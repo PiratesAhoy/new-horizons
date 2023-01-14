@@ -4,7 +4,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].id = "Willemstad_port";
 	locations[n].id.label = "#stown_name# port."; // KK
 	locations[n].worldmap = "Curacao";
-	Locations[n].image = "Town_FalaiseDeFleur_Port_Holland.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Port_Holland";
 	Locations[n].filespath.models = "locations\Town_FalaiseDeFleur\port";
 	Locations[n].filespath.textures = "locations\HOLLAND";
 
@@ -89,7 +89,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].filespath.models = "locations\town_Greenford\town";
 	Locations[n].filespath.textures = "locations\HOLLAND";
-	Locations[n].image = "Town_Greenford_Town_Holland.tga";
+	Locations[n].image = "Town_Greenford_Town_Holland";
 
 	Locations[n].id = "Willemstad_town";
 	locations[n].id.label = "#stown_name#";
@@ -245,7 +245,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Willemstad_Tavern";
 	locations[n].id.label = "#stown_name# tavern";
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -291,7 +291,7 @@ void LocationInitCuracao(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Willemstad_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -331,7 +331,7 @@ void LocationInitCuracao(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Willemstad_UsurerHouse";
 	locations[n].id.label = "Loanshark's Office";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -373,7 +373,7 @@ void LocationInitCuracao(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\MediumStore";
-	Locations[n].image = "Inside_MediumStore.tga";
+	Locations[n].image = "Inside_MediumStore";
 
 	Locations[n].id = "Willemstad_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -420,7 +420,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Willemstad_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard3.tga";
+	Locations[n].image = "Inside_Shipyard3";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -461,7 +461,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Willemstad_church";
 	locations[n].id.label = "#stown_name# church";
-	Locations[n].image = "Inside_Church_2.tga";
+	Locations[n].image = "Inside_Church_2";
 	Locations[n].filespath.models = "locations\inside\Church_2";
 
 	//Town sack
@@ -504,7 +504,7 @@ void LocationInitCuracao(ref n)
 	// Curacao Tailor
 	Locations[n].id = "Willemstad_TailorsShop";	
 	Locations[n].id.label = "Tailor's Shop.";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -550,7 +550,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Willemstad_townhall";
 	locations[n].id.label = "#stown_name# townhall";
-	locations[n].image = "Inside_ResidencA3.tga";
+	locations[n].image = "Inside_ResidencA3";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -593,7 +593,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].id = "DWIC";
 	locations[n].id.label = "Dutch West India Company";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga";
+	Locations[n].image = "Inside_Residence_BackHall";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -635,7 +635,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].id = "Willemstad_town_2";
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Willemstad";
-	Locations[n].image = "Town_FalaiseDeFleur_Town_03_Holland.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Town_03_Holland";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -698,7 +698,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Curacao_Jungle_01";
 	locations[n].id.label = "Outskirts.";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].image = "Outside_Jungle_1";
 	//Sound
 	locations[n].type = "jungle";
 
@@ -761,7 +761,7 @@ void LocationInitCuracao(ref n)
 	//  -------------------------------------------------
 	Locations[n].id = "Curacao_Jungle_02";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Town_FalaiseDeFleur_Exit.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Exit";
 	//Sound
 	locations[n].type = "jungle";
 //	locations[n].fastreload = "Willemstad";
@@ -823,7 +823,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Curacao_Jungle_03";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_3.tga";
+	Locations[n].image = "Outside_Jungle_3";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -902,7 +902,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].id = "Curacao_shore_01";
 	locations[n].id.label = "Bullen Bay";
 	//locations[n].worldmap = "MShore 2";
-	Locations[n].image = "Outside_Shore_9.tga";
+	Locations[n].image = "Outside_Shore_9";
 	Locations[n].name = "Bullen Bay";   // TALISMAN added to make beach name appear in smuggler tavern dialog
 	//Sound
 	locations[n].type = "seashore";
@@ -965,7 +965,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].id = "Curacao_shore_03";
 	locations[n].id.label = "Mixteca Bay."; // KK
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "Outside_Shore_6.tga";
+	Locations[n].image = "Outside_Shore_6";
 	Locations[n].name = "Mixteca Bay";
 	//Sound
 	locations[n].type = "seashore";
@@ -1019,7 +1019,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Curacao_shore_02";
 	locations[n].id.label = "Bocht Van Hato."; // KK
-	Locations[n].image = "Outside_Shore_8.tga";
+	Locations[n].image = "Outside_Shore_8";
 	Locations[n].name = "Bocht Van Hato";
 	//Sound
 	locations[n].type = "seashore";
@@ -1084,7 +1084,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Curacao_Jungle_04";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_2.tga";
+	Locations[n].image = "Outside_Jungle_2";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1150,7 +1150,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Curacao_shore_04";
 	locations[n].id.label = "Darien Beach."; // KK
-	Locations[n].image = "Outside_Passage1.tga";
+	Locations[n].image = "Outside_Passage1";
 	Locations[n].name = "Darien Beach";
 	//Sound
 	locations[n].type = "seashore";
@@ -1209,7 +1209,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Curacao_Jungle_05";
 	locations[n].id.label = "Jungle.";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "Jungle";
 
@@ -1274,7 +1274,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].id = "Labirint_4";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-	Locations[n].image = "Incas_Temple_Alcove.tga";
+	Locations[n].image = "Incas_Temple_Alcove";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Alcove";
 	//Models
@@ -1314,7 +1314,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Curacao_Jungle_06";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_7.tga";
+	Locations[n].image = "Outside_Jungle_7";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1393,7 +1393,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].filespath.models = "locations\town_QC\town";
 	Locations[n].filespath.textures = "locations\HOLLAND";
-	Locations[n].image = "Town_QC_Town.tga";
+	Locations[n].image = "Town_QC_Town";
 
 	Locations[n].id = "Curacao_village";
 	locations[n].id.label = "Village.";
@@ -1483,7 +1483,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Village_Tavern";
 	locations[n].id.label = "Tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad"; // NK 04-08-29
@@ -1530,7 +1530,7 @@ void LocationInitCuracao(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Village_tavern_upstairs";
 	locations[n].id.label = "Room in tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -1571,7 +1571,7 @@ void LocationInitCuracao(ref n)
 
 	Locations[n].id = "Village_House_01";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Pirate_House.tga";
+	Locations[n].image = "Inside_Pirate_House";
 	//Sound
 	locations[n].type = "house";
 	//Models
@@ -1610,7 +1610,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].id = "Willemstad_town_3";
 	locations[n].id.label = "#stown_name# town";
 	locations[n].worldmap = "Willemstad";
-	Locations[n].image = "Town_Conceicao_Town_Holland.tga";
+	Locations[n].image = "Town_Conceicao_Town_Holland";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";

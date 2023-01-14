@@ -70,12 +70,12 @@ void ProcessDialogEvent()
 		case "Fake_reload":
 			if (!checkAttribute(PChar,"quest.poker.winner"))
 				{
-				locations[FindLocation(Pchar.location)].image = "poker_invite1.tga";
+				locations[FindLocation(Pchar.location)].image = "poker_invite1";
 				TakeItemFromCharacter(pchar, "poker_invite1");//take poker_invite
 				}
 				else
 				{
-				locations[FindLocation(Pchar.location)].image = "poker_invite2.tga";
+				locations[FindLocation(Pchar.location)].image = "poker_invite2";
 				TakeItemFromCharacter(pchar, "poker_invite2");//take poker_invite
 				}
 			DoQuestReloadToLocation( "Turks_poker_entre", "goto", "desk","Instructions");	

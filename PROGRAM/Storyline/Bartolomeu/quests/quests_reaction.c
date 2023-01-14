@@ -9208,7 +9208,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "cartagena_church_lever_down1":
-			Locations[FindLocation("cartagena_church")].image = "Inside_Church_3.tga";
+			Locations[FindLocation("cartagena_church")].image = "Inside_Church_3";
 			PlaySound("INTERFACE\shelf_open.wav");
 			break;
 
@@ -9218,7 +9218,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "cartagena_church_lever_up1":
-			Locations[FindLocation("cartagena_church")].image = "Inside_Church_3.tga";
+			Locations[FindLocation("cartagena_church")].image = "Inside_Church_3";
 			PlaySound("INTERFACE\shelf_close.wav");
 			break;
 
@@ -10520,7 +10520,7 @@ void QuestComplete(string sQuestName)
 
 		case "place_admiral_lever3":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall.tga";
+			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall";
 			break;
 
 		case "admiral_lever_down":
@@ -10537,7 +10537,7 @@ void QuestComplete(string sQuestName)
 		case "admiral_lever_down2":
 			PlaySound("PEOPLE\wood3.wav");
 			CreateParticleSystem("blast_dirt", -1.30, -0.3, -2.2, 0.0, 0.0, 0.0, sti(20) );
-			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall.tga";
+			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall";
 
 			LAi_QuestDelay("cartagena_cannonball_check", 0.1);
 			LAi_QuestDelay("admiral_lever_down3", 1.0);
@@ -10571,7 +10571,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\rusty.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload1");
-			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall.tga";
+			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall";
 
 			LAi_QuestDelay("enter_admiral_steplock4", 0.5);
 			break;
@@ -10597,7 +10597,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(Pchar);
 			ChangeCharacterAddressGroup(Pchar, "Admiral_Office", "goto", "goto7");
 			Pchar.quest.admiral_steplock = "way_in";
-			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall.tga";
+			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall";
 
 			LAi_QuestDelay("leave_admiral_steplock2", 1.5);
 			break;
@@ -10636,7 +10636,7 @@ void QuestComplete(string sQuestName)
 
 		case "place_admiral_cannonball3":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall.tga";
+			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall";
 			PlaySound("INTERFACE\rusty.wav");
 
 			LAi_QuestDelay("place_admiral_cannonball4", 1.0);
@@ -10670,7 +10670,7 @@ void QuestComplete(string sQuestName)
 		case "use_fire_irons3":
 			PlaySound("INTERFACE\took_item.wav");
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Governor_Daughter_House")].image = "Inside_Residence3.tga";
+			Locations[FindLocation("Governor_Daughter_House")].image = "Inside_Residence3";
 			break;
 
 		case "place_admiral_clockkey":
@@ -10693,7 +10693,7 @@ void QuestComplete(string sQuestName)
 
 		case "place_admiral_clockkey3":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall.tga";
+			Locations[FindLocation("Admiral_Office")].image = "Town_Havana_Townhall";
 			break;
 
 

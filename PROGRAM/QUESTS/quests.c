@@ -1256,7 +1256,7 @@ void QuestToSeaLogin_PrepareLoc(string islandID, string locGroup, string locName
 		}
 	}
 
-	questToSeaLoginer.ImageName = "Sea.tga";
+	questToSeaLoginer.ImageName = "Sea";
 	num = GetIslandTownsQuantity(islandID);
 	for (i = 0; i < num; i++)
 	{
@@ -1268,11 +1268,11 @@ void QuestToSeaLogin_PrepareLoc(string islandID, string locGroup, string locName
 			if (chrIdx < 0) continue;
 			chr = GetCharacter(chrIdx);
 			if (GetDistance2D(stf(chr.ship.pos.x), stf(chr.ship.pos.z), stf(questToSeaLoginer.PlayerGroup.x), stf(questToSeaLoginer.PlayerGroup.z)) <= MIN_ENEMY_DISTANCE_TO_DISABLE_MAP_ENTER && GetNationRelation(sti(characters[GetMainCharacterIndex()].nation), sti(chr.nation)) == RELATION_ENEMY) {
-				questToSeaLoginer.ImageName = "Battle.tga";
+				questToSeaLoginer.ImageName = "Battle";
 				break;
 			}
 		}
-		if (questToSeaLoginer.ImageName != "Sea.tga") break;
+		if (questToSeaLoginer.ImageName != "Sea") break;
 	}
 }
 
@@ -1289,7 +1289,7 @@ void QuestToSeaLogin_SetStorm()
 {
 	questToSeaLoginer.Storm = true;
 	//questToSeaLoginer.Title = TranslateString("", "Storm");
-	questToSeaLoginer.ImageName = "Storm.tga";
+	questToSeaLoginer.ImageName = "Storm";
 }
 
 void QuestToSeaLogin_SetTornado(float x, float z)
@@ -1297,7 +1297,7 @@ void QuestToSeaLogin_SetTornado(float x, float z)
 	questToSeaLoginer.Storm = true;
 	questToSeaLoginer.Tornado = true;
 	//questToSeaLoginer.Title = TranslateString("", "Twister");
-	questToSeaLoginer.ImageName = "Twister.tga";
+	questToSeaLoginer.ImageName = "Twister";
 	Tornado.init.x = x;
 	Tornado.init.z = z;
 }
@@ -1323,7 +1323,7 @@ void QuestToSeaLogin_AddGroup(string sGroupID, int formation, float x, float z, 
 	Group_SetXZ_AY(sGroupID, x, z, ay);
 	Group_SetSailsUp(sGroupID, sailUP);
 
-	if (Group_GetTask(sGroupID) == AITASK_ATTACK && Group_GetGroupTarget(sGroupID) == PLAYER_GROUP) questToSeaLoginer.ImageName = "Battle.tga";
+	if (Group_GetTask(sGroupID) == AITASK_ATTACK && Group_GetGroupTarget(sGroupID) == PLAYER_GROUP) questToSeaLoginer.ImageName = "Battle";
 
 	chnum = Group_GetCharactersNum(sGroupID);
 	for (j = 0; j < chnum; j++)
@@ -1332,7 +1332,7 @@ void QuestToSeaLogin_AddGroup(string sGroupID, int formation, float x, float z, 
 		if (chrIdx < 0) continue;
 		if (!CheckAttribute(&characters[chrIdx], "nation")) continue;
 		if (GetNationRelation(sti(characters[GetMainCharacterIndex()].nation), sti(characters[chrIdx].nation)) == RELATION_ENEMY) {
-			questToSeaLoginer.ImageName = "Battle.tga";
+			questToSeaLoginer.ImageName = "Battle";
 			break;
 		}
 	}
@@ -1347,7 +1347,7 @@ void QuestToSeaLogin_AddGroup(string sGroupID, int formation, float x, float z, 
 			chrIdx = GetTownFortCommanderIndex(sTown, j);
 			if (chrIdx < 0) continue;
 			if (GetNationRelation(sti(characters[GetMainCharacterIndex()].nation), sti(characters[chrIdx].nation)) == RELATION_ENEMY) {
-				questToSeaLoginer.ImageName = "Battle.tga";
+				questToSeaLoginer.ImageName = "Battle";
 				return;
 			}
 		}
@@ -1367,7 +1367,7 @@ void QuestToSeaLogin_AddGroupLoc(string sGroupID, int formation, string locGroup
 	Group_SetSailsUp(sGroupID, sailUP);
 
 	if (Group_GetTask(sGroupID) == AITASK_ATTACK && Group_GetGroupTarget(sGroupID) == PLAYER_GROUP) {
-		questToSeaLoginer.ImageName = "Battle.tga";
+		questToSeaLoginer.ImageName = "Battle";
 		return;
 	}
 
@@ -1378,7 +1378,7 @@ void QuestToSeaLogin_AddGroupLoc(string sGroupID, int formation, string locGroup
 		if (chrIdx < 0) continue;
 		if (!CheckAttribute(&characters[chrIdx], "nation")) continue;
 		if (GetNationRelation(sti(characters[GetMainCharacterIndex()].nation), sti(characters[chrIdx].nation)) == RELATION_ENEMY) {
-			questToSeaLoginer.ImageName = "Battle.tga";
+			questToSeaLoginer.ImageName = "Battle";
 			return;
 		}
 	}
@@ -1392,7 +1392,7 @@ void QuestToSeaLogin_AddGroupLoc(string sGroupID, int formation, string locGroup
 			chrIdx = GetTownFortCommanderIndex(sTown, j);
 			if (chrIdx < 0) continue;
 			if (GetNationRelation(sti(characters[GetMainCharacterIndex()].nation), sti(characters[chrIdx].nation)) == RELATION_ENEMY) {
-				questToSeaLoginer.ImageName = "Battle.tga";
+				questToSeaLoginer.ImageName = "Battle";
 				return;
 			}
 		}

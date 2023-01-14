@@ -10,7 +10,7 @@ void LocationInitSaintMartin(ref n)
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";	//A warning sign at the gate :)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -67,7 +67,7 @@ void LocationInitSaintMartin(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -113,7 +113,7 @@ void LocationInitSaintMartin(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -156,7 +156,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "Marigot_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -201,7 +201,7 @@ void LocationInitSaintMartin(ref n)
 	// --------- Marigot_store ----------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "Marigot_store"; // KK
 	locations[n].id.label = "Store";
@@ -250,7 +250,7 @@ void LocationInitSaintMartin(ref n)
 	// ----------Bedroom of Marigot store---------------------------------------
 	Locations[n].id = "Marigot_bedroom";
 	locations[n].id.label = "Bedroom";
-	Locations[n].image = "Inside_Doubleflour_House_Upper.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Upper";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -295,7 +295,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "Marigot_tavern";
 	locations[n].id.label = "Tavern";		// ccc oct06
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	//Town sack
 	Locations[n].townsack = "Marigot"; // KK
@@ -340,7 +340,7 @@ void LocationInitSaintMartin(ref n)
 // KK -->	--------------------------------------------------
 	Locations[n].id = "Marigot_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern.";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -384,7 +384,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].id = "Marigot_shipyard"; // KK
 	locations[n].id.label = "Shipwright's Office"; // KK
 	Locations[n].filespath.models = "locations\Inside\shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga"; // KK
+	Locations[n].image = "Inside_Shipyard1"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -425,7 +425,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].id = "Marigot_mansion_hall";
 	locations[n].id.label = "Mansion";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga"; // KK
+	Locations[n].image = "Inside_Residence_BackHall"; // KK
 	//Town sack
 	Locations[n].townsack = "Marigot";
 
@@ -473,7 +473,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "Marigot_mansion_study";
 	locations[n].id.label = "Study";
-	Locations[n].image = "Inside_Residence3.tga";
+	Locations[n].image = "Inside_Residence3";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -518,7 +518,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].id = "Marigot_mansion_bedroom";
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -559,7 +559,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].id = "Marigot_port";
 	locations[n].id.label = "#stown_name# Port."; // KK
 	locations[n].worldmap = "Marigot";
-	Locations[n].image = "Town_FalaiseDeFleur_Port_Buildings.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Port_Buildings";
 	Locations[n].filespath.models = "locations\Town_FalaiseDeFleur\port";
 	Locations[n].filespath.textures = "locations\FRANCE";
 
@@ -653,7 +653,7 @@ void LocationInitSaintMartin(ref n)
 	//Marigot church -------------------------------------------------
 	Locations[n].id = "Marigot_Church";
 	locations[n].id.label = "#stown_name# Church";
-	Locations[n].image = "GB_Charleston_church.tga";
+	Locations[n].image = "GB_Charleston_church";
 	Locations[n].filespath.models = "locations\inside\Church_4";
 
 	//Town sack
@@ -706,7 +706,7 @@ void LocationInitSaintMartin(ref n)
 	locations[n].worldmap = "Marigot";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_03";
 	Locations[n].filespath.textures = "locations\FRANCE";
-	Locations[n].image = "Town_Redmond_Town_03_France.tga";
+	Locations[n].image = "Town_Redmond_Town_03_France";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -833,7 +833,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Marigot_Cellar";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -881,7 +881,7 @@ void LocationInitSaintMartin(ref n)
 	locations[n].worldmap = "Marigot";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_04";
 	Locations[n].filespath.textures = "locations\FRANCE";
-	Locations[n].image = "Town_Redmond_Town_04_France.tga";
+	Locations[n].image = "Town_Redmond_Town_04_France";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -999,7 +999,7 @@ void LocationInitSaintMartin(ref n)
 	locations[n].id.label = "Jungle";
 	Locations[n].filespath.models = "locations\Town_Redmond\REDexit2";
 	Locations[n].filespath.textures = "locations\FRANCE";
-	Locations[n].image = "Town_Redmond_Exit2.tga";
+	Locations[n].image = "Town_Redmond_Exit2";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -1059,7 +1059,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "Marigot_town";
 	locations[n].id.label = "#stown_name#";
-	Locations[n].image = "Town_FalaiseDeFleur_Exit_Buildings.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Exit_Buildings";
 	//Sound
 	locations[n].type = "town";
 //	locations[n].fastreload = "QC";
@@ -1114,7 +1114,7 @@ void LocationInitSaintMartin(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Marigot_HouseInsideR11(03)";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh6.tga";
+	Locations[n].image = "Inside_mh6";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -1155,7 +1155,7 @@ void LocationInitSaintMartin(ref n)
 		// -------------------------------------------------
 	Locations[n].id = "Marigot_HouseInsideR2";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -1196,7 +1196,7 @@ void LocationInitSaintMartin(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Marigot_HouseInsideR4";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh8.tga";
+	Locations[n].image = "Inside_mh8";
 
 	//Town sack
 	Locations[n].townsack = "Marigot";
@@ -1243,7 +1243,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "SaintMartin_Jungle_01";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_7.tga";
+	Locations[n].image = "Outside_Jungle_7";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1319,7 +1319,7 @@ void LocationInitSaintMartin(ref n)
 	locations[n].id.label = "Simpson Bay."; // KK
 	// locations[n].worldmap = "SaintMartin_shore_01";
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "Outside_Shore_6.tga";
+	Locations[n].image = "Outside_Shore_6";
 	Locations[n].name = "Simpson Bay";
 	//Sound
 	locations[n].type = "seashore";
@@ -1376,7 +1376,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].id = "SaintMartin_shore_02";
 	locations[n].id.label = "Baie Orient."; // KK
 	locations[n].worldmap = "SaintMartin_shore_02"; // KK
-	Locations[n].image = "Outside_Shore_4.tga";
+	Locations[n].image = "Outside_Shore_4";
 	Locations[n].name = "Baie Orient";
 	//Sound
 	locations[n].type = "seashore";
@@ -1455,7 +1455,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "SaintMartin_Jungle_02";
 	locations[n].id.label = "jungle";
-	Locations[n].image = "Outside_Jungle_3.tga";
+	Locations[n].image = "Outside_Jungle_3";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1536,7 +1536,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "Marigot_dungeon";
 	locations[n].id.label = "Mine";
-	Locations[n].image = "Inside_Mine.tga";
+	Locations[n].image = "Inside_Mine";
 
 	//Sound
 	locations[n].type = "dungeon";
@@ -1575,7 +1575,7 @@ void LocationInitSaintMartin(ref n)
 	// ----------------- Philipsburg_Dungeon --------------------
 	Locations[n].filespath.models = "locations\Inside\Sewer"; // PB: Flood the sewer as per an original idea by CCC
 	Locations[n].id = "Philipsburg_Dungeon";
-	Locations[n].image = "Inside_Sewer.tga";
+	Locations[n].image = "Inside_Sewer";
 	Locations[n].monsters = "1";
 	locations[n].id.label = "#stown_name# Sewer";
 
@@ -1634,7 +1634,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].filespath.models = "locations\Town_Greenford\port";
 	Locations[n].filespath.textures = "locations\HOLLAND";
-	Locations[n].image = "Town_Greenford_Port_Holland.tga";
+	Locations[n].image = "Town_Greenford_Port_Holland";
 
 	Locations[n].id = "Philipsburg_port";
 	locations[n].id.label = "#stown_name# port."; // KK
@@ -1709,7 +1709,7 @@ void LocationInitSaintMartin(ref n)
 	locations[n].fastreload = "Philipsburg";
 
 	Locations[n].filespath.models = "locations\Inside\MediumStore";
-	Locations[n].image = "Inside_MediumStore.tga";
+	Locations[n].image = "Inside_MediumStore";
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg"; // KK
@@ -1747,7 +1747,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "Philipsburg_tavern";
 	locations[n].id.label = "#stown_name# tavern";		// ccc oct06
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg"; // KK
@@ -1792,7 +1792,7 @@ void LocationInitSaintMartin(ref n)
 // KK --> -------------------------------------------------
 	Locations[n].id = "Philipsburg_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern.";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg";
@@ -1835,7 +1835,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].id = "Philipsburg_town";
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Philipsburg";
-	Locations[n].image = "Town_IslaMuelle_Town_03_Holland.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_03_Holland";
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg";
@@ -1931,7 +1931,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].id = "Philipsburg_town_02";
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Philipsburg";
-	Locations[n].image = "Town_IslaMuelle_Town_02_Holland.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_02_Holland";
 	//Sound
 
 	//Town sack
@@ -1988,7 +1988,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "Philipsburg_house1";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Pirate_House.tga";
+	Locations[n].image = "Inside_Pirate_House";
 	//Town sack
 	Locations[n].townsack = "Philipsburg";
 	//Sound
@@ -2026,7 +2026,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Philipsburg_House2";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_Doubleflour_House_Upper.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Upper";
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg";
@@ -2067,7 +2067,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].filespath.models = "locations\Inside\Residence3";
 
 	locations[n].id.label = "#stown_name# townhall."; // KK
-	Locations[n].image = "Inside_Residence3.tga"; // KK
+	Locations[n].image = "Inside_Residence3"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg";
@@ -2108,7 +2108,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "Philipsburg_shipyard"; // KK
 	locations[n].id.label = "Shipwright's Office"; // KK
-	Locations[n].image = "Inside_Shipyard1.tga"; // KK
+	Locations[n].image = "Inside_Shipyard1"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg";
@@ -2158,7 +2158,7 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].id = "Philipsburg_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Town_IslaMuelle_Exit.tga";
+	Locations[n].image = "Town_IslaMuelle_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg";
@@ -2226,7 +2226,7 @@ void LocationInitSaintMartin(ref n)
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";	//A warning sign at the gate :)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg";
@@ -2287,7 +2287,7 @@ void LocationInitSaintMartin(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -2331,7 +2331,7 @@ void LocationInitSaintMartin(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -2379,7 +2379,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "Philipsburg_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "Philipsburg";

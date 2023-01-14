@@ -3,7 +3,7 @@ void LocationInitQuestLocations(ref n)
 
 	// ----------------------------------------------
 	Locations[n].filespath.models = "locations\Decks\qdeck";
-	Locations[n].image = "sea.tga";
+	Locations[n].image = "sea";
 
 	Locations[n].id = "smuggler_ship";
 	locations[n].id.label = "Smuggler ship";
@@ -41,7 +41,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Crew's quarters";
 	//Info
 	Locations[n].filespath.models = "locations\decks\seadogs"; // KK
-	Locations[n].image = "deck_seadogs.tga"; // KK
+	Locations[n].image = "deck_seadogs"; // KK
 	//Sound
 	Locations[n].type = "deck";
 //	Locations[n].lockCamAngle = 0.4;	// LDH removed 23Mar09
@@ -82,7 +82,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capsm"; // KK
-	Locations[n].image = "deck_capsm.tga"; // KK
+	Locations[n].image = "deck_capsm"; // KK
 	//Sound
 	Locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -118,7 +118,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\mh3";
 	Locations[n].id = "Tortuga_Pirate_House";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh3.tga";
+	Locations[n].image = "Inside_mh3";
 	//Sound
 	locations[n].type = "house";
 	//Models
@@ -153,7 +153,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Laura_Cotton_House";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_MediumHouse2.tga";
+	Locations[n].image = "Inside_MediumHouse2";
 
 	//Sound
 	locations[n].type = "house";
@@ -193,7 +193,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBig";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "ship";
 	Locations[n].lockCamAngle = 0.4;
@@ -234,7 +234,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Main cannons deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck2";
-	Locations[n].image = "deck_deck2.tga";
+	Locations[n].image = "deck_deck2";
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].camshuttle = 1;
@@ -277,7 +277,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Lower cannons deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck1";
-	Locations[n].image = "deck_deck1.tga";
+	Locations[n].image = "deck_deck1";
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].camshuttle = 1;
@@ -320,7 +320,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Cargo hold";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
-	Locations[n].image = "deck_hold.tga"; // KK
+	Locations[n].image = "deck_hold"; // KK
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].camshuttle = 1;

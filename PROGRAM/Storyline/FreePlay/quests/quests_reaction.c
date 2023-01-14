@@ -1878,7 +1878,7 @@ void QuestComplete(string sQuestName)
 		
 		
 		case "Instructions":
-		locations[FindLocation(Pchar.location)].image = "poker_entre.tga";
+		locations[FindLocation(Pchar.location)].image = "poker_entre";
 		sld = &characters[GetCharacterIndex("Reg_L")];
 		if (!checkAttribute(PChar,"quest.poker.winner"))
 			{

@@ -6,7 +6,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBig";	
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 
 	Locations[n].id = "Family_deck";
 	locations[n].id.label = "Ship deck";
@@ -42,7 +42,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckLow";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "deck";
 //	locations[n].type = "own_deck";
@@ -82,7 +82,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Crew's quarters";
 	//Info
 	Locations[n].filespath.models = "locations\decks\seadogs"; // KK
-	Locations[n].image = "deck_seadogs.tga"; // KK
+	Locations[n].image = "deck_seadogs"; // KK
 	//Sound
 	Locations[n].type = "crew";
 //	Locations[n].lockCamAngle = 0.4;	// LDH removed 23Mar09

@@ -7,7 +7,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].id = "Randomhouse0";
 	Locations[n].randloc = 1;
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_PirateResidence.tga";
+	Locations[n].image = "Inside_PirateResidence";
 	//Sound
 	locations[n].type = "house";
 	//Models
@@ -37,7 +37,7 @@ void LocationInitCCCRandomLocations(ref n)
 
 	Locations[n].id = "Randomhouse1";
 	Locations[n].randloc = 1;
-	Locations[n].image = "Inside_Pirate_House.tga";
+	Locations[n].image = "Inside_Pirate_House";
 
 	//Sound
 	locations[n].type = "house";
@@ -67,7 +67,7 @@ void LocationInitCCCRandomLocations(ref n)
 
 	Locations[n].id = "Randomhouse2";
 	Locations[n].randloc = 1;
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Sound
 	locations[n].type = "house";
@@ -97,7 +97,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].randloc = 1;
 	locations[n].id.label = "Mansion";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga";
+	Locations[n].image = "Inside_Residence_BackHall";
 
 	//Sound
 	locations[n].type = "house";
@@ -130,7 +130,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].id = "Randomhouse4";
 	Locations[n].randloc = 1;
 	locations[n].id.label = "Study";			
-	Locations[n].image = "Inside_Residence3.tga";
+	Locations[n].image = "Inside_Residence3";
 
 	//Sound
 	locations[n].type = "house";
@@ -159,7 +159,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].randloc = 1;
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 	//Sound
 	locations[n].type = "house";
 	//Models
@@ -191,7 +191,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].id = "Randomhouse6";
 	Locations[n].randloc = 1;
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 
 	//Sound
@@ -228,7 +228,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].id = "Randomhouse7";
 	Locations[n].randloc = 1;
 	locations[n].id.label = "Warehouse";
-	Locations[n].image = "Inside_Shipyard_Warehouse.tga";
+	Locations[n].image = "Inside_Shipyard_Warehouse";
  
 	//Sound
 	locations[n].type = "house";
@@ -260,7 +260,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].id = "Randomhouse8";
 	Locations[n].randloc = 1;
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].image = "Inside_Residence2";
 	Locations[n].filespath.models = "locations\inside\Residence2";
  
 	//Sound
@@ -327,7 +327,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].id = "Randomhouse10";
 	Locations[n].randloc = 1;
 	locations[n].id.label = "Yard";
-	Locations[n].image = "Town_IslaMuelle_Town_02.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_02";
 
 	//Sound
 	locations[n].type = "house";
@@ -356,7 +356,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].randloc = 1;
 	locations[n].id.label = "Study";
 	Locations[n].filespath.models = "locations\inside\Residence1";
-	Locations[n].image = "Inside_Residence1.tga";
+	Locations[n].image = "Inside_Residence1";
 
 	//Sound
 	locations[n].type = "house";
@@ -391,7 +391,7 @@ void LocationInitCCCRandomLocations(ref n)
 	locations[n].type = "house";	// leave house for VC !!
 
 	Locations[n].filespath.models = "locations\Inside\MediumStore";
-	Locations[n].image = "Inside_MediumStore.tga";
+	Locations[n].image = "Inside_MediumStore";
 
 	//Models
 	//Always
@@ -422,7 +422,7 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].id = "Randomhouse13";
 	Locations[n].randloc = 1;
 	locations[n].id.label = "Inn";
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	//Sound
 	locations[n].type = "house";	// leave house for VC !!

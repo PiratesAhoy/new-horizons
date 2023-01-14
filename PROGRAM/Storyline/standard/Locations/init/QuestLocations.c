@@ -3,7 +3,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_redmond_tavern";
 	locations[n].id.label = "#stown_name# tavern";
 	Locations[n].filespath.models = "locations\inside\Largetavern";
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	//Town sack
 	Locations[n].townsack = "Redmond"; // NK 04-08-29
@@ -44,7 +44,7 @@ void LocationInitQuestLocations(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\town_IslaMuelle\town_01";
-	Locations[n].image = "Town_IslaMuelle_Town_01.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_01";
 
 	Locations[n].id = "Quest_Muelle_town_01";
 	locations[n].id.label = "#stown_name#";
@@ -79,7 +79,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Residence";
 	locations[n].id.label = "Redmond Townhall. Silehards's Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 
 	//Town sack
 	Locations[n].townsack = "Redmond"; // NK 04-08-29
@@ -121,7 +121,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Fort inside";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "deck";
 
@@ -149,7 +149,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -177,7 +177,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_3.tga";
+	Locations[n].image = "Fort_Inside_Fort_3";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -203,7 +203,7 @@ void LocationInitQuestLocations(ref n)
 
 	//  -------------------------------------------------
 	Locations[n].filespath.models = "locations\town_Greenford\port";	
-	Locations[n].image = "Town_Greenford_Port.tga";
+	Locations[n].image = "Town_Greenford_Port";
 
 	Locations[n].id = "Fake_Greenford_port";
 	locations[n].id.label = "#stown_name# port";
@@ -250,7 +250,7 @@ void LocationInitQuestLocations(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\town_Greenford\town";
-	Locations[n].image = "Town_Greenford_Town.tga";
+	Locations[n].image = "Town_Greenford_Town";
 
 	Locations[n].id = "Fake_Greenford_town";
 	locations[n].id.label = "#stown_name#";
@@ -294,7 +294,7 @@ void LocationInitQuestLocations(ref n)
 	
 	//Sound
 	locations[n].type = "jail";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 	//Models
 	//Always
 	Locations[n].models.always.prison = "Pri";
@@ -318,7 +318,7 @@ void LocationInitQuestLocations(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Decks\qdeck";
-	Locations[n].image = "sea.tga";
+	Locations[n].image = "sea";
 
 	Locations[n].id = "Ship_deck";
 	locations[n].id.label = "Pirate bark";

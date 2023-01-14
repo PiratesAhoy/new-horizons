@@ -30,7 +30,7 @@ void Reinit_KhaelRoa()
 
 	Locations[n].id = "KhaelRoa_Jungle_01";
 	locations[n].id.label = "Khael Roa jungles";		//spell-checked by KAM
-	Locations[n].image = "Outside_Jungle_6.tga"; // KK
+	Locations[n].image = "Outside_Jungle_6"; // KK
 	//Sound
 	locations[n].type = "KR_Jungle";
 	Locations[n].island = "KhaelRoa"; // NK 04-11-03
@@ -109,7 +109,7 @@ void Reinit_KhaelRoa()
 
 	Locations[n].id = "KhaelRoa_Jungle_01";
 	locations[n].id.label = "Khael Roa jungles";		//spell-checked by KAM
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "KR_Jungle";
 	Locations[n].island = "KhaelRoa"; // NK 04-11-03
@@ -188,7 +188,7 @@ void Reinit_KhaelRoa()
 
 	Locations[n].id = "KhaelRoa_Jungle_02";
 	locations[n].id.label = "Khael Roa jungles";
-	Locations[n].image = "Outside_Jungle_7.tga";
+	Locations[n].image = "Outside_Jungle_7";
 	//Sound
 	locations[n].type = "KR_Jungle";
 	//LAi_LocationMonstersGen(&locations[n], true);
@@ -270,7 +270,7 @@ void Reinit_KhaelRoa()
 
 	Locations[n].id = "KhaelRoa_Jungle_03";
 	locations[n].id.label = "Khael Roa jungles";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].image = "Outside_Jungle_1";
 	//Sound
 	locations[n].type = "KR_Jungle";
 	Locations[n].island = "KhaelRoa"; // NK 04-11-03
@@ -340,7 +340,7 @@ void Reinit_KhaelRoa()
 
 	Locations[n].id = "Roa_Cave2";
 	locations[n].id.label = "Khael Roa cave entrance";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "KR_Jungle";
 	//LAi_LocationMonstersGen(&locations[n], true);
@@ -408,7 +408,7 @@ void Reinit_KhaelRoa()
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id.label = "Dungeon";
 	Locations[n].id = "Roa_dungeon";
-	Locations[n].image = "Inside_Dungeon_4.tga";
+	Locations[n].image = "Inside_Dungeon_4";
 //	Locations[n].monsters = "1";
 
 	//Sound
@@ -446,7 +446,7 @@ void Reinit_KhaelRoa()
 
 	Locations[n].id = "roa_Cave";
 	locations[n].id.label = "Entrance to #sisland_name# cave";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "KR_Jungle";
 	//LAi_LocationSetMonstersTime(&locations[n], 22, 6);
@@ -507,7 +507,7 @@ void Reinit_KhaelRoa()
 
 	Locations[n].id = "KhaelRoa_Cavern";
 	locations[n].id.label = "#sisland_name# Cavern";
-	Locations[n].image = "Inside_Cavern.tga";
+	Locations[n].image = "Inside_Cavern";
 
 	//Sound
 	locations[n].type = "KhaelRoa";
@@ -576,7 +576,7 @@ void Reinit_KhaelRoa()
 
 	Locations[n].id = "Roa_Hideout";
 	locations[n].id.label = "Secret Hideout";
-	Locations[n].image = "Inside_Cave_Ship.tga";
+	Locations[n].image = "Inside_Cave_Ship";
 
 	//Town sack
 	locations[n].townsack = "Khael Roa"; // Screwface : to be allowed berth ships here
@@ -631,7 +631,7 @@ void Reinit_KhaelRoa()
 	locations[n].id = "Roa_Cabin";
 	locations[n].id.label = "Captain's Cabin";
 	locations[n].filespath.models = "locations\Inside\ShipyardPirates";
-	locations[n].image = "Inside_ShipyardPirates.tga";
+	locations[n].image = "Inside_ShipyardPirates";
 
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas";

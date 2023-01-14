@@ -1149,7 +1149,7 @@ void OpenBoxProcedure_WR()
 
 			case "box26":
 				locations[FindLocation("Tortuga_port")].id.label = "#stown_name# tower.";
-				Locations[FindLocation("Tortuga_port")].image = "wr_Tortuga_tower_outside.tga";
+				Locations[FindLocation("Tortuga_port")].image = "wr_Tortuga_tower_outside";
 
 				Locations[FindLocation("Tortuga_port")].vcskip = true;
 				SetCurrentTime(12, 0);
@@ -1222,7 +1222,7 @@ void OpenBoxProcedure_WR()
 			case "box17":
 				locations[FindLocation("Tortuga_port")].id.label = "#stown_name# port.";
 
-				Locations[FindLocation("Tortuga_port")].image = "Town_Tortuga.tga";
+				Locations[FindLocation("Tortuga_port")].image = "Town_Tortuga";
 				Locations[FindLocation("Tortuga_port")].vcskip = false;
 				PlaySound("PEOPLE\run_stone.wav");
 				ChangeCharacterAddressGroup(chr, "Tortuga_tower", "reload", "reloadQ4");
@@ -3891,7 +3891,7 @@ void OpenBoxProcedure_WR()
 				SetNextWeather("Clear");
 				chr.quest.JRH_sky = "2_Rd";
 
-				Locations[FindLocation("bb_prison_port")].image = "wr_prison_pier.tga";
+				Locations[FindLocation("bb_prison_port")].image = "wr_prison_pier";
 				DoQuestReloadToLocation("bb_prison_port", "goto", "prison_entre", "arrive_prison_pier");
 			break;
 
@@ -3951,7 +3951,7 @@ void OpenBoxProcedure_WR()
 				chr.quest.JRH_rain = "Clear";
 
 				chr.quest.prison_pier = "phase7";
-				Locations[FindLocation("bb_prison_port")].image = "Town_IslaMuelle_Port.tga";
+				Locations[FindLocation("bb_prison_port")].image = "Town_IslaMuelle_Port";
 				DoQuestReloadToLocation("bb_prison_port", "goto", "return", "return_prison_pier");
 			break;
 
@@ -4036,7 +4036,7 @@ void OpenBoxProcedure_WR()
 				if(CheckAttribute(chr, "quest.prison_elevator") && chr.quest.prison_elevator == "down")
 				{
 					LAi_SetStayType(chr);
-					Locations[FindLocation("bb_prison_port")].image = "wr_prison_pier.tga";
+					Locations[FindLocation("bb_prison_port")].image = "wr_prison_pier";
 					DoQuestReloadToLocation("bb_prison_port", "goto", "goto5", "turn_prison_port_guards");
 				}
 				else
@@ -4050,7 +4050,7 @@ void OpenBoxProcedure_WR()
 
 				if(CheckAttribute(chr, "quest.prison_elevator") && chr.quest.prison_elevator == "up")
 				{
-					Locations[FindLocation("bb_prison_port")].image = "wr_prison_bridge.tga";
+					Locations[FindLocation("bb_prison_port")].image = "wr_prison_bridge";
 					DoQuestReloadToLocation("bb_prison_port", "goto", "prison_bridgeA", "prison_bridge_extra_turn");
 				}
 				else
@@ -6859,7 +6859,7 @@ void OpenBoxProcedure_WR()
 				locations[FindLocation("BB_burning_cave")].models.day.charactersPatch = "walk_patch_LONG";
 				locations[FindLocation("BB_burning_cave")].models.night.charactersPatch = "walk_patch_LONG";
 
-				Locations[FindLocation("BB_burning_cave")].image = "wr_unknown2.tga";				
+				Locations[FindLocation("BB_burning_cave")].image = "wr_unknown2";
 				DoQuestReloadToLocation("BB_burning_cave", "goto", "hole2", "_");	
 			break;
 
@@ -7352,7 +7352,7 @@ void OpenBoxProcedure_WR()
 				SetCurrentTime(21.00, 0);
 				chr.quest.JRH_rain = "Clear";
 				SetNextWeather("Clear");
-				Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore.tga";
+				Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore";
 			break;
 		}
 		return;

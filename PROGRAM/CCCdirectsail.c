@@ -144,7 +144,7 @@ void DirectsailRun()  // Jan 07, taken out of DirectsailCheck() to create break
 		// islandchange
 		// some eyecandy
 		CreateEntity(&SeaFader, "fader");
-		SetReloadImage(&SeaFader, "LandHo.tga"); // KK
+		SetReloadImage(&SeaFader, "LandHo"); // KK
 		SendMessage(&SeaFader, "lfl", FADER_IN, 0.5, true);
 		PlaySound("#land_ho"); // KK
 		// LDH Only set the encounter flag if we're due for an encounter - 11Feb09
@@ -216,7 +216,7 @@ void DirectsailRun()  // Jan 07, taken out of DirectsailCheck() to create break
 			pchar.directsail.encounter = 1;
 
 			CreateEntity(&SeaFader, "fader");
-			SetReloadImage(&SeaFader, "SailHo.tga"); // KK
+			SetReloadImage(&SeaFader, "SailHo"); // KK
 			SendMessage(&SeaFader, "lfl", FADER_IN, 0.5, true);
 			PlaySound("#sail_ho");
 			Sea_ReloadStartDirect();	// reloads Sea with new ships at horizon

@@ -666,58 +666,58 @@ void InitTownNationalities()
 
 	if(GetTownNation("Redmond") == SPAIN)
 	{
-		locations[FindLocation("Redmond_Port")].image = "Town_Redmond_Port_Spain.tga";
+		locations[FindLocation("Redmond_Port")].image = "Town_Redmond_Port_Spain";
 		locations[FindLocation("Redmond_Port")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Redmond_Town_01")].image = "Town_Redmond_Town_01_Spain.tga";
+		locations[FindLocation("Redmond_Town_01")].image = "Town_Redmond_Town_01_Spain";
 		locations[FindLocation("Redmond_Town_01")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Redmond_Town_03")].image = "Town_Redmond_Town_03_Spain.tga";
+		locations[FindLocation("Redmond_Town_03")].image = "Town_Redmond_Town_03_Spain";
 		locations[FindLocation("Redmond_Town_03")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Redmond_Town_04")].image = "Town_Redmond_Town_04_Spain.tga";
+		locations[FindLocation("Redmond_Town_04")].image = "Town_Redmond_Town_04_Spain";
 		locations[FindLocation("Redmond_Town_04")].filespath.textures = "locations\SPAIN";
 	}
 	if(GetTownNation("Douwesen") == SPAIN)
 	{
-		locations[FindLocation("Douwesen_port")].image = "Town_Douwesen_Port_Spain.tga";
+		locations[FindLocation("Douwesen_port")].image = "Town_Douwesen_Port_Spain";
 		locations[FindLocation("Douwesen_port")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Douwesen_town")].image = "Town_Douwesen_Town_Spain.tga";
+		locations[FindLocation("Douwesen_town")].image = "Town_Douwesen_Town_Spain";
 		locations[FindLocation("Douwesen_town")].filespath.textures = "locations\SPAIN";
 	}
 	if(GetTownNation("Grand Cayman") == SPAIN)
 	{
-		locations[FindLocation("Cayman_Port")].image = "Town_FalaiseDeFleur_Port2_Spain.tga";
+		locations[FindLocation("Cayman_Port")].image = "Town_FalaiseDeFleur_Port2_Spain";
 		locations[FindLocation("Cayman_Port")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Grand_Cayman_Town")].image = "Town_Douwesen_Town_Spain.tga";
+		locations[FindLocation("Grand_Cayman_Town")].image = "Town_Douwesen_Town_Spain";
 		locations[FindLocation("Grand_Cayman_Town")].filespath.textures = "locations\SPAIN";
 	}
 	if(GetTownNation("Santo Domingo") == FRANCE)
 	{
-		locations[FindLocation("Santo_Domingo_port")].image = "Town_Greenford_Port_France.tga";
+		locations[FindLocation("Santo_Domingo_port")].image = "Town_Greenford_Port_France";
 		locations[FindLocation("Santo_Domingo_port")].filespath.textures = "locations\FRANCE";
-		//locations[FindLocation("Santo_Domingo_town")].image = "Town_Greenford_Town.tga";			// PB: Location now replaced
+		//locations[FindLocation("Santo_Domingo_town")].image = "Town_Greenford_Town";			// PB: Location now replaced
 		//locations[FindLocation("Santo_Domingo_town")].filespath.textures = "locations\FRANCE";	// PB: Always looks Spanish
 	}
 	if(GetTownNation("Conceicao") == ENGLAND)
 	{
-		locations[FindLocation("Conceicao_port")].image = "Town_Conceicao_Port_England.tga";
+		locations[FindLocation("Conceicao_port")].image = "Town_Conceicao_Port_England";
 		locations[FindLocation("Conceicao_port")].filespath.textures = "locations\ENGLAND";
-		locations[FindLocation("Conceicao_town")].image = "Town_Conceicao_Town_England.tga";
+		locations[FindLocation("Conceicao_town")].image = "Town_Conceicao_Town_England";
 		locations[FindLocation("Conceicao_town")].filespath.textures = "locations\ENGLAND";
 	}
 	if(GetTownNation("Falaise de Fleur") == SPAIN)
 	{
-		locations[FindLocation("Falaise_de_fleur_port_01")].image = "Town_FalaiseDeFleur_Port_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_port_01")].image = "Town_FalaiseDeFleur_Port_Spa";
 		locations[FindLocation("Falaise_de_fleur_port_01")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Falaise_de_fleur_port_02")].image = "Town_FalaiseDeFleur_Port2_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_port_02")].image = "Town_FalaiseDeFleur_Port2_Spa";
 		locations[FindLocation("Falaise_de_fleur_port_02")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Falaise_de_fleur_location_02")].image = "Town_FalaiseDeFleur_Town_01_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_location_02")].image = "Town_FalaiseDeFleur_Town_01_Spa";
 		locations[FindLocation("Falaise_de_fleur_location_02")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Falaise_de_fleur_location_03")].image = "Town_FalaiseDeFleur_Town_02_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_location_03")].image = "Town_FalaiseDeFleur_Town_02_Spa";
 		locations[FindLocation("Falaise_de_fleur_location_03")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Falaise_de_fleur_location_04")].image = "Town_FalaiseDeFleur_Town_03_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_location_04")].image = "Town_FalaiseDeFleur_Town_03_Spa";
 		locations[FindLocation("Falaise_de_fleur_location_04")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Falaise_de_fleur_location_05")].image = "Town_FalaiseDeFleur_Town_04_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_location_05")].image = "Town_FalaiseDeFleur_Town_04_Spa";
 		locations[FindLocation("Falaise_de_fleur_location_05")].filespath.textures = "locations\SPAIN";
-		locations[FindLocation("Falaise_De_Fleur_Jungle")].image = "Town_FalaiseDeFleur_Exit_Spa.tga";
+		locations[FindLocation("Falaise_De_Fleur_Jungle")].image = "Town_FalaiseDeFleur_Exit_Spa";
 		locations[FindLocation("Falaise_De_Fleur_Jungle")].filespath.textures = "locations\SPAIN";
 	}
 

@@ -4,7 +4,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBig";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -32,7 +32,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Fire Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckMedium";
-	Locations[n].image = "sea.tga";
+	Locations[n].image = "sea";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -58,7 +58,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "HMS Hotspur";
 	//Info
 	Locations[n].filespath.models = "locations\Decks\qdeck";
-	Locations[n].image = "Sea.tga"; // KK
+	Locations[n].image = "Sea"; // KK
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -84,7 +84,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBig";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -157,7 +157,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cabin03";
-	Locations[n].image = "deck_cabin2.tga"; // KK
+	Locations[n].image = "deck_cabin2"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -199,7 +199,7 @@ void LocationInitQuestLocations(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 

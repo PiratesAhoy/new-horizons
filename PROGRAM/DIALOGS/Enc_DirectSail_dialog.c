@@ -71,8 +71,8 @@ void ProcessDialogEvent()
 							CreateEntity(&SeaFader, "fader");
 							switch(NPChar.greeting)
 							{
-								case "land_ho": SetReloadImage(&SeaFader, "LandHo.tga"); break; // KK
-								case "sail_ho": SetReloadImage(&SeaFader, "SailHo.tga"); break; // KK
+								case "land_ho": SetReloadImage(&SeaFader, "LandHo"); break; // KK
+								case "sail_ho": SetReloadImage(&SeaFader, "SailHo"); break; // KK
 							}
 							SendMessage(&SeaFader, "lfl", FADER_IN, 0.5, true);
 							Sea_ReloadStartDirect();
@@ -86,8 +86,8 @@ void ProcessDialogEvent()
 				CreateEntity(&SeaFader, "fader");
 				switch(NPChar.greeting)
 				{
-					case "land_ho": SetReloadImage(&SeaFader, "LandHo.tga"); break; // KK
-					case "sail_ho": SetReloadImage(&SeaFader, "SailHo.tga"); break; // KK
+					case "land_ho": SetReloadImage(&SeaFader, "LandHo"); break; // KK
+					case "sail_ho": SetReloadImage(&SeaFader, "SailHo"); break; // KK
 				}
 				SendMessage(&SeaFader, "lfl", FADER_IN, 0.5, true);
 				Sea_ReloadStartDirect();

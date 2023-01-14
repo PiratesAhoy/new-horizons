@@ -138,7 +138,7 @@ int LocationInitModLocations(int n)
 // KK -->
 void InitLocation(ref loc)
 {
-	if (!CheckAttribute(loc, "image")) loc.image = "sea.tga";
+	if (!CheckAttribute(loc, "image")) loc.image = "sea";
 	if (!CheckAttribute(loc, "music")) loc.music = "enplav.ogg";
 	if (!CheckAttribute(loc, "locators_radius.monsters")) loc.locators_radius.monsters = 0.6;	// ccc Nov05 Greater Oxbay
 	if (!CheckAttribute(loc, "locators_radius.reload")) loc.locators_radius.reload = 1.0;

@@ -5,7 +5,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Storyteller_house";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\MediumHouse";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";

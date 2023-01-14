@@ -5,7 +5,7 @@ void LocationInitSideQuestLocations(ref n)
 // SAVING TOFF'S DAUGHTER
 
 	Locations[n].filespath.models = "locations\Decks\qdeck";
-	Locations[n].image = "sea.tga";
+	Locations[n].image = "sea";
 
 	Locations[n].id = "Gamboa_ship";
 	locations[n].id.label = "Gamboa ship";
@@ -35,7 +35,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	Locations[n].id = "Quest_Cayman_Port";
 	locations[n].id.label = "Grand Cayman Port";
-	Locations[n].image = "Town_FalaiseDeFleur_Port2_England.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Port2_England";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";
@@ -78,7 +78,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	Locations[n].id = "Quest_Grand_Cayman_town";
 	locations[n].id.label = "Grand Cayman";
-	Locations[n].image = "Town_Douwesen_Town_England.tga";
+	Locations[n].image = "Town_Douwesen_Town_England";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";
@@ -141,7 +141,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].id = "Ransom_house_f1";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "Locations\Inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur"; // NK 04-08-29
@@ -183,7 +183,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].id = "Ransom_house_f2";
 	locations[n].id.label = "Kidnappers' Hideout, 2nd floor";
 	Locations[n].filespath.models = "Locations\Inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Upper.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Upper";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur"; // NK 04-08-29
@@ -223,7 +223,7 @@ void LocationInitSideQuestLocations(ref n)
 	//Santiago
 
 	Locations[n].filespath.models = "locations\Decks\qdeck";
-	Locations[n].image = "sea.tga";
+	Locations[n].image = "sea";
 
 	Locations[n].id = "Santiago_ship";
 	locations[n].id.label = "Santiago ship";
@@ -257,7 +257,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].id = "Hit_house";
 	Locations[n].id.label = "House of Mateus Santos";
 	Locations[n].filespath.models = "locations\inside\Residence6";
-	Locations[n].image = "Inside_Residence6.tga";
+	Locations[n].image = "Inside_Residence6";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle"; // NK 04-08-29
@@ -304,7 +304,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].id = "Hit_study";
 	Locations[n].id.label = "Study of Mateus Santos";
 	Locations[n].filespath.models = "locations\inside\Residence6";
-	Locations[n].image = "Inside_Residence6_Study.tga";
+	Locations[n].image = "Inside_Residence6_Study";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle"; // NK 04-08-29
@@ -351,7 +351,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].id = "Hit_passage";
 	Locations[n].id.label = "Secret Passage";
 	Locations[n].filespath.models = "locations\inside\Residence6";
-	Locations[n].image = "Inside_Residence6_Prison.tga";
+	Locations[n].image = "Inside_Residence6_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle"; // NK 04-08-29
@@ -392,7 +392,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].id = "Hit_house1";
 	locations[n].id.label = "House of Geffrey Bampfylde";
 	Locations[n].filespath.models = "locations\inside\Residence1";
-	Locations[n].image = "Inside_Residence1_Hitman.tga";
+	Locations[n].image = "Inside_Residence1_Hitman";
 
 	//Town sack
 	Locations[n].townsack = "Greenford"; // NK 04-08-29
@@ -431,7 +431,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].id = "Hit_house2";
 	Locations[n].id.label = "House of Amérigo Vieira";		//spell-checked by KAM
 	Locations[n].filespath.models = "Locations\Inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Hitman.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Hitman";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao"; // NK 04-08-29
@@ -474,7 +474,7 @@ void LocationInitSideQuestLocations(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckMediumVSBig";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -500,7 +500,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
-	Locations[n].image = "deck_hold.tga";
+	Locations[n].image = "deck_hold";
 	//Sound
 	Locations[n].type = "deck";
 	//Models
@@ -525,7 +525,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Decks\qdeck";
 	//Sound
 	locations[n].type = "deck";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Models
 	//Always
 	Locations[n].models.always.locators = "qdeck_l";
@@ -552,7 +552,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	Locations[n].id = "Cartagena_hotel_room1";
 	locations[n].id.label = "Room 1";
-	Locations[n].image = "Inside_JinoHotelRoom.tga";
+	Locations[n].image = "Inside_JinoHotelRoom";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -617,7 +617,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	Locations[n].id = "Cartagena_hotel_room2";
 	locations[n].id.label = "Room 2";
-	Locations[n].image = "Inside_JinoHotelRoom.tga";
+	Locations[n].image = "Inside_JinoHotelRoom";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -681,7 +681,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	Locations[n].id = "Cartagena_hotel_room3";
 	locations[n].id.label = "Room 3";
-	Locations[n].image = "Inside_JinoHotelRoom.tga";
+	Locations[n].image = "Inside_JinoHotelRoom";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -740,7 +740,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	Locations[n].id = "Cartagena_hotel_room4";
 	locations[n].id.label = "Room 4";
-	Locations[n].image = "Inside_JinoHotelRoom.tga";
+	Locations[n].image = "Inside_JinoHotelRoom";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -810,7 +810,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	Locations[n].id = "Cartagena_hotel_office";
 	locations[n].id.label = "Office";
-	Locations[n].image = "Inside_Flamhouse_Office.tga";
+	Locations[n].image = "Inside_Flamhouse_Office";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -867,8 +867,8 @@ void LocationInitSideQuestLocations(ref n)
 	//  -------------------------------------------------
 	Locations[n].id = "Cartagena_hotel_private";
 	locations[n].id.label = "Private";
-//	Locations[n].image = "GB_hotel_room.tga";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+//	Locations[n].image = "GB_hotel_room";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -924,7 +924,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\inside\Corridor\\";
 	Locations[n].filespath.textures = "locations\inside\Corridor\dark";
 
-	Locations[n].image = "GB_sulfur_passage.tga";
+	Locations[n].image = "GB_sulfur_passage";
 
 	//Sound
 	locations[n].type = "silent_residence";
@@ -985,7 +985,7 @@ void LocationInitSideQuestLocations(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Town_Cartagena\town";
-	Locations[n].image = "Town_Cartagena_Town.tga";
+	Locations[n].image = "Town_Cartagena_Town";
 
 	Locations[n].id = "Cartagena_Center_facade";
 	locations[n].id.label = "Cartagena town.";
@@ -1072,7 +1072,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].id = "Guadeloupe_Indian_House";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\HutRoundInside";
-	Locations[n].image = "Inside_IndianHome.tga"; //Todo
+	Locations[n].image = "Inside_IndianHome"; //Todo
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";

@@ -7,7 +7,7 @@ void LocationInitAntigua(ref n)
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga"; // KK
+	Locations[n].image = "Fort_Inside_Fort_1"; // KK
 
 	//Town sack
 	Locations[n].townsack = "St John's";
@@ -58,7 +58,7 @@ void LocationInitAntigua(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 	//Sound
 	locations[n].type = "military";
 
@@ -104,7 +104,7 @@ void LocationInitAntigua(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -152,7 +152,7 @@ void LocationInitAntigua(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "Antigua_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "St John's";
@@ -201,7 +201,7 @@ void LocationInitAntigua(ref n)
 	locations[n].id.label = "#stown_name# port.";
 	locations[n].worldmap = "Antigua";
 	Locations[n].filespath.models = "locations\Town_StJohns";
-	Locations[n].image = "Town_StJohns.tga";
+	Locations[n].image = "Town_StJohns";
 
 	//Town sack
 	Locations[n].townsack = "St John's";
@@ -351,7 +351,7 @@ void LocationInitAntigua(ref n)
 
 	Locations[n].id = "Antigua_house6";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_PirateResidence.tga";
+	Locations[n].image = "Inside_PirateResidence";
 	//Sound
 	locations[n].type = "house";
 	//Models
@@ -385,7 +385,7 @@ void LocationInitAntigua(ref n)
 	Locations[n].filespath.models = "locations\Inside\Pirate_House";	
 
 	Locations[n].id = "Antigua_house2";
-	Locations[n].image = "Inside_Pirate_House.tga";
+	Locations[n].image = "Inside_Pirate_House";
 
 	//Sound
 	locations[n].type = "house";
@@ -419,7 +419,7 @@ void LocationInitAntigua(ref n)
 	// -------------------------------------------------
 
 	Locations[n].id = "Antigua_house3";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Sound
 	locations[n].type = "house";
@@ -452,7 +452,7 @@ void LocationInitAntigua(ref n)
 	// Store -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "Antigua_Store";
 	locations[n].id.label = "Naval Store";
@@ -505,7 +505,7 @@ void LocationInitAntigua(ref n)
 
 	Locations[n].id = "Antigua_yard";
 	locations[n].id.label = "Naval Shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga";
+	Locations[n].image = "Inside_Shipyard1";
 
 	//Town sack
 	Locations[n].townsack = "St John's";
@@ -547,7 +547,7 @@ void LocationInitAntigua(ref n)
 	Locations[n].id = "Antigua_Residence";
 	locations[n].id.label = "British Naval Headquarters"; // SJG MAY09
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga";
+	Locations[n].image = "Inside_Residence_BackHall";
 
 	//Town sack
 	Locations[n].townsack = "St John's";
@@ -598,7 +598,7 @@ void LocationInitAntigua(ref n)
 
 	Locations[n].id = "Antigua_mansion_study";
 	locations[n].id.label = "British Naval Headquarters Study";
-	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].image = "Inside_Residence2";
 
 	//Town sack
 	Locations[n].townsack = "St John's";
@@ -638,7 +638,7 @@ void LocationInitAntigua(ref n)
 	Locations[n].id = "Antigua_mansion_bedroom";
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 
 	Locations[n].townsack = "St John's"; // KK
 	Locations[n].fastreload = "Antigua"; // KK
@@ -673,7 +673,7 @@ void LocationInitAntigua(ref n)
 	Locations[n].id = "Antigua_mansion_bedroom2";
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 
 	Locations[n].townsack = "St John's"; // KK
 	Locations[n].fastreload = "Antigua"; // KK
@@ -711,7 +711,7 @@ void LocationInitAntigua(ref n)
 
 	Locations[n].id = "Antigua_outskirts";
 	locations[n].id.label = "Antigua";
-	Locations[n].image = "Town_Douwesen_Exit.tga";
+	Locations[n].image = "Town_Douwesen_Exit";
 
 
 	Locations[n].fastreload = "Antigua"; // KK
@@ -807,7 +807,7 @@ void LocationInitAntigua(ref n)
 
 	Locations[n].id = "Antigua_Tavern"; // KK
 	locations[n].id.label = "#stown_name# tavern";		// ccc oct06
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	locations[n].townsack = "Antigua"; // KK
 	locations[n].fastreload = "Antigua"; // KK
@@ -854,7 +854,7 @@ void LocationInitAntigua(ref n)
 
 	Locations[n].id = "Antigua_Tavern_upstairs";
 	Locations[n].id.label = "Room in #stown_name# tavern.";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	locations[n].townsack = "Antigua";
 	locations[n].fastreload = "Antigua";
@@ -893,7 +893,7 @@ void LocationInitAntigua(ref n)
 	//outskirt hut -------------------------------------------------
 
 	Locations[n].id = "Antigua_house4";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Sound
 	locations[n].type = "house";
@@ -947,7 +947,7 @@ void LocationInitAntigua(ref n)
 	// ----------------- Antigua_Dungeon1 --------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1";
 	Locations[n].id = "Antigua_Dungeon1";
-	Locations[n].image = "Inside_Dungeon_1.tga";
+	Locations[n].image = "Inside_Dungeon_1";
 	Locations[n].monsters = "1";
 	locations[n].id.label = "Cellar";
 
@@ -995,7 +995,7 @@ void LocationInitAntigua(ref n)
 
 	Locations[n].id = "Antigua_Jungle_01";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_7.tga";
+	Locations[n].image = "Outside_Jungle_7";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1072,7 +1072,7 @@ void LocationInitAntigua(ref n)
 
 	Locations[n].id = "Antigua_Jungle_02";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_3.tga";
+	Locations[n].image = "Outside_Jungle_3";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1151,7 +1151,7 @@ void LocationInitAntigua(ref n)
 
 	Locations[n].id = "Antigua_Jungle_03";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].image = "Outside_Jungle_1";
 	//Sound
 	locations[n].type = "Jungle";
 
@@ -1215,7 +1215,7 @@ void LocationInitAntigua(ref n)
 	locations[n].id.label = "Muscetto Cove."; // KK
 	//locations[n].worldmap = "Muscetto Cove"; // KK
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "Outside_Shore_6.tga";
+	Locations[n].image = "Outside_Shore_6";
 	Locations[n].name = "Muscetto Cove";
 	//Sound
 	locations[n].type = "seashore";

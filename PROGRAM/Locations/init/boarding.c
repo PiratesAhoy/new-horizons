@@ -8,7 +8,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\udeck";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -34,7 +34,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
-	Locations[n].image = "deck_hold.tga";
+	Locations[n].image = "deck_hold";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -62,7 +62,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\udeck";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -86,7 +86,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\udeck1";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -115,7 +115,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\udeck2";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -144,7 +144,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckLow";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -171,7 +171,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckMedium";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -197,7 +197,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBig";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -223,7 +223,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBP";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -249,7 +249,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckLowVSMedium";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -276,7 +276,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckLowVSBig";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -303,7 +303,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckMediumVSBig";
-	Locations[n].image = "Boarding.tga";
+	Locations[n].image = "Boarding";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -329,7 +329,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck2";
-	Locations[n].image = "deck_deck2.tga";
+	Locations[n].image = "deck_deck2";
 	//Sound
 	Locations[n].type = "deck";
 	//Models
@@ -355,7 +355,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck1";
-	Locations[n].image = "deck_deck1.tga";
+	Locations[n].image = "deck_deck1";
 	//Sound
 	Locations[n].type = "deck";
 	//Models
@@ -381,7 +381,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck1";
-	Locations[n].image = "deck_deck1.tga";
+	Locations[n].image = "deck_deck1";
 	//Sound
 	Locations[n].type = "deck";
 	//Models
@@ -407,7 +407,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
-	Locations[n].image = "deck_hold.tga";
+	Locations[n].image = "deck_hold";
 	//Sound
 	Locations[n].type = "deck";
 	//Models
@@ -437,7 +437,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capsm"; // KK
-	Locations[n].image = "deck_capsm.tga";
+	Locations[n].image = "deck_capsm";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -470,7 +470,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capmd"; // KK
-	Locations[n].image = "deck_capmd.tga";
+	Locations[n].image = "deck_capmd";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -504,7 +504,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cap"; // KK
-	Locations[n].image = "deck_cap.tga";
+	Locations[n].image = "deck_cap";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -538,7 +538,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\Cabin01"; // KK
-	Locations[n].image = "deck_cabin1.tga";
+	Locations[n].image = "deck_cabin1";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -569,7 +569,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\Cabin02"; // KK
-	Locations[n].image = "deck_cabin2.tga";
+	Locations[n].image = "deck_cabin2";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -600,7 +600,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\Cabin03"; // KK
-	Locations[n].image = "deck_cabin1.tga";
+	Locations[n].image = "deck_cabin1";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -631,7 +631,7 @@ void LocationInitBoarding(ref n)
 	Locations[n].id.label = "Boarding deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\Cabin01"; // KK
-	Locations[n].image = "deck_cabin1.tga";
+	Locations[n].image = "deck_cabin1";
 	//Sound
 	Locations[n].type = "deck";
 
@@ -668,7 +668,7 @@ void LocationInitBoarding(ref n)
 	locations[n].id.label = "Fort inside";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "deck";
 	//Models

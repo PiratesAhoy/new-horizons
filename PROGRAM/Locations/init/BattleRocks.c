@@ -6,7 +6,7 @@ void LocationInitBattleRocks(ref n)
 	Locations[n].id = "Devil_Creek";
 	locations[n].id.label = "Devil Creek"; 
 	locations[n].worldmap = "Battle Rocks";
-	Locations[n].image = "Outside_Shore_4.tga";
+	Locations[n].image = "Outside_Shore_4";
 	Locations[n].name = "Devil Creek";
 	//Sound
 	locations[n].type = "seashore";
@@ -70,7 +70,7 @@ void LocationInitBattleRocks(ref n)
 
 	Locations[n].id = "Battle_Rocks_Jungle_01";
 	locations[n].id.label = "Mine.";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "jungle";
 	locations[n].ambush = true;
@@ -138,7 +138,7 @@ void LocationInitBattleRocks(ref n)
 
 	Locations[n].id = "Battle_Rocks_Jungle_02";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle2.tga";
+	Locations[n].image = "Outside_Jungle2";
 	//Sound
 	locations[n].type = "jungle";
 	locations[n].ambush = true;
@@ -210,7 +210,7 @@ void LocationInitBattleRocks(ref n)
 	Locations[n].id = "Battle_Rocks_Jungle_04";
 	locations[n].id.label = "Jungle";
 	Locations[n].filespath.models = "locations\Outside\jungle_8"; 
-	Locations[n].image = "Outside_Jungle_8.tga";
+	Locations[n].image = "Outside_Jungle_8";
  	//Sound
 	locations[n].type = "jungle";
 	locations[n].ambush = true;
@@ -273,7 +273,7 @@ void LocationInitBattleRocks(ref n)
 
 	Locations[n].id = "Spanish_Camp";
 	locations[n].id.label = "Spanish Camp";
-	Locations[n].image = "Outside_Jungle3_Camp.tga";
+	Locations[n].image = "Outside_Jungle3_Camp";
 
 	//Town sack
 	Locations[n].townsack = "Spanish Camp"; 
@@ -356,7 +356,7 @@ void LocationInitBattleRocks(ref n)
 
 	Locations[n].id = "Battle_Rocks_Jungle_05";
 	locations[n].id.label = "Jungle";		
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "jungle";
 
@@ -418,7 +418,7 @@ void LocationInitBattleRocks(ref n)
 	Locations[n].id = "Battle_Rocks_Jungle_03";
 	locations[n].id.label = "Jungle";
 	Locations[n].filespath.models = "locations\Outside\jungle5"; 
-	Locations[n].image = "Outside_Jungle5.tga";
+	Locations[n].image = "Outside_Jungle5";
  	//Sound
 	locations[n].type = "jungle";
 	locations[n].ambush = true;
@@ -493,7 +493,7 @@ void LocationInitBattleRocks(ref n)
 
 	Locations[n].id = "Battle_Rocks_port";
 	locations[n].id.label = "Battle Rocks port"; 
-	Locations[n].image = "Outside_Shore_2.tga";
+	Locations[n].image = "Outside_Shore_2";
 	Locations[n].name = "Battle Rocks port";
 	//Sound
 	locations[n].type = "seashore";
@@ -547,7 +547,7 @@ void LocationInitBattleRocks(ref n)
 
 	Locations[n].id = "Battle_Rocks_mine";
 	locations[n].id.label = "Battle Rocks mine";
-	Locations[n].image = "Inside_Mine.tga";
+	Locations[n].image = "Inside_Mine";
 
 	//Sound
 	locations[n].type = "cave";

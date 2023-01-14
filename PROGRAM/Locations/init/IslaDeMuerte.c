@@ -5,7 +5,7 @@ void LocationInitIslaDeMuerte(ref n)
 	locations[n].id.label = "Deserted shore";
 	locations[n].worldmap = "IslaDeMuerte";
 	Locations[n].name = "Deserted shore";
-	Locations[n].image = "Outside_Shore_7.tga";
+	Locations[n].image = "Outside_Shore_7";
 	locations[n].filespath.models = "locations\Outside\Shore_7";
 
 	//Sound
@@ -59,7 +59,7 @@ void LocationInitIslaDeMuerte(ref n)
 	//  -------------------------------------------------
 	Locations[n].id = "Grotto";
 	locations[n].id.label = "Cave";
-	Locations[n].image = "Outside_Grotto.tga";
+	Locations[n].image = "Outside_Grotto";
 	locations[n].filespath.models = "locations\Outside\Grotto";
 
 	//Sound
@@ -131,7 +131,7 @@ void LocationInitIslaDeMuerte(ref n)
 
 	Locations[n].id = "IslaDeMuerte_shore_02";
 	locations[n].id.label = "Dead Man's Bay";
-	Locations[n].image = "Outside_Shore_Ship.tga";
+	Locations[n].image = "Outside_Shore_Ship";
 	//Sound
 	locations[n].type = "treasure_cave";
 
@@ -215,7 +215,7 @@ void LocationInitIslaDeMuerte(ref n)
 	locations[n].id = "IslaDeMuerte_Cabin";
 	locations[n].id.label = "Captain's Cabin";
 	locations[n].filespath.models = "locations\Inside\ShipyardPirates";
-	locations[n].image = "Inside_ShipyardPirates.tga";
+	locations[n].image = "Inside_ShipyardPirates";
 
 	//Town sack
 	Locations[n].townsack = "Redmond"; // PB: Otherwise Vanderdecken doesn't sell ships
@@ -263,7 +263,7 @@ void LocationInitIslaDeMuerte(ref n)
 
 	Locations[n].id = "IslaDeMuerte_Cavern_1";
 	locations[n].id.label = "Cavern";
-	Locations[n].image = "Inside_Cavern.tga";
+	Locations[n].image = "Inside_Cavern";
 
 	//Sound
 	locations[n].type = "treasure_cave";
@@ -340,7 +340,7 @@ void LocationInitIslaDeMuerte(ref n)
 
 	Locations[n].id = "IslaDeMuerte_Cavern_2";
 	locations[n].id.label = "Cavern";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 
 	//Sound
 	locations[n].type = "treasure_cave";
@@ -385,7 +385,7 @@ void LocationInitIslaDeMuerte(ref n)
     Locations[n].id = "IslaDeMuerte_shore_03";
 	locations[n].id.label = "Witch's Rock";
 	Locations[n].filespath.models = "locations\Outside\Shore_3";
-	Locations[n].image = "Outside_Shore_3.tga";
+	Locations[n].image = "Outside_Shore_3";
 	Locations[n].name = "Witch's Rock";
 
  	//Sound

@@ -3,7 +3,7 @@ void LocationInitQuebradasCostillas(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\town_QC\port";
-	Locations[n].image = "Town_QC_Port.tga";
+	Locations[n].image = "Town_QC_Port";
 
 	Locations[n].id = "QC_port";
 	locations[n].id.label = "#stown_name# port."; // KK
@@ -85,7 +85,7 @@ void LocationInitQuebradasCostillas(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\town_QC\town";
-	Locations[n].image = "Town_QC_Town.tga";
+	Locations[n].image = "Town_QC_Town";
 
 	Locations[n].id = "QC_town";
 	locations[n].id.label = "#stown_name#";
@@ -270,7 +270,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_town_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Town_QC_Exit.tga";
+	Locations[n].image = "Town_QC_Exit";
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas"; // KK
 	//Sound
@@ -376,7 +376,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_residence";
 	locations[n].id.label = "House of leader #stown_name# pirates";
-	Locations[n].image = "Inside_PirateResidence.tga";
+	Locations[n].image = "Inside_PirateResidence";
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas"; // NK - "Oxbay";
 	//Sound
@@ -415,7 +415,7 @@ void LocationInitQuebradasCostillas(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "QC_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -461,7 +461,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard2.tga";
+	Locations[n].image = "Inside_Shipyard2";
 
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas"; // NK - "Oxbay";
@@ -521,7 +521,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_UsurerHouse";
 	locations[n].id.label = "Loanshark's Office.";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas"; // NK - "Oxbay";
 	//Sound
@@ -563,7 +563,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_Tavern";
 	locations[n].id.label = "#stown_name# tavern";
-	Locations[n].image = "Inside_SmallTavern.tga";
+	Locations[n].image = "Inside_SmallTavern";
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas"; // NK - "Oxbay";
 	//Sound
@@ -612,7 +612,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga"; // ccc: Skip VC in room
+	Locations[n].image = "Inside_Doubleflour_House_Room"; // ccc: Skip VC in room
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas"; // NK - "Oxbay";
 	//Sound
@@ -655,7 +655,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_Pirate_house";
 	locations[n].id.label = "Entrance to strange house";
-	Locations[n].image = "Outside_Pirate_Outer_location.tga";
+	Locations[n].image = "Outside_Pirate_Outer_location";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -716,7 +716,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_Pirate_house_inside";
 	locations[n].id.label = "Inside strange house";
-	Locations[n].image = "Inside_Pirate_House.tga";
+	Locations[n].image = "Inside_Pirate_House";
 	//Sound
 	locations[n].type = "house";
 	//Models
@@ -752,7 +752,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].filespath.models = "locations\Inside\Smallhome";
 	Locations[n].id = "QC_HouseInsideR4";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas"; // NK
@@ -819,7 +819,7 @@ void LocationInitQuebradasCostillas(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "QC_HouseInsideR9";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Doubleflour_House_Upper.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Upper";
 
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas"; // NK
@@ -870,7 +870,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	//Models
 	locations[n].filespath.models = "locations\Town_Charlestown";
-	locations[n].image = "Town_Charlestown.tga";
+	locations[n].image = "Town_Charlestown";
 
 	Locations[n].models.always.locators = "Charlestown_l";
 
@@ -1242,7 +1242,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].id = "Charlestown_prison";
 	locations[n].id.label = "Prison";
 	Locations[n].filespath.models = "locations\inside\prison";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1282,7 +1282,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "Charlestown_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard3.tga";
+	Locations[n].image = "Inside_Shipyard3";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1324,7 +1324,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].id = "Charlestown_Residence";
 	Locations[n].filespath.models = "locations\inside\shipyard2";
 	locations[n].id.label = "Townhall";
-	Locations[n].image = "Inside_Shipyard2_Townhall.tga";
+	Locations[n].image = "Inside_Shipyard2_Townhall";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1367,7 +1367,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "Charlestown_Tavern";
 	locations[n].id.label = "Tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1415,7 +1415,7 @@ void LocationInitQuebradasCostillas(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Charlestown_tavern_upstairs";
 	locations[n].id.label = "Room in tavern"; // KK
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1456,7 +1456,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].id = "Charlestown_Store";
 	locations[n].id.label = "#stown_name# store";
 	Locations[n].filespath.models = "locations\inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1509,7 +1509,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].id = "Charlestown_House_01";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1549,7 +1549,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].filespath.models = "locations\Inside\MediumHouse";
 	Locations[n].id = "Charlestown_House_02";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1589,7 +1589,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].id = "Charlestown_House_03";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh9";
-	Locations[n].image = "Inside_mh9.tga";
+	Locations[n].image = "Inside_mh9";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1631,7 +1631,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].id = "Mystery_House";
 	locations[n].id.label = "Mystery House";
 	Locations[n].filespath.models = "locations\inside\StoreHouse";
-	Locations[n].image = "Inside_Storehouse.tga";
+	Locations[n].image = "Inside_Storehouse";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1675,7 +1675,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].id = "Back_Room";
 	locations[n].id.label = "Back Room";
 	Locations[n].filespath.models = "locations\inside\shipyard2";
-	Locations[n].image = "Inside_Shipyard2.tga";
+	Locations[n].image = "Inside_Shipyard2";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1725,7 +1725,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].id = "Town_Tunnel";
 	locations[n].id.label = "Cellar";
 	Locations[n].filespath.models = "locations\Inside\Cellar_downstairs";
-	Locations[n].image = "Inside_Cellar_downstairs.tga";
+	Locations[n].image = "Inside_Cellar_downstairs";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1774,7 +1774,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].id = "Tunnel";
 	locations[n].id.label = "Beach Tunnel";
 	Locations[n].filespath.models = "locations\Inside\Mine";
-	Locations[n].image = "Inside_Mine.tga";
+	Locations[n].image = "Inside_Mine";
 
 	//Town sack
 	Locations[n].townsack = "Charlestown";
@@ -1812,7 +1812,7 @@ void LocationInitQuebradasCostillas(ref n)
 //SJG-------------------------------------------------
 	Locations[n].id = "Pirate_Entrance";
 	locations[n].id.label = "Pirate Entrance";
-	Locations[n].image = "Inside_ShipyardPirates.tga";
+	Locations[n].image = "Inside_ShipyardPirates";
 	Locations[n].filespath.models = "locations\Inside\ShipyardPirates";
 
 	//Town sack
@@ -1856,7 +1856,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "Special_House";
 	locations[n].id.label = "Pirate House";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas";
 	//Sound
@@ -1903,7 +1903,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].id.label = "White Bay"; // KK
 	locations[n].worldmap = "QC_Shore1";
 	Locations[n].filespath.models = "locations\Outside\Shore_7";
-	Locations[n].image = "Outside_Shore_7.tga";
+	Locations[n].image = "Outside_Shore_7";
 	Locations[n].name = "White Bay";
 	//Sound
 	locations[n].type = "seashore";
@@ -1963,7 +1963,7 @@ void LocationInitQuebradasCostillas(ref n)
     Locations[n].id = "QC_jungle_01";
 	locations[n].id.label = "Jungle";
 	Locations[n].filespath.models = "locations\Outside\jungle_8";
-	Locations[n].image = "Outside_Jungle_8.tga";
+	Locations[n].image = "Outside_Jungle_8";
  	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -2029,7 +2029,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_Jungle_03";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].image = "Outside_Jungle_1";
 	//Sound
 	locations[n].type = "jungle";
 
@@ -2098,7 +2098,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_Jungle_2";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_3.tga";
+	Locations[n].image = "Outside_Jungle_3";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -2178,7 +2178,7 @@ void LocationInitQuebradasCostillas(ref n)
 
 	Locations[n].id = "QC_Jungle_04";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);

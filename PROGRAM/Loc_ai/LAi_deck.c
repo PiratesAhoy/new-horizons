@@ -80,7 +80,7 @@ void Return2SeaAfterDeck()
 	}
 	//Создаём фейдер и запускаем
 	CreateEntity(&boarding_fader, "fader");
-	SetReloadImage(&boarding_fader, "sea.tga");
+	SetReloadImage(&boarding_fader, "sea");
 
 	float fadeOutTime = RELOAD_TIME_FADE_OUT;
 
@@ -1210,7 +1210,7 @@ void Land_DeckStartNow(int chridx, string deckname)
 	{
 		LAi_QuestDelay("gunner_ammo", 1.0);
 
-		SetReloadImage(&boarding_fader, "Landing.tga");
+		SetReloadImage(&boarding_fader, "Landing");
 	} else {
 		if (CheckAttribute(Locations[FindLocation(deckID)], "image")) SetReloadImage(&boarding_fader, Locations[FindLocation(DeckID)].image);
 	}
@@ -1366,7 +1366,7 @@ void SetUpCabin(ref chr)
 			Locations[locID].models.always.window = "";
 	} else {
 		Locations[locID].filespath.models = "locations\decks\cabin\tut_deck";
-		Locations[locID].image = "Cabin.tga";
+		Locations[locID].image = "Cabin";
 		Locations[locID].models.always.locators = "tut_Deck_ld";
 		Locations[locID].models.always.l1 = "tut_Deck";
 		Locations[locID].models.always.l2 = "cabinchest";		//JRH

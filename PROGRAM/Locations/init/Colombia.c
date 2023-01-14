@@ -4,7 +4,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Residence_Cartagena";
 	locations[n].id.label = "Residence.";
 	locations[n].worldmap = "Cartagena";
-	Locations[n].image = "Town_Cartagena_Residence.tga";
+	Locations[n].image = "Town_Cartagena_Residence";
 	Locations[n].vcskip = true;
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -105,7 +105,7 @@ void LocationInitColombia(ref n)
 // -----------------------------------------------------------------
 	Locations[n].filespath.models = "locations\Town_Cartagena\Port";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Cartagena_Port.tga";
+	Locations[n].image = "Town_Cartagena_Port";
 
 	Locations[n].id = "Cartagena_port";
 	LAi_LocationFantomsGen(&locations[n], true);
@@ -195,7 +195,7 @@ void LocationInitColombia(ref n)
 // -----------------------------------------------------------------
 	Locations[n].filespath.models = "locations\Town_Cartagena\Port";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Cartagena_Port.tga";
+	Locations[n].image = "Town_Cartagena_Port";
 
 	Locations[n].id = "Cartagena_PortB";//location only for climbing ship
 	locations[n].id.label = "Cartagena port."; // KK
@@ -248,7 +248,7 @@ void LocationInitColombia(ref n)
 	// Cartagena_town_01 -------------------------------------------------
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_01";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Redmond_Town_01_Cartagena.tga";
+	Locations[n].image = "Town_Redmond_Town_01_Cartagena";
 
 	Locations[n].id = "Cartagena_town_01";
 	locations[n].id.label = "#stown_name# town";
@@ -379,7 +379,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena_town_02";
 	locations[n].id.label = "#stown_name# town.";
 	locations[n].worldmap = "Cartagena";
-	Locations[n].image = "Town_FalaiseDeFleur_town_01_Spain.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_town_01_Spain";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -456,7 +456,7 @@ void LocationInitColombia(ref n)
 // -----------------------------------------------------------------
 	Locations[n].filespath.models = "locations\Town_Cartagena\Port";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Cartagena_Fort.tga";
+	Locations[n].image = "Town_Cartagena_Fort";
 
 	Locations[n].id = "Cartagena_fort";
 	locations[n].id.label = "Cartagena fort."; // KK
@@ -502,7 +502,7 @@ void LocationInitColombia(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Town_Cartagena\Cloister_exit";
-	Locations[n].image = "Town_Cartagena_Cloister_Inside.tga";
+	Locations[n].image = "Town_Cartagena_Cloister_Inside";
 
 	Locations[n].vcskip = true;
 
@@ -597,7 +597,7 @@ void LocationInitColombia(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Town_Cartagena\Cloister_exit";
-	Locations[n].image = "Town_Cartagena_Cloister_Outside.tga";
+	Locations[n].image = "Town_Cartagena_Cloister_Outside";
 
 	Locations[n].vcskip = true;
 
@@ -787,7 +787,7 @@ void LocationInitColombia(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Town_Cartagena\Palace";
-	Locations[n].image = "Town_Cartagena_Palace.tga";
+	Locations[n].image = "Town_Cartagena_Palace";
 
 //	Locations[n].vcskip = true;
 
@@ -848,7 +848,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Tunel";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-	Locations[n].image = "Town_Cartagena_Tunnel.tga";
+	Locations[n].image = "Town_Cartagena_Tunnel";
 	locations[n].type = "military";
 	locations[n].id.label = "Fort Tunnel";
 	//Models
@@ -899,7 +899,7 @@ void LocationInitColombia(ref n)
 
 	locations[n].id = "inside_Cartagena_Fort";
 	locations[n].id.label = "Cartagena Fort";
-	Locations[n].image = "inside_San_Felipe.tga";
+	Locations[n].image = "inside_San_Felipe";
 	//Town sack
 	locations[n].townsack = "Cartagena";
 	//Sound
@@ -946,7 +946,7 @@ void LocationInitColombia(ref n)
 	//-------------------------------------------------
 	Locations[n].id = "Admiral_Office";
 	locations[n].id.label = "Admiral's Office";
-	Locations[n].image = "Town_Havana_Townhall.tga";
+	Locations[n].image = "Town_Havana_Townhall";
 	Locations[n].filespath.models = "locations\Inside\Residence2_admiral";
 	//Locations[n].filespath.textures = "locations\inside\admiral_office";
 
@@ -1043,7 +1043,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].id = "Governor_Daughter_House";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Residence3.tga";
+	Locations[n].image = "Inside_Residence3";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1096,7 +1096,7 @@ void LocationInitColombia(ref n)
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
 	Locations[n].filespath.textures = "locations\inside\wr_bedroom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 	//Town sack
 	Locations[n].townsack = "Cartagena";
 	//Sound
@@ -1133,7 +1133,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena_Townhall";
 	locations[n].id.label = "#stown_name# townhall";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga";
+	Locations[n].image = "Inside_Residence_BackHall";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1172,7 +1172,7 @@ void LocationInitColombia(ref n)
 
  	//-------------------------------------------------
 	Locations[n].filespath.models = "locations\Town_Cartagena\town";
-	Locations[n].image = "Town_Cartagena_Town.tga";
+	Locations[n].image = "Town_Cartagena_Town";
 
 	Locations[n].id = "Cartagena_Center";
 	locations[n].id.label = "#stown_name# town";
@@ -1325,7 +1325,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena_tavern";
 	locations[n].id.label = "#stown_name# tavern";	
 	Locations[n].filespath.models = "locations\inside\Tavern_2";
-	Locations[n].image = "Inside_Tavern_2.tga";
+	Locations[n].image = "Inside_Tavern_2";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1370,7 +1370,7 @@ void LocationInitColombia(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Cartagena_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1411,7 +1411,7 @@ void LocationInitColombia(ref n)
 	// Cartagena_church -------------------------------------------------
 	Locations[n].id = "Cartagena_church";
 	locations[n].id.label = "#stown_name# church";
-	Locations[n].image = "Inside_Church_3.tga";
+	Locations[n].image = "Inside_Church_3";
 	Locations[n].filespath.models = "locations\inside\Church_3";
 
 	//Town sack
@@ -1484,7 +1484,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena_church_stairs";
 	locations[n].id.label = "Secret passage";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
-	Locations[n].image = "secret_passage.tga";
+	Locations[n].image = "secret_passage";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1546,7 +1546,7 @@ void LocationInitColombia(ref n)
 	Locations[n].filespath.models = "locations\Inside\InquisitionCave";
 	Locations[n].id = "Cartagena_church_cave";
 	locations[n].id.label = "Inquisition Cave";			//label when opened
-	Locations[n].image = "inquisition_cave.tga";
+	Locations[n].image = "inquisition_cave";
 	//Sound
 	locations[n].type = "inquisition";
 
@@ -1609,7 +1609,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].id = "Cartagena_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard2.tga";
+	Locations[n].image = "Inside_Shipyard2";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1650,7 +1650,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena_store";
 	locations[n].id.label = "#stown_name# store";
 	Locations[n].filespath.models = "locations\inside\LargeStore";
-	Locations[n].image = "Inside_LargeStore.tga";
+	Locations[n].image = "Inside_LargeStore";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1692,7 +1692,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena_tavern2";
 	locations[n].id.label = "#stown_name# tavern";
 	Locations[n].filespath.models = "locations\inside\Largetavern";
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1741,7 +1741,7 @@ void LocationInitColombia(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Cartagena_upstairs2";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1784,7 +1784,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena_TailorsShop";
 
 	Locations[n].id.label = "Tailor's Shop";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1829,7 +1829,7 @@ void LocationInitColombia(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Cartagena_UsurerHouse";
 	locations[n].id.label = "Loanshark's Office.";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1878,7 +1878,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].id = "Cartagena_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Town_Cartagena_Exit.tga";
+	Locations[n].image = "Town_Cartagena_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -1969,7 +1969,7 @@ void LocationInitColombia(ref n)
 	locations[n].id.label = "Dolphin Sands."; // Pillat
 	locations[n].worldmap = "Colombia_shore";
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "Outside_Shore_6.tga";
+	Locations[n].image = "Outside_Shore_6";
 	Locations[n].name = "Dolphin Sands";
 	//Sound
 	locations[n].type = "seashore";
@@ -2027,7 +2027,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].id = "Cartagena Casino";
 	locations[n].id.label = "#stown_name# Gambling House";
-	Locations[n].image = "Casino.tga";
+	Locations[n].image = "Casino";
 	Locations[n].vcskip = true;
 
 	//Town sack
@@ -2103,7 +2103,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena Hotel";
 	locations[n].id.label = "Cartagena Hotel";
 	Locations[n].filespath.models = "locations\inside\flamhouse";
-	Locations[n].image = "Inside_Flamhouse.tga";
+	Locations[n].image = "Inside_Flamhouse";
 	Locations[n].vcskip = true;
 
 	//Town sack
@@ -2228,7 +2228,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena Hotel Pension";
 	locations[n].id.label = "Cartagena Hotel Pension";
 	Locations[n].filespath.models = "locations\inside\Tavern_Room";
-	Locations[n].image = "Inside_Tavern_Room.tga";
+	Locations[n].image = "Inside_Tavern_Room";
 	Locations[n].vcskip = true;
 
 	//Town sack
@@ -2272,7 +2272,7 @@ void LocationInitColombia(ref n)
 	locations[n].id.label = "Casa de Contratacion";
 	Locations[n].filespath.models = "locations\inside\residenceCdC";
 	Locations[n].filespath.textures = "locations\inside\Residence_CdC";
-	Locations[n].image = "Inside_Residenc_CdC.tga";
+	Locations[n].image = "Inside_Residenc_CdC";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -2315,7 +2315,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "Cartagena Mansion Town";
 	locations[n].id.label = "Mansion";
 	Locations[n].filespath.models = "locations\inside\Office";
-	Locations[n].image = "Mansion_Inside.tga";
+	Locations[n].image = "Mansion_Inside";
 	Locations[n].vcskip = true;
 
 	//Town sack
@@ -2357,7 +2357,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "House Grandma";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Smallhome";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 	Locations[n].vcskip = true;
 
 	//Town sack
@@ -2398,7 +2398,7 @@ void LocationInitColombia(ref n)
     //NEW CLOISTER
 
 	Locations[n].filespath.models = "locations\Town_Cartagena\New_cloister";
-	Locations[n].image = "Town_Cartagena_New_Cloister_Outside.tga";
+	Locations[n].image = "Town_Cartagena_New_Cloister_Outside";
 
 	Locations[n].vcskip = true;
 
@@ -2734,7 +2734,7 @@ void LocationInitColombia(ref n)
 	//------------------------------------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Town_Cartagena\New_cloister";
-	Locations[n].image = "Town_Cartagena_New_Cloister_Outside.tga";
+	Locations[n].image = "Town_Cartagena_New_Cloister_Outside";
 
 	Locations[n].vcskip = true;
 
@@ -3051,7 +3051,7 @@ void LocationInitColombia(ref n)
 	 //------------------------------------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Town_Cartagena\New_cloister";
-	Locations[n].image = "Town_Cartagena_New_Cloister_Inside.tga";
+	Locations[n].image = "Town_Cartagena_New_Cloister_Inside";
 
 	Locations[n].vcskip = true;
 
@@ -3188,7 +3188,7 @@ void LocationInitColombia(ref n)
 //--------------------------------------------------------------------------	
 
 	Locations[n].filespath.models = "locations\Inside\Crypt2_1";	
-	Locations[n].image = "wr_crypt2_1.tga";
+	Locations[n].image = "wr_crypt2_1";
 
 	Locations[n].id = "new_cloister_crypt2_1";
 	locations[n].id.label = "Crypt";
@@ -3231,7 +3231,7 @@ void LocationInitColombia(ref n)
 //--------------------------------------------------------------------------	
 
 	Locations[n].filespath.models = "locations\Inside\Crypt2_2";	
-	Locations[n].image = "wr_crypt2_2.tga";
+	Locations[n].image = "wr_crypt2_2";
 
 	Locations[n].id = "new_cloister_crypt2_2A";
 	locations[n].id.label = "Crypt";
@@ -3277,7 +3277,7 @@ void LocationInitColombia(ref n)
 	//--------------------------------------------------------------------------	
 
 	Locations[n].filespath.models = "locations\Inside\Crypt2_2";	
-	Locations[n].image = "wr_abbey_cell.tga";
+	Locations[n].image = "wr_abbey_cell";
 
 	Locations[n].id = "new_cloister_crypt2_2B";
 	locations[n].id.label = "Cell";
@@ -3319,7 +3319,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].id = "New_cloister_chapel";
 	locations[n].id.label = "Chapel";
-	Locations[n].image = "Inside_Church_2.tga";
+	Locations[n].image = "Inside_Church_2";
 	Locations[n].filespath.models = "locations\inside\Church_2\\";
 	
 	//Town sack
@@ -3360,7 +3360,7 @@ void LocationInitColombia(ref n)
 	Locations[n].id = "New_cloister_room";
 	locations[n].id.label = "Room";
 	Locations[n].filespath.models = "locations\inside\Tavern_room";
-	Locations[n].image = "Inside_Tavern_Room.tga";
+	Locations[n].image = "Inside_Tavern_Room";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -3401,7 +3401,7 @@ void LocationInitColombia(ref n)
 	locations[n].id.label = "Library";
 	Locations[n].filespath.models = "locations\inside\Dungeon_2\\";
 	Locations[n].filespath.textures = "locations\inside\Dungeon_2\library";
-	Locations[n].image = "Inside_Cloister_Library.tga";
+	Locations[n].image = "Inside_Cloister_Library";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
@@ -3467,7 +3467,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].id = "Colombia_Jungle_01";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle3.tga";
+	Locations[n].image = "Outside_Jungle3";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -3547,7 +3547,7 @@ void LocationInitColombia(ref n)
 
     	Locations[n].id = "Colombia_swamp";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Colombia_Swamp.tga";
+	Locations[n].image = "Outside_Colombia_Swamp";
 	//Sound
 	locations[n].type = "Jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -3633,7 +3633,7 @@ void LocationInitColombia(ref n)
 
     	Locations[n].id = "Colombia_Jungle_02";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle2.tga";
+	Locations[n].image = "Outside_Jungle2";
 	//Sound
 	locations[n].type = "Jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -3719,7 +3719,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].id = "Colombia_Jungle_03";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_7.tga";
+	Locations[n].image = "Outside_Jungle_7";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -3792,7 +3792,7 @@ void LocationInitColombia(ref n)
 
     	Locations[n].id = "Colombia_Jungle_04";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle2.tga";
+	Locations[n].image = "Outside_Jungle2";
 	//Sound
 	locations[n].type = "Jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -3873,7 +3873,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].id = "Colombia_Jungle_05";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_5.tga";
+	Locations[n].image = "Outside_Jungle_5";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -3957,7 +3957,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].id = "Colombian_Indian_Village";
 	locations[n].id.label = "Indian Village";
-	Locations[n].image = "Native_village.tga";
+	Locations[n].image = "Native_village";
 
 	//Town sack
 	Locations[n].townsack = "Cartagena"; // NK 04-08-29

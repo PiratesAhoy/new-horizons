@@ -6,7 +6,7 @@ void LocationInitRedmond(ref n)
 	locations[n].worldmap = "Redmond";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_01";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Redmond_Town_01.tga";
+	Locations[n].image = "Town_Redmond_Town_01";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -330,7 +330,7 @@ void LocationInitRedmond(ref n)
 	locations[n].worldmap = "Redmond";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_03";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Redmond_Town_03.tga";
+	Locations[n].image = "Town_Redmond_Town_03";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -484,7 +484,7 @@ void LocationInitRedmond(ref n)
 	locations[n].worldmap = "Redmond";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_04";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Redmond_Town_04.tga";
+	Locations[n].image = "Town_Redmond_Town_04";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -669,7 +669,7 @@ void LocationInitRedmond(ref n)
 	locations[n].worldmap = "Redmond";
 	Locations[n].filespath.models = "locations\Town_Redmond\Port";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Redmond_Port.tga";
+	Locations[n].image = "Town_Redmond_Port";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -774,7 +774,7 @@ void LocationInitRedmond(ref n)
 	locations[n].id.label = "Exit from #stown_name#";
 	Locations[n].filespath.models = "locations\Town_Redmond\REDexit1";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Redmond_Exit1.tga";
+	Locations[n].image = "Town_Redmond_Exit1";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -838,7 +838,7 @@ void LocationInitRedmond(ref n)
 	locations[n].id.label = "Exit from #stown_name#";
 	Locations[n].filespath.models = "locations\Town_Redmond\REDexit2";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Redmond_Exit2.tga";
+	Locations[n].image = "Town_Redmond_Exit2";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -926,7 +926,7 @@ void LocationInitRedmond(ref n)
 	locations[n].id.label = "Devil's Throat."; // KK
 	locations[n].worldmap = "RShore 1";
 	Locations[n].filespath.models = "locations\Outside\Shore_7";
-	Locations[n].image = "Outside_Shore_7.tga";
+	Locations[n].image = "Outside_Shore_7";
 	Locations[n].name = "Devil's Throat";
 	//Sound
 	locations[n].type = "seashore";
@@ -989,7 +989,7 @@ void LocationInitRedmond(ref n)
     Locations[n].id = "Redmond_jungle_01";
 	locations[n].id.label = "#sisland_name# jungles";
 	Locations[n].filespath.models = "locations\Outside\jungle_8";
-	Locations[n].image = "Outside_Jungle_8.tga";
+	Locations[n].image = "Outside_Jungle_8";
  	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1056,7 +1056,7 @@ void LocationInitRedmond(ref n)
 	locations[n].id.label = "Rocky Shore."; // KK
 	locations[n].worldmap = "RShore 2";
 	Locations[n].filespath.models = "locations\Outside\Shore_3";
-	Locations[n].image = "Outside_Shore_3.tga";
+	Locations[n].image = "Outside_Shore_3";
 	Locations[n].name = "Rocky Shore";
  	//Sound
 	locations[n].type = "seashore";
@@ -1135,7 +1135,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_tavern";
 	locations[n].id.label = "#stown_name# tavern";
 	Locations[n].filespath.models = "locations\inside\Largetavern";
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1204,7 +1204,7 @@ void LocationInitRedmond(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Redmond_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1246,7 +1246,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_store";
 	locations[n].id.label = "#stown_name# store";
 	Locations[n].filespath.models = "locations\inside\MediumStore";
-	Locations[n].image = "Inside_MediumStore.tga";
+	Locations[n].image = "Inside_MediumStore";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1289,7 +1289,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_UsurerHouse";
 	locations[n].id.label = "Loanshark's Office";
 	Locations[n].filespath.models = "locations\inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1387,7 +1387,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_Shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
 	Locations[n].filespath.models = "locations\inside\Shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga";
+	Locations[n].image = "Inside_Shipyard1";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1475,7 +1475,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_Residence";
 	locations[n].id.label = "#stown_name# townhall";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga";
+	Locations[n].image = "Inside_Residence_BackHall";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1517,7 +1517,7 @@ void LocationInitRedmond(ref n)
 // SJG ---> British Naval HQ 5/30/2009
 	Locations[n].id = "Redmond Naval HQ";
 	locations[n].id.label = "#stown_name# Naval HQ";
-	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].image = "Inside_Residence2";
 	Locations[n].filespath.models = "locations\inside\Residence2";
 
 	Locations[n].vcskip = true;
@@ -1569,7 +1569,7 @@ void LocationInitRedmond(ref n)
 
 	Locations[n].id = "Head_of_Jamaica_Station";
 	locations[n].id.label = "Officer Commanding #stown_name# Naval HQ";
-	Locations[n].image = "Inside_Residence4.tga";
+	Locations[n].image = "Inside_Residence4";
 
 	Locations[n].vcskip = true;
 
@@ -1612,7 +1612,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_prison";
 	locations[n].id.label = "#stown_name# prison";
 	Locations[n].filespath.models = "locations\inside\prison";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1653,7 +1653,7 @@ void LocationInitRedmond(ref n)
 	// Redmond_church -------------------------------------------------
 	Locations[n].id = "Redmond_church";
 	locations[n].id.label = "#stown_name# church";
-	Locations[n].image = "Inside_Church_inside.tga";
+	Locations[n].image = "Inside_Church_inside";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1711,7 +1711,7 @@ void LocationInitRedmond(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Redmond_TailorsShop";
 	Locations[n].id.label = "Tailor's Shop.";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1755,7 +1755,7 @@ void LocationInitRedmond(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Redmond_HouseInsideR1";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh6.tga";
+	Locations[n].image = "Inside_mh6";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1798,7 +1798,7 @@ void LocationInitRedmond(ref n)
 		// -------------------------------------------------
 	Locations[n].id = "Redmond_HouseInsideR2";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1840,7 +1840,7 @@ void LocationInitRedmond(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Redmond_HouseInsideR4";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh8.tga";
+	Locations[n].image = "Inside_mh8";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1886,7 +1886,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR1(03)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\MediumHouse";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1927,7 +1927,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR11(03)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh7";
-	Locations[n].image = "Inside_mh7.tga";
+	Locations[n].image = "Inside_mh7";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1970,7 +1970,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR12";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\MediumHouse";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2013,7 +2013,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR7(01)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh9";
-	Locations[n].image = "Inside_mh9.tga";
+	Locations[n].image = "Inside_mh9";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2058,7 +2058,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR3(01)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh10";
-	Locations[n].image = "Inside_mh10.tga";
+	Locations[n].image = "Inside_mh10";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2103,7 +2103,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR1(01)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh5";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2148,7 +2148,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR5(01)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2190,7 +2190,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR4(02)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh10";
-	Locations[n].image = "Inside_mh10.tga";
+	Locations[n].image = "Inside_mh10";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2231,7 +2231,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR3(02)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh7";
-	Locations[n].image = "Inside_mh7.tga";
+	Locations[n].image = "Inside_mh7";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2273,7 +2273,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR2(02)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh9";
-	Locations[n].image = "Inside_mh9.tga";
+	Locations[n].image = "Inside_mh9";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2314,7 +2314,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_HouseInsideR7(02)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Smallhome";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2356,7 +2356,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].id = "Redmond_Dungeon_2";
 	locations[n].id.label = "Dungeon";
 	Locations[n].filespath.models = "locations\inside\Dungeon_2";
-	Locations[n].image = "Inside_Dungeon_2.tga";
+	Locations[n].image = "Inside_Dungeon_2";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2399,7 +2399,7 @@ void LocationInitRedmond(ref n)
 	locations[n].id.label = "Head port house";
 	//Sound
 	Locations[n].filespath.models = "locations\inside\mh5";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2439,7 +2439,7 @@ void LocationInitRedmond(ref n)
 	//-------------------------------------------------------------------
 	Locations[n].id = "EITC_Office";
 	locations[n].id.label = "Office";
-	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].image = "Inside_Residence2";
 	Locations[n].filespath.models = "locations\inside\Residence2";
 
 	//Town sack

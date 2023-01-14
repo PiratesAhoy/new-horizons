@@ -115,7 +115,7 @@ void wdmCreateMap(float dx, float dz, float ay)
 		CreateEntity(&wdm_fader, "fader");
 		if (IsEntity(&wdm_fader)) {	
 			SendMessage(&wdm_fader, "lfl", FADER_IN, fadeInTime, true);
-			SetReloadImage(&wdm_fader, "sea.tga");
+			SetReloadImage(&wdm_fader, "sea");
 		} else {
 			trace("Fader not created!!!");
 		}

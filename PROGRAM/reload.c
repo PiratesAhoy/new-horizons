@@ -571,6 +571,7 @@ string FindReloadPicture(string fname)
 	result = FindReloadTextureName(fname, "RESOURCE\Textures\INTERFACES\BACKGROUND");
 	if (result != "") return result;
 
+	Trace("Could not find reload texture for '" + fname + "'");
 	return "";
 }
 

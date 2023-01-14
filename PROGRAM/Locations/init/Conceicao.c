@@ -6,7 +6,7 @@ void LocationInitConceicao(ref n)
 	locations[n].id.label = "#stown_name# Port";
 	Locations[n].id = "Conceicao_port";
 	locations[n].worldmap = "Conceicao";
-	Locations[n].image = "Town_Conceicao_Port.tga";
+	Locations[n].image = "Town_Conceicao_Port";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -75,7 +75,7 @@ void LocationInitConceicao(ref n)
 	Locations[n].id = "Conceicao_town";
 	locations[n].id.label = "#stown_name# town";
 	locations[n].worldmap = "Conceicao";
-	Locations[n].image = "Town_Conceicao_Town.tga";
+	Locations[n].image = "Town_Conceicao_Town";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -216,7 +216,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Conceicao_townhall";
 	locations[n].id.label = "#stown_name# townhall";
-	Locations[n].image = "Inside_Residence5.tga";
+	Locations[n].image = "Inside_Residence5";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -262,7 +262,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Conceicao_town_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Town_Conceicao_Exit.tga";
+	Locations[n].image = "Town_Conceicao_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -325,7 +325,7 @@ void LocationInitConceicao(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\MediumStore";
-	Locations[n].image = "Inside_MediumStore.tga";
+	Locations[n].image = "Inside_MediumStore";
 
 	Locations[n].id = "Conceicao_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -374,7 +374,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Conceicao_Shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard3.tga";
+	Locations[n].image = "Inside_Shipyard3";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -420,7 +420,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Conceicao_Tavern";
 	locations[n].id.label = "#stown_name# Tavern";
-	Locations[n].image = "Inside_SmallTavern.tga";
+	Locations[n].image = "Inside_SmallTavern";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -469,7 +469,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Conceicao_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -511,7 +511,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Conceicao_UsurerHouse";
 	locations[n].id.label = "Loanshark's Office.";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -555,7 +555,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Conceicao_Jungle_01";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -639,7 +639,7 @@ void LocationInitConceicao(ref n)
 	Locations[n].id = "Conceicao_shore_01";
 	locations[n].id.label = "Sunny Haven."; // KK
 	locations[n].worldmap = "CShore 1";
-	Locations[n].image = "Outside_Shore_8.tga";
+	Locations[n].image = "Outside_Shore_8";
 	Locations[n].name = "Sunny Haven";
 	//Sound
 	locations[n].type = "seashore";
@@ -706,7 +706,7 @@ void LocationInitConceicao(ref n)
 	Locations[n].id = "Conceicao_shore_02";
 	locations[n].id.label = "Leviathan Rock."; // KK
 	locations[n].worldmap = "CShore 2";
-	Locations[n].image = "Outside_Shore_4.tga";
+	Locations[n].image = "Outside_Shore_4";
 	Locations[n].name = "Leviathan Rock";
 	//Sound
 	locations[n].type = "seashore";
@@ -791,7 +791,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Smugglers_lair_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Smuggler_Lair_Exit.tga";
+	Locations[n].image = "Smuggler_Lair_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Smugglers Lair"; // NK 04-08-29
@@ -870,7 +870,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Smugglers_Lair";
 	locations[n].id.label = "#stown_name#";
-	Locations[n].image = "Smuggler_Lair_Town.tga";
+	Locations[n].image = "Smuggler_Lair_Town";
 
 	//Town sack
 	Locations[n].townsack = "Smugglers Lair"; // NK 04-08-29
@@ -959,7 +959,7 @@ void LocationInitConceicao(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "Smugglers_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -1011,7 +1011,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Smugglers_Tavern";
 	locations[n].id.label = "Smugglers Tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Smugglers Lair"; // NK 04-08-29
@@ -1072,7 +1072,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Smugglers_residence";
 	locations[n].id.label = "House of Leader of smugglers";
-	Locations[n].image = "Inside_MediumHouse2.tga";
+	Locations[n].image = "Inside_MediumHouse2";
 
 	//Town sack
 	Locations[n].townsack = "Smugglers Lair"; // NK 04-08-29
@@ -1116,7 +1116,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Rheims_house_in_smugglers";
 	locations[n].id.label = "Rheims house in #stown_name#";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Smugglers Lair"; // NK 04-08-29
@@ -1158,7 +1158,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Smugglers_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Smugglers Lair"; // NK 04-08-29
@@ -1198,7 +1198,7 @@ void LocationInitConceicao(ref n)
 	// Conceicao_church -------------------------------------------------
 	Locations[n].id = "Conceicao_church";
 	locations[n].id.label = "#stown_name# church";
-	Locations[n].image = "Inside_Church_2.tga";
+	Locations[n].image = "Inside_Church_2";
 	Locations[n].filespath.models = "locations\inside\Church_2";
 
 	//Town sack
@@ -1242,7 +1242,7 @@ void LocationInitConceicao(ref n)
 	// Conceicao Tailor
 	Locations[n].id = "Conceicao_TailorsShop";
 	locations[n].id.label = "Tailor's Shop";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -1289,7 +1289,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Conceicao_HouseInsideR11";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh8.tga";
+	Locations[n].image = "Inside_mh8";
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -1336,7 +1336,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Conceicao_Grot";
 	locations[n].id.label = "Hidden Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "cave";
 	//Models
@@ -1380,7 +1380,7 @@ void LocationInitConceicao(ref n)
 	Locations[n].id = "Conceicao_Shore_03";
 	locations[n].id.label = "Linda Praia";
 	locations[n].worldmap = "MShore 2";
-	Locations[n].image = "Outside_Shore_11.tga";
+	Locations[n].image = "Outside_Shore_11";
 	//Sound
 	locations[n].type = "seashore";
 
@@ -1431,7 +1431,7 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].id = "Bartolomeu_Mansion";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_Bart.tga";
+	Locations[n].image = "Outside_Jungle_Bart";
 	//Sound
 	locations[n].type = "jungle";
 	Locations[n].vcskip = true; // KK	

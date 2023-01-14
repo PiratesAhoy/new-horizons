@@ -413,7 +413,7 @@ void Sea_MapLoad()
 	CreateEntity(&wdm_fader, "fader");
 	SendMessage(&wdm_fader, "lfl", FADER_OUT, 0.7, true);
 	SendMessage(&wdm_fader, "l", FADER_STARTFRAME);
-	SetReloadImage(&wdm_fader, "sea.tga"); // KK
+	SetReloadImage(&wdm_fader, "sea"); // KK
 
 	bSkipSeaLogin = true;
 
@@ -439,7 +439,7 @@ void Land_MapLoad()
 	CreateEntity(&wdm_fader, "fader");
 	SendMessage(&wdm_fader, "lfl", FADER_OUT, 0.7, true);
 	SendMessage(&wdm_fader, "l", FADER_STARTFRAME);
-	SetReloadImage(&wdm_fader, "sea.tga");
+	SetReloadImage(&wdm_fader, "sea");
 
 	bSkipSeaLogin = true;
 
@@ -586,7 +586,7 @@ void SeaLogin(ref Login)
 	if (!bLoadSavedGame) {
 		if (!IsEntity(&SeaFader)) {
 			// Sea Fader start
-			if (!CheckAttribute(&Login,"ImageName")) Login.ImageName = "sea.tga";
+			if (!CheckAttribute(&Login,"ImageName")) Login.ImageName = "sea";
 
 			CreateEntity(&SeaFader, "fader");
 			SendMessage(&SeaFader, "lfl", FADER_IN, 0.5, true);

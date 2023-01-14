@@ -7,7 +7,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id.label = "#stown_name# Port";
 	locations[n].worldmap = "Eleuthera";
 	locations[n].filespath.models = "locations\Town_Eleuthera";
-	locations[n].image = "Town_Eleuthera.tga";
+	locations[n].image = "Town_Eleuthera";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -174,7 +174,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id = "Eleuthera_tavern_upstairs";
 	locations[n].id.label = "Cellar in #stown_name# tavern.";
     locations[n].filespath.models = "locations\inside\Cellar_downstairs";
-	locations[n].image = "Inside_Cellar_downstairs.tga";
+	locations[n].image = "Inside_Cellar_downstairs";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -238,7 +238,7 @@ void LocationInitEleuthera(ref n)
 	Locations[n].id = "Eleuthera_shore";
 	locations[n].id.label = "Citadel Rock."; 
 	locations[n].worldmap = "EleutheraShore 1";
-	Locations[n].image = "Outside_Citadel_Rock.tga";
+	Locations[n].image = "Outside_Citadel_Rock";
 	Locations[n].name = "Citadel Rock";
 
 	//Town sack
@@ -386,7 +386,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id = "Eleuthera_store";
 	locations[n].id.label = "#stown_name# store";
 	locations[n].filespath.models = "locations\inside\Store03";
-	locations[n].image = "Inside_Store03.tga";
+	locations[n].image = "Inside_Store03";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -451,7 +451,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id = "Eleuthera_Shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
 	locations[n].filespath.models = "locations\inside\Shipyard5";
-	locations[n].image = "Inside_Shipyard5.tga";
+	locations[n].image = "Inside_Shipyard5";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -530,7 +530,7 @@ void LocationInitEleuthera(ref n)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	Locations[n].id = "Eleuthera_TailorsShop";	
 	Locations[n].id.label = "Tailor's Shop.";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Eleuthera";
@@ -577,7 +577,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Eleuthera_shore_Ship";
 	locations[n].id.label = "Eleuthera shore";
-	Locations[n].image = "Outside_Shore_Ship.tga";
+	Locations[n].image = "Outside_Shore_Ship";
 	Locations[n].name = "Ship";
 	//Sound
 	locations[n].type = "seashore";
@@ -633,7 +633,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Eleuthera_Cavern";
 	locations[n].id.label = "Eleuthera Cavern";
-	Locations[n].image = "Inside_Cavern.tga";
+	Locations[n].image = "Inside_Cavern";
 
 	//Sound
 	locations[n].type = "cave";
@@ -700,7 +700,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Eleuthera_CavernMedium";
 	locations[n].id.label = "Eleuthera Cavern";
-	Locations[n].image = "Inside_cavernMedium.tga";
+	Locations[n].image = "Inside_cavernMedium";
 
 	//Sound
 	locations[n].type = "cave";
@@ -771,7 +771,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Eleuthera_Jungle2";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle2.tga";
+	Locations[n].image = "Outside_Jungle2";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -852,7 +852,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Eleuthera_Jungle3";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle3.tga";
+	Locations[n].image = "Outside_Jungle3";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -931,7 +931,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Eleuthera_Cave_Exit";
 	locations[n].id.label = "#sisland_name# cave entrance";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -999,7 +999,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "EleutheraPlantation";
 	locations[n].id.label = "#stown_name# Plantation";
-	Locations[n].image = "Outside_Plantation.tga";
+	Locations[n].image = "Outside_Plantation";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -1119,7 +1119,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Eleuthera_Jungle4";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle3.tga";
+	Locations[n].image = "Outside_Jungle3";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1194,7 +1194,7 @@ void LocationInitEleuthera(ref n)
 	
     Locations[n].id = "FortVRight";
 	locations[n].id.label = "#stown_name# Fort";
-	Locations[n].image = "Fort_Inside_FortVRight.tga";
+	Locations[n].image = "Fort_Inside_FortVRight";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -1259,7 +1259,7 @@ void LocationInitEleuthera(ref n)
 	Locations[n].id = "Fort_prison";
 	Locations[n].id.label = "#stown_name# prison";
 	Locations[n].filespath.models = "locations\inside\Residence6";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Eleuthera";	
@@ -1297,7 +1297,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id.label = "#stown_name# Port";
 	locations[n].worldmap = "Eleuthera";
 	locations[n].filespath.models = "locations\Town_Alice";
-	locations[n].image = "Town_Alice.tga";
+	locations[n].image = "Town_Alice";
 
 	//Town sack
 	locations[n].townsack = "Alice";
@@ -1496,7 +1496,7 @@ void LocationInitEleuthera(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Alice_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Tavern_Room.tga";
+	Locations[n].image = "Inside_Tavern_Room";
 
 	//Town sack
 	Locations[n].townsack = "Alice";
@@ -1564,7 +1564,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id = "Alice_Brothel";
 	locations[n].id.label = "#stown_name# Brothel";
 	locations[n].filespath.models = "locations\inside\Brothel";
-	locations[n].image = "Inside_Brothel.tga";
+	locations[n].image = "Inside_Brothel";
 
 	//Town sack
 	locations[n].townsack = "Alice";
@@ -1620,7 +1620,7 @@ void LocationInitEleuthera(ref n)
 	Locations[n].id = "Alice_Brothel_room";
 	locations[n].id.label = "#stown_name# Brothel";
 	Locations[n].filespath.models = "locations\inside\den"; 
-	Locations[n].image = "Inside_Den_Room.tga"; // PB
+	Locations[n].image = "Inside_Den_Room"; // PB
 	//Town sack
 	Locations[n].townsack = "Alice";
 	//Sound
@@ -1660,7 +1660,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id = "Alice_Brothel_bedroom";
 	locations[n].id.label = "Brothel Bedroom";
 	locations[n].filespath.models = "locations\inside\Brothel_room";
-	locations[n].image = "Inside_Brothel_Room.tga";
+	locations[n].image = "Inside_Brothel_Room";
 
 	//Town sack
 	locations[n].townsack = "Alice";
@@ -1722,7 +1722,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Alice_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga";
+	Locations[n].image = "Inside_Shipyard1";
 
 	//Town sack
 	Locations[n].townsack = "Alice";
@@ -1765,7 +1765,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Alice_townhall";
 	locations[n].id.label = "#stown_name# townhall";
-	Locations[n].image = "Inside_Residence5.tga";
+	Locations[n].image = "Inside_Residence5";
 
 	//Town sack
 	Locations[n].townsack = "Alice";
@@ -1835,7 +1835,7 @@ void LocationInitEleuthera(ref n)
 	Locations[n].id = "Alice_dungeon_2";
 	locations[n].id.label = "#stown_name# Dungeon";
 	Locations[n].filespath.models = "locations\inside\dungeon_2";
-	Locations[n].image = "Inside_Dungeon_2.tga";
+	Locations[n].image = "Inside_Dungeon_2";
 
 	//Town sack
 	Locations[n].townsack = "Alice";
@@ -1879,7 +1879,7 @@ void LocationInitEleuthera(ref n)
 	Locations[n].id = "Alice_Prison";
 	locations[n].id.label = "#stown_name# prison";
 	Locations[n].filespath.models = "locations\inside\Prison";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Alice";
@@ -1928,7 +1928,7 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].id = "Alice_exit";
 	locations[n].id.label = "#stown_name# exit";
-	Locations[n].image = "Town_Redmond_Exit1.tga";
+	Locations[n].image = "Town_Redmond_Exit1";
 
 	//Town sack
 	Locations[n].townsack = "Alice";
@@ -1992,7 +1992,7 @@ void LocationInitEleuthera(ref n)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	Locations[n].id = "Alice_TailorsShop";	
 	Locations[n].id.label = "Tailor's Shop.";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Alice";
@@ -2038,7 +2038,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id = "Eleuthera_Brothel";
 	locations[n].id.label = "#stown_name# Brothel";
 	locations[n].filespath.models = "locations\inside\Brothel";
-	locations[n].image = "Inside_Brothel.tga";
+	locations[n].image = "Inside_Brothel";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -2090,7 +2090,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id = "Eleuthera_Brothel_bedroom";
 	locations[n].id.label = "#stown_name# Brothel room";
 	locations[n].filespath.models = "locations\inside\Brothel_room";
-	locations[n].image = "Inside_Brothel_Room.tga";
+	locations[n].image = "Inside_Brothel_Room";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";

@@ -5,7 +5,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Wedding_Ballroom";
 	locations[n].id.label = "#stown_name# townhall";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga";
+	Locations[n].image = "Inside_Residence_BackHall";
 
 	//Town sack
 	Locations[n].townsack = "Falaise De Fleur";
@@ -49,7 +49,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Haraldo_Bedroom";
 	locations[n].id.label = "Redmond Townhall. Silehards's Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 
 	//Town sack
 	Locations[n].townsack = "Falaise De Fleur"; // NK 04-08-29
@@ -89,7 +89,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Recovery_House";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Smallhome";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";

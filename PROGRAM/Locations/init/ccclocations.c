@@ -6,7 +6,7 @@ void LocationInitCCCLocations(ref n)
 
 	Locations[n].id = "Oxbayhouse1";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_PirateResidence.tga";
+	Locations[n].image = "Inside_PirateResidence";
 	//Town sack
 	Locations[n].townsack = "Oxbay";
 	//Sound
@@ -46,7 +46,7 @@ void LocationInitCCCLocations(ref n)
 
 	Locations[n].id = "Oxbayhouse2";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Pirate_House.tga";
+	Locations[n].image = "Inside_Pirate_House";
 	//Town sack
 	Locations[n].townsack = "Oxbay";
 	locations[n].fastreload = "Oxbay";
@@ -86,7 +86,7 @@ void LocationInitCCCLocations(ref n)
 
 	Locations[n].id = "Oxbayhouse3";		//change, new id
 	Locations[n].id.label = "House";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -126,7 +126,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].id = "Oxbay_mansion_hall";	//new ID
 	locations[n].id.label = "Mansion";		//change
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga";	//use any image you like
+	Locations[n].image = "Inside_Residence_BackHall";	//use any image you like
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";		//change
@@ -176,7 +176,7 @@ void LocationInitCCCLocations(ref n)
 
 	Locations[n].id = "Oxbay_mansion_study";		//change
 	locations[n].id.label = "Study";			//change
-	Locations[n].image = "Inside_Residence3.tga";
+	Locations[n].image = "Inside_Residence3";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";			//change
@@ -222,7 +222,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].id = "Oxbay_mansion_bedroom";	//change
 	locations[n].id.label = "Bedroom";			//change
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 	//Sound
 	locations[n].type = "house";			//change
 	locations[n].fastreload = "Oxbay";			//add to enable quickteleport
@@ -259,7 +259,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].id = "Oxbay_suburb";		//change
 	locations[n].id.label = "Town";		//change
 	locations[n].worldmap = "Oxbay";		//change
-	Locations[n].image = "Town_FalaiseDeFleur_Town_01_England.tga";	//change
+	Locations[n].image = "Town_FalaiseDeFleur_Town_01_England";	//change
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";		//change
@@ -343,7 +343,7 @@ void LocationInitCCCLocations(ref n)
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";	//A warning sign at the gate :)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";		//change
@@ -400,7 +400,7 @@ void LocationInitCCCLocations(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -446,7 +446,7 @@ void LocationInitCCCLocations(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -489,7 +489,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "Oxbay_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -538,7 +538,7 @@ void LocationInitCCCLocations(ref n)
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";	//A warning sign at the gate :)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "greenford";		//change
@@ -592,7 +592,7 @@ void LocationInitCCCLocations(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -638,7 +638,7 @@ void LocationInitCCCLocations(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -686,7 +686,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "greenford_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "greenford";
@@ -743,7 +743,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].id = "greenford_mansion_hall";	//new ID
 	locations[n].id.label = "Mansion";		//change
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga";
+	Locations[n].image = "Inside_Residence_BackHall";
 
 	//Town sack
 	Locations[n].townsack = "greenford";		//change
@@ -793,7 +793,7 @@ void LocationInitCCCLocations(ref n)
 
 	Locations[n].id = "greenford_mansion_study";		//change
 	locations[n].id.label = "Study";			//change
-	Locations[n].image = "Inside_Residence3.tga";
+	Locations[n].image = "Inside_Residence3";
 
 	//Town sack
 	Locations[n].townsack = "greenford";			//change
@@ -839,7 +839,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].id = "greenford_mansion_bedroom";	//change
 	locations[n].id.label = "Bedroom";			//change
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 	//Sound
 	locations[n].type = "house";			//change
 	locations[n].fastreload = "greenford";			//add to enable quickteleport
@@ -877,7 +877,7 @@ void LocationInitCCCLocations(ref n)
 	locations[n].worldmap = "Greenford";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_03";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Redmond_Town_03_England.tga";
+	Locations[n].image = "Town_Redmond_Town_03_England";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1002,7 +1002,7 @@ void LocationInitCCCLocations(ref n)
 
 	Locations[n].id = "greenford_warehouse";
 	locations[n].id.label = "Warehouse";
-	Locations[n].image = "Inside_Shipyard_Warehouse.tga";	//change, just to have another loading screen than shipyard
+	Locations[n].image = "Inside_Shipyard_Warehouse";	//change, just to have another loading screen than shipyard
 
 	//Town sack
 	Locations[n].townsack = "Greenford";	// mar 06
@@ -1046,7 +1046,7 @@ void LocationInitCCCLocations(ref n)
 // Greenford suburb near small gate-------------------------------------------------
 	Locations[n].id = "Greenford_suburbhouse14";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].image = "Inside_Residence2";
 	Locations[n].filespath.models = "locations\inside\Residence2";
 
 	//Town sack
@@ -1094,7 +1094,7 @@ void LocationInitCCCLocations(ref n)
 	// "Greenford_M_church" -------------------------------------------------
 	Locations[n].id = "Greenford_M_church";
 	locations[n].id.label = "Abbey of the Maltese order";
-	Locations[n].image = "Inside_Church_3.tga";
+	Locations[n].image = "Inside_Church_3";
 	Locations[n].filespath.models = "locations\inside\Church_3";
 
 	//Town sack
@@ -1148,7 +1148,7 @@ void LocationInitCCCLocations(ref n)
 	locations[n].id.label = "Abbey of the Maltese order";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-	Locations[n].image = "Incas_Temple_Labirint_Crypt.tga";
+	Locations[n].image = "Incas_Temple_Labirint_Crypt";
 	locations[n].type = "dungeon";
 	locations[n].abbey = true; // KK
 
@@ -1212,7 +1212,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].id = "Greenford_M_undercroft";
 	locations[n].id.label = "Abbey of the Maltese order";
 	Locations[n].filespath.models = "locations\inside\Dungeon_2";
-	Locations[n].image = "Incas_Temple_Labirint_Crypt.tga";
+	Locations[n].image = "Incas_Temple_Labirint_Crypt";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1266,7 +1266,7 @@ void LocationInitCCCLocations(ref n)
 	locations[n].id.label = "Fort inside";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 	//Models

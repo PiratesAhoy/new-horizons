@@ -697,7 +697,7 @@ void InitQCBrothel()
 	Locations[n].id = "QC_brothel";
 	locations[n].id.label = "#stown_name# Brothel.";
 	Locations[n].filespath.models = "locations\inside\Largetavern";
-	Locations[n].image = "Inside_LargeTavern_Brothel.tga";
+	Locations[n].image = "Inside_LargeTavern_Brothel";
 
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas";
@@ -926,7 +926,7 @@ void InitEleutheraBrothel()
 	Locations[n].id = "Eleuthera_Brothel";
 	Locations[n].id.label = "#stown_name# Brothel.";
 	locations[n].filespath.models = "locations\inside\Brothel";
-	locations[n].image = "Inside_Brothel.tga";
+	locations[n].image = "Inside_Brothel";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -1131,7 +1131,7 @@ void InitArsenal(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\Arsenal";
-	Locations[n].image = "Inside_Arsenal.tga";
+	Locations[n].image = "Inside_Arsenal";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
 	//Always
@@ -1164,7 +1164,7 @@ void InitBank(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\Bank";
-	Locations[n].image = "Inside_Bank.tga";
+	Locations[n].image = "Inside_Bank";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
 	//Always
@@ -1193,7 +1193,7 @@ void InitResidence7(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\residence7";
-	Locations[n].image = "Inside_Residence7.tga";
+	Locations[n].image = "Inside_Residence7";
 
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
@@ -1225,7 +1225,7 @@ void InitChurch1(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\Church_1";
-	Locations[n].image = "Inside_Church_1.tga";
+	Locations[n].image = "Inside_Church_1";
 
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
@@ -1257,7 +1257,7 @@ void InitStorehouse(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\StoreHouse";
-	Locations[n].image = "Inside_Storehouse.tga";
+	Locations[n].image = "Inside_Storehouse";
 
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
@@ -1289,7 +1289,7 @@ void InitStore02(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\store02";
-	Locations[n].image = "Inside_Store02.tga";
+	Locations[n].image = "Inside_Store02";
 
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
@@ -1321,7 +1321,7 @@ void InitStore01(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\store01";
-	Locations[n].image = "Inside_Store01.tga";
+	Locations[n].image = "Inside_Store01";
 
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
@@ -1353,7 +1353,7 @@ void InitShipyard4(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\Shipyard4";
-	Locations[n].image = "inside_shipyard4.tga";
+	Locations[n].image = "inside_shipyard4";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
 	//Always
@@ -1381,7 +1381,7 @@ void InitBrothel(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\Brothel";
-	Locations[n].image = "Inside_Brothel.tga";
+	Locations[n].image = "Inside_Brothel";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
 	//Always
@@ -1417,7 +1417,7 @@ void InitBrothelRoom(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\brothel_room";
-	Locations[n].image = "Inside_Brothel_Room.tga";
+	Locations[n].image = "Inside_Brothel_Room";
 	Locations[n].type = "house";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
@@ -1448,7 +1448,7 @@ void InitTavern02(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\Tavern02";
-	Locations[n].image = "Inside_Tavern02.tga";
+	Locations[n].image = "Inside_Tavern02";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
 	//Always
@@ -1481,7 +1481,7 @@ void InitTavern01(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\Tavern01";
-	Locations[n].image = "Inside_Tavern01.tga";
+	Locations[n].image = "Inside_Tavern01";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
 	//Always
@@ -1514,7 +1514,7 @@ void InitStoneHouse(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\StoneHouse";
-	Locations[n].image = "Inside_Stonehouse.tga";
+	Locations[n].image = "Inside_Stonehouse";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
 	//Always
@@ -1542,7 +1542,7 @@ void InitHut(string locationID)
 	if (n < 0) return;
 
 	Locations[n].filespath.models = "locations\Inside\hut";
-	Locations[n].image = "Inside_Hut.tga";
+	Locations[n].image = "Inside_Hut";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
 	//Always

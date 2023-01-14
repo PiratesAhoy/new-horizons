@@ -8,7 +8,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Main cannons deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck2";
-	Locations[n].image = "deck_deck2.tga";
+	Locations[n].image = "deck_deck2";
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].camshuttle = 1;
@@ -61,7 +61,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Middle cannons deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck1";
-	Locations[n].image = "deck_deck1.tga";
+	Locations[n].image = "deck_deck1";
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].camshuttle = 1;
@@ -114,7 +114,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Lower cannons deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck1";
-	Locations[n].image = "deck_deck1.tga";
+	Locations[n].image = "deck_deck1";
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].camshuttle = 1;
@@ -168,7 +168,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Cargo hold";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
-	Locations[n].image = "deck_hold.tga"; // KK
+	Locations[n].image = "deck_hold"; // KK
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].camshuttle = 1;
@@ -212,7 +212,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Cargo hold";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
-	Locations[n].image = "deck_hold.tga"; // KK
+	Locations[n].image = "deck_hold"; // KK
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].camshuttle = 1;
@@ -255,7 +255,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\Decks\qdeck";
-	Locations[n].image = "Sea.tga"; // KK
+	Locations[n].image = "Sea"; // KK
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -314,7 +314,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\udeck1";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -380,7 +380,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\udeck2";
-	Locations[n].image = "Sea.tga"; // KK
+	Locations[n].image = "Sea"; // KK
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -443,7 +443,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckLow";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -512,7 +512,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckMedium";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -576,7 +576,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBig";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -651,7 +651,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBP";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -725,7 +725,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Crew's quarters";
 	//Info
 	Locations[n].filespath.models = "locations\decks\seadogs"; // KK
-	Locations[n].image = "deck_seadogs.tga"; // KK
+	Locations[n].image = "deck_seadogs"; // KK
 	//Sound
 	Locations[n].type = "crew";
 //	Locations[n].lockCamAngle = 0.4;	// LDH removed 23Mar09
@@ -770,7 +770,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capsm"; // KK
-	Locations[n].image = "deck_capsm.tga"; // KK
+	Locations[n].image = "deck_capsm"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -812,7 +812,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capmd"; // KK
-	Locations[n].image = "deck_capmd.tga"; // KK
+	Locations[n].image = "deck_capmd"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -853,7 +853,7 @@ void LocationInitShip(ref n)
 	Locations[n].id = "Tutorial_Deck";
 	Locations[n].id.label = "Captain's Cabin"; // KK
 	Locations[n].filespath.models = "locations\DECKS\cabin\tut_deck"; // KK
-	Locations[n].image = "battle.tga";
+	Locations[n].image = "battle";
 	//Sound
 	locations[n].type = "own_deck";
 	locations[n].fastreload = "ship"; // KK
@@ -919,7 +919,7 @@ void LocationInitShip(ref n)
 	Locations[n].id = "Companion_Cabin_1";
 	Locations[n].id.label = "Captain's Cabin";
 	Locations[n].filespath.models = "locations\DECKS\cabin\tut_deck";
-	Locations[n].image = "battle.tga";
+	Locations[n].image = "battle";
 	//Sound
 	locations[n].type = "own_deck";
 	locations[n].fastreload = "ship";
@@ -965,7 +965,7 @@ void LocationInitShip(ref n)
 	Locations[n].id = "Companion_Cabin_2";
 	Locations[n].id.label = "Captain's Cabin";
 	Locations[n].filespath.models = "locations\DECKS\cabin\tut_deck";
-	Locations[n].image = "battle.tga";
+	Locations[n].image = "battle";
 	//Sound
 	locations[n].type = "own_deck";
 	locations[n].fastreload = "ship";
@@ -1011,7 +1011,7 @@ void LocationInitShip(ref n)
 	Locations[n].id = "Companion_Cabin_3";
 	Locations[n].id.label = "Captain's Cabin";
 	Locations[n].filespath.models = "locations\DECKS\cabin\tut_deck";
-	Locations[n].image = "battle.tga";
+	Locations[n].image = "battle";
 	//Sound
 	locations[n].type = "own_deck";
 	locations[n].fastreload = "ship";
@@ -1060,7 +1060,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cap"; // KK
-	Locations[n].image = "deck_cap.tga"; // KK
+	Locations[n].image = "deck_cap"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -1103,7 +1103,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cabin01"; // KK
-	Locations[n].image = "deck_cabin1.tga"; // KK
+	Locations[n].image = "deck_cabin1"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -1145,7 +1145,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cabin01"; // KK
-	Locations[n].image = "deck_cabin1.tga"; // KK
+	Locations[n].image = "deck_cabin1"; // KK
 	//Sound
 	Locations[n].type = "Silence"; //"own_deck";//SJG
 	Locations[n].lockCamAngle = 0.4;
@@ -1187,7 +1187,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cabin02";
-	Locations[n].image = "deck_cabin2.tga"; // KK
+	Locations[n].image = "deck_cabin2"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -1229,7 +1229,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cabin03";
-	Locations[n].image = "deck_cabin3.tga"; // KK
+	Locations[n].image = "deck_cabin3"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -1271,7 +1271,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cabin01"; // KK
-	Locations[n].image = "deck_cabin1.tga"; // KK
+	Locations[n].image = "deck_cabin1"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -1313,7 +1313,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cabinFDM"; // KK
-	Locations[n].image = "deck_cabinFDM.tga"; // KK
+	Locations[n].image = "deck_cabinFDM"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -1355,7 +1355,7 @@ void LocationInitShip(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\Udeck1";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;

@@ -11,7 +11,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 
 //	locations[n].id.label = "Portuguese Gunsmith";	//JRH
 	locations[n].id.label = "#stown_name# Gunsmith"; // GR: use town name rather than nation, then it works for all periods
-	Locations[n].image = "Inside_Blacksmith1.tga"; // KK
+	Locations[n].image = "Inside_Blacksmith1"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Conceicao";
@@ -93,7 +93,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 	Locations[n].id = "FdF_blacksmith";
 //	locations[n].id.label = "French Blacksmith";
 	locations[n].id.label = "#stown_name# BlacksmithF"; // GR: "BlacksmithF" is for a female blacksmith, necessary for translations
-	Locations[n].image = "Inside_Blacksmith2.tga"; // KK
+	Locations[n].image = "Inside_Blacksmith2"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -173,7 +173,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 	Locations[n].id = "IM_blacksmith";
 //	locations[n].id.label = "Spanish Blacksmith";
 	locations[n].id.label = "#stown_name# Blacksmith"; // GR: use town name rather than nation, then it works for all periods
-	Locations[n].image = "Inside_Blacksmith2.tga"; // KK
+	Locations[n].image = "Inside_Blacksmith2"; // KK
 
 
 	//Town sack
@@ -250,7 +250,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\Blacksmith1";
 	Locations[n].id = "red_blacksmith";
 	locations[n].id.label = "#stown_name# Blacksmith";
-	Locations[n].image = "Inside_Blacksmith1.tga"; // KK
+	Locations[n].image = "Inside_Blacksmith1"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -326,7 +326,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 	Locations[n].id = "den";
 	locations[n].id.label = "Opium Den";
 	Locations[n].filespath.models = "locations\inside\den"; 
-	Locations[n].image = "Inside_Den.tga"; // KK
+	Locations[n].image = "Inside_Den"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -379,7 +379,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 	Locations[n].id = "Douw_blacksmith";
 //	locations[n].id.label = "Dutch Blacksmith";
 	locations[n].id.label = "#stown_name# Blacksmith"; // GR: use town name rather than nation, then it works for all periods
-	Locations[n].image = "Inside_Blacksmith2.tga"; // KK
+	Locations[n].image = "Inside_Blacksmith2"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Douwesen"; // NK 04-08-29
@@ -456,7 +456,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 	Locations[n].id = "QC_blacksmith";
 //	locations[n].id.label = "Pirate Blacksmith";
 	locations[n].id.label = "#stown_name# Blacksmith";
-	Locations[n].image = "Inside_Blacksmith1.tga"; // KK
+	Locations[n].image = "Inside_Blacksmith1"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas";
@@ -538,7 +538,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 
 	Locations[n].id = "apothecary";
 	locations[n].id.label = "Apothecary";
-	Locations[n].image = "Inside_Apothecary.tga"; // KK
+	Locations[n].image = "Inside_Apothecary"; // KK
 	//Town sack
 	Locations[n].townsack = "Greenford"; 
 	//Sound
@@ -583,7 +583,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 	Locations[n].id = "Havana_blacksmith";
 //	locations[n].id.label = "Spanish Blacksmith";
 	locations[n].id.label = "#stown_name# Blacksmith"; // GR: use town name rather than nation, then it works for all periods
-	Locations[n].image = "Inside_Blacksmith2.tga";
+	Locations[n].image = "Inside_Blacksmith2";
 
 
 	//Town sack
@@ -658,7 +658,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 	//if (GetAttribute(Pchar, "Turks") == Brotherhood){locations[n].id.label = "Pirates Ahoy! Blacksmith";}
 //	locations[n].id.label = "Pirate Gun- and Blacksmith";		//JRH
 	locations[n].id.label = "#stown_name# Gun- and Blacksmith";	// GR: use town name rather than nation, then it works in all periods
-	Locations[n].image = "Inside_Blacksmith1.tga"; // KK
+	Locations[n].image = "Inside_Blacksmith1"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Grand Turk";
@@ -741,7 +741,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 
 	Locations[n].id = "apothecary";
 	locations[n].id.label = "Apothecary";
-	Locations[n].image = "Inside_Apothecary.tga"; // KK
+	Locations[n].image = "Inside_Apothecary"; // KK
 	//Town sack
 	Locations[n].townsack = "Greenford"; 
 	//Sound
@@ -787,7 +787,7 @@ void LocationInitAlanSmitheeLocations(ref n)
 	Locations[n].id = "Cartagena_blacksmith";
 //	locations[n].id.label = "Spanish Blacksmith";
 	locations[n].id.label = "#stown_name# Blacksmith"; // GR: use town name rather than nation, then it works for all periods
-	Locations[n].image = "Inside_Blacksmith2.tga"; // KK
+	Locations[n].image = "Inside_Blacksmith2"; // KK
 
 
 	//Town sack

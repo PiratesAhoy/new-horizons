@@ -6,7 +6,7 @@ void LocationInitIslaMona(ref n)
 	Locations[n].id = "IslaMona_port";
 	Locations[n].name = "Port";
 	locations[n].id.label = "Isla Mona Port";
-	Locations[n].image = "Outside_Mayak.tga";
+	Locations[n].image = "Outside_Mayak";
 	//Sound
 	locations[n].type = "seashore";
 	//Models
@@ -83,7 +83,7 @@ void LocationInitIslaMona(ref n)
 
 	Locations[n].id = "IslaMona_Tavern";
 	locations[n].id.label = "Isla Mona Tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Isla Mona"; // NK 04-08-29
@@ -126,7 +126,7 @@ void LocationInitIslaMona(ref n)
 	Locations[n].id = "IslaMona_headport_house";
 	Locations[n].name = "head port house";
 	locations[n].id.label = "head port house.";
-	Locations[n].image = "Outside_Mayak_Inside.tga";
+	Locations[n].image = "Outside_Mayak_Inside";
 	//Sound
 	locations[n].type = "house";
 
@@ -174,7 +174,7 @@ void LocationInitIslaMona(ref n)
 	Locations[n].id = "IslaMona_warehouse";
 	locations[n].id.label = "Isla Mona warehouse";
 	Locations[n].filespath.models = "locations\inside\Shipyard";
-	Locations[n].image = "Inside_Warehouse.tga";
+	Locations[n].image = "Inside_Warehouse";
 
 	//Town sack
 	Locations[n].townsack = "Isla Mona";
@@ -214,7 +214,7 @@ void LocationInitIslaMona(ref n)
 
 	Locations[n].id = "IslaMona_residence";
 	locations[n].id.label = "Commander's House";
-	Locations[n].image = "Inside_PirateResidence_IslaMona.tga";
+	Locations[n].image = "Inside_PirateResidence_IslaMona";
 	//Town sack
 	Locations[n].townsack = "Isla Mona"; 
 	//Sound
@@ -255,7 +255,7 @@ void LocationInitIslaMona(ref n)
 
 	Locations[n].id = "IslaMona_port_exit";
 	locations[n].id.label = "Exit from port";
-	Locations[n].image = "Town_QC_Exit.tga";
+	Locations[n].image = "Town_QC_Exit";
 	//Town sack
 	Locations[n].townsack = "Isla Mona"; 
 	//Sound
@@ -327,7 +327,7 @@ void LocationInitIslaMona(ref n)
 
 	Locations[n].id = "IslaMona_passage";
 	locations[n].id.label = "#sisland_name# passage";
-	Locations[n].image = "Outside_Passage2.tga";
+	Locations[n].image = "Outside_Passage2";
 	Locations[n].vcskip = true;
 	//Sound
 	locations[n].type = "seashore";
@@ -405,7 +405,7 @@ void LocationInitIslaMona(ref n)
 	{
 		locations[n].id.label = "Fort";
 	}
-	Locations[n].image = "Inside_Mine.tga";
+	Locations[n].image = "Inside_Mine";
 
 	//Sound
 	locations[n].type = "cave";
@@ -453,7 +453,7 @@ void LocationInitIslaMona(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "town";
 

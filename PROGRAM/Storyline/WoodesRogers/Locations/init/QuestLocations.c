@@ -5,7 +5,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id.label = "Officer's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\Cabin\cap";
-	Locations[n].image = "Deck_Cap.tga";
+	Locations[n].image = "Deck_Cap";
 
 	//locations[n].lockWeather = "Inside";//no effect
 	//Sound
@@ -64,7 +64,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Somewhere in the Caribbean";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckLow";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "silent_seashore";
 	Locations[n].lockCamAngle = 0.2;			//was 0.4
@@ -110,7 +110,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Outside\jungle2";
 	Locations[n].id = "Swamp_island1";
 	locations[n].id.label = "Marooned Island";
-	Locations[n].image = "wr_marooned_island.tga";
+	Locations[n].image = "wr_marooned_island";
 	//Town sack
 	locations[n].townsack = "Redmond";
 	//Sound
@@ -165,7 +165,7 @@ void LocationInitQuestLocations(ref n)
 
 	locations[n].id = "Swamp_island2";
 	locations[n].id.label = "Swamp Island";
-	locations[n].image = "wr_shipwreck_island.tga";
+	locations[n].image = "wr_shipwreck_island";
 	//Town sack
 	locations[n].townsack = "Redmond";
 	//Sound
@@ -335,7 +335,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id = "swamp_wreck_inside";
 	locations[n].id.label = "Swamp Wreck";
 	locations[n].filespath.models = "locations\decks\SwampWreck";
-	locations[n].image = "wr_wreck_inside.tga";
+	locations[n].image = "wr_wreck_inside";
 
 	//Town sack
 	locations[n].townsack = "Redmond";
@@ -431,7 +431,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Loghouse";
 	locations[n].id.label = "Log-house";		//open = on, try from start
-	Locations[n].image = "wr_loghouse.tga";
+	Locations[n].image = "wr_loghouse";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -490,7 +490,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Swamp_grot";
 	locations[n].id.label = "Pirate's Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "silent_cave_seashore";
 	//Models
@@ -523,7 +523,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id = "at_sea_in_fog";
 	//locations[n].id = "TownExitW_flooded";
 	locations[n].id.label = "";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Town sack
 	locations[n].townsack = "Redmond";
 	//Sound
@@ -604,7 +604,7 @@ void LocationInitQuestLocations(ref n)
 	//Info
 
 	Locations[n].filespath.models = "locations\decks\hold";
-	Locations[n].image = "deck_hold.tga";
+	Locations[n].image = "deck_hold";
 	//Sound
 	locations[n].type = "silent_cave_seashore";
 	//Models
@@ -669,7 +669,7 @@ void LocationInitQuestLocations(ref n)
 	//  -------------------------------------------------
 	Locations[n].id = "BB_Hornigold_shore";
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "Hornigold_shore.tga";
+	Locations[n].image = "Hornigold_shore";
 
 	//Sound
 	locations[n].type = "Blackbeard_shore";
@@ -719,7 +719,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].worldmap = "Redmond";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_04";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Redmond_Town_04.tga";
+	Locations[n].image = "Town_Redmond_Town_04";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -790,7 +790,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\MediumHouse\\";
 	Locations[n].filespath.textures = "locations\inside\MediumHouse";
-	Locations[n].image = "wr_claire.tga";
+	Locations[n].image = "wr_claire";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -834,7 +834,7 @@ void LocationInitQuestLocations(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "JRH_tavern_upstairs";		//see also "Redmond_tavern_upstairs" in Redmond (standard alternative: sleep/reincarnation)
 	locations[n].id.label = "Room in Redmond tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -896,7 +896,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Woodes Rogers' bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
 	Locations[n].filespath.textures = "locations\inside\wr_bedroom";
-	Locations[n].image = "wr_bedroom.tga";
+	Locations[n].image = "wr_bedroom";
 
 	//Town sack
 	Locations[n].townsack = "Redmond"; // NK 04-08-29
@@ -949,7 +949,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "WR_kitchen";
 	locations[n].id.label = "Woodes Rogers' kitchen";		//exit D2 = on, try on from start
 	Locations[n].filespath.models = "locations\inside\flamhouse";
-	Locations[n].image = "wr_kitchen.tga";
+	Locations[n].image = "wr_kitchen";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1067,7 +1067,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "ck_bedroom";
 //	locations[n].id.label = "Caroline K's bedroom";		//open = on
 	Locations[n].filespath.models = "locations\inside\Tavern_room";
-	Locations[n].image = "ck_bedroom.tga";
+	Locations[n].image = "ck_bedroom";
 
 	//Town sack
 	Locations[n].townsack = "Redmond"; // NK 04-08-29
@@ -1123,7 +1123,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_food_supply";
 //	locations[n].id.label = "Woodes Rogers' food cellar";		//open = on
 	Locations[n].filespath.models = "locations\inside\store03";
-	Locations[n].image = "wr_food_supply.tga";
+	Locations[n].image = "wr_food_supply";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1215,7 +1215,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_crew";
 //	locations[n].id.label = "Crew's quarter";		
 	Locations[n].filespath.models = "locations\inside\tavern03";
-	Locations[n].image = "wr_crew.tga";
+	Locations[n].image = "wr_crew";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1309,7 +1309,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Tavern_storeroom";
 	locations[n].id.label = "Tavern storeroom";		
 	Locations[n].filespath.models = "locations\inside\store04";
-	Locations[n].image = "tavern_storeroom.tga";
+	Locations[n].image = "tavern_storeroom";
 	//Locations[n].image = "";
 
 	//Town sack
@@ -1417,7 +1417,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Charles_Windem_room";
 	locations[n].id.label = "Charles Windem's room";		//open = on
-	Locations[n].image = "Charles_Windem_room.tga";
+	Locations[n].image = "Charles_Windem_room";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1494,7 +1494,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_library";
 	locations[n].id.label = "Woodes Rogers' library";		
-	Locations[n].image = "wr_library.tga";
+	Locations[n].image = "wr_library";
 	Locations[n].filespath.models = "locations\inside\Residence2\\";
 
 	//Town sack
@@ -1739,7 +1739,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "ck_drawing_room";
 //	locations[n].id.label = "Caroline K's drawing room";			//open = on
-	Locations[n].image = "ck_drawing_room.tga";
+	Locations[n].image = "ck_drawing_room";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1794,7 +1794,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_study";
 //	locations[n].id.label = "Woodes Rogers' study";		//open = on
-	Locations[n].image = "wr_study.tga";
+	Locations[n].image = "wr_study";
 	Locations[n].filespath.models = "locations\inside\shipyard5\\";
 
 	//Town sack
@@ -1893,7 +1893,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_secret";
 //	locations[n].id.label = "Woodes Rogers' secret room";		//open = on
 	Locations[n].filespath.models = "locations\inside\MediumStore_inner";
-	Locations[n].image = "wr_secret.tga";
+	Locations[n].image = "wr_secret";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -1951,7 +1951,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_residence";
 	locations[n].id.label = "Woodes Rogers' residence";
 	Locations[n].filespath.models = "locations\inside\Residence1";
-	Locations[n].image = "wr_residence.tga";
+	Locations[n].image = "wr_residence";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2047,7 +2047,7 @@ void LocationInitQuestLocations(ref n)
 	//  -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
-	Locations[n].image = "wr_armory.tga";
+	Locations[n].image = "wr_armory";
 
 	Locations[n].id = "wr_armory";
 	locations[n].id.label = "Woodes Rogers' armory";		//open = on, try on from start
@@ -2152,7 +2152,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_gunpowder";
 	locations[n].id.label = "Gunpowder storage";
 	Locations[n].filespath.models = "locations\inside\MediumStore_Gps";
-	Locations[n].image = "wr_gunpowder.tga";
+	Locations[n].image = "wr_gunpowder";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2233,7 +2233,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_gunroom";
 //	locations[n].id.label = "Gunroom";	//open from gps = on
-	Locations[n].image = "wr_gunroom.tga";
+	Locations[n].image = "wr_gunroom";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2338,7 +2338,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Loanshark_cellar";
 //	locations[n].id.label = "Loanshark cellar";		//open from tunnel = on
 	Locations[n].filespath.models = "locations\inside\mh9_cellar";
-	Locations[n].image = "loanshark_cellar.tga";
+	Locations[n].image = "loanshark_cellar";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2387,7 +2387,7 @@ void LocationInitQuestLocations(ref n)
 	
 	Locations[n].id = "wr_booty";
 	locations[n].id.label = "Woodes Rogers' booty room";
-	Locations[n].image = "wr_booty.tga";
+	Locations[n].image = "wr_booty";
 	
 	Locations[n].filespath.models = "locations\Inside\Pirate_House";
 	//Sound
@@ -2462,7 +2462,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_friday";
 //	locations[n].id.label = "Friday's room";
 	locations[n].id.label = "Fried Egg's room";
-	Locations[n].image = "wr_friday.tga";
+	Locations[n].image = "wr_friday";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2530,7 +2530,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Shop_stairs";
 //	locations[n].id.label = "Rogers' Paintings Furniture & Weapons";	//yes something to wonder about
 	Locations[n].filespath.models = "locations\inside\store04_stone";
-	Locations[n].image = "Shop_stairs.tga";
+	Locations[n].image = "Shop_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2609,7 +2609,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Dave_Edna_room";
 	locations[n].id.label = "Dave Edna's Room";		
-	Locations[n].image = "Dave_Edna_room.tga";
+	Locations[n].image = "Dave_Edna_room";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2672,7 +2672,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_shop";
 	locations[n].id.label = "Rogers' Paintings Furniture & Weapons";	//open = on, try visible from start
-	Locations[n].image = "wr_shop.tga";
+	Locations[n].image = "wr_shop";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2773,7 +2773,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_shop_office";
 //	locations[n].id.label = "Shop office";
-	Locations[n].image = "wr_shop_office.tga";
+	Locations[n].image = "wr_shop_office";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2850,7 +2850,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_mother_stairs";
 //	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
-	Locations[n].image = "wr_mother_stairs.tga";
+	Locations[n].image = "wr_mother_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2911,7 +2911,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_mother";
 	locations[n].id.label = "Grandmother Rogers' room";		
-	Locations[n].image = "wr_mother.tga";
+	Locations[n].image = "wr_mother";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -2994,7 +2994,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_mine";
 	//locations[n].id.label = "Port Royal old mine";	//label not to be seen from LS cellar, switched on later
-	Locations[n].image = "wr_mine.tga";
+	Locations[n].image = "wr_mine";
 
 	//Sound
 	locations[n].type = "Rogers_mine";
@@ -3120,7 +3120,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_prison_guard";
 	locations[n].id.label = "Guard room";
-	Locations[n].image = "wr_prison_guard.tga";
+	Locations[n].image = "wr_prison_guard";
 
 	//Sound
 	locations[n].type = "Rogers_jail";
@@ -3185,7 +3185,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_prison";
 	locations[n].id.label = "Woodes Rogers' prison";
 	Locations[n].filespath.models = "locations\inside\prison";
-	Locations[n].image = "wr_prison.tga";
+	Locations[n].image = "wr_prison";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -3337,7 +3337,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_gibbet";
 	locations[n].id.label = "Woodes Rogers' prison";
 	Locations[n].filespath.models = "locations\inside\prison";
-	Locations[n].image = "wr_gibbet.tga";
+	Locations[n].image = "wr_gibbet";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -3435,7 +3435,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_mine_control";
 	locations[n].id.label = "Port Royal old mine";
 	Locations[n].filespath.models = "locations\inside\Dungeon_2\\";
-	Locations[n].image = "wr_mine_control.tga";
+	Locations[n].image = "wr_mine_control";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -3530,7 +3530,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].filespath.models = "locations\Inside\Dungeon_3";
 	Locations[n].id = "wr_dungeon3_left";
-	Locations[n].image = "wr_dungeon3_left.tga";
+	Locations[n].image = "wr_dungeon3_left";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
@@ -3701,7 +3701,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].filespath.models = "locations\Inside\Dungeon_3";
 	Locations[n].id = "wr_dungeon3_right";
-	Locations[n].image = "wr_dungeon3_right.tga";
+	Locations[n].image = "wr_dungeon3_right";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
@@ -3844,7 +3844,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "wr_dungeon4_main";
-	Locations[n].image = "wr_dungeon4_main.tga";
+	Locations[n].image = "wr_dungeon4_main";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
@@ -3970,7 +3970,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "wr_dungeon4_loop";
-	Locations[n].image = "wr_dungeon4_loop.tga";
+	Locations[n].image = "wr_dungeon4_loop";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
@@ -4070,7 +4070,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "wr_dungeon4_low";
-	Locations[n].image = "wr_dungeon4_low.tga";
+	Locations[n].image = "wr_dungeon4_low";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
@@ -4137,7 +4137,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_cannon_tower";
 	locations[n].id.label = "Cannon tower";
-	Locations[n].image = "wr_cannon_tower.tga";
+	Locations[n].image = "wr_cannon_tower";
 	//Sound
 	locations[n].type = "Vane_towers";			
 
@@ -4243,7 +4243,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_cave_shore";
 	locations[n].id.label = "Cave shore";
 	locations[n].worldmap = "RShore 2";			//instead of Rocky Shore
-	Locations[n].image = "wr_cave_shore.tga";
+	Locations[n].image = "wr_cave_shore";
 
 	//Sound
 	locations[n].type = "Vane_seashore";
@@ -4469,7 +4469,7 @@ void LocationInitQuestLocations(ref n)
 // -------------------------------------------------
 	locations[n].id = "wr_wood_tower1";
 	locations[n].id.label = "Wood tower";
-	Locations[n].image = "wr_wood_tower1.tga";
+	Locations[n].image = "wr_wood_tower1";
 	
 	//Town sack
 	locations[n].lockWeather = "Inside";
@@ -4531,7 +4531,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Wood tower";
 	Locations[n].filespath.models = "locations\inside\store04";
 	Locations[n].filespath.textures = "locations\inside\store04\wood_tower";
-	Locations[n].image = "wr_wood_tower2.tga";
+	Locations[n].image = "wr_wood_tower2";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -4640,7 +4640,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Wood tower";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\wood_tower";
-	Locations[n].image = "wr_wood_tower3.tga";
+	Locations[n].image = "wr_wood_tower3";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -4721,7 +4721,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\Cavern_blue";
 	Locations[n].id = "wr_Cavern";
 	locations[n].id.label = "Blue cavern";
-	Locations[n].image = "wr_cavern.tga";
+	Locations[n].image = "wr_cavern";
 
 	//Sound
 	locations[n].type = "blue_cavern";
@@ -4829,7 +4829,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Outside\Pirate_Outer_Location_2";
 	Locations[n].id = "wr_church_outside";
 	locations[n].id.label = "Outside pirate church";
-	Locations[n].image = "wr_church_outside.tga";
+	Locations[n].image = "wr_church_outside";
 	//Sound
 	locations[n].type = "Vane_jungle";
 
@@ -5004,7 +5004,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Entrance to church attic";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\church_attic";
-	Locations[n].image = "wr_church_attic_stairs.tga";
+	Locations[n].image = "wr_church_attic_stairs";
 
 	//Town sack
 	//Locations[n].townsack = "Redmond";
@@ -5069,7 +5069,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Outside\Pirate_Outer_Location_2";
 	Locations[n].id = "wr_church_attic";
 	locations[n].id.label = "Church attic";
-	Locations[n].image = "wr_church_attic.tga";
+	Locations[n].image = "wr_church_attic";
 	//Sound
 	locations[n].type = "jungle_pirates";
 
@@ -5196,7 +5196,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.textures = "locations\inside\Shipyard3\sacristy";
 	Locations[n].id = "wr_sacristy";
 	//locations[n].id.label = "Sacristy";		//not from start
-	Locations[n].image = "wr_sacristy.tga";
+	Locations[n].image = "wr_sacristy";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -5277,7 +5277,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "wr_church_inside";
 	locations[n].id.label = "Pirate church";
-	Locations[n].image = "wr_church_inside.tga";
+	Locations[n].image = "wr_church_inside";
 
 	//Sound
 	locations[n].type = "Vane_church";		//"tavern" later on
@@ -5379,7 +5379,7 @@ void LocationInitQuestLocations(ref n)
 	//locations[n].id.label = "Chapel stairs";			//not from start
 	Locations[n].filespath.models = "locations\inside\store04";
 	Locations[n].filespath.textures = "locations\inside\store04\church";
-	Locations[n].image = "wr_chapel_stairs.tga";
+	Locations[n].image = "wr_chapel_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -5468,7 +5468,7 @@ void LocationInitQuestLocations(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "wr_chapel";
 	locations[n].id.label = "Chapel";
-	Locations[n].image = "wr_chapel.tga";
+	Locations[n].image = "wr_chapel";
 	Locations[n].filespath.models = "locations\inside\Church_2\\";
 	Locations[n].filespath.textures = "locations\inside\Church_2\chapel";
 	
@@ -5524,7 +5524,7 @@ void LocationInitQuestLocations(ref n)
 //	locations[n].id.label = "Temple stairs";				//turn it on later
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\chapel";
-	Locations[n].image = "wr_animists_stairs.tga";
+	Locations[n].image = "wr_animists_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -5596,7 +5596,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.textures = "locations\inside\ANIMISTS_Cave\mandala1";
 	Locations[n].id = "wr_animists";
 	locations[n].id.label = "Temple";
-	Locations[n].image = "wr_animists.tga";
+	Locations[n].image = "wr_animists";
 	//Sound
 	locations[n].type = "Vane_temple";
 
@@ -5694,7 +5694,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.textures = "locations\inside\Dungeon_1\crypt";
 	Locations[n].id = "wr_crypt";
 //	locations[n].id.label = "Port Royal catacombs";		//later
-	Locations[n].image = "wr_crypt.tga";
+	Locations[n].image = "wr_crypt";
 	//Town sack
 	Locations[n].townsack = "Redmond";
 
@@ -5763,10 +5763,10 @@ void LocationInitQuestLocations(ref n)
 //----------------------------------------------------------------------------------------------
 
 	locations[n].id = "wr_wine_cellar";
-	locations[n].image = "loading\inside\dungeon.tga";
+	locations[n].image = "loading\inside\dungeon";
 	//locations[n].id.label = "Roger's wine cellar";
 	locations[n].id.label = "";
-	Locations[n].image = "wr_wine_cellar.tga";
+	Locations[n].image = "wr_wine_cellar";
 	//Sound
 	Locations[n].townsack = "Redmond";
 	locations[n].type = "Rogers_cellar";		//was dungeon
@@ -5817,7 +5817,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id = "church_wine_cellar";
 	//locations[n].id.label = "Church wine cellar";
 	locations[n].id.label = "";
-	Locations[n].image = "church_wine_cellar.tga";
+	Locations[n].image = "church_wine_cellar";
 	//Town sack
 	locations[n].townsack = "Redmond";
 	//Sound
@@ -5897,7 +5897,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id = "church_choir";
 	//locations[n].id.label = "Port Royal Church Choir";
 	locations[n].id.label = "";
-	Locations[n].image = "church_choir.tga";
+	Locations[n].image = "church_choir";
 	//Town sack
 	locations[n].townsack = "Redmond";
 	//Sound
@@ -6011,7 +6011,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1_wood";
 	Locations[n].id = "shipyard_stairs";
 //	locations[n].id.label = "Shipyard stairs";		//open = on
-	Locations[n].image = "shipyard_stairs.tga";
+	Locations[n].image = "shipyard_stairs";
 	//Locations[n].monsters = "1";
 	
 	//Town sack
@@ -6064,7 +6064,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1_wood";
 	Locations[n].id = "storeroom_attic";
 //	locations[n].id.label = "Storeroom attic";		//open = on
-	Locations[n].image = "storeroom_attic.tga";
+	Locations[n].image = "storeroom_attic";
 	
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -6134,7 +6134,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Shipyard_shore";
 	locations[n].id.label = "Shipyard shore";
 //	locations[n].worldmap = "Redmond";
-	Locations[n].image = "Shipyard_shore.tga";
+	Locations[n].image = "Shipyard_shore";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -6274,7 +6274,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Shipyard_docks";
 	locations[n].id.label = "Docks";
-	Locations[n].image = "Shipyard_docks.tga";
+	Locations[n].image = "Shipyard_docks";
 	
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -6325,7 +6325,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Defoes_cabin";
 	locations[n].id.label = "De Foe's Home";
-	Locations[n].image = "Defoes_cabin.tga";
+	Locations[n].image = "Defoes_cabin";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -6384,7 +6384,7 @@ void LocationInitQuestLocations(ref n)
 
 	locations[n].id = "stonehouse_inside";
 	locations[n].id.label = "Port Royal Military Head Quarter";
-	Locations[n].image = "stonehouse_inside.tga";
+	Locations[n].image = "stonehouse_inside";
 
 	//Sound
 	locations[n].type = "military";
@@ -6443,7 +6443,7 @@ void LocationInitQuestLocations(ref n)
 
 	locations[n].id = "fake_fort_JRH";
 	locations[n].id.label = "Port Royale Fort";
-	Locations[n].image = "stonehouse_inside.tga";
+	Locations[n].image = "stonehouse_inside";
 
 	//Sound
 	locations[n].type = "military";
@@ -6475,7 +6475,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Redmond_shore_ship";
 	locations[n].id.label = "Prison ships";
-	Locations[n].image = "Redmond_shore_ship.tga";
+	Locations[n].image = "Redmond_shore_ship";
 	Locations[n].name = "Ship";
 	//Sound
 	locations[n].type = "prison_ships";
@@ -6546,7 +6546,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Redmond_shore_03";
 	locations[n].id.label = "Boat shore";
-	Locations[n].image = "Redmond_shore_03.tga";
+	Locations[n].image = "Redmond_shore_03";
 
 	//Sound
 	locations[n].type = "indian_seashore";
@@ -6619,7 +6619,7 @@ void LocationInitQuestLocations(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\town_QC\port";	
-	Locations[n].image = "wr_port.tga";
+	Locations[n].image = "wr_port";
 
 	Locations[n].id = "wr_port";
 	locations[n].id.label = "Woodes Rogers' port";
@@ -6742,7 +6742,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Prize ships";
 	//Info
 	Locations[n].filespath.models = "locations\decks\udeck_open";
-	Locations[n].image = "wr_ships.tga";
+	Locations[n].image = "wr_ships";
 	//Sound
 	
 	locations[n].type = "Rogers_ships";
@@ -6931,7 +6931,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Quarterdeck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\udeck_open";
-	Locations[n].image = "wr_ships.tga";
+	Locations[n].image = "wr_ships";
 	//Sound
 	
 	locations[n].type = "Rogers_ships";
@@ -7047,7 +7047,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	locations[n].id.label = "Prize ship";
 	//Info
 	Locations[n].filespath.models = "locations\decks\qdeck_open";
-	Locations[n].image = "wr_corvette.tga";
+	Locations[n].image = "wr_corvette";
 	//Sound
 	locations[n].type = "silent_seashore";		
 
@@ -7256,7 +7256,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capmd";
-	Locations[n].image = "Deck_Capmd.tga";
+	Locations[n].image = "Deck_Capmd";
 	//Sound
 	Locations[n].type = "corvette_closed";
 
@@ -7316,7 +7316,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "Cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capsm";
-	Locations[n].image = "Deck_Capsm.tga";
+	Locations[n].image = "Deck_Capsm";
 	//Sound
 	Locations[n].type = "corvette_closed";
 
@@ -7382,7 +7382,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "Crew's quarters";
 	//Info
 	Locations[n].filespath.models = "locations\decks\seadogs";
-	Locations[n].image = "Deck_seadogs.tga";
+	Locations[n].image = "Deck_seadogs";
 	//Sound
 	Locations[n].type = "corvette_closed";
 
@@ -7457,7 +7457,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "Cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\seadogs";
-	Locations[n].image = "wr_corv_smallcabin.tga";
+	Locations[n].image = "wr_corv_smallcabin";
 	//Sound
 	Locations[n].type = "corvette_closed";
 
@@ -7500,7 +7500,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "This heavy cast iron door has a copper lock";
 	//Info
 	Locations[n].filespath.models = "locations\decks\seadogs";
-	Locations[n].image = "wr_corv_smallcabin.tga";
+	Locations[n].image = "wr_corv_smallcabin";
 	//Sound
 	Locations[n].type = "corvette_closed";
 
@@ -7545,7 +7545,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "Gun deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck1_yellow";
-	Locations[n].image = "wr_corv_deck1.tga";
+	Locations[n].image = "wr_corv_deck1";
 	//Sound
 	Locations[n].type = "corvette_closed";
 	
@@ -7683,7 +7683,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "Gun deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck2_red";
-	Locations[n].image = "wr_gall_deck2_prow.tga";
+	Locations[n].image = "wr_gall_deck2_prow";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -7775,7 +7775,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "Gun deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck2_red";
-	Locations[n].image = "wr_gall_deck2_stern.tga";
+	Locations[n].image = "wr_gall_deck2_stern";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -7844,7 +7844,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 
 	Locations[n].id = "wr_gall_galley";
 	locations[n].id.label = "Galley";
-	Locations[n].image = "wr_gall_galley.tga";
+	Locations[n].image = "wr_gall_galley";
 
 	//Sound
 	Locations[n].type = "galleon_open";		//closed later
@@ -7906,7 +7906,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 
 	Locations[n].id = "wr_gall_galley_flooded";
 	locations[n].id.label = "Galley";
-	Locations[n].image = "wr_gall_galley.tga";
+	Locations[n].image = "wr_gall_galley";
 
 	//Sound
 	Locations[n].type = "galleon_closed";
@@ -7973,7 +7973,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "Officer's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cap";
-	Locations[n].image = "Deck_Cap.tga";
+	Locations[n].image = "Deck_Cap";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -8027,7 +8027,7 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].id.label = "This heavy cast iron door has a gold lock";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cap";
-	Locations[n].image = "wr_gall_cap_outer.tga";
+	Locations[n].image = "wr_gall_cap_outer";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -8112,7 +8112,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\Cabin02";
-	Locations[n].image = "Deck_Cabin2.tga";
+	Locations[n].image = "Deck_Cabin2";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -8157,7 +8157,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id.label = "Cargo Hold";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold_red";
-	Locations[n].image = "wr_gall_hold_first.tga";
+	Locations[n].image = "wr_gall_hold_first";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -8244,7 +8244,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Info
 	//Locations[n].filespath.models = "locations\decks\hold_A";
 	Locations[n].filespath.models = "locations\decks\hold_red";
-	Locations[n].image = "wr_gall_hold_second.tga";
+	Locations[n].image = "wr_gall_hold_second";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -8327,7 +8327,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	locations[n].id = "wr_farm_kitchen";
 	locations[n].id.label = "Rogers' kitchen";
-	Locations[n].image = "wr_farm_kitchen.tga";
+	Locations[n].image = "wr_farm_kitchen";
 	//Town sack
 	locations[n].lockWeather = "Inside";
 	//Sound
@@ -8384,7 +8384,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	locations[n].id = "wr_farm_bedroom";
 	locations[n].id.label = "Rogers' bedroom";
-	Locations[n].image = "wr_farm_bedroom.tga";
+	Locations[n].image = "wr_farm_bedroom";
 	//Town sack
 	locations[n].lockWeather = "Inside";
 	//Sound
@@ -8460,7 +8460,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\inside\Corridor\\";
 	Locations[n].filespath.textures = "locations\inside\Corridor\dark";	//start dark, normal later
 
-	Locations[n].image = "wr_farm_corridor.tga";
+	Locations[n].image = "wr_farm_corridor";
 
 	//Sound
 	locations[n].type = "Rogers_corridor";					//JRH sound: no monster breathe
@@ -8541,7 +8541,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "wr_farm_servant";
 	//locations[n].id.label = "Minervas room";				//later
-	Locations[n].image = "wr_farm_servant.tga";
+	Locations[n].image = "wr_farm_servant";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -8629,7 +8629,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	locations[n].id = "wr_farm_booty";
 	locations[n].id.label = "Rogers' storeroom";
-	Locations[n].image = "wr_farm_booty.tga";
+	Locations[n].image = "wr_farm_booty";
 
 	//Town sack
 	locations[n].lockWeather = "Inside";
@@ -8675,7 +8675,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	locations[n].id = "wr_farm_alchemy";
 	locations[n].id.label = "Rogers' laboratory";
-	Locations[n].image = "wr_farm_alchemy.tga";
+	Locations[n].image = "wr_farm_alchemy";
 	//Town sack
 	locations[n].lockWeather = "Inside";
 	//Sound
@@ -8774,7 +8774,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 //JRH2	
 	Locations[n].id = "wr_farm_alchemy2";
 	//locations[n].id.label = "Rogers' secret laboratory";			//quest 2
-	Locations[n].image = "wr_farm_alchemy2.tga";
+	Locations[n].image = "wr_farm_alchemy2";
 	
 	Locations[n].filespath.models = "locations\Inside\TwoFloorHouse";
 	//Sound
@@ -8922,7 +8922,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	locations[n].id = "wr_farm_booty2";
 //	locations[n].id.label = "Rogers' secret storeroom";				//label when opened
-	Locations[n].image = "wr_farm_booty2.tga";
+	Locations[n].image = "wr_farm_booty2";
 
 	//Town sack
 	locations[n].lockWeather = "Inside";
@@ -8973,7 +8973,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "QC_store_upstairs";
 	locations[n].id.label = "Store upstairs";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas";
@@ -9030,7 +9030,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 // -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";	
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "QC_Store_JRH";
 	locations[n].id.label = "#stown_name# store";
@@ -9113,7 +9113,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "QC_store_bedroom";
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\mh10";
-	Locations[n].image = "Inside_mh10.tga";
+	Locations[n].image = "Inside_mh10";
 
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas";
@@ -9164,7 +9164,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\inside\shipyard2";//"locations\Inside\shipyard";
 	Locations[n].id = "QC_shipyard1_JRH";
 	locations[n].id.label = "#stown_name# shipyard";
-	//Locations[n].image = "Shipyard_01.tga";
+	//Locations[n].image = "Shipyard_01";
 	Locations[n].image = "";//no loading picture please
 
 	//Town sack
@@ -9379,7 +9379,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	locations[n].id = "bb_Maltains";
 	locations[n].id.label = "Order of Malta";
-	Locations[n].image = "Inside_Maltains.tga";
+	Locations[n].image = "Inside_Maltains";
 	//Town sack
 	locations[n].townsack = "QuebradasCostillas";
 	//Sound
@@ -9491,7 +9491,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.textures = "locations\inside\Shipyard2\malta";
 	Locations[n].id = "bb_maltains_office";
 	locations[n].id.label = "Secret room";
-	Locations[n].image = "Inside_Maltains_Secret.tga";
+	Locations[n].image = "Inside_Maltains_Secret";
 
 	//Town sack
 	Locations[n].townsack = "Quebradas Costillas";
@@ -9550,7 +9550,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\town_IslaMuelle\port";
-	Locations[n].image = "wr_prison_port.tga";
+	Locations[n].image = "wr_prison_port";
 
 	Locations[n].id = "bb_prison_port";
 	locations[n].id.label = "Entrance to Prison";
@@ -9661,7 +9661,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Elevator";
 	Locations[n].filespath.models = "locations\inside\Dungeon_2\\";
 	Locations[n].filespath.textures = "locations\inside\Dungeon_2\elevator";
-	Locations[n].image = "wr_prison_elevator.tga";
+	Locations[n].image = "wr_prison_elevator";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -9727,7 +9727,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Incas Temple\Alcove";
 	Locations[n].filespath.textures = "locations\inside\Alcove\prison";
 	//Sound
-	Locations[n].image = "wr_prison_alcove.tga";
+	Locations[n].image = "wr_prison_alcove";
 	locations[n].type = "Rogers_jail";
 	locations[n].id.label = "Prison central hall";
 	//Models
@@ -9822,7 +9822,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1_wood";
 	Locations[n].id = "bb_prison_stairs1";		//open = on
-	Locations[n].image = "GB_big_stairs.tga";
+	Locations[n].image = "GB_big_stairs";
 	
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -9873,7 +9873,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "bb_prison";
 	locations[n].id.label = "Rotunda lower levels";
 	Locations[n].filespath.models = "locations\inside\prison";
-	Locations[n].image = "Inside_prison.tga";
+	Locations[n].image = "Inside_prison";
 
 	//Town sack
 	//Locations[n].townsack = "Redmond";
@@ -9943,7 +9943,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 //	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\Tortuga";	
-	Locations[n].image = "Inside_Townhall_Stairs_Tortuga.tga";
+	Locations[n].image = "Inside_Townhall_Stairs_Tortuga";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -10005,7 +10005,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "bb_prison2";
 	locations[n].id.label = "Rotunda bottom level";
 	Locations[n].filespath.models = "locations\inside\prison2";
-	Locations[n].image = "wr_prison2.tga";
+	Locations[n].image = "wr_prison2";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -10152,7 +10152,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Prison Office";
 	Locations[n].filespath.models = "locations\inside\store03";
 	Locations[n].filespath.textures = "locations\inside\store03\prison";	
-	Locations[n].image = "wr_prison_office.tga";
+	Locations[n].image = "wr_prison_office";
 
 	//Sound
 	locations[n].type = "Rogers_jail";
@@ -10227,7 +10227,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\outside\Canyon";
 	Locations[n].id = "Kristiania_canyon";
 	locations[n].id.label = "Kristiania canyon";
-	Locations[n].image = "wr_Kr_canyon.tga";
+	Locations[n].image = "wr_Kr_canyon";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -10287,7 +10287,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "Kristiania_entre";
 	locations[n].id.label = "Kristiania entre";
-	Locations[n].image = "wr_Kr_entre.tga";
+	Locations[n].image = "wr_Kr_entre";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -10406,7 +10406,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Nueva_Suecia_upper_town";
 	Locations[n].filespath.models = "locations\town_IslaMuelle\town_03";
 	locations[n].id.label = "Nueva Suecia upper town";
-	Locations[n].image = "wr_NS_high.tga";
+	Locations[n].image = "wr_NS_high";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -10600,7 +10600,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Nueva_Suecia_TailorsShop";
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";	
 	Locations[n].filespath.textures = "locations\inside\StoreSmall\Spanish";
-	Locations[n].image = "wr_NS_tailor.tga";	
+	Locations[n].image = "wr_NS_tailor";
 	locations[n].id.label = "Nueva Suecia tailor's shop";
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -10669,7 +10669,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Nueva_Suecia_tailor_upstairs";
 	locations[n].id.label = "Storeroom textiles";
 	Locations[n].filespath.models = "locations\inside\mh5";
-	Locations[n].image = "wr_NS_textiles.tga";
+	Locations[n].image = "wr_NS_textiles";
 
 	//Town sack
 	//Locations[n].townsack = "Falaise de Fleur";
@@ -10753,7 +10753,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Inside\mh3";
 	Locations[n].id = "Oriel_room";
 	locations[n].id.label = "Tailor's room";
-	Locations[n].image = "Inside_mh3.tga";
+	Locations[n].image = "Inside_mh3";
 
 	//Town sack
 	//Locations[n].townsack = "Douwesen";
@@ -10806,7 +10806,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Oriel_room_stairs";
 	locations[n].id.label = "Stairs";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
-	Locations[n].image = "GB_small_stairs.tga";
+	Locations[n].image = "GB_small_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -10868,7 +10868,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Nueva_Suecia_hidden_town";
 	Locations[n].filespath.models = "locations\town_IslaMuelle\town_01";
 	locations[n].id.label = "Nueva Suecia inner town";
-	Locations[n].image = "wr_NS_inner.tga";
+	Locations[n].image = "wr_NS_inner";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -10943,7 +10943,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "The Siberia.";
 	Locations[n].filespath.models = "locations\Inside\Tavern_1";
 	Locations[n].filespath.textures = "locations\inside\Tavern_1\spanish";	
-	Locations[n].image = "Inside_Tavern_1_white.tga";
+	Locations[n].image = "Inside_Tavern_1_white";
 
 	//Sound
 	locations[n].type = "tavern";
@@ -10990,7 +10990,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	// -------------------------------------------------
 	Locations[n].id = "NS_hidden_town_priest";
 	locations[n].id.label = "Priest's room";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 
@@ -11039,7 +11039,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\town_IslaMuelle\town_01";
 
 	locations[n].id.label = "Nueva Suecia lower town";
-	Locations[n].image = "wr_NS_low.tga";
+	Locations[n].image = "wr_NS_low";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -11167,7 +11167,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "Kristiania_cathedral";
 	locations[n].id.label = "Kristiania cathedral";
-	Locations[n].image = "Inside_Church_3.tga";
+	Locations[n].image = "Inside_Church_3";
 	Locations[n].filespath.models = "locations\inside\Church_3";
 
 	//Town sack
@@ -11279,7 +11279,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "Kristiania_shipyard";
 	locations[n].id.label = "Kristiania shipyard";
-	Locations[n].image = "Inside_shipyard3.tga";
+	Locations[n].image = "Inside_shipyard3";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -11342,7 +11342,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Kristiania_shipyard_stairs";
 	locations[n].id.label = "Shipyard stairs";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
-	Locations[n].image = "GB_small_stairs.tga";
+	Locations[n].image = "GB_small_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -11405,7 +11405,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id = "Kristiania_shipwreck";
 	locations[n].id.label = "Spanish galleon";
 	locations[n].filespath.models = "locations\decks\Kidds_cabin";
-	locations[n].image = "wr_wreck_inside.tga";
+	locations[n].image = "wr_wreck_inside";
 	
 	locations[n].lockWeather = "Inside";
 	//Sound
@@ -11507,7 +11507,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 // -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\town_Greenford\port";
-	Locations[n].image = "wr_Kr_port.tga";
+	Locations[n].image = "wr_Kr_port";
 
 	Locations[n].id = "Kristiania_port";
 	locations[n].id.label = "Kristiania port";
@@ -11613,7 +11613,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 //--------------------------------------------------------------------------
 
 	Locations[n].filespath.models = "locations\town_Greenford\town";
-	Locations[n].image = "wr_Kr_center.tga";
+	Locations[n].image = "wr_Kr_center";
 
 	Locations[n].id = "Kristiania_center";
 	locations[n].id.label = "Kristiania center";
@@ -11743,7 +11743,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Kristiania_townhall_entre";
 	locations[n].id.label = "Townhall office - open later today";
 	Locations[n].filespath.models = "locations\inside\Office";
-	Locations[n].image = "wr_Kr_TH_office.tga";
+	Locations[n].image = "wr_Kr_TH_office";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -11817,7 +11817,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].type = "Swe_inside";
 	
 	Locations[n].filespath.models = "locations\Inside\Shipyard4";
-	Locations[n].image = "wr_Kr_TH.tga";
+	Locations[n].image = "wr_Kr_TH";
 	//Models
 	Locations[n].models.back = "back\grms_";
 	//Always
@@ -11864,7 +11864,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Kristiania_store";
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
 	Locations[n].filespath.textures = "locations\inside\StoreSmall\Tortuga";	
-	Locations[n].image = "wr_Kr_store.tga";
+	Locations[n].image = "wr_Kr_store";
 	locations[n].id.label = "Kristiana store.";
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -11911,7 +11911,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
 //	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\church_attic";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\wood_tower";
-	Locations[n].image = "GB_small_stairs.tga";
+	Locations[n].image = "GB_small_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -11982,7 +11982,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1_wood";
 	Locations[n].id = "Kristiania_center_stairs";
 	locations[n].id.label = "To Kristiania center";
-	Locations[n].image = "GB_big_stairs.tga";
+	Locations[n].image = "GB_big_stairs";
 	//Locations[n].monsters = "1";
 	
 	//Town sack
@@ -12032,7 +12032,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "Kristiania_jungle_exit";
 	locations[n].id.label = "Exit from Kristiania";
-	Locations[n].image = "wr_Kr_jungleX.tga";
+	Locations[n].image = "wr_Kr_jungleX";
 
 	//Town sack
 	
@@ -12109,7 +12109,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "Kristiania_chapel";
 	locations[n].id.label = "Kristiania Chapel";
-	Locations[n].image = "wr_chapel.tga";
+	Locations[n].image = "wr_chapel";
 	Locations[n].filespath.models = "locations\inside\Church_2\\";
 	Locations[n].filespath.textures = "locations\inside\Church_2\chapel";
 	
@@ -12157,7 +12157,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
 	//Locations[n].filespath.textures = "locations\SPAIN";
 	
-	Locations[n].image = "wr_Kr_fort.tga";
+	Locations[n].image = "wr_Kr_fort";
 	//Sound
 	//locations[n].type = "silent_seashore";
 	//locations[n].type = "silent_cave_seashore";
@@ -12227,7 +12227,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Fort tower";
 	Locations[n].filespath.models = "locations\inside\store04";
 	Locations[n].filespath.textures = "locations\inside\store04\fort";
-	Locations[n].image = "wr_tower_stairsA.tga";
+	Locations[n].image = "wr_tower_stairsA";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -12336,7 +12336,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	
 	Locations[n].id = "Kristiania_fort_commander";
 	locations[n].id.label = "Fort Commander Hilpershaussen";
-	Locations[n].image = "wr_Kr_fort_commander.tga";
+	Locations[n].image = "wr_Kr_fort_commander";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -12389,7 +12389,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Kristiania_downhill";
 	locations[n].id.label = "Kristiania downhill";
 	locations[n].worldmap = "Falaise De Fleur";
-	Locations[n].image = "wr_Kr_downhill.tga";
+	Locations[n].image = "wr_Kr_downhill";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -12471,7 +12471,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1";
 	Locations[n].id = "Kristiania_cathedral_passage";
 	locations[n].id.label = "Kristiania cathedral passage";
-	Locations[n].image = "wr_Kr_passage.tga";
+	Locations[n].image = "wr_Kr_passage";
 	
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -12539,7 +12539,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Kristiania suburb";
 	locations[n].worldmap = "Falaise De Fleur";
 
-	Locations[n].image = "wr_Kr_suburb.tga";
+	Locations[n].image = "wr_Kr_suburb";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -12591,7 +12591,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "Kristiania_swamp_exit";
 	locations[n].id.label = "Kristiania swamp exit";
-	Locations[n].image = "wr_Kr_swampX.tga";
+	Locations[n].image = "wr_Kr_swampX";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -12664,7 +12664,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "KR_Jungle_1";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "wr_Kr_green_swamp.tga";
+	Locations[n].image = "wr_Kr_green_swamp";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -12747,7 +12747,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Outside\Jungle_5";
 	Locations[n].id = "KR_jungle_2";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "wr_Kr_green_swamp.tga";
+	Locations[n].image = "wr_Kr_green_swamp";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -12830,7 +12830,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Outside\Jungle_4";
 	Locations[n].id = "KR_jungle_3";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "wr_Kr_green_swamp.tga";
+	Locations[n].image = "wr_Kr_green_swamp";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -12913,7 +12913,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.textures = "locations\JUNGLES";			//huh?
 	Locations[n].id = "KR_Jungle_4";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "wr_Kr_green_swamp.tga";
+	Locations[n].image = "wr_Kr_green_swamp";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -12996,7 +12996,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.textures = "locations\JUNGLES";			//huh?
 	Locations[n].id = "KR_Jungle_5";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "wr_Kr_green_swamp.tga";
+	Locations[n].image = "wr_Kr_green_swamp";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13078,7 +13078,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Outside\Jungle3";
 	Locations[n].id = "KR_jungle_6";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "wr_Kr_green_swamp.tga";
+	Locations[n].image = "wr_Kr_green_swamp";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13160,7 +13160,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Outside\Jungle_4";
 	Locations[n].id = "KR_jungle_7";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_4.tga";
+	Locations[n].image = "Outside_Jungle_4";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13243,7 +13243,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "KR_jungle_8";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13325,7 +13325,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].filespath.models = "locations\Outside\Jungle_QC";
 	Locations[n].id = "KR_jungle_9";
-	Locations[n].image = "wr_Kr_indian_camp.tga";
+	Locations[n].image = "wr_Kr_indian_camp";
 	
 	//Sound
 	locations[n].type = "indian_jungle";
@@ -13453,7 +13453,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "KR_jungle_10";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13536,7 +13536,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "KR_jungle_11";
 	locations[n].id.label = "Jungle";
 	Locations[n].filespath.models = "locations\Outside\jungle5"; 
-	Locations[n].image = "wr_Kr_green_swamp.tga";
+	Locations[n].image = "wr_Kr_green_swamp";
  	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13630,7 +13630,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Outside\Shore_2";
 	Locations[n].id = "KR_jungle_12";
 	locations[n].id.label = "Shore.";
-	Locations[n].image = "Town_QC_Port.tga";
+	Locations[n].image = "Town_QC_Port";
 	//Sound
 	locations[n].type = "indian_seashore";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13688,7 +13688,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "KR_jungle_13";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13769,7 +13769,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Outside\Cave Entrance";
 	Locations[n].id = "KR_jungle_14";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "indian_jungle";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13836,7 +13836,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Inside\Grot";
 	Locations[n].id = "KR_jungle_15";
 	locations[n].id.label = "Hidden Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "KhaelRoa";
 	LAi_LocationMonstersGen(&locations[n], false);
@@ -13877,7 +13877,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "KR_jungle_16";
 	locations[n].id.label = "Jungle";
 	Locations[n].filespath.models = "locations\Outside\jungle_8";
-	Locations[n].image = "Outside_Jungle_8.tga";
+	Locations[n].image = "Outside_Jungle_8";
  	//Sound
 	locations[n].type = "indian_jungle";
 	//LAi_LocationMonstersGen(&locations[n], true);
@@ -13943,7 +13943,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Outside\Jungle_Church";
 	Locations[n].id = "Kristiania_jungle_house";
 	locations[n].id.label = "Charleston swamp";
-	Locations[n].image = "wr_redhouse_outside.tga";
+	Locations[n].image = "wr_redhouse_outside";
 	//Sound
 	locations[n].type = "silent_jungle";
 	//Models
@@ -14051,7 +14051,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Hall";
 	Locations[n].filespath.models = "locations\inside\flamhouse";
 	
-	Locations[n].image = "wr_redhouse_hall.tga";
+	Locations[n].image = "wr_redhouse_hall";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -14165,7 +14165,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "Redhouse_room";
 	locations[n].id.label = "Living Room";
-	Locations[n].image = "wr_redhouse_livingroom.tga";
+	Locations[n].image = "wr_redhouse_livingroom";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -14231,7 +14231,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "BB_island1";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "wr_Kr_swamp.tga";
+	Locations[n].image = "wr_Kr_swamp";
 	//Sound
 	locations[n].type = "silent_seashore";
 	
@@ -14330,7 +14330,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 //--------------------------------------------------------------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_3";
 	Locations[n].id = "BB_mountain_tunnel";
-	Locations[n].image = "wr_BB_mountain.tga";
+	Locations[n].image = "wr_BB_mountain";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
@@ -14381,7 +14381,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "BB_island2";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "wr_BB_tower.tga";
+	Locations[n].image = "wr_BB_tower";
 	
 	Locations[n].townsack = "Grand Turk"; 					//needed for pirate flag
 
@@ -14500,7 +14500,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	
     	Locations[n].id = "BB_tower";
 	locations[n].id.label = "Blackbeard's tower";
-	Locations[n].image = "wr_BB_tower_inside.tga";
+	Locations[n].image = "wr_BB_tower_inside";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -14589,7 +14589,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	locations[n].id = "BB_upper_cave";
 	locations[n].id.label = "Grot";
-    	locations[n].image = "wr_BB_upper_cave.tga";
+    	locations[n].image = "wr_BB_upper_cave";
 	//Sound
 	locations[n].type = "silent_cave_seashore";
 	
@@ -14774,7 +14774,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//flooded cave
 	locations[n].id = "BB_lower_cave";
 	locations[n].id.label = "Grot";
-    	locations[n].image = "wr_BB_lower_cave.tga";
+    	locations[n].image = "wr_BB_lower_cave";
 	//Sound
 	locations[n].type = "silent_cave_seashore";
 
@@ -14966,7 +14966,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id = "BB_burning_cave";
 //	locations[n].id.label = "Grot";
 	locations[n].id.label = "into the unknown...";
-    	locations[n].image = "wr_unknown1.tga";
+    	locations[n].image = "wr_unknown1";
 	//Sound
 	locations[n].type = "silent_burning_cave";				//later "burning_cave" (music)
 
@@ -15207,7 +15207,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "BB_isle";
 	locations[n].id.label = "Islet";
-	Locations[n].image = "wr_isle.tga";
+	Locations[n].image = "wr_isle";
 	//Sound
 //	locations[n].type = "Blackbeard_shore";
 	locations[n].type = "Rogers_ships";
@@ -15262,7 +15262,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].filespath.models = "locations\Inside\Hut_attic";
 	locations[n].id = "BB_isle_passage";
 	locations[n].id.label = "Passage";
-	Locations[n].image = "wr_isle_hut1.tga";
+	Locations[n].image = "wr_isle_hut1";
 	//Sound
 	locations[n].type = "silent_cave_seashore";
 	//Models
@@ -15334,7 +15334,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "BB_isle_hut";
 	locations[n].id.label = "Hideout";
 	Locations[n].filespath.models = "locations\inside\Hut_isle";
-	Locations[n].image = "wr_isle_hut2.tga";
+	Locations[n].image = "wr_isle_hut2";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -15386,7 +15386,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "BB_sloop";
 	locations[n].id.label = "Sloop";
 	Locations[n].filespath.models = "locations\decks\deckLow";
-	Locations[n].image = "Teach_sloop.tga";
+	Locations[n].image = "Teach_sloop";
 
 	//Sound
 	locations[n].type = "Blackbeard_shore";	
@@ -15443,7 +15443,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "BB_sloop_hold";		//never visited
 	locations[n].id.label = "Hold";
 	Locations[n].filespath.models = "locations\decks\deckLow";
-	Locations[n].image = "Teach_sloop.tga";
+	Locations[n].image = "Teach_sloop";
 
 	//Sound
 	locations[n].type = "Blackbeard_shore";	
@@ -15475,8 +15475,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id.label = "Large Cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\Cabin01";
-	Locations[n].image = "Teach_ship.tga";				//first time
-//	Locations[n].image = "deck_cabin1.tga";				//later
+	Locations[n].image = "Teach_ship";				//first time
+//	Locations[n].image = "deck_cabin1";				//later
 	//Sound
 	Locations[n].type = "Blackbeard_house";
 
@@ -15529,7 +15529,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\Cabin01";
 
-	Locations[n].image = "Teach_cabin.tga";				
+	Locations[n].image = "Teach_cabin";
 
 	//Sound
 	Locations[n].type = "Blackbeard_party";
@@ -15598,7 +15598,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "BB_QAR_captain";		//never visited
 	locations[n].id.label = "Captains cabin";
 	Locations[n].filespath.models = "locations\decks\deckLow";
-	Locations[n].image = "Teach_sloop.tga";
+	Locations[n].image = "Teach_sloop";
 
 	//Sound
 	locations[n].type = "Blackbeard_shore";	
@@ -15629,7 +15629,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Queen Anne's Revenge";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckLowVSBig";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 
 	Locations[n].townsack = "Grand Turk"; 					//needed for pirate flag
 	//Sound
@@ -15710,7 +15710,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Citadel";
 	Locations[n].filespath.models = "locations\inside\store04";
 	Locations[n].filespath.textures = "locations\inside\store04\fort";
-	Locations[n].image = "wr_tower_stairsA.tga";
+	Locations[n].image = "wr_tower_stairsA";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -15785,7 +15785,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "This part of the Citadel is damaged";
 	Locations[n].filespath.models = "locations\inside\store04";
 	Locations[n].filespath.textures = "locations\inside\store04\fort";
-	Locations[n].image = "wr_wood_tower2.tga";
+	Locations[n].image = "wr_wood_tower2";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -15827,7 +15827,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Maynard's room";
 	Locations[n].filespath.models = "locations\inside\mh5";
 	Locations[n].filespath.textures = "locations\inside\mh5\fort";
-	Locations[n].image = "wr_Maynard.tga";
+	Locations[n].image = "wr_Maynard";
 
 	//Town sack
 //	Locations[n].townsack = "Falaise de Fleur";
@@ -15896,7 +15896,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Citadel";
 	Locations[n].filespath.models = "locations\inside\store04";
 	Locations[n].filespath.textures = "locations\inside\store04\fort";
-	Locations[n].image = "wr_tower_stairsA.tga";
+	Locations[n].image = "wr_tower_stairsA";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -15970,7 +15970,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Citadel";	
 	Locations[n].filespath.models = "locations\inside\store04";
 	Locations[n].filespath.textures = "locations\inside\store04\fort_darker";
-	Locations[n].image = "wr_tower_stairsB.tga";
+	Locations[n].image = "wr_tower_stairsB";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -16034,7 +16034,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Citadel_tower_stairs4";
 	locations[n].id.label = "Citadel";
 	Locations[n].filespath.models = "locations\inside\store04_stone";
-	Locations[n].image = "wr_tower_stairsC.tga";
+	Locations[n].image = "wr_tower_stairsC";
 
 	//Town sack
 	Locations[n].townsack = "Khael Roa";
@@ -16089,7 +16089,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "Citadel_cave";
 	locations[n].id.label = "Citadel Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "silent_cave_seashore";
 	//Models
@@ -16123,7 +16123,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Turks_balcony_room";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh7";
-	Locations[n].image = "Inside_mh7.tga";
+	Locations[n].image = "Inside_mh7";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -16164,7 +16164,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].filespath.models = "locations\Inside\Sewer"; // PB: Flood the sewer as per an original idea by CCC
 	Locations[n].id = "Turks_sewer";
-	Locations[n].image = "wr_sewer.tga";
+	Locations[n].image = "wr_sewer";
 	locations[n].id.label = "#stown_name# Sewer";
 
 	//Sound
@@ -16230,7 +16230,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 
 	Locations[n].id = "Turks_wreck_shore";
 	//locations[n].id.label = "Prison ships";
-	Locations[n].image = "wr_wreck_shore.tga";
+	Locations[n].image = "wr_wreck_shore";
 	Locations[n].name = "Ship";
 	//Sound
 	locations[n].type = "prison_ships";
@@ -16306,7 +16306,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capsm";
 	Locations[n].filespath.textures = "locations\decks\wreck";
-	Locations[n].image = "wr_wreck_cabin.tga";
+	Locations[n].image = "wr_wreck_cabin";
 	//Sound
 	Locations[n].type = "corvette_closed";
 
@@ -16360,7 +16360,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Locations[n].id.label = "Cargo Hold";
 	Locations[n].filespath.models = "locations\decks\hold_wreck";
 	Locations[n].filespath.textures = "locations\decks\wreck";
-	Locations[n].image = "wr_wreck_hold.tga";
+	Locations[n].image = "wr_wreck_hold";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -16428,7 +16428,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "#stown_name# gunsmith";
 	Locations[n].filespath.models = "locations\inside\DoubleFlour_house";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\Tortuga";					
-	Locations[n].image = "wr_surgeon3_house.tga";
+	Locations[n].image = "wr_surgeon3_house";
 
 	//Town sack
 //	Locations[n].townsack = "Douwesen";
@@ -16495,7 +16495,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Models
 	Locations[n].filespath.models = "locations\Town_Tortuga";
 	Locations[n].models.always.locators = "Tortuga_l_inside";
-	Locations[n].image = "wr_surgeon3_shop.tga";
+	Locations[n].image = "wr_surgeon3_shop";
 	//Sound
 	locations[n].type = "Rogers_repair_residence";
 	locations[n].fastreload = "Tortuga";
@@ -16583,7 +16583,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "#stown_name# surgeon";
 	
 	locations[n].worldmap = "Tortuga";
-	Locations[n].image = "wr_surgeon2.tga";
+	Locations[n].image = "wr_surgeon2";
 
 	//Town sack
 	Locations[n].townsack = "Tortuga";
@@ -16659,7 +16659,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "#stown_name# sailmaker";
 	
 	locations[n].worldmap = "Tortuga";
-	Locations[n].image = "wr_sailmaker.tga";
+	Locations[n].image = "wr_sailmaker";
 
 	//Town sack
 	Locations[n].townsack = "Tortuga";
@@ -16753,7 +16753,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	// -------------------------------------------------
 	Locations[n].id = "Tortuga_tower";
 	locations[n].id.label = "#stown_name# tower";
-	Locations[n].image = "wr_Tortuga_tower_inside.tga";
+	Locations[n].image = "wr_Tortuga_tower_inside";
 	
 	locations[n].worldmap = "Tortuga";
 
@@ -17233,7 +17233,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "Tower stairs";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\Tortuga";
-	Locations[n].image = "Inside_Townhall_Stairs_Tortuga.tga";
+	Locations[n].image = "Inside_Townhall_Stairs_Tortuga";
 	//Town sack
 	Locations[n].townsack = "Redmond";
 
@@ -17306,7 +17306,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	locations[n].id.label = "To the Dovecote";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\Tortuga";
-	Locations[n].image = "Inside_Townhall_Stairs_Tortuga.tga";
+	Locations[n].image = "Inside_Townhall_Stairs_Tortuga";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -17386,7 +17386,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	// -------------------------------------------------
 	Locations[n].id = "Tortuga_surgeon1";					//above sailmaker
 	locations[n].id.label = "#stown_name# surgeon";
-	Locations[n].image = "Inside_Tavern_Room_Tortuga.tga";
+	Locations[n].image = "Inside_Tavern_Room_Tortuga";
 
 	//Town sack
 	Locations[n].townsack = "Tortuga";
@@ -17437,7 +17437,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//locations[n].id.label = "Tower passage";				//when opened
 	Locations[n].filespath.models = "locations\inside\Corridor\\";
 	Locations[n].filespath.textures = "locations\inside\Corridor\fort";
-	Locations[n].image = "wr_Tortuga_tower_passage.tga";
+	Locations[n].image = "wr_Tortuga_tower_passage";
 
 	//Sound
 	locations[n].type = "silent_residence";
@@ -17499,7 +17499,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//--------------------------------------------------------------------------	
 
 	Locations[n].filespath.models = "locations\Town_Cartagena\Cloister_exit";
-	Locations[n].image = "Town_Cartagena_Cloister_Inside.tga";
+	Locations[n].image = "Town_Cartagena_Cloister_Inside";
 
 	Locations[n].vcskip = true;
 
@@ -17600,7 +17600,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id = "BB_graveyard";
 	locations[n].id.label = "Abbey";
 	Locations[n].filespath.models = "locations\Outside\Graveyard";
-	Locations[n].image = "wr_abbey.tga";
+	Locations[n].image = "wr_abbey";
 	
 	//Sound
 	locations[n].type = "deserted_mountains";
@@ -17710,7 +17710,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id = "BB_bell_tower";
 	locations[n].id.label = "Bell tower";
 	Locations[n].filespath.models = "locations\Outside\Graveyard";
-	Locations[n].image = "wr_bell_tower.tga";
+	Locations[n].image = "wr_bell_tower";
 	
 	//Sound
 	locations[n].type = "deserted_mountains";
@@ -17759,7 +17759,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id = "BB_refectory";
 	locations[n].id.label = "Refectory";	
 	Locations[n].filespath.models = "locations\inside\Tavern_2";
-	Locations[n].image = "wr_refectory.tga";
+	Locations[n].image = "wr_refectory";
 
 	//Town sack
 	//Locations[n].townsack = "Havana";
@@ -17851,7 +17851,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "BB_monastary_chapel";
 	locations[n].id.label = "Chapel";
-	Locations[n].image = "Inside_Church_2.tga";
+	Locations[n].image = "Inside_Church_2";
 	Locations[n].filespath.models = "locations\inside\Church_2\\";
 	
 	//Sound
@@ -17893,7 +17893,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id = "BB_abbess";
 	locations[n].id.label = "Abbess";
 	Locations[n].filespath.models = "locations\inside\Tavern_room";
-	Locations[n].image = "Inside_Tavern_Room.tga";
+	Locations[n].image = "Inside_Tavern_Room";
 
 	//Town sack
 	//Locations[n].townsack = "Redmond"; // NK 04-08-29
@@ -17938,7 +17938,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//--------------------------------------------------------------------------	
 
 	Locations[n].filespath.models = "locations\Inside\Church_room";	
-	Locations[n].image = "wr_church_room.tga";
+	Locations[n].image = "wr_church_room";
 
 	Locations[n].id = "BB_church_room";
 	locations[n].id.label = "Small Chapel";
@@ -17985,7 +17985,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//--------------------------------------------------------------------------	
 
 	Locations[n].filespath.models = "locations\Inside\Crypt1";	
-	Locations[n].image = "wr_crypt1.tga";
+	Locations[n].image = "wr_crypt1";
 
 	Locations[n].id = "BB_crypt1";
 	locations[n].id.label = "Crypt ";
@@ -18025,7 +18025,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//--------------------------------------------------------------------------	
 
 	Locations[n].filespath.models = "locations\Inside\Crypt2_1";	
-	Locations[n].image = "wr_crypt2_1.tga";
+	Locations[n].image = "wr_crypt2_1";
 
 	Locations[n].id = "BB_crypt2_1";
 	locations[n].id.label = "Crypt ";
@@ -18074,7 +18074,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 //--------------------------------------------------------------------------	
 
 	Locations[n].filespath.models = "locations\Inside\Crypt2_2";	
-	Locations[n].image = "wr_crypt2_2.tga";
+	Locations[n].image = "wr_crypt2_2";
 
 	Locations[n].id = "BB_crypt2_2";
 	locations[n].id.label = "Crypt ";
@@ -18130,7 +18130,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//--------------------------------------------------------------------------	
 
 	Locations[n].filespath.models = "locations\Inside\Crypt2_2";	
-	Locations[n].image = "wr_abbey_cell.tga";
+	Locations[n].image = "wr_abbey_cell";
 
 	Locations[n].id = "BB_abbey_cell";
 	locations[n].id.label = "Cell";
@@ -18184,7 +18184,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id = "BB_Eden_estate";
 	locations[n].id.label = "Estate";
 	Locations[n].filespath.models = "locations\Outside\Estate";
-	Locations[n].image = "wr_estate.tga";
+	Locations[n].image = "wr_estate";
 	
 	//Sound
 	locations[n].type = "Chinese_garden";
@@ -18307,7 +18307,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id = "BB_Eden_estate_wreck";
 	locations[n].id.label = "Estate";
 	Locations[n].filespath.models = "locations\Outside\Estate";
-	Locations[n].image = "Eden_estate.tga";
+	Locations[n].image = "Eden_estate";
 	
 	//Sound
 	locations[n].type = "silent_jungle";
@@ -18428,7 +18428,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "BB_Eden_maze";
 	locations[n].id.label = "Garden";
-	Locations[n].image = "wr_maze.tga";
+	Locations[n].image = "wr_maze";
 	
 	//Sound
 	locations[n].type = "Chinese_garden";
@@ -18695,7 +18695,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	locations[n].id.label = "Garden house";
 	Locations[n].filespath.models = "locations\Inside\ResidenceSmall1";
 	Locations[n].filespath.textures = "locations\inside\ResidenceSmall1";	
-	Locations[n].image = "wr_garden_house.tga";
+	Locations[n].image = "wr_garden_house";
 	
 	//Sound
 //	locations[n].type = "residence";
@@ -18748,7 +18748,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id = "BB_Eden_office";
 	locations[n].id.label = "Office";
 	Locations[n].filespath.models = "locations\inside\EstateOffice";
-	Locations[n].image = "Inside_estate_office.tga";
+	Locations[n].image = "Inside_estate_office";
 
 	//Town sack
 	//Locations[n].townsack = "Redmond"; // NK 04-08-29
@@ -18803,7 +18803,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "BB_Eden_bedroom1";
 	locations[n].id.label = "Bedroom";
-	Locations[n].image = "Inside_estate_bedroom1.tga";
+	Locations[n].image = "Inside_estate_bedroom1";
 	Locations[n].filespath.models = "locations\inside\EstateBedRoom1\\";
 	
 	//Sound
@@ -18857,7 +18857,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	locations[n].id = "BB_Eden_kitchen";
 	locations[n].id.label = "Kitchen";
-	Locations[n].image = "Inside_largehouse1.tga";
+	Locations[n].image = "Inside_largehouse1";
 	
 	//Town sack
 	locations[n].lockWeather = "Inside";
@@ -18919,7 +18919,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].filespath.models = "locations\Inside\Hut_attic";
 	Locations[n].id = "BB_Eden_attic1";
 	locations[n].id.label = "Attic";
-	Locations[n].image = "wr_hut_attic.tga";
+	Locations[n].image = "wr_hut_attic";
 	//Sound
 	locations[n].type = "Pym_tower";
 	//Models
@@ -18971,7 +18971,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "BB_Eden_attic2";
 	locations[n].id.label = "Attic room";
-	Locations[n].image = "wr_mediumhouse2_attic.tga";
+	Locations[n].image = "wr_mediumhouse2_attic";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -19042,7 +19042,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].filespath.models = "locations\Inside\Hut_attic";
 	Locations[n].id = "BB_Eden_attic3";
 	locations[n].id.label = "Attic";
-	Locations[n].image = "wr_hut_attic.tga";
+	Locations[n].image = "wr_hut_attic";
 	//Sound
 	locations[n].type = "Pym_tower";
 	//Models
@@ -19092,7 +19092,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "BB_Eden_dining_room";
 	locations[n].id.label = "Dining room";
-	Locations[n].image = "Inside_diningroom.tga";
+	Locations[n].image = "Inside_diningroom";
 	Locations[n].filespath.models = "locations\inside\Dining_room\\";
 	
 	//Sound
@@ -19162,7 +19162,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "BB_Eden_bedroom2";
 	locations[n].id.label = "Bedroom";
-	Locations[n].image = "Inside_estate_bedroom2.tga";
+	Locations[n].image = "Inside_estate_bedroom2";
 	Locations[n].filespath.models = "locations\inside\EstateBedRoom2\\";
 	
 	//Sound
@@ -19223,7 +19223,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	locations[n].id.label = "Chapel stairs";
 	Locations[n].filespath.models = "locations\inside\store04";
 	Locations[n].filespath.textures = "locations\inside\store04\church";
-	Locations[n].image = "wr_chapel_stairs.tga";
+	Locations[n].image = "wr_chapel_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -19311,7 +19311,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "BB_Eden_chapel";
 	locations[n].id.label = "Chapel";
-	Locations[n].image = "Inside_chapel.tga";
+	Locations[n].image = "Inside_chapel";
 	Locations[n].filespath.models = "locations\inside\Church_2\\";
 //	Locations[n].filespath.textures = "locations\inside\Church_2\chapel";
 	
@@ -19365,7 +19365,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id = "BB_Teach_kitchen";
 	locations[n].id.label = "Teach house";
 	Locations[n].filespath.models = "locations\inside\DoubleFlour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 //	Locations[n].townsack = "Douwesen";
@@ -19450,7 +19450,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "BB_Teach_drawing_room";
 	locations[n].id.label = "Teach room";			//open = on
-	Locations[n].image = "wr_Teach_room.tga";
+	Locations[n].image = "wr_Teach_room";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -19504,7 +19504,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	locations[n].id = "BB_Eden_tunnel";
 	locations[n].id.label = "Estate wine cellar";
-	Locations[n].image = "Inside_wine_cellar.tga";
+	Locations[n].image = "Inside_wine_cellar";
 	//Town sack
 	locations[n].townsack = "Redmond";
 	//Sound
@@ -19590,7 +19590,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "open_today";		//to enable special label for locked location in Kristiania
 	locations[n].id.label = "Repairs finished. The Gate will open today.";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "silent_cave_seashore";
 	//Models
@@ -19620,7 +19620,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//  -------------------------------------------------
 	Locations[n].id = "BB_careen_shore";
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "wr_careen_shore.tga";
+	Locations[n].image = "wr_careen_shore";
 
 	Locations[n].townsack = "Grand Turk"; 
 
@@ -19998,7 +19998,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 
 	Locations[n].id = "BB_careen_blockhouse";
 	locations[n].id.label = "Blockhouse";
-	Locations[n].image = "wr_careen_blockhouse.tga";
+	Locations[n].image = "wr_careen_blockhouse";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -20079,7 +20079,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	locations[n].id.label = "Weather deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\qdeck";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "silent_seashore";		
 
@@ -20131,7 +20131,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	locations[n].id.label = "Weather deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\qdeck";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "silent_seashore";		
 
@@ -20191,7 +20191,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capmd_2";
-	Locations[n].image = "wr_careen_capmd.tga";
+	Locations[n].image = "wr_careen_capmd";
 	//Sound
 	Locations[n].type = "silent_cabin";
 
@@ -20295,7 +20295,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capsm";
 	Locations[n].filespath.textures = "locations\decks\red";
-	Locations[n].image = "wr_careen_capsm.tga";
+	Locations[n].image = "wr_careen_capsm";
 	//Sound
 	Locations[n].type = "silent_deck";
 
@@ -20365,7 +20365,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id.label = "Gun deck prow";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck1_red";
-	Locations[n].image = "wr_careen_crew.tga";
+	Locations[n].image = "wr_careen_crew";
 	//Sound
 	Locations[n].type = "silent_sneaking_deck";
 	
@@ -20830,7 +20830,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].id.label = "Gun deck stern";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deck2_red";
-	Locations[n].image = "wr_gall_deck2_stern.tga";
+	Locations[n].image = "wr_gall_deck2_stern";
 	//Sound
 //	Locations[n].type = "silent_deck";
 	Locations[n].type = "silent_sneaking_deck";			//to begin with, changes very soon
@@ -20932,7 +20932,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
 	Locations[n].filespath.textures = "locations\decks\BlackPearl";
-	Locations[n].image = "wr_careen_donkeys.tga";
+	Locations[n].image = "wr_careen_donkeys";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -21101,7 +21101,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold_wreck";
 	Locations[n].filespath.textures = "locations\decks\BlackPearl";
-	Locations[n].image = "wr_careen_slaves.tga";
+	Locations[n].image = "wr_careen_slaves";
 	//Sound
 	Locations[n].type = "galleon_closed";
 
@@ -21207,7 +21207,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	locations[n].id.label = "Tavern.";
 	Locations[n].filespath.models = "locations\Inside\Tavern_1";
 	Locations[n].filespath.textures = "locations\inside\Tavern_1\spanish";	
-	Locations[n].image = "Teach_tavern.tga";
+	Locations[n].image = "Teach_tavern";
 
 	//Sound
 //	locations[n].type = "tavern";

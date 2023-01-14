@@ -6,7 +6,7 @@ void LocationInitCuba(ref n)
 	locations[n].worldmap = "Havana";
 	Locations[n].filespath.models = "locations\Town_Redmond\Port";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Redmond_Port_Spain.tga";
+	Locations[n].image = "Town_Redmond_Port_Spain";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -102,7 +102,7 @@ void LocationInitCuba(ref n)
 	locations[n].worldmap = "Havana";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_01";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Redmond_Town_01_Spain.tga";
+	Locations[n].image = "Town_Redmond_Town_01_Spain";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -267,7 +267,7 @@ void LocationInitCuba(ref n)
 	locations[n].worldmap = "Havana";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_04";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Redmond_Town_04_Spain.tga";
+	Locations[n].image = "Town_Redmond_Town_04_Spain";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -388,7 +388,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Havana_Town_02";
 	locations[n].id.label = "#stown_name# town";
-	Locations[n].image = "Town_Havana_center.tga";
+	Locations[n].image = "Town_Havana_center";
 	locations[n].worldmap = "Havana";
 
 	//Town sack
@@ -510,7 +510,7 @@ void LocationInitCuba(ref n)
 	n = n + 1;
 	// -------------------------------------------------
 	Locations[n].filespath.models = "locations\Inside\MediumStore";
-	Locations[n].image = "Inside_MediumStore.tga";
+	Locations[n].image = "Inside_MediumStore";
 
 	Locations[n].id = "Havana_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -556,7 +556,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Havana_Shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
 	Locations[n].filespath.models = "locations\inside\Shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga";
+	Locations[n].image = "Inside_Shipyard1";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -598,7 +598,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Havana_tavern";
 	locations[n].id.label = "#stown_name# tavern";	
 	Locations[n].filespath.models = "locations\inside\Tavern_2";
-	Locations[n].image = "Inside_Tavern_2.tga";
+	Locations[n].image = "Inside_Tavern_2";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -643,7 +643,7 @@ void LocationInitCuba(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Havana_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -685,7 +685,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Havana_townhall";
 	locations[n].id.label = "#stown_name# residence";
-	Locations[n].image = "Town_Havana_Townhall.tga";
+	Locations[n].image = "Town_Havana_Townhall";
 	Locations[n].filespath.models = "locations\Town_Havana\Residence2";
 
 	//Town sack
@@ -736,7 +736,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Townhall_bedroom";
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\Town_Havana\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -776,7 +776,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Suarez_House";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Residence3.tga";
+	Locations[n].image = "Inside_Residence3";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -814,7 +814,7 @@ void LocationInitCuba(ref n)
 	// Thomas the Terror => -------------------------------------------------
 	Locations[n].id = "Havana_church";
 	locations[n].id.label = "#stown_name# church";
-	Locations[n].image = "Inside_Church_inside.tga";
+	Locations[n].image = "Inside_Church_inside";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -862,7 +862,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Havana_prison";
 	locations[n].id.label = "#stown_name# prison";
 	Locations[n].filespath.models = "locations\inside\prison";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -905,7 +905,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Havana_Outskirts";
 	locations[n].id.label = "#stown_name# Outskirts.";
-	Locations[n].image = "Town_Conceicao_Exit_Spain.tga";
+	Locations[n].image = "Town_Conceicao_Exit_Spain";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -973,7 +973,7 @@ void LocationInitCuba(ref n)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Fort_1";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "Havana";		//change
@@ -1031,7 +1031,7 @@ void LocationInitCuba(ref n)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Fort_2";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -1078,7 +1078,7 @@ void LocationInitCuba(ref n)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Fort_3";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -1120,7 +1120,7 @@ void LocationInitCuba(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "Havana_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -1165,7 +1165,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Cuba_shore_01";
 	//Locations[n].worldmap = "CubShore 1";
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "Outside_Shore_6.tga";
+	Locations[n].image = "Outside_Shore_6";
 	locations[n].id.label = "Bahia de San Antonio";
 	Locations[n].name = "Bahia de San Antonio";		// TALISMAN added to make beach name appear in smuggler tavern dialog
 	//Sound
@@ -1220,7 +1220,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Cuba_Jungle_01";
 	locations[n].id.label = "Jungle.";
-	Locations[n].image = "Outside_Jungle_2.tga";
+	Locations[n].image = "Outside_Jungle_2";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1300,7 +1300,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Cuba_Jungle_02";
 	locations[n].id.label = "Jungle.";		//spell-checked by KAM
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "jungle";
 
@@ -1378,7 +1378,7 @@ void LocationInitCuba(ref n)
 	locations[n].id.label = "Punta de Maisi"; // KK
 	locations[n].worldmap = "CubShore 3";
 	Locations[n].filespath.models = "locations\Outside\Shore_7";
-	Locations[n].image = "Outside_Shore_7.tga";
+	Locations[n].image = "Outside_Shore_7";
 	Locations[n].name = "Punta de Maisi";
 	//Sound
 	locations[n].type = "seashore";
@@ -1440,7 +1440,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Cuba_Jungle_03";
 	locations[n].id.label = "Jungle.";
-	Locations[n].image = "Outside_Jungle_7.tga";
+	Locations[n].image = "Outside_Jungle_7";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1523,7 +1523,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Cuba_Shore_04";
 	locations[n].id.label = "Playa de Sabana"; // KK
 	locations[n].worldmap = "CubShore 4";
-	Locations[n].image = "Outside_Shore_2.tga";
+	Locations[n].image = "Outside_Shore_2";
 	Locations[n].name = "Playa de Sabana";
 	//Sound
 	locations[n].type = "seashore";
@@ -1595,7 +1595,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Smugglers_Fort";
 	locations[n].id.label = "Smugglers Fort";
-	Locations[n].image = "Pirate_Fort.tga";
+	Locations[n].image = "Pirate_Fort";
 
 	//Town sack
 	Locations[n].townsack = "Smugglers Fort"; // NK 04-08-29
@@ -1665,7 +1665,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Cuba_Shore_05";
 	locations[n].id.label = "Playa de Sierra Maestra"; // KK
-	Locations[n].image = "Outside_Shore_5.tga";
+	Locations[n].image = "Outside_Shore_5";
 	Locations[n].name = "Playa de Sierra Maestra";
 	locations[n].worldmap = "CubShore 5";
 
@@ -1730,7 +1730,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Cuba_Jungle_04";
 	locations[n].id.label = "Jungle.";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].image = "Outside_Jungle_1";
 	//Sound
 	locations[n].type = "jungle";
 
@@ -1814,7 +1814,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Santiago_outskirts";
 	locations[n].id.label = "outskirts.";
-	Locations[n].image = "Town_Greenford_Exit.tga";
+	Locations[n].image = "Town_Greenford_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -1899,7 +1899,7 @@ void LocationInitCuba(ref n)
 	// -------------------------------------------------
 	
 	Locations[n].filespath.models = "locations\town_QC\port";	
-	Locations[n].image = "Town_QC_Port.tga";
+	Locations[n].image = "Town_QC_Port";
 
 	Locations[n].id = "Cuba_Shore_06";
 	locations[n].id.label = "Peninsula de Zapata"; // KK
@@ -1977,7 +1977,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Cuba_exit_grot";
 	locations[n].id.label = "Cave entrance";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "Jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -2046,7 +2046,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Cuba_Grot";
 	locations[n].id.label = "Small Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "cave";
 	//Models
@@ -2088,7 +2088,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Santiago_warehouse_01";
 	locations[n].id.label = "Santiago warehouse";	
 	Locations[n].filespath.models = "locations\inside\Warehouse";
-	Locations[n].image = "Inside_Warehouse.tga";
+	Locations[n].image = "Inside_Warehouse";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2121,7 +2121,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Santiago_warehouse_02";
 	locations[n].id.label = "Santiago warehouse";
 	Locations[n].filespath.models = "locations\inside\Warehouse";
-	Locations[n].image = "Inside_Warehouse.tga";
+	Locations[n].image = "Inside_Warehouse";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2157,7 +2157,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Havana_House_01";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\DoubleFlour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -2198,7 +2198,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Havana_House_02";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_MediumHouse2.tga";
+	Locations[n].image = "Inside_MediumHouse2";
 
 	//Town sack
 	Locations[n].townsack = "Havana"; // NK 04-08-29
@@ -2239,7 +2239,7 @@ void LocationInitCuba(ref n)
 	locations[n].id.label = "Vice Admiral's residence";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Inside_Residence_BackHall_Spain.tga";
+	Locations[n].image = "Inside_Residence_BackHall_Spain";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -2288,7 +2288,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Havana_House_03_bedroom";
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -2327,7 +2327,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Havana_House_04";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\MediumHouse";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -2366,7 +2366,7 @@ void LocationInitCuba(ref n)
 	Locations[n].filespath.models = "locations\Inside\mh3";
 	Locations[n].id = "Damski_House";
 	locations[n].id.label = "Damski's House";
-	Locations[n].image = "Inside_mh3.tga";
+	Locations[n].image = "Inside_mh3";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -2406,7 +2406,7 @@ void LocationInitCuba(ref n)
 
 // KK -------------------------------------------------
 	Locations[n].filespath.models = "locations\Town_Santiago\port";
-	Locations[n].image = "Town_Santiago_port.tga";
+	Locations[n].image = "Town_Santiago_port";
 
 	Locations[n].id = "Santiago_port";
 	locations[n].id.label = "#stown_name# port.";
@@ -2498,7 +2498,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Santiago_town_01";
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Santiago";
-	Locations[n].image = "Town_Santiago_center.tga";
+	Locations[n].image = "Town_Santiago_center";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2609,7 +2609,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Santiago_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga";
+	Locations[n].image = "Inside_Shipyard1";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2651,7 +2651,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Santiago_townhall";
 	locations[n].id.label = "#stown_name# townhall";
 	locations[n].filespath.models = "locations\inside\ResidenceA01";
-	locations[n].image = "Inside_ResidencA1.tga";
+	locations[n].image = "Inside_ResidencA1";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2691,7 +2691,7 @@ void LocationInitCuba(ref n)
 	//Santiago_church -------------------------------------------------
 	Locations[n].id = "Santiago_church";
 	locations[n].id.label = "#stown_name# Church.";
-	Locations[n].image = "Inside_Church_inside.tga";
+	Locations[n].image = "Inside_Church_inside";
 	Locations[n].filespath.models = "locations\inside\Church_inside";
 
 	//Town sack
@@ -2734,7 +2734,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Santiago_store";
 	locations[n].id.label = "#stown_name# store";
 	Locations[n].filespath.models = "locations\inside\MediumStore";
-	Locations[n].image = "Inside_MediumStore.tga";
+	Locations[n].image = "Inside_MediumStore";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2776,7 +2776,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Santiago_Tavern";
 	locations[n].id.label = "#stown_name# tavern.";
 	Locations[n].filespath.models = "locations\Inside\Tavern_1";	
-	Locations[n].image = "Inside_Tavern_1.tga";
+	Locations[n].image = "Inside_Tavern_1";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2818,7 +2818,7 @@ void LocationInitCuba(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Santiago_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern.";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2862,7 +2862,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Cartographer_House";
 	locations[n].id.label = "Cartographer's House";
-	Locations[n].image = "Inside_cartographer.tga";
+	Locations[n].image = "Inside_cartographer";
 	//Sound
 	locations[n].type = "house";
 	//Models
@@ -2905,7 +2905,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Santiago_town_exit1";
 	locations[n].id.label = "Outskirts";
 	Locations[n].filespath.models = "locations\Town_Redmond\REDexit1";
-	Locations[n].image = "Town_Redmond_Exit1.tga";
+	Locations[n].image = "Town_Redmond_Exit1";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2969,7 +2969,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Santiago_town_exit2";
 	locations[n].id.label = "Outskirts";
-	Locations[n].image = "Town_IslaMuelle_Exit.tga";
+	Locations[n].image = "Town_IslaMuelle_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -3034,7 +3034,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Cuba_shore_02";
 	locations[n].id.label = "Bahia de Moa";
 	locations[n].worldmap = "MShore 1";
-	Locations[n].image = "Outside_Passage1.tga";
+	Locations[n].image = "Outside_Passage1";
 	Locations[n].name = "Bahia de Moa";
 	//Sound
 	locations[n].type = "seashore";
@@ -3099,7 +3099,7 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Prison_Shore";
 	locations[n].id.label = "Prison Shore";
 //	locations[n].worldmap = "MShore 1";
-	Locations[n].image = "Outside_Passage1.tga";
+	Locations[n].image = "Outside_Passage1";
 //	Locations[n].name = "Bahia de Moa";
 	//Sound
 	locations[n].type = "seashore";
@@ -3154,7 +3154,7 @@ void LocationInitCuba(ref n)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Fort_1";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "Havana";		//change
@@ -3197,7 +3197,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Dining_Room";
 	locations[n].id.label = "Prison Dining Room";
-	Locations[n].image = "Inside_Residence5.tga";
+	Locations[n].image = "Inside_Residence5";
 
 	//Town sack
 

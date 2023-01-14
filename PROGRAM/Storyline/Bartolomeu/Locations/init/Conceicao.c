@@ -9,7 +9,7 @@ void LocationInitConceicao(ref n)
 	Location.id = "Conceicao_town";
 	location.id.label = "#stown_name# town";
 	location.worldmap = "Conceicao";
-	Location.image = "Town_Conceicao_Town.tga";
+	Location.image = "Town_Conceicao_Town";
 
 	//Town sack
 	Location.townsack = "Conceicao";

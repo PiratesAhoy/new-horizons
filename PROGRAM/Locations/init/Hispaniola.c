@@ -6,7 +6,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "Hispaniola_shore_03";
 	locations[n].id.label = "Cape Francos."; // KK
 	locations[n].worldmap = "HiShore 3";
-	Locations[n].image = "Outside_Shore_9.tga";
+	Locations[n].image = "Outside_Shore_9";
 	Locations[n].name = "Cape Francos"; 		// TALISMAN added to make beach name appear in smuggler tavern dialog
 	//Sound
 	locations[n].type = "seashore";
@@ -69,7 +69,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Jungle_07";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_2.tga";
+	Locations[n].image = "Outside_Jungle_2";
 	//Sound
 	locations[n].type = "Jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -149,7 +149,7 @@ void LocationInitHispaniola(ref n)
 	//Sound
 	locations[n].type = "jungle";
 	locations[n].ambush = true;
-	Locations[n].image = "Incas_Temple_Temple.tga";
+	Locations[n].image = "Incas_Temple_Temple";
 	locations[n].id.label = "Temple";
 	//Models
 	//Always
@@ -192,7 +192,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Jungle_09";
 	locations[n].id.label = "Cave entrance";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "jungle";
 	locations[n].ambush = true;
@@ -261,7 +261,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Grot2";
 	locations[n].id.label = "Cavern";
-	Locations[n].image = "Inside_Cavern.tga";
+	Locations[n].image = "Inside_Cavern";
 
 	//Sound
 	locations[n].type = "cave";
@@ -330,7 +330,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_passage";
 	locations[n].id.label = "Passage";
-	Locations[n].image = "Outside_Passage2.tga";
+	Locations[n].image = "Outside_Passage2";
 	//Sound
 	locations[n].type = "seashore";
 
@@ -406,7 +406,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_shore_05";
 	locations[n].id.label = "Playa del Muerte"; // KK
-	Locations[n].image = "Outside_Shore_5.tga";
+	Locations[n].image = "Outside_Shore_5";
 	Locations[n].name = "Playa del muerte";
 
 	//Sound
@@ -461,7 +461,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Grot3";
 	locations[n].id.label = "Hidden Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "cave";
 	//Models
@@ -508,7 +508,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "Hispaniola_shore_04";
 	locations[n].id.label = "Ile a Vache."; // KK
 	locations[n].worldmap = "HiShore 4";
-	Locations[n].image = "Outside_Shore_2.tga";
+	Locations[n].image = "Outside_Shore_2";
 	Locations[n].name = "Ile a Vache";
 	//Sound
 	locations[n].type = "seashore";
@@ -573,7 +573,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Jungle_01";
 	locations[n].id.label = "Cave entrance";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "jungle";
 	locations[n].ambush = true;
@@ -642,7 +642,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Grot";
 	locations[n].id.label = "Hidden Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "KhaelRoa";
 	//Models
@@ -685,7 +685,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "Hispaniola_shore_02";
 	locations[n].id.label = "Boca de Hubon.";		//spell-checked by KAM // KK
 	locations[n].worldmap = "HiShore 2";
-	Locations[n].image = "Outside_Shore_8.tga";
+	Locations[n].image = "Outside_Shore_8";
 	Locations[n].name = "Boca de Hubon";
 	//Sound
 	locations[n].type = "seashore";
@@ -747,7 +747,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "Hispaniola_Jungle_02";
 	locations[n].id.label = "Jungle";
 	Locations[n].filespath.models = "locations\Outside\jungle_8"; // qf"
-	Locations[n].image = "Outside_Jungle_8.tga";
+	Locations[n].image = "Outside_Jungle_8";
  	//Sound
 	locations[n].type = "jungle";
 	locations[n].ambush = true;
@@ -815,7 +815,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Jungle_03";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Buccaneer_camp_exit.tga";
+	Locations[n].image = "Buccaneer_camp_exit";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -895,7 +895,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Buccaneers_Camp";
 	locations[n].id.label = "Buccaneers Camp";
-	Locations[n].image = "Buccaneer.tga";
+	Locations[n].image = "Buccaneer";
 
 	//Town sack
 	Locations[n].townsack = "Buccaneers Camp";
@@ -978,7 +978,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Jungle_04";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].image = "Outside_Jungle_1";
 	//Sound
 	locations[n].type = "jungle";
 	locations[n].ambush = true;
@@ -1046,7 +1046,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Jungle_05";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_4.tga";
+	Locations[n].image = "Outside_Jungle_4";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1126,7 +1126,7 @@ void LocationInitHispaniola(ref n)
 	// 06 -------------------------------------------------
 	Locations[n].id = "Hispaniola_Jungle_06";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Town_FalaiseDeFleur_Exit.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Exit";
 	//Sound
 	locations[n].type = "jungle";
 
@@ -1191,7 +1191,7 @@ void LocationInitHispaniola(ref n)
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";	//A warning sign at the gate :)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1256,7 +1256,7 @@ void LocationInitHispaniola(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -1300,7 +1300,7 @@ void LocationInitHispaniola(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -1342,7 +1342,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "PoPrince_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1389,7 +1389,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "PoPrince_town_exit";
 	locations[n].id.label = "Jungle";		//spell-checked by KAM
-	Locations[n].image = "Town_Conceicao_Exit.tga";
+	Locations[n].image = "Town_Conceicao_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1454,7 +1454,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "PoPrince_town";
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Port au Prince";
-	Locations[n].image = "Town_PoPrince_Town.tga";
+	Locations[n].image = "Town_PoPrince_Town";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1579,7 +1579,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "PoPrince_town_02";
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Port au Prince";
-	Locations[n].image = "Town_PoPrince_Town.tga";
+	Locations[n].image = "Town_PoPrince_Town";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1620,7 +1620,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].filespath.models = "locations\Inside\shipyard"; // ccc may07 Location Remodeling Campaign
 	Locations[n].id = "PoPrince_Shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga";
+	Locations[n].image = "Inside_Shipyard1";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1663,7 +1663,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "PoPrince_tavern";
 	Locations[n].filespath.models = "locations\inside\smalltavern";
 	locations[n].id.label = "#stown_name# tavern";
-	Locations[n].image = "Inside_SmallTavern.tga";
+	Locations[n].image = "Inside_SmallTavern";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1710,7 +1710,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "PoPrince_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1748,7 +1748,7 @@ void LocationInitHispaniola(ref n)
 
 	// -------------------------------------------------
 	Locations[n].filespath.models = "locations\Inside\MediumStore";
-	Locations[n].image = "Inside_MediumStore.tga";
+	Locations[n].image = "Inside_MediumStore";
 
 	Locations[n].id = "PoPrince_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -1795,7 +1795,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "PoPrince_townhall";
 	locations[n].id.label = "#stown_name# townhall";
-	Locations[n].image = "Inside_ResidencA2.tga";
+	Locations[n].image = "Inside_ResidencA2";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1840,7 +1840,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "PoPrince_Port";
 	locations[n].id.label = "#stown_name# port."; // KK
 	locations[n].worldmap = "Port au Prince";
-	Locations[n].image = "Town_PoPrince_Port.tga";
+	Locations[n].image = "Town_PoPrince_Port";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1908,7 +1908,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "French_WIC_Office";
 	locations[n].id.label = "French West India Company";
-	Locations[n].image = "Inside_FWIC_Office.tga";
+	Locations[n].image = "Inside_FWIC_Office";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1950,7 +1950,7 @@ void LocationInitHispaniola(ref n)
 	// Retextured Santo Domingo
 	Locations[n].filespath.models = "locations\town_Greenford\port";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Greenford_Port_Spain.tga";
+	Locations[n].image = "Town_Greenford_Port_Spain";
 
 	Locations[n].id = "Santo_Domingo_port";
 	locations[n].id.label = "#stown_name# port.";
@@ -2021,7 +2021,7 @@ void LocationInitHispaniola(ref n)
 
 	// -------------------------------------------------
 	Locations[n].filespath.models = "locations\Town_SantoDomingo\center";
-	Locations[n].image = "Town_SantoDomingo_center.tga";
+	Locations[n].image = "Town_SantoDomingo_center";
 
 	Locations[n].id = "Santo_Domingo_town";
 	locations[n].id.label = "#stown_name#";
@@ -2151,7 +2151,7 @@ void LocationInitHispaniola(ref n)
 	locations[n].id.label = "To the Loanshark";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\church_attic";
-	Locations[n].image = "GB_small_stairs.tga";
+	Locations[n].image = "GB_small_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -2220,7 +2220,7 @@ void LocationInitHispaniola(ref n)
 	locations[n].id.label = "Exit";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
 	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\church_attic";
-	Locations[n].image = "GB_small_stairs.tga";
+	Locations[n].image = "GB_small_stairs";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -2296,7 +2296,7 @@ void LocationInitHispaniola(ref n)
 	//InitBank(Locations[n].id);
 
 	Locations[n].filespath.models = "locations\Inside\Bank";
-	Locations[n].image = "Inside_Bank.tga";
+	Locations[n].image = "Inside_Bank";
 	//Models
 	Locations[n].models.back = "back\tor3_";				//JRH
 	//Always
@@ -2325,7 +2325,7 @@ void LocationInitHispaniola(ref n)
 
 	// -------------------------------------------------
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "Santo_Domingo_store";
 	locations[n].id.label = "#stown_name# store";
@@ -2372,7 +2372,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Santo_Domingo_Shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_PirateResidence_Shipyard.tga";
+	Locations[n].image = "Inside_PirateResidence_Shipyard";
 	//Town sack
 	Locations[n].townsack = "Santo Domingo"; // NK - "Oxbay";
 	//Sound
@@ -2410,7 +2410,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "Santo_Domingo_tavern";
 	locations[n].id.label = "#stown_name# tavern";
 	Locations[n].filespath.models = "locations\inside\Largetavern";
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -2459,7 +2459,7 @@ void LocationInitHispaniola(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Santo_Domingo_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -2503,7 +2503,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Santo_Domingo_townhall";
 	locations[n].id.label = "#stown_name# townhall";
-	Locations[n].image = "Inside_Residence5.tga";
+	Locations[n].image = "Inside_Residence5";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -2549,7 +2549,7 @@ void LocationInitHispaniola(ref n)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Fort_1";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";		//change
@@ -2607,7 +2607,7 @@ void LocationInitHispaniola(ref n)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Fort_2";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -2652,7 +2652,7 @@ void LocationInitHispaniola(ref n)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Fort_3";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -2694,7 +2694,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "Santo_Domingo_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -2741,7 +2741,7 @@ void LocationInitHispaniola(ref n)
 	locations[n].id.label = "Jungle";
 	Locations[n].filespath.models = "locations\Town_Redmond\REDexit1";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Redmond_Exit1.tga";
+	Locations[n].image = "Town_Redmond_Exit1";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -2803,7 +2803,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_Jungle_08";
 	locations[n].id.label = "Jungle";		//spell-checked by KAM
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -2889,7 +2889,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "Hispaniola_Jungle_Captain_House";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\HutRoundInside";
-	Locations[n].image = "Inside_IndianHome.tga"; //Todo
+	Locations[n].image = "Inside_IndianHome"; //Todo
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -2939,7 +2939,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].filespath.models = "locations\town_QC\exit";	
 	Locations[n].id = "Hispaniola_village_Exit";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Town_QC_Exit.tga";
+	Locations[n].image = "Town_QC_Exit";
 	//Sound
 	locations[n].type = "town";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -3019,7 +3019,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Hispaniola_village";
 	locations[n].id.label = "Village";
-	Locations[n].image = "Pirate_Fort.tga";
+	Locations[n].image = "Pirate_Fort";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo"; // NK 04-08-29
@@ -3077,7 +3077,7 @@ void LocationInitHispaniola(ref n)
 	locations[n].id.label = "Boca de Yuman."; // KK
 	locations[n].worldmap = "HiShore 1";
 	Locations[n].filespath.models = "locations\Outside\Shore_3";
-	Locations[n].image = "Outside_Shore_3.tga";
+	Locations[n].image = "Outside_Shore_3";
 	Locations[n].name = "Boca de Yuman";
  	//Sound
 	locations[n].type = "seashore";
@@ -3136,7 +3136,7 @@ void LocationInitHispaniola(ref n)
 	n = n + 1;
 
 	// -------------------------------------------------
-	Locations[n].image = "Town_Tortuga.tga";
+	Locations[n].image = "Town_Tortuga";
 
 	Locations[n].id = "Tortuga_port";
 	locations[n].id.label = "#stown_name# port.";
@@ -3830,7 +3830,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "Tortuga_tailorsShop";
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
 	Locations[n].filespath.textures = "locations\inside\StoreSmall\Tortuga";	
-	Locations[n].image = "Inside_Tortuga_Tailor.tga";
+	Locations[n].image = "Inside_Tortuga_Tailor";
 	locations[n].id.label = "Tailor's Shop.";
 	//Town sack
 	Locations[n].townsack = "Tortuga";
@@ -3901,7 +3901,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1_wood";
 	Locations[n].id = "Tortuga_stairs";
 	locations[n].id.label = "#stown_name# Exit";
-	Locations[n].image = "Inside_Tortuga_stairs.tga";
+	Locations[n].image = "Inside_Tortuga_stairs";
 	
 	//Town sack
 	Locations[n].townsack = "Tortuga";
@@ -3952,7 +3952,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Tortuga_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard_Tortuga.tga";
+	Locations[n].image = "Inside_Shipyard_Tortuga";
 
 	//Town sack
 	Locations[n].townsack = "Tortuga";
@@ -4014,7 +4014,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].filespath.models = "locations\Inside\Bank";
 	Locations[n].filespath.textures = "locations\inside\Bank\Tortuga";
-	Locations[n].image = "Inside_Bank_Tortuga.tga";
+	Locations[n].image = "Inside_Bank_Tortuga";
 	//Models
 	Locations[n].models.back = "back\tor3_";				//JRH
 	//Always
@@ -4058,7 +4058,7 @@ void LocationInitHispaniola(ref n)
 	//Models
 
 	Locations[n].filespath.models = "locations\Inside\Tavern01";
-	Locations[n].image = "Inside_Tavern01_Tortuga.tga";
+	Locations[n].image = "Inside_Tavern01_Tortuga";
 	//Models
 	Locations[n].models.back = "back\tor_";					//JRH
 	//Always
@@ -4130,7 +4130,7 @@ void LocationInitHispaniola(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Tortuga_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Tavern_Room_Tortuga.tga";
+	Locations[n].image = "Inside_Tavern_Room_Tortuga";
 
 	//Town sack
 	Locations[n].townsack = "Tortuga";
@@ -4185,7 +4185,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].filespath.models = "locations\Inside\store01";
 	Locations[n].filespath.textures = "locations\inside\store01\Tortuga";
-	Locations[n].image = "Inside_Store01_Tortuga.tga";
+	Locations[n].image = "Inside_Store01_Tortuga";
 
 	//Models
 	Locations[n].models.back = "back\tor2_";				//JRH
@@ -4233,7 +4233,7 @@ void LocationInitHispaniola(ref n)
 		LAi_LocationFantomsGen(&locations[n], false);
 
 		Locations[n].filespath.models = "locations\Inside\brothel_room";
-		Locations[n].image = "Inside_Brothel_Room_Tortuga.tga";
+		Locations[n].image = "Inside_Brothel_Room_Tortuga";
 		//Models
 		Locations[n].filespath.textures = "locations\inside\brothel_room\Tortuga";
 		Locations[n].models.back = "back\tor_";				//JRH
@@ -4268,7 +4268,7 @@ void LocationInitHispaniola(ref n)
 	if (IsBrothelEnabled()) {
 		locations[n].id.label = "#stown_name# Brothel";
 		Locations[n].filespath.models = "locations\inside\den";
-		Locations[n].image = "Inside_Den_Room.tga"; // PB
+		Locations[n].image = "Inside_Den_Room"; // PB
 		//Town sack
 		Locations[n].townsack = "Tortuga";
 		//Sound
@@ -4305,7 +4305,7 @@ void LocationInitHispaniola(ref n)
 		InitTortugaBrothel(); // KK
 
 		Locations[n].filespath.models = "locations\Inside\Brothel";
-		Locations[n].image = "Inside_Brothel_Tortuga.tga";
+		Locations[n].image = "Inside_Brothel_Tortuga";
 		//Models
 		Locations[n].models.back = "back\tor2_";				
 		//Always
@@ -4348,7 +4348,7 @@ void LocationInitHispaniola(ref n)
 	locations[n].fastreload = "Tortuga";
 
 	Locations[n].filespath.models = "locations\Inside\StoneHouse";
-	Locations[n].image = "Inside_Stonehouse_Tortuga.tga";
+	Locations[n].image = "Inside_Stonehouse_Tortuga";
 	//Models
 	Locations[n].filespath.textures = "locations\inside\Stonehouse\Tortuga";
 	Locations[n].models.back = "back\tor2_";				//JRH
@@ -4383,7 +4383,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Tortuga_town_exit";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Town_Oxbay_Exit.tga";
+	Locations[n].image = "Town_Oxbay_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Tortuga";
@@ -4475,7 +4475,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Tortuga_Jungle_01";
 	locations[n].id.label = "House in Jungle";
-	Locations[n].image = "Outside_Rheims_House.tga";
+	Locations[n].image = "Outside_Rheims_House";
 	//Sound
 	locations[n].type = "house";
 
@@ -4539,7 +4539,7 @@ void LocationInitHispaniola(ref n)
 	locations[n].fastreload = "Tortuga";
 
 	Locations[n].filespath.models = "locations\Inside\StoreHouse";
-	Locations[n].image = "Inside_Storehouse_Tortuga.tga";
+	Locations[n].image = "Inside_Storehouse_Tortuga";
 
 	//Models
 	Locations[n].models.back = "back\tor3_";
@@ -4579,7 +4579,7 @@ void LocationInitHispaniola(ref n)
 	locations[n].id.label = "#stown_name# prison";
 	Locations[n].filespath.models = "locations\inside\prison";
 	Locations[n].filespath.textures = "locations\inside\prison\Tortuga";
-	Locations[n].image = "Inside_Prison_Tortuga.tga";
+	Locations[n].image = "Inside_Prison_Tortuga";
 
 	//Town sack
 	Locations[n].townsack = "Tortuga";
@@ -4622,7 +4622,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "BC_Tavern";
 	locations[n].id.label = "Buccaneers Camp tavern";
-	Locations[n].image = "Inside_SmallTavern.tga";
+	Locations[n].image = "Inside_SmallTavern";
 	//Town sack
 	Locations[n].townsack = "Buccaneers Camp"; // NK - "Oxbay";
 	//Sound
@@ -4671,7 +4671,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "BC_tavern_upstairs";
 	locations[n].id.label = "Room in Buccaneers Camp tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga"; // ccc: Skip VC in room
+	Locations[n].image = "Inside_Doubleflour_House_Room"; // ccc: Skip VC in room
 	//Town sack
 	Locations[n].townsack = "Buccaneers Camp";
 	//Sound
@@ -4710,7 +4710,7 @@ void LocationInitHispaniola(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";	
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "BC_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -4755,7 +4755,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "BC_ForgerHouse";
 	locations[n].id.label = "House of Pablo Escriva.";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 	//Town sack
 	Locations[n].townsack = "Buccaneers Camp"; // GR - wrong, but less wrong than others
 	//Sound
@@ -4794,7 +4794,7 @@ void LocationInitHispaniola(ref n)
 	// Village_church -------------------------------------------------
 	Locations[n].id = "Village_church";
 	locations[n].id.label = "Village church";
-	Locations[n].image = "Inside_Church_3.tga";
+	Locations[n].image = "Inside_Church_3";
 	Locations[n].filespath.models = "locations\inside\Church_3";
 
 	//Town sack
@@ -4837,7 +4837,7 @@ void LocationInitHispaniola(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Santo_Domingo_House_01";
 	Locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh10.tga";
+	Locations[n].image = "Inside_mh10";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -4877,7 +4877,7 @@ void LocationInitHispaniola(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Santo_Domingo_Historian_House";
 	Locations[n].id.label = "House in #stown_name#";
-	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].image = "Inside_Residence2";
 	Locations[n].filespath.models = "locations\inside\Residence2";
 
 	//Town sack
@@ -4924,7 +4924,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "Santo_Domingo_House_02";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh6";
-	Locations[n].image = "Inside_mh6.tga";
+	Locations[n].image = "Inside_mh6";
 
 	//Town sack
 	Locations[n].townsack = "Santo Domingo";
@@ -4963,7 +4963,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "PoPrince_House_01";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Port au prince";
@@ -5002,7 +5002,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].id = "PoPrince_House_02";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Port au prince";
@@ -5044,7 +5044,7 @@ void LocationInitHispaniola(ref n)
 
 	Locations[n].id = "Will_Turner_house_inside";
 	locations[n].id.label = "Will Turner's House";
-	Locations[n].image = "Inside_Pirate_House.tga";
+	Locations[n].image = "Inside_Pirate_House";
 	//Sound
 	locations[n].type = "house";
 	//Models

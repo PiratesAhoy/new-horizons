@@ -126,28 +126,28 @@ void wdmReloadToSea()
 	SendMessage(&wdm_fader, "lfl", FADER_OUT, fadeOutTime, true);
 	SendMessage(&wdm_fader, "l", FADER_STARTFRAME);
 // KK -->
-	string imageName = "sea.tga";
+	string imageName = "sea";
 	if (CheckAttribute(&worldMap, "QuestToSeaLogin") == true && sti(worldMap.QuestToSeaLogin) == true) {
 		DeleteAttribute(&worldMap, "QuestToSeaLogin");
 		if (CheckAttribute(&questToSeaLoginer, "Storm") == true && sti(questToSeaLoginer.Storm) == true) {
 			wdmLoginToSea.storm = true;
 			if (CheckAttribute(&questToSeaLoginer, "Tornado") == true && sti(questToSeaLoginer.Tornado) == true) {
-				imageName = "Twister.tga";
+				imageName = "Twister";
 				wdmLoginToSea.tornado = 1;
 			} else {
-				imageName = "Storm.tga";
+				imageName = "Storm";
 				wdmLoginToSea.tornado = 0;
 			}
 		}
 	} else {
 		//Trace("worldMap.encounter.type = " + worldMap.encounter.type);
-		if (isShipEncounterType) imageName = "Battle.tga";
-		if (bShipMutiny) imageName = "ShipMutiny.tga"; // KK
+		if (isShipEncounterType) imageName = "Battle";
+		if (bShipMutiny) imageName = "ShipMutiny"; // KK
 		if (wdmLoginToSea.storm != "0") {
-			imageName = "Storm.tga";
+			imageName = "Storm";
 			wdmLoginToSea.tornado = 0;
 			if(wdmTornadoGenerator()) {
-				imageName = "Twister.tga";
+				imageName = "Twister";
 				wdmLoginToSea.tornado = 1;
 			}
 		}

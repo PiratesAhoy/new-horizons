@@ -4,7 +4,7 @@ void LocationInitCayman(ref n)
 	Locations[n].id = "Cayman_Port";
 	locations[n].id.label = "#stown_name# Port";
 	locations[n].worldmap = "Grand Cayman";
-	Locations[n].image = "Town_FalaiseDeFleur_Port2_England.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Port2_England";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";
@@ -71,7 +71,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Grand_Cayman_town";
 	locations[n].id.label = "#stown_name#";
-	Locations[n].image = "Town_Douwesen_Town_England.tga";
+	Locations[n].image = "Town_Douwesen_Town_England";
 	locations[n].worldmap = "Grand Cayman";
 
 	//Town sack
@@ -196,7 +196,7 @@ void LocationInitCayman(ref n)
 	Locations[n].id = "Grand_Cayman_shipyard";
 	Locations[n].filespath.models = "locations\inside\shipyard2";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard2.tga";
+	Locations[n].image = "Inside_Shipyard2";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";
@@ -239,7 +239,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Grand_Cayman_Tavern";
 	locations[n].id.label = "#stown_name# tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";
@@ -286,7 +286,7 @@ void LocationInitCayman(ref n)
 	// -------------------------------------------------
 	Locations[n].id = "Grand_Cayman_Tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern.";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";
@@ -325,7 +325,7 @@ void LocationInitCayman(ref n)
 
 	// -------------------------------------------------
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "Grand_Cayman_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -371,7 +371,7 @@ void LocationInitCayman(ref n)
 	Locations[n].id = "Grand_Cayman_townhall";
 	locations[n].id.label = "#stown_name# townhall";
 	Locations[n].filespath.models = "locations\inside\Residence1";
-	Locations[n].image = "Inside_Residence1.tga";
+	Locations[n].image = "Inside_Residence1";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";
@@ -415,7 +415,7 @@ void LocationInitCayman(ref n)
 	// 06 -------------------------------------------------
 	Locations[n].id = "Cayman_Jungle_02";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Town_FalaiseDeFleur_Exit.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Exit";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -480,7 +480,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Jungle_03";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_4.tga";
+	Locations[n].image = "Outside_Jungle_4";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -560,7 +560,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_jungle_04";
 	locations[n].id.label = "Jungle.";
-	Locations[n].image = "Town_Greenford_Exit.tga";
+	Locations[n].image = "Town_Greenford_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";
@@ -626,7 +626,7 @@ void LocationInitCayman(ref n)
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";	//A warning sign at the gate :)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";		//change
@@ -681,7 +681,7 @@ void LocationInitCayman(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -724,7 +724,7 @@ void LocationInitCayman(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -766,7 +766,7 @@ void LocationInitCayman(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "Cayman_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";
@@ -812,7 +812,7 @@ void LocationInitCayman(ref n)
 	locations[n].id.label = "Eden Rock."; // KK
 	locations[n].worldmap = "CaymanShore 1";
 	Locations[n].filespath.models = "locations\Outside\Shore_7";
-	Locations[n].image = "Outside_Shore_7.tga";
+	Locations[n].image = "Outside_Shore_7";
 	Locations[n].name = "Eden Rock";
 	//Sound
 	locations[n].type = "seashore";
@@ -865,7 +865,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Jungle_01";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].image = "Outside_Jungle_1";
 	//Sound
 	locations[n].type = "jungle";
 
@@ -932,7 +932,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_passage";
 	locations[n].id.label = "#sisland_name# passage";
-	Locations[n].image = "Outside_Passage2.tga";
+	Locations[n].image = "Outside_Passage2";
 	//Sound
 	locations[n].type = "seashore";
 
@@ -998,7 +998,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Jungle_05";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1076,7 +1076,7 @@ void LocationInitCayman(ref n)
 	Locations[n].id = "Cayman_Shore_02";
 	//Locations[n].worldmap = "";
 	Locations[n].filespath.models = "locations\Outside\Shore_1";
-	Locations[n].image = "Outside_Shore_1.tga";
+	Locations[n].image = "Outside_Shore_1";
 	locations[n].id.label = "Cayman Kai.";
 	Locations[n].name = "Cayman Kai";
 	//Sound
@@ -1138,7 +1138,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Jungle_06";
 	locations[n].id.label = "#sisland_name# Grot entrance";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1206,7 +1206,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Grot_01";
 	locations[n].id.label = "Hidden Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "cave";
 	//Models
@@ -1248,7 +1248,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Shore_03";
 	locations[n].id.label = "Sand Bluff."; // KK
-	Locations[n].image = "Outside_Shore_5.tga";
+	Locations[n].image = "Outside_Shore_5";
 	Locations[n].name = "Sand Bluff";
 	locations[n].worldmap = "DShore 1";
 
@@ -1314,7 +1314,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Jungle_07";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_7.tga";
+	Locations[n].image = "Outside_Jungle_7";
 	//Sound
 	locations[n].type = "Jungle";
 	//LAi_LocationMonstersGen(&locations[n], true);
@@ -1393,7 +1393,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Pirate_house_01";
 	locations[n].id.label = "Entrance to house";
-	Locations[n].image = "Outside_Pirate_Outer_location.tga";
+	Locations[n].image = "Outside_Pirate_Outer_location";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1451,7 +1451,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Pirate_house_01_inside";
 	locations[n].id.label = "Inside house";
-	Locations[n].image = "Inside_Pirate_House.tga";
+	Locations[n].image = "Inside_Pirate_House";
 	//Sound
 	locations[n].type = "Residence";
 	//Models
@@ -1486,7 +1486,7 @@ void LocationInitCayman(ref n)
 	Locations[n].id = "Cayman_Jungle_08";
 	locations[n].id.label = "#sisland_name# jungle";
 	Locations[n].filespath.models = "locations\Outside\jungle_8";
-	Locations[n].image = "Outside_Jungle_8.tga";
+	Locations[n].image = "Outside_Jungle_8";
  	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1558,7 +1558,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Jungle_09";
 	locations[n].id.label = "House in Jungle";
-	Locations[n].image = "Outside_Rheims_House.tga";
+	Locations[n].image = "Outside_Rheims_House";
 	//Sound
 	locations[n].type = "Jungle";
 
@@ -1620,7 +1620,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Cayman_Pirate_house_02_inside";
 	locations[n].id.label = "Inside house";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 	//Sound
 	locations[n].type = "House";
 
@@ -1655,7 +1655,7 @@ void LocationInitCayman(ref n)
 	// -----------------Mosh D24--------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_3";
 	Locations[n].id = "Cayman_Grot_02";
-	Locations[n].image = "Inside_Dungeon_3.tga";
+	Locations[n].image = "Inside_Dungeon_3";
 //	Locations[n].monsters = "1";
 	locations[n].id.label = "#sisland_name# underground";
 	//Sound
@@ -1693,7 +1693,7 @@ void LocationInitCayman(ref n)
 
 	Locations[n].id = "Outskirts_House";
 	locations[n].id.label = "Inside house";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 	//Sound
 	locations[n].type = "House";
 
@@ -1733,7 +1733,7 @@ void LocationInitCayman(ref n)
 	Locations[n].id = "Grand_Cayman_House_01";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\DoubleFlour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";

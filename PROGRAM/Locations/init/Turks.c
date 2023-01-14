@@ -1,7 +1,7 @@
 void LocationInitTurks(ref n)
 {
 	Locations[n].filespath.models = "locations\Town_GrandTurk\Port";	
-	Locations[n].image = "Town_Grand_Turk.tga";
+	Locations[n].image = "Town_Grand_Turk";
 
 	Locations[n].id = "Turks_port";
 	locations[n].id.label = "#stown_name# port";
@@ -315,7 +315,7 @@ void LocationInitTurks(ref n)
 	locations[n].fastreload = "Grand_Turk";
 
 	Locations[n].filespath.models = "locations\Inside\Bank";
-	Locations[n].image = "Inside_Bank.tga";
+	Locations[n].image = "Inside_Bank";
 	//Models
 	Locations[n].models.back = "..\back\inside_back_";
 	//Always
@@ -349,7 +349,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_church";
 	locations[n].id.label = "Brethren of the Coast";
-	Locations[n].image = "Inside_Turks_Church.tga";
+	Locations[n].image = "Inside_Turks_Church";
 
 	//Sound
 	locations[n].type = "Turks_church";
@@ -390,7 +390,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Tavern";
 	locations[n].id.label = "#stown_name# Tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Grand Turk"; // NK 04-08-29
@@ -445,7 +445,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";	//spell-checked by KAM
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Grand Turk";
@@ -485,7 +485,7 @@ void LocationInitTurks(ref n)
 	Locations[n].id = "Turks_tavern_kitchen";
 	locations[n].id.label = "Kitchen - staff only";
 	Locations[n].filespath.models = "locations\inside\flamhouse";
-	Locations[n].image = "Inside_Flamhouse_Kitchen.tga";
+	Locations[n].image = "Inside_Flamhouse_Kitchen";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -565,7 +565,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_tavern_bedroom";
 	locations[n].id.label = "Private";
-	Locations[n].image = "Inside_JinoRoom.tga";
+	Locations[n].image = "Inside_JinoRoom";
 
 	//Town sack
 	Locations[n].townsack = "Grand Turk";
@@ -627,7 +627,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Grand_Turk_Shipyard";
 	locations[n].id.label = "#stown_name# Shipyard";
-	Locations[n].image = "Inside_Shipyard3.tga";
+	Locations[n].image = "Inside_Shipyard3";
 
 	//Town sack
 	Locations[n].townsack = "Grand Turk";
@@ -667,7 +667,7 @@ void LocationInitTurks(ref n)
 
 	// -------------------------------------------------
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
-	Locations[n].image = "Inside_LargeStore.tga";
+	Locations[n].image = "Inside_LargeStore";
 
 	Locations[n].id = "Turks_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -715,7 +715,7 @@ void LocationInitTurks(ref n)
 	// Tailor mod
 	Locations[n].id = "Turks_TailorsShop";
 	Locations[n].id.label = "Tailor's Shop.";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Grand Turk";
@@ -761,7 +761,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_library";
 	locations[n].id.label = "Library";
-	Locations[n].image = "Inside_Library.tga"; // KK
+	Locations[n].image = "Inside_Library"; // KK
 	//Town sack
 	Locations[n].townsack = "Grand Turk"; 
 	//Sound
@@ -804,7 +804,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_townhall";
 	locations[n].id.label = "#stown_name# Townhall";
-	Locations[n].image = "Inside_Residence4.tga";
+	Locations[n].image = "Inside_Residence4";
 
 	//Town sack
 	Locations[n].townsack = "Grand Turk";
@@ -847,7 +847,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Jungle_03";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -943,7 +943,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Jungle_04";
 	locations[n].id.label = "#sisland_name# canyon";
-	Locations[n].image = "Outside_Canyon.tga";
+	Locations[n].image = "Outside_Canyon";
 
 	//Town sack
 	Locations[n].townsack = "Turks";
@@ -1017,7 +1017,7 @@ void LocationInitTurks(ref n)
 
     Locations[n].id = "Turks_old_Fort";
 	locations[n].id.label = "#stown_name# Fort";
-	Locations[n].image = "Fort_Inside_FortVRight.tga";
+	Locations[n].image = "Fort_Inside_FortVRight";
 
 	//Town sack
 	locations[n].townsack = "Grand Turk";
@@ -1083,7 +1083,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Fort_Office";
 	locations[n].id.label = "Armory";
-	Locations[n].image = "Inside_Armory.tga";
+	Locations[n].image = "Inside_Armory";
 	//Sound
 	locations[n].type = "Fort_Moultrie_inside";
 	//Models
@@ -1128,7 +1128,7 @@ void LocationInitTurks(ref n)
 	Locations[n].name = "Old lighthouse";
 	locations[n].id.label = "Turtle Bay."; // KK
 //	locations[n].worldmap = "TShore 2";
-	Locations[n].image = "Outside_Mayak.tga";
+	Locations[n].image = "Outside_Mayak";
 	//Sound
 	locations[n].type = "seashore";
 	//Models
@@ -1198,7 +1198,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_House1_Inside";
 	locations[n].id.label = "Inside House";
-	Locations[n].image = "Inside_PirateResidence.tga";
+	Locations[n].image = "Inside_PirateResidence";
 	//Sound
 	locations[n].type = "Residence"; //"house";
 	//Models
@@ -1234,7 +1234,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Jungle_02";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_7.tga";
+	Locations[n].image = "Outside_Jungle_7";
 	//Sound
 	locations[n].type = "Jungle";
 	//LAi_LocationMonstersGen(&locations[n], true);
@@ -1314,7 +1314,7 @@ void LocationInitTurks(ref n)
 	Locations[n].id = "Turks_shore_05";
 	locations[n].id.label = "Birds Cove."; // KK
 	//locations[n].worldmap = "TShore 5";
-	Locations[n].image = "Outside_Shore_4.tga";
+	Locations[n].image = "Outside_Shore_4";
 	Locations[n].name = "Birds Cove";
 	//Sound
 	locations[n].type = "seashore";
@@ -1390,7 +1390,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Cavern_02";
 	locations[n].id.label = "Hidden Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "KhaelRoa";
 	//Models
@@ -1433,7 +1433,7 @@ void LocationInitTurks(ref n)
 	Locations[n].id = "Turks_shore_04";
 	locations[n].id.label = "Sandy Point."; // KK
 	locations[n].worldmap = "TShore 4";
-	Locations[n].image = "Outside_Passage1.tga";
+	Locations[n].image = "Outside_Passage1";
 	Locations[n].name = "Sandy Point";
 	//Sound
 	locations[n].type = "seashore";
@@ -1494,7 +1494,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Cavern_03";
 	locations[n].id.label = "#sisland_name# Cavern";
-	Locations[n].image = "Inside_Cavern.tga";
+	Locations[n].image = "Inside_Cavern";
 
 	//Sound
 	locations[n].type = "cave";
@@ -1564,7 +1564,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Cave_Exit_02";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "Jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1627,7 +1627,7 @@ void LocationInitTurks(ref n)
 	// -----------------Mosh D24--------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "Turks_dungeon_01";
-	Locations[n].image = "Inside_Dungeon_4.tga";
+	Locations[n].image = "Inside_Dungeon_4";
 	Locations[n].monsters = "1";
 
 	//Sound
@@ -1663,7 +1663,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_shore_01";
 	locations[n].id.label = "White Reefs."; // KK
-	Locations[n].image = "Outside_Shore_10.tga";
+	Locations[n].image = "Outside_Shore_10";
 	Locations[n].name = "White Reefs";
 	//Locations[n].worldmap = "TShore 1";
 	//Sound
@@ -1726,7 +1726,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Jungle_01";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_3.tga";
+	Locations[n].image = "Outside_Jungle_3";
 	//Sound
 	locations[n].type = "Jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1804,7 +1804,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_Cave_Exit_01";
 	locations[n].id.label = "#sisland_name# cave entrance";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "Jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1870,7 +1870,7 @@ void LocationInitTurks(ref n)
 	Locations[n].filespath.models = "locations\Inside\ANIMISTS_Cave";
 	Locations[n].id = "Turks_Cavern_01";
 	locations[n].id.label = "Pirate Lair";
-	Locations[n].image = "Inside_Animists_Cave_Lair.tga";
+	Locations[n].image = "Inside_Animists_Cave_Lair";
 	//Sound
 	locations[n].type = "cave";
 
@@ -1908,7 +1908,7 @@ void LocationInitTurks(ref n)
 	Locations[n].id = "Turks_shore_ship";
 	locations[n].id.label = "Wreckage shore."; // KK
 //	locations[n].worldmap = "TShore 3";
-	Locations[n].image = "Outside_Shore_Ship.tga";
+	Locations[n].image = "Outside_Shore_Ship";
 	Locations[n].name = "Wreck";
 	//Sound
 	locations[n].type = "seashore";
@@ -1964,7 +1964,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_poker_entre";
 	locations[n].id.label = "Entrance Hall";
-	Locations[n].image = "poker_entre.tga";
+	Locations[n].image = "poker_entre";
 	Locations[n].filespath.models = "locations\inside\Residence2";
 
 	Locations[n].vcskip = true;
@@ -2023,7 +2023,7 @@ void LocationInitTurks(ref n)
 	locations[n].id = "Turks_poker_room";
 	locations[n].id.label = "Cardroom";
 	Locations[n].filespath.models = "locations\Inside\residence7";
-	Locations[n].image = "poker_room.tga";
+	Locations[n].image = "poker_room";
 	Locations[n].vcskip = true;
 	//Sound
 //	locations[n].type = "residence";
@@ -2083,7 +2083,7 @@ void LocationInitTurks(ref n)
 	locations[n].fastreload = "Grand_Turk";
 
 	locations[n].filespath.models = "locations\inside\ResidenceA02";
-	Locations[n].image = "murphy_house_loading.tga";
+	Locations[n].image = "murphy_house_loading";
 	//Models
 	Locations[n].models.back = "back\turkT_";
 	locations[n].models.always.locators = "residence02_locators";

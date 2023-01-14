@@ -669,7 +669,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Legrands_kitchen_plank_down1":
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 
 			if(Locations[FindLocation(Pchar.location)].models.always.locators == "mediumhouse01_locators_GB1")
 			{
@@ -754,7 +754,7 @@ void QuestComplete(string sQuestName)
 		case "end_of_tinderbox1":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 			
 			Logit(TranslateString("","Hmm, it's only glowing...?"));
 			PlaySound("VOICE\ENGLISH\blaze_huh.wav");
@@ -771,7 +771,7 @@ void QuestComplete(string sQuestName)
 			Logit(TranslateString("","That really helped - now let's see if there are more secrets to be found on the parchment."));
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 		break;
 
 		case "take_dirty_parchment_from_hot_water":
@@ -785,7 +785,7 @@ void QuestComplete(string sQuestName)
 			Logit(TranslateString("","Now when it's clean, maybe I should heat it up again?"));
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 			AddQuestRecord("The_parchment", "9");
 		break;
 
@@ -794,7 +794,7 @@ void QuestComplete(string sQuestName)
 			Logit(TranslateString("","No, the water isn't warm enough."));	
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 		break;
 	
 		case "end_of_placing_woodsack":
@@ -813,7 +813,7 @@ void QuestComplete(string sQuestName)
 		case "end_of_placing_crypto_on_pan2":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 
 			if(CheckAttribute(Pchar,"quest.driftwood") && Pchar.quest.driftwood == "yes")
 			{
@@ -837,7 +837,7 @@ void QuestComplete(string sQuestName)
 		case "end_of_placing_cauldron2":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 
 			if(CheckAttribute(Pchar,"quest.Legrands_fireplace") && Pchar.quest.Legrands_fireplace == "fire2")
 			{
@@ -855,7 +855,7 @@ void QuestComplete(string sQuestName)
 		case "end_of_placing_fryingpan2":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 		
 			if(CheckAttribute(Pchar,"quest.Legrands_fireplace") && Pchar.quest.Legrands_fireplace == "fire2")
 			{
@@ -870,14 +870,14 @@ void QuestComplete(string sQuestName)
 		case "end_of_tinderbox2":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 		break;
 
 		case "end_of_tinderbox3":
 			//from LAi_events
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 
 			PlaySound("VOICE\ENGLISH\blaze_hah.wav");
 		break;
@@ -886,7 +886,7 @@ void QuestComplete(string sQuestName)
 			//from LAi_events
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 
 			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
 			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
@@ -897,7 +897,7 @@ void QuestComplete(string sQuestName)
 			Logit(TranslateString("","So that's how it happened! The heat revealed a death's-head on the other side of the parchment!"));
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 		break;
 
 		case "end_of_visible_skullgoat_dirty":
@@ -905,7 +905,7 @@ void QuestComplete(string sQuestName)
 			Logit(TranslateString("","More heat and now there's a goat together with a death's-head!"));
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 		break;
 
 		case "end_of_visible_skullgoat_clean":
@@ -913,13 +913,13 @@ void QuestComplete(string sQuestName)
 			Logit(TranslateString("","Okay, there's the goat and the death's-head again!"));
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 		break;
 
 		case "end_of_visible_parttext_clean":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 		break;
 
 		case "end_of_visible_text_clean":
@@ -937,7 +937,7 @@ void QuestComplete(string sQuestName)
 			Logit(TranslateString("","Yes yes yes. I knew there was more. A lot of characters are rudely traced between the Death's-head and the Goat!"));
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 			AddQuestRecord("The_parchment", "8");
 
 			if(CheckAttribute(Pchar,"quest.crypto_full_text") && Pchar.quest.crypto_full_text == "first_time")
@@ -957,7 +957,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Legrands_damper1":
-			Locations[FindLocation("Legrands_kitchen")].image = "Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "Legrands_kitchen";
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(PChar, false);
 
@@ -975,7 +975,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Legrands_damper_closed1":
-			Locations[FindLocation("Legrands_kitchen")].image = "Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "Legrands_kitchen";
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(PChar, false);
 		break;
@@ -988,7 +988,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Legrands_damper_closed_smoke1":
-			Locations[FindLocation("Legrands_kitchen")].image = "Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "Legrands_kitchen";
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(PChar, false);
 
@@ -3000,7 +3000,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Edgar Allan Poe"));
 			LAi_ActorTurnToLocator(characterFromID("Edgar Allan Poe"), "goto", "goto10");
 
-			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside.tga";
+			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside";
 			
 			LAi_QuestDelay("visitor_leaves1A", 0.5);
 		break;
@@ -3222,7 +3222,7 @@ void QuestComplete(string sQuestName)
 
 		case "day2_startA":
 			SetCurrentTime(7.00, 0);
-			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside.tga";
+			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside";
 			Pchar.quest.Legrands_fireplace = "no_wood";
 			locations[FindLocation("Legrands_kitchen")].models.always.l2 = "";		//no wood
 			locations[FindLocation("Legrands_kitchen")].models.always.l10 = "ashes1";
@@ -3474,7 +3474,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "boathouse1":
-			Locations[FindLocation("Sullivan_jungle1")].image = "GB_Legrands_hut_outside.tga";
+			Locations[FindLocation("Sullivan_jungle1")].image = "GB_Legrands_hut_outside";
 			Pchar.quest.boathouse = "wood";	
 		
 			ChangeCharacterAddressGroup(characterFromID("Legrand_copy"), "Legrands_kitchen", "goto", "close");
@@ -3537,7 +3537,7 @@ void QuestComplete(string sQuestName)
 			//from  "end_of_placing_woodsack"
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 
 			LAi_QuestDelay("end_of_placing_woodsack3", 1.0);
 		break;
@@ -3550,7 +3550,7 @@ void QuestComplete(string sQuestName)
 		case "end_of_placing_woodsack4":
 		//Pchar.quest.exchange_items = "yes";
 
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Legrands_kitchen", "goto", "fireplace");
 			LAi_SetActorType(characterFromID("Jupiter"));
 			LAi_ActorGoToLocator(characterFromID("Jupiter"), "goto", "exit", "end_of_placing_woodsack5", 4.0);
@@ -3606,7 +3606,7 @@ void QuestComplete(string sQuestName)
 		break;	
 
 		case "Jup_paper_mission":
-			Locations[FindLocation("Legrands_grot")].image = "GB_Legrands_storeroom.tga";
+			Locations[FindLocation("Legrands_grot")].image = "GB_Legrands_storeroom";
 			ChangeCharacterAddressGroup(characterFromID("Legrand_copy"), "Legrands_grot", "goto", "legrand");
 			LAi_SetStayType(characterFromID("Legrand_copy"));
 			LAi_SetPlayerType(Pchar);
@@ -3812,7 +3812,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\jump.wav");
 			Php = LAi_GetCharacterHP(Pchar);
 			LAi_ApplyCharacterDamage(Pchar, Php/2);
-			Locations[FindLocation("Fort_Moultrie_village")].image = "GB_Moultrie_village.tga";
+			Locations[FindLocation("Fort_Moultrie_village")].image = "GB_Moultrie_village";
 
 			LAi_QuestDelay("bouncer_knocking3", 2.0);
 		break;
@@ -4167,7 +4167,7 @@ void QuestComplete(string sQuestName)
 		case "second_placing_woodsack1":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Legrands_kitchen")], true);
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 
 			LAi_QuestDelay("second_placing_woodsack2", 1.0);
 		break;
@@ -4180,7 +4180,7 @@ void QuestComplete(string sQuestName)
 		case "second_placing_woodsack3":
 	//Pchar.quest.exchange_items = "yes";
 
-			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen.tga";
+			Locations[FindLocation("Legrands_kitchen")].image = "GB_Legrands_kitchen";
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Legrands_kitchen", "goto", "fireplace");
 		
 			LAi_SetStayType(Pchar);
@@ -4395,7 +4395,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Fort_M_turn_to_look1":
-			Locations[FindLocation("Fort_Moultrie")].image = "GB_Fort_Moultrie.tga";
+			Locations[FindLocation("Fort_Moultrie")].image = "GB_Fort_Moultrie";
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "goto", "look1");
 			
@@ -4539,7 +4539,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Fort_M_flag_pos = "down";
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Fort_Moultrie")], true);
-			Locations[FindLocation("Fort_Moultrie")].image = "GB_Fort_Moultrie.tga";
+			Locations[FindLocation("Fort_Moultrie")].image = "GB_Fort_Moultrie";
 			LAi_SetPlayerType(Pchar);
 
 			LAi_QuestDelay("place_usa_flag3", 1.0);
@@ -4563,7 +4563,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation(Pchar.location)].models.always.locators = "fort2_locators_GB3";	
 
 			DoQuestReloadToLocation("Fort_Moultrie", "goto", "box35", "raise_usa_flag3");
-			Locations[FindLocation("Fort_Moultrie")].image = "GB_Fort_Moultrie.tga";
+			Locations[FindLocation("Fort_Moultrie")].image = "GB_Fort_Moultrie";
 		break;
 
 		case "raise_usa_flag3":
@@ -5075,7 +5075,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Charleston_too_early_done3":
-			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside.tga";
+			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside";
 			LAi_SetPlayerType(Pchar);
 			PlaySound("VOICE\ENGLISH\blaze_lets_go.wav");
 			Pchar.quest.Jupiter_equip = "case1";
@@ -5128,7 +5128,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Charleston_too_late_done5":
-			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside.tga";
+			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside";
 			PlaySound("AMBIENT\JAIL\sigh2.wav");
 			SetCurrentTime(7.00, 0);
 			LAi_SetSitType(Pchar);
@@ -5368,7 +5368,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Poe_bedroom2":
-			Locations[FindLocation("Poe_bedroom")].image = "GB_Poe_bedroom.tga";
+			Locations[FindLocation("Poe_bedroom")].image = "GB_Poe_bedroom";
 
 			for(i=1; i<4; i++) RemoveOfficersIndex(GetMainCharacter(), GetOfficersIndex(GetMainCharacter(), i));
 			RemovePassenger(pchar, characterFromID("Jupiter"));
@@ -5647,7 +5647,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Dupin_private_hatch_unlock1":
-			Locations[FindLocation("Dupin_private")].image = "Inside_mh10.tga";
+			Locations[FindLocation("Dupin_private")].image = "Inside_mh10";
 			PlaySound("INTERFACE\closet_open.wav");
 			Locations[FindLocation("Dupin_private")].reload.l2.disable = 0;
 			Locations[FindLocation("GB_Charleston_opium")].reload.l2.disable = 0;
@@ -5659,7 +5659,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Dupin_private_hatch_lock1":
-			Locations[FindLocation("Dupin_private")].image = "Inside_mh10.tga";
+			Locations[FindLocation("Dupin_private")].image = "Inside_mh10";
 			PlaySound("INTERFACE\closed_locked_door.wav");
 			Locations[FindLocation("Dupin_private")].reload.l2.disable = 1;
 			Locations[FindLocation("GB_Charleston_opium")].reload.l2.disable = 1;
@@ -6721,7 +6721,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\step_wood.wav");
 			ChangeCharacterAddressGroup(Pchar, "GB_chinese_nitre", "goto", "stepback");
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter.tga";
+			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter";
 
 			pchar.quest.nitre_steplock1.win_condition.l1 = "locator";
 			pchar.quest.nitre_steplock1.win_condition.l1.location = "GB_chinese_nitre";
@@ -6940,7 +6940,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_gunpowder")], true);
 			Pchar.quest.mill_position = "elsewhere";
-			Locations[FindLocation("GB_chinese_gunpowder")].image = "GB_gunpowder_mill.tga";
+			Locations[FindLocation("GB_chinese_gunpowder")].image = "GB_gunpowder_mill";
 //	LogIt("large_bottle = " + Pchar.quest.large_bottle);
 
 			if(CheckAttribute(Pchar,"quest.large_bottle") && Pchar.quest.large_bottle == "LG2")
@@ -6965,7 +6965,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_gunpowder")], true);
 			Pchar.quest.mill_position = "elsewhere";
-			Locations[FindLocation("GB_chinese_gunpowder")].image = "GB_gunpowder_mill.tga";
+			Locations[FindLocation("GB_chinese_gunpowder")].image = "GB_gunpowder_mill";
 //	LogIt("medium_bottle = " + Pchar.quest.medium_bottle);
 		break;
 //..........................................................................................
@@ -7094,7 +7094,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_gunpowder")], true);
 			Pchar.quest.mill_position = "elsewhere";
-			Locations[FindLocation("GB_chinese_gunpowder")].image = "GB_gunpowder_mill.tga";
+			Locations[FindLocation("GB_chinese_gunpowder")].image = "GB_gunpowder_mill";
 		break;
 //..........................................................................................
 		case "pick_up_barrel_from_floor1":
@@ -7107,7 +7107,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_gunpowder")], true);
 			Pchar.quest.mill_position = "elsewhere";
-			Locations[FindLocation("GB_chinese_gunpowder")].image = "GB_gunpowder_mill.tga";
+			Locations[FindLocation("GB_chinese_gunpowder")].image = "GB_gunpowder_mill";
 
 			if(CheckAttribute(Pchar, "quest.2barrels_gpS") && Pchar.quest.2barrels_gpS == "second_time")
 			{
@@ -7794,7 +7794,7 @@ void QuestComplete(string sQuestName)
 		case "charcoal_push_log1":
 			PlaySound("PEOPLE\clothes1.wav");
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal.tga";
+			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal";
 		break;
 //..........................................................................................
 		case "charcoal_saw_log":
@@ -7815,7 +7815,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_charcoal")], true);
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal.tga";
+			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal";
 			Pchar.quest.charcoal_box4 = "off";
 		break;
 
@@ -7829,7 +7829,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_SetPlayerType(Pchar);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_charcoal")], true);
-			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal.tga";
+			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal";
 		break;
 //..........................................................................................
 		case "charcoal_place_short_logs":
@@ -7847,7 +7847,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_charcoal")], true);
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal.tga";
+			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal";
 			Pchar.quest.charcoal_wood_short = "on_stump";
 			Pchar.quest.charcoal_box1 = "off";
 		break;
@@ -7867,7 +7867,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_charcoal")], true);
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal.tga";
+			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal";
 			Pchar.quest.charcoal_wood_short = "no";
 			Pchar.quest.charcoal_box1 = "off";
 		break;
@@ -7885,7 +7885,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_SetPlayerType(Pchar);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_charcoal")], true);
-			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal.tga";
+			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal";
 		break;
 //..........................................................................................
 		case "charcoal_place_wood4":
@@ -7902,7 +7902,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_charcoal")], true);
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal.tga";
+			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal";
 			Pchar.quest.charcoal_box2 = "off";
 		break;
 //..........................................................................................
@@ -7917,7 +7917,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_charcoal")], true);
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal.tga";
+			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal";
 
 			LAi_QuestDelay("charcoal_fire_sound", 0.1);
 			LAi_QuestDelay("end_of_tinderbox_charcoal2", 1.0);
@@ -8049,7 +8049,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "charcoal_pick_up_again4":
-			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal.tga";
+			Locations[FindLocation("GB_chinese_charcoal")].image = "GB_charcoal";
 			//PlaySound("OBJECTS\DUEL\man_attack6.wav");
 			Pchar.quest.charcoal_box2 = "off";
 
@@ -8422,7 +8422,7 @@ void QuestComplete(string sQuestName)
 		case "nitre_levers_water_sound_and_fog2":
 			CreateParticleSystem("waterfog" , 1.5, 1.0, -4.2, -27.8, 3.6, 16.3, sti(20) );
 			PlaySound("NATURE\water_in.wav");
-			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter.tga";
+			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter";
 
 			if(CheckAttribute(Pchar,"quest.nitre_dirt_tub2") && Pchar.quest.nitre_dirt_tub2 == "First_time")	
 			{
@@ -8469,16 +8469,16 @@ void QuestComplete(string sQuestName)
 		case "nitre_levers_water_sound_and_fog3":
 			CreateParticleSystem("waterfog" , 5.2, 0.4, -3.7, -27.8, 3.6, 16.3, sti(20) );
 			PlaySound("NATURE\water_in.wav");
-			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter.tga";
+			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter";
 		break;
 
 		case "nitre_levers_water_sound":
 			PlaySound("NATURE\water_in.wav");
-			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter.tga";
+			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter";
 		break;
 
 		case "reset_nitre_loading":
-			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter.tga";
+			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter";
 		break;
 
 		case "nitre_levers_dripping_sound":
@@ -8486,7 +8486,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("AMBIENT\CAVE\drop4.wav");
 			PlaySound("AMBIENT\CAVE\drop4.wav");
 			PlaySound("AMBIENT\CAVE\drop4.wav");
-			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter.tga";
+			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter";
 
 			if(CheckAttribute(Pchar,"quest.nitre_drops") && Pchar.quest.nitre_drops == "first_time")
 			{
@@ -8525,7 +8525,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_nitre")], true);
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter.tga";
+			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter";
 		
 			LAi_QuestDelay("nitre_fill_bucket2", 1.0);
 		break;
@@ -8551,7 +8551,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_nitre")], true);
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter.tga";
+			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter";
 		
 			LAi_QuestDelay("nitre_empty_bucket2", 1.0);
 		break;
@@ -8622,7 +8622,7 @@ void QuestComplete(string sQuestName)
 			TakeItemFromCharacter(Pchar, "pistolnitre_H" );
 			GiveItem2Character(Pchar, "pistolnitre_big_F");	
 			EquipCharacterByItem(Pchar, "pistolnitre_big_F");
-			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter.tga";
+			Locations[FindLocation("GB_chinese_nitre")].image = "GB_salpeter";
 
 			LAi_QuestDelay("nitre_scrape_salpeter_again3", 1.0);
 		break;
@@ -8726,7 +8726,7 @@ void QuestComplete(string sQuestName)
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_sulphur")], true);
 			Pchar.quest.pyrite_stones = "no";
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur.tga";
+			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur";
 	
 			LAi_QuestDelay("pyrite_dust_pick_up_again4", 1.0);
 		break;	
@@ -8765,7 +8765,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_sulphur")], true);
 			LAi_SetPlayerType(Pchar);			
-			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur.tga";
+			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur";
 
 			LAi_QuestDelay("pyrite_stones_smashed3", 1.0);
 		break;
@@ -8796,7 +8796,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("GB_chinese_sulphur")], true);
 			LAi_SetPlayerType(Pchar);			
-			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur.tga";
+			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur";
 
 			LAi_QuestDelay("pyrite_stones_smashed_again3", 1.0);
 		break;
@@ -8898,12 +8898,12 @@ void QuestComplete(string sQuestName)
 
 		case "sulfur_hatch_close":
 			PlaySound("PEOPLE\counter_close.wav");
-			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur.tga";
+			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur";
 		break;
 
 		case "sulfur_hatch_open":
 			PlaySound("INTERFACE\closet_open.wav");
-			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur.tga";
+			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur";
 		break;
 //..........................................................................................
 		case "sulfur_pull_rope":
@@ -8921,7 +8921,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_dirt", 0.4, 0.2, 6.4, 0.4, 0.2, 6.4, 10);
 			PlaySound("PEOPLE\cavern1.wav");
 			PlaySound("PEOPLE\cavern1.wav");
-			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur.tga";
+			Locations[FindLocation("GB_chinese_sulphur")].image = "GB_sulfur";
 		
 			LAi_QuestDelay("sulfur_pull_rope2", 1.0);
 		break;
@@ -10050,7 +10050,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "in_fireworks_lab_glue_done5":
-			Locations[FindLocation("GB_chinese_room")].image = "GB_chinese_room.tga";
+			Locations[FindLocation("GB_chinese_room")].image = "GB_chinese_room";
 			PlaySound("AMBIENT\TAVERN\move1.wav");
 			PlaySound("AMBIENT\TAVERN\move1.wav");
 
@@ -12723,7 +12723,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.tapA_activated = "no";
 			Pchar.quest.tapA = "open";
 			Pchar.quest.barrelA = "empty";
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 
 			LAi_QuestDelay("Jup_to_officer_reload5_1", 0.1);
 		break;
@@ -12737,7 +12737,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(Pchar, "cork");
 			Pchar.quest.tapB_activated = "no";
 			Pchar.quest.tapB = "open";
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 
 			LAi_QuestDelay("Jup_to_officer_reload5_1", 0.1);
 		break;
@@ -12751,7 +12751,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(Pchar, "cork");
 			Pchar.quest.tapC_activated = "no";
 			Pchar.quest.tapC = "open";
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 
 			LAi_QuestDelay("Jup_to_officer_reload5_1", 0.1);
 		break;
@@ -12765,7 +12765,7 @@ void QuestComplete(string sQuestName)
 			TakeItemFromCharacter(Pchar, "cork");
 			Pchar.quest.tapA_activated = "no";
 			Pchar.quest.tapA = "closed";
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 
 			LAi_QuestDelay("Jup_to_officer_reload5_1", 0.1);
 		break;
@@ -12779,7 +12779,7 @@ void QuestComplete(string sQuestName)
 			TakeItemFromCharacter(Pchar, "cork");
 			Pchar.quest.tapB_activated = "no";
 			Pchar.quest.tapB = "closed";
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 
 			LAi_QuestDelay("Jup_to_officer_reload5_1", 0.1);
 		break;
@@ -12793,7 +12793,7 @@ void QuestComplete(string sQuestName)
 			TakeItemFromCharacter(Pchar, "cork");
 			Pchar.quest.tapC_activated = "no";
 			Pchar.quest.tapC = "closed";
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 
 			LAi_QuestDelay("Jup_to_officer_reload5_1", 0.1);
 		break;
@@ -12814,7 +12814,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Maroon_Cavern")].locators_radius.box.box13 = 0.5;
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box13", 0.5);
 			
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "box", "box12");
@@ -12840,7 +12840,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Maroon_Cavern")].locators_radius.box.box12 = 0.5;
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box12", 0.5);
 			
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "box", "box12");
@@ -12862,7 +12862,7 @@ void QuestComplete(string sQuestName)
 		case "mar_cav_take_ladder_bottom1":
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 
 			LAi_QuestDelay("Jup_to_officer_reload5_1", 0.1);
 		break;
@@ -12892,7 +12892,7 @@ void QuestComplete(string sQuestName)
 			}
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium.tga";
+			Locations[FindLocation("Maroon_Cavern")].image = "Inside_cavernMedium";
 		break;	
 
 		case "pull_up_ladder_from_cavern":
@@ -12944,7 +12944,7 @@ void QuestComplete(string sQuestName)
 		case "ch_shore_turn_to_box18":
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "box", "box18");
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 
 			LAi_QuestDelay("Pchar_playertype", 1.0);
 		break;
@@ -12957,7 +12957,7 @@ void QuestComplete(string sQuestName)
 		case "ch_shore_place_ladder_gibbet1":
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 
 			LAi_QuestDelay("ch_shore_turn_to_look_b18", 1.0);
 		break;	
@@ -12971,7 +12971,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\jump.wav");
 			LAi_SetSitType(Pchar);
 			ChangeCharacterAddressGroup(Pchar, "Charleston_shore", "goto", "box19");
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 			Pchar.quest.box_action = "no";
 
 			LAi_QuestDelay("ch_shore_turn_to_look_b18", 0.5);
@@ -13008,7 +13008,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("VOICE\ENGLISH\blaze_lets_go.wav");
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 			Pchar.quest.box_action = "no";
 
 			LAi_QuestDelay("ch_shore_turn_to_look_b18", 0.1);
@@ -13247,13 +13247,13 @@ void QuestComplete(string sQuestName)
 		case "ch_shore_loading_image_back":
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 		break;
 
 		case "ch_shore_after_box37":
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 
 			for(i=1; i<4; i++) RemoveOfficersIndex(GetMainCharacter(), GetOfficersIndex(GetMainCharacter(), i));
 			RemovePassenger(Pchar, characterFromID("Jupiter"));
@@ -13285,7 +13285,7 @@ void QuestComplete(string sQuestName)
 
 		case "ch_shore_bars_up":
 			PlaySound("INTERFACE\girder_open.wav");
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 			if(Locations[FindLocation("Charleston_shore")].models.always.l7 == "plank_ground")
 			{
 				LAi_QuestDelay("ch_shore_bars_up1", 1.5);
@@ -13330,7 +13330,7 @@ void QuestComplete(string sQuestName)
 		case "ch_shore_bars_down":
 			PlaySound("INTERFACE\girder_close.wav");
 			CreateParticleSystemX("blast_dirt", -9.1, 13.4, -30.3, -9.1, 13.4, -30.3, 10);
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 
 			for(i=1; i<4; i++) RemoveOfficersIndex(GetMainCharacter(), GetOfficersIndex(GetMainCharacter(), i));
 			RemovePassenger(Pchar, characterFromID("Jupiter"));
@@ -13416,7 +13416,7 @@ void QuestComplete(string sQuestName)
 		case "falling_lever3":
 			PlaySound("INTERFACE\girder_close.wav");
 			CreateParticleSystemX("blast_dirt", -9.1, 13.4, -30.3, -9.1, 13.4, -30.3, 10);
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 			LAi_SetPlayerType(Pchar);
 			
 			if(Locations[FindLocation(Pchar.location)].models.always.l4 == "bars_stuck") 
@@ -13473,7 +13473,7 @@ void QuestComplete(string sQuestName)
 				LAi_QuestDelay("Jup_has_plank", 0.1);
 			}
 
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 		break;
 
 		case "stop_gate":
@@ -13550,7 +13550,7 @@ void QuestComplete(string sQuestName)
 		case "stop_gate6":
 			LAi_SetPlayerType(Pchar);
 			PlaySound("INTERFACE\girder_open.wav");
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 			
 			for(i=1; i<4; i++) RemoveOfficersIndex(GetMainCharacter(), GetOfficersIndex(GetMainCharacter(), i));
 			RemovePassenger(Pchar, characterFromID("Jupiter"));
@@ -13599,7 +13599,7 @@ void QuestComplete(string sQuestName)
 		case "stop_gate10":
 			PlaySound("INTERFACE\girder_close.wav");
 			CreateParticleSystemX("blast_dirt", -9.1, 13.4, -30.3, -9.1, 13.4, -30.3, 10);
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 			LAi_SetStayType(Pchar);
 
 			for(i=1; i<4; i++) RemoveOfficersIndex(GetMainCharacter(), GetOfficersIndex(GetMainCharacter(), i));
@@ -13793,7 +13793,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "maroon_cavern_steplock3":
-			Locations[FindLocation("Maroon_cavern")].image = "Inside_cavernMedium.tga";	
+			Locations[FindLocation("Maroon_cavern")].image = "Inside_cavernMedium";
 			LAi_SetPlayerType(Pchar);
 
 			LAi_QuestDelay("maroon_cavern_steplock4", 0.5);
@@ -13896,7 +13896,7 @@ void QuestComplete(string sQuestName)
 		case "jup_kungfu_done3":
 			Pchar.quest.jup_kungfu = "no";
 			LAi_SetOfficerType(characterFromID("Jupiter"));
-			Locations[FindLocation("Maroon_hideout")].image = "Inside_Cave_Ship.tga";	
+			Locations[FindLocation("Maroon_hideout")].image = "Inside_Cave_Ship";
 			LAi_SetPlayerType(Pchar);
 
 			LAi_QuestDelay("kungfu_new", 0.1);		
@@ -13957,7 +13957,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "maroon_hideout_steplock3":
-			Locations[FindLocation("Maroon_hideout")].image = "Inside_Cave_Ship.tga";	
+			Locations[FindLocation("Maroon_hideout")].image = "Inside_Cave_Ship";
 			LAi_SetPlayerType(Pchar);
 
 			LAi_QuestDelay("maroon_hideout_steplock4", 0.5);
@@ -14012,7 +14012,7 @@ void QuestComplete(string sQuestName)
 
 		case "tree_zoom":
 			Locations[FindLocation(Pchar.location)].models.always.locators = "locator_BH2";	//with tree!
-			locations[FindLocation(Pchar.location)].image = "zoom_tree.tga";
+			locations[FindLocation(Pchar.location)].image = "zoom_tree";
 
 			DoQuestReloadToLocation("Bishops_Hostel", "box", "box37", "tree_zoom1");
 		break;
@@ -14030,7 +14030,7 @@ void QuestComplete(string sQuestName)
 			}
 
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";
 
 			if(!CheckAttribute(Pchar,"quest.BH_message8") || Pchar.quest.BH_message8 != "done")
 			{
@@ -14061,7 +14061,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "green_zoom":
-			locations[FindLocation(Pchar.location)].image = "zoom_green.tga";
+			locations[FindLocation(Pchar.location)].image = "zoom_green";
 
 			DoQuestReloadToLocation("Bishops_Hostel", "box", "box37", "green_zoom1");
 		break;
@@ -14079,7 +14079,7 @@ void QuestComplete(string sQuestName)
 			}
 
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";
 			
 			LAi_QuestDelay("green_zoom2", 1.0);	
 		break;
@@ -14185,7 +14185,7 @@ void QuestComplete(string sQuestName)
 		case "jup_unlock_the_gate6":
 			LAi_SetPlayerType(Pchar);
 			PlaySound("INTERFACE\girder_open.wav");
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 			
 			pchar.quest.jup_unlock_the_gate7.win_condition.l1 = "locator";
 			pchar.quest.jup_unlock_the_gate7.win_condition.l1.location = "Charleston_shore";
@@ -14221,7 +14221,7 @@ void QuestComplete(string sQuestName)
 		case "jup_unlock_the_gate10":
 			PlaySound("INTERFACE\girder_close.wav");
 			CreateParticleSystemX("blast_dirt", -9.1, 13.4, -30.3, -9.1, 13.4, -30.3, 10);
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 			LAi_SetPlayerType(Pchar);
 
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Charleston_shore", "officers", "reload4_1");
@@ -14941,7 +14941,7 @@ void QuestComplete(string sQuestName)
 
 		case "place_pym_anchor1":
 			Pchar.quest.pym_anchor = "placed";
-			Locations[FindLocation("Pym_bedroom")].image = "Inside_Doubleflour_House_Room.tga";
+			Locations[FindLocation("Pym_bedroom")].image = "Inside_Doubleflour_House_Room";
 			LAi_SetFightMode(Pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Pym_bedroom")], true);
 			
@@ -14968,7 +14968,7 @@ void QuestComplete(string sQuestName)
 
 		case "Ship_painting_up1":
 			Pchar.quest.pym_niche = "open";
-			Locations[FindLocation("Pym_bedroom")].image = "Inside_Doubleflour_House_Room.tga";
+			Locations[FindLocation("Pym_bedroom")].image = "Inside_Doubleflour_House_Room";
 			PlaySound("INTERFACE\chart_move.wav");
 			PlaySound("INTERFACE\chart_move.wav");
 			LAi_SetStayType(Pchar);
@@ -14991,7 +14991,7 @@ void QuestComplete(string sQuestName)
 
 		case "Ship_painting_down1":
 			Pchar.quest.pym_niche = "closed";
-			Locations[FindLocation("Pym_bedroom")].image = "Inside_Doubleflour_House_Room.tga";
+			Locations[FindLocation("Pym_bedroom")].image = "Inside_Doubleflour_House_Room";
 			PlaySound("INTERFACE\chart_move.wav");
 			PlaySound("INTERFACE\chart_move.wav");
 			LAi_SetStayType(Pchar);
@@ -15177,7 +15177,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("VOICE\ENGLISH\blaze_huh.wav");
 			Logit(TranslateString("","What am I doing wrong?"));
 			Pchar.quest.pym_sack = "placed";
-			Locations[FindLocation("Pym_study")].image = "GB_Pym_study.tga";
+			Locations[FindLocation("Pym_study")].image = "GB_Pym_study";
 			LAi_SetFightMode(Pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Pym_study")], true);
 		break;
@@ -15190,7 +15190,7 @@ void QuestComplete(string sQuestName)
 
 		case "take_pym_sack1":
 			Pchar.quest.pym_sack = "picked_up";
-			Locations[FindLocation("Pym_study")].image = "GB_Pym_study.tga";
+			Locations[FindLocation("Pym_study")].image = "GB_Pym_study";
 			LAi_SetFightMode(Pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Pym_study")], true);
 		break;
@@ -15206,7 +15206,7 @@ void QuestComplete(string sQuestName)
 		case "place_pym_big_sack1":
 			PlaySound("INTERFACE\closet_open.wav");
 			Pchar.quest.pym_big_sack = "placed";
-			Locations[FindLocation("Pym_study")].image = "GB_Pym_study.tga";
+			Locations[FindLocation("Pym_study")].image = "GB_Pym_study";
 			LAi_SetFightMode(Pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Pym_study")], true);
 
@@ -15237,7 +15237,7 @@ void QuestComplete(string sQuestName)
 
 		case "reset_towerroom_image":
 			PlaySound("PEOPLE\clothes2.wav");
-			Locations[FindLocation("Pym_towerroom")].image = "GB_Pym_chamber.tga";
+			Locations[FindLocation("Pym_towerroom")].image = "GB_Pym_chamber";
 		break;
 
 		case "bladeboom_equip_check":
@@ -15268,7 +15268,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystem("blast_dirt_small" , 0.6, 3.0, -2.3, 0.0, 0.0, 0.0, sti(20) );
 			PlaySound("PEOPLE\counter_close.wav");
 			PlaySound("PEOPLE\counter_close.wav");
-			Locations[FindLocation("Pym_towerroom")].image = "GB_Pym_chamber.tga";
+			Locations[FindLocation("Pym_towerroom")].image = "GB_Pym_chamber";
 			LAi_SetFightMode(Pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Pym_towerroom")], true);
 
@@ -15372,7 +15372,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "place_bladepaperroll1":
-			Locations[FindLocation("Pym_towerroom")].image = "GB_Pym_chamber.tga";
+			Locations[FindLocation("Pym_towerroom")].image = "GB_Pym_chamber";
 			LAi_SetFightMode(Pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Pym_towerroom")], true);
 			Pchar.quest.tower_tinderbox = "enabled";
@@ -15426,7 +15426,7 @@ void QuestComplete(string sQuestName)
 		case "end_of_tinderbox_tower3":
 			CreateParticleSystem("smoke_short" , 0.3, 3.0, -2.3, 4.5, 1.5, 0.0, sti(20) );
 
-			Locations[FindLocation("Pym_towerroom")].image = "GB_Pym_chamber.tga";
+			Locations[FindLocation("Pym_towerroom")].image = "GB_Pym_chamber";
 			Pchar.quest.pym_hatch = "open";
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box9", 0.001);
 			Locations[FindLocation("Pym_towerroom")].locators_radius.box.box9 = 0.001;
@@ -16650,7 +16650,7 @@ void QuestComplete(string sQuestName)
 				LAi_SetOfficerType(characterFromID("Jupiter"));
 			}
 
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 
 			LAi_QuestDelay("Jup_stops_maroons1", 1.5);
 		break;	
@@ -16867,7 +16867,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Charleston_shore")].locators_radius.goto.stop_bars = 0.0001;
 			Locations[FindLocation("Charleston_passage")].models.always.locators = "pass2_l_GB_raft";
 
-			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1.tga";
+			Locations[FindLocation("Charleston_shore")].image = "Outside_Passage1";
 
 			LAi_QuestDelay("Jup_stops_maroons15", 1.0);	
 		break;	
@@ -17540,7 +17540,7 @@ void QuestComplete(string sQuestName)
 		case "set_sails1":
 			PlaySound("OBJECTS\DUEL\man_attack6.wav");
 			Pchar.sails_on_boat = "yes";
-			Locations[FindLocation("Legrands_boathouse")].image = "GB_Legrands_boathouse.tga";
+			Locations[FindLocation("Legrands_boathouse")].image = "GB_Legrands_boathouse";
 
 			pchar.quest.leave_boathouse.win_condition.l1 = "locator";
 			pchar.quest.leave_boathouse.win_condition.l1.location = "Legrands_boathouse";
@@ -17874,7 +17874,7 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Moultrie_sergeant")].dialog.CurrentNode  = "what_you_want";
 			EquipCharacterbyItem(Pchar, "bladespade");
 			EquipCharacterbyItem(Pchar, "pistolsextant2");
-			Locations[FindLocation("Fort_Moultrie")].image = "GB_Fort_Moultrie.tga";
+			Locations[FindLocation("Fort_Moultrie")].image = "GB_Fort_Moultrie";
 
 			LAi_QuestDelay("Fort_M_turn_to_ri8", 1.0);
 		break;
@@ -19145,7 +19145,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "reset_church_image":
-			Locations[FindLocation("GB_Charleston_church")].image = "GB_Charleston_church.tga";
+			Locations[FindLocation("GB_Charleston_church")].image = "GB_Charleston_church";
 		break;
 
 		case "return_church_box7":	
@@ -19999,7 +19999,7 @@ void QuestComplete(string sQuestName)
 		case "BH_rope_down1":	
 			LAi_SetPlayerType(Pchar);
 			PlaySound("PEOPLE\grass_turn.wav");	
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("Jup_lowers_rope", 2.0);
 		break;
@@ -20021,7 +20021,7 @@ void QuestComplete(string sQuestName)
 		case "Jup_lowers_rope2":	
 			LAi_SetPlayerType(Pchar);
 			PlaySound("PEOPLE\grass_turn.wav");
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("cancel_sound", 0.5);
 			LAi_QuestDelay("Jup_lowers_rope3", 1.0);
@@ -20160,7 +20160,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(characterFromID("Edgar Allan Poe"));
 			LAi_SetFightMode(characterFromID("Edgar Allan Poe"), true);
 			TakeItemFromCharacter(characterFromID("Edgar Allan Poe"), "peg");
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("place_stake_1B", 1.5);
 			LAi_QuestDelay("place_stake_1B", 2.5);
@@ -20257,7 +20257,7 @@ void QuestComplete(string sQuestName)
 			LAi_QuestDelay("Jup_digs_hole1_C", 0.1);
 			LAi_SetFightMode(characterFromID("Jupiter"), false);
 			LAi_SetOfficerType(characterFromID("Jupiter"));
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("Jup_digs_hole1_EE", 2.0);
 			LAi_QuestDelay("Poe_try_again", 4.0);
@@ -20313,7 +20313,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(characterFromID("Jupiter"), false);
 			LAi_SetOfficerType(characterFromID("Jupiter"));
 			LAi_SetOfficerType(characterFromID("Edgar Allan Poe"));
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 			
 			LAi_QuestDelay("Jup_digs_hole1_K", 2.0);
 		break;
@@ -20444,7 +20444,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(characterFromID("Edgar Allan Poe"));
 			LAi_SetFightMode(characterFromID("Edgar Allan Poe"), true);
 			TakeItemFromCharacter(characterFromID("Edgar Allan Poe"), "peg");
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("place_stake_2A", 1.5);
 			LAi_QuestDelay("place_stake_2A", 2.5);
@@ -20516,7 +20516,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(characterFromID("Edgar Allan Poe"));
 			LAi_SetFightMode(characterFromID("Edgar Allan Poe"), true);
 			TakeItemFromCharacter(characterFromID("Edgar Allan Poe"), "peg");
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("place_stake_2B", 1.5);
 			LAi_QuestDelay("place_stake_2B", 2.5);
@@ -20590,7 +20590,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorTurnToLocator(characterFromID("Edgar Allan Poe"), "goto", "skeleton2A");
 			LAi_SetActorType(characterFromID("Jupiter"));
 			LAi_ActorTurnToLocator(characterFromID("Jupiter"), "goto", "skeleton2A");
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 			
 			LAi_QuestDelay("Legrand_digs6", 2.0);
 		break;
@@ -20599,7 +20599,7 @@ void QuestComplete(string sQuestName)
 			LAi_QuestDelay("Legrand_digs3", 0.1);
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToCharacter(Pchar, characterFromID("Edgar Allan Poe"));
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 			
 			LAi_QuestDelay("Poe_ooh", 0.1);
 			LAi_QuestDelay("Legrand_digs7", 2.0);
@@ -20681,7 +20681,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Jupiter"));
 			LAi_ActorTurnToLocator(characterFromID("Jupiter"), "goto", "skeleton2A");
 			PlaySound("OBJECTS\VOICES\DEAD\male\dead6.wav");
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("skeletons_found0", 1.0);
 			LAi_QuestDelay("skeletons_found", 2.0);
@@ -20803,7 +20803,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(characterFromID("Jupiter"));
 			Pchar.quest.box_blocked = "no";
 			Pchar.treasure_spot = "locked_chest";
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("poe_ooh", 1.0);
 			LAi_QuestDelay("pchar_oh", 2.0);
@@ -20855,7 +20855,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.box_blocked = "no";
 			Pchar.treasure_spot = "open_chest";
 			Pchar.opened_once = "no";
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("pchar_lets_go", 1.0);
 			LAi_QuestDelay("prepare_dance_number", 2.0);
@@ -21015,7 +21015,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "prepare_tour2":
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("prepare_tour2_sacks", 1.0);
 		break;
@@ -21076,7 +21076,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "prepare_tour3":
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("prepare_tour3_sacks", 1.0);
 		break;
@@ -21208,7 +21208,7 @@ void QuestComplete(string sQuestName)
 		case "Jup_lifts_chest13":
 			LAi_QuestDelay("Legrand_digs3", 0.1);
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 			
 			LAi_QuestDelay("Jup_lifts_chest14", 1.0);
 		break;
@@ -21263,7 +21263,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "near_raft");
 			LAi_SetStayType(characterFromID("Jupiter"));
 			LAi_SetActorType(Pchar);
-			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel.tga";	//temp
+			Locations[FindLocation("Bishops_Hostel")].image = "GB_Bishops_hostel";	//temp
 
 			LAi_QuestDelay("rope_to_raft", 1.0);
 		break;
@@ -21980,7 +21980,7 @@ void QuestComplete(string sQuestName)
 
 		case "good_morning1":
 			SetCurrentTime(10.00, 0);
-			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside.tga";
+			Locations[FindLocation("Legrands_house")].image = "GB_Legrands_hut_inside";
 			ChangeCharacterAddressGroup(Pchar, "Legrands_house", "goto", "staybed");
 			LAi_SetPlayerType(Pchar);
 		break;

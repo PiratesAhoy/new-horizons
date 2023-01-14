@@ -3,7 +3,7 @@ void LocationInitQuestLocations(ref n)
 	// Retextured Santo Domingo
 	Locations[n].filespath.models = "locations\town_Greenford\port";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Greenford_Port_Spain.tga";
+	Locations[n].image = "Town_Greenford_Port_Spain";
 
 	Locations[n].id = "Quest_Domingo_port";
 	locations[n].id.label = "Santo Domingo port.";
@@ -58,7 +58,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Cargo hold";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
-	Locations[n].image = "deck_hold.tga"; // KK
+	Locations[n].image = "deck_hold"; // KK
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].lockCamAngle = 0.4;
@@ -89,7 +89,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBig";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -131,7 +131,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Santiago ship";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckMedium";
-	Locations[n].image = "sea.tga";
+	Locations[n].image = "sea";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -159,7 +159,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Muelle_Town_Quest";
 	locations[n].id.label = "Center.";
-	Locations[n].image = "Town_IslaMuelle_Town_04.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_04";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -204,7 +204,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Major_house";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].image = "Inside_Residence2";
 	Locations[n].filespath.models = "locations\inside\Residence2";
 
 	//Town sack
@@ -251,7 +251,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Major_bedroom";
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -290,7 +290,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id = "Quest_Eleuthera_townhall";
 	locations[n].id.label = "#stown_name# townhall";
 	Locations[n].filespath.models = "locations\Inside\residence7";
-	Locations[n].image = "Inside_Residence7.tga";
+	Locations[n].image = "Inside_Residence7";
 	
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -328,7 +328,7 @@ void LocationInitQuestLocations(ref n)
 	
     Locations[n].id = "Quest_FortVRight";
 	locations[n].id.label = "Fort";
-	Locations[n].image = "Fort_Inside_FortVRight.tga";
+	Locations[n].image = "Fort_Inside_FortVRight";
 
 	//Town sack
 	locations[n].townsack = "Eleuthera";
@@ -393,7 +393,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Fort_prison";
 	Locations[n].id.label = "#stown_name# prison";
 	Locations[n].filespath.models = "locations\inside\Residence6";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Eleuthera";	
@@ -428,7 +428,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "#stown_name#";
 	Locations[n].filespath.models = "locations\Town_Redmond\Town_01";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Town_Redmond_Town_01_Spain.tga";
+	Locations[n].image = "Town_Redmond_Town_01_Spain";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -484,7 +484,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Vera_Cruz_Beach";
 	locations[n].id.label = "Playa Blanca"; 
-	Locations[n].image = "Outside_Shore_4.tga";
+	Locations[n].image = "Outside_Shore_4";
 	Locations[n].name = "Playa Blanca";
 	//Sound
 	locations[n].type = "seashore";
@@ -529,7 +529,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Captain's cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\cabin01"; // KK
-	Locations[n].image = "Deck_Cabin1.tga"; // KK
+	Locations[n].image = "Deck_Cabin1"; // KK
 	//Sound
 	Locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -568,7 +568,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\udeck1";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -602,7 +602,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Morro_fort1";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Morro\\";
-	Locations[n].image = "Fort_Inside_Morro.tga";
+	Locations[n].image = "Fort_Inside_Morro";
 
 	//Town sack
 	Locations[n].townsack = "Havana";		//change
@@ -648,7 +648,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Morro_fort2";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Morrob\\";
-	Locations[n].image = "Fort_Inside_Morrob.tga";
+	Locations[n].image = "Fort_Inside_Morrob";
 
 	//Town sack
 	Locations[n].townsack = "Havana";		//change
@@ -677,7 +677,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Morro_warehouse";
 	locations[n].id.label = "Morro warehouse";	
 	Locations[n].filespath.models = "locations\inside\Warehouse\\";
-	Locations[n].image = "Inside_Warehouse.tga";
+	Locations[n].image = "Inside_Warehouse";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -708,7 +708,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Vera_Cruz_01";
 	locations[n].id.label = "Vera Cruz. Plaza de Armas";
-	Locations[n].image = "Town_IslaMuelle_Town_01_Spain.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_01_Spain";
 
 	//Town sack
 	Locations[n].townsack = "Havana";	
@@ -767,7 +767,7 @@ void LocationInitQuestLocations(ref n)
 	// Vera Cruz Port -------------------------------------------------
 	Locations[n].id = "Vera_Cruz_Port";
 	locations[n].id.label = "Vera Cruz port."; // KK
-	Locations[n].image = "Town_FalaiseDeFleur_Port_Spain.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Port_Spain";
 	Locations[n].filespath.models = "locations\Town_FalaiseDeFleur\port";
 	Locations[n].filespath.textures = "locations\SPAIN";
 
@@ -820,7 +820,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Head port house";
 	//Sound
 	Locations[n].filespath.models = "locations\inside\mh5";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -862,7 +862,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Vera_Cruz_Tavern";
 	locations[n].id.label = "Vera Cruz Tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -908,7 +908,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Vera_Cruz_House_1";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh8.tga";
+	Locations[n].image = "Inside_mh8";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -952,7 +952,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1\\";
-	Locations[n].image = "Fort_Inside_Fort_1.tga"; // KK
+	Locations[n].image = "Fort_Inside_Fort_1"; // KK
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -999,7 +999,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "VeraCruz_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Inside_LargeStore.tga";
+	Locations[n].image = "Inside_LargeStore";
 
 	//Town sack
 	Locations[n].townsack = "Havana";
@@ -1046,7 +1046,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Morro_Fort";
 	locations[n].id.label = "El Morro Fort."; // KK
-	Locations[n].image = "Fort_Inside_Morro.tga";
+	Locations[n].image = "Fort_Inside_Morro";
 	//Sound
 	locations[n].type = "seashore";
 	//Models
@@ -1106,7 +1106,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Ilot";
 	locations[n].id.label = "The Lost Islet";
-	Locations[n].image = "Outside_Isle.tga";
+	Locations[n].image = "Outside_Isle";
 	//Sound
 	locations[n].type = "seashore";
 
@@ -1131,7 +1131,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBig";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -1158,7 +1158,7 @@ void LocationInitQuestLocations(ref n)
 //JRH test location for boulder
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "boulder_tunnel";
-	Locations[n].image = "wr_dungeon4_loop.tga";
+	Locations[n].image = "wr_dungeon4_loop";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound

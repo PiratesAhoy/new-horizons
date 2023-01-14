@@ -4,7 +4,7 @@ void LocationInitAruba(ref n)
 // -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Town_Oranjestad\port";	
-	Locations[n].image = "Town_Oranjestad_Port.tga";
+	Locations[n].image = "Town_Oranjestad_Port";
 
 	Locations[n].id = "Oranjestad_port";
 	locations[n].id.label = "#stown_name# port."; // KK
@@ -102,7 +102,7 @@ void LocationInitAruba(ref n)
 
 	Locations[n].id = "Oranjestad_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Smuggler_Lair_Exit.tga";
+	Locations[n].image = "Smuggler_Lair_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Oranjestad"; // NK 04-08-29
@@ -183,7 +183,7 @@ void LocationInitAruba(ref n)
 
 	Locations[n].id = "Oranjestad_town";
 	locations[n].id.label = "#stown_name#";
-	Locations[n].image = "Smuggler_Lair_Town.tga";
+	Locations[n].image = "Smuggler_Lair_Town";
 
 	//Town sack
 	Locations[n].townsack = "Oranjestad"; // NK 04-08-29
@@ -268,7 +268,7 @@ void LocationInitAruba(ref n)
 
 	Locations[n].id = "Oranjestad_townhall";
 	locations[n].id.label = "#stown_name# Townhall";
-	Locations[n].image = "Inside_ResidenceSmall1.tga";
+	Locations[n].image = "Inside_ResidenceSmall1";
 	//Town sack
 	Locations[n].townsack = "Oranjestad"; // NK - "Oxbay";
 	//Sound
@@ -307,7 +307,7 @@ void LocationInitAruba(ref n)
 	Locations[n].id = "Oranjestad_Store";
 	locations[n].id.label = "Store";
 	Locations[n].filespath.models = "locations\inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Oranjestad";
@@ -353,7 +353,7 @@ void LocationInitAruba(ref n)
 
 	Locations[n].id = "Oranjestad_tavern";
 	locations[n].id.label = "#stown_name# tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Oranjestad"; // NK 04-08-29
@@ -401,7 +401,7 @@ void LocationInitAruba(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Oranjestad_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern."; // KK
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Oranjestad";
@@ -444,7 +444,7 @@ void LocationInitAruba(ref n)
 
 	Locations[n].id = "Aruba_Jungle_01";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Outside_Jungle_6.tga";
+	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -545,7 +545,7 @@ void LocationInitAruba(ref n)
 	Locations[n].id = "Aruba_shore";
 	locations[n].id.label = "Rocky Cove."; // KK
 	locations[n].worldmap = "ArubaShore";
-	Locations[n].image = "Outside_Shore_4.tga";
+	Locations[n].image = "Outside_Shore_4";
 	Locations[n].name = "Rocky Cove";
 	//Sound
 	locations[n].type = "seashore";
@@ -620,7 +620,7 @@ void LocationInitAruba(ref n)
 
 	Locations[n].id = "Arawak_Village";
 	locations[n].id.label = "Arawak Village";
-	Locations[n].image = "Pirate_Fort_Native.tga";
+	Locations[n].image = "Pirate_Fort_Native";
 
 	//Town sack
 	Locations[n].townsack = "Pirate Fort"; // NK 04-08-29
@@ -682,7 +682,7 @@ void LocationInitAruba(ref n)
 	// Oranjestad Tailor
 	Locations[n].id = "Oranjestad_TailorsShop";
 	Locations[n].id.label = "Tailor's Shop.";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Oranjestad";
@@ -727,7 +727,7 @@ void LocationInitAruba(ref n)
 	Locations[n].id = "Indian_house";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\IndianHome";
-	Locations[n].image = "Inside_IndianHome.tga";
+	Locations[n].image = "Inside_IndianHome";
 
 	//Town sack
 	Locations[n].townsack = "Aruba";
@@ -767,7 +767,7 @@ void LocationInitAruba(ref n)
 	Locations[n].filespath.models = "locations\Inside\mh3";
 	Locations[n].id = "Aruba_HouseInsideR1";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh3.tga";
+	Locations[n].image = "Inside_mh3";
 
 	//Town sack
 	Locations[n].townsack = "Aruba";
@@ -806,7 +806,7 @@ void LocationInitAruba(ref n)
 	Locations[n].id = "Oranjestad_Store_02";
 	locations[n].id.label = "Store";
 	Locations[n].filespath.models = "locations\inside\HutRoundInside";
-	Locations[n].image = "Inside_HutRoundInside_Store.tga";
+	Locations[n].image = "Inside_HutRoundInside_Store";
 
 	//Town sack
 	Locations[n].townsack = "Oranjestad";
@@ -860,7 +860,7 @@ void LocationInitAruba(ref n)
 	Locations[n].id = "Oranjestad_Port_Captain_House";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\HutRoundInside";
-	Locations[n].image = "Inside_HutRoundInside.tga";
+	Locations[n].image = "Inside_HutRoundInside";
 
 	//Town sack
 	Locations[n].townsack = "Oranjestad";
@@ -909,7 +909,7 @@ void LocationInitAruba(ref n)
 	// ----------------- Aruba_Dungeon --------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1";
 	Locations[n].id = "Aruba_Dungeon";
-	Locations[n].image = "Inside_Dungeon_1.tga";
+	Locations[n].image = "Inside_Dungeon_1";
 	Locations[n].monsters = "1";
 	locations[n].id.label = "Arawak Burialground";
 
@@ -958,7 +958,7 @@ void LocationInitAruba(ref n)
 	locations[n].id.label = "Sandy Beach."; // KK
 	locations[n].worldmap = "ArubaShore2";
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "Outside_Shore_6.tga";
+	Locations[n].image = "Outside_Shore_6";
 	Locations[n].name = "Sandy Beach";
 	//Sound
 	locations[n].type = "seashore";

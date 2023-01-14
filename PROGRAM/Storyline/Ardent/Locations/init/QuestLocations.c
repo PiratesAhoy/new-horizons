@@ -5,7 +5,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Cabin";
 	//Info
 	Locations[n].filespath.models = "locations\decks\cabin\capsm";
-	Locations[n].image = "Deck_Capsm.tga"; // KK
+	Locations[n].image = "Deck_Capsm"; // KK
 	//Sound
 	Locations[n].type = "ship";
 	Locations[n].lockCamAngle = 0.4;
@@ -43,7 +43,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Cargo hold";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
-	Locations[n].image = "deck_hold.tga"; // KK
+	Locations[n].image = "deck_hold"; // KK
 	//Sound
 //	Locations[n].type = "ship";
 	Locations[n].type = "deck";
@@ -75,7 +75,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckLow";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "deck";
 //	locations[n].type = "own_deck";
@@ -115,7 +115,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Ship deck";
 	//Info
 	Locations[n].filespath.models = "locations\decks\deckBig";
-	Locations[n].image = "Sea.tga";
+	Locations[n].image = "Sea";
 	//Sound
 	locations[n].type = "own_deck";
 	Locations[n].lockCamAngle = 0.4;
@@ -191,7 +191,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Crew's quarters";
 	//Info
 	Locations[n].filespath.models = "locations\decks\seadogs"; // KK
-	Locations[n].image = "deck_seadogs.tga"; // KK
+	Locations[n].image = "deck_seadogs"; // KK
 	//Sound
 	Locations[n].type = "crew";
 //	Locations[n].lockCamAngle = 0.4;	// LDH removed 23Mar09
@@ -239,7 +239,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "Quest_Arawak_Village";
 	locations[n].id.label = "Taino Village";
-	Locations[n].image = "Pirate_Fort_Native.tga";
+	Locations[n].image = "Pirate_Fort_Native";
 
 	//Town sack
 //	Locations[n].townsack = "Khael Roa";
@@ -304,7 +304,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Indian_house";
 	locations[n].id.label = "Chief's House";
 	Locations[n].filespath.models = "locations\inside\IndianHome";
-	Locations[n].image = "Inside_IndianHome.tga";
+	Locations[n].image = "Inside_IndianHome";
 
 	//Town sack
 //	Locations[n].townsack = "Khael Roa";
@@ -345,7 +345,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Hispaniola_Labirint_1";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-	Locations[n].image = "Incas_Temple_Labirint.tga";
+	Locations[n].image = "Incas_Temple_Labirint";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Maze";
 	//Models
@@ -468,7 +468,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Hispaniola_Labirint_2";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-		Locations[n].image = "Incas_Temple_Labirint.tga";
+		Locations[n].image = "Incas_Temple_Labirint";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Maze";
 	//Models
@@ -566,7 +566,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Hispaniola_Labirint_3";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-		Locations[n].image = "Incas_Temple_Labirint.tga";
+		Locations[n].image = "Incas_Temple_Labirint";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Maze";
 	//Models
@@ -662,7 +662,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Santiago_Bedroom";
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -705,7 +705,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Dining_Room";
 	locations[n].id.label = "Dining Room";
 	Locations[n].filespath.models = "Locations\Inside\Dining_room";
-	Locations[n].image = "Inside_diningroom.tga";
+	Locations[n].image = "Inside_diningroom";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -743,7 +743,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Merchant_House";
 	locations[n].id.label = "House of Gilbert Downing";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Downing_House.tga";
+	Locations[n].image = "Downing_House";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -785,7 +785,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Cellar_Prison";
 	locations[n].id.label = "Old Inquisition prison";
 	Locations[n].filespath.models = "locations\inside\prison";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -830,7 +830,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].id = "PoPrince_archive";
 	locations[n].id.label = "???";
-	Locations[n].image = "Inside_PaP_Archives.tga"; // KK
+	Locations[n].image = "Inside_PaP_Archives"; // KK
 	//Town sack
 	Locations[n].townsack = "Port au Prince"; 
 	//Sound
@@ -870,7 +870,7 @@ void LocationInitQuestLocations(ref n)
 	locations[n].id.label = "Fort inside";
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "deck";
 	//Models

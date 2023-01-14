@@ -4,7 +4,7 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].id = "KhaelRoa_port";
 	Locations[n].worldmap = "Khael Roa";
 	Locations[n].filespath.models = "locations\Incas Temple\Port";
-	Locations[n].image = "Incas_Temple_Port.tga";
+	Locations[n].image = "Incas_Temple_Port";
 	locations[n].id.label = "#sisland_name# shore";
 	//Sound
 	locations[n].type = "seashore";
@@ -54,7 +54,7 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].filespath.models = "locations\Incas Temple\Temple";
 	//Sound
 	locations[n].type = "canyon";
-	Locations[n].image = "Incas_Temple_Temple.tga";
+	Locations[n].image = "Incas_Temple_Temple";
 	locations[n].id.label = "Incas Temple";
 	//Models
 	//Always
@@ -96,7 +96,7 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].id = "Labirint_1";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-	Locations[n].image = "Incas_Temple_Labirint.tga";
+	Locations[n].image = "Incas_Temple_Labirint";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Maze";
 	//Models
@@ -218,7 +218,7 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].id = "Labirint_2";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-		Locations[n].image = "Incas_Temple_Labirint.tga";
+		Locations[n].image = "Incas_Temple_Labirint";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Maze";
 	//Models
@@ -316,7 +316,7 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].id = "Labirint_3";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-		Locations[n].image = "Incas_Temple_Labirint.tga";
+		Locations[n].image = "Incas_Temple_Labirint";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Maze";
 	//Models
@@ -409,7 +409,7 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].id = "Treasure_Alcove";
 	Locations[n].filespath.models = "locations\Incas Temple\Alcove";
 	//Sound
-	Locations[n].image = "Incas_Temple_Alcove.tga";
+	Locations[n].image = "Incas_Temple_Alcove";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Alcove";
 	//Models

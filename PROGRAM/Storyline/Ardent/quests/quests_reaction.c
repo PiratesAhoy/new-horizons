@@ -12263,7 +12263,7 @@ void QuestComplete(string sQuestName)
 		case "imperial_escort_outside_kidnap_cave":
 			Locations[FindLocation("Cuba_Grot")].vcskip = true;
 			Locations[FindLocation("Cuba_Grot")].locators_radius.officers.reload3_1 = 3.0;
-			Locations[FindLocation("Cuba_Grot")].image = "Inside_Kidnap_Cave.tga";
+			Locations[FindLocation("Cuba_Grot")].image = "Inside_Kidnap_Cave";
 
 			TakeItemFromCharacter(CharacterFromID("Imperial_envoy"), FindCharacterItemByGroup(CharacterFromID("Imperial_envoy"), BLADE_ITEM_TYPE));
 			RemoveCharacterEquip(CharacterFromID("Imperial_envoy"), BLADE_ITEM_TYPE);
@@ -13057,7 +13057,7 @@ void QuestComplete(string sQuestName)
 			LAi_LocationFightDisable(&Locations[FindLocation("Cuba_Grot")], false);
 			Locations[FindLocation("Cuba_exit_grot")].reload.l3.disable = 0;
 			Locations[FindLocation("Cuba_exit_grot")].reload.l3.emerge = "reload1";
-			Locations[FindLocation("Cuba_Grot")].image = "Inside_Grot.tga";
+			Locations[FindLocation("Cuba_Grot")].image = "Inside_Grot";
 			Locations[FindLocation("Cuba_Grot")].models.always.locators = "Grot_l";
 			DeleteAttribute(&Locations[FindLocation("Cuba_Grot")],"vcskip");
 			DeleteAttribute(&Locations[FindLocation("Cuba_exit_grot")],"vcskip");

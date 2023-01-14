@@ -5,7 +5,7 @@ void LocationInitOxbay(ref n)
 
 	Locations[n].filespath.models = "locations\town_Oxbay\port";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Oxbay_Port.tga";
+	Locations[n].image = "Town_Oxbay_Port";
 
 	Locations[n].id = "Oxbay_port";
 	locations[n].id.label = "#stown_name# port.";
@@ -81,7 +81,7 @@ void LocationInitOxbay(ref n)
 
 	Locations[n].filespath.models = "locations\town_Oxbay\town";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Oxbay_Town.tga";
+	Locations[n].image = "Town_Oxbay_Town";
 
 	Locations[n].id = "Oxbay_town";
 	locations[n].id.label = "#stown_name#";
@@ -239,7 +239,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_town_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Town_Oxbay_Exit.tga";
+	Locations[n].image = "Town_Oxbay_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -319,7 +319,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga";
+	Locations[n].image = "Inside_Shipyard1";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -362,7 +362,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "Oxbay_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -413,7 +413,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_Tavern";
 	locations[n].id.label = "#stown_name# tavern";
-	Locations[n].image = "Inside_LargeTavern.tga";
+	Locations[n].image = "Inside_LargeTavern";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -468,7 +468,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// -------------------------------------------------
 	Locations[n].id = "Oxbay_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -508,7 +508,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// -------------------------------------------------
 	Locations[n].id = "Oxbay_UsurerHouse";
 	locations[n].id.label = "Loanshark's Office";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	Locations[n].vcskip = true; // KK
 
@@ -554,7 +554,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_HouseInsideR7";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -597,7 +597,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_HouseInsideR5";
 	Locations[n].id.label = "House";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -639,7 +639,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// Tailor mod
 	Locations[n].id = "Oxbay_TailorsShop";	
 	Locations[n].id.label = "Tailor's Shop.";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -683,7 +683,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_HouseInsideR8";
 	Locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh10.tga";
+	Locations[n].image = "Inside_mh10";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -724,7 +724,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_HouseInsideR17";
 	Locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh7.tga";
+	Locations[n].image = "Inside_mh7";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";
@@ -769,7 +769,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_Jungle_01";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].image = "Outside_Jungle_1";
 	//Sound
 	locations[n].type = "jungle";
 
@@ -839,7 +839,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].id = "Oxbay_shore_01";
 	locations[n].id.label = "Far Beach."; // KK
 	locations[n].worldmap = "OShore 1";
-	Locations[n].image = "Outside_Shore_1.tga";
+	Locations[n].image = "Outside_Shore_1";
 	Locations[n].name = "Far Beach";
 	//Sound
 	locations[n].type = "seashore";
@@ -905,7 +905,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_Jungle_02";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_3.tga";
+	Locations[n].image = "Outside_Jungle_3";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -987,7 +987,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_Cave_Exit";
 	locations[n].id.label = "#sisland_name# cave entrance";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1058,7 +1058,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_jungle_03";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_5.tga";
+	Locations[n].image = "Outside_Jungle_5";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1141,7 +1141,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].id = "Oxbay_shore_02";
 	locations[n].id.label = "Gray Rock Bay."; // KK
 	locations[n].worldmap = "OShore 2";
-	Locations[n].image = "Outside_Shore_2.tga";
+	Locations[n].image = "Outside_Shore_2";
 	Locations[n].name = "Gray Rock Bay";
 	//Sound
 	locations[n].type = "seashore";
@@ -1206,7 +1206,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].filespath.models = "locations\town_Greenford\port";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Greenford_Port.tga";
+	Locations[n].image = "Town_Greenford_Port";
 
 	Locations[n].id = "Greenford_port";
 	locations[n].id.label = "#stown_name# port";
@@ -1274,7 +1274,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].filespath.models = "locations\town_Greenford\town";
 	Locations[n].filespath.textures = "locations\ENGLAND";
-	Locations[n].image = "Town_Greenford_Town.tga";
+	Locations[n].image = "Town_Greenford_Town";
 
 	Locations[n].id = "Greenford_town";
 	locations[n].id.label = "#stown_name#";
@@ -1470,7 +1470,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Greenford_town_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Town_Greenford_Exit.tga";
+	Locations[n].image = "Town_Greenford_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1539,7 +1539,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Greenford_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard3.tga";
+	Locations[n].image = "Inside_Shipyard3";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1581,7 +1581,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\MediumStore";
-	Locations[n].image = "Inside_MediumStore.tga";
+	Locations[n].image = "Inside_MediumStore";
 
 	Locations[n].id = "Greenford_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -1630,7 +1630,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Greenford_Tavern";
 	locations[n].id.label = "#stown_name# tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1678,7 +1678,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// -------------------------------------------------
 	Locations[n].id = "Greenford_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern."; // KK
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1720,7 +1720,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].id = "Greenford_UsurerHouse";
 	locations[n].id.label = "Loanshark's Office.";
 	Locations[n].filespath.models = "locations\inside\MediumHouse";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1766,7 +1766,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Greenford_InsideHouseR6";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh4.tga";
+	Locations[n].image = "Inside_mh4";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1809,7 +1809,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Greenford_TailorsShop";
 	locations[n].id.label = "Tailor's Shop";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1854,7 +1854,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Greenford_InsideHouseR25";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh8.tga";
+	Locations[n].image = "Inside_mh8";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1900,7 +1900,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Greenford_InsideHouseR22";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh9.tga";
+	Locations[n].image = "Inside_mh9";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1944,7 +1944,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Greenford_InsideHouseR14";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -1985,7 +1985,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 // SJG ---> Greenford Naval HQ 5/30/2009
 	Locations[n].id = "Greenford Naval HQ";
 	locations[n].id.label = "#stown_name# Naval HQ";
-	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].image = "Inside_Residence2";
 	Locations[n].filespath.models = "locations\inside\Residence2";
 
 	Locations[n].vcskip = true;
@@ -2038,7 +2038,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Greenford_Station";
 	locations[n].id.label = "Officer Commanding #stown_name# Naval HQ";
-	Locations[n].image = "Inside_Residence4.tga";
+	Locations[n].image = "Inside_Residence4";
 
 	Locations[n].vcskip = true;
 
@@ -2085,7 +2085,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Mrs. Mason's House";
 	locations[n].id.label = "Mrs. Mason's House";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -2132,7 +2132,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_Canyon";
 	locations[n].id.label = "#sisland_name# canyon";
-	Locations[n].image = "Outside_Canyon.tga";
+	Locations[n].image = "Outside_Canyon";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -2201,7 +2201,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].name = "Lighthouse";
 	locations[n].id.label = "#sisland_name# lighthouse."; // KK
 	locations[n].worldmap = "Lighthouse";
-	Locations[n].image = "Outside_Mayak.tga";
+	Locations[n].image = "Outside_Mayak";
 	//Sound
 	locations[n].type = "seashore";
 	//Models
@@ -2268,7 +2268,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].id = "Lighthouse_Inside";
 	Locations[n].name = "Lighthouse Inside";
 	locations[n].id.label = "#sisland_name# lighthouse Inside";
-	Locations[n].image = "Outside_Mayak_Inside.tga";
+	Locations[n].image = "Outside_Mayak_Inside";
 	//Sound
 	locations[n].type = "house";
 
@@ -2318,7 +2318,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Oxbay_mine";
 	locations[n].id.label = "#sisland_name# mine";
-	Locations[n].image = "Inside_Mine.tga";
+	Locations[n].image = "Inside_Mine";
 
 	//Sound
 	locations[n].type = "cave";
@@ -2360,7 +2360,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].id = "Greenford_prison";
 	locations[n].id.label = "#stown_name# prison";
 	Locations[n].filespath.models = "locations\inside\prison";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -2399,7 +2399,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].id = "Mines_commander_house";
 	locations[n].label = "House начальника рудников";
 	Locations[n].filespath.models = "locations\inside\smallhome";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	Locations[n].vcskip = true;
 
@@ -2436,7 +2436,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].id = "Yedam Kinne_house";
 	locations[n].label = "Yedam Kinne's house";
 	Locations[n].filespath.models = "locations\inside\smallhome";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -2474,7 +2474,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// Greenford_church -------------------------------------------------
 	Locations[n].id = "Greenford_church";
 	locations[n].id.label = "#stown_name# church";
-	Locations[n].image = "Inside_Church_2.tga";
+	Locations[n].image = "Inside_Church_2";
 	Locations[n].filespath.models = "locations\inside\Church_2";
 
 	//Town sack
@@ -2517,7 +2517,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// -----------------Mosh D24--------------------
 	Locations[n].filespath.models = "locations\Inside\MediumHouse";
 	Locations[n].id = "Greenford_house_Figuiera";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 	locations[n].id.label = "House";
 	//Town sack
 	Locations[n].townsack = "Greenford";
@@ -2556,7 +2556,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// -----------------Mosh D24--------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1";
 	Locations[n].id = "Dungeon 1";
-	Locations[n].image = "Inside_Dungeon_1.tga";
+	Locations[n].image = "Inside_Dungeon_1";
 	Locations[n].monsters = "1";
 	locations[n].id.label = "#stown_name# Dungeon";
 	//Town sack
@@ -2613,7 +2613,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	// -----------------Mosh D24--------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_3";
 	Locations[n].id = "Oxbay_cave";
-	Locations[n].image = "Inside_Dungeon_3.tga";
+	Locations[n].image = "Inside_Dungeon_3";
 //	Locations[n].monsters = "1";
 	locations[n].id.label = "Abandoned mine";
 	//Sound
@@ -2657,7 +2657,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].id = "Mings_Townhall";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Residence5.tga";
+	Locations[n].image = "Inside_Residence5";
 
 	//Town sack
 	Locations[n].townsack = "Oxbay";

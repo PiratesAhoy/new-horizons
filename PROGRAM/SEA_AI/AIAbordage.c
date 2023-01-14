@@ -287,7 +287,7 @@ void Sea_AbordageStartNow(int _iAbordageMode, int _iAbordageCharacter, bool _bPl
 		boarding_deck = FindLocation("BOARDING_" + GetCharacterShipQDeck(pc));
 	if (_iAbordageMode == FORT_ABORDAGE) {
 		boarding_deck = FindLocation("BOARDING_Fort");
-		Locations[boarding_deck].image = "Fort_Inside_Fort_1.tga";
+		Locations[boarding_deck].image = "Fort_Inside_Fort_1";
 	}
 	if (_iAbordageMode == TOWN_ABORDAGE) boarding_deck = FindLocation(Towns[GetTownIndex(characters[_iAbordageCharacter].town)].boarding.l1);
 	if (boarding_deck < 0) boarding_deck = FindLocation("BOARDING_ShipDeck1");

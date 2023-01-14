@@ -9,7 +9,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	location.id = "Falaise_de_fleur_location_02";
 	location.id.label = "#stown_name#. Slums.";
 	location.worldmap = "Falaise De Fleur";
-	location.image = "Town_FalaiseDeFleur_Town_01.tga";
+	location.image = "Town_FalaiseDeFleur_Town_01";
 
 	//Town sack
 	location.townsack = "Falaise de Fleur";
@@ -89,7 +89,7 @@ void LocationInitFalaiseDeFleur(ref n)
 
 	location.id = "Smuggler_Residence";
 	location.id.label = "House of Luc Merin";
-	location.image = "Inside_MediumHouse.tga";
+	location.image = "Inside_MediumHouse";
 
 	//Town sack
 	location.townsack = "FalaiseDeFleur"; // NK 04-08-29

@@ -4,7 +4,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].filespath.models = "locations\town_Douwesen\port";
 	Locations[n].filespath.textures = "locations\HOLLAND";
-	Locations[n].image = "Town_Douwesen_Port.tga";
+	Locations[n].image = "Town_Douwesen_Port";
 	locations[n].worldmap = "Douwesen";
 	Locations[n].id = "Douwesen_port";
 	locations[n].id.label = "#stown_name# port."; // KK
@@ -94,7 +94,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_town";
 	locations[n].id.label = "#stown_name# town";
-	Locations[n].image = "Town_Douwesen_Town.tga";
+	Locations[n].image = "Town_Douwesen_Town";
 	locations[n].worldmap = "Douwesen";
 
 	//Town sack
@@ -233,7 +233,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_townhall";
 	locations[n].id.label = "#stown_name# townhall";
-	Locations[n].image = "Inside_Residence4.tga";
+	Locations[n].image = "Inside_Residence4";
 
 	//Town sack
 	Locations[n].townsack = "Douwesen";
@@ -275,7 +275,7 @@ void LocationInitDouwesen(ref n)
 	Locations[n].id = "Dutch_Smuggler_Home";
 	locations[n].id.label = "Smuggler's Home";
 	Locations[n].filespath.models = "locations\inside\DoubleFlour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Douwesen";
@@ -318,7 +318,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_town_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Town_Douwesen_Exit.tga";
+	Locations[n].image = "Town_Douwesen_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Douwesen";
@@ -408,7 +408,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga";
+	Locations[n].image = "Inside_Shipyard1";
 
 	//Town sack
 	Locations[n].townsack = "Douwesen";
@@ -451,7 +451,7 @@ void LocationInitDouwesen(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
-	Locations[n].image = "Inside_LargeStore.tga";
+	Locations[n].image = "Inside_LargeStore";
 
 	Locations[n].id = "Douwesen_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -501,7 +501,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_Tavern";
 	locations[n].id.label = "#stown_name# tavern.";
-	Locations[n].image = "Inside_SmallTavern.tga";
+	Locations[n].image = "Inside_SmallTavern";
 
 	//Town sack
 	Locations[n].townsack = "Douwesen";
@@ -552,7 +552,7 @@ void LocationInitDouwesen(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Douwesen_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern."; // KK
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Douwesen";
@@ -593,7 +593,7 @@ void LocationInitDouwesen(ref n)
 	Locations[n].filespath.models = "locations\Inside\MediumHouse";
 	Locations[n].id = "Douwesen_UsurerHouse";
 	locations[n].id.label = "Loanshark's Office.";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Douwesen";
@@ -636,7 +636,7 @@ void LocationInitDouwesen(ref n)
 	Locations[n].filespath.models = "locations\Inside\mh3";
 	Locations[n].id = "Douwesen_HouseInsideR1";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh3.tga";
+	Locations[n].image = "Inside_mh3";
 
 	//Town sack
 	Locations[n].townsack = "Douwesen";
@@ -678,7 +678,7 @@ void LocationInitDouwesen(ref n)
 	// Douwesen Tailor
 	Locations[n].id = "Douwesen_TailorsShop";
 	locations[n].id.label = "Tailor's Shop";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Douwesen";
@@ -725,7 +725,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Pirate_Fort";
 	locations[n].id.label = "Pirate Fort";
-	Locations[n].image = "Pirate_Fort.tga";
+	Locations[n].image = "Pirate_Fort";
 
 	//Town sack
 	Locations[n].townsack = "Pirate Fort"; // NK 04-08-29
@@ -813,7 +813,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_Pirate_Residence";
 	locations[n].id.label = "House of leader of #sisland_name# pirates";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Pirate Fort"; // NK 04-08-29
@@ -862,7 +862,7 @@ void LocationInitDouwesen(ref n)
 	// Douwesen Pirates Tailor
 	Locations[n].id = "Douwesen_Pirates_TailorsShop";
 	Locations[n].id.label = "Tailor's Shop";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 	
 	//Town sack
 	Locations[n].townsack = "Pirate Fort"; // NK 04-08-29
@@ -905,7 +905,7 @@ void LocationInitDouwesen(ref n)
 	
 	// -------------------------------------------------
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
-	Locations[n].image = "Inside_LargeStore.tga";
+	Locations[n].image = "Inside_LargeStore";
 
 	Locations[n].id = "Pirate_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -954,7 +954,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_Jungle_01";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_2.tga";
+	Locations[n].image = "Outside_Jungle_2";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1037,7 +1037,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_shore_01";
 	locations[n].id.label = "Palm Beach"; // KK
-	Locations[n].image = "Outside_Shore_5.tga";
+	Locations[n].image = "Outside_Shore_5";
 	Locations[n].name = "Palm Beach";
 	locations[n].worldmap = "DShore 1";
 
@@ -1107,7 +1107,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_Jungle_02";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_7.tga";
+	Locations[n].image = "Outside_Jungle_7";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1189,7 +1189,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_shore_02";
 	locations[n].id.label = "Crab Cliffs"; // KK
-	Locations[n].image = "Outside_Shore_10.tga";
+	Locations[n].image = "Outside_Shore_10";
 	Locations[n].name = "Crab Cliffs";
 	Locations[n].worldmap = "DShore 2";
 	//Sound
@@ -1253,7 +1253,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_Jungle_03";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_4.tga";
+	Locations[n].image = "Outside_Jungle_4";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1337,7 +1337,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Rheims_House";
 	locations[n].id.label = "House in Jungle";
-	Locations[n].image = "Outside_Rheims_House.tga";
+	Locations[n].image = "Outside_Rheims_House";
 	//Sound
 	locations[n].type = "house";
 
@@ -1402,7 +1402,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Rheims_House_inside";
 	locations[n].id.label = "Rheims house on #sisland_name#";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 	//Sound
 	locations[n].type = "house";
 
@@ -1441,7 +1441,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Pirate_Tavern";
 	locations[n].id.label = "Tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Pirate Fort"; // NK 04-08-29
@@ -1492,7 +1492,7 @@ void LocationInitDouwesen(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Pirate_tavern_upstairs";
 	locations[n].id.label = "Room in Pirate tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Pirate Fort"; // NK 04-08-29
@@ -1536,7 +1536,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_shore_ship";
 	locations[n].id.label = "#sisland_name# shore.";
-	Locations[n].image = "Outside_Shore_Ship.tga";
+	Locations[n].image = "Outside_Shore_Ship";
 	Locations[n].name = "Ship";
 	//Sound
 	locations[n].type = "seashore";
@@ -1594,7 +1594,7 @@ void LocationInitDouwesen(ref n)
 	// -----------------Mosh D24--------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "Douwesen_dungeon";
-	Locations[n].image = "Inside_Dungeon_4.tga";
+	Locations[n].image = "Inside_Dungeon_4";
 //	Locations[n].monsters = "1";
 
 	//Sound
@@ -1633,7 +1633,7 @@ void LocationInitDouwesen(ref n)
 
 	Locations[n].id = "Douwesen_Cavern";
 	locations[n].id.label = "#sisland_name# Cavern";
-	Locations[n].image = "Inside_Cavern.tga";
+	Locations[n].image = "Inside_Cavern";
 
 	//Sound
 	locations[n].type = "cave";

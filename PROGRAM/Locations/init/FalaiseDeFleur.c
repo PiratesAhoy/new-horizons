@@ -4,7 +4,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_port_01";
 	locations[n].id.label = "#stown_name# port."; // KK
 	locations[n].worldmap = "Falaise De Fleur";
-	Locations[n].image = "Town_FalaiseDeFleur_Port.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Port";
 	Locations[n].filespath.models = "locations\Town_FalaiseDeFleur\port";
 	Locations[n].filespath.textures = "locations\FRANCE";
 
@@ -89,8 +89,8 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_port_02";
 	locations[n].id.label = "#sisland_name# beach";
 	locations[n].worldmap = "Falaise De Fleur";
-	if(GetCurrentPeriod() == PERIOD_NAPOLEONIC) Locations[n].image = "Town_FalaiseDeFleur_Port2_Nap.tga";
-	else Locations[n].image = "Town_FalaiseDeFleur_Port2.tga";
+	if(GetCurrentPeriod() == PERIOD_NAPOLEONIC) Locations[n].image = "Town_FalaiseDeFleur_Port2_Nap";
+	else Locations[n].image = "Town_FalaiseDeFleur_Port2";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -151,7 +151,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_location_02";
 	locations[n].id.label = "#stown_name#. Slums.";
 	locations[n].worldmap = "Falaise De Fleur";
-	Locations[n].image = "Town_FalaiseDeFleur_Town_01.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Town_01";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -224,7 +224,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_location_03";
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Falaise De Fleur";
-	Locations[n].image = "Town_FalaiseDeFleur_Town_02.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Town_02";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -358,7 +358,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Falaise De Fleur";
 
-	Locations[n].image = "Town_FalaiseDeFleur_Town_03.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Town_03";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -419,7 +419,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_location_05";
 	locations[n].id.label = "#stown_name#. Slums";
 	locations[n].worldmap = "Falaise De Fleur";
-	Locations[n].image = "Town_FalaiseDeFleur_Town_04.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Town_04";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -489,7 +489,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	// Falaise de Fleur Tailor
 	Locations[n].id = "Falaise_de_fleur_TailorsShop";	
 	Locations[n].id.label = "Tailor's Shop";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -535,7 +535,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_InsideHouseR6(05)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\DoubleFlour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -577,7 +577,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_InsideHouseR7(05)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh5";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -619,7 +619,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_InsideHouseR11(05)";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Smallhome";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -659,7 +659,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	// Falaise_de_fleur_church -------------------------------------------------
 	Locations[n].id = "Falaise_de_fleur_church";
 	locations[n].id.label = "#stown_name# church";
-	Locations[n].image = "Inside_Church_inside.tga";
+	Locations[n].image = "Inside_Church_inside";
 	Locations[n].filespath.models = "locations\inside\Church_inside";
 
 	//Town sack
@@ -700,7 +700,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	// 06 -------------------------------------------------
 	Locations[n].id = "Falaise_De_Fleur_Jungle";
 	locations[n].id.label = "#sisland_name# jungle";
-	Locations[n].image = "Town_FalaiseDeFleur_Exit.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Exit";
 	//Sound
 	locations[n].type = "jungle";
 //	locations[n].fastreload = "Falaise_De_Fleur";
@@ -761,7 +761,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	locations[n].id.label = "Octopus Bay."; // KK
 	locations[n].worldmap = "FShore 1";
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "Outside_Shore_6.tga";
+	Locations[n].image = "Outside_Shore_6";
 	Locations[n].name = "Octopus Bay";
 	//Sound
 	locations[n].type = "seashore";
@@ -823,7 +823,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_De_Fleur_townhall";
 	locations[n].id.label = "#stown_name# townhall";
 	Locations[n].filespath.models = "locations\inside\Residence1";
-	Locations[n].image = "Inside_Residence1.tga";
+	Locations[n].image = "Inside_Residence1";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -865,7 +865,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_tavern";
 	Locations[n].filespath.models = "locations\inside\smalltavern";
 	locations[n].id.label = "#stown_name# Tavern";
-	Locations[n].image = "Inside_SmallTavern.tga";
+	Locations[n].image = "Inside_SmallTavern";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -914,7 +914,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -954,7 +954,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_shipyard";
 	Locations[n].filespath.models = "locations\inside\shipyard2";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard2.tga";
+	Locations[n].image = "Inside_Shipyard2";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -997,7 +997,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_Fleur_store";
 	locations[n].id.label = "#stown_name# store";
 	Locations[n].filespath.models = "locations\inside\LargeStore";
-	Locations[n].image = "Inside_LargeStore.tga";
+	Locations[n].image = "Inside_LargeStore";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1040,7 +1040,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "house_of_smuggler_in_FiF";
 	locations[n].id.label = "House in #stown_name#";
 	Locations[n].filespath.models = "locations\inside\DoubleFlour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1082,7 +1082,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "FF_usurerHouse";
 	locations[n].id.label = "Loanshark's Office.";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1125,7 +1125,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "house_of_laurence";
 	locations[n].id.label = "House in #stown_name#";
 	Locations[n].filespath.models = "locations\inside\smallhome";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1167,7 +1167,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "house_of_Elzire_Ayarai";
 	locations[n].id.label = "House in #stown_name#";
 	Locations[n].filespath.models = "locations\inside\smallhome";
-	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].image = "Inside_Smallhome";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1209,7 +1209,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "HouseInsideR20";
 	locations[n].id.label = "House in #stown_name#";
 	Locations[n].filespath.models = "locations\inside\mh5";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1251,7 +1251,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falause_de_fleur_InsideHouseR6";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh6";
-	Locations[n].image = "Inside_mh6.tga";
+	Locations[n].image = "Inside_mh6";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1292,7 +1292,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falause_de_fleur_InsideHouseR1";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh10";
-	Locations[n].image = "Inside_mh10.tga";
+	Locations[n].image = "Inside_mh10";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1333,7 +1333,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falause_de_fleur_InsideHouseR7";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh5";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1375,7 +1375,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	locations[n].id.label = "Head port house";
 	//Sound
 	Locations[n].filespath.models = "locations\inside\mh5";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";
@@ -1420,7 +1420,7 @@ void LocationInitFalaiseDeFleur(ref n)
 
 	Locations[n].id = "FalaiseDeFleur_Grot";
 	locations[n].id.label = "Hidden Cave";
-	Locations[n].image = "Inside_Grot.tga";
+	Locations[n].image = "Inside_Grot";
 	//Sound
 	locations[n].type = "cave";
 	//Models
@@ -1467,7 +1467,7 @@ void LocationInitFalaiseDeFleur(ref n)
 
 	Locations[n].id = "FalaiseDeFleur_Bridge";
 	locations[n].id.label = "Old Bridge";
-	Locations[n].image = "Outside_Passage1.tga";
+	Locations[n].image = "Outside_Passage1";
 	//Sound
 	locations[n].type = "seashore";
 
@@ -1527,7 +1527,7 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "FalaiseDeFleur_jungle_01";
 	Locations[n].id.label = "#sisland_name# jungles";
 	Locations[n].filespath.models = "locations\Outside\jungle_8";
-	Locations[n].image = "Outside_Jungle_8.tga";
+	Locations[n].image = "Outside_Jungle_8";
  	//Sound
 	locations[n].type = "jungle";
 //	LAi_LocationMonstersGen(&locations[n], true);
@@ -1595,7 +1595,7 @@ void LocationInitFalaiseDeFleur(ref n)
 
     	Locations[n].id = "FalaiseDeFleur_jungle_02";
 	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle2.tga";
+	Locations[n].image = "Outside_Jungle2";
 	//Sound
 	locations[n].type = "Jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1678,7 +1678,7 @@ void LocationInitFalaiseDeFleur(ref n)
 
 	Locations[n].id = "FalaiseDeFleur_passage";
 	locations[n].id.label = "Falaise de Fleur";
-	Locations[n].image = "Outside_Passage2.tga";
+	Locations[n].image = "Outside_Passage2";
 	//Sound
 	locations[n].type = "seashore";
 

@@ -6279,7 +6279,7 @@ void QuestComplete(string sQuestName)
 		case "QC_gate_1":
 			//from Caroline dialog
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("QC_town")].image = "Town_QC_Town.tga";
+			Locations[FindLocation("QC_town")].image = "Town_QC_Town";
 
 			Pchar.quest.JRH_sky = "";		//reset
 			SetCurrentTime(23.00, 0);
@@ -6744,7 +6744,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "QC_gate_52":
-			Locations[FindLocation("QC_town_exit")].image = "Town_QC_Exit.tga";
+			Locations[FindLocation("QC_town_exit")].image = "Town_QC_Exit";
 			locations[FindLocation("QC_town_exit")].type = "silent_jungle";
 			LAi_QuestDelay("QC_gate_53", 0.5);
 		break;
@@ -7015,7 +7015,7 @@ void QuestComplete(string sQuestName)
 			//start: exit 	 		kosters, gate open, black
 			//check: town 1:st visit	derrick, sound, kosters
 
-			Locations[FindLocation("QC_town_exit")].image = "Town_QC_Exit.tga";//reset
+			Locations[FindLocation("QC_town_exit")].image = "Town_QC_Exit";//reset
 			Locations[FindLocation("QC_town_exit")].models.always.locators = "QCexit_l_JRH3";
 			Locations[FindLocation("QC_town_exit")].reload.l1.disable = 0;//open
 
@@ -7288,7 +7288,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystem("blast_dirt_small" , -0.4, 0.0, -3.5, 0.0, 0.0, 0.0, sti(20) );
 			LAi_SetFightMode(Pchar, false);
 			PlaySound("PEOPLE\wood1.wav");
-			Locations[FindLocation("JRH_tavern_upstairs")].image = "Inside_Doubleflour_House_Room.tga";
+			Locations[FindLocation("JRH_tavern_upstairs")].image = "Inside_Doubleflour_House_Room";
 		break;
 
 		case "close_tavern_upstairs_hatch":
@@ -7300,7 +7300,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystem("blast_dirt_small" , 0.2, 1.0, -4.1, 0.0, 0.0, 0.0, sti(20) );
 			LAi_SetFightMode(Pchar, false);
 			PlaySound("PEOPLE\wood1.wav");
-			Locations[FindLocation("JRH_tavern_upstairs")].image = "Inside_Doubleflour_House_Room.tga";
+			Locations[FindLocation("JRH_tavern_upstairs")].image = "Inside_Doubleflour_House_Room";
 		break;
 	//------------------------------------------------------------------------------------------------------
 		case "pistol1_check":
@@ -7658,7 +7658,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "kitchen_R1_unlock1":
-			Locations[FindLocation("wr_kitchen")].image = "wr_kitchen.tga";
+			Locations[FindLocation("wr_kitchen")].image = "wr_kitchen";
 			PlaySound("INTERFACE\closet_open.wav");
 			Locations[FindLocation("wr_kitchen")].reload.l1.disable = 0;
 
@@ -7674,7 +7674,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "kitchen_R1_lock1":
-			Locations[FindLocation("wr_kitchen")].image = "wr_kitchen.tga";
+			Locations[FindLocation("wr_kitchen")].image = "wr_kitchen";
 			PlaySound("INTERFACE\key_lock.wav");
 			Locations[FindLocation("wr_kitchen")].reload.l1.disable = 1;
 			Locations[FindLocation("Redmond_Town_01")].reload.l16.disable = 1;
@@ -8386,7 +8386,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "stick_on_floorhatch1":
-			Locations[FindLocation("Redmond_UsurerHouse")].image = "Inside_StoreSmall.tga";	//after merge
+			Locations[FindLocation("Redmond_UsurerHouse")].image = "Inside_StoreSmall";	//after merge
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(PChar, false);
 
@@ -8417,7 +8417,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "loanshark_cellar":
-			Locations[FindLocation("Redmond_UsurerHouse")].image = "Inside_StoreSmall.tga";//after merge
+			Locations[FindLocation("Redmond_UsurerHouse")].image = "Inside_StoreSmall";//after merge
 
 			pchar.quest.loanshark_cellar1.win_condition.l1 = "locator";
 			pchar.quest.loanshark_cellar1.win_condition.l1.location = "Loanshark_cellar";
@@ -8690,7 +8690,7 @@ void QuestComplete(string sQuestName)
 
 		case "elevator_lever1":
 			PlaySound("INTERFACE\elevator.wav");
-			Locations[FindLocation("wr_shop")].image = "wr_shop.tga";
+			Locations[FindLocation("wr_shop")].image = "wr_shop";
 		break;
 //-----------------------------------------------------------------------------------------------------------
 		case "dave_talks":
@@ -10391,7 +10391,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "bookpuzzle1_finished":
-			Locations[FindLocation("wr_library")].image = "wr_library.tga";
+			Locations[FindLocation("wr_library")].image = "wr_library";
 			PlaySound("INTERFACE\shelf_open.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "goto", "goto15");
@@ -10415,7 +10415,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "gunroom_door_visible1":
-			Locations[FindLocation("wr_library")].image = "wr_library.tga";
+			Locations[FindLocation("wr_library")].image = "wr_library";
 			PlaySound("INTERFACE\shelf_open.wav");
 		break;
 
@@ -10429,7 +10429,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "gunroom_door_hidden1":
-			Locations[FindLocation("wr_library")].image = "wr_library.tga";
+			Locations[FindLocation("wr_library")].image = "wr_library";
 			PlaySound("INTERFACE\shelf_close.wav");
 		break;
 //.................................................................................................
@@ -10543,7 +10543,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "autoopen_right_shelf3":
-			Locations[FindLocation("wr_library")].image = "wr_library.tga";
+			Locations[FindLocation("wr_library")].image = "wr_library";
 			PlaySound("INTERFACE\shelf_open.wav");
 
 			LAi_QuestDelay("autoclose_both_shelves", 0.1);	//loop
@@ -10810,7 +10810,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "gunroom_disable_fightmode1":
-			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom.tga";
+			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom";
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(pchar, false);
 		break;
@@ -10821,7 +10821,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "damper1":
-			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom.tga";
+			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom";
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(PChar, false);
 
@@ -11253,7 +11253,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "distill_2nd":
-			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom.tga";
+			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom";
 			//Log_SetStringToLog("distill 2nd");
 			Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"RUM has started to drip into the Barrel!"));
 			LAi_QuestDelay("distill_sounds", 0.1);
@@ -11275,7 +11275,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "distill_3rd":
-			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom.tga";
+			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom";
 			//Log_SetStringToLog("distill 3rd");
 			Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"After one hour - least"));
 			PlaySound3D("INTERFACE\rumble1.wav", 5.1, 1.0, 1.1);
@@ -11803,7 +11803,7 @@ void QuestComplete(string sQuestName)
 		break;
 //----------------------------------------------------------------------------------
 		case "place_wood2":
-			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom.tga";
+			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom";
 			if(CheckAttribute(Pchar,"quest.rum_fire") && Pchar.quest.rum_fire == "lit")
 			{
 				LAi_QuestDelay("place_wood3", 1.0);
@@ -12677,7 +12677,7 @@ void QuestComplete(string sQuestName)
 		break;
 //---------------------------------------------------------------------------------------------
 		case "place_sack2":
-			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom.tga";
+			Locations[FindLocation("wr_gunroom")].image = "wr_gunroom";
 			if(CheckAttribute(Pchar,"quest.rum_fire") && Pchar.quest.rum_fire == "lit")
 			{
 				LAi_QuestDelay("place_sack3", 1.0);
@@ -12907,7 +12907,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "steplock_barrel1":
-			Locations[FindLocation("wr_mother")].image = "wr_mother.tga";
+			Locations[FindLocation("wr_mother")].image = "wr_mother";
 			TakeItemFromCharacter(Pchar, "bladebarrel");
 			EquipCharacterByItem(Pchar, "bladeA11");
 			LAi_SetPlayerType(Pchar);
@@ -13038,7 +13038,7 @@ void QuestComplete(string sQuestName)
 
 		case "bridge_visible2":
 
-			Locations[FindLocation("Redmond_Town_01")].image = "Redmond_Town_01.tga";//after merge
+			Locations[FindLocation("Redmond_Town_01")].image = "Redmond_Town_01";//after merge
 			PlaySound("PEOPLE\wood3.wav");
 
 			pchar.quest.bridge_run.win_condition.l1 = "locator";
@@ -13573,7 +13573,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "crew_hatch_open2":
-			Locations[FindLocation("wr_crew")].image = "wr_crew.tga";
+			Locations[FindLocation("wr_crew")].image = "wr_crew";
 			PlaySound("PEOPLE\wood2.wav");
 
 			LAi_QuestDelay("crew_hatch_open1", 1.5);
@@ -13589,7 +13589,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "crew_hatch_lock2":
-			Locations[FindLocation("wr_crew")].image = "wr_crew.tga";
+			Locations[FindLocation("wr_crew")].image = "wr_crew";
 			PlaySound("INTERFACE\closet_open.wav");
 
 			LAi_QuestDelay("crew_hatch_lock1", 1.5);
@@ -13611,7 +13611,7 @@ void QuestComplete(string sQuestName)
 		case "crew_hatch_lock_rosabella_1":
 			AddQuestRecord("Open_the_mine", "3");
 			Logit(LanguageConvertString(tmpLangFileID,"Yes! It's open now but I cannot see the chest any longer..."));
-			Locations[FindLocation("wr_crew")].image = "wr_crew.tga";
+			Locations[FindLocation("wr_crew")].image = "wr_crew";
 			PlaySound("INTERFACE\closet_open.wav");
 
 			LAi_QuestDelay("crew_hatch_lock1", 1.5);
@@ -13716,7 +13716,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "empty_barrel_gibbet1":
-			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet.tga";
+			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet";
 			LAi_SetPlayerType(Pchar);
 			ChangeCharacterAddressGroup(CharacterFromID("wr_hanged"), "wr_gibbet", "goto", "goto3");
 			LAi_SetActorType(CharacterFromID("wr_hanged"));
@@ -13750,7 +13750,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "cut_down_hanged2":
-			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet.tga";
+			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet";
 			LAi_SetPlayerType(Pchar);
 			ChangeCharacterAddressGroup(CharacterFromID("wr_hanged"), "wr_gibbet", "goto", "goto3");//reset
 			PlaySound("PEOPLE\wood3.wav");
@@ -13797,7 +13797,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "hammer_on_barrel2":
-			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet.tga";
+			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet";
 			LAi_SetPlayerType(Pchar);
 			PlaySound("PEOPLE\wood3.wav");
 			LAi_SetFightMode(PChar, false);
@@ -13836,7 +13836,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "axe_on_skeleton2":
-			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet.tga";
+			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet";
 			LAi_SetPlayerType(Pchar);
 			ChangeCharacterAddressGroup(CharacterFromID("wr_hanged_body"), "wr_gibbet", "goto", "goto3");//reset
 			LAi_SetFightMode(PChar, false);
@@ -13876,7 +13876,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "saw_on_gibbet2":
-			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet.tga";
+			Locations[FindLocation("wr_gibbet")].image = "wr_gibbet";
 			PlaySound("PEOPLE\gibbet_fall.wav");
 			GetCharacterPos(Pchar, &x1, &y1, &z1);
 			CreateParticleSystemX("blast_dirt", x1, y1, z1, x1, y1, z1,10);
@@ -13939,7 +13939,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "pickaxe2_on_keybox2":
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(PChar, false);
 
@@ -14103,7 +14103,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "after_unlock_shop":
-			Locations[FindLocation("Redmond_UsurerHouse")].image = "Inside_StoreSmall.tga";	//after merge
+			Locations[FindLocation("Redmond_UsurerHouse")].image = "Inside_StoreSmall";	//after merge
 			Pchar.quest.wr_elevator = "up";//start position
 			TakeItemFromCharacter(Pchar, "key6");
 
@@ -14204,14 +14204,14 @@ void QuestComplete(string sQuestName)
 		case "tunnel1_loop1":
 			if(CheckAttribute(Pchar,"quest.swimming") && Pchar.quest.swimming == "done")
 			{
-				Locations[FindLocation("wr_dungeon3_right")].image = "wr_dungeon3_low.tga";//2 torches + hatch to lower tunnel
+				Locations[FindLocation("wr_dungeon3_right")].image = "wr_dungeon3_low";//2 torches + hatch to lower tunnel
 				DoQuestReloadToLocation("wr_dungeon3_right", "goto", "goto5", "tunnel1_loop");//last case door open
 			}
 			else
 			{
 				if(CheckAttribute(Pchar,"quest.swimming") && Pchar.quest.swimming == "now")
 				{
-					Locations[FindLocation("wr_dungeon3_left")].image = "wr_dungeon3_low.tga";
+					Locations[FindLocation("wr_dungeon3_left")].image = "wr_dungeon3_low";
 					DoQuestReloadToLocation("wr_dungeon3_left", "goto", "goto5", "tunnel1_loop");//temp, if swim back
 				}
 			}
@@ -14263,7 +14263,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "tunnel1back_loop1":
-			Locations[FindLocation("wr_dungeon3_right")].image = "wr_dungeon3_right.tga";
+			Locations[FindLocation("wr_dungeon3_right")].image = "wr_dungeon3_right";
 			DoQuestReloadToLocation("wr_dungeon3_right", "goto", "goto4", "tunnel1back_loop");
 		break;
 	//-------------------------------------------------------------------------------------------
@@ -14308,7 +14308,7 @@ void QuestComplete(string sQuestName)
 			//loop started with  case "mine_open2"
 
 			//Log_SetStringToLog("steplock_A_prison");
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			LAi_SetPlayerType(Pchar);
 
 			pchar.quest.steplock_A_prison1.win_condition.l1 = "locator";
@@ -14459,7 +14459,7 @@ void QuestComplete(string sQuestName)
 
 		case "steplock_A_prison4":
 			//Log_SetStringToLog("steplock_A_prison4");
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			LAi_SetPlayerType(Pchar);
 
 			if(CheckAttribute(Pchar,"quest.alternative_way_in") && Pchar.quest.alternative_way_in == "done")
@@ -14482,7 +14482,7 @@ void QuestComplete(string sQuestName)
 //----------------------------------------------------------------------------------------------------------
 		case "steplock_A_prison4_Rogers":
 			//Log_SetStringToLog("steplock_A_prison4");
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			LAi_SetPlayerType(Pchar);
 
 			if(CheckAttribute(Pchar,"quest.prison_skull") && Pchar.quest.prison_skull == "placed")
@@ -14607,7 +14607,7 @@ void QuestComplete(string sQuestName)
 		case "steplock_A_prison8":
 			//Log_SetStringToLog("steplock_A_prison8");
 
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			Pchar.quest.prison_barrel2 = "loop_on"//turn on 5 5_2 etc again
 			LAi_QuestDelay("steplock_A_prison4", 0.1);
 		break;
@@ -14630,7 +14630,7 @@ void QuestComplete(string sQuestName)
 
 		case "steplock_A_barrel1":
 			//Log_SetStringToLog("steplock_A_barrel1");
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 
 			if(CheckCharacterItem(Pchar,"bladebarrel"))
 			{
@@ -14683,7 +14683,7 @@ void QuestComplete(string sQuestName)
 			//Log_SetStringToLog("steplock_B_prison");
 			//loop started with  case "steplock_A_barrel1"
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 
 			pchar.quest.steplock_B_prison1.win_condition.l1 = "locator";
 			pchar.quest.steplock_B_prison1.win_condition.l1.location = "wr_prison";
@@ -14749,7 +14749,7 @@ void QuestComplete(string sQuestName)
 
 		case "steplock_B_prison4":
 			//Log_SetStringToLog("steplock_B_prison4");
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			LAi_SetPlayerType(Pchar);
 
 			pchar.quest.steplock_B_prison5.win_condition.l1 = "locator";
@@ -14833,7 +14833,7 @@ void QuestComplete(string sQuestName)
 
 		case "steplock_B_barrel1":
 			//Log_SetStringToLog("steplock_B_barrel1");
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 
 			if(CheckCharacterItem(Pchar,"bladebarrel"))
 			{
@@ -14882,7 +14882,7 @@ void QuestComplete(string sQuestName)
 		break;
 //...................................................................................................
 		case "loading_image_back_prison":
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 		break;
 //...................................................................................................
 		case "mine_lights_1":
@@ -14957,7 +14957,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "loading_image_back_mine_control":
-			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control.tga";
+			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control";
 		break;
 
 		case "mine_lights_gas_on":
@@ -14966,7 +14966,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "mine_lights_gas_effects":
-			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control.tga";
+			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control";
 			//Log_SetStringToLog("gas level 1");
 			Pchar.quest.gas_level = "1";
 			PlaySound("INTERFACE\gas_on.wav");
@@ -15073,7 +15073,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "mine_lights_gas_off_sound":
-			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control.tga";
+			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control";
 			PlaySound("INTERFACE\gas_off1.wav");
 			PlaySound("INTERFACE\gas_off2.wav");
 		break;
@@ -15102,7 +15102,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "mine_lights_fire_off_smoke":
-			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control.tga";
+			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control";
 			PlaySound("INTERFACE\fire_off.wav");
 			CreateParticleSystem("smoke_inv_short" , -27.8, 2.6, 16.3, -27.8, 4.6, 16.3, sti(20) );
 		break;
@@ -15203,7 +15203,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "mine_lights_fire_sound":
-			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control.tga";
+			Locations[FindLocation("wr_mine_control")].image = "wr_mine_control";
 			PlaySound("INTERFACE\fire_on.wav");
 			LAi_QuestDelay("mine_lights_fire_sound1", 0.5);
 		break;
@@ -15299,7 +15299,7 @@ void QuestComplete(string sQuestName)
 			//Log_SetStringToLog("skull6");
 			AddQuestRecord("Open_the_niche", "1");
 
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			PlaySound("VOICE\ENGLISH\blaze_hah.wav");
 
 			LAi_SetFightMode(PChar, false);
@@ -15373,7 +15373,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "place_plank_on_wall1":
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(PChar, false);
 
@@ -15521,7 +15521,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "skeleton_no_skull6":
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			Locations[FindLocation("wr_prison")].reload.l15.disable = 1;//floor hatch
 			PlaySound("INTERFACE\closed_door.wav");
 			PlaySound("PEOPLE\step_echo.wav");
@@ -15612,7 +15612,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "remove_plank_from_wall2":
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 			GiveItem2Character(Pchar, "bladeplank");
 			EquipCharacterByItem(Pchar, "bladeplank");
@@ -15644,7 +15644,7 @@ void QuestComplete(string sQuestName)
 				TakeItemFromCharacter(Pchar, "bladeplank");
 			}
 
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			PlaySound("PEOPLE\wood2.wav");
 
 			LAi_QuestDelay("steplock_A_plank", 0.1);
@@ -15653,7 +15653,7 @@ void QuestComplete(string sQuestName)
 		case "steplock_A_plank":
 			//Log_SetStringToLog("steplock_A_plank");
 			//loop started from place_plank_on_floor
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			LAi_SetPlayerType(Pchar);
 
 			pchar.quest.steplock_A_plank1.win_condition.l1 = "locator";
@@ -15702,7 +15702,7 @@ void QuestComplete(string sQuestName)
 
 		case "steplock_A_plank4":
 			//Log_SetStringToLog("steplock_A_plank4");
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			LAi_SetPlayerType(Pchar);
 
 			pchar.quest.steplock_A_plank5.win_condition.l1 = "locator";
@@ -15767,7 +15767,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "steplock_A_plank_barrel1":
-			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
+			Locations[FindLocation("wr_prison")].image = "wr_prison";
 			Locations[FindLocation("wr_prison")].reload.l15.disable = 0;//floor hatch
 			if(CheckCharacterItem(Pchar,"bladebarrel"))
 			{
@@ -17317,7 +17317,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "tell_your_story2_done1":
-			Locations[FindLocation("wr_church_attic")].image = "wr_church_attic.tga";
+			Locations[FindLocation("wr_church_attic")].image = "wr_church_attic";
 
 			LAi_SetActorType(CharacterFromID("pir_cap3"));
 			LAi_ActorTurnToLocator(characterFromID("pir_cap3"), "sit", "sit1");
@@ -17650,7 +17650,7 @@ void QuestComplete(string sQuestName)
 //[9] starts with "rogers_talks_medicine"
 		case "rogers_talks_medicine":
 			Locations[FindLocation("Redmond_shore_02")].models.always.locators = "shore03_l";	//no tartane until meds are collected
-		Locations[FindLocation("Redmond_Town_01")].image = "Town_Redmond_Town_01.tga";	//was missing
+		Locations[FindLocation("Redmond_Town_01")].image = "Town_Redmond_Town_01";	//was missing
 			Locations[FindLocation("Redmond_Town_01")].reload.l10.disable = 0;	//to loanshark
 			Locations[FindLocation("Redmond_Town_01")].reload.l20.disable = 0;	//to loanshark nackdoor
 			Locations[FindLocation("Redmond_Town_01")].reload.l11.disable = 0;	//to tavern
@@ -18873,7 +18873,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "pickup_foodchest_place_mdchest1":
-			Locations[FindLocation("wr_food_supply")].image = "wr_food_supply.tga";
+			Locations[FindLocation("wr_food_supply")].image = "wr_food_supply";
 			GiveItem2Character(Pchar, "pistolfoodchest");
 			EquipCharacterByItem(Pchar, "pistolfoodchest");
 			GiveItem2Character(Pchar, "2winebottles");
@@ -18887,7 +18887,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "pickup_mdchest_place_nothing1":
-			Locations[FindLocation("wr_food_supply")].image = "wr_food_supply.tga";
+			Locations[FindLocation("wr_food_supply")].image = "wr_food_supply";
 			PlaySound("INTERFACE\important_item.wav");
 			Log_SetStringToLog(XI_ConvertString("You take item"));
 
@@ -21346,7 +21346,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "cavern_chest_lock1":
-			Locations[FindLocation("wr_cavern")].image = "wr_cavern.tga";
+			Locations[FindLocation("wr_cavern")].image = "wr_cavern";
 			if(CheckCharacterItem(Pchar,"key16"))
 			{
 				TakeItemFromCharacter(Pchar, "key16");
@@ -21370,7 +21370,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "cavern_place_chest1":
-			Locations[FindLocation("wr_cavern")].image = "wr_cavern.tga";
+			Locations[FindLocation("wr_cavern")].image = "wr_cavern";
 			LAi_SetFightMode(Pchar, false);
 			PlaySound("PEOPLE\wood3.wav");
 			CreateParticleSystem("blast_dirt", 3.3, 0.9, -16.6, 0.0, 0.0, 0.0, sti(20) );
@@ -21384,7 +21384,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "cavern_church_unlock1":
-			Locations[FindLocation("wr_cavern")].image = "wr_cavern.tga";
+			Locations[FindLocation("wr_cavern")].image = "wr_cavern";
 			PlaySound("PEOPLE\creak.wav");
 
 			Locations[FindLocation("wr_church_outside")].reload.l1.disable = 0;
@@ -21403,7 +21403,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "cavern_church_lock1":
-			Locations[FindLocation("wr_cavern")].image = "wr_cavern.tga";
+			Locations[FindLocation("wr_cavern")].image = "wr_cavern";
 			PlaySound("PEOPLE\wood3.wav");
 			CreateParticleSystem("blast_dirt", 3.3, 0.9, -16.6, 0.0, 0.0, 0.0, sti(20) );
 
@@ -21428,7 +21428,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\rum_wheel.wav");
 			Locations[FindLocation("wr_cave_shore")].reload.l111.disable = 0;
 			Locations[FindLocation("wr_Cavern")].reload.l2.disable = 0;
-			locations[FindLocation("wr_cannon_tower")].image = "wr_cannon_tower.tga";
+			locations[FindLocation("wr_cannon_tower")].image = "wr_cannon_tower";
 		
 			if(CheckAttribute(Pchar, "quest.Spriggs") && Pchar.quest.Spriggs == "on_shore")
 			{
@@ -21460,7 +21460,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\shelf_close.wav");
 			Locations[FindLocation("wr_cave_shore")].reload.l111.disable = 1;
 			Locations[FindLocation("wr_Cavern")].reload.l2.disable = 1;
-			locations[FindLocation("wr_cannon_tower")].image = "wr_cannon_tower.tga";
+			locations[FindLocation("wr_cannon_tower")].image = "wr_cannon_tower";
 		break;
 	//.......................................................................................................
 /*
@@ -22878,7 +22878,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "place_temple_bomb4":
-			locations[FindLocation("wr_animists")].image = "wr_animists.tga";
+			locations[FindLocation("wr_animists")].image = "wr_animists";
 			PlaySound("PEOPLE\wood3.wav");
 			CreateParticleSystemX("blast_dirt", -5.0, 0.7, -13.1, 0.0, 0.0, 0.0, 10);
 			Pchar.quest.mine_bomb2 = "placed";
@@ -23034,7 +23034,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "mandala_finish_1":
-			Locations[FindLocation("wr_animists")].image = "wr_animists.tga";
+			Locations[FindLocation("wr_animists")].image = "wr_animists";
 			PlaySound("INTERFACE\stone_mandala.wav");
 			CreateParticleSystemX("blast_dirt", -4.0, 1.6, -0.4, -4.0, 3.6, -0.4, 10);
 
@@ -23070,7 +23070,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "temple_lever_ON_A":
-			Locations[FindLocation("wr_animists")].image = "wr_animists.tga";
+			Locations[FindLocation("wr_animists")].image = "wr_animists";
 			PlaySound("INTERFACE\shelf_cogs.wav");
 		break;
 
@@ -23080,7 +23080,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "temple_lever_OFF_A":
-			Locations[FindLocation("wr_animists")].image = "wr_animists.tga";
+			Locations[FindLocation("wr_animists")].image = "wr_animists";
 			PlaySound("INTERFACE\shelf_close.wav");
 		break;
 //-----------------------------------------------------------------------------------------------------------
@@ -23249,7 +23249,7 @@ void QuestComplete(string sQuestName)
 
 		case "temple_defence":
 			LAi_LocationFightDisable(&Locations[FindLocation(Pchar.location)], true);
-			locations[FindLocation("wr_animists")].image = "wr_animists.tga";
+			locations[FindLocation("wr_animists")].image = "wr_animists";
 			if(CheckCharacterItem(Pchar,"bladedefense"))
 			{
 				//moved up
@@ -24966,7 +24966,7 @@ void QuestComplete(string sQuestName)
 
 			Locations[FindLocation("wr_ships")].image = "";
 			DoQuestReloadToLocation("wr_ships", "goto", "box5", "_");
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 		break;
 	//------------------------------------------------------------------------------------------------
 		case "shipcannon_down":
@@ -25029,7 +25029,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "shipcannon_down1":
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 			CreateParticleSystemX("blast_dirt", -0.4, 3.6, -4.1, -0.4, 3.6, -4.1, 10);
 			PlaySound("PEOPLE\wood3.wav");
 		break;
@@ -25061,7 +25061,7 @@ void QuestComplete(string sQuestName)
 
 			Locations[FindLocation("wr_ships")].image = "";
 			DoQuestReloadToLocation("wr_ships", "goto", "box7", "guncrew_dismiss");
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 		break;
 	//------------------------------------------------------------------------------------------------
 		case "guncrew_ohoh":
@@ -25091,7 +25091,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "shipcannon_hard_down1":
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 			CreateParticleSystemX("blast_dirt", -0.4, 2.7, -4.1, -0.4, 3.6, -4.1, 10);
 			CreateParticleSystemX("blast_dirt", -0.4, 2.7, -4.1, -0.4, 3.6, -4.1, 10);
 			CreateParticleSystemX("blast_dirt", -0.4, 3.0, -4.1, -0.4, 3.6, -4.1, 10);
@@ -25192,7 +25192,7 @@ void QuestComplete(string sQuestName)
 				}
 			}
 
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 		break;
 	//.................................................................................................
 		case "see_tool_under_elevator":
@@ -25251,7 +25251,7 @@ void QuestComplete(string sQuestName)
 				}
 			}
 
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 		break;
 	//.................................................................................................
 		case "planks_and_elevator_on_deck":
@@ -25291,7 +25291,7 @@ void QuestComplete(string sQuestName)
 		case "anchor_down_corvette1":
 			PlaySound("INTERFACE\_Yakordrop1.wav");
 			CreateParticleSystemX("ball_splash", -2.1, 2.6, 18.8, 0.0, 0.0, 0.0, 0);
-			Locations[FindLocation("wr_ships")].image = "wr_corvette.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_corvette";
 		break;
 	//.................................................................................................
 		case "anchor_up_corvette":
@@ -25303,7 +25303,7 @@ void QuestComplete(string sQuestName)
 		case "anchor_up_corvette1":
 			PlaySound("INTERFACE\anchor_up.wav");
 			CreateParticleSystemX("ball_splash", -2.1, 2.9, 18.3, 0.0, 0.0, 0.0, 0);
-			Locations[FindLocation("wr_ships")].image = "wr_corvette.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_corvette";
 		break;
 	//.................................................................................................
 		case "stay_at_stuck8":
@@ -25401,9 +25401,9 @@ void QuestComplete(string sQuestName)
 		case "wr_ships_loadingimage_back":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_ships")], true);
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
-			Locations[FindLocation("wr_gall_hold_first")].image = "wr_gall_hold_first.tga";
-			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
+			Locations[FindLocation("wr_gall_hold_first")].image = "wr_gall_hold_first";
+			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow";
 		break;
 	//................................................................................................
 		case "wheel_on_hub_already":
@@ -25439,9 +25439,9 @@ void QuestComplete(string sQuestName)
 		case "elevator_ropes_check2":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_ships")], true);
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
-			Locations[FindLocation("wr_gall_hold_first")].image = "wr_gall_hold_first.tga";
-			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
+			Locations[FindLocation("wr_gall_hold_first")].image = "wr_gall_hold_first";
+			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow";
 
 			if(CheckCharacterItem(Pchar,"elevator_ropes"))
 			{
@@ -25469,9 +25469,9 @@ void QuestComplete(string sQuestName)
 		case "place_elevator_ropes2":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_ships")], true);
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
-			Locations[FindLocation("wr_gall_hold_first")].image = "wr_gall_hold_first.tga";
-			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
+			Locations[FindLocation("wr_gall_hold_first")].image = "wr_gall_hold_first";
+			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow";
 
 			LAi_QuestDelay("place_elevator_ropes3", 1.0);
 		break;
@@ -25682,7 +25682,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "pick_up_bladeirontool1":
-			Locations[FindLocation("wr_gall_hold_first")].image = "wr_gall_hold_first.tga";
+			Locations[FindLocation("wr_gall_hold_first")].image = "wr_gall_hold_first";
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 			GiveItem2Character(Pchar,"bladeirontool");
 			EquipCharacterByItem(Pchar, "bladeirontool");
@@ -25705,7 +25705,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "remove_plank_prow2":
-			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow.tga";
+			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow";
 			if(CheckCharacterItem(Pchar,"plank1_long"))
 			{
 				PlaySound("PEOPLE\place_planks.wav");
@@ -25851,7 +25851,7 @@ void QuestComplete(string sQuestName)
 
 		case "open_bedroom_window1":
 			PlaySound("PEOPLE\counter_open.wav");
-			Locations[FindLocation("wr_farm_bedroom")].image = "wr_farm_bedroom.tga";
+			Locations[FindLocation("wr_farm_bedroom")].image = "wr_farm_bedroom";
 		break;
 	//................................................................................................
 		case "close_bedroom_window":
@@ -25861,7 +25861,7 @@ void QuestComplete(string sQuestName)
 
 		case "close_bedroom_window1":
 			PlaySound("PEOPLE\counter_close.wav");
-			Locations[FindLocation("wr_farm_bedroom")].image = "wr_farm_bedroom.tga";
+			Locations[FindLocation("wr_farm_bedroom")].image = "wr_farm_bedroom";
 
 			if(CheckAttribute(pchar,"quest.Minerva") && pchar.quest.Minerva == "arrived")
 			{
@@ -25877,7 +25877,7 @@ void QuestComplete(string sQuestName)
 
 		case "change_bedroom_chart1":
 			PlaySound("INTERFACE\chart_move.wav");
-			Locations[FindLocation("wr_farm_bedroom")].image = "wr_farm_bedroom.tga";
+			Locations[FindLocation("wr_farm_bedroom")].image = "wr_farm_bedroom";
 		break;
 	//................................................................................................
 		case "stay_at_candle":
@@ -25898,7 +25898,7 @@ void QuestComplete(string sQuestName)
 		case "pick_up_book46_1":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_farm_corridor")], true);
-			Locations[FindLocation("wr_farm_corridor")].image = "wr_farm_corridor.tga";
+			Locations[FindLocation("wr_farm_corridor")].image = "wr_farm_corridor";
 
 			if(Locations[FindLocation(Pchar.location)].models.always.locators == "StoreSmall_locators_JRH_normal")
 			Pchar.quest.keymiddle = "on_counter";
@@ -25912,7 +25912,7 @@ void QuestComplete(string sQuestName)
 		case "corridor_lit_1":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_farm_corridor")], true);
-			Locations[FindLocation("wr_farm_corridor")].image = "wr_farm_corridor.tga";
+			Locations[FindLocation("wr_farm_corridor")].image = "wr_farm_corridor";
 		break;
 
 		case "pick_up_key18":
@@ -25924,7 +25924,7 @@ void QuestComplete(string sQuestName)
 		case "pick_up_key18_1":
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_farm_corridor")], true);
-			Locations[FindLocation("wr_farm_corridor")].image = "wr_farm_corridor.tga";
+			Locations[FindLocation("wr_farm_corridor")].image = "wr_farm_corridor";
 		break;
 	//................................................................................................
 		case "unlock_from_corridor":
@@ -25980,7 +25980,7 @@ void QuestComplete(string sQuestName)
 			}
 
 			PlaySound("INTERFACE\carpet_move.wav");
-			Locations[FindLocation("wr_farm_servant")].image = "wr_farm_servant.tga";
+			Locations[FindLocation("wr_farm_servant")].image = "wr_farm_servant";
 
 			LAi_QuestDelay("pull_carpet4", 1.0);
 		break;
@@ -26185,7 +26185,7 @@ void QuestComplete(string sQuestName)
 			}
 			else LAi_SetPlayerType(Pchar);
 
-			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy.tga";
+			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy";
 
 			if(locations[FindLocation("wr_farm_alchemy")].models.always.l5 == "bottle_MB2")
 			{
@@ -26410,7 +26410,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_port")].models.always.locators = "QCport_l_JRHsea";
 			SetCharacterShipLocation(Pchar, "wr_port");
 			Locations[FindLocation("Redmond_Port")].models.always.locators = "RedPort_l";		//reset to normal
-		locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore.tga";
+		locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore";
 
 			SetCharacterGoods(Pchar, GOOD_GRAPES  , 0);
 			SetCharacterGoods(Pchar, GOOD_KNIPPELS, 0);
@@ -26986,7 +26986,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystem("rocket_fire" , -7.3, 3.8, 7.3, 5.1, 4.0, 0.0, sti(20) );
 			CreateParticleSystem("smoke_short" , -7.3, 3.8, 7.3, 5.1, 4.0, 0.0, sti(20) );	//3
 
-			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2.tga";
+			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2";
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_farm_alchemy2")], true);
 
 			LAi_QuestDelay("for_longer_rocket_fire", 0.7);
@@ -27037,7 +27037,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystem("smoke_short" , 1.4, 1.0, 1.6, 5.1, 4.0, 0.0, sti(20) );
 			CreateParticleSystem("smoke_short" , 1.7, 1.0, 1.4, 5.1, 4.0, 0.0, sti(20) );
 
-			Locations[FindLocation("wr_farm_booty2")].image = "wr_booty.tga";
+			Locations[FindLocation("wr_farm_booty2")].image = "wr_booty";
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_farm_booty2")], true);
 
 			LAi_QuestDelay("for_more_longer_rocket_fire", 0.7);
@@ -27718,7 +27718,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "alchemy_plank_sound_down":
-			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy.tga";
+			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy";
 			PlaySound("PEOPLE\basket.wav");
 		break;
 
@@ -27735,7 +27735,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "alchemy_plank_sound_up":
-			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy.tga";
+			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy";
 			PlaySound("PEOPLE\creak2.wav");
 		break;
 
@@ -27855,7 +27855,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "alchemy_plank_down1":
-			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy.tga";
+			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy";
 
 			if(Locations[FindLocation(Pchar.location)].models.always.locators == "mediumhouse01_locators_JRH1")
 			{
@@ -28261,7 +28261,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "alchemy_distill4":
-			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy.tga";
+			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy";
 
 			if(CheckAttribute(Pchar, "quest.apparatus_level") && Pchar.quest.apparatus_level == "glass_explosion")
 			{
@@ -28385,7 +28385,7 @@ void QuestComplete(string sQuestName)
 
 			PlaySound("INTERFACE\steam1.wav");
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy.tga";
+			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy";
 
 			LAi_QuestDelay("pchar_ooh", 5.0);
 		break;
@@ -28448,7 +28448,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("OBJECTS\VOICES\DEAD\male\dead0.wav");
 
 			LAi_ApplyCharacterDamage(Pchar, 10);
-			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy.tga";
+			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy";
 		break;
 	//................................................................................................
 		case "alchemy_acid_small_boiling":
@@ -28553,7 +28553,7 @@ void QuestComplete(string sQuestName)
 
 			CreateParticleSystem("smoke_inv_short" , -2.1, 1.2, -2.4, 5.0, 1.5, 0.0, sti(20) );
 
-			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy.tga";
+			Locations[FindLocation("wr_farm_alchemy")].image = "wr_farm_alchemy";
 
 			LAi_QuestDelay("alchemy_acid_explosion2", 2.4);
 		break;
@@ -28700,7 +28700,7 @@ void QuestComplete(string sQuestName)
 
 		case "acid_copper_door5":
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_corv_deck1")].image = "wr_corv_deck1.tga";
+			Locations[FindLocation("wr_corv_deck1")].image = "wr_corv_deck1";
 			Locations[FindLocation("wr_corv_smallcabin_R")].id.label = "Cabin";
 			locations[FindLocation(Pchar.location)].box4.items.pistolnitre = 14;
 			locations[FindLocation(Pchar.location)].box4.items.bladebottle_CT1_sulf = 1;
@@ -28876,7 +28876,7 @@ void QuestComplete(string sQuestName)
 		break;
 	//-----------------------------------------------------------
 		case "remove_planks_hold2":
-			Locations[FindLocation("wr_gall_hold_second")].image = "wr_gall_hold_second.tga";
+			Locations[FindLocation("wr_gall_hold_second")].image = "wr_gall_hold_second";
 
 			LAi_SetFightMode(Pchar, false);
 			if(CheckCharacterItem(Pchar,"plank2_long"))
@@ -30087,7 +30087,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "guncrew_turn4":
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 			PlaySound("PEOPLE\creak.wav");
 			LAi_SetFightMode(CharacterFromID("guncrew_3"), false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_ships")], true);
@@ -30168,7 +30168,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "guncrew_move4":
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 			PlaySound("PEOPLE\creak.wav");
 			LAi_SetFightMode(CharacterFromID("guncrew_4"), false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_ships")], true);
@@ -30219,7 +30219,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "guncrew_move_back4":
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 			PlaySound("PEOPLE\creak.wav");
 			LAi_SetFightMode(CharacterFromID("guncrew_3"), false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_ships")], true);
@@ -31004,7 +31004,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "guncrew_S1X_long2":
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 
 			CreateParticleSystem("smoke_short" , 0.0, 4.2, -5.2, 4.5, 1.5, 0.0, sti(20) );
 			CreateParticleSystem("smoke_short" , 0.0, 4.2, -5.2, 4.5, 1.5, 0.0, sti(20) );
@@ -31470,7 +31470,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "guncrew_S0_long2":
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 			Locations[FindLocation("wr_ships")].reload.l5.disable = 0;			//open to capmd
 			CloseQuestHeader("Cannon_drill");
 
@@ -31698,7 +31698,7 @@ void QuestComplete(string sQuestName)
 		case "stopboom_done":
 			PlaySound("PEOPLE\wood1.wav");
 
-			Locations[FindLocation("wr_corv_capsm")].image = "Deck_Capsm.tga";
+			Locations[FindLocation("wr_corv_capsm")].image = "Deck_Capsm";
 		break;
 	//----------------------------------------------------------------------------------------
 		case "stay_at_belt_door":
@@ -31735,7 +31735,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_corv_crew")], true);
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_corv_crew")].image = "Deck_seadogs.tga";
+			Locations[FindLocation("wr_corv_crew")].image = "Deck_seadogs";
 		break;
 
 		case "unlock_crew_deck1":
@@ -31761,7 +31761,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "unlock_crew_deck1_B":
-			Locations[FindLocation("wr_corv_crew")].image = "Deck_seadogs.tga";
+			Locations[FindLocation("wr_corv_crew")].image = "Deck_seadogs";
 
 			pchar.quest.unlock_crew_deck1_C.win_condition.l1 = "locator";
 			pchar.quest.unlock_crew_deck1_C.win_condition.l1.location = "wr_corv_deck1";
@@ -33029,7 +33029,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "bridge_invisible2":
-			Locations[FindLocation("Redmond_Town_01")].image = "Redmond_Town_01.tga";//after merge
+			Locations[FindLocation("Redmond_Town_01")].image = "Redmond_Town_01";//after merge
 			PlaySound("PEOPLE\wood3.wav");
 
 			//enemies fall down in here.....
@@ -34775,7 +34775,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "switch_weather_wine_cellars1":
-			Locations[FindLocation("wr_wine_cellar")].image = "wr_wine_cellar.tga";
+			Locations[FindLocation("wr_wine_cellar")].image = "wr_wine_cellar";
 			locations[FindLocation("wr_wine_cellar")].id.label = "Roger's wine cellar";
 
 			if(locations[FindLocation("church_wine_cellar")].environment.sea == "true")
@@ -34802,7 +34802,7 @@ void QuestComplete(string sQuestName)
 
 		case "switch_weather_wine_cellars3":
 			//SetNextWeather("Medium Foggy Mine");
-			Locations[FindLocation("church_wine_cellar")].image = "church_wine_cellar.tga";
+			Locations[FindLocation("church_wine_cellar")].image = "church_wine_cellar";
 			locations[FindLocation("church_wine_cellar")].id.label = "Church wine cellar";
 
 			pchar.quest.switch_weather_wine_cellars.win_condition.l1 = "location";
@@ -35195,7 +35195,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "place_ladder_choir_box2_1":
-			Locations[FindLocation("church_choir")].image = "church_choir.tga";
+			Locations[FindLocation("church_choir")].image = "church_choir";
 
 			Pchar.quest.choir_ladder = "placed";
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
@@ -35235,7 +35235,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "remove_ladder_choir_box2_1":
-			Locations[FindLocation("church_choir")].image = "church_choir.tga";
+			Locations[FindLocation("church_choir")].image = "church_choir";
 
 			LAi_QuestDelay("remove_ladder_choir_box2_2", 1.0);
 		break;
@@ -35292,7 +35292,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "exit_choir_box3_1":
-			Locations[FindLocation("church_choir")].image = "church_choir.tga";
+			Locations[FindLocation("church_choir")].image = "church_choir";
 
 			LAi_SetFightMode(pchar, false);
 			LAi_SetPlayerType(Pchar);
@@ -35332,7 +35332,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "exit_choir_box4_1":
-			Locations[FindLocation("church_choir")].image = "church_choir.tga";
+			Locations[FindLocation("church_choir")].image = "church_choir";
 
 			LAi_SetFightMode(pchar, false);
 			LAi_SetPlayerType(Pchar);
@@ -35371,7 +35371,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "exit_choir_box5_1":
-			Locations[FindLocation("church_choir")].image = "church_choir.tga";
+			Locations[FindLocation("church_choir")].image = "church_choir";
 
 			LAi_SetFightMode(pchar, false);
 			LAi_SetPlayerType(Pchar);
@@ -35392,7 +35392,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "place_choir_clockkey1":
-			Locations[FindLocation("church_choir")].image = "church_choir.tga";
+			Locations[FindLocation("church_choir")].image = "church_choir";
 
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "goto", "look");
@@ -35581,7 +35581,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "choir_lockpick3":
-			Locations[FindLocation("church_choir")].image = "church_choir.tga";
+			Locations[FindLocation("church_choir")].image = "church_choir";
 
 			PlaySound("PEOPLE\step_echo.wav");
 			Pchar.quest.choir_lockpick = "found";
@@ -36786,7 +36786,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Vane_scales6":
-			Locations[FindLocation("wr_sacristy")].image = "wr_sacristy.tga";
+			Locations[FindLocation("wr_sacristy")].image = "wr_sacristy";
 
 			LAi_SetPlayerType(Pchar);
 			LAi_SetActorType(CharacterFromID("pir_cap1"));
@@ -37102,7 +37102,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "votiv_ship1":
-			Locations[FindLocation("wr_church_inside")].image = "wr_church_inside.tga";
+			Locations[FindLocation("wr_church_inside")].image = "wr_church_inside";
 			PlaySound("INTERFACE\key_lock.wav");
 
 			LAi_QuestDelay("votiv_ship2", 1.0);
@@ -37237,7 +37237,7 @@ void QuestComplete(string sQuestName)
 
 		case "votiv_ship_moves1":
 			PlaySound("PEOPLE\creak2.wav");
-			Locations[FindLocation("wr_church_inside")].image = "wr_church_inside.tga";
+			Locations[FindLocation("wr_church_inside")].image = "wr_church_inside";
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "goto", "pulpit");
 
@@ -37509,7 +37509,7 @@ void QuestComplete(string sQuestName)
 			Php2 = Php/2;
 			LAi_ApplyCharacterDamage(Pchar, Php2);
 
-			Locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore.tga";
+			Locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore";
 
 			LAi_QuestDelay("fallen_tree4", 4.0);
 		break;
@@ -37599,7 +37599,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "pick_up_ship_ladder1":
-			locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore.tga";
+			locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore";
 		break;
 	//...............................................................................................
 		case "place_ladder_cave_shore":
@@ -37616,7 +37616,7 @@ void QuestComplete(string sQuestName)
 			GetCharacterPos(Pchar, &u, &v, &w);
 			CreateParticleSystem("blast_dirt_small" , u, v+1, w, 0.0, 0.0, 0.0, sti(20) );
 			PlaySound("PEOPLE\wood1.wav");
-			locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore.tga";
+			locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore";
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(Pchar, "bladeladder2");
 			if(!CheckCharacterItem(Pchar,"bladeX4")) GiveItem2Character(Pchar, "bladeX4");
@@ -37739,7 +37739,7 @@ void QuestComplete(string sQuestName)
 		case "swivelgun_turn1":
 			LAi_SetPlayerType(Pchar);
 			PlaySound("INTERFACE\lever_placed.wav");
-			locations[FindLocation("wr_wood_tower2")].image = "wr_wood_tower2.tga";//change this
+			locations[FindLocation("wr_wood_tower2")].image = "wr_wood_tower2";//change this
 		break;
 	//...............................................................................................
 		case "fill_flagchest":
@@ -38095,7 +38095,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\step_stairway.wav");
 
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_wood_tower3")].image = "wr_wood_tower3.tga";//reset change this later
+			Locations[FindLocation("wr_wood_tower3")].image = "wr_wood_tower3";//reset change this later
 		break;
 	//...............................................................................................
 		case "place_musket_lever":
@@ -38117,7 +38117,7 @@ void QuestComplete(string sQuestName)
 		case "place_musket_lever1":
 			PlaySound("INTERFACE\lever_placed.wav");
 			LAi_SetFightMode(Pchar, false);
-			locations[FindLocation("wr_cannon_tower")].image = "wr_cannon_tower.tga";
+			locations[FindLocation("wr_cannon_tower")].image = "wr_cannon_tower";
 	
 			LAi_QuestDelay("equip_boathook", 0.1);
 		break;
@@ -38198,7 +38198,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("pir_cap10"));
 			LAi_ActorSetLayMode(CharacterFromID("pir_cap10"));
 
-			locations[FindLocation("wr_wood_tower3")].image = "wr_wood_tower3.tga";
+			locations[FindLocation("wr_wood_tower3")].image = "wr_wood_tower3";
 
 			LAi_QuestDelay("wood_tower_top_staytype", 0.1);
 			LAi_QuestDelay("wood_tower_spyglass", 0.1);
@@ -38333,7 +38333,7 @@ void QuestComplete(string sQuestName)
 		case "boat_zoom":
 			Locations[FindLocation("wr_wood_tower3")].reload.l2.emerge = "head";			//was reload8
 			Locations[FindLocation(Pchar.location)].models.always.locators = "Shore04_l_JRH3";
-			locations[FindLocation(Pchar.location)].image = "zoom_boat.tga";
+			locations[FindLocation(Pchar.location)].image = "zoom_boat";
 
 			DoQuestReloadToLocation("wr_cave_shore", "goto", "head", "boat_zoom1");
 		break;
@@ -38341,7 +38341,7 @@ void QuestComplete(string sQuestName)
 		case "boat_zoom1":
 			LAi_SetFightMode(Pchar, false);
 			LAi_SetStayType(Pchar);
-			Locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore.tga";
+			Locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore";
 			Pchar.quest.Bunce = "in_boat";
 
 			LAi_QuestDelay("boat_zoom2", 1.5);
@@ -38430,7 +38430,7 @@ void QuestComplete(string sQuestName)
 		case "Bunce_wakes_up7":
 			PlaySound("VOICe\ENGLISH\blaze_what_was_that.wav");
 
-			Locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore.tga";
+			Locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore";
 			Pchar.quest.Bunce = "on_shore";
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_cave_shore")], false);//reset
 
@@ -38598,7 +38598,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "hoist_spanish_flag3":
-			locations[FindLocation(Pchar.location)].image = "zoom_cutter.tga";
+			locations[FindLocation(Pchar.location)].image = "zoom_cutter";
 
 			DoQuestReloadToLocation("wr_cave_shore", "goto", "head", "hoist_spanish_flag4");
 		break;
@@ -38611,7 +38611,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(Pchar);
 
 			Pchar.flag_knowledge = "no";
-			Locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore.tga";
+			Locations[FindLocation("wr_cave_shore")].image = "wr_cave_shore";
 
 			SetLocatorRadius(locations[FindLocation("wr_cave_shore")], "box", "box6", 1.0);
 			Locations[FindLocation("wr_cave_shore")].locators_radius.box.box6 = 1.0;
@@ -39027,7 +39027,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "equip_redchest_caveshore1":
-			locations[FindLocation("wr_wood_tower3")].image = "wr_wood_tower3.tga";
+			locations[FindLocation("wr_wood_tower3")].image = "wr_wood_tower3";
 			GetCharacterPos(Pchar, &u, &v, &w);
 			CreateParticleSystem("blast_dirt" , 5.4, 3.6, -10.5, 0.0, 0.0, 0.0, sti(20) );
 			PlaySound("PEOPLE\wood3.wav");
@@ -39575,7 +39575,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Vane_ladder34":
-			Locations[FindLocation("wr_cavern")].image = "wr_cavern.tga";
+			Locations[FindLocation("wr_cavern")].image = "wr_cavern";
 			PlaySound("PEOPLE\wood1.wav");
 			LAi_SetPlayerType(Pchar);
 			Locations[FindLocation("wr_dungeon4_low")].locators_radius.reload.reload3 = 1.5;
@@ -41352,7 +41352,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_corvette1":
 			//reset
 			LAi_SetSitType(Pchar);
-			Locations[FindLocation("wr_port")].image = "wr_port.tga";
+			Locations[FindLocation("wr_port")].image = "wr_port";
 			PlaySound("INTERFACE\anchor_up.wav");
 			CreateParticleSystemX("ball_splash", -8.0, 0.0, 145.0, 0.0, 0.0, 0.0, 0);
 
@@ -41542,7 +41542,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\step_echo.wav");
 			LAi_SetFightMode(Pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_corv_capsm")], true);
-			Locations[FindLocation("wr_corv_capsm")].image = "Deck_Capsm.tga";
+			Locations[FindLocation("wr_corv_capsm")].image = "Deck_Capsm";
 
 			Locations[FindLocation("wr_ships")].models.always.locators = "udeck_l_JRH_S1";
 			Locations[FindLocation("wr_ships")].locators_radius.box.box8 = 0.5;
@@ -41920,7 +41920,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\creak2.wav");
 			LAi_SetFightMode(Pchar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("wr_ships")], true);
-			Locations[FindLocation("wr_ships")].image = "wr_ships.tga";
+			Locations[FindLocation("wr_ships")].image = "wr_ships";
 			LAi_SetPlayerType(Pchar);
 
 			LAi_QuestDelay("anchor_placed_at_corvette2", 1.5);
@@ -43505,7 +43505,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystem("blast_dirt_small" , -2.5, 14.45, 8.8, 0.0, 0.0, 0.0, sti(20) );
 			PlaySound("PEOPLE\wood3.wav");
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow.tga";
+			Locations[FindLocation("wr_gall_deck2_prow")].image = "wr_gall_deck2_prow";
 
 			Locations[FindLocation("wr_gall_hold_first")].reload.l1.disable = 0;
 			Locations[FindLocation("wr_gall_hold_first")].locators_radius.reload.reload3 = 0.0001;	//stairs to irontool
@@ -46062,7 +46062,7 @@ void QuestComplete(string sQuestName)
 		case "study_loading_image_back":
 			LAi_LocationFightDisable(&Locations[FindLocation(Pchar.location)], true);
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			Pchar.study_levers = "enabled";
 		break;
 	//...............................................................................................
@@ -46086,7 +46086,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "study_wall_free1":
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			PlaySound("INTERFACE\shelf_open.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
@@ -46159,7 +46159,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "study_bars_up3":
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			PlaySound("INTERFACE\shelf_close.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
@@ -46191,7 +46191,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "study_girder_free3":
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			PlaySound("INTERFACE\elevator_gate.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
@@ -46223,7 +46223,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "study_secret_unlock3":
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			PlaySound("INTERFACE\girder_close.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
@@ -46238,7 +46238,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "study_bars_down1":
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			PlaySound("INTERFACE\elevator_gate.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
@@ -46252,7 +46252,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "study_girder_block1":
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			PlaySound("INTERFACE\girder_close.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
@@ -46266,7 +46266,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "study_wall_block1":
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			PlaySound("INTERFACE\shelf_close.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
@@ -46280,7 +46280,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "study_secret_lock1":
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			PlaySound("INTERFACE\key_lock.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
@@ -46348,7 +46348,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "study_levers_reset1A":
-			Locations[FindLocation("wr_study")].image = "wr_study.tga";
+			Locations[FindLocation("wr_study")].image = "wr_study";
 			Pchar.quest.study_teleport = "no";
 
 			if(CheckAttribute(Pchar,"quest.study_sound1") && Pchar.quest.study_sound1 == "yes")
@@ -48978,7 +48978,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(pchar);
 			PlaySound("VOICE\ENGLISH\blaze_lets_go.wav");
 
-		Locations[FindLocation("Redmond_town_01")].image = "Town_Redmond_Town_01.tga";
+		Locations[FindLocation("Redmond_town_01")].image = "Town_Redmond_Town_01";
 			SetCharacterShipLocation(characterFromID("CoastBrother29"), "Redmond_shore_ship");//PrisonShip
 			SetCharacterShipLocation(characterFromID("CoastBrother30"), "Redmond_shore_ship");//PrisonShip
 			SetCharacterShipLocation(characterFromID("CoastBrother32"), "Redmond_shore_ship");//tartane2
@@ -49101,7 +49101,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(Pchar, "long_johns");
 			GiveItem2Character(Pchar, "bandana");
 
-			Locations[FindLocation("Shipyard_shore")].image = "Shipyard_shore.tga";
+			Locations[FindLocation("Shipyard_shore")].image = "Shipyard_shore";
 			
 			LAi_QuestDelay("Shipyard_shore_ambush8", 3.0);
 		break;
@@ -52780,7 +52780,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(characterFromID("bb_crew8"), "piratesdagger");		
 			EquipCharacterbyItem(characterFromID("bb_crew8"), "piratesdagger");
 
-			Locations[FindLocation("BB_Eden_office")].image = "Eden_estate.tga";
+			Locations[FindLocation("BB_Eden_office")].image = "Eden_estate";
 
 			SetNextWeather("Clear");
 			DoQuestReloadToLocation("BB_Eden_office", "reload", "reload2" ,"Eden_bribing_scene1");
@@ -53533,7 +53533,7 @@ void QuestComplete(string sQuestName)
 				LAi_SetOfficerType(characterFromID("Pell"));
 			}
 
-			Locations[FindLocation("BB_Eden_office")].image = "Inside_estate_office.tga";			//reset
+			Locations[FindLocation("BB_Eden_office")].image = "Inside_estate_office";			//reset
 			Locations[FindLocation("BB_Eden_office")].reload.l2.go = "BB_Eden_tunnel";
 			Locations[FindLocation("BB_Eden_office")].reload.l2.disable = 1;
 			
@@ -53944,7 +53944,7 @@ void QuestComplete(string sQuestName)
 
 			if(!IsOfficer(CharacterFromID("Hands"))) ChangeCharacterAddressGroup(CharacterFromID("Hands"), "none", "", "");
 
-			Locations[FindLocation("BB_Eden_chapel")].image = "Inside_chapel.tga";
+			Locations[FindLocation("BB_Eden_chapel")].image = "Inside_chapel";
 
 			pchar.quest.hands_dialogG.win_condition.l1 = "locator";
 			pchar.quest.hands_dialogG.win_condition.l1.location = "BB_Eden_estate";
@@ -54103,7 +54103,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Eden_steplock_4":
-			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";	
+			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar";
 			PlaySound("INTERFACE\key_unlock2.wav");
 			LAi_SetPlayerType(Pchar);
 
@@ -54184,7 +54184,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\rusty.wav");
 			RemovePassenger(Pchar, characterFromID("Hands"));
 			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_lever6");
-			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar";
 	
 			LAi_QuestDelay("Hands_reset_officer", 0.2);
 			LAi_QuestDelay("Eden_tunnel_gate_up2", 2.0);
@@ -54230,7 +54230,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\rusty.wav");
 			RemovePassenger(Pchar, characterFromID("Hands"));
 			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_lever6");
-			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar";
 	
 			LAi_QuestDelay("Hands_reset_officer", 0.2);
 			LAi_QuestDelay("Eden_tunnel_gate_down2", 2.0);
@@ -54257,7 +54257,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\elevator_short.wav");
 			RemovePassenger(Pchar, characterFromID("Hands"));
 			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_lever7");
-			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar";
 
 			LAi_QuestDelay("Hands_reset_officer", 0.2);
 
@@ -54287,7 +54287,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\elevator_short.wav");
 			RemovePassenger(Pchar, characterFromID("Hands"));
 			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_lever7");
-			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar";
 
 			LAi_QuestDelay("Hands_reset_officer", 0.2);
 
@@ -54345,7 +54345,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\running_water.wav");
 			RemovePassenger(Pchar, characterFromID("Hands"));
 			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_barrel");
-			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar";
 
 			LAi_QuestDelay("Hands_reset_officer", 0.2);
 			LAi_QuestDelay("Eden_tunnel_wine_out2", 3.0);
@@ -54387,7 +54387,7 @@ void QuestComplete(string sQuestName)
 
 		case "Eden_tunnel_take_empty_barrel1":
 			PlaySound("INTERFACE\step_path.wav");
-			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar";
 
 			LAi_QuestDelay("Eden_tunnel_gate2_up", 1.0);
 		break;
@@ -54409,7 +54409,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(Pchar);
 			RemovePassenger(Pchar, characterFromID("Hands"));
 			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_elevator");
-			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar";
 
 			LAi_QuestDelay("Hands_reset_officer", 0.2);
 		break;
@@ -55994,7 +55994,7 @@ void QuestComplete(string sQuestName)
 
 		case "Citadel_place_lever2":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock.tga";
+			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock";
 			Pchar.citadel_lever_blocked = "no";
 		break;
 
@@ -56007,7 +56007,7 @@ void QuestComplete(string sQuestName)
 
 		case "Citadel_lever1":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock.tga";
+			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock";
 			Pchar.citadel_lever_blocked = "no";
 
 			if(CheckAttribute(Pchar, "citadel_bridge_sounds") && Pchar.citadel_bridge_sounds == "on")
@@ -56085,7 +56085,7 @@ void QuestComplete(string sQuestName)
 
 		case "dig_up_anchor_Citadel1":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock.tga";
+			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock";
 		break;
 
 		case "dig_up_anchor_Citadel2":
@@ -56099,7 +56099,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(Pchar, "bladeanchor_big");
 			EquipCharacterByItem(Pchar, "bladeanchor_big");
 			TakeItemFromCharacter(pchar, "bladespade");
-			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock.tga";
+			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock";
 
 			LAi_QuestDelay("pchar_yah", 1.0);
 
@@ -56124,7 +56124,7 @@ void QuestComplete(string sQuestName)
 
 		case "Citadel_place_anchor1":
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock.tga";
+			Locations[FindLocation("Eleuthera_shore")].image = "Outside_Citadel_Rock";
 
 			if(CheckAttribute(Pchar, "citadel_extra_bridge_sound") && Pchar.citadel_extra_bridge_sound == "on")
 			{
@@ -56373,7 +56373,7 @@ void QuestComplete(string sQuestName)
 
 		case "Turks_place_barrels1":
 			LAi_SetPlayerType(pchar);
-			Locations[FindLocation("Turks_Jungle_03")].image = "Outside_Jungle_6.tga";
+			Locations[FindLocation("Turks_Jungle_03")].image = "Outside_Jungle_6";
 
 			LAi_SetActorType(pchar);	
 			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "gate_runaway";
@@ -56448,7 +56448,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystem("smoke_inv" , 27.7, 0.9, 1.1, 5.1, 4.0, 0.0, sti(20) );		//4 black smoke
 			CreateParticleSystem("smoke_inv" , 27.7, 0.9, 1.6, 5.1, 4.0, 0.0, sti(20) );		//4 black smoke
 			
-			Locations[FindLocation("Turks_Jungle_03")].image = "Outside_Jungle_6.tga";
+			Locations[FindLocation("Turks_Jungle_03")].image = "Outside_Jungle_6";
 			Locations[FindLocation("Turks_port")].models.always.l9 = "Margarita_gatebroken";
 			Locations[FindLocation("Turks_Jungle_03")].reload.l4.disable = 0;		//unlocked to port
 			ChangeCharacterAddressGroup(characterFromID("Mistress"), "Turks_port", "quest", "quest2");
@@ -57001,7 +57001,7 @@ void QuestComplete(string sQuestName)
 		case "Turks_steplockM_4":
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "ships_other", "ship1");
-			Locations[FindLocation("Turks_port")].image = "Town_Grand_Turk.tga";	
+			Locations[FindLocation("Turks_port")].image = "Town_Grand_Turk";
 
 			LAi_QuestDelay("pchar_playertype", 1.0);
 
@@ -57095,7 +57095,7 @@ void QuestComplete(string sQuestName)
 		case "Turks_steplockR_4":
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "ships_other", "ship1");
-			Locations[FindLocation("Turks_port")].image = "Town_Grand_Turk.tga";	
+			Locations[FindLocation("Turks_port")].image = "Town_Grand_Turk";
 
 			LAi_QuestDelay("pchar_playertype", 1.0);
 		
@@ -57175,7 +57175,7 @@ void QuestComplete(string sQuestName)
 		case "Turks_steplockL_4":
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "ships_other", "ship1");
-			Locations[FindLocation("Turks_port")].image = "Town_Grand_Turk.tga";	
+			Locations[FindLocation("Turks_port")].image = "Town_Grand_Turk";
 
 			LAi_QuestDelay("pchar_playertype", 1.0);
 		
@@ -57393,7 +57393,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_SetPlayerType(Pchar);
 
-			Locations[FindLocation("BB_sloop_wreck_cabin")].image = "wr_wreck_cabin.tga";
+			Locations[FindLocation("BB_sloop_wreck_cabin")].image = "wr_wreck_cabin";
 			LAi_LocationFightDisable(&Locations[FindLocation("BB_sloop_wreck_cabin")], true);
 
 			if(CheckCharacterItem(Pchar,"bladebottle_CE0")) 
@@ -57408,7 +57408,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(pchar, false);
 			LAi_SetPlayerType(Pchar);
 
-			Locations[FindLocation("BB_sloop_wreck_cabin")].image = "wr_wreck_cabin.tga";
+			Locations[FindLocation("BB_sloop_wreck_cabin")].image = "wr_wreck_cabin";
 			LAi_LocationFightDisable(&Locations[FindLocation("BB_sloop_wreck_cabin")], true);
 		break;
 
@@ -58775,7 +58775,7 @@ void QuestComplete(string sQuestName)
 
 		case "maltains_bars_up1":
 			PlaySound("INTERFACE\girder_open.wav");
-			Locations[FindLocation("bb_maltains")].image = "Inside_Maltains.tga";
+			Locations[FindLocation("bb_maltains")].image = "Inside_Maltains";
 		break;
 
 		case "maltains_bars_down":
@@ -58785,7 +58785,7 @@ void QuestComplete(string sQuestName)
 
 		case "maltains_bars_down1":
 			PlaySound("INTERFACE\girder_close.wav");
-			Locations[FindLocation("bb_maltains")].image = "Inside_Maltains.tga";
+			Locations[FindLocation("bb_maltains")].image = "Inside_Maltains";
 		break;
 
 		case "got_all_books_done":
@@ -59347,7 +59347,7 @@ void QuestComplete(string sQuestName)
 		case "place_alcove_rope1":
 			LAi_SetFightMode(Pchar, false);
 			Pchar.alcove.rope = "at_gibbet";
-			Locations[FindLocation("BB_prison_alcove")].image = "wr_prison_alcove.tga";
+			Locations[FindLocation("BB_prison_alcove")].image = "wr_prison_alcove";
 
 			LAi_QuestDelay("pick_up_alcove_boom", 0.1);
 		break;
@@ -59389,7 +59389,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(Pchar, false);
 			LAi_SetStayType(Pchar);
 			Pchar.alcove.crate = "fallen_down";
-			Locations[FindLocation("BB_prison_alcove")].image = "wr_prison_alcove.tga";
+			Locations[FindLocation("BB_prison_alcove")].image = "wr_prison_alcove";
 		break;
 
 		case "unlock_bb_prison":
@@ -59414,7 +59414,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.JRH_sky = "";		//reset
 
 			PlaySound("INTERFACE\closed_locked_door.wav");
-			Locations[FindLocation("BB_prison_port")].image = "wr_prison_port.tga";
+			Locations[FindLocation("BB_prison_port")].image = "wr_prison_port";
 
 			LAi_QuestDelay("pchar_ohoh", 2.0);
 
@@ -61828,14 +61828,14 @@ void QuestComplete(string sQuestName)
 				Locations[FindLocation("Tortuga_port")].lockCamAngle = 0.0;
 				ChangeCharacterAddressGroup(characterFromID("carriage_girl"), "Tortuga_port", "merchant", "carriage_girl");
 		//		Locations[FindLocation("Tortuga_port")].image = "";
-				Locations[FindLocation("Tortuga_port")].image = "wr_Tortuga_carriage.tga";
+				Locations[FindLocation("Tortuga_port")].image = "wr_Tortuga_carriage";
 				DoQuestReloadToLocation("Tortuga_port", "merchant", "carriage_pyle", "Tortuga_carriage_inside");
 			}
 		break;
 
 		case "Tortuga_carriage_inside":
 			LAi_SetStayType(Pchar);
-			Locations[FindLocation("Tortuga_port")].image = "Town_Tortuga.tga";		//reset
+			Locations[FindLocation("Tortuga_port")].image = "Town_Tortuga";		//reset
 
 			LAi_QuestDelay("carriage_girl", 1.0);
 		break;
@@ -61913,7 +61913,7 @@ void QuestComplete(string sQuestName)
 			if(CheckAttribute(port,"lockCamAngle") ) DeleteAttribute(port,"lockCamAngle"); 	
 			SetNextWeather("Clear");
 	 		DeleteAttribute(Pchar, "quest.JRH_rain");
-	//Locations[FindLocation("Tortuga_port")].image = "Tortuga_port.tga";
+	//Locations[FindLocation("Tortuga_port")].image = "Tortuga_port";
 			//RESET
 
 			LAi_QuestDelay("no_rain_in_tower", 0.1);
@@ -62159,7 +62159,7 @@ void QuestComplete(string sQuestName)
 	//switch loading image Tortuga_port
 
 		case "image_dovecote":
-			Locations[FindLocation("Tortuga_port")].image = "wr_dovecote.tga";
+			Locations[FindLocation("Tortuga_port")].image = "wr_dovecote";
 
 			pchar.quest.image_outside.win_condition.l1 = "location";
 			pchar.quest.image_outside.win_condition.l1.location = "Tortuga_tower_stairs_A";
@@ -62167,7 +62167,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "image_outside":
-			Locations[FindLocation("Tortuga_port")].image = "wr_Tortuga_tower_outside.tga";
+			Locations[FindLocation("Tortuga_port")].image = "wr_Tortuga_tower_outside";
 
 			pchar.quest.image_dovecote.win_condition.l1 = "location";
 			pchar.quest.image_dovecote.win_condition.l1.location = "Tortuga_tower_stairs_B";
@@ -62395,7 +62395,7 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Richards")].Dialog.Filename = "bb_crew2_dialog.c";
 			Characters[GetCharacterIndex("Richards")].dialog.CurrentNode  = "First time";
 
-			Locations[FindLocation("BB_QAR_cabin")].image = "deck_cabin1.tga";
+			Locations[FindLocation("BB_QAR_cabin")].image = "deck_cabin1";
 
 			LAi_QuestDelay("wait_for_Richards", 2.0);
 		break;
@@ -63598,7 +63598,7 @@ void QuestComplete(string sQuestName)
 			LAi_LocationFightDisable(&Locations[FindLocation("BB_abbey_cell")], true);
 			LAi_SetPlayerType(Pchar);
 			if(LAi_IsFightMode(Pchar)) {LAi_SetFightMode(Pchar, false);}
-			Locations[FindLocation("BB_abbey_cell")].image = "Incas_Temple_Alcove.tga";
+			Locations[FindLocation("BB_abbey_cell")].image = "Incas_Temple_Alcove";
 		break;
 //------------------------------------------------------------------------------------------------------------
 		case "all_abbess_items":
@@ -66213,7 +66213,7 @@ void QuestComplete(string sQuestName)
 		break;
 	
 		case "place_switch_button1":
-			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3";
 
 			pchar.quest.remove_cardinal.win_condition.l1 = "location";
 			pchar.quest.remove_cardinal.win_condition.l1.location = "NS_hidden_town_priest";
@@ -66257,7 +66257,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "KR_church_close_door1":
-			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3";
 			PlaySound("INTERFACE\shelf_close.wav");
 		break;
 
@@ -66268,7 +66268,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "KR_church_open_door1":
-			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3";
 			PlaySound("INTERFACE\shelf_open.wav");
 		break;
 
@@ -66279,7 +66279,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "KR_church_lever_down1":
-			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3";
 			PlaySound("INTERFACE\el_on.wav");
 		break;
 
@@ -66290,7 +66290,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "KR_church_lever_up1":
-			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3";
 			PlaySound("INTERFACE\gas_off2.wav");
 		break;
 
@@ -66355,7 +66355,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "NS_upper_town_lever_down1":
-			Locations[FindLocation("Nueva_Suecia_upper_town")].image = "Town_IslaMuelle_Town_03.tga";
+			Locations[FindLocation("Nueva_Suecia_upper_town")].image = "Town_IslaMuelle_Town_03";
 			PlaySound("INTERFACE\girder_open.wav");
 
 			LAi_QuestDelay("NS_upper_town_officers", 0.1);
@@ -66368,7 +66368,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "NS_upper_town_lever_up1":
-			Locations[FindLocation("Nueva_Suecia_upper_town")].image = "Town_IslaMuelle_Town_03.tga";
+			Locations[FindLocation("Nueva_Suecia_upper_town")].image = "Town_IslaMuelle_Town_03";
 			PlaySound("INTERFACE\girder_close.wav");
 
 			LAi_QuestDelay("NS_upper_town_officers", 0.1);
@@ -66709,7 +66709,7 @@ void QuestComplete(string sQuestName)
 
 		case "BB_island1_unlock_tunnel1":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("BB_island1")].image = "wr_Kr_swamp.tga";
+			Locations[FindLocation("BB_island1")].image = "wr_Kr_swamp";
 			Pchar.BB_isl1_box4 = "off";
 			Pchar.BB_isl1_tunnel = "open";
 	
@@ -66763,7 +66763,7 @@ void QuestComplete(string sQuestName)
 
 		case "BB_island2_unlock_tower1":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("BB_island2")].image = "wr_BB_tower.tga";
+			Locations[FindLocation("BB_island2")].image = "wr_BB_tower";
 		//	Pchar.BB_isl2_box7 = "off";		//no should still be "on"
 			Pchar.BB_tower_entrance = "open";
 	
@@ -66913,7 +66913,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "close_grotto_hatch0":
-			locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave.tga";
+			locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave";
 			PlaySound("INTERFACE\chart_move.wav");
 			PlaySound("INTERFACE\chart_move.wav");
 
@@ -66943,7 +66943,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "open_grotto_hatch0":
-			locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave.tga";
+			locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave";
 			PlaySound("PEOPLE\counter_open.wav");
 
 			LAi_QuestDelay("open_grotto_hatch1", 1.5);
@@ -67023,7 +67023,7 @@ void QuestComplete(string sQuestName)
 
 		case "place_grotto_boom3":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave.tga";
+			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave";
 		break;
 //------------------------------------------------------------------------------------------------------------------------
 		case "place_upper_cave_lever":
@@ -67046,7 +67046,7 @@ void QuestComplete(string sQuestName)
 
 		case "place_upper_cave_lever3":
 			LAi_SetFightMode(Pchar, false);
-			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave.tga";
+			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave";
 
 			LAi_QuestDelay("BB_uppercave_leverturn", 1.0);
 		break;
@@ -67058,7 +67058,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "lower_cave_water_out1":
-			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave.tga";
+			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave";
 			PlaySound("NATURE\water_out.wav");
 
 			LAi_QuestDelay("BB_uppercave_leverturn", 0.01);
@@ -67082,7 +67082,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "lower_cave_water_in1":
-			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave.tga";
+			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave";
 			PlaySound("NATURE\water_in.wav");
 
 			LAi_QuestDelay("BB_uppercave_leverturn", 0.01);
@@ -67158,7 +67158,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "BB_lower_cave_steplock3":
-			Locations[FindLocation("BB_lower_cave")].image = "wr_BB_lower_cave.tga";
+			Locations[FindLocation("BB_lower_cave")].image = "wr_BB_lower_cave";
 
 			if(Locations[FindLocation("BB_lower_cave")].models.always.l1 == "bars_down")
 			{
@@ -67353,7 +67353,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\stone_mandala.wav");
 			CreateParticleSystem("blast_dirt" , 7.5, 0.7, 14.4, 0.0, 0.0, 0.0, sti(20) );
 			CreateParticleSystem("blast_dirt" , 7.0, 0.4, 14.0, 0.0, 0.0, 0.0, sti(20) );
-			Locations[FindLocation("BB_lower_cave")].image = "wr_BB_lower_cave.tga";
+			Locations[FindLocation("BB_lower_cave")].image = "wr_BB_lower_cave";
 			
 			LAi_QuestDelay("wand_and_censer_check4", 1.0);
 
@@ -69265,16 +69265,16 @@ void QuestComplete(string sQuestName)
 		break;
 	
 		case "bc_loading":
-			Locations[FindLocation("BB_burning_cave")].image = "wr_unknown1.tga";
+			Locations[FindLocation("BB_burning_cave")].image = "wr_unknown1";
 		break;
 
 		case "bc_loading2":
 			EquipCharacterByItem(Pchar, "bladeladder2");
-			Locations[FindLocation("BB_burning_cave")].image = "wr_unknown2.tga";
+			Locations[FindLocation("BB_burning_cave")].image = "wr_unknown2";
 		break;
 
 		case "bc_loading3":
-			Locations[FindLocation("BB_burning_cave")].image = "wr_unknown3.tga";
+			Locations[FindLocation("BB_burning_cave")].image = "wr_unknown3";
 		break;
 
 		case "bc_loading_topchest":
@@ -69282,7 +69282,7 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation(Pchar.location)].box9.items.contract2 = 1;
 			locations[FindLocation(Pchar.location)].box9.items.contract3 = 1;
 			locations[FindLocation(Pchar.location)].box9.items.BBDagger = 1;
-			Locations[FindLocation("BB_burning_cave")].image = "wr_unknown1.tga";
+			Locations[FindLocation("BB_burning_cave")].image = "wr_unknown1";
 		break;
 
 		case "bc_down_from_chair":
@@ -69568,10 +69568,10 @@ void QuestComplete(string sQuestName)
 			if(Pchar.new.flag.sequence == 6) 
 			{
 				DeleteQuestHeader("KR_amulet");
-				Locations[FindLocation("BB_island2")].image = "zoom_islet.tga";
+				Locations[FindLocation("BB_island2")].image = "zoom_islet";
 				Pchar.boat.islet = "ready";
 			}
-			else Locations[FindLocation("BB_island2")].image = "zoom_archipelago.tga";
+			else Locations[FindLocation("BB_island2")].image = "zoom_archipelago";
 
 			DoQuestReloadToLocation("BB_island2", "goto", "spyglass", "place_coin_BB_spyglass1");
 		break;
@@ -69583,7 +69583,7 @@ void QuestComplete(string sQuestName)
 			}
 			else PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
 
-			Locations[FindLocation("BB_island2")].image = "wr_BB_tower.tga";	
+			Locations[FindLocation("BB_island2")].image = "wr_BB_tower";
 
 			LAi_QuestDelay("place_coin_BB_spyglass2", 1.0);
 		break;
@@ -70002,7 +70002,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "change_BBflag_A":
-			Locations[FindLocation("BB_island2")].image = "wr_BB_tower.tga";
+			Locations[FindLocation("BB_island2")].image = "wr_BB_tower";
 			PlaySound("PEOPLE\clothes1.wav");
 			LAi_SetFightMode(Pchar, false);
 			LAi_SetStayType(Pchar);
@@ -70343,7 +70343,7 @@ void QuestComplete(string sQuestName)
 		case "Pyle_transformation3":
 			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
-			Locations[FindLocation("BB_mountain_tunnel")].image = "later.tga";
+			Locations[FindLocation("BB_mountain_tunnel")].image = "later";
 			
 			LAi_QuestDelay("Pyle_transformation4", 5.0);
 		break;
@@ -70417,8 +70417,8 @@ void QuestComplete(string sQuestName)
 			EquipCharacterByItem(Pchar, "pistolbook71");
 
 			LAi_SetStayType(pchar);
-			Locations[FindLocation("BB_island1")].image = "wr_Kr_swamp.tga";
-			Locations[FindLocation("BB_mountain_tunnel")].image = "wr_BB_mountain.tga";
+			Locations[FindLocation("BB_island1")].image = "wr_Kr_swamp";
+			Locations[FindLocation("BB_mountain_tunnel")].image = "wr_BB_mountain";
 
 			LAi_QuestDelay("Pyle_transformation12", 1.0);
 		break;
@@ -70601,7 +70601,7 @@ void QuestComplete(string sQuestName)
 
 			SetCharacterShipLocation(Pchar, "BB_upper_cave");
 			SetLocatorRadius(locations[FindLocation("BB_upper_cave")], "randitem", "randitem2", 0.0001);
-			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave.tga";
+			Locations[FindLocation("BB_upper_cave")].image = "wr_BB_upper_cave";
   
 			pchar.quest.with_treasure_to_sea.win_condition.l1 = "location";
 			pchar.quest.with_treasure_to_sea.win_condition.l1.location = "BB_upper_cave";
@@ -71389,7 +71389,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(characterFromID("Caesar"), "bladeanchor");
 			EquipCharacterByItem(characterFromID("Caesar"), "bladeanchor");	
 		
-			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore.tga";
+			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore";
 
 			LAi_QuestDelay("careen_mutineers19_F", 1.0);
 		break;
@@ -71486,7 +71486,7 @@ void QuestComplete(string sQuestName)
 			TakenItems(Pchar, "pistolbullets", -2);
 			TakenItems(Pchar, "gunpowder", -2);
 		
-			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore.tga";
+			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore";
 
 			LAi_QuestDelay("careen_mutineers21", 1.0);
 		break;
@@ -71909,7 +71909,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("OBJECTS\SHIPCHARGE\gunner_fire.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToCharacter(Pchar, characterFromID("Mutineer_32"));
-			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore.tga";
+			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore";
 
 			LAi_QuestDelay("careen_mutineers29", 1.0);
 		break;
@@ -72362,7 +72362,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialogNow(characterFromID("Pell"), pchar, "", 0.01);
 			LAi_ActorWaitDialog(Pchar, characterFromID("Pell"));
 	
-			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore.tga";
+			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore";
 		break;
 
 		case "careen_ship1_A":	
@@ -74352,7 +74352,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "pchar_to_blockhouse3":
-			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore.tga";
+			Locations[FindLocation("BB_careen_shore")].image = "wr_careen_shore";
 
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "goto", "trigger1", 21.0);		//was 18
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "goto", "trigger2", 10.0);		//was 9
@@ -76275,7 +76275,7 @@ void QuestComplete(string sQuestName)
 			LAi_LocationFightDisable(&Locations[FindLocation("BB_careen_capmd_2")], true);
 			if(LAi_IsFightMode(Pchar)) {LAi_SetFightMode(Pchar, false);}
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("BB_careen_capmd_2")].image = "wr_careen_capmd.tga";
+			Locations[FindLocation("BB_careen_capmd_2")].image = "wr_careen_capmd";
 		break;
 
 		case "explore_corvette14":
@@ -81088,7 +81088,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\shelf_open.wav");
 			CreateParticleSystem("blast_dirt_small" , 0.0, 5.4, -2.6, 0.0, 0.0, 0.0, sti(20) );
 
-			Locations[FindLocation("BB_careen_capsm")].image = "wr_careen_capsm.tga";
+			Locations[FindLocation("BB_careen_capsm")].image = "wr_careen_capsm";
 		break;
 
 
@@ -81884,7 +81884,7 @@ void QuestComplete(string sQuestName)
 //----------------------------------------------------------------------------------------------------------------------------------
 		case "fire_up_alchemy2":
 			Pchar.crucible = "off";
-			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2.tga";
+			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2";
 
 			switch(Locations[FindLocation(Pchar.location)].models.always.locators)
 			{
@@ -82594,7 +82594,7 @@ void QuestComplete(string sQuestName)
 			Pchar.crucible = "off";
 			Pchar.alchemy2_box13 = "free";
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2.tga";
+			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2";
 
 			if(CheckAttribute(Pchar, "filter_failure") && Pchar.filter_failure == "yes")
 			{
@@ -82606,7 +82606,7 @@ void QuestComplete(string sQuestName)
 
 		case "loading_back_alchemy2_plop":
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2.tga";
+			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2";
 
 			PlaySound("AMBIENT\TAVERN\open_bottle.wav");
 		break;
@@ -82614,7 +82614,7 @@ void QuestComplete(string sQuestName)
 		case "loading_back_alchemy2_take_time_JRH3":
 			Pchar.crucible = "off";
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2.tga";
+			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2";
 			
 			if(Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH3")
 			{
@@ -82625,7 +82625,7 @@ void QuestComplete(string sQuestName)
 		case "loading_back_alchemy2_take_time_JRH1":
 			Pchar.crucible = "off";
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2.tga";
+			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2";
 			
 			if(Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH1")
 			{
@@ -82636,7 +82636,7 @@ void QuestComplete(string sQuestName)
 		case "loading_back_alchemy2_take_time_JRH2":
 			Pchar.crucible = "off";
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2.tga";
+			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2";
 			
 			if(Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH2")
 			{
@@ -82792,7 +82792,7 @@ void QuestComplete(string sQuestName)
 		case "alchemy2_grinder_powder_out1":
 			PlaySound("PEOPLE\gunpowder.wav");
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2.tga";
+			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_farm_alchemy2";
 		break;
 
 		case "take_grinded_item":

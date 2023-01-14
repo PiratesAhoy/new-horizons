@@ -4,7 +4,7 @@ void LocationInitIslaMuelle(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\town_IslaMuelle\port";
-	Locations[n].image = "Town_IslaMuelle_Port.tga";
+	Locations[n].image = "Town_IslaMuelle_Port";
 
 	Locations[n].id = "Muelle_port";
 	LAi_LocationFantomsGen(&locations[n], true);
@@ -97,7 +97,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].id = "Muelle_town_01";
 	locations[n].id.label = "#stown_name#. Trade Square";
 	locations[n].worldmap = "Isla Muelle";
-	Locations[n].image = "Town_IslaMuelle_Town_01.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_01";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -264,7 +264,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].id = "Muelle_town_02";
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Isla Muelle";
-	Locations[n].image = "Town_IslaMuelle_Town_02.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_02";
 	//Sound
 
 	//Town sack
@@ -330,7 +330,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].id = "Muelle_town_03";
 	locations[n].id.label = "#stown_name#";
 	locations[n].worldmap = "Isla Muelle";
-	Locations[n].image = "Town_IslaMuelle_Town_03.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_03";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -422,7 +422,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].id = "Muelle_town_04";
 	locations[n].id.label = "#stown_name#. Center.";
 	locations[n].worldmap = "Isla Muelle";
-	Locations[n].image = "Town_IslaMuelle_Town_04.tga";
+	Locations[n].image = "Town_IslaMuelle_Town_04";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -504,7 +504,7 @@ void LocationInitIslaMuelle(ref n)
 
 	Locations[n].id = "Muelle_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard2.tga";
+	Locations[n].image = "Inside_Shipyard2";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -548,7 +548,7 @@ void LocationInitIslaMuelle(ref n)
 
 	Locations[n].id = "Muelle_HouseInsideR1";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -588,7 +588,7 @@ void LocationInitIslaMuelle(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\StoreSmall";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	Locations[n].id = "Muelle_Store";
 	locations[n].id.label = "#stown_name# store";
@@ -638,7 +638,7 @@ void LocationInitIslaMuelle(ref n)
 
 	Locations[n].id = "Muelle_Tavern";
 	locations[n].id.label = "#stown_name# tavern";
-	Locations[n].image = "Inside_SmallTavern.tga";
+	Locations[n].image = "Inside_SmallTavern";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -685,7 +685,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Muelle_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -726,7 +726,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Muelle_InsideHouseR6";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_Doubleflour_House_Upper.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Upper";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -766,7 +766,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\mh4";
 	Locations[n].id = "Muelle_InsideHouseR5";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh4.tga";
+	Locations[n].image = "Inside_mh4";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -807,7 +807,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\MH9";
 	Locations[n].id = "Muelle_InsideHouseR3";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh9.tga";
+	Locations[n].image = "Inside_mh9";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -848,7 +848,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\MH5";
 	Locations[n].id = "Muelle_InsideHouseR2";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh5.tga";
+	Locations[n].image = "Inside_mh5";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -889,7 +889,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\mh3";
 	Locations[n].id = "Muelle_InsideHouseR19";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh3.tga";
+	Locations[n].image = "Inside_mh3";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -930,7 +930,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\mh8";
 	Locations[n].id = "Muelle_InsideHouseR12";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh8.tga";
+	Locations[n].image = "Inside_mh8";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -974,7 +974,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].id = "Muelle_TailorsShop";
 
 	Locations[n].id.label = "Tailor's Shop";
-	Locations[n].image = "Inside_StoreSmall.tga";
+	Locations[n].image = "Inside_StoreSmall";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -1019,7 +1019,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\MH8";
 	Locations[n].id = "Muelle_InsideHouseR2(03)";
 	locations[n].id.label = "House.";
-	Locations[n].image = "Inside_mh8.tga";
+	Locations[n].image = "Inside_mh8";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -1062,7 +1062,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Muelle_UsurerHouse";
 	locations[n].id.label = "Loanshark's Office.";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -1105,7 +1105,7 @@ void LocationInitIslaMuelle(ref n)
 
 	Locations[n].id = "Muelle_Residence";
 	locations[n].id.label = "#stown_name# townhall";
-	Locations[n].image = "Inside_Residence3.tga";
+	Locations[n].image = "Inside_Residence3";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -1146,7 +1146,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "house_of_Sylvie_Bondies";
 	locations[n].id.label = "House in #stown_name#";
-	Locations[n].image = "Inside_Doubleflour_House_Upper.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Upper";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -1190,7 +1190,7 @@ void LocationInitIslaMuelle(ref n)
 
 	Locations[n].id = "Muelle_town_exit";
 	locations[n].id.label = "Exit from #stown_name#";
-	Locations[n].image = "Town_IslaMuelle_Exit.tga";
+	Locations[n].image = "Town_IslaMuelle_Exit";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -1256,7 +1256,7 @@ void LocationInitIslaMuelle(ref n)
 
 	Locations[n].id = "Muelle_passage";
 	locations[n].id.label = "#sisland_name# passage";
-	Locations[n].image = "Outside_Passage2.tga";
+	Locations[n].image = "Outside_Passage2";
 	//Sound
 	locations[n].type = "seashore";
 
@@ -1325,7 +1325,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].id = "Muelle_shore";
 	locations[n].id.label = "Oyster Beach."; // KK
 	locations[n].worldmap = "MShore 1";
-	Locations[n].image = "Outside_Passage1.tga";
+	Locations[n].image = "Outside_Passage1";
 	Locations[n].name = "Oyster Beach";
 	//Sound
 	locations[n].type = "seashore";
@@ -1386,7 +1386,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\Doubleflour_house";
 	Locations[n].id = "Sidonio Ogarrio House";
 	locations[n].id.label = "House in #stown_name#";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Isla Muelle";
@@ -1429,7 +1429,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].id = "Muelle_shore_02";
 	locations[n].id.label = "#stown_name# shore";
 	locations[n].worldmap = "MShore 2";
-	Locations[n].image = "Outside_Shore_9.tga";
+	Locations[n].image = "Outside_Shore_9";
 	//Sound
 	locations[n].type = "seashore";
 
@@ -1493,7 +1493,7 @@ void LocationInitIslaMuelle(ref n)
 
 	Locations[n].id = "Muelle_Cave";
 	locations[n].id.label = "Entrace to #sisland_name# cave";
-	Locations[n].image = "Outside_Cave_Entrance.tga";
+	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -1554,7 +1554,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].filespath.models = "locations\Inside\ANIMISTS_Cave";
 	Locations[n].id = "Muelle_ANIMISTS";
 	locations[n].id.label = "Satanists Lair";
-	Locations[n].image = "Inside_Animists_Cave.tga";
+	Locations[n].image = "Inside_Animists_Cave";
 	//Sound
 	locations[n].type = "cave";
 
@@ -1590,7 +1590,7 @@ void LocationInitIslaMuelle(ref n)
 	// Isla Muelle_church -------------------------------------------------
 	Locations[n].id = "Muelle_church";
 	locations[n].id.label = "#stown_name# church";
-	Locations[n].image = "Inside_Church_3.tga";
+	Locations[n].image = "Inside_Church_3";
 	Locations[n].filespath.models = "locations\inside\Church_3";
 
 	//Town sack
@@ -1632,7 +1632,7 @@ void LocationInitIslaMuelle(ref n)
 // Isla Muelle_church -------------------------------------------------
 	Locations[n].id = "Muelle04_HouseInsideR6";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].image = "Inside_Residence2";
 	Locations[n].filespath.models = "locations\inside\Residence2";
 
 	//Town sack
@@ -1679,7 +1679,7 @@ void LocationInitIslaMuelle(ref n)
 	locations[n].id.label = "Aguadilla Bay."; // KK
 	locations[n].worldmap = "FShore 1";
 	Locations[n].filespath.models = "locations\Outside\Shore_6";
-	Locations[n].image = "Outside_Shore_6_Fort.tga";
+	Locations[n].image = "Outside_Shore_6_Fort";
 	Locations[n].name = "Aguadilla Bay";
 	//Sound
 	locations[n].type = "seashore";
@@ -1752,7 +1752,7 @@ void LocationInitIslaMuelle(ref n)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Fort_2";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -1800,7 +1800,7 @@ void LocationInitIslaMuelle(ref n)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_Inside\Fort_3";
 	Locations[n].filespath.textures = "locations\SPAIN";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 

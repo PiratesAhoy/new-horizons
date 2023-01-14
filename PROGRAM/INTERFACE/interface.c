@@ -1950,31 +1950,32 @@ void procInfoShow()
 			objInfoList[nInfoIdx].scale = 1.0;
 			objInfoList[nInfoIdx].offset = 30;
 
+			objInfoList[nInfoIdx].picbackfilename = "Loading\background.jpg";
+
 			switch(sInfoID)
 			{
 			case "save game":
-				objInfoList[nInfoIdx].picbackfilename = "Loading\save_game.tga";
+				objInfoList[nInfoIdx].picbackfilename = "Loading\save_game.jpg";
 			break;
 
 			case "lost controller":
-				objInfoList[nInfoIdx].picbackfilename = "Loading\lost_controller.tga";
+				objInfoList[nInfoIdx].picbackfilename = "Loading\lost_controller.jpg";
 			break;
 
 			case "Low Storage":
-				objInfoList[nInfoIdx].picbackfilename = "Loading\low_storage.tga";
+				objInfoList[nInfoIdx].picbackfilename = "Loading\low_storage.jpg";
 			break;
 
 			case "game prepare":
 				objInfoList[nInfoIdx].picfilename = "Loading\loading.jpg";
-				objInfoList[nInfoIdx].picbackfilename = "Loading\background.jpg";
 			break;
 
 			case "MainMenuLaunch":
-				objInfoList[nInfoIdx].picbackfilename = "INTERFACES\mainmenu_ss.tga";
+				objInfoList[nInfoIdx].picbackfilename = "INTERFACES\mainmenu_ss.jpg";
 			break;
 
 			case "OptionsBreak":
-				objInfoList[nInfoIdx].picbackfilename = "Loading\options.tga";
+				objInfoList[nInfoIdx].picbackfilename = "Loading\options.jpg";
 			break;
 			}
 

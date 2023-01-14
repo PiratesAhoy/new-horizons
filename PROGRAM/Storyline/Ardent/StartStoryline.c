@@ -67,7 +67,7 @@ void StartStoryLine()
 	Locations[FindLocation("Cuba_Jungle_03")].reload.l1.label = "Slave Camp";		// Rename Cuba Smugglers Fort to Slave Camp
 	Locations[FindLocation("Cuba_Jungle_03")].reload.l5.label = "Slave Camp";
 	locations[FindLocation("Smugglers_Fort")].id.label = "Slave Camp";
-	locations[FindLocation("Smugglers_Fort")].image = "Slave_Camp.tga";
+	locations[FindLocation("Smugglers_Fort")].image = "Slave_Camp";
 	Locations[FindLocation("PoPrince_town")].reload.l40.name = "reload20";
 	Locations[FindLocation("PoPrince_town")].reload.l40.go = "PoPrince_archive";
 	Locations[FindLocation("PoPrince_town")].reload.l40.emerge = "Reload1";
@@ -94,7 +94,7 @@ void StartStoryLine()
 		}
 	}
 	Build_at("IslaMona_port", "warehouse_destroyed", "", 5.867, 11.604, -70.479, 0, "building");
-	Locations[FindLocation("IslaMona_port")].image = "Outside_Mona.tga";
+	Locations[FindLocation("IslaMona_port")].image = "Outside_Mona";
 
 	Locations[FindLocation("Hispaniola_Temple")].reload.l2.name = "reload2";		// Open up Hispaniola temple
 	Locations[FindLocation("Hispaniola_Temple")].reload.l2.go = "Quest_Hispaniola_Labirint_1";
@@ -129,7 +129,7 @@ void StartStoryLine()
 
 	ChangeCharacterAddress(characterFromID("Horacio de la Vega"), "None", "");		// Whoever this guy is, he's not an admiral!
 	Locations[FindLocation("Havana_House_03")].id.label = "Admiralty";			// "Vice Admiral's Residence" now becomes "Admiralty"
-	Locations[FindLocation("Havana_House_03")].image = "Inside_Havana_Admiralty.tga";
+	Locations[FindLocation("Havana_House_03")].image = "Inside_Havana_Admiralty";
 	Locations[FindLocation("Havana_Town_01")].reload.l13.label = "Admiralty";
 
 	CaptureTownForNation("Khael Roa", PIRATE);

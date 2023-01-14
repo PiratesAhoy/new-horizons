@@ -4,7 +4,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].id = "Guadeloupe_Port";
 	locations[n].id.label = "#stown_name# Port.";
 	locations[n].worldmap = "Pointe a Pitre";
-	Locations[n].image = "Town_PointeAPitre.tga";
+	Locations[n].image = "Town_PointeAPitre";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -241,7 +241,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].id = "PaP_prison";
 	locations[n].id.label = "#stown_name# prison";
 	Locations[n].filespath.models = "locations\inside\prison";
-	Locations[n].image = "Inside_Prison.tga";
+	Locations[n].image = "Inside_Prison";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -390,7 +390,7 @@ void LocationInitguadeloupe(ref n)
 	if (IsBrothelEnabled()) {
 		locations[n].id.label = "#stown_name# Brothel";
 		Locations[n].filespath.models = "locations\inside\den";
-		Locations[n].image = "Inside_Den_Room.tga"; // PB
+		Locations[n].image = "Inside_Den_Room"; // PB
 		//Town sack
 		Locations[n].townsack = "Pointe a Pitre";
 		//Sound
@@ -496,7 +496,7 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].id = "Guadeloupe_Plantation";
 	locations[n].id.label = "Plantation";
-	Locations[n].image = "Outside_Plantation.tga";
+	Locations[n].image = "Outside_Plantation";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -576,7 +576,7 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].id = "Guadeloupe_Jungle_01";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_5.tga";
+	Locations[n].image = "Outside_Jungle_5";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -695,7 +695,7 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].id = "Guadeloupe_Jungle_02";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].image = "Outside_Jungle_1";
 	//Sound
 	locations[n].type = "Jungle";
 
@@ -768,7 +768,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].id = "Guadeloupe_Lighthouse";
 	Locations[n].name = "Lighthouse";
 	locations[n].id.label = "#sisland_name# lighthouse."; // KK
-	Locations[n].image = "Outside_Mayak.tga";
+	Locations[n].image = "Outside_Mayak";
 	//Sound
 	locations[n].type = "seashore";
 	//Models
@@ -823,7 +823,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].filespath.models = "locations\town_QC\exit";	
 	Locations[n].id = "Guadeloupe_Jungle_03";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Town_QC_Exit.tga";
+	Locations[n].image = "Town_QC_Exit";
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre"; // KK
 	//Sound
@@ -900,7 +900,7 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].id = "Guadeloupe_Plantation_inside";
 	locations[n].id.label = "#sisland_name# Plantation Residence";
-	Locations[n].image = "Inside_Residence3.tga";
+	Locations[n].image = "Inside_Residence3";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -945,7 +945,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].id = "Guadeloupe_Plantation_bedroom";
 	locations[n].id.label = "Bedroom";
 	Locations[n].filespath.models = "locations\inside\ResBedRoom";
-	Locations[n].image = "Inside_ResBedRoom.tga";
+	Locations[n].image = "Inside_ResBedRoom";
 	//Sound
 	locations[n].type = "Residence";
 	locations[n].fastreload = "Pointe_a_Pitre";
@@ -981,7 +981,7 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].id = "Guadeloupe_shore_01";
 	locations[n].worldmap = "GuadShore 1";
-	Locations[n].image = "Outside_Shore_4.tga";
+	Locations[n].image = "Outside_Shore_4";
 	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
 	{
 		locations[n].id.label = "Ensenada del Bosque Quebrado.";
@@ -1074,7 +1074,7 @@ void LocationInitguadeloupe(ref n)
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";	//A warning sign at the gate :)
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";		//change
@@ -1129,7 +1129,7 @@ void LocationInitguadeloupe(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_2";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	locations[n].type = "military";
 
@@ -1171,7 +1171,7 @@ void LocationInitguadeloupe(ref n)
 
 	//Info
 	Locations[n].filespath.models = "locations\Fort_inside\Fort_3";
-	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	Locations[n].image = "Fort_Inside_Fort_1";
 	//Sound
 	Locations[n].type = "military";
 
@@ -1213,7 +1213,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].filespath.models = "locations\Inside\LargeStore";
 	Locations[n].id = "Guadeloupe_armory";
 	locations[n].id.label = "MILITARY AREA. NO TRESPASSING!";
-	Locations[n].image = "Fort_Inside_Fort_2.tga";
+	Locations[n].image = "Fort_Inside_Fort_2";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -1258,7 +1258,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].id = "Pointe_a_pitre_store";
 	locations[n].id.label = "Store";
 	Locations[n].filespath.models = "locations\inside\LargeStore";
-	Locations[n].image = "Inside_LargeStore.tga";
+	Locations[n].image = "Inside_LargeStore";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -1301,7 +1301,7 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].id = "Pointe_a_pitre_shipyard";
 	locations[n].id.label = "#stown_name# shipyard";
-	Locations[n].image = "Inside_Shipyard1.tga";
+	Locations[n].image = "Inside_Shipyard1";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -1344,7 +1344,7 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].id = "Pointe_a_pitre_Tavern";
 	locations[n].id.label = "Tavern";
-	Locations[n].image = "Inside_MediumTavern.tga";
+	Locations[n].image = "Inside_MediumTavern";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre"; // NK 04-08-29
@@ -1401,7 +1401,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].filespath.models = "locations\Inside\SmallHome";
 	Locations[n].id = "Pointe_a_pitre_tavern_upstairs";
 	locations[n].id.label = "Room in #stown_name# tavern";
-	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Room";
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
 	//Sound
@@ -1439,7 +1439,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].id = "Guadeloupe_House_01";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house";
-	Locations[n].image = "Inside_Doubleflour_House_Lower.tga";
+	Locations[n].image = "Inside_Doubleflour_House_Lower";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -1479,7 +1479,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].filespath.models = "locations\Inside\MediumHouse";
 	Locations[n].id = "Guadeloupe_House_02";
 	locations[n].id.label = "House";
-	Locations[n].image = "Inside_MediumHouse.tga";
+	Locations[n].image = "Inside_MediumHouse";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -1519,7 +1519,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].id = "Guadeloupe_House_03";
 	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\mh9";
-	Locations[n].image = "Inside_mh9.tga";
+	Locations[n].image = "Inside_mh9";
 
 	//Town sack
 	Locations[n].townsack = "Pointe a Pitre";
@@ -1577,7 +1577,7 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].id = "Guadeloupe_shore_02";
 	locations[n].id.label = "Bahía Grande"; // KK
-	Locations[n].image = "Outside_Shore_5.tga";
+	Locations[n].image = "Outside_Shore_5";
 	Locations[n].name = "Bahía Grande";
 	locations[n].worldmap = "GuadShore 2";
 
