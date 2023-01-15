@@ -3241,21 +3241,21 @@ Section /o "Unfinished Storylines" SEC03
   Rename "$INSTDIR\PROGRAM\Storyline\DevlinOpera_off.c"		"$INSTDIR\PROGRAM\Storyline\DevlinOpera.c"
 SectionEnd
 
-Section /o "Widescreen Textures" SEC04
-  SetOutPath "$INSTDIR"
-  File /r "addons\Widescreen\*.*"
-SectionEnd
+;Section /o "Widescreen Textures" SEC04
+;  SetOutPath "$INSTDIR"
+;  File /r "addons\Widescreen\*.*"
+;SectionEnd
 
 Section /o "Intel Graphics Fix" SEC05
   SetOutPath "$INSTDIR"
   File /r "addons\Intel GFX Fix\*.*"
 SectionEnd
 
-Section /o "ENB Improved Graphics" SEC06
-  Delete "$INSTDIR\Uninstall ENB.bat"
-  SetOutPath "$INSTDIR"
-  File /r "addons\ENB\*.*"
-SectionEnd
+;Section /o "ENB Improved Graphics" SEC06
+;  Delete "$INSTDIR\Uninstall ENB.bat"
+;  SetOutPath "$INSTDIR"
+;  File /r "addons\ENB\*.*"
+;SectionEnd
 
 Section /o "Original British Navy Fleet" SEC07
   SetOutPath "$INSTDIR"
