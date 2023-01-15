@@ -84,11 +84,11 @@ Section "Visual Studio Runtime" SEC08
   SetOutPath "$INSTDIR"
   ${If} ${RunningX64}
     File "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.32.31326\vc_redist.x64.exe"
-    ExecWait "$INSTDIR\vc_redist.x64.exe /install /quiet"
+    ExecWait "$INSTDIR\vc_redist.x64.exe /install /quiet /norestart"
     Delete "$INSTDIR\vc_redist.x64.exe"
   ${Else}
     File "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.32.31326\vc_redist.x86.exe"
-    ExecWait "$INSTDIR\vc_redist.x86.exe /install /quiet"
+    ExecWait "$INSTDIR\vc_redist.x86.exe /install /quiet /norestart"
     Delete "$INSTDIR\vc_redist.x86.exe"
   ${EndIf}
 
