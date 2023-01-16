@@ -805,6 +805,12 @@ void wdmInitWorldMap()
 	worldMap.islands.Aruba.position.rx = -169.8129;
 	worldMap.islands.Aruba.position.rz = 565.5464;
 
+	worldMap.islands.IslaMona.name = "IslaMona";
+	worldMap.islands.IslaMona.position.x = -288.5556;
+	worldMap.islands.IslaMona.position.z = -235.5098;
+	worldMap.islands.IslaMona.position.rx = -314.0483;
+	worldMap.islands.IslaMona.position.rz = -201.129;
+
 	worldMap.islands.Colombia.name = "Colombia";
 	worldMap.islands.Colombia.position.x = -55.4972;
 	worldMap.islands.Colombia.position.z = 801.376;
