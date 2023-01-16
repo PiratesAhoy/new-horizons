@@ -97,13 +97,14 @@ SectionEnd
 Section "!Main Files" SEC01
   SetOutPath "$INSTDIR"
 
-  ${If} ${RunningX64}
+  ;${If} ${RunningX64}
     File /r "..\..\storm-engine\cmake-build-release\bin\*.exe"
     File /r "..\..\storm-engine\cmake-build-release\bin\*.dll"
-  ${Else}
-    File /r "..\..\storm-engine\cmake-build-release\bin\*.exe"
-    File /r "..\..\storm-engine\cmake-build-release\bin\*.dll"
-  ${EndIf}
+    File /r "..\..\storm-engine\cmake-build-release\bin\*.pdb"
+  ;${Else}
+  ;  File /r "..\..\storm-engine\cmake-build-release\bin\*.exe"
+  ;  File /r "..\..\storm-engine\cmake-build-release\bin\*.dll"
+  ;${EndIf}
 
   File /r "..\..\storm-engine\cmake-build-release\bin\*.h"
   File /r "..\..\storm-engine\cmake-build-release\bin\*.fx"
