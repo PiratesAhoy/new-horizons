@@ -207,7 +207,7 @@ void StartDialogMain()
 void DialogPlayGreeting()
 {
 	DelEventHandler("PlayDialogGreeting", "DialogPlayGreeting");
-	Dialog.greeting = "Gr_none";		// this causes a fixed length dialog animation with no sound
+	DeleteAttribute(&Dialog, "greeting");
 	PlayGreeting(CharacterRef);			// play the greeting explicitly rather than letting the dialog engine do it - 19Mar09
 }
 // <-- KK
