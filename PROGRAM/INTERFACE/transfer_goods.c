@@ -690,24 +690,21 @@ void TakeCurrentProcess()
 	int freeSpace;
 	int freeQuantity;
 
-// TIH --> nonneeded loop bug fix Jul20'06
-//	for(i=0;i<GOODS_QUANTITY;i++)
-//	{
-		freeSpace = GetCargoFreeSpace(xi_refCharacter);
-		freeQuantity = GetGoodQuantityByWeight(GetGoodsIndexForI(curNum),freeSpace);
-		itmp = GetCargoGoods(refEnemyCharacter,GetGoodsIndexForI(curNum));
-		if(itmp<=freeQuantity)
-		{
-			AddCharacterGoods(xi_refCharacter,GetGoodsIndexForI(curNum),itmp);
-			RemoveCharacterGoods(refEnemyCharacter,GetGoodsIndexForI(curNum),itmp);
-		}
-		else
-		{
-			AddCharacterGoods(xi_refCharacter,GetGoodsIndexForI(curNum),freeQuantity);
-			RemoveCharacterGoods(refEnemyCharacter,GetGoodsIndexForI(curNum),freeQuantity);
-		}
+	freeSpace = GetCargoFreeSpace(xi_refCharacter);
+	freeQuantity = GetGoodQuantityByWeight(GetGoodsIndexForI(curNum),freeSpace);
+	itmp = GetCargoGoods(refEnemyCharacter,GetGoodsIndexForI(curNum));
+	if(itmp<=freeQuantity)
+	{
+		AddCharacterGoods(xi_refCharacter,GetGoodsIndexForI(curNum),itmp);
+		RemoveCharacterGoods(refEnemyCharacter,GetGoodsIndexForI(curNum),itmp);
+	}
+	else
+	{
+		AddCharacterGoods(xi_refCharacter,GetGoodsIndexForI(curNum),freeQuantity);
+		RemoveCharacterGoods(refEnemyCharacter,GetGoodsIndexForI(curNum),freeQuantity);
+	}
 
-//	}
+	ChangeScroll();
 }
 // added by MAXIMUS [take all current GOOD] <--
 
