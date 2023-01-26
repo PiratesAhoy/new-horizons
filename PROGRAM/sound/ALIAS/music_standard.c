@@ -7,7 +7,7 @@ void InitMusic()
 
 	//============ MAIN MENU ========================
 	// added by NK so it can be done in code.
-	tmpref.music_main_menu.f1.name = "MUSIC\Main_Title.ogg";						// PB: Cutthroat Island
+	tmpref.music_main_menu.f1.name = "MUSIC\piratesahoy_theme.ogg";
 
 	//============ MAIN THEME ========================
 	tmpref.music_main_theme.f1.name = "MUSIC\Main_Theme.ogg";
