@@ -47,9 +47,6 @@ void InitInterface(string iniName)
 
 	if(!sti(InterfaceStates.Buttons.Resume.enable))//MAXIMUS
 	{
-		GameInterface.mainmenu.timeclock = MAINMENU_TIME_DELAY;
-		SetEventHandler("evntTimeCalculate","procTimeCalculate",0);
-		PostEvent("evntTimeCalculate",1000);
 		if (GetMusicScheme() != "PGMUS") SetMusic("music_main_menu"); // PG // NK 04-09-17 because it's handled now in the alias ini // KK
 	}
 	// fix music handling 05-04-29
@@ -268,28 +265,11 @@ void IDoExit(int exitCode, bool bClear)
 	DelEventHandler("UpPress","UpPress");
 	DelEventHandler("DownPress","DownPress");
 	DelEventHandler("ievnt_command","ProcCommand");
-	DelEventHandler("evntTimeCalculate","procTimeCalculate");
 	DelEventHandler("BreakExit","procBreakExit");
 	DelEventHandler("evntTime","TimeCalculate");//MAXIMUS
 
 	interfaceResultCommand = exitCode;
 	EndCancelInterface(bClear);
-}
-
-void procTimeCalculate()
-{
-	int n = sti(GameInterface.mainmenu.timeclock) - 1;
-
-	if(n>0)
-	{
-		GameInterface.mainmenu.timeclock = n;
-		PostEvent("evntTimeCalculate",1000);
-		return;
-	}
-
-	SetEventHandler(EVENT_END_VIDEO,"LaunchMainMenu_afterVideo",0);
-	StartPostVideo("trailer",1);
-	SetEventHandler("Control Activation","procAttractExit",1);
 }
 
 void TimeCalculate()
