@@ -1,8 +1,8 @@
 About_Build
 {
-Pirates of the Caribbean: New Horizons
+Beyond New Horizons
 
-This being a large modification to the original 2003 game, there is a lot to know about the game and a lot of things that may not be immediately apparent.
+This being a game originally based on the original 2003 game "Pirates of the Caribbean", there is a lot to know about the game and a lot of things that may not be immediately apparent.
 
 Therefore, we have compiled these Tips & Tricks for all players. There are probably some things mentioned that you didn't already know and can help enhance your game experience.
 
@@ -15,7 +15,7 @@ About_Build_1_d{INTRODUCTION}
 About_Build_1
 {
 
-Made for the original 2003 Akella game "Pirates of the Caribbean", this modpack has been in development ever since the release of Build 13 in early 2007. We have come a long way since then, adding much new content and many new features, some of which were thought to be impossible to achieve even by the original game developers themselves.
+Made based on the original 2003 Akella game "Pirates of the Caribbean", this game has been in development ever since the release of Build 13 in early 2007. We have come a long way since then, adding much new content and many new features, some of which were thought to be impossible to achieve even by the original game developers themselves.
 
 The intention is to provide as full a pirate game experience as possible, both more realistic, but also more fun. New features include more storylines, historical detail, abilities for free play, variety and more customization than ever before. Not to mention that the graphics have also been improved upon, mainly with new models and textures, but also the sea itself and anywhere else that we could manage.
 }
@@ -47,7 +47,7 @@ About_Build_3
 
 - Bandage rolls and other medications can be bought from merchants on the streets and in the store. They will save your live!
 
-- Don't forget that you can take crewmembers with you at land explores. Especially at the beginning of a game it's helpfull, because you won't have officers.
+- Don't forget that you can take crewmembers with you for land exploration. Especially at the beginning of a game it's helpfull, because you won't have officers. Your entourage might draw extra attention though.
 
 - Always watch your ammunition and powder for guns!
 
@@ -62,43 +62,43 @@ About_Build_4_d{SAILING and SEA BATTLES}
 About_Build_4
 {
 
-- Hired officers contribute their skills also if they're not in your "active" officer party. Note that they only contribute the skills that are correct for their type. In the Passengers interface, you can reassign officers, see their effective skills. The total effect of player + officers is shown as the player skills in the Passengers interface
+- Hired officers contribute their skills also if they're not in your "active" officer party. Note that they only contribute the skills that are correct for their type. In the Passengers interface, you can reassign officers and see their effective skills. The total effect of player + officers is shown as the player's own skills in the Passengers interface.
 
 - Always check if your ship is in need of repairs! You can also upgrade your ship at the shipyard to make it stronger, more agile or faster.
 
 - A ship needs enough crew in order to sail and fight properly!
 
-- Hire a gunner as early as possible to perform better in naval battles. He will also equip you with new ammunition if you enter your ship's deck, otherwise you have to resupply yourself at the powder storage in the cargo hold.
+- Hire a gunner as early as possible to perform better in naval battles. He (or she?) will also equip you with new ammunition whenever you enter your ship's deck; otherwise you have to resupply yourself at the powder storage in the cargo hold.
 
 - Hiring a doctor with a good defence skill and having medicine on board will decrease after-battle casualties. Wounded crew are shown as [healthy crew] / [wounded crew] in F2>Ship.
 
-- Don't forget that your crew needs food and rum to survive. You can change the foodrations if it gets critical. Also you need cannonballs and powder in order to load your cannons.
+- Don't forget that your crew needs food and rum to survive. You can reduce the food rations if things get critical; just don't expect the crew to be happy about it. Obviously you also need cannonballs and powder in order to load your cannons.
 
-- Double rum rations will increase your crew's morale, but they might get into a drunken brawl.
+- Double rum rations will increase your crew's morale, but they might get into a drunken brawl once in a while too.
 
 - The way your ship and enemy ship are positioned on the world map is the same as on open sea. So turn your ship into a good position on the world map before starting the fight! A good starting position can be a huge advantage.
 
 - You can change the appearance of your sails in F2>Ship>Sails.
 
-- If the odds in a seabattle are totally against you, load chains and try to break the enemy's masts. It'll be way easier to escape.
+- If the odds in a sea battle are totally against you, load chains and try to break the enemy's masts. If you succeed, your escape will be all the easier.
 
 - Boarding will be much easier with a crew with good morale. Also, it is very effective to load grapes and fire a few salvos before boarding.
 
 - Boarding crew uses armour and potions that you stock in the weaponslocker. If you don't put any weapons in the weaponslocker, they will use Cutlasses.
 
-- Later in the game, your crew will be generated with better skills and abilities and then they might use guns that require the Gunman ability. But not at the start.
+- Later in the game, your crew will be generated with better skills and abilities and then they might be able to use guns that require the Gunman ability. But not at the start.
 
-- When you try to board, watch your speed! It can be deadly to pass by a ship's side.
+- When you try to board, watch your speed! It can be deadly to pass by a ship's side. And make sure to not get hit from dead astern. Being 'raked' like that really packs a punch!
 
-- Your crew can use the weapons, guns, armor and medications in your weaponslocker when boarding. This can be the difference between victory and loss!
+- Your crew can use the weapons, guns, armour and medications in your weaponslocker when boarding. This can make the difference between victory and defeat!
 
-- In Realistic and Iron Man Mode you need a compass and a sextant in order to see your ship on the archipelago map (default key M). Also, in every mode, they increase your sailing skill.
+- In Realistic and Iron Man Mode, you need a compass and a sextant in order to see your ship on the archipelago map (default key [M]). Also, in every mode, they increase your sailing skill.
 
-- In order to execute a firedrill, you need the perk "Basic Ship Defence". The default key for this is C.
+- In order to execute a fire drill when you find your ship ablaze, you need the perk "Basic Ship Defence". The default key for this is [C].
 
-- You can fly other nations' flags through F2>Relations. If it is a false flag, you can be recognized. The chance for this increases if you are famous and as you get closer to friendly ships that are of an enemy nation. Flying your Personal flag, the sea relations will be the same as your real relations.
+- You can fly other nations' flags through F2>Relations. If it is a false flag, you might be recognized. The chance for this increases if you are famous and as you approach more closely to friendly ships that are of an enemy nation. But flying your Personal flag, the sea relations will simply be the same as your real relations.
 
-- Steamship engines needs planks to work
+- Steamship engines need planks to work.
 
 }
 
@@ -107,12 +107,12 @@ About_Build_5_d{ADDITIONAL NOTES}
 About_Build_5
 {
 
-- Don't forget to save often (Quicksave: F5). You'll never know what will happen next.
+- Don't forget to save often (Quicksave: [F5]). You'll never know what will happen next.
 
 - You can customize your game in the additional game settings.
 
-- You can also go into InternalSettings.h in [Game-Folder]\PROGRAM, which you can open with WordPad.
-WARNING! You can mess things up there! If you edit this file, please follow the instructions at the end of every line! If there's no description, leave it.
+- You can also go into InternalSettings.h in [Game-Folder]\PROGRAM, which you can open with NotePad.
+WARNING! You can mess things up there! If you edit this file, please follow the instructions at the end of every line! If there's no description and you don't know what you're doing, better to leave it be.
 
 - At the bottom of the mentioned file, you can enable/disable the sidestep ([A] and [D]). We couldn't make the collision control work, so you can slide through the world. Default setting: disabled.
 
@@ -131,7 +131,7 @@ Firstly, you probably didn't know what caused this. Your reputation goes down wh
 > Your landing party and/or officers hurt or killed a civilian. Note, this can happen even at a distance if your officers use guns.
 > You fired on a friendly or neutral ship.
 > You basically did the evil thing in a certain situation.
-To fix this, do the obvious thing: good deeds. talking to people and helping them, rescuing shipwreck survivors, finishing quests you still have going which give you a reputation bonus, etc.
+To fix this, do the obvious thing: good deeds. talking to people and helping them, rescuing shipwrecked survivors, finishing quests you still have going which give you a reputation bonus, etc.
 }
 
 B_6{Secrets}
@@ -147,11 +147,11 @@ About_Build_6
 
 - The Apothecary in Bridgetown offers interesting options, such as increasing your maximum health. Pay him a visit to find out what is required.
 
-- There are some strange coins from a well-known movie out in the carribbean. It is told that whoever finds and carries one with him/her, a terrible curse will fall upon him/her (and the crew if there a coins in the weaponslocker).
+- There are some strange coins from a well-known movie set in the Caribbean. It is said that whoever finds and carries one will suffer a terrible curse (and even the crew too, if such coins find their way into the weapons locker).
 
 - The Opium Den on Jamaica offers skill-enhancing tattoos.
 
-- In the Revolutions and Napoleonic time periods, you can leave mines in the sea to destroy your enemies.
+- In the Revolutions and Napoleonic time periods, you can leave mines in the sea behind you to destroy your enemies.
 }
 
 B_7{Issues}
@@ -159,10 +159,10 @@ About_Build_7_d{KNOWN ISSUES and WORKAROUNDS}
 About_Build_7
 {
 
-- Save often. (Quicksave F5) The game usually is very stable, but remember that this is a MOD from private people!
+- Save often. (Quicksave [F5]) The game usually is very stable, but remember that this is a MOD made by private people in their spare time and for free!
 
 - I CAN'T CONTINUE TO THE NEXT BOARDING DECK
-Press [F12] to force the game to enable the reload. It should now possible to continue.
+Press [F12] to force the game to enable the reload. It should now be possible to continue.
 
 - I CAN NO LONGER MOVE AT ALL
 You have probably been set to Actor Type through the code. Press [F12] to return to Player Type.

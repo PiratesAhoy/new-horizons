@@ -1,8 +1,8 @@
 About_Build
 {
-Pirates of the Caribbean: New Horizons
+Beyond New Horizons
 
-This being a large modification to the original 2003 game, there is a lot to know about the game and a lot of things that may not be immediately apparent.
+This being a game originally based on the original 2003 game "Pirates of the Caribbean", there is a lot to know about the game and a lot of things that may not be immediately apparent.
 
 Therefore, we have compiled these Tips & Tricks for all players. There are probably some things mentioned that you didn't already know and can help enhance your game experience.
 
@@ -15,7 +15,7 @@ About_Build_1_d{INTRODUCTION}
 About_Build_1
 {
 
-Made for the original 2003 Akella game "Pirates of the Caribbean", this modpack has been in development ever since the release of Build 13 in early 2007. We have come a long way since then, adding much new content and many new features, some of which were thought to be impossible to achieve even by the original game developers themselves.
+Made based on the original 2003 Akella game "Pirates of the Caribbean", this game has been in development ever since the release of Build 13 in early 2007. We have come a long way since then, adding much new content and many new features, some of which were thought to be impossible to achieve even by the original game developers themselves.
 
 The intention is to provide as full a pirate game experience as possible, both more realistic, but also more fun. New features include more storylines, historical detail, abilities for free play, variety and more customization than ever before. Not to mention that the graphics have also been improved upon, mainly with new models and textures, but also the sea itself and anywhere else that we could manage.
 }

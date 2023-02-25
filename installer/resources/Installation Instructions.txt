@@ -12,17 +12,9 @@
 CRUCIAL INSTALLATION TIPS:
 =====================================================
 
-1. You MUST install this on top of the unmodified stock game
-   Pirates of the Caribbean, released in 2003 by Akella.
-   The mod is NOT a standalone game!
-
- - DON'T install the game to Program Files,
-   otherwise Windows prevents it from installing correctly
-   Install to, for example, C:\Games\Pirates of the Caribbean
-
- - Switch OFF "Fullscreen mode" using Config.exe
-   to allow you to Alt+Tab in and out of the game
-   NOTE: Brightness settings do not work in windowed mode
+1. The mod IS a standalone game!
+   DON'T install this on top of Pirates of the Caribbean, 
+   released in 2003 by Akella.
 
  - Check out the controls in
    Documentation\Default Key Assignments.txt
@@ -31,19 +23,6 @@ CRUCIAL INSTALLATION TIPS:
    Options>Game Preferences menu
 
  - !!!SAVE OFTEN!!!
-
-
-=====================================================
-KNOWN GAME ISSUES AND SOLUTIONS:
-=====================================================
-
-- Windows Security Issues:
-  If necessary, use "Compatibility Administrator (32-bit)"
-  http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=7352
-
-- Using ffdshow:
-  Add the game to your "exception list"
-
 
 =====================================================
 ADDITIONAL INFORMATION:

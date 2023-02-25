@@ -1006,7 +1006,7 @@ float GetSaveVersion(string saveData)
 bool ParseSaveData(string fullSaveData, ref pic1, ref offic1, ref pic2, ref offic2, ref pic3, ref offic3, ref pic4, ref offic4,
                    ref locationStr, ref timeStr, ref sgvStr) // TIH Aug24'06
 {
-//	Trace("SAVEGAME - parse: "+ fullSaveData);
+	Trace("SAVEGAME - parse: "+ fullSaveData);
 	string lastStr;
 	if( !GetNextSubStr(fullSaveData, locationStr, &lastStr) ) return false;
 	if( !GetNextSubStr(lastStr, pic1, &lastStr) ) return false;
