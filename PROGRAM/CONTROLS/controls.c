@@ -704,6 +704,11 @@ void FreezeGroupControls(string grName, bool bFreeze)
 	}
 }
 
+void ResetActiveControls() {
+	FreezeGroupControls("",true);
+	FreezeGroupControls(curKeyGroupName,false);
+}
+
 void AllControlsFreeze(bool bFreeze)
 {
 	int i,ngq, j,ncq;

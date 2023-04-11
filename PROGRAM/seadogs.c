@@ -848,6 +848,9 @@ void OnLoad()
 	InterfaceStates.Buttons.Save.enable = true;
 	InterfaceStates.Buttons.Load.enable = true;
 
+	// Reset active control group
+	ResetActiveControls();
+
 // KK -->
 	switch (seadogs_saveFrom)
 	{
