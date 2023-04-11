@@ -1,22 +1,22 @@
 TEXT	{
-So ye be wanting to learn about pirating?  This here book will tell ye all ye need to know about the fine art of plundering.
+Итак, вы хотите узнать о пиратстве? Эта книга расскажет вам все, что вам нужно знать о тонком искусстве грабежа.
 
-Ye probably became a pirate either by clobbering ships ye weren't supposed to. A fat merchant is a nice target but the only types who'll be attacking it are enemy navies,
-enemy privateers and pirates. If ye don't have a commission in someone's navy nor a Letter of Marque from a governor then ye be a pirate - arr!
+Вы, вероятно, тоже стали пиратом, грабя корабли, на которые не должны были нападать. Толстый торговец - хорошая мишень, но единственные, кто может атаковать его - это вражеские флоты,
+вражеские каперы и пираты. Если у тебя нет ни чина в каком-либо флоте, ни каперской грамоты от губернатора, то ты пират - арр!
 
-Or ye might have chosen to be a pirate right at the start of yer career.
+Или вы могли бы стать пиратом в самом начале своего пути.
 
-All nations be yer enemies - ye might be hating one more than another and prefer to attack one nation's ships, or leave yer favoured nation alone, but that won't stop all
-the so-called civilised nations from attacking ye on sight. So ye'll be wanting to make good use of false flags. A false flag can make a ship think ye're her friend right
-up till ye drop it, raise yer pirate flag and give her a broadside. Some true villains don't bother with the pirate flag, but only the worst scum fire while still pretending
-to be the victim's friend, so use yer pirate flag, that's what it's for. Also, if ye be wanting to sail into port, ye'll want a friendly flag so the fort don't blast ye to
-driftwood and the shopkeepers don't tell ye to get lost. Though if ye be famous, ye may be recognised for the pirate ye be anyway.
+Все нации являются врагами - вы можете ненавидеть одну больше, чем другую, и предпочесть атаковать корабли одной нации или оставить свою любимую нацию в покое, но это не остановит все
+так называемые цивилизованные нации от нападения на вас на месте. Таким образом, вы захотите эффективно использовать ложные флаги. Фальшивый флаг может заставить вражеский корабль думать, что мы его друзья, до тех пор,
+пока вы не выстрелите в него, либо не поднимете свой пиратский флаг. Некоторые настоящие злодеи не утруждают себя пиратским флагом, но только самые отъявленные подонки стреляют, все еще притворяясь
+другом жертвы, так что используй свой пиратский флаг, вот для чего он нужен. Кроме того, если вы захотите зайти в порт, вам понадобится дружественный флаг, чтобы форт не разнес вас в
+щепки, а владельцы магазинов не посоветовали вам заблудиться. Хотя, если ты знаменит, тебя все равно могут признать за пирата.
 
-Where ye can be sure of a welcome is them ports as is run by other pirates. And if ye join our Brotherhood, ye can sell yer booty for more than ye'll get anywhere else. Ye
-can also rise through the ranks just as if ye were in one of them navies and make a real name for yerself.
+Где вы можете быть уверены в радушном приеме, так это в тех портах, которыми управляют другие пираты. И если вы присоединитесь к нашему Братству, вы сможете продать свою добычу дороже, чем где-либо еще. Вы
+также можете подняться по служебной лестнице так же, как если бы вы были в одном из этих флотов, и сделать себе настоящее имя.
 
-Course, ye may decide to stop being a pirate. Just go crawling on yer knees to some rich governor, pay him some of yer hard-earned loot, and he'll pardon ye. Ye can even then
-pay him even more and get yerself a Letter of Marque, which means instead of attacking whatever ship ye want, ye can only attack whatever ships he wants. Cause if ye hit the
-wrong ship, ye'll be on yer way back to being a pirate again. Arr!
+Конечно, вы можете решить перестать быть пиратом. Просто приползите на коленях к какому-нибудь богатому губернатору, заплатите ему часть своей с трудом заработанной добычи, и он простит вас. Даже тогда вы можете
+заплатить ему еще больше и получить себе каперское свидетельство, что означает, что вместо того, чтобы атаковать любой корабль, который вы хотите, вы можете атаковать только те корабли, которые он хочет. Потому что,
+если вы наткнетесь не на тот корабль, вы снова станете пиратом. Арр!
 
 }

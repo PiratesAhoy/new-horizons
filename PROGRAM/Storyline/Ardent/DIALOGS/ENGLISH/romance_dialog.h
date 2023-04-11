@@ -1,4 +1,4 @@
-string DLG_TEXT[539] = {
+string DLG_TEXT[551] = {
 "Good day, ",
 "Good day to you, too.",
 "What are you doing in my room?",
@@ -535,6 +535,18 @@ string DLG_TEXT[539] = {
 " And there must be opportunities around the Caribbean for an experienced captain with a powerful ship.",
 "Hmm... my father has been telling me about something which might be just such an opportunity. Father, perhaps what you were telling me before ",
 " arrived would interest #spronoun2#?",
+"Indeed we are. We are on our way to the tailor's shop.",
+"Lead the way, ",
+"!",
+"That dress certainly looks good on you, ",
+".",
+"It does not! It makes me look like a sack of potatoes and I'll change back into my proper clothes as soon as I'm in my cabin!",
+"I apologise. I only meant to pay you a compliment.",
+"Thank you. But that gives me an idea. Tell the guard you find the dress too dull and that it would be improved by a brooch which you saw on sale from the trader in the port.",
+"You don't need a trinket from a street merchant. I'm sure I can find something better in our family jewellery.",
+"The brooch doesn't matter! It gives us an excuse to go to the port. And that puts us a lot nearer to my ship. Come on, let's go and see the guard.",
+"That dress looks very dull. I believe the trader in the port has a brooch which would make you look more suitable as a member of the governor's household. <To the soldier> We will now go to the port to buy the brooch.",
+"Do you still want me to buy a brooch for you?",
 "Capitán", // These are used to address you in case "First time".
 "my dear", // Renumber them there if more lines are added above here
 "my dear", // Alternative line for non-English translations when player character is female

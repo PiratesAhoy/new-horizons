@@ -268,6 +268,13 @@ string TranslateString(string strData1, string strData2)
 	if (rStr1 == "") rStr1 = str1;
 	if (rStr2 == "") rStr2 = str2;
 
+	str1 = strData1;
+	str2 = strData2;
+	resultString = SpellString(GetStorylinePath(FindCurrentStoryline()), "storyline_strings.txt", &str1, &str2, joinString);
+	if (resultString != "") return resultString;
+	if (rStr1 == "") rStr1 = str1;
+	if (rStr2 == "") rStr2 = str2;
+
 	string sPref = "";
 	if (DEBUGINFO) sPref = "@";
 	if (rStr1 == "" && strData1 != "") rStr1 = sPref + strData1;

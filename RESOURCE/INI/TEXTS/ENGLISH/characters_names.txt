@@ -233,6 +233,8 @@ Magarino{Magarino}
 Micael{Micael}
 Salinas{Salinas}
 Mahala{Mahala}
+Tancredo{Tancredo}
+Pellón{Pellón}
 
 {=====| Curacao.c |=====}
 Hans{Hans}

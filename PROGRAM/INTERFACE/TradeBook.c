@@ -16,6 +16,26 @@ void InitInterface_S(string iniName, string town)
 	ref PChar = GetMainCharacter();
 	GameInterface.title = "titleColonies";
 
+	int cont_store_price_x = 412;
+	int cont_smug_desc_x = 472;
+	int cont_smug_price_x = 552;
+	switch(LanguageGetLanguage())
+	{
+		case "Russian":
+			cont_store_price_x = 430;
+			cont_smug_desc_x = 486;
+			cont_smug_price_x = 573;
+		break;
+		case "Spanish":
+			cont_store_price_x = 418;
+			cont_smug_desc_x = 477;
+			cont_smug_price_x = 559;
+		break;
+		cont_store_price_x = 412;
+		cont_smug_desc_x = 472;
+		cont_smug_price_x = 540;
+	}
+
 	FillScroll();
 // KK -[improved by MAXIMUS]->
 	if (!TownExist(town)) town = GetCurrentTownID();
@@ -74,8 +94,8 @@ void InitInterface_S(string iniName, string town)
 // MAXIMUS interface MOD -->
 	CreateExitString();//MAXIMUS: standard exit-string for exit-button
 
-	CreateString(true,"IslandName","",FONT_NORMAL,COLOR_NORMAL,395,42,SCRIPT_ALIGN_CENTER,0.8);
-	CreateString(true,"VisitDate","",FONT_NORMAL,COLOR_GREEN_LIGHT,225,76,SCRIPT_ALIGN_LEFT,0.8); // added by MAXIMUS
+	CreateString(true,"IslandName","",FONT_NORMAL,COLOR_NORMAL,395,45,SCRIPT_ALIGN_CENTER,0.8);
+	CreateString(true,"VisitDate","",FONT_NORMAL,COLOR_GREEN_LIGHT,225,78,SCRIPT_ALIGN_LEFT,0.8); // added by MAXIMUS
 	CreateString(true,"TownName","",FONT_NORMAL,COLOR_NORMAL,395,111,SCRIPT_ALIGN_CENTER,0.8);
 
 	CreateString(true,"Import0","",FONT_NORMAL,COLOR_NORMAL,72,163,SCRIPT_ALIGN_LEFT,0.8);
@@ -119,13 +139,13 @@ void InitInterface_S(string iniName, string town)
 	CreateString(true,"Export05","",FONT_NORMAL,COLOR_MONEY,232,403,SCRIPT_ALIGN_LEFT,0.7);
 	CreateString(true,"Export06","",FONT_NORMAL,COLOR_MONEY,232,447,SCRIPT_ALIGN_LEFT,0.7);
 
-	CreateString(true,"Contraband00","",FONT_NORMAL,COLOR_MONEY,412,183,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband01","",FONT_NORMAL,COLOR_MONEY,412,227,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband02","",FONT_NORMAL,COLOR_MONEY,412,271,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband03","",FONT_NORMAL,COLOR_MONEY,412,315,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband04","",FONT_NORMAL,COLOR_MONEY,412,359,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband05","",FONT_NORMAL,COLOR_MONEY,412,403,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband06","",FONT_NORMAL,COLOR_MONEY,412,447,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband00","",FONT_NORMAL,COLOR_MONEY,cont_store_price_x,182,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband01","",FONT_NORMAL,COLOR_MONEY,cont_store_price_x,226,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband02","",FONT_NORMAL,COLOR_MONEY,cont_store_price_x,270,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband03","",FONT_NORMAL,COLOR_MONEY,cont_store_price_x,314,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband04","",FONT_NORMAL,COLOR_MONEY,cont_store_price_x,358,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband05","",FONT_NORMAL,COLOR_MONEY,cont_store_price_x,402,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband06","",FONT_NORMAL,COLOR_MONEY,cont_store_price_x,446,SCRIPT_ALIGN_LEFT,0.7);
 	
 	//Levis Smuggler addon for tradebook
 	CreateString(true,"Contraband0_desc","",FONT_NORMAL,COLOR_NORMAL,372,180,SCRIPT_ALIGN_LEFT,0.8);
@@ -136,29 +156,29 @@ void InitInterface_S(string iniName, string town)
 	CreateString(true,"Contraband5_desc","",FONT_NORMAL,COLOR_NORMAL,372,400,SCRIPT_ALIGN_LEFT,0.8);
 	CreateString(true,"Contraband6_desc","",FONT_NORMAL,COLOR_NORMAL,372,444,SCRIPT_ALIGN_LEFT,0.8);
 	
-	CreateString(true,"Contraband0_desc2","",FONT_NORMAL,COLOR_NORMAL,472,180,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband1_desc2","",FONT_NORMAL,COLOR_NORMAL,472,224,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband2_desc2","",FONT_NORMAL,COLOR_NORMAL,472,268,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband3_desc2","",FONT_NORMAL,COLOR_NORMAL,472,312,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband4_desc2","",FONT_NORMAL,COLOR_NORMAL,472,356,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband5_desc2","",FONT_NORMAL,COLOR_NORMAL,472,400,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband6_desc2","",FONT_NORMAL,COLOR_NORMAL,472,444,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband0_desc2","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x,180,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband1_desc2","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x,224,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband2_desc2","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x,268,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband3_desc2","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x,312,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband4_desc2","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x,356,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband5_desc2","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x,400,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband6_desc2","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x,444,SCRIPT_ALIGN_LEFT,0.8);
 	
-	CreateString(true,"Contraband10","",FONT_NORMAL,COLOR_MONEY,540,183,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband11","",FONT_NORMAL,COLOR_MONEY,540,227,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband12","",FONT_NORMAL,COLOR_MONEY,540,271,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband13","",FONT_NORMAL,COLOR_MONEY,540,315,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband14","",FONT_NORMAL,COLOR_MONEY,540,359,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband15","",FONT_NORMAL,COLOR_MONEY,540,403,SCRIPT_ALIGN_LEFT,0.7);
-	CreateString(true,"Contraband16","",FONT_NORMAL,COLOR_MONEY,540,447,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband10","",FONT_NORMAL,COLOR_MONEY,cont_smug_price_x,182,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband11","",FONT_NORMAL,COLOR_MONEY,cont_smug_price_x,226,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband12","",FONT_NORMAL,COLOR_MONEY,cont_smug_price_x,270,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband13","",FONT_NORMAL,COLOR_MONEY,cont_smug_price_x,314,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband14","",FONT_NORMAL,COLOR_MONEY,cont_smug_price_x,358,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband15","",FONT_NORMAL,COLOR_MONEY,cont_smug_price_x,402,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Contraband16","",FONT_NORMAL,COLOR_MONEY,cont_smug_price_x,446,SCRIPT_ALIGN_LEFT,0.7);
 	
-	CreateString(true,"Contraband20","",FONT_NORMAL,COLOR_NORMAL,462,163,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband21","",FONT_NORMAL,COLOR_NORMAL,462,207,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband22","",FONT_NORMAL,COLOR_NORMAL,462,251,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband23","",FONT_NORMAL,COLOR_NORMAL,462,295,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband24","",FONT_NORMAL,COLOR_NORMAL,462,339,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband25","",FONT_NORMAL,COLOR_NORMAL,462,383,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Contraband26","",FONT_NORMAL,COLOR_NORMAL,462,427,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband20","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x-10,163,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband21","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x-10,207,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband22","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x-10,251,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband23","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x-10,295,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband24","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x-10,339,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband25","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x-10,383,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Contraband26","",FONT_NORMAL,COLOR_NORMAL,cont_smug_desc_x-10,427,SCRIPT_ALIGN_LEFT,0.8);
 
 	string groupIcons = "GOODS";
 	if(bNewIcons==true) groupIcons = "GOODS_NEW";

@@ -401,7 +401,7 @@ There is a moderate breeze{Sopla una brisa moderada}
 There is a fresh breeze{Sopla una brisa fresca}
 There is a strong breeze{Sopla una brisa fuerte}
 There is a near gale{Sopla un vendaval}
-from the{del}
+wind_from_the{del}
 Wind is from the{El viento sopla del}
 wind_at{a}
 kts{nudos}
@@ -719,6 +719,7 @@ Store{Tienda}
 Jungle{Selva}
 House{Casa}
 Tailor's Shop{Sastrería}
+Changing room{Camerino}
 Mansion{Mansión}
 SeaPort{Puerto}
 SeaFort{Fuerte}

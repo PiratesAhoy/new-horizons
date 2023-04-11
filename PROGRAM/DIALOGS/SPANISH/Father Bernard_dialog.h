@@ -1,184 +1,188 @@
-string DLG_TEXT[182] = {// -- Scheffnow -- 2004-01-14 -- ResetCharacterMod --
-", #saddr#! Como puede ayudarle este humilde servidor de nuestro Senor?", 
-"Estoy ",
-", capitan y propietario del barco",
-".",
-"Bienvenido a la casa de nuestro Senor, ", //4
-" #saddr#. Me alegra ver a un marinero que no descuida el alma de #spronoun2#.",
-"Saludar, ",
-". ?Estas aqui para confesarte?",
-"#saddr_upper#, me alegro de verte y estoy listo para tomar tu confesion si lo dabas libremente. El Senor sabe que el pecado es inevitable en la vida terrenal.",
-", me gustaria dar un regalo a la Iglesia.",
-"Necesito hablar contigo, #sFather#.",
-"Agradecer. Tal vez la proxima vez.",
-"Me complace dar la bienvenida a una nueva oveja a nuestro rebano",
+string DLG_TEXT[186] = {// -- Scheffnow -- 2004-01-14 -- ResetCharacterMod --
+", #saddr#. ¿Cómo puede ayudarte este humilde servidor de nuestro Señor?", 
+"Soy ",
+", capitán en propiedad del barco '",
+"'.",
+"Te doy la bienvenida a la casa de nuestro Señor, ", //4
+" #saddr#. Me alegra ver que no todos los marinos descuidan el bienestar de su alma.",
+"Hola, ",
+". ¿Y bien? ¿Has venido para confesarte?",
+"#saddr_upper#, me alegro de verte y estoy listo para escuchar tu confesión si me la confías libremente. El Señor sabe que el pecado es inevitable en la vida terrenal.",
+", me gustaría hacer una donación a la Iglesia.",
+"Necesito hablar contigo, padre.",
+"Gracias. Tal vez la próxima vez.",
+"Me complace recibir a una nueva oveja en nuestro rebaño",
 ". ",
-"Entonces por favor acepta mi regalo.",
-"Puedo hablar contigo, #sFather#?",
-"Gracias, #sFather#, pero debo irme.",
-"Es esto concerniente a tu fe, #saddr#?",
-"Posiblemente. No puedo evitar notar que pareces preocupado por algo. ?Puedo ayudarte de alguna manera?",
-"Esto es concerniente al negocio que me encomendaste.",
-"Posiblemente. Puedo ver en tu cara que algo te perturba. Tal vez podria ayudar.",
-"Tengo una carta para TI.",
-"Inconcebible! ", //22
-"Padre Gareth", //23
-", sirviendo al Principe de las Tinieblas? ?Quien podria haberlo imaginado? Vaya, vaya...", //24
-"Ahora se quien es el culpable de mis recientes problemas. !Fue el quien reporto todos mis movimientos a los monjes!", //25
+"Entonces, por favor, acepta mi regalo.",
+"¿Puedo hablar contigo, padre?",
+"Gracias, padre, pero debo irme.",
+"¿Es una cuestión de fe, #saddr#?",
+"Posiblemente. No puedo evitar notar que pareces preocupado por algo. ¿Puedo ayudarte de alguna manera?",
+"Es una cuestioón referente al asunto que me encomendaste.",
+"Posiblemente. Puedo ver en tu cara que algo te perturba. Tal vez podría ayudar.",
+"Tengo una carta para ti.",
+"¡Inconcebible! ", //22
+"¡El padre Gareth", //23
+", sirviendo al Príncipe de las Tinieblas? ¿Quién podría haberlo imaginado? ¿Por qué? ¿Cómo?...", //24
+"Ahora sé quién es el culpable de mis recientes problemas. ¡Fue él quien informó a los monjes de todos mis movimientos!", //25
 "Necesito permiso para liberar a un prisionero retenido en #sGreenford#.",
-"He conseguido el permiso que me pediste. Aqui esta, y por favor, x mi fe en TI.",
-"No te preocupes, lo hare bien.",
+"He conseguido el permiso que me pediste. Aquí está. Y, por favor, recuerda que he puesto mi fe en ti.",
+"No te preocupes, lo haré bien.",
 "No. Hablemos de otra cosa.", //29
-"Hay mas-mis hombres y yo hemos destruido la secta.",
-"No. La cosa es que hay un hombre al que le gustaria donar cierta cantidad de oro a su iglesia. Estoy cumpliendo su peticion.",
-"Um... No. Cambiemos de tema, ?de acuerdo?", //32
-"El Senor nos ha provisto de un milagro! !Celebraremos una misa en honor de su increible logro!",
-"Ahora, si me disculpas, debo ir a #sDouwesen#, a devolver a los ninos-18.",
-"Me temo que esto esta fuera de mi Reino...",
+"Hay mas: mis hombres y yo hemos destruido la secta.",
+"No. La cosa es que hay un hombre al que le gustaría donar cierta cantidad de oro a tu iglesia. Estoy cumpliendo su petición.",
+"Hum... No. Cambiemos de tema, ¿de acuerdo?", //32
+"¡El Señor nos ha honrado con un milagro! ¡Celebraremos una misa en honor de tu increíble logro!",
+"Ahora, si me disculpas, debo ir a #sDouwesen# para devolver a los niños a sus familias.",
+"Me temo que eso está fuera de mi jurisdicción...",
 "No lo creo. Este prisionero es uno de esos que me pediste que destruyera.",
-"Pero si eso es asi, entonces ?por que liberarlo?",
-"Necesitare ganarme su confianza. Sabe donde esta su guarida, y sera mucho mas probable que me diga si cree que estoy de su lado.",
-"Acto. Si, vere que puedo hacer. Espera aqui.",
+"Pero si eso es así, entonces, ¿por qué liberarlo?",
+"Necesitaré ganarme su confianza. Seguro que sabe dónde está su guarida, y será mucho más probable que me lo diga si cree que estoy de su lado.",
+"Entiendo. Sí, veré qué puedo hacer. Espera aquí.",
 "Muy bien.",
-"Monjes? !Esos no son monjes, son los sirvientes del Diablo!", //41
-"Como tu dices, #sFather#. Pero todos ellos llevaban las tunicas de monje.",
-"Mucho mas facil ganar la confianza de aquellos que desean corromper. Debemos encontrar la guarida de estos diablos! Capitan, ?cree que podria viajar a #sIsla Muelle# por nosotros y hacer algunas preguntas alli?",
-"Si, absolutamente. Sigo buscando a esos ninos desaparecidos.",
-"Que el buen Senor este contigo, #saddr#.",
-"No te fallare.",
-"Por supuesto, #saddr#. Pero espera, antes de que te vayas, hay algo mas que tengo que hacer. Me gustaria presentar a alguien...", //47
-"Si?",
-"Pero estamos perdiendo el tiempo. ?Aceptas mi oferta?", //del
-"Segun recuerdo, me ofreciste 15.000 piezas de oro por la muerte de la secta. ?Correcto?", //del
-"Gracias al Senor! Me preguntaba si habias llegado a tiempo para ",
+"¿Monjes? ¡Esos no son monjes, son los sirvientes del Diablo!", //41
+"Como tu digas, padre. Pero todos ellos llevaban hábitos de monje.",
+"Para ganarse más fácilmenta la confianza de aquellos a los que desean corromper. ¡Debemos encontrar la guarida de estos diablos! Capitán, ¿crees que podrías viajar a #sIsla Muelle# por nosotros y hacer algunas preguntas allí?",
+"Sí, absolutamente. Sigo buscando a esos niños desaparecidos.",
+"Que el buen Señor esté contigo, #saddr#.",
+"No te fallaré.",
+"Por supuesto, #saddr#. Pero espera, antes de que te vayas, hay algo mas que tengo que hacer. Me gustaría presentarte a alguien...", //47
+"¿Sí?",
+"Pero estamos perdiendo el tiempo. ¿Aceptas mi oferta?", //del
+"Según recuerdo, me ofreciste 15.000 piezas de oro por acabar con la secta. ¿Correcto?", //del
+"¡Gracias al Señor! Me preguntaba si habrías llegado allí a tiempo para que el",
 "Padre Domingues",
-"para pasarle esta carta.",
-"Si, aunque se esta volviendo cada vez mas peligroso trabajar para TI, #sFather#. Fui atacado y casi asesinado por hombres con tunicas esto que querian tomar esta carta mia. Y lamento informar que los asesinos han secuestrado al Padre Domingues.",
-"Si, esa desafortunada noticia ha llegado aqui antes que tu. Me temo que nuestros peores temores han llegado a pasar.",
-"?Que quieres decir?", //56
-"Hace varios anos, una guarida satanica fue destruida en Italia. Por desgracia, el jefe de esa orden logro torre, y ultimamente ha habido pruebas de que se establecio aqui en este archipielago con algunos de sus seguidores. Ahora, a trabajamos por las desapariciones de ninos y ahora un sacerdote de alto rango, esta activo de nuevo y tiene la intencion de realizar un cierto ritual antiguo \nThe.!todo el archipielago esta en peligro, capitan! Debemos detenerlo!",
-"Ya veo. Esta es la conexion con el Mefisto y los ninos que he estado buscando. ?En que puedo ayudarle?", //58
-"Necesitamos que sirvas como la espada de nuestro Senor, llevando a cabo su venganza. Pero segun tengo entendido eres un #sperson# de, ah... negocios, te ofrezco 15.000 piezas de oro por tu Servicio a la iglesia.",
-"Bueno, empece todo esto para ayudar a esas pobres mujeres en #sisland_Douwesen#. Pero debo admitir que su oferta no es mala...",
-"Es una bendicion del Senor que estes aqui ahora. Necesito tu ayuda.",
-"Estoy escuchando, #sFather#.", //62
-"Me temo que su mala fama me impide pedir su ayuda en asuntos de la iglesia.",
+" te pasara esta carta.",
+"Sí, aunque se está volviendo cada vez más peligroso trabajar para ti, padre. Me atacaron y casi me asesinasn unos hombres con hábitos rojos que querían quitarme la carta. Y lamento informar que los asesinos han secuestrado al padre Domingues.",
+"Si, esa desafortunada noticia ha llegado aquí antes que tú. Me temo que nuestros peores temores se han hecho realidad.",
+"¿Qué quieres decir?", //56
+"Hace varios años, la guarida de una secta satánica fue destruida en Italia. Por desgracia, el jefe de esa orden logró escapar, y últimamente han aparecido indicios de que se estableció aquí, en este archipiélago, con algunos de sus seguidores. Ahora, a juzgar por las desapariciones de niños y de un sacerdote de alto rango, está activo de nuevo y tiene la intención de realizar cierto ritual antiguo \n¡Todo el archipiélago está en peligro, capitán! ¡Debemos detenerlo!",
+"Ya veo. Esta es la conexión con el 'Mefisto' y los niños que he estado buscando. ¿En qué puedo ayudar?", //58
+"Necesitamos que sirvas como la espada de nuestro Señor, llevando a cabo su venganza. Pero, según tengo entendido, eres #sperson# de, ejem... negocios, así que te ofrezco 15.000 piezas de oro por tus servicios a la Iglesia.",
+"Bueno, empecé todo esto para ayudar a esas pobres mujeres en #sisland_Douwesen#. Pero debo admitir que tu oferta no es mala...",
+"Es una bendición del Señor que estés aquí ahora. Necesito tu ayuda.",
+"Soy todo oídos, padre.", //62
+"Me temo que tu mala fama me impide pedirte tu ayuda en asuntos de la Iglesia.",
 "Francamente, eso no me preocupa demasiado.",
-"Te ayudare todo lo que pueda, #saddr#. Sin embargo, tengo que advertirles - mi nueva tarea es urgente, y mucho mas compleja de lo que inicialmente pueda parecer.",
-"Hm... ?Sera tan amable de darme los organismo?", //66
-"Algunos ninos fueron secuestrados de #sDouwesen#...",
-"Increible. Ese es el tema de mi investigacion. ?Sabes algo al respecto?",
-"Hm. No sabiamos nada de eso. Creo que sus noticias podrian explicar algunas cosas. Parece que mi proxima tarea para usted puede traernos informacion que todos necesitamos.\nI me gustaria que le entregaras un mensaje a #sIsla Muelle# y se lo entregaras a un hombre llamado ",
+"Te ayudaré todo lo que pueda, #saddr#. Sin embargo, tengo que advertirte: mi nueva tarea es urgente, y mucho más compleja de lo que inicialmente pueda parecer.",
+"Hum... ¿Serás tan amable de darme los detalles?", //66
+"Algunos niños fueron secuestrados de #sDouwesen#...",
+"Increíble. Ese es precisamente el asunto que estoy investigando. ¿Sabes algo al respecto?",
+"Hum. No sabíamos nada de eso. Creo que tus noticias podrían explicar algunas cosas. Creo que la próxima tarea que tengo para ti puede traernos información que todos necesitamos.\nMe gustaría que llevaras un mensaje a #sIsla Muelle# y se lo entregaras al ",
 "Padre Domingues",
 "Padre Domingues",
-".\nHe es un sacerdote de alto rango de la iglesia en Espana. Te dara mas indicaciones, si es necesario, para ayudarte en esta busqueda.", //72
-"Eso parece muy simple. ?Que lo hace tan complejo?",
-"Y fue una manera desafortunada de averiguarlo. Nuestro acolito era un muchacho bueno y decente, y su muerte sin sentido nos entristece a todos.",
-"Ah. Asi que como su nuevo mensajero, alguien puede tratar de matarme a mi tambien, para evitar que esta carta llegue a su destino.",
-"Me temo que es verdad. Lo entenderemos si te niegas.",
-"Oh, el dinero es demasiado bueno para rechazarlo, #sFather#.", //77
-"Eres valiente e ingenioso, Capitan. Eso sin duda ayudara. Aqui esta la carta. X, debes darselo a ",
-"Padre Domingues",
-"y solo a el. Y lo encontraras en #sisland_Isla Muelle#.",
-"Muy bien. Esto no tomara mucho tiempo.", //81
-"?Que estabas conduciendo para averiguarlo?",
-"Padre Jerald",
-"Nada todavia.",
-"es culpable de los crimenes de los que se le acusa.",
-"Padre Jerald",
-"Padre Jerald",
-"es inocente de los crimenes de los que se le acusa.", //88
-" !Claro que si! ?Tiene pruebas de eso?",
-"Lo hago. Estas cartas parecen manchar la reputacion del sacerdote - pero en realidad fueron escritas por su asistente.",
-"!Que cruel engano! Resolvere esto inmediatamente. Has hecho un excelente trabajo al Servicio de la iglesia, y estoy feliz de darte esta recompensa como agradecimiento.\nPlease, seguir visitandome de vez en cuando - estoy constantemente en necesidad de la ayuda de alguien con su particular...talento.", //91
-"Gracias, #sFather#. Creo que me ire, ahora.", //92
-" !Claro que si! ?Tiene pruebas de esto?",
-"Si. Estas cartas cuentan toda la historia.",
-"Oh Dios, ya veo. Estaba rezando para que no fuera verdad. Pero has hecho tu trabajo. Aqui esta su recompensa, Capitan.\nPlease, siga visitandome de vez en cuando - estoy seguro de que necesitare sus servicios de nuevo mas tarde.", //95
-"Gracias, #sFather#. Creo que me ire, ahora.",
-"No estoy seguro de que puedas, #saddr#. Vera, necesito ayuda en un asunto serio, y preferiria encontrar esa ayuda fuera de la iglesia.", // --Cat
-"Algunos dirian que estoy muy fuera de la iglesia, #sFather#. Pero yo soy el capitan de un barco; dime que te preocupa, y tal vez yo pueda ayudar.", // --Cat
-"Me temo que su reputacion no me permite aceptar su ayuda.",
+".\nEs un sacerdote de alto rango de la Iglesia española. Te dará más indicaciones, si es necesario, para ayudarte en esta búsqueda.", //72
+"Eso parece muy simple. ¿Qué lo hace tan complejo?",
+"Y ha sido una manera desafortunada de averiguarlo. Nuestro acólito era un muchacho bueno y decente, y su muerte sin sentido nos entristece a todos.",
+"Ah. Así que, como tu nuevo mensajero, alguien puede tratar de matarme a mí también, para evitar que esta carta llegue a su destino.",
+"Me temo que así es. Lo entenderemos si te niegas.",
+"Oh, es demasiado dinero para rechazarlo, padre.", //77
+"Tienes valor e ingenio, capitán. Eso sin duda ayudará. Aquí está la carta. Recuerda, debes dársela al ",
+"padre Domingues",
+"y solo a él. Y lo encontrarás en #sisland_Isla Muelle#.",
+"Muy bien. Esto no llevará mucho tiempo.", //81
+"¿Qué has conseguido averiguar?",
+"Father Jerald",
+"Nada todavía.",
+" es culpable de los crímenes de los que se le acusa.",
+"Father Jerald",
+"Father Jerald",
+"es inocente de los crímenes de los que se le acusa.", //88
+"¡No me digas! ¿Tiene pruebas de eso?",
+"Las tengo. Estas cartas parecen manchar la reputación del sacerdote, pero en realidad fueron escritas por su asistente.",
+"¡Qué cruel engaño! Resolveré esto inmediatamente. Has hecho un excelente trabajo al servicio de la Iglesia, y estoy feliz de darte esta recompensa como agradecimiento.\nPor favor, sigue visitándome de vez en cuando; seguro que volveré a necesitar la ayuda de alguien con tus... talkentos.", //91
+"Gracias, padre. Creo que ahora me iré.", //92
+"¡No me digas! ¿Tiene pruebas de eso?",
+"Sí. Estas cartas cuentan toda la historia.",
+"Oh, Dios, ya veo. Estaba rezando para que no fuera verdad. Pero has hecho tu trabajo. Aquí está tu recompensa, capitán.\nPor favor, sigue visitándome de vez en cuando; seguro que volveré a necesitar tus servicios.", //95
+"Gracias, padre. Creo que ahora me iré.",
+"No estoy seguro de que puedas, #saddr#. Verás, necesito ayuda en un asunto serio, y preferiría encontrar esa ayuda fuera de la Iglesia.", // --Cat
+"Algunos dirían que yo estoy muy fuera de la Iglesia, padre. Pero soy capitán de barco; dime qué te preocupa, y tal vez yo pueda ayudar.", // --Cat
+"Me temo que tu reputacion no me permite aceptar tu ayuda.",
 "Es justo.", //100
-"Muy bien. Siento que puedo confiar en ti. Pero quiero oirte jurar que nadie se enterara de esta subir.",
-"Puedes considerarte en mi confesionario, #sFather#.",
-"Fino. Entonces escucha: me han llegado rumores De que uno de mis hermanos en la fe ha olvidado sus votos al Senor y esta sumido en el pecado. Por desgracia, no puedo dejar a mi rebano para comprobar estos rumores yo mismo, y solo despertara Pass si envio a alguien mas de nuestra cirujano.\nBesides libertad, solo yo puedo desafiarlo a tal subir, y mirar en su alma para ver si me esta diciendo la verdad...",
-"Tan...?me esta pidiendo que reuna pruebas contra uno de sus companeros sacerdotes?", //104
-"!En absoluto! No, simplemente quiero saber si es culpable o no de los pecados de los que se le acusa. Si es inocente, entonces necesito saber quien ha manchado su reputacion.",
-"Muy bien, #sFather#. Dame su nombre, y vere lo que puedo averiguar.",
-"El sirve a la iglesia en #sGreenford#. Su nombre es ",
-"Padre Jerald",
-"Padre Jerald",
-". 4 ser bastante facil encontrarlo una vez que llegues alli.",
-"Volvere lo antes posible, #sFather#.",
-"Que el buen Senor te guie a la verdad, #saddr#. Ven aqui y acepta mi bendicion.",
-"Descanse tranquilo, #sFather#. Estoy seguro de que todo ira bien.",
-"Muy bien. Pero es mi deber decirle que tal indiferencia hacia su fe es imprudente.",
-"Como usted dice. Por favor acepte mi regalo a la Santa iglesia.",
-"Lo siento, #sFather#, pero tengo que irme.",
-"Por supuesto, #saddr#. ?Cuanto quiere dar a la Santa iglesia?", //117
-"Lo siento, #sFather#, pero acabo de darme cuenta de que no puedo hacer una donacion en este momento.",
+"Muy bien. Siento que puedo confiar en ti. Pero quiero oírte jurar que nadie se enterará de esta conversación.",
+"Puedes considerarme sujeto al secreto confesional, padre.",
+"Bien. Entonces, escucha: me han llegado rumores de que uno de mis hermanos en la fe ha olvidado sus votos al Señor y está sumido en el pecado. Por desgracia, no puedo dejar a mi rebaño para comprobar estos rumores yo mismo, y solo despertará sospechas si envío a alguien más de nuestra congregación.\nAdemás, solo yo puedo tener esa conversación con él y mirar en su alma para ver si me está diciendo la verdad...",
+"Entonces... ¿me estás pidiendo que reúna pruebas contra uno de tus compañeros de sacerdocio?", //104
+"¡En absoluto! No, simplemente quiero saber si es culpable o no de los pecados de los que se le acusa. Si es inocente, entonces necesito saber quién ha manchado su reputación.",
+"Muy bien, padre. Dame su nombre, y veré lo que puedo averiguar.",
+"Oficia en la iglesia de #sGreenford#. Su nombre es ",
+"Father Jerald",
+"Father Jerald",
+". Debería ser fácil dar con él una vez que llegues allí.",
+"Volveré lo antes posible, padre.",
+"Que el buen Señor te guíe hacia la verdad, #saddr#. Ven aquí y acepta mi bendición.",
+"Descansa tranquilo, padre. Seguro de que todo irá bien.",
+"Muy bien. Pero es mi deber decirte que tal indiferencia hacia tu fe es imprudente.",
+"Como tú digas. Por favor, acepta mi regalo a la Santa Iglesia.",
+"Lo siento, padre, pero tengo que irme.",
+"Por supuesto, #saddr#. ¿Cuánto quieres donar a la Santa Iglesia?", //117
+"Lo siento, padre, pero acabo de darme cuenta de que no puedo hacer una donación en este momento.",
 "Me temo que 100 piezas de oro es todo lo que puedo pagar ahora.",
-"Pensaria que el Senor miraria amablemente en 1000 piezas de oro.",
-"Lo estoy haciendo bien en estos dias, asi que voy a dar 5000 piezas de oro.",
-"Es tu decision, #saddr#. Nunca es demasiado tarde para cambiar - y tenga en cuenta que todo se tendra en cuenta en el momento de su muerte.",
-"!Mi muerte esta todavia muy lejos, si Dios quiere! Hablemos de otra cosa.",
-"Lo siento, #sFather#. Me tengo que ir.",
-"Te agradezco por tu regalo en el nombre de la Santa iglesia, #saddr#.", //125
-"Necesito hablar contigo, #sFather#.",
-"Lo siento, #sFather#, pero debo irme.",
-"Te agradezco por tu regalo en el nombre de la Santa iglesia, #saddr#.",
-"Necesito hablar contigo, #sFather#.",
-"Lo siento, #sFather#, pero debo irme.",
-"Te agradezco por tu regalo en el nombre de la Santa iglesia, #saddr#.",
-"Necesito hablar contigo, #sFather#.",
-"Lo siento, #sFather#, pero debo irme.", // -- Scheffnow -- 2004-01-14 -- ResetCharacterMod -- start -----------
-"#sFather#, estoy desesperado por mi lucha en vivo, ojala pudiera empezar de nuevo...",
-"Rezare por TI, #saddr#, pero tengo que estar seguro de que vas en serio. ?Estas dispuesto a dar ",
-"?oro para los pobres y los desafortunados de este archipielago?", //136
-"Oh, #saddr#, ?que4 decir? Rezare por TI otra vez, pero esta vez te costara mas que el oro. Perderas ",
+"Creo que el Señor vería con agrado una donación de 1000 piezas de oro.",
+"Me va bastante bien estos días, así que voy a dar 5000 de oro.",
+"Es tu decisión, #saddr#. Nunca es demasiado tarde para cambiar. Y no olvides que tus buenas obras serán tenidas en cuenta en el momento de tu muerte.",
+"¡Mi muerte aún está muy lejana, si Dios quiere! Hablemos de otra cosa.",
+"Lo siento, padre. Me tengo que ir.",
+"Te agradezco tu regalo en el nombre de la Santa Iglesia, #saddr#.",
+"Necesito hablar contigo, padre.",
+"Lo siento, padre, pero tengo que irme.",
+"Te agradezco tu regalo en el nombre de la Santa Iglesia, #saddr#.",
+"Necesito hablar contigo, padre.",
+"Lo siento, padre, pero tengo que irme.",
+"Te agradezco tu regalo en el nombre de la Santa Iglesia, #saddr#.",
+"Necesito hablar contigo, padre.",
+"Lo siento, padre, pero tengo que irme.", // -- Scheffnow -- 2004-01-14 -- ResetCharacterMod -- start -----------
+"Padre, me desespera esta vida tan dura, ojalá pudiera empezar de nuevo...",
+"Rezaré por ti, #saddr#, pero tengo que estar seguro de que vas en serio. ¿Entregarás ",
+" piezas de oro para los pobres y los desafortunados de este archipiélago?", //136
+"Oh, #saddr#, ¿qué puedo decir? Rezaré por ti otra vez, pero esta vez te costará más que el oro. Perderás ",
 "skillpoint ",
-"skillpoints y ",
+"puntos de destreza y ",
 " habilidad ",
-" habilidad ",
-"y tienes que dar ",
-"!oro para los pobres, para las viudas y los huerfanos! ?Aceptas?",
-"El precio es alto, pero estoy muy seguro de mi mismo. Pagare, sea cual sea el precio.", //144
-"Le pido perdon, pero el precio es demasiado alto. Supongo que tengo que soportar mi vida actual.",
-"Concedeme, senor, este #sgender# el poder para iniciar una nueva vida...", //146
-"!Te doy las gracias #sFather#! Esta vez tendre mas cuidado con las cosas que hago y lo que aprendo. Lo prometo.",
-"#saddr_upper#, no tienes el dinero necesario para ayudar a los pobres. Si realmente deseas empezar una nueva vida, regresaras cuando hayas ganado. ",
-" oro...",
-"Vendre otra vez, para estar seguro...", //150 // -- Scheffnow -- 2004-01-14 -- ResetCharacterMod -- end -------------
-"I'm", // -- > Cat
+" habilidades ",
+", ¡y tienes que donar ",
+" piezas de oro para los pobres, para las viudas y los huérfanos! ¿Aceptas?",
+"El precio es alto, pero mi seguridad es total. Pagaré, sea cual sea el precio.", //144
+"Lo siento, pero el precio es demasiado alto. Supongo que tendré que seguir soportando mi vida actual.",
+"Señor, concede a esta criatura, pobre #sgender# que s ehumilla ante Ti, el poder para iniciar una nueva vida...", //146
+"¡Gracias, padre! Esta vez tendré más cuidado con las cosas que hago y lo que aprendo. Lo prometo.",
+"#saddr_upper#, no tienes el dinero necesario para ayudar a los pobres. Si realmente deseas empezar una nueva vida, regresarás cuando hayas conseguido. ",
+" piezas de oro...",
+"Volveré, te lo aseguro...", //150 // -- Scheffnow -- 2004-01-14 -- ResetCharacterMod -- end -------------
+"Soy ", // -- > Cat
 ". ",
-"Solo que sucedio. Todos estamos muy preocupados por ello. ?Que has descubierto sobre este incidente, #saddr#?", //153
-"Tengo entendido que los ninos fueron cargados en el barco negro 'Mefisto', y luego desaparecio en una direccion desconocida.",
-"Gracias, #sFather#. Estoy disponible para ayudarte de nuevo de inmediato, pero tambien me gustaria un poco de informacion sobre algo que estoy investigando personalmente. Me han dicho que puede ayudarme.",
-"Gracias, #sFather#. Estoy disponible para ayudarte de nuevo de inmediato, pero tambien me gustaria un poco de informacion sobre algo que estoy investigando personalmente. Me han dicho que puede ayudarme.",
-"Bendito seas, #saddr#, por ser valiente ante el mal y el peligro. Necesitamos desesperadamente su ayuda.", // 157
-"Desesperadamente, #sFather#?",
-"Desafortunadamente, nuestro joven y fiel mensajero de accolyte fue encontrado muriendo en los escalones de su casa, una daga hirio el golpe fatal. Su madre estaba bastante devastada, como puedes imaginar. Pero creo que para conocer la historia completa, deberias hablar con #sFatherGareth#, aqui.",
-"Muy bien. #sFatherGareth#?", //160
-"Que el buen Senor vaya contigo, #saddr#. Y por favor ten cuidado.",
+"Solo los rumores que nos han llegado. Todos estamos muy preocupados por ello. ¿Qué has descubierto sobre este incidente, #saddr#?", //153
+"Tengo entendido que los niños fueron cargados en el barco negro 'Mefisto', y luego desaparecio en una direccion desconocida.",
+"Gracias, padre. Estoy disponible para ayudarte de nuevo de inmediato, pero también me gustaría que me dieras un poco de información sobre algo que estoy investigando personalmente. Me han dicho que puedes ayudarme.",
+"Gracias, padre. Estoy disponible para ayudarte de nuevo de inmediato, pero tambien me gustaria un poco de informacion sobre algo que estoy investigando personalmente. Me han dicho que puede ayudarme.",
+"Dios te bendiga, #saddr#, por tu valor ante el mal y el peligro. Necesitamos desesperadamente tu ayuda.", // 157
+"¿Desesperadamente, padre?",
+"Desgraciadamente, nuestro joven y fiel acólito a quien envié como mensajero, fue encontrado moribundo en los escalones de su casa, una daga le asestó el golpe fatal. Su madre estaba devastada, como puedes imaginar. Pero creo que para conocer la historia completa, deberías hablar con #sFatherGareth#, aquí.",
+"Muy bien. ¿#sFatherGareth#?", //160
+"Que el buen Señor vaya contigo, #saddr#. Y, por favor, ten cuidado.",
 "...", //162 // <-- Cat (while working on the Animists quest I also edited other parts of this dialog)
-"Tengo miedo ",
-"el oro es todo lo que puedo pagar ahora.",
-"Creo que el Senor miraria amablemente ",
-"Estoy bien estos dias, asi que voy a dar ",
-"piezas de oro.",
-"Bienvenidos a #saddr# y gracias por salvarnos. Te estan esperando en el astillero.",
-"Nada de que hablar, el astillero que dices...",
-"Es sobre el matrimonio de #sromance# y #svillain#.", //170
-"Si, una ocasion muy feliz como todos los matrimonios.",
-"No para #sromance#, no fue - #spronoun# fue secuestrado y forzado a casarse contra #spronoun2# will.",
-"?Entiendes que no puedo simplemente tomar tu palabra para eso? Los votos fueron intercambiados en esta iglesia y no deben tomarse a la ligera.",
-"Tal vez #sromance# podria ir a algun lugar privado y explicar en #spronoun# propias palabras ?que ha pasado?",
-"Si, puedo hacerlo. Unete a mi en la camara de la confesion, #sromance_child#.",
-"#sromance# ha explicado como #spronoun# fue secuestrado, forzado a casarse y luego encarcelado. Y como #spronoun# fue rescatado por TI, aparentemente no por primera vez.",
-"#sromance# ha explicado como #spronoun# fue secuestrado, forzado a casarse y luego encarcelado. Y como #spronoun# fue rescatado por TI - #spronoun# se sorprendio por eso!",
-"Entonces, ?se puede cancelar el matrimonio?",
-"Eso esta mas alla de mi poder. Todo lo que puedo hacer es escribirle al Santo Padre en Roma. Este tipo de cosas no son inauditas, y donde se demuestra que el consentimiento no fue dado libremente, el matrimonio puede ser anulado.sera como si el matrimonio nunca hubiera ocurrido. Pero tomara tiempo, y habra gastos.",
-"Muy bien. Escribire a Roma explicando la situacion. Desafortunadamente, #sromance# sigue casada con #svillain#. Pero puedo absolverles a ambos del pecado de #sromance# dejar #svillain# para estar con ustedes, dadas las circunstancias.", //180
-"Gracias, Padre.",
+"Me temo que ",
+" piezas de oro es todo lo que puedo pagar ahora.",
+"Creo que el Señor vería con agrado una donación de ",
+"Me va bastante bien estos días, así que voy a dar ",
+" piezas de oro.",
+"Te doy la bienvenida, #saddr# y gracias por salvarnos. Te están esperando en el astillero.",
+"No ha sido nada. ¿El astillero, dices...?",
+"Es por la boda de #sromance# y #svillain#.", //170
+"Si, una ocasión muy feliz, como todos los matrimonios.",
+"No para #sromance#, me temo; Fue víctima de un secuestro y de un matrimonio forzado en contra de su voluntad.",
+"¿Entiendes que no puedo fiarme solo de tu palabra en este asunto? Los votos fueron intercambiados en esta misma iglesia y no deben tomarse a la ligera.",
+"¿Tal vez #sromance# podria ir a algún lugar privado y explicar los ocurrido con sus propias palabras?",
+"Sí, podemos hacerlo. Reúnete conmigo en el confesioanrio, #sromance_child#.",
+"#sromance# me ha explicado las circunstancias d esu secuestro, el matrimonio forzado y su encierro posterior. Y como te debe su rescate a ti, y al parecer no es la primera vez.",
+"#sromance# me ha explicado las circunstancias d esu secuestro, el matrimonio forzado y su encierro posterior. Y como te debe su rescate a ti, ¡cosa que fue toda una sorpresa para #spronoun#!",
+"Entonces, ¿se puede cancelar el matrimonio?",
+"Eso está más allá de mis capacidades. Todo lo que puedo hacer es escribir al Santo Padre en Roma. Este tipo de cosas no son inauditas, y donde se demuestra que el consentimiento no fue dado libremente, el matrimonio puede ser anulado.\nSerá como si el matrimonio nunca hubiera ocurrido. Pero llevará tiempo, y habrá gastos.",
+"Muy bien. Escribiré a Roma explicando la situación. Desgraciadamente, #sromance# y #svillain# siguen casados. Pero puedo absolveros a ambos del pecado que comete #sromance# al dejar a #svillain# para estar contigo, dadas las circunstancias.", //180
+"Gracias, padre.",
+"No tengo pruebas físicas. El asistente me mostró unas cartas que, según él, había escrito ",
+" a una jovencita, pero descubrí que las había falsificado. Él está detrás de esos rumores.",
+"No tengo pruebas físicas. El asistente me mostró unas cartas que ",
+" había escrito a una jovencita. Me repugnaron tanto que las quemé.",
 };

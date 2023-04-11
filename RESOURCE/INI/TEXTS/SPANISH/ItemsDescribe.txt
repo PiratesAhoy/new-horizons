@@ -2,7 +2,7 @@ Potion parameters{Remedio médico}
 health value{Salud}
 weapon blade parameters{Arma: daño mín./máx. #ddmg_min#/#ddmg_max#, penetrante #dpiercing#%, bloqueo #dblock#%.}
 weapon gun parameters{Arma: daño mín./máx. #ddmg_min#/#ddmg_max#, recarga #dchargespeed# s, precisión #daccuracy#%.}
-weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / % de daño recibido si no hay parada, para: Espada #dbladestop#% / #dbladefrac#%, Arma de fuego #dgunstop#% / #dgunfrac#%.}
+weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / Daño recibido si no hay parada, para: Espada #dbladestop#% / #dbladefrac#%, Arma de fuego #dgunstop#% / #dgunfrac#%.}
 
 you've_got {Has encontrado}
 
@@ -145,7 +145,7 @@ Un sable común. Está diseñado más para blandirlo desde un caballo que en la cubi
 itmname_blade2	{Ropera}
 itmdescr_blade2
 {
-"Estas armas son propias de niños, no de hombres, para que los chicos rezagados del campamento maten gallinas, no para hombres de honor que se enfrentan en batalla a sus enemigos" - George Silver, "Paradoxes of Defence" 1599.
+"Estas armas son propias de niños, para que los chicos del campamento maten gallinas, no para hombres de honor que se enfrentan en batalla a sus enemigos" - George Silver, "Paradoxes of Defence" 1599.
 }
 
 itmname_blade3	{Badelaire}
@@ -295,7 +295,7 @@ Estas cuidadas hojas son fabricadas en Solingen, Alemania, especialmente para se
 itmname_blade27	{Favorito del Contramaestre}
 itmdescr_blade27
 {
-Después de retirarse a una vida en tierra firme, tu antiguo primer oficial Malcolm decidió que alguien debería fabricar buenas armas para contramaestres, para marineros trabajadores, no solo espadas elegantes para oficiales. Alfanjes de calidad como este son el resultado de sus esfuerzos.
+Después de retirarse, tu antiguo primer oficial Malcolm decidió fabricar buenas armas para marineros trabajadores, en vez de espadas elegantes para oficiales. Este alfanje de calidad es el resultado de sus esfuerzos.
 }
 
 // Blades from SLiB. Added 09-10-2007 by KevAtl -->
@@ -303,7 +303,7 @@ Después de retirarse a una vida en tierra firme, tu antiguo primer oficial Malco
 itmname_blade28	{Shamshir}
 itmdescr_blade28
 {
-Una decorada espada persa caracterizada por una hoja fina y muy curva. El único filo es muy cortante pero ofrece poco valor defensivo.
+Una decorada espada persa caracterizada por una hoja fina y muy curva. El único filo es muy cortante, pero ofrece poco valor defensivo.
 }
 
 itmname_blade29	{Espada de oficial portugués}
@@ -353,7 +353,7 @@ Una hoja corta, decorada con una cabeza de marfil bajo la empuñadura.
 itmname_bladeC11	{Espada milanesa}
 itmdescr_bladeC11
 {
-Hay muchas espadas a caballo entre los estilos de punta y de corte; espadas que son más largas que las de estilos posteriores pero más finas que las espadas de corte más antiguas. Ésta es una de esas espadas.
+Hay espadas a caballo entre los estilos de punta y de corte; más largas que las de estilos posteriores pero más finas que las espadas tajadoras más antiguas. Ésta es una de esas espadas.
 }
 
 itmname_bladeC12	{Katzbalger}
@@ -365,7 +365,7 @@ Una hoja de doble filo con tres acanaladuras grandes y dos pequeñas, gavilanes e
 itmname_bladeC6	{Espadín}
 itmdescr_bladeC6
 {
-El espadín es la espada de duelo más común. No es simplemente un arma, sino más bien una parte esencial del vestuario de un caballero. A pesar del nombre, los espadines pueden ser bastante largos. Se refiere a la anchura de la hoja más que a la longitud.
+El espadín es la espada de duelo más común. No es solo un arma, sino parte esencial del vestuario de un caballero. Los espadines pueden ser bastante largos. Se refiere a la anchura de la hoja más que a la longitud.
 }
 
 itmname_bladeC17	{Ropera flamígera}
@@ -383,7 +383,7 @@ Esta pesada espada es usada sobre todo por hombres fuertes, y tiene la potencia 
 itmname_bladeC2	{Espada italiana con contrafilo}
 itmdescr_bladeC2
 {
-Esta es una espada veneciana con guarda de cuarto de lazo. Dos aspectos distintivos de este diseño son la empuñadura de acero y una ancha hoja con contrafilo y doble acanaladura central. La hoja es lo bastante ancha y pesada como para calificarla como una espada de punta y corte.
+Espada veneciana con guarda de cuarto de lazo. Tiene la empuñadura de acero y una ancha hoja con contrafilo y acanaladura central. Es lo bastante ancha y pesada para considerarla una espada de punta y corte.
 }
 
 itmname_bladeC23 {Ropera de Toledo}
@@ -450,7 +450,7 @@ Esta antigua y rara espada de doble filo ha sido transmitida durante generacione
 itmname_blade36	{Espada de caza}
 itmdescr_blade36
 {
-Esta espada corta y afilada suele usarse para sacrificar animales, pero es igual de efectiva contra personas.
+Esta espada corta y afilada suele usarse para rematar animales heridos en las cacerías, pero es igual de efectiva contra personas.
 }
 
 itmname_blade37	{Daga dorada con incrustaciones de joyas}
@@ -501,7 +501,7 @@ itmdescr_blade41
 El Shashka, que significa 'cuchillo largo', es favorecido por los regimientos de cosacos rusos debido a su ligereza y su hoja resistente. Perfectamente equilibrado, el Shashka es un arma de caballería ideal y es letal en las manos de casi cualquiera.
 }
 
-itmname_blade45	{Espada 'Garra de Cangrejo'}
+itmname_blade45	{Espada de patillas}
 itmdescr_blade45
 {
 Antigua y rara, esta pesada arma de doble filo es de origen desconocido, pero puuede cortar y parar bastante bien a pesar de su edad.
@@ -644,7 +644,7 @@ Comúnmente usada para cortar madera, el hacha también puede usarse como arma. Su
 itmname_bladeaxe2 {Hacha de abordaje}
 itmdescr_bladeaxe2
 {
-Una herramienta con muchos usos a bordo de un barco incluyendo control de daños o de incendios. El hacha de abordaje se usaba a menudo también para ayudar en el abordaje de barcos enemigos para inutilizarlos cortando los aparejos, etc. Por supuesto también puede ser un arma poderosa, aunque no muy manejable.
+Una herramienta con muchos usos a bordo de un barco. El hacha de abordaje se usa para abordar barcos enemigos, cortar aparejos, etc. También puede ser un arma poderosa, aunque no muy manejable.
 }
 
 itmname_bladeaxe3 {Hachuela}
@@ -1412,7 +1412,7 @@ Esta armadura está tan bien hecha que puede parar una espada e incluso desviar u
 itmname_CheapArmor	{Coraza barata}
 itmdescr_CheapArmor
 {
-Esta es una típica armadura de batalla de acero; es pesada y dificulta los movimientos.
+Típica armadura de acero; es pesada y dificulta los movimientos.
 }
 
 itmname_Gorget	{Gola}
@@ -1880,7 +1880,7 @@ Contiene una piedra de afilar, aceite y un trapo fino. Cuida de tu espada y ella
 itmname_clock1 {Reloj simple} // PB
 itmdescr_clock1
 {
-Conocer la hora a bordo de un barco siempre ha sido muy importante para la navegación. Este sencillo reloj, de 10 cm de diámetro, puede colgarse en un mamparo de tu cámara y te indicará la hora cuando estés en el mar. Sin embargo, este reloj no es muy preciso y no puede usarse para determinar tu posición usando las estrellas.
+Conocer la hora a bordo de un barco es muy importante para la navegación. Puedes colgar este sencillo reloj en tu cámara y te indicará la hora cuando estés en el mar. Sin embargo, no es muy preciso y no puede usarse para determinar tu posición usando las estrellas.
 }
 
 itmname_clock2 {Cronómetro} // PB
@@ -2092,7 +2092,7 @@ itmname_skillbook3 {Libro del rebote Balístico}
 itmdescr_skillbook3
 {
 ¿Sabías que existe una forma de hacer rebotar las balas de cañón al golpear tu casco? En este libro podrás aprender éste y más trucos. 
-(Desbloquea 'Defensa naval avanzada')
+(Desbloquea 'Control de daños mejorado')
 }
 
 itmname_skillbook4 {No dispares al mensajero}

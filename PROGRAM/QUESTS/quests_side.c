@@ -10207,9 +10207,9 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.con_parri.win_condition = "con_parri";
 
 			PChar.quest.con_parri_expired.win_condition.l1 = "Timer";
-			PChar.quest.con_parri_expired.win_condition.l1.date.day = GetAddingDataDay(0,30,0);
-			PChar.quest.con_parri_expired.win_condition.l1.date.month = GetAddingDataMonth(0,30,0);
-			PChar.quest.con_parri_expired.win_condition.l1.date.year = GetAddingDataYear(0,30,0);
+			PChar.quest.con_parri_expired.win_condition.l1.date.day = GetAddingDataDay(0,0,30);	// GR: was (0,30,0) which is 30 months!
+			PChar.quest.con_parri_expired.win_condition.l1.date.month = GetAddingDataMonth(0,0,30);
+			PChar.quest.con_parri_expired.win_condition.l1.date.year = GetAddingDataYear(0,0,30);
 			PChar.quest.con_parri_expired.win_condition = "con_parri_expired";
 		break;
 

@@ -2668,8 +2668,8 @@ void SetSettingsList()
 	int i;
 
 	SendMessage(&GameInterface,"ll", MSG_INTERFACE_LOCK_NODE, 0);
-	CreateString(false,"BuildSettingsTitle",XI_ConvertString("BuildSettingsTitle"),FONT_NORMAL,COLOR_YELLOW_LIGHT,320,37,SCRIPT_ALIGN_CENTER,1.3);
-	CreateString(false,"BuildSettingsDescr",XI_ConvertString("BuildSettingsDescr"),FONT_NORMAL,COLOR_RED_LIGHT,320,74,SCRIPT_ALIGN_CENTER,1.0);
+	CreateString(false,"BuildSettingsTitle",XI_ConvertString("BuildSettingsTitle"),FONT_NORMAL,COLOR_YELLOW_LIGHT,320,40,SCRIPT_ALIGN_CENTER,1.3);
+	CreateString(false,"BuildSettingsDescr",XI_ConvertString("BuildSettingsDescr"),FONT_NORMAL,COLOR_RED_LIGHT,320,77,SCRIPT_ALIGN_CENTER,1.0);
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_OK_BUTTON",0,XI_ConvertString("Ok"));
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_CANCEL_BUTTON",0,XI_ConvertString("Cancel"));
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_DEFAULT_BUTTON",0,XI_ConvertString("Restore Default"));

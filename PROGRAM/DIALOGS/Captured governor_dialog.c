@@ -85,9 +85,8 @@ void ProcessDialogEvent()
 					Link.(tempstr).go = "new_nation_" + i;
 				}
 			}
-//			i = makeint(GetTownGovernorIndex(NPChar.town) > -1) + GetTownNumForts(NPChar.town);
-			i = GetTownNumForts(NPChar.town) + 1;							// GR: simplified, if (makeint(GetTownGovernorIndex(NPChar.town) > -1) is false then original line sets i to wrong value
-			if (GetTownGovernorIndex(NPChar.town) > -1 && GetPassengersQuantity(PChar) >= i && ProfessionalNavyNation() == UNKNOWN_NATION)
+			i = makeint(GetTownGovernorIndex(NPChar.town) > -1) + GetTownNumForts(NPChar.town);
+			if (GetPassengersQuantity(PChar) >= i && ProfessionalNavyNation() == UNKNOWN_NATION)
 			{
 				Link.l10 = DLG_TEXT[7];
 				Link.l10.go = "capture_for_blaze";

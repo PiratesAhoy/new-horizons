@@ -1,27 +1,27 @@
 TEXT	{
-Theorem : All numbers are equal to zero.
-Proof: Suppose that a=b. Then
+Теорема: Все числа равны нулю.
+Доказательство: Предположим, что a=b. Тогда
 a = b
 a^2 = ab
 a^2 - b^2 = ab - b^2
 (a + b)(a - b) = b(a - b)
 a + b = b
 a = 0
-Furthermore if a + b = b, and a = b, then b + b = b, and 2b = b, which mean that 2 = 1 and your two-mast brig is actually a one-mast tartane.
+Кроме того, если a + b = b, и a = b, то b + b = b, и 2b = b, это означает, что 2 = 1 и ваш двухмачтовый бриг на самом деле является одномачтовой тартаной.
 -------------------------
-Jack Sparrow and his two lieutenants stay a night in Tortuga tavern, where they're charged 10 gold each - 5 for the normal tavern rate and 5 for the night's company with the bar wench. It still works out cheaper than going to the brothel, so Jack takes 10 gold from each lieutenant, another 10 gold from his own pocket, then hands over the 30 gold total. The following morning the bar wench says that she forgot that there's a special offer for a foursome, it's only 25 gold total, and hands 5 gold back to Jack. Jack puts 1 gold in his pocket, gives 1 gold to each of his lieutenants, then gives the other 2 back to the wench. Now there are two problems with this story. One is that Jack Sparrow, having got his hands on 5 gold, would not willingly part with it again. The other is that each man has now paid a total of 9 gold, which together with the 2 gold Jack gave back to the wench makes a total of 29 gold. Where's the missing gold piece?
+Джек Воробей и два его лейтенанта остаются на ночь в таверне на Тортуге, где с каждого берут по 10 золотых монет - 5 золотых монет за обычную ночь в таверне и 5 золотых монет за ночь с официанткой. Это все равно выходит дешевле, чем поход в бордель, поэтому Джек берет по 10 золотых монет с каждого лейтенанта, еще 10 золотых монет из своего кармана, а затем отдает все 30 золотых монет. На следующее утро официантка говорит, что забыла о специальном предложении для секса вчетвером, всего 25 золотых монет, и возвращает 5 золотых монет Джеку. Джек кладет золотые монеты в карман, дает по 1 золотой монете каждому из своих лейтенантов, затем возвращает остальные 2 золотые монеты официантке. Теперь есть две проблемы с этой историей. Одна - Джек Воробей, заполучив 5 золотых монет, не стал бы с ними расставаться по своей воле. Другая - каждый мужчина заплатил в общей сложности 9 золотых монет, что вместе с 2 золотыми монетами, которые Джек отдал официантке, составляет в общей сложности 29 золотых монет. Где пропавшая золотая монета?
 -------------------------
-Blackbeard: "Think of a number between 1 and 10 but don't tell me what it is."
-Pirate 1: "Got it."
-Blackbeard: "Your number is 4."
-Pirate 1: "No, actually it's 6."
-Blackbeard: "Wrong answer." <BANG> "Think of a number between 1 and 10 but don't tell me what it is."
-Pirate 2: "Got it."
-Blackbeard: "Your number is 7."
-Pirate 2: "I was thinking of 3 but suddenly I'm thinking of 7."
+Черная борода: "Придумай число от 1 до 10, но не говори мне его."
+Пират 1: "Понял."
+Черная борода: "Твоё число это 4."
+Пират 1: "Нет, на самом деле это 6."
+Черная борода: "Неправильный ответ." <Удар> "Придумай число от 1 до 10, но не говори мне его."
+Пират 2: "Понял."
+Черная борода: "Твоё число это 7."
+Пират 2: "Я думал о 3, но вдруг передумал... Ты прав это 7."
 -------------------------
-Theorem: All numbers are equal.
-Proof: Choose arbitrary a and b, and let t = a + b. Then
+Теорема: Все числа равны.
+Доказательство: Выберите произвольные a и b, и пусть t = a + b. Тогда
 a + b = t
 (a + b)(a - b) = t(a - b)
 a^2 - b^2 = ta - tb
@@ -30,5 +30,5 @@ a^2 - ta + (t^2)/4 = b^2 - tb + (t^2)/4
 (a - t/2)^2 = (b - t/2)^2
 a - t/2 = b - t/2
 a = b
-So all numbers are the same, and math is pointless, which means it is time to put down this book and get back to the helm before you hit that rock ahead.
+Итак, все числа одинаковы, а математика бессмысленна, а это значит, что пора отложить эту книгу и вернуться к штурвалу, прежде чем вы врежетесь в скалу спереди.
 }

@@ -3290,7 +3290,7 @@ void InitModels(bool isstart)
 
 	model.description =  "An officer of His Majesty's Royal Marines";
 	model.id          =  "brtoffic18";
-	model.FaceId      =  99;
+	model.FaceId      =  623;	// GR: was 99
 	model.nation      =  ENGLAND;
 	model.price       =  4500;
 	model.assigned    =  true;
@@ -3300,7 +3300,7 @@ void InitModels(bool isstart)
 	// English Marines. JMV Textures with portraits and recoding by Jack Davidson -->
 	model.description =  "A soldier of His Majesty's Royal Marines.  A Nice shaggy goatee too.";
 	model.id          =  "BrtSol18_1";
-	model.FaceId      =  99; // TALISMAN changed was 311
+	model.FaceId      =  623;	// GR: was 99: TALISMAN changed was 311
 	model.nation      =  ENGLAND;
 	model.price       =  1150;
 	model.assigned    =  true;
@@ -3309,7 +3309,7 @@ void InitModels(bool isstart)
 
 	model.description =  "A soldier of His Majesty's Royal Marines... the facial hair makes you look older?";
 	model.id          =  "BrtSol18_2";
-	model.FaceId      =  99; // TALISMAN changed was 312
+	model.FaceId      =  623;	// GR: was 99: TALISMAN changed was 311
 	model.nation      =  ENGLAND;
 	model.price       =  1150;
 	model.assigned    =  true;
@@ -3318,7 +3318,7 @@ void InitModels(bool isstart)
 
 	model.description =  "A soldier of His Majesty's Royal Marines.";
 	model.id          =  "BrtSol18_3";
-	model.FaceId      =  99; // TALISMAN changed was 313
+	model.FaceId      =  623;	// GR: was 99: TALISMAN changed was 311
 	model.nation      =  ENGLAND;
 	model.price       =  1150;
 	model.assigned    =  true;
@@ -3327,7 +3327,7 @@ void InitModels(bool isstart)
 
 	model.description =  "A soldier of His Majesty's Royal Marines.  You look nice, why so sad?";
 	model.id          =  "BrtSol18_4";
-	model.FaceId      =  99; // TALISMAN changed was 314
+	model.FaceId      =  623;	// GR: was 99: TALISMAN changed was 311
 	model.nation      =  ENGLAND;
 	model.price       =  1150;
 	model.assigned    =  true;
@@ -3336,7 +3336,7 @@ void InitModels(bool isstart)
 
 	model.description =  "A soldier of His Majesty's Royal Marines, but I think you lied about your age.";
 	model.id          =  "BrtSol18_5";
-	model.FaceId      =  99; // TALISMAN changed was 315
+	model.FaceId      =  623;	// GR: was 99: TALISMAN changed was 311
 	model.nation      =  ENGLAND;
 	model.price       =  1150;
 	model.assigned    =  true;
@@ -3345,7 +3345,7 @@ void InitModels(bool isstart)
 
 	model.description =  "A soldier of His Majesty's Royal Marines.  You'll look like a right proper soldier in this uniform.";
 	model.id          =  "BrtSol18_6";
-	model.FaceId      =  99; // TALISMAN changed was 316
+	model.FaceId      =  623;	// GR: was 99: TALISMAN changed was 311
 	model.nation      =  ENGLAND;
 	model.price       =  1150;
 	model.assigned    =  true;
@@ -4057,10 +4057,23 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description	=  "Helen Ardent - in a dress?";
-	model.id		=  "ArdentF_2"; // Based on "towngirl4" with texture from AoP lady_5"
+	model.id		=  "ArdentF_2"; // Based on "towngirl4" with texture from AoP "lady_5"
 	model.FaceId		=  587;
 	model.nation		=  BROKEN; // Assigned during story
 	model.price		=  2400;
+	model.sex		=  "woman";
+	model.ani		=  "woman_sit";
+	model.height		=  1.75;
+	model.name		= "Helen";
+	model.lastname		= "Ardent";
+	model.assigned		=  true;
+	AddCharacterModel(model);
+
+	model.description	=  "A blue dress with red trimmings and a bonnet - but why is Helen Ardent wearing it?";
+	model.id		= "Ardent_F_TG"; // Based on "towngirl3" with details from AoP "girl3"
+	model.FaceId		=  619;
+	model.nation		=  BROKEN; // Assigned during story
+	model.price		=  2000;
 	model.sex		=  "woman";
 	model.ani		=  "woman_sit";
 	model.height		=  1.75;
@@ -6878,7 +6891,7 @@ void InitModels(bool isstart)
 	// Officer English -->
 	model.description =  "Perhaps the uniform of an officer of the English Army is what is called for here!";
 	model.id	   =  "Offic_eng_15";
-	model.FaceId	= 99;
+	model.FaceId	= 620;
 	model.minrank	 =  1;
 	model.nation	  =  ENGLAND;
 	model.price	   =  3000;
@@ -6900,7 +6913,7 @@ void InitModels(bool isstart)
 
 	model.description =  "Perhaps the uniform of an officer of the English Army is what is called for here!";
 	model.id	   =  "Offic_eng_17";
-	model.FaceId	= 99;
+	model.FaceId	= 623;
 	model.minrank	 =  1;
 	model.nation	  =  ENGLAND;
 	model.price	   =  3000;
@@ -6910,11 +6923,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "The uniform of British officer, straight from Caribbean islands.";
-	model.id	   =  "Offic_eng_18";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  3000;
+	model.id	=  "Offic_eng_18";
+	model.FaceId	= 623;
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  3000;
 	model.assigned	=  true;
 	model.period = "" + PERIOD_COLONIAL_POWERS + PERIOD_REVOLUTIONS + PERIOD_NAPOLEONIC;
 	AssignModelTypeNation(isstart, model, "Land_Officers", 1.0, ENGLAND);
@@ -6922,11 +6935,11 @@ void InitModels(bool isstart)
 	// <-- Officer English
 
 	model.description =  "This uniform suggests that it's wearer might be an officer of the King's Musketeers!  Surely a rapier is the appropriate blade to complete the effect!";
-	model.id	   =  "Offic_fra_15";
-	model.FaceId	= 101;
-	model.minrank	 =  1;
-	model.nation	  =  FRANCE;
-	model.price	   =  4000;
+	model.id	=  "Offic_fra_15";
+	model.FaceId	= 624; // GR: was 101
+	model.minrank	=  1;
+	model.nation	=  FRANCE;
+	model.price	=  4000;
 	model.assigned	=  true;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
 	AssignModelTypeNation(isstart, model, "Land_Officers", 1.0, FRANCE);
@@ -7104,7 +7117,7 @@ void InitModels(bool isstart)
 	// Officer Spanish -->
 	model.description =  "An engraved steel breasplate dominates this outfit that includes a white shirt topped off with a Spanish helmet!";
 	model.id	   =  "Offic_spa_15";
-	model.FaceId	= 102; // TALISMAN changed was 110
+	model.FaceId	= 621; // GR: was 102 // TALISMAN changed was 110
 	model.minrank	 =  1;
 	model.nation	  =  SPAIN;
 	model.price	   =  2200;
@@ -7115,7 +7128,7 @@ void InitModels(bool isstart)
 
 	model.description =  "An engraved steel breasplate dominates this outfit that includes a white shirt topped off with a Spanish helmet!";
 	model.id	   =  "Offic_spa_16";
-	model.FaceId	= 102; // TALISMAN changed was 110
+	model.FaceId	= 621;	// GR: was 102 // TALISMAN changed was 110
 	model.minrank	 =  1;
 	model.nation	  =  SPAIN;
 	model.price	   =  2200;
@@ -7126,7 +7139,7 @@ void InitModels(bool isstart)
 
 	model.description =  "An engraved steel breasplate dominates this outfit that includes a white shirt topped off with a Spanish helmet!";
 	model.id	   =  "Offic_spa_17";
-	model.FaceId	= 102; // TALISMAN changed was 110
+	model.FaceId	= 621;	// GR: was 102 // TALISMAN changed was 110
 	model.minrank	 =  1;
 	model.nation	  =  SPAIN;
 	model.price	   =  2200;
@@ -7985,11 +7998,11 @@ void InitModels(bool isstart)
 
 	// Soldier English -->
 	model.description =  "Your basic English Army or Marine uniform under a strong jaw and a mustache.";
-	model.id	   =  "Soldier_Eng_15";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng_15";
+	model.FaceId	=  620;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -7997,11 +8010,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "An English Army or Marine uniform, and have the barber trim the goatee!";
-	model.id	   =  "Soldier_Eng2_15";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng2_15";
+	model.FaceId	=  620;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8009,11 +8022,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "An English land forces uniform with a blonde mustache and hair.";
-	model.id	   =  "Soldier_Eng3_15";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng3_15";
+	model.FaceId	=  620;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8021,11 +8034,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Here is a uniform of the English Army or Marines, and the barber is waiting down the street.";
-	model.id	   =  "Soldier_Eng4_15";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng4_15";
+	model.FaceId	= 620;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8033,11 +8046,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A typical English soldier's kit.";
-	model.id	   =  "Soldier_Eng5_15";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng5_15";
+	model.FaceId	= 620;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8045,11 +8058,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "An English uniform of the Army or the Marines.  It's similarity to other such packages is explained by the term 'uniform'...";
-	model.id	   =  "Soldier_Eng6_15";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng6_15";
+	model.FaceId	= 620;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8057,11 +8070,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Your basic English Army or Marine uniform under a strong jaw and a mustache.";
-	model.id	   =  "Soldier_Eng_16";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng_16";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -8069,11 +8082,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "An English Army or Marine uniform, and have the barber trim the goatee!";
-	model.id	   =  "Soldier_Eng2_16";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng2_16";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -8081,11 +8094,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "An English land forces uniform with a blonde mustache and hair.";
-	model.id	   =  "Soldier_Eng3_16";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng3_16";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -8093,11 +8106,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Here is a uniform of the English Army or Marines, and the barber is waiting down the street.";
-	model.id	   =  "Soldier_Eng4_16";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng4_16";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -8105,11 +8118,12 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A typical English soldier's kit.";
-	model.id	   =  "Soldier_Eng5_16";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng5_16";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
+	model.assigned	=  true;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -8117,11 +8131,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "An English uniform of the Army or the Marines.  It's similarity to other such packages is explained by the term 'uniform'...";
-	model.id	   =  "Soldier_Eng6_16";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng6_16";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -8129,11 +8143,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Your basic English Army or Marine uniform under a strong jaw and a mustache.";
-	model.id	   =  "Soldier_Eng_17";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng_17";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -8141,11 +8155,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "An English Army or Marine uniform, and have the barber trim the goatee!";
-	model.id	   =  "Soldier_Eng2_17";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng2_17";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -8153,11 +8167,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "An English land forces uniform with a blonde mustache and hair.";
-	model.id	   =  "Soldier_Eng3_17";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng3_17";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -8165,11 +8179,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Here is a uniform of the English Army or Marines, and the barber is waiting down the street.";
-	model.id	   =  "Soldier_Eng4_17";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng4_17";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MARINE;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -8177,11 +8191,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A typical English soldier's kit.";
-	model.id	   =  "Soldier_Eng5_17";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng5_17";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -8189,11 +8203,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "An English uniform of the Army or the Marines.  It's similarity to other such packages is explained by the term 'uniform'...";
-	model.id	   =  "Soldier_Eng6_17";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng6_17";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.playertype  = PLAYER_TYPE_MARINE;
@@ -8202,11 +8216,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A typical english red-coat uniform.";
-	model.id	   =  "Soldier_Eng_18";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng_18";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_COLONIAL_POWERS + PERIOD_REVOLUTIONS + PERIOD_NAPOLEONIC;
@@ -8214,11 +8228,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A typical english red-coat uniform 2.";
-	model.id	   =  "Soldier_Eng2_18";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng2_18";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_COLONIAL_POWERS + PERIOD_REVOLUTIONS + PERIOD_NAPOLEONIC;
@@ -8226,11 +8240,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A typical english red-coat uniform 3.";
-	model.id	   =  "Soldier_Eng3_18";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng3_18";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_COLONIAL_POWERS + PERIOD_REVOLUTIONS + PERIOD_NAPOLEONIC;
@@ -8238,11 +8252,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A typical english red-coat uniform 4.";
-	model.id	   =  "Soldier_Eng4_18";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng4_18";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_COLONIAL_POWERS + PERIOD_REVOLUTIONS + PERIOD_NAPOLEONIC;
@@ -8250,11 +8264,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A typical english red-coat uniform 5.";
-	model.id	   =  "Soldier_Eng5_18";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng5_18";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_COLONIAL_POWERS + PERIOD_REVOLUTIONS + PERIOD_NAPOLEONIC;
@@ -8262,11 +8276,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A typical english red-coat uniform 6.";
-	model.id	   =  "Soldier_Eng6_18";
-	model.FaceId	= 99;
-	model.minrank	 =  1;
-	model.nation	  =  ENGLAND;
-	model.price	   =  1000;
+	model.id	=  "Soldier_Eng6_18";
+	model.FaceId	= 623;	// GR: was 99
+	model.minrank	=  1;
+	model.nation	=  ENGLAND;
+	model.price	=  1000;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_COLONIAL_POWERS + PERIOD_REVOLUTIONS + PERIOD_NAPOLEONIC;
@@ -8276,11 +8290,11 @@ void InitModels(bool isstart)
 
 	// Soldier French -->
 	model.description =  "The kit of a soldier of France, complimented by long dark hair and a goatee.";
-	model.id	   =  "Soldier_Fra_15";
-	model.FaceId	= 101;
-	model.minrank	 =  1;
-	model.nation	  =  FRANCE;
-	model.price	   =  1250;
+	model.id	=  "Soldier_Fra_15";
+	model.FaceId	= 624; // GR: was 101
+	model.minrank	=  1;
+	model.nation	=  FRANCE;
+	model.price	=  1250;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8288,11 +8302,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "The uniform of a soldier of France, without the common goatee.";
-	model.id	   =  "Soldier_Fra2_15";
-	model.FaceId	= 101;
-	model.minrank	 =  1;
-	model.nation	  =  FRANCE;
-	model.price	   =  1250;
+	model.id	=  "Soldier_Fra2_15";
+	model.FaceId	= 624; // GR: was 101
+	model.minrank	=  1;
+	model.nation	=  FRANCE;
+	model.price	=  1250;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8300,11 +8314,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "The uniform of a soldier of France who...  looks like... many other soldiers of France.";
-	model.id	   =  "Soldier_Fra3_15";
-	model.FaceId	= 101;
-	model.minrank	 =  1;
-	model.nation	  =  FRANCE;
-	model.price	   =  1250;
+	model.id	=  "Soldier_Fra3_15";
+	model.FaceId	= 624; // GR: was 101
+	model.minrank	=  1;
+	model.nation	=  FRANCE;
+	model.price	=  1250;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8312,11 +8326,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "This fresh-faced occupant of the uniform of the Army of France could well resemble one M'seur D'Artagnan of another place and time!";
-	model.id	   =  "Soldier_Fra4_15";
-	model.FaceId	= 101;
-	model.minrank	 =  1;
-	model.nation	  =  FRANCE;
-	model.price	   =  1250;
+	model.id	=  "Soldier_Fra4_15";
+	model.FaceId	= 624; // GR: was 101
+	model.minrank	=  1;
+	model.nation	=  FRANCE;
+	model.price	=  1250;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8324,11 +8338,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Uniform, French Army, one each.";
-	model.id	   =  "Soldier_Fra5_15";
-	model.FaceId	= 101;
-	model.minrank	 =  1;
-	model.nation	  =  FRANCE;
-	model.price	   =  1250;
+	model.id	=  "Soldier_Fra5_15";
+	model.FaceId	= 624; // GR: was 101
+	model.minrank	=  1;
+	model.nation	=  FRANCE;
+	model.price	=  1250;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -8336,11 +8350,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "This uniform of a soldier of France seems... shorter than others like it.";
-	model.id	   =  "Soldier_Fra6_15";
-	model.FaceId	= 101;
-	model.minrank	 =  1;
-	model.nation	  =  FRANCE;
-	model.price	   =  1250;
+	model.id	=  "Soldier_Fra6_15";
+	model.FaceId	= 624; // GR: was 101
+	model.minrank	=  1;
+	model.nation	=  FRANCE;
+	model.price	=  1250;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -9430,10 +9444,11 @@ void InitModels(bool isstart)
 
 	// Soldier Spanish -->
 	model.description =  "Plain, or smooth, or cheap breastplate, with a Spanish metal helmet.  Compliment that with a goatee, and you're talking one tough Spanish-looking adventurer!";
-	model.id	   =  "Soldier_Spa_15";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
+	model.id	=  "Soldier_Spa_15";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -9441,11 +9456,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "This is the gear of the Conquistador, whose sun has not fully yet risen over the Archipelago!";
-	model.id	   =  "Soldier_Spa2_15";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa2_15";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -9453,11 +9468,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "The uniform and gear of a soldier of Spain.";
-	model.id	   =  "Soldier_Spa3_15";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa3_15";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -9465,11 +9480,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "With a beard and this breastplate and Spanish helm, the image of seasoned soldiering is complete.";
-	model.id	   =  "Soldier_Spa4_15";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa4_15";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -9477,11 +9492,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A Clean-shaven Spanish Conquistador is a fresh Spanish Conquistador!";
-	model.id	   =  "Soldier_Spa5_15";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa5_15";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -9489,11 +9504,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Yet another in a series of ensembles intended for a Spanish soldier.  The breastplate may be hot, and bad for swimming, but against a sword it can be quite welcome!";
-	model.id	   =  "Soldier_Spa6_15";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa6_15";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_EARLY_EXPLORERS;
@@ -9501,11 +9516,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Plain, or smooth, or cheap breastplate, with a Spanish metal helmet.  Compliment that with a goatee, and you're talking one tough Spanish-looking adventurer!";
-	model.id	   =  "Soldier_Spa_16";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa_16";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -9513,11 +9528,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "This is the gear of the Conquistador, whose sun has not fully yet risen over the Archipelago!";
-	model.id	   =  "Soldier_Spa2_16";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa2_16";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -9525,11 +9540,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "The uniform and gear of a soldier of Spain.";
-	model.id	   =  "Soldier_Spa3_16";
-	model.FaceId	= 102;// TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa3_16";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -9537,11 +9552,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "With a beard and this breastplate and Spanish helm, the image of seasoned soldiering is complete.";
-	model.id	   =  "Soldier_Spa4_16";
-	model.FaceId	= 102;  // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa4_16";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -9549,11 +9564,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A Clean-shaven Spanish Conquistador is a fresh Spanish Conquistador!";
-	model.id	   =  "Soldier_Spa5_16";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa5_16";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
@@ -9561,23 +9576,23 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Yet another in a series of ensembles intended for a Spanish soldier.  The breastplate may be hot, and bad for swimming, but against a sword it can be quite welcome!";
-	model.id	   =  "Soldier_Spa6_16";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
-	model.period = "" + PERIOD_THE_SPANISH_MAIN;
+	model.id	=  "Soldier_Spa6_16";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
+	model.period = "" + PERIOD_THE_SPANISH_MAIN;
 	AssignModelTypeNation(isstart, model, "Soldiers", 1.0, sti(model.nation));
 	AddCharacterModel(model);
 
 	model.description =  "Plain, or smooth, or cheap breastplate, with a Spanish metal helmet.  Compliment that with a goatee, and you're talking one tough Spanish-looking adventurer!";
-	model.id	   =  "Soldier_Spa_17";
-	model.FaceId	= 102;  // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa_17";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -9585,11 +9600,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "This is the gear of the Conquistador, whose sun has not fully yet risen over the Archipelago!";
-	model.id	   =  "Soldier_Spa2_17";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa2_17";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -9597,11 +9612,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "The uniform and gear of a soldier of Spain.";
-	model.id	   =  "Soldier_Spa3_17";
-	model.FaceId	= 102; // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa3_17";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -9609,11 +9624,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "With a beard and this breastplate and Spanish helm, the image of seasoned soldiering is complete.";
-	model.id	   =  "Soldier_Spa4_17";
-	model.FaceId	= 102;  // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa4_17";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -9621,11 +9636,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A Clean-shaven Spanish Conquistador is a fresh Spanish Conquistador!";
-	model.id	   =  "Soldier_Spa5_17";
-	model.FaceId	= 102;  // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa5_17";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -9633,11 +9648,11 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Yet another in a series of ensembles intended for a Spanish soldier.  The breastplate may be hot, and bad for swimming, but against a sword it can be quite welcome!";
-	model.id	   =  "Soldier_Spa6_17";
-	model.FaceId	= 102;  // TALISMAN changed was 110
-	model.minrank	 =  1;
-	model.nation	  =  SPAIN;
-	model.price	   =  850;
+	model.id	=  "Soldier_Spa6_17";
+	model.FaceId	= 621; // GR: was 102; // TALISMAN changed was 110
+	model.minrank	=  1;
+	model.nation	=  SPAIN;
+	model.price	=  850;
 	model.assigned	=  true;
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY;
@@ -10859,10 +10874,10 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A soldier of England. Loyal and true sometimes.";
-	model.id	   =  "Offic_en77";
-	model.FaceId	= 99;
-	model.nation	  =  ENGLAND;
-	model.price	   =  4000;
+	model.id	=  "Offic_en77";
+	model.FaceId	= 623;
+	model.nation	=  ENGLAND;
+	model.price	=  4000;
 	model.assigned	=  true;
 	AddCharacterModel(model);
 

@@ -1,4 +1,4 @@
 string DLG_TEXT[2] = {
-"Symbol zastÃ—pczy",
+"Symbol zast×pczy",
 "Tekst",
 };

@@ -1,4 +1,4 @@
-string DLG_TEXT[206] = {
+string DLG_TEXT[224] = {
 "Halt! Who goes there, friend or foe?",
 "Friend. Definitely friend.",
 "We heard sounds of battle and came to investigate. Are you the captain of this ship?",
@@ -205,4 +205,22 @@ string DLG_TEXT[206] = {
 "<Thinks: most fortunate; now he can't tell anyone who brought him here.> Yes, most unfortunate. Now we'll never know how he got here. I'll leave you to dispose of the body. Meanwhile I must report back to the governor.",
 "son-in-law",
 "daughter-in-law",
+"I am starting work as a servant to ",
+".",
+"Not while you're dressed like that!",
+"That is what he said. So we're going to get something which he finds more appropriate.",
+"That won't be necessary. We will find the tailor's shop without your help.",
+"Do you really think a mere servant girl has the right to tell a soldier of the guard his job?",
+"That is not the tailor's shop! Follow your master or lose your job!",
+"Sorry, I'm new to #sSantiago# and was looking around. But you are right, I should concentrate on finding the tailor's shop.",
+"Why are you going to the port? You are behaving very suspiciously - the tailor's shop is in the opposite direction!",
+"No, sir. I just got a bit lost. Thank you for reminding me where to find the shop. I shall go there now.",
+"May I remind you that you are NOT the one getting married in there!",
+"Not today, anyway.",
+"<To ",
+"> As you wish, ",
+".",
+"Your cunning disguise does not fool me, ",
+"! It might have worked if you had continued to wear it.",
+"I'll have to remember that. If I want a disguise to succeed, I must stay in disguise.",
 }

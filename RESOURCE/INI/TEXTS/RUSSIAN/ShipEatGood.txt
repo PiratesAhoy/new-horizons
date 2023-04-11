@@ -1,39 +1,39 @@
 Ship_got_good		{%1 ц %2 поднято на борт}
-Ship_cant_got_good	{Нет места для %1. Трюм заполнен}
+Ship_cant_got_good	{Нет места для %1. Трюм заполнен!}
 
-seg_Balls		{ядер}
-seg_Grapes		{картечи}
-seg_Knippels	{книппелей}
-seg_Bombs		{бомб}
-seg_Sailcloth	{парусины}
-seg_Planks		{досок}
-seg_Slaves		{рабов}
-seg_Wheat		{пшеницы}
-seg_Ebony		{черного дерева}
-seg_Chocolate	{какао}
-seg_Sugar		{сахара}
-seg_Wine		{вина}
-seg_Linen		{полотна}
-seg_Rum			{рома}
-seg_Tobacco		{табака}
-seg_Coffee		{кофе}
-seg_Mahogany	{красного дерева}
-seg_Cinnamon	{корицы}
-seg_Copra		{копры}
-seg_Paprika		{паприки}
-seg_Fruits		{фруктов}
-seg_Ale			{эля}
-seg_Silk		{шелка}
-seg_Clothes		{одежды}
-seg_Cotton		{хлопка}
-seg_Sandal		{сандала}
-seg_Leather		{кожи}
-seg_Oil			{масла}
-seg_Gold		{золота}    // from SLiB -->
-seg_Silver		{серебра}  //   by
-seg_Bricks		{кирпичей}  // Jack Davidson <--
-seg_Food		{провизии}
-seg_Weapon		{оружия}
-seg_Gunpowder	{пороха}
-seg_Ration		{провизии}
-seg_Medicines	{медикаментов}
+seg_Balls		{Ядер}
+seg_Grapes		{Картечи}
+seg_Knippels	{Книппелей}
+seg_Bombs		{Бомб}
+seg_Sailcloth	{Парусины}
+seg_Planks		{Досок}
+seg_Slaves		{Рабов}
+seg_Wheat		{Пшеницы}
+seg_Ebony		{Чёрного Дерева}
+seg_Chocolate	{Какао}
+seg_Sugar		{Сахара}
+seg_Wine		{Вина}
+seg_Linen		{Полотна}
+seg_Rum			{Рома}
+seg_Tobacco		{Табака}
+seg_Coffee		{Кофе}
+seg_Mahogany	{Красного Дерева}
+seg_Cinnamon	{Корицы}
+seg_Copra		{Копры}
+seg_Paprika		{Паприки}
+seg_Fruits		{Фруктов}
+seg_Ale			{Эля}
+seg_Silk		{Шёлка}
+seg_Clothes		{Одежды}
+seg_Cotton		{Хлопка}
+seg_Sandal		{Сандала}
+seg_Leather		{Кожи}
+seg_Oil			{Масла}
+seg_Gold		{Золота}
+seg_Silver		{Серебра}
+seg_Bricks		{Кирпичей}
+seg_Food		{Провизии}
+seg_Weapon		{Оружия}
+seg_Gunpowder	{Пороха}
+seg_Ration		{Провизии}
+seg_Medicines	{Лекарств}

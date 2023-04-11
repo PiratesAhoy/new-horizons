@@ -56,11 +56,11 @@ void ProcessDialogEvent()
 			Dialog.snd = "dialogs\0\009";
 
 			dialog.text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + ".";
-			if (isofficer(NPChar)) dialog.text = DLG_TEXT[0] + DLG_TEXT[536] + ".";
+			if (isofficer(NPChar)) dialog.text = DLG_TEXT[0] + DLG_TEXT[548] + ".";
 			if (CheckAttribute(NPChar, "married") && sti(NPChar.married) == MR_MARRIED && NPChar.married.id == PChar.id)
 			{
-				if (PChar.sex == "woman") dialog.text = DLG_TEXT[0] + DLG_TEXT[538] + ".";
-				else dialog.text = DLG_TEXT[0] + DLG_TEXT[537] + ".";
+				if (PChar.sex == "woman") dialog.text = DLG_TEXT[0] + DLG_TEXT[550] + ".";
+				else dialog.text = DLG_TEXT[0] + DLG_TEXT[549] + ".";
 			}
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";
@@ -166,8 +166,16 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[93];
-				link.l1 = DLG_TEXT[94];
+				if (PChar.sex == "woman")
+				{
+					dialog.text = DLG_TEXT[536];
+					link.l1 = DLG_TEXT[537] + GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false)+ DLG_TEXT[538];
+				}
+				else
+				{
+					dialog.text = DLG_TEXT[93];
+					link.l1 = DLG_TEXT[94];
+				}
 				AddDialogExitQuest("kidnap_cooperate_day");
 			}
 			link.l1.go = "exit";
@@ -176,6 +184,30 @@ void ProcessDialogEvent()
 		case "apologise":
 			dialog.text = DLG_TEXT[21];
 			link.l1 = DLG_TEXT[22];
+			link.l1.go = "exit";
+		break;
+
+		case "dress_looks_good":
+			dialog.text = DLG_TEXT[539] + GetMyName(PChar) + DLG_TEXT[540];
+			link.l1 = DLG_TEXT[541];
+			link.l1.go = "brooch1";
+		break;
+
+		case "brooch1":
+			dialog.text = DLG_TEXT[542];
+			link.l1 = DLG_TEXT[543];
+			link.l1.go = "brooch2";
+		break;
+
+		case "brooch2":
+			dialog.text = DLG_TEXT[544];
+			link.l1 = DLG_TEXT[545];
+			link.l1.go = "exit";
+		break;
+
+		case "brooch_to_guard":
+			dialog.text = DLG_TEXT[546];
+			link.l1 = "...";
 			link.l1.go = "exit";
 		break;
 
@@ -217,7 +249,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "reached_a_decision":
-			n = makeint(PChar.quest.ardent_kidnap.voyage_stage);
+			n = 0;
+			if (CheckAttribute(PChar, "quest.ardent_kidnap.voyage_stage")) n = sti(PChar.quest.ardent_kidnap.voyage_stage);
+			if (CheckAttribute(PChar,"quest.bored_in_san_juan")) n = 10;
 			dialog.text = DLG_TEXT[30];
 			if (!CheckAttribute(PChar,"quest.bored_in_san_juan"))
 			{
@@ -308,7 +342,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "marry":
-			n = makeint(PChar.quest.ardent_kidnap.voyage_stage);
+			n = 0;
+			if (CheckAttribute(PChar, "quest.ardent_kidnap.voyage_stage")) n = sti(PChar.quest.ardent_kidnap.voyage_stage);
 			if (n<2 && !CheckAttribute(PChar,"quest.bored_in_san_juan"))
 			{
 				dialog.text = DLG_TEXT[48] + GetMySimpleName(characterFromID(PChar.quest.villain)) + DLG_TEXT[49];
@@ -871,7 +906,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "run_for_ship":
-			dialog.text = DLG_TEXT[95];
+			if (NPChar.sex == "woman") dialog.text = DLG_TEXT[95];
+			else dialog.text = DLG_TEXT[547];
 			if (PChar.location.from_sea == "Cuba_shore_02") link.l1 = DLG_TEXT[411];
 			else link.l1 = DLG_TEXT[96];
 			link.l1.go = "exit";

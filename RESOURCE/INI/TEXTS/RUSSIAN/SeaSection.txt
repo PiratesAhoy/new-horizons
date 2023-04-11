@@ -23,23 +23,23 @@ seg_Linen		{Полотна}
 seg_Rum			{Рома}
 seg_Tobacco		{Табака}
 seg_Coffee		{Кофе}
-seg_Mahogany	{Красного дерева}
+seg_Mahogany	{Красного Дерева}
 seg_Cinnamon	{Корицы}
 seg_Copra		{Копры}
-seg_Paprika		{Перца}
+seg_Paprika		{Паприки}
 seg_Fruits		{Фруктов}
 seg_Ale			{Эля}
-seg_Silk		{Шелка}
+seg_Silk		{Шёлка}
 seg_Clothes		{Одежды}
 seg_Cotton		{Хлопка}
 seg_Sandal		{Сандала}
 seg_Leather		{Кожи}
 seg_Oil			{Масла}
-seg_Gold		{Золота}    // from SLiB -->
-seg_Silver		{Серебра}  //  by
-seg_Bricks		{Кирпичей}  // Jack Davidson <--
+seg_Gold		{Золота}
+seg_Silver		{Серебра}
+seg_Bricks		{Кирпичей}
 seg_Food		{Провизии}
 seg_Weapon		{Оружия}
 seg_Gunpowder	{Пороха}
 seg_Ration		{Провизии}
-seg_Medicines	{Медикаментов}
+seg_Medicines	{Лекарств}

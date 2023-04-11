@@ -1,68 +1,68 @@
 TEXT	{
 ======= I ==========
 
-Exorcizamus te, omnis immundus spiritus
-omnis satanica potestas, omnis incursio
-infernalis adversarii, omnis legio,
-omnis congregatio et secta diabolica.
-Ergo draco maledicte
-et omnis legio diabolica
-adjuramus te.
-Cessa decipere humanas creaturas,
-eisque aeternae Perditionis venenum propinare.
+Мы изгоним тебя, всякий нечистый дух
+каждая сатанинская сила, каждое вторжение
+адский противник, каждый легион,
+всякое дьявольское собрание и секта.
+Поэтому прокляни этого дракона
+и весь дьявольский легион
+мы клянемся тебе.
+Перестать обманывать людей,
+и бросать на них яд вечной погибели.
 
-Vade, Satana, inventor et magister
-omnis fallaciae, hostis humanae salutis.
-Humiliare sub potenti manu dei,
-contremisce et effuge, invocato a
-nobis sancto et terribili nomine,
-quem inferi tremunt.
+Изыди, сатана, изобретатель и учитель
+всякого обмана - враг человеческого спасения.
+Смириться под могучей рукой Божьей,
+дрожать и бежать, говоря
+святое и страшное имя,
+это те, кто боится.
 
-Ab insidiis diaboli, libera nos, Domine.
-Ut Ecclesiam tuam secura tibi facias libertate servire
-te rogamus, audi nos.
-Ut inimicos sanctae Ecclesiae humiliare digneris,
-te rogamus, audi nos.
+Освободи нас от сетей дьявола, Господь.
+Чтобы ваша церковь была безопасной, чтобы вы могли свободно служить
+умоляю тебя услышь нас.
+Да соизволите смирить врагов святой Церкви,
+умоляю тебя услышь нас.
 
-Terribilis Deus de sanctuario suo.
-Deus Israhel ipse truderit virtutem
-et fortitudinem plebi Suae.
-Benedictus deus. Gloria patri.
+Бог своего царства.
+Сам Бог Израиля даст мужество
+и силу Его народа.
+Благослови нас Бог. Аминь.
 
 ======= II ==========
-Exorcizamus te, omnis immundus spiritus
-omnis satanica potestas, omnis incursio
-infernalis adversarii, omnis legio,
-omnis congregatio et secta diabolica.
-Ergo draco maledicte
-et omnis legio diabolica adjuramus te.
-cessa decipere humanas creaturas,
-eisque aeternae Perditionis venenum propinare.
-Vade, Satana, inventor et magister
-omnis fallaciae, hostis humanae salutis.
-Humiliare sub potenti manu dei,
-contremisce et effuge, invocato a
-nobis sancto et terribili nomine,
-quem inferi tremunt.
-Ab insidiis diaboli, libera nos, Domine.
-Exorcizamus te, omnis immundus spiritus
-omnis satanica potestas, omnis incursio
-infernalis adversarii,omnis legio,
-omnis congregatio et secta diabolica.
-Ergo draco maledicte
-et omnis legio diabolica
-adjuramus te.
-Cessa decipere humanas creaturas,
-eisque aeternae Perditionis venenum propinare.
-Ut Ecclesiam tuam secura tibi facias libertate servire
-te rogamus, audi nos.
+Мы изгоним тебя, всякий нечистый дух
+каждая сатанинская сила, каждое вторжение
+адский противник, каждый легион,
+всякое дьявольское собрание и секта.
+Поэтому прокляни этого дракона
+и весь дьявольский легион
+Перестать обманывать людей,
+и бросать на них яд вечной погибели.
+Изыди, сатана, изобретатель и учитель
+всякого обмана - враг человеческого спасения.
+Смириться под могучей рукой Божьей,
+дрожать и бежать, говоря
+святое и страшное имя,
+это те, кто боится.
+Освободи нас от сетей дьявола, Господь.
+Мы изгоним тебя, всякий нечистый дух
+каждая сатанинская сила, каждое вторжение
+адский противник, каждый легион,
+всякое дьявольское собрание и секта.
+Поэтому прокляни этого дракона
+и весь дьявольский легион
+мы клянемся тебе.
+Перестать обманывать людей,
+и бросать на них яд вечной погибели.
+Чтобы ваша церковь была безопасной, чтобы вы могли свободно служить
+умоляю тебя услышь нас.
 
 ======= III ==========
-Exorcizamus te, omnis immundus spiritus,
-omnis satanica potestas, omnis incursio infernalis adversarii,
-omnis congregatio et secta diabolica.
+Мы изгоним тебя, всякий нечистый дух,
+каждая сатанинская сила, каждое вторжение адского противника,
+всякое дьявольское собрание и секта.
 
-Ergo, draco maledicte.
-Ecclesiam tuam securi tibi facias libertate servire,
-te rogamus, audi nos.
+Поэтому прокляни этого дракона.
+Чтобы ваша церковь была безопасной, чтобы вы могли свободно служить,
+умоляю тебя услышь нас.
 }

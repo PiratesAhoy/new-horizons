@@ -644,6 +644,7 @@ Shave and a haircut - two grand. You'd hardly recognise Charles Ardent!{Shave an
 Helen Ardent, pirate. Heroine or villainess - the choice is yours.{Helen Ardent, pirate. Heroine or villainess - the choice is yours.}
 Helen Ardent, with a pirate's hat and coat.{Helen Ardent, with a pirate's hat and coat.}
 Helen Ardent - in a dress?{Helen Ardent - in a dress?}
+A blue dress with red trimmings and a bonnet - but why is Helen Ardent wearing it?{A blue dress with red trimmings and a bonnet - but why is Helen Ardent wearing it?}
 A gentleman like this has no time for vagabonds - and may not be quite the gentleman he appears!{A gentleman like this has no time for vagabonds - and may not be quite the gentleman he appears!}
 A high-ranking French naval officer and gentleman.{A high-ranking French naval officer and gentleman.}
 Charles Ardent has 'borrowed' a Spanish uniform.{Charles Ardent has 'borrowed' a Spanish uniform.}

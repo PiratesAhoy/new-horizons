@@ -275,11 +275,11 @@ void ProcessDialogEvent()
 			Link.l3 = DLG_TEXT[112];
 			Link.l3.go = "town_store";
 			// RobC/Alan_Smithee Blacksmiths -->
-			if (ENABLE_WEAPONSMOD)
-			{
+			// if (ENABLE_WEAPONSMOD)
+			// {
 			//	Link.l4 = DLG_TEXT[162];
 			//	Link.l4.go = "town_smithy";
-			}
+			// }
 			// RobC/Alan_Smithee Blacksmiths <--
 		break;
 
@@ -302,11 +302,11 @@ void ProcessDialogEvent()
 			Link.l2.go = "town_shipyard";
 			Link.l3 = DLG_TEXT[116];
 			Link.l3.go = "town_store";
-			if (ENABLE_WEAPONSMOD)
-			{
+			// if (ENABLE_WEAPONSMOD)
+			// {
 			//	Link.l4 = DLG_TEXT[167];
 			//	Link.l4.go = "town_smithy";
-			}
+			// }
 			DeleteAttribute(&locations[FindLocation("Guadeloupe_port")], "reload.l6.goto_disable"); // JRH: Unlock Fast Travel
 		break;
 

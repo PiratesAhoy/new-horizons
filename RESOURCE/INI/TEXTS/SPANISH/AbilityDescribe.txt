@@ -76,11 +76,11 @@ Completa un encargo para un Armero | El personaje es un experto tirador, mejora 
 GunProfessional {Pistolero profesional}
 perkGunProfessional
 {
-El personaje es un profesional de la pistola:  recarga un 50% más rápido, la puntería mejora un 25% y la posibilidad de impacto crítico un 10%. Permite usar pistolas de cuatro cañones.
+El personaje es un profesional de la pistola:  recarga un 50% más rápido, la puntería mejora un 10% y la posibilidad de impacto crítico un 10%. Permite usar pistolas de cuatro cañones.
 }
 perkGunProfessionalLocked
 {
-Encuentra un libro para desbloquear | El personaje es un profesional de la pistola:  recarga un 50% más rápido, la puntería mejora un 25% y la posibilidad de impacto crítico un 10%. Permite usar pistolas de cuatro cañones.
+Encuentra un libro para desbloquear | El personaje es un profesional de la pistola:  recarga un 50% más rápido, la puntería mejora un 10% y la posibilidad de impacto crítico un 10%. Permite usar pistolas de cuatro cañones.
 }
 
 GunFighter	{Maestro pistolero}

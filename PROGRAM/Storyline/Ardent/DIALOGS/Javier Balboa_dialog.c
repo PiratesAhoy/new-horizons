@@ -335,26 +335,26 @@ void ProcessDialogEvent()
 			TakeItemFromCharacter(Pchar, "ExplainLetter");
 			ChangeCharacterReputation(PChar, 2);
 			dialog.text = DLG_TEXT[91];
-			link.l1 = DLG_TEXT[112] + GetMyAddressForm(NPChar, CharacterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMySimpleName(CharacterFromID(PChar.quest.romance)) + ".";
+			link.l1 = DLG_TEXT[112] + GetMyRespectfullyName(CharacterFromID(PChar.quest.romance)) + ".";
 			link.l1.go = "hostage_free2";
 		break;
 
 		case "hostage_free2":
 			dialog.text = DLG_TEXT[113];
-			link.l1 = DLG_TEXT[114] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[115];
+			link.l1 = DLG_TEXT[114] + GetMyRespectfullyName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[115];
 			link.l1.go = "hostage_free3";
 		break;
 
 		case "hostage_free3":
 			if(GetRMRelation(Pchar, SPAIN) > REL_WAR)
 			{
-				dialog.text = DLG_TEXT[116] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[117] + gov_kid_pronoun + DLG_TEXT[118];
+				dialog.text = DLG_TEXT[116] + GetMyName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[117] + gov_kid_pronoun + DLG_TEXT[118];
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[116] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[117] + gov_kid_pronoun + DLG_TEXT[119];
+				dialog.text = DLG_TEXT[116] + GetMyName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[117] + gov_kid_pronoun + DLG_TEXT[119];
 			}
-			link.l1 = DLG_TEXT[120] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[121];
+			link.l1 = DLG_TEXT[120] + GetMyRespectfullyName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[121];
 			AddDialogExitQuest("governor_relaxes");
 			link.l1.go = "Exit";
 		break;
@@ -794,7 +794,8 @@ void ProcessDialogEvent()
 			if (PChar.ship.type == "RN_WarGalleon" || PChar.ship.type == "PO_WarGalleon" || PChar.ship.type == "FR_WarGalleon" || PChar.ship.type == "NL_WarGalleon" || PChar.ship.type == "SP_WarGalleon" || PChar.ship.type == "FR_Licorne")
 			{
 				dialog.text = DLG_TEXT[226];
-				link.l1 = DLG_TEXT[227];
+				if (CheckAttribute(PChar, "quest.convoy_officer")) link.l1 = DLG_TEXT[227];
+				else link.l1 = "...";
 				AddDialogExitQuest("convoy_get_ship_back");
 				link.l1.go = "Exit";
 			}

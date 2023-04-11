@@ -1,711 +1,751 @@
-Caravel1_Descr{Lateen masts give good upwind performance.
-Decorated merchant ship with red and white hull.}
-Caravel2_Descr{Ship-rigged masts give good downwind performance.
-Trader with decorated red and white superstructure.}
-FastCaravel_Descr{Good upwind performance. Blood-red
-and bright eyes bode ill for Bartolomeu's victims.}
-CursedCaravel_Descr{It's cursed, I tell ya!
-Caravel with a seaweed-covered hull.}
-Carrack_Descr{Скорее устаревший дизайн и неэлегантное маневрирование,
-но для торгового судна может представлять опасность.}
-PO_Caravel50_Descr{Portuguese square rigged trade ship with
-few decorations. Will sail better with the wind.}
-
-Schooner1_Descr{Both privateers' and traders' choice with good
-upwind performance. Her dark paint wears off.}
-Schooner2_Descr{Both privateers' and traders' choice with good
-upwind performance. Beautiful green vessel.}
-SchoonerWar_Descr{Naval vessel with decorated stern.
-Faster but not as good upwind.}
-Schooner50_Descr{Both privateers' and traders' choice with
-triple-coloured hull. Faster but not as good upwind.}
-US_Schooner47_Descr{Both privateers' and traders' choice, bearing
-colours of US Navy. Faster but not as good upwind.}
-
-Hooker_Descr{Additional sails reduce upwind speed.
-A strong black and red hull gives her a tough look.}
-
-Shnyava1_Descr{This adaptable ship is agile,
-but won't sail well upwind. Hull is black and white.}
-Shnyava2_Descr{This adaptable ship is agile,
-but won't sail well upwind. Hull is well-decorated.}
-
-HMS_Bounty_Descr{Resembles the famous 'КЕВ Баунти'.
-Better keep your distance from Tahiti.}
-
-BrigRoyal_Descr{Decent naval vessel, but won't sail well upwind.
-British crest on the stern represents courage at sea.}
-
-Brig1_Descr{Swift naval vessel but struggles upwind.
-Painted brown with intricate decorations.}
-Brig2_Descr{Swift naval vessel but struggles upwind.
-White and red painted hull.}
-RN_Brig_Descr{Swift naval vessel but struggles upwind.
-Paint wears off, hinting at long Royal Navy service.}
-BrigQeen1_Descr{Swift naval vessel which may struggle upwind.
-Varnished hull with white trimmings.}
-BrigSW1_Descr{Swift combat vessel which may struggle upwind.
-Black hull and wolf's head figurehead.}
-Brig3_Descr{Adaptable ship, fast, but poor in crosswind.
-Varnished hull with red trim and green markings.}
-Brig_20_Gun1_181_Descr{Adaptable ship, fast, but poor in crosswind.
-Pirate scheme featuring a dark hull with red markings.}
-
-HMS_Interceptor_Descr{"There's no ship as can match
-the Interceptor for speed."}
-RN_Interceptor_Descr{A particularly fast brig. Hull is black
-with cream stripes.}
-US_Interceptor_Descr{The "Lady Washington" appeared in various films, e.g.
-"Pirates of the Caribbean" and "Star Trek: Generations".}
-USS_Enterprise_Descr{24-gun navy brig 'USS Enterprise'.
-Doesn't sail well into the wind.}
-
-Yacht1_Descr{This trade vessel won't sail fast upwind.
-Blue paint and ornaments adorn the hull.}
-Yacht2_Descr{This trade vessel won't sail fast upwind.
-Black paint and ornaments adorn the hull.}
-
-Barque1_Descr{This ship performs well with the wind.
-Decent trade vessel with blue paint.}
-Barque2_Descr{This ship performs well with the wind.
-No paint - she's a trader, not a lady's carriage.}
-Barkentine1_Descr{Nice performance for a small trader, even against the wind.
-Dark brown hull with ornate decorations.}
-
-BarqueHeavy_Descr{Nice performance for a small trader, but not upwind.
-Weathered blue hull hints she served some time.}
-
-Barque3_50_Descr{This adaptable ship will go upwind easily.
-Black and red paint gives her a sinister look.}
-
-Barque4_47_Descr{Goes hard upwind. This adaptable ship
-has little paint, so it won't wear off fast.}
-
-US_Brig47_Descr{Not too good upwind,
-but she is a fast and agile US Navy vessel.}
-PiratBrig50_Descr{Not too good upwind but fast and agile.
-Naval design in green and orange.}
-
-Brigantina1_Descr{This naval ship goes upwind at a decent angle.
-Light hull is painted white and ornated.}
-Brigantina2_Descr{This naval ship goes upwind at a decent angle.
-Light hull is painted blue and ornated.}
-BrigantineOld_Descr{A light warship with good cross-wind performance.
-The hull has black and white stripes.}
-
-Tartane1_Descr{Did ya lose yer ship, cap'n?
-Single-masted tartane with plain red wooden hull.}
-Tartane2_Descr{Did ya lose yer ship, cap'n?
-Single-masted tartane with decorated wooden hull.}
-
-Tartane50_Descr{Did ya lose yer ship, cap'n?
-Single-masted with gray hull like the 'Jolly Mon'.}
-
-Gunboat_Descr{It is better than nothing. Her one bow cannon
-makes for a challenge in any battle.}
-
-TartaneWar_Descr{Sails fine, but is rather
-recreational in size.}
-
-Galeoth1_Descr{Agile and swift, also upwind. Spanish naval
-design with decorated red hull.}
-Galeoth2_Descr{Agile and swift, also upwind. Spanish naval
-design with decorated green and yellow hull.}
-
-Sloop1_Descr{Common for both merchants and navy.
-This blue painted ship sails good against the wind.}
-FR_Sloop_Descr{'Le Rкve' sails well against the wind.
-Agile vessel of the French Navy.}
-Sloop2_Descr{Adaptable vessel in pale red,
-sails good against the wind.}
-Sloop4_Descr{Adaptable vessel with varnished wood,
-sails good against the wind.}
-
-SloopBermuda_Descr{Sails well against the wind.
-Agile vessel with a British Royal Navy look.}
-
-Cutter1_Descr{Sails well against the wind.
-Agile naval vessel in white and brown.}
-Cutter2_Descr{Sails well against the wind.
-Agile vessel, bearing weathered Royal Navy colours.}
-
-Ketch_Descr{This naval vessel sails well against the wind.
-The hull is very agile, and painted brown and white.}
-
-Lugger1_Descr{Small merchant ship of decent performance.
-Agile vessel in black, white and yellow.}
-Lugger2_Descr{Small merchant ship of decent performance.
-Agile vessel with brown paint.}
-LuggerCT_Descr{Small merchant ship of decent performance.
-Agile vessel with black and white decoration.}
-Lugger4_Descr{Small merchant ship of decent performance.
-Agile, weathered vessel with blue paint.}
-
-LuggerVML_Descr{Quite a fast and agile trader with a strong hull.
-Compass included (but doesn't point North).}
-
-Lugger3_Descr{Small merchant ship of decent performance.
-Agile vessel with weathered paint.}
-
-EdinburghTrader_Descr{Three-masted cargo ship,
-based on the 'Edinburgh Trader'.}
-
-FastMerchantman1_Descr{A former frigate sold off at auction and converted
-into a merchant vessel, bearing a white and
-brown paint scheme.}
-FastMerchantman2_Descr{A former frigate sold off at auction and converted
-into a merchant vessel, bearing a faded yellow 
-and black paint scheme.}
-
-Fleut1_Descr{Decent at speed and turn rate.
-Brown, decorated merchant vessel.}
-Fleut2_Descr{Decent at speed and turn rate.
-Blue, decorated merchant vessel, little weathered.}
-NL_Fleut50_Descr{Decent at speed and turn rate.
-Excellent trade vessel bearing Dutch colours.}
-
-PO_Fleut50_Descr{Decent at speed and turn rate.
-Excellent trade vessel with few decorations.}
-
-FleutWar_Descr{Decent at speed and turn rate.
-Naval vessel painted blue.}
-
-FleutWarSat_Descr{Decent at speed and turn rate.
-Black vessel with sinister markings.}
-
-FleutWarExSat_Descr{Decent at speed and turn rate.
-Former Animist ship now in less sinister markings.}
-
-FR_LightPinnace_Descr{Decent speed but not too agile.
-French trade vessel is painted brown and red.}
-
-Pinnace1_Descr{Decent speed but not too agile.
-Highly decorated trader, brown with a white stripe.}
-Pinnace2_Descr{Decent speed but not too agile.
-Higly decorated trader, painted mostly brown.}
-
-NL_Pinnace_Descr{Decent speed but not too agile.
-Decorated Dutch trader with some green paint.}
-
-SP_Pinnace50_Descr{Trader with decent speed but not too agile.
-This decorated Spanish vessel is painted red.}
-
-HMS_Indefatigable_Descr{'КЕВ Неутомимый', a razйed Ardent-class warship
-built to the design of Sir Thomas Slade.}
-RN_Indefatigable_Descr{A razйed warship bearing a British
-cream and black paint scheme.}
-GEN_Indefatigable_Descr{A razйed warship bearing a generic
-yellow and black paint scheme.}
-FR_Indefatigable_Descr{A razйed warship bearing a French
-red and black paint scheme.}
-SP_Indefatigable_Descr{A razйed warship bearing a Spanish
-dark red and black paint scheme.}
-NL_PinnaceofWar47_Descr{Capacious naval vessel.
-This Dutch ship is painted green, brown and white.}
-
-WallerPinnace_Descr{Decent speed but not too agile.
-Capacious naval vessel in gold, brown and white.}
-
-Galeon1_Descr{You don't expect agility from a galleon.
-Of Spanish design, this one is brown painted.}
-Galeon2_Descr{You don't expect agility from a galleon.
-Spanish design with blue painted superstructure.}
-PiratBattleGalleon_Descr{You don't expect agility from a galleon.
-This pirate vessel has minor Portuguese decorations.}
-SP_BattleGalleon_Descr{You don't expect agility from a galleon.
-This Spanish war vessel has minor decorations.}
-
-SP_Galeon50_Descr{Quite agile for a galleon.
-This one bears Spanish decorations.}
-
-GaleonWar_Descr{You don't expect agility from a galleon.
-This one is painted black, and well decorated.}
-Galeon50_Descr{You don't expect agility from a galleon.
-Painted mostly black and blue.}
-
-NL_FleutWar_Descr{Decent at speed and turn rate.
-This naval vessel bears Dutch colours.}
-
-PO_WarGalleon_Descr{Amiable performance.
-English galleon bearing brown and white paint.}
-FR_WarGalleon_Descr{Amiable performance.
-English galleon bearing French colours.}
-RN_WarGalleon_Descr{Amiable performance.
-English galleon bearing blue paint.}
-NL_WarGalleon_Descr{Amiable performance.
-English galleon bearing Dutch colours.}
-SP_WarGalleon_Descr{Amiable performance.
-English galleon bearing Spanish colours.}
-FR_Licorne_Descr{Amiable performance.
-Based on French ship 'La Licorne'}
-
-FastGalleon1_Descr{At full speed she'll show her possibilities.
-Bears ornate red and white decorations.}
-FastGalleon2_Descr{At full speed she'll show her possibilities.
-Hull painted in black and white.}
-FastGalleon3_Descr{At full speed she'll show her possibilities.
-Bears colourful decorations.}
-FastGalleon4_Descr{At full speed she'll show her possibilities.
-Hull painted in red and black.}
-FastGalleon5_Descr{At full speed she'll show her possibilities.
-Hull is decorated with shields and golden symbols.}
-PiratFastGal_Descr{At full speed she'll show her possibilities.
-Pirates' design in fearsome black.}
-
-Xebec1_Descr{Lateen rigs give great upwind performance.
-Adaptable vessel painted red and yellow.}
-Xebec2_Descr{Lateen rigs give great upwind performance.
-Adaptable vessel decorated by some nords.}
-Xebec3_Descr{Lateen rigs give great upwind performance.
-Adaptable vessel with Moorish decoration.}
-
-SchoonerXebec_Descr{Heavy schooner, excellent upwind.
-Adaptable vessel painted black and yellow.}
-
-XebecAS_Descr{This heavy xebec sails fast upwind.
-Almost impossible to catch.}
-
-Corvette47_Descr{A swift French corvette that performs well,
-painted with black and ochre stripes.}
-
-Corvette1_Descr{A mid-18th century frigate that performs well,
-bearing a red and brown paint scheme.}
-Corvette2_Descr{A mid-18th century frigate that performs well,
-bearing a beige and maroon paint scheme.}
-RN_Corvette_Descr{A mid-18th century frigate that performs well,
-bearing an ornate blue, brown and gold 
-paint scheme.}
-
-CursedCorvette_Descr{An old frigate covered with seaweed, said to
-be possessed by a terrible curse...}
-
-PiratCorvette_Descr{A mid-18th century frigate captured by pirates,
-bearing a sinister black paint scheme.}
-PiratCorvette50_Descr{A mid-18th century frigate captured by pirates,
-bearing a sinister red and black paint scheme.}
-CrimsonBlood_Descr{A frigate captured by pirates, bearing a dark 
-paint scheme and crimson sails. Her crew is 
-said to be cursed...}
-
-PO_FastNavy_Descr{An early Portuguese frigate with a lateen rig,
-bearing a highly ornate paint scheme.}
-
-Frigate1_Descr{A Russian-built frigate of the early 18th century,
-bearing a yellow and black paint scheme.}
-Frigate2_Descr{A Russian-built frigate of the early 18th century,
-bearing a gold, white and olive-green
-paint scheme.}
-NL_Frigate47_Descr{A Russian-built frigate of the early 18th century,
-bearing a Dutch Navy paint scheme.}
-FR_Frigate_Descr{A Russian-built frigate of the early 18th century,
-bearing a gold, blue and peach paint scheme.}
-RN_Frigate_Descr{A Russian-built frigate of the early 18th century,
-bearing a blue and peach paint scheme
-and an ornately decorated stern.}
-
-Frigate_sat_Descr{A mysterious 18th century frigate bearing a dark red 
-and black paint scheme. She is said to be crewed 
-by Satanists.}
-Frigate_Ex_Sat_Descr{Formerly crewed by Satanists, this frigate now
-bears a yellow and black paint scheme
-with gilded trimmings.}
-PiratFrigateSup_Descr{An early 18th century frigate captured by pirates,
-bearing a red and black paint scheme adorned 
-with skulls and bones.}
-PiratFrigateSat_Descr{An early 18th century frigate captured by Satanists,
-bearing a red and black paint scheme.}
-PiratFrigateExSat_Descr{An early 18th century frigate captured by Satanists,
-repainted to a yellow and black paint scheme.}
-
-USS_Constitution_Descr{'USS Constitution', a large, modern frigate 
-built to the design of Joshua Humphreys.}
-US_BattleFrigate_Descr{A large, modern frigate of excellent performance,
-bearing a white and black paint scheme.}
-RN_BattleFrigate_Descr{A large, modern frigate of excellent performance,
-bearing a cream and black paint scheme.}
-FR_BattleFrigate_Descr{A large, modern frigate of excellent performance,
-bearing a red and black paint scheme.}
-SuperFrigate_Descr{A large frigate designed for long-range patrols.
-This version has a natural wood finish.}
-
-HMS_Surprise_Descr{КЕВ Сюрприз, a large British-built frigate that 
-performs very well, bearing a black and 
-cream paint scheme.}
-FR_Boussole_Descr{A powerful, sleek French frigate, bearing a
-gold, blue and brown paint scheme.}
-FR_Razee_Descr{A powerful, sleek French frigate, bearing a red and
-black paint scheme.}
-RN_Razee_Descr{A powerful, sleek British frigate, bearing a cream and
-black paint scheme.}
-
-Lineship1_Descr{For a ship-of-the-line, performance comes second.
-This vessel is painted black.}
-Lineship47_Descr{For a ship-of-the-line, performance comes second.
-Hull is painted black, white, green and yellow.}
-
-PO_Warship_Descr{For a ship-of-the-line, performance comes second.
-Hull is decorated, painted white and yellow.}
-RN_Warship_Descr{For a ship-of-the-line, performance comes second.
-Hull bears the colours of the Royal Navy.}
-SP_Warship_Descr{For a ship-of-the-line, performance comes second.
-Hull bears colours of France.}
-FR_Belette_Descr{For a ship-of-the-line, performance comes second.
-Hull bears colours of France.}
-
-SwedishIndiaman1_Descr{Lightly armed trader, very fast with good
-cargo capacity.}
-
-NL_Batavia_Descr{Performance comes second for the 'Batavia'.
-Armed trader in Dutch colours.}
-
-NL_SevenProvincien_Descr{Dutch vessel 'Seven Provinciлn', built
-to the design of Salomon Jansz van den Tempel.}
-
-NL_Lineship_Descr{For a ship-of-the-line, performance comes second.
-Hull bears Dutch colours.}
-
-NL_ConvoiShip_Descr{For a ship-of-the-line, performance comes second.
-Hull bears Dutch colours.}
-
-NL_Amsterdam_Descr{The 'Amsterdam', famous vessel of
-the Vereenigde Oost-Indische Compagnie!}
-
-Battleship1_Descr{For a ship-of-the-line, performance comes second.
-Hull is red painted.}
-Battleship2_Descr{For a ship-of-the-line, performance comes second.
-Hull is painted black, white and red.}
-RN_Battleship_Descr{For a ship-of-the-line, performance comes second.
-Hull bears British colours.}
-SP_Battleship_Descr{For a ship-of-the-line, performance comes second.
-Weathered hull is dark painted.}
-Battleship5_Descr{For a ship-of-the-line, performance comes second.
-Weathered hull bears Spanish colours.}
-
-RN_SuperiorWarship_Descr{For a ship-of-the-line, performance comes second.
-Hull bears colours of the Royal Navy.}
-FR_SuperiorWarship_Descr{For a ship-of-the-line, performance comes second.
-Hull bears colours of France.}
-
-Battleship3_Descr{For a ship-of-the-line, performance comes second.
-The weathered hull bears colours of Royal Navy.}
-
-HeavyLineship_Descr{For a ship-of-the-line, performance comes second.
-Hull is red and blue with decorations.}
-
-Battleship4_Descr{For a ship-of-the-line, performance comes second.
-The varnished hull has black stripes and blue uppers.}
-
-FR_Battleship4_Descr{For a ship-of-the-line, performance comes second.
-The dark brown hull has white stripes and blue uppers.}
-
-SP_Battleship4_Descr{For a ship-of-the-line, performance comes second.
-The varnished hull has red stripes and uppers.}
-
-HMS_Endeavour_Descr{КЕВ Стремительный, the fearsome flagship of the East 
-India company, owned by Lord Cutler Beckett.}
-HMS_Dauntless_Descr{КЕВ Неустрашимый, the Royal Navy's most impressive
-warship.}
-
-SP_SotL_Descr{Second rate ship-of-the-line.
-Bears colours of Spain.}
-FR_SotL_Descr{Second rate ship-of-the-line.
-Bears colours of France.}
-US_SotL_Descr{Second rate ship-of-the-line.
-Bears colours of the United States.}
-RN_SotL_Descr{Second rate ship-of-the-line.
-Bears Royal Navy colours.}
-
-Manowar1_Descr{For a ship-of-the-line, performance comes second.
-Hull has black and white lines.}
-Manowar2_Descr{For a ship-of-the-line, performance comes second.
-Highly decorated hull is white, yellow and green.}
-Manowar_gub_Descr{For a ship-of-the-line, performance comes second.
-Black and blue, also with white stripes.}
-SP_Manowar_Descr{For a ship-of-the-line, performance comes second.
-Red and yellow hull marks a Spanish ship.}
-PO_Manowar_Descr{For a ship-of-the-line, performance comes second.
-Highly decorated hull is white and brown.}
-
-US_SteamFrigate_Descr{Prototype steam-propelled frigate bearing a white
-and black paint scheme. Engines operate 
-separately from the sails.}
-
-FR_SteamFrigate_Descr{Prototype steam-propelled frigate bearing a red
-and black paint scheme. Engines operate 
-separately from the sails.}
-
-RN_SteamFrigate_Descr{Prototype steam-propelled frigate bearing a cream
-and black paint scheme. Engines operate 
-separately from the sails.}
-
-Pirate_SteamFrigate_Descr{Prototype steam-propelled frigate bearing a black
-and dark red paint scheme. Engines operate 
-separately from the sails.}
-
-CursedDutchman_Descr{The cursed ship of Davy Jones, able to submerge.
-"Summon... the Kraken!"}
-FlyingDutchman_Descr{The true form of the 'Flying Dutchman',
-freed of her curse.}
-
-WickedWench_Descr{An East India Trading Company vessel; the
-first ship under Captain Jack Sparrow's command.}
-BlackPearl_Descr{Captain Jack Sparrow's beloved ship,
-freed of her curse.}
-164_Descr{"Crewed by the damned and captained by a man
-so evil, Hell itself spat him back out."}
-UncursedPearl_Descr{Captain Jack Sparrow's beloved ship, as she was
-before falling victim to a terrible curse.}
-
-RN_FirstRate_Descr{A mighty first rate ship-of-the-line bearing
-the Nelson Chequer paint scheme.}
-HMS_Victory_Descr{КЕВ Виктори, the Royal Navy's most famous ship,
-built to the design of Sir Thomas Slade.}
-US_FirstRate_Descr{A mighty first rate ship-of-the-line bearing
-a white and black paint scheme.}
-FR_FirstRate_Descr{A mighty first rate ship-of-the-line bearing
-a bright red and black paint scheme.}
-SP_FirstRate_Descr{A mighty first rate ship-of-the-line bearing
-a dark red and black paint scheme.}
-
-FR_Superbe_Descr{A third rate ship of the famous Tйmйraire class, the 
-most numerous class of capital ship ever built, 
-bearing a red and black paint scheme.}
-RN_Superbe_Descr{A formidable third rate ship-of-the-line, 
-bearing a cream and black paint scheme.}
-NL_Superbe_Descr{A formidable third rate ship-of-the-line, 
-bearing a brown and black paint scheme.}
-
-HMS_Bellona_Descr{A third rate ship based on the powerful Bellona class, 
-bearing a cream and black paint scheme.}
-FR_Bellona_Descr{A highly powerful third rate ship-of-the-line, 
-bearing a red and black paint scheme.}
-US_Bellona_Descr{A large, fearsome American third rate ship, 
-bearing a white and black paint scheme.}
-KetchNavy_Descr{So agile, she can easily traverse 'Devil's Throat',
-but lacks in speed. Based on КЕВ Непревзойденный.}
-
-HMS_Greyhound_Descr{A small, agile, British frigate used to hunt
-pirates. Beware, ye scurvy dogs!}
-FR_Greyhound_Descr{A small, agile, French frigate used to hunt
-pirates. Beware, ye scurvy dogs!}
-PO_Greyhound_Descr{A small, agile, Portuguese frigate used to hunt
-pirates. Beware, ye scurvy dogs!}
-
-HMS_Sophie_Descr{A large and dependable brig
-bearing a cream and black paint scheme.}
-
-US_Enterprise_Descr{An agile American schooner of good performance,
-bearing a simple paint scheme.}
-
-HMS_Mordaunt_Descr{A privately built fourth rate ship-of-the-line, 
-purchased by the Royal Navy, bearing a brown 
-and white paint scheme.}
-
-FR_Couronne_Descr{A large, emblematic French Navy galleon,
-and the first of her kind to be built in France.}
-
-SP_ApostolFelipe_Descr{'Apуstol Felipe', one of the six galleons
-built by Martнn de Arana for King Felipe IV.}
-
-US_Hannah_Descr{A small American schooner hired into service
-by General George Washington.}
-PiratHannah_Descr{A small schooner captured by pirates, bearing
-a simple paint scheme.}
-
-HMS_Speedy_Descr{A highly versatile brig built to Thomas King's 
-design, bearing a cream and black
-paint scheme.}
-
-PO_Poseidon_Descr{A Danish-built third rate of the early 18th century,
-bearing an ornate blue, yellow and black 
-paint scheme.}
-FR_Fleuron_Descr{A French-built third rate of the early 18th century,
-bearing an ornate red, brown and black 
-paint scheme.}
-RN_Poseidon_Descr{A Danish-built third rate of the early 18th century,
-bearing an ornate yellow and black 
-paint scheme.}
-SP_Natividad_Descr{A Spanish-built fourth rate of the late 18th century,
-bearing an ornate yellow and black paint scheme.}
-
-RN_Surprise_Descr{A sleek British frigate based on a French design,
-bearing a cream and black paint scheme.}
-FR_Surprise_Descr{A sleek French frigate, bearing a red and black paint scheme.}
-SP_Surprise_Descr{A sleek Spanish frigate based on a French design,
-bearing a maroon and black paint scheme.}
-
-SP_SanFelipe_Descr{Built by the King of Spain in 1690, the San Felipe
-was Spain's most majestic ship fighting the French.}
-FR_SoleilRoyal_Descr{French ship-of-the-line 'Soleil Royal', built in 1670.
-Elaborately decorated baroque flagship.}
-
-RN_RevengeM_Descr{Merchant version of a 4-masted Elizabethan Galleon.
-Dark brown hull with green-with-yellow decorations.}
-RN_RevengeW_Descr{Naval version of a 4-masted Elizabethan Galleon.
-Medium brown hull with white-with-yellow decorations.}
-RN_RevengeF_Descr{Fast version of a 4-masted Elizabethan Galleon.
-Light brown hull with green-with-yellow decorations.}
-
-PO_CaravelR_Descr{Specialized Portuguese fighting ship used to act as
-an escort in Brazil and in the East Indies route.}
-
-QueenAnnesRevenge_Descr{Blackbeard's fearsome ship with morbid detail.
-Features Greek Fire in place of bow chasers.}
-
-PO_Hoy_Descr{The 'Lyon Hoy' is a common small trader.
-Hull has Portuguese colours.}
-FR_Hoy_Descr{The 'Lyon Hoy' is a common small trader.
-Hull has French colours.}
-SP_Hoy_Descr{The 'Lyon Hoy' is a common small trader.
-Hull has Spanish colours.}
-
-FR_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
-bearing a blue and yellow paint scheme.}
-RN_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
-painted yellow with red and blue decoration.}
-PO_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
-bearing a yellow and blue paint scheme.}
-SP_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
-bearing a red and black paint scheme.}
-NL_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
-bearing a green, red and grey paint scheme.}
-PiratNeptunus_Descr{A Dutch-built privateer of the early 18th century,
-with varnished hull and yellow trimmings.}
-
-PO_NeptunusE_Descr{A Dutch-built privateer of the late 17th century,
-bearing a brown and white paint scheme.}
-SP_NeptunusE_Descr{A Dutch-built privateer of the late 17th century,
-bearing a brown and red paint scheme.}
-NL_NeptunusE_Descr{A Dutch-built privateer of the late 17th century,
-bearing a brown and green paint scheme.}
-FR_NeptunusE_Descr{A Dutch-built privateer of the late 17th century,
-bearing a brown and blue paint scheme.}
-
-NL_LightPinnace_Descr{Built according to the Dutch 'Papegojan' from 1627.
-Hull bears Dutch colours.}
-PO_LightPinnace_Descr{Built according to the Dutch 'Papegojan' from 1627.
-Hull bears Portuguese colours.}
-SP_LightPinnace_Descr{Built according to the Dutch 'Papegojan' from 1627.
-Hull bears Spanish colours.}
-
-NL_Derfflinger_Descr{A German-built fluyt of the 17th century,
-bearing a Dutch Navy paint scheme.}
-FR_Derfflinger_Descr{A German-built fluyt of the 17th century,
-bearing a brown and blue paint scheme.}
-SP_Derfflinger_Descr{A German-built fluyt of the 17th century,
-bearing a brown and red paint scheme.}
-
-NL_FWzP_Descr{A large German-built frigate of the late 17th century,
-bearing a Dutch Navy paint scheme.}
-
-HMS_Unicorn_Descr{A large British frigate of the mid-18th century, 
-one of the first if its kind, bearing a 
-black and cream paint scheme.}
-
-FR_Unicorn_Descr{A large British frigate of the mid-18th century, 
-in French hands, bearing a 
-red and black paint scheme.}
-
-FR_Dilligente_Descr{A large French armed tartane bearing a 
-red and orange paint scheme.}
-
-RN_RaaFrigate_Descr{A Danish-built frigate of the early 18th century,
-bearing a yellow and black paint scheme.}
-
-NL_Postillionen_Descr{A small frigate with good sailing qualities,
-bearing an ornate green and brown paint scheme.}
-SP_Postillionen_Descr{A small frigate with good sailing qualities,
-bearing an ornate red and yellow paint scheme.}
-PO_Postillionen_Descr{A small frigate with good sailing qualities,
-bearing a white, green and brown paint scheme.}
-RN_Postillionen_Descr{A small frigate with good sailing qualities,
-bearing a yellow and black paint scheme.}
-FR_Postillionen_Descr{A small frigate with good sailing qualities,
-bearing an ornate red and black paint scheme.}
-
-PiratPostillionen_Descr{A small frigate with good sailing qualities,
-captured by pirates and bearing a black and 
-brown paint scheme.}
-
-Empress_Descr{A Chinese junk with unique sailing qualities,
-owned by Captain Sao Feng.}
-
-La_Marianna_Descr{A former Spanish galleon rumoured to be crewed
-by the ghosts of cursed sailors...}
-
-US_PrinceNeufchatel_Descr{A very fast American schooner that handles well,
-bearing a white and black paint scheme.}
-
-RN_Volage_Descr{A French-built sloop-of-war of the late 18th century,
-bearing a cream and black paint scheme.}
-FR_Volage_Descr{A French-built sloop-of-war of the late 18th century,
-bearing a red and black paint scheme.}
-SP_Volage_Descr{A French-built sloop-of-war of the late 18th century,
-bearing a dark red and black paint scheme.}
-PO_Volage_Descr{A French-built sloop-of-war of the late 18th century,
-bearing a brown and black paint scheme.}
-US_Volage_Descr{A French-built sloop-of-war of the late 18th century,
-bearing a white and black paint scheme.}
-
-FR_Trinity_Descr{A Danish-built second rate ship-of-the-line
-bearing a light wood and blue paint scheme.}
-PO_Trinity_Descr{A Danish-built second rate ship-of-the-line
-bearing a white and brown paint scheme.}
-RN_Trinity_Descr{A Danish-built second rate ship-of-the-line
-bearing a yellow and black paint scheme.}
-SP_Trinity_Descr{A Danish-built second rate ship-of-the-line
-bearing a brown and green paint scheme.}
-
-US_Essex_Descr{A large American-built frigate with good sailing 
-qualities, bearing a white and black 
-paint scheme.}
-RN_Essex_Descr{A large American-built frigate with good sailing 
-qualities, bearing a cream and black 
-paint scheme.}
-NL_Essex_Descr{A large American-built frigate with good sailing 
-qualities, bearing a brown and black 
-paint scheme.}
-FR_Essex_Descr{A large American-built frigate with good sailing 
-qualities, bearing a red, black and white
-paint scheme.}
-SP_Essex_Descr{A large American-built frigate with good sailing 
-qualities, bearing a red and black 
-paint scheme.}
-Sat_Essex_Descr{A mysterious American-built frigate bearing a dark
-red and black paint scheme. She is said to be crewed 
-by Satanists.}
-UnSat_Essex_Descr{Formerly crewed by Satanists, this frigate now
-bears a white and black paint scheme.}
-
-XebecVML_Descr{A large xebec with excellent sailing qualities,
-bearing an ornate red, blue and white 
-paint scheme.}
-
-HMS_Centurion_Descr{A British-built third rate of the early 18th 
-century, bearing a well decorated red, 
-brown and blue paint scheme.}
-
-Polacca_Descr{A seventeenth-century sailing vessel, similar to the xebec.
-She has three single-pole masts and a shallow draught.
-Bearing a weathered plain wood colour scheme.}
-Polacca_N_Descr{A seventeenth-century sailing vessel, similar to the xebec.
-She has three single-pole masts and a shallow draught.
-Bearing a red hull with yellow trim.}
-
-PinnaceMerchant_Descr{A large cargo ship. Well built but slow. With an 
-escort this is a real money maker.
-Bearing bearing a Dutch colour scheme.}
-
-PinnaceMedium_Descr{Well built and the fastest of her type.
-Medium Dutch trader with some green paint.}
-
-GoldenHind_Descr{The 'Golden Hind' is best known for her circumnavigation of the globe between 1577 and 1580.
-She was originally known as the 'Pelican', but was renamed by Drake mid-voyage in 1578.}
-RN_Galeon_L_Descr{A small galleon of English design with colourful markings.}
-
-FR_CastelF_Descr{The 'Castell Friedrichsburg' was built in 1688 and is a coastal patrol ship with shallow draft. She has good speed and manueverability and can sail well into the wind.
-This one bears a French blue and gold paint scheme.}
-NL_CastelF_Descr{The 'Castell Friedrichsburg' was built in 1688 and is a coastal patrol ship with shallow draft. She has good speed and manueverability and can sail well into the wind.
-This one bears a Dutch green and gold paint scheme.}
-SP_CastelF_Descr{The 'Castell Friedrichsburg' was built in 1688 and is a coastal patrol ship with shallow draft. She has good speed and manueverability and can sail well into the wind.
-This one bears a Spanish black and red paint scheme.}
+Caravel1_Descr{Латинская оснастка обеспечивает хороший ход против ветра.
+Украшенный торговый корабль с красно-белым корпусом.}
+Caravel2_Descr{Прямая оснастка обеспечивает хороший ход по ветру.
+Торговое судно украшенное в красных и белых тонах.}
+FastCaravel_Descr{Хороший ход против ветра. Кроваво-красное
+и яркое плохо действует на жертв Бартоломью.}
+CursedCaravel_Descr{Она проклята, говорю тебе!
+Каравелла с покрытым водорослями корпусом.}
+Carrack_Descr{Устаревший дизайн и плохое маневрирование,
+но для торгового корабля она может быть вполне опасной.}
+PO_Caravel50_Descr{Португальский торговый корабль с прямыми парусами и
+небогатыми декорациями. Лучше плыть с попутным ветром.}
+
+Schooner1_Descr{Выбор как пирата, так и торговца, с хорошим
+ходом против ветра. Судно окрашено в темных тонах.}
+Schooner2_Descr{Выбор как пирата, так и торговца, с хорошим
+ходом против ветра. Прекрасное зелёное судно.}
+SchoonerWar_Descr{Военное судно с украшенной кормой.
+Быстрое, но не против ветра.}
+Schooner50_Descr{Выбор как пирата, так и торговца,
+корпус окрашен в три цвета. Быстрое, но не против ветра.}
+US_Schooner47_Descr{Выбор как пирата, так и торговца, в
+цветах флота Соединенных Штатов. Быстрое, но не против ветра.}
+
+Hooker_Descr{Дополнительные паруса снижают скорость против ветра.
+Крепкий чёрно-красный корпус придает суровый вид.}
+
+Shnyava1_Descr{Этот сбалансированный корабль хорошо маневрирует,
+но плохо плывёт против ветра. Чёрно-белый корпус.}
+Shnyava2_Descr{Этот сбалансированный корабль хорошо маневрирует,
+но плохо плывёт против ветра. Богато украшенный корпус.}
+
+HMS_Bounty_Descr{Напоминает знаменитого 'Баунти'.
+Лучше держаться подальше от Таити.}
+
+BrigRoyal_Descr{Достойное военное судно, но плохо плывёт против ветра.
+Британские кормовые украшения вселяют храбрость на море.}
+
+Brig1_Descr{Быстрое военное судно, но с трудом плывёт против ветра.
+Окрашено в коричневых тонах, с затейливыми украшениями.}
+Brig2_Descr{Быстрое военное судно, но с трудом плывёт против ветра.
+Корпус окрашен в белые и красные тона.}
+RN_Brig_Descr{Быстрое военное судно, но с трудом плывёт против ветра.
+Окраска стёрлась, что намекает на долгую военную службу.}
+BrigQeen1_Descr{Быстрое военное судно, но с трудом плывёт против ветра.
+Отполированный корпус с белой отделкой.}
+BrigSW1_Descr{Быстрое военное судно, но с трудом плывёт против ветра.
+Чёрный корпус и носовая фигура волка.}
+Brig3_Descr{Адаптируемый корабль, быстрый, но плохой при боковом ветре.
+Лакированный корпус с красной отделкой и зеленой маркировкой.}
+Brig_20_Gun1_181_Descr{Сбалансированный корабль, быстрый, но плохой при боковом ветре.
+Пиратская схема с темным корпусом и красными узорами.}
+
+HMS_Interceptor_Descr{"Нет корабля, который мог бы сравниться
+по скорости с Перехватчиком."}
+RN_Interceptor_Descr{Очень быстрый бриг. Чёрный корпус
+с кремовыми полосками.}
+US_Interceptor_Descr{"Леди Вашингтон" появлялась в различных фильмах, например,
+"Пираты Карибского Моря" и "Звездный Путь: Поколения".}
+USS_Enterprise_Descr{24-орудийный военный бриг 'Энтерпрайз'.
+Плохо плывёт против ветра.}
+
+Yacht1_Descr{Это торговое судно не будет быстро плыть против ветра.
+Синяя окраска и украшения по всему корпусу.}
+Yacht2_Descr{Это торговое судно не будет быстро плыть против ветра.
+Черная окраска и украшения по всему корпусу.}
+
+Barque1_Descr{Этот корабль хорошо плывёт по ветру.
+Достойное торговое судно с синей окраской.}
+Barque2_Descr{Этот корабль хорошо плывёт по ветру.
+Никакой окраски - это торговое судно, а не карета для леди.}
+Barkentine1_Descr{Хорошая скорость для небольшого торгового судна, даже против ветра.
+Тёмно-коричневый корпус с декоративными украшениями.}
+
+BarqueHeavy_Descr{Хорошая скорость для небольшого торгового судна, но не против ветра.
+Выветрившийся синий корпус намекает на долгую службу.}
+
+Barque3_50_Descr{Этот сбалансированный корабль легко плывёт против ветра.
+Чёрно-красная окраска придает зловещий вид.}
+
+Barque4_47_Descr{С трудом плывёт против ветра. Этот сбалансированный корабль
+не слишком окрашен, поэтому краска не будет быстро стираться.}
+
+US_Brig47_Descr{С трудом плывёт против ветра,
+но, тем не менее, это быстрый и маневренный военный корабль Соединенных Штатов.}
+PiratBrig50_Descr{С трудом плывёт против ветра, но, тем не менее, это быстрый и маневренный корабль.
+Военный зелено-оранжевый дизайн.}
+
+Brigantina1_Descr{Этот военный корабль достойно плывёт против ветра.
+Лёгкий украшенный корпус, покрашенный в белый.}
+Brigantina2_Descr{Этот военный корабль достойно плывёт против ветра.
+Лёгкий украшенный корпус, покрашенный в синий.}
+BrigantineOld_Descr{Лёгкий военный корабль с хорошей скоростью при боковом ветре.
+Корпус имеет чёрные и белые полосы.}
+
+Tartane1_Descr{Потеряли свой корабль, капитан?
+Одномачтовая тартана с простым красным деревянным корпусом.}
+Tartane2_Descr{Потеряли свой корабль, капитан?
+Одномачтовая тартана с украшенным деревянным корпусом.}
+
+Tartane50_Descr{Потеряли свой корабль, капитан?
+Одномачтовое судно с серым корпусом, наподобие 'Джолли Мон'.}
+
+Gunboat_Descr{Лучше, чем ничего. Его единственное носовое орудие
+бросит вызов в любом сражении.}
+
+TartaneWar_Descr{Хорошая скорость, но оно больше
+прогулочное из-за своих размеров.}
+
+Galeoth1_Descr{Быстрое и маневренное, достойно плывёт против ветра. Испанский военный
+дизайн с украшенным красным корпусом.}
+Galeoth2_Descr{Быстрое и маневренное, достойно плывёт против ветра. Испанский военный
+дизайн с украшенным жёлто-зелёным корпусом.}
+
+Sloop1_Descr{Подходит и для торговцев, и для военных.
+Судно покрашенно в синие тона, хорошо плывёт против ветра.}
+FR_Sloop_Descr{'Ле Рив' хорошо плывёт против ветра.
+Маневренное судно французского флота.}
+Sloop2_Descr{Сбалансированное судно в бледно-красных тонах,
+хорошо плывёт против ветра.}
+Sloop4_Descr{Сбалансированное судно из лакированного дерева,
+хорошо плывёт против ветра.}
+
+SloopBermuda_Descr{Хорошо плывёт против ветра.
+Маневренное судно Британского Королевского Военного Флота.}
+
+Cutter1_Descr{Хорошо плывёт против ветра.
+Маневренное военное судно в белых и коричневых тонах.}
+Cutter2_Descr{Хорошо плывёт против ветра.
+Маневренное судно в выветрившейся окраске Королевского Флота.}
+
+Ketch_Descr{Это военное судно хорошо плывёт против ветра.
+Очень маневренное, корпус окрашен в коричневые и белые тона.}
+
+Lugger1_Descr{Небольшой, но достойный торговый корабль.
+Маневренное судно в чёрных, белых и жёлтых тонах.}
+Lugger2_Descr{Небольшой, но достойный торговый корабль.
+Маневренное судно с коричневой окраской.}
+LuggerCT_Descr{Небольшой, но достойный торговый корабль.
+Маневренное судно с чёрными и белыми декорациями.}
+Lugger4_Descr{Небольшой, но достойный торговый корабль.
+Маневренное, выветрившееся судно с синей окраской.}
+
+LuggerVML_Descr{Вполне быстрое и маневренное торговое судно с крепким корпусом.
+Компас включен (но не указывает на север).}
+
+PO_LuggerP_Descr{Небольшой маневренный торговый корабль, приспособленный для каперства.
+Белый корпус с зелёным и красным декором.}
+SP_LuggerP_Descr{Небольшой маневренный торговый корабль, приспособленный для каперства.
+Чёрный корпус с синим и красным декором.}
+NL_LuggerP_Descr{Небольшой маневренный торговый корабль, приспособленный для каперства.
+Жёлтый корпус с зеленым и красным декором.}
+FR_LuggerP_Descr{Небольшой маневренный торговый корабль, приспособленный для каперства.
+Синий корпус с красным декором.}
+RN_LuggerP_Descr{Небольшой маневренный торговый корабль, приспособленный для каперства.
+Коричневый корпус с синим и жёлтым декором}
+
+Lugger3_Descr{Небольшой, но достойный торговый корабль.
+Маневренное судно с выветрившейся окраской.}
+
+EdinburghTrader_Descr{Трехмачтовый грузовой корабль,
+основанный на 'Эдинбургском Торговце'.}
+
+FastMerchantman1_Descr{Бывший фрегат, проданный на аукционе и переделанный
+в торговое судно, в белой и
+коричневой окраске.}
+FastMerchantman2_Descr{Бывший фрегат, проданный на аукционе и переделанный
+в торговое судно, с выгоревшей чёрно-жёлтой 
+окраской.}
+
+Fleut1_Descr{Приемлемые скорость и маневренность.
+Коричневое украшенное торговое судно.}
+Fleut2_Descr{Приемлемые скорость и маневренность.
+Синее, украшенное торговое судно, немного выветрившееся.}
+NL_Fleut50_Descr{Приемлемые скорость и маневренность.
+Превосходное торговое судно с голландской окраской.}
+
+PO_Fleut50_Descr{Приемлемые скорость и маневренность.
+Превосходное торговое судно с небогатыми декорациями.}
+
+FleutWar_Descr{Приемлемые скорость и маневренность.
+Военное судно, окрашенное в синий.}
+
+FleutWar2_Descr{Достойные скорость и маневренность.
+Военно-морское судно окрашено в черные и красные тона.}
+
+FleutWarSat_Descr{Приемлемые скорость и маневренность.
+Чёрное судно со зловещей отделкой.}
+
+FleutWarExSat_Descr{Достойный по скорости и скорости поворота.
+Бывший корабль сатанистов теперь имеет менее зловещие опознавательные знаки.}
+
+FR_LightPinnace_Descr{Приемлемый по скорости, но не слишком маневреннен.
+Французское торговое судно, окрашенное в коричневые и красные тона.}
+
+Pinnace1_Descr{Приемлемый по скорости, но не слишком маневреннен.
+Богато украшенное торговое судно, коричневое в белую полосочку.}
+Pinnace2_Descr{Приемлемая скорость, но не слишком маневреннен.
+Богато украшенное торговое судно, окрашенное, по большей части, в коричневый.}
+
+NL_Pinnace_Descr{Судно с приемлемой скоростью, но не слишком маневренное.
+Украшенное голландское торговое судно, немного покрашенное в зелёный.}
+
+SP_Pinnace50_Descr{Торговое судно с приемлемой скоростью, но не слишком маневренное.
+Это украшенное испанское судно окрашено в красный.}
+
+HMS_Indefatigable_Descr{'Индефатигейбл', военный корабль типа рази Ардент,
+построенный по дизайну сэра Томаса Слейда.}
+RN_Indefatigable_Descr{Военный корабль типа рази, окрашенный по-британски,
+в кремовые и чёрные тона.}
+GEN_Indefatigable_Descr{Военный корабль типа рази, окрашенный
+в чёрные и жёлтые тона.}
+FR_Indefatigable_Descr{Военный корабль типа рази, окрашенный по-французски,
+в красные и чёрные тона.}
+SP_Indefatigable_Descr{Военный корабль типа рази, окрашенный по-испански,
+в тёмно-красные и чёрные тона.}
+NL_PinnaceofWar47_Descr{Вместительное военное судно.
+Этот голландский корабль окрашен в зелёные, коричневые и белые тона.}
+
+WallerPinnace_Descr{Судно с приемлемой скоростью, но не слишком маневренное.
+Вместительное военное судно в золотом, коричневом и белом тонах.}
+
+Galeon1_Descr{Не ждите маневренности от галеона.
+Испанский дизайн, окрашен в коричневый.}
+Galeon2_Descr{Не ждите маневренности от галеона.
+Испанский дизайн, верхняя часть окрашена в синий.}
+PiratBattleGalleon_Descr{Не ждите маневренности от галеона.
+Пиратское судно с португальским декором.}
+SP_BattleGalleon_Descr{Не ждите маневренности от галеона.
+Испанское военное судно, почти не украшенное.}
+
+SP_Galeon50_Descr{Вполне маневреннен для галеона.
+Выполнен в испанском стиле.}
+
+GaleonWar_Descr{Не ждите маневренности от галеона.
+Чёрный и богато украшенный.}
+Galeon50_Descr{Не ждите маневренности от галеона.
+Окрашен, по большей части, в чёрный и синий тона.}
+
+NL_FleutWar_Descr{Приемлемые скорость и маневренность.
+Это военное судно окрашено в голландском стиле.}
+
+RN_FleutWar_Descr{Приемлемые скорость и маневренность.
+Это военное судно окрашено в желтые и синие тона.}
+
+SP_FleutWar_Descr{Приемлемые скорость и маневренность.
+Это военное судно окрашено в красные тона.}
+
+PO_WarGalleon_Descr{Симпатичный.
+Английский галеон, окрашенный в коричневый и белый тона.}
+FR_WarGalleon_Descr{Симпатичный.
+Английский галеон, окрашенный по-французски.}
+RN_WarGalleon_Descr{Симпатичный.
+Английский галеон, покрашенный в синий.}
+NL_WarGalleon_Descr{Симпатичный.
+Английский галеон, окрашенный по-голландски.}
+SP_WarGalleon_Descr{Симпатичный.
+Английский галеон, окрашенный по-испански.}
+FR_Licorne_Descr{Симпатичный.
+Основан на французском корабле 'Ля Ликорн'}
+
+FastGalleon1_Descr{На полной скорости покажет все свои возможности.
+С узорами и бело-красными декорациями.}
+FastGalleon2_Descr{На полной скорости покажет все свои возможности.
+Корпус окрашен в чёрные и белые тона.}
+FastGalleon3_Descr{На полной скорости покажет все свои возможности.
+С красочными декорациями.}
+FastGalleon4_Descr{На полной скорости покажет все свои возможности.
+Корпус окрашен в красные и чёрные тона.}
+FastGalleon5_Descr{На полной скорости покажет все свои возможности.
+Корпус украшен щитами и золотыми символами.}
+PiratFastGal_Descr{На полной скорости покажет все свои возможности.
+Пиратский дизайн, выполненный в устрашающих чёрных тонах.}
+
+Xebec1_Descr{Латинская оснастка обеспечивает хороший ход против ветра.
+Сбалансированное судно, окрашенное в красные и жёлтые тона.}
+Xebec2_Descr{Латинская оснастка обеспечивает хороший ход против ветра.
+Сбалансированное судно, украшенное в северном стиле.}
+Xebec3_Descr{Латинская оснастка обеспечивает хороший ход против ветра.
+Сбалансированное судно, украшенное в мавританском стиле.}
+
+SchoonerXebec_Descr{Тяжелая шхуна, превосходно идущая против ветра.
+Сбалансированное судно, окрашенное в чёрные и жёлтые тона.}
+
+XebecAS_Descr{Эта тяжелая шебека быстро плывёт против ветра.
+Практически невозможно поймать.}
+
+Corvette47_Descr{Быстрый французский корвет,
+покрашенный в чёрные тона в охровую полосочку.}
+
+Corvette1_Descr{Фрегат середины 18-го века,
+окрашенный в красные и коричневые тона.}
+Corvette2_Descr{Фрегат середины 18-го века,
+окрашенный в бежевые и морские тона.}
+RN_Corvette_Descr{Фрегат середины 18-го века,
+узорчатый и окрашенный в синие, коричневые и золотые 
+тона.}
+
+CursedCorvette_Descr{Старый фрегат, покрытый водорослями, сказано,
+что он одержим ужасным проклятием...}
+
+PiratCorvette_Descr{Фрегат середины 18-го века, захваченный пиратами,
+покрашенный в зловещие чёрные тона.}
+PiratCorvette50_Descr{Фрегат середины 18-го века, захваченный пиратами,
+окрашенный в зловещие красные и чёрные тона.}
+CrimsonBlood_Descr{Захваченный пиратами фрегат, окрашенный в тёмные 
+тона и со зловещими парусами. Сказано, что 
+команда этого корабля проклята...}
+
+PO_FastNavy_Descr{Ранний португальский фрегат с латинской оснасткой,
+богато украшенный.}
+
+Frigate1_Descr{Русский фрегат начала 18-го века,
+окрашенный в жёлтые и чёрные тона.}
+Frigate2_Descr{Русский фрегат начала 18-го века,
+окрашенный в золотое, белые и оливковые
+тона.}
+NL_Frigate47_Descr{Русский фрегат начала 18-го века,
+окрашенный по-голландски.}
+FR_Frigate_Descr{Русский фрегат начала 18-го века,
+окрашенный в золотое, синие и персиковые тона.}
+RN_Frigate_Descr{Русский фрегат начала 18-го века,
+выполненный в синих и персиковых тонах
+с богато украшенной кормой.}
+
+Frigate_sat_Descr{Загадочный фрегат 18-го века, окрашенный в тёмно-красных 
+и чёрных тонах. Сказано, что его команда 
+состоит из сатанистов.}
+Frigate_Ex_Sat_Descr{Ранее экипаж этого фрегата состоял из сатанистов, теперь
+он окрашен в жёлто-чёрных тонах
+с позолоченной отделкой.}
+PiratFrigateSup_Descr{Фрегат начала 18-го века, захваченный пиратами,
+окрашенный в красные и чёрные тона, украшен
+черепом и костями.}
+PiratFrigateSat_Descr{Фрегат начала 18-го века, захваченный сатанистами,
+окрашенный в красные и чёрные тона.}
+PiratFrigateExSat_Descr{Фрегат начала 18-го века, захваченный сатанистами,
+окрашенный в жёлтые и чёрные тона.}
+
+USS_Constitution_Descr{'Конституция', большой, современный фрегат, 
+построенный по дизайну Джошуа Хамфри.}
+US_BattleFrigate_Descr{Большой, современный, превосходный фрегат,
+окрашенный в белые и чёрные тона.}
+RN_BattleFrigate_Descr{Большой, современный, превосходный фрегат,
+окрашенный в кремовые и чёрные тона.}
+FR_BattleFrigate_Descr{Большой, современный, превосходный фрегат,
+окрашенный в красные и чёрные тона.}
+SuperFrigate_Descr{Большой фрегат, созданный для длительных патрулей.
+Эта вариация выполнена в естественном деревянном стиле.}
+
+HMS_Surprise_Descr{'Сюрприз', большой британский фрегат,
+окрашенный в чёрные и 
+кремовые тона.}
+FR_Boussole_Descr{Мощный, изящный французский фрегат, окрашенный
+в золотое, синие и коричневые тона.}
+FR_Razee_Descr{Мощный, изящный французский фрегат, окрашенный в
+красные и чёрные тона.}
+RN_Razee_Descr{Мощный, изящный британский фрегат, окрашенный в
+кремовые и чёрные тона.}
+
+Lineship1_Descr{Для линейного корабля внешний вид отходит на второй план.
+Это судно покрашено в чёрный.}
+Lineship47_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в чёрные, белые, зелёные и жёлтые тона.}
+
+PO_Warship_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус украшен и окрашен в белые и жёлтые тона.}
+RN_Warship_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в стиле Королевского Флота.}
+SP_Warship_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в цвета Франции.}
+FR_Belette_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в цвета Франции.}
+
+SwedishIndiaman1_Descr{Легко вооруженное торговое судно, очень быстрое, с хорошим
+объемом трюма.}
+SwedishIndiaman_red_Descr{Легко вооруженное торговое судно, очень быстрое, с хорошим
+объемом трюма. Лакированный корпус с красным декором.}
+SwedishIndiaman_blue_Descr{Легко вооруженное торговое судно, очень быстрое, с хорошим
+объемом трюма. Лакированный корпус с тёмно-синим декором.}
+
+NL_Batavia_Descr{Для 'Батавии' внешний вид отходит на второй план.
+Вооруженный торговое судно в голландских тонах.}
+
+NL_SevenProvincien_Descr{Голландское судно 'Семь Провинций', построенное
+по дизайну Соломона Янса ван Темпеля.}
+
+NL_Lineship_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в голландском стиле.}
+
+NL_ConvoiShip_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в голландском стиле.}
+
+NL_Amsterdam_Descr{'Амстердам', знаменитое судно
+голландской Ост-Индской Компании!}
+
+Battleship1_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус покрашен в красный.}
+Battleship2_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в чёрные, белые и красные тона.}
+RN_Battleship_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в британском стиле.}
+SP_Battleship_Descr{Для линейного корабля внешний вид отходит на второй план.
+Выветрившийся корпус, окрашеный в темные тона.}
+Battleship5_Descr{Для линейного корабля внешний вид отходит на второй план.
+Выветрившийся корпус, окрашенный в испанском стиле.}
+Battleship1b_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в черные и красные тона.}
+
+RN_SuperiorWarship_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен в стиле Королевского Флота.}
+FR_SuperiorWarship_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус окрашен во французском стиле.}
+
+Battleship3_Descr{Для линейного корабля внешний вид отходит на второй план.
+Выветрившийся корпус, окрашенный в стиле Королевского флота.}
+
+HeavyLineship_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус с декорациями, окрашенный в красные и синие тона.}
+HeavyLineship2_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус жёлто-чёрный, с золотыми декорациями.}
+HeavyLineship3_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус имеет синие и золотые декорации.}
+
+Battleship4_Descr{Для линейного корабля внешний вид отходит на второй план.
+Лакированный корпус в чёрную полосочку и с синей верхней частью.}
+
+FR_Battleship4_Descr{Для линейного корабля внешний вид отходит на второй план.
+Тёмно-коричневый корпус в белую полосочку и с синей верхней частью.}
+
+SP_Battleship4_Descr{Для линейного корабля внешний вид отходит на второй план.
+Лакированный корпус с красными полосочками и верхней частью.}
+
+HMS_Endeavour_Descr{'Усилие', устрашающий флагман Ост-Индской 
+Торговой Компании, принадлежащий лорду Катлеру Беккету.}
+HMS_Dauntless_Descr{'Разящий', самый впечатляющий военный корабль Королевского
+Флота.}
+
+SP_SotL_Descr{Линейный корабль 2 класса.
+Окрашен в испанском стиле.}
+FR_SotL_Descr{Линейный корабль 2 класса.
+Окрашен во французском стиле.}
+US_SotL_Descr{Линейный корабль 2 класса.
+Окрашен в стиле Соединенных Штатов.}
+RN_SotL_Descr{Линейный корабль 2 класса.
+Окрашен в стиле Королевского Флота.}
+
+Manowar1_Descr{Для линейного корабля внешний вид отходит на второй план.
+Корпус с чёрными и белыми полосочками.}
+Manowar2_Descr{Для линейного корабля внешний вид отходит на второй план.
+Богато украшенный корпус, окрашенный в белые, жёлтые и зелёные тона.}
+Manowar_gub_Descr{Для линейного корабля внешний вид отходит на второй план.
+Чёрный с синим, а также белыми полосочками.}
+SP_Manowar_Descr{Для линейного корабля внешний вид отходит на второй план.
+Красно-жёлтый корпус означает, что это испанский корабль.}
+PO_Manowar_Descr{Для линейного корабля внешний вид отходит на второй план.
+Богато украшенный белый с коричневым корпус.}
+
+US_SteamFrigate_Descr{Прототип парового фрегата, окрашенный
+в белые и чёрные тона. Двигатель работает
+отдельно от парусов.}
+
+FR_SteamFrigate_Descr{Прототип парового фрегата, окрашенный
+в красные и чёрные тона. Двигатель работает
+отдельно от парусов.}
+
+RN_SteamFrigate_Descr{Прототип парового фрегата, окрашенный
+в кремовые и чёрные тона. Двигатель работает
+отдельно от парусов.}
+
+Pirate_SteamFrigate_Descr{Прототип парового фрегата, покрашенный
+в тёмно-красный. Двигатель работает
+отдельно от парусов.}
+
+CursedDutchman_Descr{Проклятый корабль Дэви Джонса, способный погружаться под воду.
+"Выпускайте... Кракена!"}
+FlyingDutchman_Descr{Истинная форма 'Летучего Голландца',
+освобождённого от проклятия.}
+
+WickedWench_Descr{Судно Ост-Индской Торговой Компании;
+первый корабль под командованием капитана Джека Воробья.}
+BlackPearl_Descr{Любимый корабль капитана Джека Воробья,
+освобождённый от проклятия.}
+164_Descr{"С лихими бандитами, чей капитан - мертвец,
+которого изрыгнула сама Преисподняя."}
+UncursedPearl_Descr{Любимый корабль капитана Джека Воробья, каким он был
+до того, как стал жертвой ужасного проклятия.}
+
+RN_FirstRate_Descr{Могучий линейный корабль 1 класса,
+окрашенный в клетку Нельсона Чекера.}
+HMS_Victory_Descr{'Победа', самый известный корабль Королевского Флота,
+построенный по дизайну сэра Томаса Слейда.}
+US_FirstRate_Descr{Могучий линейный корабль 1 класса,
+окрашенный в белые и чёрные тона.}
+FR_FirstRate_Descr{Могучий линейный корабль 1 класса,
+окрашенный в ярко-красные и чёрные тона.}
+SP_FirstRate_Descr{Могучий линейный корабль 1 класса,
+окрашенный в тёмно-красные и чёрные тона.}
+
+FR_Superbe_Descr{Корабль 3 класса знаменитого класса Бесшабашный,
+наиболее многочисленный класс боевый кораблей, когда-либо строившихся,
+окрашенный в красные и чёрные тона.}
+RN_Superbe_Descr{Грозный Корабль 3 класса,
+окрашенный в кремовые и чёрные тона.}
+NL_Superbe_Descr{Грозный Корабль 3 класса, 
+окрашенный в коричневые и чёрные тона.}
+
+HMS_Bellona_Descr{Корабль 3 класса, основанный на мощном классе Беллона,
+окрашенный в кремовые и чёрные тона.}
+FR_Bellona_Descr{Очень мощный линейный корабль 3 класса,
+окрашенный в красные и чёрные тона.}
+US_Bellona_Descr{Большой, устрашающий американский корабль 3 класса,
+окрашенный в белые и чёрные тона.}
+KetchNavy_Descr{Такой маневренный, что легко может пройти через 'Глотку Дьявола',
+но недостает скорости. Основан на 'Несравненном'.}
+
+HMS_Greyhound_Descr{Небольшой, маневренный британский фрегат, созданный для охоты
+на пиратов. Берегитесь, жалкие псы!}
+FR_Greyhound_Descr{Небольшой, маневренный французский фрегат, созданный для охоты
+на пиратов. Берегитесь, жалкие псы!}
+PO_Greyhound_Descr{Небольшой, маневренный португальский фрегат, созданный для охоты
+на пиратов. Берегитесь, жалкие псы!}
+
+HMS_Sophie_Descr{Большой и надежный бриг,
+окрашенный в кремовые и чёрные тона.}
+
+US_Enterprise_Descr{Хорошая маневренная американская шхуна,
+простенько окрашенная.}
+
+HMS_Mordaunt_Descr{Частно построенный линейный корабль 4 класса,
+приобретенный Королевским Флотом, окрашенный в коричневые
+и белые тона.}
+
+FR_Couronne_Descr{Большой, символический галеон французского флота,
+первый своего вида, построенный во Франции.}
+
+Couronne_pirate_Descr{Большой, бывший галеон французского флота,
+ныне захваченный пиратами.}
+
+SP_ApostolFelipe_Descr{'Апостол Филипп', один из шести галеонов,
+построенных Мартином де Араной для Короля Филиппа IV.}
+
+US_Hannah_Descr{Небольшая американская шхуна, взятая на службу
+генералом Джорджем Вашингтоном.}
+PiratHannah_Descr{Небольшая шхуна, захваченная пиратами,
+простенько окрашенная.}
+
+HMS_Speedy_Descr{Очень разносторонний бриг, построенный по дизайну
+Томаса Кинга, окрашенный в кремовые и чёрные
+тона.}
+
+PO_Poseidon_Descr{Датский корабль 3 класса начала 18-го века,
+с синим орнаментом и жёлто-чёрной
+окраской.}
+FR_Fleuron_Descr{Французский корабль 3 класса начала 18-го века,
+с красным орнаментом и коричнево-чёрной
+окраской.}
+RN_Poseidon_Descr{Датский корабль 3 класса начала 18-го века,
+с жёлтым орнаментом и чёрной
+окраской.}
+SP_Natividad_Descr{Испанский корабль 4 класса конца 18-го века,
+с жёлтым орнаментом и чёрной окраской.}
+
+RN_Surprise_Descr{Изящный британский фрегат, основанный на французском,
+окрашен в кремовые и чёрные тона.}
+FR_Surprise_Descr{Изящный французский фрегат, окрашенный в красные и чёрные тона.}
+SP_Surprise_Descr{Изящный испанский фрегат, основанный на французском,
+окрашен в морские и чёрные тона.}
+
+SP_SanFelipe_Descr{Построенный королем Испании в 1690, 'Сан Фелиппе'
+был самым величественным кораблем Испании, сражавшимся с французами.}
+FR_SoleilRoyal_Descr{Французский линейный корабль 'Солей Рояль', построенный в 1670.
+Изысканно украшенный барокканский флагман.}
+
+RN_RevengeM_Descr{Торговый вариант 4-мачтового Елизаветинского галеона.
+Тёмно-коричневый корпус с жёлто-зелёными декорациями.}
+RN_RevengeW_Descr{Военный вариант 4-мачтового Елизаветинского галеона.
+Коричневый корпус с бело-жёлтыми декорациями.}
+RN_RevengeF_Descr{Быстроходный вариант 4-мачтового Елизаветинского галеона.
+Светло-коричневый корпус с жёлто-зелёными декорациями.}
+
+PO_CaravelR_Descr{Специализированный португальский боевой корабль для
+сопровождения в Бразилию и Ост-Индию.}
+
+QueenAnnesRevenge_Descr{Ужасающий корабль Чёрной Бороды с жуткими деталями.
+Содержит греческий огонь на месте носовых орудий.}
+
+PO_Hoy_Descr{'Лион Хой' - обычное небольшое торговое судно.
+Корпус окрашен в португальском стиле.}
+FR_Hoy_Descr{'Лион Хой' - обычное небольшое торговое судно.
+Корпус окрашен во французском стиле.}
+SP_Hoy_Descr{'Лион Хой' - обычное небольшое торговое судно.
+Корпус окрашен в испанском стиле.}
+
+FR_Neptunus_Descr{Голландский капер начала 18-го века,
+окрашенный в синие и жёлтые тона.}
+RN_Neptunus_Descr{Голландский капер начала 18-го века,
+окрашенный в жёлтые и красные тона, с синими декорациями.}
+PO_Neptunus_Descr{Голландский капер начала 18-го века,
+окрашенный в белые и зелёные тона.}
+SP_Neptunus_Descr{Голландский капер начала 18-го века,
+окрашенный в красные и чёрные тона.}
+NL_Neptunus_Descr{Голландский капер начала 18-го века,
+окрашенный в зелёные, красные и серые тона.}
+PiratNeptunus_Descr{Голландский капер начала 18-го века,
+с отделанным жёлтым лакированным корпусом.}
+
+PO_NeptunusE_Descr{Голландский капер конца 17-го века,
+окрашенный в коричневые и белые тона.}
+SP_NeptunusE_Descr{Голландский капер конца 17-го века,
+окрашенный в коричневые и красные тона.}
+NL_NeptunusE_Descr{Голландский капер конца 17-го века,
+окрашенный в коричневые и зелёные тона.}
+FR_NeptunusE_Descr{Голландский капер конца 17-го века,
+окрашенный в коричневые и синие тона.}
+
+NL_LightPinnace_Descr{Построен на основе голландского 'Попугая' от 1627.
+Корпус окрашен в голландском стиле.}
+PO_LightPinnace_Descr{Построен на основе голландского 'Попугая' от 1627.
+Корпус окрашен в португальском стиле.}
+SP_LightPinnace_Descr{Построен на основе голландского 'Попугая' от 1627.
+Корпус окрашен в испанском стиле.}
+
+NL_Derfflinger_Descr{Германский флейт 17-го века,
+покрашен в стиле голландского военного флота.}
+FR_Derfflinger_Descr{Германский флейт 17-го века,
+окрашенный в коричневые и синие тона.}
+SP_Derfflinger_Descr{Германский флейт 17-го века,
+окрашенный в коричневые и красные тона.}
+
+NL_FWzP_Descr{Большой германский фрегат конца 17-го века,
+покрешн в стиле голландского военного флота.}
+
+HMS_Unicorn_Descr{Большой британский фрегат середины 18-го века,
+один из первых своего вида, окрашенный
+в чёрные и кремовые тона.}
+
+FR_Unicorn_Descr{Большой британский фрегат середины 18-го века,
+попавший во французские руки,
+окрашенный в красные и чёрные тона.}
+
+FR_Dilligente_Descr{Большая французская вооруженная тартана,
+окрашенная в красные и оранжевые тона.}
+
+RN_RaaFrigate_Descr{Датский фрегат начала 18-го века,
+окрашенный в жёлтые и чёрные тона.}
+
+NL_Postillionen_Descr{Небольшой фрегат с хорошими ходовыми качествами,
+узорчатый, окрашен в зелёные и коричневые тона.}
+SP_Postillionen_Descr{Небольшой фрегат с хорошими ходовыми качествами,
+узорчатый, окрашен в красные и жёлтые тона.}
+PO_Postillionen_Descr{Небольшой фрегат с хорошими ходовыми качествами,
+окрашенный в белые, зелёные и коричневые тона.}
+RN_Postillionen_Descr{Небольшой фрегат с хорошими ходовыми качествами,
+окрашенный в жёлтые и чёрные тона.}
+FR_Postillionen_Descr{Небольшой фрегат с хорошими ходовыми качествами,
+узорчатый, окрашен в красные и чёрные тона.}
+
+PiratPostillionen_Descr{Небольшой фрегат с хорошими ходовыми качествами,
+захваченный пиратами, окрашен в
+чёрные и коричневые тона.}
+
+Empress_Descr{Китайская джонка с уникальными ходовыми качествами,
+принадлежащая капитану Сяо Фэню.}
+
+CursedMariana_Descr{Бывший испанский галеон, чья команда, по слухам,
+состоит из призраков проклятых моряков...}
+Mariana_Descr{На полной скорости это судно покажет свои возможности.
+Испанский дизайн, украшенный позолотой.}
+
+US_PrinceNeufchatel_Descr{Очень быстрая американская шхуна,
+окрашенная в белые и чёрные тона.}
+
+RN_Volage_Descr{Французский военный шлюп конца 18-го века,
+окрашенный в кремовые и чёрные тона.}
+FR_Volage_Descr{Французский военный шлюп конца 18-го века,
+окрашенный в красные и чёрные тона.}
+SP_Volage_Descr{Французский военный шлюп конца 18-го века,
+окрашенный в тёмно-красные и чёрные тона.}
+PO_Volage_Descr{Французский военный шлюп конца 18-го века,
+окрашенный в коричневые и чёрные тона.}
+US_Volage_Descr{Французский военный шлюп конца 18-го века,
+окрашенный в белые и чёрные тона.}
+
+FR_Trinity_Descr{Датский линейный корабль 2 класса,
+светло-древесного стиля с синей окраской.}
+PO_Trinity_Descr{Датский линейный корабль 2 класса,
+окрашенный в белые и коричневые тона.}
+RN_Trinity_Descr{Датский линейный корабль 2 класса,
+окрашенный в жёлтые и чёрные тона.}
+SP_Trinity_Descr{Датский линейный корабль 2 класса,
+окрашенный в коричневые и зелёные тона.}
+
+US_Essex_Descr{Большой американский фрегат с хорошими ходовыми качествами,
+окрашенный в белые и чёрные 
+тона.}
+RN_Essex_Descr{Большой американский фрегат с хорошими ходовыми качествами,
+окрашенный в кремовые и чёрные 
+тона.}
+NL_Essex_Descr{Большой американский фрегат с хорошими ходовыми качествами,
+окрашенный в коричневые и чёрные 
+тона.}
+FR_Essex_Descr{Большой американский фрегат с хорошими ходовыми качествами,
+окрашенный в красные, чёрные и белые 
+тона.}
+SP_Essex_Descr{Большой американский фрегат с хорошими ходовыми качествами,
+окрашенный в красные и чёрные 
+тона.}
+Sat_Essex_Descr{Загадочный фрегат американской постройки с тёмной
+красно-чёрной окраской. Говорят, что это судно с экипажем 
+сатанистов.}
+UnSat_Essex_Descr{Ранее экипаж этого фрегата состоял из сатанистов, теперь
+он окрашен в бело-чёрные тона.}
+
+XebecVML_Descr{Большая шебека с превосходными ходовыми качествами,
+с красными узорами, окрашена в синие и белые
+тона.}
+
+HMS_Centurion_Descr{Британский 3 класс начала 18-го века,
+богато украшен, окрашен в красные,
+коричневые и синие тона.}
+
+Polacca_Descr{Судно 17 века, схожее с шебекой.
+Обладает тремя однополюсными мачтами и небольшой осадкой.
+Покрашена в стиле выветрившегося дерева.}
+Polacca_N_Descr{Судно 17 века, схожее с шебекой.
+Обладает тремя однополюсными мачтами и небольшой осадкой.
+Красный корпус с жёлтой отделкой.}
+
+PinnaceMerchant_Descr{Большой грузовой корабль. Славно построен, но медленный. С
+сопровождением станет настоящим источником дохода.
+Окрашен в голландском стиле.}
+PinnaceMerchant2_Descr{Большой грузовой корабль. Славно построен, но медленный. С 
+сопровождением станет настоящим источником дохода.
+Окрашен в сине-жёлтых тонах.}
+
+PinnaceMedium_Descr{Хорошо построен, а также быстрейший в своем классе.
+Средние голландское торговое судно с зеленой окраской.}
+PinnaceMedium2_Descr{Хорошо построен, а также быстрейший в своем классе.
+Средний трейдер с небольшим количеством краски в синих тонах.}
+
+GoldenHind_Descr{'Золотая Лань' наиболее известна за свое кругосветное плавание между 1577 и 1580 г.
+Изначальна была известна, как 'Пеликан', но была переименована Дрейком в 1578 г.}
+RN_Galeon_L_Descr{Небольшой красочный английский галеон.}
+
+FR_CastelF_Descr{'Замок Фридрихсбург' построили в 1688 г, это патрульный корабль с небольшой осадкой. Обладает хорошей скоростью и маневренностью и может хорошо плыть против ветра.
+Окрашен во французском стиле, в синих и золотых тонах.}
+NL_CastelF_Descr{'Замок Фридрихсбург' построили в 1688 г, это патрульный корабль с небольшой осадкой. Обладает хорошей скоростью и маневренностью и может хорошо плыть против ветра.
+Окрашен в голландском стиле, в зелёных и золотых тонах.}
+SP_CastelF_Descr{'Замок Фридрихсбург' построили в 1688 г, это патрульный корабль с небольшой осадкой. Обладает хорошей скоростью и маневренностью и может хорошо плыть против ветра.
+Окрашен в испанском стиле, в чёрных и красных тонах.}

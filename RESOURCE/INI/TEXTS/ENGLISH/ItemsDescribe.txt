@@ -2092,7 +2092,7 @@ itmname_skillbook3 {Book of Bouncing Balls}
 itmdescr_skillbook3
 {
 Did you know there is a way to make cannons balls bounce of your hull? This and more tricks you'll find in this book. 
-(Unlocks Advanced Ship defence)
+(Unlocks Improved Damage Control)
 }
 
 itmname_skillbook4 {Don't Shoot the Messenger}
