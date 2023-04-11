@@ -6,70 +6,71 @@ Legrand{Легран}
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
-Edgar Allan{Эдгар Алан}
+Edgar Allan{Эдгар Аллан}
 Poe{По}
 Jupiter{Юпитер}
 
 {=====| TempQuest.c |=====}
-C. Auguste{}
-Dupin{}
-Arthur Gordon{}
-Pym{}
+C. Auguste{К. Огюст}
+Dupin{Дюпен}
+Arthur Gordon{Артур Гордон}
+Pym{Пим}
 Lieutenant{Лейтенант}
-G{}
-Medicine{}
-Woman{}
-Hans{Ханс}
-Pfaall{}
-Wilson{}
-Ethelred{}
-Usher{}
-Fortunato{}
-Summer{}
-visitor{}
-Soldier{}
-Bartender{}
-Sergeant{}
-Corporal{}
+G{Дж.}
+Medicine{Доктор}
+Woman{Женщина}
+Medicine Woman{Знахарка}
+Hans{Ганса}
+Pfaall{Пфааль}
+Wilson{Уилсон}
+Ethelred{Этельред}
+Usher{Ашер}
+Fortunato{Фортунато}
+Summer{Саммер}
+visitor{посетитель}
+Soldier{Солдат}
+Bartender{Бармен}
+Sergeant{Сержант}
+Corporal{Капрал}
 Sailor{Моряк}
 Claude{Клод}
-Frollo{}
-Landlady{}
+Frollo{Фролло}
+Landlady{Хозяйка}
 Natalia{Наталиа}
 Decoteau{Декото}
 Serena{Серена}
 Tisserand{Тиссеранд}
 Celia{Селия}
 Hilder{Хилдер}
-Mummy{}
-Citizen{}
-Axel{}
-von Fersen{}
-Doctor{}
-KP{}
+Mummy{Мумия}
+Citizen{Горожанин}
+Axel{Аксель}
+von Fersen{вон Ферсен}
+Doctor{Доктор}
+KP{КП}
 Street{Уличный}
 Merchant{Торговец}
-Shipyard{}
-Owner{}
-Harbour{}
-Master{}
-Bank{}
-Clerk{}
-Blacksmith{}
-Storeowner{}
-Governor Thomas{}
-Bennet{}
-The Chinese{}
-Man{}
-Black Magic Woman{}
-Plantation{}
-Guard{}
-Captain William{}
-Kidd{}
-Howard{}
-Pyle{}
-Caroline{}
-K{}
+Shipyard{Верфи}
+Owner{Владелец}
+Harbour{Гавани}
+Master{Мастер}
+Bank{Банка}
+Clerk{Служащий}
+Blacksmith{Кузнец}
+Storeowner{Владелец магазина}
+Governor Thomas{Губернатор Томас}
+Bennet{Беннет}
+The Chinese{Китаец}
+Man{Мужчина}
+Black Magic Woman{Чёрная ведьма}
+Plantation{Плантация}
+Guard{Охрана}
+Captain William{Капитан Уильям}
+Kidd{Кидд}
+Howard{Говард}
+Pyle{Пайл}
+Caroline{Каролина}
+K{К}
 Friday{Пятница}
 Alexander{Александр}
 Selkirk{Селкирк}
@@ -78,7 +79,7 @@ Rogers{Роджерс}
 Dave{Дэйв}
 Edna{Эдна}
 Nathaniel{Натаниэль}
-Hawk{Хок}
+Hawk{Хаук}
 Danielle{Даниэль}
 Fawn{Фавн}
 Steven{Стивен}
@@ -122,6 +123,6 @@ Thug{Громила}
 Bandit{Бандит}
 Priest{Священник}
 Zombie{Зомби}
-Buccaneer{Буканьер}
+Buccaneer{Пират}
 
 {=====| 191 characters |=====}

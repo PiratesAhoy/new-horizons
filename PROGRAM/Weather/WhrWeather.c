@@ -348,9 +348,34 @@ void CreateWeatherEnvironment()
 	{
 		switch (compasstype)
 		{
-			case "compass1": logstr = logstr + " " + TranslateString("from the", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0))); break;
-			case "compass2": logstr = TranslateString("Wind is from the", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0))) + " " + TranslateString("", "wind_at") + " " + winds + " " + TranslateString("", "kts"); break;
-			case "compass3": logstr = TranslateString("Wind is from the", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0))) + " " + TranslateString("", "wind_at") + " " + winds + " " + TranslateString("", "kts"); break;
+			case "compass1":
+				switch(LanguageGetLanguage())
+				{
+					case "Russian":
+						logstr = TranslateString("", "wind_from_the") + " " + TranslateString("", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0))) + " " + logstr;
+					break;
+					logstr = logstr + " " + TranslateString("wind_from_the", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0)));
+				}
+			break;
+			case "compass2":
+				switch(LanguageGetLanguage())
+				{
+					case "Russian":
+						logstr = TranslateString("", "wind_from_the") + " " + TranslateString("", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0))) + " " + TranslateString("", "Wind is from the") + " " + TranslateString("", "wind_at") + " " +  winds + " " + TranslateString("", "kts");
+					break;
+					logstr = TranslateString("Wind is from the", "") + " " + TranslateString(GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0)), "") + " " + TranslateString("", "wind_at") + " " + winds + " " + TranslateString("", "kts");
+				}
+			break;
+			case "compass3":
+				switch(LanguageGetLanguage())
+				{
+					case "Russian":
+						logstr = TranslateString("", "wind_from_the") + " " + TranslateString("", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0))) + " " + TranslateString("", "Wind is from the") + " " + TranslateString("", "wind_at") + " " +  winds + " " + TranslateString("", "kts");
+					break;
+					logstr = TranslateString("Wind is from the", "") + " " + TranslateString(GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0)), "") + " " + TranslateString("", "wind_at") + " " + winds + " " + TranslateString("", "kts");
+				}
+			break;
+			// In Russian translation, "Wind is from the" translates to "wind"
 		}
 	}
 	if(bSeaActive && compasstype == "")			ShowWindLog = true;

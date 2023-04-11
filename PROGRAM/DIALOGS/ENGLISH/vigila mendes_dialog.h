@@ -13,7 +13,7 @@ string DLG_TEXT[77] = {
 "I'm listening, what do you want to tell me?",
 "I've heard that you are looking for a reliable captain who can escort your ship during your voyage.",
 "I've heard you need an escort. I can do it for you.",
-"Oh, I'm so glad to see you again! To tell you the truth I felt very safe under your protection! .",
+"Oh, I'm so glad to see you again! To tell you the truth I felt very safe under your protection!",
 "When are you planning to head back?",
 "When are we going back, fat man? I can't wait to get my money.",
 "So, we're back. Thanks for your help, ",

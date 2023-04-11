@@ -40,11 +40,11 @@ Corsair_Descr_i{}
 
 Engineer_Descr_a{}
 Engineer_Descr_b{Вы служили одной из}
-Engineer_Descr_c{главных держав Европы в качестве}
-Engineer_Descr_d{военного инженера, строя}
-Engineer_Descr_e{морты, форты и минируя}
-Engineer_Descr_f{вражескую защиту во время}
-Engineer_Descr_g{осад.}
+Engineer_Descr_c{главных держав Европы}
+Engineer_Descr_d{в качестве военного}
+Engineer_Descr_e{инженера, строя моcты,}
+Engineer_Descr_f{форты и подрывая оборону}
+Engineer_Descr_g{противника во время осад.}
 Engineer_Descr_h{}
 Engineer_Descr_i{}
 
@@ -102,16 +102,16 @@ Naval Officer_Descr_a{}
 Naval Officer_Descr_b{Вы - уполномоченный}
 Naval Officer_Descr_c{офицер флота на службе у}
 Naval Officer_Descr_d{одной из великих держав.}
-Naval Officer_Descr_e{Вы живете, чтобы служить своей стране}
-Naval Officer_Descr_f{и защищать своих соотечественников.}
-Naval Officer_Descr_g{}
+Naval Officer_Descr_e{Вы живете, чтобы служить}
+Naval Officer_Descr_f{своей стране и защищать}
+Naval Officer_Descr_g{своих соотечественников.}
 Naval Officer_Descr_h{}
 Naval Officer_Descr_i{}
 
 Physician_Descr_a{}
 Physician_Descr_b{Бывший корабельный хирург,}
 Physician_Descr_c{вы привыкли к жизни в море}
-Physician_Descr_d{и теперь командуете
+Physician_Descr_d{и теперь командуете}
 Physician_Descr_e{собственным судном.}
 Physician_Descr_f{}
 Physician_Descr_g{}
@@ -139,31 +139,31 @@ Rebel_Descr_h{}
 Rebel_Descr_i{}
 
 Rogue_Descr_a{}
-Rogue_Descr_b{А вы распутник!}
+Rogue_Descr_b{Ты настоящий бабник!}
 Rogue_Descr_c{Едва сбежав из Европы}
-Rogue_Descr_d{после соблазнения и выманивания}
-Rogue_Descr_e{леди из ее сокровищницы, вы}
-Rogue_Descr_f{попали на дуэль с}
-Rogue_Descr_g{испанским доном.}
+Rogue_Descr_d{после того, как очаровал даму,}
+Rogue_Descr_e{лишив ее драгоценностей, вы}
+Rogue_Descr_f{оказываетесь втянутым}
+Rogue_Descr_g{в дуэль с испанским доном.}
 Rogue_Descr_h{}
 Rogue_Descr_i{}
 
 Sailor_Descr_a{}
 Sailor_Descr_b{Скромный матрос, вы}
 Sailor_Descr_c{провели всю свою жизнь в}
-Sailor_Descr_d{мечтах об обладании собственным}
-Sailor_Descr_e{кораблем. Наконец, этот день настал.}
-Sailor_Descr_f{}
+Sailor_Descr_d{мечтах об обладании}
+Sailor_Descr_e{собственным кораблем.}
+Sailor_Descr_f{Наконец, этот день настал.}
 Sailor_Descr_g{}
 Sailor_Descr_h{}
 Sailor_Descr_i{}
 
 Shipwright_Descr_a{}
-Shipwright_Descr_b{Дизайнер и строитель}
-Shipwright_Descr_c{кораблей, страсть к путешествиям}
-Shipwright_Descr_d{взяла верх, и вы}
-Shipwright_Descr_e{покинули порт на судне,}
-Shipwright_Descr_f{построенным собственными руками.}
+Shipwright_Descr_b{Дизайнер и строитель кораблей,}
+Shipwright_Descr_c{страсть к путешествиям}
+Shipwright_Descr_d{взяла верх, и вы покинули}
+Shipwright_Descr_e{порт на судне, построенным}
+Shipwright_Descr_f{собственными руками.}
 Shipwright_Descr_g{}
 Shipwright_Descr_h{}
 Shipwright_Descr_i{}
@@ -179,37 +179,37 @@ Smuggler_Descr_h{}
 Smuggler_Descr_i{}
 
 Social Climber_Descr_a{}
-Social Climber_Descr_b{Вы по жизни намереваетесь посещать места.}
-Social Climber_Descr_c{Если корабль может вас туда отвезти,}
-Social Climber_Descr_d{так тому и быть.}
-Social Climber_Descr_e{}
+Social Climber_Descr_b{Вы по жизни намереваетесь}
+Social Climber_Descr_c{посещать различные места.}
+Social Climber_Descr_d{Если корабль может вас туда}
+Social Climber_Descr_e{доставить, так тому и быть.}
 Social Climber_Descr_f{}
 Social Climber_Descr_g{}
 Social Climber_Descr_h{}
 Social Climber_Descr_i{}
 
 Sword Master_Descr_a{}
-Sword Master_Descr_b{Мастер фехтования из Европы, вы}
-Sword Master_Descr_c{тренировали солдат и аристократов и}
-Sword Master_Descr_d{знаете, чем один меч отличается от}
-Sword Master_Descr_e{другого. Устав от этого занятия, вы}
-Sword Master_Descr_f{купили корабль и прибыли на Карибы.}
-Sword Master_Descr_g{}
+Sword Master_Descr_b{Мастер фехтования из Европы,}
+Sword Master_Descr_c{вы обучали солдат и знать,}
+Sword Master_Descr_d{поэтому знаете, чем один меч}
+Sword Master_Descr_e{отличается от другого. Устав}
+Sword Master_Descr_f{от этого занятия, вы купили}
+Sword Master_Descr_g{корабль и прибыли на Карибы.}
 Sword Master_Descr_h{}
 Sword Master_Descr_i{}
 
 Cursed_Descr_a{}
-Cursed_Descr_b{Остров, куда отыскать путь не надо никому,}
-Cursed_Descr_c{так говорилось. Но вы нашли его!}
-Cursed_Descr_d{Там был сундук. Вы взяли все!}
-Cursed_Descr_e{Но попытаетесь ли вы избавиться}
-Cursed_Descr_f{от проклятия? Или воспользуетесь}
-Cursed_Descr_g{его преимуществами?}
-Cursed_Descr_h{}
-Cursed_Descr_i{}
+Cursed_Descr_b{Остров, который невозможно}
+Cursed_Descr_c{найти, так они говорили.}
+Cursed_Descr_d{Но вы нашли его! Там был}
+Cursed_Descr_e{сундук. Вы взяли всё!}
+Cursed_Descr_f{Но попытаетесь ли вы}
+Cursed_Descr_g{избавиться от проклятия?}
+Cursed_Descr_h{Или воспользуетесь его}
+Cursed_Descr_i{преимуществами?}
 
 Castaway_Descr_a{}
-Castaway_Descr_b{Без опыта и имущества, вам}
+Castaway_Descr_b{Без опыта и денег, вам}
 Castaway_Descr_c{придется начать с нуля.}
 Castaway_Descr_d{Без сомнений, суровое начало!}
 Castaway_Descr_e{Выживете ли вы, приняв этот}

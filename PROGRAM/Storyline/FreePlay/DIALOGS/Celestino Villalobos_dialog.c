@@ -47,23 +47,23 @@ void ProcessDialogEvent()
 			switch(iNation)
 			{
 				case FRANCE:
-					Preprocessor_Add("friend", "mon ami");
+					Preprocessor_Add("friend", DLG_TEXT[15]);
 				break;
 
 				case SPAIN:
-					Preprocessor_Add("friend", "amigo mio");
+					Preprocessor_Add("friend", DLG_TEXT[16]);
 				break;
 
 				case PORTUGAL:
-					Preprocessor_Add("friend", "meu amigo");
+					Preprocessor_Add("friend", DLG_TEXT[17]);
 				break;
 
 				case HOLLAND:
-					Preprocessor_Add("friend", "mijn vriend");
+					Preprocessor_Add("friend", DLG_TEXT[18]);
 				break;
 
 				case ENGLAND:
-					Preprocessor_Add("friend", "my friend");
+					Preprocessor_Add("friend", DLG_TEXT[19]);
 				break;
 
 				case PIRATE:
@@ -77,11 +77,11 @@ void ProcessDialogEvent()
 				case GUEST1_NATION:
 					if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
 					{
-						Preprocessor_Add("friend", "min vдn");
+						Preprocessor_Add("friend", DLG_TEXT[20]);
 					}
 					else
 					{
-						Preprocessor_Add("friend", "my friend");
+						Preprocessor_Add("friend", DLG_TEXT[19]);
 					}
 				break;
 			}
@@ -101,9 +101,9 @@ void ProcessDialogEvent()
 			// DeathDaisy -->
 			string Puta;
 			if(PChar.sex == "woman")
-				Puta = "Hija de puta";
+				Puta = DLG_TEXT[21];
 			else
-				Puta = "Hijo de puta";
+				Puta = DLG_TEXT[22];
 			Preprocessor_Add("puta", Puta);
 			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false));
 			// DeathDaisy <--

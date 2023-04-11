@@ -7,14 +7,14 @@ RCaptain{колонией}
 
 {=====| Aruba.c |=====}
 Hendrick{Хендрик}
-van der Kuylen{фон дер Кайле}
+van der Kuylen{ван дер Кайлен}
 Nicolaas{Николаас}
 Bos{Вос}
 Richard{Ричард}
-Citreon{Ситреон}
+Citreon{Цитреон}
 Rosa{Роза}
-Vos{Фос}
-Rodolf{Родолф}
+Vos{Вос}
+Rodolf{Рудольф}
 Meer{Миэр}
 Grote{Большой}
 Beer{Медведь}
@@ -22,68 +22,68 @@ Kleine{Маленький}
 Oude{Старый}
 Kapitein{Капитан}
 Bontekoe{Бонтеку}
-Jacomina{Якомина}
+Jacomina{Джакомина}
 Boymans{Бойманс}
 Leo{Лео}
-Visscher{Фиссер}
+Visscher{Вишер}
 Jan{Ян}
 Thijs{Тайс}
 Arawak{Аравак}
 Indian{Индеец}
-IndianF{Индеец}
+IndianF{Индианка}
 Chief{Вождь}
-Arawak Indian{Аравак Индеец}
-Arawak IndianF{Аравак Индеец}
-Arawak Chief{Аравак Вождь}
+Arawak Indian{Аравакский Индеец}
+Arawak IndianF{Аравакская Индианка}
+Arawak Chief{Вождь Араваков}
 
 {=====| cayman.c |=====}
 Edmund{Эдмунд}
 Christobel{Кристобаль}
 Shaw{Шоу}
-Ginny{}
-Weasly{}
-Ron Mc{}
+Ginny{Джинни}
+Weasly{Уизли}
+Ron Mc{Рон Мак}
 Donald{Дональд}
-Harry{Хэрри}
-Propper{}
+Harry{Гарри}
+Propper{Чистый}
 John{Джон}
-Ranger{}
-Jenna{}
-Valentine{}
+Ranger{Рейнджер}
+Jenna{Дженна}
+Valentine{Валентин}
 Coxon{Коксон}
 
 {=====| Colombia.c |=====}
-Gregorio{}
+Gregorio{Грегорио}
 Montavez{Монтавез}
 Jose{Хосе}
 Puablo{}
 Diego{Диего}
 Martinez{Мартинез}
-Alejandra{}
+Alejandra{Алехандра}
 Sanchez{Санчес}
-Raquel{}
+Raquel{Ракель}
 Torres{Торрес}
-Quirino{}
+Quirino{Квирино}
 Mendoza{Мендоза}
-Raul{}
-Reyes{}
-Sancho{}
-Alvarez{}
-Selena{}
+Raul{Рауль}
+Reyes{Рейес}
+Sancho{Санчо}
+Alvarez{Альварес}
+Selena{Селена}
 Diaz{Диас}
-Cameron{}
-Gomez{}
-Antonio{}
+Cameron{Кэмерон}
+Gomez{Гомес}
+Antonio{Антонио}
 Castillo{Кастильо}
-Penelope{}
-Cruz{Крус}
-Virmundus{}
-Gastelu{}
+Penelope{Пенелопа}
+Cruz{Круз}
+Virmundus{Вирмундус}
+Gastelu{Гастель}
 Padre{Падре}
-Camardiel{}
-Uitalez{}
-Chiamuhera{}
-Lorenzo{}
+Camardiel{Камардиэль}
+Uitalez{Уиталез}
+Chiamuhera{Чиамухера}
+Lorenzo{Лоренцо}
 Delgado{Дельгадо}
 Mary{Мэри}
 Seacole{Сикол}
@@ -91,50 +91,50 @@ Abequa{Абекуа}
 Brother{Брат}
 Elias{Элиас}
 Simon{Саймон}
-Anton{Энтон}
+Anton{Антон}
 Kristian{Кристиан}
-Colombian{Colombian}
-Native{Native}
-Colombian Indian{Colombian Indian}
-Colombian IndianF{Colombian Indian}
-Colombian Chief{Colombian Chief}
-Chima{Chima}
-Alejandro{Alejandro}
-de Mendoza{de Mendoza}
-Arturo{Arturo}
-de Cбdiz{de Cбdiz}
-Librarian{Librarian}
+Colombian{Колумбиец}
+Native{Родной}
+Colombian Indian{Колумбийский Индеец}
+Colombian IndianF{Колумбийская Индианка}
+Colombian Chief{Колумбийский Вождь}
+Chima{Чима}
+Alejandro{Алехандро}
+de Mendoza{де Мендоза}
+Arturo{Артур}
+de Cбdiz{де Кадис}
+Librarian{Библиотекарь}
 
 {=====| CommonQuest.c |=====}
 Malcolm{Малькольм}
 Hatcher{Хатчер}
-Blackbeard{Черная Борода}
+Blackbeard{Чёрная Борода}
 Winston{Уинстон}
 Churchill{Черчилль}
-Michiel{Микель}
-de Reyder{де Рюйтер}
+Michiel{Мишель}
+de Reyder{де Рейдер}
 Luis{Луис}
-Vas{Ваэс}
+Vas{Вос}
 de Torres{де Торрес}
-Reginald{Reginald}
-de Boeuf{de Boeuf}
-Bjцrn{Bjцrn}
-Roos af Hjelmsдter{Roos af Hjelmsдter}
+Reginald{Реджинальд}
+de Boeuf{де Бёф}
+Bjцrn{Бьорн}
+Roos af Hjelmsдter{Рус аф Йельмсгестер}
 Charlie{Чарли}
 Allen{Аллен}
 Edgar{Эдгар}
 Luнs{Луис}
 Buchinho{Бучиньо}
-Abelard{Abelard}
-Laviniere{Laviniere}
-Deadly{Неумолимый}
+Abelard{Абелард}
+Laviniere{Лавиньер}
+Deadly{Злостный}
 Pirate{Пират}
 Smuggler{Контрабандист}
 Trader{Торговец}
 Virginie{Вирджиния}
 d'Espivant{д'Эспиван}
 Raymond{Рамон}
-Bouchez{Буше}
+Bouchez{Бучез}
 Emellio{Эмилио}
 Fernandez{Фернандес}
 
@@ -146,7 +146,7 @@ Maria{Мария}
 Rivaldo{Ривальдо}
 Rodrigo{Родриго}
 Caldeira{Калдейра}
-Aleixo{Алейсо}
+Aleixo{Алексио}
 Simos{Симос}
 Miguel{Мигель}
 Filho{Фильо}
@@ -169,7 +169,7 @@ Tomaz{Томас}
 Cid{Сид}
 Aristides{Аристид}
 Chiamulera{Чамулера}
-Francisco{Франсиско}
+Francisco{Франциско}
 Baia{Байя}
 Eloi{Элой}
 Labat{Лабат}
@@ -179,7 +179,7 @@ Nuno{Нуно}
 Abrao{Абрао}
 Emilio{Эмилио}
 Guerra{Гуэрра}
-Pascoal{Паскуаль}
+Pascoal{Паскаль}
 Chagas{Чагас}
 Desmond Ray{Десмонд Рэй}
 Beltrop{Белтроп}
@@ -189,41 +189,41 @@ Regalo{Ригало}
 Uargo{Уарго}
 
 {=====| cuba.c |=====}
-Felipe{}
-Cisneros{}
+Felipe{Фелип}
+Cisneros{Циснерос}
 Horacio{Горацио}
 de la Vega{де ла Вега}
 Ortega{Ортега}
-Marco{}
-Quintero{}
-Pueblo{}
-Cabreno{}
-Francesca{}
-Toblerone{}
-Jeronimo{}
-Izar{}
-Leandro{Лиандро}
-Koldobika{}
-Narcisa{}
-Montse{}
-Nacho{}
-Tacco{}
-Fabricio{}
-Oleo{}
-Javier{}
-Balboa{}
+Marco{Марко}
+Quintero{Кинтеро}
+Pueblo{Пуэбло}
+Cabreno{Кабрено}
+Francesca{Франческа}
+Toblerone{Тоблероне}
+Jeronimo{Джеронимо}
+Izar{Изар}
+Leandro{Леандро}
+Koldobika{Колдобика}
+Narcisa{Нарциса}
+Montse{Монтсе}
+Nacho{Начо}
+Tacco{Такко}
+Fabricio{Фабрицио}
+Oleo{Олео}
+Javier{Хавьер}
+Balboa{Бальбоа}
 Esteban{Эстебан}
-Muchacho{}
-Fauto{}
-Coleone{}
-Rigo{}
-Ibiza{}
-Higini{}
-Seat{}
-Probello{}
-Jose Jalapeno{}
-on the stalk{}
-Magarino{}
+Muchacho{Мучачо}
+Fauto{Фауто}
+Coleone{Колеоне}
+Rigo{Риго}
+Ibiza{Ибица}
+Higini{Хигини}
+Seat{Сиат}
+Probello{Пробелло}
+Jose Jalapeno{Хосе Халапеньо}
+on the stalk{на стебле}
+Eustacio{Юстасио}
 Ocampo{Окампо}
 Patricia{Патрисия}
 Santбngel{Сантенгель}
@@ -232,30 +232,30 @@ Figueroa{Фигероа}
 Magarino{Магарино}
 Micael{Микаэль}
 Salinas{Салинас}
-Mahala{Mahala}
+Mahala{Махала}
 
 {=====| Curacao.c |=====}
 Hans{Ханс}
-Kloss{}
-Pelgrem{}
-Christus{}
+Kloss{Клосс}
+Pelgrem{Пельгрем}
+Christus{Христос}
 Father{Отец}
-Derksen{}
-Joep{}
-Laura{}
-Haan{}
-Lambert{}
-Jong{}
-Marten{}
-Visser{}
-Marja{}
-Fixe{}
-Piet{}
-Heyn{}
+Derksen{Дерксен}
+Joep{Джоэп}
+Laura{Лаура}
+Haan{Хан}
+Lambert{Ламберт}
+Jong{Джонг}
+Marten{Мартен}
+Visser{Виссер}
+Marja{Марья}
+Fixe{Фикс}
+Piet{Пит}
+Heyn{Хейн}
 
 {=====| DockyardOwners.c |=====}
 Patrick{Патрик}
-Webster{}
+Webster{Вебстер}
 Dockyard{Портовый}
 Comissioner{оценщик}
 Hugh{Хью}
@@ -266,7 +266,7 @@ Lambrecht{Ламбрехт}
 Fobes{Фобес}
 Philippe{Филипп}
 Jean{Жан}
-Filaut{Фило}
+Filaut{Филат}
 Fletcher{Флэтчер}
 Rosewood{Розвуд}
 David{Дэвид}
@@ -275,12 +275,12 @@ Jorge{Хорхе}
 Suarez{Суарез}
 Maurice{Морис}
 Dupont{Дюпон}
-Abraham{}
-Hollander{}
+Abraham{Абрахам}
+Hollander{Голландец}
 Oweyn{Овейн}
 McDorey{МакДори}
 Arendt{Арен}
-Verheugen{Верхейге}
+Verheugen{Верхаген}
 Prosper{Проспер}
 Fraigneau{Фрейно}
 Benoit{Бенуа}
@@ -295,13 +295,13 @@ Teodinus{Теодинус}
 Serrano{Серрано}
 Adhemar{Адемар}
 Bertillon{Бертильон}
-Maarten{Маартен}
+Maarten{Мартен}
 Verlinden{Верлинден}
-Gheret{}
-Bogardus{}
+Gheret{Герет}
+Bogardus{Богардус}
 Vanderdecken{Вендердеккен}
 Ricardo{Рикардо}
-Ordiales{}
+Ordiales{Ордиалес}
 
 {=====| Douwesen.c |=====}
 Todredus{Тодредус}
@@ -309,14 +309,14 @@ Ordialds{Ордиальд}
 Toff{Тофф}
 Oremans{Ореманс}
 Taresa{Тареса}
-Tanneken{Таннеке}
+Tanneken{Таннекен}
 Bernardo{Бернардо}
 Gamboa{Гамбоа}
 Corentin{Корентин}
 Lucay{Люцей}
 Reynard{Рэйнард}
 Grueneveldt{Грюневельд}
-Anne{Анни}
+Anne{Анна}
 Paers{Пирс}
 Laurens{Лоуренс}
 Bloem{Блойм}
@@ -332,18 +332,18 @@ Boudewijn{Будевийн}
 Smidt{Шмидт}
 Ricout{Рико}
 Harmse{Хармс}
-Mattheus{Мэтьюс}
+Mattheus{Маттеус}
 Doull{Долл}
 Eduard{Эдуард}
 Gerrits{Гэрритс}
-Johan{Йоган}
+Johan{Йохан}
 Van Pelt{Ван Пелт}
-Raes{Рас}
+Raes{Раэс}
 Stevense{Стивенс}
 Dirrik{Диррик}
 Jacobse{Джэкобс}
 Sefia{Сефиа}
-Christoffel{Кристофэль}
+Christoffel{Кристофер}
 Yden{Иден}
 Kalkman{Калькман}
 Rost{Рост}
@@ -356,44 +356,44 @@ Elting{Элтинг}
 Andries{Андрис}
 Lorine{Лорин}
 Willem{Виллем}
-Maritz{Маритс}
+Maritz{Мариц}
 Pieter{Питер}
 Nolt{Нолт}
 Ector{Эктор}
 Clenen{Клинен}
 Heyne{Хейне}
-Deburghraeve{Дебурграве}
+Deburghraeve{Дебургрейв}
 Severin{Северин}
-Bonvoisin{Бонвузин}
+Bonvoisin{Бонвуазен}
 Alistair{Алистар}
 Garcilaso{Гарсилазо}
 
 {=====| Eleuthera.c |=====}
 Kermit{Кермит}
-Brazier{}
-Alicia{}
-Banister{}
-Geoffrey{}
-Shuttle{}
+Brazier{Брейзер}
+Alicia{Алисия}
+Banister{Баннистер}
+Geoffrey{Джеффри}
+Shuttle{Шаттл}
 Joseph{Жозеф}
-Bigsby{}
+Bigsby{Бигсби}
 Lucas{Лукас}
-Bird{}
-Nick{}
-Hopkins{}
-Michael{}
-Wainwright{}
-Cole{}
-Arkwright{}
+Bird{Бёрд}
+Nick{Ник}
+Hopkins{Хопкинс}
+Michael{Мишель}
+Wainwright{Уэйнрайт}
+Cole{Коул}
+Arkwright{Аркрайт}
 Father{Отец}
-Buzzard{}
-Abbott{}
-Karen{}
-Cakebread{}
+Buzzard{Баззард}
+Abbott{Эббот}
+Karen{Карен}
+Cakebread{Кейкбред}
 Brendan{Брендан}
-Arrowsmith{}
-Slave{раб}
-Worker{}
+Arrowsmith{Эроусмит}
+Slave{Раб}
+Worker{Рабочий}
 Slaver{Работорговец}
 
 {=====| FalaiseDeFleur.c |=====}
@@ -401,46 +401,46 @@ Milon{Милон}
 Blacque{Бласкю}
 Orable{Орабл}
 Caron{Карон}
-Rachel{Рахель}
+Rachel{Рэйчел}
 Marc{Марк}
 Sabine{Сабин}
-Sabina{Sabina}
-Sabie{Sabie}
-Sabi{Sabi}
+Sabina{Сабина}
+Sabie{Саби}
+Sabi{Саби}
 Matton{Маттон}
 Raoul{Рауль}
-Calmes{Калмс}
+Calmes{Калмес}
 Lucien{Люсьен}
 Bescanceny{Бесканцени}
 Teodoro{Теодоро}
 Andre{Андрэ}
-Juliao{Жоли}
+Juliao{Джулия}
 Rene{Ренэ}
-Duguay{Дагай}
+Duguay{Дугай}
 Pater{Отец}
 Jourdain{Журден}
 Claude{Клод}
-Le Moigne{Ле Мойн}
+Le Moigne{Ле Муань}
 Hardouin{Хардуин}
-Aufort{Уфорт}
-Hortensio{Hortensio}
-Crespo{Crespo}
+Aufort{Ауфорт}
+Hortensio{Гортензио}
+Crespo{Креспо}
 Turpin{Турпин}
 Cabanel{Кабанель}
 Gris{Гриз}
 Barthez{Бартез}
-Huon{Хуан}
+Huon{Хуон}
 Marly{Марли}
 Tancrede{Танкрид}
-Rimbaud{Римбо}
+Rimbaud{Рембо}
 Pierre{Пьер}
-Biez{Бье}
+Biez{Бьез}
 Emile{Эмиль}
 Capelle{Капэль}
 Doolin{Дулин}
 Soleuze{Солез}
 Merle{Мирли}
-Granet{Гранэ}
+Granet{Гранет}
 Deglau{Дегло}
 Robert{Роберт}
 Mingeon{Миньон}
@@ -449,8 +449,8 @@ Alembert{Алембэр}
 Alban{Албан}
 Sartre{Сартр}
 Octavien{Октавьен}
-Sauvaigo{Совего}
-Justin{Жустин}
+Sauvaigo{Совайго}
+Justin{Джастин}
 Beineix{Бьенэкс}
 Loup{Луп}
 Letice{Летис}
@@ -460,12 +460,12 @@ Sebastien{Себастьян}
 Wilmart{Вильмар}
 Honore{Оноре}
 Villette{Виллет}
-Helgot{Эльго}
+Helgot{Хельгот}
 Cottard{Коттар}
 Celestin{Селестин}
-Fammeree{Фаммэр}
+Fammeree{Фаммери}
 Felix{Феликс}
-Baijot{Бижо}
+Baijot{Байджот}
 Florentin{Флорентин}
 Oudet{Удэ}
 Amadeo{Амадео}
@@ -477,60 +477,60 @@ Trenet{Тренэ}
 Gentile{Жантиль}
 Hurtis{Хартис}
 Beuve{Бэве}
-Jenlain{Женлон}
+Jenlain{Дженлейн}
 Corneille{Корнель}
 Maccaux{Маккокс}
 Elzire{Эльзир}
 Ayarai{Айарай}
-Tomasina{Томазина}
+Tomasina{Томасина}
 Pickfurt{Пикфурт}
 
 {=====| FortCommandants.c |=====}
 Rauf{Рауф}
-Mallard{Меллард}
-Stanley{Стенли}
+Mallard{Маллард}
+Stanley{Стэнли}
 Ransome{Рэнсом}
 William{Уильям}
-Bishop{Вишоп}
-Gerard{Жерар}
-Cahusac{Каюзак}
+Bishop{Епископ}
+Gerard{Джерард}
+Cahusac{Каузак}
 Basil{Бэзил}
 Vespucci{Веспуччи}
 Frank{Франк}
-Voorwerp{Фуверп}
+Voorwerp{Вурверп}
 Almadovar{Альмадовар}
 Teseus{Тесей}
 Woods{Вудс}
 Nicholas{Николас}
-Quinton{Куинтон}
+Quinton{Квинтон}
 Pedro{Педро}
 Navarro{Наварро}
-Maurellus{Мореллю}
+Maurellus{Мореллус}
 Maradona{Марадона}
 Francois{Франсуа}
-Vautrin{Вутра}
+Vautrin{Вотрен}
 Bernard{Бернард}
 Fokke{Фокке}
 Luniere{Люньер}
-Rimbaut{Рамбо}
+Rimbaut{Рэмбо}
 Arno{Арно}
 Salsa{Сальса}
 Walter{Уолтер}
 Talleyrand{Талейран}
 Marius{Мариус}
-Yberville{Ибервилль}
+Yberville{Ибервиль}
 Gerrit{Гэррит}
 Schotte{Шотте}
 Philip{Филип}
 Rockridge{Рокридж}
-Oranjestad Fort{Комендант форта Ораньестад}
-Commandant{}
-de Heredia{де Эредья}
+Oranjestad Fort{Форта Ораньестад}
+Commandant{Комендант}
+de Heredia{де Эредия}
 Smith{Смит}
 
 {=====| Guadeloupe.c |=====}
 Remy{Реми}
-Gatien{Гатье}
+Gatien{Гатьен}
 Dominic{Доминик}
 Elliot{Эллиот}
 Marpeut{Марпэт}
@@ -541,61 +541,61 @@ Franзois{Франсуа}
 de Vigny{де Виньи}
 
 {=====| Hispaniola.c |=====}
-Jehan{}
-Labbe{}
-Puebla{}
-Esmeralda{}
-Cruezo{}
-Basilio{}
-Domingo{}
-Larga{}
-Conzuela{}
-Rodriguez{}
-Carla{}
+Jehan{Джехан}
+Labbe{Лаббе}
+Puebla{Пуэбла}
+Esmeralda{Эсмеральда}
+Cruezo{Крузо}
+Basilio{Базилио}
+Domingo{Доминго}
+Larga{Ларга}
+Conzuela{Консуэла}
+Rodriguez{Родригес}
+Carla{Карла}
 Salvador{Сальвадор}
 Allende{Альенде}
 Town guard{Городская стража}
 Neal{Нил}
-Rodgers{}
+Rodgers{Роджерс}
 Claire{Клэр}
 Bertrand{Бертран}
 Ogeron{Ожерон}
 Guy{Гай}
-Lafleur{}
+Lafleur{Лафлер}
 Carpenter{Карпентер}
-Pereira{}
-Peeters{}
-Herbert{}
+Pereira{Перейра}
+Peeters{Питерс}
+Herbert{Герберт}
 Fawn{Фавн}
-Leadbeater{}
-Jordan{}
-Richardson{}
-Dupray{}
+Leadbeater{Ледбитер}
+Jordan{Джордан}
+Richardson{Ричардсон}
+Dupray{Дюпре}
 Gabriel{Габриэль}
-Santana{}
-Dirk{}
-Maase{}
-Lars{}
-Andersson{}
+Santana{Сантана}
+Dirk{Дирк}
+Maase{Маасе}
+Lars{Ларс}
+Andersson{Андерссон}
 Isabelle{Изабель}
 de Cussy{де Кюсси}
-Frederic{}
-Bagage{}
-Arielle{}
-Dumont{}
-Dorian{}
-Denise{}
-Fleur{}
-Dimitri{}
-Lunesque{}
-Bryan{}
-the Disgruntled{}
-Bloody{}
-Norm Kidd{}
+Frederic{Фредерик}
+Bagage{Багаж}
+Arielle{Ариэль}
+Dumont{Дюмон}
+Dorian{Дориан}
+Denise{Денис}
+Fleur{Флер}
+Dimitri{Дмитрий}
+Lunesque{Лунеск}
+Bryan{Брайан}
+the Disgruntled{Рассерженный}
+Bloody{Кровавый}
+Norm Kidd{Норм Кидд}
 Iguaran{Игуаран}
-Escriva{}
-Aubert{Aubert}
-de La Chesnaye{de La Chesnaye}
+Escriva{Эскрива}
+Aubert{Обер}
+de La Chesnaye{де Ла Шене}
 
 {=====| IslaMona.c |=====}
 Randolf{Рэндольф}
@@ -612,22 +612,22 @@ Vigila{Вигила}
 Mendes{Мендес}
 Estrella{Эстрелла}
 de Alencar{де Аленкар}
-Disguised{(переодетая)}
+Disguised{(Переодетая)}
 Citizen{Горожанин}
-Uasco{Васко}
+Uasco{Уаско}
 Mazinho{Мазино}
 Rodrico{Родриго}
-Insulza{Инсульца}
+Insulza{Инсулза}
 Gaspar{Гаспар}
-Domingues{Домингес}
+Domingues{Домингус}
 Robano{Робано}
 Christofor{Христофор}
 Manuel{Мануэль}
 Nunno{Нунно}
-Gats{Гэтс}
+Gats{Гатс}
 Mergildo{Мергильдо}
 Deferr{Дэфер}
-Gisellus{Джизеллус}
+Gisellus{Жизель}
 Aicega{Айчега}
 Alonso{Алонсо}
 Rodas{Родас}
@@ -641,7 +641,7 @@ Garci{Гарси}
 Crusellas{Круселлас}
 Ermegildo{Эрмегильдо}
 Caminero{Каминеро}
-Necha{Нета}
+Necha{Неча}
 Duany{Дуани}
 Iuliano{Юлиано}
 Enciso{Энкисо}
@@ -654,7 +654,7 @@ Hidalgo{Идальго}
 Vito{Вито}
 Ordonez{Ордонез}
 Velasconi{Веласкони}
-Silloniz{Силониз}
+Silloniz{Силлониз}
 Andemio{Андемио}
 De Caxias{Де Касиас}
 Isidro{Исидро}
@@ -669,18 +669,18 @@ Cabellodoferro{Кабельодоферро}
 First{Имя}
 Last{Фамилия}
 Ye Keeper{Хранитель}
-o' ye Hoarde{сокровищ}
+o' ye Hoarde{Сокровищ}
 
 {=====| Officers.c |=====}
 Fred{Фред}
 Bob{Боб}
-Baldewyn{Болдевин}
-Coffier{Кофьер}
+Baldewyn{Болдуин}
+Coffier{Коффир}
 Da Saldanha{Де Салданья}
 Rys{Рис}
 Bloom{Блум}
 Larrouse{Лярус}
-Jaoquin{Хоакин}
+Jaoquin{Жаокин}
 De Masse{Де Массе}
 Nigel{Найджел}
 Blythe{Блайт}
@@ -690,9 +690,9 @@ Amerigo{Америго}
 Vieira{Виейра}
 Florens{Флоренс}
 Clauss{Клаусс}
-Attwood{Этвуд}
+Attwood{Эттвуд}
 Blood{Блад}
-Txiki{Тики}
+Txiki{Тсики}
 Pijuan{Пижуан}
 
 {=====| Other.c |=====}
@@ -709,7 +709,7 @@ Applegate{Эплгейт}
 Brennan{Бреннан}
 Gregor{Грегор}
 Samsa{Самса}
-Moses{Мозес}
+Moses{Моисей}
 Blinman{Блинман}
 Lavinia{Лавиния}
 Ault{Оулт}
@@ -718,7 +718,7 @@ Flora{Флора}
 Debney{Дебни}
 Gilroy{Гилрой}
 Marvin{Марвин}
-Prince{Принс}
+Prince{Принц}
 Ralph{Ральф}
 Maybank{Мэйбанк}
 Evan{Эван}
@@ -728,7 +728,7 @@ Celia{Селия}
 Shedder{Шеддер}
 Coy{Кой}
 Peate{Пит}
-Damerall{Дэмрэлл}
+Damerall{Дэмералл}
 Gosling{Гослинг}
 Garry{Гарри}
 Ankers{Анкерс}
@@ -748,14 +748,14 @@ Brian{Брайан}
 Bratcher{Братчер}
 Ronald{Рональд}
 Blacklock{Блэклок}
-Miner{Рудокоп}
-Mines Commander{Управляющий рудниками}
+Miner{Шахтер}
+Mines Commander{Управляющий Рудниками}
 Jerald{Джеральд}
 Gilbert{Гилберт}
 Ballester{Бэллестэр}
 Steven{Стивен}
-Mather-Wren{Матэ-Врэн}
-Hacepoco{Hacepoco}
+Mather-Wren{Мазер-Врен}
+Hacepoco{Хацепоко}
 
 {=====| PostInit.c |=====}
 
@@ -772,16 +772,16 @@ Romao{Ромао}
 Edhino{Эдино}
 Valerio{Валерио}
 Tintorero{Тинтореро}
-Hamund{Хэманд}
+Hamund{Хамунд}
 Verret{Веррет}
-Armand{Арман}
+Armand{Арманд}
 Delacroix{Делакруа}
 Howell{Хауэлл}
 Davis{Дэвис}
-Isenbrandt{Изебранд}
-Jurcksen{Юркенс}
+Isenbrandt{Изенбрандт}
+Jurcksen{Юрксен}
 Morys{Морис}
-Biddulph{Биддальф}
+Biddulph{Биддульф}
 Hayes{Хэйс}
 Flann{Флэнн}
 Marrow{Марроу}
@@ -791,35 +791,35 @@ Maupassant{Мопассан}
 Natalia{Наталиа}
 Decoteau{Декото}
 Serena{Серена}
-Tisserand{Тиссеранд}
+Tisserand{Тиссеран}
 Amelia{Амелия}
-Frere{Фрере}
+Frere{Фрер}
 Valentina{Валентина}
-Hilder{Хилдер}
+Hilder{Хильдер}
 Officer{Офицер}
 Thomas{Томас}
 Modiford{Модифорд}
-Samuel{Сэмюэль}
+Samuel{Самуэль}
 Clint{Клинт}
 Eastwood{Иствуд}
 Arne{Арнэ}
-Saknussem{Сакнассим}
+Saknussem{Сакнуссим}
 Goyle{Гойл}
 Stone{Стоун}
-Luna{Лана}
-Grange{Гранж}
+Luna{Луна}
+Grange{Грейндж}
 
 {=====| Redmond.c |=====}
 Henry{Генри}
-Laurence{Лоурэнс}
-Wellman{Вэлмэн}
-Docker{Портовый грузчик}
+Laurence{Лоуренс}
+Wellman{Вэлман}
+Docker{Портовый Грузчик}
 Gillian{Джиллиан}
 Atterbury{Эттербери}
 Griffith{Гриффит}
 Peabody{Пибоди}
 Jane{Джейн}
-Attwell{Аттвэлл}
+Attwell{Эттуэлл}
 Blewett{Блюэтт}
 Miles{Майлс}
 Biddick{Биддик}
@@ -829,8 +829,8 @@ Eamonn{Эмон}
 Larter{Лартэр}
 Magdalen{Магдален}
 Ayler{Эйлер}
-Jacob{Джекоб}
-Bewighte{Бьют}
+Jacob{Джейкоб}
+Bewighte{Бевайт}
 Peutherer{Пьютерер}
 Yvonne{Ивон}
 Dale{Дэйл}
@@ -845,39 +845,37 @@ Clifford{Клиффорд}
 Brin{Брин}
 Mortimer{Мортимер}
 Pitchblende{Питчбленд}
-Richechio{Ричечьо}
+Richechio{Ричечио}
 Daraborum{Дараборум}
-Murato{Мюрат}
+Murato{Мурато}
 Kamizane{Кэмизен}
-Bettany{Бесени}
+Bettany{Беттани}
 McGillicutty{Мак Гилликатти}
 Sullivan{Салливан}
 James{Джеймс}
 Lancaster{Ланкастер}
-Cutler{Катлер}
-Beckett{Беккет}
 
 {=====| SaintMartin.c |=====}
-Dickman{Дикмен}
+Dickman{Дикман}
 de Rivarol{де Ривароль}
 Travers{Траверс}
-Aubert{}
-Boogard{}
-Dunere{}
-Juliette{}
-Truffel{}
-Fulbert{}
-Trebluf{}
-Adam{}
-Groot{}
-Hubert{}
-Decker{}
-Hanna{}
-Hoff{}
-Hannes{}
+Aubert{Обер}
+Boogard{Бугард}
+Dunere{Дюнере}
+Juliette{Джульетта}
+Truffel{Трюфель}
+Fulbert{Фулберт}
+Trebluf{Треблюф}
+Adam{Адам}
+Groot{Грут}
+Hubert{Хьюберт}
+Decker{Декер}
+Hanna{Ханна}
+Hoff{Хофф}
+Hannes{Ханнес}
 Jansen{Дженсен}
-Jana{}
-Smit{}
+Jana{Яна}
+Smit{Смит}
 
 {=====| Ship.c |=====}
 Crewmember{Член команды}
@@ -898,7 +896,6 @@ Jordano{Джордано}
 Yedam{Йедам}
 Kinne{Кинн}
 Animist{Сатанист}
-Satanist{Satanist}
 Dark Teacher{Тёмный Учитель}
 Mystery Man{Таинственный Человек}
 Teacher{Учитель}
@@ -907,7 +904,7 @@ killer{Убийца}
 Joaquin{Хоакин}
 Arabella{Арабелла}
 Silehard{Сайлхард}
-Arabella's guard{охранник Арабеллы}
+Arabella's guard{Охранник Арабеллы}
 Billy{Билли}
 Brock{Брок}
 Snorri{Снорри}
@@ -916,33 +913,33 @@ Francis{Франсис}
 Snake{Снэйк}
 Angelique{Анжелика}
 Moulin{Мулен}
-Chamot{}
+Chamot{Шамот}
 Antoine{Антуан}
-Chamfort{Шамфор}
-Robert_fr{Робер}
+Chamfort{Шамфорт}
+Robert_fr{Роберт}
 Durand{Дюран}
 Reynoud{Рейнойд}
 Davy{Дэйви}
 Jones{Джонс}
-Octave{Октаве}
+Octave{Октава}
 Fabre{Фабр}
 Elizabeth{Элизабет}
 Palafico{Палафико}
 Jimmy{Джимми}
 Legs{Легс}
-Penrod{Penrod}
-Bart{}
-Cooke{}
-Wally{}
-Cutty{}
+Penrod{Пенрод}
+Bart{Барт}
+Cooke{Кук}
+Wally{Вэлли}
+Cutty{Катти}
 Bill{Билл}
-Jellybones{}
+Jellybones{Джеллибонс}
 Oraglio{Ораглио}
-Wadham{}
-Notley{}
-Morland{}
-Haley{}
-Gyles{Жиль}
+Wadham{Вадхэм}
+Notley{Нотли}
+Morland{Морланд}
+Haley{Хейли}
+Gyles{Джайлз}
 Peat{Пит}
 Gordon{Гордон}
 Dark Captain{Тёмный Капитан}
@@ -954,13 +951,13 @@ Figuiera{Фигуэйра}
 Friedrich{Фридрих}
 Maxwell{Максвелл}
 Meranda{Меранда}
-seven{}
+seven{севен}
 Claudio{Клаудио}
 Murena{Мурена}
 Ethilrede{Этильред}
 Claar{Клаар}
 Martin{Мартин}
-Warner{Уорнер}
+Warner{Ворнер}
 Jack{Джек}
 Greenfield{Гринфилд}
 Ambroz{Амброз}
@@ -977,16 +974,16 @@ Captain Jack{Капитан Джек}
 Sparrow{Воробей}
 Camille{Камилла}
 Leone{Леоне}
-Prisoner{}
+Prisoner{Заключенный}
 Geffrey{Джеффри}
-Bampfylde{Бампфилд}
+Bampfylde{Бэмпфилд}
 Bucho{Бучо}
 Pepin{Пепин}
-Bertillon's guard{охранник Бертильона}
+Bertillon's guard{Охранник Бертильона}
 Soares{Соарес}
 Juan{Хуан}
 Hernandez{Эрнандез}
-Boelen{Буле}
+Boelen{Боэлен}
 Cordoba{Кордова}
 Captain{Капитан}
 Cecile{Сесиль}
@@ -995,55 +992,55 @@ Etienne{Этьен}
 Dupuis{Дюпюи}
 Rivera{Ривера}
 Dusac{Дюсак}
-Konrad{Konrad}
-Kulczycki{Kulczycki}
+Konrad{Конрад}
+Kulczycki{Кульчицкий}
 Silver{Сильвер}
-Nathaniel's Crewmember{Член команды Хока}
+Nathaniel's Crewmember{Член Команды Хаука}
 Clair{Клэр}
-Larrousse{Лярусс}
-France_bukaner_01{Французский буканьер}
-Skull{Skull}
+Larrousse{Ларрусс}
+France_bukaner_01{Французский Пират}
+Skull{Череп}
 Will{Уилл}
 Turner{Тёрнер}
 Swann{Суонн}
-Contre-Amirale{}
-Cesar{}
-Beauregard{}
-Dockworker{}
-Maartje{}
-Hesselink{}
-Barendsz{}
-Geoffroi{}
-Albeille{}
-Barend{}
-Cook{}
-Dusty{}
-Broome{}
-Surgeon{}
+Contre-Amirale{Контр-Адмирал}
+Cesar{Цезарь}
+Beauregard{Борегар}
+Dockworker{Портовый Рабочий}
+Maartje{Мартье}
+Hesselink{Хесселинк}
+Barendsz{Барендс}
+Geoffroi{Жоффруа}
+Albeille{Альбей}
+Barend{Баренд}
+Cook{Кук}
+Dusty{Дасти}
+Broome{Брум}
+Surgeon{Врач}
 Priest{Священник}
-Boatswain{}
-Navigator{}
-Voigt{}
-Rodney{}
-Leighton{}
-Midshipman{}
-Longley{}
+Boatswain{Боцман}
+Navigator{Штурман}
+Voigt{Фойгт}
+Rodney{Родни}
+Leighton{Лейтон}
+Midshipman{Мичман}
+Longley{Лонгли}
 Lieutenant{Лейтенант}
-Julian{}
-Alvarado{}
-Cristobal{}
-Leon{}
-Escovar{}
-Entenza{}
-Seсorita{}
-Hebe{}
-Constantino{}
-Avellбn{}
+Julian{Джулиан}
+Alvarado{Альварадо}
+Cristobal{Кристобаль}
+Leon{Леон}
+Escovar{Эсковар}
+Entenza{Энтенза}
+Seсorita{Секорита}
+Hebe{Хебе}
+Constantino{Константино}
+Avellбn{Авеллан}
 Growling{Рычащий}
 Bear{Медведь}
 Kicking{Клюющийся}
 Raven{Ворон}
-Lewis{}
+Lewis{Льюис}
 Vickers{Викерс}
 
 {=====| StoreOwners.c |=====}
@@ -1054,19 +1051,19 @@ Guterres{Гутеррес}
 Gheerlof{Гирлоф}
 Darlang{Дарланг}
 Cornelius{Корнелиус}
-Vanslyperken{}
+Vanslyperken{Ванслиперкен}
 Arnaud{Арно}
 Bannerman{Баннерман}
 Filbert{Филберт}
 Emiliano{Эмильяно}
 Rionda{Рионда}
 Maginot{Мажино}
-Cornelis{}
-Huijser{}
-Carl Black{}
+Cornelis{Корнелис}
+Huijser{Хейзер}
+Carl Black{Карл Блэк}
 Milds{Майлдс}
 Van Vecker{Ван Векер}
-Dieudonne{Дюдон}
+Dieudonne{Дьедонне}
 Toussaint{Туссен}
 Violette{Виолетта}
 De Colville{Де Колвилль}
@@ -1078,25 +1075,26 @@ Leonardo{Леонардо}
 Violate{Виолате}
 Jasmine{Жасмин}
 Cotton{Коттон}
-Jacobus{}
-Colijn{}
-Fox{}
-Ratter{}
-Dawg{}
-Bennett{}
-Augustin{}
-Frechilla{}
-Brown{Brown}
+Jacobus{Джейкобус}
+Colijn{Колин}
+Fox{Фокс}
+Ratter{Раттер}
+Dawg{Довг}
+Bennett{Беннетт}
+Augustin{Августин}
+Frechilla{Фречилла}
+Dawg{Довг}
+Brown{Браун}
 
 {=====| StreetMerchants.c |=====}
 Street{Уличный}
-Merchant{торговец}
-Street{Street Merchant}
+Merchant{Торговец}
+Street{Уличный Торговец}
 Edward{Эдвард}
 Pear{Пеар}
 Patric{Патрик}
 Cardone{Кардон}
-Louis{Луи}
+Louis{Льюис}
 Rouge{Руж}
 Rober{Робер}
 Artouis{Артуа}
@@ -1104,13 +1102,13 @@ Cloude{Клод}
 Labush{Лабуш}
 Potter{Поттер}
 Prew{Прю}
-Greg{}
-Dawson{}
-Gillis{}
-Caspers{}
-Owen{}
-Tripper{}
-Dempster{}
+Greg{Грэг}
+Dawson{Доусон}
+Gillis{Джиллис}
+Caspers{Каспер}
+Owen{Оуэн}
+Tripper{Триппер}
+Dempster{Демпстер}
 Rafael{Рафаэль}
 Pinto{Пинто}
 Hugo{Хуго}
@@ -1121,12 +1119,12 @@ Zambrano{Замбрано}
 Crewmember{Член команды}
 
 {=====| Taverns.c |=====}
-Wicker{}
+Wicker{Уикер}
 Moods{Мудс}
 Andress{Андрес}
 Destot{Десто}
-Joanne{}
-Ellene{}
+Joanne{Джоанн}
+Ellene{Эллен}
 Pete{Пит}
 Manchester{Манчестер}
 Agnes{Агнес}
@@ -1138,13 +1136,13 @@ Carlos{Карлос}
 Resende{Резенде}
 Helena{Хелена}
 Azocar{Азокар}
-Corleis{Корли}
+Corleis{Корлейс}
 Baernt{Барнт}
-Jans{Джанс}
+Jans{Джонс}
 Fessler{Фесслер}
 Clemens{Клеменс}
-Armstrong{}
-Sulana{}
+Armstrong{Армстронг}
+Sulana{Сулана}
 Lebretton{Лебреттон}
 Thierry{Тьерри}
 Bosquet{Боске}
@@ -1152,29 +1150,29 @@ Pauline{Паулин}
 Beteille{Бетэйл}
 Littlejohn{Литлджон}
 Julia{Джулия}
-Stirling{Стирлинг}
+Stirling{Стерлинг}
 Hanpool{Хэнпул}
 Damerell{Дэмерэлл}
 Frederyk{Фредерик}
 Kember{Кембер}
 Nadine{Надин}
-Burrieza{Бурьеца}
-Tiago{Тьяго}
+Burrieza{Бурриеза}
+Tiago{Тиаго}
 Marquina{Маркина}
 Marinella{Маринелла}
 Castrilli{Кастрилли}
 Fadrique{Фадрике}
 Leonor{Леонор}
-Esperanza{Эсперанца}
-Ramуn{Ramуn}
-Figueras{Figueras}
+Esperanza{Эсперанса}
+Ramуn{Рамон}
+Figueras{Фигерас}
 Figaux{Фиго}
 Sophie{Софи}
 Neveu{Невю}
-Johannes{}
-Harlekeyn{}
-Alcke{}
-Smitshoek{}
+Johannes{Йоханнс}
+Harlekeyn{Арлекин}
+Alcke{Альке}
+Smitshoek{Смитшук}
 Everard{Эверард}
 Raulf{Ральф}
 Mather{Матэ}
@@ -1186,15 +1184,15 @@ Maas{Маас}
 Cornelisje{Корнелизье}
 Vandecken{Вандекен}
 Mario{Марио}
-Elkzander{Александер}
-Dumarteene{Дюматин}
+Elkzander{Элькандер}
+Dumarteene{Дюмартин}
 Sousa{Соуза}
 Rosalie{Розали}
 Bezace{Безачи}
 Albin{Альбин}
 Bonaventure{Бонавентюр}
 Sailor{Моряк}
-Guillaut{Гию}
+Guillaut{Гийо}
 Brigitte{Бриджит}
 Chabert{Шабер}
 Marcel{Марсель}
@@ -1210,10 +1208,10 @@ Charles{Чарльз}
 Windem{Уиндэм}
 Simona{Симона}
 Tolman{Толмэн}
-Voyant{}
+Voyant{Воянт}
 Fructoso{Фруктоcо}
 Juana{Хуана}
-Garcнa{Garcнa}
+Garcнa{Гарча}
 Ramos{Рамос}
 Fabiao{Фабио}
 Dunga{Дунга}
@@ -1231,48 +1229,48 @@ Josephine{Жозефина}
 Bonassieu{Бонасье}
 Cathrine{Катрин}
 Scarlett{Скарлетт}
-Bella{}
-Froelich{}
-Jantina{}
-Dedrick{}
-Pierart{}
-Kamerling{}
-Brechtje{}
-Palings{}
-Xalmiento{}
-Inocencia{}
-Ussica{}
-Salvadore{}
+Bella{Белла}
+Froelich{Фролих}
+Jantina{Джантина}
+Dedrick{Дедрик}
+Pierart{Пьеро}
+Kamerling{Камерлинг}
+Brechtje{Брехтье}
+Palings{Палингс}
+Xalmiento{Халмьенто}
+Inocencia{Иноценсия}
+Ussica{Уссика}
+Salvadore{Сальвадор}
 Jimena{Химена}
 Lуpez{Лупез}
 
 {=====| Turks.c |=====}
-Dante{}
-Siciliano{}
+Dante{Данте}
+Siciliano{Сицилиано}
 LeNoir{ЛеНуар}
 Barns{Барнс}
-Pugh{}
-Lorenza{}
-Trevisano{}
+Pugh{Пью}
+Lorenza{Лоренза}
+Trevisano{Тревизано}
 Fisherman{Фишерман}
-Jo{}
-Peixe{}
-Valderrama{}
-Christine{}
-Hoppe{}
-Admiral{}
-Coastbrother{}
-Leading{}
+Jo{Джо}
+Peixe{Пейше}
+Valderrama{Вальдеррама}
+Christine{Кристина}
+Hoppe{Хоппе}
+Admiral{Адмирал}
+Coastbrother{Береговой брат}
+Leading{Начальник}
 
 {=====| Usurers.c |=====}
 Robyn{Робин}
 Corrick{Коррик}
-Archibald{}
-Gripsou{}
-Stephen{}
-Bairnsfather{}
-Angus{}
-McDuck{}
+Archibald{Арчибальд}
+Gripsou{Грипсу}
+Stephen{Стефан}
+Bairnsfather{Бэрнсфатзер}
+Angus{Ангус}
+McDuck{МакДак}
 Diarmuid{Демед}
 Sargent{Сарджент}
 Proudfoot{Праудфут}
@@ -1286,13 +1284,13 @@ Silvestre{Сильвестре}
 Nabarro{Наварро}
 Vistremiro{Вистремиро}
 Monteiro{Монтерио}
-Peterson{}
-Adelheyd{}
-Berchoven{}
-Cojuango{}
-Jacquotte{}
-Delahaye{}
-Corrales{}
+Peterson{Питерсон}
+Adelheyd{Адельхейд}
+Berchoven{Берховен}
+Cojuango{Кохуанго}
+Jacquotte{Жакот}
+Delahaye{Делаэ}
+Corrales{Корралес}
 
 {=====| NK.c |=====}
 Vickery{Викери}
@@ -1302,13 +1300,13 @@ Barret{Баррет}
 Bonden{Бонден}
 Lepee{Липи}
 Forster{Форстер}
-Calamy{Кэлами}
+Calamy{Калами}
 Lee{Ли}
 Tyson{Тайсон}
 Sylvan{Сильван}
 Osborne{Осборн}
 Edwards{Эдвардс}
-Mowett{Моэтт}
+Mowett{Моуэтт}
 Orswood{Орсвуд}
 
 
@@ -1316,22 +1314,16 @@ Orswood{Орсвуд}
 
 
 {=====| Others |=====}
-Maltese{Maltese}
-Knight{Knight}
-Weird{Weird}
-Warriormonk{Warriormonk}
-Maccus{Maccus}
-Hadras{Hadras}
-Angler{Angler}
-Ogilvey{Ogilvey}
-Clanker{Clanker}
-Urchin{Urchin}
-Wheelback{Wheelback}
-Wyvern{Wyvern}
-Quittance{Quittance}
-Scarlett{Scarlett}
-Giselle{Giselle}
-Harriett{Harriett}
-Anamaria{Anamaria}
-Scared Monk{Scared Monk}
-Cursed Skeleton{Cursed Skeleton}
+Maltese{Мальтийский}
+Knight{Рыцарь}
+Weird{Странный}
+Warriormonk{Воин-монах}
+Maccus{Маккус}
+Hadras{Хедрэс}
+Angler{Англер}
+Ogilvey{Огилви}
+Clanker{Кланкер}
+Urchin{Ерчин}
+Wheelback{Уилбэк}
+Wyvern{Виверн}
+Quittance{Квитанс}

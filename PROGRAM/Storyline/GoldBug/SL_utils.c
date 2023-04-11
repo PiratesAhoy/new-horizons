@@ -7871,7 +7871,7 @@ void OpenBoxProcedure_BUG()
 			break;
 
 			case "box16":
-				//No gunpowder barrel on floor
+				//no barrel on floor
 
 				if(LAi_IsFightMode(chr))
 				{
@@ -7879,7 +7879,7 @@ void OpenBoxProcedure_BUG()
 					if(CheckCharacterItem(chr,"bladebarrel_gp0"))
 					{
 						RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
-						TakeItemFromCharacter(chr, "bladebarrel_gp0" );
+						TakeItemFromCharacter(chr, "bladebarrel_gp0");
 						EquipCharacterByItem(chr, "bladeX4");
 						PlaySound("OBJECTS\DUEL\club2.wav");
 						PlaySound("PEOPLE\step_echo.wav");
@@ -13909,7 +13909,8 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 						}
 					}
 
-					if(Locations[FindLocation(attack.location)].models.always.locators == "sklad_l_GB_empty")
+				//	if(Locations[FindLocation(attack.location)].models.always.locators == "sklad_l_GB_empty")
+					if(CheckCharacterItem(attack,"pistolbarrel_gp0"))
 					{
 						//no barrel on floor
 

@@ -51,7 +51,7 @@ void ProcessDialogEvent()
 				dialog.snd = "Voice\CLLA\CLLA004";
 				if (PChar.model == "will" || PChar.model == "will_A1" || PChar.model == "will_A2" || PChar.model == "will_A3") dialog.text = DLG_TEXT[125];
 				else dialog.text = DLG_TEXT[41];
-				link.l1 = DLG_TEXT[42] + GetMyFullName(PChar) + DLG_TEXT[43] + GetMyShipNameShow(PChar) + "'."+ DLG_TEXT[44];
+				link.l1 = DLG_TEXT[42] + GetMyFullName(PChar) + DLG_TEXT[43] + GetMyShipNameShow(PChar) + DLG_TEXT[44];
 				link.l1.go = "begin_1";	
 			}
 			if(CheckQuestAttribute("Turner", "Change_over_to_Bartolomeu_Quest"))

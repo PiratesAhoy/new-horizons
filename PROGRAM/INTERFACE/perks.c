@@ -33,8 +33,8 @@ void InitInterface_R(string iniName, ref chref)
 			offictype = XI_ConvertString(refUsedCharacter.quest.officertype);
 	}
 	if (offictype != "") mychrname += " - " + offictype;
-	CreateString(true,"ChrName",mychrname,FONT_NORMAL,COLOR_NORMAL,320,40,SCRIPT_ALIGN_CENTER,1.0); // Maximus
-	CreateString(true,"FreeAbilities","",FONT_NORMAL,COLOR_NORMAL,120,74,SCRIPT_ALIGN_LEFT,1.0);
+	CreateString(true,"ChrName",mychrname,FONT_NORMAL,COLOR_NORMAL,320,43,SCRIPT_ALIGN_CENTER,1.0); // Maximus
+	CreateString(true,"FreeAbilities","",FONT_NORMAL,COLOR_NORMAL,120,77,SCRIPT_ALIGN_LEFT,1.0);
 	lngFileID = LanguageOpenFile("AbilityDescribe.txt");
 
 	//Create Strings for numbers

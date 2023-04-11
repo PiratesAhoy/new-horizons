@@ -1,4 +1,4 @@
-string DLG_TEXT[17] = {
+string DLG_TEXT[35] = {
 ".....",
 ".....",
 "Oi, I don´t know you! Lay down your arms scurvy dogs!",
@@ -16,4 +16,24 @@ string DLG_TEXT[17] = {
 "Attack",
 "Hello, mister",
 "Captain",
+"A l'attaque",
+"Bonjour, Monsieur",
+"Capitaine",
+"Al ataque",
+"Hola, Senor",
+"Capitán",
+"Al ataque",
+"Hola, Senhor",
+"CapitÝo",
+"Aanvallen",
+"Hallo, Mijnheer",
+"Kapitein",
+"Angrip",
+"Hallå, min herre",
+"Kapten",
+"Attack",
+"Hello, mister",
+"Captain",
 };
+// First version of "Attack" etc. is for Pirate or Personal, should be player's own language
+// Second version is for English or American characters and should not be translated

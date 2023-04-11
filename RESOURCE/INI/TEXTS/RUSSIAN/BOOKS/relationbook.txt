@@ -1,35 +1,49 @@
 TEXT	{
 
-Hostility at Sea:
+Враждебность в Море:
 
-Forts and ships at sea may be hostile to you for any of the following reasons:
-- They are hostile to the nation whose flag you're flying
-- They are hostile to you personally and have recognized you flying a false flag
-- They remember you being hostile from a previous encounter
-- You have deliberately opened fire upon them
+Форты и корабли в море могут быть враждебны вам по любой из следующих причин:
+- Они враждебны нации, под флагом которой вы плывете
+- Они настроены враждебно к вам лично и признали, что вы сменили флаг.
+- Они помнят, что вы были враждебны из предыдущей встречи
+- Вы намеренно открыли по ним огонь
 
-Deliberately firing on friendly ships or accidentally hitting them reduces your reputation.
-
------------------------------------------
-
-Unrespectable Acts:
-
-Depending on the situation, you may be committing an unrespectable acts when you capture or sink any non-pirate ships. The following are considered as such by the civilized nations of the world and are listed in order of severity:
-- You had no Letter of Marque or navy commission and therefore no legal reason for the attack
-- You were flying a pirate flag
-- You attacked a nation you were neutral or friendly with
-- You were flying a flag friendly to the ship you attacked
-
-Depending on the severity of your actions, you may be recognized as a traitor in non-pirate towns. For common unrespectable acts, this may take a while. However, large offences are considered an act of piracy and affect your relations with all nations.
-
-It is always possible to hoist another flag in battle, which could mean the difference between your actions being considered legal or a major act of piracy. It serves to be careful especially when being recognized for flying a false flag.
+Преднамеренная стрельба по дружественным кораблям или случайное попадание в них снижает вашу репутацию.
 
 -----------------------------------------
+Фальшивые Флаги:
 
-International Relations:
+Использование фальшивых флагов для получения тактического преимущества перед сражением или для входа во вражеский порт под прикрытием совершенно законно. От вас требуется поднять свой настоящий флаг (или, по крайней мере, флаг, враждебный цели), прежде чем открывать огонь.
 
-Gaining points with any nation requires joining their ranks as a privateer or navy officer or joining the Pirate Brotherhood. As long as you serve a single nation, your own relations are tied to that nation. While you can join as many nations as you wish at the same time, this does reduce the points you gain from your actions.
+Форты и корабли могут видеть, как вы меняете флаг, если вы находитесь в пределах видимости. Имейте в виду, форты имеют высокую дальность видемости. Если форт однажды увидит вас под враждебным флагом, он запомнит и узнает вас. Поэтому, если вы намереваетесь войти во враждебный порт под фальшивым флагом, обязательно поднимите свой фальшивый флаг подальше от берега.
 
-The nations of the world object to any actions against their allies. It is therefore important to keep up-to-date with the tavern news. This may become especially complicated if you serve multiple nations at the same time.
+Если вас узнали, есть несколько способов избежать дальнейшего признания:
+- Заключите мир с нацией, хотя бы на время, достаточное для того, чтобы завершить свои дела в порту и благополучно покинуть его.
+- Приобретите другой тип корабля. Форт запоминает ваш корабль, поэтому если у вас больше нет корабля такого типа, форт вас больше не узнает. (Недостаточно перекрасить корабль или передать его подчиненному офицеру. Если форт увидит этот корабль или любой корабль того же типа в любом месте вашего флота, вас узнают.)
+
+-----------------------------------------
+Неуважаемые Поступки:
+
+В зависимости от ситуации вы можете совершать неуважаемый поступок, захватывая или топя любые союзные корабли. Следующие виды считаются таковыми цивилизованными нациями мира и перечислены в порядке серьезности:
+- У вас не было каперского свидетельства или военно-морского и, следовательно, не было законных оснований для нападения
+- Вы использовали пиратский флаг
+- Вы напали на нацию, с которой были нейтральны или дружественны
+- Вы были под флагом, дружественным кораблю, на который напали
+
+В зависимости от серьезности ваших действий, вас могут признать предателем в союзных городах. Для обычных безответственных действий это может занять некоторое время. Однако крупные правонарушения считаются актом пиратства и влияют на ваши отношения со всеми нациями.
+
+В бою всегда можно поднять другой флаг, что может означать разницу между тем, будут ли ваши действия считаться законными или крупным актом пиратства. Это служит для того, чтобы быть осторожным, особенно когда вас узнают за ложный флаг.
+
+-----------------------------------------
+Международные Отношения:
+
+Чтобы набрать очки с любой нацией, необходимо вступить в их ряды в качестве капера или офицера военно-морского флота или вступить в Пиратское Братство. Пока вы служите одной нации, ваши собственные отношения привязаны к этой нации. Хотя вы можете присоединиться к любому количеству наций одновременно, это уменьшает очки, которые вы получаете за свои действия.
+
+Все нации возражают против любых действий направленных на своих союзников. Поэтому важно быть в курсе последних новостей таверны. Это может стать особенно сложно, если вы служите нескольким странам одновременно.
+
+-----------------------------------------
+Военнопленные:
+
+Военно-морские офицеры и каперы обязаны обращаться с заключенными с уважением. Требование выкупа за их освобождение приемлемо. Убийство - нет. Если у вас есть привычка казнить заключенных, вы можете лишиться продвижения по службе и, в конечном счете, полностью лишиться своих комиссионных. (Однако военно-морские офицеры и каперы не будут наказаны за убийство пиратов.)
 
 }

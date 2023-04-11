@@ -21,33 +21,33 @@ void ProcessDialogEvent()
 	switch(iNation)
 	{
 		case FRANCE:
-			Preprocessor_Add("attack", "A l'attaque");
-			Preprocessor_Add("hello", "Bonjour, Monsieur");
-			Preprocessor_Add("captain", "Capitaine");
+			Preprocessor_Add("attack", DLG_TEXT[17]);
+			Preprocessor_Add("hello", DLG_TEXT[18]);
+			Preprocessor_Add("captain", DLG_TEXT[19]);
 		break;
 
 		case SPAIN:
-			Preprocessor_Add("attack", "Al ataque");
-			Preprocessor_Add("hello", "Hola, Senor");
-			Preprocessor_Add("captain", "Capitán");
+			Preprocessor_Add("attack", DLG_TEXT[20]);
+			Preprocessor_Add("hello", DLG_TEXT[21]);
+			Preprocessor_Add("captain", DLG_TEXT[22]);
 		break;
 
 		case PORTUGAL:
-			Preprocessor_Add("attack", "Al ataque");
-			Preprocessor_Add("hello", "Hola, Senhor");
-			Preprocessor_Add("captain", "CapitÝo");
+			Preprocessor_Add("attack", DLG_TEXT[23]);
+			Preprocessor_Add("hello", DLG_TEXT[24]);
+			Preprocessor_Add("captain", DLG_TEXT[25]);
 		break;
 
 		case HOLLAND:
-			Preprocessor_Add("attack", "Aanvallen");
-			Preprocessor_Add("hello", "Hallo, Mijnheer");
-			Preprocessor_Add("captain", "Kapitein");
+			Preprocessor_Add("attack", DLG_TEXT[26]);
+			Preprocessor_Add("hello", DLG_TEXT[27]);
+			Preprocessor_Add("captain", DLG_TEXT[28]);
 		break;
 
 		case ENGLAND:
-			Preprocessor_Add("attack", "Attack");
-			Preprocessor_Add("hello", "Hello, mister");
-			Preprocessor_Add("captain", "Captain");
+			Preprocessor_Add("attack", DLG_TEXT[32]);
+			Preprocessor_Add("hello", DLG_TEXT[33]);
+			Preprocessor_Add("captain", DLG_TEXT[34]);
 		break;
 
 		case PIRATE:
@@ -65,15 +65,15 @@ void ProcessDialogEvent()
 		case GUEST1_NATION:
 			if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
 			{
-				Preprocessor_Add("attack", "Angrip");
-				Preprocessor_Add("hello", "Hallå, min herre");
-				Preprocessor_Add("captain", "Kapten");
+				Preprocessor_Add("attack", DLG_TEXT[29]);
+				Preprocessor_Add("hello", DLG_TEXT[30]);
+				Preprocessor_Add("captain", DLG_TEXT[31]);
 			}
 			else
 			{
-				Preprocessor_Add("attack", "Attack");
-				Preprocessor_Add("hello", "Hello, mister");
-				Preprocessor_Add("captain", "Captain");
+				Preprocessor_Add("attack", DLG_TEXT[32]);
+				Preprocessor_Add("hello", DLG_TEXT[33]);
+				Preprocessor_Add("captain", DLG_TEXT[34]);
 			}
 		break;
 	}

@@ -200,10 +200,10 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
 				Dialog.text = DLG_TEXT[30];
 				if (CheckCharacterItem(PChar, "BattleOrders"))
 				{
+					Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
 					link.l1 = DLG_TEXT[31] + DLG_TEXT[33];
 					link.l1.go = "ardent_hunt_offer_document";
 				}
@@ -211,8 +211,11 @@ void ProcessDialogEvent()
 				{
 					if (!CheckAttribute(PChar, "QuestInfo.Battle Royale")) SetQuestHeader("Battle Royale");
 					Preprocessor_AddQuestData("villain", GetMySimpleName(CharacterFromID(PChar.quest.villain)));
+					Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID(PChar.quest.villain))));
 					AddQuestRecord("Battle Royale", 2);
+					Preprocessor_Remove("pronoun");
 					Preprocessor_Remove("villain");
+					Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
 					link.l1 = DLG_TEXT[31] + DLG_TEXT[32];
 					AddDialogExitQuest("reset_antigua_portadmiral");
 					link.l1.go = "exit";

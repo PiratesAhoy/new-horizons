@@ -13,6 +13,7 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	string romance_title = XI_ConvertString(Characters[GetCharacterIndex(PChar.quest.romance)].title);
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -86,7 +87,7 @@ void ProcessDialogEvent()
 
 		case "residence_challenge":
 			dialog.text = DLG_TEXT[15];
-			link.l1 = DLG_TEXT[16] + GetMyAddressForm(characterFromID(PChar.quest.romance), characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMySimpleName(characterFromID(PChar.quest.romance)) + DLG_TEXT[17];
+			link.l1 = DLG_TEXT[16] + GetMyFullName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[17];
 			link.l1.go = "Exit";
 		break;
 
@@ -97,15 +98,37 @@ void ProcessDialogEvent()
 		break;
 
 		case "residence_challenge_day":
-			dialog.text = DLG_TEXT[20] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, true, true) + DLG_TEXT[21];
-			link.l1 = DLG_TEXT[22] + GetMyFullName(characterFromID(PChar.quest.villain)) + DLG_TEXT[23] + GetMyFullName(characterFromID(PChar.quest.romance)) + DLG_TEXT[24];
+			dialog.text = DLG_TEXT[20] + GetMyFullName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[21];
+			IF (PChar.sex == "woman")
+			{
+				link.l1 = DLG_TEXT[206] + GetMyRespectfullyName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[207];
+				link.l1.go = "residence_challenge_tailor";
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[22] + GetMyFullName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[23] + GetMyRespectfullyName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[24];
+				link.l1.go = "Exit";
+			}
+		break;
+
+		case "residence_challenge_tailor":
+			dialog.text = DLG_TEXT[208];
+			link.l1 = DLG_TEXT[209];
 			link.l1.go = "Exit";
 		break;
 
 		case "still_suspicious":
-			dialog.text = DLG_TEXT[25] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, true) + DLG_TEXT[26] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.villain), ADDR_CIVIL, false, true) + DLG_TEXT[27];
-			link.l1 = DLG_TEXT[28];
-			link.l1.go = "still_suspicious2";
+			dialog.text = DLG_TEXT[25] + GetMyRespectfullyName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[26] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.villain), ADDR_CIVIL, false, true) + DLG_TEXT[27];
+			if (PChar.sex == "woman")
+			{
+				link.l1 =DLG_TEXT[210];
+				link.l1.go = "still_suspicious2F";
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[28];
+				link.l1.go = "still_suspicious2";
+			}
 		break;
 
 		case "still_suspicious2":
@@ -114,21 +137,51 @@ void ProcessDialogEvent()
 			link.l1.go = "Exit";
 		break;
 
-		case "wrong_way_to_ring":
-			dialog.text = DLG_TEXT[32] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, true) + "?";
-			link.l1 = DLG_TEXT[33];
+		case "still_suspicious2F":
+			dialog.text =DLG_TEXT[211];
+			link.l1 = DLG_TEXT[31];
+			link.l1.go = "Exit";
+		break;
+
+		case "wrong_way":
+			if (PChar.sex == "woman")
+			{
+				dialog.text = DLG_TEXT[212];
+				link.l1= DLG_TEXT[213];
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[32] + GetMyRespectfullyName(CharacterFromID(PChar.quest.romance)) + "?";
+				link.l1 = DLG_TEXT[33];
+			}
 			link.l1.go = "Exit";
 		break;
 
 		case "no_church_for_you":
-			dialog.text = GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, true) + DLG_TEXT[34];
-			link.l1 = DLG_TEXT[35];
+			if (PChar.sex == "woman")
+			{
+				dialog.text = DLG_TEXT[216];
+				link.l1 = DLG_TEXT[217];
+			}
+			else
+			{
+				dialog.text = GetMyFullName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[34];
+				link.l1 = DLG_TEXT[35];
+			}
 			link.l1.go = "Exit";
 		break;
 
 		case "no_escape_to_port":
-			dialog.text = DLG_TEXT[36] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, true) + DLG_TEXT[37];
-			link.l1 = DLG_TEXT[38];
+			if (PChar.sex == "woman")
+			{
+				dialog.text = DLG_TEXT[214];
+				link.l1 = DLG_TEXT[215];
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[36] + GetMyRespectfullyName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[37];
+				link.l1 = DLG_TEXT[38];
+			}
 			link.l1.go = "Exit";
 		break;
 
@@ -136,6 +189,21 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[39];
 			link.l1 = DLG_TEXT[40];
 			link.l1.go = "Exit";
+		break;
+
+		case "brooch_to_Edmundo":
+			dialog.text = DLG_TEXT[218] + GetMySimpleName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[219] + GetMyAddressForm(NPChar, CharacterFromID(PChar.quest.romance), ADDR_POLITE, false, false) + DLG_TEXT[220];
+			link.l1 = "...";
+			link.l1.go = "Exit";
+		break;
+
+		case "disguise_fail":
+			if (CheckAttribute(NPChar, "nation")) PChar.quest.detector_group = GetSoldiersGroup(sti(NPChar.nation));
+			else PChar.quest.detector_group = GetSoldiersGroup(GetTownNation(GetCurrentTownID()));
+			AddDialogExitQuest("disguise_failed");
+			dialog.text = DLG_TEXT[221] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[222];
+			link.l1 = DLG_TEXT[223];
+			link.l1.go = "exit";
 		break;
 
 		case "port_challenge":

@@ -1505,6 +1505,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.location.locator = "goto1";
 	ch.Dialog.Filename = "Blacksmith3_dialog.c";
 	ch.Dialog.Filename.Groupdialog = "Gunsmith_fetch.c";
+	ch.nation = PORTUGAL;
 	ch.greeting = "Gr_Redmond Citizen";
 	ch.rank 	= 1;
 	ch.reputation = "None";

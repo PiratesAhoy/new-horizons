@@ -1,6 +1,6 @@
-title=Fireworks
-text.t1=The Chinese restaurant sells Fireworks according to Jupiter.
-text.t2=Slow-burning Gunpowder for Fireworks: 4 parts of Salpeter, 2 parts of Charcoal and Sulfur each.
-text.t3=I have to produce Slow-burning Gunpowder used for Fireworks.
-text.t4=The Chinese has opened three workshops where more raw materials can be found.
-text.t5=If I follow the Chinese to his Laboratory he'll make some Fireworks for me.
+title=Фейерверки
+text.t1=Китайский ресторан продает фейерверки, так мне сказал Юпитер.
+text.t2=Медленногорящий Порох для Фейерверка: 4 Селитры, 2 Древесного угля, 2 Серы.
+text.t3=Я должен создать Медленногорящий Порох, используемый для Фейерверка.
+text.t4=Китаец открыл три мастерские, там можно найти больше сырья.
+text.t5=Если я последую за китайцем в его Лабораторию, то он изготовит для меня Фейерверки.

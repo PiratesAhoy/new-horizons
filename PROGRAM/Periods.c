@@ -756,6 +756,15 @@ void InitTownNationalities()
 				item.skiptrade = true;
 				item.skipsell  = true;
 			}*/
+
+// GR: set correct flags on soldier interface icons -->
+			Models[GetModelIndex("Offic_en77")].FaceID = 620;
+			Models[GetModelIndex("brtoffic18")].FaceID = 620;
+			for(i=1; i<=6; i++)
+			{
+				Models[GetModelIndex("BrtSol18_" + i)].FaceID = 620;
+			}
+// GR: <-- set correct flags on soldier interface icons
 		break;
 
 		case PERIOD_THE_SPANISH_MAIN:
@@ -786,6 +795,19 @@ void InitTownNationalities()
 			{
 				ChangeCharacterAddressGroup(CharacterFromID("Swedish Emissary"), "Marigot_mansion_hall",  "goto","goto5");
 			}
+
+// GR: set correct flags on soldier interface icons -->
+			Models[GetModelIndex("Offic_spa_18")].FaceID = 622;
+			Models[GetModelIndex("Soldier_Spa_18")].FaceID = 622;
+			for(i=2; i<=6; i++)
+			{
+				Models[GetModelIndex("Soldier_Spa" + i + "_18")].FaceID = 622;
+			}
+			for(i=0; i<CHARACTERS_QUANTITY; i++)
+			{
+				if (HasSubStr(Characters[i].model, "Soldier_Spa")) Characters[i].faceid = 622;
+			}
+// GR: <-- set correct flags on soldier interface icons
 		break;
 
 		case PERIOD_REVOLUTIONS:
@@ -796,6 +818,23 @@ void InitTownNationalities()
 		case PERIOD_NAPOLEONIC:
 			ChangeCharacterAddressGroup(characterFromID("Portuguese Emissary"), "Conceicao_townhall",   "Sit", "Sit3");
 			ChangeCharacterAddressGroup(characterFromID("Portuguese Tailor"),   "Conceicao_TailorsShop","goto","locator6");
+
+// GR: set correct flags on soldier interface icons -->
+			Models[GetModelIndex("Offic_en77")].FaceID = 99;
+			Models[GetModelIndex("Offic_eng_18")].FaceID = 99;
+			Models[GetModelIndex("Soldier_Eng_18")].FaceID = 99;
+			Models[GetModelIndex("brtoffic18")].FaceID = 99;
+			Models[GetModelIndex("BrtSol18_1")].FaceID = 99;
+			for(i=2; i<=6; i++)
+			{
+				Models[GetModelIndex("Soldier_Eng" + i + "_18")].FaceID = 99;
+				Models[GetModelIndex("BrtSol18_" + i)].FaceID = 99;
+			}
+			for(i=0; i<CHARACTERS_QUANTITY; i++)
+			{
+				if (HasSubStr(Characters[i].model, "Soldier_Eng")) Characters[i].faceid = 99;
+			}
+// GR: <-- set correct flags on soldier interface icons
 		break;
 	}
 

@@ -15,7 +15,7 @@ string DLG_TEXT[53] = {
 "It seems we share the same fate.",
 "The Vice-Admiral, somehow he knew I was a good shipwright before becoming a pirate, pressed me into service instead of the gallows, I did not argue.",
 "I understand and sympathize.",
-"But I'm not here to tell you my life story, lets get down to the business at hand - I have to explain the features of my latest work.",
+"But I'm not here to tell you my life story, let's get down to the business at hand - I have to explain the features of my latest work.",
 "She must be a very special ship!",
 "Yes indeed, she exceeds the standard in every aspect. The cargo hold is twice the norm, more cannons of a larger caliber.",
 "She must be heavier and slower.",

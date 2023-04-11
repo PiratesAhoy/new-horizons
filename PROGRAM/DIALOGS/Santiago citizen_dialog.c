@@ -117,11 +117,11 @@ void ProcessDialogEvent()
 				{
 					if (PChar.sex == "man")
 					{
-						d.Text = DLG_TEXT[170] + DLG_TEXT[173] + DLG_TEXT[171] + XI_ConvertString("fiance") + DLG_TEXT[172];
+						d.Text = DLG_TEXT[172] + DLG_TEXT[175] + DLG_TEXT[173] + XI_ConvertString("fiance") + DLG_TEXT[174];
 					}
 					else
 					{
-						d.Text = DLG_TEXT[170] + DLG_TEXT[174] + DLG_TEXT[171] + XI_ConvertString("fiancee") + DLG_TEXT[172];
+						d.Text = DLG_TEXT[172] + DLG_TEXT[176] + DLG_TEXT[173] + XI_ConvertString("fiancee") + DLG_TEXT[174];
 					}
 					if (!checkquestattribute("ardent_kidnap.wedding", "sad"))
 					{
@@ -138,22 +138,22 @@ void ProcessDialogEvent()
 				}
 				if(CheckQuestAttribute("assassination", "no_clue"))
 				{
-					d.Text = DLG_TEXT[176];
-					link.l1 = DLG_TEXT[177];
+					d.Text = DLG_TEXT[177];
+					link.l1 = DLG_TEXT[178];
 					link.l1.go = "no_body";
 				}
 		break;
 
 		case "no_body":
-			d.Text = DLG_TEXT[178];
-			link.l1 = DLG_TEXT[179];
+			d.Text = DLG_TEXT[179];
+			link.l1 = DLG_TEXT[180];
 			link.l1.go = "no_musket";
 		break;
 
 		case "no_musket":
 			PChar.quest.assassination = "got_clue";
 			AddQuestRecord("Marriage", 15);
-			d.Text = DLG_TEXT[180];
+			d.Text = DLG_TEXT[181];
 			Link.l1 = DLG_TEXT[63];
 			Link.l1.go = "new question";
 			Link.l2 = DLG_TEXT[64];
@@ -292,6 +292,8 @@ void ProcessDialogEvent()
 			//	Link.l4.go = "town_smithy";
 			}
 			// RobC/Alan_Smithee Blacksmiths <--
+			Link.l5 = DLG_TEXT[168];
+			Link.l5.go = "town_tailorsshop";
 		break;
 
 		case "town_smithy":
@@ -302,6 +304,8 @@ void ProcessDialogEvent()
 			Link.l2.go = "town_shipyard";
 			Link.l3 = DLG_TEXT[166];
 			Link.l3.go = "town_store";
+			Link.l4 = DLG_TEXT[168];
+			Link.l4.go = "town_tailorsshop";
 		break;
 //<-- RobC/A_S Smiths
 
@@ -318,6 +322,8 @@ void ProcessDialogEvent()
 			//	Link.l4 = DLG_TEXT[167];
 			//	Link.l4.go = "town_smithy";
 			}
+			Link.l5 = DLG_TEXT[168];
+			Link.l5.go = "town_tailorsshop";
 			DeleteAttribute(&locations[FindLocation("Santiago_town_01")], "reload.l7.goto_disable"); // JRH: Unlock Fast Travel
 		break;
 
@@ -327,8 +333,10 @@ void ProcessDialogEvent()
 			Link.l1.go = "town_tavern";
 			Link.l2 = DLG_TEXT[119];
 			Link.l2.go = "town_store";
-			Link.l3 = DLG_TEXT[120];
-			Link.l3.go = "exit";
+			Link.l3 = DLG_TEXT[168];
+			Link.l3.go = "town_tailorsshop";
+			Link.l4 = DLG_TEXT[120];
+			Link.l4.go = "exit";
 			DeleteAttribute(&locations[FindLocation("Santiago_port")], "reload.l4.goto_disable"); // JRH: Unlock Fast Travel
 		break;
 
@@ -338,9 +346,29 @@ void ProcessDialogEvent()
 			Link.l1.go = "town_shipyard";
 			Link.l2 = DLG_TEXT[123];
 			Link.l2.go = "town_tavern";
-			Link.l3 = DLG_TEXT[124];
-			Link.l3.go = "exit";
+			Link.l3 = DLG_TEXT[168];
+			Link.l3.go = "town_tailorsshop";
+			Link.l4 = DLG_TEXT[124];
+			Link.l4.go = "exit";
 			DeleteAttribute(&locations[FindLocation("Santiago_town_01")], "reload.l6.goto_disable"); // JRH: Unlock Fast Travel
+		break;
+
+		case "town_tailorsshop":
+			d.Text = DLG_TEXT[169];
+			Link.l2 = DLG_TEXT[123];
+			Link.l2.go = "town_tavern";
+			Link.l3 = DLG_TEXT[122];
+			Link.l3.go = "town_shipyard";
+			Link.l4 = DLG_TEXT[119];
+			Link.l4.go = "town_store";
+			if (ENABLE_WEAPONSMOD)
+			{
+				Link.l5 = DLG_TEXT[167];
+				Link.l5.go = "town_smithy";
+			}
+			Link.l6 = DLG_TEXT[114];
+			Link.l6.go = "exit";
+			DeleteAttribute(&locations[FindLocation("Santiago_town_01")], "reload.l9.goto_disable"); // JRH: Unlock Fast Travel
 		break;
 
 		case "colony":
@@ -363,7 +391,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Santiago":
-			d.Text = DLG_TEXT[134] + DLG_TEXT[168] + GetTownSize("Santiago") + DLG_TEXT[169];// NK
+			d.Text = DLG_TEXT[134] + DLG_TEXT[170] + GetTownSize("Santiago") + DLG_TEXT[171];// NK
 			Link.l1 = pcharrepphrase(DLG_TEXT[135], DLG_TEXT[136]);
 			Link.l1.go = "new question";
 			link.l2 = pcharrepphrase(DLG_TEXT[137], DLG_TEXT[138]);

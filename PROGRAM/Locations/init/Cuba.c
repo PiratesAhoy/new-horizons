@@ -2596,9 +2596,17 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l8.autoreload = "0";
 	Locations[n].reload.l8.label = "Cartographer's House";
 	Locations[n].reload.l8.close_for_night = 1;
-
 	Locations[n].locators_radius.randitem.randitem1 = 0.01;
 	Locations[n].items.randitem1 = "WallMap";
+
+	Locations[n].reload.l9.name = "reload9";
+	Locations[n].reload.l9.go = "Santiago_TailorsShop";
+	Locations[n].reload.l9.emerge = "locator2";
+	Locations[n].reload.l9.autoreload = "0";
+	Locations[n].reload.l9.label = "Tailor's Shop.";
+	Locations[n].reload.l9.close_for_night = 1;
+	Locations[n].locators_radius.reload.reload1 = 0.75;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l9.goto_disable = 1; // Screwface: Disable Go-To location
 
 	Locations[n].island = "Cuba";
 	n = n + 1;
@@ -2863,6 +2871,10 @@ void LocationInitCuba(ref n)
 	Locations[n].id = "Cartographer_House";
 	locations[n].id.label = "Cartographer's House";
 	Locations[n].image = "Inside_cartographer";
+
+	//Town sack
+	Locations[n].townsack = "Santiago";
+
 	//Sound
 	locations[n].type = "house";
 	//Models
@@ -2898,6 +2910,101 @@ void LocationInitCuba(ref n)
 	Locations[n].locators_radius.randitem.randitem1 = 0.01;
 	Locations[n].items.randitem1 = "WallMap";
 	
+	Locations[n].island = "Cuba"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
+	Locations[n].id = "Santiago_TailorsShop";
+	Locations[n].id.label = "Tailor's Shop.";
+	Locations[n].image = "Inside_StoreSmall.tga";
+
+	//Town sack
+	Locations[n].townsack = "Santiago";
+
+	//Sound
+	locations[n].type = "shop";
+	locations[n].fastreload = "Santiago";
+	//Models
+	//Always
+	Locations[n].filespath.models = "locations\inside\StoreSmall";
+	Locations[n].models.always.store = "SS";
+	Locations[n].models.always.locators = "SS_l";
+	Locations[n].models.always.window = "SS_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch   = "SS_p";
+	Locations[n].models.day.fonar			 = "SS_fn";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "SS_p";
+	Locations[n].models.night.fonar		   = "ss_fn";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\grmh9_";
+	//Reload map
+	Locations[n].reload.l1.name = "locator2";
+	Locations[n].reload.l1.go = "Santiago_town_01";
+	Locations[n].reload.l1.emerge = "reload9";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "#stown_name#";
+	Locations[n].locators_radius.reload.locator2 = 0.7;
+
+	Locations[n].reload.l2.name = "locator1";
+	Locations[n].reload.l2.go = "Santiago_Tailor_ChangingRoom";
+	Locations[n].reload.l2.emerge = "reload1";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].reload.l2.label = "Changing room";
+	Locations[n].reload.l2.disable = true;
+	Locations[n].locators_radius.reload.locator1 = 0.7;
+
+	LAi_LocationFightDisable(&Locations[n], true);
+
+	Locations[n].island = "Cuba"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].id = "Santiago_Tailor_ChangingRoom";
+	locations[n].id.label = "Changing room";
+	Locations[n].filespath.models = "locations\inside\mh7";
+	Locations[n].image = "Inside_mh7.tga";
+
+	//Town sack
+	Locations[n].townsack = "Santiago";
+
+	//Sound
+	locations[n].type = "shop";
+	locations[n].fastreload = "Santiago";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "mh7_l";
+	Locations[n].models.always.shipyard = "mh7";
+	Locations[n].models.always.window = "mh7_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+
+	//Day
+	Locations[n].models.day.charactersPatch = "mh7_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "mh7_p";
+
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\redmh7_";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Santiago_TailorsShop";
+	Locations[n].reload.l1.emerge = "locator1";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "Tailor's Shop.";
+
+
 	Locations[n].island = "Cuba"; // NK 04-08-29
 	n = n + 1;	
 

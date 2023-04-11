@@ -360,13 +360,14 @@ void CreateOfficersCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPPIRATE;
 	ch.skill.freeskill = 3;				// Petros added as points to increase ability later in game
 	ch.perks.freepoints = 3;			// Petros ditto
-	ch.HPBonus = 50;			// Petros  to correct for game only giving 48
+	ch.HPBonus = 50;				// Petros  to correct for game only giving 48
 	LAi_SetMerchantType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_NoRebirthEnable(ch);
 	ch.greeting = "Gr_Nigel Blythe";
 	ch.isOfficer = true;
+	ch.cancel_mutiny = true;			// GR: prevent Blythe from mutinying
 	AddGameCharacter(n, ch);
 
 	// Artois Voysey.

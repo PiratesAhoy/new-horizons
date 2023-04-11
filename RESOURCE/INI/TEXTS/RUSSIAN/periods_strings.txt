@@ -6,7 +6,7 @@ Henry VIII{Генрих VIII}
 Edward VI{Эдуард VI}
 Mary I{Мария I}
 Elizabeth I{Елизавета I}
-Fernando II{Фердинанд II}
+Fernando II{Фернандо II}
 Juana I{Хуана I}
 Carlos I{Карлос I}
 Felipe II{Филипп II}
@@ -15,7 +15,7 @@ Manuel I{Мануэл I}
 JoЭo III{Жуан III}
 SebastiЭo{Себастьян}
 Henrique{Энрике}
-Antуnio{Антониу}
+Antуnio{Антонио}
 Felipe I{Филипп I}
 Louis XII{Людовик XII}
 Franзois{Франсуа}
@@ -32,14 +32,14 @@ Charles II{Карл II}
 Felipe IV{Филипп IV}
 Carlos II{Карлос II}
 JoЭo IV{Жуан IV}
-Alfonso VI{Афонсу VI}
+Alfonso VI{Альфонсо VI}
 Louis XIII le Juste{Людовик XIII Справедливый}
 Louis XIV le Grande{Людовик XIV Великий}
 James II{Яков II}
 William II and Mary II{Вильгельм II и Мария II}
 William II{Вильгельм II}
 Anne of Stuart{Анна Стюарт}
-Anne of Great Britain{Анна королева Великобритании}
+Anne of Great Britain{Анна Королева Великобритании}
 George I{Георг I}
 George II{Георг II}
 Felipe V{Филипп V}
@@ -51,14 +51,14 @@ Carlos III{Карл III}
 George III{Георг III}
 Josй I{Жозе I}
 Carlos IV{Карл IV}
-Maria I & Pedro III{Мария I & Педру III}
+Maria I & Pedro III{Мария I и Педру III}
 Maria I{Мария I}
 Louis XVI{Людовик XVI}
 George IV{Георг IV}
 Fernando VII{Фердинанд VII}
 JoЭo VI{Жуан VI}
 Maria II{Мария II}
-Napolйon Bonaparte{Наполеон I Бонапарт}
+Napolйon Bonaparte{Наполеон Бонапарт}
 Louis XVIII{Людовик XVIII}
 Charles X{Карл X}
 John Adams{Джон Адамс}
@@ -98,24 +98,24 @@ Henri Caesar{Анри Цезарь}
 
 {=====| Islands |=====}
 Santiago{Сантьяго}
-Los Barbados{Лос Барбадос}
+Los Barbados{Лос-Барбадос}
 Camahogne{Камахон}
-Isla do Palo Brasil{Исла ду Пало Бразил}
-Nuestra Senora de las Nieves{Нуэстра Сеньора де Лас Ньевес}
-Las Tortugas{Лас Тортугас}
-Isla Juana{Исла Хуана}
-Santa Maria de Guadalupe de Extremadura{Санта Мария де Гуадалупе де Эстремадура}
-Isla de San Martin{Исла де Сан-Мартин}
-San Salvador{Сан Сальвадор}
+Isla do Palo Brasil{Исла-ду-Пало Бразилия}
+Nuestra Senora de las Nieves{Богоматерь Снегов}
+Las Tortugas{Лас-Тортугас}
+Isla Juana{Исла-Хуана}
+Santa Maria de Guadalupe de Extremadura{Санта-Мария-де-Гуадалупе Испания}
+Isla de San Martin{Исла-де-Сан-Мартин}
+San Salvador{Сан-Сальвадор}
 Kingdom of Granada{Королевство Гранада}
 Concepcion{Консепсьон}
-La Grenade{Ла Гренада}
-New Granada{Нью Гранада}
+La Grenade{Ла-Гренада}
+New Granada{Новая Гранада}
 
 {=====| 24 Islands |=====}
 
 {=====| Towns |=====}
-Palo Brasil{Пало Бразил}
+Palo Brasil{Пало Бразилия}
 Sao Luis{Сан-Луис}
 Santa Ines{Санта-Инес}
 Villa de la Vega{Вилья-де-ла-Вега}
@@ -123,7 +123,7 @@ Pueblo Carlos{Пуэбло Карлос}
 Santa Maria del Puerto{Санта-Мария-дель-Пуэрто}
 Cumana{Кумана}
 San Cristobal de la Habana{Сан-Кристобаль-де-ла-Хабана}
-Santiago de Cuba{Сантьяго де Куба}
+Santiago de Cuba{Сантьяго-де-Куба}
 Puerto la Cruz{Пуэрто-ла-Крус}
 San Elena{Сан-Елена}
 Hopital{Хопитал}
@@ -150,7 +150,7 @@ de Angulo{де Ангуло}
 Nicolбs{Николас}
 de Ovando{де Овандо}
 Diego{Диего}
-de Mazariegos{де Масариегос}
+de Mazariegos{де Масарьегос}
 Columbus{Колумб}
 Francisco{Франсиско}
 Garcнa{Гарсиа}
@@ -232,7 +232,7 @@ Robinson{Робинсон}
 Henry{Генри}
 Grenville{Гренвилл}
 Ulysses{Улисс}
-FitzMaurice{ФитцМорис}
+FitzMaurice{Фитц Морис}
 Miguel{Мигель}
 de Musesas{де Мусас}
 Samuel{Сэмюэль}
@@ -247,8 +247,8 @@ y Moreno{Морено}
 Manuel{Мануэль}
 de Ezpeleta{де Эспелета}
 Domingo{Доминго}
-Cabello{Доминго}
-y Robles{Роблес}
+Cabello{Кабельо}
+y Robles{и Роблес}
 Franзois{Франсуа}
 de Dion{де Дион}
 James{Джеймс}

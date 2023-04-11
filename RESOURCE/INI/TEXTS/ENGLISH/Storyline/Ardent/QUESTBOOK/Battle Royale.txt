@@ -1,6 +1,6 @@
 title=Battle Royale
 text.t1=The admiral in #sSt John's# was most upset when I showed him the French plans for the assault on #sRedmond#. He doesn't have a force capable of taking on the '#swarship#'. So he wants me to sail to #sRedmond# and evacuate the governor.
-text.t2=The admiral in #sSt John's# has paid me what he owed. What next? By now #svillain# will have finished whatever he was up to at #sSantiago#, and anyway if I sail there, I may be too late for whatever is going on at #sRedmond#.
+text.t2=The admiral in #sSt John's# has paid me what he owed. What next? By now #svillain# will have finished whatever #spronoun# was up to at #sSantiago#, and anyway if I sail there, I may be too late for whatever is going on at #sRedmond#.
 text.t3=#sgovernor# believes, as do I, that if the French succeed in taking #sRedmond#, their next target will be #sSantiago#. So he wants me to assist with the defence of #sRedmond#.
 text.t4=#sgovernor# believes, as do I, that if the French succeed in taking #sRedmond#, their next target will be #sSantiago#. So he wants me to assist with the defence of #sRedmond#. And he's helping me by sending a couple of fast galleons to accompany me.
 text.t5=By the time I reached #sisland_Antigua#, the French had already succeeded in capturing #sRedmond#. Perhaps I should sail to #sSantiago# to see if #sgovernor# has anything interesting for me to do.

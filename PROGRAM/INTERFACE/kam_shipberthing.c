@@ -122,10 +122,10 @@ void InitInterface(string iniName)
 	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 	CreateExitString();//MAXIMUS: standard exit-string for exit-button
 
-	CreateString(true,"TownName","",FONT_NORMAL,COLOR_NORMAL,320,193,SCRIPT_ALIGN_CENTER,1.0); // KK
+	CreateString(true,"TownName","",FONT_NORMAL,COLOR_NORMAL,320,198,SCRIPT_ALIGN_CENTER,1.0); // KK
 	CreateString(false,"NoBerthedShips","",FONT_NORMAL,COLOR_NORMAL,320,285,SCRIPT_ALIGN_CENTER,1.0);
-	CreateString(false,"CantBerthShip","",FONT_NORMAL,COLOR_NORMAL,325,450,SCRIPT_ALIGN_CENTER,1.0); // Screwface
-	CreateString(false,"Shipyard","",FONT_NORMAL,COLOR_NORMAL,320,462,SCRIPT_ALIGN_CENTER,1.0); // Screwface
+	CreateString(false,"CantBerthShip","",FONT_NORMAL,COLOR_NORMAL,325,474,SCRIPT_ALIGN_CENTER,1.0); // Screwface
+	CreateString(false,"Shipyard","",FONT_NORMAL,COLOR_NORMAL,320,470,SCRIPT_ALIGN_CENTER,1.0); // Screwface
 
 	CreateString(false,"BSD_ShipNameAndType","",FONT_NORMAL,COLOR_NORMAL,150,68,SCRIPT_ALIGN_LEFT,1.0);
 	CreateString(false,"BSD_ShipStatus","",FONT_NORMAL,COLOR_NORMAL,150,98,SCRIPT_ALIGN_LEFT,1.0);

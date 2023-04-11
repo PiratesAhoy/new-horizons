@@ -2172,7 +2172,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_AppearOnIslaMuelleonAnacletoShip":
-			CloseQuestHeader("Where_are_i"); // GR: Catch-all as questbook is not closed by some story sequences
+			CloseQuestHeader("Where_are_i");				// GR: Catch-all as questbook is not closed by some story sequences
+			ChangeCharacterAddress(CharacterFromID("peasant"), "None", "");	// GR: remove character who met you on "Douwesen_shore_01" after storm
 			iPassenger = makeint(Pchar.Temp.Officer.idx1);
 
 			PlaceCharacter(&Characters[iPassenger], "officers");
@@ -6097,10 +6098,6 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("researcher"));
 			LAi_ActorDialog(characterFromID("researcher"), pchar, "", 5.0, 1.0);
 			bQuestDisableMapEnter = false;
-		break;
-
-		case "exit_from_douwesen_townhall_complete":
-			LAi_ActorDialog(characterFromID("Lisebet Schefold"), pchar, "", 5.0, 1.0);
 		break;
 
 		case "OnUse_Idol": //используем статую идольскую.

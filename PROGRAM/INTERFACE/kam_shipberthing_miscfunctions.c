@@ -71,6 +71,7 @@ void FillScroll()
 
 	int i = 0;
 	int n = 0;
+	int iIsland;
 	string pic = "";
 	while (i < ISLANDS_QUANTITY) {
 		string island = Islands[i].id;
@@ -88,7 +89,14 @@ void FillScroll()
 			pic = "pic" + n;
 			GameInterface.islandslist.(pic).img1 = island;
 			GameInterface.islandslist.(pic).tex1 = 0;
-			GameInterface.islandslist.(pic).str1 = FindIslandName(island);
+		//	GameInterface.islandslist.(pic).str1 = FindIslandName(island);	// GR: 'FindIslandName' translates the name, but it is translated again elsewhere
+			iIsland = FindIsland(island);
+			if (iIsland >= 0) GameInterface.islandslist.(pic).str1 = Islands[iIsland].name;
+			else
+			{
+				GameInterface.islandslist.(pic).str1 = "";
+				trace("kam_shipberthing_miscfunctions.c, FillScroll(): '" + island + "' not found");
+			}
 		}
 		i++;
 	}

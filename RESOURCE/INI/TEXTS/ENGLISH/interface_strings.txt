@@ -401,7 +401,7 @@ There is a moderate breeze{There is a moderate breeze}
 There is a fresh breeze{There is a fresh breeze}
 There is a strong breeze{There is a strong breeze}
 There is a near gale{There is a near gale}
-from the{from the}
+wind_from_the{from the}
 Wind is from the{Wind is from the}
 wind_at{at}
 kts{kts}
@@ -719,6 +719,7 @@ Store{Store}
 Jungle{Jungle}
 House{House}
 Tailor's Shop{Tailor's Shop}
+Changing room{Changing room}
 Mansion{Mansion}
 SeaPort{Port}
 SeaFort{Fort}

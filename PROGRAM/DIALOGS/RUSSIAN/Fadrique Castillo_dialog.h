@@ -45,7 +45,7 @@ string DLG_TEXT[49] = {
 "Я так и сделаю, не сомневайся.",
 "Нет, сейчас никого нет. Может быть, тебе повезет в другой день.",
 "Ладно, на нет и суда нет.",
-"Has an English convoy been in port the last week or so?",
-"Yes. That was quite a night! A lot of the crew came in here. Most of them stayed but a group of the officers decided to do the whole tour - both taverns and the hotel.",
-"Thanks. I'll see if anyone at the other tavern or the hotel remembers them.",
+"Был ли здесь в порту английский конвой на прошлой неделе или около того?",
+"Да. Это была настоящая ночь! Многие из команды пришли сюда. Большинство из них остались, но группа офицеров решила совершить весь тур - и по тавернам, и по отелю.",
+"Спасибо. Я посмотрю, помнит ли их кто-нибудь в другой таверне или отеле..",
 };

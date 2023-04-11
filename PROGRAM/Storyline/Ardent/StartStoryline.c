@@ -63,18 +63,19 @@ void StartStoryLine()
 	Locations[FindLocation("IslaMona_port")].reload.l4.disable = 1;				// Head Port house locked	
 	Locations[FindLocation("IslaMona_port")].reload.l6.disable = 1;				// Warehouse locked
 	Locations[FindLocation("IslaMona_passage")].reload.l4.disable = 0;			// Fort opened
-	locations[FindLocation("IslaMona_fort")].id.label = "Abandoned fort";			// Rename fort
+	Locations[FindLocation("IslaMona_fort")].id.label = "Abandoned fort";			// Rename fort
+	Locations[FindLocation("Fort_Entry")].id.label = "To Fort";
 	Locations[FindLocation("Cuba_Jungle_03")].reload.l1.label = "Slave Camp";		// Rename Cuba Smugglers Fort to Slave Camp
 	Locations[FindLocation("Cuba_Jungle_03")].reload.l5.label = "Slave Camp";
-	locations[FindLocation("Smugglers_Fort")].id.label = "Slave Camp";
-	locations[FindLocation("Smugglers_Fort")].image = "Slave_Camp";
+	Locations[FindLocation("Smugglers_Fort")].id.label = "Slave Camp";
+	Locations[FindLocation("Smugglers_Fort")].image = "Slave_Camp";
 	Locations[FindLocation("PoPrince_town")].reload.l40.name = "reload20";
 	Locations[FindLocation("PoPrince_town")].reload.l40.go = "PoPrince_archive";
 	Locations[FindLocation("PoPrince_town")].reload.l40.emerge = "Reload1";
 	Locations[FindLocation("PoPrince_town")].reload.l40.autoreload = "0";
 	Locations[FindLocation("PoPrince_town")].reload.l40.label = "???";
 	Locations[FindLocation("PoPrince_town")].reload.l40.disable = 1;
-	locations[FindLocation("PoPrince_archive")].id.label = "???";
+	Locations[FindLocation("PoPrince_archive")].id.label = "???";
 
 	ref lcn = &Locations[FindLocation("IslaMona_fort")];					// Remove big cannons
 	for(int i = 1; i<=MAXBUILDINGS; i++)

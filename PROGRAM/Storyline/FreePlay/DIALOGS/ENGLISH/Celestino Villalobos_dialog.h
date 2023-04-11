@@ -1,4 +1,4 @@
-string DLG_TEXT[15] = {
+string DLG_TEXT[23] = {
 "So there you are, ",
 "! I almost thought you wouldn't have the courage to show up!",
 "Well, as you can see, I am here. So no worries there!",
@@ -14,4 +14,14 @@ string DLG_TEXT[15] = {
 "! En Garde!",
 "En Garde!",
 "my friend",
+"mon ami",
+"amigo mio",
+"meu amigo",
+"mijn vriend",
+"my friend",
+"min vän",
+"Hija de puta",
+"Hijo de puta",
 };
+// First version of "my friend" is for Personal and Pirate character and should be the player's language
+// Second version of "my friend" is for English character and should not be translated

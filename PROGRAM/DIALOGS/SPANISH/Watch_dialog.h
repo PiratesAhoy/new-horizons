@@ -1,4 +1,4 @@
-string DLG_TEXT[17] = {
+string DLG_TEXT[35] = {
 ".....",
 ".....",
 "¡Oye, no te conozco! ¡Deponed las armas, perros canallas!",
@@ -16,4 +16,22 @@ string DLG_TEXT[17] = {
 "Al ataque",
 "Hola, señor",
 "capitán",
+"A l'attaque",
+"Bonjour, Monsieur",
+"Capitaine",
+"Al ataque",
+"Hola, Senor",
+"Capitán",
+"Al ataque",
+"Hola, Senhor",
+"CapitÝo",
+"Aanvallen",
+"Hallo, Mijnheer",
+"Kapitein",
+"Angrip",
+"Hallå, min herre",
+"Kapten",
+"Attack",
+"Hello, mister",
+"Captain",
 };

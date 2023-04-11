@@ -388,6 +388,17 @@ void ProcessDialogEvent()
 			if (CheckQuestAttribute("hunt_romance_on_ship", "true")) dialog.text = DLG_TEXT[95] + DLG_TEXT[96] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[97];
 			else dialog.text = DLG_TEXT[95];
 			link.l1 = DLG_TEXT[98] + villain_title_England + " " + GetMyLastName(characterFromID(PChar.quest.villain)) + ".";
+			if (CheckAttribute(PChar, "quest.hunt_french_released")) link.l1.go = "hunt_french_release";
+			else
+			{
+				AddDialogExitQuest("hunt_villain_leaves_hold");
+				link.l1.go = "exit";
+			}
+		break;
+
+		case "hunt_french_release":
+			dialog.text = DLG_TEXT[135];
+			link.l1 = DLG_TEXT[136];
 			AddDialogExitQuest("hunt_villain_leaves_hold");
 			link.l1.go = "exit";
 		break;

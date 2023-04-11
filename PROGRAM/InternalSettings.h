@@ -29,14 +29,14 @@ Please follow these rules when editing settings:
 #define CANNOT_RELOAD_WHILE_FIGHTING		1		// INT - 1=DEFAULT: Controlled by Realism Mode - 0 or 2 override the Realism Mode setting
 #define SAIL_OPERATE_DELAY			3		// INT - sailors will operate sails this amount of seconds after receiving command (set to 0 to restore stock PotC)
 // Included in Iron Man Mode:
-#define OPEN_SEA_MOD					0		// BOOL - 1=ON - Worldmap enlarged for realistic DirectSail
-#define WORLDMAP_DISABLED				0		// BOOL - 1=ON - DirectSail enforced
-#define SAILTO_DISABLED					0		// BOOL - 1=ON - Cannot Sail-To any ships at sea
-#define ONSEA_DATA_DISABLED				0		// BOOL - 1=ON - Spyglass and compass additional information disabled, cannot move camera to non-player ships
-#define REALISTIC_ABILITIES				1		// INT  - 1=DEFAULT: Controlled by Realism Mode - 0 or 2 override the Realism Mode setting
-#define ITEM_REALISM					0		// BOOL - 1=ON - Items like rubies, diamonds and inca statuettes give no skill bonuses (books and items like compass etc. still do)
-#define CLINT_SHOTGUN					1		// BOOL - 0=OFF - Clint Eastwood carries brace of four horse pistols in Arcade Mode; 1=ON - Clint Eastwood carries shotgun in Arcade Mode.  In any other mode he always has brace of four horse pistols.
-#define CURSES_DISABLED					0		// INT - 0=default: Cursed items can be dumped or given away. 1 = cursed coins, 2 = cursed albatross, 0 = neither, 3 = both
+#define OPEN_SEA_MOD				0		// BOOL - 1=ON - Worldmap enlarged for realistic DirectSail
+#define WORLDMAP_DISABLED			0		// BOOL - 1=ON - DirectSail enforced
+#define SAILTO_DISABLED				0		// BOOL - 1=ON - Cannot Sail-To any ships at sea
+#define ONSEA_DATA_DISABLED			0		// BOOL - 1=ON - Spyglass and compass additional information disabled, cannot move camera to non-player ships
+#define REALISTIC_ABILITIES			1		// INT  - 1=DEFAULT: Controlled by Realism Mode - 0 or 2 override the Realism Mode setting
+#define ITEM_REALISM				0		// BOOL - 1=ON - Items like rubies, diamonds and inca statuettes give no skill bonuses (books and items like compass etc. still do)
+#define CLINT_SHOTGUN				1		// BOOL - 0=OFF - Clint Eastwood carries brace of four horse pistols in Arcade Mode; 1=ON - Clint Eastwood carries shotgun in Arcade Mode.  In any other mode he always has brace of four horse pistols.
+#define CURSES_DISABLED				0		// INT - 0=default: Cursed items can be dumped or given away. 1 = cursed coins, 2 = cursed albatross, 0 = neither, 3 = both
 
 
 // ======================================
@@ -837,12 +837,13 @@ Set all to -1 to disable this mod
 // INTERFACE MODS:
 // ======================================
 
-#define GOLD_PER_CLICK      			1000	// INT - Amount of gold that is transferred by one click
-#define ALLOWBERTHING_ONLYAT			""		// STRING - Set to "shipyard" to allow ship berthing only at a shipyard.
+#define GOLD_PER_CLICK      				1000		// INT - Amount of gold that is transferred by one click
+#define ALLOWBERTHING_ONLYAT				""		// STRING - Set to "shipyard" to allow ship berthing only at a shipyard.
 #define ENABLE_VIDEOS 					1 		// BOOL - Enable/Disable videos in the game.
-#define ENABLE_EXTRA_SOUNDS 			1 		// BOOL - Enable/Disable added sound effects.
-#define ENABLE_PLAYING_MAINTHEME		1		// BOOL - Enable/Disable mod that randomly makes storyline main theme music playing instead of current one, depending on your progress in the quest.
-#define ENABLE_WEAKER_PISTOL_SOUNDS 	0		// BOOL - Enable/Disable   0 = old loud sounds
+#define ENABLE_EXTRA_SOUNDS 				1 		// BOOL - Enable/Disable added sound effects.
+#define ENABLE_PLAYING_MAINTHEME			1		// BOOL - Enable/Disable mod that randomly makes storyline main theme music playing instead of current one, depending on your progress in the quest.
+#define ENABLE_WEAKER_PISTOL_SOUNDS			0		// BOOL - Enable/Disable   0 = old loud sounds
+#define DIALOGCOLOUR					2		// GR: if bNewInterface is false, DIALOGCOLOUR = 1 for bright blue dialog background, 2 for original blue and green (default = 2)
 
 // ======================================
 // LOG NOTIFICATIONS:

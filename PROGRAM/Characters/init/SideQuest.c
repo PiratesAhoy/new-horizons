@@ -3107,7 +3107,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.Ship.Type = "PiratBrig50"; // Petros: was Brig1
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS12;
-	LAi_SetSitType(ch);
+	LAi_SetStayType(ch);		// GR: was LAi_SetSitType(ch)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);

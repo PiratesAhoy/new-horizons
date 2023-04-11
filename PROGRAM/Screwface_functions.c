@@ -291,7 +291,10 @@ bool CheckAllShips(string type, bool initialize)
 
 int GetFortRelationToPirates(ref chr)
 {
-	if (CheckAttribute(chr, "relation_to_pirates"))
+	int iNation = UNKNOWN_NATION;
+	if (CheckAttribute(chr, "nation")) iNation = sti(chr.nation);
+
+	if (iNation != PERSONAL_NATION && CheckAttribute(chr, "relation_to_pirates"))
 	{
 		return sti(chr.relation_to_pirates);
 	}
@@ -301,8 +304,9 @@ int GetFortRelationToPirates(ref chr)
 		string town;
 		ref rPeriod;
 
-		if (CheckAttribute(chr, "town"))	town = chr.town;			// For fort commanders
-		else								town = GetCurrentTownID();	// For characters in town
+		if (iNation == PERSONAL_NATION)		iRelation = GetNationRelation2MainCharacter(PIRATE);	// GR: Personal fort commanders follow player's relation to pirates
+		if (CheckAttribute(chr, "town"))	town = chr.town;					// For fort commanders
+		else					town = GetCurrentTownID();				// For characters in town
 		if (town != "")
 		{
 			iRelation = GetNationRelation(GetTownNation(town), PIRATE);
@@ -322,9 +326,9 @@ bool CheckForPirateException(ref chr)
 	if (IsFort)
 	{
 		PirateException = true;
-		if(GetCurrentFlag() != PIRATE)									PirateException = false;
+		if(GetCurrentFlag() != PIRATE)					PirateException = false;
 		if(GetNationRelation2MainCharacter(PIRATE) == RELATION_ENEMY)	PirateException = false;
-		if(GetFortRelationToPirates(chr) == RELATION_ENEMY)				PirateException = false;
+		if(GetFortRelationToPirates(chr) == RELATION_ENEMY)		PirateException = false;
 	}
 	return PirateException;
 }

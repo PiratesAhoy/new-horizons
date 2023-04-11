@@ -1,5 +1,5 @@
 //Sailor Al, NK
-//random strings for conversation
+//случайные строки для разговора
 
 void InitConversationRus()
 {

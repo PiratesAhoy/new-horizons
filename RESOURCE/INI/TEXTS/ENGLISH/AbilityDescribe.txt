@@ -60,7 +60,7 @@ The character's melee attacks cause more damage, but it is harder to block. The 
 Gunman	{Gunman}
 perkGunman
 {
-The character handles a pistol better - reloading is 10% faster, accuracy is increased by 5% and chance of scoring a critical hit is increased with 5%. The character can use dual-barrel pistol and all brace pistol sets.
+The character handles a pistol better - reloading is 10% faster, accuracy is increased by 5% and chance of scoring a critical hit is increased by 5%. The character can use dual-barrel pistol and all brace pistol sets.
 }
 
 ImproveAiming	{Expert Marksman}
@@ -76,11 +76,11 @@ Complete a fetchquest for a gunsmith | The character is an expert marksman which
 GunProfessional	{Professional Gunman}
 perkGunProfessional
 {
-The character is a pistol professional - reloading is 50% faster and accuracy is increased by an addition 10% and chance of scoring a critical hit is increased with 10%. The character can use quad-barrel pistol.
+The character is a pistol professional - reloading is 50% faster, accuracy is increased by an additional 10% and chance of scoring a critical hit is increased by 10%. The character can use a quad-barrel pistol.
 }
 perkGunProfessionalLocked
 {
-Find a book to unlock | The character is a pistol professional - reloading is 50% faster and accuracy is increased by 25% and chance of scoring a critical hit is increased to 15%. The character can use quad-barrel pistol.
+Find a book to unlock | The character is a pistol professional - reloading is 50% faster, accuracy is increased by an additional 10% and chance of scoring a critical hit is increased by 10%. The character can use a quad-barrel pistol.
 }
 
 GunFighter	{Master Gunfighter}

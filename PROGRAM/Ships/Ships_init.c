@@ -25812,7 +25812,7 @@ void InitShips()
 	n++;
 	refShip.Name					= "FR_Trinity";
 	refShip.All					= "HMS_Endeavour";
-	refShip.SName				= "Trinity";
+	refShip.SName					= "Trinity";
 	refShip.id					= refShip.Name;
 	refShip.Class					= 2;
 	refShip.Walk					= "";
@@ -25899,7 +25899,7 @@ void InitShips()
 	n++;
 	refShip.Name					= "PO_Trinity";
 	refShip.All					= "HMS_Endeavour";
-	refShip.SName				= "RN_SotL";
+	refShip.SName					= "Trinity";
 	refShip.id					= refShip.Name;
 	refShip.Class					= 2;
 	refShip.Walk					= "";
@@ -25976,7 +25976,7 @@ void InitShips()
 	n++;
 	refShip.Name					= "SP_Trinity";
 	refShip.All					= "HMS_Endeavour";
-	refShip.SName				= "RN_SotL";
+	refShip.SName					= "Trinity";
 	refShip.id					= refShip.Name;
 	refShip.Class					= 2;
 	refShip.Walk					= "";

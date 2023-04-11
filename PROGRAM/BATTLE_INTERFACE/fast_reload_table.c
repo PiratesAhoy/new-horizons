@@ -1089,6 +1089,11 @@ void initFastReloadTable()
 	curTable.l4.tex = FRT_RESIDENCE;
 	curTable.l4.note = FRN_RESIDENCE;
 	curTable.l4.location = "Santiago_townhall";
+	// tailor's shop
+	curTable.l5.pic = FRP_TAILORSHOP;
+	curTable.l5.tex = FRT_TAILORSHOP;
+	curTable.l5.note = FRN_TAILORSHOP;
+	curTable.l5.location = "Santiago_TailorsShop";
 
 	makearef(curTable,objFastReloadTable.table.Charlestown);
 	// store

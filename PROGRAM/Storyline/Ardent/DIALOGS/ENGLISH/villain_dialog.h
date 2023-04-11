@@ -1,4 +1,4 @@
-string DLG_TEXT[135] = {
+string DLG_TEXT[137] = {
 "Yes? Have you business here, ",
 "No, I must have walked through the wrong door. I'll see myself out.",
 "Get out! You have already disgraced yourself here. Leave, or do I need to have you thrown out?",
@@ -134,4 +134,6 @@ string DLG_TEXT[135] = {
 "You heard the priest. Shall we continue this outside?",
 "No! This is another of your tricks, ",
 "! If we are to fight, it will be here! Now!",
+"Incidentally, you had some French prisoners. I've released them, of course.",
+"At least I won't have to share my hold with them.",
 }

@@ -9,7 +9,6 @@ string DLG_TEXT[12] = {
 "I'll control this town.",
 "I changed my mind...",
 "Then this town will belong to the ",
-"Do you really want to leave town for uncivilized pirates?",
+"Do you really want to leave this town to uncivilized pirates?",
 "Right.",
-
 };

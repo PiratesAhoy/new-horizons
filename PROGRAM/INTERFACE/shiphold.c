@@ -24,7 +24,7 @@ void InitInterface(string iniName)
 
 	refCharacter = GetMainCharacter();
 	CreateString(true,"Money",MakeMoneyShow(sti(refCharacter.Money),MONEY_SIGN,MONEY_DELIVER),FONT_NORMAL,COLOR_MONEY,320,393,SCRIPT_ALIGN_CENTER,1.0);
-	CreateString(true,"ShipName","",FONT_SEADOGS,COLOR_NORMAL,320,201,SCRIPT_ALIGN_CENTER,1.0);
+	CreateString(true,"ShipName","",FONT_SEADOGS,COLOR_NORMAL,320,198,SCRIPT_ALIGN_CENTER,1.0);
 	CreateString(true,"Weight","",FONT_NORMAL,COLOR_NORMAL,304,240,SCRIPT_ALIGN_LEFT,1.0);
 	CreateString(true,"FreeSpace","",FONT_NORMAL,COLOR_NORMAL,304,274,SCRIPT_ALIGN_LEFT,1.0);
 	CreateString(false,"Discarding","",FONT_NORMAL,COLOR_NORMAL,320,314,SCRIPT_ALIGN_CENTER,1.0);

@@ -51,6 +51,8 @@ void ProcessDialogEvent()
 	int price = makeint(sqrt(sti(pchar.rank)))*250;
 	string sNation = "";
 
+	bool bPatrolQuestionSet;
+
 	bool bHostileDetected = false;
 
 	switch(Dialog.CurrentNode)
@@ -207,11 +209,13 @@ void ProcessDialogEvent()
 			Preprocessor_Add("npcsir",FirstLetterUp(GetCharacterAddressForm(NPChar,ADDR_POLITE,false,false)));
 			
 			Dialog.Text = DLG_TEXT[4];
+			bPatrolQuestionSet = false;
 			if(!CheckAttribute(Pchar,"quest.Contraband.Talked"))
 			{
 				Link.l1 = PersuadeDialog;
 				if(PersuadeInt == 0)	Link.l1.go = "seasidepicknick";
 				else Link.l1.go = "persuadeguard"+PersuadeInt;
+				bPatrolQuestionSet = true;
 			}
 			if(!CheckAttribute(Pchar,"quest.Contraband.Cardwon"))
 			{
@@ -219,7 +223,14 @@ void ProcessDialogEvent()
 				{
 					Link.l3 = DLG_TEXT[28];
 					Link.l3.go = "playgame";
+					bPatrolQuestionSet = true;
 				}
+			}
+
+			if (!bPatrolQuestionSet)
+			{
+				Link.l1 = DLG_TEXT[31];		// GR: Can get to case "PatrolQuestion" if *either* "Contraband.Talked" or "Contraband.Cardwon" is not set
+				Link.l1.go = "exit_smuggling";	// Exit if "Contraband.Talked" is set, "Contrband.Cardwon" is not set, and you don't have "HighStakes" perk
 			}
 			//if(ProfessionalNavyNation() == NPChar.nation){ //DeathDaisy: TODO: if you happen to be in the navy, outrank the soldier and they are of your nation, order them to give you the time
 		break;

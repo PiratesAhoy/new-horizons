@@ -1097,7 +1097,11 @@ void ProcessDialogEvent()
 				if(colony1 == "nowhere") colony1 = "";
 				if(colony2 == "nowhere") aboutColony = "..";
 				if (colony1 != "")
-					dialog.text = DLG_TEXT[204] + good1 + DLG_TEXT[158] + good2 + DLG_TEXT[205] + colony1 + DLG_TEXT[206] + good1 + DLG_TEXT[207] + aboutColony + ".";
+				{
+					Preprocessor_Add("good1", good1);
+					dialog.text = DLG_TEXT[204] + good1 + DLG_TEXT[158] + good2 + DLG_TEXT[205] + colony1 + DLG_TEXT[206];
+					if (colony2 != "nowhere") dialog.text = dialog.text + DLG_TEXT[207] + aboutColony + ".";
+				}
 				else
 					dialog.text = DLG_TEXT[208];
 					link.l1 = DLG_TEXT[195];

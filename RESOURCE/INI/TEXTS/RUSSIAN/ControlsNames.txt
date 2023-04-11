@@ -1,12 +1,12 @@
-HelpChooser {Выбор помощи}
-MainInterface {Основной интерфейс}
+HelpChooser {Выбор Помощи}
+MainInterface {Основной Интерфейс}
 DialogControls {Диалог}
 WorldMapControls {Карта Мира}
-BattleInterfaceControls {Управление в бою}
-Sailing1Pers {Море от 1го лица}
-Sailing3Pers {Море от 3го лица}
-FightModeControls {Режим боя}
-PrimaryLand {Управление на земле}
+BattleInterfaceControls {Управление в Бою}
+Sailing1Pers {Море от 1-го Лица}
+Sailing3Pers {Море от 3-го Лица}
+FightModeControls {Режим Боя}
+PrimaryLand {Управление на Земле}
 
 
 
@@ -22,7 +22,7 @@ ChrCamTurnH
 }
 ChrCamCameraSwitch
 {
-Переключение камеры "за персонажем"\"вид из глаз"
+Переключение камеры "за персонажем"/"вид из глаз"
 
 }
 ChrCamNormalize
@@ -36,7 +36,6 @@ Sulan_ArchipelagoMap
 Посмотреть карту архипелага (если есть)
 
 }
-
 
 ShipCamera_Turn_V
 {
@@ -174,7 +173,7 @@ ChrRecoil
 }
 ChrFightMode
 {
-Включение\выключение боевого режима
+Включение/выключение боевого режима
 
 }
 ChrFire
@@ -210,7 +209,7 @@ Ship_SailDown
 }
 Ship_Fire
 {
-Стрельба из пушек на корабле
+Стрельба из орудий на корабле
 
 }
 Aimed_Ship_Fire
@@ -220,12 +219,12 @@ Aimed_Ship_Fire
 }
 Sea_CameraSwitch
 {
-Переключение морской камеры "за кораблем"\"на палубе"
+Переключение морской камеры "за кораблем"/"на палубе"
 
 }
 TelescopeIn
 {
-Включить\выключить подзорную трубу
+Включить/выключить подзорную трубу
 
 }
 
@@ -245,7 +244,7 @@ WMapTurnV
 }
 WMapCameraRotate
 {
-Включение режима скольжения\вращения камеры
+Включение режима скольжения/вращения камеры
 
 }
 WMapForward
@@ -494,7 +493,7 @@ SCHEFFNOW_RUSH
 
 BOAL_Control
 {
-Ускорение времени 1x-3x
+Ускорение времени 1x-3x, 10x-30x
 
 }
 
@@ -506,7 +505,7 @@ BOAL_Control2
 
 BOAL_Control0
 {
-Ускорение времени 10x-30x
+Замедление времени 30x-10x, 3x-1x
 
 }
 
