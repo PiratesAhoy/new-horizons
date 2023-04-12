@@ -1,6 +1,8 @@
-Documentation/
-MODULES/
-SAVE/
+.idea/
+
+/MODULES/
+/SAVE/
+/Blender/
 
 /options
 
@@ -9,3 +11,7 @@ SAVE/
 *.xls
 *.7z
 *.zip
+*.tx
+*.psd
+
+*.afphoto
