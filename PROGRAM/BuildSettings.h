@@ -75,6 +75,11 @@ bool RELATION_IGNORE_FRIENDLY = 1;
 	// 0: Forts and ships will remember you even if you are not hostile
 	// 1: Forts and ships will only remember you if you are hostile
 
+bool GENERATE_STORMS = 1;
+	// Determines whether storms will be generated
+	// 0: No storms
+	// 1: Storms
+
 
 // ======================================
 // SAILING & SHIP BATTLES:

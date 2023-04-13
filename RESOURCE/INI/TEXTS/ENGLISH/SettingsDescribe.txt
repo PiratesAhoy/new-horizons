@@ -414,6 +414,15 @@ settinglock_open1
 {
 You need some skill to pick a chest's lock. And some may be booby-trapped! Above 33 you won't hurt yourself anymore, above 66 chests are always open.
 }
+GENERATE_STORMS{Storms}
+settinggenerate_storms1
+{
+Storms will not be generated on the worldmap
+}
+settinggenerate_storms2
+{
+Storms will be generated on the worldmap (stock PotC)
+}
 loc_camera{Door Camera}
 settingloc_camera1
 {

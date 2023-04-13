@@ -405,6 +405,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 				Settings.BuildSettings.SALARY_MULTIPLIER = SALARY_MULTIPLIER;
 				Settings.BuildSettings.NO_THEFT = NO_THEFT;
 				Settings.BuildSettings.LOCK_OPEN = LOCK_OPEN;
+				Settings.BuildSettings.GENERATE_STORMS = GENERATE_STORMS;
 
 
 		/////////////////////////////////////////////////////////////////////
@@ -478,6 +479,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 				SALARY_MULTIPLIER = Settings.BuildSettings.SALARY_MULTIPLIER;
 				NO_THEFT = Settings.BuildSettings.NO_THEFT;
 				LOCK_OPEN = Settings.BuildSettings.LOCK_OPEN;
+				GENERATE_STORMS = Settings.BuildSettings.GENERATE_STORMS;
 
 
 		/////////////////////////////////////////////////////////////////////

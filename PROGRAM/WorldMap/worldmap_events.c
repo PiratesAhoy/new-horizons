@@ -34,8 +34,12 @@ void wdmEvent_EncounterCreate()
 	{
 		if(worldMap.noenc == "true") return;
 	}
+
 	//Generate encounters
-	wdmStormGen(dltTime, playerShipX, playerShipZ, playerShipAY);
+	if (GENERATE_STORMS) {
+		wdmStormGen(dltTime, playerShipX, playerShipZ, playerShipAY);
+	}
+
 	wdmShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
 	wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
 }
