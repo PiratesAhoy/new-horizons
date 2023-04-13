@@ -63,6 +63,13 @@ void LAi_ChrSnd_Dead()
 #event_handler("Event_ChrSnd_Attack", "LAi_ChrSnd_Attack");
 void LAi_ChrSnd_Attack()
 {
+	// Skip event most of the time to reduce sound spam
+	// Original PotC code did this check in-engine:
+	// if(!(rand() & 15))
+	if (rand(15) != 0) {
+		return;
+	}
+
 	aref chr = GetEventData();
 	if(CheckAttribute(chr, "sex"))
 	{
