@@ -44,7 +44,7 @@ string DLG_TEXT[313] = {
 "Capto la idea; ponlos tú y sigamos con cosas más importantes.",
 "Parece que aún no has llenado el armero.",
 "Espera un minuto...",
-"No hay problema. Presta atención, por favor. En la esquina inferior izquierda podrás ver el icono de tu personaje. La barra roja que hay encima del icono es tu salud. La barra azul representa el estado de carga de tu pistola. Y los círculos encima de las barras muestran cuántos disparos tienes cargados en tu pistola.",
+"No problem. Pay attention, please. In the bottom left corner you'll see your character icon. The red bar on the left is your health. The circles above the character icon show how many shots you have left in your pistol.",
 "Entendido.",
 "Bien. Necesitaremos más espacio para nuestros ejercicios. Sígueme; cuando te acerques a la puerta verás el icono correspondiente en la esquina superior izquierda de la pantalla. Pulsa la tecla 'Acción' para ir a la siguiente ubicación.",
 "Adelante.",

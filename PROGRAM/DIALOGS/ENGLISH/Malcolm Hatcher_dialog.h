@@ -44,7 +44,7 @@ string DLG_TEXT[340] = {
 "I get the idea; you put them in there and let's get on with more important things.",
 "It seems that you haven't equipped the weapons-locker yet, Captain.",
 "Wait a minute...",
-"No problem, Cap'n. Pay attention, please. In the bottom left corner you'll see your character icon. The red bar above it is your health. The blue bar represents the loading status of your gun. And the circle above those bars shows how many shots you have left in your pistol.",
+"No problem, Cap'n. Pay attention, please. In the bottom left corner you'll see your character icon. The red bar on the left is your health. The circles above the character icon show how many shots you have left in your pistol.",
 "I understand.",
 "Good. We need some space for our exercises. Follow me; when you approach the door you'll see the 'Open Lock' icon in top left corner of the screen. Press the 'Action' key to go to the next location.",
 "Lead on.",
