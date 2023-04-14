@@ -432,12 +432,11 @@ ref LAi_CreateFantomCharacterExOt(bool isfriend, string officertype, int rank, b
 	return LAi_CreateFantomCharacterExOtAt(isfriend, officertype, "", "", "", rank, hasblade, hasgun, model, group, locator);
 }
 
-//Создать фантомного персонажа
-ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string attr1, string attr2, string attr3, int rank     , bool hasblade, 
-								  float hasgun , string model, string group      , string locator)
+ref FindFreePhantomCharacterSlot()
 {
-	//Ищем свободное место для персонажа
-	for(int i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
+	int i;
+	// We are looking for a free place for the character
+	for(i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
 	{
 		if(CheckAttribute(&Characters[LOC_FANTOM_CHARACTERS + i], "id") == false) break;
 		if(Characters[LOC_FANTOM_CHARACTERS + i].id == "") break;
@@ -450,10 +449,18 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 		}
 		if(i >= MAX_LOGINED_CHARACTERS_IN_LOCATION) i = 0;
 	}
-	ref chr; makeref(chr, Characters[LOC_FANTOM_CHARACTERS + i]); // KK
-	//Заполняем поля персонажа
+	ref chr; makeref(chr, Characters[LOC_FANTOM_CHARACTERS + i]);
 	chr.id = "Location fantom character <" + i + ">";
 	chr.index = LOC_FANTOM_CHARACTERS + i;
+	return chr;
+}
+
+// Create a phantom character
+ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string attr1, string attr2, string attr3, int rank     , bool hasblade, 
+								  float hasgun , string model, string group      , string locator)
+{
+	ref chr = FindFreePhantomCharacterSlot();
+	// Filling in character fields
 	//address
 	if (!IsEntity(loadedLocation))
 		chr.location = "none";
@@ -505,8 +512,8 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 	if(attr2 != "") chr.(attr2) = true;
 	if(attr3 != "") chr.(attr3) = true;
 
-	//nation - moved up here for consistency 
-	int nat = GetLocationNation(loadedLocation);	
+	//nation - moved up here for consistency
+	int nat = GetLocationNation(loadedLocation);
 	if(nat >= 0)
 	{
 		chr.nation = nat;
@@ -515,8 +522,8 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 	}
 	//name
 	SetRandomNameToCharacter(chr);
-  
-	// Sulan: No naval soldiers with shovels and pickaxes -->	
+
+	// Sulan: No naval soldiers with shovels and pickaxes -->
 //	if((iFCoHS_BoardingNation != PIRATE) && bFCoHS_FriendlyBoardingStarted)
 //	{
 //		chr.isSoldier = true;

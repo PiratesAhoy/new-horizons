@@ -1721,8 +1721,7 @@ void CreateCoastGuardPatrol()
 	String IDXname;
 	if(rand(100)<=largegroup_chance) numguards = 2;
 	//Generate the Captain
-	//sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.75, GetRandomModelForTypeNation(true, "Land_Officers", GetSmugglingNation()), group, locator);
-	sld = LAi_CreateFantomCharacterExOt(false, 0, true, OFFIC_TYPE_GUARD, GetRandomRank(true, OFFIC_TYPE_GUARD, (4-GetDifficulty())), true, 0.75, GetRandomModelForTypeNation(true, "Land_Officers", GetSmugglingNation()), group, locator);
+	sld = LAi_CreateFantomCharacterExOt(false, OFFIC_TYPE_GUARD, GetRandomRank(true, OFFIC_TYPE_GUARD, (4-GetDifficulty())), true, 0.75, GetRandomModelForTypeNation(true, "Land_Officers", GetSmugglingNation()), group, locator);
 	sld.Dialog.Filename = "Coastal Guards_dialog.c";
 	sld.Dialog.CurrentNode = "First time";
 	Pchar.quest.contraband.SoldierIDX1 = sld.index;
@@ -1733,7 +1732,6 @@ void CreateCoastGuardPatrol()
 	for (int i = 2; i <= numguards; i++)
 	{
 		IDXname = "SoldierIDX"+i;
-		//sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.75, GetRandomModelForTypeNation(true, "Soldiers", GetSmugglingNation()), group, locator);
 		sld = LAi_CreateFantomCharacterExOt(false, OFFIC_TYPE_GUARD, GetRandomRank(true, OFFIC_TYPE_GUARD, (4-GetDifficulty())), true, 0.75, GetRandomModelForTypeNation(true, "Soldiers", GetSmugglingNation()), group, locator);
 		Pchar.quest.contraband.(IDXname) = sld.index;
 		LAi_SetActorType(sld);
