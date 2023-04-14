@@ -132,30 +132,47 @@ void wdmReloadToSea()
 		if (CheckAttribute(&questToSeaLoginer, "Storm") == true && sti(questToSeaLoginer.Storm) == true) {
 			wdmLoginToSea.storm = true;
 			if (CheckAttribute(&questToSeaLoginer, "Tornado") == true && sti(questToSeaLoginer.Tornado) == true) {
-				imageName = "Twister";
-				wdmLoginToSea.tornado = 1;
+				WdmStormEncounter(&imageName, 2);
 			} else {
-				imageName = "Storm";
-				wdmLoginToSea.tornado = 0;
+				WdmStormEncounter(&imageName, 1);
 			}
 		}
 	} else {
 		//Trace("worldMap.encounter.type = " + worldMap.encounter.type);
-		if (isShipEncounterType) imageName = "Battle";
-		if (bShipMutiny) imageName = "ShipMutiny"; // KK
-		if (wdmLoginToSea.storm != "0") {
-			imageName = "Storm";
-			wdmLoginToSea.tornado = 0;
-			if(wdmTornadoGenerator()) {
-				imageName = "Twister";
-				wdmLoginToSea.tornado = 1;
-			}
-		}
+		WdmStormEncounter(&imageName, 0);
 	}
+
 	wdmLoginToSea.imageName = imageName;
 	SetReloadImage(&wdm_fader, imageName);
 // <-- KK
 	wdmDisableTornadoGen = true;
+}
+
+void WdmStormEncounter(ref imageName, int forced)
+{
+	wdmLoginToSea.storm = worldMap.playerInStorm;
+	if(forced != 0 || MakeInt(wdmLoginToSea.storm) != 0)
+	{
+		if (forced == 2 || MakeInt(worldMap.stormWhithTornado) != 0) {
+			imageName = "Twister";
+			wdmLoginToSea.tornado = 1;
+		}
+		else {
+			wdmLoginToSea.tornado = 0;
+			imageName = "Storm";
+		}
+	}
+
+	if(CheckAttribute(&worldMap, "stormId") != 0)
+	{
+		if(worldMap.stormId != "")
+		{
+			string encStringID = worldMap.stormId;
+			encStringID = "encounters." + encStringID;
+			worldMap.(encStringID).needDelete = "Reload delete storm";
+			Trace("Deleting storm encounter " + encStringID);
+		}
+	}
 }
 
 void WdmStartFade()

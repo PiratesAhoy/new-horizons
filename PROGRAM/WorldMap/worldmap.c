@@ -92,6 +92,7 @@ void wdmCreateMap(float dx, float dz, float ay)
 	wdmDisableRelease = true;
 	//Create world map engine object
 	ReloadProgressStart();
+	wdmRemoveOldEncounters();
 // KK -->
 	// if (bNewInterface)
 	// 	CreateEntity(&worldMap, "wrldmap2");
@@ -105,6 +106,7 @@ void wdmCreateMap(float dx, float dz, float ay)
 	//Update parameters
 	worldMap.update = "";
 	//Reset encounters data
+	worldMap.playerInStorm = "0";
 	wdmReset();
 	worldMap.playerShipUpdateDisp = "";
 	if (wdmNoClearEncountersTable == false) ReleaseMapEncounters();

@@ -29,14 +29,39 @@ float wdmTimeOfLastMerchant = 0.0;
 float wdmTimeOfLastWarring = 0.0;
 float wdmTimeOfLastFollow = 0.0;
 
-
-
 void wdmReset()
 {
 	wdmTimeOfLastStorm = 0.0;
 	wdmTimeOfLastMerchant = 0.0;
 	wdmTimeOfLastWarring = 0.0;
 	wdmTimeOfLastFollow = 0.0;
+}
+
+void wdmRemoveOldEncounters()
+{
+	//wdmMarkDeleteEncounters();
+	aref encs;
+	makearef(encs, worldMap.encounters);
+	int num = GetAttributesNum(encs);
+	object forDelete;
+	string attr, encID;
+	int count = 0;
+	for(int i = 0; i < num; i++)
+	{
+		aref enc = GetAttributeN(encs, i);
+		if(CheckAttribute(enc, "needDelete") != 0)
+		{
+			attr = "del" + count;
+			forDelete.(attr) = GetAttributeName(enc);
+			count = count + 1;
+		}
+	}
+	for(i = 0; i < count; i++)
+	{
+		attr = "del" + i;
+		encID = "encounters." + forDelete.(attr);
+		DeleteAttribute(&worldMap, encID);
+	}
 }
 
 //Storm
