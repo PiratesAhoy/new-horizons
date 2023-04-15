@@ -1309,7 +1309,7 @@ void SetMusic(string name)
 	//Trace("SetMusic : "+name);
 	if (oldMusicID)
 	{
-		SendMessage(Sound,"ll",MSG_SOUND_RELEASE, oldMusicID);
+		SendMessage(Sound,"lll",MSG_SOUND_STOP, oldMusicID, 0);
 	}
 
 	if (musicID)
@@ -1361,7 +1361,8 @@ void SetMusic(string name)
 
 //TraceAndLog("MUSIC: scheme = " + name + ", name = " + music_name + ", (" + musicnumber + " of " + num + ")");	// LDH 13Feb09
 	}
-
+// sl[llllfff]" file_name, type, simple_cache?, looped?, cached?, fade_in_time, start_x, start_y, start_y
+//                               lsllllllfff
 	musicID = SendMessage(Sound,"lslllllll",MSG_SOUND_PLAY, music_name, SOUND_MP3_STEREO, VOLUME_MUSIC, true, true, false, MUSIC_CHANGE_TIME, silenceTime*1000);
 	if (musicID == 0)	// LDH 24Mar09
 	{
