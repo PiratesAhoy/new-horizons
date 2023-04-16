@@ -1,15 +1,15 @@
-Potion parameters{Remedio médico}
+Potion parameters{Remedio mÃ©dico}
 health value{Salud}
-weapon blade parameters{Arma: daño mín./máx. #ddmg_min#/#ddmg_max#, penetrante #dpiercing#%, bloqueo #dblock#%.}
-weapon gun parameters{Arma: daño mín./máx. #ddmg_min#/#ddmg_max#, recarga #dchargespeed# s, precisión #daccuracy#%.}
-weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / Daño recibido si no hay parada, para: Espada #dbladestop#% / #dbladefrac#%, Arma de fuego #dgunstop#% / #dgunfrac#%.}
+weapon blade parameters{Arma: daÃ±o mÃ­n./mÃ¡x. #ddmg_min#/#ddmg_max#, penetrante #dpiercing#%, bloqueo #dblock#%.}
+weapon gun parameters{Arma: daÃ±o mÃ­n./mÃ¡x. #ddmg_min#/#ddmg_max#, recarga #dchargespeed# s, precisiÃ³n #daccuracy#%.}
+weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / DaÃ±o recibido si no hay parada, para: Espada #dbladestop#% / #dbladefrac#%, Arma de fuego #dgunstop#% / #dgunfrac#%.}
 
 you've_got {Has encontrado}
 
 itmname_gold	{Oro}
 itmdescr_gold
 {
-Oro. El deseo más profundo de un pirata.
+Oro. El deseo mÃ¡s profundo de un pirata.
 }
 
 itmname_love_letters_of_priest	{Cartas de amor del sacerdote}
@@ -18,10 +18,10 @@ itmdescr_love_letters_of_priest
 Cartas de amor del #sFatherJerald# a cierta muchacha.
 }
 
-itmname_animists_amulet	{Amuleto satánico}
+itmname_animists_amulet	{Amuleto satÃ¡nico}
 itmdescr_animists_amulet
 {
-Un siniestro amuleto satánico con forma de estrella de cinco puntas.
+Un siniestro amuleto satÃ¡nico con forma de estrella de cinco puntas.
 }
 
 itmname_letter_to_domingues	{Carta para el Padre Domingues}
@@ -39,32 +39,32 @@ Una carta del Padre Domingues para el #sFatherBernard#.
 itmname_prison_letter	{Carta del #sFatherBernard#}
 itmdescr_prison_letter
 {
-Una carta del #sFatherBernard# que te da permiso para liberar a un prisionero de #sGreenford# en la prisión de #sisland_Oxbay#.
+Una carta del #sFatherBernard# que te da permiso para liberar a un prisionero de #sGreenford# en la prisiÃ³n de #sisland_Oxbay#.
 }
 
 itmname_old_journal	{Viejo diario}
 itmdescr_old_journal
 {
-28 de noviembre de 1595 - Tras navegar rumbo sur durante cinco días, fondeamos en una amplia costa cerca de una bahía en una isla desierta y nos aprovisionamos de agua y comida.
-4 de diciembre de 1595 - He mandado a un marinero que entierre una cosa en a jungla; he tenido una racha de mala suerte desde que la adquirí y prefiero librarme de ella.
-(En la letra de otra persona) Internándose en al jungla desde la amplia costa, todo recto hasta la primera encrucijada, girar a la izquierda cerca de la segunda encrucijada. Allí está enterrado el objeto.
+28 de noviembre de 1595 - Tras navegar rumbo sur durante cinco dÃ­as, fondeamos en una amplia costa cerca de una bahÃ­a en una isla desierta y nos aprovisionamos de agua y comida.
+4 de diciembre de 1595 - He mandado a un marinero que entierre una cosa en a jungla; he tenido una racha de mala suerte desde que la adquirÃ­ y prefiero librarme de ella.
+(En la letra de otra persona) InternÃ¡ndose en al jungla desde la amplia costa, todo recto hasta la primera encrucijada, girar a la izquierda cerca de la segunda encrucijada. AllÃ­ estÃ¡ enterrado el objeto.
 }
 
 itmname_old_journal2	{Viejo diario}
 itmdescr_old_journal2
 {
-28 de octubre de 1492 - Tras navegar rumbo oeste durante tres días, fondeamos en una amplia costa cerca de una bahía en una isla desierta y nos aprovisionamos de agua y comida.
-4 de noviembre de 1492 - He mandado a un marinero que entierre una cosa en la jungla; he tenido una racha de mala suerte desde que la adquirí y prefiero librarme de ella.
-(En la letra de otra persona) Iternándose en la jungla más allá de la roca con el agujero redondo, después a través de un pasaje estrecho a la derecha. Cerca de la siguiente bifurcación, el objeto está enterrado al lado de un camino a la derecha.
+28 de octubre de 1492 - Tras navegar rumbo oeste durante tres dÃ­as, fondeamos en una amplia costa cerca de una bahÃ­a en una isla desierta y nos aprovisionamos de agua y comida.
+4 de noviembre de 1492 - He mandado a un marinero que entierre una cosa en la jungla; he tenido una racha de mala suerte desde que la adquirÃ­ y prefiero librarme de ella.
+(En la letra de otra persona) IternÃ¡ndose en la jungla mÃ¡s allÃ¡ de la roca con el agujero redondo, despuÃ©s a travÃ©s de un pasaje estrecho a la derecha. Cerca de la siguiente bifurcaciÃ³n, el objeto estÃ¡ enterrado al lado de un camino a la derecha.
 }
 
-itmname_small_chest	{Cofre pequeño}
+itmname_small_chest	{Cofre pequeÃ±o}
 itmdescr_small_chest
 {
-Los documentos en este cofre prueban que, en efecto, el barco que se hundió en Baie d'Orient era la fragata británica 'Lightning'. Dice: 'El barco se hunde. Nos vamos al fondo. Ya nunca encontraremos a la señorita Shaw. Mi gobernador quedará decepcionado.' - Capitán Thomas Boulden Thompson.
+Los documentos en este cofre prueban que, en efecto, el barco que se hundiÃ³ en Baie d'Orient era la fragata britÃ¡nica 'Lightning'. Dice: 'El barco se hunde. Nos vamos al fondo. Ya nunca encontraremos a la seÃ±orita Shaw. Mi gobernador quedarÃ¡ decepcionado.' - CapitÃ¡n Thomas Boulden Thompson.
 }
 
-itmname_SpanishLetter	{Carta española}
+itmname_SpanishLetter	{Carta espaÃ±ola}
 itmdescr_SpanishLetter
 {
 Este documento, firmado por el Vicealmirante Salvatore, prueba que el 'Vogelstruijs' lleva municiones para la conquista de #sRedmond# y debe llevar su carga a #sSanto Domingo#.
@@ -73,55 +73,55 @@ Este documento, firmado por el Vicealmirante Salvatore, prueba que el 'Vogelstru
 itmname_Trade_Passport {Licencia Mercantil}
 itmdescr_Trade_Passport
 {
-Este documento ha sido expedido por el director de la Compañía Comercial de las Indias Occidentales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
+Este documento ha sido expedido por el director de la CompaÃ±Ã­a Comercial de las Indias Occidentales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. TambiÃ©n muestra a tu tripulaciÃ³n que no estÃ¡s envuelto en ningÃºn tipo de piraterÃ­a.
 }
 
 itmname_Trade_PassportE {Licencia mercantil}
 itmdescr_Trade_PassportE
 {
-Este documento ha sido expedido por el director de la Compañía Comercial de las Indias Orientales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
+Este documento ha sido expedido por el director de la CompaÃ±Ã­a Comercial de las Indias Orientales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. TambiÃ©n muestra a tu tripulaciÃ³n que no estÃ¡s envuelto en ningÃºn tipo de piraterÃ­a.
 }
 
 itmname_Trade_PassportH {Licencia mercantil}
 itmdescr_Trade_PassportH
 {
-Este documento ha sido expedido por el director de la Compañía Holandesa de las Indias Occidentales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
+Este documento ha sido expedido por el director de la CompaÃ±Ã­a Holandesa de las Indias Occidentales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. TambiÃ©n muestra a tu tripulaciÃ³n que no estÃ¡s envuelto en ningÃºn tipo de piraterÃ­a.
 }
 
 itmname_Trade_PassportS {Licencia mercantil}
 itmdescr_Trade_PassportS
 {
-Este documento ha sido expedido por el director de la Casa de Contratación de Sevilla. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
+Este documento ha sido expedido por el director de la Casa de ContrataciÃ³n de Sevilla. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. TambiÃ©n muestra a tu tripulaciÃ³n que no estÃ¡s envuelto en ningÃºn tipo de piraterÃ­a.
 }
 
 itmname_Trade_PassportF {Licencia mercantil}
 itmdescr_Trade_PassportF
 {
-Este documento ha sido expedido por el director de la Compañía Francesa de las Indias Occidentales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería..
+Este documento ha sido expedido por el director de la CompaÃ±Ã­a Francesa de las Indias Occidentales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. TambiÃ©n muestra a tu tripulaciÃ³n que no estÃ¡s envuelto en ningÃºn tipo de piraterÃ­a..
 }
 
 itmname_Trade_PassportP {Licencia mercantil}
 itmdescr_Trade_PassportP
 {
-Este documento ha sido expedido por el director de la Casa da India. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
+Este documento ha sido expedido por el director de la Casa da India. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. TambiÃ©n muestra a tu tripulaciÃ³n que no estÃ¡s envuelto en ningÃºn tipo de piraterÃ­a.
 }
 
-itmname_EITC_Passport {Pasaporte de la Compañía de las Indias Orientales}
+itmname_EITC_Passport {Pasaporte de la CompaÃ±Ã­a de las Indias Orientales}
 itmdescr_EITC_Passport
 {
-Este documento te permite acceder a todos los lugares controlados por la Compañía Comercial de las Indias Orientales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piraterú}.
+Este documento te permite acceder a todos los lugares controlados por la CompaÃ±Ã­a Comercial de las Indias Orientales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. TambiÃ©n muestra a tu tripulaciÃ³n que no estÃ¡s envuelto en ningÃºn tipo de piraterÃº}.
 }
 
 itmname_Davy_Chest {Cofre de Davy Jones}
 itmdescr_Davy_Chest
 {
-Este cofre contiene el corazón palpitante del capitán del Holandés Errante. Poseer esto indica que estás maldito, condenado a navegar por los Siete Mares, sin pisar nunca tierra firme, y a transportar las almas de aquéllos que murieron en la mar.
+Este cofre contiene el corazÃ³n palpitante del capitÃ¡n del HolandÃ©s Errante. Poseer esto indica que estÃ¡s maldito, condenado a navegar por los Siete Mares, sin pisar nunca tierra firme, y a transportar las almas de aquÃ©llos que murieron en la mar.
 }
 
 itmname_Devil_Contract {Contrato con el Diablo}
 itmdescr_Devil_Contract
 {
-Este contrato, firmado por Mefistófeles, certifica que has formalizado un trato con el diablo. Llevar esto encima indica que pesa sobre ti la maldición de cosechar almas para el Infierno y que esta maldición está unida a tu barco para toda la eternidad.
+Este contrato, firmado por MefistÃ³feles, certifica que has formalizado un trato con el diablo. Llevar esto encima indica que pesa sobre ti la maldiciÃ³n de cosechar almas para el Infierno y que esta maldiciÃ³n estÃ¡ unida a tu barco para toda la eternidad.
 }
 
 itmname_Correspondence1 {Carta para Sylvie Bondies}
@@ -139,19 +139,19 @@ Correspondencia entre Sylvie Bondies y Arnaud Matton al respecto de Sabine.
 itmname_blade1	{Sable}
 itmdescr_blade1
 {
-Un sable común. Está diseñado más para blandirlo desde un caballo que en la cubierta de un barco, pero es un arma simple y efectiva.
+Un sable comÃºn. EstÃ¡ diseÃ±ado mÃ¡s para blandirlo desde un caballo que en la cubierta de un barco, pero es un arma simple y efectiva.
 }
 
 itmname_blade2	{Ropera}
 itmdescr_blade2
 {
-"Estas armas son propias de niños, para que los chicos del campamento maten gallinas, no para hombres de honor que se enfrentan en batalla a sus enemigos" - George Silver, "Paradoxes of Defence" 1599.
+"Estas armas son propias de niÃ±os, para que los chicos del campamento maten gallinas, no para hombres de honor que se enfrentan en batalla a sus enemigos" - George Silver, "Paradoxes of Defence" 1599.
 }
 
 itmname_blade3	{Badelaire}
 itmdescr_blade3
 {
-El juguete favorito de un carnicero francés. Sus cualidades combativas son mediocres como mucho, pero este sable está tan bien pulido que brilla fieramente: es más de adorno que de trabajo.
+El juguete favorito de un carnicero francÃ©s. Sus cualidades combativas son mediocres como mucho, pero este sable estÃ¡ tan bien pulido que brilla fieramente: es mÃ¡s de adorno que de trabajo.
 }
 
 itmname_blade4	{Alfanje}
@@ -163,103 +163,103 @@ El mejor amigo del pirata. Este sable corto y pesado es perfecto para el combate
 itmname_blade5	{Daga}
 itmdescr_blade5
 {
-Una daga de aspecto siniestro. Queda especialmente elegante cuando está clavada en la espalda de alguien.
+Una daga de aspecto siniestro. Queda especialmente elegante cuando estÃ¡ clavada en la espalda de alguien.
 }
 
 itmname_blade6	{Schiavona}
 itmdescr_blade6
 {
-Una grácil y letal hoja usada por mercenarios italianos.
+Una grÃ¡cil y letal hoja usada por mercenarios italianos.
 }
 
-itmname_blade7	{Yatagán}
+itmname_blade7	{YatagÃ¡n}
 itmdescr_blade7
 {
-Pocas cosas cortan más que un yatagán. Puede partir una ballena en dos. Si consigues pillarla por sorpresa.
+Pocas cosas cortan mÃ¡s que un yatagÃ¡n. Puede partir una ballena en dos. Si consigues pillarla por sorpresa.
 }
 
-itmname_blade8	{Espada de caballero maltés}
+itmname_blade8	{Espada de caballero maltÃ©s}
 itmdescr_blade8
 {
 Una espada usada por los caballeros de Malta. Tan recta y sobria como los mismos caballeros. Rara fuera de Malta.
 }
 
-itmname_blade9	{Ropera del Almirantazgo francés}
+itmname_blade9	{Ropera del Almirantazgo francÃ©s}
 itmdescr_blade9
 {
 Una ropera de calidad, un regalo de la corona francesa.
 }
 
-itmname_blade10	{Piraña}
+itmname_blade10	{PiraÃ±a}
 itmdescr_blade10
 {
-Una espada corta de aspecto cruel hecha de buen acero. No está hecha para la defensa pero su dentellada lo compensa con creces.
+Una espada corta de aspecto cruel hecha de buen acero. No estÃ¡ hecha para la defensa pero su dentellada lo compensa con creces.
 }
 
 itmname_blade11	{Highlander}
 itmdescr_blade11
 {
-Esta espada de farol escocesa es perfecta para un hombre de carácter ardiente. Un poco pesada, con una hoja corta y fuerte, en una mano poderosa es una arma temible.
+Esta espada de farol escocesa es perfecta para un hombre de carÃ¡cter ardiente. Un poco pesada, con una hoja corta y fuerte, en una mano poderosa es una arma temible.
 }
 
-itmname_blade12	{Cimitarra árabe}
+itmname_blade12	{Cimitarra Ã¡rabe}
 itmdescr_blade12
 {
-Un ancho sable de las ardientes forjas de Damasco. Afilada y ligera a pesar de su impresionante tamaño, esta hoja puede cortar seda con la misma facilidad que clavos.
+Un ancho sable de las ardientes forjas de Damasco. Afilada y ligera a pesar de su impresionante tamaÃ±o, esta hoja puede cortar seda con la misma facilidad que clavos.
 }
 
 itmname_blade13	{Ropera de duelista}
 itmdescr_blade13
 {
-Más ligera y rápida que la típica ropera. Se puso mucho trabajo en su diseño.
+MÃ¡s ligera y rÃ¡pida que la tÃ­pica ropera. Se puso mucho trabajo en su diseÃ±o.
 }
 
-itmname_blade14	{Espada de la nobleza española}
+itmname_blade14	{Espada de la nobleza espaÃ±ola}
 itmdescr_blade14
 {
-Una hermosa hoja, del tipo otorgado a aquellos que reciben títulos de nobleza españoles. La leyenda dice que este tipo de espada fue usado por Cortés y sus oficiales.
+Una hermosa hoja, del tipo otorgado a aquellos que reciben tÃ­tulos de nobleza espaÃ±oles. La leyenda dice que este tipo de espada fue usado por CortÃ©s y sus oficiales.
 }
 
-itmname_blade15	{Espada ibérica}
+itmname_blade15	{Espada ibÃ©rica}
 itmdescr_blade15
 {
-Este tipo de espada era preferida por los primeros exploradores españoles y portugueses.
+Este tipo de espada era preferida por los primeros exploradores espaÃ±oles y portugueses.
 }
 
 itmname_blade16	{Tizona}
 itmdescr_blade16
 {
-Espadas de este tipo suelen ser preferidas por los españoles. A vecs conocidas como espadas de Toledo, famosas por su calidad.
+Espadas de este tipo suelen ser preferidas por los espaÃ±oles. A vecs conocidas como espadas de Toledo, famosas por su calidad.
 }
 
-itmname_blade17	{Flamígera}
+itmname_blade17	{FlamÃ­gera}
 itmdescr_blade17
 {
-Una espada de duelo con una hoja serpentenate, que recuerda al flamberge alemán, aunque algo más ligera.
+Una espada de duelo con una hoja serpentenate, que recuerda al flamberge alemÃ¡n, aunque algo mÃ¡s ligera.
 }
 
 itmname_blade18	{Sable de Nicolas Sharp}
 itmdescr_blade18
 {
-Nicolas Sharp, el más horrible, sanguinario y depravado pirata que haya surcado alta mar, abordó barcos y saqueó ciudades con este sable en la mano. Un arma excelente, por cierto.
+Nicolas Sharp, el mÃ¡s horrible, sanguinario y depravado pirata que haya surcado alta mar, abordÃ³ barcos y saqueÃ³ ciudades con este sable en la mano. Un arma excelente, por cierto.
 }
 
 itmname_blade19	{Ropera alemana}
 itmdescr_blade19
 {
-Una simple pero efectiva ropera, aparentemente de origen alemán.
+Una simple pero efectiva ropera, aparentemente de origen alemÃ¡n.
 }
 
-itmname_blade20	{Espada asiática}
+itmname_blade20	{Espada asiÃ¡tica}
 itmdescr_blade20
 {
-Un arma asiática de origen incierto, seguramente china.
+Un arma asiÃ¡tica de origen incierto, seguramente china.
 }
 
 itmname_blade21	{Bracamarte}
 itmdescr_blade21
 {
-Una espada pesada perfecta para cortar a tu enemigo en pequeñas rodajitas.
+Una espada pesada perfecta para cortar a tu enemigo en pequeÃ±as rodajitas.
 }
 
 itmname_blade22	{Orgullo del Corsario}
@@ -268,13 +268,13 @@ itmdescr_blade22
 Espadas como esta eran otorgadas a los corsarios al servicio de Su Majestad, por grandes servicios prestados a Inglaterra, normalmente en el momento de ser nombrados caballeros.
 }
 
-itmname_blade23	{Espada del Almirantazgo holandés}
+itmname_blade23	{Espada del Almirantazgo holandÃ©s}
 itmdescr_blade23
 {
 Una hoja grabada otorgada a capitanes de la Armada holandesa.
 }
 
-itmname_blade24	{Sable de oficial inglés}
+itmname_blade24	{Sable de oficial inglÃ©s}
 itmdescr_blade24
 {
 Espada otorgada a los oficiales navales ingleses cuando reciben su primer mando importante.
@@ -283,7 +283,7 @@ Espada otorgada a los oficiales navales ingleses cuando reciben su primer mando 
 itmname_blade25	{Espada de la nobleza francesa}
 itmdescr_blade25
 {
-Espada otorgada a aquéllos que son nombrados caballeros por sus servicios a Francia.
+Espada otorgada a aquÃ©llos que son nombrados caballeros por sus servicios a Francia.
 }
 
 itmname_blade26	{Ropera de Solingen}
@@ -295,7 +295,7 @@ Estas cuidadas hojas son fabricadas en Solingen, Alemania, especialmente para se
 itmname_blade27	{Favorito del Contramaestre}
 itmdescr_blade27
 {
-Después de retirarse, tu antiguo primer oficial Malcolm decidió fabricar buenas armas para marineros trabajadores, en vez de espadas elegantes para oficiales. Este alfanje de calidad es el resultado de sus esfuerzos.
+DespuÃ©s de retirarse, tu antiguo primer oficial Malcolm decidiÃ³ fabricar buenas armas para marineros trabajadores, en vez de espadas elegantes para oficiales. Este alfanje de calidad es el resultado de sus esfuerzos.
 }
 
 // Blades from SLiB. Added 09-10-2007 by KevAtl -->
@@ -303,19 +303,19 @@ Después de retirarse, tu antiguo primer oficial Malcolm decidió fabricar buenas 
 itmname_blade28	{Shamshir}
 itmdescr_blade28
 {
-Una decorada espada persa caracterizada por una hoja fina y muy curva. El único filo es muy cortante, pero ofrece poco valor defensivo.
+Una decorada espada persa caracterizada por una hoja fina y muy curva. El Ãºnico filo es muy cortante, pero ofrece poco valor defensivo.
 }
 
-itmname_blade29	{Espada de oficial portugués}
+itmname_blade29	{Espada de oficial portuguÃ©s}
 itmdescr_blade29
 {
-Espada decorativa otorgada a oficiales navales portugueses de alto rango. Este modelo está basado en las primeras espadas usadas por el gran explorador portugués Vasco da Gama.
+Espada decorativa otorgada a oficiales navales portugueses de alto rango. Este modelo estÂÃ¡ basado en las primeras espadas usadas por el gran explorador portuguÃ©s Vasco da Gama.
 }
 
 itmname_blade30	{Sable de duelista}
 itmdescr_blade30
 {
-Un sable de duelo italiano finamente forjado. Hojas como ésta son raras en el archipiélago.
+Un sable de duelo italiano finamente forjado. Hojas como Ã©sta son raras en el archipiÃ©lago.
 }
 
 itmname_blade31	{Cabeza de Serpiente}
@@ -327,19 +327,19 @@ Una hermosa espada corta perfecta para un pirata principiante.
 itmname_blade32	{Shamshir de Damasco}
 itmdescr_blade32
 {
-Una espada persa grabada e incrustada de joyas, hecha del más fino acero de Damasco. Este tipo de espada se ha extendido desde la conquista de Goa a los turcos en el siglo XVI. Un regalo de la Corona portuguesa.
+Una espada persa grabada e incrustada de joyas, hecha del mÃ¡s fino acero de Damasco. Este tipo de espada se ha extendido desde la conquista de Goa a los turcos en el siglo XVI. Un regalo de la Corona portuguesa.
 }
 
 itmname_blade33	{Sable morisco}
 itmdescr_blade33
 {
-Un sable árabe con hermosas decoraciones doradas. Un regalo de la Corona española.
+Un sable Ã¡rabe con hermosas decoraciones doradas. Un regalo de la Corona espaÃ±ola.
 }
 
-itmname_blade34	{Cabeza de Dragón}
+itmname_blade34	{Cabeza de DragÃ³n}
 itmdescr_blade34
 {
-Un regalo de los señores piratas. Un auténtico tesoro, ya que los piratas no son conocidos por regalar nada.
+Un regalo de los seÃ±ores piratas. Un autÃ©ntico tesoro, ya que los piratas no son conocidos por regalar nada.
 }
 
 // END Blades from SLiB. Added 09-03-2007 by KevAtl <--
@@ -347,96 +347,96 @@ Un regalo de los señores piratas. Un auténtico tesoro, ya que los piratas no son
 itmname_bladeC10	{Bracamarte corto}
 itmdescr_bladeC10
 {
-Una hoja corta, decorada con una cabeza de marfil bajo la empuñadura.
+Una hoja corta, decorada con una cabeza de marfil bajo la empuÃ±adura.
 }
 
 itmname_bladeC11	{Espada milanesa}
 itmdescr_bladeC11
 {
-Hay espadas a caballo entre los estilos de punta y de corte; más largas que las de estilos posteriores pero más finas que las espadas tajadoras más antiguas. Ésta es una de esas espadas.
+Hay espadas a caballo entre los estilos de punta y de corte; mÃ¡s largas que las de estilos posteriores pero mÃ¡s finas que las espadas tajadoras mÃ¡s antiguas. Ã‰sta es una de esas espadas.
 }
 
 itmname_bladeC12	{Katzbalger}
 itmdescr_bladeC12
 {
-Una hoja de doble filo con tres acanaladuras grandes y dos pequeñas, gavilanes en forma de S con remates de bola, así como un pomo ensanchado en forma de seta perfectamente unido a una empuñadura de madera.
+Una hoja de doble filo con tres acanaladuras grandes y dos pequeÃ±as, gavilanes en forma de S con remates de bola, asÃ­ como un pomo ensanchado en forma de seta perfectamente unido a una empuÃ±adura de madera.
 }
 
-itmname_bladeC6	{Espadín}
+itmname_bladeC6	{EspadÃ­n}
 itmdescr_bladeC6
 {
-El espadín es la espada de duelo más común. No es solo un arma, sino parte esencial del vestuario de un caballero. Los espadines pueden ser bastante largos. Se refiere a la anchura de la hoja más que a la longitud.
+El espadÃ­n es la espada de duelo mÃ¡s comÃºn. No es solo un arma, sino parte esencial del vestuario de un caballero. Los espadines pueden ser bastante largos. Se refiere a la anchura de la hoja mÃ¡s que a la longitud.
 }
 
-itmname_bladeC17	{Ropera flamígera}
+itmname_bladeC17	{Ropera flamÃ­gera}
 itmdescr_bladeC17
 {
-Cuando se usa para parar un golpe, las ondulaciones de la hoja de esta ropera transmiten desagradables vibraciones a la espada del oponente. Esta arma es probablemente de origen alemán. 
+Cuando se usa para parar un golpe, las ondulaciones de la hoja de esta ropera transmiten desagradables vibraciones a la espada del oponente. Esta arma es probablemente de origen alemÃ¡n. 
 }
 
-itmname_bladeC18	{Bracamarte con guarnición de concha}
+itmname_bladeC18	{Bracamarte con guarniciÃ³n de concha}
 itmdescr_bladeC18
 {
-Esta pesada espada es usada sobre todo por hombres fuertes, y tiene la potencia suficiente para cortar a sus oponentes en pequeños pedazos.
+Esta pesada espada es usada sobre todo por hombres fuertes, y tiene la potencia suficiente para cortar a sus oponentes en pequeÃ±os pedazos.
 }
 
 itmname_bladeC2	{Espada italiana con contrafilo}
 itmdescr_bladeC2
 {
-Espada veneciana con guarda de cuarto de lazo. Tiene la empuñadura de acero y una ancha hoja con contrafilo y acanaladura central. Es lo bastante ancha y pesada para considerarla una espada de punta y corte.
+Espada veneciana con guarda de cuarto de lazo. Tiene la empuÃ±adura de acero y una ancha hoja con contrafilo y acanaladura central. Es lo bastante ancha y pesada para considerarla una espada de punta y corte.
 }
 
 itmname_bladeC23 {Ropera de Toledo}
 itmdescr_bladeC23 {
-Una ropera de los maestros espaderos toledanos, con una hoja ligera pero robusta. El arma favorita de los duelistas españoles.
+Una ropera de los maestros espaderos toledanos, con una hoja ligera pero robusta. El arma favorita de los duelistas espaÃ±oles.
 }
 
 itmname_bladeC26	{Ropera Pappenheimer}
 itmdescr_bladeC26
 {
-Una hoja de 45 pulgadas con un diseño especial de la guarda para proteger la mano durante el combate. Bautizada por el alemán conde de Pappenheim.
+Una hoja de 45 pulgadas con un diseÃ±o especial de la guarda para proteger la mano durante el combate. Bautizada por el alemÃ¡n conde de Pappenheim.
 }
 
 itmname_bladeC30	{Ropera de lazo}
 itmdescr_bladeC30
 {
-Aunque está diseñada para usarse en combinación con una daga de mano izquierda, esta espada funciona bastante bien por sí sola. 
+Aunque estÃ¡ diseÃ±ada para usarse en combinaciÃ³n con una daga de mano izquierda, esta espada funciona bastante bien por sÃ­ sola. 
 }
 
 itmname_bladeC33	{Espada valona}
 itmdescr_bladeC33
 {
-La espada valona es popular entre la baja nobleza tanto civil como militar por su versatilidad: es ligera, flexible, apta para tajos y estocadas, además del juego más preciso requerido en los duelos con ropera.
+La espada valona es popular entre la baja nobleza tanto civil como militar por su versatilidad: es ligera, flexible, apta para tajos y estocadas, ademÃ¡s del juego mÃ¡s preciso requerido en los duelos con ropera.
 }
 
 itmname_bladeC35	{Hibernia}
 itmdescr_bladeC35
 {
-De fabricación irlandesa, 32 pulgadas, es una espada civil de acero de alta calidad, con una hoja pesada de doble filo.
+De fabricaciÃ³n irlandesa, 32 pulgadas, es una espada civil de acero de alta calidad, con una hoja pesada de doble filo.
 }
 
 itmname_bladeC36 	{Katana}
 itmdescr_bladeC36 
 {
-La Katana es una espada ligera japonesa. Es buena tanto para ataques rápidos como para bloqueos gracias a su hoja larga y excepcionalmente afilada.
+La Katana es una espada ligera japonesa. Es buena tanto para ataques rÃ¡pidos como para bloqueos gracias a su hoja larga y excepcionalmente afilada.
 }
 
 itmname_blade308 	{Espada de la Tierra}
 itmdescr_blade308 
 {
-Diseñada según las fantasías de un excéntrico noble, esta espada larga con su inusual arriaz es, no obstante, un arma efectiva.
+DiseÃ±ada segÃºn las fantasÃ­as de un excÃ©ntrico noble, esta espada larga con su inusual arriaz es, no obstante, un arma efectiva.
 }
 
 itmname_bladeCiri  {Espada de acero de Ciri}
 itmdescr_bladeCiri 
 {
-Aunque no está forjada en plata, sigue siendo una excelente hoja para cazar monstruos u hombres.
+Aunque no estÃ¡ forjada en plata, sigue siendo una excelente hoja para cazar monstruos u hombres.
 }
 
-itmname_witcher_steel  {Espada flamígera de acero de Geralt}
+itmname_witcher_steel  {Espada flamÃ­gera de acero de Geralt}
 itmdescr_witcher_steel 
 {
-Esta espada flamígera fue forjada en Toussaint por el gran maestro espadero Lazare Lafargue, poco antes de que Geralt y Ciri dejaran su mundo y llegaran al Caribe.
+Esta espada flamÃ­gera fue forjada en Toussaint por el gran maestro espadero Lazare Lafargue, poco antes de que Geralt y Ciri dejaran su mundo y llegaran al Caribe.
 }
 
 // Russian mod -->
@@ -444,19 +444,19 @@ Esta espada flamígera fue forjada en Toussaint por el gran maestro espadero Laza
 itmname_blade35	{Espada de caballero templario}
 itmdescr_blade35
 {
-Esta antigua y rara espada de doble filo ha sido transmitida durante generaciones por los 'Guardianes del Santo Grial'. El arma lleva la inscripción "In hoc signo vinces" - "Con este signo, vencerás".
+Esta antigua y rara espada de doble filo ha sido transmitida durante generaciones por los 'Guardianes del Santo Grial'. El arma lleva la inscripciÃ³n "In hoc signo vinces" - "Con este signo, vencerÃ¡s".
 }
 
 itmname_blade36	{Espada de caza}
 itmdescr_blade36
 {
-Esta espada corta y afilada suele usarse para rematar animales heridos en las cacerías, pero es igual de efectiva contra personas.
+Esta espada corta y afilada suele usarse para rematar animales heridos en las cacerÃ­as, pero es igual de efectiva contra personas.
 }
 
 itmname_blade37	{Daga dorada con incrustaciones de joyas}
 itmdescr_blade37
 {
-Esta larga daga dorada está incrustada con preciosas joyas y probablemente ha visto más ceremonias que campos de batalla. Sería una pena ensuciarla, la verdad.
+Esta larga daga dorada estÃ¡ incrustada con preciosas joyas y probablemente ha visto mÃ¡s ceremonias que campos de batalla. SerÃ­a una pena ensuciarla, la verdad.
 }
 
 itmname_blade38	{Kilij}
@@ -465,40 +465,40 @@ itmdescr_blade38
 Un antiguo y pesado sable de un solo filo procedente del Imperio Otomano.
 }
 
-itmname_blade39	{Daga naval con puño dorado}
+itmname_blade39	{Daga naval con puÃ±o dorado}
 itmdescr_blade39
 {
-Una daga dorada particularmente decorada, que sería ideal para hacerle un regalo a alguien... entre las costillas.
+Una daga dorada particularmente decorada, que serÃ­a ideal para hacerle un regalo a alguien... entre las costillas.
 }
 
-itmname_blade40	{Szabla de húsar polaco}
+itmname_blade40	{Szabla de hÃºsar polaco}
 itmdescr_blade40
 {
-Arma comúnmente usada por la caballería pesada de los húsares polacos. La larga y delgada hoja curva de un solo filo es ideal para atravesar a tus oponentes desde el caballo. Esta es el arma que influyó en la posterior adopción del sable en los ejércitos de Europa Occidental.
+Arma comÃºnmente usada por la caballerÃ­a pesada de los hÃºsares polacos. La larga y delgada hoja curva de un solo filo es ideal para atravesar a tus oponentes desde el caballo. Esta es el arma que influyÃ³ en la posterior adopciÃ³n del sable en los ejÃ©rcitos de Europa Occidental.
 }
 
-itmname_blade43	{Sable de la caballería de EE.UU.}
+itmname_blade43	{Sable de la caballerÃ­a de EE.UU.}
 itmdescr_blade43
 {
-Sable de la caballería de Estados Uidos de gran calidad. Con su hoja de un único y acerado filo, larga y resistente, esta espada está forjada usando las más modernas técnicas.}
+Sable de la caballerÃ­a de Estados Uidos de gran calidad. Con su hoja de un Ãºnico y acerado filo, larga y resistente, esta espada estÃ¡ forjada usando las mÃ¡s modernas tÃ©cnicas.}
 }
 
 itmname_blade42	{Alfanje de Jack Sparrow}
 itmdescr_blade42
 {
-Una hoja con una forma extraña para el pirata más excéntrico del Caribe.
+Una hoja con una forma extraÃ±a para el pirata mÃ¡s excÃ©ntrico del Caribe.
 }
 
-itmname_blade44	{Ropera española de taza}
+itmname_blade44	{Ropera espaÃ±ola de taza}
 itmdescr_blade44
 {
-Ligera y bien equilibrada, la ropera española de taza tiene una hoja larga y afilada ideal para duelos.
+Ligera y bien equilibrada, la ropera espaÃ±ola de taza tiene una hoja larga y afilada ideal para duelos.
 }
 
 itmname_blade41	{Shashka de cosaco ruso}
 itmdescr_blade41
 {
-El Shashka, que significa 'cuchillo largo', es favorecido por los regimientos de cosacos rusos debido a su ligereza y su hoja resistente. Perfectamente equilibrado, el Shashka es un arma de caballería ideal y es letal en las manos de casi cualquiera.
+El Shashka, que significa 'cuchillo largo', es favorecido por los regimientos de cosacos rusos debido a su ligereza y su hoja resistente. Perfectamente equilibrado, el Shashka es un arma de caballerÃ­a ideal y es letal en las manos de casi cualquiera.
 }
 
 itmname_blade45	{Espada de patillas}
@@ -507,28 +507,28 @@ itmdescr_blade45
 Antigua y rara, esta pesada arma de doble filo es de origen desconocido, pero puuede cortar y parar bastante bien a pesar de su edad.
 }
 
-itmname_blade46	{Espada corta 'Dragón'}
+itmname_blade46	{Espada corta 'DragÃ³n'}
 itmdescr_blade46
 {
-Antigua pero efectiva arma corta de doble filo. Recibe su nombre de la figura de dragón forjada en su empuñadura.
+Antigua pero efectiva arma corta de doble filo. Recibe su nombre de la figura de dragÃ³n forjada en su empuÃ±adura.
 }
 
 itmname_blade47	{Tizona ligera}
 itmdescr_blade47
 {
-Una espada española de doble filo hecha de acero de Damasco y una versión más ligera de la Tizona. Esta arma lleva la inscripción "Ave María, llena de Gracia. El Señor es contigo".
+Una espada espaÃ±ola de doble filo hecha de acero de Damasco y una versiÃ³n mÃ¡s ligera de la Tizona. Esta arma lleva la inscripciÃ³n "Ave MarÃ­a, llena de Gracia. El SeÃ±or es contigo".
 }
 
-itmname_blade48	{Daga naval con puño de madera}
+itmname_blade48	{Daga naval con puÃ±o de madera}
 itmdescr_blade48
 {
-El mejor amigo de un oficial naval. Más ligera y compacta que una espada tradicional, consiste en una empuñadura de daga con una hoja de espada recortada, haciéndola ideal para el combate en cubierta.
+El mejor amigo de un oficial naval. MÃ¡s ligera y compacta que una espada tradicional, consiste en una empuÃ±adura de daga con una hoja de espada recortada, haciÃ©ndola ideal para el combate en cubierta.
 }
 
-itmname_blade49	{Daga naval con puño de bronce}
+itmname_blade49	{Daga naval con puÃ±o de bronce}
 itmdescr_blade49
 {
-Más una espada de gala que un arma de combate. Te permite a la vez impresionar a las damas y acuchillar a tus enemigos.
+MÃ¡s una espada de gala que un arma de combate. Te permite a la vez impresionar a las damas y acuchillar a tus enemigos.
 }
 
 itmname_blade50	{Alfanje naval veneciano}
@@ -537,10 +537,10 @@ itmdescr_blade50
 Lo bastante robusto como para cortar cabos, lona y madera y ala vez lo bastante corto para blandirlo en la estrecha cubierta de un barco. Este alfanje es el arma elegida por cualquier pirata digno de tal nombre.
 }
 
-itmname_blade51	{Espadín de gala francés}
+itmname_blade51	{EspadÃ­n de gala francÃ©s}
 itmdescr_blade51
 {
-Una ornamentada espada de gala de la Corte Real de París. Tal vez puedas impresionar a tu oponente lo bastante como para que se rinda.
+Una ornamentada espada de gala de la Corte Real de ParÃ­sÂ. Tal vez puedas impresionar a tu oponente lo bastante como para que se rinda.
 }
 
 // KevAtl SLiB Special Weapon blades -->
@@ -548,7 +548,7 @@ Una ornamentada espada de gala de la Corte Real de París. Tal vez puedas impres
 itmname_bladeFD	{Espada de Francis Drake}
 itmdescr_bladeFD
 {
-Encontré esta hoja de aspecto antiguo en la jungla de Antigua gracias al diario que me dio François Moulin. Tiene por lo menos un siglo y esta cubierta por una pátina azul verdosa. Una inscripción en la hoja reza "Sir Francis Drake". Esta espada tiene poderes mágicos, quizáas debido a su historia.
+EncontrÃ© esta hoja de aspecto antiguo en la jungla de Antigua gracias al diario que me dio FranÃ§ois Moulin. Tiene por lo menos un siglo y esta cubierta por una pÃ¡tina azul verdosa. Una inscripciÃ³n en la hoja reza "Sir Francis Drake". Esta espada tiene poderes mÃ¡gicos, quizÃ¡as debido a su historia.
 }
 
 
@@ -558,78 +558,78 @@ itmdescr_bladeFD2
 Esta espada fue otorgada a Francis Drake por sus servicios a la Corona inglesa.
 }
 
-itmname_bladeSC	{Espada de Cortés}
+itmname_bladeSC	{Espada de CortÃ©s}
 itmdescr_bladeSC
 {
-Le quité este antiguo sable a Amérigo Vieira. Es un arma mística y maldita usada por Hernán Cortés durante la conquista del Imperio Azteca. El poder de la espada se combina con una vaina sagrada, hecha con las entrañas de vícitmas de los sacrificos aztecas. La inscripción de la hoja reza "Hernán Cortés 1520 A.D.".
+Le quitÃ© este antiguo sable a AmÃ©rigo Vieira. Es un arma mÃ­stica y maldita usada por HernÃ¡n CortÃ©s durante la conquista del Imperio Azteca. El poder de la espada se combina con una vaina sagrada, hecha con las entraÃ±as de vÃ­citmas de los sacrificos aztecas. La inscripciÃ³n de la hoja reza "HernÃ¡n CortÃ©s 1520 A.D.".
 }
 
 itmname_bladeMH	{El favorito del profesor}
 itmdescr_bladeMH
 {
-Esta es mi recompensa por matar a mi tutor. ¡Ahora yo soy el maestro!
+Esta es mi recompensa por matar a mi tutor. Â¡Ahora yo soy el maestro!
 }
 
 // KevAtl SLiB Special Weapon blades <--
 
-itmname_bladeTriton {Espada de Tritón}
+itmname_bladeTriton {Espada de TritÃ³n}
 itmdescr_bladeTriton
 {
-Según la leyenda, esta espada fue forjada por la divinidad marina Tritón en la ciudad perdida de la Atlántida. Se dice que cualquiera que porte la espada podrá manejar el aparejo de un barco, controlándolo para realizar su voluntad.
+SegÃºn la leyenda, esta espada fue forjada por la divinidad marina TritÃ³n en la ciudad perdida de la AtlÃ¡ntida. Se dice que cualquiera que porte la espada podrÃ¡ manejar el aparejo de un barco, controlÃ¡ndolo para realizar su voluntad.
 }
 
 itmname_tridentNeptune {Tridente de Neptuno}
 itmdescr_tridentNeptune
 {
-¡Se cree que este tirdente fue una vez propiedad de Neptuno! Pero un travieso tiburón lo robó y lo trajo al mundo de la superficie. Allí pasó de un propietario a otro. Neptuno lo usaba para crear y calmar tormentas.
+Â¡Se cree que este tirdente fue una vez propiedad de Neptuno! Pero un travieso tiburÃ³n lo robÃ³ y lo trajo al mundo de la superficie. AllÃ­ pasÃ³ de un propietario a otro. Neptuno lo usaba para crear y calmar tormentas.
 }
 
 itmname_bladeBP	{Espada de Bartolomeu}
 itmdescr_bladeBP
 {
-Esta excéntrica espada ootorgada por el gobernador en recompensa por el arresto de Charles Baxter tiene una extraña guarnición que permite bloquear mejor.
+Esta excÃ©ntrica espada ootorgada por el gobernador en recompensa por el arresto de Charles Baxter tiene una extraÃ±a guarniciÃ³n que permite bloquear mejor.
 }
 
 itmname_bladePOA {Mano de Poseidon}
 itmdescr_bladePOA
 {
-Johan Elting se hizo con esta espada hace muchos años cuando estaba luchando por el ejército holandés y mató a un famoso pirata.
+Johan Elting se hizo con esta espada hace muchos aÃ±os cuando estaba luchando por el ejÃ©rcito holandÃ©s y matÂÃ³ a un famoso pirata.
 }
 
 itmname_blthag02 {Calavera Letal}
 itmdescr_blthag02
 {
-Roxanne Lalliere encargó esta espada a un armero de Tortuga. Como su dueña, esta peculiar arma es hermosa y letal.
+Roxanne Lalliere encargÂÃ³ esta espada a un armero de Tortuga. Como su dueÃ±a, esta peculiar arma es hermosa y letal.
 }
 
-itmname_blangel {Espada Ángel}
+itmname_blangel {Espada Ãngel}
 itmdescr_blangel
 {
-Inicialmente diseñada para el conde Guillermo V de Holanda, esta espada ceremonial tiene un pomo en forma de alas de ángel y un gran zafiro engarzado en la guarda.
+Inicialmente diseÃ±ada para el conde Guillermo V de Holanda, esta espada ceremonial tiene un pomo en forma de alas de Ã¡ngel y un gran zafiro engarzado en la guarda.
 }
 
 itmname_bldevil	{Espada de Orellana}
 itmdescr_bldevil
 {
-Nadie sabe quién forjó esta espada. Se dice que fue unvocada desde los negros abismos y entregada a Ricardo Orellana por los servicios prestados a la Inquisición Española. La hoja emite una fuerza malévola, como si un millón de voces gritaran de terror.
+Nadie sabe quiÃ©n forjÃ³ esta espada. Se dice que fue unvocada desde los negros abismos y entregada a Ricardo Orellana por los servicios prestados a la InquisiciÃ³n EspaÃ±ola. La hoja emite una fuerza malÃ©vola, como si un millÃ³n de voces gritaran de terror.
 }
 
-itmname_bladerubysb {Sable rúnico de rubí}
+itmname_bladerubysb {Sable rÃºnico de rubÃ­}
 itmdescr_bladerubysb
 {
-Este es uno de los sables rúnicos que fue forjado en las míticas minas de sal de una isla muy lejos del Caribe; solo con blandirla, puedes apreciar que la hoja está afilada como una navaja de afeitar.
+Este es uno de los sables rÃºnicos que fue forjado en las mÃ­ticas minas de sal de una isla muy lejos del Caribe; solo con blandirla, puedes apreciar que la hoja estÃ¡ afilada como una navaja de afeitar.
 }
 
-itmname_blade_ebony {Sable de ébano}
+itmname_blade_ebony {Sable de Ã©bano}
 itmdescr_blade_ebony
 {
-Este sable es diferente a todos los demás. Está hecho de un acero único, ébano y oro. Puedes snetir un aura oscura rodeando a esta espada.
+Este sable es diferente a todos los demÃ¡s. EstÃ¡ hecho de un acero Ãºnico, Ã©bano y oro. Puedes snetir un aura oscura rodeando a esta espada.
 }
 
-itmname_bladeNorr {Espadín ceremonial}
+itmname_bladeNorr {EspadÃ­n ceremonial}
 itmdescr_bladeNorr
 {
-Esta espada es un arma propiedad de James Norrington. Bellamente forjasa a mano por el parendiz de herrero William Turner, la espada está perfectamente equilibrada y el mango está decorado con filigrana de oro.
+Esta espada es un arma propiedad de James Norrington. Bellamente forjasa a mano por el parendiz de herrero William Turner, la espada estÃ¡ perfectamente equilibrada y el mango estÃ¡ decorado con filigrana de oro.
 }
 
 // Axes from SLiB. Jack Davidson. -->
@@ -638,28 +638,28 @@ Esta espada es un arma propiedad de James Norrington. Bellamente forjasa a mano 
 itmname_bladeaxe1 {Hacha}
 itmdescr_bladeaxe1
 {
-Comúnmente usada para cortar madera, el hacha también puede usarse como arma. Su falta de capacidad defensiva se compensa con su peso y poder destructivo.
+ComÃºnmente usada para cortar madera, el hacha tambiÃ©n puede usarse como arma. Su falta de capacidad defensiva se compensa con su peso y poder destructivo.
 }
 
 itmname_bladeaxe2 {Hacha de abordaje}
 itmdescr_bladeaxe2
 {
-Una herramienta con muchos usos a bordo de un barco. El hacha de abordaje se usa para abordar barcos enemigos, cortar aparejos, etc. También puede ser un arma poderosa, aunque no muy manejable.
+Una herramienta con muchos usos a bordo de un barco. El hacha de abordaje se usa para abordar barcos enemigos, cortar aparejos, etc. TambiÃ©n puede ser un arma poderosa, aunque no muy manejable.
 }
 
 itmname_bladeaxe3 {Hachuela}
 itmdescr_bladeaxe3
 {
-Una pequeña hacha de mano, útil para ataques sorpresa, pero de poco valor defensivo.
+Una pequeÃ±a hacha de mano, Ãºtil para ataques sorpresa, pero de poco valor defensivo.
 }
 
 // TIH <--
 // Axes from SLiB. Jack Davidson. <--
 
-itmname_topor1 {Hacha de leñador grabada}
+itmname_topor1 {Hacha de leÃ±ador grabada}
 itmdescr_topor1
 {
-Usada para cortar árboles, pero también se pueede usar para cortar los miembros de tus enemigos.
+Usada para cortar Ã¡rboles, pero tambiÃ©n se pueede usar para cortar los miembros de tus enemigos.
 }
 
 itmname_topor2 {Hacha de batallla de media luna}
@@ -679,7 +679,7 @@ Una gran e impresionante hacha de batalla, perfecta para abordar barcos enemigos
 itmname_bladelead {Par de nudilleras de bronce}
 itmdescr_bladelead
 {
-Nudilleras de bronce, un arma de último recurso en el combate cuerpo a cuerpo. ¡Golpea a tu oponente en el lugar correcto y son letales!
+Nudilleras de bronce, un arma de Ãºltimo recurso en el combate cuerpo a cuerpo. Â¡Golpea a tu oponente en el lugar correcto y son letales!
 }
 
 itmname_bladeclub {Cachiporra}
@@ -693,25 +693,25 @@ Un pesado garrote de madera. A las brigadas de abordaje les encanta esta herrami
 itmname_pistol1	{Pistola corta}
 itmdescr_pistol1
 {
-Una pistola pequeña y barata. Más un arma de distancias cortas que de largo alcance, a menudo se usa para dar un pistoletazo en las tripas a enemigos desprevenidos.
+Una pistola pequeÃ±a y barata. MÃ¡s un arma de distancias cortas que de largo alcance, a menudo se usa para dar un pistoletazo en las tripas a enemigos desprevenidos.
 }
 
 itmname_pistol1a	{Pistola corta}
 itmdescr_pistol1a
 {
-Una pistola barata de cañón corto. Solo sirve para matar gorriones. A quemarropa.
+Una pistola barata de caÃ±Ã³n corto. Solo sirve para matar gorriones. A quemarropa.
 }
 
 itmname_pistol2	{Pistola larga}
 itmdescr_pistol2
 {
-Una pistola corriente con un cañón largo. Su alcance y su potencia son decentes, pero tarda más en recargarse y no es muy precisa.
+Una pistola corriente con un caÃ±Ã³n largo. Su alcance y su potencia son decentes, pero tarda mÃ¡s en recargarse y no es muy precisa.
 }
 
 itmname_pistol3	{Pistola de metralla}
 itmdescr_pistol3
 {
-Un auténtico cañón de mano que puede hacer daño a varios enemigos a la vez. Gran poder de parada pero le faltan alcance y precisión.
+Un autÃ©ntico caÃ±Ã³n de mano que puede hacer daÃ±o a varios enemigos a la vez. Gran poder de parada pero le faltan alcance y precisiÃ³n.
 }
 
 itmname_pistol4	{Pimentero}
@@ -723,55 +723,55 @@ Cuatro pistolas en una. Tarda mucho en recargar pero merece la pena. Usar esta p
 itmname_DuelPistol {Pistola de duelo}
 itmdescr_DuelPistol
 {
-Una pistola de calidad con un cañón largo. Precisa y bien equilibrada, esta es el arma a elegir para resolver asuntos de honor.
+Una pistola de calidad con un caÃ±Ã³n largo. Precisa y bien equilibrada, esta es el arma a elegir para resolver asuntos de honor.
 }
 
-itmname_pistol5	{Pistola de caballería}
+itmname_pistol5	{Pistola de caballerÃ­a}
 itmdescr_pistol5
 {
-Esta pistola de calibre .70 y 14 pulgadas es un auténtico monstruo. Su gran poder de parada, así como su excelente alcance y precisión, la hacen un argumento de peso en cualquier disputa.
+Esta pistola de calibre .70 y 14 pulgadas es un autÃ©ntico monstruo. Su gran poder de parada, asÃ­ como su excelente alcance y precisiÃ³n, la hacen un argumento de peso en cualquier disputa.
 }
 
-itmname_pistol6	{Pistola de dos cañones}
+itmname_pistol6	{Pistola de dos caÃ±ones}
 itmdescr_pistol6
 {
-Una excelente pistola con dos cañones. Para esos momentos en que una sola bala no es suficiente. Usar esta pistola requiere la habilidad 'Pistolero'.
+Una excelente pistola con dos caÃ±ones. Para esos momentos en que una sola bala no es suficiente. Usar esta pistola requiere la habilidad 'Pistolero'.
 }
 
-itmname_pistol6_2	{Pistola de dos cañones}
+itmname_pistol6_2	{Pistola de dos caÃ±ones}
 itmdescr_pistol6_2
 {
-Una ornamentada pistola de dos cañones. La empuñadura de marfil está tallada en forma de cabeza de halcón. Requiere la habilidad 'Pistolero'.
+Una ornamentada pistola de dos caÃ±ones. La empuÃ±adura de marfil estÃ¡ tallada en forma de cabeza de halcÃ³n. Requiere la habilidad 'Pistolero'.
 }
 
-itmname_pistol25	{Juego de cuatro pistolas de caballería}
+itmname_pistol25	{Juego de cuatro pistolas de caballerÃ­a}
 itmdescr_pistol25
 {
-Estas pistolas de calibre .70 y 14 pulgadas son uténticos monstruos. Gran poder de parada, así como excelente alcance y precisión, las hacen un argumento de peso en cualquier disputa. Requiere la habilidad 'Pistolero profesional'
+Estas pistolas de calibre .70 y 14 pulgadas son utÃ©nticos monstruos. Gran poder de parada, asÃ­ como excelente alcance y precisiÃ³n, las hacen un argumento de peso en cualquier disputa. Requiere la habilidad 'Pistolero profesional'
 }
 
-itmname_pistol26	{Pistola de metralla de cuatro cañones}
+itmname_pistol26	{Pistola de metralla de cuatro caÃ±ones}
 itmdescr_pistol26
 {
-Con cuatro cañones cargados de metralla puedes hacer mucho daño a varios enemigos a la vez. Requiere la habilidad 'Pistolero profesional'.
+Con cuatro caÃ±ones cargados de metralla puedes hacer mucho daÃ±o a varios enemigos a la vez. Requiere la habilidad 'Pistolero profesional'.
 }
 
 itmname_pistol27	{Pistola con llave de miguelete}
 itmdescr_pistol27
 {
-Esta pistola española no es especialmente precisa, pero hace mucho daño. El mecanismo es una forma temprana de llave de chispa.
+Esta pistola espaÃ±ola no es especialmente precisa, pero hace mucho daÃ±o. El mecanismo es una forma temprana de llave de chispa.
 }
 
 itmname_pistol3_14	{Pistola de la suerte de Jack}
 itmdescr_pistol3_14
 {
-Esta bella pero sobriamente decorada pistola, viene de las colonias Británicas de la India, el fabricante tiene su nombre 'Perry' grabado en la pistola. Originalmente propiedad de Sri Sumbhajee, pero robada por ti.
+Esta bella pero sobriamente decorada pistola, viene de las colonias BritÃ¡nicas de la India, el fabricante tiene su nombre 'Perry' grabado en la pistola. Originalmente propiedad de Sri Sumbhajee, pero robada por ti.
 }
 
 itmname_pistol4_1	{Pistola de mercenario}
 itmdescr_pistol4_1
 {
-Una pistola de cuatro cañones, pero más grande y poderosa que una normal. Puede matar a varios enemigos en solo unos segundos. Muy apreciada por los mercenarios españoles.
+Una pistola de cuatro caÃ±ones, pero mÃ¡s grande y poderosa que una normal. Puede matar a varios enemigos en solo unos segundos. Muy apreciada por los mercenarios espaÃ±oles.
 }
 
 itmname_Sparrow_Ring {Anillo de plata}
@@ -783,33 +783,33 @@ En un impulso, cogiste este anillo de plata de la mesa de Cap'n Drow mientras mi
 itmname_Sparrow_Ring1 {Anillo bonito}
 itmdescr_Sparrow_Ring1
 {
-Gombo, ahora conocido como caballero Jocard, te cambió este anillo por una baratija que encontraste en el cuerpo del auténtico caballero Jocard. Parece que saliste ganando con el trato.}
+Gombo, ahora conocido como caballero Jocard, te cambiÃ³ este anillo por una baratija que encontraste en el cuerpo del autÃ©ntico caballero Jocard. Parece que saliste ganando con el trato.}
 }
 
 // Alan Smithee's new weapons 
 
-itmname_pistol7	{Juego de pistolas pequeñas}
+itmname_pistol7	{Juego de pistolas pequeÃ±as}
 itmdescr_pistol7
 {
-Una bandolera con tres pistolas de desenfundado rápido. Más decorativas que poderosas, solían ser usadas por la nobleza francesa en duelos. Requiere la habilidad 'Pistolero'.
+Una bandolera con tres pistolas de desenfundado rÃ¡pido. MÃ¡s decorativas que poderosas, solÃ­an ser usadas por la nobleza francesa en duelos. Requiere la habilidad 'Pistolero'.
 }
 
 itmname_pistol7a	{Juego de pistolas cortas}
 itmdescr_pistol7a
 {
-Una bandolera con tres pistolas de desenfundado rápido. Ahora puedes abatir a un abandada de gorriones, siempre que se queden quietos. Requiere la habilidad 'Pistolero'.
+Una bandolera con tres pistolas de desenfundado rÃ¡pido. Ahora puedes abatir a un abandada de gorriones, siempre que se queden quietos. Requiere la habilidad 'Pistolero'.
 }
 
 itmname_pistol8	{Juego de pistolas de chispa}
 itmdescr_pistol8
 {
-Tres pistolas de chispa en una bandolera de fácil acceso. Se dice que son obra de un armero español manco y tuerto. Requiere la habilidad 'Pistolero'.
+Tres pistolas de chispa en una bandolera de fÃ¡cil acceso. Se dice que son obra de un armero espaÃ±ol manco y tuerto. Requiere la habilidad 'Pistolero'.
 }
 
-itmname_pistol9	{Juego de pistolas de caballería}
+itmname_pistol9	{Juego de pistolas de caballerÃ­a}
 itmdescr_pistol9
 {
-Estas pistolas de calibre .70 y 14 pulgadas son uténticos monstruos. Gran poder de parada, así como excelente alcance y precisión, las hacen un argumento de peso en cualquier disputa.. (Requiere la habilidad 'Pistolero')
+Estas pistolas de calibre .70 y 14 pulgadas son utÃ©nticos monstruos. Gran poder de parada, asÃ­ como excelente alcance y precisiÃ³n, las hacen un argumento de peso en cualquier disputa.. (Requiere la habilidad 'Pistolero')
 }
 
 // Alan Smithee's new weapons end
@@ -819,7 +819,7 @@ Estas pistolas de calibre .70 y 14 pulgadas son uténticos monstruos. Gran poder 
 itmname_LongRifle_C		{Rifle largo}
 itmdescr_LongRifle_C
 {
-Esta arma única se puede equipar con un telescopio para mejorar la precisión. 
+Esta arma Ãºnica se puede equipar con un telescopio para mejorar la precisiÃ³n. 
 }
 
 itmname_LongRifle_CT		{Rifle largo con telescopio}
@@ -843,7 +843,7 @@ Esta es el arma favorita de un francotirador.
 itmname_LongRifle_W		{Rifle largo}
 itmdescr_LongRifle_W
 {
-Esta arma única se puede equipar con un telescopio para mejorar la precisión. 
+Esta arma Ãºnica se puede equipar con un telescopio para mejorar la precisiÃ³n. 
 }
 
 itmname_LongRifle_WT	{Rifle largo con telescopio}
@@ -855,17 +855,17 @@ Esta es el arma favorita de un francotirador.
 itmname_LongRifle_H		{Rifle largo}
 itmdescr_LongRifle_H
 {
-Un rifle Baker, un rifle de chispa usado por el ejército británico durante las Guerras Napoleónicas.
+Un rifle Baker, un rifle de chispa usado por el ejÃ©rcito britÃ¡nico durante las Guerras NapoleÃ³nicas.
 }
 
 // <-- JRH: Long Rifle end
 
 // GR: Collier revolver for use by Clint Eastwood -->
 
-itmname_pistolcollier	{Revólver Collier}
+itmname_pistolcollier	{RevÃ³lver Collier}
 itmdescr_pistolcollier
 {
-Una versión ornamentada de un revólver temprano producido por Elisha Collier. Requiere la habilidad 'Pistolero profesional'.
+Una versiÃ³n ornamentada de un revÃ³lver temprano producido por Elisha Collier. Requiere la habilidad 'Pistolero profesional'.
 }
 
 // <-- GR: Collier revolver
@@ -881,7 +881,7 @@ Un arco pesado hecho de sauce rojo.
 itmname_bladearrows		{Flechas}
 itmdescr_bladearrows
 {
-Flechas para arco con plumas de halcón para mejorar la precisión. Se pueden mejorar a flechas incendiarias o envenenadas con las mezclas adecuadas.
+Flechas para arco con plumas de halcÃ³n para mejorar la precisiÃ³n. Se pueden mejorar a flechas incendiarias o envenenadas con las mezclas adecuadas.
 }
 
 itmname_curare			{Curare}
@@ -893,7 +893,7 @@ Una mezcla de extractos de plantas usada como veneno para flechas.
 itmname_tar			{Mezcla de brea}
 itmdescr_tar
 {
-Una espesa pasta negra mezcla de brea, pólvora y otros combustibles. Huele muy mal pero hace tus flechas incendiarias.
+Una espesa pasta negra mezcla de brea, pÃ³lvora y otros combustibles. Huele muy mal pero hace tus flechas incendiarias.
 }
 
 itmname_quiver			{Carcaj}
@@ -905,13 +905,13 @@ Puedes llevar 12 flechas en este ornamentado carcaj cuando lo lleves equipado.
 itmname_tomahawk		{Tomahawk}
 itmdescr_tomahawk
 {
-Un arma de combate cuerpo a cuerpo muy peligrosa, de diseño indio.
+Un arma de combate cuerpo a cuerpo muy peligrosa, de diseÃ±o indio.
 }
 
 itmname_pistoldart		{Cuchillo arrojadizo}
 itmdescr_pistoldart
 {
-Si lo lanzas desde cierta distancia, la víctima no sabrá de dónde ha venido. Puede equiparse en vez de una pistola.
+Si lo lanzas desde cierta distancia, la vÃ­ctima no sabrÃ¡ de dÃ³nde ha venido. Puede equiparse en vez de una pistola.
 }
 
 // BOP and JRH: Indian Weapons <--
@@ -921,7 +921,7 @@ Si lo lanzas desde cierta distancia, la víctima no sabrá de dónde ha venido. Pue
 itmname_tomahawk_chief		{Tomahawk del jefe}
 itmdescr_tomahawk_chief
 {
-Si tienes esta arma es que has tenido la suerte se sobrevivir a ella, o la más rara suerte de que te la hayan regalado.
+Si tienes esta arma es que has tenido la suerte se sobrevivir a ella, o la mÃ¡s rara suerte de que te la hayan regalado.
 }
 
 // GR: ceremonial tomahawk for "Crystal Skull" sidequest <--
@@ -931,23 +931,23 @@ Si tienes esta arma es que has tenido la suerte se sobrevivir a ella, o la más r
 itmname_pistol10 		{Escopeta de corredera}
 itmdescr_pistol10
 {
-Un arma mágica muy rara en estas aguas. Te permite disparar casi continuamente y usa metralla como munición. Requiere la habilidad 'Pistolero'.
+Un arma mÃ¡gica muy rara en estas aguas. Te permite disparar casi continuamente y usa metralla como municiÃ³n. Requiere la habilidad 'Pistolero'.
 }
 
 // KevAtl SLiB Shotgun <--
 
 // vassal weapons mod start
 
-itmname_pistolmtoon 	{Mosquetón}
+itmname_pistolmtoon 	{MosquetÃ³n}
 itmdescr_pistolmtoon
 {
-Un arma larga con un cañón más corto que el mosquete de infantería, usado normalmente en abordajes para eliminar varios enemigos a la vez.
+Un arma larga con un caÃ±Ã³n mÃ¡s corto que el mosquete de infanterÃ­a, usado normalmente en abordajes para eliminar varios enemigos a la vez.
 }
 
 itmname_pistolmket 		{Mosquete}
 itmdescr_pistolmket
 {
-Un mosquete de infantería. Se le puede añadir un cuchillo de tapón como bayoneta.
+Un mosquete de infanterÃ­a. Se le puede aÃ±adir un cuchillo de tapÃ³n como bayoneta.
 }
 
 // vassal weapons mod end
@@ -957,19 +957,19 @@ Un mosquete de infantería. Se le puede añadir un cuchillo de tapón como bayoneta
 itmname_arguebuse 			{Arcabuz}
 itmdescr_arguebuse
 {
-Este clásico mosquete de mecha sostiene una mecha lenta en una tenaza al final de una pequeña palanca curva conocida como serpentín.
+Este clÃ¡sico mosquete de mecha sostiene una mecha lenta en una tenaza al final de una pequeÃ±a palanca curva conocida como serpentÃ­n.
 }
 
 itmname_blade_mKnife		{Bayoneta de cuchillo}
 itmdescr_blade_mKnife
 {
-Bayoneta temprana del tipo 'de tapón'. Este cuchillo tiene un puño redondeado que encaja directamente en el cañón del mosquete, por lo que impide disparar mientras está puesta.
+Bayoneta temprana del tipo 'de tapÃ³n'. Este cuchillo tiene un puÃ±o redondeado que encaja directamente en el caÃ±Ã³n del mosquete, por lo que impide disparar mientras estÂÃ¡ puesta.
 }
 
 itmname_blademketK			{Mosquete con bayoneta}
 itmdescr_blademketK
 {
-Mosquete reglamentario con un cuchillo de tapón como bayoneta. El cuchillo debe retirarse para disparar.
+Mosquete reglamentario con un cuchillo de tapÃ³n como bayoneta. El cuchillo debe retirarse para disparar.
 }
 
 itmname_pistolmketB 		{Mosquete con bayoneta}
@@ -999,7 +999,7 @@ Un excelente par de ornamentadas pistolas de rueda. Requiere la habilidad 'Pisto
 itmname_pistol13			{Mosquete corto}
 itmdescr_pistol13
 {
-Un mosquete corto de pequeño calibre con llave de rueda. Se carga con dos balas de pistola.
+Un mosquete corto de pequeÃ±o calibre con llave de rueda. Se carga con dos balas de pistola.
 }
 
 // <-- JRH muskets & pistols
@@ -1009,43 +1009,43 @@ Un mosquete corto de pequeño calibre con llave de rueda. Se carga con dos balas 
 itmname_Barmansknife	{Cuchillo para el pan}
 itmdescr_Barmansknife
 {
-El uso original de este cuchillo es cortar rebanadas de pan, pero con un poco de destreza también puede usarse para cortar en rebanadas a tus enemigos.
+El uso original de este cuchillo es cortar rebanadas de pan, pero con un poco de destreza tambiÃ©n puede usarse para cortar en rebanadas a tus enemigos.
 }
 
 itmname_Merchantsdagger	{Daga de mercader}
 itmdescr_Merchantsdagger
 {
-Esta daga es favorecida por los mercaderes que tienen que viajar por lugares peligrosos. Gracias a su tamaño, puede esconderse fácilmente. Útil para atacar por sorpresa y quitar las ganas de atacarte a los enemigos restantes. Hasta que descubran las carencias defensivas del arma.
+Esta daga es favorecida por los mercaderes que tienen que viajar por lugares peligrosos. Gracias a su tamaÃ±o, puede esconderse fÃ¡cilmente. Ãštil para atacar por sorpresa y quitar las ganas de atacarte a los enemigos restantes. Hasta que descubran las carencias defensivas del arma.
 }
 
-itmname_GuestsKnife	{Puñal}
+itmname_GuestsKnife	{PuÃ±al}
 itmdescr_GuestsKnife
 {
-La estrecha hoja de este puñal puede penetrar a través del agujero más pequeño.
+La estrecha hoja de este puÃ±al puede penetrar a travÃ©s del agujero mÃ¡s pequeÃ±o.
 }
 
-itmname_Minersaxe	{Hacha de leñador}
+itmname_Minersaxe	{Hacha de leÃ±ador}
 itmdescr_Minersaxe
 {
-La mejor amiga del leñador. Árboles o enemigos, esta herramienta no hace distinción.
+La mejor amiga del leÃ±ador. Ãrboles o enemigos, esta herramienta no hace distinciÃ³n.
 }
 
 itmname_Minerscrow	{Azada}
 itmdescr_Minerscrow
 {
-Usada sobre todo por granjeros y esclavos para cultivar los campos. Con su borde afilado, tampoco tiene problemas para 'cultivar' el cráneo de tu enemigo.
+Usada sobre todo por granjeros y esclavos para cultivar los campos. Con su borde afilado, tampoco tiene problemas para 'cultivar' el crÃ¡neo de tu enemigo.
 }
 
 itmname_Minerspick	{Pico}
 itmdescr_Minerspick
 {
-Esta herramienta suele usarse para picar rocas. Pero también se puede usar para picar enemigos.
+Esta herramienta suele usarse para picar rocas. Pero tambiÃ©n se puede usar para picar enemigos.
 }
 
 itmname_MinersSpade	{Pala}
 itmdescr_MinersSpade
 {
-Capaz tanto de cortar como de golpear. Después de matar a tu víctima, puedes darle un entierro digno al instante.
+Capaz tanto de cortar como de golpear. DespuÃ©s de matar a tu vÃ­ctima, puedes darle un entierro digno al instante.
 }
 
 itmname_PiratesDagger	{Estilete}
@@ -1063,47 +1063,47 @@ Una pistola de chispa normal y corriente.
 itmname_MerchantsBlade	{Sable de mercader}
 itmdescr_MerchantsBlade
 {
-Este sable es la elección de los pocos mercaderes dispuestos a proteger sus mercancías con su vida. No muy elegante pero cunple su trabajo.
+Este sable es la elecciÃ³n de los pocos mercaderes dispuestos a proteger sus mercancÃ­as con su vida. No muy elegante pero cunple su trabajo.
 }
 //SuperDurnius <--
 
-itmname_spyglass0	{Catalejo de la vergüenza}
+itmname_spyglass0	{Catalejo de la vergÃ¼enza}
 itmdescr_spyglass0
 {
-¡Un catalejo barato y uno realmente vergonzoso pueden estar a solo una letra de distancia!
-Este en particular perteneció a Yuri (Ursus) Rogach, que se libró de él en cuanto encontró algo mejor.
+Â¡Un catalejo barato y uno realmente vergonzoso pueden estar a solo una letra de distancia!
+Este en particular perteneciÃ³ a Yuri (Ursus) Rogach, que se librÃ³ de Ã©l en cuanto encontrÃ³ algo mejor.
 Permite al usuario ver solo el nombre, tipo y velocidad del barco.
 }
 
 itmname_spyglass1	{Catalejo barato}
 itmdescr_spyglass1
 {
-Un simple catalejo con la lente rayada. Esta porquería no debería estar en el bolsillo de ningún capitán digno de tal nombre.
+Un simple catalejo con la lente rayada. Esta porquerÃ­a no deberÃ­a estar en el bolsillo de ningÃºn capitÃ¡n digno de tal nombre.
 Permite al usuario ver solo el nombre, tipo y velocidad del barco.
 }
 
-itmname_spyglass2	{Catalejo común}
+itmname_spyglass2	{Catalejo comÃºn}
 itmdescr_spyglass2
 {
 Un catalejo ordinario. Las lentes son de calidad decente, aunque no son las mejores.
-Permite al usuario ver solo el nombre, tipo y velocidad del barco, además del número de cañones y la cantidad de daño sufrido.
+Permite al usuario ver solo el nombre, tipo y velocidad del barco, ademÃ¡s del nÃºmero de caÃ±ones y la cantidad de daÃ±o sufrido.
 }
 
 itmname_spyglass3	{Catalejo superior}
 itmdescr_spyglass3
 {
 Un catalejo con lentes de gran calidad. Puedes ver la sonrisa en la cara del contramaestre enemigo desde una milla de distancia con esta cosa.
-Permite al usuario ver el nombre, tipo y velocidad del barco, número de cañones, cantidad de daño sufrido y número de tripulantes.
+Permite al usuario ver el nombre, tipo y velocidad del barco, nÃºmero de caÃ±ones, cantidad de daÃ±o sufrido y nÃºmero de tripulantes.
 }
 
 itmname_spyglass4	{Catalejo magistral}
 itmdescr_spyglass4
 {
-Un catalejo hecho por un auténtico maestro, con lentes del cristal de roca mas puro. No hay mejor catalejo que éste.
-Permite al usuario ver el nombre, tipo y velocidad del barco, la cantidad de cañones y la munición que llevan cargada, el daño recibido y el número de tripulantes.
+Un catalejo hecho por un autÃ©ntico maestro, con lentes del cristal de roca mas puro. No hay mejor catalejo que Ã©ste.
+Permite al usuario ver el nombre, tipo y velocidad del barco, la cantidad de caÃ±ones y la municiÃ³n que llevan cargada, el daÃ±o recibido y el nÃºmero de tripulantes.
 }
 
-itmname_potion1	{Poción curativa pequeña}
+itmname_potion1	{PociÃ³n curativa pequeÃ±a}
 itmdescr_potion1
 {
 Un brebaje de hierbas curativas que cura heridas leves.
@@ -1112,7 +1112,7 @@ Un brebaje de hierbas curativas que cura heridas leves.
 itmname_potion2	{Elixir curativo}
 itmdescr_potion2
 {
-Una potente decocción de más de 100 hierbas raras, puede curar incluso las más horribles heridas.
+Una potente decocciÃ³n de mÃ¡s de 100 hierbas raras, puede curar incluso las mÃ¡s horribles heridas.
 }
 
 //New Medical System added by Duncan
@@ -1123,21 +1123,21 @@ itmdescr_medical1
 Vendajes de tela, para ayudar a detener hemorragias e inmovilizar miembros heridos.
 }
 
-itmname_medical2	{Equipo de cauterización}
+itmname_medical2	{Equipo de cauterizaciÃ³n}
 itmdescr_medical2
 {
-Un cauterio caliente para quemar una herida y sellarla rápidamente, puede detener la hemorragia en heridas muy graves.
+Un cauterio caliente para quemar una herida y sellarla rÃ¡pidamente, puede detener la hemorragia en heridas muy graves.
 }
 
-itmname_lockpick	{Ganzúa}
+itmname_lockpick	{GanzÃºa}
 itmdescr_lockpick
 {
-Extracto de la "Guía para el Latrocinio del Gremio de Ladrones":
-CAPÍTULO XVII: DEL USO DE LAS GAANZÚAS
-Estos útiles objetos doblarán las posibilidades de un ladrón profesional de abrir cerraduras. Si la ganzúa no se rompe y se atasca en la cerradura, claro.
+Extracto de la "GuÃ­a para el Latrocinio del Gremio de Ladrones":
+CAPÃTULO XVII: DEL USO DE LAS GAANZÃšAS
+Estos Ãºtiles objetos doblarÃ¡n las posibilidades de un ladrÃ³n profesional de abrir cerraduras. Si la ganzÃºa no se rompe y se atasca en la cerradura, claro.
 
-- "¡Juramos solemnemente que no tramamos nada bueno!" -
-Firmado: Lunático, Colagusano, Canuto y Cornamenta
+- "Â¡Juramos solemnemente que no tramamos nada bueno!" -
+Firmado: LunÃ¡tico, Colagusano, Canuto y Cornamenta
 }
 
 itmname_jewelry1	{Zafiro}
@@ -1152,7 +1152,7 @@ itmdescr_jewelry2
 Una piedra exquisita. Dicen que puedes ver tu futuro en el resplandor de esta gema.
 }
 
-itmname_jewelry3	{Rubí}
+itmname_jewelry3	{RubÃ­}
 itmdescr_jewelry3
 {
 Una piedra preciosa del color de la sangre.
@@ -1161,25 +1161,25 @@ Una piedra preciosa del color de la sangre.
 itmname_jewelry4	{Esmeralda}
 itmdescr_jewelry4
 {
-Incluso el mayor canalla mirará esta maravillosa piedra y soñará con la belleza de ojos verdes que dejó atrás.
+Incluso el mayor canalla mirarÃ¡ esta maravillosa piedra y soÃ±arÃ¡ con la belleza de ojos verdes que dejÃ³ atrÃ¡s.
 }
 
 itmname_jewelry5	{Pepita de oro}
 itmdescr_jewelry5
 {
-Una pepita de oro puro. Los hombres matan por él, y las mujeres se rinden ante él.
+Una pepita de oro puro. Los hombres matan por Ã©l, y las mujeres se rinden ante Ã©l.
 }
 
 itmname_jewelry6	{Anillo de plata}
 itmdescr_jewelry6
 {
-Una combinación ideal de lujo y estilo.
+Una combinaciÃ³n ideal de lujo y estilo.
 }
 
 itmname_jewelry7	{Anillo de oro}
 itmdescr_jewelry7
 {
-Por supuesto que es demasiado ostentoso, ¿pero acaso tienes miedo de parecer noble?
+Por supuesto que es demasiado ostentoso, Â¿pero acaso tienes miedo de parecer noble?
 }
 
 itmname_jewelry8	{Anillo de bronce}
@@ -1191,79 +1191,79 @@ El 'anillo de la suerte' de alguien.
 itmname_jewelry9	{Cruz de bronce}
 itmdescr_jewelry9
 {
-Un símbolo de fe. Tal vez esta pequeña cruz te salve la vida en el fragor de la batalla.
+Un sÃ­mbolo de fe. Tal vez esta pequeÃ±a cruz te salve la vida en el fragor de la batalla.
 }
 
 itmname_jewelry10	{Anillo de oro lujoso}
 itmdescr_jewelry10
 {
-Un complemento de lujo para la mano más ilustre
+Un complemento de lujo para la mano mÃ¡s ilustre
 }
 
 itmname_jewelry11	{Perla grande}
 itmdescr_jewelry11
 {
-Un regalo de la mar. Puede que tenga más de 100 años.
+Un regalo de la mar. Puede que tenga mÃ¡s de 100 aÃ±os.
 }
 
-itmname_jewelry12	{Perla pequeña}
+itmname_jewelry12	{Perla pequeÃ±a}
 itmdescr_jewelry12
 {
-Una pequeña pero hermosa perla.
+Una pequeÃ±a pero hermosa perla.
 }
 
 itmname_jewelry13	{Broche de plata}
 itmdescr_jewelry13
 {
-Regala esto a cualquier mujer, y ella te recordará durante el resto de su vida.
+Regala esto a cualquier mujer, y ella te recordarÃ¡ durante el resto de su vida.
 }
 
 itmname_jewelry14	{Broche de oro}
 itmdescr_jewelry14
 {
-No le darías esta belleza a la primera mujer que encuentres. Es un regalo digno de una reina.
+No le darÃ­as esta belleza a la primera mujer que encuentres. Es un regalo digno de una reina.
 }
 
 itmname_jewelry15	{Colgante lujoso}
 itmdescr_jewelry15
 {
-Cualquier mujer estaría encantada de tener esta hermosa pieza de joyería.
+Cualquier mujer estarÃ­a encantada de tener esta hermosa pieza de joyerÃ­a.
 }
 
 itmname_jewelry16	{Collar de gemas}
 itmdescr_jewelry16
 {
-Puede que no sea la pieza de joyería más cara, pero a las damas les encantará.
+Puede que no sea la pieza de joyerÃ­a mÃ¡s cara, pero a las damas les encantarÃ¡.
 }
 
-itmname_indian1	{Ídolo de Irgantachul}
+itmname_indian1	{Ãdolo de Irgantachul}
 itmdescr_indian1
 {
 Figurilla de un dios inca.
 }
 
-itmname_indian2	{Extraña figurilla animal}
+itmname_indian2	{ExtraÃ±a figurilla animal}
 itmdescr_indian2
 {
-Nadie sabe exactamente lo que es. Puede que fuera el juguete de un niño inca.
+Nadie sabe exactamente lo que es. Puede que fuera el juguete de un niÃ±o inca.
 }
 
-itmname_indian3	{Pequeño mosaico}
+itmname_indian3	{PequeÃ±o mosaico}
 itmdescr_indian3
 {
-Obra de arte tremendamente bella. El secreto de su creación se perdió hace mucho.
+Obra de arte tremendamente bella. El secreto de su creaciÃ³n se perdiÃ³ hace mucho.
 }
 
 itmname_indian4	{Vasija de arcilla}
 itmdescr_indian4
 {
-Hermosa vasija adornada con imágenes.
+Hermosa vasija adornada con imÃ¡genes.
 }
 
 itmname_indian5	{Mascara de Markuchankatu}
 itmdescr_indian5
 {
-Una máscara de oro de un dios inca.
+Una mÃ¡scara de oro de un dios inca.
 }
 
 itmname_indian6	{Figurilla de Akumalartu}
@@ -1272,10 +1272,10 @@ itmdescr_indian6
 Figurilla de un dios inca de la guerra.
 }
 
-itmname_indian7	{Ídolo de Pikachuatl}
+itmname_indian7	{Ãdolo de Pikachuatl}
 itmdescr_indian7
 {
-Este ídolo representa a una diosa inca de la fertilidad y la suerte.
+Este Ã­dolo representa a una diosa inca de la fertilidad y la suerte.
 }
 
 itmname_indian8	{Escupidera real}
@@ -1284,13 +1284,13 @@ itmdescr_indian8
 Objeto ritual de la corte del emperador inca.
 }
 
-itmname_indian9	{Ídolo de Bakachukta}
+itmname_indian9	{Ãdolo de Bakachukta}
 itmdescr_indian9
 {
-Por un lado, es una figurilla de un dios inca. Por el otro, un vaso. Un objeto útil.
+Por un lado, es una figurilla de un dios inca. Por el otro, un vaso. Un objeto Ãºtil.
 }
 
-itmname_indian10	{Ídolo de Yxtoikchatlu}
+itmname_indian10	{Ãdolo de Yxtoikchatlu}
 itmdescr_indian10
 {
 Hermosa figurilla de oro de un dios inca incrustada de gemas.
@@ -1299,13 +1299,13 @@ Hermosa figurilla de oro de un dios inca incrustada de gemas.
 itmname_indian11	{Figurilla de la muela del juicio}
 itmdescr_indian11
 {
-Dios inca de la sabiduría. Parece feliz. (Curioso, ya que la mayoría de los europeos asocian la sabiduría con el cinismo. Diferencias culturales.)
+Dios inca de la sabidurÃ­a. Parece feliz. (Curioso, ya que la mayorÃ­a de los europeos asocian la sabidurÃ­a con el cinismo. Diferencias culturales.)
 }
 
-itmname_indian12	{Ídolo de Morchachtulak}
+itmname_indian12	{Ãdolo de Morchachtulak}
 itmdescr_indian12
 {
-Un gran ídolo inca de oro. Se usó una buena cantidad de oro para crearlo.
+Un gran Ã­dolo inca de oro. Se usÃ³ una buena cantidad de oro para crearlo.
 }
 
 itmname_indian13	{Vasija ritual}
@@ -1314,30 +1314,30 @@ itmdescr_indian13
 Una tradicional vasija ritual inca.
 }
 
-itmname_indian14	{Ídolo de oro de Ichtyloxtumba}
+itmname_indian14	{Ãdolo de oro de Ichtyloxtumba}
 itmdescr_indian14
 {
-Ídolo inca de oro hecho en un estilo muy inusual.
+Ãdolo inca de oro hecho en un estilo muy inusual.
 }
 
-itmname_indian15	{Bañera ritual de arcilla}
+itmname_indian15	{BaÃ±era ritual de arcilla}
 itmdescr_indian15
 {
-Bañera ritual; un objeto ceremonial de los incas.
+BaÃ±era ritual; un objeto ceremonial de los incas.
 }
-itmname_indian16	{Extraña vasija pintada}
+itmname_indian16	{ExtraÃ±a vasija pintada}
 itmdescr_indian16
 {
 Una vasija pintada con gran colorido, en el tradicional estilo inca.
 }
 
-itmname_indian17	{Ídolo de Darién}
+itmname_indian17	{Ãdolo de DariÃ©n}
 itmdescr_indian17
 {
-Este ídolo de oro pertenece a una tribu de caníbales. Representa a su dios de la guerra. Quien lo robe, tendrá serios problemas.
+Este Ã­dolo de oro pertenece a una tribu de canÃ­bales. Representa a su dios de la guerra. Quien lo robe, tendrÃ¡ serios problemas.
 }
 
-itmname_potion3		{Abtídoto embotellado}
+itmname_potion3		{AbtÃ­doto embotellado}
 itmdescr_potion3
 {
 Este combinado cura el envenenamiento.
@@ -1347,7 +1347,7 @@ Este combinado cura el envenenamiento.
 itmname_potion4		{Mixtura}
 itmdescr_potion4
 {
-La mixtura no solo detiene el veneno, también recupera parte de tu salud.
+La mixtura no solo detiene el veneno, tambiÃ©n recupera parte de tu salud.
 }
 
 ;-----------------------------------START ADDED BY VERRUCKT
@@ -1355,7 +1355,7 @@ La mixtura no solo detiene el veneno, también recupera parte de tu salud.
 itmname_potionrum		{Botella de ron}
 itmdescr_potionrum
 {
-Ningún ron te emborracha más rápido...
+NingÃºn ron te emborracha mÃ¡s rÃ¡pido...
 }
 
 itmname_potionwine	{Petaca de buen vino}
@@ -1376,61 +1376,61 @@ itmname_500gp	{bolsa con 500 piezas de oro}
 itmname_mineral1	{Cristal de pirita}
 itmdescr_mineral1
 {
-Gran cristal de mineral de hierro azteca. Si uno consigue suficientes fragmentos, aprenderá los secretos del hierro.
+Gran cristal de mineral de hierro azteca. Si uno consigue suficientes fragmentos, aprenderÃ¡ los secretos del hierro.
 }
 
 itmname_Mineral2	{Cristal de granate}
 itmdescr_Mineral2
 {
-Precioso y raro granate. Te dará mucho oro si se lo vendes a un mercader.
+Precioso y raro granate. Te darÃ¡ mucho oro si se lo vendes a un mercader.
 }
 
-itmname_Mineral3	{Fragmento de crisópalo}
+itmname_Mineral3	{Fragmento de crisÃ³palo}
 itmdescr_Mineral3
 {
-Cristal de crisópalo indio. Es casi imposible encontrar algo así. Es sabido que dos de estas piedras protegen de los fantasmas.
+Cristal de crisÃ³palo indio. Es casi imposible encontrar algo asÃ­. Es sabido que dos de estas piedras protegen de los fantasmas.
 }
 
 itmname_Albatross	{Albatros muerto}
 itmdescr_Albatross
 {
-Trae mala suerte encontrar un albatros muerto, como todo marino sabe. Ahora ¿cómo puedes librarte de él? Puede que haya un famoso naturalista viviendo en algún lugar de las colonias británicas que pueda estar interesado en un especimen como éste.
+Trae mala suerte encontrar un albatros muerto, como todo marino sabe. Ahora Â¿cÃ³mo puedes librarte de Ã©l? Puede que haya un famoso naturalista viviendo en algÃºn lugar de las colonias britÃ¡nicas que pueda estar interesado en un especimen como Ã©ste.
 }
 
 itmname_GoldArmor	{Coraza dorada}
 itmdescr_GoldArmor
 {
-Armadura muy decorada aparentemente diseñada para alguien importante y hecha de los más nobles materiales.
+Armadura muy decorada aparentemente diseÃ±ada para alguien importante y hecha de los mÃ¡s nobles materiales.
 }
 
 itmname_CommonArmor	{Coraza de combate}
 itmdescr_CommonArmor
 {
-Esta armadura está tan bien hecha que puede parar una espada e incluso desviar una bala. 
+Esta armadura estÃ¡ tan bien hecha que puede parar una espada e incluso desviar una bala. 
 }
 
 itmname_CheapArmor	{Coraza barata}
 itmdescr_CheapArmor
 {
-Típica armadura de acero; es pesada y dificulta los movimientos.
+TÃ­pica armadura de acero; es pesada y dificulta los movimientos.
 }
 
 itmname_Gorget	{Gola}
 itmdescr_Gorget
 {
-Protección para el cuello, normalmente de latón o acero, a menudo preferida por los espadachines.
+ProtecciÃ³n para el cuello, normalmente de latÃ³n o acero, a menudo preferida por los espadachines.
 }
 
-itmname_Jerkin	{Jubón de cuero}
+itmname_Jerkin	{JubÃ³n de cuero}
 itmdescr_Jerkin
 {
-Un chaleco de cuero; proporciona una escasa protección contra heridas de espada o de bala.
+Un chaleco de cuero; proporciona una escasa protecciÃ³n contra heridas de espada o de bala.
 }
 
 itmname_Cured	{Coraza de cuero}
 itmdescr_Cured
 {
-Armadura de combate hecha de cuero endurecido; proporciona una ligera protección heridas de espada o de bala.
+Armadura de combate hecha de cuero endurecido; proporciona una ligera protecciÃ³n heridas de espada o de bala.
 }
 
 itmname_Mineral7	{Fragmento de cuarzo ahumado}
@@ -1478,7 +1478,7 @@ Esta es una de las calavera de cristal mayas para el ritual sagrado.
 itmname_cryskull	{alavera de cristal}
 itmdescr_cryskull
 {
-Una calavera a tamaño real hecha de algún tipo de cristal.
+Una calavera a tamaÃ±o real hecha de algÃºn tipo de cristal.
 }
 
 itmname_mineral15	{Fragmento de platino nativo}
@@ -1498,38 +1498,38 @@ Muchos afirman que se puede ver el futuro en un cristal como este.
 itmname_CursedCoin		{Moneda misteriosa}
 itmdescr_CursedCoin
 {
-Gran moneda de oro con la imagen de una calavera azteca. Emite un aura de gran y antiguo poder. Los rumores dicen que viene de una isla que no puede ser encontrada salvo por los que ya saben dónde está. Puede que algún pirata borracho sepa más sobre esto.
+Gran moneda de oro con la imagen de una calavera azteca. Emite un aura de gran y antiguo poder. Los rumores dicen que viene de una isla que no puede ser encontrada salvo por los que ya saben dÃ³nde estÃ¡. Puede que algÃºn pirata borracho sepa mÃ¡s sobre esto.
 }
 
 itmname_luckydimeA	{10 centavos de la suerte}
 itmdescr_luckydimeA
 {
 Una moneda americana de plata de diez centavos de 1875 con la efigie de la Libertad sedente.
-Cuando te cueste tomar una decisión... ¡lanza la moneda al aire! 
+Cuando te cueste tomar una decisiÃ³n... Â¡lanza la moneda al aire! 
 }
 
 itmname_luckydimeB	{10 centavos de la suerte}
 itmdescr_luckydimeB
 {
 Una moneda americana de plata de diez centavos de 1875 con la efigie de la Libertad sedente.
-Cuando te cueste tomar una decisión... ¡lanza la moneda al aire! 
+Cuando te cueste tomar una decisiÃ³n... Â¡lanza la moneda al aire! 
 }
 
 // -- Scheffnow -- 2004-01-17 -- NoSaveModeMod -- start ---------------
 
-itmname_holycross1	{Cruz Cúprica}
+itmname_holycross1	{Cruz CÃºprica}
 itmdescr_holycross1
 {
 Una pesada cruz con decoraciones de piedras preciosas y perlas.
 }
 
-itmname_holycross2	{Cruz Argéntea}
+itmname_holycross2	{Cruz ArgÃ©ntea}
 itmdescr_holycross2
 {
 Una cruz de plata incrustada con perlas y raras gemas.
 }
 
-itmname_holycross3	{Cruz Áurea}
+itmname_holycross3	{Cruz Ãurea}
 itmdescr_holycross3
 {
 Una cruz dorada incrustada con un zafiro en el centro y una perla en cada brazo.
@@ -1542,14 +1542,14 @@ Una cruz dorada incrustada con un zafiro en el centro y una perla en cada brazo.
 itmname_letter_reward	{Carta de recompensa}
 itmdescr_letter_reward
 {
-Esta carta sellada tiene una inscripción en el sobre, prometiendo una recompensa a quien la entregue.
+Esta carta sellada tiene una inscripciÃ³n en el sobre, prometiendo una recompensa a quien la entregue.
 }
 
 
 itmname_estrella_token	{Prenda de Estrella}
 itmdescr_estrella_token
 {
-Una antigua moneda española convertida por un pirata en una prenda de amor para su dama.
+Una antigua moneda espaÃ±ola convertida por un pirata en una prenda de amor para su dama.
 }
 ; <-- Fred Bob quest items added by CatalinaThePirate
 
@@ -1558,13 +1558,13 @@ Una antigua moneda española convertida por un pirata en una prenda de amor para 
 itmname_Santos_Ring {Anillo de Santos}
 itmdescr_Santos_Ring
 {
-En un impulso, cogiste este anillo de plata de la mano de Santos después de matarlo. Quizás lo consrves como un memento mori, o lo vendas y compres algo de ron para olvidar que esta aventura alguna vez ocurrió.
+En un impulso, cogiste este anillo de plata de la mano de Santos despuÃ©s de matarlo. QuizÃ¡s lo consrves como un memento mori, o lo vendas y compres algo de ron para olvidar que esta aventura alguna vez ocurriÃ³.
 }
 
 itmname_Santos_Keys {Llaves de Santos}
 itmdescr_Santos_Keys
 {
-Las llaves de la casa de Mateus Santos, ¿qué puertas abren? Antes de que atacaras a Santos, viste cómo accionaba un interruptor, y ahora muchas puertas no pueden abrirse ni siquiera con estas llaves. Las llaves están marcadas de forma extraña: una dice "Estudio", otra, "¡Ay, pobre Yorick!", y la tercera, "Secret-ario", ¿qué significa esto?
+Las llaves de la casa de Mateus Santos, Â¿quÃ© puertas abren? Antes de que atacaras a Santos, viste cÃ³mo accionaba un interruptor, y ahora muchas puertas no pueden abrirse ni siquiera con estas llaves. Las llaves estÃ¡n marcadas de forma extraÃ±a: una dice "Estudio", otra, "Â¡Ay, pobre Yorick!", y la tercera, "Secret-ario", Â¿quÃ© significa esto?
 }
 
 itmname_Santos_Journal1 {Lista de objetivos de Santos A-N}
@@ -1576,7 +1576,7 @@ Este es aparentmente el primer volumen de un diario con una lista de los objetiv
 itmname_Santos_Journal2 {Lista de objetivos de Santos O-Z}
 itmdescr_Santos_Journal2
 {
-Más objetivos de la lista de Santos; Petros, Pieter Boelen, Pirate Sam, Rafe Bligh, Rico,(aka Drunken, aka El Capitain, aka Admiral Makkay), Screwface, Skull, Spaz, Vassal, William, ¡y ese malvado Sir Christopher Mings! También cierto profesor de universidad llamado Losey que al parecer una vez le puso una mala nota.
+MÃ¡s objetivos de la lista de Santos; Petros, Pieter Boelen, Pirate Sam, Rafe Bligh, Rico,(aka Drunken, aka El Capitain, aka Admiral Makkay), Screwface, Skull, Spaz, Vassal, William, Â¡y ese malvado Sir Christopher Mings! TambiÃ©n cierto profesor de universidad llamado Losey que al parecer una vez le puso una mala nota.
 }
 ; <-- Mateus Santos quest items added by SCM
 
@@ -1585,7 +1585,7 @@ Más objetivos de la lista de Santos; Petros, Pieter Boelen, Pirate Sam, Rafe Bli
 itmname_building	{Licencia del edificio ;) }
 itmdescr_building
 {
-¡NO TOCAR! ¡Esencial para el 'ocupante' de este edificio! 
+Â¡NO TOCAR! Â¡Esencial para el 'ocupante' de este edificio! 
 }
 
 // ccc Special weapons assembly kit start
@@ -1593,19 +1593,19 @@ itmdescr_building
 itmname_bladeX1	{Hoja Borgia}
 itmdescr_bladeX1
 {
-Parece una ostentosa espada ceremonial, pero la punta está envenenada con belladona. Incluso el menor rasguño causará a la vícitima una muerte lenta pero segura.
+Parece una ostentosa espada ceremonial, pero la punta estÃ¡ envenenada con belladona. Incluso el menor rasguÃ±o causarÃ¡ a la vÃ­citima una muerte lenta pero segura.
 }
 
 itmname_bladeX2	{Bolsa de arena}
 itmdescr_bladeX2
 {
-El arma favorita de un atracador: un golpe en la cabeza de una víctima DESPREVENIDA aturde inmediatamente (por un tiempo) pero no causa ruido ni alarma. Las personas aturdidas pueden ser desvalijadas fácilmente... si no hay testigos cerca.
+El arma favorita de un atracador: un golpe en la cabeza de una vÃ­ctima DESPREVENIDA aturde inmediatamente (por un tiempo) pero no causa ruido ni alarma. Las personas aturdidas pueden ser desvalijadas fÃ¡cilmente... si no hay testigos cerca.
 }
 
-itmname_bladeX3	{Cuchillo de ladrón}
+itmname_bladeX3	{Cuchillo de ladrÃ³n}
 itmdescr_bladeX3
 {
-La punta y uno de los filos de esta estrecha hoja están sin afilar para poder deslizarlo fácilmente bajo el cinturón de alguien. Entonces puedes cortar el cinturón con el lado afilado y llevarte la bolsa y las armas de la víctima en un rápido movimiento. Tu siguiente rápido movimiento debería ser en dirección opuesta...
+La punta y uno de los filos de esta estrecha hoja estÃ¡n sin afilar para poder deslizarlo fÃ¡cilmente bajo el cinturÃ³n de alguien. Entonces puedes cortar el cinturÃ³n con el lado afilado y llevarte la bolsa y las armas de la vÃ­ctima en un rÃ¡pido movimiento. Tu siguiente rÃ¡pido movimiento deberÃ­a ser en direcciÃ³n opuesta...
 }
 
 itmname_pistolbbuss	{Trabuco}
@@ -1617,41 +1617,41 @@ Primitiva escopeta. Para personas que nunca pueden acertar a sus objetivos norma
 itmname_pistolgrenade	{Granada}
 itmdescr_pistolgrenade
 {
-Mutila a TODOS los que estén cerca del objetivo inicial, ¡así que ten cuidado de no tirarla demasiado cerca! Puede equiparse en lugar de una pistola.
+Mutila a TODOS los que estÃ©n cerca del objetivo inicial, Â¡asÃ­ que ten cuidado de no tirarla demasiado cerca! Puede equiparse en lugar de una pistola.
 }
 
-itmname_pistolgas	{Botella de Éter}
+itmname_pistolgas	{Botella de Ã‰ter}
 itmdescr_pistolgas
 {
-Emite vapores anestésicos si se tira y se rompe. TODOS los que estén cerca y desprevenidos quedarán confusos y aturdidos... por un tiempo. Puede equiparse en lugar de una pistola.
+Emite vapores anestÃ©sicos si se tira y se rompe. TODOS los que estÃ©n cerca y desprevenidos quedarÃ¡n confusos y aturdidos... por un tiempo. Puede equiparse en lugar de una pistola.
 }
 
 itmname_pistolpdart	{Cuchillo arrojadizo envenenado}
 itmdescr_pistolpdart
 {
-Afilada cuchilla bañada en sangre de la rana venenosa del archipiélago, que mata lentamente pero con seguridad. Si la lanzas desde cierta distancia la víctima no sabrá de dónde vino. Puede equiparse en lugar de una pistola.
+Afilada cuchilla baÃ±ada en sangre de la rana venenosa del archipiÃ©lago, que mata lentamente pero con seguridad. Si la lanzas desde cierta distancia la vÃ­ctima no sabrÃ¡ de dÃ³nde vino. Puede equiparse en lugar de una pistola.
 }
 
 itmname_pistolstink	{Bomba de azufre}
 itmdescr_pistolstink
 {
-Vasija que contiene materias combustibles que emiten un humo sofocante. Envenena lentamente a todos los que inhalen el humo, ¡así que ten cuidado de no tirarla demasiado cerca! Puede equiparse en lugar de una pistola.
+Vasija que contiene materias combustibles que emiten un humo sofocante. Envenena lentamente a todos los que inhalen el humo, Â¡asÃ­ que ten cuidado de no tirarla demasiado cerca! Puede equiparse en lugar de una pistola.
 }
 
-itmname_pistolrock	{Adoquín}
+itmname_pistolrock	{AdoquÃ­n}
 itmdescr_pistolrock
 {
-No subestimes su efectividad como arma sigilosa. Si lo lanzas desde cierta distancia la víctima quedará aturdida y verá las estrellas... por algún tiempo. Sin embargo, cualquiera que esté esperando un ataque, lo esquivará fácilmente. Puede equiparse en lugar de una pistola.
+No subestimes su efectividad como arma sigilosa. Si lo lanzas desde cierta distancia la vÃ­ctima quedarÃ¡ aturdida y verÃ¡ las estrellas... por algÃºn tiempo. Sin embargo, cualquiera que estÃ© esperando un ataque, lo esquivarÃ¡ fÃ¡cilmente. Puede equiparse en lugar de una pistola.
 }
 
 // ccc Special weapons assembly kit end
 
 // PB: Fists -->
 
-itmname_bladeX4	{Tus fieles puños}
+itmname_bladeX4	{Tus fieles puÃ±os}
 itmdescr_bladeX4
 {
-Puede que no hagan tanto daño como un arma de verdad, pero pueden dejar a tu oponente inconsciente. Y a medida que aumenta tu rango, también lo hace tu capacidad para dar una buena paliza a tus enemigos.
+Puede que no hagan tanto daÃ±o como un arma de verdad, pero pueden dejar a tu oponente inconsciente. Y a medida que aumenta tu rango, tambiÃ©n lo hace tu capacidad para dar una buena paliza a tus enemigos.
 }
 
 // PB: Fists <--
@@ -1661,31 +1661,31 @@ Puede que no hagan tanto daño como un arma de verdad, pero pueden dejar a tu opo
 itmname_tatt1	{Antiguo tatuaje tribal}
 itmdescr_tatt1
 {
-Los antiguos guerreros tribales recibían estas marcas antes de entrar en batalla, diseñadas para llevar el miedo al corazón de sus enemigos.
+Los antiguos guerreros tribales recibÃ­an estas marcas antes de entrar en batalla, diseÃ±adas para llevar el miedo al corazÃ³n de sus enemigos.
 }
 
 itmname_tatt2	{Tatuaje del marinero y su amor}
 itmdescr_tatt2
 {
-Con su bote, su aldea en llamas y su muchacha bonita, este tatuaje le traerá a cualquier marinero recuerdos del amor (o amores) que le espera en puerto, y le inspirará para llegar allí mucho más rápido.
+Con su bote, su aldea en llamas y su muchacha bonita, este tatuaje le traerÃ¡ a cualquier marinero recuerdos del amor (o amores) que le espera en puerto, y le inspirarÃ¡ para llegar allÃ­ mucho mÃ¡s rÃ¡pido.
 }
 
-itmname_tatt3	{Tatuaje libre como un pájaro}
+itmname_tatt3	{Tatuaje libre como un pÃ¡jaro}
 itmdescr_tatt3
 {
-Esta inspiradora imagen en tinta te atraerá la estima y el favor de la tripulación, recordándoles la libertad y las facilidades de la vida en el mar.
+Esta inspiradora imagen en tinta te atraerÃ¡ la estima y el favor de la tripulaciÃ³n, recordÃ¡ndoles la libertad y las facilidades de la vida en el mar.
 }
 
-itmname_tatt4	{Clásico tatuaje de ancla}
+itmname_tatt4	{ClÃ¡sico tatuaje de ancla}
 itmdescr_tatt4
 {
-Un cláico diseño marinero de ancla y barco, animará a tus hombres a luchar con más ahinco para mantener su barco a flote.
+Un clÃ¡ico diseÃ±o marinero de ancla y barco, animarÃ¡ a tus hombres a luchar con mÃ¡s ahinco para mantener su barco a flote.
 }
 
 itmname_tatt5	{Antiguo y ornamentado tatuaje}
 itmdescr_tatt5
 {
-Miembros de ciertas iglesias y órdenes antiguas recibían estas marcas, para invocar la providencia divina.
+Miembros de ciertas iglesias y Ã³rdenes antiguas recibÃ­an estas marcas, para invocar la providencia divina.
 }
 // <--- ditto
 
@@ -1694,71 +1694,71 @@ Miembros de ciertas iglesias y órdenes antiguas recibían estas marcas, para invo
 itmname_leeches	{Tarro de sanguijuelas}
 itmdescr_leeches
 {
-El curalotodo por excelencia de las colonias. Cuando se ponen sobre la piel, estos pequeños diablillos (llamados Lenny, Benny, Jenny y Eduardo, respectivamente) succionarán los malos humores pero dejarán al paciente sintiéndose un poco débil.
+El curalotodo por excelencia de las colonias. Cuando se ponen sobre la piel, estos pequeÃ±os diablillos (llamados Lenny, Benny, Jenny y Eduardo, respectivamente) succionarÃ¡n los malos humores pero dejarÃ¡n al paciente sintiÃ©ndose un poco dÃ©bil.
 }
 
 itmname_meds1	{Acetum Saturninum}
 itmdescr_meds1
 {
-Un líquido volátil, usado como droga hipnótica, derivado de la oxidación del alcohol. Mejor encontrar a alguien que sepa lo que hace con esto.
+Un lÃ­quido volÃ¡til, usado como droga hipnÃ³tica, derivado de la oxidaciÃ³n del alcohol. Mejor encontrar a alguien que sepa lo que hace con esto.
 }
 
 itmname_meds2	{Confectio Damocritis}
 itmdescr_meds2
 {
-Una botella de misterioso y apestoso líquido, presumiblemente con alguna propiedad medicinal... aunque no te sirve de nada tal como está.
+Una botella de misterioso y apestoso lÃ­quido, presumiblemente con alguna propiedad medicinal... aunque no te sirve de nada tal como estÃ¡.
 }
 
-itmname_meds3	{Tintura de Láudano}
+itmname_meds3	{Tintura de LÃ¡udano}
 itmdescr_meds3
 {
-Muchas almas desgraciadas han caído presa de esta mezcla de alcohol y opiáceos, quedando reducidos a adictos descerebrados. Lleva la etiqueta "Mantener fuera del alcance de los niños".
+Muchas almas desgraciadas han caÃ­do presa de esta mezcla de alcohol y opiÃ¡ceos, quedando reducidos a adictos descerebrados. Lleva la etiqueta "Mantener fuera del alcance de los niÃ±os".
 }
 
 itmname_meds4	{Turpethum}
 itmdescr_meds4
 {
-Un cofrecillo lleno de alguna medicina de naturaleza desconocida, completamente desconcertante e inútil para ti.
+Un cofrecillo lleno de alguna medicina de naturaleza desconocida, completamente desconcertante e inÃºtil para ti.
 }
 
 // <-- ditto
 
 // JRH ammo mod start
 
-itmname_powderflask {Petaca de pólvora}
+itmname_powderflask {Petaca de pÃ³lvora}
 itmdescr_powderflask
 {
-Con la petaca de pólvora equipada, puedes llevar hasta 12 cargas de pólvora. Recargar es un 5% más rápido.
+Con la petaca de pÃ³lvora equipada, puedes llevar hasta 12 cargas de pÃ³lvora. Recargar es un 5% mÃ¡s rÃ¡pido.
 }
 
-itmname_gunpowder {Pólvora}
+itmname_gunpowder {PÃ³lvora}
 itmdescr_gunpowder
 {
-Munición ordinaria. Comprueba tu pólvora a menudo, puede ponerse húmeda fácilmente.
+MuniciÃ³n ordinaria. Comprueba tu pÃ³lvora a menudo, puede ponerse hÃºmeda fÃ¡cilmente.
 }
 
 itmname_ammopouch {Saquete de balas}
 itmdescr_ammopouch
 {
-Con la cartuchera equipada puedes llevar 12 balas de pistola, 12 cargas de metralla de psitola o 6 balas de mosquete. Recargar es un 5% más rápido.
+Con la cartuchera equipada puedes llevar 12 balas de pistola, 12 cargas de metralla de psitola o 6 balas de mosquete. Recargar es un 5% mÃ¡s rÃ¡pido.
 }
 
-itmname_powderbarrel {Barrilete de pólvora}
+itmname_powderbarrel {Barrilete de pÃ³lvora}
 itmdescr_powderbarrel
 {
-Puedes llevar 24 cargas de pólviora cuando el barrilete de pólvora esté equipado.
+Puedes llevar 24 cargas de pÃ³lviora cuando el barrilete de pÃ³lvora estÂÃ© equipado.
 }
 
-itmname_ammobag {Bolsa de munición}
+itmname_ammobag {Bolsa de municiÃ³n}
 itmdescr_ammobag
 {
-Puedes llevar 24 balas de pistola, 24 cargas de metralla de psitola o 12 balas de mosquete cuando la bolsa de munición esté equipada.
+Puedes llevar 24 balas de pistola, 24 cargas de metralla de psitola o 12 balas de mosquete cuando la bolsa de municiÃ³n estÃ© equipada.
 }
 
 itmname_ammobag1 {Cartuchera}
 itmdescr_ammobag1
 {
-Puedes llevar 18 cargas de pólvora Y 18 balas de pistola, 18 cargas de metralla de pistola o 9 balas de mosquete. NO se necesita petaca de pólvora ni saquete de balas, pero debe equiparse un cinturón de pistola. Recargar es un 10% más rápido.
+Puedes llevar 18 cargas de pÃ³lvora Y 18 balas de pistola, 18 cargas de metralla de pistola o 9 balas de mosquete. NO se necesita petaca de pÃ³lvora ni saquete de balas, pero debe equiparse un cinturÃ³n de pistola. Recargar es un 10% mÃ¡s rÃ¡pido.
 }
 
 itmname_pistolbullets {Balas de pistola}
@@ -1770,13 +1770,13 @@ Balas para todos los tipos de pistola excepto la pistola de metralla.
 itmname_pistolgrapes {Metralla}
 itmdescr_pistolgrapes
 {
-Munición para el trabuco, el mosquetón y la pistola de metralla. 
+MuniciÃ³n para el trabuco, el mosquetÃ³n y la pistola de metralla. 
 }
 
 itmname_musketbullets {Balas de mosquete}
 itmdescr_musketbullets
 {
-Balas más grandes que las de pistola, solo para mosquetes. 
+Balas mÃ¡s grandes que las de pistola, solo para mosquetes. 
 }
 
 // JRH ammo mod end
@@ -1786,53 +1786,53 @@ Balas más grandes que las de pistola, solo para mosquetes.
 itmname_microscope {Microscopio} // Black Bart
 itmdescr_microscope
 {
-Los microscopios se usan para ver cosas que son demasiado pequeñas para apreciar a simple vista. Suele ser usado por doctores y científicos. Aunque este microscopio es bastante inútil para un capitán, la tripulación pensará que un capitán con un microscopio es más inteligente que un capitán sin un microscopio.
+Los microscopios se usan para ver cosas que son demasiado pequeÃ±as para apreciar a simple vista. Suele ser usado por doctores y cientÃ­ficos. Aunque este microscopio es bastante inÃºtil para un capitÃ¡n, la tripulaciÃ³n pensarÃ¡ que un capitÃ¡n con un microscopio es mÃ¡s inteligente que un capitÃ¡n sin un microscopio.
 }
 
-itmname_compass1 {Brújula barata} // Black Bart
+itmname_compass1 {BrÃºjula barata} // Black Bart
 itmdescr_compass1
 {
-Una simple brújula que apunta al Norte. Es de gran ayuda para la navegación porque te muestra la dirección del viento.
+Una simple brÃºjula que apunta al Norte. Es de gran ayuda para la navegaciÃ³n porque te muestra la direcciÃ³n del viento.
 }
 
-itmname_compass2 {Brújula normal} // PB
+itmname_compass2 {BrÃºjula normal} // PB
 itmdescr_compass2
 {
-Esta brújula normal es mucho más útil que la brújula más barata. Te muestra la velocidad del viento y de tu barco, la costa, el ángulo de fuego de tus cañones, además de los barcos que haya a tu alrededor y si están a flote (triángulo gris) o hundiéndose (triángulo azul).
+Esta brÃºjula normal es mucho mÃ¡s Ãºtil que la brÃºjula mÃ¡s barata. Te muestra la velocidad del viento y de tu barco, la costa, el Ã¡ngulo de fuego de tus caÃ±ones, ademÃ¡s de los barcos que haya a tu alrededor y si estÃ¡n a flote (triÃ¡ngulo gris) o hundiÃ©ndose (triÃ¡ngulo azul).
 }
 
-itmname_compass3 {Brújula mejorada} // KK
+itmname_compass3 {BrÃºjula mejorada} // KK
 itmdescr_compass3
 {
-Este modelo es una versión mejorada de la brújula normal; te muestra también los barcos contra los que estás luchando (triángulo rojo) y los que son neutrales/amistosos (triángulo gris/verde respectivamente).
+Este modelo es una versiÃ³n mejorada de la brÃºjula normal; te muestra tambiÃ©n los barcos contra los que estÃ¡s luchando (triÃ¡ngulo rojo) y los que son neutrales/amistosos (triÃ¡ngulo gris/verde respectivamente).
 }
 
-itmname_aztec_compass {Brújula azteca} // Petros
+itmname_aztec_compass {BrÃºjula azteca} // Petros
 itmdescr_aztec_compass
 {
-Por raro que parezca, esta brújula parece haber sido hecha por los aztecas.
-Los aztecas son conocidos por su oro, su religión y sus templos.
+Por raro que parezca, esta brÃºjula parece haber sido hecha por los aztecas.
+Los aztecas son conocidos por su oro, su religiÃ³n y sus templos.
 Sin embargo no se los considera grandes marinos.
-Esta brújula deja claro por qué:
-No apunta al norte, haciéndola bastante inútil para la navegación.
+Esta brÃºjula deja claro por quÃ©:
+No apunta al norte, haciÃ©ndola bastante inÃºtil para la navegaciÃ³n.
 }
 
 itmname_scales {Juego de balanzas} // Black Bart
 itmdescr_scales
 {
-Las balanzas suelen ser usadas por los mercaderes. Ayudan a pesar los objetos y mercancías que se intercambian y son útiles para mejorar tu precisión y habilidad en el comercio.
+Las balanzas suelen ser usadas por los mercaderes. Ayudan a pesar los objetos y mercancÃ­as que se intercambian y son Ãºtiles para mejorar tu precisiÃ³n y habilidad en el comercio.
 }
 
 itmname_sextant {Sextante} // Gedscho
 itmdescr_sextant
 {
-Un sextante es un instrumento de medida generalmente usado para medir el ángulo de elevación de un cuerpo celeste sobre el horizonte. Es un objeto extremadamente útil para los navegantes para determinar la posición de su barco.
+Un sextante es un instrumento de medida generalmente usado para medir el Ã¡ngulo de elevaciÃ³n de un cuerpo celeste sobre el horizonte. Es un objeto extremadamente Ãºtil para los navegantes para determinar la posiciÃ³n de su barco.
 }
 
 itmname_doctortoolkit {Herramientas de cirujano} // Black Bart & Gedscho
 itmdescr_doctortoolkit
 {
-Usando las herramientas de cirujano, puedes intentar salvar a los tripulantes heridos de morir después de una batalla. Esto disminuye las bajas en combate.
+Usando las herramientas de cirujano, puedes intentar salvar a los tripulantes heridos de morir despuÃ©s de una batalla. Esto disminuye las bajas en combate.
 }
 
 itmname_carpentertools {Herramientas de carpintero} // JRMM
@@ -1844,49 +1844,49 @@ Estas herramientas de alta calidad mejoran la habilidad del carpintero para hace
 itmname_silkgrapple {Estachas de abordaje de seda} // JRMM
 itmdescr_silkgrapple
 {
-Cabos para los garfios de abordaje más ligeros y resistentes hechos de seda trenzada, Más fáciles de lanzar y más difíciles de cortar.
+Cabos para los garfios de abordaje mÃ¡s ligeros y resistentes hechos de seda trenzada, MÃ¡s fÃ¡ciles de lanzar y mÃ¡s difÃ­ciles de cortar.
 }
 
 itmname_gunnerdrum {Tambor de zafarrancho} // JRMM
 itmdescr_gunnerdrum
 {
-Entrenar a las brigadas de artillería para trabajar al ritmo del tambor les permite moverse más rápido y con más eficacia.
+Entrenar a las brigadas de artillerÃ­a para trabajar al ritmo del tambor les permite moverse mÃ¡s rÃ¡pido y con mÃ¡s eficacia.
 }
 
 itmname_gunnerglass {Catalejo de artillero} // JRMM
 itmdescr_gunnerglass
 {
-Un catalejo graduado y de baja ampliación diseñado para oficiales de artillería, permitiéndoles ajustar el fuego rápidamente.
+Un catalejo graduado y de baja ampliaciÃ³n diseÃ±ado para oficiales de artillerÃ­a, permitiÃ©ndoles ajustar el fuego rÃ¡pidamente.
 }
 
 itmname_masterkeys {Llaves maestras} // JRMM
 itmdescr_masterkeys
 {
-Llaves de la santabárbara, el armero y el pañol del ron. La posesión de estas llaves denota que el tripulante es un oficial de confianza y digno de respeto.
+Llaves de la santabÃ¡rbara, el armero y el paÃ±ol del ron. La posesiÃ³n de estas llaves denota que el tripulante es un oficial de confianza y digno de respeto.
 }
 
 itmname_luckcharm {Amuleto de buena suerte} // JRMM
 itmdescr_luckcharm
 {
-Un colgante de plata de ley en forma de trébol. Esta clase de suerte no se puede comprar, hay que encontrarla.
+Un colgante de plata de ley en forma de trÃ©bol. Esta clase de suerte no se puede comprar, hay que encontrarla.
 }
 
 itmname_bladekit {Equipo para el cuidado de la espada} // JRMM
 itmdescr_bladekit
 {
-Contiene una piedra de afilar, aceite y un trapo fino. Cuida de tu espada y ella cuidará de ti. Así durará más.
+Contiene una piedra de afilar, aceite y un trapo fino. Cuida de tu espada y ella cuidarÃ¡ de ti. AsÃ­ durarÃ¡ mÃ¡s.
 }
 
 itmname_clock1 {Reloj simple} // PB
 itmdescr_clock1
 {
-Conocer la hora a bordo de un barco es muy importante para la navegación. Puedes colgar este sencillo reloj en tu cámara y te indicará la hora cuando estés en el mar. Sin embargo, no es muy preciso y no puede usarse para determinar tu posición usando las estrellas.
+Conocer la hora a bordo de un barco es muy importante para la navegaciÃ³n. Puedes colgar este sencillo reloj en tu cÃ¡mara y te indicarÃ¡ la hora cuando estÃ©s en el mar. Sin embargo, no es muy preciso y no puede usarse para determinar tu posiciÃ³n usando las estrellas.
 }
 
-itmname_clock2 {Cronómetro} // PB
+itmname_clock2 {CronÃ³metro} // PB
 itmdescr_clock2
 {
-Para poder determinar tu posición en el mar, necesitas conocer la hora con exactitud. Este instrumento de precisión pivota sobre dos puntos por lo que siempre cuelga recto, incluso con mala mar. Usando este cronómetro en combinación con un sextante, es posible determinar tu posición en mar abierto a través de una serie de complicados cálculos.
+Para poder determinar tu posiciÃ³n en el mar, necesitas conocer la hora con exactitud. Este instrumento de precisiÃ³n pivota sobre dos puntos por lo que siempre cuelga recto, incluso con mala mar. Usando este cronÃ³metro en combinaciÃ³n con un sextante, es posible determinar tu posiciÃ³n en mar abierto a travÃ©s de una serie de complicados cÃ¡lculos.
 }
 
 // PB: Add new items <--
@@ -1896,20 +1896,20 @@ Para poder determinar tu posición en el mar, necesitas conocer la hora con exact
 itmname_book1 {El Libro de cabecera de abordajes de Black Bart}
 itmdescr_book1
 {
-Capítulos sobre: Siempre ata un cabo a tu garfio de abordaje - No abordes barcos con cubiertas de pino nudoso si tienes una pata de palo, y siempre deja a tus hombres ir delante.
+CapÃ­tulos sobre: Siempre ata un cabo a tu garfio de abordaje - No abordes barcos con cubiertas de pino nudoso si tienes una pata de palo, y siempre deja a tus hombres ir delante.
 }
 
-itmname_book2 {Álgebra de Boelen}
+itmname_book2 {Ãlgebra de Boelen}
 itmdescr_book2
 {
-Muestra cómo calcular esas molestas parábolas de disparo y cómo conseguir 'la segunda unidad gratis' de los mercaderes. 
-Incluye un ábaco plegable gratis
+Muestra cÃ³mo calcular esas molestas parÃ¡bolas de disparo y cÃ³mo conseguir 'la segunda unidad gratis' de los mercaderes. 
+Incluye un Ã¡baco plegable gratis
 }
 
 itmname_book3 {Dobla tus doblones, de Drow}
 itmdescr_book3
 {
-Incluye: Comprobación de monedas con los dientes - Cómo sacar siempre cara - Quitar espinillas con dos monedas - Usar una moneda en vez de un parche en el ojo (para tener siempre un ojo puesto en tu dinero).
+Incluye: ComprobaciÃ³n de monedas con los dientes - CÃ³mo sacar siempre cara - Quitar espinillas con dos monedas - Usar una moneda en vez de un parche en el ojo (para tener siempre un ojo puesto en tu dinero).
 Un libro imprescindible.
 }
 
@@ -1917,53 +1917,53 @@ itmname_book4 {Libro de Hook}
 itmdescr_book4
 {
 Originalmente titulado Manual de Hook - hasta su desafortunado accidente
-Muchas pistas útiles para la navegación - incluyendo la posición del sol
+Muchas pistas Ãºtiles para la navegaciÃ³n - incluyendo la posiciÃ³n del sol
 }
 
-itmname_book5 {El mástil de mesana de Morgan}
+itmname_book5 {El mÃ¡stil de mesana de Morgan}
 itmdescr_book5
 {
-Descripción detallada de cómo Morgan reparó su palo de mesana en alta mar usando solo su pañuelo y la pata de palo de su primer oficial - Ilustrado - Imprescindible para todas esas escaramuzas y tormentas en alta mar.
+DescripciÃ³n detallada de cÃ³mo Morgan reparÃ³ su palo de mesana en alta mar usando solo su paÃ±uelo y la pata de palo de su primer oficial - Ilustrado - Imprescindible para todas esas escaramuzas y tormentas en alta mar.
 }
 
-itmname_book6 {Machacar mástiles, de Morgan}
+itmname_book6 {Machacar mÃ¡stiles, de Morgan}
 itmdescr_book6
 {
-Libro 2 en una serie de 3 - Detalles del otro lado de Morgan - Desplegables a tamño natural de cómo desarbolar un barco: a larga distancia, corta distancia y de noche en el astillero cuando todos se han ido a casa.
-No recomendable para niños o personas de carácter nervioso.
+Libro 2 en una serie de 3 - Detalles del otro lado de Morgan - Desplegables a tamÃ±o natural de cÃ³mo desarbolar un barco: a larga distancia, corta distancia y de noche en el astillero cuando todos se han ido a casa.
+No recomendable para niÃ±os o personas de carÃ¡cter nervioso.
 }
 
 itmname_book7 {Almanaque de Morgan}
 itmdescr_book7
 {
-Libro 3 en una serie de 3 mostrando el lado personal y práctico de Morgan. Fases de la Luna, Tabla de mareas, velocidad y dirección de las corrientes. Apéndice que contiene cartas de su Mamá, cartas a su Mamá y cartas de la baraja. Desplegable extra: Cartas de piratas que conoció, piratas que no conoció y piratas que no querían conocerlo (la mayoría fallecidos).
+Libro 3 en una serie de 3 mostrando el lado personal y prÃ¡ctico de Morgan. Fases de la Luna, Tabla de mareas, velocidad y direcciÃ³n de las corrientes. ApÃ©ndice que contiene cartas de su MamÃ¡, cartas a su MamÃ¡ y cartas de la baraja. Desplegable extra: Cartas de piratas que conociÃ³, piratas que no conociÃ³ y piratas que no querÃ­an conocerlo (la mayorÃ­a fallecidos).
 }
 
-itmname_book8 {Piratería con Petros}
+itmname_book8 {PiraterÃ­a con Petros}
 itmdescr_book8
 {
-Historias de su larga tryaectoria en el mar con ilustraciones en pergamino - Emocionantes capítulos que incluyen:
-Petros y los Piratas - Petros y el Pillaje - Petros y las Puñaladas traperas - Petros y la Planificación, y Petros y las Pastillas.
+Historias de su larga tryaectoria en el mar con ilustraciones en pergamino - Emocionantes capÃ­tulos que incluyen:
+Petros y los Piratas - Petros y el Pillaje - Petros y las PuÃ±aladas traperas - Petros y la PlanificaciÃ³n, y Petros y las Pastillas.
 }
 
 itmname_book9 {Cocina con albatros}
 itmdescr_book9
 {
 Algunas sabrosas recetas - con o sin plumas 
-Añade algunas proteínas a la dieta de tu tripulación - podría mejorar su habilidad en los abordajes
+AÃ±ade algunas proteÃ­nas a la dieta de tu tripulaciÃ³n - podrÃ­a mejorar su habilidad en los abordajes
 }
 
 itmname_book10 {Defensa definitiva}
 itmdescr_book10
 {
-Capítulos escritos por marinos tan famosa como el Capitán Pierre D'Edor, Vicealmirante Merrin Doe
-y Almirante De Rota deberían ayudarte a defender tu barco.
+CapÃ­tulos escritos por marinos tan famosa como el CapitÃ¡n Pierre D'Edor, Vicealmirante Merrin Doe
+y Almirante De Rota deberÃ­an ayudarte a defender tu barco.
 }
 
 itmname_book11 {Forzar fuertes}
 itmdescr_book11
 {
-Fiables y fabulosas fechorías para fieros forzadores de fuertes favorecidos por fama y fortuna - Feroces frentes de fortalezas - Fuertes ficticios y famosas fintas, y fuertes que he forzado, por Francesco el Feroz
+Fiables y fabulosas fechorÃ­as para fieros forzadores de fuertes favorecidos por fama y fortuna - Feroces frentes de fortalezas - Fuertes ficticios y famosas fintas, y fuertes que he forzado, por Francesco el Feroz
 }
 
 itmname_book12 {Grandes mirillas para armas}
@@ -1972,22 +1972,22 @@ itmdescr_book12
 Ilustraciones desplegables a todo color de faabulosas y funcionales mirillas para armas - Dos clavos y un taco de madera - Cordel anudado - Dos pulgares y un dedo - Y por supuesto, el famoso palo apuntado.
 }
 
-itmname_book13 {Frases marítimas útiles}
+itmname_book13 {Frases marÃ­timas Ãºtiles}
 itmdescr_book13
 {
-1001 famosas frases - incluye: Salvarse por los pelos - Yo Ho Ho - ARGGGH - Al abordaje, mis valientes, con las uñas y los dientes - Un poco a mano izquierda y ¡Ouch, eso duele!
+1001 famosas frases - incluye: Salvarse por los pelos - Yo Ho Ho - ARGGGH - Al abordaje, mis valientes, con las uÃ±as y los dientes - Un poco a mano izquierda y Â¡Ouch, eso duele!
 }
 
-itmname_book14 {Cómo repeler abordajes}
+itmname_book14 {CÃ³mo repeler abordajes}
 itmdescr_book14
 {
-Montones de pistas útiles en este libro, incluyendo: No cambies las sábanas - La comida fría es divertida - Las maravillas del gorgojo - Expresiones faciales feroces - Cuando enseñar el culo funciona - Quitar los ganchos para las hamacas - Y mucho, mucho más.
+Montones de pistas Ãºtiles en este libro, incluyendo: No cambies las sÃ¡banas - La comida frÃ­a es divertida - Las maravillas del gorgojo - Expresiones faciales feroces - Cuando enseÃ±ar el culo funciona - Quitar los ganchos para las hamacas - Y mucho, mucho mÃ¡s.
 }
 
-itmname_book15 {Reparación naval sin clavos}
+itmname_book15 {ReparaciÃ³n naval sin clavos}
 itmdescr_book15
 {
-Usando cola de pezuña de caballo - Ahorra miles de piastras en la factura del astillero
+Usando cola de pezuÃ±a de caballo - Ahorra miles de piastras en la factura del astillero
 y mucho mas silencioso, sin ruido de martillazos
 }
 
@@ -1998,7 +1998,7 @@ y mucho mas silencioso, sin ruido de martillazos
 itmname_book_exorcist {Cessa Decipere}
 itmdescr_book_exorcist
 {
-Un extraño libro en un extraño idioma, encontrado en el cuerpo de un aventurero muerto.
+Un extraÃ±o libro en un extraÃ±o idioma, encontrado en el cuerpo de un aventurero muerto.
 }
 
 //Levis' exorcism book <--
@@ -2007,13 +2007,13 @@ Un extraño libro en un extraño idioma, encontrado en el cuerpo de un aventurero 
 itmname_indian_treasure_note {Nota del tesoro indio}
 itmdescr_indian_treasure_note
 {
-Puede que contenga alguna información importante.
+Puede que contenga alguna informaciÃ³n importante.
 }
 
 itmname_hotel_flyer {Octavilla del hotel}
 itmdescr_hotel_flyer
 {
-Parece algún tipo de publicidad de un hotel recientementa abierto en #sCartagena#. Indica que el lugar está en el centro de la ciudad, entre la tienda y el herrero.
+Parece algÃºn tipo de publicidad de un hotel recientementa abierto en #sCartagena#. Indica que el lugar estÃ¡ en el centro de la ciudad, entre la tienda y el herrero.
 }
 
 itmname_package_steven {Paquete para Steven}
@@ -2027,7 +2027,7 @@ Es un paquete de los nativos que debo entregar a Steven.
 itmname_smugglingbook {Manual del contrabandista}
 itmdescr_smugglingbook
 {
-Este libro parece contener pistas y trucos para practiar el contrabando. Me pregunto cómo puede publicarse un libro así sin que atrapen al autor.
+Este libro parece contener pistas y trucos para practiar el contrabando. Me pregunto cÃ³mo puede publicarse un libro asÃ­ sin que atrapen al autor.
 }
 
 itmname_opiumlist {Lista de compradores de opio}
@@ -2039,24 +2039,24 @@ La lista de compradores de opio proporcionada por los contrabandistas.
 itmname_smugglingbook2 {Manual del contrabandosta, Vol 2}
 itmdescr_smugglingbook2
 {
-¡Espera! ¿Hay otro de estos libros de contrabando? ¿Pero quién los imprime?
+Â¡Espera! Â¿Hay otro de estos libros de contrabando? Â¿Pero quiÃ©n los imprime?
 }
 
 itmname_relationbook {El arte de la guerra}
 itmdescr_relationbook
 {
-Aunque los asuntos de las grandes naciones puedan parecer poco importantes para un simple capitán de barco, tus acciones pueden tener un gran impacto en cómo serás tratado por otros barcos en alta mar o por los fuertes costeros. Este libro contiene varias notas importantes para ayudarte a navegar con seguridad por las traicioneras aguas de la política internacional.
+Aunque los asuntos de las grandes naciones puedan parecer poco importantes para un simple capitÃ¡n de barco, tus acciones pueden tener un gran impacto en cÃ³mo serÃ¡s tratado por otros barcos en alta mar o por los fuertes costeros. Este libro contiene varias notas importantes para ayudarte a navegar con seguridad por las traicioneras aguas de la polÃ­tica internacional.
 }
 
 itmname_piratebook {Bajo la Jolly Roger}
 itmdescr_piratebook
 {
-Para el pirata novato, algo para leer mientras te echas al cuerpo tu ron. El libro contiene pistas para ayudarte a sobrevivir y sacar el máximo provecho a tu carrera de robo y saqueo.
+Para el pirata novato, algo para leer mientras te echas al cuerpo tu ron. El libro contiene pistas para ayudarte a sobrevivir y sacar el mÃ¡ximo provecho a tu carrera de robo y saqueo.
 }
 
 //Levis & PB: Tutorial Books <--
 
-itmname_smuggling_papers {Órdenes del gobernador}
+itmname_smuggling_papers {Ã“rdenes del gobernador}
 itmdescr_smuggling_papers
 {
 Este documento te ordena investigar a los contrabandistas.
@@ -2074,31 +2074,31 @@ itmdescr_smuggling_second_report
 Este documento habla sobre mis experiencias con el contrabando de opio.
 }
 
-itmname_skillbook1 {Técnicas avanzadas de bloqueo}
+itmname_skillbook1 {TÃ©cnicas avanzadas de bloqueo}
 itmdescr_skillbook1
 {
-Este libro explica cómo puedes usar tu espada para desviar golpes y no recibir tantos daños en combate.
+Este libro explica cÃ³mo puedes usar tu espada para desviar golpes y no recibir tantos daÃ±os en combate.
 (Desbloquea 'Defensa avanzada')
 }
 
-itmname_skillbook2 {No mires dentro del cañón}
+itmname_skillbook2 {No mires dentro del caÃ±Ã³n}
 itmdescr_skillbook2
 {
-Este libro te enseña lo secretos de las armas de fuego. 
+Este libro te enseÃ±a lo secretos de las armas de fuego. 
 (Desbloquea 'Pistolero profesional')
 }
 
-itmname_skillbook3 {Libro del rebote Balístico}
+itmname_skillbook3 {Libro del rebote BalÃ­sÂtico}
 itmdescr_skillbook3
 {
-¿Sabías que existe una forma de hacer rebotar las balas de cañón al golpear tu casco? En este libro podrás aprender éste y más trucos. 
-(Desbloquea 'Control de daños mejorado')
+Â¿SabÃ­as que existe una forma de hacer rebotar las balas de caÃ±Ã³n al golpear tu casco? En este libro podrÃ¡s aprender Ã©ste y mÃ¡s trucos. 
+(Desbloquea 'Control de daÃ±os mejorado')
 }
 
 itmname_skillbook4 {No dispares al mensajero}
 itmdescr_skillbook4
 {
-Este libro te enseña a usar mejor los cañones.
+Este libro te enseÃ±a a usar mejor los caÃ±ones.
 (Desbloquea 'Artillero profesional')
 }
 
@@ -2106,7 +2106,7 @@ Este libro te enseña a usar mejor los cañones.
 
 //Levis' Patrol Schedule Book -->
 
-itmname_patrolbook {Itinerario de patrullas de #sisland#, versión #dversion#}
+itmname_patrolbook {Itinerario de patrullas de #sisland#, versiÃ³n #dversion#}
 itmdescr_patrolbook
 {
 Itinerario de las patrullas de #sisland#.
@@ -2124,7 +2124,7 @@ Se dice que esta planta tiene el poder de desbloquear la mente.
 itmname_vegetal {Hoasca}
 itmdescr_vegetal
 {
-Una poción de aspecto extraño. Se dice que mejora las capcidades de combate del usuario durante un corto periodo de tiempo.
+Una pociÃ³n de aspecto extraÃ±o. Se dice que mejora las capcidades de combate del usuario durante un corto periodo de tiempo.
 }
 
 //Levis' ayahuasca <--
@@ -2157,13 +2157,13 @@ Un objeto para un piloto.
 itmname_hotel_megaphone {Bocina}
 itmdescr_hotel_megaphone
 {
-Un objeto para un capitán.
+Un objeto para un capitÃ¡n.
 }
 
 itmname_hotel_spyglass {Catalejo}
 itmdescr_hotel_spyglass
 {
-Un objeto para un capitán.
+Un objeto para un capitÃ¡n.
 }
 
 itmname_hotel_whistle {Silbato de contramaestre}
@@ -2178,7 +2178,7 @@ itmdescr_hotel_grappling
 Un objeto para un contramaestre.
 }
 
-itmname_hotel_surgery {Instrumental quirúrgico}
+itmname_hotel_surgery {Instrumental quirÃºrgico}
 itmdescr_hotel_surgery
 {
 Un objeto para un cirujano.
@@ -2193,7 +2193,7 @@ Un objeto para un cirujano.
 itmname_hotel_keys {Llaves del hotel}
 itmdescr_hotel_keys
 {
-Un manojo de llaves. ¿Para abrir cofres, puertas o las dos cosas?
+Un manojo de llaves. Â¿Para abrir cofres, puertas o las dos cosas?
 }
 
 itmname_chair_45 {Silla}
@@ -2208,13 +2208,13 @@ itmdescr_chair_45
 itmname_opium {Opio}
 itmdescr_opium
 {
-Una extraña sustancia.
-Esto se considera contrabando, así que puedo tener dificultades para evitar a los guardias de la ciudad mientras lo lleve encima.
+Una extraÃ±a sustancia.
+Esto se considera contrabando, asÃ­ que puedo tener dificultades para evitar a los guardias de la ciudad mientras lo lleve encima.
 }
 
 //Levis' Opium <--
 
-itmname_map {Mapa del archipiélago}
+itmname_map {Mapa del archipiÃ©lago}
 itmdescr_map {
 Mapa del Caribe.
 }
