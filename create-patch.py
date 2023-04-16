@@ -1,5 +1,7 @@
 import subprocess
-import py7zr
+import os
+# import py7zr
+from zipfile import ZipFile, ZIP_LZMA
 import re
 
 version = subprocess.run(["git", "describe", "--tags", "--abbrev=0"], stdout=subprocess.PIPE).stdout.decode("utf-8").strip()
@@ -17,7 +19,7 @@ with open("PROGRAM/globals.c", "r") as globals_file:
 files = subprocess.run(['git', '--no-pager', 'diff', '--name-only', '--diff-filter=d', "15.0.0-alpha.1.."],
                        stdout=subprocess.PIPE).stdout.decode("utf-8").replace('"', '').split("\n")
 
-with py7zr.SevenZipFile('patch.zip', 'w') as z:
+with ZipFile('patch.zip', 'w', compression=ZIP_LZMA) as z:
     for file in files:
         if file != "" and not file.startswith("installer/") and not file.endswith(".py"):
             z.write(file)
@@ -28,4 +30,8 @@ with py7zr.SevenZipFile('patch.zip', 'w') as z:
     z.write("E:/Projects/PiratesAhoy/storm-engine/cmake-build-release/bin/fmod.dll", 'fmod.dll')
     z.write("E:/Projects/PiratesAhoy/storm-engine/cmake-build-release/bin/mimalloc.dll", 'mimalloc.dll')
     z.write("E:/Projects/PiratesAhoy/storm-engine/cmake-build-release/bin/mimalloc-redirect.dll", 'mimalloc-redirect.dll')
-    z.writeall("E:/Projects/PiratesAhoy/storm-engine/cmake-build-release/bin/resource", 'RESOURCE')
+    for base, dirs, files in os.walk("E:/Projects/PiratesAhoy/storm-engine/cmake-build-release/bin/resource"):
+        for file in files:
+            fn = os.path.join(base, file)
+            print(fn)
+            z.write(fn, fn.replace("E:/Projects/PiratesAhoy/storm-engine/cmake-build-release/bin/resource", "RESOURCE"))
