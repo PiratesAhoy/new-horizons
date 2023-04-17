@@ -9017,6 +9017,7 @@ void SideQuestComplete(string sQuestName)
 				LAi_SetActorType(CharacterFromID("Nigel Blythe"));
 				LAi_group_MoveCharacter(CharacterFromID("Artois Voysey"), "Artois");
 				LAi_group_MoveCharacter(CharacterFromID("Nigel Blythe"), "Nigel");
+				LAi_group_SetRelation("Artois", "Nigel", LAI_GROUP_ENEMY);
 				LAi_SetImmortal(CharacterFromID("Nigel Blythe"), true);
 				LAi_ActorAttack(characterFromID("Nigel Blythe"), characterFromID("Artois Voysey"), "");
 				LAi_ActorAttack(characterFromID("Artois Voysey"), characterFromID("Nigel Blythe"), "");
