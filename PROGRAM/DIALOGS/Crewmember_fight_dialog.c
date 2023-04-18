@@ -160,9 +160,9 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[46];
 			Link.l1.go = "Wait1hour";
 			Link.l2 = DLG_TEXT[47];
-			Link.l2.go = "Wait3hours";
+			Link.l2.go = "Wait8hours";
 			Link.l3 = DLG_TEXT[48];
-			Link.l3.go = "Wait8hours";
+			Link.l3.go = "wait_custom";
 			Link.l4 = DLG_TEXT[45];
 			Link.l4.go = "Exit_reset";
 		break;
@@ -174,15 +174,7 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("waited_on_ship_for_time");
 			LAi_Fade("", "");
 		break;
-		
-		case "Wait3hours":
-			DialogExit();
-			WaitDate("", 0,0,0,3,0);
-			PChar.waitedonship = NPChar.id;
-			AddDialogExitQuest("waited_on_ship_for_time");
-			LAi_Fade("", "");
-		break;
-		
+
 		case "Wait8hours":
 			DialogExit();
 			WaitDate("", 0,0,0,8,0);
@@ -191,7 +183,84 @@ void ProcessDialogEvent()
 			LAi_Fade("", "");
 		break;
 		//Levis Add Waiting Time options <--
-		
+
+		case "wait_custom":
+			Dialog.Text = DLG_TEXT[49];
+			Link.l1 = "";
+			Link.l1.edit = "string";
+			Link.l1.go = "wait_custom_submit";
+		break;
+
+		case "wait_custom_submit":
+			if(PChar.sex == "woman")
+			{
+				Preprocessor_Add("sir", XI_ConvertString("ma'am")); // DeathDaisy
+			}
+			else
+			{
+				Preprocessor_Add("sir", XI_ConvertString("sir")); // DeathDaisy
+			}
+
+			int value = sti(Dialog.value);
+
+			int hours = 0;
+			int minutes = 0;
+
+			bool isInvalid = false;
+
+			if (value <= 0) {
+				isInvalid = true;
+			}
+
+			if (value < 24) {
+				hours = tmpi;
+			}
+			if (value >= 24 && value < 100) {
+				DialogExit();
+				isInvalid = true;
+			}
+			if (value >= 100) {
+				hours = value / 100;
+				minutes = value % 100;
+				if (minutes >= 60) {
+					isInvalid = true;
+				}
+			}
+
+			if (isInvalid) {
+				Dialog.Text = DLG_TEXT[54];
+				Link.l1 = DLG_TEXT[55];
+				Link.l1.go = "wait_custom";
+				Link.l2 = DLG_TEXT[56];
+				Link.l2.go = "Exit_reset";
+				break;
+			}
+
+			float desiredTime = hours + makefloat(minutes)/60.0);
+			float currentTime = GetTime();
+			float diff = desiredTime - currentTime;
+			if (diff < 0) {
+				diff += 24.0;
+			}
+			if (diff > 24.0) {
+				diff -= 24.0;
+			}
+			Pchar.Quest.TimeToWait = diff;
+
+			Dialog.Text = DLG_TEXT[50] + GetTimeText(hours + (minutes/60.0)) + DLG_TEXT[51];
+			Link.l1 = DLG_TEXT[52];
+			Link.l1.go = "wait_custom_confirm";
+			Link.l2 = DLG_TEXT[53];
+			Link.l2.go = "Exit_reset";
+		break;
+
+		case "wait_custom_confirm":
+			float timeToWait = stf(Pchar.Quest.TimeToWait);
+			WaitDate("", 0,0,0,makeint(timeToWait),makeint((timeToWait - makeint(timeToWait)) * 60.0));
+			LAi_Fade("", "");
+			DialogExit();
+		break;
+
 		case "Howmany":
 			Dialog.Text = DLG_TEXT[5];
 			maxcrew = GetMaxLandCrew(sti(PChar.Ship.Crew.Quantity));

@@ -1,4 +1,4 @@
-string DLG_TEXT[49] = {
+string DLG_TEXT[57] = {
 "What do you think about our last fight? I don't remember anything like that!",
 "Aye! There was glorious carnage! And what you will have to see in the future!!! This is our life, my friend.",
 "If you want to fight again, I need some men to go ashore with me next time!",
@@ -46,6 +46,14 @@ string DLG_TEXT[49] = {
 " now. Do you want us to wait for a while?",
 "No, now is as good a time as any. Let's go!",
 "Yes, we should wait 1 more hour.",
-"Yes, we should wait 3 more hours.",
-"Yes, we should wait 8 more hours."
+"Yes, we should wait 8 more hours.",
+"Yes, let's wait until a specific time.",
+"Very well, until when should we wait? [hhmm]",
+"You want us to wait until ",
+", #ssir#?",
+"Yes, that's right.",
+"No, I changed my mind. Let's go now!",
+"I don't understand. Until when should we wait?",
+"Let me say it again.",
+"Never mind. Let's go now!"
 };
