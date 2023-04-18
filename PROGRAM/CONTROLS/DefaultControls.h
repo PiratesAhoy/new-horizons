@@ -138,6 +138,7 @@ Please follow these rules when editing settings:
 #define CTL_CMD_INTERFACE_RIGHT 	"VK_RIGHT"
 
 #define CTL_DIALOG_SELECT 			"VK_SPACE"
+#define CTL_DIALOG_SELECT1 			"VK_RETURN"
 #define CTL_DIALOG_SELECT_ALT		"VK_LBUTTON" // KK
 #define CTL_DIALOG_CANCEL 			"VK_ESCAPE"
 #define CTL_DIALOG_CHOICE_UP 		"KEY_W"

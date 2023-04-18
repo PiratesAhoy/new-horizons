@@ -558,16 +558,18 @@ void ProcessLinks(int maxfiles,int curfile)
 		{
 			case "l":
 				newlink = action + link + curfile;
-				Dialog.PreLinks.(newlink) = Dialog.Links.(curlink);
-				Dialog.PreLinks.(newlink).go = Dialog.Links.(curlink).go;
 			break;
 			
 			case "a":
 				newlink = "l" + link + 1; //1 should always be the mainfile
-				Dialog.PreLinks.(newlink) = Dialog.Links.(curlink);
-				Dialog.PreLinks.(newlink).go = Dialog.Links.(curlink).go;
 				if(DIALOG_DEBUG) Trace("Dialog: Dialog option " + "l" + link + " replaced");
 			break;
+		}
+
+		Dialog.PreLinks.(newlink) = Dialog.Links.(curlink);
+		Dialog.PreLinks.(newlink).go = Dialog.Links.(curlink).go;
+		if (CheckAttribute(Dialog, "Links." + curlink + ".edit")) {
+			Dialog.PreLinks.(newlink).edit = Dialog.Links.(curlink).edit;
 		}
 	}
 	if(DIALOG_DEBUG) Trace("Dialog: Done Processing Links");
@@ -594,6 +596,9 @@ string SortLinks()
 	if(DIALOG_DEBUG) Trace("Dialog: Link " + lowest + " is the lowest link");
 	Dialog.SortLinks.(lowest) = Dialog.PreLinks.(lowest);
 	Dialog.SortLinks.(lowest).go = Dialog.PreLinks.(lowest).go;
+	if (CheckAttribute(Dialog, "PreLinks." + lowest + ".edit")) {
+		Dialog.SortLinks.(lowest).edit = Dialog.PreLinks.(lowest).edit;
+	}
 	DeleteAttribute(&Dialog,"PreLinks."+lowest);
 	return lowest;
 }
@@ -805,8 +810,12 @@ void ProcessDialogText()
 	int lnum = GetAttributesNum(links);
 	for (int l = 0; l < lnum; l++) {
 		string curlink = SortLinks(); //Changed by Levis
+
 		Dialog.Links.(curlink) = PreprocessText(Dialog.SortLinks.(curlink)); //Changed by Levis
 		Dialog.Links.(curlink).go = Dialog.SortLinks.(curlink).go; //Added by Levis
+		if (CheckAttribute(Dialog, "SortLinks." + curlink + ".edit")) {
+			Dialog.Links.(curlink).edit = Dialog.SortLinks.(curlink).edit;
+		}
 	}
 	DeleteAttribute(&Dialog,"SortLinks"); //Added by Levis
 	Preprocessor_Clear(false);

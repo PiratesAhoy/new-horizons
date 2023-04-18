@@ -786,6 +786,7 @@ void SwitchDialogControls()
 {
 	if (bAltDialogControls) {
 		CI_CreateAndSetControls( "DialogControls", "DlgAction", CI_GetKeyCode(CTL_DIALOG_SELECT_ALT), 0, false );
+		CI_CreateAndSetControls( "DialogControls", "DlgAction1", CI_GetKeyCode(CTL_DIALOG_SELECT1), 0, false );
 		CI_CreateAndSetControls( "DialogControls", "DlgUp", CI_GetKeyCode(CTL_DIALOG_CHOICE_UP_ALT), 0, false );
 		CI_CreateAndSetControls( "DialogControls", "DlgDown", CI_GetKeyCode(CTL_DIALOG_CHOICE_DOWN_ALT), 0, false );
 
@@ -794,6 +795,7 @@ void SwitchDialogControls()
 		CI_CreateAndSetControls( "DialogControls", "DlgDownAlt", CI_GetKeyCode(CTL_DIALOG_CHOICE_DOWN), 0, false );
 	} else {
 		CI_CreateAndSetControls( "DialogControls", "DlgAction", CI_GetKeyCode(CTL_DIALOG_SELECT), 0, false );
+		CI_CreateAndSetControls( "DialogControls", "DlgAction1", CI_GetKeyCode(CTL_DIALOG_SELECT1), 0, false );
 		CI_CreateAndSetControls( "DialogControls", "DlgUp", CI_GetKeyCode(CTL_DIALOG_CHOICE_UP), 0, false );
 		CI_CreateAndSetControls( "DialogControls", "DlgDown", CI_GetKeyCode(CTL_DIALOG_CHOICE_DOWN), 0, false );
 
