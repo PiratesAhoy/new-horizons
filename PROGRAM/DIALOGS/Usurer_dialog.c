@@ -497,66 +497,40 @@ void ProcessDialogEvent()
 			Dialog.snd3 = "voice\USDI\USDI029";
 			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			d.Text = RandPhrase(DLG_TEXT[108], DLG_TEXT[109], DLG_TEXT[110], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3);
-			Link.l1 = DLG_TEXT[111] + makeint(makeint(PChar.money)/40)*10 + DLG_TEXT[112];
-			Link.l1.go = "quarter";
-			Link.l2 = DLG_TEXT[113] + makeint(makeint(PChar.money)/20)*10 + DLG_TEXT[114];
-			Link.l2.go = "half";
-			Link.l3 = DLG_TEXT[169] + makeint(makeint(PChar.money)*0.75/10)*10 + DLG_TEXT[170];	// LDH 21Apr09
-			Link.l3.go = "most";
-			Link.l4 = DLG_TEXT[115] + makeint(makeint(PChar.money)/10)*10 + DLG_TEXT[116];
-			Link.l4.go = "All";
+			Link.l1 = "";
+			Link.l1.edit = "string";
+			Link.l1.go = "deposit_submit";
 		break;
 
-		case "quarter":
-			Pchar.Quest.Deposits.(NPC_Area).Interest = CalcCharacterSkill(PChar,SKILL_COMMERCE) + 1; // NK
-			Pchar.Quest.Deposits.(NPC_Area).Sum = makeint(makeint(PChar.money)/40)*10;
+		case "deposit_submit":
+			DepositSum = sti(dialog.value);
 			Dialog.snd = "voice\USDI\USDI030";
-			d.Text = DLG_TEXT[117] + Pchar.Quest.Deposits.(NPC_Area).Interest + DLG_TEXT[118];
+
+			if (DepositSum <= 0)
+			{ // Invalid amount
+				dialog.text = DLG_TEXT[123];
+				Link.l1 = DLG_TEXT[124];
+				Link.l1.go = "deposit";
+				Link.l2 = DLG_TEXT[125];
+				Link.l2.go = "exit";
+				break;
+			}
+
+			if (DepositSum > sti(Pchar.money))
+			{ // More then we have, let's take all we have
+				DepositSum = sti(Pchar.money);
+			}
+
+			Pchar.Quest.Deposits.(NPC_Area).Interest = CalcCharacterSkill(PChar,SKILL_COMMERCE) + 1; // NK
+			Pchar.Quest.Deposits.(NPC_Area).Sum = DepositSum;
+
+			d.Text = DLG_TEXT[117] + Pchar.Quest.Deposits.(NPC_Area).Sum + DLG_TEXT[122] + Pchar.Quest.Deposits.(NPC_Area).Interest + DLG_TEXT[118];
 			Link.l1 = DLG_TEXT[119];
 			Link.l1.go = "Deposit_placed";
 			Link.l2 = DLG_TEXT[120];
 			Link.l2.go = "Deposit";
 			Link.l3 = DLG_TEXT[121];
 			Link.l3.go = "Exit";
-		break;
-
-		case "half":
-			Pchar.Quest.Deposits.(NPC_Area).Interest = CalcCharacterSkill(PChar,SKILL_COMMERCE) + 1; // NK
-			Pchar.Quest.Deposits.(NPC_Area).Sum = makeint(makeint(PChar.money)/20)*10;
-			Dialog.snd = "voice\USDI\USDI031";
-			d.Text = DLG_TEXT[122] + Pchar.Quest.Deposits.(NPC_Area).Interest + DLG_TEXT[123];
-			Link.l1 = DLG_TEXT[124];
-			Link.l1.go = "Deposit_placed";
-			Link.l2 = DLG_TEXT[125];
-			Link.l2.go = "Deposit";
-			Link.l3 = DLG_TEXT[126];
-			Link.l3.go = "Exit";
-		break;
-
-		case "most":							// LDH 21Apr09
-			Pchar.Quest.Deposits.(NPC_Area).Interest = CalcCharacterSkill(PChar,SKILL_COMMERCE) + 1; // NK
-			Pchar.Quest.Deposits.(NPC_Area).Sum = makeint(makeint(PChar.money)*0.75/10)*10;
-			Dialog.snd = "voice\USDI\USDI032";
-			d.Text = DLG_TEXT[127] + Pchar.Quest.Deposits.(NPC_Area).Interest + DLG_TEXT[128];
-			Link.l1 = DLG_TEXT[129];
-			Link.l1.go = "Deposit_placed";
-			Link.l2 = DLG_TEXT[130];
-			Link.l2.go = "Deposit";
-			Link.l3 = DLG_TEXT[131];
-			Link.l3.go = "Exit";		
-		break;
-
-		case "All":
-			Pchar.Quest.Deposits.(NPC_Area).Interest = CalcCharacterSkill(PChar,SKILL_COMMERCE) + 1; // NK
-			Pchar.Quest.Deposits.(NPC_Area).Sum = makeint(makeint(PChar.money)/10)*10;
-			Dialog.snd = "voice\USDI\USDI032";
-			d.Text = DLG_TEXT[127] + Pchar.Quest.Deposits.(NPC_Area).Interest + DLG_TEXT[128];
-			Link.l1 = DLG_TEXT[129];
-			Link.l1.go = "Deposit_placed";
-			Link.l2 = DLG_TEXT[130];
-			Link.l2.go = "Deposit";
-			Link.l3 = DLG_TEXT[131];
-			Link.l3.go = "Exit";		
 		break;
 
 // NK -->
