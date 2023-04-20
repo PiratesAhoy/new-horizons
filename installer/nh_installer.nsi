@@ -131,6 +131,10 @@ Section "!Main Files" SEC01
   File /r "..\RESOURCE\*.gm"
   File /r "..\RESOURCE\*.col"
 
+# Particles
+  File /r "..\RESOURCE\*.xps"
+  File /r "..\RESOURCE\*.xml"
+
   File /r "..\RESOURCE\*.jpg"
 ;  File /r "..\RESOURCE\*.png"
   File /r "..\RESOURCE\*.tx"
