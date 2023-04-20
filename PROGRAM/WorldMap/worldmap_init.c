@@ -93,12 +93,12 @@ void wdmInitWorldMap()
 	worldMap.labels.QuebradasCostillas.type = "Island";
 	worldMap.labels.QuebradasCostillas.id = "QuebradasCostillas";
 	worldMap.labels.QuebradasCostillas.locator = "QuebradasCostillas";
-	worldMap.labels.QuebradasCostillas.text = FindIslandName("Khael Roa");
+	worldMap.labels.QuebradasCostillas.text = FindIslandName("QuebradasCostillas");
 
 	worldMap.labels.KhaelRoa.type = "Island";
 	worldMap.labels.KhaelRoa.id = "KhaelRoa";
 	worldMap.labels.KhaelRoa.locator = "KhaelRoa";
-	worldMap.labels.KhaelRoa.text = FindIslandName("Quebradas Costillas");
+	worldMap.labels.KhaelRoa.text = FindIslandName("Khael Roa");
 
 	worldMap.labels.Cayman.type = "Island";
 	worldMap.labels.Cayman.id = "Cayman";
