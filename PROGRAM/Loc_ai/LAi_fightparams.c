@@ -1172,3 +1172,60 @@ float LAi_NPC_EvtGetEny()
 	npc_return_tmp = LAi_GetCharacterRelEnergy(chr);
 	return npc_return_tmp;
 }
+
+// Is temporary target reselection allowed among neighbors - polled constantly
+#event_handler("NPC_Event_AdaptiveTargetSelect","LAi_NPC_AdaptiveTargetSelect");
+bool LAi_NPC_AdaptiveTargetSelect()
+{
+	aref chr = GetEventData();
+	if(chr.chr_ai.type == LAI_TYPE_ACTOR)
+	{
+		npc_return_tmpb = false;
+	}else{
+		npc_return_tmpb = true;
+	}
+	return npc_return_tmpb;
+}
+
+// Hit selection weight "fast", 0 - never select
+//#event_handler("NPC_Event_GetAttackWeightFast","LAi_NPC_GetAttackWeightFast");
+//float LAi_NPC_GetAttackWeightFast()
+//{
+//	aref chr = GetEventData();
+//	npc_return_tmp = 20.0 * LAi_NPC_GetAttackPreferenceWeight(chr, "FencingS", 1.0, 3.0);
+//	npc_return_tmp = npc_return_tmp * LAi_NPC_GetAttackPreferenceWeight(chr, "FencingH", 1.0, 0.5);
+//	npc_return_tmp = npc_return_tmp * (0.8 + (0.1 * MOD_SKILL_ENEMY_RATE));
+//	return npc_return_tmp;
+//}
+
+// Hit selection weight "force", 0 - never select
+#event_handler("NPC_Event_GetAttackWeightForce","LAi_NPC_GetAttackWeightForce");
+float LAi_NPC_GetAttackWeightForce()
+{
+	npc_return_tmp = 0;
+	return npc_return_tmp;
+}
+
+// The weight of the "round" hit selection, 0 - never select, if enemies <3 then the hit is not selected
+#event_handler("NPC_Event_GetAttackWeightRound","LAi_NPC_GetAttackWeightRound");
+float LAi_NPC_GetAttackWeightRound()
+{
+	npc_return_tmp = 0;
+	return npc_return_tmp;
+}
+
+// Hit selection weight "break", 0 - never select
+#event_handler("NPC_Event_GetAttackWeightBreak","LAi_NPC_GetAttackWeightBreak");
+float LAi_NPC_GetAttackWeightBreak()
+{
+	npc_return_tmp = 0;
+	return npc_return_tmp;
+}
+
+// Hit selection weight "feint", 0 - never select
+#event_handler("NPC_Event_GetAttackWeightFeint","LAi_NPC_GetAttackWeightFeint");
+float LAi_NPC_GetAttackWeightFeint()
+{
+	npc_return_tmp = 0;
+	return npc_return_tmp;
+}
