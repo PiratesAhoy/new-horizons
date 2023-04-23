@@ -2073,9 +2073,9 @@ void SetParameterData()
 	BattleInterface.CommandTextures.list.t7.xsize = calcNumberOfTextureColumns(1);
 	BattleInterface.CommandTextures.list.t7.ysize = 1;
 
-	BattleInterface.CommandTextures.list.t8.name = "battle_interface\small_nations"+GetCurrentPeriod()+".tga"; // PB
+	BattleInterface.CommandTextures.list.t8.name = "battle_interface\small_nations"+GetCurrentPeriod()+".png"; // PB
 	BattleInterface.CommandTextures.list.t8.columns = 16;
-	BattleInterface.CommandTextures.list.t8.xsize = calcNumberOfTextureColumns(16);					//changed by KAM
+	BattleInterface.CommandTextures.list.t8.xsize = 16;					//changed by KAM
 	BattleInterface.CommandTextures.list.t8.ysize = 1;
 
 	BattleInterface.CommandTextures.list.t9.name = "battle_interface\Artefact.tga";
@@ -2653,7 +2653,7 @@ ref procGetSmallFlagData()
             case PERSONAL_NATION: BI_intNRetValue[1] = 12; break; // KK
 		}
 
-		BI_intNRetValue[2] = 11;
+		BI_intNRetValue[2] = BI_ICONS_TEXTURE_NATIONS;
 		switch( SeaAI_GetRelation(chrIdx,nMainCharacterIndex) )
 		{
 			case RELATION_FRIEND:	BI_intNRetValue[2] = 10; break;
