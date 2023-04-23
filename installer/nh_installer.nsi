@@ -136,7 +136,7 @@ Section "!Main Files" SEC01
   File /r "..\RESOURCE\*.xml"
 
   File /r "..\RESOURCE\*.jpg"
-;  File /r "..\RESOURCE\*.png"
+  File /r "..\RESOURCE\*.png"
   File /r "..\RESOURCE\*.tx"
 
 ;   ${If} ${FileExists} "$INSTDIR\ENGINE.exe"
