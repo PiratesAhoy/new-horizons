@@ -19,7 +19,7 @@ void wdmInitWorldMap()
 	worldMap.date.day = CharDay;
 	worldMap.date.month = CharMonth;
 	worldMap.date.year = CharYear;
-	worldMap.date.hourPerSec = 4.0;
+	worldMap.date.hourPerSec = 1.5;
 
 	//=========================================================================
 	//Labels
