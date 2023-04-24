@@ -277,6 +277,96 @@ bool wdmGetShorePos(string locid, ref x, ref z)
 	return false;
 }
 
+float wdmGetDays(int year, int month, int day, int hour)
+{
+	//Считаем дни по годам
+	if(year < 0) year = 0;
+	if(year > 3000) year = 3000;
+	year = year*365;
+	//Считаем целые дни
+	for(int i = 1; i < month; i++)
+	{
+		day = day + GetMonthDays(i, year);
+	}
+	//Считаем полные дни
+	float days = year + day + (hour/24.0);
+	return days;
+}
+
+void wdmMarkDeleteEncounters()
+{
+	// Getting the date
+	int year = sti(worldMap.date.year);
+	int month = sti(worldMap.date.month);
+	int day = sti(worldMap.date.day);
+	int hour = sti(worldMap.date.hour);
+	float days = wdmGetDays(year, month, day, hour);
+	int encYear, encMonth, encDay, encHour;
+	// We go through all the encounters, marking for deletion
+	aref encs;
+	makearef(encs, worldMap.encounters);
+	int num = GetAttributesNum(encs);
+	for(int i = 0; i < num; i++)
+	{
+		aref enc = GetAttributeN(encs, i);
+		if(CheckAttribute(enc, "Quest") != 0)
+		{
+			continue;
+		}
+		bool deleteMe = false;
+		if(CheckAttribute(enc, "year") != 0)
+		{
+			encYear = sti(enc.year);
+		}else{
+			deleteMe = true;
+		}
+		if(CheckAttribute(enc, "month") != 0)
+		{
+			encMonth = sti(enc.month);
+		}else{
+			deleteMe = true;
+		}
+		if(CheckAttribute(enc, "day") != 0)
+		{
+			encDay = sti(enc.day);
+		}else{
+			deleteMe = true;
+		}
+		if(CheckAttribute(enc, "hour") != 0)
+		{
+			encHour = sti(enc.hour);
+		}else{
+			deleteMe = true;
+		}
+
+		float deltaDays = 0;
+		float encounter_days = wdmGetDays(encYear, encMonth, encDay, encHour);
+
+		if(deleteMe != true)
+		{
+			deltaDays = encounter_days - days;
+			if(deltaDays < 0)
+			{
+				deltaDays = -deltaDays;
+			}
+			if(deltaDays > 1.0)
+			{
+				deleteMe = true;
+			}
+		}
+		if(deleteMe != false)
+		{
+			if (encounter_days > 0) {
+				Trace("Marked (" + enc.type + ") encounter for deletion after " + deltaDays + " days.");
+			}
+			else {
+				Trace("Marked (" + enc.type + ") encounter for deletion.");
+			}
+			enc.needDelete = "Time delete";
+		}
+	}
+}
+
 void wdmInit()
 {
 	if(LoadSegment("worldmap\worldmap_init.c"))

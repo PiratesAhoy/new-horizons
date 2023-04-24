@@ -39,7 +39,7 @@ void wdmReset()
 
 void wdmRemoveOldEncounters()
 {
-	//wdmMarkDeleteEncounters();
+	wdmMarkDeleteEncounters();
 	aref encs;
 	makearef(encs, worldMap.encounters);
 	int num = GetAttributesNum(encs);
