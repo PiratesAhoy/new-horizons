@@ -1503,7 +1503,7 @@ void QuestComplete(string sQuestName)
 		case "giflepretre":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Padre Iguaran"));
-			LAi_ActorAnimation(pchar, "attack_2", "habitmoine", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "habitmoine", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 
 			break;

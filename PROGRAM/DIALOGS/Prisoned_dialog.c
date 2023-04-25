@@ -433,7 +433,7 @@ trace("Prisoned_dialog: locationNation = " + locationNation);
 				break;
 			}
 			Lai_SetActorType(PChar);
-			LAi_ActorAnimation(PChar, "attack_2","Surrendered_Captain_Dialog", -1);
+			LAi_ActorAnimation(PChar, "attack_fast_2","Surrendered_Captain_Dialog", -1);
 			DialogExit();
 			LAi_CharacterPlaySound(NPChar, "OBJECTS\DUEL\punch"+sti(Rand(3)+3)+".wav");
 			NextDiag.CurrentNode = NextDiag.TempNode;

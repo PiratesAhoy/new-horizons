@@ -303,7 +303,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Get_back_to_the_ship":
-			LAi_ActorAnimation(characterFromID("Jack Simpson"), "attack_2", "Simpson_runs_off", -1);
+			LAi_ActorAnimation(characterFromID("Jack Simpson"), "attack_fast_2", "Simpson_runs_off", -1);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			Characters[GetCharacterIndex("Clayton")].dialog.currentnode = "Charlestown_fight";
 		break;
@@ -506,7 +506,7 @@ void QuestComplete(string sQuestName)
 
 		case "The Lieutenant Arrives Back":
 			LAi_Fade("The Lieutenant Arrives Back2", "The Lieutenant Arrives Back3");
-			LAi_ActorAnimation(characterFromID("Clayton"), "attack_2", "The Lieutenant Arrives Back2", -1);
+			LAi_ActorAnimation(characterFromID("Clayton"), "attack_fast_2", "The Lieutenant Arrives Back2", -1);
 			PlaySound("OBJECTS\duel\punch1.wav");
 		break;
 
@@ -1763,7 +1763,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Return_Mystery_House2":
-			LAi_ActorAnimation(characterFromID("Lt. Uriah Quelp"), "attack_2", "", 0.0);
+			LAi_ActorAnimation(characterFromID("Lt. Uriah Quelp"), "attack_fast_2", "", 0.0);
 			Lai_KillCharacter(characterFromID("Smug Larr"));
 			LAi_SetActorType(PChar);
 			LAi_ActorRunToLocator((Pchar), "goto", "goto1", "", 3.0);

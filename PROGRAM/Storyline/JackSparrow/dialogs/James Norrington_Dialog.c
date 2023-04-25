@@ -313,7 +313,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[53] + Pchar.lastname + DLG_TEXT[54]; 
 			link.l1 = DLG_TEXT[55];
 			LAi_SetActorType(Pchar);
-//			LAi_ActorAnimation(pchar, "attack_2", "", 0.0);			
+//			LAi_ActorAnimation(pchar, "attack_fast_2", "", 0.0);
 //			PlaySound("OBJECTS\duel\punch1.wav");
 			link.l1.go = "the_prison_fight_scene3";
 		break;
@@ -322,7 +322,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[56]; 
 			link.l1 = DLG_TEXT[57];
 			link.l1.go = "exit";
-//			LAi_ActorAnimation(pchar, "attack_2", "", 0.0);			
+//			LAi_ActorAnimation(pchar, "attack_fast_2", "", 0.0);
 //			PlaySound("OBJECTS\duel\punch1.wav");	
 			RemoveCharacterEquip(characterFromID("James Norrington"), BLADE_ITEM_TYPE);			
 			GiveItem2Character(Pchar, "blade4");   

@@ -3750,7 +3750,7 @@ void QuestComplete(string sQuestName)
 
 		//солдат в таверне бьет нас по мордe
 		case "kicked_by_soldier_complete":
-			LAi_ActorAnimation(characterFromID("soldier1"), "attack_2", "kicked_by_soldier_2_complete", 0.5);
+			LAi_ActorAnimation(characterFromID("soldier1"), "attack_fast_2", "kicked_by_soldier_2_complete", 0.5);
 		break;
 
 		case "kicked_by_soldier_2_complete":
@@ -4575,7 +4575,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "kicked_by_murderer_complete":
-			LAi_ActorAnimation(characterFromID("murderer_in_greenford_04"), "attack_2", "kicked_by_murderer_complete_2", 0.3);
+			LAi_ActorAnimation(characterFromID("murderer_in_greenford_04"), "attack_fast_2", "kicked_by_murderer_complete_2", 0.3);
 		break;
 
 		case "kicked_by_murderer_complete_2":
@@ -5120,7 +5120,7 @@ void QuestComplete(string sQuestName)
 			else
 			{
 				LAi_ActorTurnToCharacter(characterFromID("Stephan Bonser"), pchar);
-				LAi_ActorAnimation(characterFromID("Stephan Bonser"), "attack_2", "kicked_to_mine_3_complete", 0.4);
+				LAi_ActorAnimation(characterFromID("Stephan Bonser"), "attack_fast_2", "kicked_to_mine_3_complete", 0.4);
 			}
 		break;
 
