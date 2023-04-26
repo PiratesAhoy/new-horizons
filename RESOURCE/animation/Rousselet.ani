@@ -508,13 +508,13 @@ event = "swim", 245, normal
 
 	event = "Move blade", 5164, normal
 
-	event = "Blade to hand", 5167, normal
+	event = "SndAlliace_sword_sh", 5167, normal
 
 	event = "RStep", 5172, normal
 	event = "LStep", 5176, normal
 event = "Move blade", 5165, normal
 event = "SndAlliace_sword_sh", 5158, normal
-event = "Blade to hand", 5165, normal
+event = "SndAlliace_sword_sh", 5165, normal
 
 ;Убрать саблю
 	[Fight to normal]
@@ -528,7 +528,7 @@ event = "Blade to hand", 5165, normal
 
 	event = "Move blade", 6300, normal
 
-	event = "Blade to belt", 6296, normal
+	event = "SndAlliace_sword_out", 6296, normal
 
 	event = "LStep", 6302, normal
 	event = "RStep", 6306, normal
@@ -665,7 +665,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 5293, normal			;slash
-	event = "Sound_slash", 5288, normal
+	event = "SndAlliace_sword_wind", 5288, normal
 
 
 [attack_fast_2]
@@ -678,7 +678,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 5293, normal			;slash
-	event = "Sound_slash", 5288, normal
+	event = "SndAlliace_sword_wind", 5288, normal
 
 
 [attack_fast_3]
@@ -691,7 +691,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 5319, normal			;slash
-	event = "Sound_slash", 5314, normal
+	event = "SndAlliace_sword_wind", 5314, normal
 
 [attack_fast_4]
 type = normal
@@ -703,7 +703,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 5340, normal			;slash
-	event = "Sound_slash", 5337, normal
+	event = "SndAlliace_sword_wind", 5337, normal
 
 ;SLASH
 [attack_fast_5]
@@ -716,7 +716,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 5195, normal			;slash
-	event = "Sound_slash", 5188, normal
+	event = "SndAlliace_sword_wind", 5188, normal
 
 [attack_fast_6]
 type = normal
@@ -728,7 +728,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 	
 	event = "Attack", 5226, normal			;slash
-	event = "Sound_slash", 5224, normal
+	event = "SndAlliace_sword_wind", 5224, normal
 
 [attack_fast_7]
 type = normal
@@ -740,7 +740,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 	
 	event = "Attack", 5258, normal			;slash
-	event = "Sound_slash", 5273, normal
+	event = "SndAlliace_sword_wind", 5273, normal
 
 [attack_fast_8]
 type = normal
@@ -752,7 +752,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 5362, normal			;slash
-	event = "Sound_slash", 5355, normal
+	event = "SndAlliace_sword_wind", 5355, normal
 
 ;ROUNDHOUSE 
 [attack_right_1]
@@ -765,7 +765,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 8419, normal			;slash
-	event = "Sound_slash", 8416, normal
+	event = "SndAlliace_sword_wind", 8416, normal
 	event = "Attack", 8427, normal			;slash
 
 
@@ -779,7 +779,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 8419, normal			;slash
-	event = "Sound_slash", 8416, normal
+	event = "SndAlliace_sword_wind", 8416, normal
 	event = "Attack", 8427, normal			;slash
 
 
@@ -793,7 +793,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 8419, normal			;slash
-	event = "Sound_slash", 8416, normal
+	event = "SndAlliace_sword_wind", 8416, normal
 	event = "Attack", 8427, normal			;slash
 
 
@@ -807,7 +807,7 @@ loop = false
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 8419, normal			;slash
-	event = "Sound_slash", 8416, normal
+	event = "SndAlliace_sword_wind", 8416, normal
 	event = "Attack", 8427, normal			;slash
 
 
@@ -824,7 +824,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 8419, normal			;slash
-event = "Sound_slash", 8416, normal
+event = "SndAlliace_sword_wind", 8416, normal
 event = "Attack", 8427, normal
 
 [attack_break_2]
@@ -838,7 +838,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 8419, normal			;slash
-event = "Sound_slash", 8416, normal
+event = "SndAlliace_sword_wind", 8416, normal
 event = "Attack", 8427, normal
 
 [attack_break_3]
@@ -852,7 +852,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 8419, normal			;slash
-event = "Sound_slash", 8416, normal
+event = "SndAlliace_sword_wind", 8416, normal
 event = "Attack", 8427, normal
 
 [attack_break_4]
@@ -866,7 +866,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 8419, normal			;slash
-event = "Sound_slash", 8416, normal
+event = "SndAlliace_sword_wind", 8416, normal
 event = "Attack", 8427, normal
 
 
@@ -1126,7 +1126,7 @@ start_time = 6334
 end_time = 6396
 loop = false
 	event = "To hand", 6340, normal
-	event = "sound_pistol", 6339, normal
+	event = "SndAlliace_pistol_shot", 6339, normal
 	event = "Fire", 6360, normal
 	event = "To belt", 6386, normal
 	

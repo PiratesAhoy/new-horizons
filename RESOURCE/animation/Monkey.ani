@@ -117,7 +117,7 @@ data = "Blend time", "0.3"		; sec
 
 event = "Move blade", 15, normal
 
-event = "Blade to hand", 16, normal
+event = "SndAlliace_sword_sh", 16, normal
 
 
 ;Убрать саблю
@@ -131,7 +131,7 @@ data = "Blend time", "0.3"		; sec
 
 event = "Move blade", 15, normal
 
-event = "Blade to belt", 16, normal
+event = "SndAlliace_sword_out", 16, normal
 
 
 ;Бросить саблю и поднять руки
@@ -288,7 +288,7 @@ end_time = 72
 loop = false
 
 event = "To hand", 53, normal
-event = "sound_pistol", 55, normal
+event = "SndAlliace_pistol_shot", 55, normal
 event = "Fire", 60, normal
 event = "To belt", 70, normal
 

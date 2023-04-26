@@ -444,7 +444,7 @@ data = "Blend time", "0.3"		; sec
 
 event = "Move blade", 1489, normal
 event = "LStep", 1497, normal
-event = "Blade to hand", 1489, normal   ; sound
+event = "SndAlliace_sword_sh", 1489, normal   ; sound
 
 ;Убрать саблю
 [Fight to normal]
@@ -456,7 +456,7 @@ loop = false
 data = "Blend time", "0.3"		; sec
 
 event = "Move blade", 2266, normal
-event = "Blade to belt", 2261, normal   ; sound
+event = "SndAlliace_sword_out", 2261, normal   ; sound
 
 ;Бросить саблю и поднять руки
 [drop saber]
@@ -568,7 +568,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 1514, normal			;slash
-event = "Sound_slash", 1510, normal
+event = "SndAlliace_sword_wind", 1510, normal
 
 
 ;Удар 2 прямой рубящий
@@ -582,7 +582,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 1525, normal			;slash
-event = "Sound_slash", 1521, normal
+event = "SndAlliace_sword_wind", 1521, normal
 
 
 ;Удар 3 прямой рубящий
@@ -596,7 +596,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 1538, normal			;slash
-event = "Sound_slash", 1534, normal
+event = "SndAlliace_sword_wind", 1534, normal
 
 
 ;Удар 4 прямой рубящий
@@ -610,7 +610,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 1554, normal			;slash
-event = "Sound_slash", 1550, normal
+event = "SndAlliace_sword_wind", 1550, normal
 
 
 ;Удар 5 прямой рубящий
@@ -624,7 +624,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 1568, normal			;slash
-event = "Sound_slash", 1565, normal
+event = "SndAlliace_sword_wind", 1565, normal
 
 
 ;Удар 6 прямой рубящий
@@ -638,7 +638,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 1580, normal			;slash
-event = "Sound_slash", 1577, normal
+event = "SndAlliace_sword_wind", 1577, normal
 
 
 ;Удар 7 прямой рубящий
@@ -652,7 +652,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 
 event = "Attack", 1593, normal			;slash
-event = "Sound_slash", 1590, normal
+event = "SndAlliace_sword_wind", 1590, normal
 
 
 ;Удар 8 прямой колющий
@@ -785,7 +785,7 @@ end_time = 1668
 loop = false
 speed = 1.0
 event = "To hand", 1647, normal
-event = "sound_pistol", 1648, normal
+event = "SndAlliace_pistol_shot", 1648, normal
 event = "Fire", 1654, normal
 event = "To belt", 1663, normal
 

@@ -561,7 +561,7 @@ type = reverse
 	data = "Blend time", "0.1"		; sec
 	
 	event = "Move blade", 788, normal
-	event = "Blade to hand", 788, normal
+	event = "SndAlliace_sword_sh", 788, normal
 
 
 ;Убрать саблю
@@ -577,7 +577,7 @@ type = reverse
 	data = "Blend time", "0.1"		; sec
 	
 	event = "Move blade", 816, normal
-	event = "Blade to belt", 816, normal
+	event = "SndAlliace_sword_out", 816, normal
 
 ;Бросить саблю и поднять руки
 	[drop saber]
@@ -692,7 +692,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 10, normal			;slash
-	event = "Sound_slash", 2, normal
+	event = "SndAlliace_sword_wind", 2, normal
 
 	
 	[attack_fast_2]
@@ -711,7 +711,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 10, normal			;slash
-	event = "Sound_slash", 2, normal
+	event = "SndAlliace_sword_wind", 2, normal
 		
 	[attack_fast_3]
 	type = normal
@@ -729,7 +729,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 24, normal			;slash
-	event = "Sound_slash", 19, normal
+	event = "SndAlliace_sword_wind", 19, normal
 	
 	[attack_fast_4]
 	type = normal
@@ -747,7 +747,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 24, normal			;slash
-	event = "Sound_slash", 19, normal
+	event = "SndAlliace_sword_wind", 19, normal
 
 
 ;SLASH
@@ -766,7 +766,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 	
 	event = "Attack", 49, normal			;slash
-	event = "Sound_slash", 36, normal
+	event = "SndAlliace_sword_wind", 36, normal
 		
 	[attack_fast_6]
 	type = normal
@@ -783,7 +783,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 49, normal			;slash
-	event = "Sound_slash", 36, normal
+	event = "SndAlliace_sword_wind", 36, normal
 
 	[attack_fast_7]
 	type = normal
@@ -800,7 +800,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 	
 	event = "Attack", 78, normal			;slash
-	event = "Sound_slash", 66, normal
+	event = "SndAlliace_sword_wind", 66, normal
 
 	[attack_fast_8]
 	type = normal
@@ -817,7 +817,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 78, normal			;slash
-	event = "Sound_slash", 66, normal
+	event = "SndAlliace_sword_wind", 66, normal
 
 ;ROUNDHOUSE 
 	[attack_right_1]
@@ -835,7 +835,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 131, normal			;slash
-	event = "Sound_slash", 125, normal
+	event = "SndAlliace_sword_wind", 125, normal
 	event = "Attack", 144, normal			;slash
 	
 
@@ -854,7 +854,7 @@ type = reverse
 	data = "Blend time", "0.2"		; sec
 		
 	event = "Attack", 131, normal			;slash
-	event = "Sound_slash", 125, normal
+	event = "SndAlliace_sword_wind", 125, normal
 	event = "Attack", 144, normal			;slash
 
 

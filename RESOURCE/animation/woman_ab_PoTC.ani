@@ -440,7 +440,7 @@ speed = 1.6
 loop = false
 data = "Blend time", "0.3"		; sec
 event = "Move blade", 2009, normal
-event = "Blade to hand", 2009, normal 
+event = "SndAlliace_sword_sh", 2009, normal
 event = "LStep", 2017, normal
 event = "SndAlliace_sword_sh", 1997, normal
 
@@ -453,7 +453,7 @@ speed = 1.6
 loop = false
 data = "Blend time", "0.3"		; sec
 event = "Move blade", 2973, normal
-event = "Blade to belt", 2968, normal   ; sound
+event = "SndAlliace_sword_out", 2968, normal   ; sound
 event = "LStep", 2958, normal
 event = "SndAlliace_sword_out", 2968, normal
 
@@ -567,7 +567,7 @@ data = "Dist", "2"	; m
 data = "Ang", "20"	; grd
 	
 event = "Attack", 2144, normal			;slash
-event = "Sound_slash", 2138, normal
+event = "SndAlliace_sword_wind", 2138, normal
 
 ;Удар 2 прямой рубящий
 [attack_fast_2]
@@ -581,7 +581,7 @@ data = "Dist", "2"	; m
 data = "Ang", "20"	; grd
 	
 event = "Attack", 2167, normal			;slash
-event = "Sound_slash", 2160, normal
+event = "SndAlliace_sword_wind", 2160, normal
 
 ;Удар 3 прямой рубящий
 [attack_fast_3]
@@ -593,7 +593,7 @@ data = "Blend time", "0.2"		; sec
 data = "Dist", "2"	; m
 data = "Ang", "20"	; grd
 event = "Attack", 2192, normal			;slash
-event = "Sound_slash", 2188, normal
+event = "SndAlliace_sword_wind", 2188, normal
 
 
 ;Удар 4 прямой рубящий
@@ -604,7 +604,7 @@ speed = 2.1
 loop = false
 data = "Blend time", "0.2"		; sec
 event = "Attack", 2038, normal			;slash
-event = "Sound_slash", 2030, normal
+event = "SndAlliace_sword_wind", 2030, normal
 
 
 ;Удар 5 прямой рубящий
@@ -615,7 +615,7 @@ speed = 2.1
 loop = false
 data = "Blend time", "0.2"		; sec
 event = "Attack", 2060, normal			;slash
-event = "Sound_slash", 2049, normal
+event = "SndAlliace_sword_wind", 2049, normal
 
 ;Удар 3 прямой рубящий
 [attack_fast_6]
@@ -625,7 +625,7 @@ speed = 2.1
 loop = false
 data = "Blend time", "0.2"		; sec
 event = "Attack", 2085, normal			;slash
-event = "Sound_slash", 2076, normal
+event = "SndAlliace_sword_wind", 2076, normal
 
 
 ;Удар 7 прямой рубящий
@@ -636,7 +636,7 @@ speed = 1.8
 loop = false
 data = "Blend time", "0.2"		; sec
 event = "Attack", 2116, normal			;slash
-event = "Sound_slash", 2112, normal
+event = "SndAlliace_sword_wind", 2112, normal
 
 
 ;Удар 8 прямой колющий
@@ -783,7 +783,7 @@ end_time = 2945
 loop = false
 speed = 2.0
 event = "To hand", 2894, normal
-event = "sound_pistol", 2887, normal
+event = "SndAlliace_pistol_shot", 2887, normal
 event = "Fire", 2908, normal
 event = "To belt", 2934, normal
 
