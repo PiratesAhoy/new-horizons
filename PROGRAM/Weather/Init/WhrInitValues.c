@@ -345,16 +345,10 @@ void Whr_InitGValues()
 
 	if (sti(Weathers.Sun.Glow.Enable) == true)
 	{
-		string widescreen = "";
-		float screen_x = stf(showWindow.width);
-		float screen_y = stf(showWindow.height);
-		float screen_ratio = screen_x/screen_y;
-		if(screen_ratio > 1.4){ widescreen = "\widescreen";}
-		
 		Weathers.Sun.Glow.Dist = 3500.0;
 		Weathers.Sun.Glow.Size = 1250.0;
 		Weathers.Sun.Glow.RotateSpeed = 1.0;
-		Weathers.Sun.Glow.Texture = "weather\sun\glow" + widescreen + "\sunglow.tga";
+		Weathers.Sun.Glow.GlowTexture = "weather\sun\glow\sunglow.tga";
 		Weathers.Sun.Glow.DecayTime = 8.0;
 		Weathers.Sun.Glow.TechniqueNoZ = "sunglow_noz";
 		Weathers.Sun.Glow.TechniqueZ = "sunglow_z";

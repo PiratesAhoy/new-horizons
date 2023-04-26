@@ -33,7 +33,7 @@ void WhrCreateSunGlowEnvironment()
 	{
 		SunGlow.Glow.Dist = Whr_GetFloat(aGlow,"Dist");
 		SunGlow.Glow.Size = Whr_GetFloat(aGlow,"Size");
-		SunGlow.Glow.Texture = Whr_GetString(aGlow,"Texture");
+		SunGlow.Glow.GlowTexture = Whr_GetString(aGlow,"GlowTexture");
 		SunGlow.Glow.Color = Whr_GetColor(aGlow,"Color");
 		SunGlow.Glow.RotateSpeed = Whr_GetColor(aGlow,"RotateSpeed");
 		SunGlow.Glow.DecayTime = Whr_GetColor(aGlow,"DecayTime");
