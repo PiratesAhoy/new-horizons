@@ -567,7 +567,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 1514, normal			;slash
+event = "Attack", 1514, normal			;slash
 event = "Sound_slash", 1510, normal
 
 
@@ -581,7 +581,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 1525, normal			;slash
+event = "Attack", 1525, normal			;slash
 event = "Sound_slash", 1521, normal
 
 
@@ -595,7 +595,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 1538, normal			;slash
+event = "Attack", 1538, normal			;slash
 event = "Sound_slash", 1534, normal
 
 
@@ -609,7 +609,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 1554, normal			;slash
+event = "Attack", 1554, normal			;slash
 event = "Sound_slash", 1550, normal
 
 
@@ -623,7 +623,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 1568, normal			;slash
+event = "Attack", 1568, normal			;slash
 event = "Sound_slash", 1565, normal
 
 
@@ -637,7 +637,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 1580, normal			;slash
+event = "Attack", 1580, normal			;slash
 event = "Sound_slash", 1577, normal
 
 
@@ -651,7 +651,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 1593, normal			;slash
+event = "Attack", 1593, normal			;slash
 event = "Sound_slash", 1590, normal
 
 
@@ -682,7 +682,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 1618, normal			;slash
+event = "Attack", 1618, normal			;slash
 
 ;--------------------------------------------------
 
@@ -696,7 +696,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 1634, normal			;slash
+event = "Attack", 1634, normal			;slash
 
 ;--------------------------------------------------
 

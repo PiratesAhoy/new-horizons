@@ -566,7 +566,7 @@ data = "Blend time", "0.2"		; sec
 data = "Dist", "2"	; m
 data = "Ang", "20"	; grd
 	
-event = "Attack_slash", 2144, normal			;slash
+event = "Attack", 2144, normal			;slash
 event = "Sound_slash", 2138, normal
 
 ;Удар 2 прямой рубящий
@@ -580,7 +580,7 @@ data = "Blend time", "0.2"		; sec
 data = "Dist", "2"	; m
 data = "Ang", "20"	; grd
 	
-event = "Attack_slash", 2167, normal			;slash
+event = "Attack", 2167, normal			;slash
 event = "Sound_slash", 2160, normal
 
 ;Удар 3 прямой рубящий
@@ -592,7 +592,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 data = "Dist", "2"	; m
 data = "Ang", "20"	; grd
-event = "Attack_slash", 2192, normal			;slash
+event = "Attack", 2192, normal			;slash
 event = "Sound_slash", 2188, normal
 
 
@@ -603,7 +603,7 @@ end_time = 2049
 speed = 2.1
 loop = false
 data = "Blend time", "0.2"		; sec
-event = "Attack_slash", 2038, normal			;slash
+event = "Attack", 2038, normal			;slash
 event = "Sound_slash", 2030, normal
 
 
@@ -614,7 +614,7 @@ end_time = 2074
 speed = 2.1
 loop = false
 data = "Blend time", "0.2"		; sec
-event = "Attack_slash", 2060, normal			;slash
+event = "Attack", 2060, normal			;slash
 event = "Sound_slash", 2049, normal
 
 ;Удар 3 прямой рубящий
@@ -624,7 +624,7 @@ end_time = 2099
 speed = 2.1
 loop = false
 data = "Blend time", "0.2"		; sec
-event = "Attack_slash", 2085, normal			;slash
+event = "Attack", 2085, normal			;slash
 event = "Sound_slash", 2076, normal
 
 
@@ -635,7 +635,7 @@ end_time = 2131
 speed = 1.8
 loop = false
 data = "Blend time", "0.2"		; sec
-event = "Attack_slash", 2116, normal			;slash
+event = "Attack", 2116, normal			;slash
 event = "Sound_slash", 2112, normal
 
 
@@ -646,7 +646,7 @@ end_time = 3022
 speed = 1.5
 loop = false
 data = "Blend time", "0.2"		; sec
-event = "Attack_slash", 3016, normal			;slash
+event = "Attack", 3016, normal			;slash
 event = "Sound_stub", 3012, normal
 
 
@@ -663,7 +663,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3050, normal			;slash
+event = "Attack", 3050, normal			;slash
 
 ;--------------------------------------------------
 
@@ -677,7 +677,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3032, normal			;slash
+event = "Attack", 3032, normal			;slash
 
 ;--------------------------------------------------
 

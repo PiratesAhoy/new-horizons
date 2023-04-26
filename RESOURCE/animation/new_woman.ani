@@ -691,7 +691,7 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 10, normal			;slash
+	event = "Attack", 10, normal			;slash
 	event = "Sound_slash", 2, normal
 
 	
@@ -710,7 +710,7 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 10, normal			;slash
+	event = "Attack", 10, normal			;slash
 	event = "Sound_slash", 2, normal
 		
 	[attack_fast_3]
@@ -728,7 +728,7 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 24, normal			;slash
+	event = "Attack", 24, normal			;slash
 	event = "Sound_slash", 19, normal
 	
 	[attack_fast_4]
@@ -746,7 +746,7 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 24, normal			;slash
+	event = "Attack", 24, normal			;slash
 	event = "Sound_slash", 19, normal
 
 
@@ -765,7 +765,7 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 	
-	event = "Attack_slash", 49, normal			;slash
+	event = "Attack", 49, normal			;slash
 	event = "Sound_slash", 36, normal
 		
 	[attack_fast_6]
@@ -782,7 +782,7 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 49, normal			;slash
+	event = "Attack", 49, normal			;slash
 	event = "Sound_slash", 36, normal
 
 	[attack_fast_7]
@@ -799,7 +799,7 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 	
-	event = "Attack_slash", 78, normal			;slash
+	event = "Attack", 78, normal			;slash
 	event = "Sound_slash", 66, normal
 
 	[attack_fast_8]
@@ -816,7 +816,7 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 78, normal			;slash
+	event = "Attack", 78, normal			;slash
 	event = "Sound_slash", 66, normal
 
 ;ROUNDHOUSE 
@@ -834,9 +834,9 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 131, normal			;slash
+	event = "Attack", 131, normal			;slash
 	event = "Sound_slash", 125, normal
-	event = "Attack_slash", 144, normal			;slash
+	event = "Attack", 144, normal			;slash
 	
 
 	[attack_left_1]
@@ -853,9 +853,9 @@ type = reverse
 	
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 131, normal			;slash
+	event = "Attack", 131, normal			;slash
 	event = "Sound_slash", 125, normal
-	event = "Attack_slash", 144, normal			;slash
+	event = "Attack", 144, normal			;slash
 
 
 ;РЕАКЦИИ НА ПОРАЖЕНИЕ

@@ -523,7 +523,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 2998, normal			;slash
+event = "Attack", 2998, normal			;slash
 event = "Sound_slash", 2996, normal
 
 ;event = "RStep", 1716, normal
@@ -541,7 +541,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3014, normal			;slash
+event = "Attack", 3014, normal			;slash
 event = "Sound_slash", 3012, normal
 
 ;event = "RStep", 1716, normal
@@ -559,7 +559,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3029, normal			;slash
+event = "Attack", 3029, normal			;slash
 event = "Sound_slash", 3028, normal
 
 ;event = "RStep", 1716, normal
@@ -577,7 +577,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3042, normal			;slash
+event = "Attack", 3042, normal			;slash
 event = "Sound_slash", 3040, normal
 
 ;event = "RStep", 1716, normal
@@ -595,7 +595,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3055, normal			;slash
+event = "Attack", 3055, normal			;slash
 event = "Sound_slash", 3052, normal
 
 ;event = "RStep", 1716, normal
@@ -613,7 +613,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3067, normal			;slash
+event = "Attack", 3067, normal			;slash
 event = "Sound_slash", 3065, normal
 
 ;event = "RStep", 1716, normal
@@ -631,7 +631,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3014, normal			;slash
+event = "Attack", 3014, normal			;slash
 event = "Sound_slash", 3012, normal
 
 ;event = "RStep", 1716, normal
@@ -669,7 +669,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3095, normal
+event = "Attack", 3095, normal
 event = "Sound_slash", 3094, normal
 
 ;event = "RStep", 1716, normal
@@ -687,7 +687,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 3111, normal			;slash
+event = "Attack", 3111, normal			;slash
 event = "Sound_slash", 3108, normal
 
 ;event = "RStep", 1716, normal

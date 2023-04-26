@@ -664,7 +664,7 @@ speed = 2.0
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 5293, normal			;slash
+	event = "Attack", 5293, normal			;slash
 	event = "Sound_slash", 5288, normal
 
 
@@ -677,7 +677,7 @@ speed = 2.0
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 5293, normal			;slash
+	event = "Attack", 5293, normal			;slash
 	event = "Sound_slash", 5288, normal
 
 
@@ -690,7 +690,7 @@ speed = 2.0
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 5319, normal			;slash
+	event = "Attack", 5319, normal			;slash
 	event = "Sound_slash", 5314, normal
 
 [attack_fast_4]
@@ -702,7 +702,7 @@ speed = 2.0
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 5340, normal			;slash
+	event = "Attack", 5340, normal			;slash
 	event = "Sound_slash", 5337, normal
 
 ;SLASH
@@ -715,7 +715,7 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 5195, normal			;slash
+	event = "Attack", 5195, normal			;slash
 	event = "Sound_slash", 5188, normal
 
 [attack_fast_6]
@@ -727,7 +727,7 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 	
-	event = "Attack_slash", 5226, normal			;slash
+	event = "Attack", 5226, normal			;slash
 	event = "Sound_slash", 5224, normal
 
 [attack_fast_7]
@@ -739,7 +739,7 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 	
-	event = "Attack_slash", 5258, normal			;slash
+	event = "Attack", 5258, normal			;slash
 	event = "Sound_slash", 5273, normal
 
 [attack_fast_8]
@@ -751,7 +751,7 @@ speed = 1.6
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 5362, normal			;slash
+	event = "Attack", 5362, normal			;slash
 	event = "Sound_slash", 5355, normal
 
 ;ROUNDHOUSE 
@@ -764,9 +764,9 @@ speed = 0.77
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 8419, normal			;slash
+	event = "Attack", 8419, normal			;slash
 	event = "Sound_slash", 8416, normal
-	event = "Attack_slash", 8427, normal			;slash
+	event = "Attack", 8427, normal			;slash
 
 
 [attack_left_1]
@@ -778,9 +778,9 @@ speed = 0.77
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 8419, normal			;slash
+	event = "Attack", 8419, normal			;slash
 	event = "Sound_slash", 8416, normal
-	event = "Attack_slash", 8427, normal			;slash
+	event = "Attack", 8427, normal			;slash
 
 
 [attack_round_3]
@@ -792,9 +792,9 @@ speed = 0.77
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 8419, normal			;slash
+	event = "Attack", 8419, normal			;slash
 	event = "Sound_slash", 8416, normal
-	event = "Attack_slash", 8427, normal			;slash
+	event = "Attack", 8427, normal			;slash
 
 
 [attack_round_4]
@@ -806,9 +806,9 @@ speed = 0.77
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack_slash", 8419, normal			;slash
+	event = "Attack", 8419, normal			;slash
 	event = "Sound_slash", 8416, normal
-	event = "Attack_slash", 8427, normal			;slash
+	event = "Attack", 8427, normal			;slash
 
 
 
@@ -823,9 +823,9 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 8419, normal			;slash
+event = "Attack", 8419, normal			;slash
 event = "Sound_slash", 8416, normal
-event = "Attack_slash", 8427, normal
+event = "Attack", 8427, normal
 
 [attack_break_2]
 type = normal
@@ -837,9 +837,9 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 8419, normal			;slash
+event = "Attack", 8419, normal			;slash
 event = "Sound_slash", 8416, normal
-event = "Attack_slash", 8427, normal
+event = "Attack", 8427, normal
 
 [attack_break_3]
 type = normal
@@ -851,9 +851,9 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 8419, normal			;slash
+event = "Attack", 8419, normal			;slash
 event = "Sound_slash", 8416, normal
-event = "Attack_slash", 8427, normal
+event = "Attack", 8427, normal
 
 [attack_break_4]
 type = normal
@@ -865,9 +865,9 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack_slash", 8419, normal			;slash
+event = "Attack", 8419, normal			;slash
 event = "Sound_slash", 8416, normal
-event = "Attack_slash", 8427, normal
+event = "Attack", 8427, normal
 
 
 ;PARRY

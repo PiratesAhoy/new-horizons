@@ -228,7 +228,7 @@ data = "Blend time", "0.2"		; sec
 
 loop = false
 
-event = "Attack_slash", 82, normal
+event = "Attack", 82, normal
 event = "scream", 78, normal
 
 ;--------------------------------------------------
