@@ -908,7 +908,7 @@ void NewGame()
 	DelEventHandler("frame","NewGame");
 
 	// PB: Storyline Specific Start New Game Screens -->
-	string LoadingScreen = "Quest_"+GetStoryline(FindCurrentStoryline())+".tga";
+	string LoadingScreen = "Quest_"+GetStoryline(FindCurrentStoryline());
 	string TextureFolder = "RESOURCE\Textures\Loading\"+ LanguageGetLanguage() +"\";
 	ref model = ModelFromID(CharModel);
 	if (CheckAttribute(model, "loadingScreen"))	LoadingScreen = model.loadingScreen;
