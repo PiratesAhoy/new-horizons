@@ -165,6 +165,11 @@ void wdmInitWorldMap()
 	worldMap.labels.Colombia.locator = "Colombia";
 	worldMap.labels.Colombia.text = FindIslandName("Colombia");
 
+	worldMap.labels.IslaDeMuerte.type = "Island";
+	worldMap.labels.IslaDeMuerte.id = "IslaDeMuerte";
+	worldMap.labels.IslaDeMuerte.locator = "IslaDeMuerte";
+	worldMap.labels.IslaDeMuerte.text = TranslateString("","Isla De Muerte");
+
 	//------- TOWN ------------------------------------------------------------
 
 	worldMap.labels.FalaiseDeFleur_town_1.type = "Town";
@@ -816,6 +821,12 @@ void wdmInitWorldMap()
 	worldMap.islands.Colombia.position.z = 801.376;
 	worldMap.islands.Colombia.position.rx = -24.6888;
 	worldMap.islands.Colombia.position.rz = 807.4202;
+
+	worldMap.islands.IslaDeMuerte.name = "IslaDeMuerte";
+	worldMap.islands.IslaDeMuerte.position.x = 386.499;
+	worldMap.islands.IslaDeMuerte.position.z = 425.603;
+	worldMap.islands.IslaDeMuerte.position.rx = 375.139;
+	worldMap.islands.IslaDeMuerte.position.rz = 418.814;
 }
 
 void InitializationLabels()
