@@ -543,7 +543,7 @@ void SetVariable()
     sPlayerName = xi_refCharacter.name;
 
 	nPlayerMoney = sti(xi_refCharacter.Money);
-	if(CheckAttribute(xi_refCharacter, "wealth") && sti(xi_refCharacter.wealth) > 0) nPlayerMoney = sti(xi_refCharacter.wealth); // PB: Always show wealth if available
+	if(CheckAttribute(xi_refCharacter, "wealth")) nPlayerMoney = sti(xi_refCharacter.wealth); // PB: Always show wealth if available
     nPlayerLand = GetCharacterLand(xi_refCharacter); // RM
     nCurrentExperience = sti(xi_refCharacter.Experience);
     nNextExperience = CalculateExperienceFromRank(sti(xi_refCharacter.rank)+1);
