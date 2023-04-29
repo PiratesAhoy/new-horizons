@@ -24,7 +24,8 @@ void InitInterface(string iniName)
 	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"INFO_TEXT",5);
 	SetNodeUsing("VIDEOPIE",bAnimation);
 
-	CreateString(true, "Engage", TranslateString("", "Engage") + "?", FONT_NORMAL, COLOR_NORMAL, 320, 300, SCRIPT_ALIGN_CENTER, 1.0); // KK
+	SetFormatedText("ACTION_TEXT", TranslateString("", "Engage") + "?");
+	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"ACTION_TEXT",5);
 
 	SetEventHandler("InterfaceBreak","ProcessBreakExit",0); // Output/yield at sea
 //	SetEventHandler("exitCancel","ProcessCancelExit",0); // Output/yield at sea on the small cross or Esc - PB: Escape key disabled
@@ -107,7 +108,7 @@ void DoPostExit()
 
 void CalculateInfoData()
 {
-	CreateString(true, "engage", TranslateString("", "Engage") + "?", FONT_NORMAL, COLOR_NORMAL, 320, 268, SCRIPT_ALIGN_CENTER, 0.9);
+	SetFormatedText("ACTION_TEXT", TranslateString("", "Engage") + "?");
 	ref mainCh = GetMainCharacter();
 	if (sti(mainCh.CanEscape) == false) {
 		SetSelectable("B_CANCEL", false);
