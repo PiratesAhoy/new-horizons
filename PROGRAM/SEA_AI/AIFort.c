@@ -81,7 +81,7 @@ void Fort_Login(int iIslandIndex)
 			SendMessage(&Forts[iNumForts], "ls", MSG_MODEL_SET_LIGHT_PATH, GetLightingPath());
 			SendMessage(&Forts[iNumForts], "ls", MSG_MODEL_LOAD_GEO, sFortModel);
 			SendMessage(&Island, "li", MSG_ISLAND_ADD_FORT,  &Forts[iNumForts]);
-			LayerAddObject(SEA_REALIZE, &Forts[iNumForts], 10000);
+			LayerAddObject(SEA_EXECUTE, &Forts[iNumForts], 10001);
 			LayerAddObject(FORT_CANNON_TRACE, &Forts[iNumForts], 1);
 			SendMessage(SeaLighter, "ssi", "AddModel", arLocator.fort.model, &Forts[iNumForts]);
 			iNumForts++;
@@ -211,6 +211,7 @@ int Fort_GetCannonsQuantity(ref rFortCharacter)
 		int quantity = 0;
 		if (CheckAttribute(rFortCharacter, "Fort.Cannons.Type.1.Quantity")) quantity += sti(rFortCharacter.Fort.Cannons.Type.1.Quantity);
 		if (CheckAttribute(rFortCharacter, "Fort.Cannons.Type.2.Quantity")) quantity += sti(rFortCharacter.Fort.Cannons.Type.2.Quantity);
+		if (CheckAttribute(rFortCharacter, "Fort.Cannons.Type.3.Quantity")) quantity += sti(rFortCharacter.Fort.Cannons.Type.3.Quantity);
 		return quantity;
 // <-- KK
 	}
@@ -417,6 +418,7 @@ void Fort_CheckAttributes(ref rCharacter)
 		if (!CheckAttribute(rCharacter, "Ship.Cannons.Charge.Type")) { rCharacter.Ship.Cannons.Charge.Type = GOOD_BOMBS; }
 		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.1")) { rCharacter.Fort.Cannons.Type.1 = CANNON_TYPE_LONG_LBS42; }
 		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.2")) { rCharacter.Fort.Cannons.Type.2 = CANNON_TYPE_CARRONADE_LBS68; }
+		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.3")) { rCharacter.Fort.Cannons.Type.3 = CANNON_TYPE_CARRONADE_LBS68; }
 	}
 	// KNB <--
 	else
@@ -426,5 +428,6 @@ void Fort_CheckAttributes(ref rCharacter)
 		if (!CheckAttribute(rCharacter, "Ship.Cannons.Charge.Type")) { rCharacter.Ship.Cannons.Charge.Type = GOOD_BOMBS; }
 		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.1")) { rCharacter.Fort.Cannons.Type.1 = CANNON_TYPE_CULVERINE_LBS24; }
 		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.2")) { rCharacter.Fort.Cannons.Type.2 = CANNON_TYPE_CANNON_LBS32; }
+		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.3")) { rCharacter.Fort.Cannons.Type.3 = CANNON_TYPE_CANNON_LBS32; }
 	}
 }
