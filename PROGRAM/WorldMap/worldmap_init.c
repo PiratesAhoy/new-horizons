@@ -595,7 +595,7 @@ void wdmInitWorldMap()
 	//Internal information - !!!Caution, no checks!!!
 	//=========================================================================
 	//Прараметры влияния ветра на скорость коробля (относительная скорость)
-	worldMap.shipSpeedOppositeWind = 0.3;
+	worldMap.shipSpeedOppositeWind = 0.8;
 	worldMap.shipSpeedOverWind = 0.8;
 
 	//Player ship
