@@ -707,6 +707,8 @@ void ExternInitKeyCodes()
 
 
 	// boal -->
+	objControlsState.key_codes.VK_F10      = 121;
+	objControlsState.key_codes.VK_F10.img = "<";
 	objControlsState.key_codes.VK_F11      = 122;
 	objControlsState.key_codes.VK_F11.img = "<";
 	objControlsState.key_codes.VK_F12      = 123;
