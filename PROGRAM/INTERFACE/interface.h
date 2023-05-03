@@ -47,10 +47,7 @@
 // MAXIMUS interface MOD -->
 #define INTERFACE_MAP		            42
 #define INTERFACE_OFFICER	            43
-// MAXIMUS interface MOD <--
-//->Inez
-//#define INTERFACE_BUILDSETTINGS			44
-//<-Inez
+#define INTERFACE_DEBUG                 44
 #define INTERFACE_TRANSFER_CANNONS		45 // MAXIMUS
 #define INTERFACE_CUSTOMIZATION       	46 // added by MAXIMUS [choose character mod]
 #define INTERFACE_ABOUT_BUILD		    47 // added by MAXIMUS

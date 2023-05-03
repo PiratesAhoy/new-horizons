@@ -233,6 +233,7 @@ void ExternControlsInit(bool bFirst)
 	CI_CreateAndSetControls( "General", "BOAL_Control2", CI_GetKeyCode(CTL_NPC_INFO_TOGGLE), 0, true );	// Toggle show char info
 	CI_CreateAndSetControls( "", "NK_Re-init", CI_GetKeyCode(CTL_REINITIALIZE_GAME), 0, false );		// Process reinit (hidden from control settings)
 	CI_CreateAndSetControls( "", "executeconsole", CI_GetKeyCode(CTL_EXECUTE_CONSOLE), 0, false );		// Activate the console function (hidden from control settings)
+	CI_CreateAndSetControls( "", "ShowDebugMenu", CI_GetKeyCode(CTL_DEBUG_MENU), 0, false );		// Activate the console function (hidden from control settings)
 
 	CI_CreateAndSetControls( "General", "DCH_Quicksave", CI_GetKeyCode(CTL_QUICKSAVE), 0, false );	// dchaley
 	CI_CreateAndSetControls( "General", "DCH_Quickload", CI_GetKeyCode(CTL_QUICKLOAD), 0, false );	// dchaley

@@ -1247,6 +1247,16 @@ void LaunchGame()
 	//StartVideo("3Ship");
 }
 
+void LaunchDebugMenu()
+{
+	if(procInterfacePrepare(INTERFACE_DEBUG))
+	{
+		nPrevInterface = -1;
+		CurrentInterface = INTERFACE_DEBUG;
+		InitInterface(Interfaces[CurrentInterface].IniFile);
+	}
+}
+
 void ISTART_Game()
 {
 	DelEventHandler(EVENT_END_VIDEO,"ISTART_Game");

@@ -2917,6 +2917,8 @@ void ReinitInterface()
 	Interfaces[INTERFACE_MAP].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\map.ini";
 	Interfaces[INTERFACE_OFFICER].SectionName = "interface\officer.c";
 	Interfaces[INTERFACE_OFFICER].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\officer.ini";
+	Interfaces[INTERFACE_DEBUG].SectionName = "interface/debug_menu.c";
+	Interfaces[INTERFACE_DEBUG].IniFile = "RESOURCE/INI/INTERFACES/debug_menu.ini";
 	Interfaces[INTERFACE_TRANSFER_CANNONS].SectionName = "interface\transfer_cannons.c";
 	Interfaces[INTERFACE_TRANSFER_CANNONS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\transfer_cannons.ini";
 	Interfaces[INTERFACE_CUSTOMIZATION].SectionName = "interface\customization.c";

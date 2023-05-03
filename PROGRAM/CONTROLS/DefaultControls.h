@@ -36,6 +36,7 @@ Please follow these rules when editing settings:
 #define CTL_SCREEN_FULL_LOGS_TOGGLE "KEY_L"
 #define CTL_ARCHIPELAGO_MAP    		"KEY_M"
 #define CTL_NPC_INFO_TOGGLE 		"KEY_O"
+#define CTL_DEBUG_MENU              "VK_F10"
 #define CTL_REINITIALIZE_GAME 		"VK_F11" // (not changable ingame)
 #define CTL_EXECUTE_CONSOLE 		"VK_F12" // (not changable ingame)
 

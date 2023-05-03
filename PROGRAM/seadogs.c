@@ -1387,6 +1387,11 @@ void ProcessControls()
 					UnloadSegment("console.c");
 				}
 			break;
+
+			case "ShowDebugMenu":
+				LaunchDebugMenu();
+			break;
+
 // added by MAXIMUS [for new C-III models, which have an animated sidestep] -->
 			case "Sidestep_left_on":
 				if(bSeaActive && !bAbordageStarted) break; // PB: Don't do this while sailing, but don't prevent it during boarding
