@@ -7,20 +7,29 @@ void InitInterface(string iniName)
 
 	SendMessage(&GameInterface, "ls", MSG_INTERFACE_INIT, iniName);
 
-	SetEventHandler("ExecuteCheat", "ExecuteCheat", 0);
-
 	SetEventHandler("InterfaceBreak", "ProcessCancelExit", 0);
 	SetEventHandler("InterfaceCancel", "ProcessCancelExit", 0);
 	SetEventHandler("exitCancel", "ProcessCancelExit", 0);
+
+	SetEventHandler("EnableFreeCamera", "EnableFreeCamera", 0);
+	SetEventHandler("SpawnFleet", "SpawnFleet", 0);
+
+	bool in_sailing_mode = bSeaActive;
+
+	SetSelectable("BTN_FREE_CAMERA", in_sailing_mode);
+	SetSelectable("BTN_SPAWN_FLEET", in_sailing_mode && iNumShips <= 1);
 }
 
 void ProcessCancelExit()
 {
-	DelEventHandler("ExecuteCheat", "ExecuteCheat");
+	DelEventHandler("EnableFreeCamera", "EnableFreeCamera");
+	DelEventHandler("SpawnFleet", "SpawnFleet");
 
 	DelEventHandler("InterfaceBreak", "ProcessCancelExit");
 	DelEventHandler("InterfaceCancel", "ProcessCancelExit");
 	DelEventHandler("exitCancel", "ProcessCancelExit");
+
+	interfaceResultCommand = RC_INTERFACE_DO_NOTHING;
 
 	SetTimeScale(1.0);
 	EngineLayersOffOn(false);
@@ -28,10 +37,20 @@ void ProcessCancelExit()
 	EndCancelInterface(true);
 }
 
-void ExecuteCheat()
+void EnableFreeCamera()
 {
 	SeaCameras.Camera = "SeaFreeCamera";
 	SeaCameras_UpdateCamera();
+
+	ProcessCancelExit();
+}
+
+void SpawnFleet()
+{
+	while (iNumShips < MAX_SHIPS_ON_SEA) {
+		float ay = 0;
+		DirectEncounter(ay);
+	}
 
 	ProcessCancelExit();
 }

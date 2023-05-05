@@ -720,8 +720,8 @@ void DirectEncounter(float encay)  // called by SeaLoginDirect
 		Group_SetTaskAttack(groupname, PLAYER_GROUP, false); // PB: Relations should already be hostile
 		Group_LockTask(groupname);
 		Trace("Directsail encounter nation: " + Encnation + ", task attack ");
-		UpdateRelations();
 	}
+	UpdateRelations();
 
 	ReloadProgressUpdate();
 	Trace("Directencounter done ");
