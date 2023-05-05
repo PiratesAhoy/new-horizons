@@ -1380,6 +1380,10 @@ void AddShipToInterface(int charIndex)
 			}
 		}
 	}
+	if (idx < 0) {
+		trace("ERROR: AddShipToInterface: idx < 0 for " + chRef.id);
+		return;
+	}
 // <-- KK
 	ref shipRef = &ShipStats[idx];
 	DeleteAttribute(shipRef,""); // clear out
@@ -1418,7 +1422,7 @@ void AddShipToInterface(int charIndex)
 	}
 
 	//Screwface : No other ships infos in bars in menu in realistic mod
-	if(iRealismMode>1 && charIndex != GetMainCharacterIndex() && !IsCompanion(chRef)) DeleteAttribute(shipRef,"");
+	if(iRealismMode>0 && charIndex != GetMainCharacterIndex() && !IsCompanion(chRef)) DeleteAttribute(shipRef,"");
 
 	SendMessage(&BattleInterface,"llaall",BI_IN_CREATE_SHIP,charIndex,chRef,shipRef,myShip,shipRelation);
 }
@@ -2499,7 +2503,7 @@ void SetParameterData()
 	BattleInterface.ShipInfoImages.CrewOffset.z = 0.0;
 	BattleInterface.ShipInfoImages.CrewUV = "0.0,0.0,1.0,0.166";
 
-	if (iRealismMode <= 1) {
+	if (iRealismMode < 1) {
 		BattleInterface.ShifInfoVisible = true;
 	}
 
