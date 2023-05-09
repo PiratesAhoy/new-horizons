@@ -1,0 +1,216 @@
+//animation = Heads\AN\h_Man6_1.an
+animation = Heads\AN\h_Davy_Crew.an
+
+data = "Turn speed", "4.0"
+
+;-------------------------------------------------
+; Normal
+;-------------------------------------------------
+; All actions set to 0 length because animation
+; does not work.
+;-------------------------------------------------
+
+[dialog_stay2]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay3]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay4]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay5]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[yes4]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[no4]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_all]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_idle]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+;-------------------------------------------------
+; Smile
+;-------------------------------------------------
+
+[dialog_stay2_smile]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay3_smile]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay4_smile]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay5_smile]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+
+[yes4_smile]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[no4_smile]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_all_smile]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_idle_smile]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+;-------------------------------------------------
+; Angry
+;-------------------------------------------------
+
+[dialog_stay2_angry]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay3_angry]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay4_angry]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay5_angry]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[yes4_angry]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[no4_angry]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_all_angry]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_idle_angry]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+;-------------------------------------------------
+; Afraid
+;-------------------------------------------------
+
+[dialog_stay2_afraid]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay3_afraid]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay4_afraid]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_stay5_afraid]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[yes4_afraid]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[no4_afraid]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_all_afraid]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec
+
+[dialog_idle_afraid]
+    type = normal
+	start_time = 0
+	end_time = 0
+	data = "Blend time", "0.0"		; sec

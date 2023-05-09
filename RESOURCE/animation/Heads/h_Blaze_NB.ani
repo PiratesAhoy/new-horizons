@@ -1,0 +1,202 @@
+animation = Heads\AN\h_Blaze.an
+
+data = "Turn speed", "4.0"
+
+;-------------------------------------------------
+; Normal
+;-------------------------------------------------
+
+[dialog_stay2]
+start_time = 1
+end_time = 42
+data = "Blend time", "0.1"		; sec
+
+[dialog_stay3]
+start_time = 42
+end_time = 64
+data = "Blend time", "0.1"		; sec
+
+[dialog_stay4]
+start_time = 64
+end_time = 103
+data = "Blend time", "0.1"		; sec
+
+[dialog_stay5]
+start_time = 103
+end_time = 125
+data = "Blend time", "0.1"		; sec
+
+[yes4]
+start_time = 125
+end_time = 148
+data = "Blend time", "0.1"		; sec
+
+
+[no4]
+start_time = 148
+end_time = 170  
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_all]
+start_time = 1
+end_time = 170
+data = "Blend time", "0.1"		; sec
+
+[dialog_idle]
+start_time = 170
+end_time = 250
+data = "Blend time", "0.1"		; sec
+
+
+;-------------------------------------------------
+; Smile
+;-------------------------------------------------
+
+[dialog_stay2_smile]
+start_time = 251
+end_time = 292
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_stay3_smile]
+start_time = 292
+end_time = 314
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_stay4_smile]
+start_time = 314
+end_time = 353
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_stay5_smile]
+start_time = 353
+end_time = 375
+data = "Blend time", "0.1"		; sec
+
+
+[yes4_smile]
+start_time = 375
+end_time = 398
+data = "Blend time", "0.1"		; sec
+
+
+[no4_smile]
+start_time = 398
+end_time = 420  
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_all_smile]
+start_time = 251
+end_time = 420
+data = "Blend time", "0.1"		; sec
+
+[dialog_idle_smile]
+start_time = 420
+end_time = 500
+data = "Blend time", "0.1"		; sec
+
+;-------------------------------------------------
+; Angry
+;-------------------------------------------------
+
+[dialog_stay2_angry]
+start_time = 501
+end_time = 542
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_stay3_angry]
+start_time = 542
+end_time = 564
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_stay4_angry]
+start_time = 564
+end_time = 603
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_stay5_angry]
+start_time = 603
+end_time = 625
+data = "Blend time", "0.1"		; sec
+
+
+[yes4_angry]
+start_time = 625
+end_time = 648
+data = "Blend time", "0.1"		; sec
+
+
+[no4_angry]
+start_time = 648
+end_time = 670  
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_all_angry]
+start_time = 501
+end_time = 670
+data = "Blend time", "0.1"		; sec
+
+[dialog_idle_angry]
+start_time = 670
+end_time = 750
+data = "Blend time", "0.1"		; sec
+
+
+;-------------------------------------------------
+; Afraid
+;-------------------------------------------------
+
+[dialog_stay2_afraid]
+start_time = 751
+end_time = 792
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_stay3_afraid]
+start_time = 792
+end_time = 814
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_stay4_afraid]
+start_time = 814
+end_time = 853
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_stay5_afraid]
+start_time = 853
+end_time = 875
+data = "Blend time", "0.1"		; sec
+
+
+[yes4_afraid]
+start_time = 875
+end_time = 898
+data = "Blend time", "0.1"		; sec
+
+
+[no4_afraid]
+start_time = 898
+end_time = 920  
+data = "Blend time", "0.1"		; sec
+
+
+[dialog_all_afraid]
+start_time = 751
+end_time = 920
+data = "Blend time", "0.1"		; sec
+
+[dialog_idle_afraid]
+start_time = 920
+end_time = 1000
+data = "Blend time", "0.1"		; sec
+
