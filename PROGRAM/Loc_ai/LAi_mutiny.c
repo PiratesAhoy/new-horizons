@@ -49,13 +49,7 @@ void MutinyDeck_ReloadEndFade()
 	// Delete current cannonballs
 	AIBalls.Clear = "";
 
-	// unload all models
-	aref arModel;
-	if (FindEntity(&arModel, "modelr"))
-	{
-		SendMessage(arModel, "l", MSG_MODEL_RELEASE);
-		while (FindEntityNext(&arModel)) { SendMessage(arModel, "l", MSG_MODEL_RELEASE); }
-	}
+	ReleaseShipModels();
 
 	PauseParticles(true);
 
@@ -451,16 +445,7 @@ void MutinyDeck_ReloadEndFadeAfter()
 	if(CheckAttribute(mchr,"Mutiny")) { DeleteAttribute(mchr,"Mutiny"); }
 	mchr.Ship.Crew.Morale = sti(mchr.Ship.Crew.Morale) + 30;
 
-//============================| load all models back to sea |============================//
-	aref arModel;
-	if (FindEntity(&arModel, "modelr"))
-	{
-		SendMessage(arModel, "l", MSG_MODEL_RESTORE);
-		while (FindEntityNext(&arModel))
-		{
-			SendMessage(arModel, "l", MSG_MODEL_RESTORE);
-		}
-	}
+	RestoreShipModels();
 
 	LayerFreeze(EXECUTE,true);
 	LayerFreeze(REALIZE,true);

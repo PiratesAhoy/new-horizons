@@ -242,16 +242,7 @@ void FCoHS_Boarding_EndFade()
 	// Delete current cannonballs (although we shouldn't be in combat)
 	AIBalls.Clear = "";
 
-	// Unload all models
-	aref arModel;
-	if (FindEntity(&arModel, "modelr"))
-	{
-		SendMessage(arModel, "l", MSG_MODEL_RELEASE);
-		while (FindEntityNext(&arModel))
-		{
-			SendMessage(arModel, "l", MSG_MODEL_RELEASE);
-		}
-	}
+	ReleaseShipModels();
 
 	// Pause particles
 	PauseParticles(true);
@@ -651,16 +642,7 @@ void FCoHS_Boarding_ReturnEndFade()
 	MainCharacter.location.group = boarding_adr[0].group;
 	MainCharacter.location.locator = boarding_adr[0].locator;
 
-    // Load all models back to sea
-	aref arModel;
-	if (FindEntity(&arModel, "modelr"))
-	{
-		SendMessage(arModel, "l", MSG_MODEL_RESTORE);
-		while (FindEntityNext(&arModel))
-		{
-			SendMessage(arModel, "l", MSG_MODEL_RESTORE);
-		}
-	}
+	RestoreShipModels();
 
 	// Layers
 	LayerFreeze(EXECUTE,true);

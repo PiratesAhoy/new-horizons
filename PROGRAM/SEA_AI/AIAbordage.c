@@ -74,17 +74,7 @@ void Go2LocationAfterAbordage()
 
 void Return2SeaAfterAbordage()
 {
-	// load all models back to sea
-	aref arModel;
-	if (FindEntity(&arModel, "modelr"))
-	{
-		SendMessage(arModel, "l", MSG_MODEL_RESTORE);
-		while (FindEntityNext(&arModel))
-		{ 
-			//Trace("XYZ");
-			SendMessage(arModel, "l", MSG_MODEL_RESTORE); 
-		}
-	}
+	RestoreShipModels();
 
 	LayerFreeze(EXECUTE,true);
 	LayerFreeze(REALIZE,true);
@@ -172,13 +162,7 @@ void Abordage_ReloadEndFade()
 	// Delete current cannonballs
 	AIBalls.Clear = "";
 
-	// unload all models
-	aref arModel;
-	if (FindEntity(&arModel, "modelr"))
-	{
-		SendMessage(arModel, "l", MSG_MODEL_RELEASE);
-		while (FindEntityNext(&arModel)) { SendMessage(arModel, "l", MSG_MODEL_RELEASE); }
-	}
+	ReleaseShipModels();
 
 	if (bAbordagePlaceShipNear)
 	{

@@ -5641,3 +5641,29 @@ void Ship_EndLoad()
 {
 	SetTexturePath(0, "");
 }
+
+void ReleaseShipModels()
+{
+	// unload all models
+	aref arModel;
+	if (FindEntity(&arModel, "modelr"))
+	{
+		SendMessage(arModel, "l", MSG_MODEL_RELEASE);
+		while (FindEntityNext(&arModel)) { SendMessage(arModel, "l", MSG_MODEL_RELEASE); }
+	}
+}
+
+void RestoreShipModels()
+{
+	Ship_StartLoad();
+	aref arModel;
+	if (FindEntity(&arModel, "modelr"))
+	{
+		SendMessage(arModel, "l", MSG_MODEL_RESTORE);
+		while (FindEntityNext(&arModel))
+		{
+			SendMessage(arModel, "l", MSG_MODEL_RESTORE);
+		}
+	}
+	Ship_EndLoad();
+}

@@ -93,16 +93,7 @@ void FCoHS_Boarding_EndFade()
 	// Delete current cannonballs (although we shouldn't be in combat)
 	AIBalls.Clear = "";
 
-	// Unload all models
-	aref arModel;
-	if (FindEntity(&arModel, "modelr"))
-	{
-		SendMessage(arModel, "l", MSG_MODEL_RELEASE);
-		while (FindEntityNext(&arModel))
-		{
-			SendMessage(arModel, "l", MSG_MODEL_RELEASE);
-		}
-	}
+	ReleaseShipModels();
 
 	// Pause particles
 	PauseParticles(true);
