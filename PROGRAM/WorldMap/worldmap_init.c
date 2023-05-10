@@ -816,6 +816,12 @@ void wdmInitWorldMap()
 	worldMap.islands.IslaMona.position.rx = -314.0483;
 	worldMap.islands.IslaMona.position.rz = -201.129;
 
+	worldMap.islands.Battle_Rocks.name = "Battle_Rocks";
+	worldMap.islands.Battle_Rocks.position.x = -806.08;
+	worldMap.islands.Battle_Rocks.position.z = 537.43;
+	worldMap.islands.Battle_Rocks.position.rx = -776.2158;
+	worldMap.islands.Battle_Rocks.position.rz = 567.0417;
+
 	worldMap.islands.Colombia.name = "Colombia";
 	worldMap.islands.Colombia.position.x = -55.4972;
 	worldMap.islands.Colombia.position.z = 801.376;
