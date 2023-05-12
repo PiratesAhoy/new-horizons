@@ -1,4 +1,4 @@
-#define MAX_SAVE_GAME_LIMIT 40 //Draksen; was 20
+#define MAX_SAVE_GAME_LIMIT 1000 //Draksen; was 20
 #define PROFILE_LIST_SIZE   10
 
 int nCurScroll;
