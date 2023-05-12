@@ -4395,7 +4395,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "From_Indy_to_Prison2":
-			LAi_Fade("From_Indy_to_Prison3", "");
+			// Fader is currently broken
+//			LAi_Fade("From_Indy_to_Prison3", "");
+			QuestComplete("From_Indy_to_Prison3");
 		break;
 
 		case "From_Indy_to_Prison3":
