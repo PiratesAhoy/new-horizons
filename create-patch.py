@@ -17,7 +17,7 @@ with open("PROGRAM/globals.c", "r") as globals_file:
     if script_version.group(1) != version:
         raise Exception("Version number in globals.c does not match latest tag " + version + " != " + script_version.group(1))
 
-files = subprocess.run(['git', '--no-pager', 'diff', '--name-only', '--diff-filter=d', "15.0.0-alpha.9.."],
+files = subprocess.run(['git', '--no-pager', 'diff', '--name-only', '--diff-filter=d', "15.0.0-alpha.10.."],
                        stdout=subprocess.PIPE).stdout.decode("utf-8").replace('"', '').split("\n")
 
 def add_directory(z, path, target = None):
@@ -25,27 +25,28 @@ def add_directory(z, path, target = None):
         for file in files:
             fn = os.path.join(base, file)
             # print(fn)
-            add_file(fn, fn.replace(path, target or ""))
+            add_file(z, fn, fn.replace(path, target or ""))
 
-def add_file(source_file, target_file=None):
+def add_file(z, source_file, target_file=None):
     # z.write(source_file, target_file)
     if target_file is None:
         target_file = source_file
+    print(target_file)
     target_path = "installer/patch/" + target_file
     os.makedirs(os.path.dirname(target_path), exist_ok=True)
     shutil.copy2(source_file, target_path)
 
-with ZipFile('patch.zip', 'a', compression=ZIP_LZMA) as z:
-    for file in files:
-        if file != "" and file != "engine.ini" and not file.startswith("installer/") and not file.startswith("RESOURCE/") and not file.endswith(".py"):
-            add_file(file)
-    add_file("installer/resources/engine.ini", 'engine.ini')
-    add_file("installer/engine/crashpad_handler.exe", 'crashpad_handler.exe')
-    add_file("installer/engine/engine.exe", 'engine.exe')
-    add_file("installer/engine/engine.pdb", 'engine.pdb')
-    add_file("installer/engine/fmod.dll", 'fmod.dll')
-    add_file("installer/engine/mimalloc.dll", 'mimalloc.dll')
-    add_file("installer/engine/mimalloc-redirect.dll", 'mimalloc-redirect.dll')
-    add_directory(z, "installer/engine/resource", "RESOURCE")
-    # Particles where not included in installer
-    add_directory(z, "RESOURCE/Particles", "RESOURCE/Particles")
+
+# with ZipFile('patch.zip', 'a', compression=ZIP_LZMA) as z:
+z = None
+for file in files:
+    if file != "" and file != "engine.ini" and not file.startswith("installer/") and not file.endswith(".py"):
+        add_file(z, file)
+add_file(z, "installer/resources/engine.ini", 'engine.ini')
+add_file(z, "installer/engine/crashpad_handler.exe", 'crashpad_handler.exe')
+add_file(z, "installer/engine/engine.exe", 'engine.exe')
+add_file(z, "installer/engine/engine.pdb", 'engine.pdb')
+add_file(z, "installer/engine/fmod.dll", 'fmod.dll')
+add_file(z, "installer/engine/mimalloc.dll", 'mimalloc.dll')
+add_file(z, "installer/engine/mimalloc-redirect.dll", 'mimalloc-redirect.dll')
+add_directory(z, "installer/engine/resource", "RESOURCE")
