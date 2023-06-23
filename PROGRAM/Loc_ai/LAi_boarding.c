@@ -1176,7 +1176,6 @@ void LAi_ReloadEndFade()
 			if (CheckAttribute(boarding_enemy,"isFantom")) { DeleteAttribute(boarding_enemy,"isFantom"); }
 			if (CheckAttribute(refEnCharacter,"isFantom")) { DeleteAttribute(refEnCharacter,"isFantom"); }
 			// TIH <--
-			DeleteParticles(); // TIH get rid of flames and candles in sea ? maybe gets rid of other needed stuff too... Aug28'06
 //			AssignCompanionComplete(refEnCharacter, boarding_enemy);//MAXIMUS: was in the first version of this mod. Now rewritten and works properly
 			Group_UpdateGroup(boarding_enemy); // KK
 			boarding_enemy.chr_ai.type = "stay"; // KK
