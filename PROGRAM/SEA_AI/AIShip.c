@@ -318,6 +318,10 @@ float Ship_MastDamage()
 
 	if(!bSeaActive) return makefloat(0);//MAXIMUS
 
+	if (LAi_IsImmortal(rCharacter) ) {
+		return makefloat(0);
+	}
+
 	switch (iDamageType)
 	{
 		case SHIP_MAST_TOUCH_ISLAND:
