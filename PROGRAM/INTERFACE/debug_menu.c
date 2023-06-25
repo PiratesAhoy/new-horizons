@@ -19,7 +19,7 @@ void InitInterface(string iniName)
 
 	SetSelectable("BTN_FREE_CAMERA", in_sailing_mode);
 	SetSelectable("BTN_SPAWN_FLEET", in_sailing_mode && iNumShips <= 1);
-	SetSelectable("BTN_3", !in_sailing_mode && IsNearEnemy());
+	SetSelectable("BTN_3", IsNearEnemy());
 }
 
 void ProcessCancelExit()
