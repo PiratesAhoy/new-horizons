@@ -1,11 +1,11 @@
 string DLG_TEXT[8] = {
-"Por cierto, hay algo que deberÃ­as saber. Tu amigo serÃ¡ trasladado pronto. Si te interesa, puedo decirte dÃ³nde y cuÃ¡ndo. Solo te costarÃ¡ 500 piezas de oro.",
-"QuÃ© oferta tan generosa. Agradezco la informaciÃ³n, pero tal vez hable con el comandante de la prisiÃ³n en vez de contigo.",
-"Claro. AquÃ­ estÃ¡ el dinero. Ahora hÃ¡blame de Edgar.",
-"Edgar va a ser transferido a las minas de #sisland_Oxbay#. MaÃ±ana a las seis serÃ¡ encerrado en la bodega de un buque prisiÃ³n y enviado a trabajar en las minas. Â¡Los condestables suelen ser buenos mineros! Â¿Verdad, Jack?",
+"Por cierto, hay algo que deberías saber. Tu amigo será trasladado pronto. Si te interesa, puedo decirte dónde y cuándo. Solo te costará 500 piezas de oro.",
+"Qué oferta tan generosa. Agradezco la información, pero tal vez hable con el comandante de la prisión en vez de contigo.",
+"Claro. Aquí está el dinero. Ahora háblame de Edgar.",
+"Edgar va a ser transferido a las minas de #sisland_Oxbay#. Mañana a las seis será encerrado en la bodega de un buque prisión y enviado a trabajar en las minas. ¡Los condestables suelen ser buenos mineros! ¿Verdad, Jack?",
 "...",
-"Pareces #sgender# de bien, capitÃ¡n, asÃ­ que te dirÃ© esto. Si vas en serio con lo de liberarlo, no intentes sacarlo de la prisiÃ³n. Con la guarniciÃ³n que tenemos aquÃ­, hay demasiadas espadas y pistolas para siquiera pensar en un rescate. Creo que lo mejor serÃ­a atacar el convoy en el puerto\n Puede sintentar abordar el buque prisiÃ³n, si tienes muchas ganas de rescatar a Edgar. EstarÃ¡ poco vigilado, y no esperarÃ¡n un ataque.",
-"Gracias, Martin. Creo que me retirarÃ© por hoy y dormirÃ© la mona.",
-"O siempre podrÃ­as intentar hablar con el alcaide; no es el mejor de los hombres, pero puede ser razonable, a su manera.",
+"Pareces #sgender# de bien, capitán, así que te diré esto. Si vas en serio con lo de liberarlo, no intentes sacarlo de la prisión. Con la guarnición que tenemos aquí, hay demasiadas espadas y pistolas para siquiera pensar en un rescate. Creo que lo mejor sería atacar el convoy en el puerto\n Puede sintentar abordar el buque prisión, si tienes muchas ganas de rescatar a Edgar. Estará poco vigilado, y no esperarán un ataque.",
+"Gracias, Martin. Creo que me retiraré por hoy y dormiré la mona.",
+"O siempre podrías intentar hablar con el alcaide; no es el mejor de los hombres, pero puede ser razonable, a su manera.",
 
 };

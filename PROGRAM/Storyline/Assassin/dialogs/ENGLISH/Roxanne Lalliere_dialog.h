@@ -14,7 +14,7 @@ string DLG_TEXT[20] = {
 "Emilio? The officer of Bartolomeu?!",
 "Right. Well, I have more to do so enjoy your stay in this jail.",
 "You took your sweet time. I was getting worried.",
-"Weâ€™ve done it as quickly as possible. Now, we have to leave Cuba. Havana must be mobbed by soldiers after what we did there.",
+"We’ve done it as quickly as possible. Now, we have to leave Cuba. Havana must be mobbed by soldiers after what we did there.",
 "What did you do, assassin! You killed my best friend.",
 "I did what I had to do. Pirate's life is not a solution for me... And for you because your end will come soon.",
 "Blasted is the day, your mother gave you birth!",

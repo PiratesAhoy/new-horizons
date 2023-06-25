@@ -11,16 +11,16 @@ itmdescr_key4
 Una fina llave para una cerradura normal.
 }
 
-itmname_SecurityLetter	{Carta al comandante de la prisi√≥n}
+itmname_SecurityLetter	{Carta al comandante de la prisiÛn}
 itmdescr_SecurityLetter
 {
-Este documento ordena al comandante que proporcione un destacamento de seguridad para un barco cargado de dinero para pagar a las tropas, que saldr√° desde #sHavana#.
+Este documento ordena al comandante que proporcione un destacamento de seguridad para un barco cargado de dinero para pagar a las tropas, que saldr· desde #sHavana#.
 }
 
-itmname_TainoRug	{Alfombra ta√≠na}
+itmname_TainoRug	{Alfombra taÌna}
 itmdescr_TainoRug
 {
-Una alfombra tejida, seguramente muy antigua, probablemente de origen ta√≠no.
+Una alfombra tejida, seguramente muy antigua, probablemente de origen taÌno.
 }
 
 itmname_SignetRing	{Anillo con sello}
@@ -32,19 +32,19 @@ Un anillo rubricado con un sello que te identifica como un agente de confianza d
 itmname_WeddingRing	{Anillo de boda}
 itmdescr_WeddingRing
 {
-Un preciado anillo que indica que has contra√≠do matrimonio. El grabado es muy antiguo y no est√° en ning√∫n lenguaje conocido.
+Un preciado anillo que indica que has contraÌdo matrimonio. El grabado es muy antiguo y no est· en ning˙n lenguaje conocido.
 }
 
 itmname_jewelry7_q	{Anillo de oro}
 itmdescr_jewelry7_q
 {
-Un anillo de oro con una esmeralda. Lo est√°s guardando para usarlo como anillo de boda.
+Un anillo de oro con una esmeralda. Lo est·s guardando para usarlo como anillo de boda.
 }
 
 itmname_jewelry10_q	{Anillo de oro lujoso}
 itmdescr_jewelry10_q
 {
-Un anillo de oro con zafiros engarzados. Lo est√°s guardando para usarlo como anillo de boda.
+Un anillo de oro con zafiros engarzados. Lo est·s guardando para usarlo como anillo de boda.
 }
 
 itmname_ExplainLetter	{Carta para el gobernador}
@@ -62,34 +62,34 @@ Una carta personal y confidencial con un elaborado sello.
 itmname_BetrayedLetter	{Carta para ti}
 itmdescr_BetrayedLetter
 {
-Capit√°n Ardent: dado que de nuevo te has ganado la enemistad de Espa√±a, me he marchado. No intentes encontrarme. #sromance#
+Capit·n Ardent: dado que de nuevo te has ganado la enemistad de EspaÒa, me he marchado. No intentes encontrarme. #sromance#
 }
 
-itmname_PrisonPass	{Pase de la prisi√≥n}
+itmname_PrisonPass	{Pase de la prisiÛn}
 itmdescr_PrisonPass
 {
 Un pase que te permite visitar a un prisionero.
 }
 
-itmname_FakePrisonPass	{Pase de la prisi√≥n falso}
+itmname_FakePrisonPass	{Pase de la prisiÛn falso}
 itmdescr_FakePrisonPass
 {
 Un pase falsificado que te permite visitar a un prisionero.
 }
 
-itmname_BattleOrders	{√ìrdenes de batalla}
+itmname_BattleOrders	{”rdenes de batalla}
 itmdescr_BattleOrders
 {
-√ìrdenes robadas en el Almirantazgo de #sPointe a Pitre# que detallan los planes para un ataque franc√©s sobre #sRedmond#.
+”rdenes robadas en el Almirantazgo de #sPointe a Pitre# que detallan los planes para un ataque francÈs sobre #sRedmond#.
 }
 
-itmname_BattleOrders2	{√ìrdenes de batalla}
+itmname_BattleOrders2	{”rdenes de batalla}
 itmdescr_BattleOrders2
 {
-√ìrdenes robadas en el Almirantazgo de #sPointe a Pitre# que detallan los planes para un ataque franc√©s sobre #sSantiago#.
+”rdenes robadas en el Almirantazgo de #sPointe a Pitre# que detallan los planes para un ataque francÈs sobre #sSantiago#.
 }
 
-itmname_fake_fort_release	{Documentos de liberaci√≥n falsificados}
+itmname_fake_fort_release	{Documentos de liberaciÛn falsificados}
 itmdescr_fake_fort_release
 {
 Documentos falsificados para liberar a prisioneros del fuerte de #sPort au Prince# y ponerlos bajo tu custodia.
@@ -98,11 +98,11 @@ Documentos falsificados para liberar a prisioneros del fuerte de #sPort au Princ
 itmname_medal1	{Cruz de Santa Isabel}
 itmdescr_medal1
 {
-Una medalla otorgada a tu persona por traer los planes de invasi√≥n de #sSantiago# a su gobernador.
+Una medalla otorgada a tu persona por traer los planes de invasiÛn de #sSantiago# a su gobernador.
 }
 
 itmname_AdmiralLetter	{Carta del almirante Jusepe Guimaraes}
 itmdescr_AdmiralLetter
 {
-Este documento del almirante Jusepe Guimaraes certifica que est√°s actuando ebn su nombre por razones de estado.
+Este documento del almirante Jusepe Guimaraes certifica que est·s actuando ebn su nombre por razones de estado.
 }

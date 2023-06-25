@@ -3,7 +3,7 @@
 //Login
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РІСЂРµРјСЏ Р·Р°РіСЂСѓР·РєРё РїРµСЂСЃРѕРЅР°Р¶Р°
+//Установить время загрузки персонажа
 void LAi_SetLoginTime(aref chr, float start, float end)
 {
 	if(start < 0) start = 0;
@@ -14,7 +14,7 @@ void LAi_SetLoginTime(aref chr, float start, float end)
 	chr.location.etime = end;
 }
 
-//РЈРґР°Р»РёС‚СЊ РІСЂРµРјСЏ Р·Р°РіСЂСѓР·РєРё РїРµСЂСЃРѕРЅР°Р¶Р°
+//Удалить время загрузки персонажа
 void LAi_RemoveLoginTime(aref chr)
 {
 	aref loc;
@@ -23,7 +23,7 @@ void LAi_RemoveLoginTime(aref chr)
 	DeleteAttribute(loc, "etime");
 }
 
-//Р”Р°РЅРЅС‹Р№ РїРµСЂСЃРѕРЅР°Р¶ СЏРІР»СЏРµС‚СЃСЏ РІРµСЂСѓСЋС‰РёРј, Рё РІ РѕРїСЂРµРґРµР»С‘РЅРЅРѕРµ РІСЂРµРјСЏ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ С†РµСЂРєРІРё
+//Данный персонаж является верующим, и в определённое время находиться в церкви
 void LAi_SetFanatic(aref chr, string churchID, string group, string locator, float start, float end)
 {
 	chr.location.church = churchID;
@@ -33,7 +33,7 @@ void LAi_SetFanatic(aref chr, string churchID, string group, string locator, flo
 	chr.location.church.etime = end;
 }
 
-//РЎРґРµР»Р°С‚СЊ РѕР±С‹С‡РЅС‹Рј РїРµСЂСЃРѕРЅР°Р¶
+//Сделать обычным персонаж
 void LAi_RemoveFanatic(aref chr)
 {
 	aref loc;
@@ -41,13 +41,13 @@ void LAi_RemoveFanatic(aref chr)
 	DeleteAttribute(loc, "church");
 }
 
-//Р—Р°РїСЂРµС‚РёС‚СЊ РїРµСЂРµСЂРѕР¶РґРµРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° РїРѕСЃР»Рµ СѓР±РёР№СЃС‚РІР° /Forbids character's rebirth after kill/
+//Запретить перерождение персонажа после убийства /Forbids character's rebirth after kill/
 void LAi_NoRebirthEnable(aref chr)
 {
 	chr.location.norebirth = "1";
 }
 
-//Р Р°Р·СЂРµС€РёС‚СЊ РїРµСЂРµСЂРѕР¶РґРµРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° РїРѕСЃР»Рµ СѓР±РёР№СЃС‚РІР° /Allows character's rebirth after kill/
+//Разрешить перерождение персонажа после убийства /Allows character's rebirth after kill/
 void LAi_NoRebirthDisable(aref chr)
 {
 	aref loc;
@@ -55,14 +55,14 @@ void LAi_NoRebirthDisable(aref chr)
 	DeleteAttribute(loc, "norebirth");
 }
 
-//РџСЂРѕРІРµСЂРёС‚СЊ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РІРѕР·СЂРѕР¶РґРµРЅРёСЏ РїРµСЂСЃРѕРЅР°Р¶Р° РїРѕСЃР»Рµ СѓР±РёР№СЃС‚РІР° /Checks up possibility of character's rebirth after kill/
+//Проверить возможность возрождения персонажа после убийства /Checks up possibility of character's rebirth after kill/
 bool CharacterRebirth(aref chr)
 {
 	if(CheckAttribute(chr,"location.norebirth") && sti(chr.location.norebirth)==1) return false;
 	return true;
 }
 
-//Р Р°Р·СЂРµС€РёС‚СЊ/Р·Р°РїСЂРµС‚РёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ Р·Р°РіСЂСѓР¶Р°С‚СЊСЃСЏ РІ Р·Р°С…РІР°С‡РµРЅРЅСѓСЋ Р»РѕРєР°С†РёСЋ
+//Разрешить/запретить персонажу загружаться в захваченную локацию
 void LAi_LoginInCaptureTown(aref chr, bool isEnable)
 {
 	aref loc;
@@ -79,7 +79,7 @@ void LAi_LoginInCaptureTown(aref chr, bool isEnable)
 //Fight, hp
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С…РёС‚РїРѕР№РЅС‚С‹
+//Установить хитпойнты
 void LAi_SetHP(aref chr, float cur, float max)
 {
 	if(max < 1) max = 1;
@@ -94,7 +94,7 @@ void LAi_SetHP(aref chr, float cur, float max)
 // <-- KK
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РµРєСѓС‰РёРё С…РёС‚РїРѕР№РЅС‚С‹
+//Установить текущии хитпойнты
 void LAi_SetCurHP(aref chr, float cur)
 {
 	float maxHP = LAI_DEFAULT_HP_MAX;
@@ -109,7 +109,7 @@ void LAi_SetCurHP(aref chr, float cur)
 	chr.chr_ai.hp = cur;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РµРєСѓС‰РёРё С…РёС‚РїРѕР№РЅС‚С‹ РјР°РєСЃРёРјР°Р»СЊРЅС‹РјРё
+//Установить текущии хитпойнты максимальными
 void LAi_SetCurHPMax(aref chr)
 {
 	float maxHP = LAI_DEFAULT_HP_MAX;
@@ -122,14 +122,14 @@ void LAi_SetCurHPMax(aref chr)
 	chr.chr_ai.hp = maxHP;
 }
 
-//РЎРєРѕСЂРѕСЃС‚СЊ РёР·РјРµРЅРµРЅРёСЏ С…Рї РІ СЃРµРєСѓРЅРґСѓ
+//Скорость изменения хп в секунду
 void LAi_SetDltHealth(aref chr, float healthPerSec)
 {
 	//if(healthPerSec < 0) healthPerSec = 0;
 	chr.chr_ai.hp_dlt = healthPerSec;
 }
 
-//РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р±СѓС‚С‹Р»РѕС‡РєСѓ-Р»РµС‡РёР»РєСѓ
+//Использовать бутылочку-лечилку
 void LAi_UseHealthBottle(aref chr, float healthInBottle)
 {
 //	if(healthInBottle <= 0) return; // Blocks leeches from giving health drop
@@ -142,14 +142,14 @@ void LAi_UseHealthBottle(aref chr, float healthInBottle)
 	chr.chr_ai.hp_bottle = stf(chr.chr_ai.hp_bottle) + healthInBottle;
 }
 
-//РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р±СѓС‚С‹Р»РѕС‡РєСѓ-РїСЂРѕС‚РёРІРѕСЏРґРёРµ
+//Использовать бутылочку-противоядие
 void LAi_UseAtidoteBottle(aref chr)
 {
 	DeleteAttribute(chr, "chr_ai.poison");
 	DeleteAttribute(chr, "chr_ai.curare");
 }
 
-//РћС‚СЂР°РІР»РµРЅ
+//Отравлен
 bool LAi_IsPoison(aref chr)
 {
 	if(CheckAttribute(chr, "chr_ai.poison")) return true;
@@ -163,7 +163,7 @@ bool LAi_IsCurare(aref chr)
 	return false;
 }
 
-//РЎРґРµР»Р°С‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° Р±РµСЃСЃРјРµСЂС‚РЅС‹Рј
+//Сделать персонажа бессмертным
 void LAi_SetImmortal(aref chr, bool isImmortal)
 {
 	if(isImmortal)
@@ -176,7 +176,7 @@ void LAi_SetImmortal(aref chr, bool isImmortal)
 	}
 }
 
-//РЈР·РЅР°С‚СЊ РѕС‚РЅРѕС€РµРЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° Рє Р±РµСЃСЃРјРµСЂС‚РёСЋ
+//Узнать отношение персонажа к бессмертию
 bool LAi_IsImmortal(aref chr)
 {
 	if(CheckAttribute(chr, "chr_ai.immortal"))
@@ -210,7 +210,7 @@ bool LAi_IsCrewImmortal(aref chr)
 }
 // <-- KK
 
-//РџРѕР»СѓС‡РёС‚СЊ С…Рї РїРµСЂСЃРѕРЅР°Р¶Р°
+//Получить хп персонажа
 float LAi_GetCharacterHP(aref chr)
 {
 	float curHp = 0.0;
@@ -225,7 +225,7 @@ float LAi_GetCharacterHP(aref chr)
 	return curHp;
 }
 
-//РџРѕР»СѓС‡РёС‚СЊ РјР°РєСЃРёРјР°Р»СЊРЅС‹Рµ С…Рї РїРµСЂСЃРѕРЅР°Р¶Р°
+//Получить максимальные хп персонажа
 float LAi_GetCharacterMaxHP(aref chr)
 {
 	float max_hp = 0.0;
@@ -238,7 +238,7 @@ float LAi_GetCharacterMaxHP(aref chr)
 	return max_hp;
 }
 
-//РџРѕР»СѓС‡РёС‚СЊ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅС‹Рµ С…Рї РїРµСЂСЃРѕРЅР°Р¶Р° 0..1
+//Получить относительные хп персонажа 0..1
 float LAi_GetCharacterRelHP(aref chr)
 {
 	float hp = LAi_GetCharacterHP(chr);
@@ -251,7 +251,7 @@ float LAi_GetCharacterRelHP(aref chr)
 	return 0.0;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРІРµСЂСЏР»СЊС‰РёРє С…Рї, РµСЃР»Рё РёС… СЃС‚Р°РЅРѕРІРёС‚СЊСЃСЏ РјРµРЅСЊС€Рµ С‡РµРј, РІС‹Р·РІР°С‚СЊ РєРІРµСЃС‚
+//Установить проверяльщик хп, если их становиться меньше чем, вызвать квест
 void LAi_SetCheckMinHP(aref chr, float min, bool immortal, string quest)
 {
 	if(min < 0.9999999) min = 0.9999999;
@@ -260,7 +260,7 @@ void LAi_SetCheckMinHP(aref chr, float min, bool immortal, string quest)
 	chr.chr_ai.hpchecker.immortal = immortal;
 }
 
-//РЈРґР°Р»РёС‚СЊ РїСЂРѕРІРµСЂСЏР»СЊС‰РёРє С…Рї
+//Удалить проверяльщик хп
 void LAi_RemoveCheckMinHP(aref chr)
 {
 	aref chr_ai;
@@ -268,7 +268,7 @@ void LAi_RemoveCheckMinHP(aref chr)
 	DeleteAttribute(chr_ai, "hpchecker");	
 }
 
-//РЈР±РёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Убить персонажа
 void LAi_KillCharacter(aref chr)
 {
 	chr.chr_ai.hp = "0";
@@ -283,7 +283,7 @@ void LAi_KillCharacter(aref chr)
 	}
 }
 
-//РЈР±РёС‚ Р»Рё РїРµСЂСЃРѕРЅР°Р¶
+//Убит ли персонаж
 bool LAi_IsDead(aref chr)
 {
 	bool bDead = false;
@@ -331,7 +331,7 @@ bool LAi_IsDead(aref chr)
 //Other
 //------------------------------------------------------------------------------------------
 
-//РЇРІР»СЏРµС‚СЃСЏ Р»Рё РїРµСЂСЃРѕРЅР°Р¶ СѓРїСЂР°РІР»СЏРµРјС‹Рј
+//Является ли персонаж управляемым
 bool LAi_IsCharacterControl(aref chr)
 {
 	if(CheckAttribute(chr, "chr_ai.tmpl"))
@@ -341,25 +341,25 @@ bool LAi_IsCharacterControl(aref chr)
 	return false;
 }
 
-//Р—Р°РїСЂРµС‚РёС‚СЊ РґРёР°Р»РѕРі СЃ РїРµСЂСЃРѕРЅР°Р¶РµРј
+//Запретить диалог с персонажем
 void LAi_CharacterDisableDialog(aref chr)
 {
 	chr.chr_ai.disableDlg = "1";
 }
 
-//Р Р°Р·СЂРµС€РёС‚СЊ РґРёР°Р»РѕРі СЃ РїРµСЂСЃРѕРЅР°Р¶РµРј
+//Разрешить диалог с персонажем
 void LAi_CharacterEnableDialog(aref chr)
 {
 	chr.chr_ai.disableDlg = "0";
 }
 
-//Р Р°Р·СЂРµС€РёС‚СЊ РїСЂРё СЃРјРµСЂС‚Рё РїРѕСЂРѕР¶РґРёС‚СЊ С„Р°РЅС‚РѕРјР°
+//Разрешить при смерти порождить фантома
 void LAi_CharacterReincarnation(aref chr, bool isEnable, bool isUseCurModel)
 {
 	LAi_CharacterReincarnationEx(chr, isEnable, isUseCurModel, "");
 }
 
-//Р Р°Р·СЂРµС€РёС‚СЊ РїСЂРё СЃРјРµСЂС‚Рё РїРѕСЂРѕР¶РґРёС‚СЊ С„Р°РЅС‚РѕРјР°
+//Разрешить при смерти порождить фантома
 void LAi_CharacterReincarnationEx(aref chr, bool isEnable, bool isUseCurModel, string locgroup)
 {
 	if(isEnable)
@@ -408,7 +408,7 @@ string LAi_CharacterReincarnationGroup(aref chr)
 	return "goto";
 }
 
-//РЎРєРёР» fencing РґР»СЏ РїРµСЂСЃРѕРЅР°Р¶Р° РїСЂРё Р»РѕРіРёРЅРµ РІС‹СЃС‚Р°РІР»СЏРµС‚СЃСЏ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РёРіСЂРѕРєР°
+//Скил fencing для персонажа при логине выставляется относительно игрока
 /*void LAi_SetAdjustFencingSkill(aref chr, float min, float max)
 {
 	if(min > max) min = max;
@@ -416,7 +416,7 @@ string LAi_CharacterReincarnationGroup(aref chr)
 	chr.chr_ai.fencing.max = max; // NK
 }
 
-//РЈРґР°Р»РёС‚СЊ РІС‹СЃС‚Р°РІР»СЏР»РєСѓ СЃРєРёР»Р°
+//Удалить выставлялку скила
 void LAi_DelAdjustFencingSkill(aref chr)
 {
 	aref chr_ai;
@@ -461,7 +461,7 @@ void LAi_AdjustFencingSkill(aref chr)
 //Other
 //------------------------------------------------------------------------------------------
 
-//РџСЂРѕРёРіСЂР°С‚СЊ Р·РІСѓРє
+//Проиграть звук
 void LAi_CharacterPlaySound(aref chr, string soundname)
 {
 	// LDH This shouldn't be happening, but it's here until we can get all the .wav sounds into the sounds_alias.ini file - 24Mar09
@@ -489,14 +489,14 @@ void LAi_CharacterPlaySound(aref chr, string soundname)
 	}
 }
 
-//РџРµСЂРµРєР»СЋС‡РёС‚СЊСЃСЏ РІ СЂРµР¶РёРј Р±РѕСЏ Рё РѕР±СЂР°С‚РЅРѕ
+//Переключиться в режим боя и обратно
 void LAi_SetFightMode(aref chr, bool isFightMode)
 {
 	SendMessage(chr, "lsl", MSG_CHARACTER_EX_MSG, "ChangeFightMode", isFightMode);
 //	PostEvent("evntBLI_Update",BLI_UPDATE_PERIOD);//MAXIMUS: makes box from corpse with hand-icon in the top-left corner
 }
 
-//Р—Р°Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ С‚РµРєСѓС‰РёР№ СЂРµР¶РёРј (!!! СЃР±СЂР°СЃС‹РІР°РµС‚СЃСЏ РїСЂРё СЃРјРµРЅРµ С€Р°Р±Р»РѕРЅР° !!!)
+//Заблокировать текущий режим (!!! сбрасывается при смене шаблона !!!)
 void LAi_LockFightMode(aref chr, bool isLockFightMode)
 {
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "LockFightMode", isLockFightMode);
@@ -508,7 +508,7 @@ void LAi_LockFightMode(aref chr, bool isLockFightMode)
 //------------------------------------------------------------------------------------------
 
 
-//РџРѕР»СѓС‡РёС‚СЊ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅС‹Р№ Р·Р°СЂСЏРґ РїРёСЃС‚РѕР»РµС‚Р°
+//Получить относительный заряд пистолета
 float LAi_GetCharacterRelCharge(aref chr)
 {
 	if(CheckAttribute(chr, "chr_ai.charge"))
@@ -546,7 +546,7 @@ float LAi_GetCharacterRelCharge(aref chr)
 	return 0.0;
 }
 
-//РџРѕР»СѓС‡РёС‚СЊ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ РїРёСЃС‚РѕР»РµС‚Р°
+//Получить максимальное количество зарядов пистолета
 int LAi_GetCharacterChargeQuant(aref chr)
 {
 	if(CheckAttribute(chr, "chr_ai.charge_max"))
@@ -556,7 +556,7 @@ int LAi_GetCharacterChargeQuant(aref chr)
 	return 0;
 }
 
-//РџРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ РїРёСЃС‚РѕР»РµС‚Р°
+//Получить текущее количество зарядов пистолета
 int LAi_GetCharacterChargeCur(aref chr)
 {
 	float charge;
@@ -579,7 +579,7 @@ int LAi_GetCharacterChargeCur(aref chr)
 	return 0;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂСЏРґРѕРІ
+//Установить количество зарядов
 void LAi_GunSetChargeQuant(aref chr, int quant)
 {
 	if(quant < 0) quant = 0;
@@ -590,14 +590,14 @@ void LAi_GunSetChargeQuant(aref chr, int quant)
 	chr.chr_ai.chargeprc = "1";
 }
 
-//Р Р°Р·СЂСЏРґРёС‚СЊ РїРёСЃС‚Р»РµС‚
+//Разрядить пистлет
 void LAi_GunSetUnload(aref chr)
 {
 	chr.chr_ai.charge = "0";
 	chr.chr_ai.chargeprc = "1";
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРєРѕСЂРѕСЃС‚СЊ Р·Р°СЂСЏРґР° РїРёСЃС‚РѕР»РµС‚Р°
+//Установить скорость заряда пистолета
 void LAi_GunSetChargeSpeed(aref chr, float speed)
 {
 	if(speed < 0.0) speed = 0.0;
@@ -605,19 +605,19 @@ void LAi_GunSetChargeSpeed(aref chr, float speed)
 	chr.chr_ai.charge_dlt = speed;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРЅ РѕС‚ РїРёСЃС‚РѕР»РµС‚Р°
+//Установить минимальный урон от пистолета
 void LAi_GunSetDamageMin(aref chr, float min)
 {
 	chr.chr_ai.dmggunmin = min;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРЅ РѕС‚ РїРёСЃС‚РѕР»РµС‚Р°
+//Установить максимальный урон от пистолета
 void LAi_GunSetDamageMax(aref chr, float max)
 {
 	chr.chr_ai.dmggunmax = max;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РїРѕРїР°РґР°РЅРёСЏ РЅР° РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ РґР°Р»СЊРЅРѕСЃС‚Рё СЃС‚СЂРµР»СЊР±С‹
+//Установить вероятность попадания на максимальной дальности стрельбы
 void LAi_GunSetAccuracy(aref chr, float accuracy)
 {
 	if(accuracy < 0.0) accuracy = 0.0;
@@ -625,19 +625,19 @@ void LAi_GunSetAccuracy(aref chr, float accuracy)
 	chr.chr_ai.accuracy = accuracy;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРЅ РѕС‚ СЃР°Р±Р»Рё
+//Установить минимальный урон от сабли
 void LAi_BladeSetDamageMin(aref chr, float min)
 {
 	chr.chr_ai.dmgbldmin = min;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРЅ РѕС‚ СЃР°Р±Р»Рё
+//Установить максимальный урон от сабли
 void LAi_BladeSetDamageMax(aref chr, float max)
 {
 	chr.chr_ai.dmgbldmax = max;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РїСЂРѕР±РёРІРєРё
+//Установить вероятность пробивки
 void LAi_BladeSetPiercing(aref chr, float piercing)
 {
 	if(piercing < 0.0) piercing = 0.0;
@@ -645,7 +645,7 @@ void LAi_BladeSetPiercing(aref chr, float piercing)
 	chr.chr_ai.piercing = piercing;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РЅРµР±Р»РѕРєРёСЂРѕРІР°РЅРёСЏ
+//Установить вероятность неблокирования
 void LAi_BladeSetBlock(aref chr, float block)
 {
 	if(block < 0.0) block = 0.0;
@@ -658,7 +658,7 @@ void LAi_BladeSetBlock(aref chr, float block)
 //Internal
 //------------------------------------------------------------------------------------------
 
-//РџСЂРѕС†РµСЃСЃРёСЂСѓРµРј РІСЃРµС… Р·Р°РіСЂСѓР¶РµРєРЅС‹С… РїРµСЂСЃРѕРЅР°Р¶РµР№
+//Процессируем всех загружекных персонажей
 void LAi_AllCharactersUpdate(float dltTime)
 {
 	for(int i = 0; i < LAi_numloginedcharacters; i++)
@@ -666,12 +666,12 @@ void LAi_AllCharactersUpdate(float dltTime)
 		int idx = LAi_loginedcharacters[i];
 		if(idx >= 0)
 		{
-			//РџРµСЂСЃРѕРЅР°Р¶
+			//Персонаж
 			aref chr_ai;
 			makearef(chr_ai, Characters[idx].chr_ai);
 			ref chr = &Characters[idx];
 			if(LAi_IsDead(chr)) continue;
-			//Р’РѕСЃС‚РѕРЅРѕРІР»РµРЅРёРµ Р¶РёР·РЅРё
+			//Востоновление жизни
 			float dlthp = LAI_DEFAULT_DLTHP;
 			float hp;
 			if(CheckAttribute(chr_ai, "hp_dlt")) dlthp = stf(chr_ai.hp_dlt);
@@ -696,13 +696,13 @@ void LAi_AllCharactersUpdate(float dltTime)
 				float bottle = stf(chr_ai.hp_bottle);
 				if(bottle != 0) // was 'if(bottle > 0)', fails to apply HP loss from leeches
 				{
-					//РЎРєРѕСЂРѕСЃС‚СЊ РІС‹СЃР°СЃС‹РІР°РЅРёСЏ РёР· Р±СѓС‚С‹Р»РєРё
+					//Скорость высасывания из бутылки
 					float bottledlthp = LAI_DEFAULT_DLTBLTHP;
 					if(CheckAttribute(chr_ai, "hp_dlt_bottle"))
 					{
 						bottledlthp = stf(chr_ai.hp_dlt_bottle);
 					}
-					//РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹С‚СЏРЅСѓС‚С‹С… С…Рї Р·Р° С‚РµРєСѓС‰РёР№ РїРµСЂРёРѕРґ РІСЂРµРјРµРЅРё
+					//Количество вытянутых хп за текущий период времени
 					bottledlthp = bottledlthp*dltTime;
 					if (bottle > 0)
 					{
@@ -723,7 +723,7 @@ void LAi_AllCharactersUpdate(float dltTime)
 					hp = hp + bottledlthp;
 					chr_ai.hp_bottle = bottle;
 				}else{
-					//РќРµС‚ Р±РѕР»СЊС€Рµ Р±СѓС‚С‹Р»РєРё
+					//Нет больше бутылки
 					DeleteAttribute(chr_ai, "hp_bottle");
 				}
 			}
@@ -764,11 +764,11 @@ void LAi_AllCharactersUpdate(float dltTime)
 				DeleteAttribute(chr_ai, "bottle");
 			}
 			chr_ai.hp = hp;
-			//РџСЂРѕРІРµСЂРєР° РєРІРµСЃС‚Р° РЅР° hp
+			//Проверка квеста на hp
 			LAi_ProcessCheckMinHP(chr);
-			//РџСЂРѕРІРµСЂРєР° РЅР° СЃРјРµСЂС‚СЊ
+			//Проверка на смерть
 			LAi_CheckKillCharacter(chr);
-			//Р’РѕСЃС‚РѕРЅРѕРІР»РµРЅРёРµ Р·Р°СЂСЏРґР°
+			//Востоновление заряда
 			float chargemax = 0.0;
 			if(CheckAttribute(chr_ai, "charge_max"))
 			{
@@ -780,9 +780,9 @@ void LAi_AllCharactersUpdate(float dltTime)
 				if(sti(chr_ai.chargeprc))
 				{
 					float charge = stf(chr_ai.charge);
-					//РЎРєРѕСЂРѕСЃС‚СЊ Р·Р°СЂСЏРґРєРё
+					//Скорость зарядки
 					float dltcharge = LAi_GunReloadSpeed(chr);
-					//РџРѕРґР·Р°СЂСЏР¶Р°РµРј РїРёСЃС‚РѕР»РµС‚
+					//Подзаряжаем пистолет
 					charge = charge + dltcharge*dltTime;
 					if(charge >= chargemax)
 					{

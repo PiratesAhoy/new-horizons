@@ -255,8 +255,8 @@ void SetGame(string gameName)// resets all to virginity :)
 {
 	if (LanguageGetLanguage() == "Spanish")
 	{
-		prefix1 = "Â¡";
-		prefix2 = "Â¿";
+		prefix1 = "¡";
+		prefix2 = "¿";
 	}
 	else
 	{

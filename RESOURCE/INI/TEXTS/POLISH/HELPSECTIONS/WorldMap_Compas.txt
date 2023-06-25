@@ -5,5 +5,5 @@ Compass
 
 Compas_info
 {
-     Kompas mapy â€ºwiata znajduje siÃª w prawym dolnym rogu ekranu. UÅ¾yj go, aby ustawiÃ swÃ³j kurs.
+     Kompas mapy ›wiata znajduje siê w prawym dolnym rogu ekranu. Uyj go, aby ustawiŞ swój kurs.
 }

@@ -1,87 +1,87 @@
-FaleDeFler{Р¤Р°Р»Рµ-РґРµ-Р¤Р»РµСЂ}
-Falaise De Fleur{Р¤Р°Р»Рµ-РґРµ-Р¤Р»РµСЂ}
-Falaise De Fleur Port{РџРѕСЂС‚ Р¤Р°Р»Рµ-РґРµ-Р¤Р»РµСЂ}
-Octopus Bay{Р‘СѓС…С‚Р° РћСЃСЊРјРёРЅРѕРіР°}
-Falaise De Fleur Fort{Р¤РѕСЂС‚ Р¤Р°Р»Рµ-РґРµ-Р¤Р»РµСЂ}
-Redmond{Р РµРґРјРѕРЅРґ}
-Redmond Port{РџРѕСЂС‚ Р РµРґРјРѕРЅРґР°}
-Devil's Throat{Р“Р»РѕС‚РєР° Р”СЊСЏРІРѕР»Р°}
-Rocky Shore{РЎРєР°Р»РёСЃС‚С‹Р№ Р‘РµСЂРµРі}
-Redmond Fort{Р¤РѕСЂС‚ Р РµРґРјРѕРЅРґР°}
-IslaMuelle{РСЃР»Р°-РњСѓСЌР»СЊРµ}
-Isla Muelle Port{РџРѕСЂС‚ РСЃР»Р°-РњСѓСЌР»СЊРµ}
-Shore{Р‘РµСЂРµРі}
-Oyster Beach{РЈСЃС‚СЂРёС‡РЅС‹Р№ Р‘РµСЂРµРі}
-Isla Muelle Fort{Р¤РѕСЂС‚ РСЃР»Р°-РњСѓСЌР»СЊРµ}
-Oxbay{РћРєСЃР±СЌР№}
-Oxbay Port{РџРѕСЂС‚ РћРєСЃР±СЌСЏ}
-Greenford Port{РџРѕСЂС‚ Р“СЂРёРЅС„РѕСЂРґР°}
-Gray Rock Bay{Р—Р°Р»РёРІ РЎРµСЂРѕР№ РЎРєР°Р»С‹}
-Lighthouse{РњР°СЏРє}
-Far Beach{Р”Р°Р»СЊРЅРёР№ РџР»СЏР¶}
-Greenford Fort{Р¤РѕСЂС‚ Р“СЂРёРЅС„РѕСЂРґР°}
-Oxbay Fort{Р¤РѕСЂС‚ РћРєСЃР±СЌСЏ}
-Conceicao{РљРѕРЅСЃРµР№СЃР°Рѕ}
-ConceiР·Ріo Port{РџРѕСЂС‚ РљРѕРЅСЃРµР№СЃР°Рѕ}
-Sunny Haven{РЎРѕР»РЅРµС‡РЅР°СЏ Р“Р°РІР°РЅСЊ}
-Leviathan Rock{РЎРєР°Р»Р° Р›РµРІРёР°С„Р°РЅР°}
-ConceiР·Ріo Fort{Р¤РѕСЂС‚ РљРѕРЅСЃРµР№СЃР°Рѕ}
-Douwesen{Р”СѓРІРµР·РµРЅ}
-Douwesen Port{РџРѕСЂС‚ Р”СѓРІРµР·РµРЅР°}
-Palm Beach{РџР°Р»СЊРјРѕРІС‹Р№ РџР»СЏР¶}
-Crab Cliffs{РљСЂР°Р±РѕРІС‹Рµ РЈС‚С‘СЃС‹}
-Douwesen Fort{Р¤РѕСЂС‚ Р”СѓРІРµР·РµРЅР°}
-QuebradasCostillas{РљРµР±СЂР°РґР°СЃ-РљРѕСЃС‚РёР»Р»Р°СЃ}
-Quebradas Costillas Port{РџРѕСЂС‚ РљРµР±СЂР°РґР°СЃ-РљРѕСЃС‚РёР»Р»Р°СЃ}
-Charlestown{Р§Р°СЂР»СЊСЃС‚Р°СѓРЅ}
-Charlestown Port{РџРѕСЂС‚ Р§Р°СЂР»СЊСЃС‚Р°СѓРЅ}
-KhaelRoa{РљР°СЌР»СЊ-Р РѕР°}
-Khael Roa Shore{Р‘РµСЂРµРі РљР°СЌР»СЊ-Р РѕР°}
-Cayman{РљР°Р№РјР°РЅ}
-Grand Cayman{Р‘РѕР»СЊС€РѕР№ РљР°Р№РјР°РЅ}
-Cayman Kai{РљР°Р№РјР°РЅ-РљР°Р№}
-Sand Bluff{РџРµСЃС‡Р°РЅС‹Р№ РЈС‚РµСЃ}
-Eden Rock{Р Р°Р№СЃРєР°СЏ РЎРєР°Р»Р°}
-Grand Cayman Fort{Р¤РѕСЂС‚ Р‘РѕР»СЊС€РѕРіРѕ РљР°Р№РјР°РЅР°}
-Hispaniola{РСЃРїР°РЅСЊРѕР»Р°}
-Port au prince{РџРѕСЂС‚-Рѕ-РџСЂРµРЅСЃ}
-Santo Domingo{РЎР°РЅС‚Рѕ-Р”РѕРјРёРЅРіРѕ}
-Tortuga{РўРѕСЂС‚СѓРіР°}
-Boca de Yuman{Р‘РѕРєР°-Р”Рµ-Р®РјР°РЅ}
-Boca de Hubon{Р‘РѕРєР°-Р”Рµ-РҐСѓР±РѕРЅ}
-Cape Francos{РњС‹СЃ Р¤СЂР°РЅРєРѕСЃ}
-Shore{Р‘РµСЂРµРі}
-Port au Prince Fort{Р¤РѕСЂС‚ РџРѕСЂС‚-Рѕ-РџСЂРµРЅСЃ}
-Santo Domingo Fort{Р¤РѕСЂС‚ РЎР°РЅС‚Рѕ-Р”РѕРјРёРЅРіРѕ}
-Cuba{РљСѓР±Р°}
-Santiago{РЎР°РЅС‚СЊСЏРіРѕ}
-Havana{Р“Р°РІР°РЅР°}
-Bahia de San Antonio{Р‘Р°Р№СЏ-РґРµ-РЎР°РЅ-РђРЅС‚РѕРЅРёРѕ}
-Bahia de Moa{Р‘Р°Р№СЏ-РґРµ-РњРѕР°}
-Playa de Sabana{РџР»Р°Р№СЏ-РґРµ-РЎР°Р±Р°РЅР°}
-Punta de Maisi{РџСѓРЅС‚Р°-РґРµ-РњР°Р№СЃРё}
-Playa de Sierra Maestra{РџР»Р°Р№СЏ-РґРµ-РЎСЊРµСЂСЂР°-РњР°СЌСЃС‚СЂР°}
-Peninsula de Zapata{РџРѕР»СѓРѕСЃС‚СЂРѕРІ-РґРµ-РЎР°РїР°С‚Р°}
-Santiago Fort{Р¤РѕСЂС‚ РЎР°РЅС‚СЊСЏРіРѕ}
-Guadeloupe{Р“РІР°РґРµР»СѓРїР°}
-Pointe Р° Pitre{РџСѓСЌРЅС‚-Р°-РџРёС‚СЂ}
-Anse Casse-Bois{РђРЅСЃ-РљР°СЃСЃ-Р‘СѓР°}
-Pointe a pitre Fort{Р¤РѕСЂС‚ РџСѓСЌРЅС‚-Р°-РџРёС‚СЂ}
-SaintMartin{РЎРµРЅ-РњР°СЂС‚РµРЅ}
-Simpson Bay{Р‘СѓС…С‚Р° РЎРёРјРїСЃРѕРЅР°}
-Baie Orient{Р’РѕСЃС‚РѕС‡РЅР°СЏ Р‘СѓС…С‚Р°}
-Fort St Louis{Р¤РѕСЂС‚ РЎРµРЅС‚-Р›СѓРёСЃ}
-Marigot{РњР°СЂРёРіРѕ}
-Antigua{РђРЅС‚РёРіСѓР°}
-Fort James{Р¤РѕСЂС‚ Р”Р¶РµР№РјСЃ}
-St John's{РЎРµРЅС‚-Р”Р¶РѕРЅСЃ}
-Muscetto Cove{РњСѓС€РєРµС‚РЅР°СЏ Р‘СѓС…С‚Р°}
-Turks{РўС‘СЂРєСЃ}
-Grand Turk{Р‘РѕР»СЊС€РѕР№ РўС‘СЂРєСЃ}
-Turtle Bay{Р§РµСЂРµРїР°С…РѕРІР°СЏ Р‘СѓС…С‚Р°}
-White reefs{Р‘РµР»С‹Рµ Р РёС„С‹}
-Sandy Point{РџРµСЃС‡Р°РЅР°СЏ РљРѕСЃР°}
-Birds Cove{РџС‚РёС‡СЊСЏ Р‘СѓС…С‚Р°}
-Fort{Р¤РѕСЂС‚}
-Bocht Van Hato{Р‘СѓС…С‚Р° Р’Р°РЅ-РҐР°С‚Рѕ}
-Bullen Bay{Р—Р°Р»РёРІ Р‘СѓР»Р»РµРЅР°}
+FaleDeFler{Фале-де-Флер}
+Falaise De Fleur{Фале-де-Флер}
+Falaise De Fleur Port{Порт Фале-де-Флер}
+Octopus Bay{Бухта Осьминога}
+Falaise De Fleur Fort{Форт Фале-де-Флер}
+Redmond{Редмонд}
+Redmond Port{Порт Редмонда}
+Devil's Throat{Глотка Дьявола}
+Rocky Shore{Скалистый Берег}
+Redmond Fort{Форт Редмонда}
+IslaMuelle{Исла-Муэлье}
+Isla Muelle Port{Порт Исла-Муэлье}
+Shore{Берег}
+Oyster Beach{Устричный Берег}
+Isla Muelle Fort{Форт Исла-Муэлье}
+Oxbay{Оксбэй}
+Oxbay Port{Порт Оксбэя}
+Greenford Port{Порт Гринфорда}
+Gray Rock Bay{Залив Серой Скалы}
+Lighthouse{Маяк}
+Far Beach{Дальний Пляж}
+Greenford Fort{Форт Гринфорда}
+Oxbay Fort{Форт Оксбэя}
+Conceicao{Консейсао}
+Conceiзгo Port{Порт Консейсао}
+Sunny Haven{Солнечная Гавань}
+Leviathan Rock{Скала Левиафана}
+Conceiзгo Fort{Форт Консейсао}
+Douwesen{Дувезен}
+Douwesen Port{Порт Дувезена}
+Palm Beach{Пальмовый Пляж}
+Crab Cliffs{Крабовые Утёсы}
+Douwesen Fort{Форт Дувезена}
+QuebradasCostillas{Кебрадас-Костиллас}
+Quebradas Costillas Port{Порт Кебрадас-Костиллас}
+Charlestown{Чарльстаун}
+Charlestown Port{Порт Чарльстаун}
+KhaelRoa{Каэль-Роа}
+Khael Roa Shore{Берег Каэль-Роа}
+Cayman{Кайман}
+Grand Cayman{Большой Кайман}
+Cayman Kai{Кайман-Кай}
+Sand Bluff{Песчаный Утес}
+Eden Rock{Райская Скала}
+Grand Cayman Fort{Форт Большого Каймана}
+Hispaniola{Испаньола}
+Port au prince{Порт-о-Пренс}
+Santo Domingo{Санто-Доминго}
+Tortuga{Тортуга}
+Boca de Yuman{Бока-Де-Юман}
+Boca de Hubon{Бока-Де-Хубон}
+Cape Francos{Мыс Франкос}
+Shore{Берег}
+Port au Prince Fort{Форт Порт-о-Пренс}
+Santo Domingo Fort{Форт Санто-Доминго}
+Cuba{Куба}
+Santiago{Сантьяго}
+Havana{Гавана}
+Bahia de San Antonio{Байя-де-Сан-Антонио}
+Bahia de Moa{Байя-де-Моа}
+Playa de Sabana{Плайя-де-Сабана}
+Punta de Maisi{Пунта-де-Майси}
+Playa de Sierra Maestra{Плайя-де-Сьерра-Маэстра}
+Peninsula de Zapata{Полуостров-де-Сапата}
+Santiago Fort{Форт Сантьяго}
+Guadeloupe{Гваделупа}
+Pointe а Pitre{Пуэнт-а-Питр}
+Anse Casse-Bois{Анс-Касс-Буа}
+Pointe a pitre Fort{Форт Пуэнт-а-Питр}
+SaintMartin{Сен-Мартен}
+Simpson Bay{Бухта Симпсона}
+Baie Orient{Восточная Бухта}
+Fort St Louis{Форт Сент-Луис}
+Marigot{Мариго}
+Antigua{Антигуа}
+Fort James{Форт Джеймс}
+St John's{Сент-Джонс}
+Muscetto Cove{Мушкетная Бухта}
+Turks{Тёркс}
+Grand Turk{Большой Тёркс}
+Turtle Bay{Черепаховая Бухта}
+White reefs{Белые Рифы}
+Sandy Point{Песчаная Коса}
+Birds Cove{Птичья Бухта}
+Fort{Форт}
+Bocht Van Hato{Бухта Ван-Хато}
+Bullen Bay{Залив Буллена}

@@ -43,7 +43,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
 			Locations[FindLocation("house_of_laurence")].vcskip = true; // NK
 			Dialog.defAni = "dialog_stay1";
@@ -252,7 +252,7 @@ void ProcessDialogEvent()
 		break;
 
 		////////////////////////////////////////////////////////////////////
-		// РІС‚РѕСЂРѕР№ СЂР°Р·РіРѕРІРѕСЂ.
+		// второй разговор.
 		////////////////////////////////////////////////////////////////////
 
 		case "Second Time_Teodoro_Unknown":			// GR: alternative "Second_Time" before you've talked about Teodoro
@@ -311,7 +311,7 @@ void ProcessDialogEvent()
 			Link.l2.go = "exit";
 		break;
 
-		//Р СѓРјРѕСЂСЃС‹
+		//Руморсы
 		case "Rumours":
 			Dialog.text = SelectRumour(FindIslandByLocation(LoadedLocation.id), GetNationIDByType(GetCurrentLocationNation()) );
 			Link.l1 = DLG_TEXT[92];
@@ -341,7 +341,7 @@ void ProcessDialogEvent()
 			NPChar.quest.teodoro = "7"; // KK
 		break;
 
-		// РІС‹РїРѕР»РЅРµРЅРёРµ РєРІРµСЃС‚Р°.
+		// выполнение квеста.
 		case "Teodoro_completed":
 			DeleteAttribute(&Locations[FindLocation("house_of_laurence")],"vcskip"); // NK
 			Dialog.Text = DLG_TEXT[94] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[95]; 

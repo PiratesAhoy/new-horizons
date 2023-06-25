@@ -1,4 +1,4 @@
-// ******* ORIGINAL SECTION *************
+﻿// ******* ORIGINAL SECTION *************
 
 void InitOptionalMusic()
 {

@@ -19,7 +19,7 @@ void ProcessDialogEvent()
 	switch(Dialog.CurrentNode)
 	{
 
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -157,7 +157,7 @@ void ProcessDialogEvent()
 			Link.l2.go = "node_12";
 		break;
 
-		// -----------------------------------Р”РёР°Р»РѕРі РµСЃР»Рё РёРіСЂРѕРє РїРѕРіРѕРІРѕСЂРёР» СЃ Milon Blacque
+		// -----------------------------------Диалог если игрок поговорил с Milon Blacque
 		case "MilonTalk_1":
 			Dialog.Text = DLG_TEXT[52] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[53] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[54])]) + DLG_TEXT[55];
 			Link.l1 = DLG_TEXT[56];
@@ -196,7 +196,7 @@ void ProcessDialogEvent()
 			Link.l2.go = "node_6";
 		break;
 
-		// -----------------------------------Р”РёР°Р»РѕРі РїСЂРё РїРѕСЃР»РµРґСѓСЋС‰РёС… РІСЃС‚СЂРµС‡Р°С…
+		// -----------------------------------Диалог при последующих встречах
 		case "Second Time":
 			if (Characters[GetCharacterIndex("Milon Blacque")].quest.first_talk == "1")
 			{
@@ -268,7 +268,7 @@ void ProcessDialogEvent()
 			link.l1 = pcharrepphrase(DLG_TEXT[95], DLG_TEXT[96]);
 			link.l1.go = "exit";
 			///////////////////////////////////////////////
-			//Р°РєС‚РёРІРёР·РёСЂСѓРµРј РІРµС‚РєСѓ, РєРѕРіРґР° РЅР° РёРіСЂРѕРєР° РЅР°РїР°РґР°СЋС‚!
+			//активизируем ветку, когда на игрока нападают!
 			characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers = "orable";
 			///////////////////////////////////////////////
 			link.l2 = pcharrepphrase(DLG_TEXT[97], DLG_TEXT[98]);

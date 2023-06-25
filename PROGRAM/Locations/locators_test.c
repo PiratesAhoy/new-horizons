@@ -28,7 +28,7 @@ void Locations_TestAll()
 	locations_TestNewLine = GetNextLineString();
 }
 
-//РџРѕРєР°РґСЂРѕРІР°СЏ РїСЂРѕРІРµСЂРєР° Р»РѕРєР°С†Р№
+//Покадровая проверка локацй
 void Locations_TestAllProcess()
 {
 	int i = locations_TestCounter;
@@ -108,7 +108,7 @@ void Locations_TestAllProcess()
 	}
 }
 
-//Р—Р°РіСЂСѓР·РёС‚СЊ РіРµРѕРјРµС‚СЂРёСЋ Р»РѕРєР°С†РёРё РґР»СЏ С‚РµСЃС‚Р° Рё РїСЂРѕРІРµСЂРёС‚СЊ
+//Загрузить геометрию локации для теста и проверить
 bool Locations_TestLocation(ref loc, bool isDayTest)
 {
 	locations_TestResult = "";
@@ -342,7 +342,7 @@ bool Locations_TestLocation(ref loc, bool isDayTest)
 		}		
 		if(CheckAttribute(loc, "locators.officers"))
 		{
-			//РџСЂРѕРІРµСЂСЏРµРј Р»РѕРєР°С‚РѕСЂС‹ РґР»СЏ РѕС„РёС†РµСЂРѕРІ
+			//Проверяем локаторы для офицеров
 			SendMessage(loc, "lss", MSG_LOCATION_EX_MSG, "TestLocatorsGroup", "officers");
 			makearef(st, loc.locators.reload);
 			num = GetAttributesNum(st);
@@ -395,9 +395,9 @@ bool Locations_TestLocation(ref loc, bool isDayTest)
 
 bool Locations_TestLoadModel(aref loc, string sat, string addition)
 {
-	//РџСЂРѕРїСѓСЃС‚РёРј РїСѓСЃС‚РѕРµ РёРјСЏ
+	//Пропустим пустое имя
 	if(loc.(sat) == "") return false;
-	//РЎС‡РёС‚С‹РІР°РµРј РїР°СЂР°РјРµС‚СЂС‹ РјРѕРґРµР»СЊРєРё
+	//Считываем параметры модельки
 	string attr, attr1;
 	bool res;
 	string tech = "";
@@ -406,7 +406,7 @@ bool Locations_TestLoadModel(aref loc, string sat, string addition)
 	if(CheckAttribute(loc, attr)) tech = loc.(attr);
 	attr = sat + ".level";
 	if(CheckAttribute(loc, attr)) level = MakeInt(loc.(attr));
-	//Р“СЂСѓР·РёРј РјРѕРґРµР»СЊРєСѓ
+	//Грузим модельку
 	res = SendMessage(loc, "lssl", MSG_LOCATION_ADD_MODEL, loc.(sat) + addition, tech, level);
 	if(res == 0) return false;
 	return true;

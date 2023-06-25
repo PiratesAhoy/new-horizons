@@ -1,60 +1,60 @@
 // MAXIMUS 23.05.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| DevlinOpera.c |=====}
-Beatrice{Р‘РµР°С‚СЂРёСЃ}
-Devlin{Р”РµРІР»РёРЅ}
+Beatrice{Беатрис}
+Devlin{Девлин}
 
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
 
 {=====| QuebradasCostillas.c |=====}
-Skull{Р§РµСЂРµРї}
+Skull{Череп}
 
 {=====| Cuba.c |=====}
-Subteniente{РЎСѓР±С‚РµРЅСЊРµРЅС‚Рµ}
-Chorizo{Р§РѕСЂРёР·Рѕ}
-Rocoso{Р РѕРєРѕСЃРѕ}
-Don Evaristo{Р”РѕРЅ Р­РІР°СЂРёСЃС‚Рѕ}
-Dragan{Р”СЂР°РіР°РЅ}
-van Mourik{Р’Р°РЅ РњРѕСѓСЂРёРє}
-Kevin{РљРµРІРёРЅ}
-Poor1{Р‘РµРґРЅСЏРє}
-Grunk{Р“СЂР°РЅРє}
-Flobb{Р¤Р»РѕР±Р±}
+Subteniente{Субтеньенте}
+Chorizo{Чоризо}
+Rocoso{Рокосо}
+Don Evaristo{Дон Эваристо}
+Dragan{Драган}
+van Mourik{Ван Моурик}
+Kevin{Кевин}
+Poor1{Бедняк}
+Grunk{Гранк}
+Flobb{Флобб}
 
 {=====| Story.c |=====}
-Mystery{РўР°РёРЅСЃС‚РІРµРЅРЅС‹Р№}
-Messenger{РџРѕСЃС‹Р»СЊРЅС‹Р№}
-Brin Mistress{Р“РѕСЃРїРѕР¶Р° Р‘СЂРёРЅ}
-Emmanuel{Р­РјРјР°РЅСѓСЌР»СЊ}
-Bonnie{Р‘РѕРЅРЅРё}
-Blaze{Р‘Р»РµР№Р·}
-Short Jack{РљРѕСЂРѕС‚С‹С€РєР° Р”Р¶РµРє}
-Gold{Р“РѕР»Рґ}
-Couch Captain{РљР°РїРёС‚Р°РЅ РљРѕСѓС‡}
-Charles{Р§Р°СЂР»СЊР·}
-Sir Christopher{РЎСЌСЂ РљСЂРёСЃС‚РѕС„РµСЂ}
-Mings{РњРёРЅРіСЃ}
-Nathan{РќР°С‚Р°РЅ}
-Kell{РљРµР»Р»}
-Petros{РџРµС‚СЂРѕСЃ}
-Robert{Р РѕР±РµСЂС‚}
-Cook{РљСѓРє}
-Thomas the{РўРѕРјР°СЃ}
-Terror{РўРµСЂСЂРѕСЂ}
-John Paul{Р”Р¶РѕРЅ РџРѕР»}
-Jones{Р”Р¶РѕРЅСЃ}
-Captain{РљР°РїРёС‚Р°РЅ}
-Maximus{РњР°РєСЃРёРјСѓСЃ}
-High Sea{РҐР°Р№ РЎРё}
-Lass{Р”РµРІСѓС€РєР°}
-Catalina{РљР°С‚Р°Р»РёРЅР°}
-the Pirate{РџРёСЂР°С‚}
-Morgan{РњРѕСЂРіР°РЅ}
-Bartholomew{Р‘Р°СЂС‚РѕР»РѕРјСЊСЋ}
-Roberts{Р РѕР±РµСЂС‚СЃ}
-Merciless{Р‘РµСЃРїРѕС‰Р°РґРЅС‹Р№}
-Mark{РњР°СЂРє}
-Sharp{РЁР°СЂРї}
+Mystery{Таинственный}
+Messenger{Посыльный}
+Brin Mistress{Госпожа Брин}
+Emmanuel{Эммануэль}
+Bonnie{Бонни}
+Blaze{Блейз}
+Short Jack{Коротышка Джек}
+Gold{Голд}
+Couch Captain{Капитан Коуч}
+Charles{Чарльз}
+Sir Christopher{Сэр Кристофер}
+Mings{Мингс}
+Nathan{Натан}
+Kell{Келл}
+Petros{Петрос}
+Robert{Роберт}
+Cook{Кук}
+Thomas the{Томас}
+Terror{Террор}
+John Paul{Джон Пол}
+Jones{Джонс}
+Captain{Капитан}
+Maximus{Максимус}
+High Sea{Хай Си}
+Lass{Девушка}
+Catalina{Каталина}
+the Pirate{Пират}
+Morgan{Морган}
+Bartholomew{Бартоломью}
+Roberts{Робертс}
+Merciless{Беспощадный}
+Mark{Марк}
+Sharp{Шарп}
 
 {=====| 18 characters |=====}

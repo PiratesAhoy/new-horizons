@@ -1,6 +1,6 @@
-title=Retribuci√≥n.
-text.t1=He sido absuelto del cargo de mot√≠n. Por desgracia, Archie confes√≥ un crimen que no hab√≠a cometido. Sharpe y yo vamos a seguir el rastro del teniente Quelp en #sisland_Cayman#.
-text.t2=Sharpe est√° seguro de que ha visto a un guardiamarina salir corriendo de la taberna. pero yo no estoy seguro. Hemos encontrado al teniente Quelp, que trat√≥ de explicarse. El cpait√°n Harvey me ha ordenado poner rumbo a #sSt John's#, en #sisland_Antigua#.
+title=RetribuciÛn.
+text.t1=He sido absuelto del cargo de motÌn. Por desgracia, Archie confesÛ un crimen que no habÌa cometido. Sharpe y yo vamos a seguir el rastro del teniente Quelp en #sisland_Cayman#.
+text.t2=Sharpe est· seguro de que ha visto a un guardiamarina salir corriendo de la taberna. pero yo no estoy seguro. Hemos encontrado al teniente Quelp, que tratÛ de explicarse. El cpait·n Harvey me ha ordenado poner rumbo a #sSt John's#, en #sisland_Antigua#.
 text.t3=.
 text.t4=.
 text.t5=.

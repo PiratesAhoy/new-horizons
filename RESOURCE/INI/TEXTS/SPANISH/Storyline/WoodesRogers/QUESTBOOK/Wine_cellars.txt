@@ -1,8 +1,8 @@
 title=La bodegas de vino
-text.t1=Yo sÃ© nadar pero la mayorÃ­a de los marineros no saben. Â¡IntentarÃ© aprovechar esa ventaja en las bodegas!
-text.t2=Un barril en un montacargas. Â¿QuÃ© s esupone que tengo que hacer?
-text.t3=Â¡Hay una placa de presiÃ³n para mover el montacargas!
-text.t4=Creo que he encontrado la salida, Â¿pero cÃ³mo la abro?
+text.t1=Yo sé nadar pero la mayoría de los marineros no saben. ¡Intentaré aprovechar esa ventaja en las bodegas!
+text.t2=Un barril en un montacargas. ¿Qué s esupone que tengo que hacer?
+text.t3=¡Hay una placa de presión para mover el montacargas!
+text.t4=Creo que he encontrado la salida, ¿pero cómo la abro?
 text.t5=A juzgar por el sonido, se han abierto tres puertas.
 text.t6=
 text.t7=

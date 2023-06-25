@@ -24,7 +24,7 @@ bool LAi_IsCapturedLocation = false;
 bool LAi_restoreStates = false;
 bool LAi_IsBoarding = false;
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµР»РµРєС‚Р°
+//Инициализация интелекта
 void LocAi_Init(ref loc)
 {
 	int i, con, maxcrew, idx, num, offic;
@@ -58,10 +58,10 @@ void LocAi_Init(ref loc)
 	LAi_IsCapturedLocation = IsLocationCaptured(loc.id);
 	if(!actLoadFlag)
 	{
-		//РћС‡РёСЃС‚РёРј С„Р°РЅС‚РѕРјРЅС‹С… РїРµСЂСЃРѕРЅР°Р¶РµР№
+		//Очистим фантомных персонажей
 		LAi_Clear_Fantoms();
 	}
-	//Р’С‹СЃС‚Р°РІРёРј Р°РґСЂРµСЃР° РѕС„РёС†РµСЂР°Рј РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+	//Выставим адреса офицерам главного персонажа
 	LAi_IsBoarding = false;
 	if (CheckAttribute(loc, "boarding") == true && loc.boarding == "true") LAi_IsBoarding = true;
 	if (!LAi_IsBoarding)
@@ -419,7 +419,7 @@ void LocAi_Init(ref loc)
 	LAi_IsCapturedLocation = IsLocationCaptured(loc.id);
 }
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµР»РµРєС‚Р°
+//Инициализация интелекта
 void LocAi_Release()
 {
 	for(int i = 0; i < LAi_numloginedcharacters; i++)
@@ -450,7 +450,7 @@ void LocAi_Release()
 	DelEventHandler("Location_CharacterEscapeSlide", "LAi_CharacterEscapeSlide");
 	DelEventHandler("Location_CharacterColThreshold", "LAi_CharacterColThreshold");
 	DelEventHandler("Location_Character_EndAction", "LAi_Character_EndAction");	
-	//РћС‡РёСЃС‚РёРј С„Р°РЅС‚РѕРјРЅС‹С… РїРµСЂСЃРѕРЅР°Р¶РµР№
+	//Очистим фантомных персонажей
 	LAi_Clear_Fantoms();
 }
 
@@ -471,16 +471,16 @@ void LocAi_PostInit(ref loc)
 	LAi_restoreStates = false;
 }
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїРµСЂРµРґ РЅРѕРІРѕР№ РёРіСЂРѕР№
+//Инициализация перед новой игрой
 void LAi_NewGame()
 {
-	//Р—Р°РґРµСЂР¶Р°РЅРЅС‹Рµ РєРІРµСЃС‚С‹
+	//Задержанные квесты
 	DeleteAttribute(&Lai_questdelays, "");
-	//Р“СЂСѓРїРїС‹
+	//Группы
 	DeleteAttribute(&LAi_grp_relations, "");
 	LAi_grp_playeralarm = 0;
 	LAi_grp_alarmactive = false;
-	//РђР±РѕСЂРґР°Р¶
+	//Абордаж
 	boarding_location = -1;
 	boarding_location_type = -1;
 	boarding_enemy_crew = 0;
@@ -489,7 +489,7 @@ void LAi_NewGame()
 	boarding_player_crew_per_chr = 1.0;
 	boarding_exp = 0;
 	LAi_boarding_process = false;
-	//Р Р°Р·РЅРѕРµ
+	//Разное
 	LAi_IsInitedAI = false;
 	LAi_IsCapturedLocation = false;
 	LAi_restoreStates = true;
@@ -508,7 +508,7 @@ void LAi_NewGame()
 	LandLocationIdx = -1;
 	LandLocator = "";
 // <-- KK
-	//РЎС‚Р°РІРёРј С‚РёРї РёРіСЂРѕРєР° РіР»Р°РІРЅРѕРјСѓ РїРµСЂСЃРѕРЅР°Р¶Сѓ
+	//Ставим тип игрока главному персонажу
 	LAi_SetPlayerType(GetMainCharacter());
 }
 

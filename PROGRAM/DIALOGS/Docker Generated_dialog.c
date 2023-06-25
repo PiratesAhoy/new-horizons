@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
@@ -149,7 +149,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "info_1":
-				trace("РђР№РґРёС€РЅРёРє РїРµСЂСЃРѕРЅР°Р¶Р° - " + TempInfoCharacterID_1);
+				trace("Айдишник персонажа - " + TempInfoCharacterID_1);
 				d.Text = GetNPCInformation(TempInfoCharacterID_1);
 				Link.l1 = DLG_TEXT[72];
 				Link.l1.go = "new question";
@@ -158,7 +158,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "info_2":
-				trace("РђР№РґРёС€РЅРёРє РїРµСЂСЃРѕРЅР°Р¶Р° - " + TempInfoCharacterID_2);
+				trace("Айдишник персонажа - " + TempInfoCharacterID_2);
 				d.Text = GetNPCInformation(TempInfoCharacterID_2);
 				Link.l1 = DLG_TEXT[74];
 				Link.l1.go = "new question";

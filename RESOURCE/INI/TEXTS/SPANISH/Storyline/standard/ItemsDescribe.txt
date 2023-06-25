@@ -1,7 +1,7 @@
 itmname_chest	{Cofre de McDorey}
 itmdescr_chest
 {
-Un peque√±o cofre que Oweyn McDorey te ha pedido que entegues a Charles Windem en #sisland_Redmond#.
+Un pequeÒo cofre que Oweyn McDorey te ha pedido que entegues a Charles Windem en #sisland_Redmond#.
 }
 
 itmname_coins	{Monedas malditas}
@@ -16,22 +16,22 @@ itmdescr_gov_letter
 Una carta del gobernador Silehard ue te ha confiado para que la entregues a Isenbrandt Jurcksen en #sisland_Quebradas Costillas#.
 }
 
-itmname_incas_idol	{√çdolo dorado}
+itmname_incas_idol	{Õdolo dorado}
 itmdescr_incas_idol
 {
-Un √≠dolo dorado de Hurukacelitipochtli, el dios inca de la muerte.
+Un Ìdolo dorado de Hurukacelitipochtli, el dios inca de la muerte.
 }
 
-itmname_incas_collection	{Colecci√≥n de tesoros incas}
+itmname_incas_collection	{ColecciÛn de tesoros incas}
 itmdescr_incas_collection
 {
-Una colecci√≥n de tesoros incas.
+Una colecciÛn de tesoros incas.
 }
 
 itmname_piece_of_legend	{Tablilla}
 itmdescr_piece_of_legend
 {
-Fragmento de una tablilla de arcilla cubireto con antiguos caracteres inc√°icos
+Fragmento de una tablilla de arcilla cubireto con antiguos caracteres inc·icos
 }
 
 itmname_notes_of_legend	{Texto de la leyenda}
@@ -49,7 +49,7 @@ Una copia del texto de la antigua leyenda inca.
 itmname_rheims_journal	{Diario de Rheims}
 itmdescr_rheims_journal
 {
-Diario del capit√°n Rheims.
+Diario del capit·n Rheims.
 }
 
 itmname_compramat_to_domigues	{Documentos comprometedores}
@@ -61,19 +61,19 @@ Documentos que desacreditan por completo al padre Domingues.
 itmname_rheims_letter	{Carte de Rheims}
 itmdescr_rheims_letter
 {
-Una carta del capit√°n Rheims al gobernador de #sRedmond#, en #sisland_Redmond#, Robert Christopher Silehard.
+Una carta del capit·n Rheims al gobernador de #sRedmond#, en #sisland_Redmond#, Robert Christopher Silehard.
 }
 
 itmname_massoni_papers	{Papeles de Valentin Massoni}
 itmdescr_massoni_papers
 {
-Estos papeles dicen que la bricbarca con suministros est√° ahora mismo en #sFalaise de Fleur#, en #sisland_Falaise de Fleur#, esperando a un buque escolta.
+Estos papeles dicen que la bricbarca con suministros est· ahora mismo en #sFalaise de Fleur#, en #sisland_Falaise de Fleur#, esperando a un buque escolta.
 }
 
 itmname_artefact	{Artefacto}
 itmdescr_artefact
 {
-El misterioso artefacto que encontraste en el antiguo templo. Produce una sensaci√≥n de hormigueo en tus manos cuando lo sostienes.
+El misterioso artefacto que encontraste en el antiguo templo. Produce una sensaciÛn de hormigueo en tus manos cuando lo sostienes.
 }
 
 itmname_story_gramota	{Documentos}

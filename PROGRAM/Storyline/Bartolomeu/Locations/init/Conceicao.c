@@ -115,7 +115,7 @@ void LocationInitConceicao(ref n)
 	Location.reload.l11.go = "Hit_house2";
 	Location.reload.l11.emerge = "reload1";
 	Location.reload.l11.autoreload = "0";
-	Location.reload.l11.label = "House of AmÃ©rigo Vieira";	//spell-checked by KAM
+	Location.reload.l11.label = "House of Amérigo Vieira";	//spell-checked by KAM
 	//Hitman
 
 // RobC/Alan_Smithee Blacksmiths -->

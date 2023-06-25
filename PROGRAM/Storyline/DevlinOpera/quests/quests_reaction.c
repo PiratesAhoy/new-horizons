@@ -6,7 +6,7 @@ void QuestComplete(string sQuestName)
 	switch(sQuestName)
 	{
 		////////////////////////////////////////////////////////////////////////
-		//  ÃŠÃ¢Ã¥Ã±Ã² Ã¯Ã°Ã® Ã¯Ã°Ã®ÃªÃ«Ã¿Ã²Ã»Ã¥ Ã¬Ã®Ã­Ã¥Ã²ÃªÃ¨
+		//  Êâåñò ïðî ïðîêëÿòûå ìîíåòêè
 		////////////////////////////////////////////////////////////////////////
 	
 		case "Start":
@@ -21,7 +21,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Devlin_tavern_outside")].reload.l2.disable = true;
 
                         DeleteAttribute(PChar, "shiplog");
-                        WriteNewLogEntry(GetTranslatedLog("New captain's log"), GetTranslatedLog("My mother always said I had the devilâ€™s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, His Majestyâ€™s representative was impressed by my tale and paid me the full expeditionâ€™s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world. This is where my father disappeared... And I think my rascal brother should also be somewhere in these waters."),"Personal",true);
+                        WriteNewLogEntry(GetTranslatedLog("New captain's log"), GetTranslatedLog("My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, His Majesty’s representative was impressed by my tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world. This is where my father disappeared... And I think my rascal brother should also be somewhere in these waters."),"Personal",true);
 		break;
 
 		case "Start_1":

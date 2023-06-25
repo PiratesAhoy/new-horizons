@@ -1,56 +1,56 @@
 string DLG_TEXT[53] = {
-"Â¿SÃ­? Â¡En quÃ© puedo ayudarte?",	//0
-"Â¿Puedo visitar la capilla?",
-"He oÃ­do hablar mucho de la cripta. Â¿EstÃ¡ abierta a las visitas?",
-"Â¿Puedo entrar en el claustro?",
-"Se supone que hay un antiguo cÃ­rculo de piedras aquÃ­. Â¿Es verdad?",
-"Estoy buscando una tumba. Â¿Puedes indicarme el camino al cementerio, por favor?",
-"Quiero ver la famosa biblioteca. Â¿DÃ³nde puedo encontrarla?",
+"¿Sí? ¡En qué puedo ayudarte?",	//0
+"¿Puedo visitar la capilla?",
+"He oído hablar mucho de la cripta. ¿Está abierta a las visitas?",
+"¿Puedo entrar en el claustro?",
+"Se supone que hay un antiguo círculo de piedras aquí. ¿Es verdad?",
+"Estoy buscando una tumba. ¿Puedes indicarme el camino al cementerio, por favor?",
+"Quiero ver la famosa biblioteca. ¿Dónde puedo encontrarla?",
 "Oh, solo estoy admirando las vistas.",
 "Por supuesto. Pero recuerda: esto no es un museo.",		//8
 "Gracias, padre.",
-"No, esa  parte aÃºn no estÃ¡ abierta. QuizÃ¡s mÃ¡s adelante. EstÃ¡ reservada para Bartolomeu o Portugues.",		//10
+"No, esa  parte aún no está abierta. Quizás más adelante. Está reservada para Bartolomeu o Portugues.",		//10
 "Ya veo.",
-"SÃ­, por favor, visita el patio interior. El balcÃ³n del piso de arriba tambiÃ©n estÃ¡ abierto.",		//12
+"Sí, por favor, visita el patio interior. El balcón del piso de arriba también está abierto.",		//12
 "Gracias, padre.",
-"SÃ­, es cierto. Este lugar ya era sagrado (en cierto modo) incluso antes de que nuestro claustro fuera construÃ­do. Lo encontrarÃ¡s al otro extremo del jardÃ­n.",		//14
-"SerÃ¡ interesante.",
-"Claro. Entra en el patio interior y, desde allÃ­, la puerta verde conduce al cementerio.",	//16
+"Sí, es cierto. Este lugar ya era sagrado (en cierto modo) incluso antes de que nuestro claustro fuera construído. Lo encontrarás al otro extremo del jardín.",		//14
+"Será interesante.",
+"Claro. Entra en el patio interior y, desde allí, la puerta verde conduce al cementerio.",	//16
 "Gracias, padre. Entendido.",
-"EncontrarÃ¡s la puerta azul de la biblioteca en el patio interior.",			//18
-"La biblioteca estÃ¡ espoecializada en ciencia y solo estÃ¡ abierta para los ingenieros.",	//19
+"Encontrarás la puerta azul de la biblioteca en el patio interior.",			//18
+"La biblioteca está espoecializada en ciencia y solo está abierta para los ingenieros.",	//19
 "Espero que disfrutes tu visita.",	//20
-"Los licores que se elaboran aquÃ­ son bien conocidos en todo el mundo. Â¿Puedo ver la destilerÃ­a?",	//21
-"Por supuesto. La encontrarÃ¡s en el jardÃ­n, cerca del edificio de la cripta. Pero no estÃ¡ permitirdo probar los productos...",	//22
+"Los licores que se elaboran aquí son bien conocidos en todo el mundo. ¿Puedo ver la destilería?",	//21
+"Por supuesto. La encontrarás en el jardín, cerca del edificio de la cripta. Pero no está permitirdo probar los productos...",	//22
 "Ya veo. Gracias, padre.",		//23
-"Â¿Eh?",					//24
-"Â¡Ni se te ocurra llevarte ningÃºn libro de la biblioteca!",		//25
-"(Â¿Â¡Ese es el Bibliotecario!?) Por supusto que no, seÃ±or.",		//26
-"DiscÃºlpame, capitÃ¡n, pero por casualidad no serÃ¡s especialista en ingenierÃ­a, Â¿verdad?",
-"Pues sÃ­, lo soy. A tu servicio, padre.",			//28
-"Â¿Conoces al investigador Sakharine?",			//29
-"SÃ­, hemos coincidido profesionalmente.",
-"Perdona que te lo pregunte, pero, Â¿puedes demostrarlo?",			//31
-"Â¿Â¡QuÃ©!? Pues, de hecho, sÃ­ que puedo; tengo aquÃ­ una carta de Ivan Sakharine. MÃ­rala tÃº mismo.",
-"Muy bien. El inventor me pidiÃ³ que te diera este mapa de la biblioteca a cambio de la carta.",//33
-"De acuerdo... Â¿Necesito un mapa para orientarme en la biblioteca?",
-"Creo que serÃ­a una muy buena idea, capitÃ¡n.",		//35
-"Â¿Ah, sÃ­? Â¿QuÃ© mÃ¡s puedes contarme acerca de la biblioteca, padre?",
-"Si me permites darte un consejo: aquÃ­ hay muchos libros valiosos, pero, pro favor, no intentes robar ninguno de ellos. Â¡El Bibliotecario no acepta tonterÃ­as!",//37
-"(Hum, interesante idea) Por supuesto que no, solo voy a buscar a mi maigo (Â¡No me asusta un blbliotecario!).",		//38
-"AsÃ­ que... te has llevado TODOS los libros valiosos. Â¡Recuerda que te lo advertÃ­!",		//39
+"¿Eh?",					//24
+"¡Ni se te ocurra llevarte ningún libro de la biblioteca!",		//25
+"(¿¡Ese es el Bibliotecario!?) Por supusto que no, señor.",		//26
+"Discúlpame, capitán, pero por casualidad no serás especialista en ingeniería, ¿verdad?",
+"Pues sí, lo soy. A tu servicio, padre.",			//28
+"¿Conoces al investigador Sakharine?",			//29
+"Sí, hemos coincidido profesionalmente.",
+"Perdona que te lo pregunte, pero, ¿puedes demostrarlo?",			//31
+"¿¡Qué!? Pues, de hecho, sí que puedo; tengo aquí una carta de Ivan Sakharine. Mírala tú mismo.",
+"Muy bien. El inventor me pidió que te diera este mapa de la biblioteca a cambio de la carta.",//33
+"De acuerdo... ¿Necesito un mapa para orientarme en la biblioteca?",
+"Creo que sería una muy buena idea, capitán.",		//35
+"¿Ah, sí? ¿Qué más puedes contarme acerca de la biblioteca, padre?",
+"Si me permites darte un consejo: aquí hay muchos libros valiosos, pero, pro favor, no intentes robar ninguno de ellos. ¡El Bibliotecario no acepta tonterías!",//37
+"(Hum, interesante idea) Por supuesto que no, solo voy a buscar a mi maigo (¡No me asusta un blbliotecario!).",		//38
+"Así que... te has llevado TODOS los libros valiosos. ¡Recuerda que te lo advertí!",		//39
 "Eeh... (esto no tiene buena pinta)",		
-"DespuÃ©s de todo, es bastante impresionante, de modo que te darÃ© una recompensa.",		//41
-"De acuerdo... (Â¿no va a matarme?)",
+"Después de todo, es bastante impresionante, de modo que te daré una recompensa.",		//41
+"De acuerdo... (¿no va a matarme?)",
 "Puedes quedarte con todos los libros.",		//43
-"Gracias (Â¿hay un 'pero'...?)",
-"Â¡AdemÃ¡s, desde este momento, eres inmortal!",		//45
-"Â¿De verdad? (Â¡esto va mÃ¡s allÃ¡ de todo lo que podrÃ­a imaginar!)",
-"SÃ­, es parte de tu nueva misiÃ³n, Â¿o deberÃ­a deicr tu nueva profesiÃ³n?",		//47
-"AjÃ¡, Â¿y cuÃ¡l es esa profesiÃ³n? (tengo un mal presentimiento)",
-"La Ãºnica persona que tiene permitido tomar todos esos libros es el Bibliotecario.",		//49
-"Â¿SÃ­..? (aquÃ­ viene)",
-"Â¡Enhorabuena, tÃº eres nuestro nuevo Bibliotecario!",		//51
+"Gracias (¿hay un 'pero'...?)",
+"¡Además, desde este momento, eres inmortal!",		//45
+"¿De verdad? (¡esto va más allá de todo lo que podría imaginar!)",
+"Sí, es parte de tu nueva misión, ¿o debería deicr tu nueva profesión?",		//47
+"Ajá, ¿y cuál es esa profesión? (tengo un mal presentimiento)",
+"La única persona que tiene permitido tomar todos esos libros es el Bibliotecario.",		//49
+"¿Sí..? (aquí viene)",
+"¡Enhorabuena, tú eres nuestro nuevo Bibliotecario!",		//51
 "...",
 
 };

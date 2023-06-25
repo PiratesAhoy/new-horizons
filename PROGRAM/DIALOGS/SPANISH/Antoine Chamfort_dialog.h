@@ -1,11 +1,11 @@
 string DLG_TEXT[8] = {
-"Â¿SÃ­, #saddr#?",
-"Me gustarÃ­a hablar con #sAntoineChamfort#.",
-"Yo soy #sAntoineChamfort#. Â¿QuÃ© quieres?",
-"Ni tÃº ni yo tenemos tiempo que perder, asÃ­ que irÃ© al grano. SÃ© que has malversado el dinero de tu gobernador.",
-"Â¿QuÃ© has dicho? Â¡PodrÃ­a mandarte a la cÃ¡rcel por decir eso!",
-"No tengo miedo. Pero tÃº deberÃ­as. Tengo pruebas y voy a explicar la situaciÃ³n a tu gobernador",
-"Â¡AjÃ¡! Ya entiendo. EstÃ¡s mal de la cabeza. Como tÃº has dicho, no quiero perder el tiempo, asÃ­ que lÃ¡rgate y haz lo que te plazca.",
+"¿Sí, #saddr#?",
+"Me gustaría hablar con #sAntoineChamfort#.",
+"Yo soy #sAntoineChamfort#. ¿Qué quieres?",
+"Ni tú ni yo tenemos tiempo que perder, así que iré al grano. Sé que has malversado el dinero de tu gobernador.",
+"¿Qué has dicho? ¡Podría mandarte a la cárcel por decir eso!",
+"No tengo miedo. Pero tú deberías. Tengo pruebas y voy a explicar la situación a tu gobernador",
+"¡Ajá! Ya entiendo. Estás mal de la cabeza. Como tú has dicho, no quiero perder el tiempo, así que lárgate y haz lo que te plazca.",
 "Como quieras.",
 
 };

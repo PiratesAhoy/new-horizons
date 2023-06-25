@@ -3,7 +3,7 @@ string DLG_TEXT[59] = {
 "Yes Captain.",
 "Good to see you again Pellew, and you Mr. Bracegirdle. And you must be the Midshipman I'm hearing so much about.",
 "Midshipman Hornblower, Captain. At your service.",
-"Just so, Mr. Hornblower. I have a report here that the 'Indefatigable' needlessly interfered with the Justinianâ€™s attack on the TÃ©mÃ©raire. And Mr. Simpson here, informs me you were in command of the helm at the time.",
+"Just so, Mr. Hornblower. I have a report here that the 'Indefatigable' needlessly interfered with the Justinian’s attack on the Téméraire. And Mr. Simpson here, informs me you were in command of the helm at the time.",
 "Er yes, but...",
 "My dear Pellew, I have no doubt of the situation during the battle. What concerns me, is what is Mr. Simpson doing giving ME a signal that was addressed to YOU, Pellew? Your reaction tells me that you knew nothing of it.",
 "Indeed Pellew, I agree with your assessment of Mr. Hornblower. That leaves us with Mr. Simpson, and an act which at best I see as gross insubordination and at worst, intent to assist the enemy by interfering with a communication to a superior officer. What do you have to say Mr. Simpson?",

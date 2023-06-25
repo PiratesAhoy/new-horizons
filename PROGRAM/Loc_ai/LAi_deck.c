@@ -74,11 +74,11 @@ void Return2SeaAfterDeck()
 		SetEventHandler("FaderEvent_EndFade", "DeckToSea_ReloadEndFadeAfter", 0);
 	} else {
 // <-- KK
-		//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С…РµРЅРґР»РµСЂС‹ РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё
+		//Установить хендлеры для обработки
 		SetEventHandler("FaderEvent_StartFade", "Deck_ReloadStartFadeAfter", 0);
 		SetEventHandler("FaderEvent_EndFade", "Deck_ReloadEndFadeAfter", 0);
 	}
-	//РЎРѕР·РґР°С‘Рј С„РµР№РґРµСЂ Рё Р·Р°РїСѓСЃРєР°РµРј
+	//Создаём фейдер и запускаем
 	CreateEntity(&boarding_fader, "fader");
 	SendMessage(&boarding_fader, "ls", FADER_PICTURE, FindReloadPicture("sea.tga")); // KK
 
@@ -158,7 +158,7 @@ void Deck_Start()
 	ResetSoundScheme();
 	PauseAllSounds();
 	int i, idx;
-	//=Р°СЃС‚СЂРѕРёРј РёРЅС‚РµСЂС„РµР№СЃ
+	//=астроим интерфейс
 	if (LandLocationIdx == -1) DeleteBattleInterface(); // KK
 	InitBattleLandInterface();
 	StartBattleLandInterface();
@@ -177,7 +177,7 @@ void Deck_Start()
 
 	SetUpDeckReloadMap(); // KK
 
-	//TС‹СЃС‚Р°РІРёРј  Рё Р·Р°РїРѕРјРЅРёРј Р°РґСЂРµСЃР°
+	//Tыставим  и запомним адреса
 	boarding_adr[0].location = mchr.location;
 	boarding_adr[0].group = mchr.location.group;
 	boarding_adr[0].locator = mchr.location.locator;
@@ -196,21 +196,21 @@ void Deck_Start()
 		boarding_adr[i].group = Characters[idx].location.group;
 		boarding_adr[i].locator = Characters[idx].location.locator;
 	}
-	//РЎС‚Р°СЂС‚СѓРµРј
+	//Стартуем
 	Deck_LoadLocation(DeckID); // KK //MAXIMUS
 }
 
-//Р—Р°РіСЂСѓР·РёС‚СЊ Р»РѕРєР°С†РёСЋ Р°Р±РѕСЂРґР°Р¶Р°
+//Загрузить локацию абордажа
 void Deck_LoadLocation(string locID) // KK //MAXIMUS
 {
 	ReloadProgressStart();
-	//LС‰РµРј Р»РѕРєР°С†Рё|
+	//Lщем локаци|
 	int locIndex = FindLocation(locID);
 	ref mchr = GetMainCharacter();
 	if(locIndex >= 0)
 	{
 		if(!bCanEnterToLand && HasSubStr(locID,"ShipDeck")) locations[locIndex].coxswain = true;//MAXIMUS: added for placing monster near steering-wheel
-		//РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+		//Устанавливаем главного персонажа
 		mchr.location = locID;
 
 	// SCREWFACE : locators to load nathaniel are different for different model
@@ -395,7 +395,7 @@ void Deck_LoadLocation(string locID) // KK //MAXIMUS
 /////////////
 void Deck_ReloadStartFadeAfter()
 {
-	//TС‹РіСЂСѓР¶Р°РµРј Р»РѕРєР°С†Рё|
+	//Tыгружаем локаци|
 	ResetSoundScheme();
 	PauseAllSounds();
 	DelEventHandler("FaderEvent_StartFade", "Deck_ReloadStartFadeAfter");
@@ -408,14 +408,14 @@ void Deck_ReloadEndFadeAfter()
 {
 	int i, idx;
 	ReloadProgressStart(); // KK
-	//Р—Р°РіСЂСѓР¶Р°РµРј СЃР»РµРґСѓ|С‰Сѓ| Р»РѕРєР°С†Рё|
+	//Загружаем следу|щу| локаци|
 	DelEventHandler("FaderEvent_EndFade", "Deck_ReloadEndFadeAfter");
 	SendMessage(&boarding_fader, "lfl", FADER_IN, RELOAD_TIME_FADE_IN, true);
 	boarding_location = -1;
-	//=Р°СЃС‚СЂРѕРёРј РёРЅС‚РµСЂС„РµР№СЃ
+	//=астроим интерфейс
 	Log_SetActiveAction("Nothing");
 	EndBattleLandInterface();
-	//TРѕСЃС‚Р°РЅРѕРІРёРј Р°РґСЂРµСЃР°
+	//Tостановим адреса
 	ref mchr = GetMainCharacter();
 	mchr.location = boarding_adr[0].location;
 	mchr.location.group = boarding_adr[0].group;
@@ -570,7 +570,7 @@ void Cabin_Start()
 	ResetSoundScheme();
 	PauseAllSounds();
 	int i, idx;
-	//=Р°СЃС‚СЂРѕРёРј РёРЅС‚РµСЂС„РµР№СЃ
+	//=астроим интерфейс
 	if (LandLocationIdx == -1) DeleteBattleInterface(); // KK
 	InitBattleLandInterface();
 	StartBattleLandInterface();
@@ -597,7 +597,7 @@ void Cabin_Start()
 	SetUpCabin(GetCharacter(iShipCaptain)); // KK
 	SetUpDeckReloadMap(); // KK
 
-	//TС‹СЃС‚Р°РІРёРј  Рё Р·Р°РїРѕРјРЅРёРј Р°РґСЂРµСЃР°
+	//Tыставим  и запомним адреса
 	boarding_adr[0].location = mchr.location;
 	boarding_adr[0].group = mchr.location.group;
 	boarding_adr[0].locator = mchr.location.locator;
@@ -614,20 +614,20 @@ void Cabin_Start()
 		boarding_adr[i].group = Characters[idx].location.group;
 		boarding_adr[i].locator = Characters[idx].location.locator;
 	}
-	//РЎС‚Р°СЂС‚СѓРµРј
+	//Стартуем
 	Cabin_LoadLocation();
 }
 
-//Р—Р°РіСЂСѓР·РёС‚СЊ Р»РѕРєР°С†Рё| Р°Р±РѕСЂРґР°Р¶Р°
+//Загрузить локаци| абордажа
 void Cabin_LoadLocation()
 {
 	ReloadProgressStart();
-	//LС‰РµРј Р»РѕРєР°С†Рё|
+	//Lщем локаци|
 	int locIndex = FindLocation(DeckID);
 	if(locIndex >= 0)
 	{
 // KK -->
-		//РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+		//Устанавливаем главного персонажа
 		ref mchr = GetMainCharacter();
 		mchr.location = DeckID;
 		if (FromDeckIdx == -1) {
@@ -649,16 +649,16 @@ void Cabin_LoadLocation()
 		current_locator_name = "";
 // <-- KK
 
-		//РџРµСЂРµРіСЂСѓР¶Р°РµРјСЃСЏ РІ Р»РѕРєР°С†Рё|
+		//Перегружаемся в локаци|
 		boarding_location = locIndex;
 		Locations[locIndex].boarding = "true";
 		if(LoadLocation(&Locations[locIndex]))
 		{
 			PlaceOfficersToDeck("Cabin");// MAXIMUS
 			BLI_UpdateOfficers();//MAXIMUS: officers-icons fixed
-			//Р Р°СЃСЃС‚Р°РІР»СЏРµРј РїРµСЂСЃРѕРЅР°Р¶РµР№
+			//Расставляем персонажей
 			//SetEventHandler(EVENT_LOCATION_LOAD,"qprocEndReload",0);
-			//Р—Р°РїСЂРµС‚РёРј РґРёР°Р»РѕРі
+			//Запретим диалог
 			dialogDisable = false;
 		}else{
 			Trace("Boarding: Boarding location not loaded, current loc <" + DeckID + ">");

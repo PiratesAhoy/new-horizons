@@ -1,8 +1,8 @@
 string DLG_TEXT[6] = {
 "No tengo tiempo para hablar contigo.",
-"No te quedes aquÃ­ -- Â¡QuÃ­tate de mi camino!",
-"Â¡Despejen el camino!",
-"Â¿A dÃ³nde crees que vas, CompaÃ±ero? Date la vuelta y marcha... no hay lugar aquÃ­ para gente como tÃº.",
+"No te quedes aquí -- ¡Quítate de mi camino!",
+"¡Despejen el camino!",
+"¿A dónde crees que vas, Compañero? Date la vuelta y marcha... no hay lugar aquí para gente como tú.",
 "No importa.",
 "...",
 

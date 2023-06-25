@@ -26,7 +26,7 @@ Wheelback{Wheelback}
 Wyvern{Wyvern}
 Quittance{Quittance}
 Penrod{Penrod}
-French Soldier{Soldado francÃ©s}							  
+French Soldier{Soldado francés}							  
 
 {=====| Officers.c |=====}
 Captaine{Captaine}
@@ -91,7 +91,7 @@ Morris{Morris}
 Murtogg{Murtogg}
 Malvert{Malvert}
 Mullroy{Mullroy}
-Captain{CapitÃ¡n}
+Captain{Capitán}
 Elizabeth{Elizabeth}
 Simon{Simon}
 Blunden{Blunden}
@@ -164,7 +164,7 @@ Ammand{Ammand}
 the Corsair{el Corsario}
 Yedam{Yedam}
 Kinne{Kinne}
-Captain Sao{CapitÃ¡n Sao}
+Captain Sao{Capitán Sao}
 Feng{Feng}
 Park{Park}
 Lian{Lian}
@@ -200,21 +200,21 @@ Jimmy{Jimmy}
 Legs{Legs}
 Port Admiral{Almirante del puerto}
 Talicerdor{Talicerdor}
-Guard Captain {CapitÃ¡n de la guardia}
-Prison Guard {Guardia de la prisiÃ³n}
+Guard Captain {Capitán de la guardia}
+Prison Guard {Guardia de la prisión}
 Atwood {Atwood}
 Paddley {Paddley}
 Elton {Elton}
 Garfield {Garfield}
-Cannibal Chief {Cacique canÃ­bal}
-Cannibal{CanÃ­bal}
+Cannibal Chief {Cacique caníbal}
+Cannibal{Caníbal}
 
 {=====| TempQuestEnemy.c |=====}
 Ronald{Ronald}
 Blacklock{Blacklock}
 Harris{Harris}
-Spanish{EspaÃ±ol}			
-Prison{PrisiÃ³n}
+Spanish{Español}			
+Prison{Prisión}
 Commendant{Comandante}
 Officer{Oficial}
 Midshipman{Guardiamarina}
@@ -223,10 +223,10 @@ Mr.{Mr.}
 Mercer{Mercer}
 Gentleman{Caballero}
 Jocard{Jocard}
-Spanish Lieutenant{Teniente espaÃ±ol}
-Spanish Officer{Oficial espaÃ±ol}
-Prison Commendant{Comandante de la prisiÃ³n}
-Spanish Midshipman{Guardiamarina espaÃ±ol}
+Spanish Lieutenant{Teniente español}
+Spanish Officer{Oficial español}
+Prison Commendant{Comandante de la prisión}
+Spanish Midshipman{Guardiamarina español}
 
 {=====| Others |=====}
 Nigel{Nigel}

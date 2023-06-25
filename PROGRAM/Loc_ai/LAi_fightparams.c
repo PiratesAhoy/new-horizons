@@ -35,10 +35,10 @@ float ApplyArmor(ref chr, ref attack, float dmg, bool blade)
 //Blade parameters
 //--------------------------------------------------------------------------------
 
-//РџРѕР»СѓС‡РёС‚СЊ РїРѕРІСЂРµР¶РґРµРЅРёРµ РѕС‚ СЃР°Р±Р»Рё
+//Получить повреждение от сабли
 float LAi_BladeCalcDamage(aref attack)
 {
-	//Р Р°СЃС‡РёС‚С‹РІР°РµРј РїРѕРІСЂРµР¶РґРµРЅРёРµ РѕС‚ СЃР°Р±Р»Рё
+	//Расчитываем повреждение от сабли
 	float min = 10.0;
 	float max = 10.0;
 	if(CheckAttribute(attack, "chr_ai.dmgbldmin"))
@@ -53,10 +53,10 @@ float LAi_BladeCalcDamage(aref attack)
 	return dmg;
 }
 
-//РњРѕРґРёС„РёС†РёСЂРѕРІР°С‚СЊ РїРѕРІСЂРµР¶РґРµРЅРёРµ РѕС‚ СЃР°Р±Р»Рё СЃ СѓС‡С‘С‚РѕРј СЃРєРёР»РѕРІ
+//Модифицировать повреждение от сабли с учётом скилов
 float LAi_BladeApplySkills(aref attack, aref enemy, float dmg)
 {
-	//РЈС‡РёС‚С‹РІР°РµРј СЃРєРёР»С‹
+	//Учитываем скилы
 	float aSkill = LAi_GetCharacterFightLevel(attack);
 	float eSkill = LAi_GetCharacterFightLevel(enemy);
 	if(aSkill >= eSkill)
@@ -89,7 +89,7 @@ float LAi_BladeApplySkills(aref attack, aref enemy, float dmg)
 		kDmg = 1.5;
 	}
 	dmg = dmg*kDmg;
-	//РђС‚С‚Р°РєР° СЃРІРѕРµР№ РіСЂСѓРїРїС‹
+	//Аттака своей группы
 	kDmg = 1.0;
 	if(IsCharacterPerkOn(enemy, "BasicDefence")) kDmg = 0.9;
 	if(IsCharacterPerkOn(enemy, "AdvancedDefence")) kDmg = 0.8;
@@ -102,10 +102,10 @@ float LAi_BladeApplySkills(aref attack, aref enemy, float dmg)
 	return dmg;
 }
 
-//Р Р°СЃС‡РёС‚Р°С‚СЊ РїРѕР»СѓС‡РµРЅРЅС‹Р№ РѕРїС‹С‚ РїСЂРё СѓРґР°СЂРµ СЃР°Р±Р»РµР№
+//Расчитать полученный опыт при ударе саблей
 float LAi_BladeCalcExperience(aref attack, aref enemy, float dmg)
 {
-	//Р’С‹С‡РёСЃР»СЏРµРј РїРѕР»СѓС‡РµРЅС‹Р№ РѕРїС‹С‚
+	//Вычисляем полученый опыт
 	float ra = 1.0;
 	float re = 1.0;
 	if(CheckAttribute(attack, "rank"))
@@ -133,7 +133,7 @@ float LAi_BladeCalcExperience(aref attack, aref enemy, float dmg)
 	return dmg;
 }
 
-//Р Р°СЃС‡РёС‚Р°С‚СЊ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РїСЂРѕР±РёРІРєРё Р±Р»РѕРєР°
+//Расчитать вероятность пробивки блока
 float LAi_BladeFindPiercingProbability(aref attack, aref enemy, float hitDmg)
 {
 	float piercing = 0.05;
@@ -216,23 +216,23 @@ float LAi_BladeFindPiercingProbability(aref attack, aref enemy, float hitDmg)
 //Gun parameters
 //--------------------------------------------------------------------------------
 
-//Р Р°СЃС‡РёС‚Р°РµРј РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РїРѕРїР°РґР°РЅРёСЏ
+//Расчитаем вероятность попадания
 float LAi_GunCalcProbability(aref attack, float kDist)
 {
-	//Р•СЃР»Рё Р±Р»РёР·РєРѕ, С‚Рѕ РїРѕРїР°РґС‘Рј С‚РѕС‡РЅРѕ
+	//Если близко, то попадём точно
 	if(kDist >= 0.9) return 1.0;
-	//Р Р°СЃС‡РёС‚Р°РµРј РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РЅР° РєРѕРЅС†Рµ РѕС‚СЂРµР·РєР°
+	//Расчитаем вероятность на конце отрезка
 	float pmin = 0.3;
 	if(CheckAttribute(attack, "chr_ai.accuracy"))
 	{
 		pmin = stf(attack.chr_ai.accuracy);
 	}
-	//РџСЂРёРјРµРЅРёРј СЂР°Р·Р±СЂРѕСЃ РѕС‚ СЃРєРёР»Р°
+	//Применим разброс от скила
 	float aSkill = LAi_GetCharacterFightLevel(attack);
 	pmin = pmin + 0.3*aSkill;
-	//Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РїРѕРїР°РґР°РЅРёСЏ РІ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё
+	//Вероятность попадания в текущей позиции
 	float p = pmin + (1.0 - pmin)*(kDist/0.9);
-	//РЈС‡РµСЃС‚СЊ Р°Р±РёР»РёС‚Рё
+	//Учесть абилити
 	if(IsCharacterPerkOn(attack, "GunProfessional"))
 	{
 		p = p + 0.10;
@@ -248,10 +248,10 @@ float LAi_GunCalcProbability(aref attack, float kDist)
 	return p;
 }
 
-//РџРѕР»СѓС‡РёС‚СЊ РїРѕРІСЂРµР¶РґРµРЅРёРµ РѕС‚ РїРёСЃС‚РѕР»РµС‚Р°
+//Получить повреждение от пистолета
 float LAi_GunCalcDamage(aref attack)
 {
-	//Р Р°СЃС‡РёС‚С‹РІР°РµРј РїРѕРІСЂРµР¶РґРµРЅРёРµ РѕС‚ СЃР°Р±Р»Рё
+	//Расчитываем повреждение от сабли
 	float min = 10.0;
 	float max = 10.0;
 	if(CheckAttribute(attack, "chr_ai.dmggunmin"))
@@ -270,10 +270,10 @@ float LAi_GunCalcDamage(aref attack)
 	return dmg;
 }
 
-//Р Р°СЃС‡РёС‚Р°С‚СЊ РїРѕР»СѓС‡РµРЅРЅС‹Р№ РѕРїС‹С‚ РїСЂРё РїРѕРїР°РґР°РЅРёРё РёР· РїРёСЃС‚РѕР»РµС‚Р°
+//Расчитать полученный опыт при попадании из пистолета
 float LAi_GunCalcExperience(aref attack, aref enemy, float dmg)
 {
-	//Р’С‹С‡РёСЃР»СЏРµРј РїРѕР»СѓС‡РµРЅС‹Р№ РѕРїС‹С‚
+	//Вычисляем полученый опыт
 	float ra = 1.0;
 	float re = 1.0;
 	if(CheckAttribute(attack, "rank"))
@@ -298,10 +298,10 @@ float LAi_GunCalcExperience(aref attack, aref enemy, float dmg)
 	return dmg;
 }
 
-//Р Р°СЃС‡РёС‚Р°РµРј С‚РµРєСѓС‰СѓСЋ СЃРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµР·Р°СЂСЏРґРєРё РїРёСЃС‚РѕР»РµС‚Р°
+//Расчитаем текущую скорость перезарядки пистолета
 float LAi_GunReloadSpeed(aref chr)
 {
-	//РџРѕР»СѓС‡РёРј С‚РµРєСѓС‰РµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё Р·Р°СЂСЏРґРєРё
+	//Получим текущее состояние скорости зарядки
 	float charge_dlt = LAI_DEFAULT_DLTCHRG;
 	if(CheckAttribute(chr, "chr_ai.charge_dlt"))
 	{
@@ -346,11 +346,11 @@ float LAi_GunReloadSpeed(aref chr)
 	}
      //JRH
 
-	//РњРѕРґРёС„РёС†РёСЂСѓРµРј СЃРєРёР»РѕРј
+	//Модифицируем скилом
 	float skill = LAi_GetCharacterFightLevel(chr);
 	//charge_dlt = charge_dlt*(1.0 + 0.25*skill);
 	charge_dlt = charge_dlt*(1.0 + 0.25*skill)*F*P; //JRH
-	//РЈС‡С‚С‘Рј Р°Р±РёР»РёС‚Рё
+	//Учтём абилити
 	if(IsCharacterPerkOn(chr, "GunProfessional"))
 	{
 		charge_dlt = charge_dlt*1.5;
@@ -486,7 +486,7 @@ float LAi_GunReloadSpeed(aref chr)
 
 float LAi_CalcDeadExp(aref attack, aref enemy)
 {
-	//Р’С‹С‡РёСЃР»СЏРµРј РїРѕР»СѓС‡РµРЅС‹Р№ РѕРїС‹С‚
+	//Вычисляем полученый опыт
 	float ra = 1.0;
 	float re = 1.0;
 	if(CheckAttribute(attack, "rank"))
@@ -636,24 +636,24 @@ float LAi_CalcDeadExp(aref attack, aref enemy)
 //--------------------------------------------------------------------------------
 
 
-//РќР°С‡РёСЃР»РµРЅРёРµ РїРѕРІСЂРµР¶РґРµРЅРёР№ РїСЂРё РЅРµР·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅРЅРѕР№ Р°С‚Р°РєРµ
+//Начисление повреждений при незаблокированной атаке
 void LAi_ApplyCharacterAttackDamage(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 	LAi_ApplyCharacterBladeDamage(attack, enemy, attackDmg, hitDmg, false);
 }
 
-//РќР°С‡РёСЃР»РµРЅРёРµ РїРѕРІСЂРµР¶РґРµРЅРёР№ РїСЂРё Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅРЅРѕР№ Р°С‚Р°РєРµ
+//Начисление повреждений при заблокированной атаке
 void LAi_ApplyCharacterBlockDamage(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 	LAi_ApplyCharacterBladeDamage(attack, enemy, attackDmg, hitDmg, true);
 }
 
-//РќР°С‡РёСЃР»РµРЅРёРµ РїРѕРІСЂРµР¶РґРµРЅРёР№ РїСЂРё Р°С‚Р°РєРµ РјРµС‡С‘Рј
+//Начисление повреждений при атаке мечём
 void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, float hitDmg, bool isBlocked)
 {
-	//Р•СЃР»Рё РЅРµСѓР±РёРІР°РµРјС‹Р№, С‚Рѕ РЅРµС‚СЂРѕРіР°РµРј РµРіРѕ
+	//Если неубиваемый, то нетрогаем его
 	if(LAi_IsImmortal(enemy)) return;
-	//РџСЂРёРјРµРЅСЏРµРј Р°Р±РёР»РёС‚Рё
+	//Применяем абилити
 	/*float pBreak = 0.0;
 	if(IsCharacterPerkOn(attack, "SwordplayProfessional"))
 	{
@@ -674,13 +674,13 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 	// PB: Disable blocking for enemies with either no sword or their fists equiped
 	if(isBlocked)
 	{
-		//Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РїСЂРѕР±РёРІРєРё
+		//Вероятность пробивки
 		float p = LAi_BladeFindPiercingProbability(attack, enemy, hitDmg);
 		//p = p + pBreak;
 
-		//Р•СЃР»Рё С€Р°РЅСЃРѕРІ РїСЂРѕР±РёС‚СЊ РЅРµС‚, С‚Рѕ РЅРµРЅР°РЅРѕСЃРёРј РїСЂРѕРІСЂРµР¶РґРµРЅРёСЏ
+		//Если шансов пробить нет, то ненаносим провреждения
 //		if(p < 0.0) return;										// LDH removed 06Apr09
-		//Р•СЃР»Рё С€Р°РЅСЃРѕРІ РїСЂРѕР±РёС‚СЊ РЅРµС‚, С‚Рѕ РЅРµРЅР°РЅРѕСЃРёРј РїСЂРѕРІСЂРµР¶РґРµРЅРёСЏ
+		//Если шансов пробить нет, то ненаносим провреждения
 		if(rand(10000) > p*10000)	// if block is NOT pierced
 		{
 			// LDH rewrite 06Apr09
@@ -696,7 +696,7 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 			return;
 		}
 	}
-	//Р’С‹С‡РёСЃР»СЏРµРј РїРѕРІСЂРµР¶РґРµРЅРёРµ
+	//Вычисляем повреждение
 	float dmg = LAi_BladeCalcDamage(attack);
 	float damage = LAi_BladeApplySkills(attack, enemy, dmg);
 	// Baste - critical hit calculation changed -->
@@ -767,7 +767,7 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 	// TIH <--
 	// if(!LAi_IsFightMode(enemy) && attack.equip.blade=="blade5") {damage = damage*(rand(5)+sti(attack.skill.Sneak)+5);}	// ccc sneakmod backstab
 
-	//РќР°РЅРѕСЃРёРј РїРѕРІСЂРµР¶РґРµРЅРёРµ
+	//Наносим повреждение
 	// Baste -->
 	if(critical > 0.0)
 	{
@@ -777,17 +777,17 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 	{
 		LAi_ApplyCharacterDamage(enemy, MakeInt(ApplyArmor(enemy, attack, damage, true) + 0.5)); // GreatZen-NK
 	}
-	//РџСЂРѕРІРµСЂРёРј РЅР° СЃРјРµСЂС‚СЊ
+	//Проверим на смерть
 	LAi_CheckKillCharacter(enemy);
-	//Р•СЃС‚СЊ Р»Рё РѕСЂСѓР¶РёРµ Сѓ С†РµР»Рё
+	//Есть ли оружие у цели
 	bool isSetBalde = (CheckAttribute(enemy, "equip.blade") == true);//(SendMessage(enemy, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
-	//РќР°С‡РёСЃР»СЏРµРј РѕРїС‹С‚Р°
+	//Начисляем опыта
 	if(critical > 0.0) damage = critical; // So EXP calculation takes critical damage into account
 	float exp = LAi_BladeCalcExperience(attack, enemy, damage);
 	// Baste <--
 	if(LAi_IsDead(enemy))
 	{
-		//РќР°С‡РёСЃР»РёРј Р·Р° СѓР±РёР№СЃС‚РІРѕ
+		//Начислим за убийство
 		exp = exp + LAi_CalcDeadExp(attack, enemy);
 		if(!isSetBalde)
 		{
@@ -843,7 +843,7 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 	if ( resetshowXP ) { DeleteAttribute(attack,"donotshowXP"); } // TIH do not show other characters XP increases
 }
 
-//РќР°С‡РёСЃР»РµРЅРёРµ РїРѕРІСЂРµР¶РґРµРЅРёР№ РїСЂРё РїРѕРїР°РґР°РЅРёРё
+//Начисление повреждений при попадании
 void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 {
 	//Levis -->
@@ -885,13 +885,13 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 		}
 	}
 	//Levis <--
-	//Р•СЃР»Рё РЅРµСѓР±РёРІР°РµРјС‹Р№, С‚Рѕ РЅРµС‚СЂРѕРіР°РµРј РµРіРѕ
+	//Если неубиваемый, то нетрогаем его
 	if(LAi_IsImmortal(enemy)) return;
-	//Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РїРѕРїРѕРґР°РЅРёСЏ
+	//Вероятность поподания
 	float p = LAi_GunCalcProbability(attack, kDist);
-	//Р•СЃР»Рё РїСЂРѕРјР°С…РЅСѓР»РёСЃСЊ, С‚Рѕ РІС‹Р№РґРµРј
+	//Если промахнулись, то выйдем
 	if(rand(10000) > p*10000) return;
-	//РќР°С‡РёСЃР»СЏРµРј РїРѕРІСЂРµР¶РґРµРЅРёРµ
+	//Начисляем повреждение
 	float damage = LAi_GunCalcDamage(attack);
 	// Baste - added possibility to score critical hit with pistol -->
 	float critical = 0.0;
@@ -925,7 +925,7 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 	{
 		critical = damage*2.0;
 	}
-	//РђС‚С‚Р°РєР° СЃРІРѕРµР№ РіСЂСѓРїРїС‹
+	//Аттака своей группы
 	bool noExp;		// Changed to correspond to how it is in LAi_ApplyCharacterBladeDamage
 	noExp = false;
 	if(CheckAttribute(attack, "chr_ai.group"))
@@ -958,21 +958,21 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 	{
 		LAi_ApplyCharacterDamage(enemy, ApplyArmor(enemy, attack, damage, false) + 0.5)); // GreatZen-NK
 	}
-	//РџСЂРѕРІРµСЂРёРј РЅР° СЃРјРµСЂС‚СЊ
+	//Проверим на смерть
 
 	// ccc sep05, keeps player & officers barely alive
 	if(stf(enemy.chr_ai.hp)<1.0 && enemy.chr_ai.group==LAI_GROUP_PLAYER) enemy.chr_ai.hp = MIN_GUNATTACK_HP;
 
 	LAi_CheckKillCharacter(enemy);
-	//Р•СЃС‚СЊ Р»Рё РѕСЂСѓР¶РёРµ Сѓ С†РµР»Рё
+	//Есть ли оружие у цели
 	bool isSetBalde = (SendMessage(enemy, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
-	//РќР°С‡РёСЃР»СЏРµРј РѕРїС‹С‚
+	//Начисляем опыт
 	if(critical > 0.0) damage = critical; // So EXP calculation takes critical damage into account
 	// Baste <--
 	float exp = LAi_GunCalcExperience(attack, enemy, damage);
 	if(LAi_IsDead(enemy))
 	{
-		//РќР°С‡РёСЃР»РёРј Р·Р° СѓР±РёР№СЃС‚РІРѕ
+		//Начислим за убийство
 		exp = exp + LAi_CalcDeadExp(attack, enemy);
 		if(!isSetBalde)
 		{
@@ -1141,12 +1141,12 @@ void LAi_Location_CharacterSGFire()
 
 	if(LAi_CharacterCanFire(attack)) LAi_CharacterFireExecute(attack, enemy, kDist, true);	// PB: Use normal damage calculations
 /*	kDmg = LAi_GunCalcDamage(attack);
-	//Р РµР°РєС†РёСЏ РіСЂСѓРї РЅР° Р°С‚Р°РєСѓ
+	//Реакция груп на атаку
 	LAi_group_Attack(attack, enemy);
 	if(AUTO_SKILL_SYSTEM) { AddCharacterExpChar(attack, "Accuracy", 100*kDmg); }
 	else { AddCharacterExp(attack, 100*kDmg); }
-	//РќР°РЅРѕСЃРёРј РїРѕРІСЂРµР¶РґРµРЅРёРµ
+	//Наносим повреждение
 	LAi_ApplyCharacterDamage(enemy, MakeInt((5 + rand(5))*kDmg));
-	//РџСЂРѕРІРµСЂРёРј РЅР° СЃРјРµСЂС‚СЊ
+	//Проверим на смерть
 	LAi_CheckKillCharacter(enemy);*/
 }

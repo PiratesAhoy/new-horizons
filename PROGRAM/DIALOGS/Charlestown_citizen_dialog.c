@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
@@ -317,7 +317,7 @@ void ProcessDialogEvent()
 	//		}
 	/*		else
 			{
-				Link.l2 = "РЎ РєРµРј С‚РѕСЂРіСѓСЋС‚ РјРµСЃС‚РЅС‹Рµ С‚РѕСЂРіРѕРІС†С‹?";
+				Link.l2 = "С кем торгуют местные торговцы?";
 				Link.l2.go = "trade";
 			}*/
 
@@ -335,7 +335,7 @@ void ProcessDialogEvent()
 
 		case "Charlestown_1":
 			d.Text = DLG_TEXT[154];
-			//Link.l1 = "Р”Р°Р»СЊС€Рµ...";
+			//Link.l1 = "Дальше...";
 			//Link.l1.go = "Redmond_2";
 			Link.l2 = DLG_TEXT[155];
 			Link.l2.go = "new question";

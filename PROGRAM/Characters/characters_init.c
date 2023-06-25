@@ -128,7 +128,7 @@ void CreateCharacters()
 			}
 		break;
 		case PLAYER_TYPE_AGENT:
-			ch.shiplog.Entry.log0 = "Today I begin my new life as a shipâ€™s captain. I have left the service of the crown and the life of a spy behind me once and for all. If I had any doubts about retiring from that line of work they ended with the episode in Madagascar. It was nothing short of a miracle that I wasnâ€™t arrested and killed along with my counterparts from the other great powers. With my severance from the secret service I have purchased a vessel and made my way to the new world where, I hope, my past will not catch up with me.";
+			ch.shiplog.Entry.log0 = "Today I begin my new life as a ship’s captain. I have left the service of the crown and the life of a spy behind me once and for all. If I had any doubts about retiring from that line of work they ended with the episode in Madagascar. It was nothing short of a miracle that I wasn’t arrested and killed along with my counterparts from the other great powers. With my severance from the secret service I have purchased a vessel and made my way to the new world where, I hope, my past will not catch up with me.";
 			if(ENABLE_WEAPONSMOD)
 			{
 				GiveItem2Character(ch, "bladeC6+2");
@@ -143,7 +143,7 @@ void CreateCharacters()
 			}
 		break;
 		case PLAYER_TYPE_CORSAIR:
-			ch.shiplog.Entry.log0 = "This is a truly momentous occasion. I have worked towards this since I went on account all those years back as a young, know-nothing scallywag with more spine than brains. The crew has elected me captain, replacing our departed leader who lost his head to a cannon ball during our last cruise. Bad for him, good for me. The old man was a good captain and ran a tight ship but Iâ€™ve always had my own ideas about how things should be done. Now I get to see if Iâ€™m right!";
+			ch.shiplog.Entry.log0 = "This is a truly momentous occasion. I have worked towards this since I went on account all those years back as a young, know-nothing scallywag with more spine than brains. The crew has elected me captain, replacing our departed leader who lost his head to a cannon ball during our last cruise. Bad for him, good for me. The old man was a good captain and ran a tight ship but I’ve always had my own ideas about how things should be done. Now I get to see if I’m right!";
 			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
 			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "compass2");
@@ -234,7 +234,7 @@ void CreateCharacters()
 			GiveItem2Character(ch, "book15");
 		break;
 		case PLAYER_TYPE_EXPLORER:
-			ch.shiplog.Entry.log0 = "My mother always said I had the devilâ€™s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, his majestyâ€™s representative was impressed by my harrowing tale and paid me the full expeditionâ€™s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world.";
+			ch.shiplog.Entry.log0 = "My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, his majesty’s representative was impressed by my harrowing tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world.";
 			if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "bladeC6+1");
 			else			GiveItem2Character(ch, "bladeC6");
 			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
@@ -242,7 +242,7 @@ void CreateCharacters()
 			GiveItem2Character(ch, "compass3");
 		break;
 		case PLAYER_TYPE_GAMBLER:
-			ch.shiplog.Entry.log0 = "I have always had the luck of the cards but this is a true windfall even by my own high standards! I am the proud new owner of a fully-outfitted sailing vessel. The old sea dog thought his four kings had me beat but my royal straight flush took the grin from his face fast enough. Ha! I didnâ€™t even cheat. I was concerned the crew wouldnâ€™t take kindly to the situation but it seems the old manâ€™s bad luck had been rubbing off on them as well of late and there were no tears at the change in management.";
+			ch.shiplog.Entry.log0 = "I have always had the luck of the cards but this is a true windfall even by my own high standards! I am the proud new owner of a fully-outfitted sailing vessel. The old sea dog thought his four kings had me beat but my royal straight flush took the grin from his face fast enough. Ha! I didn’t even cheat. I was concerned the crew wouldn’t take kindly to the situation but it seems the old man’s bad luck had been rubbing off on them as well of late and there were no tears at the change in management.";
 			GiveItem2Character(ch, "blade2");
 			if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "pistol2+2");
 			else					GiveItem2Character(ch, "pistol2");
@@ -250,7 +250,7 @@ void CreateCharacters()
 			ChangeSmugglerLiking(ch, 15); //add 15 to the default 50 -Levis
 		break;
 		case PLAYER_TYPE_GUNNER:
-			ch.shiplog.Entry.log0 = "Ten long years I have spent in the navy over hot, roaring cannon. Iâ€™m half deaf and my body is riddled with grape shot and splinters but I have saved my wages diligently and today I am the proud owner of my own ship. I have a solid crew under my command who respect my time in service and the scars I carry. My days of shattered ships and drowning men may not be over but at least Iâ€™ll be pointing those guns where I choose now.";
+			ch.shiplog.Entry.log0 = "Ten long years I have spent in the navy over hot, roaring cannon. I’m half deaf and my body is riddled with grape shot and splinters but I have saved my wages diligently and today I am the proud owner of my own ship. I have a solid crew under my command who respect my time in service and the scars I carry. My days of shattered ships and drowning men may not be over but at least I’ll be pointing those guns where I choose now.";
 			GiveItem2Character(ch, "blade1");
 			if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "pistol5+2");
 			else					GiveItem2Character(ch, "pistol5");
@@ -264,7 +264,7 @@ void CreateCharacters()
 			ChangeSmugglerLiking(ch, -25); //substract 25 to the default 50 so you need to pay first -Levis
 		break;
 		case PLAYER_TYPE_MERCHANT:
-			ch.shiplog.Entry.log0 = "I've worked long and hard for this day but it has finally come. The captain has retired to life ashore and sold me his interest in the ship. My own vessel! She is in good shape thanks to my care as first mate these last several years and I know what she and her crew can manage. I have said my last â€˜Aye, sir' while standing on this deck. Now she goes where I tell her. It's good to be the captain!";
+			ch.shiplog.Entry.log0 = "I've worked long and hard for this day but it has finally come. The captain has retired to life ashore and sold me his interest in the ship. My own vessel! She is in good shape thanks to my care as first mate these last several years and I know what she and her crew can manage. I have said my last ‘Aye, sir' while standing on this deck. Now she goes where I tell her. It's good to be the captain!";
 			GiveItem2Character(ch, "blade1");
 			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
 			else GiveItem2Character(ch, "pistol1a");
@@ -488,7 +488,7 @@ void CreateCharacters()
 				break;
 
 				case "Orellana":
-					ch.shiplog.Entry.log0 = "Originally a Navy Officer, I was accused of treason by having a relationship with a privateer who had been taken prisoner by the Admiral during an attack. I was also arrested and tortured by the Inquisition. To save us, I made a pact with Padre MelquÃ­ades de VÃ¡zquez. In exchange for a grace for me and my lover, I had to serve the Inquisition and extend its influence in the New World. I didn't know I had just sold my soul to the Devil at that time. Shortly after my first mission, my love succumbed to the Black Death and was the only victim. Realizing that the Demon had betrayed me, I decided to steal a ship and flee Cartagena to take my revenge on him. But the crew began to fall mysteriously ill and died quickly. Then strange events occurred, it was like moving shadows, or sinister whispers. Those who had escaped the disease were swept away by madness and killed each other or put an end to their day...";
+					ch.shiplog.Entry.log0 = "Originally a Navy Officer, I was accused of treason by having a relationship with a privateer who had been taken prisoner by the Admiral during an attack. I was also arrested and tortured by the Inquisition. To save us, I made a pact with Padre Melquíades de Vázquez. In exchange for a grace for me and my lover, I had to serve the Inquisition and extend its influence in the New World. I didn't know I had just sold my soul to the Devil at that time. Shortly after my first mission, my love succumbed to the Black Death and was the only victim. Realizing that the Demon had betrayed me, I decided to steal a ship and flee Cartagena to take my revenge on him. But the crew began to fall mysteriously ill and died quickly. Then strange events occurred, it was like moving shadows, or sinister whispers. Those who had escaped the disease were swept away by madness and killed each other or put an end to their day...";
 					GiveItem2Character(ch, "Devil_Contract");
 					GiveItem2Character(ch, "bldevil");
 					GiveItem2Character(ch, "pistol27");

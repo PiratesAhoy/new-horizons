@@ -6,16 +6,16 @@
 #define MORALE_NORMAL   45
 #define MORALE_MIN		0
 #define MORALE_TABLE_SIZE	10
-#define MORALET_TREACHEROUS	0	//РЈР¶Р°СЃРЅР°СЏ
-#define MORALET_AWFUL		1	//РћС‚РІСЂР°С‚РёС‚РµР»СЊРЅР°СЏ
-#define MORALET_LOW			2	//РџР»РѕС…Р°СЏ
-#define MORALET_POOR		3	//РќРёР·РєР°СЏ
-#define MORALET_NORMAL		4	//РЎСЂРµРґРЅСЏСЏ
-#define MORALET_ELATED		5	//РџСЂРёРїРѕРґРЅСЏС‚Р°СЏ
-#define MORALET_GOOD		6	//РҐРѕСЂРѕС€Р°СЏ
-#define MORALET_HIGH		7	//Р’С‹СЃРѕРєР°СЏ
-#define MORALET_EXCELLENT	8	//РћС‚Р»РёС‡РЅР°СЏ
-#define MORALET_HEROIC		9	//Р“РµСЂРѕРёС‡РµСЃРєР°СЏ
+#define MORALET_TREACHEROUS	0	//Ужасная
+#define MORALET_AWFUL		1	//Отвратительная
+#define MORALET_LOW			2	//Плохая
+#define MORALET_POOR		3	//Низкая
+#define MORALET_NORMAL		4	//Средняя
+#define MORALET_ELATED		5	//Приподнятая
+#define MORALET_GOOD		6	//Хорошая
+#define MORALET_HIGH		7	//Высокая
+#define MORALET_EXCELLENT	8	//Отличная
+#define MORALET_HEROIC		9	//Героическая
 string  MoraleTable[MORALE_TABLE_SIZE];
 
 #define REPUTATION_MIN          1

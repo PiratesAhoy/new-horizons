@@ -1776,7 +1776,7 @@ void SetShowGroup(string groupName)
 	aref arGroup;
 	makearef(arGroup,objControlsState.keygroups.(groupName));
 
-	// С•СЂРѕРїРёСЃР°С‚СЊ РєРѕРЅС‚СЂРѕР»Рё РІ СЃРїРёСЃРѕРє
+	// Прописать контроли в список
 	DeleteAttribute(&objArrayControls,"");
 	int i, idx, tmpcolor;
 	aref arControl;
@@ -1830,8 +1830,8 @@ void procFTUpdate()
 {
 	string nodName = GetEventData();
 	if(nodName!="CONTROLSWINDOW") return;
-	int grNum = GetEventData(); // РїРµСЂРІР°в‚¬ РіСЂСѓРїРїР° РІ РёР·РјРµРЅРµРЅРёв‚¬С…
-	int strNum = GetEventData(); // РїРµСЂРІР°в‚¬ СЃС‚СЂРѕРєР° РІ РёР·РјРµРЅРµРЅРёв‚¬С…
+	int grNum = GetEventData(); // первая группа в изменениях
+	int strNum = GetEventData(); // первая строка в изменениях
 
 	object objPos,obj;
 	DeleteAttribute(&objPos,"");
@@ -1911,7 +1911,7 @@ string GetControlNameFromIdx(int idx)
 void procFTActivate()
 {
 	string nodName = GetEventData();
-	curCntrlIdx = GetEventData(); // РЅРѕРјРµСЂ С‚РµРєСЃС‚Р°
+	curCntrlIdx = GetEventData(); // номер текста
 	if(nodName!="CONTROLSWINDOW" && nodName!="SETTINGS_WINDOW") return;
 	if(nodName=="SETTINGS_WINDOW") { ShowSettingsDescribe(GetSettingsName(curCntrlIdx), curCntrlIdx); return; }
 

@@ -1,7 +1,7 @@
-title=Cofre de banderas - DueÃ±o del astillero
+title=Cofre de banderas - Dueño del astillero
 text.t1=El astillero se encuentra en la parte baja de Nueva Suecia. El cartel dice 'Astillero'.
-text.t2=Si pudiera llegar hasta la campana que hay sobre la puerta del astillero, Â¿quizÃ¡s el dueÃ±o pensarÃ­a que es una alarma de incendios?
-text.t3=Un cofre de banderas ha sido vendido al dueÃ±o del astillero.
+text.t2=Si pudiera llegar hasta la campana que hay sobre la puerta del astillero, ¿quizás el dueño pensaría que es una alarma de incendios?
+text.t3=Un cofre de banderas ha sido vendido al dueño del astillero.
 text.t4=Tengo el cofre de banderas.
 text.t5=
 text.t6=

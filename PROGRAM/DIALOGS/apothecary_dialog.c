@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "bloodletting":
 			Dialog.text = DLG_TEXT[31];
 			Link.l1 = DLG_TEXT[32];

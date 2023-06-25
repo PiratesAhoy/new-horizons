@@ -1,3 +1,3 @@
 title=Un nuevo comienzo
-text.t1=Por fin he llegado a #stown#. Ahora, me dispongo a hacer todos los preparativos necesarios antes de zarpar en nuestro pr√≥ximo viaje.
-text.t2=Por fin tengo mi nuevo barco; mi fiel #sshiptype#, que he bautizado con el nombre de #sshipname#. Ahora, me dispongo a hacerme a la mar para perseguir mis sue√±os como capit√°n.
+text.t1=Por fin he llegado a #stown#. Ahora, me dispongo a hacer todos los preparativos necesarios antes de zarpar en nuestro prÛximo viaje.
+text.t2=Por fin tengo mi nuevo barco; mi fiel #sshiptype#, que he bautizado con el nombre de #sshipname#. Ahora, me dispongo a hacerme a la mar para perseguir mis sueÒos como capit·n.

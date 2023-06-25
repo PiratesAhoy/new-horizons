@@ -1,128 +1,128 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| GoldBug.c |=====}
-William{РЈРёР»СЊСЏРј}
-Legrand{Р›РµРіСЂР°РЅ}
+William{Уильям}
+Legrand{Легран}
 
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
-Edgar Allan{Р­РґРіР°СЂ РђР»Р»Р°РЅ}
-Poe{РџРѕ}
-Jupiter{Р®РїРёС‚РµСЂ}
+Edgar Allan{Эдгар Аллан}
+Poe{По}
+Jupiter{Юпитер}
 
 {=====| TempQuest.c |=====}
-C. Auguste{Рљ. РћРіСЋСЃС‚}
-Dupin{Р”СЋРїРµРЅ}
-Arthur Gordon{РђСЂС‚СѓСЂ Р“РѕСЂРґРѕРЅ}
-Pym{РџРёРј}
-Lieutenant{Р›РµР№С‚РµРЅР°РЅС‚}
-G{Р”Р¶.}
-Medicine{Р”РѕРєС‚РѕСЂ}
-Woman{Р–РµРЅС‰РёРЅР°}
-Medicine Woman{Р—РЅР°С…Р°СЂРєР°}
-Hans{Р“Р°РЅСЃР°}
-Pfaall{РџС„Р°Р°Р»СЊ}
-Wilson{РЈРёР»СЃРѕРЅ}
-Ethelred{Р­С‚РµР»СЊСЂРµРґ}
-Usher{РђС€РµСЂ}
-Fortunato{Р¤РѕСЂС‚СѓРЅР°С‚Рѕ}
-Summer{РЎР°РјРјРµСЂ}
-visitor{РїРѕСЃРµС‚РёС‚РµР»СЊ}
-Soldier{РЎРѕР»РґР°С‚}
-Bartender{Р‘Р°СЂРјРµРЅ}
-Sergeant{РЎРµСЂР¶Р°РЅС‚}
-Corporal{РљР°РїСЂР°Р»}
-Sailor{РњРѕСЂСЏРє}
-Claude{РљР»РѕРґ}
-Frollo{Р¤СЂРѕР»Р»Рѕ}
-Landlady{РҐРѕР·СЏР№РєР°}
-Natalia{РќР°С‚Р°Р»РёР°}
-Decoteau{Р”РµРєРѕС‚Рѕ}
-Serena{РЎРµСЂРµРЅР°}
-Tisserand{РўРёСЃСЃРµСЂР°РЅРґ}
-Celia{РЎРµР»РёСЏ}
-Hilder{РҐРёР»РґРµСЂ}
-Mummy{РњСѓРјРёСЏ}
-Citizen{Р“РѕСЂРѕР¶Р°РЅРёРЅ}
-Axel{РђРєСЃРµР»СЊ}
-von Fersen{РІРѕРЅ Р¤РµСЂСЃРµРЅ}
-Doctor{Р”РѕРєС‚РѕСЂ}
-KP{РљРџ}
-Street{РЈР»РёС‡РЅС‹Р№}
-Merchant{РўРѕСЂРіРѕРІРµС†}
-Shipyard{Р’РµСЂС„Рё}
-Owner{Р’Р»Р°РґРµР»РµС†}
-Harbour{Р“Р°РІР°РЅРё}
-Master{РњР°СЃС‚РµСЂ}
-Bank{Р‘Р°РЅРєР°}
-Clerk{РЎР»СѓР¶Р°С‰РёР№}
-Blacksmith{РљСѓР·РЅРµС†}
-Storeowner{Р’Р»Р°РґРµР»РµС† РјР°РіР°Р·РёРЅР°}
-Governor Thomas{Р“СѓР±РµСЂРЅР°С‚РѕСЂ РўРѕРјР°СЃ}
-Bennet{Р‘РµРЅРЅРµС‚}
-The Chinese{РљРёС‚Р°РµС†}
-Man{РњСѓР¶С‡РёРЅР°}
-Black Magic Woman{Р§С‘СЂРЅР°СЏ РІРµРґСЊРјР°}
-Plantation{РџР»Р°РЅС‚Р°С†РёСЏ}
-Guard{РћС…СЂР°РЅР°}
-Captain William{РљР°РїРёС‚Р°РЅ РЈРёР»СЊСЏРј}
-Kidd{РљРёРґРґ}
-Howard{Р“РѕРІР°СЂРґ}
-Pyle{РџР°Р№Р»}
-Caroline{РљР°СЂРѕР»РёРЅР°}
-K{Рљ}
-Friday{РџСЏС‚РЅРёС†Р°}
-Alexander{РђР»РµРєСЃР°РЅРґСЂ}
-Selkirk{РЎРµР»РєРёСЂРє}
-Grandma{Р‘Р°Р±СѓС€РєР°}
-Rogers{Р РѕРґР¶РµСЂСЃ}
-Dave{Р”СЌР№РІ}
-Edna{Р­РґРЅР°}
-Nathaniel{РќР°С‚Р°РЅРёСЌР»СЊ}
-Hawk{РҐР°СѓРє}
-Danielle{Р”Р°РЅРёСЌР»СЊ}
-Fawn{Р¤Р°РІРЅ}
-Steven{РЎС‚РёРІРµРЅ}
+C. Auguste{К. Огюст}
+Dupin{Дюпен}
+Arthur Gordon{Артур Гордон}
+Pym{Пим}
+Lieutenant{Лейтенант}
+G{Дж.}
+Medicine{Доктор}
+Woman{Женщина}
+Medicine Woman{Знахарка}
+Hans{Ганса}
+Pfaall{Пфааль}
+Wilson{Уилсон}
+Ethelred{Этельред}
+Usher{Ашер}
+Fortunato{Фортунато}
+Summer{Саммер}
+visitor{посетитель}
+Soldier{Солдат}
+Bartender{Бармен}
+Sergeant{Сержант}
+Corporal{Капрал}
+Sailor{Моряк}
+Claude{Клод}
+Frollo{Фролло}
+Landlady{Хозяйка}
+Natalia{Наталиа}
+Decoteau{Декото}
+Serena{Серена}
+Tisserand{Тиссеранд}
+Celia{Селия}
+Hilder{Хилдер}
+Mummy{Мумия}
+Citizen{Горожанин}
+Axel{Аксель}
+von Fersen{вон Ферсен}
+Doctor{Доктор}
+KP{КП}
+Street{Уличный}
+Merchant{Торговец}
+Shipyard{Верфи}
+Owner{Владелец}
+Harbour{Гавани}
+Master{Мастер}
+Bank{Банка}
+Clerk{Служащий}
+Blacksmith{Кузнец}
+Storeowner{Владелец магазина}
+Governor Thomas{Губернатор Томас}
+Bennet{Беннет}
+The Chinese{Китаец}
+Man{Мужчина}
+Black Magic Woman{Чёрная ведьма}
+Plantation{Плантация}
+Guard{Охрана}
+Captain William{Капитан Уильям}
+Kidd{Кидд}
+Howard{Говард}
+Pyle{Пайл}
+Caroline{Каролина}
+K{К}
+Friday{Пятница}
+Alexander{Александр}
+Selkirk{Селкирк}
+Grandma{Бабушка}
+Rogers{Роджерс}
+Dave{Дэйв}
+Edna{Эдна}
+Nathaniel{Натаниэль}
+Hawk{Хаук}
+Danielle{Даниэль}
+Fawn{Фавн}
+Steven{Стивен}
 Maturin{}
-Jack{Р”Р¶РµРє}
-Aubrey{РћР±СЂРё}
-Sparrow{Р’РѕСЂРѕР±РµР№}
-Elizabeth{Р­Р»РёР·Р°Р±РµС‚}
-Swann{РЎСѓРѕРЅРЅ}
-Hector{Р“РµРєС‚РѕСЂ}
-Barbossa{Р‘Р°СЂР±РѕСЃСЃР°}
-Will{РЈРёР»Р»}
-Turner{РўС‘СЂРЅРµСЂ}
-Beatrice{Р‘РµР°С‚СЂРёСЃ}
-Devlin{Р”РµРІР»РёРЅ}
-Jean{Р–Р°РЅ}
-de la Croix{РґРµ Р»Р° РљСЂСѓР°}
-Horatio{Р“РѕСЂР°С†РёРѕ}
-Hornblower{РҐРѕСЂРЅР±Р»Р°СѓСЌСЂ}
-Archie{РђСЂС‡Рё}
-Kennedy{РљРµРЅРЅРµРґРё}
-Edward{Р­РґРІР°СЂРґ}
-Pellew{РџРµР»Р»СЊСЋ}
-Bush{Р‘СѓС€}
-Richard{Р РёС‡Р°СЂРґ}
-Sharpe{РЁР°СЂРї}
-Patrick{РџР°С‚СЂРёРє}
-Harper{РҐР°СЂРїРµСЂ}
-Haggman{РҐР°РіРіРјР°РЅ}
-Harris{РҐР°СЂСЂРёСЃ}
-Lafitte{Р›Р°С„РёС‚С‚}
-Bartolomeu{Р‘Р°СЂС‚РѕР»РѕРјСЊСЋ}
-o Portugues{РџРѕСЂС‚СѓРіР°Р»РµС†}
-Emilio{Р­РјРёР»РёРѕ}
-Soares{РЎРѕР°СЂРµСЃ}
-Johan{Р™РѕРіР°РЅ}
-Elting{Р­Р»С‚РёРЅРі}
-Maroon{РњР°СЂРѕРЅ}
-Deserter{Р”РµР·РµСЂС‚РёСЂ}
-Thug{Р“СЂРѕРјРёР»Р°}
-Bandit{Р‘Р°РЅРґРёС‚}
-Priest{РЎРІСЏС‰РµРЅРЅРёРє}
-Zombie{Р—РѕРјР±Рё}
-Buccaneer{РџРёСЂР°С‚}
+Jack{Джек}
+Aubrey{Обри}
+Sparrow{Воробей}
+Elizabeth{Элизабет}
+Swann{Суонн}
+Hector{Гектор}
+Barbossa{Барбосса}
+Will{Уилл}
+Turner{Тёрнер}
+Beatrice{Беатрис}
+Devlin{Девлин}
+Jean{Жан}
+de la Croix{де ла Круа}
+Horatio{Горацио}
+Hornblower{Хорнблауэр}
+Archie{Арчи}
+Kennedy{Кеннеди}
+Edward{Эдвард}
+Pellew{Пеллью}
+Bush{Буш}
+Richard{Ричард}
+Sharpe{Шарп}
+Patrick{Патрик}
+Harper{Харпер}
+Haggman{Хаггман}
+Harris{Харрис}
+Lafitte{Лафитт}
+Bartolomeu{Бартоломью}
+o Portugues{Португалец}
+Emilio{Эмилио}
+Soares{Соарес}
+Johan{Йоган}
+Elting{Элтинг}
+Maroon{Марон}
+Deserter{Дезертир}
+Thug{Громила}
+Bandit{Бандит}
+Priest{Священник}
+Zombie{Зомби}
+Buccaneer{Пират}
 
 {=====| 191 characters |=====}

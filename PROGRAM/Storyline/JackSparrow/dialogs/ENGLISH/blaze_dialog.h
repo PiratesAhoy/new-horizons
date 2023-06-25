@@ -267,7 +267,7 @@ string DLG_TEXT[328] = {
 "(You see the port soldier)",
 "That's him again! Let's catch him!",
 "(Barbossa talking to his crew)", 
-"Gentlemen, the time has come! Our torment is nearing an end! For ten years we've been tested and tried. And each man here has moved his mettle a hundred times over and a hundred times again. Punished we were the lot of us, disproportionate to our crime. Here it is! The cursed treasure of CortÃ©s himself. Every last piece that went astray we have returned. Save for this!",
+"Gentlemen, the time has come! Our torment is nearing an end! For ten years we've been tested and tried. And each man here has moved his mettle a hundred times over and a hundred times again. Punished we were the lot of us, disproportionate to our crime. Here it is! The cursed treasure of Cortés himself. Every last piece that went astray we have returned. Save for this!",
 "Maybe you are immortal, but I can still knock you out idiot! Now, I have to join my crew to invert the situation on my ship.",
 "Captain ",
 "You are accused for crimes against the Crown. Said crimes being numerous in quantity and sinister in nature. The most egregious of these to be cited herewith: piracy, smuggling, sailing under false colours, arson, kidnapping, looting, poaching, brigandage, pilfening, depravity, depredation and general lawlessness. For these crimes, you are sentenced to be hung by the neck until dead. May God have mercy on your soul.",

@@ -18,12 +18,12 @@ void ProcessDialogEvent()
 	string Ami;
 	if(PChar.sex == "woman")
 	{
-		Frere = "ma s≈ìur";
+		Frere = "ma súur";
 		Ami = "m'amie";
 	}
 	else
 	{
-		Frere = "mon fr√©re";
+		Frere = "mon frÈre";
 		Ami = "mon ami";
 	}
 	Preprocessor_Add("smarmy", Frere); 
@@ -32,7 +32,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------–î–∏–∞–ª–æ–≥ –ø–µ—Ä–≤—ã–π - –ø–µ—Ä–≤–∞—è –≤—Å—Ç—Ä–µ—á–∞
+		// -----------------------------------ƒË‡ÎÓ„ ÔÂ‚˚È - ÔÂ‚‡ˇ ‚ÒÚÂ˜‡
 
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
@@ -90,7 +90,7 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "Sit_Right_Dialog_1";
 			Dialog.cam = "1";
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê003";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿003";
 			
 			d.Text =  RandSwear() +  DLG_TEXT[4];
 			Link.l1 = DLG_TEXT[5] + GetMyFullName(PChar) + DLG_TEXT[6];
@@ -110,14 +110,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "Node_4":
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê006";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿006";
 			d.Text = DLG_TEXT[12] + GetAddressForm(ADDR_CIVIL, FRANCE, chrsex(PChar)) + DLG_TEXT[13];
 			Link.l1 = DLG_TEXT[14];
 			Link.l1.go = "Node_5";
 		break;
 
 		case "Node_5":
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê007";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿007";
 			Diag.TempNode = "SitAndDrink";
 			d.Text = DLG_TEXT[15]; 
 			Link.l1 = DLG_TEXT[16];
@@ -133,14 +133,14 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "Sit_Look_Around";
 			Dialog.cam = "1";
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê008";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿008";
 			d.Text = DLG_TEXT[17];
 			Link.l1 = DLG_TEXT[18];
 			Link.l1.go = "Node_7";
 		break;
 
 		case "Node_7":
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê009";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿009";
 			d.Text = DLG_TEXT[19] + GetMyName(Pchar) + DLG_TEXT[20];
 			Link.l1 = DLG_TEXT[21];
 			Link.l1.go = "node_8";
@@ -154,7 +154,7 @@ void ProcessDialogEvent()
 		break;
 	
 		case "Node_9":
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê011";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿011";
 			d.Text = DLG_TEXT[24];
 			Link.l1 = DLG_TEXT[25];
 			Link.l1.go = "Node_10";
@@ -167,7 +167,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Node_11":
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê013";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿013";
 			d.Text = DLG_TEXT[28];
 			Link.l1 = DLG_TEXT[29];
 			Link.l1.go = "Node_11a";			
@@ -180,7 +180,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Node_12":
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê014";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿014";
 			d.Text = DLG_TEXT[32];
 			Link.l1 = DLG_TEXT[33];
 			Link.l1.go = "Node_13";
@@ -201,7 +201,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Node_15":
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê018";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿018";
 			d.Text = DLG_TEXT[39];
 			Link.l1 = DLG_TEXT[40];
 			Link.l1.go = "Node_16";
@@ -235,7 +235,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "money":
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê019";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿019";
 			d.Text = DLG_TEXT[49];
 			Link.l1 = DLG_TEXT[50];
 			Link.l1.go = "risks";
@@ -248,7 +248,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "risks_2":
-			Dialog.snd = "voice\VI–ú–ê\VI–ú–ê014";
+			Dialog.snd = "voice\VIÃ¿\VIÃ¿014";
 			d.Text = DLG_TEXT[53] + GetMyName(Pchar) + DLG_TEXT[54];
 			Link.l1 = DLG_TEXT[55];
 			Link.l1.go = "risks_3";

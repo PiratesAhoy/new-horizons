@@ -60,7 +60,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
@@ -335,7 +335,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "gambling_node":
-			//Log_SetStringToLog("РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹РёРіСЂС‹С€РµР№ " + gambling + "!");
+			//Log_SetStringToLog("Количество выигрышей " + gambling + "!");
 
 			Diag.tempNode = "first time";
 
@@ -547,7 +547,7 @@ void ProcessDialogEvent()
 				AddMoneyToCharacter(pchar, gameBet);
 				npchar.money = makeint(npchar.money) - gameBet;
 				pchar.quest.gambling = makeint(pchar.quest.gambling) + 1;
-				/*//РІС‹Р·РѕРІ РѕС‚ РјСѓР¶РёРєР° СЃ РєР»РµРІС‹РјРё РєРѕСЃС‚СЏРјРё
+				/*//вызов от мужика с клевыми костями
 				if (makeint(pchar.quest.gambling) == 60)
 				{
 
@@ -555,7 +555,7 @@ void ProcessDialogEvent()
 					pchar.quest.exit_from_tavern.win_condition.l1.location = pchar.location;
 					pchar.quest.exit_from_tavern.win_condition = "exit_from_tavern";
 				}
-				//РІС‹Р·РѕРІ РѕС‚ РјСѓР¶РёРєР° РёРіСЂР°СЋС‰РµРіРѕ, РєР°Рє Р±РѕРі
+				//вызов от мужика играющего, как бог
 				if (makeint(pchar.quest.gambling) == 100)
 				{
 					pchar.quest.exit_from_tavern.win_condition.l1 = "ExitFromLocation";

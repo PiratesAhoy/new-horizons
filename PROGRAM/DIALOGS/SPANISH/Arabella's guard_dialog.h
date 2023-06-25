@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = {
-"MÃ¡s vale que cuides tus modales delante de la seÃ±orita ",
+"Más vale que cuides tus modales delante de la señorita ",
 "Arabella Silehard",
-". Si das un paso en falso, te arrancarÃ© la cabeza.",
-"Â¡Por favor! Â¿Acaso tengo pinta de zoquete?",
+". Si das un paso en falso, te arrancaré la cabeza.",
+"¡Por favor! ¿Acaso tengo pinta de zoquete?",
 
 };

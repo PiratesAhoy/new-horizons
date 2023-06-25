@@ -83,31 +83,31 @@ bool LoadLocation(ref loc)
 	{
 		switch(loc.type)
 		{
-			case "cave":			// РїРµС‰РµСЂР°
+			case "cave":			// пещера
 				ExecuteTechnique("amb_cave");
 				break;
 			case "KhaelRoa":			// desert cave
 				ExecuteTechnique("amb_cave");
 				break;
-			case "inca_temple":		// С…СЂР°Рј РёРЅРєРѕРІ
+			case "inca_temple":		// храм инков
 				ExecuteTechnique("amb_inca_temple");
 				break;
-			case "house":			// РґРѕРј
+			case "house":			// дом
 				ExecuteTechnique("amb_house");
 				break;
-			case "tavern":			// С‚Р°РІРµСЂРЅР°
+			case "tavern":			// таверна
 				ExecuteTechnique("amb_tavern");
 				break;
-			case "shop":			// РјР°РіР°Р·РёРЅ
+			case "shop":			// магазин
 				ExecuteTechnique("amb_shop");
 				break;
-			case "residence":		// СЂРµР·РёРґРµРЅС†РёСЏ
+			case "residence":		// резиденция
 				ExecuteTechnique("amb_residence");
 				break;
-			case "church":			// С†РµСЂРєРѕРІСЊ
+			case "church":			// церковь
 				ExecuteTechnique("amb_church");
 				break;
-			case "jail":			// С‚СЋСЂСЊРјР°
+			case "jail":			// тюрьма
 				ExecuteTechnique("amb_jail");
 				break;
 			case "dungeon":
@@ -801,9 +801,9 @@ bool LocLoadModel(aref loc, string sat, string addition)
 {
 	//traceif("Load model: " + loc.(sat) + " from:" + sat);
 
-	//РџСЂРѕРїСѓСЃС‚РёРј РїСѓСЃС‚РѕРµ РёРјСЏ
+	//Пропустим пустое имя
 	if(loc.(sat) == "") return true;
-	//РЎС‡РёС‚С‹РІР°РµРј РїР°СЂР°РјРµС‚СЂС‹ РјРѕРґРµР»СЊРєРё
+	//Считываем параметры модельки
 	string attr, attr1;
 	bool res;
 	string tech = "";
@@ -812,7 +812,7 @@ bool LocLoadModel(aref loc, string sat, string addition)
 	if(CheckAttribute(loc, attr)) tech = loc.(attr);
 	attr = sat + ".level";
 	if(CheckAttribute(loc, attr)) level = MakeInt(loc.(attr));
-	//Р“СЂСѓР·РёРј РјРѕРґРµР»СЊРєСѓ
+	//Грузим модельку
 	string realModel = loc.(sat) + addition;
 	if(HasSubStr(sat,"back") && !ownDeckStarted())
 	{
@@ -840,13 +840,13 @@ bool LocLoadModel(aref loc, string sat, string addition)
 	}
 	res = SendMessage(loc, "lssl", MSG_LOCATION_ADD_MODEL, realModel, tech, level);
 	if(res == 0) return 0;
-	//РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј С„Р»Р°РіРё
+	//Устанавливаем флаги
 	object mdl;
 	if(SendMessage(loc, "le", MSG_LOCATION_GET_MODEL, &mdl) != 0)
 	{
 		SetTownFlag(loc, &mdl); // KK
 	}
-	// РџСЂРѕРІРµСЂСЏРµРј РЅР° РїРµРЅСѓ
+	// Проверяем на пену
 	attr = sat + ".foam";
 	if(CheckAttribute(loc, attr) != 0)
 	{
@@ -862,7 +862,7 @@ bool LocLoadModel(aref loc, string sat, string addition)
 			//traceif("<> Model " + attr + ", have a foam!!!");
 		}
 	}
-	//РЎС‚Р°РІРёРј РјРѕРґРёС„РёРєР°С‚РѕСЂС‹
+	//Ставим модификаторы
 	//locator
 	attr = sat + ".locator.group";
 	//traceif("> " + attr);
@@ -934,7 +934,7 @@ float GetAngleY(float x, float z)
 	float l = vx*vx + vz*vz;
 	if(l > 0.0000001)
 	{
-		//РС‰РµРј СѓРіР»С‹
+		//Ищем углы
 		vz = acos(vz/sqrt(l));
 	}else vz = l;
 	if(vx < 0) vz = -vz;

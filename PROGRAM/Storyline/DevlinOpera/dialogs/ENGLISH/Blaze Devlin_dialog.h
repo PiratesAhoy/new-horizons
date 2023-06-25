@@ -46,7 +46,7 @@ string DLG_TEXT[87] = {
 "I can imagine that... But the way you put it they must be watching after this island as if it was the eyeball of King Philipp II.",
 "They certainly do. After all it's their main base of operations in the new world, the place where the treasure fleet assembles to go back to Europe and the place where the explorers start for their conquests of the mainland. And wherever you go, Diego Velazquez de Cuellar, the man who first claimed and settled the island for Spain about 50 years ago, is a national hero.",
 "But he didn't have much competition in his exploits, did he?",
-"Not from Europe at that time. But you're forgetting the people that lived here before, the TaÃ­no tribes. Their chieftain, a fellow going by the name of Hatuey, fought the Spanish intruders as well as he could, but was defeated and executed. If y'ask me, he's the true hero of the story, taking on the Spaniards with sticks and stones or whatever!",
+"Not from Europe at that time. But you're forgetting the people that lived here before, the Taíno tribes. Their chieftain, a fellow going by the name of Hatuey, fought the Spanish intruders as well as he could, but was defeated and executed. If y'ask me, he's the true hero of the story, taking on the Spaniards with sticks and stones or whatever!",
 "Sounds like a brave man.",
 "Ha! He surely was. When he was about to be executed, he was asked one more time if he wants to go to heaven. Hatuey asked, if the Spaniards go to heaven, the Spanish priest said yes. So Hatuey answered he would rather go to hell, to get away from the Spaniards! That's my kind of guy...",
 "Ha-ha, yes, I could see you getting along with him!",

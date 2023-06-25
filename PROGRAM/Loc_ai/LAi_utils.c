@@ -1,4 +1,4 @@
-//РџРѕРІРµСЂРёС‚СЊ СЃСЃС‹Р»РєСѓ РЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Поверить ссылку на персонажа
 bool LAi_CheckCharacter(aref chr, string out)
 {
 	if(!TestRef(chr))
@@ -24,7 +24,7 @@ bool LAi_CheckCharacter(aref chr, string out)
 	return true;
 }
 
-//Р—Р°СЂСЏРґРёР»СЃСЏ Р»Рё РїРёСЃС‚РѕР»РµС‚ Сѓ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Зарядился ли пистолет у персонажа
 bool LAi_CharacterCanFire(aref chr)
 {
 	if(!CheckAttribute(chr, "chr_ai.chargeprc"))
@@ -49,7 +49,7 @@ bool LAi_CharacterCanFire(aref chr)
 	return false;
 }
 
-//РњРѕР¶РµС‚ Р»Рё СЃСЂР°Р¶Р°С‚СЊСЃСЏ РїРµСЂСЃРѕРЅР°Р¶ РІ Р·Р°РґР°РЅРЅРѕР№ Р»РѕРєР°С†РёРё
+//Может ли сражаться персонаж в заданной локации
 bool LAi_LocationCanFight()
 {
 	if(IsEntity(loadedLocation) != true) return true;
@@ -58,7 +58,7 @@ bool LAi_LocationCanFight()
 	return true;
 }
 
-//РќР°Р№С‚Рё СЃР»СѓС‡Р°Р№РЅС‹Р№ Р»РѕРєР°С‚РѕСЂ РІ Р·Р°РґР°РЅРЅРѕР№ РіСЂСѓРїРїРµ Р»РѕРєР°С‚РѕСЂРѕРІ
+//Найти случайный локатор в заданной группе локаторов
 string LAi_FindRandomLocator(string group)
 {
 	//Rewritten by Levis
@@ -106,7 +106,7 @@ string LAi_FindRandomLocator(string group)
 	return "";*/
 }
 
-//РќР°Р№С‚Рё РґР°Р»СЊРЅРёР№ Р»РѕРєР°С‚РѕСЂ РІ Р·Р°РґР°РЅРЅРѕР№ РіСЂСѓРїРїРµ Р»РѕРєР°С‚РѕСЂРѕРІ
+//Найти дальний локатор в заданной группе локаторов
 string LAi_FindFarLocator(string group, float x, float y, float z)
 {
 	if(IsEntity(loadedLocation) != true) return "";
@@ -143,7 +143,7 @@ string LAi_FindFarLocator(string group, float x, float y, float z)
 	return locator;
 }
 
-//РќР°Р№С‚Рё РґР°Р»СЊРЅРёР№ СЃРІРѕР±РѕРґРЅС‹Р№ Р»РѕРєР°С‚РѕСЂ РІ Р·Р°РґР°РЅРЅРѕР№ РіСЂСѓРїРїРµ Р»РѕРєР°С‚РѕСЂРѕРІ
+//Найти дальний свободный локатор в заданной группе локаторов
 string LAi_FindFarFreeLocator(string group, float x, float y, float z)
 {
 	if(IsEntity(loadedLocation) != true) return "";
@@ -186,7 +186,7 @@ string LAi_FindFarFreeLocator(string group, float x, float y, float z)
 	return locator;
 }
 
-//РќР°Р№С‚Рё Р±Р»РёР¶Р°Р№С€РёР№ СЃРІРѕР±РѕРґРЅС‹Р№ Р»РѕРєР°С‚РѕСЂ
+//Найти ближайший свободный локатор
 string LAi_FindNearestFreeLocator(string group, float x, float y, float z)
 {
 	if(IsEntity(loadedLocation) != true) return "";
@@ -227,7 +227,7 @@ string LAi_FindNearestFreeLocator(string group, float x, float y, float z)
 	return GetAttributeName(GetAttributeN(grp, j));
 }
 
-//РќР°Р№С‚Рё Р±Р»РёР¶Р°Р№С€РµРіРѕ РІРёРґРёРјРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р·Р°РґР°РЅРЅРѕРј СЂР°РґРёСѓСЃРµ
+//Найти ближайшего видимого персонажа в заданном радиусе
 int LAi_FindNearestCharacter(aref chr, float radius)
 {
 	int res = FindNearCharacters(chr, radius, -1.0, -1.0, 0.01, false, true);
@@ -235,7 +235,7 @@ int LAi_FindNearestCharacter(aref chr, float radius)
 	return sti(chrFindNearCharacters[0].index);
 }
 
-//РќР°Р№С‚Рё Р±Р»РёР¶Р°Р№С€РµРіРѕ РІРёРґРёРјРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р·Р°РґР°РЅРЅРѕРј СЂР°РґРёСѓСЃРµ
+//Найти ближайшего видимого персонажа в заданном радиусе
 int LAi_FindNearestVisCharacter(aref chr, float radius)
 {
 	int res = FindNearCharacters(chr, radius, -1.0, -1.0, 0.01, true, true);
@@ -243,7 +243,7 @@ int LAi_FindNearestVisCharacter(aref chr, float radius)
 	return sti(chrFindNearCharacters[0].index);
 }
 
-//РџРѕР»СѓС‡РёС‚СЊ СѓСЂРѕРІРµРЅСЊ РґСЂР°РєРё РїСЂРёРІРµРґС‘РЅС‹Р№ Рє 0..1
+//Получить уровень драки приведёный к 0..1
 float LAi_GetCharacterFightLevel(aref character)
 {
 	//Fencing skill
@@ -264,12 +264,12 @@ float LAi_GetCharacterFightLevel(aref character)
 	return fgtlevel;
 }
 
-//РџСЂРёРјРµРЅРёС‚СЊ РїРѕРІСЂРµР¶РґРµРЅРёРµ Рє РїРµСЂСЃРѕРЅР°Р¶Сѓ
+//Применить повреждение к персонажу
 void LAi_ApplyCharacterDamage(aref chr, int dmg)
 {
 	if(LAi_IsImmortal(chr)) return;
 	float damage = MakeFloat(dmg);
-	//РћС„РёС†РµСЂР°Рј РѕСЃР»Р°Р±Р»СЏРµРј РїРѕРІСЂРµР¶СЂРµРЅРёРµ
+	//Офицерам ослабляем поврежрение
 	if(CheckAttribute(chr, "chr_ai.type"))
 	{
 		if(chr.chr_ai.type == LAI_TYPE_OFFICER)
@@ -277,18 +277,18 @@ void LAi_ApplyCharacterDamage(aref chr, int dmg)
 			damage = damage*0.7; // the 1.03 patch has it 0.55!
 		}
 	}
-	//РџРѕР»СѓС‡Р°РµРј С‚РµРєСѓС‰РёРµ РїР°СЂР°РјРµС‚СЂС‹
+	//Получаем текущие параметры
 	if(!CheckAttribute(chr, "chr_ai.hp")) chr.chr_ai.hp = LAI_DEFAULT_HP;
 	if(!CheckAttribute(chr, "chr_ai.hp_max")) chr.chr_ai.hp_max = LAI_DEFAULT_HP_MAX;
 	float maxhp = stf(chr.chr_ai.hp_max);
 	float hp = stf(chr.chr_ai.hp);
-	//РџРµСЂРµСЃС‡РёС‚С‹РІР°РµРј
+	//Пересчитываем
 	hp = hp - damage;
 	if(hp < 1.0) hp = 0.0;
 	chr.chr_ai.hp = hp;
-	//РџСЂРѕРІРµСЂРёРј РєРІРµСЃС‚
+	//Проверим квест
 	LAi_ProcessCheckMinHP(chr);
-	//РќР°РїРёС€РµРј Рѕ РЅР°РЅРµСЃС‘РЅРЅРѕРј РїРѕРІСЂРµР¶РґРµРЅРёРё
+	//Напишем о нанесённом повреждении
 	// NK -->
 	int chrIndex = sti(chr.index);
 	ref mainChr = GetMainCharacter();
@@ -311,17 +311,17 @@ void LAi_ApplyCharacterDamage(aref chr, int dmg)
 }
 
 
-//РЈР±РёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°, РµСЃР»Рё Р·Р°РєРѕРЅС‡РёР»РёСЃСЊ hp
+//Убить персонажа, если закончились hp
 void LAi_CheckKillCharacter(aref chr)
 {
 	if(IsMainCharacter(chr) && CheckAttribute(chr, "TrainingFight")) return;//MAXIMUS
 	if(SendMessage(&chr, "ls", MSG_CHARACTER_EX_MSG, "IsDead")) return;
 
 	if(!CheckAttribute(chr, "chr_ai.hp")) chr.chr_ai.hp = 0.0;
-	//РџСЂРѕРІРµСЂСЏРµРј
+	//Проверяем
 	if(stf(chr.chr_ai.hp) < 1.0)
 	{
-		//РЈР±РёРІР°РµРј, РµСЃР»Рё СЃРјРµСЂС‚РµРЅ
+		//Убиваем, если смертен
 		if(LAi_IsImmortal(chr))
 		{
 			chr.chr_ai.hp = 1.0;
@@ -334,7 +334,7 @@ void LAi_CheckKillCharacter(aref chr)
 		SetCharacterTask_Dead(chr);
 		Postevent(EVENT_CHARACTER_DEAD, 1, "i", chr);
 
-		//РџРµСЂРµРёРЅРёС†РёРёСЂСѓРµРј РїР°СЂР°РјРµС‚СЂС‹
+		//Переинициируем параметры
 		DeleteAttribute(chr, "chr_ai.poison");// ccc fix for poisoned rebirths
 
 		//ccc Survival -> if(CheckAttribute(chr, "chr_ai.type")) //original code, replaced by 
@@ -403,7 +403,7 @@ void LAi_Clear_Fantoms()
 	}
 }
 
-//РЎРѕР·РґР°С‚СЊ С„Р°РЅС‚РѕРјРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Создать фантомного персонажа
 ref LAi_CreateFantomCharacter(bool isfriend, int offset, bool genrank, bool hasblade, float hasgun, string model, string group, string locator) // NK
 {
 	return LAi_CreateFantomCharacterEx(isfriend, offset, genrank, hasblade, hasgun, model, group, locator); // NK
@@ -432,11 +432,11 @@ ref LAi_CreateFantomCharacterExOt(bool isfriend, string officertype, int rank, b
 	return LAi_CreateFantomCharacterExOtAt(isfriend, officertype, "", "", "", rank, hasblade, hasgun, model, group, locator);
 }
 
-//РЎРѕР·РґР°С‚СЊ С„Р°РЅС‚РѕРјРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Создать фантомного персонажа
 ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string attr1, string attr2, string attr3, int rank     , bool hasblade, 
 								  float hasgun , string model, string group      , string locator)
 {
-	//РС‰РµРј СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ РґР»СЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+	//Ищем свободное место для персонажа
 	for(int i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
 	{
 		if(CheckAttribute(&Characters[LOC_FANTOM_CHARACTERS + i], "id") == false) break;
@@ -451,7 +451,7 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 		if(i >= MAX_LOGINED_CHARACTERS_IN_LOCATION) i = 0;
 	}
 	ref chr; makeref(chr, Characters[LOC_FANTOM_CHARACTERS + i]); // KK
-	//Р—Р°РїРѕР»РЅСЏРµРј РїРѕР»СЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+	//Заполняем поля персонажа
 	chr.id = "Location fantom character <" + i + ">";
 	chr.index = LOC_FANTOM_CHARACTERS + i;
 	//address
@@ -558,7 +558,7 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 	EquipCharacterByItem(&chr, FindCharacterItemByGroup(&chr, ARMOR_ITEM_TYPE));
 // NK <--
 	DeleteAttribute(chr,"itemtrade"); // NK 05-04-05 so itemtrading cleared
-	//Р›РѕРіРёРЅРµРј РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
+	//Логинем персонажа в локацию
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
 	chr.chr_ai.tmpl = LAI_DEFAULT_TEMPLATE;
 	chr.chr_ai.group = LAI_DEFAULT_GROUP;
@@ -580,7 +580,7 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 		Trace("LAi_CreateFantomCharacter -> CreateCharacter return false (LAi_numloginedcharacters = " + LAi_numloginedcharacters + ")");
 		return chr;
 	}
-	//РџРѕСЃС‚Р°РІРёРј РїРµСЂСЃРѕРЅР°Р¶Р° РЅР° Р»РѕРєР°С‚РѕСЂ
+	//Поставим персонажа на локатор
 	if(group == "")
 	{
 // changed by MAXIMUS -->
@@ -591,7 +591,7 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 	}
 	if(locator == "")
 	{
-		//Р’С‹Р±РёСЂР°РµРј РґР°Р»СЊРЅРёР№ Р»РѕРєР°С‚РѕСЂ
+		//Выбираем дальний локатор
 		float posX, posY, posZ;
 		posX = 0.0; posY = 0.0; posZ = 0.0;
 		if(GetCharacterPos(GetMainCharacter(), &posX, &posY, &posZ))
@@ -644,13 +644,13 @@ void LAi_QuestDelayProcess(float dltTime)
 {
 	string atr;
 	int num = GetAttributesNum(&lai_questdelays);
-	//РћР±СЃС‡РёС‚С‹РІР°РµРј РІСЂРµРјРµРЅР°
+	//Обсчитываем времена
 	for(int i = 0; i < num; i++)
 	{
 		atr = GetAttributeName(GetAttributeN(&lai_questdelays, i));
 		lai_questdelays.(atr) = stf(lai_questdelays.(atr)) - dltTime;
 	}
-	//РџСЂРѕРІРµСЂСЏРµРј РёСЃРїРѕР»РЅРµРЅРёРµ Рё РІС‹Р·С‹РІР°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ
+	//Проверяем исполнение и вызываем обработку
 	for(i = 0; i < num; i++)
 	{
 		atr = GetAttributeName(GetAttributeN(&lai_questdelays, i));
@@ -760,7 +760,7 @@ void LAi_SetDefaultLayAnimation(aref chr)
 }
 //MAXIMUS <-[17.09.2007]-
 
-//Р’С‹РІРµСЃС‚Рё СЌРєСЂР°РЅ РІ С‚РµРјРЅРѕС‚Сѓ, РІС‹РїРѕР»РЅРёС‚СЊ РєРІРµСЃС‚ questFadeOut, РІРµСЂРЅСѓС‚СЊ РІСЃС‘ РѕР±СЂР°С‚РЅРѕ, РІС‹РїРѕР»РЅРёС‚СЊ РєРІРµСЃС‚ questFadeIn
+//Вывести экран в темноту, выполнить квест questFadeOut, вернуть всё обратно, выполнить квест questFadeIn
 object LAi_QuestFader;
 void LAi_Fade(string questFadeOut, string questFadeIn)
 {
@@ -793,19 +793,19 @@ void LAi_FadeEndFadeIn()
 	InterfaceStates.Buttons.Save.enable = LAi_QuestFader.oldSaveState;
 }
 
-//Р•СЃС‚СЊ Р»Рё РѕСЂСѓР¶РёРµ Сѓ РїРµСЂСЃРѕРЅР°РґР°
+//Есть ли оружие у персонада
 bool LAi_IsSetBale(aref chr)
 {
 	return (SendMessage(chr, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
 }
 
-//Р’ СЂРµР¶РёРјРµ Р±РѕСЏ
+//В режиме боя
 bool LAi_IsFightMode(aref chr)
 {
 	return (SendMessage(chr, "ls", MSG_CHARACTER_EX_MSG, "IsFightMode") != 0);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С„Р»Р°Р¶С‘Рє РґР»СЏ РІРѕСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ С…РёС‚РїРѕР№РЅС‚РѕРІ Рё РѕС‚РЅРѕС€РµРЅРёР№
+//Установить флажёк для востановления хитпойнтов и отношений
 #event_handler("EventWorldMapInit", "LAi_SetRestoreStates");
 #event_handler(EVENT_SEA_LOGIN, "LAi_SetRestoreStates");
 void LAi_SetRestoreStates()
@@ -829,7 +829,7 @@ bool LAi_IsBottleWork(aref chr)
 	return false;
 }
 
-//РќР°Р№С‚Рё РІ Р±Р»РёР·Рё РІСЂР°РіРѕРІ
+//Найти в близи врагов
 bool LAi_CanNearEnemy(aref chr, float radius)
 {
 	int num = FindNearCharacters(chr, radius, -1.0, -1.0, 0.001, false, false);

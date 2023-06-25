@@ -1,35 +1,35 @@
-Hoist the Colours{РџРѕРґРЅСЏС‚СЊ Р¤Р»Р°Рі}
-Black Pearl{Р§С‘СЂРЅР°СЏ Р–РµРјС‡СѓР¶РёРЅР°}
-A lot has been speculated about the early days of Jack Sparrow and we're not even sure if this particular account is entirely accurate. It does explain some of the events that shaped this infamous pirate, but the journey can take multiple twists and turns depending on your choices, which may or may not end with you sailing into the sunset after lifting the Curse of the Black Pearl.{Рћ РїРµСЂРІС‹С… РґРЅСЏС… Р”Р¶РµРєР° Р’РѕСЂРѕР±СЊСЏ Р±С‹Р»Рѕ РјРЅРѕРіРѕ РїСЂРµРґРїРѕР»РѕР¶РµРЅРёР№, Рё РјС‹ РґР°Р¶Рµ РЅРµ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ СЌС‚Р° РёСЃС‚РѕСЂРёСЏ РїРѕР»РЅРѕСЃС‚СЊСЋ РґРѕСЃС‚РѕРІРµСЂРЅР°. РћРЅР° РѕР±СЉСЏСЃРЅСЏРµС‚ РЅРµРєРѕС‚РѕСЂС‹Рµ СЃРѕР±С‹С‚РёСЏ, СЃС„РѕСЂРјРёСЂРѕРІР°РІС€РёРµ СЌС‚РѕРіРѕ РїРµС‡Р°Р»СЊРЅРѕ РёР·РІРµСЃС‚РЅРѕРіРѕ РїРёСЂР°С‚Р°, РЅРѕ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РІР°С€РµРіРѕ РІС‹Р±РѕСЂР° РёСЃС‚РѕСЂРёСЏ РјРѕР¶РµС‚ РїСЂРёРЅСЏС‚СЊ РјРЅРѕР¶РµСЃС‚РІРѕ РїРѕРІРѕСЂРѕС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РјРѕРіСѓС‚ Р·Р°РєРѕРЅС‡РёС‚СЊСЃСЏ РёР»Рё РЅРµ Р·Р°РєРѕРЅС‡РёС‚СЊСЃСЏ С‚РµРј, С‡С‚Рѕ РІС‹ СѓРїР»С‹РІРµС‚Рµ РІ Р·Р°РєР°С‚ РїРѕСЃР»Рµ СЃРЅСЏС‚РёСЏ РїСЂРѕРєР»СЏС‚РёСЏ СЃ Р§С‘СЂРЅРѕР№ Р–РµРјС‡СѓР¶РёРЅС‹.}
+Hoist the Colours{Поднять Флаг}
+Black Pearl{Чёрная Жемчужина}
+A lot has been speculated about the early days of Jack Sparrow and we're not even sure if this particular account is entirely accurate. It does explain some of the events that shaped this infamous pirate, but the journey can take multiple twists and turns depending on your choices, which may or may not end with you sailing into the sunset after lifting the Curse of the Black Pearl.{О первых днях Джека Воробья было много предположений, и мы даже не уверены, что эта история полностью достоверна. Она объясняет некоторые события, сформировавшие этого печально известного пирата, но в зависимости от вашего выбора история может принять множество поворотов, которые могут закончиться или не закончиться тем, что вы уплывете в закат после снятия проклятия с Чёрной Жемчужины.}
 
-White Swan{Р‘РµР»С‹Р№ Р›РµР±РµРґСЊ}
-Spreading Freedom{РЎРІРѕР±РѕРґР°}
-Flying Fish{Р›РµС‚СѓС‡Р°СЏ Р С‹Р±Р°}
-Wicked Wench{Р Р°СЃРїСѓС‚РЅР°СЏ Р”РµРІРєР°}
-Lindesfarne{Р›РёРЅРґРёСЃС„Р°СЂРЅ}
-Slick Rigging{Р“Р»Р°РґРєР°СЏ РћСЃРЅР°СЃС‚РєР°}
-Cutlass{РЎР°Р±Р»СЏ}
-Free at Last{РЎРІРѕР±РѕРґРЅС‹Р№}
-Dauntless1{Р‘РµСЃСЃС‚СЂР°С€РЅС‹Р№}
-Everyone Wins{Р’С‹РёРіСЂС‹РІР°СЋС‚ Р’СЃРµ}
-Bounty1{Р©РµРґСЂРѕСЃС‚СЊ}
-China Vase{РљРёС‚Р°Р№СЃРєР°СЏ Р’Р°Р·Р°}
-Volcano{Р’СѓР»РєР°РЅ}
-Volcano II{Р’СѓР»РєР°РЅ II}
-Phantom{Р¤Р°РЅС‚РѕРј}
-The Rock{РЎРєР°Р»Р°}
-Whisper{РЁРµРїРѕС‚}
-Vengeance{РњРµСЃС‚СЊ}
-Wapen van Bergen op Zoom{Р“РµСЂР± Р‘РµСЂРіРµРЅ-РѕРї-Р—РѕРј}
-The Coder{РљРѕРґРµСЂ}
-Curlew{РљСЂРѕРЅС€РЅРµРї}
-Horn{Р РѕРі}
-The Big Buccaneer{Р‘РѕР»СЊС€РѕР№ РџРёСЂР°С‚}
-Compass Rose{РљР°СЂС‚СѓС€РєР°}
-The Comfy Sofa{РЈРґРѕР±РЅС‹Р№ Р”РёРІР°РЅ}
-Montanez{РњРѕРЅС‚Р°РЅРµР·}
-Hundred Devils{РЎРѕС‚РЅСЏ Р”СЊСЏРІРѕР»РѕРІ}
+White Swan{Белый Лебедь}
+Spreading Freedom{Свобода}
+Flying Fish{Летучая Рыба}
+Wicked Wench{Распутная Девка}
+Lindesfarne{Линдисфарн}
+Slick Rigging{Гладкая Оснастка}
+Cutlass{Сабля}
+Free at Last{Свободный}
+Dauntless1{Бесстрашный}
+Everyone Wins{Выигрывают Все}
+Bounty1{Щедрость}
+China Vase{Китайская Ваза}
+Volcano{Вулкан}
+Volcano II{Вулкан II}
+Phantom{Фантом}
+The Rock{Скала}
+Whisper{Шепот}
+Vengeance{Месть}
+Wapen van Bergen op Zoom{Герб Берген-оп-Зом}
+The Coder{Кодер}
+Curlew{Кроншнеп}
+Horn{Рог}
+The Big Buccaneer{Большой Пират}
+Compass Rose{Картушка}
+The Comfy Sofa{Удобный Диван}
+Montanez{Монтанез}
+Hundred Devils{Сотня Дьяволов}
 666{666}
-Van Diemen{Р’Р°РЅ Р”РёРјРµРЅ}
-Victory1{РџРѕР±РµРґР°}
-Sparrow Hawk{РЇСЃС‚СЂРµР±-РџРµСЂРµРїРµР»СЏС‚РЅРёРє}
+Van Diemen{Ван Димен}
+Victory1{Победа}
+Sparrow Hawk{Ястреб-Перепелятник}

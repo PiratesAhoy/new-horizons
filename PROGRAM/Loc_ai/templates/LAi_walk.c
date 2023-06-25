@@ -16,7 +16,7 @@ bool LAi_tmpl_walk_InitTemplate(aref chr)
 	}
 	if(isNew)
 	{
-		//РќРѕРІР°СЏ СѓСЃС‚Р°РЅРѕРІРєР°
+		//Новая установка
 		DeleteAttribute(chr, "chr_ai.tmpl");
 		chr.chr_ai.tmpl = LAI_TMPL_WALK;
 		chr.chr_ai.tmpl.locator = "";
@@ -32,7 +32,7 @@ bool LAi_tmpl_walk_InitTemplate(aref chr)
 			if(LAi_IsInitedAI) SetCharacterTask_Stay(chr);
 		}
 	}else{
-		//Р’РѕСЃС‚РѕРЅР°РІР»РµРЅРёРµ
+		//Востонавление
 		if(!CheckAttribute(chr, "chr_ai.tmpl.state")) chr.chr_ai.tmpl.state = "stay";
 		if(CheckAttribute(chr, "chr_ai.tmpl.locator"))
 		{
@@ -66,7 +66,7 @@ bool LAi_tmpl_walk_InitTemplate(aref chr)
 }
 
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование шаблона персонажа
 void LAi_tmpl_walk_CharacterUpdate(aref chr, float dltTime)
 {
 	float time, maxtime;
@@ -74,25 +74,25 @@ void LAi_tmpl_walk_CharacterUpdate(aref chr, float dltTime)
 	aref tmpl;
 	float dist;
 	makearef(tmpl, chr.chr_ai.tmpl);
-	//РЎРјРѕС‚СЂРёРј С‚РµРєСѓС‰РµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ С€Р°Р±Р»РѕРЅР°
+	//Смотрим текущее состояние шаблона
 	tmpl.time = stf(tmpl.time) + dltTime;
 	if(tmpl.state == "stay")
 	{
-		//РџРѕРІС‹С€Р°РµРј Р¶РµР»Р°РЅРёРµ РїРѕР№С‚Рё
+		//Повышаем желание пойти
 		time = stf(tmpl.time);
 		maxtime = stf(tmpl.maxtime);
 		if(time > maxtime)
 		{
-			//РџРѕСЂР° РёРґС‚Рё
+			//Пора идти
 			LAi_tmpl_walk_go(chr);
 		}else{
-			//РЎРјРѕС‚СЂРёРј РЅР° РїСЂРѕС…РѕРґСЏС‰РёС…
+			//Смотрим на проходящих
 			if(rand(5) == 3)
 			{
 				idx = LAi_FindNearestVisCharacter(chr, 2.0);
 				if(idx >= 0)
 				{
-					//РќР°С€Р»Рё РЅР° РєРѕРіРѕ РїРѕРїСЏР»РёС‚СЊСЃСЏ
+					//Нашли на кого попялиться
 					tmpl.state = "look";
 					tmpl.state.time = 0;
 					tmpl.state.maxtime = 3 + rand(3);
@@ -130,32 +130,32 @@ void LAi_tmpl_walk_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  go to point
+//Персонаж выполнил команду  go to point
 void LAi_tmpl_walk_EndGoToPoint(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  go to point
+//Персонаж провалил команду  go to point
 void LAi_tmpl_walk_FailureGoToPoint(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  run to point
+//Персонаж выполнил команду  run to point
 void LAi_tmpl_walk_EndRunToPoint(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  run to point
+//Персонаж провалил команду  run to point
 void LAi_tmpl_walk_FailureRunToPoint(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅРµ РјРѕР¶РµС‚ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ С‚РѕС‡РєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ
+//Персонаж не может добраться до точки назначения
 void LAi_tmpl_walk_BusyPos(aref chr, float x, float y, float z)
 {
 	LAi_tmpl_walk_endgo(chr);
@@ -165,76 +165,76 @@ void LAi_tmpl_walk_BusyPos(aref chr, float x, float y, float z)
 	}
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
+//Персонаж начал перемещение за другим
 void LAi_tmpl_walk_FollowGo(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж начал дошёл до другого персонажа
 void LAi_tmpl_walk_FollowStay(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  follow character
+//Персонаж провалил команду  follow character
 void LAi_tmpl_walk_FailureFollow(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
+//Персонаж начал перемещение за другим
 void LAi_tmpl_walk_FightGo(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж начал дошёл до другого персонажа
 void LAi_tmpl_walk_FightStay(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  Fight
+//Персонаж провалил команду  Fight
 void LAi_tmpl_walk_FailureFight(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРµР»СЏС‚СЊ
+//Можно ли стрелять
 bool LAi_tmpl_walk_IsFire(aref chr)
 {
 	return false;
 }
 
-//РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЂСѓР¶РёРµ
+//Можно ли использовать оружие
 bool LAi_tmpl_walk_IsFight(aref chr)
 {
 	return false;
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  escape
+//Персонаж выполнил команду  escape
 void LAi_tmpl_walk_EndEscape(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ СЃРєРѕР»СЊР·РёС‚ РІРґРѕР»СЊ РїР°С‚С‡Р°
+//Персонаж скользит вдоль патча
 void LAi_tmpl_walk_EscapeSlide(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  escape
+//Персонаж провалил команду  escape
 void LAi_tmpl_walk_FailureEscape(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ С‚РѕР»РєР°РµС‚СЃСЏ СЃ РґСЂСѓРіРёРјРё РїРµСЂСЃРѕРЅР°Р¶Р°РјРё
+//Персонаж толкается с другими персонажами
 void LAi_tmpl_walk_ColThreshold(aref chr)
 {
 	if(chr.chr_ai.tmpl.state == "stay")
@@ -262,20 +262,20 @@ void LAi_tmpl_walk_ColThreshold(aref chr)
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р·Р°РєРѕРЅС‡РёР» РїСЂРѕРёРіСЂС‹РІР°С‚СЊ Р°РЅРёРјР°С†РёСЋ
+//Персонаж закончил проигрывать анимацию
 void LAi_tmpl_walk_EndAction(aref chr)
 {
 	LAi_tmpl_walk_endgo(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶Р° РїСЂРѕСЃСЏС‚ РѕСЃРІРѕР±РѕРґРёС‚СЊ РјРµСЃС‚Рѕ
+//Персонажа просят освободить место
 void LAi_tmpl_walk_FreePos(aref chr, aref who)
 {
 	LAi_tmpl_walk_go(chr);
 }
 
 //------------------------------------------------------------------------------------------
-//Р’РЅСѓС‚СЂРµРЅРЅРёРё С„СѓРЅРєС†РёРё
+//Внутреннии функции
 //------------------------------------------------------------------------------------------
 
 void LAi_tmpl_walk_go(aref chr)
@@ -300,7 +300,7 @@ void LAi_tmpl_walk_go_notime(aref chr)
 	}
 	if(loc == "")
 	{
-		//Р›РѕРєР°С‚РѕСЂР° РЅРµС‚, СЃС‚РѕРёРј
+		//Локатора нет, стоим
 		chr.chr_ai.tmpl.maxtime = 60;
 		chr.chr_ai.tmpl.time = 0;
 		chr.chr_ai.tmpl.state = "stay";
@@ -308,7 +308,7 @@ void LAi_tmpl_walk_go_notime(aref chr)
 	}
 	if(SetCharacterTask_GotoPoint(chr, "goto", loc) == false)	
 	{
-		//Р›РѕРєР°С‚РѕСЂР° РЅРµС‚, СЃС‚РѕРёРј
+		//Локатора нет, стоим
 		chr.chr_ai.tmpl.maxtime = 1;
 		chr.chr_ai.tmpl.time = 0;
 		chr.chr_ai.tmpl.state = "stay";
@@ -323,24 +323,24 @@ void LAi_tmpl_walk_endgo(aref chr)
 {
 	if(stf(chr.chr_ai.tmpl.time) > stf(chr.chr_ai.tmpl.maxtime))
 	{
-		//РџСЂРѕРІРµСЂСЏРµРј Р±Р»РёР¶РЅРёС… СЃС‚РѕСЏС‡РёС…
+		//Проверяем ближних стоячих
 		if(LAi_tmpl_walk_neareststaycheck(chr))
 		{
-			//РћСЃС‚Р°РЅР°РІР»РёРІР°РµРј
+			//Останавливаем
 			LAi_tmpl_walk_nowstay(chr);
 		}else{
-			//РС‰РµРј РЅРѕРІСѓСЋ С†РµР»СЊ
+			//Ищем новую цель
 			LAi_tmpl_walk_go_notime(chr);
 		}
 	}else{
-		//РС‰РµРј РЅРѕРІСѓСЋ С†РµР»СЊ
+		//Ищем новую цель
 		LAi_tmpl_walk_go_notime(chr);
 	}
 }
 
 void LAi_tmpl_walk_nowstay(aref chr)
 {
-	//РџРµСЂРµС…РѕРґРёРј РІ СЂРµР¶РёРј РѕР¶РёРґР°РЅРёСЏ
+	//Переходим в режим ожидания
 	chr.chr_ai.tmpl.time = 0;
 	chr.chr_ai.tmpl.maxtime = 5 + rand(30);
 	SetCharacterTask_Stay(chr);

@@ -1,6 +1,6 @@
 title=Reparar el mecanismo del ancla
-text.t1=Hay algÃºn problema con el ancla de la corbeta.
-text.t2=Estoy buscando una rueda y algunos piÃ±ones.
-text.t3=Â¡SÃ­! Lo he arreglado. Ahora, el problema con la puerta de la cocina...
+text.t1=Hay algún problema con el ancla de la corbeta.
+text.t2=Estoy buscando una rueda y algunos piñones.
+text.t3=¡Sí! Lo he arreglado. Ahora, el problema con la puerta de la cocina...
 text.t4=
 text.t5=

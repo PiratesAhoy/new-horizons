@@ -1,0 +1,412 @@
+block WdmModelDrawStd()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			ColorArg1[0] = texture;
+			ColorOp[0] = SelectArg1;
+			ColorOp[1] = disable;
+			AlphaOp[0] = disable;
+
+			AlphaTestEnable = false;
+			AlphaBlendEnable = false;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmModelDrawStdA()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			ColorArg1[0] = texture;
+			ColorOp[0] = SelectArg1;
+			ColorOp[1] = disable;
+			AlphaArg1[0] = tfactor;
+			AlphaOp[0] = SelectArg1;
+			AlphaOp[1] = disable;
+
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmCounterDrawSky()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			TexCoordIndex[0] = 0;
+			TexCoordIndex[1] = 0;
+			ColorArg1[0] = texture;
+			ColorOp[0] = SelectArg1;
+			ColorArg1[1] = texture;
+			ColorArg2[1] = current;
+			ColorOp[1] = blendfactoralpha;
+			ColorOp[2] = disable;
+			AlphaOp[0] = selectarg1;
+			AlphaArg1[0] = tfactor;
+			AlphaOp[1] = disable;
+
+			AlphaTestEnable = false;
+			AlphaBlendEnable = false;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmCounterDrawNumber()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			ColorArg1[0] = texture;
+			ColorOp[0] = SelectArg1;
+			ColorArg1[1] = texture;
+			ColorArg2[1] = current;
+			ColorOp[1] = addsigned;
+			ColorOp[2] = disable;
+			AlphaOp[0] = disable;
+
+			AlphaTestEnable = false;
+			AlphaBlendEnable = false;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmClouds()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			zwriteenable = false;
+			
+			SrcBlend = srcalpha;
+			DestBlend = invsrcalpha;
+			cullmode = none;
+			
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			
+			ColorArg1[0] = texture;
+			ColorArg2[0] = diffuse;
+			ColorOp[0] = selectarg2;
+			ColorOp[1] = disable;
+			AlphaArg1[0] = texture;
+			AlphaArg2[0] = diffuse;
+			AlphaOp[0] = modulate;
+			AlphaOp[1] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmWarringShipClouds()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			zwriteenable = false;
+			
+			SrcBlend = one;
+			DestBlend = invsrccolor;
+			cullmode = none;
+			
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			
+			ColorArg1[0] = texture;
+			ColorArg2[0] = diffuse;
+			ColorOp[0] = modulate;
+			ColorOp[1] = disable;
+			AlphaOp[0] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmShipWaterTrack()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			zwriteenable = false;
+			
+			SrcBlend = one;
+			DestBlend = one;
+			cullmode = none;
+			
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			
+			ColorArg1[0] = texture;
+			ColorArg2[0] = diffuse;
+			ColorOp[0] = modulate;
+			ColorOp[1] = disable;
+			AlphaOp[0] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmDebugDraw()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			zenable = false;
+			zwriteenable = false;
+			
+			SrcBlend = srcalpha;
+			DestBlend = invsrcalpha;
+			cullmode = none;
+			
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			
+			ColorArg1[0] = texture;
+			ColorArg2[0] = diffuse;
+			ColorOp[0] = modulate;
+			ColorOp[1] = disable;
+			AlphaOp[0] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmDrawLabelIcon()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			zenable = false;
+			zwriteenable = false;
+			
+			SrcBlend = srcalpha;
+			DestBlend = invsrcalpha;
+			cullmode = none;
+			
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			
+			ColorArg1[0] = texture;
+			ColorArg2[0] = diffuse;
+			ColorOp[0] = selectarg1;
+			ColorOp[1] = disable;
+			AlphaArg1[0] = texture;
+			AlphaArg2[0] = diffuse;
+			AlphaOp[0] = modulate;
+			AlphaOp[1] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmDrawMapBlend()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			zenable = false;
+			zwriteenable = false;
+			
+			SrcBlend = srcalpha;
+			DestBlend = invsrcalpha;
+			cullmode = none;
+			
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			
+			ColorArg1[0] = texture;
+			ColorArg2[0] = diffuse;
+			ColorOp[0] = modulate;
+			ColorOp[1] = disable;
+			AlphaArg1[0] = texture;
+			AlphaArg2[0] = diffuse;
+			AlphaOp[0] = modulate;
+			AlphaOp[1] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmSeaDraw1()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			TextureTransformFlags[0] = count2;
+			AddressU[0] = clamp;
+			AddressV[0] = clamp;
+
+			zenable = false;
+			zwriteenable = false;
+
+			AlphaTestEnable = false;
+			AlphaBlendEnable = false;
+
+			ColorArg1[0] = texture;
+			ColorOp[0] = SelectArg1;
+			ColorOp[1] = disable;
+			AlphaOp[0] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmSeaDraw2()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			TextureTransformFlags[0] = count2;
+			AddressU[0] = clamp;
+			AddressV[0] = clamp;
+
+			zenable = false;
+			zwriteenable = false;
+
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			SrcBlend = srcalpha;
+			DestBlend = invsrcalpha;
+
+			ColorArg1[0] = texture;
+			ColorArg2[0] = tfactor;
+			ColorOp[0] = modulate;
+			ColorOp[1] = disable;
+			AlphaArg2[0] = tfactor;
+			AlphaOp[0] = SelectArg2;
+			AlphaOp[1] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block WdmSeaDraw3()
+{
+	technique t0
+	{
+		pass p0
+		{
+			Lighting = false;
+			FogEnable = false;
+
+			TextureTransformFlags[0] = count2;
+			TextureTransformFlags[1] = count2;
+			TexCoordIndex[0] = 0;
+			TexCoordIndex[1] = 0;			
+
+			zenable = false;
+			zwriteenable = false;
+
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			SrcBlend = srcalpha;
+			DestBlend = one;
+
+			ColorArg1[0] = texture;
+			ColorOp[0] = SelectArg1;
+			ColorArg0[1] = tfactor;
+			ColorArg1[1] = texture;
+			ColorArg2[1] = current;
+			ColorOp[1] = lerp;
+			ColorOp[2] = disable;
+			AlphaArg2[0] = tfactor;
+			AlphaOp[0] = SelectArg2;
+			AlphaOp[1] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}

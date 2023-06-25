@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
@@ -182,7 +182,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "info_1":
-				trace("РђР№РґРёС€РЅРёРє РїРµСЂСЃРѕРЅР°Р¶Р° - " + TempInfoCharacterID_1);
+				trace("Айдишник персонажа - " + TempInfoCharacterID_1);
 				d.Text = GetNPCInformation(TempInfoCharacterID_1);
 				Link.l1 = DLG_TEXT[100];
 				Link.l1.go = "new question";
@@ -191,7 +191,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "info_2":
-				trace("РђР№РґРёС€РЅРёРє РїРµСЂСЃРѕРЅР°Р¶Р° - " + TempInfoCharacterID_2);
+				trace("Айдишник персонажа - " + TempInfoCharacterID_2);
 				d.Text = GetNPCInformation(TempInfoCharacterID_2);
 				Link.l1 = DLG_TEXT[102];
 				Link.l1.go = "new question";
@@ -263,7 +263,7 @@ void ProcessDialogEvent()
 			}
 	/*		else
 			{
-				Link.l1 = "РЎ РєРµРј С‚РѕСЂРіСѓСЋС‚ РјРµСЃС‚РЅС‹Рµ С‚РѕСЂРіРѕРІС†С‹?";
+				Link.l1 = "С кем торгуют местные торговцы?";
 				Link.l1.go = "trade";
 			}*/
 
@@ -281,7 +281,7 @@ void ProcessDialogEvent()
 
 		case "Greenford_1":
 			d.Text = DLG_TEXT[140];
-			//Link.l1 = "Р”Р°Р»СЊС€Рµ...";
+			//Link.l1 = "Дальше...";
 			//Link.l1.go = "Redmond_2";
 			Link.l2 = DLG_TEXT[141];
 			Link.l2.go = "new question";

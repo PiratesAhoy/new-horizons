@@ -3,5 +3,5 @@ text.t1=I have to find and pick up the four marsh-hen we have killed.
 text.t2=I'll search the next shore for shells. There's place for at least six in my pockets.
 text.t3=A Gold-Bug! But I havn't secured it yet.
 text.t4=I'll need a leaf, or something of that nature, by which to take hold of the Gold-Bug. 
-text.t5=A piece of paper - I can use that to catch the scarabÃ¦us.
+text.t5=A piece of paper - I can use that to catch the scarabæus.
 text.t6=I've got a complete collection of shells. It's time to continue to the next shore.

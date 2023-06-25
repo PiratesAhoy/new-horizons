@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = {
-"Â¡Me has salvado! Â¡Gracias, amable seÃ±or!",
-"Tu hermano se alegrarÃ¡ de verte. DeberÃ­as darte prisa en volver a casa.",
-"SÃ­, por supuesto. Â¡IrÃ© directo a casa, y le dirÃ© a mi hermano que estoy bien, gracias a ti!",
-"Fue un placer. Â¡Ahora vete, y no te pierdas por el camino!",
+"¡Me has salvado! ¡Gracias, amable señor!",
+"Tu hermano se alegrará de verte. Deberías darte prisa en volver a casa.",
+"Sí, por supuesto. ¡Iré directo a casa, y le diré a mi hermano que estoy bien, gracias a ti!",
+"Fue un placer. ¡Ahora vete, y no te pierdas por el camino!",
 
 };

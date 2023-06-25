@@ -12,7 +12,7 @@ void InitBaseInterfaces()
 	InitLogInterface();
 	InitBattleLandInterface();
 	InterfaceStates.Launched = false;
-	if( storeDayUpdateCnt>=0 ) // РѕР±РЅРѕРІР»РµРЅРёРµ РјР°РіР°Р·РёРЅР° РјРѕР¶РЅРѕ РІРєР»СЋС‡РёС‚СЊ
+	if( storeDayUpdateCnt>=0 ) // обновление магазина можно включить
 	{
 		Event("EvStoreDayUpdate");
 	}

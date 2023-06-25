@@ -14,7 +14,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 
 	
 		case "exit":
@@ -26,7 +26,7 @@ void ProcessDialogEvent()
 		break;
 	
 		case "Quest_exit":
-			//------------РџСЂРёСЃРѕРµРґРёРЅРµРЅРёРµ Р’РёСЂРґР¶РёР»Р° Р‘СѓРЅР°.
+			//------------Присоединение Вирджила Буна.
 			LAi_SetActorType(characterFromID("Tancrede Rimbaud"));
 			LAi_type_actor_Reset(characterFromID("Tancrede Rimbaud"));
 			LAi_ActorFollow(characterFromID("Tancrede Rimbaud"),characterFromID("Virgile Boon"),"Story_ReturnToFFPortToFindBoon_2",-1);

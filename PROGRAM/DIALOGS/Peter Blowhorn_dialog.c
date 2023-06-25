@@ -23,7 +23,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// ----------------------------------- Диалог первый - первая встреча
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -277,7 +277,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "option_no_deal":
-			LAi_SetStayType(Pchar);//so the ordinary trade talk isnТ‘t started during this option
+			LAi_SetStayType(Pchar);//so the ordinary trade talk isnґt started during this option
 			dialog.text = DLG_TEXT[52];
 			link.l1 = DLG_TEXT[53];
 			link.l1.go = "option_no_deal_1";

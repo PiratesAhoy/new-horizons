@@ -1,3 +1,3 @@
-title=AntÃ­doto
+title=Antídoto
 text.t1=Tengo que encontrar esta medicina.
-text.t2=Â¡Hecho!
+text.t2=¡Hecho!

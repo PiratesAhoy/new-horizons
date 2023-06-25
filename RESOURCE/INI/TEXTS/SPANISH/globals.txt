@@ -1,47 +1,47 @@
-QUEST_MESSAGE1 {Has fracasado en la misiÃ³n. Â¡Tu acompaÃ±ante ha muerto! PARTIDA TERMINADA.}
-QUEST_MESSAGE2 {El plazo para entregar el envÃ­o ha expirado.}
-QUEST_MESSAGE3 {Ya has envejecido demasiado para resistir a la maldiciÃ³n del oro azteca...}
-QUEST_MESSAGE4 {Â¡Has encontrado un tesoro de plata!}
-QUEST_MESSAGE5 {Â¡Nigel Blythe estÃ¡ atacando la corbeta con el contrabando!}
-QUEST_MESSAGE6 {Â¡Nigel Blythe te ha abandonado!}
-QUEST_MESSAGE7 {Â¡CapitÃ¡n, hemos encontrado a la Perla Negra!}
-QUEST_MESSAGE8 {Â¡Muy bien, has matado a tu maestro!}
-QUEST_MESSAGE9 {Â¡Ahora no tienes a nadie en este mundo cruel!}
-QUEST_MESSAGE10 {Â¡A un pirata de corazÃ³n despiadado}
+QUEST_MESSAGE1 {Has fracasado en la misión. ¡Tu acompañante ha muerto! PARTIDA TERMINADA.}
+QUEST_MESSAGE2 {El plazo para entregar el envío ha expirado.}
+QUEST_MESSAGE3 {Ya has envejecido demasiado para resistir a la maldición del oro azteca...}
+QUEST_MESSAGE4 {¡Has encontrado un tesoro de plata!}
+QUEST_MESSAGE5 {¡Nigel Blythe está atacando la corbeta con el contrabando!}
+QUEST_MESSAGE6 {¡Nigel Blythe te ha abandonado!}
+QUEST_MESSAGE7 {¡Capitán, hemos encontrado a la Perla Negra!}
+QUEST_MESSAGE8 {¡Muy bien, has matado a tu maestro!}
+QUEST_MESSAGE9 {¡Ahora no tienes a nadie en este mundo cruel!}
+QUEST_MESSAGE10 {¡A un pirata de corazón despiadado}
 QUEST_MESSAGE11 {le daremos unpremio inesperado!}
-QUEST_MESSAGE12 {Â¡Lo siento, pero ya tienes demasiados oficiales! Â¡Despide a alguno y vuelve a intentarlo!}
+QUEST_MESSAGE12 {¡Lo siento, pero ya tienes demasiados oficiales! ¡Despide a alguno y vuelve a intentarlo!}
   
-Address_Form_Spa {SeÃ±or}
+Address_Form_Spa {Señor}
 Address_Form_Fra {Monsieur}
 Address_Form_Eng {Sir}
 Address_Form_Por {Senhor}
 Address_Form_Hol {Mijnheer}
   
-Swear_1 {Â¡Por los siete mares!}
-Swear_2 {Â¡MaldiciÃ³n!}
-Swear_3 {Â¡Oh, no!}
-Swear_4 {Â¡Diantre!}
-Swear_5 {Â¡Que me ahorquen!}
-Swear_6 {Â¡Voto a tal!}
-Swear_7 {Â¡Maldita sea mi estampa!}
-Swear_8 {Â¡Â¡Â¡Arrgh!!!}
-Swear_9 {Â¡Por Dios!}
-Swear_10 {Â¡Al diablo!}  
+Swear_1 {¡Por los siete mares!}
+Swear_2 {¡Maldición!}
+Swear_3 {¡Oh, no!}
+Swear_4 {¡Diantre!}
+Swear_5 {¡Que me ahorquen!}
+Swear_6 {¡Voto a tal!}
+Swear_7 {¡Maldita sea mi estampa!}
+Swear_8 {¡¡¡Arrgh!!!}
+Swear_9 {¡Por Dios!}
+Swear_10 {¡Al diablo!}  
   
-TimeGreeting {Buenos dÃ­as}
+TimeGreeting {Buenos días}
 
-Rumour_1 {No ha pasado nada interesante Ãºltimamente. La vida sigue tranquilamente. Â¡Me pregunto cuÃ¡nto durarÃ¡!}
-Rumour_2 {He oido que han encontrado algÃºn tipo de cementerio aborigen dentro de la mina de #sisland_Oxbay#. Han encontrado un montÃ³n de huesos, loza, estacas afiladas y platos de arcilla... Â¡pero nada de oro!}
-Rumour_3 {He oÃ­do que el Gobernador de Redmond metiÃ³ a un mercader en la cÃ¡rcel por pelearse en la taberna. Me contaron que ordenÃ³ su detenciÃ³n para poder confiscarle las mercancÃ­as.}
-Rumour_4 {He oÃ­do que el Gobernador de Redmond metiÃ³ a un mercader en la cÃ¡rcel por pelearse en la taberna. Me contaron que ordenÃ³ su detenciÃ³n para poder confiscarle las mercancÃ­as.}
-Rumour_5 {He oÃ­do que el Gobernador de Redmond metiÃ³ a un mercader en la cÃ¡rcel por pelearse en la taberna. Me contaron que ordenÃ³ su detenciÃ³n para poder confiscarle las mercancÃ­as.}
-Rumour_6 {He oÃ­do que el Gobernador de Redmond metiÃ³ a un mercader en la cÃ¡rcel por pelearse en la taberna. Me contaron que ordenÃ³ su detenciÃ³n para poder confiscarle las mercancÃ­as.}
-Rumour_7 {He oÃ­do que el Gobernador de Redmond metiÃ³ a un mercader en la cÃ¡rcel por pelearse en la taberna. Me contaron que ordenÃ³ su detenciÃ³n para poder confiscarle las mercancÃ­as.}
+Rumour_1 {No ha pasado nada interesante últimamente. La vida sigue tranquilamente. ¡Me pregunto cuánto durará!}
+Rumour_2 {He oido que han encontrado algún tipo de cementerio aborigen dentro de la mina de #sisland_Oxbay#. Han encontrado un montón de huesos, loza, estacas afiladas y platos de arcilla... ¡pero nada de oro!}
+Rumour_3 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
+Rumour_4 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
+Rumour_5 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
+Rumour_6 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
+Rumour_7 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
 
 Falaise De Fleur {Falaise De Fleur}
 Isla Muelle {Isla Muelle}
-Conceicao {ConceiÃ§Ão}
-ConceiÃ§Ã£o {ConceiÃ§Ão}
+Conceicao {Conceiçİo}
+Conceição {Conceiçİo}
 Douwesen {Douwesen}
 Redmond {Redmond}
 Oxbay {Oxbay}
@@ -49,8 +49,8 @@ Greenford {Greenford}
 Grand Cayman{Grand Cayman}
 Santo Domingo{Santo Domingo}
 Port au Prince{Port au Prince}
-Pointe Ã  Pitre{Pointe Ã  Pitre}
-Pointe a Pitre{Pointe Ã  Pitre}
+Pointe à Pitre{Pointe à Pitre}
+Pointe a Pitre{Pointe à Pitre}
 Havana{La Habana}
 Marigot{Marigot}
 Philipsburg{Philipsburg}

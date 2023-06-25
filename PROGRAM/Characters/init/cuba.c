@@ -411,7 +411,7 @@ if (ENABLE_WEAPONSMOD)
 	// SOLDIERS
 	///////////////////////////////////////////////////////////////////////////////////////////////
 
-			//Soldier √≠√† √¢√ª√µ√Æ√§√• √®√ß √Ø√Æ√∞√≤√†
+			//Soldier Ì‡ ‚˚ıÓ‰Â ËÁ ÔÓÚ‡
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -449,7 +449,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_isla muelle soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier √≠√† √¢√ª√µ√Æ√§√• √®√ß √Ø√Æ√∞√≤√† -- √•√π√• √Æ√§√®√≠
+	//Soldier Ì‡ ‚˚ıÓ‰Â ËÁ ÔÓÚ‡ -- Â˘Â Ó‰ËÌ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -2158,9 +2158,9 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
    
 	ch.old.name = "Patricia";
-	ch.old.lastname = "Sant√°ngel";
+	ch.old.lastname = "Sant·ngel";
 	ch.name    = TranslateString("","Patricia");
-	ch.lastname    = TranslateString("","Sant√°ngel");
+	ch.lastname    = TranslateString("","Sant·ngel");
 	ch.id        = "Patricia Santangel";
 	ch.model    = "towngirl7_2";
 	ch.sex = "woman";
@@ -2331,9 +2331,9 @@ if (ENABLE_WEAPONSMOD)
 
 	// Santiago Tailor
 	ch.old.name = "Tancredo";
-	ch.old.lastname = "Pell√≥n";
+	ch.old.lastname = "PellÛn";
 	ch.name	= TranslateString("", "Tancredo");
-	ch.lastname	= TranslateString("", "Pell√≥n");
+	ch.lastname	= TranslateString("", "PellÛn");
 	ch.id = "Tancredo Pellon";
 	ch.model = "9R_Purs";
 	ch.sex = "man";

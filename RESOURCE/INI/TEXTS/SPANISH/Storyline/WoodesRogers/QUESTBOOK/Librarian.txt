@@ -1,8 +1,8 @@
 title=Bibliotecario
 text.t1=He recibido seis libros de Selkirk para devolverlos a sus lugares correctos.
-text.t2=Ahora estÃ¡ ese libro de Dampier que hay que reparar.
-text.t3=Tengo que devolver el libro reparado de Dampier a su estanterÃ­a: la de la secciÃ³n de 'Viajes'.
+text.t2=Ahora está ese libro de Dampier que hay que reparar.
+text.t3=Tengo que devolver el libro reparado de Dampier a su estantería: la de la sección de 'Viajes'.
 text.t4=Rogers me ha dado tres libros a cambio del libro de Dampier.
 text.t5=Debo entregar "Notorios Piratas" a Rogers.
-text.t6=La cadena y los grilletes estÃ¡n bloqueando la estanterÃ­a de 'QuÃ­mica' para que pueda abrirla.
-text.t7=No me interesa tanto la poesÃ­a, Â¿puedo usar este saco de libros para alguna otra cosa?
+text.t6=La cadena y los grilletes están bloqueando la estantería de 'Química' para que pueda abrirla.
+text.t7=No me interesa tanto la poesía, ¿puedo usar este saco de libros para alguna otra cosa?

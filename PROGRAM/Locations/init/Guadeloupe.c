@@ -632,14 +632,14 @@ void LocationInitguadeloupe(ref n)
 		Locations[n].reload.l2.go = "Guadeloupe_shore_02";
 		Locations[n].reload.l2.emerge = "reload2";
 		Locations[n].reload.l2.autoreload = "1";
-		Locations[n].reload.l2.label = "BahÃ­a Grande.";
+		Locations[n].reload.l2.label = "Bahía Grande.";
 		Locations[n].locators_radius.reload.reload2 = 3.0;
 
 		Locations[n].reload.l5.name = "reload2_back";
 		Locations[n].reload.l5.go = "Guadeloupe_shore_02";
 		Locations[n].reload.l5.emerge = "reload2";
 		Locations[n].reload.l5.autoreload = "1";
-		Locations[n].reload.l5.label = "BahÃ­a Grande.";
+		Locations[n].reload.l5.label = "Bahía Grande.";
 		Locations[n].locators_radius.reload.Reload3_back = 2.0;
 	}
 	else
@@ -1576,9 +1576,9 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].filespath.models = "locations\Outside\Shore_5";
 
 	Locations[n].id = "Guadeloupe_shore_02";
-	locations[n].id.label = "BahÃ­a Grande"; // KK
+	locations[n].id.label = "Bahía Grande"; // KK
 	Locations[n].image = "Outside_Shore_5.tga";
-	Locations[n].name = "BahÃ­a Grande";
+	Locations[n].name = "Bahía Grande";
 	locations[n].worldmap = "GuadShore 2";
 
 	//Sound

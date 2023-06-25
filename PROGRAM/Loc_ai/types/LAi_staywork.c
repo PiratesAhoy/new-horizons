@@ -1,8 +1,8 @@
 //Made by MAXIMUS from LAi_Sit.c//
 /*
-РўРёРї: СЃС‚РѕСЏС‡РёР№, РІСЃРµРіРґР° СЃС‚РѕРёС‚ Рё СЂР°Р±РѕС‚Р°РµС‚, РѕС‚РІРµС‡Р°РµС‚ РЅР° РґРёР°Р»РѕРіРё, РЅРёРєРѕРіРґР° РЅРµ Р±РѕРёС‚СЃСЏ
+Тип: стоячий, всегда стоит и работает, отвечает на диалоги, никогда не боится
 
-	РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С€Р°Р±Р»РѕРЅС‹:
+	Используемые шаблоны:
 		stay
 		dialog
 */
@@ -12,14 +12,14 @@
 #define LAI_TYPE_STAYWORK		"staywork"
 
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+//Инициализация
 void LAi_type_staywork_Init(aref chr)
 {
 	DeleteAttribute(chr, "location.follower");
 	DeleteAttribute(chr, "chr_ai.type");
 	chr.chr_ai.type = LAI_TYPE_STAYWORK;
 	LAi_tmpl_stay_InitTemplate(chr);
-	//РЈСЃС‚Р°РЅРѕРІРёРј Р°РЅРёРјР°С†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Сѓ
+	//Установим анимацию персонажу
 	chr.chr_ai.type.state = "work";
 	BeginChangeCharacterActions(chr);
 	chr.actions.idle.i1 = "Barman_idle";
@@ -27,7 +27,7 @@ void LAi_type_staywork_Init(aref chr)
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightWOWeapon", false);
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С‚РёРїР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование типа персонажа
 void LAi_type_staywork_CharacterUpdate(aref chr, float dltTime)
 {
 	string snd = "male-citizen";
@@ -57,70 +57,70 @@ void LAi_type_staywork_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Р—Р°РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
+//Загрузка персонажа в локацию
 bool LAi_type_staywork_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Р’С‹РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РёР· Р»РѕРєР°С†РёСЋ
+//Выгрузка персонажа из локацию
 bool LAi_type_staywork_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ С‚РµРјРїР»РµР№С‚Р°
+//Завершение работы темплейта
 void LAi_type_staywork_TemplateComplite(aref chr, string tmpl)
 {
 	LAi_tmpl_player_InitTemplate(chr);
 }
 
-//РЎРѕРѕР±С‰РёС‚СЊ Рѕ Р¶РµР»Р°РЅРёРё Р·Р°РІРµСЃС‚Рё РґРёР°Р»РѕРі
+//Сообщить о желании завести диалог
 void LAi_type_staywork_NeedDialog(aref chr, aref by)
 {
 }
 
-//Р—Р°РїСЂРѕСЃ РЅР° РґРёР°Р»РѕРі, РµСЃР»Рё РІРѕР·РІСЂР°С‚РёС‚СЊ true С‚Рѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Запрос на диалог, если возвратить true то в этот момент можно начать диалог
 bool LAi_type_staywork_CanDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё СѓР¶Рµ РіРѕРІРѕСЂРёРј, С‚Рѕ РѕС‚РєР°Р¶РµРј
+	//Если уже говорим, то откажем
 	if(chr.chr_ai.tmpl == LAI_TMPL_DIALOG) return false;
-	//РЎРѕРіР»Р°СЃРёРјСЃСЏ РЅР° РґРёР°Р»РѕРі
+	//Согласимся на диалог
 	return true;
 }
 
-//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Начать диалог
 void LAi_type_staywork_StartDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
+	//Если мы пасивны, запускаем шаблон без времени завершения
 	LAi_tmpl_stay_InitTemplate(chr);
 	LAi_tmpl_SetActivatedDialog(chr, by);
 	LAi_tmpl_dialog_NoAni(chr);
 }
 
-//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
+//Закончить диалог
 void LAi_type_staywork_EndDialog(aref chr, aref by)
 {
 	LAi_tmpl_stay_InitTemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°Р» РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атаковал другого персонажа
 void LAi_type_staywork_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚РѕРєРѕРІР°Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РІС€РµРіРѕСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атоковал заблокировавшегося персонажа
 void LAi_type_staywork_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹СЃС‚СЂРµР»РёР»
+//Персонаж выстрелил
 void LAi_type_staywork_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°РЅ
+//Персонаж атакован
 void LAi_type_staywork_Attacked(aref chr, aref by)
 {
 	

@@ -1,11 +1,11 @@
 
 
-РћР±РЅРѕРІР»РµРЅРёРµ Р°С‚СЂРёР±СѓС‚РѕРІ
+Обновление атрибутов
 
 characters[i].actions = "";
 
 
-Р”РµР№СЃС‚РІРёСЏ РІ РЅРѕСЂРјР°Р»СЊРЅРѕРј СЂРµР¶РёРјРµ
+Действия в нормальном режиме
 
 characters[i].actions.walk = "walk";
 characters[i].actions.backwalk = "back walk";
@@ -23,7 +23,7 @@ characters[i].actions.stsDownRunBack = "back run stairs down";
 characters[i].actions.turnLeft = "turn left";
 characters[i].actions.turnRight = "turn right";
 
-Idle Р°РЅРёРјР°С†РёСЏ РІ РЅРѕСЂРјР°Р»СЊРЅРѕРј СЂРµР¶РёРјРµ
+Idle анимация в нормальном режиме
 
 characters[i].actions.idle.i1 = "idle_1";
 characters[i].actions.idle.i2 = "idle_2";
@@ -38,7 +38,7 @@ characters[i].actions.idle.i10 = "idle_10";
 ...
 
 
-//Р”РµР№СЃС‚РІРёСЏ РІ СЂРµР¶РёРјРµ Р±РѕСЏ
+//Действия в режиме боя
 characters[i].actions.fightwalk = "fight walk";
 characters[i].actions.fightbackwalk = "fight back walk";
 characters[i].actions.fightrun = "fight run";
@@ -60,7 +60,7 @@ characters[i].actions.fight.abf4.attack = "attack_4";
 characters[i].actions.fight.abf4.block = "block_4";
 characters[i].actions.fight.abf4.hit = "hit_4";
 
-//Idle Р°РЅРёРјР°С†РёСЏ РІ СЂРµР¶РёРјРµ Р±РѕСЏ
+//Idle анимация в режиме боя
 characters[i].actions.fightidle.i1 = "fight stand_1";
 characters[i].actions.fightidle.i2 = "fight stand_2";
 ...

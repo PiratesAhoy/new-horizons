@@ -5,5 +5,5 @@ Cannon Aiming Circle
 
 sea_aim_info
 {   
-KoÅ‚o celownicze armaty pojawi siÄ‘ na â€ºrodku ekranu, gdy gracz na pokÅ‚adzie statku bÄ‘dzie mÃ³gÅ‚ wykonaÅ¢ salwÄ‘ armatniÄ… w kierunku wzroku gracza. Jeâ€ºli jakiâ€º cel wejdzie do strefy, w ktÃ³rej moÅ¾e byÅ¢ zasÅ‚oniÄ‘ty salwÄ… armat, koÅ‚o celujÄ…ce zaczyna pulsowaÅ¢, zmieniajÄ…c jego rozmiar. RÃ³wnieÅ¾ celowanie pokazuje typ celu wraz z kolorem. Jeâ€ºli cel jest przyjazny, cyrk celujÄ…cy jest zielony. A jeâ€ºli cel jest wrogi, okrÄ…g celujÄ…cy miga na czerwono, podczas gdy normalny kolor celownika jest brÄ…zowy.
+Ko³o celownicze armaty pojawi siğ na ›rodku ekranu, gdy gracz na pok³adzie statku bğdzie móg³ wykonaŞ salwğ armatni¹ w kierunku wzroku gracza. Je›li jaki› cel wejdzie do strefy, w której moe byŞ zas³oniğty salw¹ armat, ko³o celuj¹ce zaczyna pulsowaŞ, zmieniaj¹c jego rozmiar. Równie celowanie pokazuje typ celu wraz z kolorem. Je›li cel jest przyjazny, cyrk celuj¹cy jest zielony. A je›li cel jest wrogi, okr¹g celuj¹cy miga na czerwono, podczas gdy normalny kolor celownika jest br¹zowy.
 }

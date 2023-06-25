@@ -34,7 +34,7 @@ string DLG_TEXT[120] = {
 "I am an ordinary tourist visiting Kristiania for the very first time and I would like to see the whole town...",
 "Tourist - hah! You're not allowed to enter the Fort. You don't know the password, Mister Pyle.",
 "No. But maybe you do, Madame?",
-"Very well...I see no harm in that. It's 'LÃ¥ngtora'.",	//35
+"Very well...I see no harm in that. It's 'Långtora'.",	//35
 "'Lang toray'. Got it.",
 "Oh for god's sake. It's pronounced 'Long-tour-ahh'.",
 "Yes, just what I said. Thank you and good bye, Madame.",
@@ -71,7 +71,7 @@ string DLG_TEXT[120] = {
 "Okay, please go on. (this is unbelievable but exciting)",
 "His name is P.. A....... also known as JRH.",		//70
 "I have met him at Governor Rogers residence! Very well, Madame. What was the password again?",
-"LÃ¥ngtora.",
+"Långtora.",
 "Yes, just what I said. Oh by the way, where is the entrance to the Fort?",	//73
 "You find the gate at the other end of the town center.",
 "Oh, I... I was just about to leave.",

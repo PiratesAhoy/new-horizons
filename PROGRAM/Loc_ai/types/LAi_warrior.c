@@ -1,7 +1,7 @@
 /*
-РўРёРї: РІРѕРёРЅ, Р±СЊС‘С‚ РІСЂР°РіРѕРІ, РєРѕРіРґР° СЃРІРѕР±РѕРґРµРЅ, РІРѕР·РІСЂР°С‰Р°РµС‚СЃСЏ Рє Р»РёРґРµСЂСѓ РёР»Рё СЃС‚РѕРёС‚
+Тип: воин, бьёт врагов, когда свободен, возвращается к лидеру или стоит
 
-	РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С€Р°Р±Р»РѕРЅС‹:
+	Используемые шаблоны:
 		fight
 		follow
 		walk
@@ -15,25 +15,25 @@
 
 
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РІРѕР№РЅСѓ РєРѕРјР°РЅРґРёСЂР°
+//Установить войну командира
 void LAi_warrior_SetCommander(aref chr, aref commander)
 {
 	chr.chr_ai.type.index = commander.index;
 }
 
-//Р Р°Р·СЂРµС€РёС‚СЊ РёР»Рё Р·Р°РїСЂРµС‚РёС‚СЊ РґРёР°Р»РѕРіРё РґР»СЏ РІРѕР№РЅР°
+//Разрешить или запретить диалоги для война
 void LAi_warrior_DialogEnable(aref chr, bool isEnable)
 {
 	chr.chr_ai.type.dialog = isEnable;
 }
 
-//РЎРєР°Р·Р°С‚СЊ РІРѕР№РЅСѓ СЃС‚РѕСЏС‚СЊ РїСЂРё РѕС‚СЃСѓС‚СЃС‚РІРёРµ С†РµР»РµР№
+//Сказать войну стоять при отсутствие целей
 void LAi_warrior_SetStay(aref chr, bool isStay)
 {
 	chr.chr_ai.type.stay = isStay;
 }
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+//Инициализация
 void LAi_type_warrior_Init(aref chr)
 {
 	DeleteAttribute(chr, "location.follower");
@@ -46,7 +46,7 @@ void LAi_type_warrior_Init(aref chr)
 	}
 	if(isNew == true)
 	{
-		//РќРѕРІС‹Р№ С‚РёРї
+		//Новый тип
 		DeleteAttribute(chr, "chr_ai.type");
 		chr.chr_ai.type = LAI_TYPE_WARRIOR;
 		chr.chr_ai.type.stay = "0";
@@ -58,16 +58,16 @@ void LAi_type_warrior_Init(aref chr)
 		if(!CheckAttribute(chr, "chr_ai.type.index")) chr.chr_ai.type.index = "";
 		if(!CheckAttribute(chr, "chr_ai.type.dialog")) chr.chr_ai.type.dialog = "0";
 	}
-	//РЈСЃС‚Р°РЅРѕРІРёРј Р°РЅРёРјР°С†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Сѓ
+	//Установим анимацию персонажу
 	LAi_SetDefaultStayAnimation(chr);
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightWOWeapon", false);
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С‚РёРїР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование типа персонажа
 void LAi_type_warrior_CharacterUpdate(aref chr, float dltTime)
 {
 	int trg = -1;
-	//РЎСЃС‹Р»РєР° РЅР° РІРµС‚РєСѓ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+	//Ссылка на ветку с параметрами
 	aref type;
 	makearef(type, chr.chr_ai.type);
 	// ccc special weapons, rearm disarmed chr. NK 05-07-01 fix chars who do not draw blade
@@ -76,12 +76,12 @@ void LAi_type_warrior_CharacterUpdate(aref chr, float dltTime)
 		EquipCharacterByItem(chr, FindCharacterItemByGroup(chr, BLADE_ITEM_TYPE))
 	}
 	// ccc end
-	//РђРЅР°Р»РёР·РёСЂСѓРµРј СЃРѕСЃС‚РѕСЏРЅРёРµ
+	//Анализируем состояние
 	string btl = "";
 	float dhlt;
 	if(chr.chr_ai.tmpl == LAI_TMPL_FIGHT)
 	{
-		//Р’РѕСЋРµРј
+		//Воюем
 		bool isValidate = false;
 		trg = LAi_tmpl_fight_GetTarget(chr);
 		if(trg >= 0)
@@ -96,15 +96,15 @@ void LAi_type_warrior_CharacterUpdate(aref chr, float dltTime)
 		}
 		if(!isValidate)
 		{
-			//РС‰РµРј РЅРѕРІСѓСЋ С†РµР»СЊ
+			//Ищем новую цель
 			trg = LAi_group_GetTarget(chr);
 			if(trg < 0)
 			{
-				//РџРµСЂРµС…РѕРґРёРј РІ СЂРµР¶РёРј РѕР¶РёРґР°РЅРёСЏ
+				//Переходим в режим ожидания
 				LAi_tmpl_stay_InitTemplate(chr);
 				LAi_type_warrior_SetWateState(chr);
 			}else{
-				//РќР°С‚СЂР°РІР»РёРІР°РµРј РЅР° РЅРѕРІСѓСЋ С†РµР»СЊ
+				//Натравливаем на новую цель
 				LAi_tmpl_SetFight(chr, &Characters[trg]);
 				if(rand(100) < 20)
 				{
@@ -141,11 +141,11 @@ void LAi_type_warrior_CharacterUpdate(aref chr, float dltTime)
 			}
 		}
 	}else{
-		//РС‰РµРј РЅРѕРІСѓСЋ С†РµР»СЊ
+		//Ищем новую цель
 		trg = LAi_group_GetTarget(chr);
 		if(trg >= 0)
 		{
-			//РќР°РїР°РґР°РµРј РЅР° РЅРѕРІСѓСЋ С†РµР»СЊ
+			//Нападаем на новую цель
 			LAi_tmpl_SetFight(chr, &Characters[trg]);
 			if(rand(100) < 70)
 			{
@@ -154,7 +154,7 @@ void LAi_type_warrior_CharacterUpdate(aref chr, float dltTime)
 		}else{
 			if(chr.chr_ai.tmpl == LAI_TMPL_STAY)
 			{
-				//РЎС‚РѕРёРј Рё Р¶РґС‘Рј С†РµР»Рё
+				//Стоим и ждём цели
 				LAi_type_warrior_SetWateState(chr);
 			}
 
@@ -172,78 +172,78 @@ void LAi_type_warrior_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Р—Р°РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
+//Загрузка персонажа в локацию
 bool LAi_type_warrior_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Р’С‹РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РёР· Р»РѕРєР°С†РёСЋ
+//Выгрузка персонажа из локацию
 bool LAi_type_warrior_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ С‚РµРјРїР»РµР№С‚Р°
+//Завершение работы темплейта
 void LAi_type_warrior_TemplateComplite(aref chr, string tmpl)
 {
 }
 
-//РЎРѕРѕР±С‰РёС‚СЊ Рѕ Р¶РµР»Р°РЅРёРё Р·Р°РІРµСЃС‚Рё РґРёР°Р»РѕРі
+//Сообщить о желании завести диалог
 void LAi_type_warrior_NeedDialog(aref chr, aref by)
 {
 }
 
-//Р—Р°РїСЂРѕСЃ РЅР° РґРёР°Р»РѕРі, РµСЃР»Рё РІРѕР·РІСЂР°С‚РёС‚СЊ true С‚Рѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Запрос на диалог, если возвратить true то в этот момент можно начать диалог
 bool LAi_type_warrior_CanDialog(aref chr, aref by)
 {	
 	if(sti(chr.chr_ai.type.dialog) == 0) return false;
-	//Р•СЃР»Рё РїСЂРѕСЃС‚Рѕ СЃС‚РѕРёРј, С‚Рѕ СЃРѕРіР»Р°СЃРёРјСЃСЏ
+	//Если просто стоим, то согласимся
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY) return true;
 	if(chr.chr_ai.tmpl == LAI_TMPL_FOLLOW) return true;
 	if(chr.chr_ai.tmpl == LAI_TMPL_WALK) return true;
 	return false;
 }
 
-//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Начать диалог
 void LAi_type_warrior_StartDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
+	//Если мы пасивны, запускаем шаблон без времени завершения
 	LAi_CharacterSaveAy(chr);
 	CharacterTurnByChr(chr, by);
 	LAi_tmpl_SetActivatedDialog(chr, by);
 }
 
-//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
+//Закончить диалог
 void LAi_type_warrior_EndDialog(aref chr, aref by)
 {
 	LAi_tmpl_stay_InitTemplate(chr);
 	LAi_CharacterRestoreAy(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°Р» РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атаковал другого персонажа
 void LAi_type_warrior_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 	
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚РѕРєРѕРІР°Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РІС€РµРіРѕСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атоковал заблокировавшегося персонажа
 void LAi_type_warrior_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 	
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹СЃС‚СЂРµР»РёР»
+//Персонаж выстрелил
 void LAi_type_warrior_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°РЅ
+//Персонаж атакован
 void LAi_type_warrior_Attacked(aref chr, aref by)
 {
-	//РЎРІРѕРёС… РїСЂРѕРїСѓСЃРєР°РµРј
+	//Своих пропускаем
 //Log_SetStringToLog("LAi_type_warrior_Attacked "+chr.id + " "+by.id);
 	if(!LAi_group_IsEnemy(chr, by)) return;
 	LAi_group_UpdateTargets(chr);
@@ -260,7 +260,7 @@ void LAi_type_warrior_Attacked(aref chr, aref by)
 	}
 	if(isChangeTarget)
 	{
-		//РњРµРЅСЏРµРј С†РµР»СЊ
+		//Меняем цель
 		LAi_tmpl_SetFight(chr, by);*/
 //boal fix ai -->
     float dist = -1.0;
@@ -268,7 +268,7 @@ void LAi_type_warrior_Attacked(aref chr, aref by)
 	if(!GetCharacterDistByChr3D(chr, by, &dist)) return;
 	if(dist < 0.0) return;
 	if(dist > 20.0) return;
-	//РќР°С‚СЂР°РІР»РёРІР°РµРј
+	//Натравливаем
 	//LAi_tmpl_SetFight(chr, by); // TIH moved down below after sound check
     // boal <--
     // TIH reduced this repetitive sound by only doing it on change of target and less percent - Aug29'06
@@ -282,7 +282,7 @@ void LAi_type_warrior_Attacked(aref chr, aref by)
 //	}
 }
 
-//РџРµСЂРµС…РѕРґРёРј РІ СЂРµР¶РёРј РѕР¶РёРґР°РЅРёСЏ
+//Переходим в режим ожидания
 void LAi_type_warrior_SetWateState(aref chr)
 {
 	if(sti(chr.chr_ai.type.stay) == 0)
@@ -292,18 +292,18 @@ void LAi_type_warrior_SetWateState(aref chr)
 			int cmd = sti(chr.chr_ai.type.index);
 			if(cmd >= 0)
 			{
-				//Р’РѕР·РІСЂР°С‰Р°РµРјСЃСЏ Рє РєРѕРјР°РЅРґРёСЂСѓ
+				//Возвращаемся к командиру
 				LAi_tmpl_SetFollow(chr, &Characters[cmd], -1.0);
 			}else{
-				//Р“СѓР»СЏРµРј РІ РїРѕРёСЃРєР°С… С†РµР»Рё
+				//Гуляем в поисках цели
 				LAi_tmpl_walk_InitTemplate(chr);
 			}
 		}else{
-			//Р“СѓР»СЏРµРј РІ РїРѕРёСЃРєР°С… С†РµР»Рё
+			//Гуляем в поисках цели
 			LAi_tmpl_walk_InitTemplate(chr);
 		}
 	}else{
-		//РћР¶РёРґР°РµРј С†РµР»СЊ СЃС‚РѕСЏ РЅР° РјРµСЃС‚Рµ
+		//Ожидаем цель стоя на месте
 		if(chr.chr_ai.tmpl != LAI_TMPL_STAY)
 		{
 			LAi_tmpl_stay_InitTemplate(chr);

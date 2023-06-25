@@ -6,10 +6,10 @@ void land_commands_InitHelp()
 	string sectName = GetEventData();
 	if(sectName!="land_commands") return;
 
-	// Р—Р°РїРѕР»РЅРёРј СЌРєСЂР°РЅ СЃРѕРґРµСЂР¶РёРјС‹Рј
-		// РєР°СЂРёРЅРєРё
+	// Заполним экран содержимым
+		// каринки
 	SetNewPicture("HELPPICTURE","interfaces\helppictures\land_commands.tga");
-		// СЃС‚СЂРѕРєРё
+		// строки
 	int strFileID = LanguageOpenFile("helpsections\land_command_menu.txt");
 	SetFormatedText("TEXTWINDOW",LanguageConvertString(strFileID,"land_commands_info"));
 	GameInterface.strings.HelpName = LanguageConvertString(strFileID,"land_commands_title");
@@ -21,7 +21,7 @@ void land_commands_ResetHelp()
 	string sectName = GetEventData();
 	if(sectName!="lands_commands") return;
 
-	// РЈРґР°Р»РёРј СЃ СЌСЂР°РЅР° РІСЃРµ
+	// Удалим с эрана все
 	SetNewPicture("HELPPICTURE","");
 	SetFormatedText("TEXTWINDOW","");
 }

@@ -360,10 +360,10 @@ void DeleteQuestHeader(string idQuest)
 }
 
 //**********************************************************************************
-// РЈС‚РёР»РёС‚С‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РєРІРµСЃС‚Р°РјРё
+// Утилиты для работы с квестами
 //==================================================================================
 
-// РїСЂРѕРІРµСЂРёС‚СЊ С„Р»Р°Рі СЃРѕСЃС‚РѕСЏРЅРёСЏ РєРІРµСЃС‚Р°
+// проверить флаг состояния квеста
 //-----------------------------------------
 bool CheckQuestAttribute(string attributeName, string attributeValue)
 {
@@ -373,7 +373,7 @@ bool CheckQuestAttribute(string attributeName, string attributeValue)
 	return false;
 }
 
-// СѓРґР°Р»РёС‚СЊ С„Р»Р°Рі СЃРѕСЃС‚РѕСЏРЅРёСЏ РєРІРµСЃС‚Р°
+// удалить флаг состояния квеста
 //------------------------------------------
 void DeleteQuestAttribute(string attributeName)
 {
@@ -452,7 +452,7 @@ string GetNearLocatorToLocator(string origGroup, string origLocator, string find
 	return findedLocator;
 }
 
-// СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р±Р»РёР¶Р°Р№С€РёР№ Р»РѕРєР°С‚РѕСЂ РіСЂСѓРїРїС‹ goto (РЅРѕ РЅРµ Р±Р»РёР¶Рµ РјРёРЅРёРјР°Р»СЊРЅРѕР№ РґРёСЃС‚Р°РЅС†РёРё)
+// установить персонажа в ближайший локатор группы goto (но не ближе минимальной дистанции)
 //--------------------------------------------------------------------------------------------
 bool SetCharacterToNearLocatorFromMe(string characterID, float minDistance)
 {
@@ -476,7 +476,7 @@ bool SetCharacterToNearLocatorFromMe(string characterID, float minDistance)
 	return false;
 }
 
-// РїРѕР»СѓС‡РёС‚СЊ СЃСЃС‹Р»РєСѓ РЅР° РїРµСЂСЃРѕРЅР°Р¶ С‡РµСЂРµР· РµРіРѕ ID-С€РЅРёРє
+// получить ссылку на персонаж через его ID-шник
 //------------------------------------------------------
 ref CharacterFromID(string characterID)
 {
@@ -501,7 +501,7 @@ void WaitDatePostEventControl()
 	QuestsCheck();
 }
 
-// РїСЂРѕРїСѓСЃС‚РёС‚СЊ РЅРµРєРѕС‚РѕСЂРѕРµ РІСЂРµРјСЏ СЃ С„СЌР№РґРѕРј СЌРєСЂР°РЅР°
+// пропустить некоторое время с фэйдом экрана
 //----------------------------------------------------
 void WaitDate(string postName,int year, int month, int day, int hour, int minute)
 {
@@ -514,7 +514,7 @@ void WaitDate(string postName,int year, int month, int day, int hour, int minute
 	WaitDatePostEventControl();
 }
 
-// СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РєР°РјРµСЂСѓ РЅР° РїСЂРѕСЃРјРѕС‚СЂ РєРѕСЂР°Р±Р»СЏ РїРµСЂСЃРѕРЅР°Р¶Р° Рё РІС‹Р·РІР°С‚СЊ РєРІРµСЃС‚ С‡РµСЂРµР· Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЃРµРєСѓРЅРґ
+// установить камеру на просмотр корабля персонажа и вызвать квест через заданное число секунд
 //---------------------------------------------------------------------------------------------
 bool SetCameraToShipView(string characterName, string questCheckName, float viewTimeInSec)
 {
@@ -553,7 +553,7 @@ void QuestCameraRestore()
 	}
 }
 
-// Р—Р°РєСЂС‹С‚СЊ РІСЃРµ РІС‹С…РѕРґС‹ РЅР° РјРѕСЂРµ РІ СЂР°Р№РѕРЅРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ СЃРІРѕРµРіРѕ РєРѕСЂР°Р±Р»СЏ
+// Закрыть все выходы на море в районе расположения своего корабля
 //-----------------------------------------------------------------
 bool QuestCloseSeaExit()
 {
@@ -577,7 +577,7 @@ bool QuestCloseSeaExit()
 	return true;
 }
 
-// РћС‚РєСЂС‹С‚СЊ РІСЃРµ РІС‹С…РѕРґС‹ РЅР° РјРѕСЂРµ РІ СЂР°Р№РѕРЅРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ СЃРІРѕРµРіРѕ РєРѕСЂР°Р±Р»СЏ
+// Открыть все выходы на море в районе расположения своего корабля
 //-----------------------------------------------------------------
 bool QuestOpenSeaExit()
 {
@@ -598,7 +598,7 @@ bool QuestOpenSeaExit()
 	return true;
 }
 
-// РЅР°Р№С‚Рё Р»РѕРєР°С‚РѕСЂ РІ Р»РѕРєР°С†РёРё РїРѕ РёРјРµРЅРё
+// найти локатор в локации по имени
 //-----------------------------------
 bool FindLocator(string locationName, string locatorName, ref locatorRef, bool fromRealLoadedLocators)
 {
@@ -647,7 +647,7 @@ bool FindLocator(string locationName, string locatorName, ref locatorRef, bool f
 	return false;
 }
 
-// РїСЂРѕРІРµСЂРёС‚СЊ РїРѕРїР°РґР°РµС‚ Р»Рё РєРѕРѕСЂРґРёРЅР°С‚Р° РІ Р·Р°РґР°РЅРЅС‹Р№ Р»РѕРєР°С‚РѕСЂ РІ С‚РµРєСѓС‰РµР№ Р»РѕРєР°С†РёРё
+// проверить попадает ли координата в заданный локатор в текущей локации
 bool CheckCurLocator(string group,string locator,float x,float y,float z)
 {
 	int locIdx = FindLoadedLocation();
@@ -662,7 +662,7 @@ bool CheckCurLocator(string group,string locator,float x,float y,float z)
 	else return false;
 }
 
-// Р·Р°РјРµРЅРёС‚СЊ РѕРґРёРЅ Р»РѕРєР°С‚РѕСЂ РЅР° РЅРѕРІС‹Р№ Р°РґСЂРµСЃ РїРµСЂРµРіСЂСѓР·РєРёРё
+// заменить один локатор на новый адрес перегрузкии
 //---------------------------------------------------
 bool ChangeReloadData(string locationName,string locatorName, string toLocationName,string toLocatorName)
 {
@@ -683,7 +683,7 @@ bool ChangeReloadData(string locationName,string locatorName, string toLocationN
 	return true;
 }
 
-// РІРµСЂРЅСѓС‚СЊ Р»РѕРєР°С‚РѕСЂСѓ СЃС‚Р°СЂС‹Р№ Р°РґСЂРµСЃ РїРµСЂРµРіСЂСѓР·РєРё
+// вернуть локатору старый адрес перегрузки
 bool ChangeBackReloadData(string locationName,string locatorName)
 {
 	aref locRef;
@@ -696,7 +696,7 @@ bool ChangeBackReloadData(string locationName,string locatorName)
 	return true;
 }
 
-// РІС‹Р·РІР°С‚СЊ РїСЂРѕРІРµСЂРєСѓ РєРІРµСЃС‚Р° С‡РµСЂРµР· Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЃРµРєСѓРЅРґ
+// вызвать проверку квеста через заданное число секунд
 //------------------------------------------------------
 void DoQuestCheckDelay(string questCheckName, float delayInSecond)
 {
@@ -746,7 +746,7 @@ void ExitActAnimation()
 	}
 }
 
-// Р’СЂРµРјРµРЅРЅРѕ СЃРѕС…СЂР°РЅРёС‚СЊ РІСЃРµ РґР°РЅРЅС‹Рµ Рѕ РЅР°С€РµРј РєРѕСЂР°Р±Р»Рµ РІ РїР°РјСЏС‚Рё
+// Временно сохранить все данные о нашем корабле в памяти
 //--------------------------------------------------------
 bool ShipTempRemove(ref _refCharacter)
 {
@@ -761,7 +761,7 @@ bool ShipTempRemove(ref _refCharacter)
 	return true;
 }
 
-// Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РґР°РЅРЅС‹Рµ Рѕ РЅР°С€РµРј СЃС‚Р°СЂРѕРј РєРѕСЂР°Р±Р»Рµ РёР· РїР°РјСЏС‚Рё
+// Восстановить данные о нашем старом корабле из памяти
 //------------------------------------------------------
 bool RestoreTempRemovedShip(ref _refCharacter)
 {
@@ -802,7 +802,7 @@ bool RestoreTempRemovedItems(ref _refCharacter) // GR: Similar to RestoreTempRem
 	return true;
 }
 
-// РћР±РјРµРЅСЏС‚СЊ РґРІСѓС… РїРµСЂСЃРѕРЅР°Р¶РµР№ РєРѕСЂР°Р±Р»СЏРјРё
+// Обменять двух персонажей кораблями
 //------------------------------------
 void ExchangeCharacterShip(ref oneCharacter, ref twoCharacter)
 {
@@ -824,7 +824,7 @@ void QuestProcessDialogExit()
 	DeleteAttribute(two_aref,"act.disableDialog");
 }
 
-// Р—Р°РґР°С‚СЊ РєРІРµСЃС‚, РІС‹РїРѕР»РЅСЏРµРјС‹Р№ РїРѕСЃР»Рµ РІС‹С…РѕРґР° РёР· РґРёР°Р»РѕРіР°
+// Задать квест, выполняемый после выхода из диалога
 //---------------------------------------------------
 void AddDialogExitQuest(string questName)
 {
@@ -852,7 +852,7 @@ void QuestDialogExitProcedure()
 	string attrName;
 	ref mc = GetMainCharacter();
 
-	// РјРѕР¶РµС‚ Р±С‹С‚СЊ РІС‹РїРѕР»РЅРёРј РєР°РєСѓСЋ РЅРёР±СѓРґСЊ Р·Р°РґР°С‡Сѓ
+	// может быть выполним какую нибудь задачу
 	ExecuteAfterDialogTask(otherCh);
 	ExecuteAfterDialogTask(mc);
 
@@ -889,7 +889,7 @@ void DoDeleteFakeLocation()
 	}
 }
 
-// РџРµСЂРµРіСЂСѓР·РёС‚СЊ РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° РІ РґСЂСѓРіСѓСЋ Р»РѕРєР°С†РёСЋ Рё РїРѕ Р·Р°РІРµСЂС€РµРЅРёСЋ РІС‹Р·РІР°С‚СЊ РєРІРµСЃС‚
+// Перегрузить главного персонажа в другую локацию и по завершению вызвать квест
 //-------------------------------------------------------------------------------
 bool DoQuestReloadToLocation(string idLocation, string idGroup, string idLocator, string questName)
 {
@@ -910,7 +910,7 @@ bool DoQuestReloadToLocation(string idLocation, string idGroup, string idLocator
 	return DoReloadCharacterToLocation(idLocation,idGroup,idLocator);
 }
 
-// РџРµСЂРµРіСЂСѓР·РёС‚СЊ РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° РІ РґСЂСѓРіСѓСЋ Р»РѕРєР°С†РёСЋ
+// Перегрузить главного персонажа в другую локацию
 //-------------------------------------------------------------------------------
 bool DoReloadCharacterToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -944,7 +944,7 @@ bool DoReloadCharacterToLocation(string idLocation, string idGroup, string idLoc
 	return TeleportCharacterFromCurLocationToLocation("fakeReload",idGroup,idLocator);
 }
 
-// РџРµСЂРµРіСЂСѓР·РёС‚СЊ РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° РІ РґСЂСѓРіСѓСЋ Р»РѕРєР°С†РёСЋ РёР· РєР°СЂС‚С‹ РјРёСЂР°
+// Перегрузить главного персонажа в другую локацию из карты мира
 //-------------------------------------------------------------------------------
 bool DoReloadFromWorldMapToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -965,7 +965,7 @@ void ReloadFromWMtoL_complete()
 	DeleteAttribute(pchar,"tmpWDMtoLand");
 }
 
-// РџРµСЂРµРіСЂСѓР·РёС‚СЊ РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° РІ РґСЂСѓРіСѓСЋ Р»РѕРєР°С†РёСЋ РёР· РјРѕСЂСЏ
+// Перегрузить главного персонажа в другую локацию из моря
 //-------------------------------------------------------------------------------
 bool DoReloadFromSeaToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -994,7 +994,7 @@ void EndReloadToLocation()
 	ReloadFromWMtoL_complete();
 }
 
-// РЈРґР°Р»РёС‚СЊ РєРІРµСЃС‚ РёР· СЃРїРёСЃРєР° РїСЂРѕРІРµСЂСЏРµРјС‹С… РєРІРµСЃС‚РѕРІ
+// Удалить квест из списка проверяемых квестов
 //---------------------------------------------
 void DeleteQuestCheck(string sQuestName)
 {
@@ -1003,7 +1003,7 @@ void DeleteQuestCheck(string sQuestName)
 	if( CheckAttribute(mc,"quest."+sQuestName+".win_condition") )	mc.quest.(sQuestName).over = "yes";
 }
 
-// РџРѕР»СѓС‡РёС‚СЊ РїРѕР»РЅРѕРµ РёРјСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+// Получить полное имя персонажа
 //----------------------------------
 string GetCharacterFullName(string idCharacter)
 {
@@ -1017,7 +1017,7 @@ string GetCharacterFullName(string idCharacter)
 	return retStr;
 }
 
-// РЎРѕС…СЂР°РЅРёС‚СЊ СЃРѕСЃС‚РѕСЏРЅРёРµ Рѕ РїР°СЃСЃР°Р¶РёСЂР°С… РІРѕ РІСЂРµРјРµРЅРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ Рё РІСЂРµРјРµРЅРЅРѕ СѓРґР°Р»РёС‚СЊ РёС… РІСЃРµС…
+// Сохранить состояние о пассажирах во временной переменной и временно удалить их всех
 //-------------------------------------------------------------------------------------
 bool StorePassengers(string idCharacter)
 {
@@ -1030,7 +1030,7 @@ bool StorePassengers(string idCharacter)
 	string sTmp;
 	aref arTmp;
 	int i,idx;
-	// СЃРѕС…СЂР°РЅРёРј РѕС„РёС†РµСЂРѕРІ
+	// сохраним офицеров
 	makearef(arTmp,refCh.Fellows.Old.Officers);
 	for(i=1; i<4; i++)
 	{
@@ -1039,7 +1039,7 @@ bool StorePassengers(string idCharacter)
 		sTmp = "id"+i;
 		arTmp.(sTmp) = idx;
 	}
-	// СЃРѕС…СЂР°РЅРёРј РїР°СЃСЃР°Р¶РёСЂРѕРІ
+	// сохраним пассажиров
 	makearef(arTmp,refCh.Fellows.Old.Passengers);
 	for(i=0; GetPassengersQuantity(refCh)>0; i++)
 	{
@@ -1055,7 +1055,7 @@ bool StorePassengers(string idCharacter)
 	return true;
 }
 
-// Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ Р·Р°РїРѕРјРЅРµРЅРЅС‹С… СЂР°РЅРµРµ РїР°СЃСЃР°Р¶РёСЂРѕРІ Рё РїРѕ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РѕС„РёС†РµСЂРѕРІ
+// Восстановить запомненных ранее пассажиров и по возможности офицеров
 //----------------------------------------------------------------------
 bool RestorePassengers(string idCharacter)
 {
@@ -1067,7 +1067,7 @@ bool RestorePassengers(string idCharacter)
 
 	int i,idx;
 	aref arTmp,arCur;
-	// Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїР°СЃСЃР°Р¶РёСЂРѕРІ
+	// Восстановление пассажиров
 	makearef(arTmp,refCh.Fellows.Old.Passengers);
 	for(i=0; i<GetAttributesNum(arTmp); i++)
 	{
@@ -1077,7 +1077,7 @@ bool RestorePassengers(string idCharacter)
 		AddPassenger(refCh,ch,false);
 		DeleteAttribute(ch,"StoredFellow"); // PB: Erase this attribute
 	}
-	// Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РѕС„РёС†РµСЂРѕРІ
+	// Восстановление офицеров
 	makearef(arTmp,refCh.Fellows.Old.Officers);
 	for(i=0; i<GetAttributesNum(arTmp); i++)
 	{
@@ -1087,12 +1087,12 @@ bool RestorePassengers(string idCharacter)
 		SetOfficersIndex(refCh,-1,idx);
 	}
 
-	// СѓРґР°Р»РµРЅРёРµ РІСЂРµРјРµРЅРЅРѕРіРѕ С…СЂР°РЅРёР»РёС‰Р° РїР°СЃСЃР°Р¶РёСЂРѕРІ
+	// удаление временного хранилища пассажиров
 	DeleteAttribute(refCh,"Fellows.Old");
 	return true;
 }
 
-// РЎРјРѕС‚СЂРёРј РЅР° РєР°РєРѕРіРѕ РЅРёР±СѓРґСЊ РїРµСЂСЃРѕРЅР°Р¶Р°
+// Смотрим на какого нибудь персонажа
 //--------------------------------------
 bool StartLookAfterCharacter(string idCharacter)
 {
@@ -1111,14 +1111,14 @@ void LookAfterCharacterProc()
 	PostEvent("evntLookAfterCharacter",100,"l",idxCh);
 }
 
-// РџСЂРµРєСЂР°С‚РёР»Рё СЃРјРѕС‚СЂРµС‚СЊ РЅР° РїРµСЂСЃРѕРЅР°Р¶
+// Прекратили смотреть на персонаж
 //-----------------------------------
 void EndLookAfterCharacter()
 {
 	DelEventHandler("evntLookAfterCharacter","LookAfterCharacterProc");
 }
 
-// РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶ (РЅР° СЃР»СѓС‡Р°Р№, РµСЃР»Рё РѕРЅ Р±С‹Р» РґРѕ СЌС‚РѕРіРѕ СѓР±РёС‚)
+// восстановить персонаж (на случай, если он был до этого убит)
 bool ReanimateCharacter(string characterID)
 {
 	int idx = GetCharacterIndex(characterID);
@@ -1133,7 +1133,7 @@ bool ReanimateCharacter(string characterID)
 }
 
 //extern void SetRandomNameToCharacter(ref chref);
-// СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃР»СѓС‡Р°Р№РЅРѕРµ РёРјСЏ РґР»СЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+// установить случайное имя для персонажа
 bool SetCharacterRandomName(string characterID)
 {
 	int idx = GetCharacterIndex(characterID);
@@ -1147,7 +1147,7 @@ bool SetCharacterRandomName(string characterID)
 }
 
 
-// РѕР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РѕР± СѓРЅРёС‡С‚РѕР¶РµРЅРёРё С„РѕСЂС‚Р°
+// обработка события об уничтожении форта
 void QuestFortDestroyed()
 {
 	int idx = GetEventData();
@@ -1216,7 +1216,7 @@ void QuestGroupDeath(int chrIdx)
 }
 // <-- KK
 
-// РїРѕРґРіРѕС‚РѕРІРёС‚СЊСЃСЏ Рє РІС‹РіСЂСѓР·РєРµ РІ РјРѕСЂРµ РїРѕ РєРІРµСЃС‚Сѓ
+// подготовиться к выгрузке в море по квесту
 object questToSeaLoginer;
 void QuestToSeaLogin_PrepareLoc(string islandID, string locGroup, string locName, bool sailUP)
 {
@@ -1302,7 +1302,7 @@ void QuestToSeaLogin_SetTornado(float x, float z)
 	Tornado.init.z = z;
 }
 
-// РїРѕРґРіРѕС‚РѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° РґР»СЏ РІС‹РіСЂСѓР·РєРё РІ РјРѕСЂРµ РїРѕ РєРІРµСЃС‚Сѓ
+// подготовить персонажа для выгрузки в море по квесту
 void QuestToSeaLogin_AddGroup(string sGroupID, int formation, float x, float z, float ay, bool sailUP)
 {
 	int i, j, num, chnum, chrIdx;
@@ -1399,7 +1399,7 @@ void QuestToSeaLogin_AddGroupLoc(string sGroupID, int formation, string locGroup
 	}
 }
 
-// Р·Р°РїСѓСЃС‚РёС‚СЊ РєРІРµСЃС‚РѕРІСѓСЋ РІС‹РіСЂСѓР·РєСѓ РІ РјРѕСЂРµ
+// запустить квестовую выгрузку в море
 void QuestToSeaLogin_Launch()
 {
 	if (LAi_boarding_process) return;
@@ -1449,7 +1449,7 @@ void QuestToSeaLoginEndFade()
 }
 // <-- KK
 
-// РџРѕР»СѓС‡РёС‚СЊ СЃР»РµРґСѓСЋС‰РµРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° РѕРґРЅРѕР№ РіСЂСѓРїРїС‹
+// Получить следующего персонажа одной группы
 int	GetCharacterFromFantom(ref chref)
 {
 	/*int tmpi = FindLoadedLocation();
@@ -1474,7 +1474,7 @@ int	GetCharacterFromFantom(ref chref)
 	return -1;
 }
 
-// СѓР±СЂР°С‚СЊ РёР· Р»РѕРєР°С†РёРё РІСЃРµС… РїРµСЂСЃРѕРІ СѓРєР°Р·Р°РЅРЅРѕРіРѕ С‚РёРїР°
+// убрать из локации всех персов указанного типа
 /*void RemoveCharactersFromLocation(string idLocation, string modelName, string type)
 {
 	for(int i=0; i<CHARACTERS_QUANTITY; i++) // NK 05-04-05 use CHARACTERS_QUANTITY
@@ -1583,10 +1583,10 @@ void procEvntQuestComplete()
 }
 
 ///////////////////////////////////
-///  Р­С‚Рѕ СЃС‚Р°СЂР°СЏ С„РёРіРЅСЏ - Р·Р° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р±СѓРґСѓ Р±РёС‚СЊ РјРѕСЂРґСѓ... СЃРёР»СЊРЅРѕ
+///  Это старая фигня - за использование буду бить морду... сильно
 ///////////////////////////////////
 
-// РџСЂРѕРёРіСЂР°С‚СЊ Р°РЅРёРјР°С†РёСЋ Рё РїРѕ РµРµ Р·Р°РІРµСЂС€РµРЅРёСЋ РІС‹Р·РІР°С‚СЊ РєРІРµСЃС‚
+// Проиграть анимацию и по ее завершению вызвать квест
 //------------------------------------------------------------
 void ActAnimation(ref chref, string action, string questName)
 {
@@ -1594,7 +1594,7 @@ void ActAnimation(ref chref, string action, string questName)
 //	actAction(chref, action, "ExitActAnimation");
 }
 
-// Р’СЃРµРј РІРѕСЋСЋС‰РёРј РїРµСЂСЃР°Рј СѓР±СЂР°С‚СЊ РѕСЂСѓР¶РёРµ, СЃРѕР»РґР°С‚Р°Рј РІРµСЂРЅСѓС‚СЊСЃСЏ РЅР° СЃРІРѕРё РїРѕР·РёС†РёРё.
+// Всем воюющим персам убрать оружие, солдатам вернуться на свои позиции.
 void BreakAllAttack()
 {
 //	actAllarm = 0.0;

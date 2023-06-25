@@ -473,7 +473,7 @@ void SetDefaultFight(ref character)
 
 	SetDefaultFightDead(character);
 
-	//Idle Р°РЅРёРјР°С†РёСЏ РІ СЂРµР¶РёРјРµ Р±РѕСЏ
+	//Idle анимация в режиме боя
 	character.actions.fightidle.i1 = "fight stand_1";
 	character.actions.fightidle.i2 = "fight stand_2";
 	character.actions.fightidle.i3 = "fight stand_3";

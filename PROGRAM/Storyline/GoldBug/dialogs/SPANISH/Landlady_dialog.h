@@ -1,9 +1,9 @@
 string DLG_TEXT[6] = {
-"Mr. Poe estÃ¡ en casa, seÃ±or. Por aquÃ­, por favor, subiendo las escaleras.",
+"Mr. Poe está en casa, señor. Por aquí, por favor, subiendo las escaleras.",
 "Gracias.",
-"Mr. Poe no estÃ¡ en casa, seÃ±or.",
-"Muy bien. AdiÃ³s.",
-"Â¿QuÃ© estÃ¡ usted mirando, seÃ±or?",
-"Hum, yo..., discÃºlpeme...",
+"Mr. Poe no está en casa, señor.",
+"Muy bien. Adiós.",
+"¿Qué está usted mirando, señor?",
+"Hum, yo..., discúlpeme...",
 
 };

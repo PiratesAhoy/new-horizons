@@ -1,59 +1,59 @@
 
-//РџРѕРґРєР»СЋС‡С‘РЅРЅС‹Рµ С‚РёРїС‹ РґР»СЏ РёРЅС‚РµР»РµРєС‚Р°
+//Подключённые типы для интелекта
 
-//РРіСЂРѕРє
+//Игрок
 #include "Loc_ai\types\LAi_player.c"
-//РћС„РёС†РµСЂ
+//Офицер
 #include "Loc_ai\types\LAi_officer.c"
-//Р“РѕСЂРѕР¶Р°РЅРёРЅ
+//Горожанин
 #include "Loc_ai\types\LAi_citizen.c"
-//РћС…СЂР°РЅРёРє
+//Охраник
 #include "Loc_ai\types\LAi_guardian.c"
-//РџР°С‚СЂСѓР»СЊ
+//Патруль
 #include "Loc_ai\types\LAi_patrol.c"
-//Р’РѕРёРЅ
+//Воин
 #include "Loc_ai\types\LAi_warrior.c"
-//РўРѕСЂРіРѕРІРµС†
+//Торговец
 #include "Loc_ai\types\LAi_merchant.c"
-//РЎС‚РѕСЏС‡РёР№ С‡РµР»РѕРІРµРє
+//Стоячий человек
 #include "Loc_ai\types\LAi_stay.c"
-//РЎРёРґСЏС‡РёР№ С‡РµР»РѕРІРµРє
+//Сидячий человек
 #include "Loc_ai\types\LAi_sit.c"
-//Р‘Р°СЂРјРµРЅ
+//Бармен
 #include "Loc_ai\types\LAi_barman.c"
-//РћС„РёС†РёР°РЅС‚РєР°
+//Официантка
 #include "Loc_ai\types\LAi_waitress.c"
-//РќРёС‰РёР№
+//Нищий
 #include "Loc_ai\types\LAi_poor.c"
-//Р“СѓР±РµСЂРЅР°С‚РѕСЂ, СЃРёРґСЏС‡РёР№ РЅР° РјРµСЃС‚Рµ
+//Губернатор, сидячий на месте
 #include "Loc_ai\types\LAi_huber.c"
-//Р“СѓР±РµСЂРЅР°С‚РѕСЂ, С…РѕРґСЏС‡РёР№ РїРѕ РїРѕРјРµС‰РµРЅРёСЋ
+//Губернатор, ходячий по помещению
 #include "Loc_ai\types\LAi_huberstay.c"
-//РЎРІСЏС‰РµРЅРёРє
+//Священик
 #include "Loc_ai\types\LAi_priest.c"
-//РђРєС‚С‘СЂ
+//Актёр
 #include "Loc_ai\types\LAi_actor.c"
-//РћР±РµР·СЊСЏРЅР°-РјРѕРЅСЃС‚СЂ
+//Обезьяна-монстр
 #include "Loc_ai\types\LAi_monkey.c"
 
 #include "Loc_ai\types\LAi_stunned.c" // NK 05-07-10 CCC's stun type
 
 #include "Loc_ai\types\LAi_building.c" // ccc building kit Aug 05
-//РЎРїСЏС‰РёР№
+//Спящий
 #include "Loc_ai\types\LAi_lay.c" // MAXIMUS 17.09.2007
-//Р Р°Р±РѕС‚Р°СЋС‰РёР№
+//Работающий
 #include "Loc_ai\types\LAi_staywork.c" // MAXIMUS 17.09.2007
 
 //------------------------------------------------------------------------------------------
 //Player
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РёРіСЂРѕРєР°
+//Установить персонажу тип игрока
 void LAi_SetPlayerType(aref chr)
 {
-	//РўРёРї РїРµСЂСЃРѕРЅР°Р¶Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	//Тип персонажа по умолчанию
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
-	//РЁР°Р±Р»РѕРЅ СЃРїРµС†РёР°Р»СЊРЅС‹Р№
+	//Шаблон специальный
 	LAi_type_player_Init(chr);
 	LAi_group_MoveCharacter(chr, LAI_GROUP_PLAYER);
 }
@@ -62,7 +62,7 @@ void LAi_SetPlayerType(aref chr)
 //Officer
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РѕС„РёС†РµСЂР°
+//Установить персонажу тип офицера
 void LAi_SetOfficerType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -74,7 +74,7 @@ void LAi_SetOfficerType(aref chr)
 //Citizen
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РіРѕСЂРѕР¶Р°РЅРёРЅР°
+//Установить персонажу тип горожанина
 void LAi_SetCitizenType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -82,7 +82,7 @@ void LAi_SetCitizenType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РіРѕСЂРѕР¶Р°РЅРёРЅР°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип горожанина, без перемещения в группу
 void LAi_SetCitizenTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -93,7 +93,7 @@ void LAi_SetCitizenTypeNoGroup(aref chr)
 //Guardian
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЃС‚СЂР°Р¶РЅРёРєР°
+//Установить персонажу тип стражника
 void LAi_SetGuardianType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -103,7 +103,7 @@ void LAi_SetGuardianType(aref chr)
 	chr.isSoldier = true; // KK
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЃС‚СЂР°Р¶РЅРёРєР°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип стражника, без перемещения в группу
 void LAi_SetGuardianTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -123,7 +123,7 @@ void LAi_SetCivilianGuardianType(aref chr)
 //Patrol
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РїР°С‚СЂСѓР»СЏ
+//Установить персонажу тип патруля
 void LAi_SetPatrolType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -133,7 +133,7 @@ void LAi_SetPatrolType(aref chr)
 	chr.isSoldier = true; // KK
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РїР°С‚СЂСѓР»СЏ, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип патруля, без перемещения в группу
 void LAi_SetPatrolTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -153,7 +153,7 @@ void LAi_SetCivilianPatrolType(aref chr)
 //Warrior
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РІРѕР№РЅР°
+//Установить персонажу тип война
 void LAi_SetWarriorType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -162,7 +162,7 @@ void LAi_SetWarriorType(aref chr)
 	chr.isWarrior = true;
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РІРѕР№РЅР°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип война, без перемещения в группу
 void LAi_SetWarriorTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -175,7 +175,7 @@ void LAi_SetWarriorTypeNoGroup(aref chr)
 //Merchant
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї С‚РѕСЂРіРѕРІС†Р°
+//Установить персонажу тип торговца
 void LAi_SetMerchantType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -184,7 +184,7 @@ void LAi_SetMerchantType(aref chr)
 	chr.isMerchant = true; //Levis
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї С‚РѕСЂРіРѕРІС†Р°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип торговца, без перемещения в группу
 void LAi_SetMerchantTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -196,7 +196,7 @@ void LAi_SetMerchantTypeNoGroup(aref chr)
 //Stay
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЃС‚РѕСЏС‡РµРіРѕ
+//Установить персонажу тип стоячего
 void LAi_SetStayType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -204,7 +204,7 @@ void LAi_SetStayType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЃС‚РѕСЏС‡РµРіРѕ, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип стоячего, без перемещения в группу
 void LAi_SetStayTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -215,7 +215,7 @@ void LAi_SetStayTypeNoGroup(aref chr)
 //Sit
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЃРёРґСЏС‡РµРіРѕ
+//Установить персонажу тип сидячего
 void LAi_SetSitType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -223,7 +223,7 @@ void LAi_SetSitType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЃРёРґСЏС‡РµРіРѕ, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип сидячего, без перемещения в группу
 void LAi_SetSitTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -235,7 +235,7 @@ void LAi_SetSitTypeNoGroup(aref chr)
 //Barmen
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р±Р°СЂРјРµРЅР° (only man)
+//Установить персонажу тип бармена (only man)
 void LAi_SetBarmanType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -244,7 +244,7 @@ void LAi_SetBarmanType(aref chr)
 	chr.isMerchant = true; //Levis
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РѕС„РёС†РёР°РЅС‚РєРё, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ (only man)
+//Установить персонажу тип официантки, без перемещения в группу (only man)
 void LAi_SetBarmanTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -256,7 +256,7 @@ void LAi_SetBarmanTypeNoGroup(aref chr)
 //Waitress
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РѕС„РёС†РёР°РЅС‚РєРё (only woman)
+//Установить персонажу тип официантки (only woman)
 void LAi_SetWaitressType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -264,7 +264,7 @@ void LAi_SetWaitressType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РѕС„РёС†РёР°РЅС‚РєРё, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ (only woman)
+//Установить персонажу тип официантки, без перемещения в группу (only woman)
 void LAi_SetWaitressTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -276,7 +276,7 @@ void LAi_SetWaitressTypeNoGroup(aref chr)
 //Poor
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р±РµРґРЅРёРєР°
+//Установить персонажу тип бедника
 void LAi_SetPoorType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -284,7 +284,7 @@ void LAi_SetPoorType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р±РµРґРЅРёРєР°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип бедника, без перемещения в группу
 void LAi_SetPoorTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -295,7 +295,7 @@ void LAi_SetPoorTypeNoGroup(aref chr)
 //Huber
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РіСѓР±РµСЂРЅР°С‚РѕСЂР°
+//Установить персонажу тип губернатора
 void LAi_SetHuberType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -303,7 +303,7 @@ void LAi_SetHuberType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_GROUP_HUBER);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РіСѓР±РµСЂРЅР°С‚РѕСЂР°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип губернатора, без перемещения в группу
 void LAi_SetHuberTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -314,7 +314,7 @@ void LAi_SetHuberTypeNoGroup(aref chr)
 //HuberStay
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РіСѓР±РµСЂРЅР°С‚РѕСЂР°, С…РѕРґСЏС‡РµРіРѕ РїРѕ РєРѕРјРЅР°С‚Рµ
+//Установить персонажу тип губернатора, ходячего по комнате
 void LAi_SetHuberStayType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -322,7 +322,7 @@ void LAi_SetHuberStayType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_GROUP_HUBER);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РіСѓР±РµСЂРЅР°С‚РѕСЂР°, С…РѕРґСЏС‡РµРіРѕ РїРѕ РєРѕРјРЅР°С‚Рµ, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип губернатора, ходячего по комнате, без перемещения в группу
 void LAi_SetHuberStayTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -333,7 +333,7 @@ void LAi_SetHuberStayTypeNoGroup(aref chr)
 //Priest
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЃРІСЏС‰РµРЅРёРєР°
+//Установить персонажу тип священика
 void LAi_SetPriestType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -341,7 +341,7 @@ void LAi_SetPriestType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЃРІСЏС‰РµРЅРёРєР°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип священика, без перемещения в группу
 void LAi_SetPriestTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -353,7 +353,7 @@ void LAi_SetPriestTypeNoGroup(aref chr)
 //Actor
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р°РєС‚С‘СЂР°
+//Установить персонажу тип актёра
 void LAi_SetActorType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -361,7 +361,7 @@ void LAi_SetActorType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_GROUP_ACTOR);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р°РєС‚С‘СЂР°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип актёра, без перемещения в группу
 void LAi_SetActorTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -372,7 +372,7 @@ void LAi_SetActorTypeNoGroup(aref chr)
 //Monkey
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РѕР±РµР·СЊСЏРЅС‹-РјРѕРЅСЃС‚СЂР°
+//Установить персонажу тип обезьяны-монстра
 void LAi_SetMonkeyType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -380,7 +380,7 @@ void LAi_SetMonkeyType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_GROUP_MONSTERS);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї РѕР±РµР·СЊСЏРЅС‹-РјРѕРЅСЃС‚СЂР°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип обезьяны-монстра, без перемещения в группу
 void LAi_SetMonkeyTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -391,7 +391,7 @@ void LAi_SetMonkeyTypeNoGroup(aref chr)
 // Stunned -- NK 05-07-10 CCC's stun type
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р±РµРґРЅРёРєР°
+//Установить персонажу тип бедника
 void LAi_SetStunnedType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -399,7 +399,7 @@ void LAi_SetStunnedType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р±РµРґРЅРёРєР°, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип бедника, без перемещения в группу
 void LAi_SetStunnedTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -410,7 +410,7 @@ void LAi_SetStunnedTypeNoGroup(aref chr)
 // Building -- ccc aug05
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р·РґР°РЅРёСЏ
+//Установить персонажу тип здания
 void LAi_SetBuildingType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -418,7 +418,7 @@ void LAi_SetBuildingType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р·РґР°РЅРёСЏ, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип здания, без перемещения в группу
 void LAi_SetBuildingTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -429,7 +429,7 @@ void LAi_SetBuildingTypeNoGroup(aref chr)
 //Lay - MAXIMUS 17.09.2007
 //------------------------------------------------------------------------------------------
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р»РµР¶Р°С‡РµРіРѕ
+//Установить персонажу тип лежачего
 void LAi_SetLayType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -437,14 +437,14 @@ void LAi_SetLayType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї Р»РµР¶Р°С‡РµРіРѕ, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип лежачего, без перемещения в группу
 void LAi_SetLayTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
 	LAi_type_lay_Init(chr);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЂР°Р±РѕС‚Р°СЋС‰РµРіРѕ
+//Установить персонажу тип работающего
 void LAi_SetStayworkType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -452,7 +452,7 @@ void LAi_SetStayworkType(aref chr)
 	LAi_group_MoveCharacter(chr, LAI_DEFAULT_GROUP);
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ С‚РёРї СЂР°Р±РѕС‚Р°СЋС‰РµРіРѕ, Р±РµР· РїРµСЂРµРјРµС‰РµРЅРёСЏ РІ РіСЂСѓРїРїСѓ
+//Установить персонажу тип работающего, без перемещения в группу
 void LAi_SetStayworkTypeNoGroup(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;

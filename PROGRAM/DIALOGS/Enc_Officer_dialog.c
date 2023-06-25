@@ -1609,7 +1609,7 @@ void ProcessDialogEvent()
 			if (!CheckAttribute(PChar,"Ship.Crew.Morale"))	{ PChar.Ship.Crew.Morale = 45;	}
 			if (!CheckAttribute(PChar,"Ship.Crew.Quantity")) { PChar.Ship.Crew.Quantity = GetMinCrewQuantity(&PChar); } // PRS3
 
-			// СѓР±РµСЂРµРј РІСЃРµ С‚РѕРІР°СЂС‹
+			// уберем все товары
 			for(int g=0; g<GOODS_QUANTITY; g++)
 			{
 				if(!CheckAttribute(Goods[g],"name")) continue; // NK
@@ -1626,7 +1626,7 @@ void ProcessDialogEvent()
 			}
 			PChar.Ship.Cargo.Load = 0;
 			
-			// СѓСЃС‚Р°РЅРѕРІРёРј РІСЃРµ С‚РѕРІР°СЂС‹
+			// установим все товары
 			for(g=0; g<GOODS_QUANTITY; g++)
 			{
 				SetCharacterGoods(PChar, g, gq[g]);

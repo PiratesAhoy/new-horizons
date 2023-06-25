@@ -1,7 +1,7 @@
 title=Fogueado en la batalla
-text.t1=El 'TÃ©mÃ©raire' ha sido hundido. Ahora zarparemos hacia #sCharlestown# antes de que el resto de los franceses lleguen allÃ­. El 'Justinian' pondrÃ¡ rumbo a #sisland_Antigua#, asÃ­ que estamos solos. 
-text.t2=Â¡Un ascenso, teniente en funciones! Eso estÃ¡ muy bien, pero estoy cansado. IrÃ© a la taberna a dormir un poco. Luego buscarÃ© al seÃ±or Hunter, un guardiamarina, y verÃ© cÃ³mo estÃ¡n los heridos.
+text.t1=El 'Téméraire' ha sido hundido. Ahora zarparemos hacia #sCharlestown# antes de que el resto de los franceses lleguen allí. El 'Justinian' pondrá rumbo a #sisland_Antigua#, así que estamos solos. 
+text.t2=¡Un ascenso, teniente en funciones! Eso está muy bien, pero estoy cansado. Iré a la taberna a dormir un poco. Luego buscaré al señor Hunter, un guardiamarina, y veré cómo están los heridos.
 text.t3=Navegando rumbo a #sGreenford#. Al menos es un puerto amistoso.
-text.t4=El 'Indy' y los otros barcos grandes van a dirigirse a #sisland_Antigua#. Yo debo quedarme aquÃ­ para reagrupar a la tripulaciÃ³n. Tengo que encontrar al seÃ±or Hunter.
+text.t4=El 'Indy' y los otros barcos grandes van a dirigirse a #sisland_Antigua#. Yo debo quedarme aquí para reagrupar a la tripulación. Tengo que encontrar al señor Hunter.
 text.t5=Tenemos que encontrar a 'Smug' Larr. Tiene su casa junto al puente.
-text.t6=El tÃºnel que va a la Academia estÃ¡ en la habitaciÃ³n trasera despuÃ©s de subir las escaleras. TambiÃ©n conduce al campamento pirata. Me pregunto quÃ© encontraremos primero.
+text.t6=El túnel que va a la Academia está en la habitación trasera después de subir las escaleras. También conduce al campamento pirata. Me pregunto qué encontraremos primero.

@@ -112,7 +112,7 @@ string DLG_TEXT[170] = {
 "How can I get to the tavern?",
 "Where's the shipyard?",
 "Where can I sell the goods I've brought with me?",
-"Is this une esprit, capitan? Can't Ã¼ see le sign on the right?",
+"Is this une esprit, capitan? Can't ü see le sign on the right?",
 "Fine. Thanks for your time.",
 "Where's the shipyard?",
 "Where can I get a decent price for fine goods I've brought to town?",

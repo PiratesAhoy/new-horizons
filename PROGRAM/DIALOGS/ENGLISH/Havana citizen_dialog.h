@@ -101,7 +101,7 @@ string DLG_TEXT[170] = {
 "Hmmm.. can't tell much about him I don't see him that often. But I think he does his job well.",
 "I see. I have another question for you.",
 "Thank you, bye-bye.",
-"SeÃ±or Mendoza used to be a merchant captain until he retired and settled down here. He has done very well, as you can see from his fine clothes.",
+"Señor Mendoza used to be a merchant captain until he retired and settled down here. He has done very well, as you can see from his fine clothes.",
 "I see. I have another question for you.",
 "Thank you, bye-bye.",
 "Where are you headed, ",

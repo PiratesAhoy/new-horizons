@@ -1,6 +1,6 @@
-title=Entrenamiento de artillerÃ­a
-text.t1=La campana que hay en el alcÃ¡zar llama a la brigasda de artillerÃ­a.
-text.t2=Tengo que encontrar un cuerno de pÃ³lvora para cebar el caÃ±Ã³n. 
-text.t3=BuscarÃ© un manual de artillerÃ­a en el Cuartel General Militar. EstÃ¡ cerca de los muelles.
+title=Entrenamiento de artillería
+text.t1=La campana que hay en el alcázar llama a la brigasda de artillería.
+text.t2=Tengo que encontrar un cuerno de pólvora para cebar el cañón. 
+text.t3=Buscaré un manual de artillería en el Cuartel General Militar. Está cerca de los muelles.
 text.t4=
 text.t5=

@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -659,7 +659,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_after_santiago_townhall":
-			dialog.text = DLG_TEXT[178] + GetMyFullName(CharacterFromID("Emiliano de GuzmР±n")) + DLG_TEXT[179];
+			dialog.text = DLG_TEXT[178] + GetMyFullName(CharacterFromID("Emiliano de Guzmбn")) + DLG_TEXT[179];
 			link.l1 = DLG_TEXT[180] + GetMyFullName(CharacterFromID("Jusepe Guimaraes")) + DLG_TEXT[181];
 			link.l1.go = "exit";
 		break;

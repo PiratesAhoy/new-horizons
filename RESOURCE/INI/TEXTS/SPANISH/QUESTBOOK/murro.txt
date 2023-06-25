@@ -1,5 +1,5 @@
-title=Misi√≥n secundaria: Los problemas de Zaid Murro.
+title=MisiÛn secundaria: Los problemas de Zaid Murro.
 text.t1=El antiguo piloto del 'Juno', el barco de Vigila Mendes, ahora se ha convertido en granjero. Dice que unos tipos que salen de la selva vienen a robarle. Tal vez pueda ayudar a Zaid.
-text.t2=En la selva, m√°s all√° de la ciudad, he encontrado a los bandidos de los que hablaba Zaid, y han intentado matarme.
-text.t3=Esos bandidos no estaban solos. Adentr√°ndome en la selva, he encontrado al resto de la banda de forajidos.
-text.t4=A partir da ahora, Zaid no volver√° a tener problemas con los bandidos.
+text.t2=En la selva, m·s all· de la ciudad, he encontrado a los bandidos de los que hablaba Zaid, y han intentado matarme.
+text.t3=Esos bandidos no estaban solos. Adentr·ndome en la selva, he encontrado al resto de la banda de forajidos.
+text.t4=A partir da ahora, Zaid no volver· a tener problemas con los bandidos.

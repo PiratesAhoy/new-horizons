@@ -6,9 +6,9 @@ string LAi_monsters_group = "monsters";
 void LAi_CreateMonsters(ref location)
 {
 	//trace("Gauging: Create Monsters start");
-	//Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ Р»РѕРіРёРЅР° РјРѕРЅСЃС‚СЂРѕРІ РІ Р»РѕРєР°С†РёСЋ
+	//Возможность логина монстров в локацию
 	//NKcccOA1ENABLE MONSTERS EVEN if(LAi_LocationIsMonstersGen(location) == false) return;
-	//РЎРѕРѕР±С‰РёРј Рѕ РЅР°С‡Р°Р»Рµ Р»РѕРіРёРЅР° РјРѕРЅСЃС‚СЂРѕРІ
+	//Сообщим о начале логина монстров
 	// NK -->
 	//SetAllSoldierGroups(GetMainCharacter()); // NK, to reset soldier friendlyness.
 	//note above is for forthcoming RM soldier-kill-tracking mod.
@@ -192,7 +192,7 @@ void LAi_CreateMonsters(ref location)
 
 	//cccOA1 enable fights in tavern bar room
 	if(location.type == "tavern") LAi_LocationFightDisable(&location, false);
-	//РќР°Р»РёС‡РёРµ РіСЂСѓРїРїС‹ РґР»СЏ Р»РѕРіРёРЅР° РјРѕРЅСЃС‚СЂРѕРІ
+	//Наличие группы для логина монстров
 	string group = "locators." + LAi_monsters_group;
 	//if(DEBUGINFO) Log_SetStringToLog("Using " + group); // NK
 	if(CheckAttribute(location, group) == 0)
@@ -203,7 +203,7 @@ void LAi_CreateMonsters(ref location)
 		group = "locators." + LAi_monsters_group; 
 		if(DEBUGINFO) Log_SetStringToLog("House, using " + group + " instead.");
 	}
-	//РњР°РєСЃРёРјР°Р»СЊРЅРѕ РІРѕР·РјРѕР¶РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјРѕРЅСЃС‚СЂРѕРІ
+	//Максимально возможное количество монстров
 	int maxMonsters = (MAX_LOGINED_CHARACTERS_IN_LOCATION-12) - LAi_numloginedcharacters;
 
 	//SCREWFACE : INCREASE maxMonsters if crewmembers on shore mod
@@ -307,7 +307,7 @@ void LAi_CreateMonsters(ref location)
 
 	if(DEBUGINFO) Log_SetStringToLog(stringRet(CheckAttribute(location,"lastentermonth"),"Occupants, ","") + "MaxMonsters Clamped: " + maxMonsters);
 	if(maxMonsters <= 0) return;
-	//РџРµСЂРµР±РµСЂР°РµРј Р»РѕРєР°С‚РѕСЂС‹, РІС‹Р±РёСЂР°СЏ СЃРІРѕР±РѕРґРЅС‹Рµ
+	//Перебераем локаторы, выбирая свободные
 	// NK -->
 	int loginedMonsters = 0;
 	if(group != "locators.reload") //i.e., normal locators.
@@ -322,13 +322,13 @@ void LAi_CreateMonsters(ref location)
 		//trace("Gauging: start locator loop");
 		for(int i = 0; i < maxMonsters; i++)
 		{
-			//РљРѕР»РёС‡РµСЃС‚РІРѕ Р»РѕРєР°С‚РѕСЂРѕРІ РЅР° С‚РµРєСѓС‰РµРіРѕ РјРѕРЅСЃС‚СЂР°
+			//Количество локаторов на текущего монстра
 			int locnum = (num - locatorPos)/(maxMonsters - loginedMonsters);
 			if(locnum < 1) locnum = 1;
-			//Р’С‹Р±РёСЂР°РµРј Р»РѕРєР°С‚РѕСЂ РёР· РґРѕСЃС‚СѓРїРЅС‹С…
+			//Выбираем локатор из доступных
 			locnum = rand(locnum - 1);
 			locatorPos = locatorPos + locnum + 1;
-			//РџРѕР·РёС†РёСЏ Р»РѕРєР°С‚РѕСЂР°
+			//Позиция локатора
 			aref loc = GetAttributeN(grp, locatorPos - 1);
 			if(GetAttributeName(GetAttributeN(grp, i))=="wheel" || GetAttributeName(GetAttributeN(grp, i))=="wheel1") continue;//MAXIMUS: monster onto steering-wheel locator will be placed later
 			float lx = stf(loc.x);
@@ -351,7 +351,7 @@ void LAi_CreateMonsters(ref location)
 	}
 	if(DEBUGINFO) Log_SetStringToLog("Logged in " + loginedMonsters + " monsters");
 	// NK <--
-	//РЎРѕРѕР±С‰РёРј РѕР± РѕРєРѕРЅС‡Р°РЅРёРё Р»РѕРіРёРЅР° РјРѕРЅСЃС‚СЂРѕРІ
+	//Сообщим об окончании логина монстров
 	LEnc_MonstersLoginEnd(location);
 }
 
@@ -370,7 +370,7 @@ object LAi_MonsterInfo;
 bool LAi_MonsterLogin(ref location, string group, string locator)
 {
 	//trace("Gauging: Start MonsterLogin");
-	//Р—Р°РїСЂРѕСЃРёРј РјРѕРґРµР»СЊ
+	//Запросим модель
 	string defModel = "Skel1";
 	string defAni = "man";
 	LAi_MonsterInfo.model = defModel;
@@ -423,12 +423,12 @@ bool LAi_MonsterLogin(ref location, string group, string locator)
 	ainfo.sex = cmodel.sex;
 	//trace("Gauging: Copied over.");
 	// NK <--
-	//РџСЂРѕРІРµСЂРёРј РјРѕРґРµР»СЊРєСѓ
+	//Проверим модельку
 	if(!CheckAttribute(LAi_MonsterInfo, "model")) return false;	
 	if(LAi_MonsterInfo.model == "") return false;
 	if(!CheckAttribute(LAi_MonsterInfo, "ani")) LAi_MonsterInfo.ani = defAni;
 	if(LAi_MonsterInfo.ani == "") LAi_MonsterInfo.ani = defAni;
-	//РЎРѕР·РґР°С‘Рј С„Р°РЅС‚РѕРјР° Рё Р·Р°РїРѕР»РЅСЏРµРј РїРѕР»СЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	//Создаём фантома и заполняем поля по умолчанию
 	// NK -->
 	int offset = 0; //note this will be SUBTRACTED later
 	int pclevel = GetLevel(GetMainCharacter());
@@ -515,9 +515,9 @@ bool LAi_MonsterLogin(ref location, string group, string locator)
 	LAi_warrior_SetStay(chr, true);
 	if(LAi_MonsterInfo.current != "vagabond") LAi_group_MoveCharacter(chr, LAI_GROUP_MONSTERS); // NK
 	LAi_warrior_SetStay(chr, true); // NK
-	//РћРїРµСЂР°РµРјСЃСЏ РЅР° СѓСЂРѕРІРµРЅСЊ РїРµСЂСЃРѕРЅР°Р¶Р°
+	//Операемся на уровень персонажа
 	//ref mchr = GetMainCharacter();
-	//РћРїСЂРµРґРµР»СЏРµРј СѓСЂРѕРІРµРЅСЊ Р¶РёР·РЅРё
+	//Определяем уровень жизни
 	// NK -->
 	/*int hp = 20 + rand(5)*10;
 	if(CheckAttribute(mchr, "rank") != 0)
@@ -527,7 +527,7 @@ bool LAi_MonsterLogin(ref location, string group, string locator)
 		hp = hp*(1.0 + rank*0.1);
 	}
 	LAi_SetHP(chr, hp, hp);
-	//РћРїСЂРµРґРµР»СЏРµРј СЃРєРёР» С„РµРєС‚РѕРІР°РЅРёСЏ
+	//Определяем скил фектования
 	if(CheckAttribute(mchr, "skill.Fencing") != 0)
 	{
 		int flevel = sti(mchr.skill.Fencing);
@@ -538,7 +538,7 @@ bool LAi_MonsterLogin(ref location, string group, string locator)
 		chr.skill.Fencing = flevel;
 	}*/
 	// NK <--
-	//РљРѕСЂСЂРµРєС‚РёСЂСѓРµРј РїРѕР»СЏ РјРѕРґРµР»СЊРєРё
+	//Корректируем поля модельки
 	LEnc_MonstersLoginCorrectParams(location, chr, group, locator);
 	/*if(save) location.vags.quantity = curvag + 1;
 	if(curvag != -1) {curvag++; location.curvag = curvag; }*/
@@ -583,19 +583,19 @@ string LAi_SoldierModel(int nat)
 // RM <--
 
 
-//РЎРѕР·РґР°С‚СЊ С„Р°РЅС‚РѕРјР° РѕСЃРЅРѕРІС‹РІР°СЏСЃСЊ РЅР° С…Р°СЂР°РєС‚СѓСЂРёСЃС‚РёРєР°С… РґР°РЅРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° РІ СЃР°РјРѕРј РґР°Р»СЊРЅРµРј СѓРіР»Сѓ
+//Создать фантома основываясь на характуристиках данного персонажа в самом дальнем углу
 void LAi_GenerateFantomFromMe(aref chr)
 {
 	//TraceAndLog("Start GenFMM, old char id " + chr.id + ", model = " + chr.model);
-	//РџСЂРѕРІРµСЂСЏРµРј РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РіРµРЅРµСЂР°С†РёРё С„Р°РЅС‚РѕРјР° РІ РґР°РЅРЅРѕР№ Р»РѕРєР°С†РёРё
+	//Проверяем возможность генерации фантома в данной локации
 	if(!TestRef(loadedLocation)) return;
 	if(!IsEntity(loadedLocation)) return;
 	if(LAi_LocationIsFantomsGen(loadedLocation) == false) return;
-	//РџСЂРѕРІРµСЂСЏРµРј РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РїРµСЂРµСЂРѕР¶РґРµРЅРёСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+	//Проверяем возможность перерождения персонажа
 	if(LAi_CharacterIsReincarnation(chr) == false) return;
 	if(CheckAttribute(GetMainCharacter(),"quest.kill_all_soldiers_in_prison")) return; // NK
 	if(CheckAttribute(chr,"corpse")) return; // 05-07-12 fix for corpses, just in case.
-	//РџСЂРѕРІРµСЂСЏРµРј РєР°РєСѓСЋ РјРѕРґРµР»СЊРєСѓ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР»СЏ РїРµСЂРµСЂРѕР¶РґРµРЅРёСЏ
+	//Проверяем какую модельку использовать для перерождения
 	bool isGen = LAi_CharacterReincarnationMode(chr);
 	if(CheckAttribute(chr, "model") == false) isGen = true;
 	if(CheckAttribute(chr, "model.animation") == false) isGen = true;
@@ -663,17 +663,17 @@ void LAi_GenerateFantomFromMe(aref chr)
 		}*/
 	}
 	//traceandlog("gffm for character " + chr.id + " of model " + chr.model + " we now have model " + model);
-	//РЎРѕС…СЂР°РЅСЏРµРј РїР°СЂР°РјРµС‚СЂС‹ РїРµСЂСЃРѕРЅР°Р¶Р°
+	//Сохраняем параметры персонажа
 	object tmp;
 	CopyAttributes(&tmp, chr);
-	//РЎРѕР·РґР°С‘Рј С„Р°РЅС‚РѕРјР°	
+	//Создаём фантома	
 	// NK -->
 	// 05-05-10 add friend
 	bool wasfriend = false;
 	if(CheckAttribute(chr,"friend")) wasfriend = sti(chr.friend);
 	ref fnt = LAi_CreateFantomCharacterEx(wasfriend, 0, false, false, false, model, LAi_CharacterReincarnationGroup(chr), ""); // NK
 	string curidx = fnt.index;
-	//РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РїР°СЂР°РјРµС‚СЂС‹ РїСЂРµРґС‹РґСѓС‰РµРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+	//Устанавливаем параметры предыдущего персонажа
 	CopyAttributes(fnt, &tmp);
 	if(DEBUG_EXPERIENCE>0) TraceAndLog("LAi_GenerateFantomFromMe: Set officer type for " + GetMySimpleName(fnt));
 	fnt.quest.officertype = OFFIC_TYPE_RANDCHAR;
@@ -690,7 +690,7 @@ void LAi_GenerateFantomFromMe(aref chr)
 	{
 		chrgroup = fnt.chr_ai.group;
 	}
-	//РЎРѕС…СЂР°РЅСЏРµРј РјРѕРґРµР»СЊРєСѓ Рё Р°РЅРёРјР°С†РёСЋ
+	//Сохраняем модельку и анимацию
 	// NK check for stunned 05-07-12
 	if(CheckAttribute(fnt, "stuntime"))
 	{
@@ -700,7 +700,7 @@ void LAi_GenerateFantomFromMe(aref chr)
 	// NK <--
 	fnt.model = model;
 	fnt.model.animation = ani;
-	//РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј С‚РёРї
+	//Инициализируем тип
 	if(!CheckAttribute(fnt, "chr_ai.type")) fnt.chr_ai.type = "";	
 	string chrtype = fnt.chr_ai.type;
 	//SetRandomNameToCharacter(fnt); // NK
@@ -747,13 +747,13 @@ bool LAi_CreateEncounters(ref location)
 	int num = 0;
 	for(int i = 0; i < 5; i++)
 	{
-		//Р’С‹Р±РёСЂР°РµРј РіСЂСѓРїРїСѓ Р»РѕРєР°С‚РѕСЂРѕРІ
+		//Выбираем группу локаторов
 		encGroup = LAi_FindRandomLocator("encdetector");
 		if(encGroup == "") return retValue;
-		//РџСЂРѕРІРµСЂСЏРµРј РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ
+		//Проверяем на существование
 		if(CheckAttribute(location, "locators." + encGroup))
 		{
-			//РџСЂРѕРІРµСЂРёРј РЅР° СЃРѕРґРµСЂР¶Р°РЅРёРµ Р»РѕРєР°С‚РѕС‚СЂРѕРІ
+			//Проверим на содержание локатотров
 			str = "locators." + encGroup;
 			makearef(grp, location.(str));
 			num = GetAttributesNum(grp);			
@@ -761,18 +761,18 @@ bool LAi_CreateEncounters(ref location)
 		}
 	}
 	if(num <= 0) return retValue;
-	//РњР°РєСЃРёРјР°Р»СЊРЅРѕ РІРѕР·РјРѕР¶РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂСЃРѕРЅР°Р¶РµР№ РІ СЌРЅРєРѕСѓРЅС‚РµСЂРµ
+	//Максимально возможное количество персонажей в энкоунтере
 	int maxChr = 16 - LAi_numloginedcharacters;
 	if(maxChr <= 0) return retValue;
 	if(maxChr > num) maxChr = num;
-	//Р•СЃС‚СЊ РіСЂСѓРїРїР° РїСЂРѕР±СѓРµРј Р·Р°РІРµСЃС‚Рё СЌРЅРєРѕСѓРЅС‚РµСЂРѕРІ
+	//Есть группа пробуем завести энкоунтеров
 	if(!LEnc_LoginStart(location, "encdetector", encGroup, maxChr)) return retValue;
-	//РќР°С‡РёРЅР°РµРј РїРµСЂРµР±РёСЂР°С‚СЊ Р»РѕРєР°С‚РѕСЂС‹ Рё Р»РѕРіРёРЅРёС‚СЊ С„Р°РЅС‚РѕРјРѕРІ
+	//Начинаем перебирать локаторы и логинить фантомов
 	for(i = 0; i < maxChr; i++)
 	{
-		//РџРѕР»СѓС‡РёРј Р»РѕРєР°С‚РѕСЂ РґР»СЏ Р»РѕРіРёРЅР°
+		//Получим локатор для логина
 		string locator = GetAttributeName(GetAttributeN(grp, i));
-		//Р—Р°РїСЂРѕСЃРёРј РјРѕРґРµР»СЊ
+		//Запросим модель
 		string defModel = "man1";
 		string defAni = "man";
 		LAi_MonsterInfo.model = defModel;
@@ -786,12 +786,12 @@ bool LAi_CreateEncounters(ref location)
 		bool swd = sti(ainfo.sword);
 		float pst = stf(ainfo.pistol); // NK
 		//Log_SetStringToLog("s" + swd + " p" + pst)
-		//РџСЂРѕРІРµСЂРёРј РјРѕРґРµР»СЊРєСѓ
+		//Проверим модельку
 		if(!CheckAttribute(LAi_MonsterInfo, "model")) break;
 		if(LAi_MonsterInfo.model == "") break;
 		/*if(!CheckAttribute(LAi_MonsterInfo, "ani")) LAi_MonsterInfo.ani = defModel;
 		if(LAi_MonsterInfo.ani == "") LAi_MonsterInfo.ani = defModel;*/
-		//РЎРѕР·РґР°С‘Рј С„Р°РЅС‚РѕРјР°
+		//Создаём фантома
 		// NK modeltypes 05-07-09 -->
 		if(GetModelindex(ainfo.model) == -1) ainfo.model = GetRandomModelForTypeExSubCheck(sti(ainfo.iscombat), ainfo.model, ainfo.sex, sti(ainfo.nation));
 		ref cmodel = &Models[GetModelIndex(ainfo.model)];
@@ -801,13 +801,13 @@ bool LAi_CreateEncounters(ref location)
 		chr.current = ainfo.current;
 		// NK <--
 		//Log_SetStringtoLog(chr.equip.blade);
-		//РЎРєРѕСЂСЂРµРєС‚РёСЂСѓРµРј РїР°СЂР°РјРµС‚СЂС‹
+		//Скорректируем параметры
 		LEnc_LoginCorrectParams(location, chr, encGroup, locator);
 		retValue = true;
-		//РџСЂРµРєСЂР°С‰РµРЅРёРµ Р»РѕРіРёРЅР°
+		//Прекращение логина
 		if(!LEnc_IsContinueLogin(location, chr, encGroup, locator)) break;
 	}
-	//Р—Р°РІРµСЂС€РёС‚СЊ Р·Р°РіСЂСѓР·РєСѓ СЌРЅРєРѕСѓРЅС‚РµСЂР° РІ Р»РѕРєР°С†РёСЋ
+	//Завершить загрузку энкоунтера в локацию
 	LEnc_LoginEnd(location, "encdetector", encGroup);
 	return retValue;
 }

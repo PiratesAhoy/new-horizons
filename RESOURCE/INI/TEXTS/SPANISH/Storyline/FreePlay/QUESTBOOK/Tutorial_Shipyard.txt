@@ -1,3 +1,3 @@
-title=Tutorial: Reparar los daÃ±os sufidos en combate
-text.t1=El casco y el aparejo resultaron daÃ±ados en un ataque pirata asÃ­ que debo mandar reparalos en el astillero antes de abandonar la isla.
+title=Tutorial: Reparar los daños sufidos en combate
+text.t1=El casco y el aparejo resultaron dañados en un ataque pirata así que debo mandar reparalos en el astillero antes de abandonar la isla.
 text.t2=Asunto arregaldo.

@@ -2288,7 +2288,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_ActorDialog(sld, PChar, "", 2.0, 0);
 			AddXP(pchar, SKILL_SAILING, 500, XP_GROUP_OFFIC);
 		break;
-//p√§r
+//p‰r
 		case "Returned in Greenford for Apothecary":
 			//RestoreCharacterShip(pchar);//PW moved to reduce food use and possible deaths and mutiny and in loop
 			for (i = 0; i < COMPANION_MAX; i++) {//PW now loop for whole pchar fleet
@@ -2396,7 +2396,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_QuestDelay("Finish Beggar Find",0);
 			LAi_QuestDelay("Cartagena_hotel_plants_start",0);
 		break;
-//p√§r
+//p‰r
 		case "Got Hotel Flyer":
 			AddQuestRecord("plants",39);
 			LAi_QuestDelay("Finish Beggar Find",0);
@@ -2889,7 +2889,7 @@ void SideQuestComplete(string sQuestName)
 			
            		
 		break;
-//p√§r
+//p‰r
 
 ///////////////////////////////////////////////////////////////
 ///// Smugglers: Thomas O Reily is annoying
@@ -3551,7 +3551,7 @@ void SideQuestComplete(string sQuestName)
 		case "mendes_away_forewer":
 			LAi_SetActorType(characterFromID("Vigila Mendes"));
 			LAi_ActorGoToLocation(characterFromID("Vigila Mendes"), "reload", "locator2", "none", "", "", "", 3.0);
-			//ZAID MURRO - √ß√†√™√∞√ª√¢√†√•√¨ √¢√Æ√ß√¨√Æ√¶√≠√Æ√±√≤√º √Ø√∞√Æ√µ√Æ√§√®√≤√º √Ω√≤√Æ√≤ √™√¢√•√±√≤
+			//ZAID MURRO - Á‡Í˚‚‡ÂÏ ‚ÓÁÏÓÊÌÓÒÚ¸ ÔÓıÓ‰ËÚ¸ ˝ÚÓÚ Í‚ÂÒÚ
 			//ChangeCharacterAddress(characterFromID("Zaid Murro"), "none", ""); //NK disable this (dunno why it's here but it breaks Zaid)
 		break;
 
@@ -10331,9 +10331,9 @@ void SideQuestComplete(string sQuestName)
 			{
 				case "SPANISH": temp = TranslateString("","Crewmember of") + " " + GetMyName(PChar); break;
 				case "RUSSIAN":
-					if(strright(GetMyName(PChar),1) == "√º") temp = strleft(GetMyName(PChar), strlen(GetMyName(PChar))-1);
+					if(strright(GetMyName(PChar),1) == "¸") temp = strleft(GetMyName(PChar), strlen(GetMyName(PChar))-1);
 					else temp = GetMyName(PChar);
-					temp = TranslateString("","Crewmember of") + " " + temp + "√†";
+					temp = TranslateString("","Crewmember of") + " " + temp + "‡";
 				break;
 				temp = GetMyName(PChar) + TranslateString("","'s crewmember");
 			}
@@ -11787,7 +11787,7 @@ void SideQuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////////////
 // The Kapitein of Kralendijk
 // By Grey Roger
-// Based very loosely on the real life story of the Captain of K√∂penick
+// Based very loosely on the real life story of the Captain of Kˆpenick
 ///////////////////////////////////////////////////////////////////////
 		case "Kapitein_follow_proposer_upstairs":
 			ChangeCharacterAddressGroup(characterFromID("Willem Voigt"), "Philipsburg_tavern", "tables", "table5");
@@ -12154,7 +12154,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "kapitein_get_money2":
 			PlayStereoSound("INTERFACE\took_item.wav");
-			AddMoneyToCharacter(pchar, 35574);		// About 10 times the number of Marks that the real Captain of K√∂penick got.
+			AddMoneyToCharacter(pchar, 35574);		// About 10 times the number of Marks that the real Captain of Kˆpenick got.
 			PChar.quest.kapitein = "got_money";
 			LAi_SetActorType(characterFromID("Dou_soldier_1"));
 			Characters[GetCharacterIndex("Dou_soldier_1")].dialog.CurrentNode = "keep_them_here";

@@ -1,7 +1,7 @@
 /*
-РўРёРї: С…РѕРґСЏС‡РёР№ РіСѓР±РµСЂРЅР°С‚РѕСЂ
+Тип: ходячий губернатор
 
-	РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С€Р°Р±Р»РѕРЅС‹:
+	Используемые шаблоны:
 		stay
 		dialog
 		goto
@@ -12,7 +12,7 @@
 #define LAI_TYPE_HUBERSTAY		"huberstay"
 
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+//Инициализация
 void LAi_type_huberstay_Init(aref chr)
 {
 	DeleteAttribute(chr, "location.follower");
@@ -25,7 +25,7 @@ void LAi_type_huberstay_Init(aref chr)
 	}
 	if(isNew == true)
 	{
-		//РќРѕРІС‹Р№ С‚РёРї
+		//Новый тип
 		DeleteAttribute(chr, "chr_ai.type");
 		chr.chr_ai.type = LAI_TYPE_HUBERSTAY;
 		chr.chr_ai.type.state = "stay";
@@ -45,28 +45,28 @@ void LAi_type_huberstay_Init(aref chr)
 		if(!CheckAttribute(chr, "chr_ai.type.map_locator")) chr.chr_ai.type.map_locator = "";
 		if(!CheckAttribute(chr, "chr_ai.type.curpos")) chr.chr_ai.type.curpos = "main";
 	}
-	//РЈСЃС‚Р°РЅРѕРІРёРј Р°РЅРёРјР°С†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Сѓ
+	//Установим анимацию персонажу
 	LAi_SetDefaultStayAnimation(chr);
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightWOWeapon", false);
-	//РўРѕС‡РєР° РѕСЃРЅРѕРІРЅРѕРіРѕ СЃС‚РѕСЏРЅРёСЏ
+	//Точка основного стояния
 	chr.chr_ai.type.main_group = chr.location.group;
 	chr.chr_ai.type.main_locator = chr.location.locator;
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С‚РёРїР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование типа персонажа
 void LAi_type_huberstay_CharacterUpdate(aref chr, float dltTime)
 {
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY)
 	{
-		//РРЅРѕРіРґР° Р·РІСѓС‡РёРј
+		//Иногда звучим
 		if(rand(1000) == 525)
 		{
 			LAi_CharacterPlaySound(chr, "governor");
 		}
-		//РџРѕСЃС‡РёС‚Р°РµРј РІСЂРµРјСЏ СЃС‚РѕСЏРЅРёСЏ
+		//Посчитаем время стояния
 		float time = stf(chr.chr_ai.type.time) + dltTime;
 		chr.chr_ai.type.time = time;
-		//РџСЂРѕРІРµСЂРёРј СѓРґР°Р»С‘РЅРЅРѕСЃС‚СЊ РѕС‚ Р»РѕРєР°С‚РѕСЂР° СЃС‚РѕСЏРЅРёСЏ
+		//Проверим удалённость от локатора стояния
 		string grp, loc;
 		float maxTime = 15.0;
 		switch(chr.chr_ai.type.curpos)
@@ -90,7 +90,7 @@ void LAi_type_huberstay_CharacterUpdate(aref chr, float dltTime)
 		float dist = -1.0;
 		if(GetCharacterDistByLoc(chr, grp, loc, &dist))
 		{
-			//Р’РµСЂРЅС‘РјСЃСЏ РЅР° Р»РѕРєР°С‚РѕСЂ
+			//Вернёмся на локатор
 			if(dist > 1.0)
 			{
 				LAi_tmpl_goto_InitTemplate(chr);
@@ -102,12 +102,12 @@ void LAi_type_huberstay_CharacterUpdate(aref chr, float dltTime)
 			chr.chr_ai.type.time = "0";
 			time = 0;
 		}
-		//РћСЂРёРµРЅС‚РёСЂСѓРµРј РїРѕ Р»РѕРєР°С‚РѕСЂСѓ
+		//Ориентируем по локатору
 		CharacterTurnByLoc(chr, grp, loc);
-		//РџСЂРѕРІРµСЂСЏРµРј РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ
+		//Проверяем возможность
 		if(time > maxTime)
 		{
-			//Р’С‹Р±РёСЂР°РµРј РЅРѕРІСѓСЋ С‚РѕС‡РєСѓ
+			//Выбираем новую точку
 			int rpnt = rand(6);
 			string pnt = "main";
 			if(rpnt < 3)
@@ -132,7 +132,7 @@ void LAi_type_huberstay_CharacterUpdate(aref chr, float dltTime)
 			}
 			if(pnt != chr.chr_ai.type.curpos)
 			{
-				//РЈСЃС‚Р°РЅРѕРІРёРј РЅРѕРІСѓСЋ С‚РѕС‡РєСѓ
+				//Установим новую точку
 				chr.chr_ai.type.curpos = pnt;
 				chr.chr_ai.type.time = "0";
 			}
@@ -148,74 +148,74 @@ void LAi_type_huberstay_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Р—Р°РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
+//Загрузка персонажа в локацию
 bool LAi_type_huberstay_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Р’С‹РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РёР· Р»РѕРєР°С†РёСЋ
+//Выгрузка персонажа из локацию
 bool LAi_type_huberstay_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ С‚РµРјРїР»РµР№С‚Р°
+//Завершение работы темплейта
 void LAi_type_huberstay_TemplateComplite(aref chr, string tmpl)
 {
 	LAi_tmpl_stay_InitTemplate(chr);
 }
 
-//РЎРѕРѕР±С‰РёС‚СЊ Рѕ Р¶РµР»Р°РЅРёРё Р·Р°РІРµСЃС‚Рё РґРёР°Р»РѕРі
+//Сообщить о желании завести диалог
 void LAi_type_huberstay_NeedDialog(aref chr, aref by)
 {
 }
 
-//Р—Р°РїСЂРѕСЃ РЅР° РґРёР°Р»РѕРі, РµСЃР»Рё РІРѕР·РІСЂР°С‚РёС‚СЊ true С‚Рѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Запрос на диалог, если возвратить true то в этот момент можно начать диалог
 bool LAi_type_huberstay_CanDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё СѓР¶Рµ РіРѕРІРѕСЂРёРј, С‚Рѕ РѕС‚РєР°Р¶РµРј
+	//Если уже говорим, то откажем
 	if(chr.chr_ai.tmpl == LAI_TMPL_DIALOG) return false;
-	//РЎРѕРіР»Р°СЃРёРјСЃСЏ РЅР° РґРёР°Р»РѕРі
+	//Согласимся на диалог
 	return true;
 }
 
-//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Начать диалог
 void LAi_type_huberstay_StartDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
+	//Если мы пасивны, запускаем шаблон без времени завершения
 	LAi_CharacterSaveAy(chr);
 	CharacterTurnByChr(chr, by);
 	LAi_tmpl_SetActivatedDialog(chr, by);
 }
 
-//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
+//Закончить диалог
 void LAi_type_huberstay_EndDialog(aref chr, aref by)
 {
 	LAi_tmpl_stay_InitTemplate(chr);
 	LAi_CharacterRestoreAy(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°Р» РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атаковал другого персонажа
 void LAi_type_huberstay_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚РѕРєРѕРІР°Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РІС€РµРіРѕСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атоковал заблокировавшегося персонажа
 void LAi_type_huberstay_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹СЃС‚СЂРµР»РёР»
+//Персонаж выстрелил
 void LAi_type_huberstay_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°РЅ
+//Персонаж атакован
 void LAi_type_huberstay_Attacked(aref chr, aref by)
 {
 	
@@ -225,7 +225,7 @@ void LAi_type_huberstay_Attacked(aref chr, aref by)
 //Scripters ai program interface
 //------------------------------------------------------------------------------------------
 
-//РЈРєР°Р·Р°С‚СЊ РіСѓР±РµСЂРЅР°С‚РѕСЂСѓ С‚РѕС‡РєСѓ РІРѕР·Р»Рµ РєР°СЂС‚С‹
+//Указать губернатору точку возле карты
 void LAi_SetStayHuberPointMap(aref chr, string group, string locator)
 {
 	if(chr.chr_ai.type == LAI_TYPE_HUBERSTAY)
@@ -235,7 +235,7 @@ void LAi_SetStayHuberPointMap(aref chr, string group, string locator)
 	}
 }
 
-//РЈРєР°Р·Р°С‚СЊ РіСѓР±РµСЂРЅР°С‚РѕСЂСѓ С‚РѕС‡РєСѓ РІРѕР·Р»Рµ РѕРєРЅР°
+//Указать губернатору точку возле окна
 void LAi_SetStayHuberPointWindow(aref chr, string group, string locator)
 {
 	if(chr.chr_ai.type == LAI_TYPE_HUBERSTAY)

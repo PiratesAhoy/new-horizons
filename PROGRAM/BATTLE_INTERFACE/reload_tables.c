@@ -10,7 +10,7 @@ void CreateReloadPaths(string groupID)
 	string outLocName,goLocName;
 	aref reloadList,curReload;
 
-	// Р·Р°РїРёС€РµРј РІСЃРµ РїРµСЂРµС…РѕРґС‹ РІ Р»РѕРєР°С†РёСЏС… РёСЃРїРѕР»СЊР·СѓРµРјРѕР№ РіСЂСѓРїРїС‹
+	// запишем все переходы в локациях используемой группы
 	for(i=0; i<MAX_LOCATIONS; i++)
 	{
 		if( !CheckAttribute(&Locations[i],"fastreload") ) continue;
@@ -34,7 +34,7 @@ void CreateReloadPaths(string groupID)
 		}
 	}
 
-	// Р·Р°РїРѕР»РЅРёРј РІСЃРµ РїСѓС‚Рё РїРµСЂРµС…РѕРґР° РёР· РѕРґРЅРѕР№ Р»РѕРєР°С†РёРё РІ РґСЂСѓРіСѓСЋ
+	// заполним все пути перехода из одной локации в другую
 	aref outLoc,goLoc, tmpLoc;
 	bool yesChange = true;
 	string tmpLocName;
@@ -68,8 +68,8 @@ void CreateReloadPaths(string groupID)
 	}
 }
 
-// РїРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃР»РµРґСѓСЋС‰РµР№ Р»РѕРєР°С†РёРё РґР»СЏ РїРµСЂРµС…РѕРґР° РёР· РѕРґРЅРѕР№ Р»РѕРєР°С†РёРё РІ РґСЂСѓРіСѓСЋ
-// РІРѕР·РІСЂР°С‰Р°РµС‚ true, РµСЃР»Рё РїРѕРёСЃРє РїСѓС‚Рё Р·Р°РІРµСЂС€РµРЅ
+// получить идентификатор следующей локации для перехода из одной локации в другую
+// возвращает true, если поиск пути завершен
 bool GetNextLocationForPath(string outLocName, string goLocName, ref nextLocName, ref reloadName)
 {
 	aref tbl; makearef(tbl,objFastReloadTable.Paths.table);
@@ -80,7 +80,7 @@ bool GetNextLocationForPath(string outLocName, string goLocName, ref nextLocName
 
 	while(outLocName!=goLocName)
 	{
-		// РџСЂРѕРїРёСЃР°РЅ РїСЂСЏРјРѕР№ РїСѓС‚СЊ РѕС‚ СЃС‚Р°СЂС‚РѕРІРѕР№ Р»РѕРєР°С†РёРё РґРѕ РёСЃРєРѕРјРѕР№
+		// Прописан прямой путь от стартовой локации до искомой
 		if( CheckAttribute(tbl,outLocName+"."+goLocName) )
 		{
 			nextLocName = tbl.(outLocName).(goLocName);
@@ -88,10 +88,10 @@ bool GetNextLocationForPath(string outLocName, string goLocName, ref nextLocName
 			break;
 		}
 
-		// РћР±СЂР°С‚РЅС‹Р№ РїСѓС‚СЊ С‚Р°Рє Р¶Рµ РЅРµ РїСЂРѕРїРёСЃР°РЅ
+		// Обратный путь так же не прописан
 		if( !CheckAttribute(tbl,goLocName+"."+outLocName) ) {break;}
 
-		// РР· РёСЃРєРѕРјРѕР№ Р»РѕРєР°С†РёРё РјС‹ РјРѕР¶РµРј РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РїРѕРїР°СЃС‚СЊ РІ СЃС‚Р°СЂС‚РѕРІСѓСЋ Р»РѕРєР°С†РёСЋ
+		// Из искомой локации мы можем непосредственно попасть в стартовую локацию
 		if( tbl.(goLocName).(outLocName) == finalLocation )
 		{
 			nextLocName = goLocName;

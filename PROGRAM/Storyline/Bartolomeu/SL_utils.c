@@ -25,7 +25,7 @@ void OpenBoxProcedure_BART()
 	int mb;
 	int i;
 	//note in INTERFACE\itemsbox search JRH: normal box sounds avoided when not wanted
-//pÐ´r
+//pär
     //Cartagena puzzle -->
 	
 	if(Locations[locidx].id=="Cartagena_center")
@@ -565,12 +565,12 @@ void OpenBoxProcedure_BART()
     //<-- Cartagena puzzle
     // <-- JRH
   }
-	//pÐ´r
+	//pär
 	virtual_box = true;	//JRH
 	OpenBoxProcedure();
 }
 
-//pÐ´r
+//pär
 //from Loginterface.c
 void CreateLandActionsEnvironment_BART()
 {
@@ -633,7 +633,7 @@ void CreateLandActionsEnvironment_BART()
 				IActions.ActiveActions.OpenBox.IconNum  			= 2;
 			}
 		}
-//pÐ´r
+//pär
 		if(Pchar.location == "Cartagena_church_cave")	
 		{
 			if(Pchar.boxname == "box6")
@@ -767,7 +767,7 @@ void LAi_CharacterFireExecute_BART(aref attack, aref enemy, float kDist, int isF
 	//ccc aref enemy = GetEventData();
 	//ccc float kDist = GetEventData();
 	//ccc int isFindedEnemy = GetEventData();
-	//Ð—Ð°Ñ€ÑÐ´ Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶Ð°
+	//Çàðÿä ïåðñîíàæà
 	if(!CheckAttribute(attack, "chr_ai.charge")) attack.chr_ai.charge = "0";
 	float charge = stf(attack.chr_ai.charge) - 1.0;
 	if(charge <= 0.0)
@@ -776,7 +776,7 @@ void LAi_CharacterFireExecute_BART(aref attack, aref enemy, float kDist, int isF
 		attack.chr_ai.chargeprc = "1";
 	}
 	attack.chr_ai.charge = charge;
-	//Ð•ÑÐ»Ð¸ Ð¿Ñ€Ð¾Ð¼Ð°Ñ…Ð½ÑƒÐ»Ð¸ÑÑŒ, Ñ‚Ð¾ Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð´ÐµÐ»Ð°ÐµÐ¼
+	//Åñëè ïðîìàõíóëèñü, òî íè÷åãî íå äåëàåì
 
 //JRH moved up block from below
 	string weaponID = GetCharacterEquipByGroup(attack,GUN_ITEM_TYPE);	// defines weaponname
@@ -791,7 +791,7 @@ void LAi_CharacterFireExecute_BART(aref attack, aref enemy, float kDist, int isF
 
 	if(isFindedEnemy == 0)
 	{
-		//Ð·Ð´ÐµÑÑŒ Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ð¾Ð´Ð½Ð¸Ð¼Ð°Ñ‚ÑŒ Ñ‚Ñ€ÐµÐ²Ð¾Ð³Ñƒ Ð² ÑÐ»ÑƒÑ‡Ð°Ðµ Ð±Ð»Ð¸Ð·ÐºÐ¾Ð³Ð¾ Ð²Ñ‹ÑÑ‚Ñ€ÐµÐ»Ð°
+		//çäåñü ìîæíî ïîäíèìàòü òðåâîãó â ñëó÷àå áëèçêîãî âûñòðåëà
 		if(CheckAttribute(weapon, "id") && weapon.id == "pistolsteel")
 		{
 			//JRH pistolsteel

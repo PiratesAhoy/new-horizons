@@ -4,8 +4,8 @@
 Hilda{Hilda}
 Sparre{Sparre}
 The Road Back to Greatness{El camino de vuelta a la grandeza}
-You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.{Eres una mujer de alta cuna, perteneciente a la m√°s antigua nobleza de Suecia, pero el reinado de Carlos XI ha tra√≠do una disminuci√≥n del poder y los privilegios de los nobles. Por conspirar para tratar de recuperar la influencia perdida, est√°s sentenciada a muerte en Suecia. Sin ning√∫n otro sitio al que ir y perseguida por las autoridades, te has refugiado en el Nuevo Mundo.}
-Kr√•kan{Kr√•kan}
+You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.{Eres una mujer de alta cuna, perteneciente a la m·s antigua nobleza de Suecia, pero el reinado de Carlos XI ha traÌdo una disminuciÛn del poder y los privilegios de los nobles. Por conspirar para tratar de recuperar la influencia perdida, est·s sentenciada a muerte en Suecia. Sin ning˙n otro sitio al que ir y perseguida por las autoridades, te has refugiado en el Nuevo Mundo.}
+KrÂkan{KrÂkan}
 
 Ciri{Ciri}
 Riannon{Riannon}
@@ -14,7 +14,7 @@ Little Horse{Caballito}
 Geralt{Geralt}
 of Rivia{de Rivia}
 Travelling Worlds{Viajando entre mundos}
-Take the role of Geralt of Rivia, a Witcher. A mutant, trained to kill monsters since childhood. Thrust into a different world and separated from your loved ones, you now search for your daughter in the Caribbean. Whether you find her or not, is a mystery...{Ponte en la piel de Geralt de Rivia, un brujo. Un mutante entrenado desde la infancia para matar monstruos. Arrojado a un mundo diferente al tuyo y separado de tus seres queridos, ahora debes buscar a tu hija adoptiva en el Caribe. Si conseguir√°s encontrarla o no, es un misterio...}
+Take the role of Geralt of Rivia, a Witcher. A mutant, trained to kill monsters since childhood. Thrust into a different world and separated from your loved ones, you now search for your daughter in the Caribbean. Whether you find her or not, is a mystery...{Ponte en la piel de Geralt de Rivia, un brujo. Un mutante entrenado desde la infancia para matar monstruos. Arrojado a un mundo diferente al tuyo y separado de tus seres queridos, ahora debes buscar a tu hija adoptiva en el Caribe. Si conseguir·s encontrarla o no, es un misterio...}
 Roach{Sardinilla}
 
 Morgen{Morgen}
@@ -40,7 +40,7 @@ Horatio{Horatio}
 Hornblower{Hornblower}
 Caroline{Caroline}
 
-Le R√®ve{Le R√®ve}
+Le RËve{Le RËve}
 
 Atropos{Atropos}
 
@@ -50,16 +50,16 @@ Alvarado{Alvarado}
 Aine{Aine}
 
 Petra{Petra}
-Borinque√±a{Borinque√±a}
+BorinqueÒa{BorinqueÒa}
 
 Becka{Becka}
 La Aguja - The Needle{La Aguja}
-The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.{Eres la hija de un rico terrateniente que una vez fue guerrillero; tu familia ha sido asesinada por los franceses y quieres venganza. Te has convertido en la l√≠der de una partida guerrillera, y a veces colaboras con un oficial brit√°nico llamado Richard Sharpe. Incluso tienes un barco, que antes era franc√©s, y que ha pasado por varias manos antes de llegar a las tuyas.}
+The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.{Eres la hija de un rico terrateniente que una vez fue guerrillero; tu familia ha sido asesinada por los franceses y quieres venganza. Te has convertido en la lÌder de una partida guerrillera, y a veces colaboras con un oficial brit·nico llamado Richard Sharpe. Incluso tienes un barco, que antes era francÈs, y que ha pasado por varias manos antes de llegar a las tuyas.}
 
 Teresa{Teresa}
 Moreno{Moreno}
-Out of the Frying Pan...{Salir de la sart√©n...}
-Born into a governor's family, you fell in with bad company in the form of Jack Sparrow and Will Turner. Never one to merely follow other people's lead, you now have a ship of your own. What will you do with her?{Aunque eres la hija de un gobernador, acabaste junt√°ndote con malas compa√±√≠as, en la forma de Jack Sparrow y Will Turner. Como nunca has sido el tipo de persona que se deja mandar por otros, ahora te has hecho con tu propio barco. ¬øQu√© har√°s con √©l?}
+Out of the Frying Pan...{Salir de la sartÈn...}
+Born into a governor's family, you fell in with bad company in the form of Jack Sparrow and Will Turner. Never one to merely follow other people's lead, you now have a ship of your own. What will you do with her?{Aunque eres la hija de un gobernador, acabaste junt·ndote con malas compaÒÌas, en la forma de Jack Sparrow y Will Turner. Como nunca has sido el tipo de persona que se deja mandar por otros, ahora te has hecho con tu propio barco. øQuÈ har·s con Èl?}
 
 Elizabeth{Elizabeth}
 Swann{Swann}
@@ -89,7 +89,7 @@ the Pirate{the Pirate}
 Jean-Baptiste{Jean-Baptiste}
 du Casse{du Casse}
 War of the League of Augsburg{Guerra de la Liga de Augsburgo}
-Quite a colourful character, you are! History claims that you became a buccaneer, admiral and colonial administrator who served throughout the Atlantic World during the 17th and 18th centuries. Now at the beginning of your career as officer in the French navy, you are of course required to follow orders. However, your life is yours and you can make whatever choices you see fit.{Eres un personaje de lo m√°s polifac√©tico. La Historia dice que fuiste bucanero, almirante y administrador colonial en servicio por todo el Atl√°ntico entre los siglos XVII y XVIII. Ahora, en los inicios de tu carrera como oficial en la Armada Francesa, se supone que debes seguir √≥rdenes. Sin embargo, tu vida te pertenece y puedes elegir vivirla como te plazca.}
+Quite a colourful character, you are! History claims that you became a buccaneer, admiral and colonial administrator who served throughout the Atlantic World during the 17th and 18th centuries. Now at the beginning of your career as officer in the French navy, you are of course required to follow orders. However, your life is yours and you can make whatever choices you see fit.{Eres un personaje de lo m·s polifacÈtico. La Historia dice que fuiste bucanero, almirante y administrador colonial en servicio por todo el Atl·ntico entre los siglos XVII y XVIII. Ahora, en los inicios de tu carrera como oficial en la Armada Francesa, se supone que debes seguir Ûrdenes. Sin embargo, tu vida te pertenece y puedes elegir vivirla como te plazca.}
 Magicienne{Magicienne}
 
 Pieter{Pieter}
@@ -99,7 +99,7 @@ Amsterdam{Amsterdam}
 Francisco{Francisco}
 de Almeida{de Almeida}
 The Portuguese Armada{La Armada Portuguesa}
-As was customary for men in your social circle, you joined the military at an early age. You have fought in conflicts in different parts of Morocco and Spain on the side of the Castilians. Now in the Caribbean, Spain is again your ally. But you never know what the future might bring!{Como era costumbre entre los hombres de tu c√≠rculo social, iniciaste tu carrera militar a una corta edad. Has luchado en conflictos en diferentes partes de Marruecos y Espa√±a, en el bando castellano. Ahora, en el Caribe, Espa√±a vuelve a ser tu aliada. ¬°Pero nunca se sabe lo que traer√° el futuro!}
+As was customary for men in your social circle, you joined the military at an early age. You have fought in conflicts in different parts of Morocco and Spain on the side of the Castilians. Now in the Caribbean, Spain is again your ally. But you never know what the future might bring!{Como era costumbre entre los hombres de tu cÌrculo social, iniciaste tu carrera militar a una corta edad. Has luchado en conflictos en diferentes partes de Marruecos y EspaÒa, en el bando castellano. Ahora, en el Caribe, EspaÒa vuelve a ser tu aliada. °Pero nunca se sabe lo que traer· el futuro!}
 Lebre{Lebre}
 
 Taegan{Taegan}
@@ -107,8 +107,8 @@ Finch{Finch}
 
 Dark{Oscuro}
 Teacher{Maestro}
-Satanists{Sat√°nicos}
-After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...{Despu√©s de escapar a la destrucci√≥n de tu guarida en Italia por parte de la Orden de Malta, has huido al Caribe, jurando venganza en el nombre del Pr√≠ncipe de las Tinieblas...}
+Satanists{Sat·nicos}
+After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...{DespuÈs de escapar a la destrucciÛn de tu guarida en Italia por parte de la Orden de Malta, has huido al Caribe, jurando venganza en el nombre del PrÌncipe de las Tinieblas...}
 Anna{Anna}
 De Leiva{De Leiva}
 
@@ -119,18 +119,18 @@ Arturo{Arturo}
 Campos{Campos}
 
 Aubrey{Aubrey}
-Master & Commander{Capit√°n de mar y guerra}
-Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Surprise. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{El capit√°n John 'Jack el Afortunado' Aubrey tiene √≥rdenes de realizar un crucero por el Caribe en busca de enemigos a bordo de su nuevo barco, HMS Surprise. Conoce a su buen amigo, el naturalista y m√©dico de a bordo Stephen Maturin, e influye en el curso de la guerra con Francia.}
+Master & Commander{Capit·n de mar y guerra}
+Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Surprise. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{El capit·n John 'Jack el Afortunado' Aubrey tiene Ûrdenes de realizar un crucero por el Caribe en busca de enemigos a bordo de su nuevo barco, HMS Surprise. Conoce a su buen amigo, el naturalista y mÈdico de a bordo Stephen Maturin, e influye en el curso de la guerra con Francia.}
 Surprise{Surprise}
 
 Hector{Hector}
 Barbossa{Barbossa}
-The Curse of Cort√©s{La Maldici√≥n de Cort√©s}
-Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...{Se√±or Pirata del mar Caspio. Amotinado. Y ahora descubridor del tesoro perdido de la Isla de Muerta. ¬°Est√°s listo para hacer uso de tu reci√©n adquirida riqueza! Pero te espera una desagradable sorpresa...}
+The Curse of CortÈs{La MaldiciÛn de CortÈs}
+Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...{SeÒor Pirata del mar Caspio. Amotinado. Y ahora descubridor del tesoro perdido de la Isla de Muerta. °Est·s listo para hacer uso de tu reciÈn adquirida riqueza! Pero te espera una desagradable sorpresa...}
 Black Pearl{Perla Negra}
 
-On Stranger Tides{En mareas extra√±as}
-Are your days of pirating truly behind you? Or do you serve the crown for your own ulterior motives?{¬øDe verdad has dejado atr√°s tus d√≠as de pirater√≠a? ¬øO acaso sirves a la Corona por tus propios motivos ocultos?}
+On Stranger Tides{En mareas extraÒas}
+Are your days of pirating truly behind you? Or do you serve the crown for your own ulterior motives?{øDe verdad has dejado atr·s tus dÌas de piraterÌa? øO acaso sirves a la Corona por tus propios motivos ocultos?}
 Providence{Providence}
 
 Beatrise{Beatrise}
@@ -138,7 +138,7 @@ Beatrise{Beatrise}
 Beatrice{Beatrice}
 Devlin{Devlin}
 Caribbean Tales{Historias del Caribe}
-Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?{A Beatrice Devlin le gusta explorar las reci√©n descubiertas Indias Occidentales. Eres una mujer libre en un mundo libre. ¬øPero tienes lo que hay que tener para crear una aut√©ntica Era de los Piratas?}
+Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?{A Beatrice Devlin le gusta explorar las reciÈn descubiertas Indias Occidentales. Eres una mujer libre en un mundo libre. øPero tienes lo que hay que tener para crear una autÈntica Era de los Piratas?}
 Discovery{Discovery}
 
 Bonnie{Bonnie}
@@ -151,14 +151,14 @@ Berend{Berend}
 De Voor{De Voor}
 
 Blackbeard{Barbanegra}
-No Quarter!{¬°Sin cuartel!}
-With a one-of-a-kind ship, you are ready to terrorize the Caribbean. But you haven't earned your fame just yet. Are you ready to live up to your name and become the pirate all pirates fear?{Con un barco como ning√∫n otro, ya est√°s listo para aterrorizar al Caribe. Pero todav√≠a no te has ganado tu fama. ¬øEst√°s preparado para hacer honor a tu nombre y convertirte en el pirata al que todos los dem√°s piratas temen?}
+No Quarter!{°Sin cuartel!}
+With a one-of-a-kind ship, you are ready to terrorize the Caribbean. But you haven't earned your fame just yet. Are you ready to live up to your name and become the pirate all pirates fear?{Con un barco como ning˙n otro, ya est·s listo para aterrorizar al Caribe. Pero todavÌa no te has ganado tu fama. øEst·s preparado para hacer honor a tu nombre y convertirte en el pirata al que todos los dem·s piratas temen?}
 Queen Anne's Revenge{Queen Anne's Revenge}
 
 Sea Horse{Sea Horse}
 
 The Cossack in the Caribbean{Un cosaco en el Caribe}
-A Cossack under the great Stenka Rasin, you have escaped after his death and come to the Caribbean seeking your fortune.{Eres un cosaco que luch√≥ bajo el mando del gran Stenka Rasin. Despu√©s de su muerte, has huido de Rusia y has venido al Caribe en busca de fortuna.}
+A Cossack under the great Stenka Rasin, you have escaped after his death and come to the Caribbean seeking your fortune.{Eres un cosaco que luchÛ bajo el mando del gran Stenka Rasin. DespuÈs de su muerte, has huido de Rusia y has venido al Caribe en busca de fortuna.}
 
 Bohdan{Bohdan}
 Aleskeevich{Aleskeevich}
@@ -170,7 +170,7 @@ Bilgemunky{Bilgemunky}
 Annabella{Annabella}
 Brinkley{Brinkley}
 
-Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Sophie. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{El capit√°n John 'Jack el Afortunado' Aubrey tiene √≥rdenes de realizar un crucero por el Caribe en busca de enemigos a bordo de su nuevo barco, HMS Sophie. Conoce a su buen amigo, el naturalista y m√©dico de a bordo Stephen Maturin, e influye en el curso de la guerra con Francia.}
+Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Sophie. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{El capit·n John 'Jack el Afortunado' Aubrey tiene Ûrdenes de realizar un crucero por el Caribe en busca de enemigos a bordo de su nuevo barco, HMS Sophie. Conoce a su buen amigo, el naturalista y mÈdico de a bordo Stephen Maturin, e influye en el curso de la guerra con Francia.}
 Sophie{Sophie}
 
 Chico{Chico}
@@ -179,7 +179,7 @@ Cois{Cois}
 Jean{Jean}
 Lafitte{Lafitte}
 The Buccaneer{El bucanero}
-A French smuggler friendly to the United States arrives in port. But will you abandon your profitable ventures to expand the might of the Americas in the Caribbean? Or perhaps join forces with one of the other nations? And how long will you be able to resist the lure of piracy?{Un contrabandista franc√©s amigo de los Estados Unidos acaba de llegar a puerto. ¬øAbandonar√°s tus provechosos negocios para acrecentar el poder de los norteamericanos en el Caribe? ¬øO quiz√°s unir√°s tus fuerzas a una de las otras naciones? ¬øY por cu√°nto tiempo podr√°s resistir la tentaci√≥n de la pirater√≠a?}
+A French smuggler friendly to the United States arrives in port. But will you abandon your profitable ventures to expand the might of the Americas in the Caribbean? Or perhaps join forces with one of the other nations? And how long will you be able to resist the lure of piracy?{Un contrabandista francÈs amigo de los Estados Unidos acaba de llegar a puerto. øAbandonar·s tus provechosos negocios para acrecentar el poder de los norteamericanos en el Caribe? øO quiz·s unir·s tus fuerzas a una de las otras naciones? øY por cu·nto tiempo podr·s resistir la tentaciÛn de la piraterÌa?}
 Goelette la Diligente{Goelette la Diligente}
 
 James T.{James T.}
@@ -189,94 +189,94 @@ Jolly Roger{Jolly Roger}
 Eduardo{Eduardo}
 Villanueva{Villanueva}
 Sargento{Sargento}
-Lord of the Adriatic{Se√±or del Adri√°tico}
-Relive the piratical adventures of Capit√°n Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Revive las pir√°ticas aventuras del capit√°n Villanueva, temido corsario del mar Adri√°tico. Si eso significa servir a Espa√±a un como corsario leg√≠timo, o volverte contra cualquiera que se interponga en tu cmaino, es una decisi√≥n que depende de ti.}
+Lord of the Adriatic{SeÒor del Adri·tico}
+Relive the piratical adventures of Capit·n Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Revive las pir·ticas aventuras del capit·n Villanueva, temido corsario del mar Adri·tico. Si eso significa servir a EspaÒa un como corsario legÌtimo, o volverte contra cualquiera que se interponga en tu cmaino, es una decisiÛn que depende de ti.}
 
 Sao{Sao}
 Feng{Feng}
-Crouching Tiger, Sailing Dragon{Tigre y Drag√≥n (marino)}
-Destined to become the Pirate Lord of Singapore and scourge of the South China Sea, you have just made your way to the Caribbean to make a name for yourself. Your uncommon type of ship may give you the leverage you need to become a successful pirate.{Destinado a convertirte en el Se√±or Pirata de Singapur y azote del Mar de China Meridional, acabas de llegar al Caribe para labrarte un nombre. Tu barco, de un tipo nunca visto en estas aguas, podr√≠a darte la ventaja necesaria para convertirte en un pirata de √©xito.}
+Crouching Tiger, Sailing Dragon{Tigre y DragÛn (marino)}
+Destined to become the Pirate Lord of Singapore and scourge of the South China Sea, you have just made your way to the Caribbean to make a name for yourself. Your uncommon type of ship may give you the leverage you need to become a successful pirate.{Destinado a convertirte en el SeÒor Pirata de Singapur y azote del Mar de China Meridional, acabas de llegar al Caribe para labrarte un nombre. Tu barco, de un tipo nunca visto en estas aguas, podrÌa darte la ventaja necesaria para convertirte en un pirata de Èxito.}
 Empress{Empress}
 
 Capitaine{Capitaine}
 Chevalle{Chevalle}
-Lord of the Mediterranean Sea{Se√±or del mar Mediterr√°neo}
-Chevalle, pirate lord of the Mediterranean sea, has embarked on a journey to the Caribbean. Work as a privateer for France, a pirate for yourself, or a rival power...the choice is yours, Capitaine.{Chevalle, se√±or pirata del mar Mediterr√°neo, se ha embarcado en un viaje al Caribe. Puedes trabajar como corsario para Francia, como pirata para ti mismo, o para alguna portencia rival... La decisi√≥n es tuya, Capitaine.}
+Lord of the Mediterranean Sea{SeÒor del mar Mediterr·neo}
+Chevalle, pirate lord of the Mediterranean sea, has embarked on a journey to the Caribbean. Work as a privateer for France, a pirate for yourself, or a rival power...the choice is yours, Capitaine.{Chevalle, seÒor pirata del mar Mediterr·neo, se ha embarcado en un viaje al Caribe. Puedes trabajar como corsario para Francia, como pirata para ti mismo, o para alguna portencia rival... La decisiÛn es tuya, Capitaine.}
 Fancy{Fancy}
 
 Sumbhajee{Sumbhajee}
 Angria{Angria}
-Lord of the Indian Ocean{Se√±or del oc√©ano √çndico}
-Priest turned pirate lord, Sri Sumbhajee Angria has left the Indian Ocean to resume his piratical activities in the Caribbean.{Un sacerdote convertido en pirata, Sri Sumbhajee Angria ha dejado las aguas del oc√©ano √çndioc para continuar sus actividade spir√°ticas en el Caribe.}
+Lord of the Indian Ocean{SeÒor del ocÈano Õndico}
+Priest turned pirate lord, Sri Sumbhajee Angria has left the Indian Ocean to resume his piratical activities in the Caribbean.{Un sacerdote convertido en pirata, Sri Sumbhajee Angria ha dejado las aguas del ocÈano Õndioc para continuar sus actividade spir·ticas en el Caribe.}
 Otter{Otter}
 
 Edward{Edward}
 Teague{Teague}
-Pirate Lord of Madagascar{Se√±or pirata de Madagascar}
-Rumour has it this infamous buccaneer fathered the legendary Captain Jack Sparrow. Some say his accomplishments eclipsed even those of Jack. Steer the ship of the mighty Edward Teague.{Los rumores dicen que este infame bucanero engendr√≥ al legendario cpait√°n Jack Sparrow. Algunos dicen que sus haza√±as eclipsan incluso a las del mismo Jack. Gobierna la nave del poderoso Edward Teague.}
+Pirate Lord of Madagascar{SeÒor pirata de Madagascar}
+Rumour has it this infamous buccaneer fathered the legendary Captain Jack Sparrow. Some say his accomplishments eclipsed even those of Jack. Steer the ship of the mighty Edward Teague.{Los rumores dicen que este infame bucanero engendrÛ al legendario cpait·n Jack Sparrow. Algunos dicen que sus hazaÒas eclipsan incluso a las del mismo Jack. Gobierna la nave del poderoso Edward Teague.}
 Troubadour{Troubadour}
 
 Amazon{Amazon}
 
 Theodore{Theodore}
 Groves{Groves}
-You have been placed in command of your very own ship. Will you live up to be that fine officer?{Se te ha otorgado el mando de tu propio barco. ¬øDar√°s la talla como un buen oficial?}
-After the promotion of James Norrington, you have been placed in charge of HMS Interceptor. Will you continue to retain her status as the fastest ship in His Majesty's Navy, one of the finest of Port Royal?{Tras el ascenso de James Norrington, se te ha otorgado el mando del HMS Interceptor. ¬øConseguir√°as mantener su fama como el barco m√°s r√°pido de la Armada de Su Majestad y uno de los mejores de Port Royal?}
+You have been placed in command of your very own ship. Will you live up to be that fine officer?{Se te ha otorgado el mando de tu propio barco. øDar·s la talla como un buen oficial?}
+After the promotion of James Norrington, you have been placed in charge of HMS Interceptor. Will you continue to retain her status as the fastest ship in His Majesty's Navy, one of the finest of Port Royal?{Tras el ascenso de James Norrington, se te ha otorgado el mando del HMS Interceptor. øConseguir·as mantener su fama como el barco m·s r·pido de la Armada de Su Majestad y uno de los mejores de Port Royal?}
 
 Interceptor{Interceptor}
 
-Having served under Commodore Norrington and chasing menacing pirates across the seas, you now find yourself serving your nation, under different interests. Welcome to the East India trading Company, Lieutenant!{Tras servir bajo las √≥rdenes del Comodoro Norrington y perseguir a peligrosos piratas por todos los mares, contin√∫as sirviendo a tu naci√≥n, pero bajo intereses diferentes. ¬°Bienvenido a la Compa√±√≠a Comercial de las Indias Orientales, teniente!}
+Having served under Commodore Norrington and chasing menacing pirates across the seas, you now find yourself serving your nation, under different interests. Welcome to the East India trading Company, Lieutenant!{Tras servir bajo las Ûrdenes del Comodoro Norrington y perseguir a peligrosos piratas por todos los mares, contin˙as sirviendo a tu naciÛn, pero bajo intereses diferentes. °Bienvenido a la CompaÒÌa Comercial de las Indias Orientales, teniente!}
 
-You have finally managed to be recognised for all the years of chasing that ridiculed pirate, with Commodore Norrington. He has placed you in command of HMS Dauntless. Will you continue to uphold the legacy of this mighty ship?{Por fin has conseguido reconocimiento por todos esos a√±os persiguiendo a ese rid√≠culo pirata junto al comodoro Norrington. Te han puesto al mando del HMS Dauntless. ¬øContinuar√°s manteniendo el legado de este poderoso nav√≠o?}
+You have finally managed to be recognised for all the years of chasing that ridiculed pirate, with Commodore Norrington. He has placed you in command of HMS Dauntless. Will you continue to uphold the legacy of this mighty ship?{Por fin has conseguido reconocimiento por todos esos aÒos persiguiendo a ese ridÌculo pirata junto al comodoro Norrington. Te han puesto al mando del HMS Dauntless. øContinuar·s manteniendo el legado de este poderoso navÌo?}
 
 Dauntless{Dauntless}
 
-As newly promoted Admiral of the Fleet, you are now in charge of Port Royal's finest ships.{Como un reci√©n ascendido Almirante de la Flota, los mejores nav√≠os de Port Royal est√°n a tu cargo.}
+As newly promoted Admiral of the Fleet, you are now in charge of Port Royal's finest ships.{Como un reciÈn ascendido Almirante de la Flota, los mejores navÌos de Port Royal est·n a tu cargo.}
 
 Andrew{Andrew}
 Gillette{Gillette}
-After seeing the threats that oppose the nation first hand, you accompanied Commodore Norrington and your trusty companion Lieutenant Groves on many adventures. Now you have been placed in charge of HMS Interceptor and given your own place in the Royal Navy's finest. While young in the service, shall you continue to uphold your duties?{Tras haber sido testigo de las amenazas que se oponen a tu naci√≥n, has acompa√±ado al comodoro Norrington y a tu leal compa√±ero, el teniente Groves, en muchas aventuras. Ahora se te ha concedido el mando del HMS Interceptor y un puesto entre la flor y la nata de la Royal Navy. A√∫n eres joven, ¬øcontinuar√°s en el servicio, cumpliendo con tu deber?}
+After seeing the threats that oppose the nation first hand, you accompanied Commodore Norrington and your trusty companion Lieutenant Groves on many adventures. Now you have been placed in charge of HMS Interceptor and given your own place in the Royal Navy's finest. While young in the service, shall you continue to uphold your duties?{Tras haber sido testigo de las amenazas que se oponen a tu naciÛn, has acompaÒado al comodoro Norrington y a tu leal compaÒero, el teniente Groves, en muchas aventuras. Ahora se te ha concedido el mando del HMS Interceptor y un puesto entre la flor y la nata de la Royal Navy. A˙n eres joven, øcontinuar·s en el servicio, cumpliendo con tu deber?}
 
-You have been placed in command of your own ship. Will you continue to serve the interests of the East India Trading Company? Or will you perhaps look to make a name for yourself elsewhere?{Se te ha otorgado el mando de tu propio barco. ¬øSeguir√°s sirviendo a los intereses de la Compa√±√≠a de las Indias Orientales? ¬øO buscar√°s tu fortuna en otra parte?}
+You have been placed in command of your own ship. Will you continue to serve the interests of the East India Trading Company? Or will you perhaps look to make a name for yourself elsewhere?{Se te ha otorgado el mando de tu propio barco. øSeguir·s sirviendo a los intereses de la CompaÒÌa de las Indias Orientales? øO buscar·s tu fortuna en otra parte?}
 
-You are still a young captain now. Will you prove that you are capable of defending the nation? Will you join your colleagues in becoming one of Port Royal's most successful officers?{Todav√≠a eres un joven capit√°n. ¬øDemostrar√°s al mundo que eres capaz de defender tu naci√≥n y seguir los pasos de tus colegas para convertirte en uno de los oficiales m√°s exitosos de Port Royal?}
+You are still a young captain now. Will you prove that you are capable of defending the nation? Will you join your colleagues in becoming one of Port Royal's most successful officers?{TodavÌa eres un joven capit·n. øDemostrar·s al mundo que eres capaz de defender tu naciÛn y seguir los pasos de tus colegas para convertirte en uno de los oficiales m·s exitosos de Port Royal?}
 
-Climbing up the ranks, you have succeeded in becoming a fine officer. Now you have been placed in charge of HMS Dauntless, once under the command of Commodore Norrington. Will you continue to uphold the legacy of this powerful and old friend?{Ascendiendo en el escalaf√≥n, has logrado convertirte en un flamante oficial. Ahora est√°s al mando del HMS Dauntless, como lo estuvo en su momento el comodoro Norrington. ¬øLograr√°s defener el legado de este poderoso y viejo amigo?}
+Climbing up the ranks, you have succeeded in becoming a fine officer. Now you have been placed in charge of HMS Dauntless, once under the command of Commodore Norrington. Will you continue to uphold the legacy of this powerful and old friend?{Ascendiendo en el escalafÛn, has logrado convertirte en un flamante oficial. Ahora est·s al mando del HMS Dauntless, como lo estuvo en su momento el comodoro Norrington. øLograr·s defener el legado de este poderoso y viejo amigo?}
 
 Endeavour{Endeavour}
 
 Henri{Henri}
 Caesar{Caesar}
-The Haitian Revolution{La Revoluci√≥n Haitiana}
-Born to a slave family on Hispaniola, you joined the revolution to see your island become independent from France. Your search in support has led you to the Pirate Brotherhood on Nevis.{Nacido en el seno de una familia de esclavos en la isla de La Espa√±ola, te has unido a la revoluci√≥n para conseguir la independencia de tu isla respecto a Francia. Tu b√∫squeda de apoyos te lleva a la Hermandad Pirata de Nevis.}
+The Haitian Revolution{La RevoluciÛn Haitiana}
+Born to a slave family on Hispaniola, you joined the revolution to see your island become independent from France. Your search in support has led you to the Pirate Brotherhood on Nevis.{Nacido en el seno de una familia de esclavos en la isla de La EspaÒola, te has unido a la revoluciÛn para conseguir la independencia de tu isla respecto a Francia. Tu b˙squeda de apoyos te lleva a la Hermandad Pirata de Nevis.}
 Black Caesar{Black Caesar}
 
 Charles{Charles}
 Ardent{Ardent}
-The Caribbean in the Golden Age of Piracy offers many opportunities for those willing to seize them. As a pirate, seizing things is your business!{El Caribe en la Edad de Oro de la Pirater√≠a ofrece muchas oportunidades para quienes est√©n dispuestos a hacerse con ellas. ¬°Como pirata, hacerte con cosas es tu especialidad!}
+The Caribbean in the Golden Age of Piracy offers many opportunities for those willing to seize them. As a pirate, seizing things is your business!{El Caribe en la Edad de Oro de la PiraterÌa ofrece muchas oportunidades para quienes estÈn dispuestos a hacerse con ellas. °Como pirata, hacerte con cosas es tu especialidad!}
 Fortune{Fortune}
 
 Helen{Helen}
 
 Lucia{Lucia}
 de la Vega{de la Vega}
-Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Condenada a un matrimonio infeliz, decidiste fugarte con un pirata. Ahora tienes tu propio barco. ¬øRegresar√°s a una vida honrada, o tal vez tu tiempo con los piratas te ha cambiado para siempre?}
-Intr√©pido{Intr√©pido}
+Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Condenada a un matrimonio infeliz, decidiste fugarte con un pirata. Ahora tienes tu propio barco. øRegresar·s a una vida honrada, o tal vez tu tiempo con los piratas te ha cambiado para siempre?}
+IntrÈpido{IntrÈpido}
 
 Edmundo{Edmundo}
-Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Condenado a un matrimonio infeliz, decidiste fugarte con una mujer pirata. Ahora tienes tu propio barco. ¬øRegresar√°s a una vida honrada, o tal vez tu tiempo con los piratas te ha cambiado para siempre?}
+Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Condenado a un matrimonio infeliz, decidiste fugarte con una mujer pirata. Ahora tienes tu propio barco. øRegresar·s a una vida honrada, o tal vez tu tiempo con los piratas te ha cambiado para siempre?}
 
 Piers{Piers}
 Downing{Downing}
 Entreprenant{Entreprenant}
 
-Fran√ßois-Louis{Fran√ßois-Louis}
+FranÁois-Louis{FranÁois-Louis}
 Rousselet{Rousselet}
 Le Saint Louis{Le Saint Louis}
 
 Nelson{Nelson}
 Nelson's First Command{El primer mando de Nelson}
-As a commissioned officer in His Majesty's Royal Navy, Horatio has been recently appointed commander of the brig HMS Badger. Will Horatio let his talents be known and make his way into the history books?{Como un oficial con mando en la Armada de Su Majestad, Horatio ha sido nombrado recientemente capit√°n del bergant√≠n HMS Badger. ¬øDemostrar√° su talento y se har√° un hueco en los libros de Historia?}
+As a commissioned officer in His Majesty's Royal Navy, Horatio has been recently appointed commander of the brig HMS Badger. Will Horatio let his talents be known and make his way into the history books?{Como un oficial con mando en la Armada de Su Majestad, Horatio ha sido nombrado recientemente capit·n del bergantÌn HMS Badger. øDemostrar· su talento y se har· un hueco en los libros de Historia?}
 Badger{Badger}
 
 Danielle{Danielle}
@@ -285,21 +285,21 @@ Lucrezia{Lucrezia}
 
 Greene{Greene}
 A Lady Scorned{Una mujer despechada}
-After having your heart broken by a scoundrel named Nathaniel Hawk, you have sworn to never fall for another man again. And whoever said a woman cannot captain a ship? This is the Golden Age of Piracy and there is opportunity aplenty for all those willing to take their chance!{Despu√©s de que un canalla llamado Nathaniel Hawk te rompiera el coraz√≥n, juraste que jam√°s volver√≠as a enamorarte de ning√∫n hombre. ¬øY qui√©n dijo que una mujer no puede capitanear un barco? Estamos en la Edad de Oro de la Pirater√≠a y hay oportunidades de sobra para quien tenga las agallas de arriesgarse.}
+After having your heart broken by a scoundrel named Nathaniel Hawk, you have sworn to never fall for another man again. And whoever said a woman cannot captain a ship? This is the Golden Age of Piracy and there is opportunity aplenty for all those willing to take their chance!{DespuÈs de que un canalla llamado Nathaniel Hawk te rompiera el corazÛn, juraste que jam·s volverÌas a enamorarte de ning˙n hombre. øY quiÈn dijo que una mujer no puede capitanear un barco? Estamos en la Edad de Oro de la PiraterÌa y hay oportunidades de sobra para quien tenga las agallas de arriesgarse.}
 Vertigo{Vertigo}
 
 Davy{Davy}
 Jones{Jones}
-Lord of the Sea{Se√±or del Mar}
-Having fallen for the treacherous godess of the sea herself, you got your heart broken as a result. Now all you have left is a thirst for vengeance and a ship to be reckoned with! And... you've got a trick up your sleeve to bring terror upon all souls at sea.{Cuando te enamoraste de la mism√≠sima diosa del mar, acabaste con el coraz√≥n roto. Ahora solo te queda la sed de venganza y un barco con poderes extraordinarios. Y... tienes un as en la manga para llevar el terror a las almas de todos los que surcan los mares.}
-Flying Dutchman{Holand√©s Errante}
+Lord of the Sea{SeÒor del Mar}
+Having fallen for the treacherous godess of the sea herself, you got your heart broken as a result. Now all you have left is a thirst for vengeance and a ship to be reckoned with! And... you've got a trick up your sleeve to bring terror upon all souls at sea.{Cuando te enamoraste de la mismÌsima diosa del mar, acabaste con el corazÛn roto. Ahora solo te queda la sed de venganza y un barco con poderes extraordinarios. Y... tienes un as en la manga para llevar el terror a las almas de todos los que surcan los mares.}
+Flying Dutchman{HolandÈs Errante}
 
 Anamaria{Anamaria}
 Jolly Mon{Jolly Mon}
 
 Blaze{Blaze}
 Age of Pirates{La Edad de los Piratas}
-Brother to another well-known character, Blaze Devlin is a corsair always on the hunt for treasure. But what Caribbean Tales lie in store for you? The choice is up to you!{Hermano de otro personaje bien conocido, Blaze Devlin es un corsario siempre a la caza de tesoros. ¬øQu√© Historias del Caribe te esperan en tu camino? ¬°La elecci√≥n es tuya!}
+Brother to another well-known character, Blaze Devlin is a corsair always on the hunt for treasure. But what Caribbean Tales lie in store for you? The choice is up to you!{Hermano de otro personaje bien conocido, Blaze Devlin es un corsario siempre a la caza de tesoros. øQuÈ Historias del Caribe te esperan en tu camino? °La elecciÛn es tuya!}
 Fool's Gold{Fool's Gold}
 
 Valerie{Valerie}
@@ -318,7 +318,7 @@ Monkey{Monkey}
 D.{D.}
 Luffy{Luffy}
 Going Merry{Going Merry}
-Having eaten a magic fruit and narrowly avoided being eaten yourself, you now sail the seas in search of the One Piece. Can you rise to become a Pirate King?{Despu√©s de comer una fruta m√°gica y librarte por poco de que te comieran a ti, navegas por los mares en busca del One Piece. ¬øPodr√°s llegar a convertirte en Rey de los Piratas?}
+Having eaten a magic fruit and narrowly avoided being eaten yourself, you now sail the seas in search of the One Piece. Can you rise to become a Pirate King?{DespuÈs de comer una fruta m·gica y librarte por poco de que te comieran a ti, navegas por los mares en busca del One Piece. øPodr·s llegar a convertirte en Rey de los Piratas?}
 
 Gherarde{Gherarde}
 de Jongh{de Jongh}
@@ -331,7 +331,7 @@ o Portugues{o Portugues}
 
 Santiago{Santiago}
 
-Fran√ßois{Fran√ßois}
+FranÁois{FranÁois}
 de Hadoque{de Hadoque}
 La Licorne{La Licorne}
 
@@ -343,7 +343,7 @@ Black{Black}
 Caesar{Caesar}
 Longboat{Longboat}
 From Slave to Pirate{De esclavo a pirata}
-You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?{Fuiste arrebatado por la fuerza de tu hogar y encadenado en la bodega de un barco negrero. Pero no todos los hombres blancos que hay a bordo son enemigos. Con un poco de ayuda de un aliado inesperado y una tormenta, consigues escapar de tu cautiverio. ¬øQu√© har√°s ahora?}
+You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?{Fuiste arrebatado por la fuerza de tu hogar y encadenado en la bodega de un barco negrero. Pero no todos los hombres blancos que hay a bordo son enemigos. Con un poco de ayuda de un aliado inesperado y una tormenta, consigues escapar de tu cautiverio. øQuÈ har·s ahora?}
 the Beggar{el Mendigo}
 
 Rackham{Rackham}
@@ -353,7 +353,7 @@ Tripper{Tripper}
 
 de la Croix{de la Croix}
 Tales of a Chevalier{Historias de un caballero}
-A charming French nobleman with a rogue streak. Your latest endeavour left you several jewels richer and a Spanish lady somewhat distraught. Her brother challenged you to a duel at dawn to settle the score.{Un encantador noble franc√©s con un toque canallesco. Tu √∫ltima aventura se sald√≥ con unas cuantas joyas en tu poder y una dama espa√±ola algo afligida. Su hermano te ha desafiado a un duelo al amanecer para ajustar cuentas.}
+A charming French nobleman with a rogue streak. Your latest endeavour left you several jewels richer and a Spanish lady somewhat distraught. Her brother challenged you to a duel at dawn to settle the score.{Un encantador noble francÈs con un toque canallesco. Tu ˙ltima aventura se saldÛ con unas cuantas joyas en tu poder y una dama espaÒola algo afligida. Su hermano te ha desafiado a un duelo al amanecer para ajustar cuentas.}
 Le Cheval Furieux{Le Cheval Furieux}
 
 Johan{Johan}
@@ -367,11 +367,11 @@ Kieron{Kieron}
 Swan{Swan}
 
 A Fine Gentleman{Un caballero respetable}
-You intend to see to it that any man who sails under a pirate flag or wears a pirate brand gets what he deserves. But while you may be an ambitious young lieutenant in His Majesty's Navy, you do have your heart in the right place.{Tienes la intenci√≥n de hacer que cualquier hombre que navegue bajo una bandera pirata o lleve una marca de pirata obtenga lo que se merece. Pero, aunque seas un joven y ambicioso teniente de la Armada de Su Majestad, tu coraz√≥n esta en el lugar correcto.}
+You intend to see to it that any man who sails under a pirate flag or wears a pirate brand gets what he deserves. But while you may be an ambitious young lieutenant in His Majesty's Navy, you do have your heart in the right place.{Tienes la intenciÛn de hacer que cualquier hombre que navegue bajo una bandera pirata o lleve una marca de pirata obtenga lo que se merece. Pero, aunque seas un joven y ambicioso teniente de la Armada de Su Majestad, tu corazÛn esta en el lugar correcto.}
 
 Michiel{Michiel}
 de Ruyter{de Ruyter}
-Besteva√™r{Besteva√™r}
+BestevaÍr{BestevaÍr}
 Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!{Nacido como Michiel Adriaenszoon de Ruyter, hijo de un repartidor de cerveza de Vlissingen, eres un hombre humilde. Sin embargo, las guerras anglo-holandesas del siglo XVII te han dado muchas oportunidades de probar tu grandeza.}
 Neptunus{Neptunus}
 
@@ -416,21 +416,21 @@ Ragetti{Ragetti}
 Robert{Robert}
 Fulton{Fulton}
 Age of Steam{La Edad del Vapor}
-Born on a farm in Little Britain, Pennsylvania, on November 14, 1765, you have spent the past ten years developing a new type of ship. Your latest creation is battle-ready and equipped both with regular sails, but also a new design engine. It is time to take her out for sea trials.{Nacido en una granja en Little Britain, Pennsylvania, el 14 de noviembre de 1765, te has pasado los √∫ltimos diez a√±os desarrollando un nuevo tipo de barco. Tu √∫ltima creaci√≥n est√° lista para el combate y equipada tanto con velas como con un motor a vapor de nuevo dise√±o. ¬°Es hora de sacarla para sus pruebas de mar!}
+Born on a farm in Little Britain, Pennsylvania, on November 14, 1765, you have spent the past ten years developing a new type of ship. Your latest creation is battle-ready and equipped both with regular sails, but also a new design engine. It is time to take her out for sea trials.{Nacido en una granja en Little Britain, Pennsylvania, el 14 de noviembre de 1765, te has pasado los ˙ltimos diez aÒos desarrollando un nuevo tipo de barco. Tu ˙ltima creaciÛn est· lista para el combate y equipada tanto con velas como con un motor a vapor de nuevo diseÒo. °Es hora de sacarla para sus pruebas de mar!}
 Demologos{Demologos}
 
 Roche{Roche}
 Brasiliano{Brasiliano}
 
-Jos√©{Jos√©}
-Joaqu√≠m{Joaqu√≠m}
+JosÈ{JosÈ}
+JoaquÌm{JoaquÌm}
 Almeida{Almeida}
-Rustic Sea Wolf{Un r√∫stico lobo de mar}
-I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character){Dejaste tu hogar portugu√©s en las Azores para viajar a Am√©rica en 1796 a la edad de 19 a√±os. Has trabajado como marino mercante durante un tiempo, pero, ahora que ha estallado la guerra, te has convertido en corsario (incluye una misi√≥n secundaria espec√≠fica de este personaje).}
+Rustic Sea Wolf{Un r˙stico lobo de mar}
+I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character){Dejaste tu hogar portuguÈs en las Azores para viajar a AmÈrica en 1796 a la edad de 19 aÒos. Has trabajado como marino mercante durante un tiempo, pero, ahora que ha estallado la guerra, te has convertido en corsario (incluye una misiÛn secundaria especÌfica de este personaje).}
 
 Gaspar{Gaspar}
 The Legend of Gasparilla{La leyenda de Gasparilla}
-Eventually becoming the last of the Buccaneers, rumours surrounding your life have been scarce. Most say you were born in Spain in 1756 and served in the Spanish Navy. Whatever may be the truth, you worked yourself up from a lowly position until you gained command of a ship of your own. It is time to make a name for yourself in the waters south of Florida!{Aunque acabar√°s convirti√©ndote en el √∫ltimo de los bucaneros, los rumnores sobre tu vida son escasos. La mayor√≠a opina que naciste en Espa√±a en 1756 y serviste en la Armada Espa√±ola. Sea como fuere, el caso es que empezaste desde abajo, hasta que conseguiste el mando de tu propio barco. ¬°Es hora de labrarte un nombre en las aguas al sur de Florida!}
+Eventually becoming the last of the Buccaneers, rumours surrounding your life have been scarce. Most say you were born in Spain in 1756 and served in the Spanish Navy. Whatever may be the truth, you worked yourself up from a lowly position until you gained command of a ship of your own. It is time to make a name for yourself in the waters south of Florida!{Aunque acabar·s convirtiÈndote en el ˙ltimo de los bucaneros, los rumnores sobre tu vida son escasos. La mayorÌa opina que naciste en EspaÒa en 1756 y serviste en la Armada EspaÒola. Sea como fuere, el caso es que empezaste desde abajo, hasta que conseguiste el mando de tu propio barco. °Es hora de labrarte un nombre en las aguas al sur de Florida!}
 Gasparilla{Gasparilla}
 
 Old{Old}
@@ -445,8 +445,8 @@ Masarenhas{Masarenhas}
 Skull{Skull}
 
 Carrera{Carrera}
-The Might of Spain{El poder de Espa√±a}
-Ever since the Spanish set foot in the New World, others have tried and succeeded in taking more land away from them. But as recently promoted lieutenant in His Most Catholic Majesty's navy, you intend to see that Spain reclaims its rightful place in the world!{Desde el momento en que los espa√±oles pusieron el pie en el Nuevo Mundo, otros han intentado, y a veces conseguido, arrebatarles estas tierras. Pero como un teniente reci√©n ascendido en la Real Armada de su Cat√≥lica Majestad, tienes la intenci√≥n de ayudar a que Espa√±a recupere su leg√≠timo lugar en el mundo.}
+The Might of Spain{El poder de EspaÒa}
+Ever since the Spanish set foot in the New World, others have tried and succeeded in taking more land away from them. But as recently promoted lieutenant in His Most Catholic Majesty's navy, you intend to see that Spain reclaims its rightful place in the world!{Desde el momento en que los espaÒoles pusieron el pie en el Nuevo Mundo, otros han intentado, y a veces conseguido, arrebatarles estas tierras. Pero como un teniente reciÈn ascendido en la Real Armada de su CatÛlica Majestad, tienes la intenciÛn de ayudar a que EspaÒa recupere su legÌtimo lugar en el mundo.}
 San Jeronimo{San Jeronimo}
 
 Sri{Sri}
@@ -459,24 +459,24 @@ Lynch{Lynch}
 
 Josiah{Josiah}
 Peabody{Peabody}
-Play the exploits of a typical U.S. Frigate cruising at sea during the War of 1812. Its captain, Josiah Peabody, demonstrates the revolutionary virtues of a new democracy fighting for its survival against an overwhelmingly superior British Navy.{Revive las haza√±as de una t√≠pica fragata de los Estados Unidos destacada en un crucero naval durante la guerra de 1812. Su capit√°n, Josiah Peabody, demuestra las virtudes revolucionarias de una nueva democracia, luchando por su supervivencia contra la abrumadoramente superior Armada brit√°nica.}
+Play the exploits of a typical U.S. Frigate cruising at sea during the War of 1812. Its captain, Josiah Peabody, demonstrates the revolutionary virtues of a new democracy fighting for its survival against an overwhelmingly superior British Navy.{Revive las hazaÒas de una tÌpica fragata de los Estados Unidos destacada en un crucero naval durante la guerra de 1812. Su capit·n, Josiah Peabody, demuestra las virtudes revolucionarias de una nueva democracia, luchando por su supervivencia contra la abrumadoramente superior Armada brit·nica.}
 Delaware{Delaware}
 
 John{John}
 Paul{Paul}
-The American Revolution{La Revoluci√≥n Americana}
-Born in Scotland in 1742, your career at sea began at age 13, and by 21 you were the captain of a ship sailing between the West Indies and British ports. You joined the Continental navy for the American Revolution and have just been promoted to lieutenant. However, you have not yet begun to fight. The real battle for independence is yet to come!{Nacido en Escocia en 1742, tu vida en el mar empez√≥ a los 13 a√±os, y a los 21 ya eras capit√°n de un barco que navegaba entre las Indias Occidentales y los puertos brit√°nicos. Te has unido a la Armada Continental para luchar por la independecnia americana y acabas de ser ascendido a teniente. ¬°La verdadera batalla por la independencia est√° por llegar!}
+The American Revolution{La RevoluciÛn Americana}
+Born in Scotland in 1742, your career at sea began at age 13, and by 21 you were the captain of a ship sailing between the West Indies and British ports. You joined the Continental navy for the American Revolution and have just been promoted to lieutenant. However, you have not yet begun to fight. The real battle for independence is yet to come!{Nacido en Escocia en 1742, tu vida en el mar empezÛ a los 13 aÒos, y a los 21 ya eras capit·n de un barco que navegaba entre las Indias Occidentales y los puertos brit·nicos. Te has unido a la Armada Continental para luchar por la independecnia americana y acabas de ser ascendido a teniente. °La verdadera batalla por la independencia est· por llegar!}
 Enterprise{Enterprise}
 
 Vito{Vito}
 Leone{Leone}
 
 A Second Calling{A Second Calling}
-After coming to terms with the truth about your father, you've decided it's time to retire from the smith and embrace the life of a sailor.{Tras aceptar la verdad sobre tu padre, has decidido que es hora de dejar la herrer√≠a y abarazar la vida del marino.}
+After coming to terms with the truth about your father, you've decided it's time to retire from the smith and embrace the life of a sailor.{Tras aceptar la verdad sobre tu padre, has decidido que es hora de dejar la herrerÌa y abarazar la vida del marino.}
 Miranda{Miranda}
 
 A Touch of Destiny{Un toque del destino}
-Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.{Maldito por haber matado a Davy Jones, ahora eres el capit√°n del renovado Holand√©s Errante. Tu misi√≥n es transportar las almas de los muertos en la mar al otro mundo. ¬°Pero sin duda, eso puede esperar! De momento, tienes que familiarizarte con tus tareas como capit√°n. Lo que hagas despu√©s de eso es cosa tuya.}
+Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.{Maldito por haber matado a Davy Jones, ahora eres el capit·n del renovado HolandÈs Errante. Tu misiÛn es transportar las almas de los muertos en la mar al otro mundo. °Pero sin duda, eso puede esperar! De momento, tienes que familiarizarte con tus tareas como capit·n. Lo que hagas despuÈs de eso es cosa tuya.}
 
 Will{Will}
 Turner{Turner}
@@ -485,7 +485,7 @@ Bootstrap Bill{Bill el Botas}
 Ricardo{Ricardo}
 Orellana{Orellana}
 The Devil's Ship{El barco del Diablo}
-You made a pact with the Devil to save you and your love from certain death in exchange for your soul. The demon betrays you by taking away everything you cared about. With your heart full of rage and revenge, you sow death in your path with the help of your cursed ship.{Hiciste un pacto con el Diablo para salvar a tu amor y a ti mismo de una muerte segura a cambio de tu alma. El demonio te traicion√≥ arrebat√°ndote todo lo que amabas. Con tu coraz√≥n lleno de rabia y ansias de venganza, siembras la muerte en tu camino con la ayuda de tu barco maldito.}
+You made a pact with the Devil to save you and your love from certain death in exchange for your soul. The demon betrays you by taking away everything you cared about. With your heart full of rage and revenge, you sow death in your path with the help of your cursed ship.{Hiciste un pacto con el Diablo para salvar a tu amor y a ti mismo de una muerte segura a cambio de tu alma. El demonio te traicionÛ arrebat·ndote todo lo que amabas. Con tu corazÛn lleno de rabia y ansias de venganza, siembras la muerte en tu camino con la ayuda de tu barco maldito.}
 La Mariana{La Mariana}
 
 Parson{Parson}
@@ -495,7 +495,7 @@ Couchcaptain{Couchcaptain}
 Cutler{Cutler}
 Beckett{Beckett}
 Just Good Business{Solo es un buen negocio}
-As head of the East India Trading Company, you are in charge of one of the largest ships in the Caribbean. But you are a merchant first of all, and an unscrupulous one at that! Which means that the task of being captain is one you are not quite familiar with.{Como l√≠der de la Compa√±√≠a Comercial de las Indias Orientales, est√°s a cargo de uno de los mayores nav√≠os en todo el Caribe. Pero ante todo eres un comerciante, ¬°y uno sin escr√∫pulos, dicho sea de paso! Lo que significa que no est√°s familiarizado con las tareas de capit√°n.}
+As head of the East India Trading Company, you are in charge of one of the largest ships in the Caribbean. But you are a merchant first of all, and an unscrupulous one at that! Which means that the task of being captain is one you are not quite familiar with.{Como lÌder de la CompaÒÌa Comercial de las Indias Orientales, est·s a cargo de uno de los mayores navÌos en todo el Caribe. Pero ante todo eres un comerciante, °y uno sin escr˙pulos, dicho sea de paso! Lo que significa que no est·s familiarizado con las tareas de capit·n.}
 
 Cruz{Cruz}
 
@@ -522,13 +522,13 @@ Saint-Jean{Saint-Jean}
 Julian{Julian}
 McAllister{McAllister}
 Brave Black Flag{La audaz bandera negra}
-You have led a mutiny against your cruel captain who meant to kill a group of your countrymen taken as pirates. Now, on the run and marked as a traitor, you must decide what path to follow. Your actions have earned you the respect of the Brotherhood of Pirates. Will you join them under the brave black flag?{Has encabezado un mot√≠n contra tu cruel capit√°n, que pretend√≠a ejecutar a un grupo de compatriotas tuyos apresados como piratas. Ahora, perseguido y marcado como traidor, debes decidir qu√© camino seguir. Tus acciones te han ganado el respeto de la Hermandad de Piratas. ¬øTe unir√°s a ellos bajo la audaz bandera negra?}
+You have led a mutiny against your cruel captain who meant to kill a group of your countrymen taken as pirates. Now, on the run and marked as a traitor, you must decide what path to follow. Your actions have earned you the respect of the Brotherhood of Pirates. Will you join them under the brave black flag?{Has encabezado un motÌn contra tu cruel capit·n, que pretendÌa ejecutar a un grupo de compatriotas tuyos apresados como piratas. Ahora, perseguido y marcado como traidor, debes decidir quÈ camino seguir. Tus acciones te han ganado el respeto de la Hermandad de Piratas. øTe unir·s a ellos bajo la audaz bandera negra?}
 Defiance{Defiance}
 
 Milady{Milady}
 de Winter{de Winter}
-Spy and Assassin{Esp√≠a y asesina}
-You are a woman who is cunning, relentless, resourceful, amoral and dangerous. Tasked with causing harm to your nations' enemies by whatever means necessary, you will stop at nothing to fulfil that purpose.{Eres una mujer astuta, inplacable, con recursos, amoral y peligrosa. Con la misi√≥n de perjudicar a los enemigos de tu naci√≥n por cualquier medio que sea necesario, no te detendr√°s ante nada para cumplir este objetivo.}
+Spy and Assassin{EspÌa y asesina}
+You are a woman who is cunning, relentless, resourceful, amoral and dangerous. Tasked with causing harm to your nations' enemies by whatever means necessary, you will stop at nothing to fulfil that purpose.{Eres una mujer astuta, inplacable, con recursos, amoral y peligrosa. Con la misiÛn de perjudicar a los enemigos de tu naciÛn por cualquier medio que sea necesario, no te detendr·s ante nada para cumplir este objetivo.}
 Athos{Athos}
 
 Comte{Comte}
@@ -537,38 +537,38 @@ de Rochefort{de Rochefort}
 Laurens{Laurens}
 de Graaf{de Graaf}
 Scourge of the West{El Azote del Oeste}
-'A great and mischievous pirate' according to Henry Morgan and thought to be the Devil in person by some Spaniards, this Dutch corsair is ready to wreak havoc on the Caribbean!{'Un gran y malvado pirata', seg√∫n Henry Morgan, y considerado la encarnacion del Diablo por algunos espa√±oles, este corsario holand√©s est√° preparado para sembrar el caos en el Caribe.}
+'A great and mischievous pirate' according to Henry Morgan and thought to be the Devil in person by some Spaniards, this Dutch corsair is ready to wreak havoc on the Caribbean!{'Un gran y malvado pirata', seg˙n Henry Morgan, y considerado la encarnacion del Diablo por algunos espaÒoles, este corsario holandÈs est· preparado para sembrar el caos en el Caribe.}
 Wapen van Hoorn{Wapen van Hoorn}
 
 Piet{Piet}
 Pieterszoon{Pieterszoon}
 Hein{Hein}
 De Zilvervloot{La Flota de la Plata}
-'We hebben een flinke reis voor de boeg. We gaan zout halen. In Afrika.' Dat is Piet's eerste kennismaking met de zee en het harde leven van de zeelieden. Jaren later krijgt Piet Hein een eigen schip. Wat zal hij doen? Nieuw land ontdekken? Handel drijven? Of... de Spaanse zilvervloot veroveren?{'Tenemos un largo viaje por delante. Vamos a por un cargamento de sal. En √Åfrica'. Esa es la primera introducci√≥n de Piet al mar y la dura vida de los navegantes. A√±os despu√©s, Piet Hein consigue su propio barco. ¬øQu√© har√° con √©l? ¬øDescubrir nuevas tierras? ¬øComerciar? ¬øO... capturar la flota espa√±ola de la plata?}
+'We hebben een flinke reis voor de boeg. We gaan zout halen. In Afrika.' Dat is Piet's eerste kennismaking met de zee en het harde leven van de zeelieden. Jaren later krijgt Piet Hein een eigen schip. Wat zal hij doen? Nieuw land ontdekken? Handel drijven? Of... de Spaanse zilvervloot veroveren?{'Tenemos un largo viaje por delante. Vamos a por un cargamento de sal. En ¡frica'. Esa es la primera introducciÛn de Piet al mar y la dura vida de los navegantes. AÒos despuÈs, Piet Hein consigue su propio barco. øQuÈ har· con Èl? øDescubrir nuevas tierras? øComerciar? øO... capturar la flota espaÒola de la plata?}
 
 Drake{Drake}
 Stranton{Stranton}
 Phantom{Phantom}
 Cursed Vengeance{Venganza maldita}
-Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Vive una aventura de tesoros y traici√≥n, sangre y venganza. En un tiempo en que los piratas ten√≠an el mundo en sus manos y siempre se llevaban a la chica, squeaban el tesoro y conquistaban a sus enemigos. Esta vida desafiar√° tus preconcepciones acerca de los piratas. ¬°Vive, ama y muere como solo un pirata puede hacerlo! Basado en la novela de Brent Jackson.}		
+Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Vive una aventura de tesoros y traiciÛn, sangre y venganza. En un tiempo en que los piratas tenÌan el mundo en sus manos y siempre se llevaban a la chica, squeaban el tesoro y conquistaban a sus enemigos. Esta vida desafiar· tus preconcepciones acerca de los piratas. °Vive, ama y muere como solo un pirata puede hacerlo! Basado en la novela de Brent Jackson.}		
 
 Francis{Francis}
 Drake{Drake}
-Disturb us, Lord{Inqui√©tanos, Se√±or}
-'It isn't that life ashore is distasteful to me. But life at sea is better.' As privateer in the service of queen Elizabeth I of England and with the Spanish owning nearly the entire Caribbean, it is your job to make life as difficult as possible for the Dons.{'No es que la vida en tierra me sea desagradable. Pero la vida en la mar es mejor'. Como corsario al servicio de la reina Isabel I de Inglaterra, y con los espa√±oles como due√±os indiscutidos de casi todo el Caribe, tu trabajo es hacer la vida lo mas dif√≠cil posible para los 'Dons'.}
+Disturb us, Lord{InquiÈtanos, SeÒor}
+'It isn't that life ashore is distasteful to me. But life at sea is better.' As privateer in the service of queen Elizabeth I of England and with the Spanish owning nearly the entire Caribbean, it is your job to make life as difficult as possible for the Dons.{'No es que la vida en tierra me sea desagradable. Pero la vida en la mar es mejor'. Como corsario al servicio de la reina Isabel I de Inglaterra, y con los espaÒoles como dueÒos indiscutidos de casi todo el Caribe, tu trabajo es hacer la vida lo mas difÌcil posible para los 'Dons'.}
 Golden Hind{Golden Hind}
 
 Blas{Blas}
 de Lezo{de Lezo}
 The Defender of Cartagena{El defensor de Cartagena}
-Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.{Blas de Lezo inici√≥ su carrera naval a los doce a√±os en 1701, sirviendo a Francia y Espa√±a durante la Guerra de Sucesi√≥n Espa√±ola. Para 1714, hab√≠a perdido en combate una pierna, un ojo y el uso de un brazo, cicatrices que llevaba como medallas a su valor. A pesar de sus heridas, tuvo una carrera exitosa y ahora est√° al mando de las fuerzas navales de Cartagena de Indias.}
+Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.{Blas de Lezo iniciÛ su carrera naval a los doce aÒos en 1701, sirviendo a Francia y EspaÒa durante la Guerra de SucesiÛn EspaÒola. Para 1714, habÌa perdido en combate una pierna, un ojo y el uso de un brazo, cicatrices que llevaba como medallas a su valor. A pesar de sus heridas, tuvo una carrera exitosa y ahora est· al mando de las fuerzas navales de Cartagena de Indias.}
 Conquistador{Conquistador}
 
 Dervia{Dervia}
 A demoness who came from the underworld seeks an adventure in mortal world.{Una diablesa venida del inframundo busca aventuras en el mundo de los mortales.}
 
 Avergorex{Avergorex}
-The undead monk who had many names for ages, decides to take up a sword and show his true nature into this cruel world.{El monje no-muerto, que ha tenido muchos nombre a lo largo de los siglos, decide empu√±ar una espada y mostrar a este mundo cruel su verdadera naturaleza.}
+The undead monk who had many names for ages, decides to take up a sword and show his true nature into this cruel world.{El monje no-muerto, que ha tenido muchos nombre a lo largo de los siglos, decide empuÒar una espada y mostrar a este mundo cruel su verdadera naturaleza.}
 
 {=====| models.c |=====}
 

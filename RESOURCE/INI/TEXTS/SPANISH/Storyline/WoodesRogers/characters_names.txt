@@ -41,8 +41,8 @@ Constable{Agente}
 Mills{Mills}
 Young{Young}
 Mutineer{Amotinado}
-Thug{MatÃ³n}
-Leading{LÃ­der}
+Thug{Matón}
+Leading{Líder}
 Coastbrother{Hermano de la Costa}
 Admiral{Almirante}
 John{John}
@@ -60,8 +60,8 @@ Robert{Robert}
 Fry{Fry}
 Stretton{Stretton}
 Rogers'{Rogers}
-Crew{TripulaciÃ³n}
-Former Crew{Antigua tripulaciÃ³n}
+Crew{Tripulación}
+Former Crew{Antigua tripulación}
 Vane{Vane}
 Bellamy{Bellamy}
 Paul{Paul}
@@ -191,7 +191,7 @@ Ireland{Ireland}
 Sergej{Sergej}
 Prokofiev{Prokofiev}
 Barbecue{Barbecue}
-PÃ¨re{PÃ¨re}
+Père{Père}
 Labat{Labat}
 Laurens{Laurens}
 de Graaf{de Graaf}
@@ -225,7 +225,7 @@ Hall{Hall}
 Knut{Knut}
 Ellingsen{Ellingsen}
 Anton{Anton}
-BÃ¤cklin{BÃ¤cklin}
+Bäcklin{Bäcklin}
 Felix{Felix}
 Nilsson{Nilsson}
 Westlund{Westlund}
@@ -241,7 +241,7 @@ Berglund{Berglund}
 Garcia{Garcia}
 Emilio{Emilio}
 Soares{Soares}
-SÃ¨rgio Gomes{SÃ¨rgio Gomes}
+Sèrgio Gomes{Sèrgio Gomes}
 Sergio{Sergio}
 Cloise{Cloise}
 Sundin{Sundin}
@@ -250,14 +250,14 @@ Larsson{Larsson}
 Ossian{Ossian}
 Rodriguez{Rodriguez}
 Felipe{Felipe}
-KristrÃ¶m{KristrÃ¶m}
+Kriström{Kriström}
 Nathalie{Nathalie}
 Sebastian{Sebastian}
 Bylund{Bylund}
 Johan{Johan}
-LÃ¶fqvist{LÃ¶fqvist}
+Löfqvist{Löfqvist}
 Pehr{Pehr}
-StÃ¥hlfot{StÃ¥hlfot}
+Ståhlfot{Ståhlfot}
 Sister{Hermana}
 Jean{Jean}
 Dubou{Dubou}
@@ -274,15 +274,15 @@ Ogeron{Ogeron}
 Maynard{Maynard}
 Bandit{Bandido}
 Bandit's{Bandido}
-leader{lÃ­der}
-Maltese{MaltÃ©s}
+leader{líder}
+Maltese{Maltés}
 Sir William{Sir William}
 Stapelton{Stapelton}
 Clerk{Secretario}
 Surgeon{Cirujano}
-Captain{CapitÃ¡n}
-Chaplain{CapellÃ¡n}
-German{AlemÃ¡n}
+Captain{Capitán}
+Chaplain{Capellán}
+German{Alemán}
 Knight{Caballero}
 Margaret{Margaret}
 Pough{Pough}
@@ -292,9 +292,9 @@ Arot{Arot}
 Anna H{Anna H}
 Trafvenfeldt{Trafvenfeldt}
 Angelica{Angelica}
-LindstrÃ¶m{LindstrÃ¶m}
+Lindström{Lindström}
 Wilma S{Wilma S}
-ForsstrÃ¶m{ForsstrÃ¶m}
+Forsström{Forsström}
 Madelaine{Madelaine}
 Hansson{Hansson}
 Linn{Linn}
@@ -302,16 +302,16 @@ Brorsson{Brorsson}
 Ebba{Ebba}
 Modin{Modin}
 Thomina{Thomina}
-SundstrÃ¶m{SundstrÃ¶m}
+Sundström{Sundström}
 Elin{Elin}
 Asp{Asp}
 Martin{Martin}
 Schmidt{Schmidt}
 Tobias{Tobias}
-HÃ¤llgren{HÃ¤llgren}
+Hällgren{Hällgren}
 Axel{Axel}
 Joel{Joel}
-BjÃ¶rk{BjÃ¶rk}
+Björk{Björk}
 Hildingsson{Hildingsson}
 Erik{Erik}
 Ejvind{Ejvind}
@@ -330,15 +330,15 @@ Svalberg{Svalberg}
 Iman{Iman}
 Razuli{Razuli}
 Jakob{Jakob}
-AndrÃ©{AndrÃ©}
+André{André}
 Jensen{Jensen}
 Albin{Albin}
-HÃ¶gman{HÃ¶gman}
+Högman{Högman}
 Lukas{Lukas}
-HammarstrÃ¶m{HammarstrÃ¶m}
+Hammarström{Hammarström}
 Mar la{Mar la}
 Kie{Kie}
-LÃ¶fgren{LÃ¶fgren}
+Löfgren{Löfgren}
 Simon{Simon}
 Grandell{Grandell}
 Cardinal Gabr{Cardenal Gabr}
@@ -417,7 +417,7 @@ Clarke{Clarke}
 Rowland{Rowland}
 Sharp{Sharp}
 Deserter{Desertor}
-Thief{LadrÃ³n}
+Thief{Ladrón}
 Legrand{Legrand}
 Poacher{Furtivo}
 Charon{Charon}
@@ -426,6 +426,6 @@ Old{Pedro}
 Nick{Botero}
 Conquistador{Conquistador}
 Templar{Templario}
-Demon{DemonÃ­aco}
+Demon{Demoníaco}
 
 {=====| 570 characters |=====}

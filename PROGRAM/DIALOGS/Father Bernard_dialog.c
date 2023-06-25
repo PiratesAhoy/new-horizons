@@ -38,7 +38,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
 //			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
 //			else Preprocessor_Add("pronoun", XI_ConvertString("her"));

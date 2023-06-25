@@ -21,7 +21,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -345,7 +345,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("sloop6");
 		break;
-//pРґr wr_port
+//pдr wr_port
 		case "sloop7":
 	ChangeCharacterAddressGroup(characterFromID("Minerva"), "wr_port", "reload", "reload2");
 	RemoveCharacterEquip(characterFromID("Minerva"), GUN_ITEM_TYPE);

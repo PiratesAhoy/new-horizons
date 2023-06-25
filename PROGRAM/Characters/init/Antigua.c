@@ -73,7 +73,7 @@ void CreateAntiguaCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 // SJG For Hornblower5/20/2009 --->
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -111,7 +111,7 @@ void CreateAntiguaCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -149,7 +149,7 @@ void CreateAntiguaCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -187,7 +187,7 @@ void CreateAntiguaCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -225,7 +225,7 @@ void CreateAntiguaCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -263,7 +263,7 @@ void CreateAntiguaCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";

@@ -219,7 +219,7 @@ Lived through a lot of pain, now I'm ready to give some.{Lived through a lot of 
 Would ye be want'n to hire a tomb raider?{Would ye be want'n to hire a tomb raider?}
 A descendant of Spaniard and Carib, she knows the Caribbean well.{A descendant of Spaniard and Carib, she knows the Caribbean well.}
 Beauty with eyes as green as emeralds and hair as red as blood.{Beauty with eyes as green as emeralds and hair as red as blood.}
-As skilled with the sword as she is beautiful, they call her Borinque√±a{As skilled with the sword as she is beautiful, they call her Borinque√±a}
+As skilled with the sword as she is beautiful, they call her BorinqueÒa{As skilled with the sword as she is beautiful, they call her BorinqueÒa}
 Don't let her beauty deceive you, she's a Pirate Captain.{Don't let her beauty deceive you, she's a Pirate Captain.}
 Have you met Orable's uncle, Elbaro?{Have you met Orable's uncle, Elbaro?}
 Sparrow got old, hit the bottle, and now look at him!{Sparrow got old, hit the bottle, and now look at him!}
@@ -423,9 +423,9 @@ Jack Sparrow in a nice british captains uniform. Looks real dashing!{Jack Sparro
 Jack Sparrow in a goldtrimmed commodores uniform. Shiny!{Jack Sparrow in a gold-trimmed commodore's uniform. Shiny!}
 Dark blue loose trowsers, a light shirt, sash, bandanna, something that will compliment dreadlocks. And don't forget me effects!{Dark blue loose trowsers, a light shirt, sash, bandanna, something that will compliment dreadlocks. And don't forget me effects!}
 A French Naval Lieutenant's uniform. And please leave the moustache as it is now, s'il vous plait.{A French Naval Lieutenant's uniform. And please leave the moustache as it is now, s'il vous plait.}
-A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la m√®re' and 'rouge' from blood!{A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la m√®re' and 'rouge' from blood!}
+A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la mËre' and 'rouge' from blood!{A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la mËre' and 'rouge' from blood!}
 A French Naval Captain's uniform. I only need a Corvette and a crew to compliment all this, monsieur!{A French Naval Captain's uniform. I only need a Corvette and a crew to compliment all this, monsieur!}
-A French Naval Commodore's uniform. Oui, C'est tr√®s bon.{A French Naval Commodore's uniform. Oui, C'est tr√®s bon.}
+A French Naval Commodore's uniform. Oui, C'est trËs bon.{A French Naval Commodore's uniform. Oui, C'est trËs bon.}
 A typical Dutch uniform 1.{A typical Dutch uniform 1.}
 A typical Dutch uniform 2.{A typical Dutch uniform 2.}
 A typical Dutch uniform 3.{A typical Dutch uniform 3.}
@@ -495,7 +495,7 @@ Crew cut, grey trousers, dark brown leather boots, a shirt that fits loose, a wa
 Crew cut, grey trousers, dark leather gold trim boots and a shirt that fits loose, a waistcoat and headband, bare knuckled. He makes a good Pirate!{Crew cut, grey trousers, dark leather gold trim boots and a shirt that fits loose, a waistcoat and headband, bare knuckled. He makes a good Pirate!}
 A flashy red coat, trimmed with golden leafs. And on top of that, an Indian pattern bandana. Now I look like a real 'gentlemen' pirate!{A flashy red coat, trimmed with golden leafs. And on top of that, an Indian pattern bandana. Now I look like a real 'gentlemen' pirate!}
 I feel like a Portuguese Marine. How about something like Manuel Sousa ?{I feel like a Portuguese Marine. How about something like Manuel Sousa ?}
-I feel like a Portuguese Marine. How about something like Louren√ßo Vaz ?{I feel like a Portuguese Marine. How about something like Louren√ßo Vaz ?}
+I feel like a Portuguese Marine. How about something like LourenÁo Vaz ?{I feel like a Portuguese Marine. How about something like LourenÁo Vaz ?}
 A perfect outfit for an infiltration mission in Spanish towns.{A perfect outfit for an infiltration mission in Spanish towns.}
 Just the best Spanish swordsman in the archipelago.{Just the best Spanish swordsman in the archipelago.}
 I feel like the Director of the Dutch West India Compagny. How about something like Gherarde de Jongh.{I feel like the Director of the Dutch West India Compagny. How about something like Gherarde de Jongh.}
@@ -520,7 +520,7 @@ Billions of Blue Blistering Barnacles! What do you mean 'I look drawn'? I'm as r
 This pirate resembles one famous pennyless French Captain{This pirate resembles one famous pennyless French Captain}
 It's a mythical creature... I can call it what I like.{It's a mythical creature... I can call it what I like.}
 And so... we go to war!{And so... we go to war!}
-It's actually spelled, Concei√ß√£o!{It's actually spelled, Concei√ß√£o!}
+It's actually spelled, ConceiÁ„o!{It's actually spelled, ConceiÁ›o!}
 A very sharp looking model for an officer.{A very sharp looking model for an officer.}
 The best gunsmith in the Caribbean, if you please!{The best gunsmith in the Caribbean, if you please!}
 A young villain who seems to love kidnapping.{A young villain who seems to love kidnapping.}

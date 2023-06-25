@@ -1,4 +1,4 @@
 title=Benjamin Hornigold
-text.t1=El barco de Hornigold fue el punto de partida para muchos de los piratas mÃ¡s famosos. 
-text.t2=Â¡Tengo el mapa! Â¿Es La EspaÃ±ola?
-text.t3=Un puerto en La EspaÃ±ola estÃ¡ marcado en rojo. Pero las dos letras azules... Tiene que haber mÃ¡s mapas que te permitan sacar algo en claro de esto.
+text.t1=El barco de Hornigold fue el punto de partida para muchos de los piratas más famosos. 
+text.t2=¡Tengo el mapa! ¿Es La Española?
+text.t3=Un puerto en La Española está marcado en rojo. Pero las dos letras azules... Tiene que haber más mapas que te permitan sacar algo en claro de esto.

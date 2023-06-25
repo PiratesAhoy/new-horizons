@@ -34,11 +34,11 @@ Ralph{Ralph}
 Partridge{Partridge}
 Coper{Coper}
 Blumberger{Blumberger}
-AmtÃ³nio{AmtÃ³nio}
+Amtónio{Amtónio}
 Guajira{Guajira}
 Ayol{Ayol}
 Bacha{Bacha}
-LucÃ­a{LucÃ­a}
+Lucía{Lucía}
 Edmundo{Edmundo}
 Valerie{Valerie}
 Downing{Downing}
@@ -57,7 +57,7 @@ Nervous Elk{Ciervo Nervioso}
 Ringboned Wolf{Lobo Huesudo}
 Strong Deer{Corzo Fuerte}
 White Crow{Cuervo Blanco}
-Soaring Hawk{HalcÃ³n En El Cielo}
+Soaring Hawk{Halcón En El Cielo}
 Ronald{Ronald}
 McDonald{McDonald}
 Doolin{Doolin}
@@ -93,7 +93,7 @@ Guard{Guardia}
 2{2}
 3{3}
 Atanagildo{Atanagildo}
-GalÃ­ndez{GalÃ­ndez}
+Galíndez{Galíndez}
 Eldo{Eldo}
 Fiz{Fiz}
 Javier{Javier}
@@ -126,9 +126,9 @@ Bruyant{Bruyant}
 Moncoutie{Moncoutie}
 Philip{Philip}
 de Malvoisin{de Malvoisin}
-FranÃ§ois-Louis{FranÃ§ois-Louis}
+François-Louis{François-Louis}
 Rousselet{Rousselet}
-de ChÃ¢teaurenault{de ChÃ¢teaurenault}
+de Châteaurenault{de Châteaurenault}
 4{4}
 Guibert{Guibert}
 Mollaret{Mollaret}
@@ -143,9 +143,9 @@ Bonnefroy{Bonnefroy}
 Jaime{Jaime}
 Lezcano{Lezcano}
 Pelayo{Pelayo}
-NÃºÃ±ez{NÃºÃ±ez}
+Núñez{Núñez}
 Emiliano{Emiliano}
-de GuzmÃ¡n{de GuzmÃ¡n}
+de Guzmán{de Guzmán}
 Gilles{Gilles}
 Clouzot{Clouzot}
 

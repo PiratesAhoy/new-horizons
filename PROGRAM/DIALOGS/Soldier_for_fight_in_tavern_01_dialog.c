@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 			
 		case "DieMotherFucker":
 
@@ -47,7 +47,7 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";			
 			
-			//РїРѕС‚Р°СЃРѕРІРєР° РІ С‚Р°РІРµСЂРЅРµ
+			//потасовка в таверне
 			if (pchar.quest.main_line == "talk_in_tavern_begin")
 			{
 				if (pchar.id == "Danielle")
@@ -65,7 +65,7 @@ void ProcessDialogEvent()
 					link.l1.go = "node_2_kick";
 				}
 			}
-			//Р°СЂРµСЃС‚ Р±Р»РµР№Р·Р°
+			//арест блейза
 			if (pchar.quest.main_line == "fawn_death")
 			{
 				Dialog.snd = "voice\SFNT\SFNT004";

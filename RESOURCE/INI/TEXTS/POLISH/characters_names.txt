@@ -104,7 +104,7 @@ de Torres{de Torres}
 Charlie{Charlie}
 Allen{Allen}
 Edgar{Edgar}
-LuÃ­s{LuÃ­s}
+Luís{Luís}
 Buchinho{Buchinho}
 Deadly{Deadly}
 Pirate{Pirate}
@@ -205,7 +205,7 @@ on the stalk{on the stalk}
 Eustacio{Eustacio}
 Ocampo{Ocampo}
 Patricia{Patricia}
-SantÃ¡ngel{SantÃ¡ngel}
+Santángel{Santángel}
 Isidoro{Isidoro}
 Figueroa{Figueroa}
 Magarino{Magarino}
@@ -510,7 +510,7 @@ Marpeut{Marpeut}
 Laure{Laure}
 Sinclair{Sinclair}
 Dubois{Dubois}
-FranÃ§ois{FranÃ§ois}
+François{François}
 de Vigny{de Vigny}
 
 {=====| Hispaniola.c |=====}
@@ -1001,10 +1001,10 @@ Cristobal{Cristobal}
 Leon{Leon}
 Escovar{Escovar}
 Entenza{Entenza}
-SeÃ±orita{SeÃ±orita}
+Señorita{Señorita}
 Hebe{Hebe}
 Constantino{Constantino}
-AvellÃ¡n{AvellÃ¡n}
+Avellán{Avellán}
 Growling{Growling}
 Bear{Bear}
 Kicking{Kicking}
@@ -1205,7 +1205,7 @@ Inocencia{Inocencia}
 Ussica{Ussica}
 Salvadore{Salvadore}
 Jimena{Jimena}
-LÃ³pez{LÃ³pez}
+López{López}
 
 {=====| Turks.c |=====}
 Dante{Dante}

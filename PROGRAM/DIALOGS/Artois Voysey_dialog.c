@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	PreProcessor_Add("title", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;

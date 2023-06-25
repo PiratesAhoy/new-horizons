@@ -5,7 +5,7 @@ string DLG_TEXT[28] = {
 "My name is ",
 ".",
 "So, why do you distract me from the very important affairs of state?",
-"I'm just here to pay my respects, SeÃ±or. Nothing more.",
+"I'm just here to pay my respects, Señor. Nothing more.",
 "In that case, please leave my study and let me get back to more important matters.",
 "Yes, of course. Sorry I disturbed you.",
 ". You arranged for the kidnap of ",

@@ -2237,13 +2237,13 @@ string GetLingvo(string strData)
 {
 	if(LanguageGetLanguage()=="Russian")
 	{
-		if(strcut(strData, strlen(strData)-1, strlen(strData)-1)=="Ã ")
+		if(strcut(strData, strlen(strData)-1, strlen(strData)-1)=="à")
 		{
-			strData = strcut(strData, 0, strlen(strData)-2)+"Ã³";
+			strData = strcut(strData, 0, strlen(strData)-2)+"ó";
 		}
-		if(strcut(strData, strlen(strData)-1, strlen(strData)-1)=="Ã€")
+		if(strcut(strData, strlen(strData)-1, strlen(strData)-1)=="À")
 		{
-			strData = strcut(strData, 0, strlen(strData)-2)+"Ã“";
+			strData = strcut(strData, 0, strlen(strData)-2)+"Ó";
 		}
 	}
 
@@ -3115,39 +3115,39 @@ void ResetKeyboardCharacters(string curLanguage)
 		break;
 
 		case "English":
-			CI_CreateAndSetControls("", "NK_Key_Ã ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¡", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¢", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã£", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¤", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¥", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Â¸", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¦", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã§", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¨", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã©", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ãª", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã«", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¬", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã­", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã®", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¯", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã°", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã±", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã²", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã³", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã´", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ãµ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¶", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã·", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¸", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¹", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã»", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ãº", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã½", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¼", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¾", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ã¿", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_à", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_á", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_â", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ã", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ä", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_å", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_¸", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_æ", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ç", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_è", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_é", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ê", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ë", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ì", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_í", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_î", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ï", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ð", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ñ", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ò", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ó", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ô", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_õ", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ö", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_÷", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ø", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ù", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_û", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ú", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ý", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ü", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_þ", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ÿ", "", 0, false);
 			CI_CreateAndSetControls("", "NK_Key_.", "", 0, false);
 		break;
 	}

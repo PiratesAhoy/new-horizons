@@ -1,0 +1,58 @@
+block Sky()
+{
+	technique t0
+	{
+		pass p0
+		{
+			ZEnable = false;
+			FogEnable = false;
+			Lighting = false;
+			CullMode = none;
+			AlphaTestEnable = false;
+			AlphaBlendEnable = false;
+
+			ColorOp[0] = modulate;
+			ColorArg1[0] = texture;
+			ColorArg2[0] = diffuse;
+
+			AlphaOp[0] = disable;
+
+			ColorOp[1] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block SkyFog()
+{
+	technique t0
+	{
+		pass p0
+		{
+			ZEnable = false;
+			FogEnable = false;
+			Lighting = false;
+			CullMode = none;
+			AlphaRef = 0x0;
+			AlphaTestEnable = true;
+			AlphaBlendEnable = true;
+			SrcBlend = srcalpha;
+			DestBlend = invsrcalpha;
+
+			ColorOp[0] = selectarg1;
+			ColorArg1[0] = diffuse;
+
+			AlphaOp[0] = selectarg1;
+			AlphaArg1[0] = diffuse;
+
+			ColorOp[1] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}

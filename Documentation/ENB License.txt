@@ -1,0 +1,17 @@
+LICENSE AGREEMENT AND DISTRIBUTION RULES:
+1 Copyrights of the ENB Series exclusively belongs to author - Vorontsov Boris (ENB developer).
+2 ENB Series (the SOFTWARE) is DonateWare application, which means you may or may not pay for this software to the author as donation.
+3 Software provided "AS IS", without warranty of any kind, use it on your own risk. 
+4 You agree not to change or remove any parts of software (files in archive or installer) without author permission. Decompilation, reverse enginering, disassembling, debugging or changing resources of software is prohibited.
+5 You may use and distribute software in commercial or non-commercial uses. For commercial use it is required to warn about using this software (in credits, on the box or other places). Commercial distribution of software as part of the games without author permission prohibited.
+6 Author can change license agreement for new versions of the software.
+7 All the rights, not described in this license agreement belongs to author.
+8 Starting the ENB Series means that user accept the terms of use, described by this license agreement.
+ 
+
+For more information about license agreement send an e-mail me:
+boris-vorontsov@yandex.ru.
+
+
+http://boris-vorontsov.narod.ru
+Copyright (c) 2008 Vorontsov Boris (ENB developer)

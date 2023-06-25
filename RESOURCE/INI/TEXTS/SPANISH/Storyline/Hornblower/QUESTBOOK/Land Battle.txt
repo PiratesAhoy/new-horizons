@@ -1,6 +1,6 @@
 title=Batalla terrestre
 text.t1=Debemos dirigirnos a #sRedmond#, en #sisland_Redmond#, para embarcar tropas con las que enfrentarnos a los franceses.
-text.t2=Se me ha ordenado llevar a las tropas a la BahÃ­a del Pulpo, en #sisland_Falaise de Fleur#, donde nos enfrentaremos a los franceses.
+text.t2=Se me ha ordenado llevar a las tropas a la Bahía del Pulpo, en #sisland_Falaise de Fleur#, donde nos enfrentaremos a los franceses.
 text.t3=Hemos vencido en la batalla. El  teniente Chumley quiere volver a #sCharlestown# pero tenemos tantos heridos que voy a llevarlos primero a #sOxbay#, en #sisland_Oxbay#.
 text.t4=.
 text.t5=.

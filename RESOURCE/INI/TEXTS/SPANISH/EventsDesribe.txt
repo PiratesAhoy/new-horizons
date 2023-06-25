@@ -1,44 +1,44 @@
 ECONOMY_title {Ahora #stown# es #seconomy#}
-ECONOMY_entry {Ahora #stown# es #seconomy# debido a los acontecimientos recientes. Esto significa que la ciudad necesitar√° otros tipos de mercanc√≠as, as√≠ que es buena idea visitar otra vez la tienda para comprobarlo.}
+ECONOMY_entry {Ahora #stown# es #seconomy# debido a los acontecimientos recientes. Esto significa que la ciudad necesitar· otros tipos de mercancÌas, asÌ que es buena idea visitar otra vez la tienda para comprobarlo.}
 
 MALARIA_title {La malaria golpea #stown#}
-MALARIA_entry {Se ha informado de que un n√∫mero cada vez mayor de personas en #stown# parece estar muriendo de malaria. Las v√≠ctimas civiles son muy numerosas pero los soldados de la guarnici√≥n local la han sufrido todav√≠a m√°s.}
+MALARIA_entry {Se ha informado de que un n˙mero cada vez mayor de personas en #stown# parece estar muriendo de malaria. Las vÌctimas civiles son muy numerosas pero los soldados de la guarniciÛn local la han sufrido todavÌa m·s.}
 
 PIRATES_title {Piratas han saqueado #stown#}
-PIRATES_entry {Se ha informado de un asalto pirata sobre #stown#. Al parecer algunos piratas entraron a escondidas en la ciudad antes de que sus barcos atacaran el puerto en mitad de la noche. Los infiltrados en la ciudad tomaron a la guarnici√≥n por sorpresa y mantuvieron las puertas abiertas para sus camaradas. Todo el ataque no dur√≥ m√°s de dos horas. Los piratas escaparon con un gran bot√≠n en oro antes de que el comandante del fuerte pudiera reunir a sus tropas para la defensa. Varias personas murieron en el ataque, cuando intentaron defender sus posesiones.}
+PIRATES_entry {Se ha informado de un asalto pirata sobre #stown#. Al parecer algunos piratas entraron a escondidas en la ciudad antes de que sus barcos atacaran el puerto en mitad de la noche. Los infiltrados en la ciudad tomaron a la guarniciÛn por sorpresa y mantuvieron las puertas abiertas para sus camaradas. Todo el ataque no durÛ m·s de dos horas. Los piratas escaparon con un gran botÌn en oro antes de que el comandante del fuerte pudiera reunir a sus tropas para la defensa. Varias personas murieron en el ataque, cuando intentaron defender sus posesiones.}
 
 GOLDFOUND_title {Oro encontrado cerca de #stown#}
-GOLDFOUND_entry {Mineros de #stown# han descubierto un rico fil√≥n de oro. Se ha abierto una nueva mina de oro y el gobernador ha solicitado m√°s tropas para proteger la ciudad de posibles ataques piratas. Las nuevas riquezas atraen a todo tipo de gente, por lo que se espera que la poblaci√≥n de #stown# crezca.}
+GOLDFOUND_entry {Mineros de #stown# han descubierto un rico filÛn de oro. Se ha abierto una nueva mina de oro y el gobernador ha solicitado m·s tropas para proteger la ciudad de posibles ataques piratas. Las nuevas riquezas atraen a todo tipo de gente, por lo que se espera que la poblaciÛn de #stown# crezca.}
 
 SILVERFOUND_title {Plata encontrada cerca de #stown#}
-SILVERFOUND_entry {Mineros de #stown# han descubierto un rico fil√≥n de plata. Se ha abierto una nueva mina de plata y el gobernador ha solicitado m√°s tropas para proteger la ciudad de posibles ataques piratas. Las nuevas riquezas atraen a todo tipo de gente, por lo que se espera que la poblaci√≥n de #stown# crezca}
+SILVERFOUND_entry {Mineros de #stown# han descubierto un rico filÛn de plata. Se ha abierto una nueva mina de plata y el gobernador ha solicitado m·s tropas para proteger la ciudad de posibles ataques piratas. Las nuevas riquezas atraen a todo tipo de gente, por lo que se espera que la poblaciÛn de #stown# crezca}
 
 INDIANS_title {Los indios han atacado #stown#}
-INDIANS_entry {Los viajeros informan de un importante ataque indio contra #stown#. Al parecer, los indios han saqueado la ciudad, y han masacrado a la poblaci√≥n civil, as√≠ como a la guarnici√≥n local. Finalmente, los ca√±ones de la guarnici√≥n consiguieron hacer que se retiraran, dejando la ciudad desolada.}
+INDIANS_entry {Los viajeros informan de un importante ataque indio contra #stown#. Al parecer, los indios han saqueado la ciudad, y han masacrado a la poblaciÛn civil, asÌ como a la guarniciÛn local. Finalmente, los caÒones de la guarniciÛn consiguieron hacer que se retiraran, dejando la ciudad desolada.}
 
 SLAVEREVOLT_title {Revuelta de esclavos en #stown#}
-SLAVEREVOLT_entry {El gobernador de #stown# ha hecho correr la noticia de que una revuelta de esclavos ha sido sofocada por la guarnici√≥n local. Todos los rebeldes supervivientes fueron ahorcados como advertencia. Aunque la rebeli√≥n ha sido sofocada, se espera que la p√©rdida de una buena cantidad de esclavos tenga un impacto en la enconom√≠a de #stown#.}
+SLAVEREVOLT_entry {El gobernador de #stown# ha hecho correr la noticia de que una revuelta de esclavos ha sido sofocada por la guarniciÛn local. Todos los rebeldes supervivientes fueron ahorcados como advertencia. Aunque la rebeliÛn ha sido sofocada, se espera que la pÈrdida de una buena cantidad de esclavos tenga un impacto en la enconomÌa de #stown#.}
 
 FIRE_title {Gran incendio en #stown#}
-FIRE_entry {Un gran incendio ha devastado parte de #stown#. El incendio se desat√≥ cerca del puerto, donde un almac√©n estall√≥ en llamas repentinamente. Se rumorea que almacenaba aceite, p√≥lvora o ambas cosas. El fuego se extendi√≥ r√°pidamente y no pudo ser extinguido hasta dos d√≠as despu√©s. Se cree que muchas personas han fallecido intentando salvar sus pertenencias de las llamas.}
+FIRE_entry {Un gran incendio ha devastado parte de #stown#. El incendio se desatÛ cerca del puerto, donde un almacÈn estallÛ en llamas repentinamente. Se rumorea que almacenaba aceite, pÛlvora o ambas cosas. El fuego se extendiÛ r·pidamente y no pudo ser extinguido hasta dos dÌas despuÈs. Se cree que muchas personas han fallecido intentando salvar sus pertenencias de las llamas.}
 
-HURRICANE_title {Un hurac√°n azota #stown#}
-HURRICANE_entry {#stown# ha sufrido el azote de un fuerte hurac√°n. El viento y el agua han destruido muchos edificios en la ciudad, especialmente las partes m√°s pobres han recivido la peor parte. Varios barcos en los alrededores del puerto se han hundido a consecuencia del hurac√°n. Se teme que se extiendan enfermedades por la ciudad, como suele ocurrir despu√©s de tales desastres.}
+HURRICANE_title {Un hurac·n azota #stown#}
+HURRICANE_entry {#stown# ha sufrido el azote de un fuerte hurac·n. El viento y el agua han destruido muchos edificios en la ciudad, especialmente las partes m·s pobres han recivido la peor parte. Varios barcos en los alrededores del puerto se han hundido a consecuencia del hurac·n. Se teme que se extiendan enfermedades por la ciudad, como suele ocurrir despuÈs de tales desastres.}
 
 SETTLERS_title {Nuevos colonos en #stown#}
-SETTLERS_entry {Un convoy de barcos con nuevos colonos llegados desde Europa ha llegado a #stown#. Los nuevos colonos son muy necesarios para reforzar la econom√≠a de la ciudad. Se ha informado de que el convoy tambi√©n ha tra√≠do a las colonias bienes de lujo y nuevos inventos de Europa, adem√°s de un peque√±o contingente de soldados.}
+SETTLERS_entry {Un convoy de barcos con nuevos colonos llegados desde Europa ha llegado a #stown#. Los nuevos colonos son muy necesarios para reforzar la economÌa de la ciudad. Se ha informado de que el convoy tambiÈn ha traÌdo a las colonias bienes de lujo y nuevos inventos de Europa, adem·s de un pequeÒo contingente de soldados.}
 
-EXPEDITION_title {Expedici√≥n regresa a #stown#}
-EXPEDITION_entry {Una expedici√≥n que parti√≥ a explorar la selva ha regresado a #stown#. La expedici√≥n ha sido un gran √©xito, ya que los exploradores encontraron a no mucha distancia un fil√≥n de oro que era explotado por una tribu nativa. Los exploradores tomaron la aldea y esclavizaron a los indios supervivientes para establecer un nuevo campamento minero. La expedici√≥n ha regresado finalmente con una gran cantidad de oro, algunas plantas hasta ahora desconocidas y varios esclavos.}
+EXPEDITION_title {ExpediciÛn regresa a #stown#}
+EXPEDITION_entry {Una expediciÛn que partiÛ a explorar la selva ha regresado a #stown#. La expediciÛn ha sido un gran Èxito, ya que los exploradores encontraron a no mucha distancia un filÛn de oro que era explotado por una tribu nativa. Los exploradores tomaron la aldea y esclavizaron a los indios supervivientes para establecer un nuevo campamento minero. La expediciÛn ha regresado finalmente con una gran cantidad de oro, algunas plantas hasta ahora desconocidas y varios esclavos.}
 
 GOODECO_title {}
 GOODECO_entry {}
 
-Fetch_Shipyard_title {#stown# est√° ampliando su flota de guerra}
-Fetch_Shipyard_entry {El gobernador de #stown# ha encargado al astillero la construcci√≥n de nuevos barcos para la escuadra. Esto requerir√° gran cantidad de recursos, por lo que es posible que algunos de ellos se agoten.}
+Fetch_Shipyard_title {#stown# est· ampliando su flota de guerra}
+Fetch_Shipyard_entry {El gobernador de #stown# ha encargado al astillero la construcciÛn de nuevos barcos para la escuadra. Esto requerir· gran cantidad de recursos, por lo que es posible que algunos de ellos se agoten.}
 
-Fetch_Tailor_title {#stown# est√° ampliando su guarnici√≥n}
-Fetch_Tailor_entry {El comandante del fuerte de #stown# est√° reclutando nuevos soldados para reforzar sus tropas. Esto ser√° una gran fuente de trabajo para el sastre y puede causar que algunos recursos se agoten en la isla.}
+Fetch_Tailor_title {#stown# est· ampliando su guarniciÛn}
+Fetch_Tailor_entry {El comandante del fuerte de #stown# est· reclutando nuevos soldados para reforzar sus tropas. Esto ser· una gran fuente de trabajo para el sastre y puede causar que algunos recursos se agoten en la isla.}
 
 Fetch_Smith_title {#stown# quiere nuevas armas}
-Fetch_Smith_entry {Para defender mejor la ciudad, el gobernador de #stown# ha decidido que todas las armas sean inspeccionadas y puestas a punto. Esto requerir√° que el herrero use muchos recursos, y puede que necesite ayuda para reponerlos.}
+Fetch_Smith_entry {Para defender mejor la ciudad, el gobernador de #stown# ha decidido que todas las armas sean inspeccionadas y puestas a punto. Esto requerir· que el herrero use muchos recursos, y puede que necesite ayuda para reponerlos.}

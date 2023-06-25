@@ -57,7 +57,7 @@ bool LAi_tmpl_ani_InitTemplate(aref chr)
 	return true;
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование шаблона персонажа
 void LAi_tmpl_ani_CharacterUpdate(aref chr, float dltTime)
 {
 	if(chr.chr_ai.tmpl.animation != "")
@@ -76,114 +76,114 @@ void LAi_tmpl_ani_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  go to point
+//Персонаж выполнил команду  go to point
 void LAi_tmpl_ani_EndGoToPoint(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  go to point
+//Персонаж провалил команду  go to point
 void LAi_tmpl_ani_FailureGoToPoint(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  run to point
+//Персонаж выполнил команду  run to point
 void LAi_tmpl_ani_EndRunToPoint(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  run to point
+//Персонаж провалил команду  run to point
 void LAi_tmpl_ani_FailureRunToPoint(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅРµ РјРѕР¶РµС‚ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ С‚РѕС‡РєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ
+//Персонаж не может добраться до точки назначения
 void LAi_tmpl_ani_BusyPos(aref chr, float x, float y, float z)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
+//Персонаж начал перемещение за другим
 void LAi_tmpl_ani_FollowGo(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж начал дошёл до другого персонажа
 void LAi_tmpl_ani_FollowStay(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  follow character
+//Персонаж провалил команду  follow character
 void LAi_tmpl_ani_FailureFollow(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
+//Персонаж начал перемещение за другим
 void LAi_tmpl_ani_FightGo(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж начал дошёл до другого персонажа
 void LAi_tmpl_ani_FightStay(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  Fight
+//Персонаж провалил команду  Fight
 void LAi_tmpl_ani_FailureFight(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРµР»СЏС‚СЊ
+//Можно ли стрелять
 bool LAi_tmpl_ani_IsFire(aref chr)
 {	
 	return false;
 }
 
-//РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЂСѓР¶РёРµ
+//Можно ли использовать оружие
 bool LAi_tmpl_ani_IsFight(aref chr)
 {
 	return false;
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  escape
+//Персонаж выполнил команду  escape
 void LAi_tmpl_ani_EndEscape(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ СЃРєРѕР»СЊР·РёС‚ РІРґРѕР»СЊ РїР°С‚С‡Р°
+//Персонаж скользит вдоль патча
 void LAi_tmpl_ani_EscapeSlide(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  escape
+//Персонаж провалил команду  escape
 void LAi_tmpl_ani_FailureEscape(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ С‚РѕР»РєР°РµС‚СЃСЏ СЃ РґСЂСѓРіРёРјРё РїРµСЂСЃРѕРЅР°Р¶Р°РјРё
+//Персонаж толкается с другими персонажами
 void LAi_tmpl_ani_ColThreshold(aref chr)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р·Р°РєРѕРЅС‡РёР» РїСЂРѕРёРіСЂС‹РІР°С‚СЊ Р°РЅРёРјР°С†РёСЋ
+//Персонаж закончил проигрывать анимацию
 void LAi_tmpl_ani_EndAction(aref chr)
 {	
 	if(chr.chr_ai.tmpl.animation == "") return;
@@ -191,13 +191,13 @@ void LAi_tmpl_ani_EndAction(aref chr)
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶Р° РїСЂРѕСЃСЏС‚ РѕСЃРІРѕР±РѕРґРёС‚СЊ РјРµСЃС‚Рѕ
+//Персонажа просят освободить место
 void LAi_tmpl_ani_FreePos(aref chr, aref who)
 {
 	LAi_tmpl_ani_UpdateState(chr);
 }
 
-//РћР±РЅРѕРІРёС‚СЊ СЃРѕСЃС‚РѕСЏРЅРёРµ С€Р°Р±Р»РѕРЅР°
+//Обновить состояние шаблона
 void LAi_tmpl_ani_UpdateState(aref chr)
 {
 	if(LAi_IsInitedAI)
@@ -210,7 +210,7 @@ void LAi_tmpl_ani_UpdateState(aref chr)
 	}
 }
 
-//Р—Р°РІРµСЂС€РµРЅРёРµ РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ Р°РЅРёРјР°С†РёРё
+//Завершение проигрывания анимации
 void LAi_tmpl_ani_EndAnimation(aref chr)
 {
 	//chr.chr_ai.tmpl.animation = "";

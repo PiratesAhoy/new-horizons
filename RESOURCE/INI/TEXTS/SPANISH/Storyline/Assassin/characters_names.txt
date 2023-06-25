@@ -45,7 +45,7 @@ Mateus{Mateus}
 Santos{Santos}
 Desiree'{Desiree'}
 Muerte{Muerte}
-Thug{MatÃ³n}
+Thug{Matón}
 Vassal{Vassal}
 Bethune{Bethune}
 Daryl{Daryl}
@@ -111,7 +111,7 @@ Daudet{Daudet}
 Diablo{Diablo}
 Villalobos{Villalobos}
 Pirate{Pirata}
-Capitan{CapitÃ¡n}
+Capitan{Capitán}
 Caceres{Caceres}
 
 {=====| TempQuestEnemy.c |=====}

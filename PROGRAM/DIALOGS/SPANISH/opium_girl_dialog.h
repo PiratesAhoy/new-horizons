@@ -1,9 +1,9 @@
 string DLG_TEXT[6] = {
-"Eh, capitÃ¡n... Â¿quiees lo mismo que estÃ¡n tomando estos caballeros?",
+"Eh, capitán... ¿quiees lo mismo que están tomando estos caballeros?",
 "Solo algo para el camino, por favor.",
 "Nada ahora mismo, no.",
-"Â¡Tengo una buena botella de Ã©ter para ti! Â¡Te aseguro que quita el sentido, je, je! Solo 400 monedas, por favor.",
-"AquÃ­ tienes... Oye, Â¿por quÃ© en la etiqueta pone 'Advertencia: No apto para el consumo humano. Solo uso externo'?",
-"Hum, en otra ocasiÃ³n, tal vez.",
+"¡Tengo una buena botella de éter para ti! ¡Te aseguro que quita el sentido, je, je! Solo 400 monedas, por favor.",
+"Aquí tienes... Oye, ¿por qué en la etiqueta pone 'Advertencia: No apto para el consumo humano. Solo uso externo'?",
+"Hum, en otra ocasión, tal vez.",
 
 };

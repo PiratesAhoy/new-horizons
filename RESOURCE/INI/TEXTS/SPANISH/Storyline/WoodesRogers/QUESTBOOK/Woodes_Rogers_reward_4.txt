@@ -1,6 +1,6 @@
 title=La cuarta recompensa de Woodes Rogers
-text.t1=La prÃ³xima pistola (Â¡Uff!) estÃ¡ en la habitaciÃ³n de la madre de Rogers, encima de la tienda.
-text.t2=Bien, estoy en la tienda. Â¿DÃ³nde se supone que tengo que usar este candado?
-text.t3=SÃ­, sÃ­, si, es una pistola, por supuesto. Pero esta tiene un aspecto mÃ¡s interesante, cuenta con una moderna llave de percusiÃ³. 'Eden N. Carolina', Â¿es el nombre de una familia, una plantaciÃ³n o una pequeÃ±a ciudad?
-text.t4=Creo que volverÃ© a la tienda, y esta vez buscarÃ© la pistola con mÃ¡s atenciÃ³n.
-text.t5=Ahora la cuestiÃ³n es, Â¿quÃ© camino tomar para volver a entrar en ese laberinto de habitaciones de Rogers?
+text.t1=La próxima pistola (¡Uff!) está en la habitación de la madre de Rogers, encima de la tienda.
+text.t2=Bien, estoy en la tienda. ¿Dónde se supone que tengo que usar este candado?
+text.t3=Sí, sí, si, es una pistola, por supuesto. Pero esta tiene un aspecto más interesante, cuenta con una moderna llave de percusió. 'Eden N. Carolina', ¿es el nombre de una familia, una plantación o una pequeña ciudad?
+text.t4=Creo que volveré a la tienda, y esta vez buscaré la pistola con más atención.
+text.t5=Ahora la cuestión es, ¿qué camino tomar para volver a entrar en ese laberinto de habitaciones de Rogers?

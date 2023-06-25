@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = {
-"Â¡Gracias, monsieur! No le conocemos, pero sabÃ­amos que serÃ­amos libres en cuanto viÃ©ramos a Chevalle entrar en la plaza del pueblo.",
-"AgradÃ©ceselo a Chevalle. Ni siquiera yo estarÃ­a aquÃ­ si no me hubiera convencido de ayudarte.",
-"Â¿Hay algÃºn problema, seÃ±or?",
-"No. OlvÃ­dalo.",
+"¡Gracias, monsieur! No le conocemos, pero sabíamos que seríamos libres en cuanto viéramos a Chevalle entrar en la plaza del pueblo.",
+"Agradéceselo a Chevalle. Ni siquiera yo estaría aquí si no me hubiera convencido de ayudarte.",
+"¿Hay algún problema, señor?",
+"No. Olvídalo.",
 
 };

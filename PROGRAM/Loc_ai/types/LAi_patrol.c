@@ -1,7 +1,7 @@
 /*
-РўРёРї: СЃС‚РѕСЏС‡РёР№, РІСЃРµРіРґР° СЃС‚РѕРёС‚, РѕС‚РІРµС‡Р°РµС‚ РЅР° РґРёР°Р»РѕРіРё, РЅРёРєРѕРіРґР° РЅРµ Р±РѕРёС‚СЃСЏ
+Тип: стоячий, всегда стоит, отвечает на диалоги, никогда не боится
 
-	РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С€Р°Р±Р»РѕРЅС‹:
+	Используемые шаблоны:
 		stay
 		dialog
 		goto
@@ -12,7 +12,7 @@
 #define LAI_TYPE_PATROL		"patrol"
 
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+//Инициализация
 void LAi_type_patrol_Init(aref chr)
 {
 	DeleteAttribute(chr, "location.follower");
@@ -38,29 +38,29 @@ void LAi_type_patrol_Init(aref chr)
 		if(!CheckAttribute(chr, "chr_ai.type.time")) chr.chr_ai.type.time = rand(5);
 		if(!CheckAttribute(chr, "chr_ai.type.player")) chr.chr_ai.type.player = "0";
 	}
-	//РЈСЃС‚Р°РЅРѕРІРёРј Р°РЅРёРјР°С†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Сѓ
+	//Установим анимацию персонажу
 	LAi_SetDefaultStayAnimation(chr);
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightWOWeapon", false);
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С‚РёРїР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование типа персонажа
 void LAi_type_patrol_CharacterUpdate(aref chr, float dltTime)
 {
 	int trg = -1;
-	//Р•СЃР»Рё Р±РѕР»С‚Р°РµРј, С‚Рѕ РЅРёС‡РµРіРѕ РїРѕРєР° РЅРµ РјРµРЅСЏРµРј
+	//Если болтаем, то ничего пока не меняем
 	if(chr.chr_ai.tmpl == LAI_TMPL_DIALOG) return;
 	if(chr.chr_ai.tmpl != LAI_TMPL_FIGHT)
 	{
-		//РС‰РµРј С†РµР»СЊ
+		//Ищем цель
 		trg = LAi_group_GetTarget(chr);
 		if(trg < 0)
 		{
-			//РџР°С‚СЂСѓР»РёСЂРѕРІР°РЅРёРµ
+			//Патрулирование
 			float time = stf(chr.chr_ai.type.player) - dltTime;
 			chr.chr_ai.type.player = time;
 			if(time <= 0.0)
 			{
-				//РђРЅР°Р»РёР·РёСЂСѓРµРј РѕРєСЂСѓР¶Р°СЋС‰РёС… РїРµСЂСЃРѕРЅР°Р¶РµР№
+				//Анализируем окружающих персонажей
 				int num = FindNearCharacters(chr, 3.0, -1.0, -1.0, 0.001, true, true);
 				if(num > 0)
 				{
@@ -70,7 +70,7 @@ void LAi_type_patrol_CharacterUpdate(aref chr, float dltTime)
 					}
 					if(i < num)
 					{
-						//РќР°С€Р»Рё РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+						//Нашли главного персонажа
 						if(stf(chr.chr_ai.type.player) <= 0.0)
 						{
 							chr.chr_ai.type.player = 3 + rand(10);
@@ -82,7 +82,7 @@ void LAi_type_patrol_CharacterUpdate(aref chr, float dltTime)
 					}
 				}
 			}			
-			//РђРЅР°Р»РёР·РёСЂСѓРµРј СЃРѕСЃС‚РѕСЏРЅРёРµ С…РѕРґСЊР±С‹
+			//Анализируем состояние ходьбы
 			if(chr.chr_ai.tmpl == LAI_TMPL_GOTO)
 			{
 				if(LAi_tmpl_goto_IsWait(chr))
@@ -91,12 +91,12 @@ void LAi_type_patrol_CharacterUpdate(aref chr, float dltTime)
 				}
 				return;
 			}
-			//РРЅРѕРіРґР° Р·РІСѓС‡РёРј
+			//Иногда звучим
 			if(rand(1000) == 125)
 			{
 				LAi_CharacterPlaySound(chr, "patrol");
 			}
-			//РЎС‚РѕРёРј
+			//Стоим
 			time = stf(chr.chr_ai.type.time) - dltTime;
 			chr.chr_ai.type.time = time;
 			if(time > 0.0)
@@ -109,16 +109,16 @@ void LAi_type_patrol_CharacterUpdate(aref chr, float dltTime)
 			}
 
 		}else{
-			//РќР°С‡РёРЅР°РµРј Р°С‚Р°РєСѓ
+			//Начинаем атаку
 			chr.chr_ai.type.state = "fight";
 			if(!LAi_tmpl_SetFight(chr, &Characters[trg]))
 			{
-				//РќРµСЃРјРѕРіР»Рё РёРЅРёС†РёРёСЂРѕРІР°С‚СЊ С€Р°Р±Р»РѕРЅ
+				//Несмогли инициировать шаблон
 				LAi_type_patrol_Stay(chr);
 			}
 		}
 	}else{
-		//РџСЂРѕРІРµСЂРёРј РЅР° РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ С†РµР»СЊ
+		//Проверим на правильность цель
 		bool isValidate = false;
 		trg = LAi_tmpl_fight_GetTarget(chr);
 		if(trg >= 0)
@@ -133,14 +133,14 @@ void LAi_type_patrol_CharacterUpdate(aref chr, float dltTime)
 		}
 		if(!isValidate)
 		{
-			//РС‰РµРј РЅРѕРІСѓСЋ С†РµР»СЊ
+			//Ищем новую цель
 			trg = LAi_group_GetTarget(chr);
 			if(trg >= 0)
 			{
 				chr.chr_ai.type.state = "fight";
 				if(!LAi_tmpl_SetFight(chr, &Characters[trg]))
 				{
-					//РќРµСЃРјРѕРіР»Рё РёРЅРёС†РёРёСЂРѕРІР°С‚СЊ С€Р°Р±Р»РѕРЅ
+					//Несмогли инициировать шаблон
 					LAi_type_patrol_Stay(chr);
 				}
 			}else{
@@ -150,19 +150,19 @@ void LAi_type_patrol_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Р—Р°РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
+//Загрузка персонажа в локацию
 bool LAi_type_patrol_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Р’С‹РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РёР· Р»РѕРєР°С†РёСЋ
+//Выгрузка персонажа из локацию
 bool LAi_type_patrol_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ С‚РµРјРїР»РµР№С‚Р°
+//Завершение работы темплейта
 void LAi_type_patrol_TemplateComplite(aref chr, string tmpl)
 {
 	if(tmpl == "goto")
@@ -173,12 +173,12 @@ void LAi_type_patrol_TemplateComplite(aref chr, string tmpl)
 	}
 }
 
-//РЎРѕРѕР±С‰РёС‚СЊ Рѕ Р¶РµР»Р°РЅРёРё Р·Р°РІРµСЃС‚Рё РґРёР°Р»РѕРі
+//Сообщить о желании завести диалог
 void LAi_type_patrol_NeedDialog(aref chr, aref by)
 {
 }
 
-//Р—Р°РїСЂРѕСЃ РЅР° РґРёР°Р»РѕРі, РµСЃР»Рё РІРѕР·РІСЂР°С‚РёС‚СЊ true С‚Рѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Запрос на диалог, если возвратить true то в этот момент можно начать диалог
 bool LAi_type_patrol_CanDialog(aref chr, aref by)
 {
 	if(chr.chr_ai.type.state == "dialog")
@@ -203,16 +203,16 @@ bool LAi_type_patrol_CanDialog(aref chr, aref by)
 	return false;
 }
 
-//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Начать диалог
 void LAi_type_patrol_StartDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
+	//Если мы пасивны, запускаем шаблон без времени завершения
 	LAi_CharacterSaveAy(chr);
 	CharacterTurnByChr(chr, by);
 	LAi_tmpl_SetActivatedDialog(chr, by);
 }
 
-//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
+//Закончить диалог
 void LAi_type_patrol_EndDialog(aref chr, aref by)
 {
 	LAi_tmpl_stay_InitTemplate(chr);
@@ -233,23 +233,23 @@ void LAi_type_patrol_EndDialog(aref chr, aref by)
 	}
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°Р» РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атаковал другого персонажа
 void LAi_type_patrol_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚РѕРєРѕРІР°Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РІС€РµРіРѕСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атоковал заблокировавшегося персонажа
 void LAi_type_patrol_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹СЃС‚СЂРµР»РёР»
+//Персонаж выстрелил
 void LAi_type_patrol_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°РЅ
+//Персонаж атакован
 void LAi_type_patrol_Attacked(aref chr, aref by)
 {
 	if(chr.chr_ai.tmpl == LAI_TMPL_DIALOG)
@@ -262,12 +262,12 @@ void LAi_type_patrol_Attacked(aref chr, aref by)
 	if(!GetCharacterDistByChr3D(chr, by, &dist)) return;
 	if(dist < 0.0) return;
 	if(dist > 20.0) return;
-	//РќР°С‚СЂР°РІР»РёРІР°РµРј
+	//Натравливаем
 	LAi_tmpl_SetFight(chr, by);
     // boal <--
 }
 
-//РџСЂРѕРІРµСЂРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° СЃ Р·Р°РґР°РЅРЅРѕР№ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊСЋ
+//Проверить персонажа с заданной вероятностью
 void LAi_type_patrol_Stay(aref chr)
 {
 	chr.chr_ai.type.time = 2 + rand(20);
@@ -275,10 +275,10 @@ void LAi_type_patrol_Stay(aref chr)
 	LAi_tmpl_stay_InitTemplate(chr);
 }
 
-//РћС‚РїСЂР°РІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° РІ РЅРѕРІСѓСЋ С‚РѕС‡РєСѓ
+//Отправить персонажа в новую точку
 void LAi_type_patrol_Goto(aref chr)
 {
-	//РРґС‘Рј РІ РЅРѕРІСѓСЋ С‚РѕС‡РєСѓ
+	//Идём в новую точку
 	string newloc = LAi_FindRandomLocator("goto");
 	// PB: Patrols between locators -->
 	if(CheckAttribute(chr, "patrollocator"))
@@ -318,10 +318,10 @@ void LAi_type_patrol_Goto(aref chr)
 	// ccc sneak mod <-
 }
 
-//РџСЂРѕРІРµСЂРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° СЃ Р·Р°РґР°РЅРЅРѕР№ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊСЋ
+//Проверить персонажа с заданной вероятностью
 void LAi_type_patrol_TestControl(aref chr)
 {
-	//РџСЂРѕРІРµСЂРёРј РЅР° РЅР°С‡Р°Р»Рѕ РґРёР°Р»РѕРіР°
+	//Проверим на начало диалога
 	ref mchr = GetMainCharacter();
 	float luck = 0.0;
 	if(CheckAttribute(mchr, "skill.Sneak"))
@@ -332,12 +332,12 @@ void LAi_type_patrol_TestControl(aref chr)
 	}
 	luck = 60.0 + luck*20.0; // was 80. NK 05-07-07
 	if(rand(100) <= luck) return;
-	//РџС‹С‚Р°РµРјСЃСЏ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+	//Пытаемся начать диалог
 	/*if(LAi_Character_CanDialog(chr, mchr))
 	{
 		chr.chr_ai.type.state = "dialog";
 		LAi_tmpl_SetDialog(chr, mchr, -1.0);
-		//РЎР»РµРґСѓСЋС‰РёР№ СЂР°Р· Р±СѓРґРµС‚ РЅРµСЃРєРѕСЂРѕ
+		//Следующий раз будет нескоро
 		chr.chr_ai.type.player = "1000000";
 	}*/
 	// ccc sneakmod
@@ -349,7 +349,7 @@ void LAi_type_patrol_TestControl(aref chr)
 		}		// friendly townguards don't challenge you
 		chr.chr_ai.type.state = "dialog";
 		LAi_tmpl_SetDialog(chr, mchr, -1.0);
-		//РЎР»РµРґСѓСЋС‰РёР№ СЂР°Р· Р±СѓРґРµС‚ РЅРµСЃРєРѕСЂРѕ
+		//Следующий раз будет нескоро
 		chr.chr_ai.type.player = "1000000";
 
 	}

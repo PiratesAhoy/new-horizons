@@ -1,4 +1,4 @@
 title=La segunda recompensa de Woodes Rogers
-text.t1=Hay otra pistola que tengo que encontrar. TambiÃ©n tengo que buscar la llave de la cocina. Tal vez deberÃ­a empezar a buscar en la Residencia.
-text.t2=Tengo la llave. Ahora solo me falta encontrar la cocina. Tengo que explorar la Residencia el dormitorio con mÃ¡s detalle.
-text.t3=He encontrado otra pistola, con la marca 'CSAR'. Â¿QuÃ© tienen estas armas que sea tan fantÃ¡stico? Se lo preguntarÃ© a Rogers cuando vuelva a la Residencia.
+text.t1=Hay otra pistola que tengo que encontrar. También tengo que buscar la llave de la cocina. Tal vez debería empezar a buscar en la Residencia.
+text.t2=Tengo la llave. Ahora solo me falta encontrar la cocina. Tengo que explorar la Residencia el dormitorio con más detalle.
+text.t3=He encontrado otra pistola, con la marca 'CSAR'. ¿Qué tienen estas armas que sea tan fantástico? Se lo preguntaré a Rogers cuando vuelva a la Residencia.

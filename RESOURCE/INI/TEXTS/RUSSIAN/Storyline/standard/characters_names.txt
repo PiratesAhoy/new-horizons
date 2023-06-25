@@ -1,142 +1,142 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| standard.c |=====}
-Nathaniel{РќР°С‚Р°РЅРёСЌР»СЊ}
-Hawk{РҐР°СѓРє}
+Nathaniel{Натаниэль}
+Hawk{Хаук}
 
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
 
 {=====| Officers.c |=====}
-Danielle{Р”Р°РЅРёСЌР»СЊ}
-Greene{Р“СЂРёРЅ}
-Ralph{Р Р°Р»СЊС„}
-Fawn{Р¤Р°РІРЅ}
-Clement{РљР»РµРјРµРЅС‚}
-Barnabas{Р‘Р°СЂРЅР°Р±Р°СЃ}
-Aurentius{РђРІСЂРµРЅС‚РёР№}
-Leborio{Р›РµР±РѕСЂРёРѕ}
-Drago{Р”СЂР°РіРѕ}
-Gervasio{Р“РµСЂРІР°СЃРёРѕ}
-Serrao{РЎРµСЂСЂР°Рѕ}
+Danielle{Даниэль}
+Greene{Грин}
+Ralph{Ральф}
+Fawn{Фавн}
+Clement{Клемент}
+Barnabas{Барнабас}
+Aurentius{Аврентий}
+Leborio{Леборио}
+Drago{Драго}
+Gervasio{Гервасио}
+Serrao{Серрао}
 
 {=====| Story.c |=====}
-Vincent{Р’РёРЅСЃРµРЅС‚}
-Bethune{Р‘РёС‚СЋРЅ}
-Waulter{Р’РѕР»С‚РµСЂ}
-Tomlison{РўРѕРјР»РёСЃРѕРЅ}
-Remy{Р РµРјРё}
-Gatien{Р“Р°С‚СЊРµ}
-Yves{РРІ}
-Giner{Р“РёРЅРµСЂ}
-Begon{Р‘РµРіРѕРЅ}
-Monchaty{РњРѕРЅС€Р°С‚Рё}
-Isaac{РСЃР°Р°Рє}
-Razilly{Р Р°Р·РёР»Р»Рё}
-Jacques{Р–Р°Рє}
-Belmondo{Р‘РµР»СЊРјРѕРЅРґРѕ}
-Pierre{РџСЊРµСЂ}
-Leverrier{Р›РµРІРµСЂСЂСЊРµ}
-Abelard{РђР±РµР»СЏСЂ}
-Tarnaud{РўР°СЂРЅРѕ}
-Wigayn{Р’РёРіРµР№РЅ}
-Ratel{Р Р°С‚СЌР»}
-Raoul{Р Р°СѓР»СЊ}
-Rheims{Р РµР№РјСЃ}
-Valentin{Р’Р°Р»РµРЅС‚РёРЅ}
-Massoni{РњР°СЃСЃРѕРЅРё}
-Amiel{Р­РјРёР»СЊ}
-Berangere{Р‘РµСЂР°РЅР¶Рµ}
-Faust{Р¤Р°СѓСЃС‚}
-Gasquet{Р“Р°СЃРєРµ}
-Virgile{Р’РёСЂРґР¶РёР»}
-Boon{Р‘СѓРЅ}
-Tobias{РўРѕР±РёР°СЃ}
-Ewan{Р­РІР°РЅ}
-Glover{Р“Р»РѕРІРµСЂ}
-Wilfred{РЈРёР»С„СЂРµРґ}
-English Soldier{РђРЅРіР»РёР№СЃРєРёР№ РЎРѕР»РґР°С‚}
-French Soldier{Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РЎРѕР»РґР°С‚}
-Rabel{Р Р°Р±СЌР»}
-Yverneau{РРІРµСЂРЅРѕ}
-Anacleto{РђРЅР°РєР»РµС‚Рѕ}
-Rui Sa{Р СѓР№ РЎР°}
-Pinto{РџРёРЅС‚Рѕ}
-Sidonio{РЎРёРґРѕРЅРёРѕ}
-Ogarrio{РћРіР°СЂСЂРёРѕ}
-Lieutenant{Р›РµР№С‚РµРЅР°РЅС‚}
-Harris{РҐР°СЂСЂРёСЃ}
-Malcolm{РњР°Р»СЊРєРѕР»СЊРј}
-Hart{РҐР°СЂС‚}
-Henry{Р“РµРЅСЂРё}
-Banfield{Р‘СЌРЅС„РёР»Рґ}
-Wauter{Р’Р°СѓС‚СЌСЂ}
-Keech{РљРёС‡}
-Lewellyn{Р›СЊСЋСЌР»Р»РёРЅ}
-Belt{Р‘РµР»С‚}
-Thomas{РўРѕРјР°СЃ}
-Norton{РќРѕСЂС‚РѕРЅ}
-Brian{Р‘СЂР°Р№Р°РЅ}
-The Slayer{РСЃС‚СЂРµР±РёС‚РµР»СЊ}
-Ferro{Р¤РµСЂСЂРѕ}
-Cerezo{Р¦РµСЂРµР·Рѕ}
-Hector{Р“РµРєС‚РѕСЂ}
-Barbossa{Р‘Р°СЂР±РѕСЃСЃР°}
-Robert{Р РѕР±РµСЂС‚}
-Christopher{РљСЂРёСЃС‚РѕС„РµСЂ}
-Silehard{РЎР°Р№Р»С…Р°СЂРґ}
+Vincent{Винсент}
+Bethune{Битюн}
+Waulter{Волтер}
+Tomlison{Томлисон}
+Remy{Реми}
+Gatien{Гатье}
+Yves{Ив}
+Giner{Гинер}
+Begon{Бегон}
+Monchaty{Моншати}
+Isaac{Исаак}
+Razilly{Разилли}
+Jacques{Жак}
+Belmondo{Бельмондо}
+Pierre{Пьер}
+Leverrier{Леверрье}
+Abelard{Абеляр}
+Tarnaud{Тарно}
+Wigayn{Вигейн}
+Ratel{Ратэл}
+Raoul{Рауль}
+Rheims{Реймс}
+Valentin{Валентин}
+Massoni{Массони}
+Amiel{Эмиль}
+Berangere{Беранже}
+Faust{Фауст}
+Gasquet{Гаске}
+Virgile{Вирджил}
+Boon{Бун}
+Tobias{Тобиас}
+Ewan{Эван}
+Glover{Гловер}
+Wilfred{Уилфред}
+English Soldier{Английский Солдат}
+French Soldier{Французский Солдат}
+Rabel{Рабэл}
+Yverneau{Иверно}
+Anacleto{Анаклето}
+Rui Sa{Руй Са}
+Pinto{Пинто}
+Sidonio{Сидонио}
+Ogarrio{Огаррио}
+Lieutenant{Лейтенант}
+Harris{Харрис}
+Malcolm{Малькольм}
+Hart{Харт}
+Henry{Генри}
+Banfield{Бэнфилд}
+Wauter{Ваутэр}
+Keech{Кич}
+Lewellyn{Льюэллин}
+Belt{Белт}
+Thomas{Томас}
+Norton{Нортон}
+Brian{Брайан}
+The Slayer{Истребитель}
+Ferro{Ферро}
+Cerezo{Церезо}
+Hector{Гектор}
+Barbossa{Барбосса}
+Robert{Роберт}
+Christopher{Кристофер}
+Silehard{Сайлхард}
 
 {=====| TempQuest.c |=====}
-Bythesea{Р‘Р°Р№С‚СЃРё}
-Harold{РҐР°СЂРѕР»СЊРґ}
-Barrat{Р‘Р°СЂСЂР°С‚}
-Sailor{РњРѕСЂСЏРє}
-Pirate{РџРёСЂР°С‚}
-Fernam{Р¤РµСЂРЅР°Рј}
-Barrios{Р‘Р°СЂСЂРёРѕСЃ}
-Violate{Р’РёРѕР»Р°С‚Рµ}
-Gyles{Р–РёР»СЊ}
-Dubois{Р”СЋР±СѓР°}
-citizen{Р“РѕСЂРѕР¶Р°РЅРёРЅ}
-Soldier{РЎРѕР»РґР°С‚}
-Ragetti{Р Р°РґР¶РµС‚С‚Рё}
-Pintel{РџРёРЅС‚РµР»}
+Bythesea{Байтси}
+Harold{Харольд}
+Barrat{Баррат}
+Sailor{Моряк}
+Pirate{Пират}
+Fernam{Фернам}
+Barrios{Барриос}
+Violate{Виолате}
+Gyles{Жиль}
+Dubois{Дюбуа}
+citizen{Горожанин}
+Soldier{Солдат}
+Ragetti{Раджетти}
+Pintel{Пинтел}
 
 {=====| TempQuestEnemy.c |=====}
-Captain{РљР°РїРёС‚Р°РЅ}
-Kalen{РљР°Р»РµРЅ}
-Mottram{РњРѕС‚С‚СЂСЌРј}
-French Patrol{Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РџР°С‚СЂСѓР»СЊ}
-French{Р¤СЂР°РЅС†СѓР·}
-Sapper{РЎР°РїРїРµСЂ}
-Simon{РЎР°Р№РјРѕРЅ}
-Buck{Р‘Р°Рє}
-Rene{Р РµРЅСЌ}
-Bouillon{Р‘СѓР№РѕРЅ}
-Bodyguard{РўРµР»РѕС…СЂР°РЅРёС‚РµР»СЊ}
-Dutruel{Р”СЋС‚СЂСѓСЌР»СЊ}
-Ian{РЇРЅ}
-Bigg{Р‘РёРіРі}
-Bonnat{Р‘РѕРЅРЅСЌС‚}
-Brendan{Р‘СЂРµРЅРґР°РЅ}
-Attwick{Р­С‚РІРёРє}
-Edd{Р­РґРґ}
-Pease{РџРёР·}
-Kevin{РљРµРІРёРЅ}
-Renner{Р РµРЅРЅРµСЂ}
-Terry{РўРµСЂСЂРё}
-Sellar{РЎРµР»Р»Р°СЂ}
-Donald{Р”РѕРЅР°Р»СЊРґ}
-Drake{Р”СЂРµР№Рє}
-David{Р”СЌРІРёРґ}
-Much{РњСѓС‡}
-Cole{РљРѕСѓР»}
-Brock{Р‘СЂРѕРє}
-Shaggy{РЁРµРіРіРё}
-Harry{Р“Р°СЂСЂРё}
-Stephan{РЎС‚РµС„Р°РЅ}
-Bonser{Р‘РѕРЅСЃРµСЂ}
-Oswald{РћСЃРІР°Р»СЊРґ}
-Chappel{Р§Р°РїРїРµР»СЊ}
+Captain{Капитан}
+Kalen{Кален}
+Mottram{Моттрэм}
+French Patrol{Французский Патруль}
+French{Француз}
+Sapper{Саппер}
+Simon{Саймон}
+Buck{Бак}
+Rene{Ренэ}
+Bouillon{Буйон}
+Bodyguard{Телохранитель}
+Dutruel{Дютруэль}
+Ian{Ян}
+Bigg{Бигг}
+Bonnat{Боннэт}
+Brendan{Брендан}
+Attwick{Этвик}
+Edd{Эдд}
+Pease{Пиз}
+Kevin{Кевин}
+Renner{Реннер}
+Terry{Терри}
+Sellar{Селлар}
+Donald{Дональд}
+Drake{Дрейк}
+David{Дэвид}
+Much{Муч}
+Cole{Коул}
+Brock{Брок}
+Shaggy{Шегги}
+Harry{Гарри}
+Stephan{Стефан}
+Bonser{Бонсер}
+Oswald{Освальд}
+Chappel{Чаппель}
 
 {=====| 123 characters |=====}

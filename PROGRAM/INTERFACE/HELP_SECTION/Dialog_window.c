@@ -6,10 +6,10 @@ void Dialog_window_InitHelp()
 	string sectName = GetEventData();
 	if(sectName!="Dialog_window") return;
 
-	// Р—Р°РїРѕР»РЅРёРј СЌРєСЂР°РЅ СЃРѕРґРµСЂР¶РёРјС‹Рј
-		// РєР°СЂРёРЅРєРё
+	// Заполним экран содержимым
+		// каринки
 	SetNewPicture("HELPPICTURE","interfaces\helppictures\Dialog_window.tga");
-		// СЃС‚СЂРѕРєРё
+		// строки
 	int strFileID = LanguageOpenFile("helpsections\dialog_window.txt");
 	SetFormatedText("TEXTWINDOW",LanguageConvertString(strFileID,"dialog_window_info"));
 	GameInterface.strings.HelpName = LanguageConvertString(strFileID,"dialog_window_title");
@@ -21,7 +21,7 @@ void Dialog_window_ResetHelp()
 	string sectName = GetEventData();
 	if(sectName!="Dialog_window") return;
 
-	// РЈРґР°Р»РёРј СЃ СЌСЂР°РЅР° РІСЃРµ
+	// Удалим с эрана все
 	SetNewPicture("HELPPICTURE","");
 	SetFormatedText("TEXTWINDOW","");
 }

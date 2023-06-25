@@ -450,7 +450,7 @@ void initFastReloadTable()
 	curTable.l8.location = "IM_blacksmith";
 // <-- KK
 
-	makearef(curTable,objFastReloadTable.table.KhaelRoa); // Ã­Ã¥Ã² Ã­Ã¨Ã·Ã¥Ã£Ã®, ÃªÃ°Ã®Ã¬Ã¥ Ã¯Ã°Ã¨Ã·Ã Ã«Ã 
+	makearef(curTable,objFastReloadTable.table.KhaelRoa); // íåò íè÷åãî, êðîìå ïðè÷àëà
 
 	makearef(curTable,objFastReloadTable.table.Oxbay);
 	// store
@@ -1316,7 +1316,7 @@ void initFastReloadTable()
 	curTable.l10.tex = FRT_HQ;
 	curTable.l10.note = FRN_HQ;
 	curTable.l10.location = "Admiral_Office";
-	// Casa de ContrataciÃ³n
+	// Casa de Contratación
 	curTable.l11.pic = FRP_CDC;		//GR
 	curTable.l11.tex = FRT_CDC;
 	curTable.l11.note = FRN_CDC;

@@ -1,6 +1,6 @@
-title=Un remedio pra curar la sÃ­filis
+title=Un remedio pra curar la sífilis
 text.t1=Tengo que encontrar esta medicina
-text.t2=Â¿DÃ³nde puedo encontrar botellas vacÃ­as en una ciudad llena de ron y marineros borrachos?
-text.t3=Tengo las botellas vacÃ­as, volvamos con el doctor.
-text.t4=Â¡Hecho!
-text.t5=El doctor se estÃ¡ probando nuevos trajes. Â¿DÃ³nde?
+text.t2=¿Dónde puedo encontrar botellas vacías en una ciudad llena de ron y marineros borrachos?
+text.t3=Tengo las botellas vacías, volvamos con el doctor.
+text.t4=¡Hecho!
+text.t5=El doctor se está probando nuevos trajes. ¿Dónde?

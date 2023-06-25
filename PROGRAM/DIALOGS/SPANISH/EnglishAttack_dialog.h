@@ -1,10 +1,10 @@
 string DLG_TEXT[7] = { 
-"Â¡CapitÃ¡n! Â¡CapitÃ¡n!",
-"Â¿QuÃ© pasa? Â¡Habla!",
-"Â¡La flota inglesa se estÃ¡ acercando a la isla! Â¡Que Dios nos ayude! Â¡Nunca he visto barcos tan grandes en mi vida!",
-"Â¡ContrÃ³late, marinero! Conoces tu trabajo. Â¡Preparad el barco para la batalla!",
+"¡Capitán! ¡Capitán!",
+"¿Qué pasa? ¡Habla!",
+"¡La flota inglesa se está acercando a la isla! ¡Que Dios nos ayude! ¡Nunca he visto barcos tan grandes en mi vida!",
+"¡Contrólate, marinero! Conoces tu trabajo. ¡Preparad el barco para la batalla!",
 "Pero, ",
 "...",
-"Â¡Haz lo que te digo!",
+"¡Haz lo que te digo!",
 
 };

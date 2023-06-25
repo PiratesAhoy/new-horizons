@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		//----TALISMAN changes for meeting on Turks after Guadeloupe capture - to send player to search for Kell - not Beckett capture at Lighthouse
 		case "First time":
 

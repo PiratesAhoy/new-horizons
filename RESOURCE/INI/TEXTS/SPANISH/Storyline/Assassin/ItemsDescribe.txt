@@ -1,43 +1,43 @@
-itmname_order	{√ìrdenes de misi√≥n}
+itmname_order	{”rdenes de misiÛn}
 itmdescr_order
 {
-Esta carta confirma que el capit√°n Aurelien Bergerat tiene la misi√≥n secreta de ayudar a la colonia portuguesa de Grenada, y que el gobernador de Martinica debe ayudarle. La carta est√° firmada por el rey Luis XIV.
+Esta carta confirma que el capit·n Aurelien Bergerat tiene la misiÛn secreta de ayudar a la colonia portuguesa de Grenada, y que el gobernador de Martinica debe ayudarle. La carta est· firmada por el rey Luis XIV.
 }
 
 itmname_report	{Informe}
 itmdescr_report
 {
-Este informe explica en detalle las actividades militares de estos √∫ltimos meses en Caim√°n, como los movimientos de barcos y tropas.
+Este informe explica en detalle las actividades militares de estos ˙ltimos meses en Caim·n, como los movimientos de barcos y tropas.
 }
 
 itmname_time_bomb	{Bomba de mecha larga}
 itmdescr_time_bomb
 {
-Es una granada grande con una mecha larga. Un modelo b√°sico pero muy efectivo.
+Es una granada grande con una mecha larga. Un modelo b·sico pero muy efectivo.
 }
 
 itmname_Gaga_Keys	{Llaves de Lady Gaga}
 itmdescr_Gaga_Keys
 {
-Las llaves de la casa de Lady Gaga. La casa est√° entre la iglesia y el ayuntamiento. 
+Las llaves de la casa de Lady Gaga. La casa est· entre la iglesia y el ayuntamiento. 
 }
 
 itmname_Roche_letter	{Carta de Roche}
 itmdescr_Roche_letter
 {
-Una carta de Roche Brasiliano en la que revela que tiene que permanecer en Cura√ßao durante los pr√≥ximos meses.
+Una carta de Roche Brasiliano en la que revela que tiene que permanecer en CuraÁao durante los prÛximos meses.
 }
 
 itmname_Medal_B	{Medalla de la Orden de Santiago}
 itmdescr_Medal_B
 {
-Esta medalla condecora a los que la reciben por sus acciones militares contra los enemigos de Espa√±a.  
+Esta medalla condecora a los que la reciben por sus acciones militares contra los enemigos de EspaÒa.  
 }
 
 itmname_Pass	{Salvoconducto}
 itmdescr_Pass
 {
-Este pase te permite atracar y permanecer en Isla Mona durante la misi√≥n.
+Este pase te permite atracar y permanecer en Isla Mona durante la misiÛn.
 }
 
 itmname_purse	{Bolsa}
@@ -55,5 +55,5 @@ Es un tipo de mina. Si se conecta a una puerta, explota cuando alguien la abre.
 itmname_Medal_A	{Medalla del Rey Carlos II}
 itmdescr_Medal_A
 {
-Esta medalla es la m√°s alta condecoraci√≥n que pueden otorgar las autoridades espa√±olas. Normalmente, solo los espa√±oles pueden obtenerla.
+Esta medalla es la m·s alta condecoraciÛn que pueden otorgar las autoridades espaÒolas. Normalmente, solo los espaÒoles pueden obtenerla.
 }

@@ -1,8 +1,8 @@
-Potion parameters{Remedio mÃ©dico}
+Potion parameters{Remedio médico}
 health value{Salud}
-weapon blade parameters{Arma: daÃ±o.min/max #ddmg_min#/#ddmg_max#, penetrante #dpiercing#%, bloqueo #dblock#%.}
-weapon gun parameters{Arma: daÃ±o.min/max #ddmg_min#/#ddmg_max#, recarga #dchargespeed#sec, precisiÃ³n #daccuracy#%.}
-weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / % de daÃ±o recibido si no hay parada, para: Espada #dbladestop#% / #dbladefrac#%, Arma de fuego #dgunstop#% / #dgunfrac#%.}
+weapon blade parameters{Arma: daño.min/max #ddmg_min#/#ddmg_max#, penetrante #dpiercing#%, bloqueo #dblock#%.}
+weapon gun parameters{Arma: daño.min/max #ddmg_min#/#ddmg_max#, recarga #dchargespeed#sec, precisión #daccuracy#%.}
+weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / % de daño recibido si no hay parada, para: Espada #dbladestop#% / #dbladefrac#%, Arma de fuego #dgunstop#% / #dgunfrac#%.}
 
 //--------------- AMMO START --------------------------------------------------------------------------------------
 
@@ -10,19 +10,19 @@ weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / % d
 itmname_ammobag2 {Cartuchera}
 itmdescr_ammobag2
 {
-Puedes llevar 18 cargas de pÃ³lvora Y 18 balas de pistola, 18 cargas de metralla de pistola o 9 balas de mosquete. NO se necesitan petaca de pÃ³lvora ni saquete de balas pero debe equiparse una bandolera de pistolas. Recargar es un 10% mÃ¡s rÃ¡pido.
+Puedes llevar 18 cargas de pólvora Y 18 balas de pistola, 18 cargas de metralla de pistola o 9 balas de mosquete. NO se necesitan petaca de pólvora ni saquete de balas pero debe equiparse una bandolera de pistolas. Recargar es un 10% más rápido.
 }
 
-itmname_bladepowderhornP	{Cuerno de pÃ³lvora}
+itmname_bladepowderhornP	{Cuerno de pólvora}
 itmdescr_bladepowderhornP
 {
-Contiene la mejor pÃ³lvora para cebar caÃ±ones. Cada disparo de caÃ±Ã³n usa tanto cebo como una carga completa de pÃ³lvora de mosquete.
+Contiene la mejor pólvora para cebar cañones. Cada disparo de cañón usa tanto cebo como una carga completa de pólvora de mosquete.
 }
 
-itmname_bladepowderhornA	{Cuerno de pÃ³lvora}
+itmname_bladepowderhornA	{Cuerno de pólvora}
 itmdescr_bladepowderhornA
 {
-Contiene la mejor pÃ³lvora para cebar caÃ±ones. Cada disparo de caÃ±Ã³n usa tanto cebo como una carga completa de pÃ³lvora de mosquete.
+Contiene la mejor pólvora para cebar cañones. Cada disparo de cañón usa tanto cebo como una carga completa de pólvora de mosquete.
 }
 
 //--------------- AMMO END --------------------------------------------------------------------------------------
@@ -55,19 +55,19 @@ Una fina llave para una cerradura normal.
 itmname_key5		{Llave}
 itmdescr_key5
 {
-Una llave pequeÃ±a para una puerta, Â¿pero para cuÃ¡l?
+Una llave pequeña para una puerta, ¿pero para cuál?
 }
 
 itmname_key6		{Llave}
 itmdescr_key6
 {
-Otra pequeÃ±a llave para una puerte, Â¡quÃ© gran ayuda! 
+Otra pequeña llave para una puerte, ¡qué gran ayuda! 
 }
 
 itmname_key7		{Llave}
 itmdescr_key7
 {
-Esta pequÃ±a llave fue encontrada en la destilerÃ­a. 
+Esta pequña llave fue encontrada en la destilería. 
 }
 
 itmname_key8		{Candado con llave}
@@ -76,46 +76,46 @@ itmdescr_key8
 Un candado oxidado con llave.
 }
 
-itmname_key9		{ColecciÃ³n de llaves}
+itmname_key9		{Colección de llaves}
 itmdescr_key9
 {
-Una pequeÃ±a colecciÃ³n de llaves para cofres.
+Una pequeña colección de llaves para cofres.
 }
 
-itmname_key10		{Llave pequeÃ±a}
+itmname_key10		{Llave pequeña}
 itmdescr_key10
 {
-Una pequeÃ±a llave para un cofre.
+Una pequeña llave para un cofre.
 }
 
-itmname_key11		{Llave pequeÃ±a}
+itmname_key11		{Llave pequeña}
 itmdescr_key11
 {
-Una pequeÃ±a llave encontrada en el fondo del cofre de medicinas: Â¡una llave para el equipo de cirujÃ­a!
+Una pequeña llave encontrada en el fondo del cofre de medicinas: ¡una llave para el equipo de cirujía!
 }
 
 itmname_key12		{Llave de la mina}
 itmdescr_key12
 {
-Un cofrecillo con una llave de la mina marcada con el nÃºmero 2.
+Un cofrecillo con una llave de la mina marcada con el número 2.
 }
 
 itmname_key13		{Llave de la mina}
 itmdescr_key13
 {
-Un cofrecillo con una llave de la mina marcada con el nÃºmero 3.
+Un cofrecillo con una llave de la mina marcada con el número 3.
 }
 
 itmname_key14		{Llave de la mina}
 itmdescr_key14
 {
-Un cofrecillo con una llave de la mina. Falta el nÃºmero.
+Un cofrecillo con una llave de la mina. Falta el número.
 }
 
-itmname_key15		{ColecciÃ³n de llaves}
+itmname_key15		{Colección de llaves}
 itmdescr_key15
 {
-Una colecciÃ³n de llaves para el almacÃ©n de comida y bebida.
+Una colección de llaves para el almacén de comida y bebida.
 }
 
 itmname_key16		{Llave de cofre}
@@ -127,25 +127,25 @@ Una gran llave negra para la cerradura de un cofre.
 itmname_key17		{Llalve dorada}
 itmdescr_key17
 {
-Una pequeÃ±a llave dorada colgada de un cordel embreado.
+Una pequeña llave dorada colgada de un cordel embreado.
 }
 
 itmname_key18		{Llave}
 itmdescr_key18
 {
-Â¡SÃ­! HabÃ­a una llave negra para una puerta debajo del pergamino.
+¡Sí! Había una llave negra para una puerta debajo del pergamino.
 }
 
 itmname_key19		{Llave}
 itmdescr_key19
 {
-Una llave para un cofre con una pequeÃ±a bandera.
+Una llave para un cofre con una pequeña bandera.
 }
 
 itmname_bladekeysimple		{Llave}
 itmdescr_bladekeysimple
 {
-Â¡SÃ­! He conseguido una lleve negra para una puerta con el mapa.
+¡Sí! He conseguido una lleve negra para una puerta con el mapa.
 }
 
 itmname_key33		{Llave}
@@ -163,19 +163,19 @@ Una llave con una cruz de Malta.
 itmname_key35		{Llave}
 itmdescr_key35
 {
-Una llave con el sÃ­mbolo de una ciudad.
+Una llave con el símbolo de una ciudad.
 }
 
 itmname_key36		{Llave}
 itmdescr_key36
 {
-Una vieja llave de cobre con el sÃ­mbolo del Sol.
+Una vieja llave de cobre con el símbolo del Sol.
 }
 
 itmname_key37		{Llave}
 itmdescr_key37
 {
-Â¡Esta es la llve del bote!
+¡Esta es la llve del bote!
 }
 
 //--------------- KEYS END -----------------------------------------------------------------------------------------
@@ -184,31 +184,31 @@ itmdescr_key37
 itmname_book21		{Libro de los estatutos}
 itmdescr_book21
 {
-Resumen de los estatutos de las Indias Occidentales britÃ¡nicas. La cubierta estÃ¡ gastada, pero, Â¿se ha abierto alguna vez?
+Resumen de los estatutos de las Indias Occidentales británicas. La cubierta está gastada, pero, ¿se ha abierto alguna vez?
 }
 
-itmname_book22		{La Gran Armada espaÃ±ola}
+itmname_book22		{La Gran Armada española}
 itmdescr_book22
 {
 'La derrota de la Gran Armada: el relato de un testigo'. Martin Frobisher, Comandante de la fragata Triumph. 
 }
 
-itmname_book23		{El navÃ­o real Wasa}
+itmname_book23		{El navío real Wasa}
 itmdescr_book23
 {
-'El secreto detrÃ¡s del desastre'. Observaciones originales de Henrik Hybertsson, ahora publicadas. 
+'El secreto detrás del desastre'. Observaciones originales de Henrik Hybertsson, ahora publicadas. 
 }
 
 itmname_book24		{Notorios Piratas}
 itmdescr_book24
 {
-'Historia General de los Robos y Asesinatos de los mÃ¡s Notorios Piratas'. Dos volÃºmenes repletos de capitanes piratas histÃ³ricos y contemporÃ¡neos, y sus tripuilaciones. Por el capitÃ¡n Charles Johnson.  
+'Historia General de los Robos y Asesinatos de los más Notorios Piratas'. Dos volúmenes repletos de capitanes piratas históricos y contemporáneos, y sus tripuilaciones. Por el capitán Charles Johnson.  
 }
 
 itmname_book25		{Un nuevo viaje alrededor del mundo}
 itmdescr_book25
 {
-Publicado en 1697 por William Dampier. Todo lo que quieras saber sobre la costa de Miscito, por ejemplo. Falta la ilustraciÃ³n de cubierta.
+Publicado en 1697 por William Dampier. Todo lo que quieras saber sobre la costa de Miscito, por ejemplo. Falta la ilustración de cubierta.
 }
 
 itmname_book26		{El esqueleto humano}
@@ -220,67 +220,67 @@ Un manual de los 206 huesos que tiene el ser humano. Con ilustraciones.
 itmname_book27		{Chymist}
 itmdescr_book27
 {
-Una obra alemana sobre quÃ­mica publicada en Leipzig en 1729. Â¿Parece que trata sobre minerales y vegetales? 
+Una obra alemana sobre química publicada en Leipzig en 1729. ¿Parece que trata sobre minerales y vegetales? 
 }
 
 itmname_book28		{Lolita}
 itmdescr_book28
 {
-Un ibro interesante sobre un tema delicado. Incluye cerradura a prueba de niÃ±os.
+Un ibro interesante sobre un tema delicado. Incluye cerradura a prueba de niños.
 }
 
 itmname_book29		{Les Fleurs du Mal}
 itmdescr_book29
 {
-Poemas del famoso poeta Charles Baudelaire. EdiciÃ³n francesa.
+Poemas del famoso poeta Charles Baudelaire. Edición francesa.
 }
 
-itmname_book30		{Libros de poesÃ­a}
+itmname_book30		{Libros de poesía}
 itmdescr_book30
 {
-Una colecciÃ³n de poesÃ­a de todo el mundo. Esto es una maravilla.
+Una colección de poesía de todo el mundo. Esto es una maravilla.
 }
 
 itmname_book31		{Un nuevo viaje alrededor del mundo}
 itmdescr_book31
 {
-El libro de Dampier estÃ¡ reparado.
+El libro de Dampier está reparado.
 }
 
 itmname_book33		{Geografien}
 itmdescr_book33
 {
-Un viejo y muy bÃ¡sico libro de texto, Â¿en uno de esos idiomas nÃ³rdicos, quizÃ¡s?
+Un viejo y muy básico libro de texto, ¿en uno de esos idiomas nórdicos, quizás?
 }
 
-itmname_book34		{ColecciÃ³n de libros}
+itmname_book34		{Colección de libros}
 itmdescr_book34
 {
-Contiene: 'Las flotas espaÃ±olas de la plata', 'Comercio de azÃºcar y ron en el Caribe', 'Nassau: un panorama econÃ³mico'.
+Contiene: 'Las flotas españolas de la plata', 'Comercio de azúcar y ron en el Caribe', 'Nassau: un panorama económico'.
 }
 
 itmname_book35		{Mercurius}
 itmdescr_book35
 {
-SanaciÃ³n y curaciÃ³n con el peligroso pero magnÃ­fico metal lÃ­quido.
+Sanación y curación con el peligroso pero magnífico metal líquido.
 }
 
 itmname_book36		{El escarabajo de oro}
 itmdescr_book36
 {
-Una fascinante historia breve sobre el tesoro enterrado del capitÃ¡n Kidd. Autor: Edgar Allan Poe.
+Una fascinante historia breve sobre el tesoro enterrado del capitán Kidd. Autor: Edgar Allan Poe.
 }
 
-itmname_book41		{Arte de la ArtillerÃ­a}
+itmname_book41		{Arte de la Artillería}
 itmdescr_book41
 {
-1) Limpia el Ã¡nima con la esponja.
-2) Introduce la pÃ³lvora.
+1) Limpia el ánima con la esponja.
+2) Introduce la pólvora.
 3) Introduce el taco.
 4) Introduce la bala.
 5) Aprieta la carga con el atacador.
 6) Pon el cebo en el oido.
-7) Â¡Fuego!
+7) ¡Fuego!
 }
 
 itmname_book42		{Documento}
@@ -298,20 +298,20 @@ itmdescr_book43
 itmname_book44		{Documento}
 itmdescr_book44
 {
-... sÃ­mbolos extraÃ±os.
+... símbolos extraños.
 }
 
 itmname_book45		{Dos cuadernos viejos}
 itmdescr_book45
 {
 Entre las notas manuscritas:
-"Nunca viertas agua sobre Ã¡cidos concentrados; Â¡es al revÃ©s!"
+"Nunca viertas agua sobre ácidos concentrados; ¡es al revés!"
 }
 
 itmname_book46		{Rollo de pergamino}
 itmdescr_book46
 {
-MÃ¡s sÃ­mbolos (Â¿cabalÃ­sticos?) o algo asÃ­.
+Más símbolos (¿cabalísticos?) o algo así.
 }
 
 itmname_book47		{Pergamino}
@@ -324,9 +324,9 @@ itmname_book48		{Alchymia}
 itmdescr_book48
 {
 El descubrimiento del Acidium Vitrioli se atribuye al alquimista del siglo VIII Jabir ibn Hayyan.
-Es uno de los ingredientes bÃ¡sicos mÃ¡s importantes, ya que se utiliza para elaborar otros muchos Ã¡cidos.
+Es uno de los ingredientes básicos más importantes, ya que se utiliza para elaborar otros muchos ácidos.
  
-Diluido, se utiliza como disolvente capaz de disolver la mayorÃ­a de los metales, con las notables excepciones del oro, la plata y el platino.
+Diluido, se utiliza como disolvente capaz de disolver la mayoría de los metales, con las notables excepciones del oro, la plata y el platino.
 }
 
 itmname_book49		{Libro}
@@ -338,46 +338,46 @@ Un pesado libro abierto...
 itmname_book50		{Libro}
 itmdescr_book50
 {
-... lleno de caracteres mÃ­sticos (Â¿un alfabeto extranjero, tal vez?)
+... lleno de caracteres místicos (¿un alfabeto extranjero, tal vez?)
 }
 
 itmname_book51		{La alquimia de la Aqua Vitae}
 itmdescr_book51
 {
-De Champagne a Cognac en un minuto, por Renault Noir. Incluye una pequeÃ±a muestra.
+De Champagne a Cognac en un minuto, por Renault Noir. Incluye una pequeña muestra.
 }
 
 itmname_bible			{Biblia de Selkirk}
 itmdescr_bible
 {
-La Sagrada Biblia, la misma que Alexander Selkirk estudiÃ³ durante aÃ±os en aquella isla dejada de la mano de Dios.
+La Sagrada Biblia, la misma que Alexander Selkirk estudió durante años en aquella isla dejada de la mano de Dios.
 }
 
 itmname_bible_shot	{Biblia de Selkirk}
 itmdescr_bible_shot
 {
-Â¡La Biblia de Selkirk me ha salvado la vida!
+¡La Biblia de Selkirk me ha salvado la vida!
 }
 
 itmname_book63		{Manual de medicina}
 itmdescr_book63
 {
-Un libro fÃ¡cil de entender escrito en el estilo cientÃ­fico mÃ¡s popular. Muchas ilustraciones.
+Un libro fácil de entender escrito en el estilo científico más popular. Muchas ilustraciones.
 }
 
-itmname_book64		{Lâ€™Ordre de Malte}
+itmname_book64		{L’Ordre de Malte}
 itmdescr_book64
 {
-Una ediciÃ³n francesa. Autor: Annet de Clermont-Gessant.
+Una edición francesa. Autor: Annet de Clermont-Gessant.
 }
 
 itmname_book65		{Sagradas Escrituras}
 itmdescr_book65
 {
-TLa Sagrada Biblia, incluye un pequeÃ±o crucifijo como marcapÃ¡ginas.
+TLa Sagrada Biblia, incluye un pequeño crucifijo como marcapáginas.
 }
 
-itmname_book66		{MontÃ³n de hojas}
+itmname_book66		{Montón de hojas}
 itmdescr_book66
 {
 Los registros de la Orden de Malta en Charlestown.
@@ -386,35 +386,35 @@ Los registros de la Orden de Malta en Charlestown.
 itmname_book67		{Documento}
 itmdescr_book67
 {
-No estoy seguro de quÃ© es. Pero parece importante.
+No estoy seguro de qué es. Pero parece importante.
 }
 
 itmname_book68		{Pergamino}
 itmdescr_book68
 {
-EstÃ¡ todo en latÃ­n. PodrÃ­a ser cualquier cosa, desde medicina hasta exorcismos.
+Está todo en latín. Podría ser cualquier cosa, desde medicina hasta exorcismos.
 }
 
-itmname_book69A		{Cuaderno de bitÃ¡cora}
+itmname_book69A		{Cuaderno de bitácora}
 itmdescr_book69A
 {
-Edw. Thatch, su cuaderno de bitÃ¡cora 
+Edw. Thatch, su cuaderno de bitácora 
     1717 - 
 }
 
-itmname_book69B		{Cuaderno de bitÃ¡cora}
+itmname_book69B		{Cuaderno de bitácora}
 itmdescr_book69B
 {
-En este DÃ­a, nos quedamos sin Ron.
-Nuestra CompaÃ±Ã­a estÃ¡ algo sobria.
-Â¡Maldita ConfusiÃ³n reina entre nosotros!
-Los canallas conspiran, se habla mucho de SeparaciÃ³n.
-AsÃ­ que busquÃ© con ahinco una Presa.
-En este dÃ­a tomÃ© una, con gran cantidad de Licor a bordo, 
-para mantener a la CompaÃ±Ã­oa caliente, bien caliente, entonces todo volviÃ³ a ir bien.
+En este Día, nos quedamos sin Ron.
+Nuestra Compañía está algo sobria.
+¡Maldita Confusión reina entre nosotros!
+Los canallas conspiran, se habla mucho de Separación.
+Así que busqué con ahinco una Presa.
+En este día tomé una, con gran cantidad de Licor a bordo, 
+para mantener a la Compañíoa caliente, bien caliente, entonces todo volvió a ir bien.
 }
 
-itmname_book69C		{Cuaderno de bitÃ¡cora}
+itmname_book69C		{Cuaderno de bitácora}
 itmdescr_book69C
 {
 Cuatro de los tripulantes franceses de 'La Concorde' se enrolaron:
@@ -423,7 +423,7 @@ Nicolas Bernard, marinero
 Julien Dubois, marinero
 Louis Arot, grumete
 
-TambiÃ©n me quedÃ© con el piloto, cuatro cirujanos, dos carpinteros, dos marineros y el cocinero. 
+También me quedé con el piloto, cuatro cirujanos, dos carpinteros, dos marineros y el cocinero. 
 }
 
 itmname_tailors_book	{Libro de encargos}
@@ -435,7 +435,7 @@ Anna Balck, sastre.
 itmname_book70_start	{Libro quemado}
 itmdescr_book70_start
 {
-Este libro ocn un signo misterioso ha sido daÃ±ado por el fuego.  
+Este libro ocn un signo misterioso ha sido dañado por el fuego.  
 }
 
 itmname_book70		{Libro de alquimia}
@@ -447,13 +447,13 @@ Solo es legible la primera parte.
 itmname_book70_0	{Libro de alquimia}
 itmdescr_book70_0
 {
-Una ilustraciÃ³n simbÃ³lica de un esqueleto.
+Una ilustración simbólica de un esqueleto.
 }
 
 itmname_book70_1	{Libro de alquimia}
 itmdescr_book70_1
 {
-'Tabula Smaragdina' o 'La mesa esmeralda', por Hermes Trismegisto. Un fragmento compacto y crÃ­ptico de la HermÃ©tica, del que se dice que contiene el secreto de la prima materia y su transmutaciÃ³n.
+'Tabula Smaragdina' o 'La mesa esmeralda', por Hermes Trismegisto. Un fragmento compacto y críptico de la Hermética, del que se dice que contiene el secreto de la prima materia y su transmutación.
 }
 
 itmname_book70_2	{Libro de alquimia}
@@ -507,25 +507,25 @@ itmdescr_book70_9
 itmname_book70_10	{Libro de alquimia}
 itmdescr_book70_10
 {
-AquÃ­ estÃ¡ todo daÃ±ado por el fuego.
+Aquí está todo dañado por el fuego.
 }
 
 itmname_book70_11	{Libro de alquimia}
 itmdescr_book70_11
 {
-Â¡QuÃ© pena!
+¡Qué pena!
 }
 
 itmname_book71_9_start	{Damaged Book}
 itmdescr_book71_9_start
 {
-Muchas pÃ¡ginas han sido arrancadas. AquÃ­ veo uno de esos sÃ­mbolos. Â¿PodrÃ­a ser...? 
+Muchas páginas han sido arrancadas. Aquí veo uno de esos símbolos. ¿Podría ser...? 
 }
 
 itmname_book71_9	{Libro de alquimia}
 itmdescr_book71_9
 {
-Solo queda la Ãºltima parte.
+Solo queda la última parte.
 }
 
 itmname_book71_10	{Libro de alquimia}
@@ -621,10 +621,10 @@ Envuelto en lona par avelas y dirigido a 'Rogers'.
 itmname_book72_closed	{Historia General de los Piratas}
 itmdescr_book72_closed
 {
-De los Robos y Asesinatos de los mÃ¡s Notoiros Piratas.
-Y tambiÃ©n de sus PolÃ­ticas, Discipliba y Gobierno,
+De los Robos y Asesinatos de los más Notoiros Piratas.
+Y también de sus Políticas, Discipliba y Gobierno,
 desde su primer ascenso y establecmiento en la isla de Providence 
-en 1717, al presente aÃ±o 1724. Por el CapitÃ¡n Charles Johnson. 
+en 1717, al presente año 1724. Por el Capitán Charles Johnson. 
 
 A note is attached to the book.
 }
@@ -632,26 +632,26 @@ A note is attached to the book.
 itmname_book72_openL	{Historia General de los Piratas}
 itmdescr_book72_openL
 {
-Â¿Es este el que creo que es?
+¿Es este el que creo que es?
 }
 
 itmname_book72_openR	{Historia General de los Piratas}
 itmdescr_book72_openR
 {
-CapÃ­tulo I. Del CapitÃ¡n Avery.		        VIII. Del CapitÃ¡n England. 
-        II. El Ascenso de los Piratas.		     IX. Del CapitÃ¡n Davis. 
-         III. Del CapitÃ¡n Martel.	       X. Del CapitÃ¡n Roberts.
-       IV. Del CapitÃ¡n Bonnet.		      XI. Del CapitÃ¡n Worley.
-	        V. Del CapitÃ¡n Thatch.		       XII. Del CapitÃ¡n Lowther.
-   VI. Del CapitÃ¡n Vane.		        XIII. Del CapitÃ¡n Low.
-      VII. Del CapitÃ¡n Rackham.		   XIV. Del CapitÃ¡n Evans.
+Capítulo I. Del Capitán Avery.		        VIII. Del Capitán England. 
+        II. El Ascenso de los Piratas.		     IX. Del Capitán Davis. 
+         III. Del Capitán Martel.	       X. Del Capitán Roberts.
+       IV. Del Capitán Bonnet.		      XI. Del Capitán Worley.
+	        V. Del Capitán Thatch.		       XII. Del Capitán Lowther.
+   VI. Del Capitán Vane.		        XIII. Del Capitán Low.
+      VII. Del Capitán Rackham.		   XIV. Del Capitán Evans.
 }
 
 itmname_book72_edenL	{Historia General de los Piratas}
 itmdescr_book72_edenL
 {
 75      De Barbanegra.
-AquÃ­ estÃ¡ el primer marcapÃ¡ginas.
+Aquí está el primer marcapáginas.
 }
 
 itmname_book72_edenR	{Historia General de los Piratas}
@@ -664,7 +664,7 @@ itmname_book72_caesarL	{Historia General de los Piratas}
 itmdescr_book72_caesarL
 {
 85      De Barbanegra.
-Otra pÃ¡gina de interÃ©s.
+Otra página de interés.
 }
 
 itmname_book72_caesarR	{Historia General de los Piratas}
@@ -677,7 +677,7 @@ itmname_book72_handsL	{Historia General de los Piratas}
 itmdescr_book72_handsL
 {
 87      De Barbanegra.
-AquÃ­ hay mÃ¡s tinta roja.
+Aquí hay más tinta roja.
 }
 
 itmname_book72_handsR	{Historia General de los Piratas}
@@ -690,7 +690,7 @@ itmname_book72_richardsL	{Historia General de los Piratas}
 itmdescr_book72_richardsL
 {
 145     Del Cpt. Charles Vane.
-Este es el cuarto y Ãºltimo.
+Este es el cuarto y último.
 }
 
 itmname_book72_richardsR	{Historia General de los Piratas}
@@ -702,85 +702,85 @@ Del Cpt. Charles Vane.      146
 //--------------- BOOKS END --------------------------------------------------------------------------------------
 //--------------- DOCUMENTS START --------------------------------------------------------------------------------
 
-itmname_picture1	{IlustraciÃ³n}
+itmname_picture1	{Ilustración}
 itmdescr_picture1
 {
-Mapa de una ciudad fortificada: Caletum. Â¿Calais?
+Mapa de una ciudad fortificada: Caletum. ¿Calais?
 }
 
-itmname_picture2	{IlustraciÃ³n}
+itmname_picture2	{Ilustración}
 itmdescr_picture2
 {
 Mapa de Islandia por Arne Saknussem.
 }
 
-itmname_picture3	{IlustraciÃ³n}
+itmname_picture3	{Ilustración}
 itmdescr_picture3
 {
 Una parte de la costa este americana.
 }
 
-itmname_picture4	{IlustraciÃ³n}
+itmname_picture4	{Ilustración}
 itmdescr_picture4
 {
-El Ãºltimo combate de Barbanegra. De una pintura de Howard Pyle.
+El último combate de Barbanegra. De una pintura de Howard Pyle.
 }
 
-itmname_picture5	{IlustraciÃ³n}
+itmname_picture5	{Ilustración}
 itmdescr_picture5
 {
 Un inventario de la finca.
 }
 
-itmname_picture6	{IlustraciÃ³n}
+itmname_picture6	{Ilustración}
 itmdescr_picture6
 {
 Una lista de suministros para un barco.
 }
 
-itmname_picture7	{IlustraciÃ³n}
+itmname_picture7	{Ilustración}
 itmdescr_picture7
 {
-Un retrato de William Dampier. (mucho mÃ¡s joven)
+Un retrato de William Dampier. (mucho más joven)
 }
 
-itmname_picture8	{IlustraciÃ³n}
+itmname_picture8	{Ilustración}
 itmdescr_picture8
 {
 Copia de una pintura de Frans Hals.
 }
 
-itmname_picture9	{IlustraciÃ³n}
+itmname_picture9	{Ilustración}
 itmdescr_picture9
 {
 Un atlas del esqueleto humano.
 }
 
-itmname_picture10	{IlustraciÃ³n}
+itmname_picture10	{Ilustración}
 itmdescr_picture10
 {
-Un incompresible diagrama alquÃ­mico. 
+Un incompresible diagrama alquímico. 
 }
 
-itmname_picture11	{IlustraciÃ³n}
+itmname_picture11	{Ilustración}
 itmdescr_picture11
 {
-Â¿MÃ¡s alquimia? Â¿O fÃ­sica?
+¿Más alquimia? ¿O física?
 }
 
-itmname_picture13	{IlustraciÃ³n}
+itmname_picture13	{Ilustración}
 itmdescr_picture13
 {
-Un paisaje marÃ­timo romÃ¡ntico.
+Un paisaje marítimo romántico.
 }
 
-itmname_picture14	{IlustraciÃ³n}
+itmname_picture14	{Ilustración}
 itmdescr_picture14
 {
 Uranienborg en la isla de Ven, de Tycho Brahe.
 }
 
-itmname_picture15	{IlustraciÃ³n}
+itmname_picture15	{Ilustración}
 itmdescr_picture15
 {
 Un joven Woodes Rogers mostrando unos papeles a su padre.
@@ -789,37 +789,37 @@ Un joven Woodes Rogers mostrando unos papeles a su padre.
 itmname_note1		{Nota}
 itmdescr_note1
 {
-Aunque eres joven y tienes una vista aguda, la escritura es demasiado pequeÃ±a para leerla.
+Aunque eres joven y tienes una vista aguda, la escritura es demasiado pequeña para leerla.
 }
 
 itmname_note2		{Nota}
 itmdescr_note2
 {
-Â¿NecesitarÃ© anteojos despuÃ©s de todo? La nota dice: 
-El mejor ron de Planter. Breves instrucciones del proceso de elaboraciÃ³n.
+¿Necesitaré anteojos después de todo? La nota dice: 
+El mejor ron de Planter. Breves instrucciones del proceso de elaboración.
 1) Llena el alambique de agua y melaza (solo de la mejor claidad).
-2) AsegÃºrate de obtener una temperatura muy alta para comenzar el proceso de destilaciÃ³n.
-3) Baja la temperatura despuÃ©s de un rato y ya lo tienes: Â¡RON!
-4) Pero cuidado, la destilaciÃ³n puede ser peligrosa: se han dado casos de explosiones.
+2) Asegúrate de obtener una temperatura muy alta para comenzar el proceso de destilación.
+3) Baja la temperatura después de un rato y ya lo tienes: ¡RON!
+4) Pero cuidado, la destilación puede ser peligrosa: se han dado casos de explosiones.
 }
 
 itmname_note3			{Astronomiae Instauratae Mechanica}
 itmdescr_note3
 {
-Un pesado libro sobre instrumentos astronÃ³micos, por Tycho Brahe 1598. Puede que lo mÃ¡s interesante sea esta nota: "La llave de las catacumbas estÃ¡ en la cuarta celda".  
+Un pesado libro sobre instrumentos astronómicos, por Tycho Brahe 1598. Puede que lo más interesante sea esta nota: "La llave de las catacumbas está en la cuarta celda".  
 }
 
 itmname_amnesty_doc		{Un 'Woodes-Rogers'}
 itmdescr_amnesty_doc
 {
-Este documento, expedido por el Gobernador Rogers, proclama que el portador (Â¡YO!) ha recibido un indulto real.  
+Este documento, expedido por el Gobernador Rogers, proclama que el portador (¡YO!) ha recibido un indulto real.  
 }
 
 itmname_excel_document		{Documento}
 itmdescr_excel_document
 {
-Â¿Para quÃ© puede servir un trozo de pergamino cuadriculado?
-CompruÃ©balo tÃº mismo en la carpeta RESOURCE\INI\TEXTS\SPANISH\Storyline\WoodesRogers\QUESTBOOK. //JRH 
+¿Para qué puede servir un trozo de pergamino cuadriculado?
+Compruébalo tú mismo en la carpeta RESOURCE\INI\TEXTS\SPANISH\Storyline\WoodesRogers\QUESTBOOK. //JRH 
 }
 
 itmname_pistolmap1		{Mapa}
@@ -832,21 +832,21 @@ itmname_doc60A			{Carta}
 itmdescr_doc60A
 {
 Dirigida a:
-CapitÃ¡n Edward Thache
+Capitán Edward Thache
 }
 
 itmname_doc60B			{Carta}
 itmdescr_doc60B
 {
 17 de Noviembre, 1718
-Amigo mÃ­o
+Amigo mío
 
 Si esta misiva te encuentra en puerto, espero que vengas a la mayor
-brevedda que tus asuntos te permitan. Tengo algo mÃ¡s que decirte
+brevedda que tus asuntos te permitan. Tengo algo más que decirte
 que en este momento no puedo poner por escrito; el portador 
-te contarÃ¡ el final de nuestra Guerra India, y Ganet puede contarte 
-en parte lo que te tengo que decir, asÃ­ que te dirijo en cierta medida 
-a Ã©l.
+te contará el final de nuestra Guerra India, y Ganet puede contarte 
+en parte lo que te tengo que decir, así que te dirijo en cierta medida 
+a él.
 ...
 }
 
@@ -854,14 +854,14 @@ itmname_doc60C			{Carta}
 itmdescr_doc60C
 {
 ...
-En verdad pienso que estos tres hombres lamentan de corazÃ³n sus diferencias 
-contigo y estarÃ¡n mÃ¡s que dispuestos a pedirte perdÃ³n; si puedo 
+En verdad pienso que estos tres hombres lamentan de corazón sus diferencias 
+contigo y estarán más que dispuestos a pedirte perdón; si puedo 
 aconsejarte, volved a ser amigos; es mejor que enemistaros entre 
 vosotros.
 
-Espero al Gobernador esta noche o maÃ±ana, quien creo que tambiÃ©n 
-se alegrarÃ¡ de verte antes de que te vayas. No tengo tiempo sino para aÃ±adir 
-mis mÃ¡s calurosos respetos para ti, y quedar como tu verdadero amigo.
+Espero al Gobernador esta noche o mañana, quien creo que también 
+se alegrará de verte antes de que te vayas. No tengo tiempo sino para añadir 
+mis más calurosos respetos para ti, y quedar como tu verdadero amigo.
 
 Y seguro servidor,
 T. Knight
@@ -871,7 +871,7 @@ itmname_doc60D			{Reverso de al carta}
 itmdescr_doc60D
 {
 P.I.R.A.T.E.
-Eso estÃ¡ escrito con otra pluma y por otra mano.
+Eso está escrito con otra pluma y por otra mano.
 }
 
 itmname_tailors_note		{Nota}
@@ -881,38 +881,38 @@ A la Casa Roja, llevar:
 3 pares de pantalones azul oscuro
 4 jerseys a rayas, a poder ser negras y rojas
 
-Para encontrar un camino seguro a travÃ©s de la selva:
-Nunca derecha - derecha o izquierda - izquierda despuÃ±es de cada una.
+Para encontrar un camino seguro a través de la selva:
+Nunca derecha - derecha o izquierda - izquierda despuñes de cada una.
 }
 
 itmname_auction_list_roll	{Documento}
 itmdescr_auction_list_roll
 {
-Esperemos que sea realmente una lista Ãºtil de los artÃ­culos vendidos en la subasta.
+Esperemos que sea realmente una lista útil de los artículos vendidos en la subasta.
 }
 
 itmname_auction_list_open	{Lista de subasta}
 itmdescr_auction_list_open
 {
-Â¡SÃ­!
+¡Sí!
 }
 
 itmname_newspaper1		{Notas de Rogers}
 itmdescr_newspaper1
 {
-Ha estado buscando en 'The Boston News-Letter' informaciÃ³n sobre la tripulaciÃ³n de Teach.
+Ha estado buscando en 'The Boston News-Letter' información sobre la tripulación de Teach.
 }
 
 itmname_newspaper2		{Notas de Rogers}
 itmdescr_newspaper2
 {
-Ha estado buscando en 'The Virinia Gazette' informaciÃ³n sobre la tripulaciÃ³n de Teach.
+Ha estado buscando en 'The Virinia Gazette' información sobre la tripulación de Teach.
 }
 
 itmname_newspaper3		{Notas de Rogers}
 itmdescr_newspaper3
 {
-Ha estado buscando en varios periÃ³dicos mÃ¡s informaciÃ³n sobre la tripulaciÃ³n de Teach.
+Ha estado buscando en varios periódicos más información sobre la tripulación de Teach.
 }
 
 //--------------- DOCUMENTS END --------------------------------------------------------------------------------------------------
@@ -921,64 +921,64 @@ Ha estado buscando en varios periÃ³dicos mÃ¡s informaciÃ³n sobre la tripulaciÃ³n
 itmname_pistolmdchest_F1	{Cofre de medicinas}
 itmdescr_pistolmdchest_F1
 {
-Una buena obra de artesanÃ­a, pero por desgracia estÃ¡ cerrado. 
+Una buena obra de artesanía, pero por desgracia está cerrado. 
 }
 
 itmname_pistolmdchest_F1_C	{Cofre de medicinas}
 itmdescr_pistolmdchest_F1_C
 {
-Una buena obra de artesanÃ­a, pero por desgracia estÃ¡ cerrado.
+Una buena obra de artesanía, pero por desgracia está cerrado.
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F2A	{Cofre de medicinas vacÃ­o}
+itmname_pistolmdchest_F2A	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2A
 {
-Solo la mitad del cofre estÃ¡ abierta. No hay gran cosa: un cajÃ³n estÃ¡ vacÃ­o, dos faltan y uno estÃ¡ bloqueado. 
+Solo la mitad del cofre está abierta. No hay gran cosa: un cajón está vacío, dos faltan y uno está bloqueado. 
 }
 
-itmname_pistolmdchest_F2A_C	{Cofre de medicinas vacÃ­o}
+itmname_pistolmdchest_F2A_C	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2A_C
 {
-Solo la mitad del cofre estÃ¡ abierta. No hay gran cosa: un cajÃ³n estÃ¡ vacÃ­o, dos faltan y uno estÃ¡ bloqueado. 
+Solo la mitad del cofre está abierta. No hay gran cosa: un cajón está vacío, dos faltan y uno está bloqueado. 
 }
 
-itmname_pistolmdchest_F2A_S	{Cofre de medicinas vacÃ­o}
+itmname_pistolmdchest_F2A_S	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2A_S
 {
-Solo la mitad del cofre estÃ¡ abierta. No hay gran cosa: un cajÃ³n estÃ¡ vacÃ­o, dos faltan y uno estÃ¡ bloqueado. 
+Solo la mitad del cofre está abierta. No hay gran cosa: un cajón está vacío, dos faltan y uno está bloqueado. 
 }
 
-itmname_pistolmdchest_F2A_CS	{Cofre de medicinas vacÃ­o}
+itmname_pistolmdchest_F2A_CS	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2A_CS
 {
-Solo la mitad del cofre estÃ¡ abierta. No hay gran cosa: un cajÃ³n estÃ¡ vacÃ­o, dos faltan y uno estÃ¡ bloqueado. 
+Solo la mitad del cofre está abierta. No hay gran cosa: un cajón está vacío, dos faltan y uno está bloqueado. 
 }
 
 
-itmname_pistolmdchest_F2B	{Cofre de medicinas vacÃ­o}
+itmname_pistolmdchest_F2B	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2B
 {
-Vaya un cerrajero estÃ¡ hecho el seÃ±or Cook. Â¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
+Vaya un cerrajero está hecho el señor Cook. ¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
 }
 
-itmname_pistolmdchest_F2B_C	{Cofre de medicinas vacÃ­o}
+itmname_pistolmdchest_F2B_C	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2B_C
 {
-Vaya un cerrajero estÃ¡ hecho el seÃ±or Cook. Â¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
+Vaya un cerrajero está hecho el señor Cook. ¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
 }
 
-itmname_pistolmdchest_F2B_S	{Cofre de medicinas vacÃ­o}
+itmname_pistolmdchest_F2B_S	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2B_S
 {
-Vaya un cerrajero estÃ¡ hecho el seÃ±or Cook. Â¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
+Vaya un cerrajero está hecho el señor Cook. ¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
 }
 
-itmname_pistolmdchest_F2B_CS	{Cofre de medicinas vacÃ­o}
+itmname_pistolmdchest_F2B_CS	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2B_CS
 {
-Vaya un cerrajero estÃ¡ hecho el seÃ±or Cook. Â¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
+Vaya un cerrajero está hecho el señor Cook. ¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
 }
 
 //..............................................................................................................
@@ -986,50 +986,50 @@ Vaya un cerrajero estÃ¡ hecho el seÃ±or Cook. Â¡Ha abierto este bonito cofre por
 itmname_pistolmdchest_F3A	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3A
 {
-Dos cajones estÃ¡n llenos pero todavÃ­a no puedo colocar el cajÃ³n grande.  
+Dos cajones están llenos pero todavía no puedo colocar el cajón grande.  
 }
 
 itmname_pistolmdchest_F3A_C	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3A_C
 {
-Dos cajones estÃ¡n llenos pero todavÃ­a no puedo colocar el cajÃ³n grande.  
+Dos cajones están llenos pero todavía no puedo colocar el cajón grande.  
 }
 
 itmname_pistolmdchest_F3A_S	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3A_S
 {
-Dos cajones estÃ¡n llenos pero todavÃ­a no puedo colocar el cajÃ³n grande.  
+Dos cajones están llenos pero todavía no puedo colocar el cajón grande.  
 }
 
 itmname_pistolmdchest_F3A_CS	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3A_CS
 {
-Dos cajones estÃ¡n llenos pero todavÃ­a no puedo colocar el cajÃ³n grande.  
+Dos cajones están llenos pero todavía no puedo colocar el cajón grande.  
 }
 
 
 itmname_pistolmdchest_F3B	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3B
 {
-Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
 itmname_pistolmdchest_F3B_C	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3B_C
 {
-Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
 itmname_pistolmdchest_F3B_S	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3B_S
 {
-Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
 itmname_pistolmdchest_F3B_CS	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3B_CS
 {
-Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
 //..............................................................................................................
@@ -1037,75 +1037,75 @@ Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.
 itmname_pistolmdchest_F4A		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4A
 {
-Esta es la obra de otro merodeador: Â¡ha reventado toda la cerradura y ha daÃ±ado la puerta!  
+Esta es la obra de otro merodeador: ¡ha reventado toda la cerradura y ha dañado la puerta!  
 }
 
 itmname_pistolmdchest_F4A_C		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4A_C
 {
-Esta es la obra de otro merodeador: Â¡ha reventado toda la cerradura y ha daÃ±ado la puerta!  
+Esta es la obra de otro merodeador: ¡ha reventado toda la cerradura y ha dañado la puerta!  
 }
 
 itmname_pistolmdchest_F4A_S		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4A_S
 {
-Esta es la obra de otro merodeador: Â¡ha reventado toda la cerradura y ha daÃ±ado la puerta!  
+Esta es la obra de otro merodeador: ¡ha reventado toda la cerradura y ha dañado la puerta!  
 }
 
 itmname_pistolmdchest_F4A_CS		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4A_CS
 {
-Esta es la obra de otro merodeador: Â¡ha reventado toda la cerradura y ha daÃ±ado la puerta!  
+Esta es la obra de otro merodeador: ¡ha reventado toda la cerradura y ha dañado la puerta!  
 }
 
 
 itmname_pistolmdchest_F4B		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4B
 {
-El cajÃ³n grande estÃ¡ en su sitio, pero los tres nuevos parecen vacÃ­os.  
+El cajón grande está en su sitio, pero los tres nuevos parecen vacíos.  
 }
 
 itmname_pistolmdchest_F4B_C		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4B_C
 {
-El cajÃ³n grande estÃ¡ en su sitio, pero los tres nuevos parecen vacÃ­os.  
+El cajón grande está en su sitio, pero los tres nuevos parecen vacíos.  
 }
 
 itmname_pistolmdchest_F4B_S		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4B_S
 {
-El cajÃ³n grande estÃ¡ en su sitio, pero los tres nuevos parecen vacÃ­os.  
+El cajón grande está en su sitio, pero los tres nuevos parecen vacíos.  
 }
 
 itmname_pistolmdchest_F4B_CS		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4B_CS
 {
-El cajÃ³n grande estÃ¡ en su sitio, pero los tres nuevos parecen vacÃ­os.  
+El cajón grande está en su sitio, pero los tres nuevos parecen vacíos.  
 }
 
 
 itmname_pistolmdchest_F4C	{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4C
 {
-Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
 itmname_pistolmdchest_F4C_C	{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4C_C
 {
-Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.
+Algunas botellas están en su sitio pero todavía faltan muchas.
 }
 
 itmname_pistolmdchest_F4C_S	{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4C_S
 {
-Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.
+Algunas botellas están en su sitio pero todavía faltan muchas.
 }
 
 itmname_pistolmdchest_F4C_CS	{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4C_CS
 {
-Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.
+Algunas botellas están en su sitio pero todavía faltan muchas.
 }
 
 //..............................................................................................................
@@ -1113,75 +1113,75 @@ Algunas botellas estÃ¡n en su sitio pero todavÃ­a faltan muchas.
 itmname_pistolmdchest_F5A		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5A
 {
-Â¡Todas las botellas encontradas!  
+¡Todas las botellas encontradas!  
 }
 
 itmname_pistolmdchest_F5A_C		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5A_C
 {
-Â¡Todas las botellas encontradas!  
+¡Todas las botellas encontradas!  
 }
 
 itmname_pistolmdchest_F5A_S		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5A_S
 {
-Â¡Todas las botellas encontradas!  
+¡Todas las botellas encontradas!  
 }
 
 itmname_pistolmdchest_F5A_CS		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5A_CS
 {
-Â¡Todas las botellas encontradas!  
+¡Todas las botellas encontradas!  
 }
 
 
 itmname_pistolmdchest_F5B		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5B
 {
-Â¡Todos los cajones estÃ¡n llenos y todas las botellas han sido encontradas!
+¡Todos los cajones están llenos y todas las botellas han sido encontradas!
 }
 
 itmname_pistolmdchest_F5B_C		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5B_C
 {
-Â¡Todos los cajones estÃ¡n llenos y todas las botellas han sido encontradas!
+¡Todos los cajones están llenos y todas las botellas han sido encontradas!
 }
 
 itmname_pistolmdchest_F5B_S		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5B_S
 {
-Â¡Todos los cajones estÃ¡n llenos y todas las botellas han sido encontradas!
+¡Todos los cajones están llenos y todas las botellas han sido encontradas!
 }
 
 itmname_pistolmdchest_F5B_CS		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5B_CS
 {
-Â¡Todos los cajones estÃ¡n llenos y todas las botellas han sido encontradas!  
+¡Todos los cajones están llenos y todas las botellas han sido encontradas!  
 }
 
 
 itmname_pistolmdchest_F5C	{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5C
 {
-Â¡Todas las botellas encontradas!  
+¡Todas las botellas encontradas!  
 }
 
 itmname_pistolmdchest_F5C_C	{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5C_C
 {
-Â¡Todas las botellas encontradas!
+¡Todas las botellas encontradas!
 }
 
 itmname_pistolmdchest_F5C_S	{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5C_S
 {
-Â¡Todas las botellas encontradas!  
+¡Todas las botellas encontradas!  
 }
 
 itmname_pistolmdchest_F5C_CS	{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5C_CS
 {
-Â¡Todas las botellas encontradas!  
+¡Todas las botellas encontradas!  
 }
 
 //..............................................................................................................
@@ -1189,25 +1189,25 @@ itmdescr_pistolmdchest_F5C_CS
 itmname_pistolmdchest_F6	{Cofre de medicinas reparado}
 itmdescr_pistolmdchest_F6
 {
-Â¡Espero que a ese carpintero se le dÃ© mejor reparar mÃ¡stiles y cascos que muebles!   
+¡Espero que a ese carpintero se le dé mejor reparar mástiles y cascos que muebles!   
 }
 
 itmname_pistolmdchest_F6_C	{Cofre de medicinas reparado}
 itmdescr_pistolmdchest_F6_C
 {
-Â¡Espero que a ese carpintero se le dÃ© mejor reparar mÃ¡stiles y cascos que muebles!   
+¡Espero que a ese carpintero se le dé mejor reparar mástiles y cascos que muebles!   
 }
 
 itmname_pistolmdchest_F6_S	{Cofre de medicinas reparado}
 itmdescr_pistolmdchest_F6_S
 {
-Â¡Espero que a ese carpintero se le dÃ© mejor reparar mÃ¡stiles y cascos que muebles!   
+¡Espero que a ese carpintero se le dé mejor reparar mástiles y cascos que muebles!   
 }
 
 itmname_pistolmdchest_F6_CS	{Cofre de medicinas reparado}
 itmdescr_pistolmdchest_F6_CS
 {
-Â¡Espero que a ese carpintero se le dÃ© mejor reparar mÃ¡stiles y cascos que muebles!   
+¡Espero que a ese carpintero se le dé mejor reparar mástiles y cascos que muebles!   
 }
 
 //..............................................................................................................
@@ -1215,19 +1215,19 @@ itmdescr_pistolmdchest_F6_CS
 itmname_mdchest_B2		{Cofre de medicinas}
 itmdescr_mdchest_B2
 {
-Â¡TambiÃ©n hay sitio para meter botellas en la parte de atrÃ¡s! 
+¡También hay sitio para meter botellas en la parte de atrás! 
 }
 
 itmname_mdchest_B3		{Cofre de medicinas}
 itmdescr_mdchest_B3
 {
-La parte de atrÃ¡s estÃ¡ llena de botellas. 
+La parte de atrás está llena de botellas. 
 }
 
 itmname_mdchest_B4		{Llave encontrada en el cofre de medicinas}
 itmdescr_mdchest_B4
 {
-HabÃ­a una llave escondida en un compartimento secreto en la aprte de atrÃ¡s. Â¡Es la llave del equipo de cirujÃ­a! 
+Había una llave escondida en un compartimento secreto en la aprte de atrás. ¡Es la llave del equipo de cirujía! 
 }
 
 //--------------- ALL MEDICINE CHESTS END --------------------------------------------------------------------------------------
@@ -1242,31 +1242,31 @@ Una cuerda resistente con una argolla de hierro.
 itmname_medicine_list	{Lista de medicinas}
 itmdescr_medicine_list
 {
-A cambio de seis rehenes, exigimos un cofre de medicinas lleno con todos los remedios y medicamentos habituales. NingÃºn prisionero serÃ¡ liberado sin estas medicinas especiales: Acetum Saturninum, AntÃ­doto, botella de Ã©ter, Confectio Damocritis, tintura de LÃ¡udano, y lo mÃ¡s importante, algo para curar la sÃ­filis. Â¡Cualquier otro medicamento o instrumental mÃ©dico es de interÃ©s! Charles Vane. 
+A cambio de seis rehenes, exigimos un cofre de medicinas lleno con todos los remedios y medicamentos habituales. Ningún prisionero será liberado sin estas medicinas especiales: Acetum Saturninum, Antídoto, botella de éter, Confectio Damocritis, tintura de Láudano, y lo más importante, algo para curar la sífilis. ¡Cualquier otro medicamento o instrumental médico es de interés! Charles Vane. 
 }
 
 itmname_medicine_leaves		{Hojas medicinales}
 itmdescr_medicine_leaves
 {
-Estas hojas pueden protegerte de los espÃ­ritus malignos e inspirar tu imaginaciÃ³n.   
+Estas hojas pueden protegerte de los espíritus malignos e inspirar tu imaginación.   
 }
 
 itmname_anti_scurvy_pills	{Tabletas}
 itmdescr_anti_scurvy_pills
 {
-Â¿Problemas con el escorbuto? Disuelve una tableta en agua y esta bebida te protegerÃ¡ de la enfermedad mÃ¡s temida por los marinos. Nueva patente secreta.  
+¿Problemas con el escorbuto? Disuelve una tableta en agua y esta bebida te protegerá de la enfermedad más temida por los marinos. Nueva patente secreta.  
 }
 
-itmname_filled_medium_drawer	{CajÃ³n con varias botellas de medicinas}
+itmname_filled_medium_drawer	{Cajón con varias botellas de medicinas}
 itmdescr_filled_medium_drawer
 {
 Hmm, el cirujano debe haber robado esto del cofre d emedicinas. 
 }
 
-itmname_mortar_ointment		{Mortero y ungÃ¼ento}
+itmname_mortar_ointment		{Mortero y ungüento}
 itmdescr_mortar_ointment
 {
-Un mortero hecho de porcelana y un ungÃ¼ento casero en una cajita de abedul. 
+Un mortero hecho de porcelana y un ungüento casero en una cajita de abedul. 
 }
 
 itmname_cough_syrup		{Jaraba para la tos}
@@ -1278,154 +1278,154 @@ Una botella de jarabe para al tos y otra de contenido desconocido.
 itmname_blood_letting		{instrumental para sangrar}
 itmdescr_blood_letting
 {
-Este pequeÃ±o objeto de latÃ³n obre las venas rÃ¡pidamente y sin dolor. El mecanismo tiene doce cuchillas afiladas que cortan al isntante. 
+Este pequeño objeto de latón obre las venas rápidamente y sin dolor. El mecanismo tiene doce cuchillas afiladas que cortan al isntante. 
 }
 
-itmname_filled_large_drawer		{CajÃ³n lleno de cosas}
+itmname_filled_large_drawer		{Cajón lleno de cosas}
 itmdescr_filled_large_drawer
 {
-El cajÃ³n estÃ¡ lleno de objetos que he recogido antes. 
+El cajón está lleno de objetos que he recogido antes. 
 }
 
-itmname_empty_large_drawer		{CajÃ³n vacÃ­o}
+itmname_empty_large_drawer		{Cajón vacío}
 itmdescr_empty_large_drawer
 {
-Creo que ese cajÃ³n pertenece al cofre de medicinas. 
+Creo que ese cajón pertenece al cofre de medicinas. 
 }
 
 itmname_bag_of_herbs		{Bolsa de hierbas}
 itmdescr_bag_of_herbs
 {
-Una pequeÃ±a bolsa para guardar hierbas y otras medicinas.  
+Una pequeña bolsa para guardar hierbas y otras medicinas.  
 }
 
 itmname_pistolmdcloth		{Rollos de vendas}
 itmdescr_pistolmdcloth
 {
-Son solo unos rollos de tela vieja, pero pueden usarse como vendas: Â¡y hay suficientes como para una campaÃ±a militar!
+Son solo unos rollos de tela vieja, pero pueden usarse como vendas: ¡y hay suficientes como para una campaña militar!
 }
 
 itmname_rolls_of_bandages	{Rollos de vendas}
 itmdescr_rolls_of_bandages
 {
-Son solo unos rollos de tela vieja, pero pueden usarse como vendas: Â¡y hay suficientes como para una campaÃ±a militar!
+Son solo unos rollos de tela vieja, pero pueden usarse como vendas: ¡y hay suficientes como para una campaña militar!
 }
 
 itmname_pistolmdclothsack	{Rollos de vendas}
 itmdescr_pistolmdclothsack
 {
-Son solo unos rollos de tela vieja, pero pueden usarse como vendas: Â¡y hay suficientes como para una campaÃ±a militar!
+Son solo unos rollos de tela vieja, pero pueden usarse como vendas: ¡y hay suficientes como para una campaña militar!
 }
 
 itmname_pistolmdsack		{Bolsa de hierbas}
 itmdescr_pistolmdsack
 {
-Una pequeÃ±a bolsa para guardar hierbas y otras medicinas.  
+Una pequeña bolsa para guardar hierbas y otras medicinas.  
 }
 
-itmname_prescriptions		{Recetas mÃ©dicas}
+itmname_prescriptions		{Recetas médicas}
 itmdescr_prescriptions
 {
-Â¿Un montÃ³n de cartas viejas? No, no, no... es una colecciÃ³n de recetas y consejos mÃ©dicos.   
+¿Un montón de cartas viejas? No, no, no... es una colección de recetas y consejos médicos.   
 }
 
-itmname_bladeprescriptions	{Recetas mÃ©dicas}
+itmname_bladeprescriptions	{Recetas médicas}
 itmdescr_bladeprescriptions
 {
-Â¿Un montÃ³n de cartas viejas? No, no, no... es una colecciÃ³n de recetas y consejos mÃ©dicos.   
+¿Un montón de cartas viejas? No, no, no... es una colección de recetas y consejos médicos.   
 }
 
-itmname_empty_bottles		{Botellas vacÃ­as}
+itmname_empty_bottles		{Botellas vacías}
 itmdescr_empty_bottles
 {
-Dos botellas vacÃ­as, nada mÃ¡s y nada menos.  
+Dos botellas vacías, nada más y nada menos.  
 }
 
 itmname_mercury_bottles		{Botellas de mercurio}
 itmdescr_mercury_bottles
 {
-La mayorÃ­a de los mÃ©dicos tratan la sÃ­filis con mercurio, bien por vÃ­a oral, en baÃ±os de vapor, o de forma tÃ³pica. El uso del mercurio se basa en la antigua teorÃ­a de los humores y la salud.  
+La mayoría de los médicos tratan la sífilis con mercurio, bien por vía oral, en baños de vapor, o de forma tópica. El uso del mercurio se basa en la antigua teoría de los humores y la salud.  
 }
 
 //----------------- ALL MEDICINE ITEMS END -----------------------------------------------------------------------------------
 //----------------- ALL SURGERY KIT START ------------------------------------------------------------------------------------
 
-itmname_bladesurgery		{BotiquÃ­n de primeros auxilios...}
+itmname_bladesurgery		{Botiquín de primeros auxilios...}
 itmdescr_bladesurgery
 {
-... Â¿o algo asÃ­? En cualquier caso, no hay llave.  
+... ¿o algo así? En cualquier caso, no hay llave.  
 }
 
-itmname_bladesurgery2		{Equipo de cirujÃ­a}
+itmname_bladesurgery2		{Equipo de cirujía}
 itmdescr_bladesurgery2
 {
-La llave que habÃ­a en el cofre abre un equipo de cirujÃ­a completo. Bueno, casi completo: falta una sierra grande.  
+La llave que había en el cofre abre un equipo de cirujía completo. Bueno, casi completo: falta una sierra grande.  
 }
 
-itmname_bladesurgery3		{Equipo de cirujÃ­a}
+itmname_bladesurgery3		{Equipo de cirujía}
 itmdescr_bladesurgery3
 {
-Â¡Con la sierra, el equipo estÃ¡ completo!  
+¡Con la sierra, el equipo está completo!  
 }
 
-itmname_bladesurgcan		{BotiquÃ­n de primeros auxilios...}
+itmname_bladesurgcan		{Botiquín de primeros auxilios...}
 itmdescr_bladesurgcan
 {
-... Â¿o algo asÃ­? En cualquier caso, no hay llave.  
+... ¿o algo así? En cualquier caso, no hay llave.  
 }
 
-itmname_bladesurgcan2		{Equipo de cirujÃ­a}
+itmname_bladesurgcan2		{Equipo de cirujía}
 itmdescr_bladesurgcan2
 {
-La llave que habÃ­a en el cofre abre un equipo de cirujÃ­a completo. Bueno, casi completo: falta una sierra grande.  
+La llave que había en el cofre abre un equipo de cirujía completo. Bueno, casi completo: falta una sierra grande.  
 }
 
-itmname_bladesurgcan3		{Equipo de cirujÃ­a}
+itmname_bladesurgcan3		{Equipo de cirujía}
 itmdescr_bladesurgcan3
 {
-Â¡Con la sierra, el equipo estÃ¡ completo!  
+¡Con la sierra, el equipo está completo!  
 }
 
-itmname_bladesurgery_r		{BotiquÃ­n de primeros auxilios...}
+itmname_bladesurgery_r		{Botiquín de primeros auxilios...}
 itmdescr_bladesurgery_r
 {
-... Â¿o algo asÃ­? En cualquier caso, no hay llave.  
+... ¿o algo así? En cualquier caso, no hay llave.  
 }
 
-itmname_bladesurgery2_r		{Equipo de cirujÃ­a}
+itmname_bladesurgery2_r		{Equipo de cirujía}
 itmdescr_bladesurgery2_r
 {
-La llave que habÃ­a en el cofre abre un equipo de cirujÃ­a completo. Bueno, casi completo: falta una sierra grande.  
+La llave que había en el cofre abre un equipo de cirujía completo. Bueno, casi completo: falta una sierra grande.  
 }
 
-itmname_bladesurgery3_r		{Equipo de cirujÃ­a}
+itmname_bladesurgery3_r		{Equipo de cirujía}
 itmdescr_bladesurgery3_r
 {
-Â¡Con la sierra, el equipo estÃ¡ completo!  
+¡Con la sierra, el equipo está completo!  
 }
 
 itmname_bladesurgcan_r		{A First Aid Kit ...}
 itmdescr_bladesurgcan_r
 {
-... Â¿o algo asÃ­? En cualquier caso, no hay llave.  
+... ¿o algo así? En cualquier caso, no hay llave.  
 }
 
-itmname_bladesurgcan2_r		{Equipo de cirujÃ­a}
+itmname_bladesurgcan2_r		{Equipo de cirujía}
 itmdescr_bladesurgcan2_r
 {
-La llave que habÃ­a en el cofre abre un equipo de cirujÃ­a completo. Bueno, casi completo: falta una sierra grande.  
+La llave que había en el cofre abre un equipo de cirujía completo. Bueno, casi completo: falta una sierra grande.  
 }
 
-itmname_bladesurgcan3_r		{Equipo de cirujÃ­a}
+itmname_bladesurgcan3_r		{Equipo de cirujía}
 itmdescr_bladesurgcan3_r
 {
-Â¡Con la sierra, el equipo estÃ¡ completo!  
+¡Con la sierra, el equipo está completo!  
 }
 
 itmname_surgery_saw		{Sierra}
 itmdescr_surgery_saw
 {
-Una robusta herramienta de carpintero, Â¿o tal vez de un cirujano naval?. 
+Una robusta herramienta de carpintero, ¿o tal vez de un cirujano naval?. 
 }
 
 //----------------- ALL SURGERY KIT END -------------------------------------------------------------------------------------
@@ -1434,43 +1434,43 @@ Una robusta herramienta de carpintero, Â¿o tal vez de un cirujano naval?.
 itmname_pistolfoodchest		{Cofre de provisiones}
 itmdescr_pistolfoodchest
 {
-Un cofre vacÃ­o de tamaÃ±o medio.
+Un cofre vacío de tamaño medio.
 }
 
 itmname_pistolfoodchest2	{Cofre de provisiones}
 itmdescr_pistolfoodchest2
 {
-Un cofre vacÃ­o de tamaÃ±o medio.
+Un cofre vacío de tamaño medio.
 }
 
 itmname_bladefish		{Pez grande}
 itmdescr_bladefish
 {
-Un gran y delicioso pescado... si no llevara dÃ­as almacenado en este sÃ³tano expuesto al calor del Caribe.
+Un gran y delicioso pescado... si no llevara días almacenado en este sótano expuesto al calor del Caribe.
 }
 
 itmname_meat			{Boucan}
 itmdescr_meat
 {
-Una especialidad de Tortuga. Carne ahumada por los cazadores, tambiÃ©n conocidos como bucaneros. Pero huele un poco mal, Â¿no?  
+Una especialidad de Tortuga. Carne ahumada por los cazadores, también conocidos como bucaneros. Pero huele un poco mal, ¿no?  
 }
 
 itmname_2winebottles		{Dos botellas de vino}
 itmdescr_2winebottles
 {
-Vino francÃ©s de la mejor calidad, pero demasiado caliente.
+Vino francés de la mejor calidad, pero demasiado caliente.
 }
 
 itmname_bread			{Bizcocho de barco}
 itmdescr_bread
 {
-Pan recocido para soportar largos viajes por mar sin estropearse. Â¡Pero ha dado igual! Hay algo moviÃ©ndose dentro.  
+Pan recocido para soportar largos viajes por mar sin estropearse. ¡Pero ha dado igual! Hay algo moviéndose dentro.  
 }
 
 itmname_ale			{Cerveza}
 itmdescr_ale
 {
-Una bebbida fuerte, Â¿llegada desde Inglaterra? Cuidado, esta cerveza se sube a la cabeza muy rÃ¡pido.  
+Una bebbida fuerte, ¿llegada desde Inglaterra? Cuidado, esta cerveza se sube a la cabeza muy rápido.  
 }
 
 //------------------- FOOD ITEMS END ----------------------------------------------------------------------------------------
@@ -1485,25 +1485,25 @@ Una moneda sueca de plata de dos marcos.
 itmname_coin2			{Moneda}
 itmdescr_coin2
 {
-Una moneda sueca de cobre de un Ã¶re. Â¿Procedente del fondo del mar?
+Una moneda sueca de cobre de un öre. ¿Procedente del fondo del mar?
 }
 
 itmname_coin3			{Moneda}
 itmdescr_coin3
 {
-Un doblÃ³n espaÃ±ol de oro.
+Un doblón español de oro.
 }
 
 itmname_coin4			{Monedas}
 itmdescr_coin4
 {
-Dos piezas de a ocho espaÃ±olas, u ocho reales.
+Dos piezas de a ocho españolas, u ocho reales.
 }
 
 itmname_coin4_bad		{Monedas}
 itmdescr_coin4_bad
 {
-Â¡Las piezas de a ocho tienen un peso demasiado variable como para ser de utilidad!
+¡Las piezas de a ocho tienen un peso demasiado variable como para ser de utilidad!
 }
 
 itmname_coin5			{Moneda}
@@ -1521,7 +1521,7 @@ Una moneda inglesa de plata de tres peniques.
 itmname_coin7			{Moneda}
 itmdescr_coin7
 {
-Una moneda china de latÃ³n.
+Una moneda china de latón.
 }
 
 itmname_coin8			{Moneda}
@@ -1533,31 +1533,31 @@ Una moneda china de cobre.
 itmname_coin9			{Moneda}
 itmdescr_coin9
 {
-Un cequÃ­ Ã¡rabe de oro.
+Un cequí árabe de oro.
 }
 
 itmname_coin10			{Moneda}
 itmdescr_coin10
 {
-Una moneda Ã¡rabe de plata.
+Una moneda árabe de plata.
 }
 
 itmname_coin11			{Moneda}
 itmdescr_coin11
 {
-Una moneda Ã¡rabe de plata muy pequeÃ±a y desgastada.
+Una moneda árabe de plata muy pequeña y desgastada.
 }
 
 itmname_coin12			{Moneda}
 itmdescr_coin12
 {
-Un bonito Louis d'or francÃ©s.
+Un bonito Louis d'or francés.
 }
 
 itmname_coin13			{Moneda}
 itmdescr_coin13
 {
-Un gulden holandÃ©s.
+Un gulden holandés.
 }
 
 itmname_coin14			{Moneda}
@@ -1569,20 +1569,20 @@ Una moneda holandesa de plata de 50 stuivers, con una forma inusual.
 itmname_coin15			{Moneda}
 itmdescr_coin15
 {
-Un rijkdaalder holandÃ©s de plata.
+Un rijkdaalder holandés de plata.
 }
 
 itmname_coin16			{Moneda}
 itmdescr_coin16
 {
-Un gran moydoro portuguÃ©s de oro.
+Un gran moydoro portugués de oro.
 }
 
 itmname_BB_coin			{Amuleto}
 itmdescr_BB_coin
 {
 Una moneda de oro china. Supongo que alguien la llevaba en torno al cuello como amuleto.
-Â¿Para quÃ©? Â¡Buena suerte? QuizÃ¡s no sirviÃ³ de mucho...
+¿Para qué? ¡Buena suerte? Quizás no sirvió de mucho...
 }
 
 //-------------------- COINS END --------------------------------------------------------------------------------------------
@@ -1591,7 +1591,7 @@ Una moneda de oro china. Supongo que alguien la llevaba en torno al cuello como 
 itmname_bladechurchsilver	{Saco}
 itmdescr_bladechurchsilver
 {
-Un saco normal y corriente. Ãšsalo para llevarte los tesoros de la iglesia...
+Un saco normal y corriente. Úsalo para llevarte los tesoros de la iglesia...
 }
 
 itmname_jewelcross		{Cruz enjoyada}
@@ -1606,10 +1606,10 @@ itmdescr_fake_reliquary
 En esta capilla reposan los restos terrenales de un santo olvidado tiempo ha.
 }
 
-itmname_fake_chalice		{CÃ¡liz}
+itmname_fake_chalice		{Cáliz}
 itmdescr_fake_chalice
 {
-Un copÃ³n de oro puro usado para contener el vino sacramental. 
+Un copón de oro puro usado para contener el vino sacramental. 
 }
 
 itmname_fake_censer		{Incensario}
@@ -1624,10 +1624,10 @@ itmdescr_fake_candelabre
 Un peado candelabro de pata de ocho brazos. 
 }
 
-itmname_bladelockpick		{GanzÃºa}
+itmname_bladelockpick		{Ganzúa}
 itmdescr_bladelockpick
 {
-Dos hierros pequeÃ±os que pueden usarse como herramientas de cerrajerÃ­a.
+Dos hierros pequeños que pueden usarse como herramientas de cerrajería.
 }
 
 itmname_bladehandle		{Picaporte}
@@ -1639,7 +1639,7 @@ Un simple picaporte de una puerta o un armario.
 itmname_bladeladder		{Escalera de mano}
 itmdescr_bladeladder
 {
-Una larga escalera de mano. Â¿Por quÃ© estaba aquÃ­ escondida?
+Una larga escalera de mano. ¿Por qué estaba aquí escondida?
 }
 
 itmname_bladeoilbottle		{Botella de aceite}
@@ -1654,13 +1654,13 @@ itmdescr_bladekeygrand
 Otra llave.
 }
 
-itmname_red_animist		{HÃ¡bito de monje}
+itmname_red_animist		{Hábito de monje}
 itmdescr_red_animist
 {
 Las vestiduras rojas de uno de los miembros del coro, junto a una larga cuerda.
 }
 
-itmname_many_red_animists	{Muchos hÃ¡bitos de monje}
+itmname_many_red_animists	{Muchos hábitos de monje}
 itmdescr_many_red_animists
 {
 El resto de los ropajes rojos del coro.
@@ -1681,7 +1681,7 @@ Este recipiente de oro profusamente labrado se usa para quemar incienso. Proteje
 itmname_book62		    	{Cessa Decipere}
 itmdescr_book62
 {
-Exorcizamus te, omnis immundus spiritus omnis satanica potestas... Â¿Eh?
+Exorcizamus te, omnis immundus spiritus omnis satanica potestas... ¿Eh?
 }
 
 itmname_altar_bread		{Pan del altar}
@@ -1738,21 +1738,21 @@ Un traje de ropas de gran calidad, cuidadosamente cepilladas y dobladas.
 itmname_sealed_map		{Papel lacrado}
 itmdescr_sealed_map
 {
-El papel ha sido lacrado en varias partes usando un dedal como sello; el mismo dedal que encontrÃ© en el bolsillo del Gobernador.
+El papel ha sido lacrado en varias partes usando un dedal como sello; el mismo dedal que encontré en el bolsillo del Gobernador.
 Debo tener mucho cuidado con el cuchillo para abirir los lacres.
 }
 
 itmname_mapBB1			{Fragmento de mapa}
 itmdescr_mapBB1
 {
-Un mapa de ciertas islas, con latitud y longitud, Pero es solo un grafmento de un mapa mÃ¡s grande del Caribe. 
+Un mapa de ciertas islas, con latitud y longitud, Pero es solo un grafmento de un mapa más grande del Caribe. 
 }
 
 itmname_package			{Paquete de lona impermeable}
 itmdescr_package
 {
 Bajo la vieja capa de marino, desgastada por la sal, un paquete envuelto en lona impermeable que parece contener papeles.
-El paquete estÃ¡ cosido, nnecesitarÃ© algo para cortar las costuras.
+El paquete está cosido, nnecesitaré algo para cortar las costuras.
 }
 
 itmname_temp_purse		{Bolso}
@@ -1764,7 +1764,7 @@ Una bolsa de lienzo que tintinea al agitarla, anunciando la presencia de oro en 
 itmname_temp_coins		{Monedas}
 itmdescr_temp_coins
 {
-Unas pocas monedas pequeÃ±as.
+Unas pocas monedas pequeñas.
 }
 
 itmname_folding_knife		{Navaja plegable}
@@ -1776,7 +1776,7 @@ Una navaja con el mango torcido.
 itmname_pistoltinderbox		{Yesquero}
 itmdescr_pistoltinderbox
 {
-Un yesquero que parece una pequeÃ±a pistola.
+Un yesquero que parece una pequeña pistola.
 }
 
 itmname_tobacco			{Tabaco}
@@ -1794,19 +1794,19 @@ Un dedal, hilo y una aguja grande.
 itmname_notebook		{Cuaderno}
 itmdescr_notebook
 {
-El cuaderno se divide en seis 'capÃ­tulos'. Aunque no hay mucho texto en cada uno...
+El cuaderno se divide en seis 'capítulos'. Aunque no hay mucho texto en cada uno...
 }
 
 itmname_drawing_kit		{Par de Compases}
 itmdescr_drawing_kit
 {
-Un par de compases de dibujo con montura de latÃ³n.
+Un par de compases de dibujo con montura de latón.
 }
 
 itmname_tin_jug			{Jarra de hojalata}
 itmdescr_tin_jug
 {
-Una pequeÃ±a jarra de hojalata.
+Una pequeña jarra de hojalata.
 }
 
 itmname_silver_bar		{Lingote de plata}
@@ -1815,16 +1815,16 @@ itmdescr_silver_bar
 Una pesada pieza de plata en lingote.
 }
 
-itmname_foreign_items		{ColecciÃ³n de trastos}
+itmname_foreign_items		{Colección de trastos}
 itmdescr_foreign_items
 {
-Algunas baratijas de poco valor y en su mayorÃ­a de factura extranjera.
+Algunas baratijas de poco valor y en su mayoría de factura extranjera.
 }
 
-itmname_strange_shells		{Conchas extraÃ±as}
+itmname_strange_shells		{Conchas extrañas}
 itmdescr_strange_shells
 {
-Cinco o seis curiosas conchas de las Indias Occidentales. Siempre me he preguntado por quÃ© llevarÃ­a consigo estas conchas en su vida errante, perseguido y culpable.
+Cinco o seis curiosas conchas de las Indias Occidentales. Siempre me he preguntado por qué llevaría consigo estas conchas en su vida errante, perseguido y culpable.
 }
 
 //-------------- FINAL CHEST ITEMS END ----------------------------------------------------------------------------------
@@ -1851,13 +1851,13 @@ Es muy largo y con un gancho en el extremo, eso es todo.
 itmname_blademegaphone		{Bocina}
 itmdescr_blademegaphone
 {
-Un objeto para oficiales, hecho del mejor latÃ³n.
+Un objeto para oficiales, hecho del mejor latón.
 }
 
 itmname_bladewhistle		{Silbato de contramaestre}
 itmdescr_bladewhistle
 {
-Da las seÃ±ales de: 'Llamar a los ayudantes del contramaestre', 'Romper filas', 'Recibir o despedir a oficiales' y 'Largar los botes'.
+Da las señales de: 'Llamar a los ayudantes del contramaestre', 'Romper filas', 'Recibir o despedir a oficiales' y 'Largar los botes'.
 }
 
 itmname_blademusket		{Mosquete}
@@ -1875,7 +1875,7 @@ Usado desde lo alto de la torre
 itmname_bladeflag_pir		{Jolly Roger}
 itmdescr_bladeflag_pir
 {
-La bandera negra al estilo de Charles Vane: una calavera y dos sables. MÃ¡s tarde usada por Jack Rackham.
+La bandera negra al estilo de Charles Vane: una calavera y dos sables. Más tarde usada por Jack Rackham.
 }
 
 //-------------- WOOD TOWER ITEMS END -------------------------------------------------------------------------------------
@@ -1884,16 +1884,16 @@ La bandera negra al estilo de Charles Vane: una calavera y dos sables. MÃ¡s tard
 itmname_flagchest_closed	{Cofre de banderas}
 itmdescr_flagchest_closed
 {
-Una caja cerrada con la inscripciÃ³n 'La Concorde'.
+Una caja cerrada con la inscripción 'La Concorde'.
 }
 
 itmname_flagchest_openA		{Cofre de banderas}
 itmdescr_flagchest_openA
 {
-Una gran colecciÃ³n de banderas de muchos paÃ­ses. Y dos banderas negras.
+Una gran colección de banderas de muchos países. Y dos banderas negras.
 }
 
-itmname_flagchest_empty		{Cofre de banderas vacÃ­o}
+itmname_flagchest_empty		{Cofre de banderas vacío}
 itmdescr_flagchest_empty
 {
 
@@ -1902,7 +1902,7 @@ itmdescr_flagchest_empty
 itmname_flagchest_openB		{Cofre de banderas}
 itmdescr_flagchest_openB
 {
-Una gran colecciÃ³n de banderas de muchos paÃ­ses. Y dos banderas negras.
+Una gran colección de banderas de muchos países. Y dos banderas negras.
 }
 
 
@@ -1924,7 +1924,7 @@ itmdescr_bladeflag_ENG
 
 }
 
-itmname_bladeflag_FRA		{Bandera espaÃ±ola}
+itmname_bladeflag_FRA		{Bandera española}
 itmdescr_bladeflag_FRA
 {
 
@@ -1936,7 +1936,7 @@ itmdescr_bladeflag_POR
 
 }
 
-itmname_bladeflag_SPA		{Bandera espaÃ±ola}
+itmname_bladeflag_SPA		{Bandera española}
 itmdescr_bladeflag_SPA
 {
 
@@ -1963,7 +1963,7 @@ itmdescr_bladeflag_SWE
 itmname_bladeflag_HOL2		{Bandera holandesa}
 itmdescr_bladeflag_HOL2
 {
-"Staten General" de los PaÃ­ses Bajos.
+"Staten General" de los Países Bajos.
 }
 
 itmname_bladeflag_AME		{Bandera estadounidense}
@@ -1975,7 +1975,7 @@ La primera bandera naval estadounidense.
 itmname_bladeflag_SPA2		{Bandera desconocida}
 itmdescr_bladeflag_SPA2
 {
-Parece vagamente espaÃ±ola.
+Parece vagamente española.
 }
 
 //---------------- FLAGCHEST END ------------------------------------------------------------------------------------------
@@ -2014,13 +2014,13 @@ Un sable.
 itmname_bladepclub203		{Pistola garrote}
 itmdescr_bladepclub203
 {
-Una pistola pesada puede usarse como garrote. Hace mÃ¡s daÃ±o que los puÃ±os desnudos.
+Una pistola pesada puede usarse como garrote. Hace más daño que los puños desnudos.
 }
 
 itmname_fake_pclub		{Pistola garrote}
 itmdescr_fake_pclub
 {
-Una pistola pesada puede usarse como garrote. Hace mÃ¡s daÃ±o que los puÃ±os desnudos.
+Una pistola pesada puede usarse como garrote. Hace más daño que los puños desnudos.
 }
 
 itmname_bladeplank		{Tabla}
@@ -2035,22 +2035,22 @@ itmdescr_bladeboom
 Es solo un trozo de madera, no es un arma muy peligrosa. 
 }
 
-itmname_bladeanchor		{RezÃ³n}
+itmname_bladeanchor		{Rezón}
 itmdescr_bladeanchor
 {
-Un ancla pequeÃ±a pero pesada, podrÃ­a causar mucho daÃ±o. 
+Un ancla pequeña pero pesada, podría causar mucho daño. 
 }
 
 itmname_bladeanchor_big		{Ancla grande}
 itmdescr_bladeanchor_big
 {
-Un ancla muy pesada. IntentarÃ© bloquear el puente colgante con ella. 
+Un ancla muy pesada. Intentaré bloquear el puente colgante con ella. 
 }
 
-itmname_fake_anchor		{RezÃ³n}
+itmname_fake_anchor		{Rezón}
 itmdescr_fake_anchor
 {
-Un ancla pequeÃ±a pero pesada, podrÃ­a causar mucho daÃ±o. 
+Un ancla pequeña pero pesada, podría causar mucho daño. 
 }
 
 itmname_bladebroom		{Escoba}
@@ -2062,13 +2062,13 @@ Ahora puedo limpiar el lugar.
 itmname_bladespade		{Pala}
 itmdescr_bladespade
 {
-SÃ­, ahora pueda desenterrar el ancla de la orilla.
+Sí, ahora pueda desenterrar el ancla de la orilla.
 }
 
 itmname_bladeBB			{Espada}
 itmdescr_bladeBB
 {
-Un pesado alfanje con una 'E' grabada en la empuÃ±adura.
+Un pesado alfanje con una 'E' grabada en la empuñadura.
 }
 
 //--------------- BLADE WEAPONS END --------------------------------------------------------------------------------------
@@ -2083,19 +2083,19 @@ Una cara pistola larga con el nombre 'Johnson'. Parece que no se ha usado.
 itmname_pistol202 	{Pistola}
 itmdescr_pistol202
 {
-Una pequeÃ±a pistola de caÃ±Ã³n corto enenegrecida por el humo. Tiene grabado 'CSAR' con caligrafÃ­a infantil.
+Una pequeña pistola de cañón corto enenegrecida por el humo. Tiene grabado 'CSAR' con caligrafía infantil.
 }
 
 itmname_pistol203 	{Pistola}
 itmdescr_pistol203
 {
-Un arma pesada que parece haber sido usdada como garrote. Tiene escrito 'Benj Hrngld' en el caÃ±Ã³n.
+Un arma pesada que parece haber sido usdada como garrote. Tiene escrito 'Benj Hrngld' en el cañón.
 }
 
 itmname_pistol204 	{Pistola}
 itmdescr_pistol204
 {
-Una pistola de dos caÃ±ones con ricos adornos. Pero una de las llaves estÃ¡ atascada. Tiene 'Eden N. Carolina' grabado en la llave.
+Una pistola de dos cañones con ricos adornos. Pero una de las llaves está atascada. Tiene 'Eden N. Carolina' grabado en la llave.
 }
 
 itmname_pistol205 	{Pistola}
@@ -2107,7 +2107,7 @@ Una pistola de duelo de excepcional factura. Es tan precisa como bonita. Tiene '
 itmname_pistol206 	{Pistola}
 itmdescr_pistol206
 {
-Â¿Es una pistola o un caÃ±Ã³n? Suena como uno. Lleva escrito con muy buena letra 'Basilica Hands'.
+¿Es una pistola o un cañón? Suena como uno. Lleva escrito con muy buena letra 'Basilica Hands'.
 }
 
 itmname_pistolbelt 	{Bandolera de pistolas de Barbanegra}
@@ -2119,55 +2119,55 @@ Con esta bandolera usada por Teach, puedes llevar seis pistolas.
 itmname_pistol20 	{Juego de seis pistolas de Barbanegra}
 itmdescr_pistol20
 {
-Tu tripulaciÃ³n cree que este pequeÃ±o arsenal perteneciÃ³ realmente a Teach. Puede que sea verdad. Solo para un 'Maestro pistolero'.
+Tu tripulación cree que este pequeño arsenal perteneció realmente a Teach. Puede que sea verdad. Solo para un 'Maestro pistolero'.
 }
 
 itmname_pistol0		{Pistola de bolsillo}
 itmdescr_pistol0
 {
-Una de un juego de dos pistolas muy pequeÃ±as para uso discreto.
+Una de un juego de dos pistolas muy pequeñas para uso discreto.
 }
 
 itmname_bladep0		{Pistola de bolsillo}
 itmdescr_bladep0
 {
-Una de un juego de dos pistolas muy pequeÃ±as para uso discreto.
+Una de un juego de dos pistolas muy pequeñas para uso discreto.
 }
 
 itmname_pistolthrow5		{Pistolas arrojadizas}
 itmdescr_pistolthrow5
 {
-Cuando te quedas sin municiÃ³n puedes lanzar la pistola a tus enemigos.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
 itmname_pistolthrow4		{Pistolas arrojadizas}
 itmdescr_pistolthrow4
 {
-Cuando te quedas sin municiÃ³n puedes lanzar la pistola a tus enemigos.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
 itmname_pistolthrow3		{Pistolas arrojadizas}
 itmdescr_pistolthrow3
 {
-Cuando te quedas sin municiÃ³n puedes lanzar la pistola a tus enemigos.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
 itmname_pistolthrow2		{Pistolas arrojadizas}
 itmdescr_pistolthrow2
 {
-Cuando te quedas sin municiÃ³n puedes lanzar la pistola a tus enemigos.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
 itmname_pistolthrow1		{Pistolas arrojadizas}
 itmdescr_pistolthrow1
 {
-Cuando te quedas sin municiÃ³n puedes lanzar la pistola a tus enemigos.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
 itmname_pistolbladeBB		{Espada}
 itmdescr_pistolbladeBB
 {
-Otro alfanje pesado con una 'T' grabada en la empuÃ±adura. SÃ­, he oÃ­do que usaba dos espadas.
+Otro alfanje pesado con una 'T' grabada en la empuñadura. Sí, he oído que usaba dos espadas.
 }
 
 //--------------- PISTOL WEAPONS END -------------------------------------------------------------------------------------
@@ -2176,25 +2176,25 @@ Otro alfanje pesado con una 'T' grabada en la empuÃ±adura. SÃ­, he oÃ­do que usa
 itmname_bladeaxe4		{Hacha}
 itmdescr_bladeaxe4
 {
-Esta siniestra hacha de gran tamaÃ±o parece el arma de un verdugo. 
+Esta siniestra hacha de gran tamaño parece el arma de un verdugo. 
 }
 
-itmname_bladeaxe5		{Hacha pequeÃ±a}
+itmname_bladeaxe5		{Hacha pequeña}
 itmdescr_bladeaxe5
 {
-Una pequeÃ±a hacha de mano, no tiene nada de especial. 
+Una pequeña hacha de mano, no tiene nada de especial. 
 }
 
 itmname_bladepickaxe1		{Herramienta}
 itmdescr_bladepickaxe1
 {
-Â¿Una larga herramienta de jardinerÃ­a?, Â¿o quizÃ¡s algo usado en minerÃ­a? 
+¿Una larga herramienta de jardinería?, ¿o quizás algo usado en minería? 
 }
 
 itmname_bladeirontool		{Herramienta}
 itmdescr_bladeirontool
 {
-PodrÃ­a usarse como pata de cabra. 
+Podría usarse como pata de cabra. 
 }
 
 itmname_bladehammer		{Martillo}
@@ -2212,7 +2212,7 @@ Un martillo corto pero muy pesado.
 itmname_bladepickaxe2		{Pico}
 itmdescr_bladepickaxe2
 {
-Una herramienta larga y afilada usada en el negocio de la minerÃ­a. 
+Una herramienta larga y afilada usada en el negocio de la minería. 
 }
 
 itmname_bladesaw		{Sierra}
@@ -2248,43 +2248,43 @@ Un taladro y otras cosas.
 itmname_tool5		{Herramientas de carpintero}
 itmdescr_tool5
 {
-Dos sierras de diferente tamaÃ±o.
+Dos sierras de diferente tamaño.
 }
 
 itmname_tool6		{Herramientas de carpintero}
 itmdescr_tool6
 {
-Una herramienta pesada que podrÃ­a usarse como palanca y mÃ¡s cosas.
+Una herramienta pesada que podría usarse como palanca y más cosas.
 }
 
-itmname_pistoltoolchest1		{Cofre de carpintero vacÃ­o}
+itmname_pistoltoolchest1		{Cofre de carpintero vacío}
 itmdescr_pistoltoolchest1
 {
-ObtÃ©n todas las herramientas de carpintero. Puede que encuentres algo Ãºtil.
+Obtén todas las herramientas de carpintero. Puede que encuentres algo útil.
 }
 
 itmname_pistoltoolchest2		{Cofre de carpintero lleno}
 itmdescr_pistoltoolchest2
 {
-El cofre estÃ¡ completamente equipado con herramientos de carpintero.
+El cofre está completamente equipado con herramientos de carpintero.
 }
 
 itmname_pistolspade		{Pala}
 itmdescr_pistolspade
 {
-Â¿Una herramienta de jardinero o quÃ©? 
+¿Una herramienta de jardinero o qué? 
 }
 
 itmname_paper_clip		{Alambre}
 itmdescr_paper_clip
 {
-No estoy seguro de quÃ© es esta pequeÃ±a pieza de alambre. Â¿QuizÃ¡s pueda hacer algo con ella?
+No estoy seguro de qué es esta pequeña pieza de alambre. ¿Quizás pueda hacer algo con ella?
 }
 
 itmname_paper_clip2		{Gancho}
 itmdescr_paper_clip2
 {
-He doblado el alambre para formar un gancho. Â¡Vamos a usarlo!
+He doblado el alambre para formar un gancho. ¡Vamos a usarlo!
 }
 
 //------------------- TOOLS END -------------------------------------------------------------------------------------------
@@ -2299,25 +2299,25 @@ Una pesada caldera de hierro fundido.
 itmname_bladecauldron_w		{Caldera}
 itmdescr_bladecauldron_w
 {
-La caldera estÃ¡ llena de agua.
+La caldera está llena de agua.
 }
 
 itmname_bladetop		{Tapa}
 itmdescr_bladetop
 {
-Un objeto de cristal sucio. DeberÃ­a colocarse encima de la retorta.
+Un objeto de cristal sucio. Debería colocarse encima de la retorta.
 }
 
 itmname_pistolretort		{Retorta}
 itmdescr_pistolretort
 {
-AquÃ­ es donde tiene lugar la destilaciÃ³n.
+Aquí es donde tiene lugar la destilación.
 }
 
 itmname_pistolglass_tube	{Tubo de cristal}
 itmdescr_pistolglass_tube
 {
-Para conectar la tapa con el receptÃ¡culo.
+Para conectar la tapa con el receptáculo.
 }
 
 itmname_pistolsalt		{Sal}
@@ -2352,7 +2352,7 @@ itmdescr_pistolcloth
 Una tela de lino limpia.
 }
 
-itmname_pistolbucket_dung	{EstiÃ©rcol de caballo}
+itmname_pistolbucket_dung	{Estiércol de caballo}
 itmdescr_pistolbucket_dung
 {
 Aunque el cubo tiene tapa, huele que apesta.
@@ -2361,13 +2361,13 @@ Aunque el cubo tiene tapa, huele que apesta.
 itmname_pistolstonebasket_R	{Sulfuro de mercurio}
 itmdescr_pistolstonebasket_R
 {
-Un compuesto quÃ­mico formado de los elementos mercurio y azufre.
+Un compuesto químico formado de los elementos mercurio y azufre.
 }
 
 itmname_pistolstonebasket_G	{Caliza}
 itmdescr_pistolstonebasket_G
 {
-Una roca sedimentaria compuesta en su mayorÃ­a por carbonato cÃ¡lcico.
+Una roca sedimentaria compuesta en su mayoría por carbonato cálcico.
 }
 
 itmname_pistolstonebasket_M	{Antimonio}
@@ -2379,19 +2379,19 @@ Un metaloide gris lustroso.
 itmname_pistolstonebasket_B	{Antimonio negro}
 itmdescr_pistolstonebasket_B
 {
-Un comÃºn sulfuro de antimonio.
+Un común sulfuro de antimonio.
 }
 
 itmname_pistolsulphur_WR	{Azufre}
 itmdescr_pistolsulphur_WR
 {
-El azufre es un elemento amarillo vivo, cristalino y sÃ³lido a temperatura ambiente.
+El azufre es un elemento amarillo vivo, cristalino y sólido a temperatura ambiente.
 }
 
-itmname_pistolcharcoal_WR	{CarbÃ³n}
+itmname_pistolcharcoal_WR	{Carbón}
 itmdescr_pistolcharcoal_WR
 {
-El carbÃ³n vegeta se produce normalmente mediante la pirÃ³lisis lenta, el calentamiento de la madera en ausencia de oxÃ­geno.
+El carbón vegeta se produce normalmente mediante la pirólisis lenta, el calentamiento de la madera en ausencia de oxígeno.
 }
 
 itmname_pistolretort3		{Cera, grasa}
@@ -2400,7 +2400,7 @@ itmdescr_pistolretort3
 Cera de abeja y mantequilla. Muy grasienta.
 }
 
-itmname_pistolcalciumsack	{Carbonato cÃ¡lcico}
+itmname_pistolcalciumsack	{Carbonato cálcico}
 itmdescr_pistolcalciumsack
 {
 Producido a partir de caliza y agua.
@@ -2409,7 +2409,7 @@ Producido a partir de caliza y agua.
 //----------------- ALCHEMY ITEMS END -------------------------------------------------------------------------------------
 //----------------- ALCHEMY BOTTLES START ---------------------------------------------------------------------------------
 
-itmname_bladebottle_CE0		{Botella pequeÃ±a vacÃ­a}
+itmname_bladebottle_CE0		{Botella pequeña vacía}
 itmdescr_bladebottle_CE0
 {
  
@@ -2421,41 +2421,41 @@ itmdescr_bladebottle_CW1
 Una botella medio llena de agua.
 }
 
-itmname_bladebottle_CT1_sulf	{Ãcido sulfÃºrico}
+itmname_bladebottle_CT1_sulf	{Ácido sulfúrico}
 itmdescr_bladebottle_CT1_sulf
 {
-Conocido como aceite de vitriolo por los alquimistas. Un ingrediente base: otros Ã¡cidos pueden elaborarse a partir de este lÃ­quido. Â¡Cuidado al mezclarlo con agua!
+Conocido como aceite de vitriolo por los alquimistas. Un ingrediente base: otros ácidos pueden elaborarse a partir de este líquido. ¡Cuidado al mezclarlo con agua!
 }
 
-itmname_bladebottle_CT1_nitr	{Ãcido NÃ­trico}
+itmname_bladebottle_CT1_nitr	{Ácido Nítrico}
 itmdescr_bladebottle_CT1_nitr
 {
-Â¡Cuidado al mezclarlo con agua!
+¡Cuidado al mezclarlo con agua!
 }
 
-itmname_bladebottle_CT1_hydr	{Ãcido clorhÃ­drico}
+itmname_bladebottle_CT1_hydr	{Ácido clorhídrico}
 itmdescr_bladebottle_CT1_hydr
 {
-Â¡Cuidado al mezclarlo con agua!
+¡Cuidado al mezclarlo con agua!
 }
 
 itmname_bladebottle_CT1_hydrnitr	{Mezcla}
 itmdescr_bladebottle_CT1_hydrnitr
 {
-Una parte de Ã¡cido clorhÃ­drico y otra de Ã¡cido nÃ­trico.
+Una parte de ácido clorhídrico y otra de ácido nítrico.
 }
 
 
-itmname_bladebottle_CT2_sulf_w	{Ãcido sulfÃºrico diluido}
+itmname_bladebottle_CT2_sulf_w	{Ácido sulfúrico diluido}
 itmdescr_bladebottle_CT2_sulf_w
 {
-Ãcido sulfÃºrico diluido con agua. Disuelve muchos metales.
+Ácido sulfúrico diluido con agua. Disuelve muchos metales.
 }
 
 itmname_bladebottle_CT2_sulf_c	{Mezcla}
 itmdescr_bladebottle_CT2_sulf_c
 {
-Ãcido sulfÃºrico mezclado con salitre.
+Ácido sulfúrico mezclado con salitre.
 }
 
 itmname_bladebottle_CT2_nitr_w	{Aqua Fortis}
@@ -2464,16 +2464,16 @@ itmdescr_bladebottle_CT2_nitr_w
 Se usaba en alquimia como disolvente para disolver plata y otros muchos metles, con las notables excepciones del oro y del platino.
 }
 
-itmname_bladebottle_CT2_hydr	{Ãcido clorhÃ­drico}
+itmname_bladebottle_CT2_hydr	{Ácido clorhídrico}
 itmdescr_bladebottle_CT2_hydr
 {
-Â¡Cuidado al mezclarlo con agua!
+¡Cuidado al mezclarlo con agua!
 }
 
 itmname_bladebottle_CT2_hydrnitr	{Mezcla}
 itmdescr_bladebottle_CT2_hydrnitr
 {
-Una parte de Ã¡cido clorhÃ­drico y otra de Ã¡cido nÃ­trico.
+Una parte de ácido clorhídrico y otra de ácido nítrico.
 }
 
 itmname_bladebottle_CG2		{Mezcla}
@@ -2485,13 +2485,13 @@ Caparrosa mezclada con agua.
 itmname_bladebottle_CA2		{Aqua Regis}
 itmdescr_bladebottle_CA2
 {
-Se llamaba asÃ­ porque puede disolver los llamados "metales reales", o nobles, el oro y el platino.
+Se llamaba así porque puede disolver los llamados "metales reales", o nobles, el oro y el platino.
 }
 
 itmname_bladebottle_CP2		{Champagne}
 itmdescr_bladebottle_CP2
 {
-Â¿Importado de Francia o tal vez de Rusia?
+¿Importado de Francia o tal vez de Rusia?
 }
 
 itmname_bladebottle_CB1		{Alcohol}
@@ -2500,25 +2500,25 @@ itmdescr_bladebottle_CB1
 Alcohol casi puro que debe diluirse en agua antes de poder beberlo.
 }
 
-itmname_bladebottle_CB2		{Â¿Cognac?}
+itmname_bladebottle_CB2		{¿Cognac?}
 itmdescr_bladebottle_CB2
 {
-Si lo almacenas durante diez aÃ±os, tal vez pudieras llamarlo cognac. Por ahora tiene un sabor muy fuerte e... inusual.  
+Si lo almacenas durante diez años, tal vez pudieras llamarlo cognac. Por ahora tiene un sabor muy fuerte e... inusual.  
 }
 
-itmname_Cognac			{Â¿Cognac?}
+itmname_Cognac			{¿Cognac?}
 itmdescr_Cognac
 {
-Si lo almacenas durante diez aÃ±os, tal vez pudieras llamarlo cognac. Por ahora tiene un sabor muy fuerte e... inusual.  
+Si lo almacenas durante diez años, tal vez pudieras llamarlo cognac. Por ahora tiene un sabor muy fuerte e... inusual.  
 }
 
-itmname_bladebottle_CR2		{Vino de comuniÃ³n}
+itmname_bladebottle_CR2		{Vino de comunión}
 itmdescr_bladebottle_CR2
 {
 Parece vino tinto normal y corriente.
 }
 
-itmname_potionwine2		{Vino de comuniÃ³n}
+itmname_potionwine2		{Vino de comunión}
 itmdescr_potionwine2
 {
 Parece vino tinto normal y corriente.
@@ -2526,7 +2526,7 @@ Parece vino tinto normal y corriente.
 
 //Q2
 
-itmname_bladebottle_BE0		{Gran botella vacÃ­a}
+itmname_bladebottle_BE0		{Gran botella vacía}
 itmdescr_bladebottle_BE0
 {
  
@@ -2535,7 +2535,7 @@ itmdescr_bladebottle_BE0
 itmname_bladebottle_BTc_hydr	{Mezcla 1}
 itmdescr_bladebottle_BTc_hydr
 {
-Sal y Ã¡cido sulfÃºrico.
+Sal y ácido sulfúrico.
 }
 
 itmname_bladebottle_CV1_ss	{Mezcla 2}
@@ -2547,25 +2547,25 @@ Sulfato de sodio.
 itmname_bladebottle_BG2		{Mezcla 3}
 itmdescr_bladebottle_BG2
 {
-Sulfato de sodio, carbonato cÃ¡lcico y carbÃ³n.
+Sulfato de sodio, carbonato cálcico y carbón.
 }
 
 itmname_bladebottle_CV2		{Mezcla 4}
 itmdescr_bladebottle_CV2
 {
-Carbonato sÃ³dico y sulfuro de calcio.
+Carbonato sódico y sulfuro de calcio.
 }
 
 itmname_bladebottle_BTc_mix3	{Mezcla 5}
 itmdescr_bladebottle_BTc_mix3
 {
-Carbonato sÃ³dico y sulfuro de calcio y agua.
+Carbonato sódico y sulfuro de calcio y agua.
 }
 
 itmname_bladebottle_CV1_sc	{Mezcla 6}
 itmdescr_bladebottle_CV1_sc
 {
-Carbonato sÃ³dico.
+Carbonato sódico.
 }
 
 itmname_bladebottle_CG1		{Caliza molida}
@@ -2577,22 +2577,22 @@ itmdescr_bladebottle_CG1
 itmname_bladebottle_BY2_mix7	{Mezcla 7}
 itmdescr_bladebottle_BY2_mix7
 {
-Azufre, sal de amoniaco, Ã³xido de calcio y agua.
+Azufre, sal de amoniaco, óxido de calcio y agua.
 }
 
 itmname_bladebottle_BY1_mix7	{Mezcla 7}
 itmdescr_bladebottle_BY1_mix7
 {
-Azufre, sal de amoniaco, Ã³xido de calcio y agua.
+Azufre, sal de amoniaco, óxido de calcio y agua.
 }
 
-itmname_bladebottle_CV1_cao	{Ã“xido de calcio}
+itmname_bladebottle_CV1_cao	{Óxido de calcio}
 itmdescr_bladebottle_CV1_cao
 {
 
 }
 
-itmname_bladebottle_CV1_NH4Cl	{Sal de AmonÃ­aco}
+itmname_bladebottle_CV1_NH4Cl	{Sal de Amoníaco}
 itmdescr_bladebottle_CV1_NH4Cl
 {
 Cloruro de amonio
@@ -2619,19 +2619,19 @@ itmdescr_bladebottle_BS1_LH
 itmname_bladebottle_BY2_mix9	{Mezcla 9}
 itmdescr_bladebottle_BY2_mix9
 {
-Azufre, carbonato sÃ³dico, Ã³xido de calcio y antimonio.
+Azufre, carbonato sódico, óxido de calcio y antimonio.
 }
 
 itmname_bladebottle_CB1_mix9	{Mezcla 10}
 itmdescr_bladebottle_CB1_mix9
 {
-Azufre seco, carbonato sÃ³dico, Ã³xido de calcio y antimonio.  
+Azufre seco, carbonato sódico, óxido de calcio y antimonio.  
 }
 
 itmname_bladebottle_CB2_mix9	{Mezcla 10}
 itmdescr_bladebottle_CB2_mix9
 {
-Azufre seco, carbonato sÃ³dico, Ã³xido de calcio y antimonio.  
+Azufre seco, carbonato sódico, óxido de calcio y antimonio.  
 }
 
 itmname_bladebottle_CC2_bps	{Pulvis Solaris negro}
@@ -2667,16 +2667,16 @@ itmdescr_bladebottle_CQ1
 itmname_bladebottle_CT2_mix11	{Mezcla 11}
 itmdescr_bladebottle_CT2_mix11
 {
-Mercurio y Ã¡cido nÃ­trico.
+Mercurio y ácido nítrico.
 }
 
 itmname_bladebottle_CA2_mix11	{Mezcla 12}
 itmdescr_bladebottle_CA2_mix11
 {
-Ã“xido de mercurio y mÃ¡s.
+Óxido de mercurio y más.
 }
 
-itmname_bladebottle_CR1		{Ã“xido de mercurio}
+itmname_bladebottle_CR1		{Óxido de mercurio}
 itmdescr_bladebottle_CR1
 {
 
@@ -2691,7 +2691,7 @@ itmdescr_bladebottle_CR2_rps
 itmname_bladebottle_BAU		{Piedra filosofal}
 itmdescr_bladebottle_BAU
 {
-Â¿De verdad?
+¿De verdad?
 }
 
 //----------------- ALCHEMY BOTTLES END -----------------------------------------------------------------------------------
@@ -2706,20 +2706,20 @@ Un gran tricornio que apesta a mechas quemadas.
 itmname_BB_hatB			{Sombrero}
 itmdescr_BB_hatB
 {
-No hay mucho que ver aquÃ­... Â¿o sÃ­? 
+No hay mucho que ver aquí... ¿o sí? 
 }
 
 itmname_BB_hatC			{Sombrero}
 itmdescr_BB_hatC
 {
-Â¡Ja! TenÃ­a una llave escondida dentro.
+¡Ja! Tenía una llave escondida dentro.
 }
 
 itmname_BB_hatA2		{Sombrero}
 itmdescr_BB_hatA2
 {
 Un gran tricornio que apesta a mechas quemadas.
-Pero tengo que probÃ¡rmelo de todos modos.
+Pero tengo que probármelo de todos modos.
 }
 
 itmname_BB_key			{Llave}
@@ -2734,19 +2734,19 @@ La llave de Teach. Debe ser importante para tomarse tantas molestias en esconder
 itmname_bandages_trousersX	{Vendas y pantalones}
 itmdescr_bandages_trousersX
 {
-Vendas, Â¡justo lo que necesito! Parece que hay algo en el bolsillo de los pantalones. 
+Vendas, ¡justo lo que necesito! Parece que hay algo en el bolsillo de los pantalones. 
 }
 
 itmname_bandages_trousersQ	{Vendas y pantalones}
 itmdescr_bandages_trousersQ
 {
-Primero tengo que vendar la herida, luego me probarÃ© los pantalones desgastados.
+Primero tengo que vendar la herida, luego me probaré los pantalones desgastados.
 }
 
 itmname_shirt_shoes		{Camisa y zapatos}
 itmdescr_shirt_shoes
 {
-Los zapatos estÃ¡n bien, Â¡pero la camisa...!
+Los zapatos están bien, ¡pero la camisa...!
 }
 
 itmname_socks_sewing		{Equipo de costura y un par de clacetines}
@@ -2758,13 +2758,13 @@ Tal vez ahora pueda arreglar mi vieja camisa. Me gustan los calcetines azules.
 itmname_waistcoat		{Chaleco}
 itmdescr_waistcoat
 {
-El cahaleco me recuerda a uno que solÃ­a usar antes de que me robaran.
+El cahaleco me recuerda a uno que solía usar antes de que me robaran.
 }
 
 itmname_sash			{Faja}
 itmdescr_sash
 {
-SÃ­, sÃ­, sÃ­. Â¡Una faja roja para un capitÃ¡n pirata!
+Sí, sí, sí. ¡Una faja roja para un capitán pirata!
 }
 
 
@@ -2774,13 +2774,13 @@ SÃ­, sÃ­, sÃ­. Â¡Una faja roja para un capitÃ¡n pirata!
 itmname_tankard			{Jarra}
 itmdescr_tankard
 {
-Una gran jarra de estaÃ±o, Â¿puede que valga algÃºn dinero? 
+Una gran jarra de estaño, ¿puede que valga algún dinero? 
 }
 
 itmname_plate			{Bandeja}
 itmdescr_plate
 {
-Porcelana azul importada por la CompaÃ±Ã­a de las Indias Orientales. 
+Porcelana azul importada por la Compañía de las Indias Orientales. 
 }
 
 itmname_copper_cauldron		{Caldera}
@@ -2792,37 +2792,37 @@ Una pesada caldera de cobre.
 itmname_fish			{Pez}
 itmdescr_fish
 {
-Puede que comer pescado sea bueno para el cerebro, pero la tripulaciÃ³n no tiene buena opiniÃ³n de un capitÃ¡n pescadero.
+Puede que comer pescado sea bueno para el cerebro, pero la tripulación no tiene buena opinión de un capitán pescadero.
 }
 
-itmname_cannonballs		{Balas de caÃ±Ã³n}
+itmname_cannonballs		{Balas de cañón}
 itmdescr_cannonballs
 {
-Un juego de balas de caÃ±Ã³n, Â¿mÃ¡s pesadas de lo que imaginabas?
+Un juego de balas de cañón, ¿más pesadas de lo que imaginabas?
 }
 
 itmname_glasses			{Anteojos}
 itmdescr_glasses
 {
-Un par de gafas, desgastadas pero de calidad. Espero que Selkirk les encuentre algÃºn uso. 
+Un par de gafas, desgastadas pero de calidad. Espero que Selkirk les encuentre algún uso. 
 }
 
 itmname_chain			{Cadena y grilletes}
 itmdescr_chain
 {
-El equipo bÃ¡sico de un preso. Intento encasquetÃ¡rselos a cualquiera en la armerÃ­a...
+El equipo básico de un preso. Intento encasquetárselos a cualquiera en la armería...
 }
 
 itmname_corkscrews		{Sacacorchos}
 itmdescr_corkscrews
 {
-Un juego de sacacorchos para botellas de distintos tamaÃ±os. Â¿PodrÃ­an ser Ãºtiles para otra cosa? 
+Un juego de sacacorchos para botellas de distintos tamaños. ¿Podrían ser útiles para otra cosa? 
 }
 
-itmname_emptysack		{Saco vacÃ­o}
+itmname_emptysack		{Saco vacío}
 itmdescr_emptysack
 {
-Un viejo saco usado para transportar caÃ±a de azÃºcar.
+Un viejo saco usado para transportar caña de azúcar.
 }
 
 itmname_glue			{Pegamento}
@@ -2834,7 +2834,7 @@ Pegamento normal para papeles.
 itmname_blue_uniform		{Uniforme de oficial}
 itmdescr_blue_uniform
 {
-Una casaca azul de oficial al estilo de Woodes Rogers. Â¿Acaso pone a sus oficiales bajo custodia? 
+Una casaca azul de oficial al estilo de Woodes Rogers. ¿Acaso pone a sus oficiales bajo custodia? 
 }
 
 itmname_elevator_ropes		{Cuerdas largas}
@@ -2852,13 +2852,13 @@ Una cuerda muy larga y fuerte.
 itmname_bladelever		{Palanca}
 itmdescr_bladelever
 {
-Ya sÃ© dÃ³nde deberÃ­a colocar estas palancas.
+Ya sé dónde debería colocar estas palancas.
 }
 
 itmname_bladelever3		{Palanca}
 itmdescr_bladelever3
 {
-SÃ© dÃ³nde hay que colocar esta palanca. 
+Sé dónde hay que colocar esta palanca. 
 }
 
 itmname_bladewood	{Madera}
@@ -2870,43 +2870,43 @@ Algo de madera seca del bosque tropical.
 itmname_bladebarrel	{Barril de ron}
 itmdescr_bladebarrel
 {
-Un pequeÃ±o barril lleno del mejor ron del Caribe, destilado por un experto (hrm).
+Un pequeño barril lleno del mejor ron del Caribe, destilado por un experto (hrm).
 }
 
-itmname_bladebarrel2	{Barril vacÃ­o}
+itmname_bladebarrel2	{Barril vacío}
 itmdescr_bladebarrel2
 {
-Un pequeÃ±o barril para llenarlo de ron.
+Un pequeño barril para llenarlo de ron.
 }
 
-itmname_bladebarrel3	{Barril vacÃ­o}
+itmname_bladebarrel3	{Barril vacío}
 itmdescr_bladebarrel3
 {
 Un barril grande para vino.
 }
 
-itmname_bladebarrel_gpS		{Barril de pÃ³lvora}
+itmname_bladebarrel_gpS		{Barril de pólvora}
 itmdescr_bladebarrel_gpS
 {
-PÃ³lvora estÃ¡ndar.
+Pólvora estándar.
 }
 
-itmname_pistolbarrel_gpS	{Barril de pÃ³lvora}
+itmname_pistolbarrel_gpS	{Barril de pólvora}
 itmdescr_pistolbarrel_gpS
 {
-PÃ³lvora estÃ¡ndar.
+Pólvora estándar.
 }
 
 itmname_bladebucket	{Cubo de agua}
 itmdescr_bladebucket
 {
-Un cubo lleno de agua frÃ­a. 
+Un cubo lleno de agua fría. 
 }
 
 itmname_pistolbucket	{Cubo de agua}
 itmdescr_pistolbucket
 {
-PodrÃ­a usarse como refrigerante. 
+Podría usarse como refrigerante. 
 }
 
 itmname_pistoltar	{Cubo de brea}
@@ -2918,13 +2918,13 @@ Un pesado cubo lleno de brea para calafatear el casco.
 itmname_bladebottlew4	{Botella de melaza}
 itmdescr_bladebottlew4
 {
-No desperdicies el lÃ­quido usando la botella como arma. 
+No desperdicies el líquido usando la botella como arma. 
 }
 
 itmname_pistolbottlew4	{Botella de melaza}
 itmdescr_pistolbottlew4
 {
-En este clima, la fermentaciÃ³n empieza muy rÃ¡pido. DestÃ­lala y ya lo tienes: Â¡RON!
+En este clima, la fermentación empieza muy rápido. Destílala y ya lo tienes: ¡RON!
 }
 
 itmname_bladebottlew5	{Botella de vino}
@@ -2936,22 +2936,22 @@ Un vino de calidad desconocida...
 itmname_pistolbottlew5	{Botella de vino}
 itmdescr_pistolbottlew5
 {
-... pero el peso es lo Ãºnico que importa.
+... pero el peso es lo único que importa.
 }
 
 itmname_bladesack	{Saco lleno de libros}
 itmdescr_bladesack
 {
-Una colecciÃ³n de libros (de poesÃ­a). Â¿De verdad los necesito?
+Una colección de libros (de poesía). ¿De verdad los necesito?
 }
 
 itmname_bladeskull1	{Calavera}
 itmdescr_bladeskull1
 {
-Â¿De quÃ© puede servir este objeto tan macabro? 
+¿De qué puede servir este objeto tan macabro? 
 }
 
-itmname_bladeviolin		{ViolÃ­n}
+itmname_bladeviolin		{Violín}
 itmdescr_bladeviolin
 {
 Una excelente obra realizada en Cremona, Italia, por el legendario Antonius Stratocastrius.  
@@ -2963,22 +2963,22 @@ itmdescr_bladedefense
 Esta tabla parece a prueba de balas.
 }
 
-itmname_bladepinion_small	{PiÃ±Ã³n pequeÃ±o}
+itmname_bladepinion_small	{Piñón pequeño}
 itmdescr_bladepinion_small
 {
-Un pequeÃ±o piÃ±Ã³n para algÃºn tipo de mecanismo, Â¿pero dÃ³nde?
+Un pequeño piñón para algún tipo de mecanismo, ¿pero dónde?
 }
 
-itmname_bladepinion_large	{PiÃ±Ã³n grande}
+itmname_bladepinion_large	{Piñón grande}
 itmdescr_bladepinion_large
 {
-Un gran piÃ±Ã³n para algÃºn tipo de mecanismo, Â¿pero dÃ³nde?
+Un gran piñón para algún tipo de mecanismo, ¿pero dónde?
 }
 
 itmname_pistolwheel		{Rueda}
 itmdescr_pistolwheel
 {
-Un gran objeto de latÃ³n - Â¿una rueda de timÃ³n, tal vez?
+Un gran objeto de latón - ¿una rueda de timón, tal vez?
 }
 
 itmname_bladecompasses		{Par de compases}
@@ -3008,7 +3008,7 @@ Una tabla pesada.
 itmname_pistolhand		{Mi mano izquierda}
 itmdescr_pistolhand
 {
-Tras aÃ±os explorando el Caribe, por fin me di cuenta de que podÃ­a usar mi mano izquierda para coger cosas. 
+Tras años explorando el Caribe, por fin me di cuenta de que podía usar mi mano izquierda para coger cosas. 
 }
 
 itmname_pistollog		{Tronco}
@@ -3023,7 +3023,7 @@ itmdescr_corkscrew
 Un sacacorchos normal y corriente.
 }
 
-itmname_bladekeyring		{ColecciÃ³n de llaves}
+itmname_bladekeyring		{Colección de llaves}
 itmdescr_bladekeyring
 {
 Nueve llaves en una argolla. 
@@ -3031,9 +3031,9 @@ Nueve llaves en una argolla.
 
 itmname_Malta_icon		{Icono}
 itmname_Malta_outfit		{Traje}
-itmname_Malta_poison		{Â¿Medicinas?}
+itmname_Malta_poison		{¿Medicinas?}
 itmname_Malta_syringe		{Jeringa, vendas}
-itmname_Malta_medkit		{PequeÃ±a botica}
+itmname_Malta_medkit		{Pequeña botica}
 itmname_Malta_statue		{Busto}
 itmname_Malta_box		{Relicario}
 itmname_Malta_relic		{Reliquia}
@@ -3043,13 +3043,13 @@ itmname_Malta_censer		{Incensario}
 itmname_switch_button		{?}
 itmdescr_switch_button
 {
-Â¿QuÃ© es esto? Un botÃ³n en una baldosa rectangular con algunos cordeles de colores.
+¿Qué es esto? Un botón en una baldosa rectangular con algunos cordeles de colores.
 }
 
-itmname_blade_gp_dry		{MontÃ³n de pÃ³lvora}
+itmname_blade_gp_dry		{Montón de pólvora}
 itmdescr_blade_gp_dry
 {
-La pÃ³lvora se ha mojado y al secarse se ha solidificado en un gran bloque. Â¿CÃ³mo se supone que voy a partirlo?
+La pólvora se ha mojado y al secarse se ha solidificado en un gran bloque. ¿Cómo se supone que voy a partirlo?
 }
 
 //--------------- OTHER ITEMS END --------------------------------------------------------------------------------------

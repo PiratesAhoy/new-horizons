@@ -11,7 +11,7 @@ QUEST_MESSAGE10 {To a pirate who has no mercy in his}
 QUEST_MESSAGE11 {wicked heart we give a secret reward!}
 QUEST_MESSAGE12 {Sorry, you have too many officers! Fire one or more of your officers and try again!}
 
-Address_Form_Spa {SeÃ±or}
+Address_Form_Spa {Señor}
 Address_Form_Fra {Monsieur}
 Address_Form_Eng {Sir}
 Address_Form_Por {Senhor}
@@ -40,8 +40,8 @@ Rumour_7 {I heard that the Redmond Governor put a merchant in jail over a small 
 
 Falaise De Fleur {Falaise De Fleur}
 Isla Muelle {Isla Muelle}
-Conceicao {ConceiÃ§Ã£o}
-ConceiÃ§Ã£o {ConceiÃ§Ã£o}
+Conceicao {Conceição}
+Conceição {Conceição}
 Douwesen {Douwesen}
 Redmond {Redmond}
 Oxbay {Oxbay}
@@ -49,8 +49,8 @@ Greenford {Greenford}
 Grand Cayman{Grand Cayman}
 Santo Domingo{Santo Domingo}
 Port au Prince{Port au Prince}
-Pointe Ã  Pitre{Pointe Ã  Pitre}
-Pointe a Pitre{Pointe Ã  Pitre}
+Pointe à Pitre{Pointe à Pitre}
+Pointe a Pitre{Pointe à Pitre}
 Havana{Havana}
 Marigot{Marigot}
 Philipsburg{Philipsburg}

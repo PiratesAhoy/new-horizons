@@ -1,5 +1,5 @@
 string DLG_TEXT[12] = {
-"You were wise to surrender, Capit√°n.",
+"You were wise to surrender, Capit·n.",
 "I didn't have much choice. What will happen to us now?",
 "For you as captain, the death penalty is inevitable. But you may die knowing you have saved your crew's lives. They probably became pirates as they could find no other work. Spain will now give them plenty of work.",
 "For you as captain, the death penalty is inevitable. But you may die knowing you have saved your crew's lives. They probably became smugglers as they could find no other work. Spain will now give them plenty of work.",

@@ -247,7 +247,7 @@ bool ChangeCharacterAddressGroup(ref character, string location_id, string group
 	PostEvent("removeCondition", 2000, "i", character);
 	if(lindex < 0)
 	{
-		//ÐŸÐµÑ€ÐµÑ…Ð¾Ð´Ð¸Ð¼ Ð² Ð¼Ð¾Ñ€ÑÐºÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ
+		//Ïåðåõîäèì â ìîðñêóþ ÷àñòü
 		LogoffCharacter(character);
 		lindex = FindIsland(location_id);
 		if(location_id != "none" && lindex < 0) // KK
@@ -260,7 +260,7 @@ bool ChangeCharacterAddressGroup(ref character, string location_id, string group
 		character.location.locator = locator;
 		return true;
 	}
-	//Ð•ÑÐ»Ð¸ Ð¿ÐµÑ€ÐµÐ¼ÐµÑ‰Ð°ÐµÐ¼ÑÑ Ð² Ð½ÑƒÑ‚Ñ€Ð¸ Ð¾Ð´Ð½Ð¾Ð¹ Ð»Ð¾ÐºÐ°Ñ†Ð¸Ð¸, Ñ‚Ð¾ Ð¿Ñ€Ð¾ÑÑ‚Ð¾ Ñ‚ÐµÐ»ÐµÐ¿Ð¾Ñ€Ñ‚Ð¸Ð¼ÑÑ
+	//Åñëè ïåðåìåùàåìñÿ â íóòðè îäíîé ëîêàöèè, òî ïðîñòî òåëåïîðòèìñÿ
 	if(CheckAttribute(character,"location") && location_id == character.location) // NK add checkattr 05-04-09
 	{
 		TeleportCharacterToLocator(character, group, locator);
@@ -269,14 +269,14 @@ bool ChangeCharacterAddressGroup(ref character, string location_id, string group
 		character.location.locator = locator;
 		return true;
 	}
-	//Ð•ÑÐ»Ð¸ Ð·Ð°Ð³Ñ€ÑƒÐ¶ÐµÐ½Ð½Ñ‹, Ñ‚Ð¾ Ð²Ñ‹Ð¹Ð´ÐµÐ¼ Ð¸Ð· Ð»Ð¾ÐºÐ°Ñ†Ð¸Ð¸
+	//Åñëè çàãðóæåííû, òî âûéäåì èç ëîêàöèè
 	LogoffCharacter(character);
-	//ÐŸÐµÑ€ÐµÐ¼ÐµÑ‰Ð°ÐµÐ¼ÑÑ Ð² Ð´Ñ€ÑƒÐ³ÑƒÑŽ Ð»Ð¾ÐºÐ°Ñ†Ð¸ÑŽ
+	//Ïåðåìåùàåìñÿ â äðóãóþ ëîêàöèþ
 	string oldLocation = "none"; if(CheckAttribute(character, "location")) oldLocation = character.location; // NK add checkattr 05-04-09
 	character.location = location_id;
 	character.location.group = group;
 	character.location.locator = locator;
-	//Ð•ÑÐ»Ð¸ Ð»Ð¾ÐºÐ°Ñ†Ð¸Ñ Ð·Ð°Ð³Ñ€ÑƒÐ¶ÐµÐ½Ð½Ð°, Ñ‚Ð¾ Ð»Ð¾Ð³Ð¸Ð½ÐµÐ¼ÑÑ
+	//Åñëè ëîêàöèÿ çàãðóæåííà, òî ëîãèíåìñÿ
 	if(IsEntity(&Locations[lindex]))
 	{
 		LoginCharacter(character, Locations[lindex].id);

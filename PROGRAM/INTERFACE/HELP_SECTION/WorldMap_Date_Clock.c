@@ -6,10 +6,10 @@ void WorldMap_Date_Clock_InitHelp()
 	string sectName = GetEventData();
 	if(sectName!="WorldMap_Date_Clock") return;
 
-	// Р—Р°РїРѕР»РЅРёРј СЌРєСЂР°РЅ СЃРѕРґРµСЂР¶РёРјС‹Рј
-		// РєР°СЂРёРЅРєРё
+	// Заполним экран содержимым
+		// каринки
 	SetNewPicture("HELPPICTURE","interfaces\helppictures\WM_DateClock.tga");
-		// СЃС‚СЂРѕРєРё
+		// строки
 	int strFileID = LanguageOpenFile("helpsections\WorldMap_ClockWeather.txt");
 	SetFormatedText("TEXTWINDOW",LanguageConvertString(strFileID,"Clock_Weather_info"));
 	GameInterface.strings.HelpName = LanguageConvertString(strFileID,"Clock_Weather_title");
@@ -21,7 +21,7 @@ void WorldMap_Date_Clock_ResetHelp()
 	string sectName = GetEventData();
 	if(sectName!="WorldMap_Date_Clock") return;
 
-	// РЈРґР°Р»РёРј СЃ СЌСЂР°РЅР° РІСЃРµ
+	// Удалим с эрана все
 	SetNewPicture("HELPPICTURE","");
 	SetFormatedText("TEXTWINDOW","");
 }

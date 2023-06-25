@@ -3,10 +3,10 @@
 #define LAI_TMPL_GOTO	"goto"
 
 /*
-	Р’РѕР·РјРѕР¶РЅС‹Рµ СЃРѕСЃС‚РѕСЏРЅРёСЏ:
-		"stay"		РѕР¶РёРґР°РµС‚ Р·Р°РґР°РЅРёСЏ
-		"goto"		РёРґС‘С‚ Рє Р»РѕРєР°С‚РѕСЂСѓ
-		"falure"	Р·Р°РґР°С‡Р° РЅРµРІС‹РїРѕР»РЅРёРјР°
+	Возможные состояния:
+		"stay"		ожидает задания
+		"goto"		идёт к локатору
+		"falure"	задача невыполнима
 */
 
 bool LAi_tmpl_goto_InitTemplate(aref chr)
@@ -60,7 +60,7 @@ bool LAi_tmpl_goto_InitTemplate(aref chr)
 	return true;
 }
 
-//РќР°РїСЂР°РІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р·Р°РґР°РЅРЅС‹Р№ Р»РѕРєР°С‚РѕСЂ
+//Направить персонажа в заданный локатор
 void LAi_tmpl_goto_SetLocator(aref chr, string group, string locator, float timeout)
 {
 	chr.chr_ai.tmpl.state = "goto";
@@ -84,7 +84,7 @@ bool LAi_tmpl_goto_IsWait(aref chr)
 	return false;
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование шаблона персонажа
 void LAi_tmpl_goto_CharacterUpdate(aref chr, float dltTime)
 {
 	aref tmpl;
@@ -95,13 +95,13 @@ void LAi_tmpl_goto_CharacterUpdate(aref chr, float dltTime)
 		float time = stf(tmpl.wait);
 		if(time > 0.0)
 		{
-			//РџРµСЂСЃРѕРЅР°Р¶ Р¶РґС‘С‚
+			//Персонаж ждёт
 			if(time > 1.0)
 			{
-				//Р•С‰С‘ Р¶РґС‘Рј
+				//Ещё ждём
 				tmpl.wait = time - dltTime;
 			}else{
-				//РџРѕСЂР° РёРґС‚Рё
+				//Пора идти
 				tmpl.wait = "0";
 				LAi_tmpl_goto_Restart(chr);
 			}
@@ -113,7 +113,7 @@ void LAi_tmpl_goto_CharacterUpdate(aref chr, float dltTime)
 			tmpl.time = time;
 			if(time >= timeout)
 			{
-				//Р­РєСЃС‚СЂРµРЅРЅРѕ РїРµСЂРµРЅРѕСЃРёРј РїРµСЂСЃРѕРЅР°Р¶Р°
+				//Экстренно переносим персонажа
 				Trace("Template <goto> -> timeout for chr.id = " + chr.id);
 				if(LAi_tmpl_goto_Teleport(chr))
 				{
@@ -127,13 +127,13 @@ void LAi_tmpl_goto_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  go to point
+//Персонаж выполнил команду  go to point
 void LAi_tmpl_goto_EndGoToPoint(aref chr)
 {
 	LAi_tmpl_goto_Complite(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  go to point
+//Персонаж провалил команду  go to point
 void LAi_tmpl_goto_FailureGoToPoint(aref chr)
 {
 	Trace("Template <goto> -> failure for chr.id = " + chr.id);
@@ -147,120 +147,120 @@ void LAi_tmpl_goto_FailureGoToPoint(aref chr)
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  run to point
+//Персонаж выполнил команду  run to point
 void LAi_tmpl_goto_EndRunToPoint(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  run to point
+//Персонаж провалил команду  run to point
 void LAi_tmpl_goto_FailureRunToPoint(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅРµ РјРѕР¶РµС‚ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ С‚РѕС‡РєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ
+//Персонаж не может добраться до точки назначения
 void LAi_tmpl_goto_BusyPos(aref chr, float x, float y, float z)
 {
 	if(chr.chr_ai.tmpl.state == "goto")
 	{
-		//РџСЂРѕСЃРёРј РѕСЃРІРѕР±РѕРґРёС‚СЊ Р»РѕРєР°С‚РѕСЂ
+		//Просим освободить локатор
 		LAi_Character_FreeLocator(chr, chr.chr_ai.tmpl.group, chr.chr_ai.tmpl.locator);
-		//Р–РґС‘Рј
+		//Ждём
 		chr.chr_ai.tmpl.wait = 3.0 + rand(4)*0.5;
 		SetCharacterTask_Stay(chr);
 	}
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
+//Персонаж начал перемещение за другим
 void LAi_tmpl_goto_FollowGo(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж начал дошёл до другого персонажа
 void LAi_tmpl_goto_FollowStay(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  follow character
+//Персонаж провалил команду  follow character
 void LAi_tmpl_goto_FailureFollow(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
+//Персонаж начал перемещение за другим
 void LAi_tmpl_goto_FightGo(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж начал дошёл до другого персонажа
 void LAi_tmpl_goto_FightStay(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  Fight
+//Персонаж провалил команду  Fight
 void LAi_tmpl_goto_FailureFight(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
-//РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРµР»СЏС‚СЊ
+//Можно ли стрелять
 bool LAi_tmpl_goto_IsFire(aref chr)
 {	
 	return false;
 }
 
-//РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЂСѓР¶РёРµ
+//Можно ли использовать оружие
 bool LAi_tmpl_goto_IsFight(aref chr)
 {
 	return false;
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  escape
+//Персонаж выполнил команду  escape
 void LAi_tmpl_goto_EndEscape(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ СЃРєРѕР»СЊР·РёС‚ РІРґРѕР»СЊ РїР°С‚С‡Р°
+//Персонаж скользит вдоль патча
 void LAi_tmpl_goto_EscapeSlide(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  escape
+//Персонаж провалил команду  escape
 void LAi_tmpl_goto_FailureEscape(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ С‚РѕР»РєР°РµС‚СЃСЏ СЃ РґСЂСѓРіРёРјРё РїРµСЂСЃРѕРЅР°Р¶Р°РјРё
+//Персонаж толкается с другими персонажами
 void LAi_tmpl_goto_ColThreshold(aref chr)
 {
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р·Р°РєРѕРЅС‡РёР» РїСЂРѕРёРіСЂС‹РІР°С‚СЊ Р°РЅРёРјР°С†РёСЋ
+//Персонаж закончил проигрывать анимацию
 void LAi_tmpl_goto_EndAction(aref chr)
 {
 	LAi_tmpl_goto_Restart(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶Р° РїСЂРѕСЃСЏС‚ РѕСЃРІРѕР±РѕРґРёС‚СЊ РјРµСЃС‚Рѕ
+//Персонажа просят освободить место
 void LAi_tmpl_goto_FreePos(aref chr, aref who)
 {
 }
 
 
-//РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚СЊ Р·Р°РґР°С‡Сѓ
+//Перезапустить задачу
 void LAi_tmpl_goto_Restart(aref chr)
 {
 	if(chr.chr_ai.tmpl.state == "goto")
@@ -300,7 +300,7 @@ bool LAi_tmpl_goto_Teleport(aref chr)
 	return false;
 }
 
-//Р—Р°РІРµСЂС€РёС‚СЊ goto
+//Завершить goto
 void LAi_tmpl_goto_Complite(aref chr)
 {
 	if(LAi_IsInitedAI) SetCharacterTask_Stay(chr);

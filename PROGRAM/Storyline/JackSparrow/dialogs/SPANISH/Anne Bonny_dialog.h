@@ -1,6 +1,6 @@
 string DLG_TEXT[22] = {
 "Necesitas hablar con Jack.",
-"Â¡Oh! O.K.",
+"¡Oh! O.K.",
 "",
 "",
 "",

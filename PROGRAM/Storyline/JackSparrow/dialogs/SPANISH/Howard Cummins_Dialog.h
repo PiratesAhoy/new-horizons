@@ -1,6 +1,6 @@
 string DLG_TEXT[46] = { 
-"Buenos dÃ­as, CapitÃ¡n.",
-"Buenos dÃ­as a usted seÃ±or.",
+"Buenos días, Capitán.",
+"Buenos días a usted señor.",
 ".",
 ".",
 ".",

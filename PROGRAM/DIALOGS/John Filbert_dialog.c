@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
 			Dialog.defAni = "Gov_Dialog_1";
 			Dialog.defCam = "1";
@@ -185,7 +185,7 @@ void ProcessDialogEvent()
 			if(npchar.quest.trade_date != lastspeak_date)
 			{
 				npchar.quest.trade_date = lastspeak_date;
-				//РїСЂРѕРІРµСЂРєР° РІСЂР°Р¶РґРµР±РЅРѕСЃС‚Рё РЅР°Рј СЃС‚СЂР°РЅС‹ С‚РѕСЂРіРѕРІС†Р°
+				//проверка враждебности нам страны торговца
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
 					Preprocessor_Add("nation_desc", XI_ConvertString(GetNationDescByType(sti(NPChar.nation))));
@@ -204,12 +204,12 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						//РїСЂРѕРІРµСЂСЏРµРј РёРјРїРѕСЂС‚/СЌРєСЃРїРѕСЂС‚
+						//проверяем импорт/экспорт
 						float fprice, tprice;
 						// NK redo this to take price into account 05-05-12 -->
 						int iTradeGoods = GenerateGoodForTrade(sti(NPChar.nation), iTradeNation, &fprice, &tprice); // KK
 						string sNation = GenerateTradeQuest(pchar, iTradeNation, iTradeGoods, fprice, tprice, true);// MAXIMUS: all was moved into MAXIMUS_Functions.c - returns translated string
-						//РїСЂРѕРІРµСЂСЏРµРј СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ (РїСЂРё СЌС‚РѕРј РґРѕР»Р¶РЅРѕ РІРјРµС‰Р°С‚СЊСЃСЏ РїРѕ РјРµРЅСЊС€РµР№ РјРµСЂРµ 100 РµРґРёРЅРёС† РІС‹Р±СЂР°РЅРЅРѕРіРѕ РіСЂСѓР·Р°
+						//проверяем свободное место (при этом должно вмещаться по меньшей мере 100 единиц выбранного груза
 						if (GetSquadronFreeSpace(pchar, iTradeGoods) < 100 || sNation=="")
 						{
 							dialog.text = DLG_TEXT[28];

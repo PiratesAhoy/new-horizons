@@ -4,7 +4,7 @@ void CreateUsurersCharacters(ref n)
 	ref ch;
 	makeref(ch, chobj);
 
-		//Р РѕСЃС‚РѕРІС‰РёРє РІ Р РµРґРјРѕРЅРґРµ
+		//Ростовщик в Редмонде
 	ch.old.name = "Robyn";
 	ch.old.lastname = "Corrick";
 	ch.name 	= TranslateString("", "Robyn");
@@ -169,7 +169,7 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
-	//Р РѕСЃС‚РѕРІС‰РёРє РІ РћРєСЃР±СЌРµ
+	//Ростовщик в Оксбэе
 	ch.old.name = "Diarmuid";
 	ch.old.lastname = "Sargent";
 	ch.name 	= TranslateString("", "Diarmuid");
@@ -202,7 +202,7 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
-		//Р РѕСЃС‚РѕРІС‰РёРє РІ Р“СЂРёРЅС„РѕСЂРґРµ
+		//Ростовщик в Гринфорде
 	ch.old.name = "Kermit";
 	ch.old.lastname = "Proudfoot";
 	ch.name 	= TranslateString("", "Kermit");
@@ -234,7 +234,7 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
-			//Р РѕСЃС‚РѕРІС‰РёРє РІ Р¤Р°Р»Рµ РґРµ Р¤Р»РµСЂ
+			//Ростовщик в Фале де Флер
 	ch.old.name = "Mercadier";
 	ch.old.lastname = "Nadeau";
 	ch.name 	= TranslateString("", "Mercadier");
@@ -267,7 +267,7 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
-			// Р РѕСЃС‚РѕРІС‰РёРє РІ РљРѕРЅСЃРµР№СЃР°Рѕ
+			// Ростовщик в Консейсао
 	ch.old.name = "Feliciano";
 	ch.old.lastname = "Pombal";
 	ch.name 	= TranslateString("", "Feliciano");
@@ -300,7 +300,7 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
-			//Р РѕСЃС‚РѕРІС‰РёРє РІ Р”СѓРІРµР·РµРЅРµ
+			//Ростовщик в Дувезене
 	ch.old.name = "Klaas";
 	ch.old.lastname = "Ramaalas";
 	ch.name 	= TranslateString("", "Klaas");
@@ -333,7 +333,7 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
-			// Р РѕСЃС‚РѕРІС‰РёРє РІ РСЃР»Р° РњСѓСЌР»СЊРµ
+			// Ростовщик в Исла Муэлье
 	ch.old.name = "Silvestre";
 	ch.old.lastname = "Nabarro";
 	ch.name 	= TranslateString("", "Silvestre");
@@ -366,7 +366,7 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
-			// Р РѕСЃС‚РѕРІС‰РёРє РІ РљРµР±СЂР°РґР°СЃ РљРѕСЃС‚РёР»Р»Р°СЃ
+			// Ростовщик в Кебрадас Костиллас
 	ch.old.name = "Vistremiro";
 	ch.old.lastname = "Monteiro";
 	ch.name 	= TranslateString("", "Vistremiro");
@@ -605,11 +605,11 @@ void CreateUsurersCharacters(ref n)
 	ch.greeting = "VOICE\" + LanguageGetLanguage() + "\Spa_m_b_001.wav";
 	AddGameCharacter(n, ch);
 
-//-----------------------------------РїСЂРµРґСЃС‚Р°РІРёС‚РµР»Рё РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚РѕРІ РІ С‚Р°РІРµСЂРЅР°С…-------------
-//-----------------------------------РїСЂРµРґСЃС‚Р°РІРёС‚РµР»Рё РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚РѕРІ РІ С‚Р°РІРµСЂРЅР°С…-------------
-//-----------------------------------РїСЂРµРґСЃС‚Р°РІРёС‚РµР»Рё РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚РѕРІ РІ С‚Р°РІРµСЂРЅР°С…-------------
+//-----------------------------------представители контрабандистов в тавернах-------------
+//-----------------------------------представители контрабандистов в тавернах-------------
+//-----------------------------------представители контрабандистов в тавернах-------------
 
-			// РќР° Р РµРґРјРѕРЅРґРµ
+			// На Редмонде
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -649,7 +649,7 @@ void CreateUsurersCharacters(ref n)
 	ch.greeting = "VOICE\" + LanguageGetLanguage() + "\Por_m_b_064.wav";
 	AddGameCharacter(n, ch);
 
-			// РќР° РћРєСЃР±СЌРµ
+			// На Оксбэе
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -689,7 +689,7 @@ void CreateUsurersCharacters(ref n)
 	ch.greeting = "VOICE\" + LanguageGetLanguage() + "\Por_m_b_064.wav";
 	AddGameCharacter(n, ch);
 
-			// Р’ Р“СЂРёРЅС„РѕСЂРґРµ
+			// В Гринфорде
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -729,7 +729,7 @@ void CreateUsurersCharacters(ref n)
 	ch.greeting = "VOICE\" + LanguageGetLanguage() + "\Por_m_b_064.wav";
 	AddGameCharacter(n, ch);
 
-			// РќР° Р¤Р°Р»Рµ Р”Рµ Р¤Р»РµСЂ
+			// На Фале Де Флер
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -769,7 +769,7 @@ void CreateUsurersCharacters(ref n)
 	ch.greeting = "VOICE\" + LanguageGetLanguage() + "\Por_m_b_064.wav";
 	AddGameCharacter(n, ch);
 
-			// РќР° Conceicao
+			// На Conceicao
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -809,7 +809,7 @@ void CreateUsurersCharacters(ref n)
 	ch.greeting = "VOICE\" + LanguageGetLanguage() + "\Por_m_b_064.wav";
 	AddGameCharacter(n, ch);
 
-			// РќР° Douwesen
+			// На Douwesen
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -849,7 +849,7 @@ void CreateUsurersCharacters(ref n)
 	ch.greeting = "VOICE\" + LanguageGetLanguage() + "\Por_m_b_064.wav";
 	AddGameCharacter(n, ch);
 
-			// РќР° Isla Muelle
+			// На Isla Muelle
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -889,7 +889,7 @@ void CreateUsurersCharacters(ref n)
 	ch.greeting = "VOICE\" + LanguageGetLanguage() + "\Por_m_b_064.wav";
 	AddGameCharacter(n, ch);
 	
-			// РќР° Pirate Settlement
+			// На Pirate Settlement
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -1563,11 +1563,11 @@ void CreateUsurersCharacters(ref n)
 	AddGameCharacter(n, ch);
 //<-- JRH
 
-//---------------------------РґРёРїР»РѕРјР°С‚С‹, РїСЂРёРјРёСЂСЏСЋС‰РёРµ РёРіСЂРѕРєР° СЃ СЂР°Р·РЅС‹РјРё СЃС‚СЂР°РЅР°РјРё-------------
-//---------------------------РґРёРїР»РѕРјР°С‚С‹, РїСЂРёРјРёСЂСЏСЋС‰РёРµ РёРіСЂРѕРєР° СЃ СЂР°Р·РЅС‹РјРё СЃС‚СЂР°РЅР°РјРё-------------
-//---------------------------РґРёРїР»РѕРјР°С‚С‹, РїСЂРёРјРёСЂСЏСЋС‰РёРµ РёРіСЂРѕРєР° СЃ СЂР°Р·РЅС‹РјРё СЃС‚СЂР°РЅР°РјРё-------------
+//---------------------------дипломаты, примиряющие игрока с разными странами-------------
+//---------------------------дипломаты, примиряющие игрока с разными странами-------------
+//---------------------------дипломаты, примиряющие игрока с разными странами-------------
 
-			// РќР° Quebradas Costillas
+			// На Quebradas Costillas
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -1607,7 +1607,7 @@ void CreateUsurersCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			// РќР° Conceicao
+			// На Conceicao
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -1647,7 +1647,7 @@ void CreateUsurersCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			// РќР° Douwesen
+			// На Douwesen
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";

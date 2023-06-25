@@ -7,7 +7,7 @@ void CreateOxbayCharacters(ref n)
 
 //Location: Oxbay Pier (an entrance to the town from the pier)
 
-		//Р‘Р°СЂС‚РѕР»РѕРјСЊСЋ РџР°СЂРґРЅРµСЂ - РњРµСЃС‚РЅС‹Р№ РєР°РїРёС‚Р°РЅ РєР°Р±РѕС‚Р°Р¶РЅРѕРіРѕ РїР»Р°РІР°РЅРёСЏ
+		//Бартоломью Парднер - Местный капитан каботажного плавания
 	ch.old.name = "Bartholomew";
 	ch.old.lastname = "Pardner";
 	ch.name 	= TranslateString("","Bartholomew");
@@ -40,7 +40,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			//РћР»РёРІРµСЂ Р‘Р»Р°РєСЃС‚РµСЂ - РјРµСЃС‚РЅС‹Р№ СЂС‹Р±Р°Рє Рё РїРµСЂРµРІРѕР·С‡РёРє
+			//Оливер Блакстер - местный рыбак и перевозчик
 	ch.old.name = "Olyver";
 	ch.old.lastname = "Blaxter";
 	ch.name 	= TranslateString("","Olyver");
@@ -73,7 +73,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -111,7 +111,7 @@ void CreateOxbayCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -225,7 +225,7 @@ void CreateOxbayCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
-			//Р‘РµР°С‚СЂРёСЃ Р­РїРїР»РіРµР№С‚
+			//Беатрис Эпплгейт
 	ch.old.name = "Beatrice";
 	ch.old.lastname = "Applegate";
 	ch.name 	= TranslateString("","Beatrice");
@@ -258,7 +258,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			//Р‘СЂРµРЅРЅР°РЅ Р­РїРїР»РіРµР№С‚
+			//Бреннан Эпплгейт
 	ch.old.name = "Brennan";
 	ch.old.lastname = "Applegate";
 	ch.name 	= TranslateString("","Brennan");
@@ -557,7 +557,7 @@ void CreateOxbayCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
-			//РњРѕР·РµСЃ Р‘Р»РёРЅРјР°РЅ
+			//Мозес Блинман
 	ch.old.name = "Moses";
 	ch.old.lastname = "Blinman";
 	ch.name 	= TranslateString("","Moses");
@@ -590,7 +590,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			//Р›Р°РІРёРЅРёСЏ РћСѓР»С‚
+			//Лавиния Оулт
 	ch.old.name = "Lavinia";
 	ch.old.lastname = "Ault";
 	ch.name 	= TranslateString("","Lavinia");
@@ -624,7 +624,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			//РџРёС‚РµСЂ Р”СЌС€РІСѓРґ
+			//Питер Дэшвуд
 	ch.old.name = "Peter";
 	ch.old.lastname = "Dashwood";
 	ch.name 	= TranslateString("","Peter");
@@ -658,7 +658,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			//Р¤Р»РѕСЂР° Р”РµР±РЅРё
+			//Флора Дебни
 	ch.old.name = "Flora";
 	ch.old.lastname = "Debney";
 	ch.name 	= TranslateString("","Flora");
@@ -2346,7 +2346,7 @@ void CreateOxbayCharacters(ref n)
 
 //Greenford prison
 
-		//РљРѕРјРјРµРЅРґР°РЅС‚ С‚СЋСЂСЊРјС‹ РЅР° Р“СЂРёРЅС„РѕСЂРґРµ
+		//Коммендант тюрьмы на Гринфорде
 	ch.old.name = "Ronald";
 	ch.old.lastname = "Blacklock";
 	ch.name 	= TranslateString("","Ronald");

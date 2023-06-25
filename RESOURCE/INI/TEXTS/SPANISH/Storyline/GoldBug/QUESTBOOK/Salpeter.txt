@@ -1,15 +1,15 @@
 title=Salitre
 text.t1=He fabricado salitre.
-text.t2=El agua va a tardar un tiempo en hervir. HarÃ© alguna otra cosa mientras tanto.
-text.t3=El salitre va a tardar un tiempo en disolverse. HarÃ© alguna otra cosa mientras tanto.
-text.t4=El salitre va a tardar un tiempo en secarse sobre las tablas. HarÃ© alguna otra cosa mientras tanto.
+text.t2=El agua va a tardar un tiempo en hervir. Haré alguna otra cosa mientras tanto.
+text.t3=El salitre va a tardar un tiempo en disolverse. Haré alguna otra cosa mientras tanto.
+text.t4=El salitre va a tardar un tiempo en secarse sobre las tablas. Haré alguna otra cosa mientras tanto.
 text.t5=
 text.t6=Necesito una herramienta para rascar el salitre adherido a las tablas.
-text.t7=1. Preparar poniendo mÃ¡s leÃ±a en el horno.
+text.t7=1. Preparar poniendo más leña en el horno.
 text.t8=2. Poner todas las palancas hacia arriba, que significa 'parar'.
 text.t9=3. Llenar recipiente 1 y esperar a que hierva.
 text.t10=4. Llenar recipiente 2 y esperar a que disuelva el salitre.
-text.t11=5. Llenar recipiente 3 y llenar un cubo con la soluciÃ³n resultante.
-text.t12=6. Esparcir el lÃ­quido sobre las tablas y esperar a que se seque.
+text.t11=5. Llenar recipiente 3 y llenar un cubo con la solución resultante.
+text.t12=6. Esparcir el líquido sobre las tablas y esperar a que se seque.
 text.t13=7. Rascar el salitre de las tablas.
 

@@ -1,12 +1,12 @@
 string DLG_TEXT[9] = {
 "Tak, kapitanie?",
-"Przepraszam. ProszÄ™ wracaÄ‡ do swych spraw",
-"Hej, chwileczkÄ™, patrzcie, kogo my tu mamy! To ",
+"Przepraszam. Proszê wracaæ do swych spraw",
+"Hej, chwileczkê, patrzcie, kogo my tu mamy! To ",
 "! Jak pan sobie radzi na morzu?",
 "Przyzwoicie. Co tu robicie razem z ",
 "Danielle",
 "?",
-"Mamy... cÃ³Å¼, pewnÄ… sprawÄ™ do zaÅ‚atwienia. JeÅ›li to pana ciekawi, lepiej niech pan spyta kapitan Danielle.",
-"MoÅ¼e tak zrobiÄ™.",
+"Mamy... có¿, pewn¹ sprawê do za³atwienia. Jeœli to pana ciekawi, lepiej niech pan spyta kapitan Danielle.",
+"Mo¿e tak zrobiê.",
 
 };

@@ -1,6 +1,6 @@
-title=La tripulaciÃ³n de Barbanegra
-text.t1=Solo 13 de los 14 fueron ahorcados. Â¿QuiÃ©n sobreviviÃ³?
-text.t2=Samuel Odel, de la guarida de contrabandistas de La Grenade, fue juzgado por piraterÃ­a en Williamsburg, Virginia, 1718. Absuelto. Si alguien sabe algo mÃ¡s acerca de la tripulaciÃ³n de Teach, tiene que ser Ã©l.
-text.t3=Teach visitÃ³ a Charles Vane en octubre de 1718. Poco antes de la muerte de Teach. Â¡SÃ© dÃ³nde encontrar a Vane!
+title=La tripulación de Barbanegra
+text.t1=Solo 13 de los 14 fueron ahorcados. ¿Quién sobrevivió?
+text.t2=Samuel Odel, de la guarida de contrabandistas de La Grenade, fue juzgado por piratería en Williamsburg, Virginia, 1718. Absuelto. Si alguien sabe algo más acerca de la tripulación de Teach, tiene que ser él.
+text.t3=Teach visitó a Charles Vane en octubre de 1718. Poco antes de la muerte de Teach. ¡Sé dónde encontrar a Vane!
 text.t4=
 text.t5=

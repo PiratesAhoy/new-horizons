@@ -12598,7 +12598,7 @@ void InitShips()
 // on this day and date Dec 23 2009, 0325h
 
 //-------------------------------------------------------------------------
-// French Battle Frigate (ArtÃ©mise class Frigate) By ZarethPL
+// French Battle Frigate (Artémise class Frigate) By ZarethPL
 // Further model and texture work by Captain Armstrong and Armada; rigging by Hylie Pistof
 //     SWS / Flushdeck Frigate / WBT4
 //-------------------------------------------------------------------------
@@ -14905,7 +14905,7 @@ void InitShips()
 // on this day and date Jan 2 10, 2131h
 
 //-------------------------------------------------------------------------
-// Lineship47 by Chris RoupÃ© and Thomas the Terror
+// Lineship47 by Chris Roupé and Thomas the Terror
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 165> (WBT4)
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
@@ -17183,7 +17183,7 @@ void InitShips()
 // on this day and date Jan 1 2010, 1711h
 
 //-------------------------------------------------------------------------
-// IntrÃ©pide by Seb
+// Intrépide by Seb
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 198> (WBT4XL)
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
@@ -20826,7 +20826,7 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// ApostÃ³l Felipe 1626 by pgargon
+// Apostól Felipe 1626 by pgargon
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
@@ -21676,7 +21676,7 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// UnitÃ© class frigate, French version of RN_Surprise by pgargon, retextured by Grey Roger
+// Unité class frigate, French version of RN_Surprise by pgargon, retextured by Grey Roger
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
@@ -21763,7 +21763,7 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// UnitÃ© class frigate, Spanish version of RN_Surprise by pgargon, retextured by Grey Roger
+// Unité class frigate, Spanish version of RN_Surprise by pgargon, retextured by Grey Roger
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;

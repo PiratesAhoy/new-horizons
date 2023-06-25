@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
 
 			Dialog.defAni = "dialog_stay1";
@@ -284,7 +284,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("mission2_given");
 		break;
-//pРґr
+//pдr
 		case "terrace":
 			PlaySound("VOICE\ENGLISH\gr_WR_friend1.wav");
 			dialog.text = DLG_TEXT[52];							

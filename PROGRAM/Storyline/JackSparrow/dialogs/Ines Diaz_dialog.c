@@ -18,7 +18,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// ----------------------------------- Диалог первый - первая встреча
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -414,7 +414,7 @@ void ProcessDialogEvent()
 			iTest = 0;
 			dialog.snd = "Voice\INDI\INDI029";
 			dialog.text = DLG_TEXT[99];
-			//Р Р°Р·РіРѕРІРѕСЂ Р‘Р»РµР№Р·Р°
+			//Разговор Блейза
 			if (pchar.quest.main_line == "blaze_talk_with_silehard_complete" && iTest < QUEST_COUNTER)
 			{
 				link.l1 = DLG_TEXT[100] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[101])]) + DLG_TEXT[103];
@@ -578,7 +578,7 @@ void ProcessDialogEvent()
 			NextDiag.CurrentNode =  NextDiag.TempNode;
 			pchar.quest.main_line = "ines_info_denied";
 			Locations[FindLocation("QC_town")].reload.l3.disable = 1;
-			//РІРєР»СЋС‡Р°РµРј РєРІРµСЃС‚ РЅР° РјСѓР¶РёРєР°, РєРѕС‚РѕСЂС‹Р№ РґР°СЃС‚ РёРЅС„Сѓ Рѕ СЂРµР№РјСЃРµ.
+			//включаем квест на мужика, который даст инфу о реймсе.
 			pchar.vcskip = true; // NK 04-08
 			pchar.quest.ines_denied_exit_from_tavern.win_condition.l1 = "location";
 			pchar.quest.ines_denied_exit_from_tavern.win_condition.l1.location = "QC_town";

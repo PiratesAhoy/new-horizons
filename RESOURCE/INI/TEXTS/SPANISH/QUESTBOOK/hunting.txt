@@ -1,7 +1,7 @@
-title=Misi√≥n general: Caza de un barco en aguas de #sisland#.
+title=MisiÛn general: Caza de un barco en aguas de #sisland#.
 text.t1=Debo hundir un barco, #sship_descr#, en aguas de #sisland#.
-text.t2=El mencionado barco, #sship_descr#, ha sido hundido con √©xito (y con la ayuda de Dios, en verdad), y puedo presentarme al gobernador de #stown# para cobrar mi recompensa.
-text.t3=La suerte ha estado de mi lado, y el capit√°n enemigo y su banda son pasto de los tiburones. Tengo que presentarme al gobernador de #stown# para cobrar la recompensa prometida.
+text.t2=El mencionado barco, #sship_descr#, ha sido hundido con Èxito (y con la ayuda de Dios, en verdad), y puedo presentarme al gobernador de #stown# para cobrar mi recompensa.
+text.t3=La suerte ha estado de mi lado, y el capit·n enemigo y su banda son pasto de los tiburones. Tengo que presentarme al gobernador de #stown# para cobrar la recompensa prometida.
 text.t4=Lo hemos logrado. Ese barco, #sship_descr#, ha ido a reunirse con Davy Jones y, por mi parte, es hora de presentarme al gobernador de #stown# para reclamar mi recompensa.
-text.t5=El barco, #sship_descr#, ha resultado no ser un gran desaf√≠o. El dinero pormetido por el gobernador de la colonia de #stown# ha sido muy f√°cil de conseguir.
+text.t5=El barco, #sship_descr#, ha resultado no ser un gran desafÌo. El dinero pormetido por el gobernador de la colonia de #stown# ha sido muy f·cil de conseguir.
 text.t6=El combate ha sido duro pero finalmente mmandamos a pique al barco enemigo, #sship_descr#. Solo me queda cobrar el dinero de manos del gobernador de #stown#.

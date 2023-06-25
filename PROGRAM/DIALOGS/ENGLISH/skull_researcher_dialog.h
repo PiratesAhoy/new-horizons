@@ -39,7 +39,7 @@ string DLG_TEXT[95] = {
 "I have indeed reconsidered your proposal. And I have decided to accept it.",
 "How goes your search for the amber skull, ",
 "I have yet to find the tribe on #sisland_Guadeloupe#.",
-"Welcome back, Capit√°n ",
+"Welcome back, Capit·n ",
 "! Have you brought the amber skull?",
 "No, I was unable to bring it to you.",
 "No, I gave it to the Caribs.",

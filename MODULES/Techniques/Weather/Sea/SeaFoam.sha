@@ -1,0 +1,69 @@
+block SeaFoam()
+{
+	technique t0
+	{
+		pass p0
+		{
+			FogEnable = false;
+			CullMode = none;
+			SpecularEnable = false;
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			SrcBlend = srcalpha;
+			DestBlend = one;
+
+			Lighting = false;
+
+			ColorOp[0] = modulate;
+			ColorArg1[0] = texture;
+			ColorArg2[0] = tfactor;
+
+			AlphaOp[0] = SelectArg1;
+			AlphaArg1[0] = diffuse;
+
+			ColorOp[1] = lerp;
+			ColorArg0[1] = diffuse;
+			ColorArg1[1] = texture;
+			ColorArg2[1] = current;
+
+			AlphaOp[1] = SelectArg1;
+			AlphaArg1[1] = current;
+
+			TexCoordIndex[1] = 0;
+
+			ColorOp[2] = disable;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}
+
+block SeaFoamShader(dword dwColor)
+{
+	technique t0
+	{
+		pass p0
+		{
+			FogEnable = false;
+			CullMode = none;
+			SpecularEnable = false;
+			AlphaTestEnable = false;
+			AlphaBlendEnable = true;
+			SrcBlend = srcalpha;
+			DestBlend = one;
+
+			Lighting = false;
+
+			VertexShader = "SeaVS_Foam";
+			PixelShader = "SeaPS_Foam";
+			VertexShaderConstant[0] = WorldViewProj;
+			PixelShaderConstant[0] = <dwColor>;
+
+			Render.Draw
+
+			Restore.States
+		}
+	}
+}

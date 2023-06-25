@@ -1,1356 +1,1356 @@
 // MAXIMUS 27.05.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| Antigua.c |=====}
-Portadmiral{РќР°С‡Р°Р»СЊРЅРёРє РїРѕСЂС‚Р°}
-Lord Barham{Р›РѕСЂРґ Р‘СЌСЂС…РµРј}
-Regulating{РЈРїСЂР°РІР»СЏСЋС‰РёР№}
-RCaptain{РєРѕР»РѕРЅРёРµР№}
+Portadmiral{Начальник порта}
+Lord Barham{Лорд Бэрхем}
+Regulating{Управляющий}
+RCaptain{колонией}
 
 {=====| Aruba.c |=====}
-Hendrick{РҐРµРЅРґСЂРёРє}
-van der Kuylen{Р’Р°РЅ Р”РµСЂ РљР°Р№Р»РµРЅ}
-Nicolaas{РќРёРєРѕР»Р°Р°СЃ}
-Bos{Р’РѕСЃ}
-Richard{Р РёС‡Р°СЂРґ}
-Citreon{Р¦РёС‚СЂРµРѕРЅ}
-Rosa{Р РѕР·Р°}
-Vos{Р’РѕСЃ}
-Rodolf{Р СѓРґРѕР»СЊС„}
-Meer{РњРёСЌСЂ}
-Grote{Р‘РѕР»СЊС€РѕР№}
-Beer{РњРµРґРІРµРґСЊ}
-Kleine{РњР°Р»РµРЅСЊРєРёР№}
-Oude{РЎС‚Р°СЂС‹Р№}
-Kapitein{РљР°РїРёС‚Р°РЅ}
-Bontekoe{Р‘РѕРЅС‚РµРєСѓ}
-Jacomina{Р”Р¶Р°РєРѕРјРёРЅР°}
-Boymans{Р‘РѕР№РјР°РЅСЃ}
-Leo{Р›РµРѕ}
-Visscher{Р’РёС€РµСЂ}
-Jan{РЇРЅ}
-Thijs{РўР°Р№СЃ}
-Arawak{РђСЂР°РІР°Рє}
-Indian{РРЅРґРµРµС†}
-IndianF{РРЅРґРёР°РЅРєР°}
-Chief{Р’РѕР¶РґСЊ}
-Arawak Indian{РђСЂР°РІР°РєСЃРєРёР№ РРЅРґРµРµС†}
-Arawak IndianF{РђСЂР°РІР°РєСЃРєР°СЏ РРЅРґРёР°РЅРєР°}
-Arawak Chief{Р’РѕР¶РґСЊ РђСЂР°РІР°РєРѕРІ}
+Hendrick{Хендрик}
+van der Kuylen{Ван Дер Кайлен}
+Nicolaas{Николаас}
+Bos{Вос}
+Richard{Ричард}
+Citreon{Цитреон}
+Rosa{Роза}
+Vos{Вос}
+Rodolf{Рудольф}
+Meer{Миэр}
+Grote{Большой}
+Beer{Медведь}
+Kleine{Маленький}
+Oude{Старый}
+Kapitein{Капитан}
+Bontekoe{Бонтеку}
+Jacomina{Джакомина}
+Boymans{Бойманс}
+Leo{Лео}
+Visscher{Вишер}
+Jan{Ян}
+Thijs{Тайс}
+Arawak{Аравак}
+Indian{Индеец}
+IndianF{Индианка}
+Chief{Вождь}
+Arawak Indian{Аравакский Индеец}
+Arawak IndianF{Аравакская Индианка}
+Arawak Chief{Вождь Араваков}
 
 {=====| cayman.c |=====}
-Edmund{Р­РґРјСѓРЅРґ}
-Christobel{РљСЂРёСЃС‚РѕР±Р°Р»СЊ}
-Shaw{РЁРѕСѓ}
-Ginny{Р”Р¶РёРЅРЅРё}
-Weasly{РЈРёР·Р»Рё}
-Ron Mc{Р РѕРЅ РњР°Рє}
-Donald{Р”РѕРЅР°Р»СЊРґ}
-Harry{Р“Р°СЂСЂРё}
-Propper{Р§РёСЃС‚С‹Р№}
-John{Р”Р¶РѕРЅ}
-Ranger{Р РµР№РЅРґР¶РµСЂ}
-Jenna{Р”Р¶РµРЅРЅР°}
-Valentine{Р’Р°Р»РµРЅС‚РёРЅ}
-Coxon{РљРѕРєСЃРѕРЅ}
+Edmund{Эдмунд}
+Christobel{Кристобаль}
+Shaw{Шоу}
+Ginny{Джинни}
+Weasly{Уизли}
+Ron Mc{Рон Мак}
+Donald{Дональд}
+Harry{Гарри}
+Propper{Чистый}
+John{Джон}
+Ranger{Рейнджер}
+Jenna{Дженна}
+Valentine{Валентин}
+Coxon{Коксон}
 
 {=====| Colombia.c |=====}
-Gregorio{Р“СЂРµРіРѕСЂРёРѕ}
-Montavez{РњРѕРЅС‚Р°РІРµР·}
-Jose{РҐРѕСЃРµ}
+Gregorio{Грегорио}
+Montavez{Монтавез}
+Jose{Хосе}
 Puablo{}
-Diego{Р”РёРµРіРѕ}
-Martinez{РњР°СЂС‚РёРЅРµР·}
-Alejandra{РђР»РµС…Р°РЅРґСЂР°}
-Sanchez{РЎР°РЅС‡РµСЃ}
-Raquel{Р Р°РєРµР»СЊ}
-Torres{РўРѕСЂСЂРµСЃ}
-Quirino{РљРІРёСЂРёРЅРѕ}
-Mendoza{РњРµРЅРґРѕР·Р°}
-Raul{Р Р°СѓР»СЊ}
-Reyes{Р РµР№РµСЃ}
-Sancho{РЎР°РЅС‡Рѕ}
-Alvarez{РђР»СЊРІР°СЂРµСЃ}
-Selena{РЎРµР»РµРЅР°}
-Diaz{Р”РёР°СЃ}
-Cameron{РљСЌРјРµСЂРѕРЅ}
-Gomez{Р“РѕРјРµСЃ}
-Antonio{РђРЅС‚РѕРЅРёРѕ}
-Castillo{РљР°СЃС‚РёР»СЊРѕ}
-Penelope{РџРµРЅРµР»РѕРїР°}
-Cruz{РљСЂСѓР·}
-Virmundus{Р’РёСЂРјСѓРЅРґСѓСЃ}
-Gastelu{Р“Р°СЃС‚РµР»СЊ}
-Padre{РџР°РґСЂРµ}
-Camardiel{РљР°РјР°СЂРґРёСЌР»СЊ}
-Uitalez{РЈРёС‚Р°Р»РµР·}
-Chiamuhera{Р§РёР°РјСѓС…РµСЂР°}
-Lorenzo{Р›РѕСЂРµРЅС†Рѕ}
-Delgado{Р”РµР»СЊРіР°РґРѕ}
-Mary{РњСЌСЂРё}
-Seacole{РЎРёРєРѕР»}
-Abequa{РђР±РµРєСѓР°}
-Brother{Р‘СЂР°С‚}
-Elias{Р­Р»РёР°СЃ}
-Simon{РЎР°Р№РјРѕРЅ}
-Anton{РђРЅС‚РѕРЅ}
-Kristian{РљСЂРёСЃС‚РёР°РЅ}
-Colombian{РљРѕР»СѓРјР±РёРµС†}
-Native{Р РѕРґРЅРѕР№}
-Colombian Indian{РљРѕР»СѓРјР±РёР№СЃРєРёР№ РРЅРґРµРµС†}
-Colombian IndianF{РљРѕР»СѓРјР±РёР№СЃРєР°СЏ РРЅРґРёР°РЅРєР°}
-Colombian Chief{РљРѕР»СѓРјР±РёР№СЃРєРёР№ Р’РѕР¶РґСЊ}
-Chima{Р§РёРјР°}
-Alejandro{РђР»РµС…Р°РЅРґСЂРѕ}
-de Mendoza{Р”Рµ РњРµРЅРґРѕР·Р°}
-Arturo{РђСЂС‚СѓСЂ}
-de CР±diz{Р”Рµ РљР°РґРёСЃ}
-Librarian{Р‘РёР±Р»РёРѕС‚РµРєР°СЂСЊ}
+Diego{Диего}
+Martinez{Мартинез}
+Alejandra{Алехандра}
+Sanchez{Санчес}
+Raquel{Ракель}
+Torres{Торрес}
+Quirino{Квирино}
+Mendoza{Мендоза}
+Raul{Рауль}
+Reyes{Рейес}
+Sancho{Санчо}
+Alvarez{Альварес}
+Selena{Селена}
+Diaz{Диас}
+Cameron{Кэмерон}
+Gomez{Гомес}
+Antonio{Антонио}
+Castillo{Кастильо}
+Penelope{Пенелопа}
+Cruz{Круз}
+Virmundus{Вирмундус}
+Gastelu{Гастель}
+Padre{Падре}
+Camardiel{Камардиэль}
+Uitalez{Уиталез}
+Chiamuhera{Чиамухера}
+Lorenzo{Лоренцо}
+Delgado{Дельгадо}
+Mary{Мэри}
+Seacole{Сикол}
+Abequa{Абекуа}
+Brother{Брат}
+Elias{Элиас}
+Simon{Саймон}
+Anton{Антон}
+Kristian{Кристиан}
+Colombian{Колумбиец}
+Native{Родной}
+Colombian Indian{Колумбийский Индеец}
+Colombian IndianF{Колумбийская Индианка}
+Colombian Chief{Колумбийский Вождь}
+Chima{Чима}
+Alejandro{Алехандро}
+de Mendoza{Де Мендоза}
+Arturo{Артур}
+de Cбdiz{Де Кадис}
+Librarian{Библиотекарь}
 
 {=====| CommonQuest.c |=====}
-Malcolm{РњР°Р»СЊРєРѕР»СЊРј}
-Hatcher{РҐР°С‚С‡РµСЂ}
-Blackbeard{Р§С‘СЂРЅР°СЏ Р‘РѕСЂРѕРґР°}
-Winston{РЈРёРЅСЃС‚РѕРЅ}
-Churchill{Р§РµСЂС‡РёР»Р»СЊ}
-Michiel{РњРёС€РµР»СЊ}
-de Reyder{Р”Рµ Р РµР№РґРµСЂ}
-Luis{Р›СѓРёСЃ}
-Vas{Р’РѕСЃ}
-de Torres{Р”Рµ РўРѕСЂСЂРµСЃ}
-Reginald{Р РµРґР¶РёРЅР°Р»СЊРґ}
-de Boeuf{Р”Рµ Р‘С‘С„}
-BjС†rn{Р‘СЊРѕСЂРЅ}
-Roos af HjelmsРґter{Р СѓСЃ Р°С„ Р™РµР»СЊРјСЃРіРµСЃС‚РµСЂ}
-Charlie{Р§Р°СЂР»Рё}
-Allen{РђР»Р»РµРЅ}
-Edgar{Р­РґРіР°СЂ}
-LuРЅs{Р›СѓРёСЃ}
-Buchinho{Р‘СѓС‡РёРЅСЊРѕ}
-Abelard{РђР±РµР»Р°СЂРґ}
-Laviniere{Р›Р°РІРёРЅСЊРµСЂ}
-Deadly{Р—Р»РѕСЃС‚РЅС‹Р№}
-Pirate{РџРёСЂР°С‚}
-Smuggler{РљРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚}
-Trader{РўРѕСЂРіРѕРІРµС†}
-Virginie{Р’РёСЂРґР¶РёРЅРёСЏ}
-d'Espivant{Р”'Р­СЃРїРёРІР°РЅ}
-Raymond{Р Р°РјРѕРЅ}
-Bouchez{Р‘СѓС‡РµР·}
-Emellio{Р­РјРёР»РёРѕ}
-Fernandez{Р¤РµСЂРЅР°РЅРґРµСЃ}
+Malcolm{Малькольм}
+Hatcher{Хатчер}
+Blackbeard{Чёрная Борода}
+Winston{Уинстон}
+Churchill{Черчилль}
+Michiel{Мишель}
+de Reyder{Де Рейдер}
+Luis{Луис}
+Vas{Вос}
+de Torres{Де Торрес}
+Reginald{Реджинальд}
+de Boeuf{Де Бёф}
+Bjцrn{Бьорн}
+Roos af Hjelmsдter{Рус аф Йельмсгестер}
+Charlie{Чарли}
+Allen{Аллен}
+Edgar{Эдгар}
+Luнs{Луис}
+Buchinho{Бучиньо}
+Abelard{Абелард}
+Laviniere{Лавиньер}
+Deadly{Злостный}
+Pirate{Пират}
+Smuggler{Контрабандист}
+Trader{Торговец}
+Virginie{Вирджиния}
+d'Espivant{Д'Эспиван}
+Raymond{Рамон}
+Bouchez{Бучез}
+Emellio{Эмилио}
+Fernandez{Фернандес}
 
 {=====| Conceicao.c |=====}
-Jacinto{Р–Р°СЃРёРЅС‚Рѕ}
-Arcibaldo{РђСЂС‡РёР±Р°Р»СЊРґРѕ}
-Barreto{Р‘Р°СЂСЂРµС‚Рѕ}
-Maria{РњР°СЂРёСЏ}
-Rivaldo{Р РёРІР°Р»СЊРґРѕ}
-Rodrigo{Р РѕРґСЂРёРіРѕ}
-Caldeira{РљР°Р»РґРµР№СЂР°}
-Aleixo{РђР»РµРєСЃРёРѕ}
-Simos{РЎРёРјРѕСЃ}
-Miguel{РњРёРіРµР»СЊ}
-Filho{Р¤РёР»СЊРѕ}
-Victor{Р’РёРєС‚РѕСЂ}
-Barros{Р‘Р°СЂСЂРѕСЃ}
-Paolo{РџР°РѕР»Рѕ}
-Milazar{РњРёР»Р°Р·Р°СЂ}
-Irene{РСЂРµРЅ}
-Mateus{РњР°С‚РµСѓСЃ}
-Branco{Р‘СЂР°РЅРєРѕ}
-Beatriz{Р‘РµР°С‚СЂРёСЃ}
-Medeiros{РњРµРґРµР№СЂРѕСЃ}
-Henrique{Р­РЅСЂРёРєРµ}
-d'Allmeida{Р”'РђР»РјРµР№РґР°}
-Neves{РќСЌРІРµСЃ}
-Valentim{Р’Р°Р»РµРЅС‚РёРј}
-Abenito{РђР±РµРЅРёС‚Рѕ}
-de Soto{Р”Рµ РЎРѕС‚Рѕ}
-Tomaz{РўРѕРјР°СЃ}
-Cid{РЎРёРґ}
-Aristides{РђСЂРёСЃС‚РёРґ}
-Chiamulera{Р§Р°РјСѓР»РµСЂР°}
-Francisco{Р¤СЂР°РЅС†РёСЃРєРѕ}
-Baia{Р‘Р°Р№СЏ}
-Eloi{Р­Р»РѕР№}
-Labat{Р›Р°Р±Р°С‚}
-Jardim{Р–Р°СЂРґРёРј}
-Ribeiro{Р РёР±РµР№СЂРѕ}
-Nuno{РќСѓРЅРѕ}
-Abrao{РђР±СЂР°Рѕ}
-Emilio{Р­РјРёР»РёРѕ}
-Guerra{Р“СѓСЌСЂСЂР°}
-Pascoal{РџР°СЃРєР°Р»СЊ}
-Chagas{Р§Р°РіР°СЃ}
-Desmond Ray{Р”РµСЃРјРѕРЅРґ Р СЌР№}
-Beltrop{Р‘РµР»С‚СЂРѕРї}
-Evaristo{Р­РІР°СЂРёСЃС‚Рѕ}
-Macario{РњР°РєР°СЂРёРѕ}
-Regalo{Р РёРіР°Р»Рѕ}
-Uargo{РЈР°СЂРіРѕ}
+Jacinto{Жасинто}
+Arcibaldo{Арчибальдо}
+Barreto{Баррето}
+Maria{Мария}
+Rivaldo{Ривальдо}
+Rodrigo{Родриго}
+Caldeira{Калдейра}
+Aleixo{Алексио}
+Simos{Симос}
+Miguel{Мигель}
+Filho{Фильо}
+Victor{Виктор}
+Barros{Баррос}
+Paolo{Паоло}
+Milazar{Милазар}
+Irene{Ирен}
+Mateus{Матеус}
+Branco{Бранко}
+Beatriz{Беатрис}
+Medeiros{Медейрос}
+Henrique{Энрике}
+d'Allmeida{Д'Алмейда}
+Neves{Нэвес}
+Valentim{Валентим}
+Abenito{Абенито}
+de Soto{Де Сото}
+Tomaz{Томас}
+Cid{Сид}
+Aristides{Аристид}
+Chiamulera{Чамулера}
+Francisco{Франциско}
+Baia{Байя}
+Eloi{Элой}
+Labat{Лабат}
+Jardim{Жардим}
+Ribeiro{Рибейро}
+Nuno{Нуно}
+Abrao{Абрао}
+Emilio{Эмилио}
+Guerra{Гуэрра}
+Pascoal{Паскаль}
+Chagas{Чагас}
+Desmond Ray{Десмонд Рэй}
+Beltrop{Белтроп}
+Evaristo{Эваристо}
+Macario{Макарио}
+Regalo{Ригало}
+Uargo{Уарго}
 
 {=====| cuba.c |=====}
-Felipe{Р¤РµР»РёРї}
-Cisneros{Р¦РёСЃРЅРµСЂРѕСЃ}
-Horacio{Р“РѕСЂР°С†РёРѕ}
-de la Vega{Р”Рµ Р›Р° Р’РµРіР°}
-Ortega{РћСЂС‚РµРіР°}
-Marco{РњР°СЂРєРѕ}
-Quintero{РљРёРЅС‚РµСЂРѕ}
-Pueblo{РџСѓСЌР±Р»Рѕ}
-Cabreno{РљР°Р±СЂРµРЅРѕ}
-Francesca{Р¤СЂР°РЅС‡РµСЃРєР°}
-Toblerone{РўРѕР±Р»РµСЂРѕРЅРµ}
-Jeronimo{Р”Р¶РµСЂРѕРЅРёРјРѕ}
-Izar{РР·Р°СЂ}
-Leandro{Р›РµР°РЅРґСЂРѕ}
-Koldobika{РљРѕР»РґРѕР±РёРєР°}
-Narcisa{РќР°СЂС†РёСЃР°}
-Montse{РњРѕРЅС‚СЃРµ}
-Nacho{РќР°С‡Рѕ}
-Tacco{РўР°РєРєРѕ}
-Fabricio{Р¤Р°Р±СЂРёС†РёРѕ}
-Oleo{РћР»РµРѕ}
-Javier{РҐР°РІСЊРµСЂ}
-Balboa{Р‘Р°Р»СЊР±РѕР°}
-Esteban{Р­СЃС‚РµР±Р°РЅ}
-Muchacho{РњСѓС‡Р°С‡Рѕ}
-Fauto{Р¤Р°СѓС‚Рѕ}
-Coleone{РљРѕР»РµРѕРЅРµ}
-Rigo{Р РёРіРѕ}
-Ibiza{РР±РёС†Р°}
-Higini{РҐРёРіРёРЅРё}
-Seat{РЎРёР°С‚}
-Probello{РџСЂРѕР±РµР»Р»Рѕ}
-Jose Jalapeno{РҐРѕСЃРµ РҐР°Р»Р°РїРµРЅСЊРѕ}
-on the stalk{РЅР° СЃС‚РµР±Р»Рµ}
-Eustacio{Р®СЃС‚Р°СЃРёРѕ}
-Ocampo{РћРєР°РјРїРѕ}
-Patricia{РџР°С‚СЂРёСЃРёСЏ}
-SantР±ngel{РЎР°РЅС‚РµРЅРіРµР»СЊ}
-Isidoro{РСЃРёРґРѕСЂРѕ}
-Figueroa{Р¤РёРіРµСЂРѕР°}
-Magarino{РњР°РіР°СЂРёРЅРѕ}
-Micael{РњРёРєР°СЌР»СЊ}
-Salinas{РЎР°Р»РёРЅР°СЃ}
-Mahala{РњР°С…Р°Р»Р°}
-Tancredo{РўР°РЅРєСЂРµРґРѕ}
-PellСѓn{РџРµР»Р»РёРЅ}
+Felipe{Фелип}
+Cisneros{Циснерос}
+Horacio{Горацио}
+de la Vega{Де Ла Вега}
+Ortega{Ортега}
+Marco{Марко}
+Quintero{Кинтеро}
+Pueblo{Пуэбло}
+Cabreno{Кабрено}
+Francesca{Франческа}
+Toblerone{Тоблероне}
+Jeronimo{Джеронимо}
+Izar{Изар}
+Leandro{Леандро}
+Koldobika{Колдобика}
+Narcisa{Нарциса}
+Montse{Монтсе}
+Nacho{Начо}
+Tacco{Такко}
+Fabricio{Фабрицио}
+Oleo{Олео}
+Javier{Хавьер}
+Balboa{Бальбоа}
+Esteban{Эстебан}
+Muchacho{Мучачо}
+Fauto{Фауто}
+Coleone{Колеоне}
+Rigo{Риго}
+Ibiza{Ибица}
+Higini{Хигини}
+Seat{Сиат}
+Probello{Пробелло}
+Jose Jalapeno{Хосе Халапеньо}
+on the stalk{на стебле}
+Eustacio{Юстасио}
+Ocampo{Окампо}
+Patricia{Патрисия}
+Santбngel{Сантенгель}
+Isidoro{Исидоро}
+Figueroa{Фигероа}
+Magarino{Магарино}
+Micael{Микаэль}
+Salinas{Салинас}
+Mahala{Махала}
+Tancredo{Танкредо}
+Pellуn{Пеллин}
 
 {=====| Curacao.c |=====}
-Hans{РҐР°РЅСЃ}
-Kloss{РљР»РѕСЃСЃ}
-Pelgrem{РџРµР»СЊРіСЂРµРј}
-Christus{РҐСЂРёСЃС‚РѕСЃ}
-Vader{Р’РµР№РґРµСЂ}
-Derksen{Р”РµСЂРєСЃРµРЅ}
-Joep{Р”Р¶РѕСЌРї}
-Laura{Р›Р°СѓСЂР°}
-Haan{РҐР°РЅ}
-Lambert{Р›Р°РјР±РµСЂС‚}
-Jong{Р”Р¶РѕРЅРі}
-Marten{РњР°СЂС‚РµРЅ}
-Visser{Р’РёСЃСЃРµСЂ}
-Marja{РњР°СЂСЊСЏ}
-Fixe{Р¤РёРєСЃ}
-Piet{РџРёС‚}
-Heyn{РҐРµР№РЅ}
+Hans{Ханс}
+Kloss{Клосс}
+Pelgrem{Пельгрем}
+Christus{Христос}
+Vader{Вейдер}
+Derksen{Дерксен}
+Joep{Джоэп}
+Laura{Лаура}
+Haan{Хан}
+Lambert{Ламберт}
+Jong{Джонг}
+Marten{Мартен}
+Visser{Виссер}
+Marja{Марья}
+Fixe{Фикс}
+Piet{Пит}
+Heyn{Хейн}
 
 {=====| DockyardOwners.c |=====}
-Patrick{РџР°С‚СЂРёРє}
-Webster{Р’РµР±СЃС‚РµСЂ}
-Dockyard{РџРѕСЂС‚РѕРІС‹Р№}
-Comissioner{РћС†РµРЅС‰РёРє}
-Hugh{РҐСЊСЋ}
-Chadman{Р§Р°РґРјРµРЅ}
-Humberto{РЈРјР±РµСЂС‚Рѕ}
-de Paiva{Р”Рµ РџР°Р№РІР°}
-Lambrecht{Р›Р°РјР±СЂРµС…С‚}
-Fobes{Р¤РѕР±РµСЃ}
-Philippe{Р¤РёР»РёРїРї}
-Jean{Р–Р°РЅ}
-Filaut{Р¤РёР»Р°С‚}
-Fletcher{Р¤Р»СЌС‚С‡РµСЂ}
-Rosewood{Р РѕР·РІСѓРґ}
-David{Р”СЌРІРёРґ}
-Fairweather{Р¤Р°Р№СЂРІРµР·РµСЂ}
-Jorge{РҐРѕСЂС…Рµ}
-Suarez{РЎСѓР°СЂРµР·}
-Maurice{РњРѕСЂРёСЃ}
-Dupont{Р”СЋРїРѕРЅ}
-Abraham{РђР±СЂР°С…Р°Рј}
-Hollander{Р“РѕР»Р»Р°РЅРґРµС†}
-Oweyn{РћРІРµР№РЅ}
-McDorey{РњР°РєР”РѕСЂРё}
-Arendt{РђСЂРµРЅ}
-Verheugen{Р’РµСЂС…Р°РіРµРЅ}
-Prosper{РџСЂРѕСЃРїРµСЂ}
-Fraigneau{Р¤СЂРµР№РЅРѕ}
-Benoit{Р‘РµРЅСѓР°}
-Bertignac{Р‘РµСЂС‚РёРЅСЊСЏРє}
-Jakob{Р”Р¶РµР№РєРѕР±}
-Nickerson{РќРёРєРµСЂСЃРѕРЅ}
-Roger{Р РѕРґР¶РµСЂ}
-Murray{РњСЋСЂСЂСЌР№}
-Pablo{РџР°Р±Р»Рѕ}
-Duarte{Р”СѓР°СЂС‚Рµ}
-Teodinus{РўРµРѕРґРёРЅСѓСЃ}
-Serrano{РЎРµСЂСЂР°РЅРѕ}
-Adhemar{РђРґРµРјР°СЂ}
-Bertillon{Р‘РµСЂС‚РёР»СЊРѕРЅ}
-Maarten{РњР°СЂС‚РµРЅ}
-Verlinden{Р’РµСЂР»РёРЅРґРµРЅ}
-Gheret{Р“РµСЂРµС‚}
-Bogardus{Р‘РѕРіР°СЂРґСѓСЃ}
-Vanderdecken{Р’РµРЅРґРµСЂРґРµРєРєРµРЅ}
-Ricardo{Р РёРєР°СЂРґРѕ}
-Ordiales{РћСЂРґРёР°Р»РµСЃ}
+Patrick{Патрик}
+Webster{Вебстер}
+Dockyard{Портовый}
+Comissioner{Оценщик}
+Hugh{Хью}
+Chadman{Чадмен}
+Humberto{Умберто}
+de Paiva{Де Пайва}
+Lambrecht{Ламбрехт}
+Fobes{Фобес}
+Philippe{Филипп}
+Jean{Жан}
+Filaut{Филат}
+Fletcher{Флэтчер}
+Rosewood{Розвуд}
+David{Дэвид}
+Fairweather{Файрвезер}
+Jorge{Хорхе}
+Suarez{Суарез}
+Maurice{Морис}
+Dupont{Дюпон}
+Abraham{Абрахам}
+Hollander{Голландец}
+Oweyn{Овейн}
+McDorey{МакДори}
+Arendt{Арен}
+Verheugen{Верхаген}
+Prosper{Проспер}
+Fraigneau{Фрейно}
+Benoit{Бенуа}
+Bertignac{Бертиньяк}
+Jakob{Джейкоб}
+Nickerson{Никерсон}
+Roger{Роджер}
+Murray{Мюррэй}
+Pablo{Пабло}
+Duarte{Дуарте}
+Teodinus{Теодинус}
+Serrano{Серрано}
+Adhemar{Адемар}
+Bertillon{Бертильон}
+Maarten{Мартен}
+Verlinden{Верлинден}
+Gheret{Герет}
+Bogardus{Богардус}
+Vanderdecken{Вендердеккен}
+Ricardo{Рикардо}
+Ordiales{Ордиалес}
 
 {=====| Douwesen.c |=====}
-Todredus{РўРѕРґСЂРµРґСѓСЃ}
-Ordialds{РћСЂРґРёР°Р»СЊРґ}
-Toff{РўРѕС„С„}
-Oremans{РћСЂРµРјР°РЅСЃ}
-Taresa{РўР°СЂРµСЃР°}
-Tanneken{РўР°РЅРЅРµРєРµРЅ}
-Bernardo{Р‘РµСЂРЅР°СЂРґРѕ}
-Gamboa{Р“Р°РјР±РѕР°}
-Corentin{РљРѕСЂРµРЅС‚РёРЅ}
-Lucay{Р›СЋС†РµР№}
-Reynard{Р СЌР№РЅР°СЂРґ}
-Grueneveldt{Р“СЂСЋРЅРµРІРµР»СЊРґ}
-Anne{РђРЅРЅР°}
-Paers{РџРёСЂСЃ}
-Laurens{Р›РѕСѓСЂРµРЅСЃ}
-Bloem{Р‘Р»РѕР№Рј}
-Stefan{РЎС‚РµС„Р°РЅ}
-Loseir{Р›РѕР·СЊРµ}
-Peter{РџРёС‚РµСЂ}
-Emden{Р­РјРґРµРЅ}
-Kersten{РљРёСЂСЃС‚РµРЅ}
-Dekker{Р”РµРєРєРµСЂ}
-Nol{РќРѕР»}
-Meens{РњРёРЅСЃ}
-Boudewijn{Р‘СѓРґРµРІРёР№РЅ}
-Smidt{РЁРјРёРґС‚}
-Ricout{Р РёРєРѕ}
-Harmse{РҐР°СЂРјСЃ}
-Mattheus{РњР°С‚С‚РµСѓСЃ}
-Doull{Р”РѕР»Р»}
-Eduard{Р­РґСѓР°СЂРґ}
-Gerrits{Р“СЌСЂСЂРёС‚СЃ}
-Johan{Р™РѕС…Р°РЅ}
-Van Pelt{Р’Р°РЅ РџРµР»С‚}
-Raes{Р Р°СЌСЃ}
-Stevense{РЎС‚РёРІРµРЅСЃ}
-Dirrik{Р”РёСЂСЂРёРє}
-Jacobse{Р”Р¶СЌРєРѕР±СЃ}
-Sefia{РЎРµС„РёР°}
-Christoffel{РљСЂРёСЃС‚РѕС„РµСЂ}
-Yden{РРґРµРЅ}
-Kalkman{РљР°Р»СЊРєРјР°РЅ}
-Rost{Р РѕСЃС‚}
-van Moor{Р’Р°РЅ РњСѓСЂ}
-Olivier{РћР»РёРІСЊРµ}
-Exquemelin{Р­РєСЃРєРІРµРјРµР»РёРЅ}
-Clays{РљР»Р°Р№СЃ}
-Hafte{РҐР°С„С‚}
-Elting{Р­Р»С‚РёРЅРі}
-Andries{РђРЅРґСЂРёСЃ}
-Lorine{Р›РѕСЂРёРЅ}
-Willem{Р’РёР»Р»РµРј}
-Maritz{РњР°СЂРёС†}
-Pieter{РџРёС‚РµСЂ}
-Nolt{РќРѕР»С‚}
-Ector{Р­РєС‚РѕСЂ}
-Clenen{РљР»РёРЅРµРЅ}
-Heyne{РҐРµР№РЅРµ}
-Deburghraeve{Р”РµР±СѓСЂРіСЂРµР№РІ}
-Severin{РЎРµРІРµСЂРёРЅ}
-Bonvoisin{Р‘РѕРЅРІСѓР°Р·РµРЅ}
-Alistair{РђР»РёСЃС‚Р°СЂ}
-Garcilaso{Р“Р°СЂСЃРёР»Р°Р·Рѕ}
+Todredus{Тодредус}
+Ordialds{Ордиальд}
+Toff{Тофф}
+Oremans{Ореманс}
+Taresa{Тареса}
+Tanneken{Таннекен}
+Bernardo{Бернардо}
+Gamboa{Гамбоа}
+Corentin{Корентин}
+Lucay{Люцей}
+Reynard{Рэйнард}
+Grueneveldt{Грюневельд}
+Anne{Анна}
+Paers{Пирс}
+Laurens{Лоуренс}
+Bloem{Блойм}
+Stefan{Стефан}
+Loseir{Лозье}
+Peter{Питер}
+Emden{Эмден}
+Kersten{Кирстен}
+Dekker{Деккер}
+Nol{Нол}
+Meens{Минс}
+Boudewijn{Будевийн}
+Smidt{Шмидт}
+Ricout{Рико}
+Harmse{Хармс}
+Mattheus{Маттеус}
+Doull{Долл}
+Eduard{Эдуард}
+Gerrits{Гэрритс}
+Johan{Йохан}
+Van Pelt{Ван Пелт}
+Raes{Раэс}
+Stevense{Стивенс}
+Dirrik{Диррик}
+Jacobse{Джэкобс}
+Sefia{Сефиа}
+Christoffel{Кристофер}
+Yden{Иден}
+Kalkman{Калькман}
+Rost{Рост}
+van Moor{Ван Мур}
+Olivier{Оливье}
+Exquemelin{Эксквемелин}
+Clays{Клайс}
+Hafte{Хафт}
+Elting{Элтинг}
+Andries{Андрис}
+Lorine{Лорин}
+Willem{Виллем}
+Maritz{Мариц}
+Pieter{Питер}
+Nolt{Нолт}
+Ector{Эктор}
+Clenen{Клинен}
+Heyne{Хейне}
+Deburghraeve{Дебургрейв}
+Severin{Северин}
+Bonvoisin{Бонвуазен}
+Alistair{Алистар}
+Garcilaso{Гарсилазо}
 
 {=====| Eleuthera.c |=====}
-Kermit{РљРµСЂРјРёС‚}
-Brazier{Р‘СЂРµР№Р·РµСЂ}
-Alicia{РђР»РёСЃРёСЏ}
-Banister{Р‘Р°РЅРЅРёСЃС‚РµСЂ}
-Geoffrey{Р”Р¶РµС„С„СЂРё}
-Shuttle{РЁР°С‚С‚Р»}
-Joseph{Р–РѕР·РµС„}
-Bigsby{Р‘РёРіСЃР±Рё}
-Lucas{Р›СѓРєР°СЃ}
-Bird{Р‘С‘СЂРґ}
-Nick{РќРёРє}
-Hopkins{РҐРѕРїРєРёРЅСЃ}
-Michael{РњРёС€РµР»СЊ}
-Wainwright{РЈСЌР№РЅСЂР°Р№С‚}
-Cole{РљРѕСѓР»}
-Arkwright{РђСЂРєСЂР°Р№С‚}
-Father{РћС‚РµС†}
-Buzzard{Р‘Р°Р·Р·Р°СЂРґ}
-Abbott{Р­Р±Р±РѕС‚}
-Karen{РљР°СЂРµРЅ}
-Cakebread{РљРµР№РєР±СЂРµРґ}
-Brendan{Р‘СЂРµРЅРґР°РЅ}
-Arrowsmith{Р­СЂРѕСѓСЃРјРёС‚}
-Slave{Р Р°Р±}
-Worker{Р Р°Р±РѕС‡РёР№}
-Slaver{Р Р°Р±РѕС‚РѕСЂРіРѕРІРµС†}
-Josie{Р”Р¶РѕР·Рё}
-Sweat Shop{РџРѕС‚РЅР°СЏ}
-Sally{РЎР°Р»Р»Рё}
-Sweat Shop Sally{РџРѕС‚РЅР°СЏ РЎР°Р»Р»Рё}
+Kermit{Кермит}
+Brazier{Брейзер}
+Alicia{Алисия}
+Banister{Баннистер}
+Geoffrey{Джеффри}
+Shuttle{Шаттл}
+Joseph{Жозеф}
+Bigsby{Бигсби}
+Lucas{Лукас}
+Bird{Бёрд}
+Nick{Ник}
+Hopkins{Хопкинс}
+Michael{Мишель}
+Wainwright{Уэйнрайт}
+Cole{Коул}
+Arkwright{Аркрайт}
+Father{Отец}
+Buzzard{Баззард}
+Abbott{Эббот}
+Karen{Карен}
+Cakebread{Кейкбред}
+Brendan{Брендан}
+Arrowsmith{Эроусмит}
+Slave{Раб}
+Worker{Рабочий}
+Slaver{Работорговец}
+Josie{Джози}
+Sweat Shop{Потная}
+Sally{Салли}
+Sweat Shop Sally{Потная Салли}
 
 {=====| FalaiseDeFleur.c |=====}
-Milon{РњРёР»РѕРЅ}
-Blacque{Р‘Р»Р°СЃРєСЋ}
-Orable{РћСЂР°Р±Р»}
-Caron{РљР°СЂРѕРЅ}
-Rachel{Р СЌР№С‡РµР»}
-Marc{РњР°СЂРє}
-Sabine{РЎР°Р±РёРЅ}
-Sabina{РЎР°Р±РёРЅР°}
-Sabie{РЎР°Р±Рё}
-Sabi{РЎР°Р±Рё}
-Matton{РњР°С‚С‚РѕРЅ}
-Raoul{Р Р°СѓР»СЊ}
-Calmes{РљР°Р»РјРµСЃ}
-Lucien{Р›СЋСЃСЊРµРЅ}
-Bescanceny{Р‘РµСЃРєР°РЅС†РµРЅРё}
-Teodoro{РўРµРѕРґРѕСЂРѕ}
-Andre{РђРЅРґСЂСЌ}
-Juliao{Р”Р¶СѓР»РёСЏ}
-Rene{Р РµРЅСЌ}
-Duguay{Р”СѓРіР°Р№}
-Pater{РћС‚РµС†}
-Jourdain{Р–СѓСЂРґРµРЅ}
-Claude{РљР»РѕРґ}
-Le Moigne{Р›Рµ РњСѓР°РЅСЊ}
-Hardouin{РҐР°СЂРґСѓРёРЅ}
-Aufort{РђСѓС„РѕСЂС‚}
-Hortensio{Р“РѕСЂС‚РµРЅР·РёРѕ}
-Crespo{РљСЂРµСЃРїРѕ}
-Turpin{РўСѓСЂРїРёРЅ}
-Cabanel{РљР°Р±Р°РЅРµР»СЊ}
-Gris{Р“СЂРёР·}
-Barthez{Р‘Р°СЂС‚РµР·}
-Huon{РҐСѓРѕРЅ}
-Marly{РњР°СЂР»Рё}
-Tancrede{РўР°РЅРєСЂРёРґ}
-Rimbaud{Р РµРјР±Рѕ}
-Pierre{РџСЊРµСЂ}
-Biez{Р‘СЊРµР·}
-Emile{Р­РјРёР»СЊ}
-Capelle{РљР°РїСЌР»СЊ}
-Doolin{Р”СѓР»РёРЅ}
-Soleuze{РЎРѕР»РµР·}
-Merle{РњРёСЂР»Рё}
-Granet{Р“СЂР°РЅРµС‚}
-Deglau{Р”РµРіР»Рѕ}
-Robert{Р РѕР±РµСЂС‚}
-Mingeon{РњРёРЅСЊРѕРЅ}
-Valerian{Р’Р°Р»РµСЂРёР°РЅ}
-Alembert{РђР»РµРјР±СЌСЂ}
-Alban{РђР»Р±Р°РЅ}
-Sartre{РЎР°СЂС‚СЂ}
-Octavien{РћРєС‚Р°РІСЊРµРЅ}
-Sauvaigo{РЎРѕРІР°Р№РіРѕ}
-Justin{Р”Р¶Р°СЃС‚РёРЅ}
-Beineix{Р‘СЊРµРЅСЌРєСЃ}
-Loup{Р›СѓРї}
-Letice{Р›РµС‚РёСЃ}
-Virginie_fr{Р’РёСЂРґР¶РёРЅРё}
-Ruinart{Р РёРЅР°СЂ}
-Sebastien{РЎРµР±Р°СЃС‚СЊСЏРЅ}
-Wilmart{Р’РёР»СЊРјР°СЂ}
-Honore{РћРЅРѕСЂРµ}
-Villette{Р’РёР»Р»РµС‚}
-Helgot{РҐРµР»СЊРіРѕС‚}
-Cottard{РљРѕС‚С‚Р°СЂ}
-Celestin{РЎРµР»РµСЃС‚РёРЅ}
-Fammeree{Р¤Р°РјРјРµСЂРё}
-Felix{Р¤РµР»РёРєСЃ}
-Baijot{Р‘Р°Р№РґР¶РѕС‚}
-Florentin{Р¤Р»РѕСЂРµРЅС‚РёРЅ}
-Oudet{РЈРґСЌ}
-Amadeo{РђРјР°РґРµРѕ}
-Theriot{РўСЌСЂРёРѕС‚}
-Brantome{Р‘СЂР°РЅС‚РѕРј}
-Visse{Р’РёСЃСЃРµ}
-Fluvant{Р¤Р»СЋРІР°}
-Trenet{РўСЂРµРЅСЌ}
-Gentile{Р–Р°РЅС‚РёР»СЊ}
-Hurtis{РҐР°СЂС‚РёСЃ}
-Beuve{Р‘СЌРІРµ}
-Jenlain{Р”Р¶РµРЅР»РµР№РЅ}
-Corneille{РљРѕСЂРЅРµР»СЊ}
-Maccaux{РњР°РєРєРѕРєСЃ}
-Elzire{Р­Р»СЊР·РёСЂ}
-Ayarai{РђР№Р°СЂР°Р№}
-Tomasina{РўРѕРјР°СЃРёРЅР°}
-Pickfurt{РџРёРєС„СѓСЂС‚}
+Milon{Милон}
+Blacque{Бласкю}
+Orable{Орабл}
+Caron{Карон}
+Rachel{Рэйчел}
+Marc{Марк}
+Sabine{Сабин}
+Sabina{Сабина}
+Sabie{Саби}
+Sabi{Саби}
+Matton{Маттон}
+Raoul{Рауль}
+Calmes{Калмес}
+Lucien{Люсьен}
+Bescanceny{Бесканцени}
+Teodoro{Теодоро}
+Andre{Андрэ}
+Juliao{Джулия}
+Rene{Ренэ}
+Duguay{Дугай}
+Pater{Отец}
+Jourdain{Журден}
+Claude{Клод}
+Le Moigne{Ле Муань}
+Hardouin{Хардуин}
+Aufort{Ауфорт}
+Hortensio{Гортензио}
+Crespo{Креспо}
+Turpin{Турпин}
+Cabanel{Кабанель}
+Gris{Гриз}
+Barthez{Бартез}
+Huon{Хуон}
+Marly{Марли}
+Tancrede{Танкрид}
+Rimbaud{Рембо}
+Pierre{Пьер}
+Biez{Бьез}
+Emile{Эмиль}
+Capelle{Капэль}
+Doolin{Дулин}
+Soleuze{Солез}
+Merle{Мирли}
+Granet{Гранет}
+Deglau{Дегло}
+Robert{Роберт}
+Mingeon{Миньон}
+Valerian{Валериан}
+Alembert{Алембэр}
+Alban{Албан}
+Sartre{Сартр}
+Octavien{Октавьен}
+Sauvaigo{Совайго}
+Justin{Джастин}
+Beineix{Бьенэкс}
+Loup{Луп}
+Letice{Летис}
+Virginie_fr{Вирджини}
+Ruinart{Ринар}
+Sebastien{Себастьян}
+Wilmart{Вильмар}
+Honore{Оноре}
+Villette{Виллет}
+Helgot{Хельгот}
+Cottard{Коттар}
+Celestin{Селестин}
+Fammeree{Фаммери}
+Felix{Феликс}
+Baijot{Байджот}
+Florentin{Флорентин}
+Oudet{Удэ}
+Amadeo{Амадео}
+Theriot{Тэриот}
+Brantome{Брантом}
+Visse{Виссе}
+Fluvant{Флюва}
+Trenet{Тренэ}
+Gentile{Жантиль}
+Hurtis{Хартис}
+Beuve{Бэве}
+Jenlain{Дженлейн}
+Corneille{Корнель}
+Maccaux{Маккокс}
+Elzire{Эльзир}
+Ayarai{Айарай}
+Tomasina{Томасина}
+Pickfurt{Пикфурт}
 
 {=====| FortCommandants.c |=====}
-Rauf{Р Р°СѓС„}
-Mallard{РњР°Р»Р»Р°СЂРґ}
-Stanley{РЎС‚СЌРЅР»Рё}
-Ransome{Р СЌРЅСЃРѕРј}
-William{РЈРёР»СЊСЏРј}
-Bishop{Р•РїРёСЃРєРѕРї}
-Gerard{Р”Р¶РµСЂР°СЂРґ}
-Cahusac{РљР°СѓР·Р°Рє}
-Basil{Р‘СЌР·РёР»}
-Vespucci{Р’РµСЃРїСѓС‡С‡Рё}
-Frank{Р¤СЂР°РЅРє}
-Voorwerp{Р’СѓСЂРІРµСЂРї}
-Almadovar{РђР»СЊРјР°РґРѕРІР°СЂ}
-Teseus{РўРµСЃРµР№}
-Woods{Р’СѓРґСЃ}
-Nicholas{РќРёРєРѕР»Р°СЃ}
-Quinton{РљРІРёРЅС‚РѕРЅ}
-Pedro{РџРµРґСЂРѕ}
-Navarro{РќР°РІР°СЂСЂРѕ}
-Maurellus{РњРѕСЂРµР»Р»СѓСЃ}
-Maradona{РњР°СЂР°РґРѕРЅР°}
-Francois{Р¤СЂР°РЅСЃСѓР°}
-Vautrin{Р’РѕС‚СЂРµРЅ}
-Bernard{Р‘РµСЂРЅР°СЂРґ}
-Fokke{Р¤РѕРєРєРµ}
-Luniere{Р›СЋРЅСЊРµСЂ}
-Rimbaut{Р СЌРјР±Рѕ}
-Arno{РђСЂРЅРѕ}
-Salsa{РЎР°Р»СЊСЃР°}
-Walter{РЈРѕР»С‚РµСЂ}
-Talleyrand{РўР°Р»РµР№СЂР°РЅ}
-Marius{РњР°СЂРёСѓСЃ}
-Yberville{РР±РµСЂРІРёР»СЊ}
-Gerrit{Р“СЌСЂСЂРёС‚}
-Schotte{РЁРѕС‚С‚Рµ}
-Philip{Р¤РёР»РёРї}
-Rockridge{Р РѕРєСЂРёРґР¶}
-Oranjestad Fort{Р¤РѕСЂС‚Р° РћСЂР°РЅСЊРµСЃС‚Р°Рґ}
-Commandant{РљРѕРјРµРЅРґР°РЅС‚}
-de Heredia{Р”Рµ Р­СЂРµРґРёСЏ}
-Smith{РЎРјРёС‚}
+Rauf{Рауф}
+Mallard{Маллард}
+Stanley{Стэнли}
+Ransome{Рэнсом}
+William{Уильям}
+Bishop{Епископ}
+Gerard{Джерард}
+Cahusac{Каузак}
+Basil{Бэзил}
+Vespucci{Веспуччи}
+Frank{Франк}
+Voorwerp{Вурверп}
+Almadovar{Альмадовар}
+Teseus{Тесей}
+Woods{Вудс}
+Nicholas{Николас}
+Quinton{Квинтон}
+Pedro{Педро}
+Navarro{Наварро}
+Maurellus{Мореллус}
+Maradona{Марадона}
+Francois{Франсуа}
+Vautrin{Вотрен}
+Bernard{Бернард}
+Fokke{Фокке}
+Luniere{Люньер}
+Rimbaut{Рэмбо}
+Arno{Арно}
+Salsa{Сальса}
+Walter{Уолтер}
+Talleyrand{Талейран}
+Marius{Мариус}
+Yberville{Ибервиль}
+Gerrit{Гэррит}
+Schotte{Шотте}
+Philip{Филип}
+Rockridge{Рокридж}
+Oranjestad Fort{Форта Ораньестад}
+Commandant{Комендант}
+de Heredia{Де Эредия}
+Smith{Смит}
 
 {=====| Guadeloupe.c |=====}
-Remy{Р РµРјРё}
-Gatien{Р“Р°С‚СЊРµРЅ}
-Dominic{Р”РѕРјРёРЅРёРє}
-Elliot{Р­Р»Р»РёРѕС‚}
-Marpeut{РњР°СЂРїСЌС‚}
-Laure{Р›Р°СѓСЂР°}
-Sinclair{РЎРёРЅРєР»РµСЂ}
-Dubois{Р”СЋР±СѓР°}
-FranР·ois{Р¤СЂР°РЅСЃСѓР°}
-de Vigny{Р”Рµ Р’РёРЅСЊРё}
-Amarante{РђРјР°СЂР°РЅС‚}
-Bontin{Р‘РѕРЅС‚РёРЅ}
+Remy{Реми}
+Gatien{Гатьен}
+Dominic{Доминик}
+Elliot{Эллиот}
+Marpeut{Марпэт}
+Laure{Лаура}
+Sinclair{Синклер}
+Dubois{Дюбуа}
+Franзois{Франсуа}
+de Vigny{Де Виньи}
+Amarante{Амарант}
+Bontin{Бонтин}
 
 {=====| Hispaniola.c |=====}
-Jehan{Р”Р¶РµС…Р°РЅ}
-Labbe{Р›Р°Р±Р±Рµ}
-Puebla{РџСѓСЌР±Р»Р°}
-Esmeralda{Р­СЃРјРµСЂР°Р»СЊРґР°}
-Cruezo{РљСЂСѓР·Рѕ}
-Basilio{Р‘Р°Р·РёР»РёРѕ}
-Domingo{Р”РѕРјРёРЅРіРѕ}
-Larga{Р›Р°СЂРіР°}
-Conzuela{РљРѕРЅСЃСѓСЌР»Р°}
-Rodriguez{Р РѕРґСЂРёРіРµСЃ}
-Carla{РљР°СЂР»Р°}
-Salvador{РЎР°Р»СЊРІР°РґРѕСЂ}
-Allende{РђР»СЊРµРЅРґРµ}
-Town guard{Р“РѕСЂРѕРґСЃРєР°СЏ СЃС‚СЂР°Р¶Р°}
-Neal{РќРёР»}
-Rodgers{Р РѕРґР¶РµСЂСЃ}
-Claire{РљР»СЌСЂ}
-Bertrand{Р‘РµСЂС‚СЂР°РЅ}
-Ogeron{РћР¶РµСЂРѕРЅ}
-Guy{Р“Р°Р№}
-Lafleur{Р›Р°С„Р»РµСЂ}
-Carpenter{РљР°СЂРїРµРЅС‚РµСЂ}
-Pereira{РџРµСЂРµР№СЂР°}
-Peeters{РџРёС‚РµСЂСЃ}
-Herbert{Р“РµСЂР±РµСЂС‚}
-Fawn{Р¤Р°РІРЅ}
-Leadbeater{Р›РµРґР±РёС‚РµСЂ}
-Jordan{Р”Р¶РѕСЂРґР°РЅ}
-Richardson{Р РёС‡Р°СЂРґСЃРѕРЅ}
-Dupray{Р”СЋРїСЂРµ}
-Gabriel{Р“Р°Р±СЂРёСЌР»СЊ}
-Santana{РЎР°РЅС‚Р°РЅР°}
-Dirk{Р”РёСЂРє}
-Maase{РњР°Р°СЃРµ}
-Lars{Р›Р°СЂСЃ}
-Andersson{РђРЅРґРµСЂСЃСЃРѕРЅ}
-Isabelle{РР·Р°Р±РµР»СЊ}
-de Cussy{Р”Рµ РљСЋСЃСЃРё}
-Frederic{Р¤СЂРµРґРµСЂРёРє}
-Bagage{Р‘Р°РіР°Р¶}
-Arielle{РђСЂРёСЌР»СЊ}
-Dumont{Р”СЋРјРѕРЅ}
-Dorian{Р”РѕСЂРёР°РЅ}
-Denise{Р”РµРЅРёСЃ}
-Fleur{Р¤Р»РµСЂ}
-Dimitri{Р”РјРёС‚СЂРёР№}
-Lunesque{Р›СѓРЅРµСЃРє}
-Bryan{Р‘СЂР°Р№Р°РЅ}
-the Disgruntled{Р Р°СЃСЃРµСЂР¶РµРЅРЅС‹Р№}
-Bloody{РљСЂРѕРІР°РІС‹Р№}
-Norm Kidd{РќРѕСЂРј РљРёРґРґ}
-Iguaran{РРіСѓР°СЂР°РЅ}
-Escriva{Р­СЃРєСЂРёРІР°}
-Aubert{РћР±РµСЂ}
-de La Chesnaye{Р”Рµ Р›Р° РЁРµРЅРµ}
-Doreen{Р”РѕСЂРёРёРЅ}
-Lascana{Р›Р°СЃРєР°РЅР°}
+Jehan{Джехан}
+Labbe{Лаббе}
+Puebla{Пуэбла}
+Esmeralda{Эсмеральда}
+Cruezo{Крузо}
+Basilio{Базилио}
+Domingo{Доминго}
+Larga{Ларга}
+Conzuela{Консуэла}
+Rodriguez{Родригес}
+Carla{Карла}
+Salvador{Сальвадор}
+Allende{Альенде}
+Town guard{Городская стража}
+Neal{Нил}
+Rodgers{Роджерс}
+Claire{Клэр}
+Bertrand{Бертран}
+Ogeron{Ожерон}
+Guy{Гай}
+Lafleur{Лафлер}
+Carpenter{Карпентер}
+Pereira{Перейра}
+Peeters{Питерс}
+Herbert{Герберт}
+Fawn{Фавн}
+Leadbeater{Ледбитер}
+Jordan{Джордан}
+Richardson{Ричардсон}
+Dupray{Дюпре}
+Gabriel{Габриэль}
+Santana{Сантана}
+Dirk{Дирк}
+Maase{Маасе}
+Lars{Ларс}
+Andersson{Андерссон}
+Isabelle{Изабель}
+de Cussy{Де Кюсси}
+Frederic{Фредерик}
+Bagage{Багаж}
+Arielle{Ариэль}
+Dumont{Дюмон}
+Dorian{Дориан}
+Denise{Денис}
+Fleur{Флер}
+Dimitri{Дмитрий}
+Lunesque{Лунеск}
+Bryan{Брайан}
+the Disgruntled{Рассерженный}
+Bloody{Кровавый}
+Norm Kidd{Норм Кидд}
+Iguaran{Игуаран}
+Escriva{Эскрива}
+Aubert{Обер}
+de La Chesnaye{Де Ла Шене}
+Doreen{Дориин}
+Lascana{Ласкана}
 
 {=====| IslaMona.c |=====}
-Randolf{Р СЌРЅРґРѕР»СЊС„}
-Blecher{Р‘Р»РµС‡РµСЂ}
-Wilfred{РЈРёР»С„СЂРµРґ}
-Burman{Р‘С‘СЂРјР°РЅ}
+Randolf{Рэндольф}
+Blecher{Блечер}
+Wilfred{Уилфред}
+Burman{Бёрман}
 
 {=====| IslaMuelle.c |=====}
-Sylvie{РЎРёР»СЊРІРёСЏ}
-Bondies{Р‘РѕРЅРґСЊРµ}
-Zaid{Р—Р°Р№Рґ}
-Murro{РњСѓСЂСЂРѕ}
-Vigila{Р’РёРіРёР»Р°}
-Mendes{РњРµРЅРґРµСЃ}
-Estrella{Р­СЃС‚СЂРµР»Р»Р°}
-de Alencar{Р”Рµ РђР»РµРЅРєР°СЂ}
-Disguised{(РџРµСЂРµРѕРґРµС‚Р°СЏ)}
-Citizen{Р“РѕСЂРѕР¶Р°РЅРёРЅ}
-Uasco{РЈР°СЃРєРѕ}
-Mazinho{РњР°Р·РёРЅРѕ}
-Rodrico{Р РѕРґСЂРёРіРѕ}
-Insulza{РРЅСЃСѓР»Р·Р°}
-Gaspar{Р“Р°СЃРїР°СЂ}
-Domingues{Р”РѕРјРёРЅРіСѓСЃ}
-Robano{Р РѕР±Р°РЅРѕ}
-Christofor{РҐСЂРёСЃС‚РѕС„РѕСЂ}
-Manuel{РњР°РЅСѓСЌР»СЊ}
-Nunno{РќСѓРЅРЅРѕ}
-Gats{Р“Р°С‚СЃ}
-Mergildo{РњРµСЂРіРёР»СЊРґРѕ}
-Deferr{Р”СЌС„РµСЂ}
-Gisellus{Р–РёР·РµР»СЊ}
-Aicega{РђР№С‡РµРіР°}
-Alonso{РђР»РѕРЅСЃРѕ}
-Rodas{Р РѕРґР°СЃ}
-Xabe{РљСЃР°Р±Рµ}
-Morayta{РњРѕСЂР°Р№С‚Р°}
-Teodulfus{РўРµРѕРґРѕР»СЊС„СѓСЃ}
-Lastres{Р›Р°СЃС‚СЂРµСЃ}
-Tasia{РўР°СЃРёСЏ}
-Cobo{РљРѕР±Рѕ}
-Garci{Р“Р°СЂСЃРё}
-Crusellas{РљСЂСѓСЃРµР»Р»Р°СЃ}
-Ermegildo{Р­СЂРјРµРіРёР»СЊРґРѕ}
-Caminero{РљР°РјРёРЅРµСЂРѕ}
-Necha{РќРµС‡Р°}
-Duany{Р”СѓР°РЅРё}
-Iuliano{Р®Р»РёР°РЅРѕ}
-Enciso{Р­РЅРєРёСЃРѕ}
-Isambero{РСЃР°РјР±РµСЂРѕ}
-Pepillo{РџРµРїРёР»СЊРѕ}
-Lazaro{Р›Р°Р·Р°СЂРѕ}
-Sabiano{РЎР°Р±РёР°РЅРѕ}
-Obecco{РћР±РµРєРєРѕ}
-Hidalgo{РРґР°Р»СЊРіРѕ}
-Vito{Р’РёС‚Рѕ}
-Ordonez{РћСЂРґРѕРЅРµР·}
-Velasconi{Р’РµР»Р°СЃРєРѕРЅРё}
-Silloniz{РЎРёР»Р»РѕРЅРёР·}
-Andemio{РђРЅРґРµРјРёРѕ}
-De Caxias{Р”Рµ РљР°СЃРёР°СЃ}
-Isidro{РСЃРёРґСЂРѕ}
-Edinho{Р­РґРёРЅСЊРѕ}
-Cervano{РЎРµСЂРІР°РЅРѕ}
-Robierto{Р РѕР±РµСЂС‚Рѕ}
-Cabellodoferro{РљР°Р±РµР»СЊРѕРґРѕС„РµСЂСЂРѕ}
+Sylvie{Сильвия}
+Bondies{Бондье}
+Zaid{Зайд}
+Murro{Мурро}
+Vigila{Вигила}
+Mendes{Мендес}
+Estrella{Эстрелла}
+de Alencar{Де Аленкар}
+Disguised{(Переодетая)}
+Citizen{Горожанин}
+Uasco{Уаско}
+Mazinho{Мазино}
+Rodrico{Родриго}
+Insulza{Инсулза}
+Gaspar{Гаспар}
+Domingues{Домингус}
+Robano{Робано}
+Christofor{Христофор}
+Manuel{Мануэль}
+Nunno{Нунно}
+Gats{Гатс}
+Mergildo{Мергильдо}
+Deferr{Дэфер}
+Gisellus{Жизель}
+Aicega{Айчега}
+Alonso{Алонсо}
+Rodas{Родас}
+Xabe{Ксабе}
+Morayta{Морайта}
+Teodulfus{Теодольфус}
+Lastres{Ластрес}
+Tasia{Тасия}
+Cobo{Кобо}
+Garci{Гарси}
+Crusellas{Круселлас}
+Ermegildo{Эрмегильдо}
+Caminero{Каминеро}
+Necha{Неча}
+Duany{Дуани}
+Iuliano{Юлиано}
+Enciso{Энкисо}
+Isambero{Исамберо}
+Pepillo{Пепильо}
+Lazaro{Лазаро}
+Sabiano{Сабиано}
+Obecco{Обекко}
+Hidalgo{Идальго}
+Vito{Вито}
+Ordonez{Ордонез}
+Velasconi{Веласкони}
+Silloniz{Силлониз}
+Andemio{Андемио}
+De Caxias{Де Касиас}
+Isidro{Исидро}
+Edinho{Эдиньо}
+Cervano{Сервано}
+Robierto{Роберто}
+Cabellodoferro{Кабельодоферро}
 
 {=====| NK.c |=====}
-First{РРјСЏ}
-Last{Р¤Р°РјРёР»РёСЏ}
-Ye Keeper{РҐСЂР°РЅРёС‚РµР»СЊ}
-o' ye Hoarde{РЎРѕРєСЂРѕРІРёС‰}
+First{Имя}
+Last{Фамилия}
+Ye Keeper{Хранитель}
+o' ye Hoarde{Сокровищ}
 
 {=====| Officers.c |=====}
-Fred{Р¤СЂРµРґ}
-Bob{Р‘РѕР±}
-Baldewyn{Р‘РѕР»РґСѓРёРЅ}
-Coffier{РљРѕС„С„РёСЂ}
-Da Saldanha{Р”Рµ РЎР°Р»РґР°РЅСЊСЏ}
-Rys{Р РёСЃ}
-Bloom{Р‘Р»СѓРј}
-Larrouse{Р›СЏСЂСѓСЃ}
-Jaoquin{Р–Р°РѕРєРёРЅ}
-De Masse{Р”Рµ РњР°СЃСЃРµ}
-Nigel{РќР°Р№РґР¶РµР»}
-Blythe{Р‘Р»Р°Р№С‚}
-Artois{РђСЂС‚СѓР°}
-Voysey{Р’СѓР°Р·СЊРµ}
-Amerigo{РђРјРµСЂРёРіРѕ}
-Vieira{Р’РёРµР№СЂР°}
-Florens{Р¤Р»РѕСЂРµРЅСЃ}
-Clauss{РљР»Р°СѓСЃСЃ}
-Attwood{Р­С‚С‚РІСѓРґ}
-Blood{Р‘Р»Р°Рґ}
-Txiki{РўСЃРёРєРё}
-Pijuan{РџРёР¶СѓР°РЅ}
+Fred{Фред}
+Bob{Боб}
+Baldewyn{Болдуин}
+Coffier{Коффир}
+Da Saldanha{Де Салданья}
+Rys{Рис}
+Bloom{Блум}
+Larrouse{Лярус}
+Jaoquin{Жаокин}
+De Masse{Де Массе}
+Nigel{Найджел}
+Blythe{Блайт}
+Artois{Артуа}
+Voysey{Вуазье}
+Amerigo{Америго}
+Vieira{Виейра}
+Florens{Флоренс}
+Clauss{Клаусс}
+Attwood{Эттвуд}
+Blood{Блад}
+Txiki{Тсики}
+Pijuan{Пижуан}
 
 {=====| Other.c |=====}
-Boat{Р›РѕРґРєР°}
-Character{РџРµСЂСЃРѕРЅР°Р¶}
+Boat{Лодка}
+Character{Персонаж}
 
 {=====| Oxbay.c |=====}
-Bartholomew{Р‘Р°СЂС‚РѕР»РѕРјСЊСЋ}
-Pardner{РџР°СЂРґРЅРµСЂ}
-Olyver{РћР»РёРІРµСЂ}
-Blaxter{Р‘Р»СЌРєСЃС‚РµСЂ}
-Beatrice{Р‘РµР°С‚СЂРёСЃ}
-Applegate{Р­РїР»РіРµР№С‚}
-Brennan{Р‘СЂРµРЅРЅР°РЅ}
-Gregor{Р“СЂРµРіРѕСЂ}
-Samsa{РЎР°РјСЃР°}
-Moses{РњРѕРёСЃРµР№}
-Blinman{Р‘Р»РёРЅРјР°РЅ}
-Lavinia{Р›Р°РІРёРЅРёСЏ}
-Ault{РћСѓР»С‚}
-Dashwood{Р”СЌС€РІСѓРґ}
-Flora{Р¤Р»РѕСЂР°}
-Debney{Р”РµР±РЅРё}
-Gilroy{Р“РёР»СЂРѕР№}
-Marvin{РњР°СЂРІРёРЅ}
-Prince{РџСЂРёРЅС†}
-Ralph{Р Р°Р»СЊС„}
-Maybank{РњСЌР№Р±Р°РЅРє}
-Evan{Р­РІР°РЅ}
-Hart{РҐР°СЂС‚}
-Butner{Р‘Р°С‚РЅРµСЂ}
-Celia{РЎРµР»РёСЏ}
-Shedder{РЁРµРґРґРµСЂ}
-Coy{РљРѕР№}
-Peate{РџРёС‚}
-Damerall{Р”СЌРјРµСЂР°Р»Р»}
-Gosling{Р“РѕСЃР»РёРЅРі}
-Garry{Р“Р°СЂСЂРё}
-Ankers{РђРЅРєРµСЂСЃ}
-Susannah{РЎСЋР·Р°РЅРЅР°}
-Lazar{Р›Р°Р·Р°СЂ}
-Michael{РњР°Р№РєР»}
-Collop{РљРѕР»Р»РѕРї}
-Malter{РњР°Р»СЊС‚РµСЂ}
-Alan{РђР»Р°РЅ}
-Newman{РќСЊСЋРјСЌРЅ}
-Audrey{РћРґСЂРё}
-Proude{РџСЂР°СѓРґ}
-Andrew{Р­РЅРґСЂСЋ}
-Brasher{Р‘СЂР°С€РµСЂ}
-Kellogg{РљРµР»Р»РѕРіРі}
-Brian{Р‘СЂР°Р№Р°РЅ}
-Bratcher{Р‘СЂР°С‚С‡РµСЂ}
-Ronald{Р РѕРЅР°Р»СЊРґ}
-Blacklock{Р‘Р»СЌРєР»РѕРє}
-Miner{РЁР°С…С‚РµСЂ}
-Mines Commander{РЈРїСЂР°РІР»СЏСЋС‰РёР№ Р СѓРґРЅРёРєР°РјРё}
-Jerald{Р”Р¶РµСЂР°Р»СЊРґ}
-Gilbert{Р“РёР»Р±РµСЂС‚}
-Ballester{Р‘СЌР»Р»РµСЃС‚СЌСЂ}
-Steven{РЎС‚РёРІРµРЅ}
-Mather-Wren{РњР°Р·РµСЂ-Р’СЂРµРЅ}
-Hacepoco{РҐР°С†РµРїРѕРєРѕ}
+Bartholomew{Бартоломью}
+Pardner{Парднер}
+Olyver{Оливер}
+Blaxter{Блэкстер}
+Beatrice{Беатрис}
+Applegate{Эплгейт}
+Brennan{Бреннан}
+Gregor{Грегор}
+Samsa{Самса}
+Moses{Моисей}
+Blinman{Блинман}
+Lavinia{Лавиния}
+Ault{Оулт}
+Dashwood{Дэшвуд}
+Flora{Флора}
+Debney{Дебни}
+Gilroy{Гилрой}
+Marvin{Марвин}
+Prince{Принц}
+Ralph{Ральф}
+Maybank{Мэйбанк}
+Evan{Эван}
+Hart{Харт}
+Butner{Батнер}
+Celia{Селия}
+Shedder{Шеддер}
+Coy{Кой}
+Peate{Пит}
+Damerall{Дэмералл}
+Gosling{Гослинг}
+Garry{Гарри}
+Ankers{Анкерс}
+Susannah{Сюзанна}
+Lazar{Лазар}
+Michael{Майкл}
+Collop{Коллоп}
+Malter{Мальтер}
+Alan{Алан}
+Newman{Ньюмэн}
+Audrey{Одри}
+Proude{Прауд}
+Andrew{Эндрю}
+Brasher{Брашер}
+Kellogg{Келлогг}
+Brian{Брайан}
+Bratcher{Братчер}
+Ronald{Рональд}
+Blacklock{Блэклок}
+Miner{Шахтер}
+Mines Commander{Управляющий Рудниками}
+Jerald{Джеральд}
+Gilbert{Гилберт}
+Ballester{Бэллестэр}
+Steven{Стивен}
+Mather-Wren{Мазер-Врен}
+Hacepoco{Хацепоко}
 
 {=====| PostInit.c |=====}
 
 {=====| QuebradasCostillas.c |=====}
-Terry{РўРµСЂСЂРё}
-Snider{РЎРЅР°Р№РґРµСЂ}
-Gilles{Р–РёР»СЊ}
-Roche{Р РѕС€Рµ}
-Alvaro{РђР»СЊРІР°СЂРѕ}
-Dimas{Р”РёРјР°СЃ}
-Natan{РќСЌР№С‚Р°РЅ}
-Bueno{Р‘СѓСЌРЅРѕ}
-Romao{Р РѕРјР°Рѕ}
-Edhino{Р­РґРёРЅРѕ}
-Valerio{Р’Р°Р»РµСЂРёРѕ}
-Tintorero{РўРёРЅС‚РѕСЂРµСЂРѕ}
-Hamund{РҐР°РјСѓРЅРґ}
-Verret{Р’РµСЂСЂРµС‚}
-Armand{РђСЂРјР°РЅРґ}
-Delacroix{Р”РµР»Р°РєСЂСѓР°}
-Howell{РҐР°СѓСЌР»Р»}
-Davis{Р”СЌРІРёСЃ}
-Isenbrandt{РР·РµРЅР±СЂР°РЅРґС‚}
-Jurcksen{Р®СЂРєСЃРµРЅ}
-Morys{РњРѕСЂРёСЃ}
-Biddulph{Р‘РёРґРґСѓР»СЊС„}
-Hayes{РҐСЌР№СЃ}
-Flann{Р¤Р»СЌРЅРЅ}
-Marrow{РњР°СЂСЂРѕСѓ}
-Newson{РќСЊСЋСЃРѕРЅ}
-Celestine{Р¦РµР»РµСЃС‚РёРЅР°}
-Maupassant{РњРѕРїР°СЃСЃР°РЅ}
-Natalia{РќР°С‚Р°Р»РёР°}
-Decoteau{Р”РµРєРѕС‚Рѕ}
-Serena{РЎРµСЂРµРЅР°}
-Tisserand{РўРёСЃСЃРµСЂР°РЅ}
-Amelia{РђРјРµР»РёСЏ}
-Frere{Р¤СЂРµСЂ}
-Valentina{Р’Р°Р»РµРЅС‚РёРЅР°}
-Hilder{РҐРёР»СЊРґРµСЂ}
-Officer{РћС„РёС†РµСЂ}
-Thomas{РўРѕРјР°СЃ}
-Modiford{РњРѕРґРёС„РѕСЂРґ}
-Samuel{РЎР°РјСѓСЌР»СЊ}
-Clint{РљР»РёРЅС‚}
-Eastwood{РСЃС‚РІСѓРґ}
-Arne{РђСЂРЅСЌ}
-Saknussem{РЎР°РєРЅСѓСЃСЃРёРј}
-Goyle{Р“РѕР№Р»}
-Stone{РЎС‚РѕСѓРЅ}
-Luna{Р›СѓРЅР°}
-Grange{Р“СЂРµР№РЅРґР¶}
+Terry{Терри}
+Snider{Снайдер}
+Gilles{Жиль}
+Roche{Роше}
+Alvaro{Альваро}
+Dimas{Димас}
+Natan{Нэйтан}
+Bueno{Буэно}
+Romao{Ромао}
+Edhino{Эдино}
+Valerio{Валерио}
+Tintorero{Тинтореро}
+Hamund{Хамунд}
+Verret{Веррет}
+Armand{Арманд}
+Delacroix{Делакруа}
+Howell{Хауэлл}
+Davis{Дэвис}
+Isenbrandt{Изенбрандт}
+Jurcksen{Юрксен}
+Morys{Морис}
+Biddulph{Биддульф}
+Hayes{Хэйс}
+Flann{Флэнн}
+Marrow{Марроу}
+Newson{Ньюсон}
+Celestine{Целестина}
+Maupassant{Мопассан}
+Natalia{Наталиа}
+Decoteau{Декото}
+Serena{Серена}
+Tisserand{Тиссеран}
+Amelia{Амелия}
+Frere{Фрер}
+Valentina{Валентина}
+Hilder{Хильдер}
+Officer{Офицер}
+Thomas{Томас}
+Modiford{Модифорд}
+Samuel{Самуэль}
+Clint{Клинт}
+Eastwood{Иствуд}
+Arne{Арнэ}
+Saknussem{Сакнуссим}
+Goyle{Гойл}
+Stone{Стоун}
+Luna{Луна}
+Grange{Грейндж}
 
 {=====| Redmond.c |=====}
-Henry{Р“РµРЅСЂРё}
-Laurence{Р›РѕСѓСЂРµРЅСЃ}
-Wellman{Р’СЌР»РјР°РЅ}
-Docker{РџРѕСЂС‚РѕРІС‹Р№ Р“СЂСѓР·С‡РёРє}
-Gillian{Р”Р¶РёР»Р»РёР°РЅ}
-Atterbury{Р­С‚С‚РµСЂР±РµСЂРё}
-Griffith{Р“СЂРёС„С„РёС‚}
-Peabody{РџРёР±РѕРґРё}
-Jane{Р”Р¶РµР№РЅ}
-Attwell{Р­С‚С‚СѓСЌР»Р»}
-Blewett{Р‘Р»СЋСЌС‚С‚}
-Miles{РњР°Р№Р»СЃ}
-Biddick{Р‘РёРґРґРёРє}
-Gareth{Р“Р°СЂРµС‚}
-Swingler{РЎРІРёРЅРіР»РµСЂ}
-Eamonn{Р­РјРѕРЅ}
-Larter{Р›Р°СЂС‚СЌСЂ}
-Magdalen{РњР°РіРґР°Р»РµРЅ}
-Ayler{Р­Р№Р»РµСЂ}
-Jacob{Р”Р¶РµР№РєРѕР±}
-Bewighte{Р‘РµРІР°Р№С‚}
-Peutherer{РџСЊСЋС‚РµСЂРµСЂ}
-Yvonne{РРІРѕРЅ}
-Dale{Р”СЌР№Р»}
-Matthew{РњСЌС‚СЊСЋ}
-Hoskins{РҐРѕСЃРєРёРЅСЃ}
-Vallentain{Р’Р°Р»РµРЅС‚Р°Р№РЅ}
-Belt{Р‘РµР»С‚}
-Bisset{Р‘РёСЃСЃРµС‚}
-Hammond{РҐСЌРјРјРѕРЅРґ}
-Kempster{РљСЌРјРїСЃС‚РµСЂ}
-Clifford{РљР»РёС„С„РѕСЂРґ}
-Brin{Р‘СЂРёРЅ}
-Mortimer{РњРѕСЂС‚РёРјРµСЂ}
-Pitchblende{РџРёС‚С‡Р±Р»РµРЅРґ}
-Richechio{Р РёС‡РµС‡РёРѕ}
-Daraborum{Р”Р°СЂР°Р±РѕСЂСѓРј}
-Murato{РњСѓСЂР°С‚Рѕ}
-Kamizane{РљСЌРјРёР·РµРЅ}
-Bettany{Р‘РµС‚С‚Р°РЅРё}
-McGillicutty{РњР°Рє Р“РёР»Р»РёРєР°С‚С‚Рё}
-Sullivan{РЎР°Р»Р»РёРІР°РЅ}
-James{Р”Р¶РµР№РјСЃ}
-Lancaster{Р›Р°РЅРєР°СЃС‚РµСЂ}
+Henry{Генри}
+Laurence{Лоуренс}
+Wellman{Вэлман}
+Docker{Портовый Грузчик}
+Gillian{Джиллиан}
+Atterbury{Эттербери}
+Griffith{Гриффит}
+Peabody{Пибоди}
+Jane{Джейн}
+Attwell{Эттуэлл}
+Blewett{Блюэтт}
+Miles{Майлс}
+Biddick{Биддик}
+Gareth{Гарет}
+Swingler{Свинглер}
+Eamonn{Эмон}
+Larter{Лартэр}
+Magdalen{Магдален}
+Ayler{Эйлер}
+Jacob{Джейкоб}
+Bewighte{Бевайт}
+Peutherer{Пьютерер}
+Yvonne{Ивон}
+Dale{Дэйл}
+Matthew{Мэтью}
+Hoskins{Хоскинс}
+Vallentain{Валентайн}
+Belt{Белт}
+Bisset{Биссет}
+Hammond{Хэммонд}
+Kempster{Кэмпстер}
+Clifford{Клиффорд}
+Brin{Брин}
+Mortimer{Мортимер}
+Pitchblende{Питчбленд}
+Richechio{Ричечио}
+Daraborum{Дараборум}
+Murato{Мурато}
+Kamizane{Кэмизен}
+Bettany{Беттани}
+McGillicutty{Мак Гилликатти}
+Sullivan{Салливан}
+James{Джеймс}
+Lancaster{Ланкастер}
 
 {=====| SaintMartin.c |=====}
-Dickman{Р”РёРєРјР°РЅ}
-de Rivarol{Р”Рµ Р РёРІР°СЂРѕР»СЊ}
-Travers{РўСЂР°РІРµСЂСЃ}
-Aubert{РћР±РµСЂ}
-Boogard{Р‘СѓРіР°СЂРґ}
-Dunere{Р”СЋРЅРµСЂРµ}
-Juliette{Р”Р¶СѓР»СЊРµС‚С‚Р°}
-Truffel{РўСЂСЋС„РµР»СЊ}
-Fulbert{Р¤СѓР»Р±РµСЂС‚}
-Trebluf{РўСЂРµР±Р»СЋС„}
-Adam{РђРґР°Рј}
-Groot{Р“СЂСѓС‚}
-Hubert{РҐСЊСЋР±РµСЂС‚}
-Decker{Р”РµРєРµСЂ}
-Hanna{РҐР°РЅРЅР°}
-Hoff{РҐРѕС„С„}
-Hannes{РҐР°РЅРЅРµСЃ}
-Jansen{Р”Р¶РµРЅСЃРµРЅ}
-Jana{РЇРЅР°}
-Smit{РЎРјРёС‚}
+Dickman{Дикман}
+de Rivarol{Де Ривароль}
+Travers{Траверс}
+Aubert{Обер}
+Boogard{Бугард}
+Dunere{Дюнере}
+Juliette{Джульетта}
+Truffel{Трюфель}
+Fulbert{Фулберт}
+Trebluf{Треблюф}
+Adam{Адам}
+Groot{Грут}
+Hubert{Хьюберт}
+Decker{Декер}
+Hanna{Ханна}
+Hoff{Хофф}
+Hannes{Ханнес}
+Jansen{Дженсен}
+Jana{Яна}
+Smit{Смит}
 
 {=====| Ship.c |=====}
-Crewmember{Р§Р»РµРЅ РљРѕРјР°РЅРґС‹}
+Crewmember{Член Команды}
 
 {=====| SideQuest.c |=====}
-Rian{Р Р°Р№Р°РЅ}
-Dekkers{Р”РµРєРєРµСЂСЃ}
-Janneke{РЇРЅРЅРёРєРµ}
-Blinkerhof{Р‘Р»РёРЅРєРµСЂС…РѕС„}
-Lisebet{Р›РёР·Р°Р±РµС‚}
-Schefold{РЁРµС„РѕР»Рґ}
-Gheraed{Р“РµСЂР°Рґ}
-Drabbe{Р”СЂР°Р±Р±СЌ}
-Balltesar{Р‘Р°Р»СЊС‚РµР·Р°СЂ}
-Figueiredo{Р¤РёРіСЌР№СЂРµРґСѓ}
-Hurtado{РҐР°СЂС‚Р°РґРѕ}
-Jordano{Р”Р¶РѕСЂРґР°РЅРѕ}
-Yedam{Р™РµРґР°Рј}
-Kinne{РљРёРЅРЅ}
-Animist{РЎР°С‚Р°РЅРёСЃС‚}
-Satanist{РЎР°С‚Р°РЅРёСЃС‚}
-Dark Teacher{РњСЂР°С‡РЅС‹Р№ РЈС‡РёС‚РµР»СЊ}
-Mystery Man{РўР°РёРЅСЃС‚РІРµРЅРЅС‹Р№ Р§РµР»РѕРІРµРє}
-Teacher{РЈС‡РёС‚РµР»СЊ}
-Blunden{Р‘Р»Р°РЅРґРµРЅ}
-killer{РЈР±РёР№С†Р°}
-Joaquin{РҐРѕР°РєРёРЅ}
-Arabella{РђСЂР°Р±РµР»Р»Р°}
-Silehard{РЎР°Р№Р»С…Р°СЂРґ}
-Arabella's guard{РћС…СЂР°РЅРЅРёРє РђСЂР°Р±РµР»Р»С‹}
-Billy{Р‘РёР»Р»Рё}
-Brock{Р‘СЂРѕРє}
-Snorri{РЎРЅРѕСЂСЂРё}
-Baldursson{Р‘Р°Р»РґСѓСЂСЃРѕРЅ}
-Francis{Р¤СЂР°РЅСЃРёСЃ}
-Snake{РЎРЅСЌР№Рє}
-Angelique{РђРЅР¶РµР»РёРєР°}
-Moulin{РњСѓР»РµРЅ}
-Chamot{РЁР°РјРѕС‚}
-Antoine{РђРЅС‚СѓР°РЅ}
-Chamfort{РЁР°РјС„РѕСЂС‚}
-Robert_fr{Р РѕР±РµСЂС‚}
-Durand{Р”СЋСЂР°РЅ}
-Reynoud{Р РµР№РЅРѕР№Рґ}
-Davy{Р”СЌР№РІРё}
-Jones{Р”Р¶РѕРЅСЃ}
-Octave{РћРєС‚Р°РІР°}
-Fabre{Р¤Р°Р±СЂ}
-Elizabeth{Р­Р»РёР·Р°Р±РµС‚}
-Palafico{РџР°Р»Р°С„РёРєРѕ}
-Jimmy{Р”Р¶РёРјРјРё}
-Legs{Р›РµРіСЃ}
-Penrod{РџРµРЅСЂРѕРґ}
-Bart{Р‘Р°СЂС‚}
-Cooke{РљСѓРє}
-Wally{Р’СЌР»Р»Рё}
-Cutty{РљР°С‚С‚Рё}
-Bill{Р‘РёР»Р»}
-Jellybones{Р”Р¶РµР»Р»РёР±РѕРЅСЃ}
-Oraglio{РћСЂР°РіР»РёРѕ}
-Wadham{Р’Р°РґС…СЌРј}
-Notley{РќРѕС‚Р»Рё}
-Morland{РњРѕСЂР»Р°РЅРґ}
-Haley{РҐРµР№Р»Рё}
-Gyles{Р”Р¶Р°Р№Р»Р·}
-Peat{РџРёС‚}
-Gordon{Р“РѕСЂРґРѕРЅ}
-Dark Captain{РўС‘РјРЅС‹Р№ РљР°РїРёС‚Р°РЅ}
-Giraldo{Р–РёСЂР°Р»СЊРґРѕ}
-Figuiera{Р¤РёРіСѓСЌР№СЂР°}
-1{1-Р№}
-2{2-Р№}
-3{3-Р№}
-Friedrich{Р¤СЂРёРґСЂРёС…}
-Maxwell{РњР°РєСЃРІРµР»Р»}
-Meranda{РњРµСЂР°РЅРґР°}
-seven{СЃРµРІРµРЅ}
-Claudio{РљР»Р°СѓРґРёРѕ}
-Murena{РњСѓСЂРµРЅР°}
-Ethilrede{Р­С‚РёР»СЊСЂРµРґ}
-Claar{РљР»Р°Р°СЂ}
-Martin{РњР°СЂС‚РёРЅ}
-Warner{Р’РѕСЂРЅРµСЂ}
-Jack{Р”Р¶РµРє}
-Greenfield{Р“СЂРёРЅС„РёР»Рґ}
-Ambroz{РђРјР±СЂРѕР·}
-Bricenos{Р‘СЂРёС†РµРЅРѕСЃ}
-Santos{РЎР°РЅС‚РѕСЃ}
-Desiree'{Р”РµР·РёСЂРµ'}
-Muerte{РњСѓСЌСЂС‚Рµ}
-Thug{Р“СЂРѕРјРёР»Р°}
-Vassal{Р’Р°СЃСЃР°Р»}
-Bethune{Р‘РёС‚СЋРЅ}
-Daryl{Р”СЌСЂРёР»}
-Larry{Р›Р°СЂСЂРё}
-Captain Jack{РљР°РїРёС‚Р°РЅ Р”Р¶РµРє}
-Sparrow{Р’РѕСЂРѕР±РµР№}
-Camille{РљР°РјРёР»Р»Р°}
-Leone{Р›РµРѕРЅРµ}
-Prisoner{Р—Р°РєР»СЋС‡РµРЅРЅС‹Р№}
-Geffrey{Р”Р¶РµС„С„СЂРё}
-Bampfylde{Р‘СЌРјРїС„РёР»Рґ}
-Bucho{Р‘СѓС‡Рѕ}
-Pepin{РџРµРїРёРЅ}
-Bertillon's guard{РћС…СЂР°РЅРЅРёРє Р‘РµСЂС‚РёР»СЊРѕРЅР°}
-Soares{РЎРѕР°СЂРµСЃ}
-Juan{РҐСѓР°РЅ}
-Hernandez{Р­СЂРЅР°РЅРґРµР·}
-Boelen{Р‘РѕСЌР»РµРЅ}
-Cordoba{РљРѕСЂРґРѕРІР°}
-Captain{РљР°РїРёС‚Р°РЅ}
-Cecile{РЎРµСЃРёР»СЊ}
-Bienbonne{Р‘СЊРµРЅР±РѕРЅРЅ}
-Etienne{Р­С‚СЊРµРЅ}
-Dupuis{Р”СЋРїСЋРё}
-Rivera{Р РёРІРµСЂР°}
-Dusac{Р”СЋСЃР°Рє}
-Konrad{РљРѕРЅСЂР°Рґ}
-Kulczycki{РљСѓР»СЊС‡РёС†РєРёР№}
-Silver{РЎРёР»СЊРІРµСЂ}
-Nathaniel's Crewmember{Р§Р»РµРЅ РљРѕРјР°РЅРґС‹ РҐР°СѓРєР°}
-Clair{РљР»СЌСЂ}
-Larrousse{Р›Р°СЂСЂСѓСЃСЃ}
-France_bukaner_01{Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РџРёСЂР°С‚}
-Skull{Р§РµСЂРµРї}
-Will{РЈРёР»Р»}
-Turner{РўС‘СЂРЅРµСЂ}
-Swann{РЎСѓРѕРЅРЅ}
-Contre-Amirale{РљРѕРЅС‚СЂ-РђРґРјРёСЂР°Р»}
-Cesar{Р¦РµР·Р°СЂСЊ}
-Beauregard{Р‘РѕСЂРµРіР°СЂ}
-Dockworker{РџРѕСЂС‚РѕРІС‹Р№ Р Р°Р±РѕС‡РёР№}
-Maartje{РњР°СЂС‚СЊРµ}
-Hesselink{РҐРµСЃСЃРµР»РёРЅРє}
-Barendsz{Р‘Р°СЂРµРЅРґСЃ}
-Geoffroi{Р–РѕС„С„СЂСѓР°}
-Albeille{РђР»СЊР±РµР№}
-Barend{Р‘Р°СЂРµРЅРґ}
-Cook{РљСѓРє}
-Dusty{Р”Р°СЃС‚Рё}
-Broome{Р‘СЂСѓРј}
-Surgeon{Р’СЂР°С‡}
-Priest{РЎРІСЏС‰РµРЅРЅРёРє}
-Boatswain{Р‘РѕС†РјР°РЅ}
-Navigator{РЁС‚СѓСЂРјР°РЅ}
-Voigt{Р¤РѕР№РіС‚}
-Rodney{Р РѕРґРЅРё}
-Leighton{Р›РµР№С‚РѕРЅ}
-Midshipman{РњРёС‡РјР°РЅ}
-Longley{Р›РѕРЅРіР»Рё}
-Lieutenant{Р›РµР№С‚РµРЅР°РЅС‚}
-Julian{Р”Р¶СѓР»РёР°РЅ}
-Alvarado{РђР»СЊРІР°СЂР°РґРѕ}
-Cristobal{РљСЂРёСЃС‚РѕР±Р°Р»СЊ}
-Leon{Р›РµРѕРЅ}
-Escovar{Р­СЃРєРѕРІР°СЂ}
-Entenza{Р­РЅС‚РµРЅР·Р°}
-SeСЃorita{РЎРµРєРѕСЂРёС‚Р°}
-Hebe{РҐРµР±Рµ}
-Constantino{РљРѕРЅСЃС‚Р°РЅС‚РёРЅРѕ}
-AvellР±n{РђРІРµР»Р»Р°РЅ}
-Growling{Р С‹С‡Р°С‰РёР№}
-Bear{РњРµРґРІРµРґСЊ}
-Kicking{РљР»СЋСЋС‰РёР№СЃСЏ}
-Raven{Р’РѕСЂРѕРЅ}
-Lewis{Р›СЊСЋРёСЃ}
-Vickers{Р’РёРєРµСЂСЃ}
-Carpenter1{РљР°СЂРїРµРЅС‚РµСЂ}
+Rian{Райан}
+Dekkers{Деккерс}
+Janneke{Яннике}
+Blinkerhof{Блинкерхоф}
+Lisebet{Лизабет}
+Schefold{Шефолд}
+Gheraed{Герад}
+Drabbe{Драббэ}
+Balltesar{Бальтезар}
+Figueiredo{Фигэйреду}
+Hurtado{Хартадо}
+Jordano{Джордано}
+Yedam{Йедам}
+Kinne{Кинн}
+Animist{Сатанист}
+Satanist{Сатанист}
+Dark Teacher{Мрачный Учитель}
+Mystery Man{Таинственный Человек}
+Teacher{Учитель}
+Blunden{Бланден}
+killer{Убийца}
+Joaquin{Хоакин}
+Arabella{Арабелла}
+Silehard{Сайлхард}
+Arabella's guard{Охранник Арабеллы}
+Billy{Билли}
+Brock{Брок}
+Snorri{Снорри}
+Baldursson{Балдурсон}
+Francis{Франсис}
+Snake{Снэйк}
+Angelique{Анжелика}
+Moulin{Мулен}
+Chamot{Шамот}
+Antoine{Антуан}
+Chamfort{Шамфорт}
+Robert_fr{Роберт}
+Durand{Дюран}
+Reynoud{Рейнойд}
+Davy{Дэйви}
+Jones{Джонс}
+Octave{Октава}
+Fabre{Фабр}
+Elizabeth{Элизабет}
+Palafico{Палафико}
+Jimmy{Джимми}
+Legs{Легс}
+Penrod{Пенрод}
+Bart{Барт}
+Cooke{Кук}
+Wally{Вэлли}
+Cutty{Катти}
+Bill{Билл}
+Jellybones{Джеллибонс}
+Oraglio{Ораглио}
+Wadham{Вадхэм}
+Notley{Нотли}
+Morland{Морланд}
+Haley{Хейли}
+Gyles{Джайлз}
+Peat{Пит}
+Gordon{Гордон}
+Dark Captain{Тёмный Капитан}
+Giraldo{Жиральдо}
+Figuiera{Фигуэйра}
+1{1-й}
+2{2-й}
+3{3-й}
+Friedrich{Фридрих}
+Maxwell{Максвелл}
+Meranda{Меранда}
+seven{севен}
+Claudio{Клаудио}
+Murena{Мурена}
+Ethilrede{Этильред}
+Claar{Клаар}
+Martin{Мартин}
+Warner{Ворнер}
+Jack{Джек}
+Greenfield{Гринфилд}
+Ambroz{Амброз}
+Bricenos{Бриценос}
+Santos{Сантос}
+Desiree'{Дезире'}
+Muerte{Муэрте}
+Thug{Громила}
+Vassal{Вассал}
+Bethune{Битюн}
+Daryl{Дэрил}
+Larry{Ларри}
+Captain Jack{Капитан Джек}
+Sparrow{Воробей}
+Camille{Камилла}
+Leone{Леоне}
+Prisoner{Заключенный}
+Geffrey{Джеффри}
+Bampfylde{Бэмпфилд}
+Bucho{Бучо}
+Pepin{Пепин}
+Bertillon's guard{Охранник Бертильона}
+Soares{Соарес}
+Juan{Хуан}
+Hernandez{Эрнандез}
+Boelen{Боэлен}
+Cordoba{Кордова}
+Captain{Капитан}
+Cecile{Сесиль}
+Bienbonne{Бьенбонн}
+Etienne{Этьен}
+Dupuis{Дюпюи}
+Rivera{Ривера}
+Dusac{Дюсак}
+Konrad{Конрад}
+Kulczycki{Кульчицкий}
+Silver{Сильвер}
+Nathaniel's Crewmember{Член Команды Хаука}
+Clair{Клэр}
+Larrousse{Ларрусс}
+France_bukaner_01{Французский Пират}
+Skull{Череп}
+Will{Уилл}
+Turner{Тёрнер}
+Swann{Суонн}
+Contre-Amirale{Контр-Адмирал}
+Cesar{Цезарь}
+Beauregard{Борегар}
+Dockworker{Портовый Рабочий}
+Maartje{Мартье}
+Hesselink{Хесселинк}
+Barendsz{Барендс}
+Geoffroi{Жоффруа}
+Albeille{Альбей}
+Barend{Баренд}
+Cook{Кук}
+Dusty{Дасти}
+Broome{Брум}
+Surgeon{Врач}
+Priest{Священник}
+Boatswain{Боцман}
+Navigator{Штурман}
+Voigt{Фойгт}
+Rodney{Родни}
+Leighton{Лейтон}
+Midshipman{Мичман}
+Longley{Лонгли}
+Lieutenant{Лейтенант}
+Julian{Джулиан}
+Alvarado{Альварадо}
+Cristobal{Кристобаль}
+Leon{Леон}
+Escovar{Эсковар}
+Entenza{Энтенза}
+Seсorita{Секорита}
+Hebe{Хебе}
+Constantino{Константино}
+Avellбn{Авеллан}
+Growling{Рычащий}
+Bear{Медведь}
+Kicking{Клюющийся}
+Raven{Ворон}
+Lewis{Льюис}
+Vickers{Викерс}
+Carpenter1{Карпентер}
 
 {=====| StoreOwners.c |=====}
-Agent-Victualler{РРЅС‚РµРЅРґР°РЅС‚}
-Eugene{Р®РґР¶РёРЅ}
-Martinho{РњР°СЂС‚РёРЅСЊРѕ}
-Guterres{Р“СѓС‚РµСЂСЂРµСЃ}
-Gheerlof{Р“РёСЂР»РѕС„}
-Darlang{Р”Р°СЂР»Р°РЅРі}
-Cornelius{РљРѕСЂРЅРµР»РёСѓСЃ}
-Vanslyperken{Р’Р°РЅСЃР»РёРїРµСЂРєРµРЅ}
-Arnaud{РђСЂРЅРѕ}
-Bannerman{Р‘Р°РЅРЅРµСЂРјР°РЅ}
-Filbert{Р¤РёР»Р±РµСЂС‚}
-Emiliano{Р­РјРёР»СЊСЏРЅРѕ}
-Rionda{Р РёРѕРЅРґР°}
-Maginot{РњР°Р¶РёРЅРѕ}
-Cornelis{РљРѕСЂРЅРµР»РёСЃ}
-Huijser{РҐРµР№Р·РµСЂ}
-Carl Black{РљР°СЂР» Р‘Р»СЌРє}
-Milds{РњР°Р№Р»РґСЃ}
-Van Vecker{Р’Р°РЅ Р’РµРєРµСЂ}
-Dieudonne{Р”СЊРµРґРѕРЅРЅРµ}
-Toussaint{РўСѓСЃСЃРµРЅ}
-Violette{Р’РёРѕР»РµС‚С‚Р°}
-De Colville{Р”Рµ РљРѕР»РІРёР»Р»СЊ}
-Kate{РљРµР№С‚}
-Blowhorn{Р‘Р»РѕСѓС…РѕСЂРЅ}
-O'Reily{Рћ'Р СЌР№Р»Рё}
-Zugarro{Р—СѓРіР°СЂСЂРѕ}
-Leonardo{Р›РµРѕРЅР°СЂРґРѕ}
-Violate{Р’РёРѕР»Р°С‚Рµ}
-Jasmine{Р–Р°СЃРјРёРЅ}
-Cotton{РљРѕС‚С‚РѕРЅ}
-Jacobus{Р”Р¶РµР№РєРѕР±СѓСЃ}
-Colijn{РљРѕР»РёРЅ}
-Fox{Р¤РѕРєСЃ}
-Ratter{Р Р°С‚С‚РµСЂ}
-Dawg{Р”РѕРІРі}
-Bennett{Р‘РµРЅРЅРµС‚С‚}
-Augustin{РђРІРіСѓСЃС‚РёРЅ}
-Frechilla{Р¤СЂРµС‡РёР»Р»Р°}
-Brown{Р‘СЂР°СѓРЅ}
+Agent-Victualler{Интендант}
+Eugene{Юджин}
+Martinho{Мартиньо}
+Guterres{Гутеррес}
+Gheerlof{Гирлоф}
+Darlang{Дарланг}
+Cornelius{Корнелиус}
+Vanslyperken{Ванслиперкен}
+Arnaud{Арно}
+Bannerman{Баннерман}
+Filbert{Филберт}
+Emiliano{Эмильяно}
+Rionda{Рионда}
+Maginot{Мажино}
+Cornelis{Корнелис}
+Huijser{Хейзер}
+Carl Black{Карл Блэк}
+Milds{Майлдс}
+Van Vecker{Ван Векер}
+Dieudonne{Дьедонне}
+Toussaint{Туссен}
+Violette{Виолетта}
+De Colville{Де Колвилль}
+Kate{Кейт}
+Blowhorn{Блоухорн}
+O'Reily{О'Рэйли}
+Zugarro{Зугарро}
+Leonardo{Леонардо}
+Violate{Виолате}
+Jasmine{Жасмин}
+Cotton{Коттон}
+Jacobus{Джейкобус}
+Colijn{Колин}
+Fox{Фокс}
+Ratter{Раттер}
+Dawg{Довг}
+Bennett{Беннетт}
+Augustin{Августин}
+Frechilla{Фречилла}
+Brown{Браун}
 
 {=====| StreetMerchants.c |=====}
-Street{РЈР»РёС‡РЅС‹Р№}
-Merchant{РўРѕСЂРіРѕРІРµС†}
-Street Merchant{РЈР»РёС‡РЅС‹Р№ РўРѕСЂРіРѕРІРµС†}
-Edward{Р­РґРІР°СЂРґ}
-Pear{РџРµР°СЂ}
-Patric{РџР°С‚СЂРёРє}
-Cardone{РљР°СЂРґРѕРЅ}
-Louis{Р›СЊСЋРёСЃ}
-Rouge{Р СѓР¶}
-Rober{Р РѕР±РµСЂ}
-Artouis{РђСЂС‚СѓР°}
-Cloude{РљР»РѕРґ}
-Labush{Р›Р°Р±СѓС€}
-Potter{РџРѕС‚С‚РµСЂ}
-Prew{РџСЂСЋ}
-Greg{Р“СЂСЌРі}
-Dawson{Р”РѕСѓСЃРѕРЅ}
-Gillis{Р”Р¶РёР»Р»РёСЃ}
-Caspers{РљР°СЃРїРµСЂ}
-Owen{РћСѓСЌРЅ}
-Tripper{РўСЂРёРїРїРµСЂ}
-Dempster{Р”РµРјРїСЃС‚РµСЂ}
-Rafael{Р Р°С„Р°СЌР»СЊ}
-Pinto{РџРёРЅС‚Рѕ}
-Hugo{РҐСѓРіРѕ}
-Aguayo{РђРіСѓР°Р№Рѕ}
-Zambrano{Р—Р°РјР±СЂР°РЅРѕ}
+Street{Уличный}
+Merchant{Торговец}
+Street Merchant{Уличный Торговец}
+Edward{Эдвард}
+Pear{Пеар}
+Patric{Патрик}
+Cardone{Кардон}
+Louis{Льюис}
+Rouge{Руж}
+Rober{Робер}
+Artouis{Артуа}
+Cloude{Клод}
+Labush{Лабуш}
+Potter{Поттер}
+Prew{Прю}
+Greg{Грэг}
+Dawson{Доусон}
+Gillis{Джиллис}
+Caspers{Каспер}
+Owen{Оуэн}
+Tripper{Триппер}
+Dempster{Демпстер}
+Rafael{Рафаэль}
+Pinto{Пинто}
+Hugo{Хуго}
+Aguayo{Агуайо}
+Zambrano{Замбрано}
 
 {=====| TActors.c |=====}
-Crewmember{Р§Р»РµРЅ РљРѕРјР°РЅРґС‹}
+Crewmember{Член Команды}
 
 {=====| Taverns.c |=====}
-Wicker{РЈРёРєРµСЂ}
-Moods{РњСѓРґСЃ}
-Andress{РђРЅРґСЂРµСЃ}
-Destot{Р”РµСЃС‚Рѕ}
-Joanne{Р”Р¶РѕР°РЅРЅ}
-Ellene{Р­Р»Р»РµРЅ}
-Pete{РџРёС‚}
-Manchester{РњР°РЅС‡РµСЃС‚РµСЂ}
-Agnes{РђРіРЅРµСЃ}
-Marley{РњР°СЂР»Рё}
-Correja{РљРѕСЂСЂРµР№Р°}
-Laurenco{Р›РѕСЂРµРЅС†Рѕ}
-Costa{РљРѕСЃС‚Р°}
-Carlos{РљР°СЂР»РѕСЃ}
-Resende{Р РµР·РµРЅРґРµ}
-Helena{РҐРµР»РµРЅР°}
-Azocar{РђР·РѕРєР°СЂ}
-Corleis{РљРѕСЂР»РµР№СЃ}
-Baernt{Р‘Р°СЂРЅС‚}
-Jans{Р”Р¶РѕРЅСЃ}
-Fessler{Р¤РµСЃСЃР»РµСЂ}
-Clemens{РљР»РµРјРµРЅСЃ}
-Armstrong{РђСЂРјСЃС‚СЂРѕРЅРі}
-Sulana{РЎСѓР»Р°РЅР°}
-Lebretton{Р›РµР±СЂРµС‚С‚РѕРЅ}
-Thierry{РўСЊРµСЂСЂРё}
-Bosquet{Р‘РѕСЃРєРµ}
-Pauline{РџР°СѓР»РёРЅ}
-Beteille{Р‘РµС‚СЌР№Р»}
-Littlejohn{Р›РёС‚Р»РґР¶РѕРЅ}
-Julia{Р”Р¶СѓР»РёСЏ}
-Stirling{РЎС‚РµСЂР»РёРЅРі}
-Hanpool{РҐСЌРЅРїСѓР»}
-Damerell{Р”СЌРјРµСЂСЌР»Р»}
-Frederyk{Р¤СЂРµРґРµСЂРёРє}
-Kember{РљРµРјР±РµСЂ}
-Nadine{РќР°РґРёРЅ}
-Burrieza{Р‘СѓСЂСЂРёРµР·Р°}
-Tiago{РўРёР°РіРѕ}
-Marquina{РњР°СЂРєРёРЅР°}
-Marinella{РњР°СЂРёРЅРµР»Р»Р°}
-Castrilli{РљР°СЃС‚СЂРёР»Р»Рё}
-Fadrique{Р¤Р°РґСЂРёРєРµ}
-Leonor{Р›РµРѕРЅРѕСЂ}
-Esperanza{Р­СЃРїРµСЂР°РЅСЃР°}
-RamСѓn{Р Р°РјРѕРЅ}
-Figueras{Р¤РёРіРµСЂР°СЃ}
-Figaux{Р¤РёРіРѕ}
-Sophie{РЎРѕС„Рё}
-Neveu{РќРµРІСЋ}
-Johannes{Р™РѕС…Р°РЅРЅСЃ}
-Harlekeyn{РђСЂР»РµРєРёРЅ}
-Alcke{РђР»СЊРєРµ}
-Smitshoek{РЎРјРёС‚С€СѓРє}
-Everard{Р­РІРµСЂР°СЂРґ}
-Raulf{Р Р°Р»СЊС„}
-Mather{РњР°С‚СЌ}
-Triston{РўСЂРёСЃС‚РѕРЅ}
-Bonger{Р‘РѕРЅРіРµСЂ}
-Bekker{Р‘РµРєРєРµСЂ}
-Marcus{РњР°СЂРєСѓСЃ}
-Maas{РњР°Р°СЃ}
-Cornelisje{РљРѕСЂРЅРµР»РёР·СЊРµ}
-Vandecken{Р’Р°РЅРґРµРєРµРЅ}
-Mario{РњР°СЂРёРѕ}
-Elkzander{Р­Р»СЊРєР°РЅРґРµСЂ}
-Dumarteene{Р”СЋРјР°СЂС‚РёРЅ}
-Sousa{РЎРѕСѓР·Р°}
-Rosalie{Р РѕР·Р°Р»Рё}
-Bezace{Р‘РµР·Р°С‡Рё}
-Albin{РђР»СЊР±РёРЅ}
-Bonaventure{Р‘РѕРЅР°РІРµРЅС‚СЋСЂ}
-Sailor{РњРѕСЂСЏРє}
-Guillaut{Р“РёР№Рѕ}
-Brigitte{Р‘СЂРёРґР¶РёС‚}
-Chabert{РЁР°Р±РµСЂ}
-Marcel{РњР°СЂСЃРµР»СЊ}
-Fasquel{Р¤Р°СЃРєРµР»СЊ}
-Eliza{Р­Р»РёР·Р°}
-Girard{Р–РёСЂР°СЂ}
-Ines{РРЅРµСЃ}
-Blaker{Р‘Р»СЌР№РєРµСЂ}
-Fremont{Р¤СЂРµРјРѕРЅ}
-Tientje{РўРёРЅС‚Рё}
-Durfee{Р”Р°СЂС„Рё}
-Charles{Р§Р°СЂР»СЊР·}
-Windem{РЈРёРЅРґСЌРј}
-Simona{РЎРёРјРѕРЅР°}
-Tolman{РўРѕР»РјСЌРЅ}
-Voyant{Р’РѕСЏРЅС‚}
-Fructoso{Р¤СЂСѓРєС‚РѕcРѕ}
-Juana{РҐСѓР°РЅР°}
-GarcРЅa{Р“Р°СЂС‡Р°}
-Ramos{Р Р°РјРѕСЃ}
-Fabiao{Р¤Р°Р±РёРѕ}
-Dunga{Р”СѓРЅРіР°}
-Christiano{РљСЂРёСЃС‚РёР°РЅРѕ}
-Bessa{Р‘РµСЃСЃР°}
-Adao{РђРґР°Рѕ}
-Henriques{Р­РЅСЂРёРєРµСЃ}
-Sofia{РЎРѕС„РёСЏ}
-Adams{РђРґР°РјСЃ}
-Salazar{РЎР°Р»Р°Р·Р°СЂ}
-Wood{Р’СѓРґ}
-Esther{Р•СЃС‚РµСЂ}
-Littlewood{Р›РёС‚Р»РІСѓРґ}
-Josephine{Р–РѕР·РµС„РёРЅР°}
-Bonassieu{Р‘РѕРЅР°СЃСЊРµ}
-Cathrine{РљР°С‚СЂРёРЅ}
-Scarlett{РЎРєР°СЂР»РµС‚С‚}
-Bella{Р‘РµР»Р»Р°}
-Froelich{Р¤СЂРѕР»РёС…}
-Jantina{Р”Р¶Р°РЅС‚РёРЅР°}
-Dedrick{Р”РµРґСЂРёРє}
-Pierart{РџСЊРµСЂРѕ}
-Kamerling{РљР°РјРµСЂР»РёРЅРі}
-Brechtje{Р‘СЂРµС…С‚СЊРµ}
-Palings{РџР°Р»РёРЅРіСЃ}
-Xalmiento{РҐР°Р»РјСЊРµРЅС‚Рѕ}
-Inocencia{РРЅРѕС†РµРЅСЃРёСЏ}
-Ussica{РЈСЃСЃРёРєР°}
-Salvadore{РЎР°Р»СЊРІР°РґРѕСЂ}
-Jimena{РҐРёРјРµРЅР°}
-LСѓpez{Р›СѓРїРµР·}
+Wicker{Уикер}
+Moods{Мудс}
+Andress{Андрес}
+Destot{Десто}
+Joanne{Джоанн}
+Ellene{Эллен}
+Pete{Пит}
+Manchester{Манчестер}
+Agnes{Агнес}
+Marley{Марли}
+Correja{Коррейа}
+Laurenco{Лоренцо}
+Costa{Коста}
+Carlos{Карлос}
+Resende{Резенде}
+Helena{Хелена}
+Azocar{Азокар}
+Corleis{Корлейс}
+Baernt{Барнт}
+Jans{Джонс}
+Fessler{Фесслер}
+Clemens{Клеменс}
+Armstrong{Армстронг}
+Sulana{Сулана}
+Lebretton{Лебреттон}
+Thierry{Тьерри}
+Bosquet{Боске}
+Pauline{Паулин}
+Beteille{Бетэйл}
+Littlejohn{Литлджон}
+Julia{Джулия}
+Stirling{Стерлинг}
+Hanpool{Хэнпул}
+Damerell{Дэмерэлл}
+Frederyk{Фредерик}
+Kember{Кембер}
+Nadine{Надин}
+Burrieza{Бурриеза}
+Tiago{Тиаго}
+Marquina{Маркина}
+Marinella{Маринелла}
+Castrilli{Кастрилли}
+Fadrique{Фадрике}
+Leonor{Леонор}
+Esperanza{Эсперанса}
+Ramуn{Рамон}
+Figueras{Фигерас}
+Figaux{Фиго}
+Sophie{Софи}
+Neveu{Невю}
+Johannes{Йоханнс}
+Harlekeyn{Арлекин}
+Alcke{Альке}
+Smitshoek{Смитшук}
+Everard{Эверард}
+Raulf{Ральф}
+Mather{Матэ}
+Triston{Тристон}
+Bonger{Бонгер}
+Bekker{Беккер}
+Marcus{Маркус}
+Maas{Маас}
+Cornelisje{Корнелизье}
+Vandecken{Вандекен}
+Mario{Марио}
+Elkzander{Элькандер}
+Dumarteene{Дюмартин}
+Sousa{Соуза}
+Rosalie{Розали}
+Bezace{Безачи}
+Albin{Альбин}
+Bonaventure{Бонавентюр}
+Sailor{Моряк}
+Guillaut{Гийо}
+Brigitte{Бриджит}
+Chabert{Шабер}
+Marcel{Марсель}
+Fasquel{Фаскель}
+Eliza{Элиза}
+Girard{Жирар}
+Ines{Инес}
+Blaker{Блэйкер}
+Fremont{Фремон}
+Tientje{Тинти}
+Durfee{Дарфи}
+Charles{Чарльз}
+Windem{Уиндэм}
+Simona{Симона}
+Tolman{Толмэн}
+Voyant{Воянт}
+Fructoso{Фруктоcо}
+Juana{Хуана}
+Garcнa{Гарча}
+Ramos{Рамос}
+Fabiao{Фабио}
+Dunga{Дунга}
+Christiano{Кристиано}
+Bessa{Бесса}
+Adao{Адао}
+Henriques{Энрикес}
+Sofia{София}
+Adams{Адамс}
+Salazar{Салазар}
+Wood{Вуд}
+Esther{Естер}
+Littlewood{Литлвуд}
+Josephine{Жозефина}
+Bonassieu{Бонасье}
+Cathrine{Катрин}
+Scarlett{Скарлетт}
+Bella{Белла}
+Froelich{Фролих}
+Jantina{Джантина}
+Dedrick{Дедрик}
+Pierart{Пьеро}
+Kamerling{Камерлинг}
+Brechtje{Брехтье}
+Palings{Палингс}
+Xalmiento{Халмьенто}
+Inocencia{Иноценсия}
+Ussica{Уссика}
+Salvadore{Сальвадор}
+Jimena{Химена}
+Lуpez{Лупез}
 
 {=====| Turks.c |=====}
-Dante{Р”Р°РЅС‚Рµ}
-Siciliano{РЎРёС†РёР»РёР°РЅРѕ}
-LeNoir{Р›РµРќСѓР°СЂ}
-Barns{Р‘Р°СЂРЅСЃ}
-Pugh{РџСЊСЋ}
-Lorenza{Р›РѕСЂРµРЅР·Р°}
-Trevisano{РўСЂРµРІРёР·Р°РЅРѕ}
-Fisherman{Р¤РёС€РµСЂРјР°РЅ}
-Jo{Р”Р¶Рѕ}
-Peixe{РџРµР№С€Рµ}
-Valderrama{Р’Р°Р»СЊРґРµСЂСЂР°РјР°}
-Christine{РљСЂРёСЃС‚РёРЅР°}
-Hoppe{РҐРѕРїРїРµ}
-Admiral{РђРґРјРёСЂР°Р»}
-Coastbrother{Р‘РµСЂРµРіРѕРІРѕР№ Р±СЂР°С‚}
-Leading{РќР°С‡Р°Р»СЊРЅРёРє}
+Dante{Данте}
+Siciliano{Сицилиано}
+LeNoir{ЛеНуар}
+Barns{Барнс}
+Pugh{Пью}
+Lorenza{Лоренза}
+Trevisano{Тревизано}
+Fisherman{Фишерман}
+Jo{Джо}
+Peixe{Пейше}
+Valderrama{Вальдеррама}
+Christine{Кристина}
+Hoppe{Хоппе}
+Admiral{Адмирал}
+Coastbrother{Береговой брат}
+Leading{Начальник}
 
 {=====| Usurers.c |=====}
-Robyn{Р РѕР±РёРЅ}
-Corrick{РљРѕСЂСЂРёРє}
-Archibald{РђСЂС‡РёР±Р°Р»СЊРґ}
-Gripsou{Р“СЂРёРїСЃСѓ}
-Stephen{РЎС‚РµС„Р°РЅ}
-Bairnsfather{Р‘СЌСЂРЅСЃС„Р°С‚Р·РµСЂ}
-Angus{РђРЅРіСѓСЃ}
-McDuck{РњР°РєР”Р°Рє}
-Diarmuid{Р”РµРјРµРґ}
-Sargent{РЎР°СЂРґР¶РµРЅС‚}
-Proudfoot{РџСЂР°СѓРґС„СѓС‚}
-Mercadier{РњРµСЂРєР°РґРµСЂ}
-Nadeau{РќР°РґСѓ}
-Feliciano{Р¤РµР»РёСЃРёР°РЅРѕ}
-Pombal{Р РѕРјР±Р°Р»СЊ}
-Klaas{РљР»Р°Р°СЃ}
-Ramaalas{Р Р°РјР°Р°Р»Р°СЃ}
-Silvestre{РЎРёР»СЊРІРµСЃС‚СЂРµ}
-Nabarro{РќР°РІР°СЂСЂРѕ}
-Vistremiro{Р’РёСЃС‚СЂРµРјРёСЂРѕ}
-Monteiro{РњРѕРЅС‚РµСЂРёРѕ}
-Peterson{РџРёС‚РµСЂСЃРѕРЅ}
-Adelheyd{РђРґРµР»СЊС…РµР№Рґ}
-Berchoven{Р‘РµСЂС…РѕРІРµРЅ}
-Cojuango{РљРѕС…СѓР°РЅРіРѕ}
-Jacquotte{Р–Р°РєРѕС‚}
-Delahaye{Р”РµР»Р°СЌ}
-Corrales{РљРѕСЂСЂР°Р»РµСЃ}
+Robyn{Робин}
+Corrick{Коррик}
+Archibald{Арчибальд}
+Gripsou{Грипсу}
+Stephen{Стефан}
+Bairnsfather{Бэрнсфатзер}
+Angus{Ангус}
+McDuck{МакДак}
+Diarmuid{Демед}
+Sargent{Сарджент}
+Proudfoot{Праудфут}
+Mercadier{Меркадер}
+Nadeau{Наду}
+Feliciano{Фелисиано}
+Pombal{Ромбаль}
+Klaas{Клаас}
+Ramaalas{Рамаалас}
+Silvestre{Сильвестре}
+Nabarro{Наварро}
+Vistremiro{Вистремиро}
+Monteiro{Монтерио}
+Peterson{Питерсон}
+Adelheyd{Адельхейд}
+Berchoven{Берховен}
+Cojuango{Кохуанго}
+Jacquotte{Жакот}
+Delahaye{Делаэ}
+Corrales{Корралес}
 
 {=====| NK.c |=====}
-Vickery{Р’РёРєРµСЂРё}
-Cuthbert{РљР°С‚Р±РµСЂС‚}
-Collingwood{РљРѕР»Р»РёРЅРіРІСѓРґ}
-Barret{Р‘Р°СЂСЂРµС‚}
-Bonden{Р‘РѕРЅРґРµРЅ}
-Lepee{Р›РёРїРё}
-Forster{Р¤РѕСЂСЃС‚РµСЂ}
-Calamy{РљР°Р»Р°РјРё}
-Lee{Р›Рё}
-Tyson{РўР°Р№СЃРѕРЅ}
-Sylvan{РЎРёР»СЊРІР°РЅ}
-Osborne{РћСЃР±РѕСЂРЅ}
-Edwards{Р­РґРІР°СЂРґСЃ}
-Mowett{РњРѕСѓСЌС‚С‚}
-Orswood{РћСЂСЃРІСѓРґ}
+Vickery{Викери}
+Cuthbert{Катберт}
+Collingwood{Коллингвуд}
+Barret{Баррет}
+Bonden{Бонден}
+Lepee{Липи}
+Forster{Форстер}
+Calamy{Калами}
+Lee{Ли}
+Tyson{Тайсон}
+Sylvan{Сильван}
+Osborne{Осборн}
+Edwards{Эдвардс}
+Mowett{Моуэтт}
+Orswood{Орсвуд}
 
 
 {=====| 1368 characters |=====}
 
 {=====| monks.c |=====}
-Kanhoji{РљР°РЅС…РѕРґР·Рё}
-Angria{РђРЅРіСЂРёСЏ}
-Surcouf{РЎСЋСЂРєСѓС„}
-Yusuf{Р®СЃСѓС„}
-Rais{Р Р°РёСЃ}
-Uela{РЈСЌР»Р°}
-de Marisco{Р”Рµ РњР°СЂРёСЃРєРѕ}
-Hugues{РҐСЊСЋР·}
-Nantucket{РќР°РЅС‚Р°РєРµС‚}
-Tuck{РўСѓРє}
+Kanhoji{Канходзи}
+Angria{Ангрия}
+Surcouf{Сюркуф}
+Yusuf{Юсуф}
+Rais{Раис}
+Uela{Уэла}
+de Marisco{Де Мариско}
+Hugues{Хьюз}
+Nantucket{Нантакет}
+Tuck{Тук}
 
 {=====| Others |=====}
-Maltese{РњР°Р»СЊС‚РёР№СЃРєРёР№}
-Knight{Р С‹С†Р°СЂСЊ}
-Weird{РЎС‚СЂР°РЅРЅС‹Р№}
-Warriormonk{Р’РѕРёРЅ-РјРѕРЅР°С…}
-Maccus{РњР°РєРєСѓСЃ}
-Hadras{РҐРµРґСЂСЌСЃ}
-Angler{РђРЅРіР»РµСЂ}
-Ogilvey{РћРіРёР»РІРё}
-Clanker{РљР»Р°РЅРєРµСЂ}
-Urchin{Р•СЂС‡РёРЅ}
-Wheelback{РЈРёР»Р±СЌРє}
-Wyvern{Р’РёРІРµСЂРЅ}
-Quittance{РљРІРёС‚Р°РЅСЃ}
-Scarlett{РЎРєР°СЂР»РµС‚}
-Giselle{Р–РёР·РµР»СЊ}
-Harriett{РҐР°СЂСЂРёРµС‚}
-Anamaria{РђРЅРЅР°РјР°СЂРёСЏ}
-Scared Monk{РСЃРїСѓРіР°РЅРЅС‹Р№ РњРѕРЅР°С…}
-Cursed Skeleton{РџСЂРѕРєР»СЏС‚С‹Р№ РЎРєРµР»РµС‚}
-Monk{РњРѕРЅР°С…}
+Maltese{Мальтийский}
+Knight{Рыцарь}
+Weird{Странный}
+Warriormonk{Воин-монах}
+Maccus{Маккус}
+Hadras{Хедрэс}
+Angler{Англер}
+Ogilvey{Огилви}
+Clanker{Кланкер}
+Urchin{Ерчин}
+Wheelback{Уилбэк}
+Wyvern{Виверн}
+Quittance{Квитанс}
+Scarlett{Скарлет}
+Giselle{Жизель}
+Harriett{Харриет}
+Anamaria{Аннамария}
+Scared Monk{Испуганный Монах}
+Cursed Skeleton{Проклятый Скелет}
+Monk{Монах}

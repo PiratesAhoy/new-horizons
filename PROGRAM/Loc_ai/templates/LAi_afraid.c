@@ -54,7 +54,7 @@ bool LAi_tmpl_afraid_InitTemplate(aref chr)
 	return true;
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование шаблона персонажа
 void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 {
 	float ay;
@@ -70,14 +70,14 @@ void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 	}
 	if(sti(tmpl.canmove))
 	{
-		//Р Р°Р·СЂРµС€РµРЅРѕ РїРµСЂРµРјРµС‰РµРЅРёРµ
+		//Разрешено перемещение
 		switch(tmpl.state)
 		{
 		case "wait":
-			//РЎС‚РѕРёРј Рё Р¶РґРµРј СЃР»РёС€РєРѕРј Р±Р»РёР·РєРѕРіРѕ РїРѕРґС…РѕРґР°
+			//Стоим и ждем слишком близкого подхода
 			if(dist < 10.0)
 			{
-				//Р РµС€Р°РµРј РґРІРёРіР°С‚СЊСЃСЏ
+				//Решаем двигаться
 				tmpl.locator = LAi_FindRandomLocator("goto");
 				if(tmpl.locator != "")
 				{
@@ -88,13 +88,13 @@ void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 			}
 			break;
 		case "stay":
-			//РЎР»РµРґРёРј Р·Р° РІСЂР°РіРѕРј
+			//Следим за врагом
 			idx = sti(chr.chr_ai.tmpl.who);
 			CharacterTurnByChr(chr, &Characters[idx]);
-			//РЎС‚РѕРёРј Рё Р¶РґРµРј СЃР»РёС€РєРѕРј Р±Р»РёР·РєРѕРіРѕ РїРѕРґС…РѕРґР°
+			//Стоим и ждем слишком близкого подхода
 			if(dist < 5.0)
 			{
-				//Р РµС€Р°РµРј РґРІРёРіР°С‚СЊСЃСЏ
+				//Решаем двигаться
 				tmpl.locator = LAi_FindRandomLocator("goto");
 				if(tmpl.locator != "")
 				{
@@ -112,7 +112,7 @@ void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 		case "goto":
 			if(dist < 5.0)
 			{
-				//РџРѕСЂР° Р±РµР¶Р°С‚СЊ
+				//Пора бежать
 				tmpl.state = "runto";
 				LAi_tmpl_afraid_updatetemplate(chr);
 			}else{
@@ -128,11 +128,11 @@ void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 			{
 				if(dist > 15.0)
 				{
-					//РњРѕР¶РЅРѕ РѕСЃС‚Р°РЅРѕРІРёС‚СЊСЃСЏ
+					//Можно остановиться
 					tmpl.state = "wait";
 					LAi_tmpl_afraid_updatetemplate(chr);
 				}else{
-					//РџРѕСЂР° СЃР±Р°РІР»СЏС‚СЊ СЃРєРѕСЂРѕСЃС‚СЊ
+					//Пора сбавлять скорость
 					tmpl.state = "goto";
 					LAi_tmpl_afraid_updatetemplate(chr);
 				}
@@ -141,7 +141,7 @@ void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 				{
 					if(dist < stf(tmpl.panic))
 					{						
-						//РЎР»РёР¶РєРѕРј Р±Р»РёР·РєРѕ - РїР°РЅРёС‡РµСЃРєРѕРµ СѓР±РµРіР°РЅРёРµ
+						//Слижком близко - паническое убегание
 						tmpl.state = "escape";
 						LAi_tmpl_afraid_updatetemplate(chr);
 					}
@@ -164,7 +164,7 @@ void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 				chr.chr_ai.tmpl.afrtime = ay;
 				if(ay <= 0.0)
 				{
-					//РћСЃРјРµР»РµР»Рё
+					//Осмелели
 					tmpl.state = "runto";
 					tmpl.panic = "0";
 				}
@@ -172,10 +172,10 @@ void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 			break;
 		}
 	}else{
-		//РњРѕР¶РЅРѕ С‚РѕР»СЊРєРѕ СЃС‚РѕСЏС‚СЊ Рё Р±РѕСЏС‚СЊСЃСЏ
+		//Можно только стоять и бояться
 		if(dist < 2.5)
 		{
-			//РџРѕСЂР° РЅР°С‡Р°С‚СЊ СЃС‚РѕСЏС‚СЊ Рё Р±РѕСЏС‚СЊСЃСЏ
+			//Пора начать стоять и бояться
 			if(tmpl.state != "afraid")
 			{
 				tmpl.state = "afraid";				
@@ -186,7 +186,7 @@ void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 		}else{
 			if(dist > 4.0)
 			{
-				//РћС‚Р±РѕСЏР»РёСЃСЊ, РјРѕР¶РЅРѕ Рё РІС‹РїРµРЅРґСЂРёС‚СЊСЃСЏ
+				//Отбоялись, можно и выпендриться
 				if(tmpl.state == "afraid")
 				{
 					tmpl.state = "wait";
@@ -202,14 +202,14 @@ void LAi_tmpl_afraid_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  go to point
+//Персонаж выполнил команду  go to point
 void LAi_tmpl_afraid_EndGoToPoint(aref chr)
 {
 	chr.chr_ai.tmpl.state = "stay";
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  go to point
+//Персонаж провалил команду  go to point
 void LAi_tmpl_afraid_FailureGoToPoint(aref chr)
 {
 	chr.chr_ai.tmpl.state = "stay";
@@ -217,85 +217,85 @@ void LAi_tmpl_afraid_FailureGoToPoint(aref chr)
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  run to point
+//Персонаж выполнил команду  run to point
 void LAi_tmpl_afraid_EndRunToPoint(aref chr)
 {
 	chr.chr_ai.tmpl.state = "stay";
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  run to point
+//Персонаж провалил команду  run to point
 void LAi_tmpl_afraid_FailureRunToPoint(aref chr)
 {
 	chr.chr_ai.tmpl.state = "stay";
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅРµ РјРѕР¶РµС‚ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ С‚РѕС‡РєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ
+//Персонаж не может добраться до точки назначения
 void LAi_tmpl_afraid_BusyPos(aref chr, float x, float y, float z)
 {
 	chr.chr_ai.tmpl.state = "stay";
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
+//Персонаж начал перемещение за другим
 void LAi_tmpl_afraid_FollowGo(aref chr)
 {
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж начал дошёл до другого персонажа
 void LAi_tmpl_afraid_FollowStay(aref chr)
 {
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  follow character
+//Персонаж провалил команду  follow character
 void LAi_tmpl_afraid_FailureFollow(aref chr)
 {
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
+//Персонаж начал перемещение за другим
 void LAi_tmpl_afraid_FightGo(aref chr)
 {
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж начал дошёл до другого персонажа
 void LAi_tmpl_afraid_FightStay(aref chr)
 {
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  Fight
+//Персонаж провалил команду  Fight
 void LAi_tmpl_afraid_FailureFight(aref chr)
 {
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРµР»СЏС‚СЊ
+//Можно ли стрелять
 bool LAi_tmpl_afraid_IsFire(aref chr)
 {	
 	return false;
 }
 
-//РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЂСѓР¶РёРµ
+//Можно ли использовать оружие
 bool LAi_tmpl_afraid_IsFight(aref chr)
 {
 	return false;
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  escape
+//Персонаж выполнил команду  escape
 void LAi_tmpl_afraid_EndEscape(aref chr)
 {
 	chr.chr_ai.tmpl.state = "stay";
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ СЃРєРѕР»СЊР·РёС‚ РІРґРѕР»СЊ РїР°С‚С‡Р°
+//Персонаж скользит вдоль патча
 void LAi_tmpl_afraid_EscapeSlide(aref chr)
 {
 	int afrTest = 1;
@@ -314,7 +314,7 @@ void LAi_tmpl_afraid_EscapeSlide(aref chr)
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  escape
+//Персонаж провалил команду  escape
 void LAi_tmpl_afraid_FailureEscape(aref chr)
 {
 	chr.chr_ai.tmpl.state = "stay";
@@ -322,21 +322,21 @@ void LAi_tmpl_afraid_FailureEscape(aref chr)
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ С‚РѕР»РєР°РµС‚СЃСЏ СЃ РґСЂСѓРіРёРјРё РїРµСЂСЃРѕРЅР°Р¶Р°РјРё
+//Персонаж толкается с другими персонажами
 void LAi_tmpl_afraid_ColThreshold(aref chr)
 {
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р·Р°РєРѕРЅС‡РёР» РїСЂРѕРёРіСЂС‹РІР°С‚СЊ Р°РЅРёРјР°С†РёСЋ
+//Персонаж закончил проигрывать анимацию
 void LAi_tmpl_afraid_EndAction(aref chr)
 {
 	LAi_tmpl_afraid_updatetemplate(chr);
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶Р° РїСЂРѕСЃСЏС‚ РѕСЃРІРѕР±РѕРґРёС‚СЊ РјРµСЃС‚Рѕ
+//Персонажа просят освободить место
 void LAi_tmpl_afraid_FreePos(aref chr, aref who)
 {
 	LAi_tmpl_afraid_updatetemplate(chr);
@@ -392,11 +392,11 @@ void LAi_tmpl_afraid_updatetemplate(aref chr)
 	}
 }
 
-//РќР°Р№С‚Рё РґРёСЃС‚Р°РЅС†РёСЋ РґРѕ РїСЂРµСЃР»РµРґСѓСЋС‰РµРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Найти дистанцию до преследующего персонажа
 float LAi_tmpl_afraid_DistByChr(aref chr)
 {
 	if(chr.chr_ai.tmpl.who == "") return -1.0;
-	//РџРѕР·РёС†РёСЏ РїРµСЂСЃРѕРЅР°Р¶Р° РєРѕС‚РѕСЂРѕРіРѕ Р±РѕРёРјСЃСЏ
+	//Позиция персонажа которого боимся
 	int idx = sti(chr.chr_ai.tmpl.who);
 	float dist = 0.0;
 	if(!GetCharacterDistByChr3D(chr, &Characters[idx], &dist)) dist = -1.0;

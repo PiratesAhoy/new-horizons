@@ -46,8 +46,8 @@ void ProcessDialogEvent()
 			}
 			/*if ( CheckQuestAttribute("FindMysteriousTablet","ReneDutruel_Talk2") )
 			{
-				d.Text = "Р’РѕС‚ СЌС‚Р° РґРµРІС‡РѕРЅРєР°, РєРѕС‚РѕСЂР°СЏ СЂР°Р·РЅСЋС…РёРІР°Р»Р° РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃРѕРєСЂРѕРІРёС‰Р°С…";
-				Link.l1 = "РђС… С‚С‹ РјРµСЂР·Р°РІРµС†. РўС‹ СЃРґР°Р» РјРµРЅСЏ СЌС‚РёРј СѓСЂРѕРґР°Рј, РЅСѓ РґРµСЂР¶РёСЃСЊ.";
+				d.Text = "Вот эта девчонка, которая разнюхивала информацию о сокровищах";
+				Link.l1 = "Ах ты мерзавец. Ты сдал меня этим уродам, ну держись.";
 				Link.l1.go = "exit";
 			}*/
 			if ( CheckQuestAttribute("FindMysteriousTablet","ReneDutruelGiveNotes") )

@@ -1,5 +1,5 @@
 title=Battle Bloodied
-text.t1=The TÃ©mÃ©raire has been sunk. Now we set sail for #sCharlestown# before the rest of the French get here. The Justinian will make for #sisland_Antigua#, so we are on our own. 
+text.t1=The Téméraire has been sunk. Now we set sail for #sCharlestown# before the rest of the French get here. The Justinian will make for #sisland_Antigua#, so we are on our own. 
 text.t2=A promotion, Acting Lieutenant! That is good, but I am so tired. I will go to the tavern for a sleep, then look for Mr. Hunter, a midshipman, and find out how the wounded are.
 text.t3=Sailing for #sGreenford#. At least that's a friendly port.
 text.t4=The 'Indy' and the other big ships are going to #sisland_Antigua#. I must stay here a regroup the crew. I need to find Mr Hunter.

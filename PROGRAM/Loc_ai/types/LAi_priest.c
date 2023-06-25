@@ -1,7 +1,7 @@
 /*
-РўРёРї: СЃС‚РѕСЏС‡РёР№, РІСЃРµРіРґР° СЃС‚РѕРёС‚, РѕС‚РІРµС‡Р°РµС‚ РЅР° РґРёР°Р»РѕРіРё, РЅРёРєРѕРіРґР° РЅРµ Р±РѕРёС‚СЃСЏ
+Тип: стоячий, всегда стоит, отвечает на диалоги, никогда не боится
 
-	РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С€Р°Р±Р»РѕРЅС‹:
+	Используемые шаблоны:
 		stay
 		dialog
 */
@@ -11,7 +11,7 @@
 #define LAI_TYPE_PRIEST		"priest"
 
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+//Инициализация
 void LAi_type_priest_Init(aref chr)
 {
 	DeleteAttribute(chr, "location.follower");
@@ -23,18 +23,18 @@ void LAi_type_priest_Init(aref chr)
 	chr.chr_ai.type.timewait = "0";
 	chr.chr_ai.type.afraid = "0";
 	LAi_tmpl_stay_InitTemplate(chr);
-	//РЈСЃС‚Р°РЅРѕРІРёРј Р°РЅРёРјР°С†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Сѓ
+	//Установим анимацию персонажу
 	LAi_SetDefaultStayAnimation(chr);
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightWOWeapon", false);
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С‚РёРїР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование типа персонажа
 void LAi_type_priest_CharacterUpdate(aref chr, float dltTime)
 {
 	float time, tw;
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY)
 	{
-		//РЎРјРѕС‚СЂРёРј Р±Р»РёР·РєРѕ РїСЂРѕС…РѕРґСЏС‰РёС… РїРµСЂСЃРѕРЅР°Р¶РµР№
+		//Смотрим близко проходящих персонажей
 		time = stf(chr.chr_ai.type.time);
 		int num = FindNearCharacters(chr, 4.5, -1.0, -1.0, 0.001, false, true);
 		if(num > 0)
@@ -42,7 +42,7 @@ void LAi_type_priest_CharacterUpdate(aref chr, float dltTime)
 			if(LAi_type_priest_FindEnemy(chr, num) < 0)
 			{
 				int ichr = sti(chrFindNearCharacters[0].index);
-				//РўСЂРµРїРёРјСЃСЏ СЃ РїРѕРґРѕС€РµРґС€РёРј
+				//Трепимся с подошедшим
 				time = time + dltTime;
 				chr.chr_ai.type.time = time;
 				if(stf(chr.chr_ai.type.who) != ichr)
@@ -59,7 +59,7 @@ void LAi_type_priest_CharacterUpdate(aref chr, float dltTime)
 					{
 						if(rand(100) < 30)
 						{
-							//Р—Р°РїСѓСЃС‚РёРј СЂРµР¶РёРј Р·Р°РјР°РЅРёРІР°РЅРёСЏ РїРѕРєСѓРїР°С‚РµР»РµР№
+							//Запустим режим заманивания покупателей
 							LAi_type_priest_Ask(chr);
 							chr.chr_ai.type.timewait = "0";
 							CharacterTurnByChr(chr, &Characters[ichr]);
@@ -73,7 +73,7 @@ void LAi_type_priest_CharacterUpdate(aref chr, float dltTime)
 					}				
 				}
 			}else{
-				//Р‘РѕРёРјСЃСЏ
+				//Боимся
 				chr.chr_ai.type.afraid = "1";
 				LAi_tmpl_ani_PlayAnimation(chr, "afraid", -1.0);
 				LAi_SetAfraidDead(chr);
@@ -84,7 +84,7 @@ void LAi_type_priest_CharacterUpdate(aref chr, float dltTime)
 			chr.chr_ai.type.who = "-1";
 			chr.chr_ai.type.timewait = "1";
 			LAi_type_priest_RestoreAngle(chr);
-			//РРЅРѕРіРґР° РјРѕР»РёРјСЃСЏ РјРѕР»РёС‚СЊСЃСЏ
+			//Иногда молимся молиться
 			if(rand(100) < 20)
 			{
 				LAi_CharacterPlaySound(chr, "priest_bead");
@@ -98,7 +98,7 @@ void LAi_type_priest_CharacterUpdate(aref chr, float dltTime)
 			chr.chr_ai.type.who = "-1";
 			chr.chr_ai.type.timewait = "3";
 		}else{
-			//РЎРјРѕС‚СЂРёРј Р±Р»РёР·РєРѕ РїСЂРѕС…РѕРґСЏС‰РёС… РїРµСЂСЃРѕРЅР°Р¶РµР№
+			//Смотрим близко проходящих персонажей
 			time = stf(chr.chr_ai.type.time);
 			num = FindNearCharacters(chr, 5.5, -1.0, -1.0, 0.001, false, false);
 			if(num > 0)
@@ -117,83 +117,83 @@ void LAi_type_priest_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Р—Р°РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
+//Загрузка персонажа в локацию
 bool LAi_type_priest_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Р’С‹РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РёР· Р»РѕРєР°С†РёСЋ
+//Выгрузка персонажа из локацию
 bool LAi_type_priest_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ С‚РµРјРїР»РµР№С‚Р°
+//Завершение работы темплейта
 void LAi_type_priest_TemplateComplite(aref chr, string tmpl)
 {
 }
 
-//РЎРѕРѕР±С‰РёС‚СЊ Рѕ Р¶РµР»Р°РЅРёРё Р·Р°РІРµСЃС‚Рё РґРёР°Р»РѕРі
+//Сообщить о желании завести диалог
 void LAi_type_priest_NeedDialog(aref chr, aref by)
 {
 }
 
-//Р—Р°РїСЂРѕСЃ РЅР° РґРёР°Р»РѕРі, РµСЃР»Рё РІРѕР·РІСЂР°С‚РёС‚СЊ true С‚Рѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Запрос на диалог, если возвратить true то в этот момент можно начать диалог
 bool LAi_type_priest_CanDialog(aref chr, aref by)
 {
-	//РЎРѕРіР»Р°СЃРёРјСЃСЏ РЅР° РґРёР°Р»РѕРі
+	//Согласимся на диалог
 	if(chr.chr_ai.type.afraid == "1") return false;
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY) return true;
 	if(chr.chr_ai.tmpl == LAI_TMPL_ANI) return true;
 	return false;
 }
 
-//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Начать диалог
 void LAi_type_priest_StartDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
+	//Если мы пасивны, запускаем шаблон без времени завершения
 	LAi_CharacterSaveAy(chr);
 	CharacterTurnByChr(chr, by);
 	LAi_tmpl_SetActivatedDialog(chr, by);
 }
 
-//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
+//Закончить диалог
 void LAi_type_priest_EndDialog(aref chr, aref by)
 {
 	LAi_tmpl_stay_InitTemplate(chr);
 	LAi_CharacterRestoreAy(chr);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°Р» РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атаковал другого персонажа
 void LAi_type_priest_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚РѕРєРѕРІР°Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РІС€РµРіРѕСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атоковал заблокировавшегося персонажа
 void LAi_type_priest_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹СЃС‚СЂРµР»РёР»
+//Персонаж выстрелил
 void LAi_type_priest_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°РЅ
+//Персонаж атакован
 void LAi_type_priest_Attacked(aref chr, aref by)
 {
 	
 }
 
-//РџСЂРѕРёРіСЂР°С‚СЊ Р°РЅРёРјР°С†РёСЋ Р·Р°Р·С‹РІР°РЅРёСЏ РїРѕРєСѓРїР°РЅРµР»РµР№
+//Проиграть анимацию зазывания покупанелей
 void LAi_type_priest_Ask(aref chr)
 {
-	//Р’С‹Р±РёСЂР°РµРј Р°РЅРёРјР°С†РёСЋ
+	//Выбираем анимацию
 	string animation;
 	switch(rand(2))
 	{
@@ -208,11 +208,11 @@ void LAi_type_priest_Ask(aref chr)
 		break;
 	};
 	LAi_tmpl_ani_PlayAnimation(chr, animation, -1.0);
-	//Р’С‹Р±РёСЂР°РµРј РїСЂРѕРёРіСЂС‹РІР°РµРјС‹Р№ Р·РІСѓРє
+	//Выбираем проигрываемый звук
 	LAi_CharacterPlaySound(chr, "priest");
 }
 
-//РџСЂРѕРёРіСЂР°С‚СЊ Р°РЅРёРјР°С†РёСЋ Р·Р°Р·С‹РІР°РЅРёСЏ РїРѕРєСѓРїР°РЅРµР»РµР№
+//Проиграть анимацию зазывания покупанелей
 void LAi_type_priest_RestoreAngle(aref chr)
 {
 	if(CheckAttribute(chr, "location.group"))
@@ -224,7 +224,7 @@ void LAi_type_priest_RestoreAngle(aref chr)
 	}
 }
 
-//РќР°Р№С‚Рё РІСЂР°РіР°
+//Найти врага
 int LAi_type_priest_FindEnemy(aref chr, int num)
 {
 	for(int i = 0; i < num; i++)

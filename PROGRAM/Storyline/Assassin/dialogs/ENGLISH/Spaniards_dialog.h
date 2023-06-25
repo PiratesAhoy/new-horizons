@@ -2,7 +2,7 @@ string DLG_TEXT[26] = {
 "......",
 "......",
 "Stop! What do you want?",
-"Donâ€™t you see? Iâ€™m Johan Elting, a mercenary working for Vice-Admiral Benavides.",
+"Don’t you see? I’m Johan Elting, a mercenary working for Vice-Admiral Benavides.",
 "Sorry, I didn't recognize you. And who's the man with you?",
 "Bartolomeu o Portugues.",
 "What?! The Portuguese pirate?",

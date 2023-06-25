@@ -1,7 +1,7 @@
 /*
-РўРёРї: РёРіСЂРѕРє
+Тип: игрок
 
-	РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С€Р°Р±Р»РѕРЅС‹:
+	Используемые шаблоны:
 		player
 		dialog
 */
@@ -11,7 +11,7 @@
 #define LAI_TYPE_PLAYER		"player"
 
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+//Инициализация
 void LAi_type_player_Init(aref chr)
 {
 	DeleteAttribute(chr, "location.follower");
@@ -24,13 +24,13 @@ void LAi_type_player_Init(aref chr)
 	}
 	if(isNew == true)
 	{
-		//РќРѕРІС‹Р№ С‚РёРї
+		//Новый тип
 		DeleteAttribute(chr, "chr_ai.type");
 		chr.chr_ai.type = LAI_TYPE_PLAYER;
 	}
-	//РЈСЃС‚Р°РЅРѕРІРёРј С€Р°Р±Р»РѕРЅ СЃС‚РѕСЏРЅРёСЏ
+	//Установим шаблон стояния
 	LAi_tmpl_player_InitTemplate(chr);
-	//РЈСЃС‚Р°РЅРѕРІРёРј Р°РЅРёРјР°С†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Сѓ
+	//Установим анимацию персонажу
 	LAi_SetDefaultStayAnimation(chr);
 
 	/* ccc building kit, keeps player view from swaying
@@ -49,11 +49,11 @@ void LAi_type_player_Init(aref chr)
 	// ccc building kit end */
 
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightWOWeapon", false);
-	//Р’СЂРµРјСЏ СЃС‚РѕСЏРЅРёСЏ СЃ РѕСЂСѓР¶РёРµРј
+	//Время стояния с оружием
 	chr.chr_ai.type.weapontime = 0;
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С‚РёРїР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование типа персонажа
 void LAi_type_player_CharacterUpdate(aref chr, float dltTime)
 {
 	float time;
@@ -79,51 +79,51 @@ void LAi_type_player_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Р—Р°РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
+//Загрузка персонажа в локацию
 bool LAi_type_player_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Р’С‹РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РёР· Р»РѕРєР°С†РёСЋ
+//Выгрузка персонажа из локацию
 bool LAi_type_player_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ С‚РµРјРїР»РµР№С‚Р°
+//Завершение работы темплейта
 void LAi_type_player_TemplateComplite(aref chr, string tmpl)
 {
 	LAi_tmpl_player_InitTemplate(chr);
 }
 
-//РЎРѕРѕР±С‰РёС‚СЊ Рѕ Р¶РµР»Р°РЅРёРё Р·Р°РІРµСЃС‚Рё РґРёР°Р»РѕРі
+//Сообщить о желании завести диалог
 void LAi_type_player_NeedDialog(aref chr, aref by)
 {
 }
 
-//Р—Р°РїСЂРѕСЃ РЅР° РґРёР°Р»РѕРі, РµСЃР»Рё РІРѕР·РІСЂР°С‚РёС‚СЊ true С‚Рѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Запрос на диалог, если возвратить true то в этот момент можно начать диалог
 bool LAi_type_player_CanDialog(aref chr, aref by)
 {
 	if(CheckAttribute(chr, "forcedlg")) return true; // NK 05-07-13
-	//Р•СЃР»Рё СѓР¶Рµ РіРѕРІРѕСЂРёРј, С‚Рѕ РѕС‚РєР°Р¶РµРј
+	//Если уже говорим, то откажем
 	if(chr.chr_ai.tmpl == LAI_TMPL_DIALOG) return false;
-	//Р•СЃР»Рё СЃСЂР°Р¶Р°РµРјСЃСЏ, С‚Рѕ РѕС‚РєР°Р¶РµРј
+	//Если сражаемся, то откажем
 	if(SendMessage(chr, "ls", MSG_CHARACTER_EX_MSG, "IsFightMode") != 0) return false;
-	//РЎРѕРіР»Р°СЃРёРјСЃСЏ РЅР° РґРёР°Р»РѕРі
+	//Согласимся на диалог
 	return true;
 }
 
-//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Начать диалог
 void LAi_type_player_StartDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
+	//Если мы пасивны, запускаем шаблон без времени завершения
 	LAi_CharacterSaveAy(chr);
 	CharacterTurnByChr(chr, by);
 	if(!CheckAttribute(chr, "forcedlg")) LAi_tmpl_SetActivatedDialog(chr, by); // NK 05-07-13 to allow for dlg in fight mode
 }
 
-//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
+//Закончить диалог
 void LAi_type_player_EndDialog(aref chr, aref by)
 {
 	if(!CheckAttribute(chr, "forcedlg")) LAi_tmpl_stay_InitTemplate(chr); // NK 05-07-13 to allow for dlg in fight mode
@@ -132,26 +132,26 @@ void LAi_type_player_EndDialog(aref chr, aref by)
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°Р» РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атаковал другого персонажа
 void LAi_type_player_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚РѕРєРѕРІР°Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РІС€РµРіРѕСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атоковал заблокировавшегося персонажа
 void LAi_type_player_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹СЃС‚СЂРµР»РёР»
+//Персонаж выстрелил
 void LAi_type_player_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°РЅ
+//Персонаж атакован
 void LAi_type_player_Attacked(aref chr, aref by)
 {
 	

@@ -5,7 +5,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	makeref(ch, chobj);
 
-			// РљР°РїРёС‚Р°РЅ С„СЂРµРіР°С‚Р° СЃ РїРѕСЂРѕС…РѕРј, РєРѕС‚РѕСЂС‹Р№ РјС‹ РґРѕР»Р¶РЅС‹ РїРѕС‚РѕРїРёС‚СЊ
+			// Капитан фрегата с порохом, который мы должны потопить
 	ch.old.name = "Captain";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Captain");
@@ -47,7 +47,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// СЃРІСЏР·РЅРѕР№ РїР°СЂС‚РёР·Р°РЅ РґР»СЏ РєРІРµСЃС‚Р° РїРµСЂРµРґР°С‡Рё РїСѓС€РµРє
+			// связной партизан для квеста передачи пушек
 	ch.old.name = "Kalen";
 	ch.old.lastname = "Mottram";
 	ch.name = TranslateString("","Kalen");
@@ -83,7 +83,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 /*	Duplicated in "Story.c"
-			// РђРіРµРЅС‚ РїРµСЂРµРІРѕР·РёРјС‹Р№ Р”СЌРЅРёРµР»СЊ РІ Р·Р°С…РІР°С‡РµРЅРЅС‹Р№ РћРєСЃР±СЌР№
+			// Агент перевозимый Дэниель в захваченный Оксбэй
 	ch.old.name = "Tobias";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Tobias");
@@ -123,7 +123,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	AddGameCharacter(n, ch);
 */
 
-			// 1-Р№ РџР°С‚СЂСѓР»СЊРЅС‹Р№
+			// 1-й Патрульный
 	ch.old.name = "French Patrol";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Patrol");
@@ -161,7 +161,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 2-Р№ РџР°С‚СЂСѓР»СЊРЅС‹Р№
+			// 2-й Патрульный
 	ch.old.name = "French Patrol";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Patrol");
@@ -199,7 +199,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 3-Р№ РџР°С‚СЂСѓР»СЊРЅС‹Р№
+			// 3-й Патрульный
 	ch.old.name = "French Patrol";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Patrol");
@@ -237,7 +237,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 1-Р№ РЎРѕР»РґР°С‚, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… РїРѕСЃС‚Р°РЅРѕРІРєР°С…
+			// 1-й Солдат, временно участвующий во всех квестовых постановках
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -276,7 +276,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 2-Р№ РЎРѕР»РґР°С‚, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… РїРѕСЃС‚Р°РЅРѕРІРєР°С…
+			// 2-й Солдат, временно участвующий во всех квестовых постановках
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -315,7 +315,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// РЅР°С€ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… РїРѕСЃС‚Р°РЅРѕРІРєР°С…
+			// наш моряк, временно участвующий во всех квестовых постановках
 	ch.old.name = "sailor";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","sailor");
@@ -354,7 +354,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 1-Р№ С„СЂР°РЅС†СѓР·СЃРєРёР№ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… РїРѕСЃС‚Р°РЅРѕРІРєР°С…
+			// 1-й французский моряк, временно участвующий во всех квестовых постановках
 	ch.old.name = "French";
 	ch.old.lastname = "Sailor";
 	ch.name = TranslateString("","French");
@@ -392,7 +392,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 2-Р№ С„СЂР°РЅС†СѓР·СЃРєРёР№ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… РїРѕСЃС‚Р°РЅРѕРІРєР°С…
+			// 2-й французский моряк, временно участвующий во всех квестовых постановках
 	ch.old.name = "French";
 	ch.old.lastname = "Sailor";
 	ch.name = TranslateString("","French");
@@ -430,7 +430,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 3-Р№ С„СЂР°РЅС†СѓР·СЃРєРёР№ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… РїРѕСЃС‚Р°РЅРѕРІРєР°С…
+			// 3-й французский моряк, временно участвующий во всех квестовых постановках
 	ch.old.name = "French";
 	ch.old.lastname = "Sailor";
 	ch.name = TranslateString("","French");
@@ -468,7 +468,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 4-Р№ С„СЂР°РЅС†СѓР·СЃРєРёР№ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… РїРѕСЃС‚Р°РЅРѕРІРєР°С…
+			// 4-й французский моряк, временно участвующий во всех квестовых постановках
 	ch.old.name = "French";
 	ch.old.lastname = "Sailor";
 	ch.name = TranslateString("","French");
@@ -506,7 +506,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 5-Р№ С„СЂР°РЅС†СѓР·СЃРєРёР№ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… РїРѕСЃС‚Р°РЅРѕРІРєР°С…
+			// 5-й французский моряк, временно участвующий во всех квестовых постановках
 	ch.old.name = "French";
 	ch.old.lastname = "Sailor";
 	ch.name = TranslateString("","French");
@@ -544,7 +544,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 1-Р№ РјРѕР№ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… СЃСЂР°Р¶РµРЅРёСЏС…
+			// 1-й мой моряк, временно участвующий во всех квестовых сражениях
 	ch.old.name = "Sailor";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Sailor");
@@ -582,7 +582,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 2-Р№ РјРѕР№ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… СЃСЂР°Р¶РµРЅРёСЏС…
+			// 2-й мой моряк, временно участвующий во всех квестовых сражениях
 	ch.old.name = "Sailor";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Sailor");
@@ -620,7 +620,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 3-Р№ РјРѕР№ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… СЃСЂР°Р¶РµРЅРёСЏС…
+			// 3-й мой моряк, временно участвующий во всех квестовых сражениях
 	ch.old.name = "Sailor";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Sailor");
@@ -658,7 +658,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 4-Р№ РјРѕР№ РјРѕСЂСЏРє, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІРѕ РІСЃРµС… РєРІРµСЃС‚РѕРІС‹С… СЃСЂР°Р¶РµРЅРёСЏС…
+			// 4-й мой моряк, временно участвующий во всех квестовых сражениях
 	ch.old.name = "Sailor";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Sailor");
@@ -696,7 +696,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// СЃР°РїРµСЂ, РІСЂРµРјРµРЅРЅРѕ СѓС‡Р°СЃС‚РІСѓСЋС‰РёР№ РІ РєРІРµСЃС‚РѕРІС‹С… РїРѕСЃС‚Р°РЅРѕРІРєР°С…
+			// сапер, временно участвующий в квестовых постановках
 	ch.old.name = "Sapper";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Sapper");
@@ -735,7 +735,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// РїРѕСЃС‹Р»СЊРЅС‹Р№ РѕС‚ РЎР°Р№Р»С…Р°СЂРґР° Рє РР·РµРЅР±СЂР°РЅРґС‚Сѓ, РЅР° Р°СЂРµСЃС‚ Р”Р°РЅРёРµР»СЊ
+			// посыльный от Сайлхарда к Изенбрандту, на арест Даниель
 	ch.old.name = "Simon";
 	ch.old.lastname = "Buck";
 	ch.name = TranslateString("","Simon");
@@ -775,7 +775,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// 1-Р№ СЃС‚СЂР°Р¶РЅРёРє СЂСѓРґРЅРёРєРѕРІ РЅР° РћРєСЃР±СЌР№
+				// 1-й стражник рудников на Оксбэй
 	ch.old.name = "Rene";
 	ch.old.lastname = "Bouillon";
 	ch.name = TranslateString("","Rene");
@@ -813,7 +813,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// 1-Р№ РўРµР»РѕС…СЂР°РЅРёС‚РµР»СЊ РЎР°Р№Р»С…Р°СЂРґР°
+			// 1-й Телохранитель Сайлхарда
 	ch.old.name = "Bodyguard";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Bodyguard");
@@ -894,7 +894,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 //=====================================================Mosh========================================================
 
-			// 1-Р№ РЎС‚СЂР°Р¶ РґРѕРјР° Р РµР№РјСЃР°
+			// 1-й Страж дома Реймса
 	ch.old.name = "Ian";
 	ch.old.lastname = "Bigg";
 	ch.name = TranslateString("","Ian");
@@ -941,7 +941,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			// 2-Р№ РЎС‚СЂР°Р¶ РґРѕРјР° Р РµР№РјСЃР°
+			// 2-й Страж дома Реймса
 	ch.old.name = "Rabel";
 	ch.old.lastname = "Bonnat";
 	ch.name = TranslateString("","Rabel");

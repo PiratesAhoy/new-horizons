@@ -1,30 +1,30 @@
-Ardent{РђСЂРґРµРЅС‚}
-Fortune{Р¤РѕСЂС‚СѓРЅР°}
-Time to put the 'gold' and 'piracy' into the Golden Age of Piracy! Kidnap, burglary and outright piracy - Charles Ardent does it all! (Though there are those that say Ardent was actually a woman, Helen.){РџРѕСЂР° РїРѕРјРµСЃС‚РёС‚СЊ 'Р·РѕР»РѕС‚Рѕ' Рё 'РїРёСЂР°С‚СЃС‚РІРѕ' РІ Р—РѕР»РѕС‚РѕР№ Р’РµРє РџРёСЂР°С‚СЃС‚РІР°! РџРѕС…РёС‰РµРЅРёСЏ, РєСЂР°Р¶Рё СЃРѕ РІР·Р»РѕРјРѕРј Рё РѕС‚РєСЂРѕРІРµРЅРЅРѕРµ РїРёСЂР°С‚СЃС‚РІРѕ - Р§Р°СЂР»СЊР· РђСЂРґРµРЅС‚ РґРµР»Р°Р» РІСЃРµ СЌС‚Рѕ! (РҐРѕС‚СЏ РµСЃС‚СЊ С‚Рµ, РєС‚Рѕ СѓС‚РІРµСЂР¶РґР°РµС‚, С‡С‚Рѕ РђСЂРґРµРЅС‚ - РЅР° СЃР°РјРѕРј РґРµР»Рµ Р±С‹Р»Р° Р¶РµРЅС‰РёРЅРѕР№ РҐРµР»РµРЅ.)}
+Ardent{Ардент}
+Fortune{Фортуна}
+Time to put the 'gold' and 'piracy' into the Golden Age of Piracy! Kidnap, burglary and outright piracy - Charles Ardent does it all! (Though there are those that say Ardent was actually a woman, Helen.){Пора поместить 'золото' и 'пиратство' в Золотой Век Пиратства! Похищения, кражи со взломом и откровенное пиратство - Чарльз Ардент делал все это! (Хотя есть те, кто утверждает, что Ардент - на самом деле была женщиной Хелен.)}
 
-Esme{Р­СЃРјРµ}
-Hasta{РҐР°СЃС‚Р°}
-Neptuno{РќРµРїС‚СѓРЅ}
-Sabina{РЎР°Р±РёРЅР°}
-Siroco{РЎРёСЂРѕРєРєРѕ}
-Tonina{РўРѕРЅРёРЅР°}
-Jacqueline{Р–Р°РєР»РёРЅ}
-Phaeton{Р¤Р°СЌС‚РѕРЅ}
-Assurance{Р“Р°СЂР°РЅС‚РёСЏ}
-Cygnet{Р›РµР±РµРґСЊ}
-Sirius{РЎРёСЂРёСѓСЃ}
-Joli{РџСЂРёРІР»РµРєР°С‚РµР»СЊРЅС‹Р№}
-Bolontaire{Р‘РѕР»РѕРЅС‚Р°СЂРЅС‹Р№}
-Salamine{РЎР°Р»Р°РјРёРЅ}
-ConquР№rante{Р—Р°РІРѕРµРІР°С‚РµР»СЊ}
-Dauphin Royal{РљРѕСЂРѕР»РµРІСЃРєРёР№ Р”РѕС„РёРЅ}
-Victorieuse{РџРѕР±РµРґРѕРЅРѕСЃРЅС‹Р№}
-RР№sistance{РЎРѕРїСЂРѕС‚РёРІР»РµРЅРёРµ}
-Reprisal{Р Р°СЃРїСЂР°РІР°}
-ImpР№tueuse{РРјРїСѓР»СЊСЃРёРІРЅС‹Р№}
-Tarantula{РўР°СЂР°РЅС‚СѓР»}
-San Lorenzo{РЎРІСЏС‚РѕР№ Р›РѕСЂРµРЅС†Рѕ}
-Entreprenant{РџСЂРµРґРїСЂРёРёРјС‡РёРІС‹Р№}
-Mayordomo{Р”РІРѕСЂРµС†РєРёР№}
-Hasta{РҐР°СЃС‚Р°}
-Neptuno{РќРµРїС‚СѓРЅ}
+Esme{Эсме}
+Hasta{Хаста}
+Neptuno{Нептун}
+Sabina{Сабина}
+Siroco{Сирокко}
+Tonina{Тонина}
+Jacqueline{Жаклин}
+Phaeton{Фаэтон}
+Assurance{Гарантия}
+Cygnet{Лебедь}
+Sirius{Сириус}
+Joli{Привлекательный}
+Bolontaire{Болонтарный}
+Salamine{Саламин}
+Conquйrante{Завоеватель}
+Dauphin Royal{Королевский Дофин}
+Victorieuse{Победоносный}
+Rйsistance{Сопротивление}
+Reprisal{Расправа}
+Impйtueuse{Импульсивный}
+Tarantula{Тарантул}
+San Lorenzo{Святой Лоренцо}
+Entreprenant{Предприимчивый}
+Mayordomo{Дворецкий}
+Hasta{Хаста}
+Neptuno{Нептун}

@@ -8936,7 +8936,7 @@ void QuestComplete(string sQuestName)
 			//JRH Cartagena -->
 			//-----------------------------------------------------------------------------------------------------------
 			//Cartagena church
-			//p√§r
+			//p‰r
 		case "pchar_playertype":
 			LAi_SetPlayerType(Pchar);
 			break;
@@ -9106,7 +9106,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Cartagena_church_cave")].locators_radius.box.box17 = 0.7;
 			Characters[GetCharacterIndex("Elting")].dialog.currentnode = "First time";
 			break;
-			//p√§r
+			//p‰r
 		case "cartagena_snoring_starts":
 			if(CheckAttribute(Pchar,"quest.priest_wakes_up") && Pchar.quest.priest_wakes_up == "yes") return;
 

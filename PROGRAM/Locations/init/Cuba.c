@@ -27,7 +27,7 @@ void LocationInitCuba(ref n)
 
 	//Day
 	Locations[n].models.day.charactersPatch = "RedPort_pd";
-	Locations[n].models.day.rinok = "RedPort_e01"; //СЂС‹РЅРѕРє
+	Locations[n].models.day.rinok = "RedPort_e01"; //рынок
 	Locations[n].models.day.fonar = "RedPort_fd";
 	Locations[n].models.day.jumppatch = "RedPort_j";
 	//Night
@@ -249,13 +249,13 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l15.go = "Redmond_HouseInsideR7(01)";
 	Locations[n].reload.l15.emerge = "reload1";
 	Locations[n].reload.l15.autoreload = "0";
-	Locations[n].reload.l15.label = "Р”РѕРј.";
+	Locations[n].reload.l15.label = "Дом.";
 
 	Locations[n].reload.l16.name = "door_3";
 	Locations[n].reload.l16.go = "Redmond_HouseInsideR3(01)";
 	Locations[n].reload.l16.emerge = "reload1";
 	Locations[n].reload.l16.autoreload = "0";
-	Locations[n].reload.l16.label = "Р”РѕРј.";*/
+	Locations[n].reload.l16.label = "Дом.";*/
 
 	Locations[n].island = "Cuba"; // NK 04-08-29
 	n = n + 1;

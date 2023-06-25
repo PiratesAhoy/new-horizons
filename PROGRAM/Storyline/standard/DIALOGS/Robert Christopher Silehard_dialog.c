@@ -18,7 +18,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
@@ -1140,7 +1140,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[300];
 			Link.l1 = DLG_TEXT[301];
 			Link.l1.go = "escape_from_prison_8";
-			//СѓР±РёРІР°РµРј Р­РґРіР°СЂР°
+			//убиваем Эдгара
 			ChangeCharacterAddress(characterFromID("Edgar Attwood"), "none", "none");
 			characters[GetCharacterIndex("Edgar Attwood")].act.hp = 0.0;
 		break;

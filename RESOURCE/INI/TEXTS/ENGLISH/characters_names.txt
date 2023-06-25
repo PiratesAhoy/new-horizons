@@ -102,7 +102,7 @@ Chima{Chima}
 Alejandro{Alejandro}
 de Mendoza{de Mendoza}
 Arturo{Arturo}
-de C√°diz{de C√°diz}
+de C·diz{de C·diz}
 Librarian{Librarian}
 
 {=====| CommonQuest.c |=====}
@@ -118,12 +118,12 @@ Vas{Vas}
 de Torres{de Torres}
 Reginald{Reginald}
 de Boeuf{de Boeuf}
-Bj√∂rn{Bj√∂rn}
-Roos af Hjelms√§ter{Roos af Hjelms√§ter}
+Bjˆrn{Bjˆrn}
+Roos af Hjelms‰ter{Roos af Hjelms‰ter}
 Charlie{Charlie}
 Allen{Allen}
 Edgar{Edgar}
-Lu√≠s{Lu√≠s}
+LuÌs{LuÌs}
 Buchinho{Buchinho}
 Abelard{Abelard}
 Laviniere{Laviniere}
@@ -221,12 +221,12 @@ Ibiza{Ibiza}
 Higini{Higini}
 Seat{Seat}
 Probello{Probello}
-Jose Jalapeno{Jos√© Jalape√±o}
+Jose Jalapeno{JosÈ JalapeÒo}
 on the stalk{on the stalk}
 Eustacio{Eustacio}
 Ocampo{Ocampo}
 Patricia{Patricia}
-Sant√°ngel{Sant√°ngel}
+Sant·ngel{Sant·ngel}
 Isidoro{Isidoro}
 Figueroa{Figueroa}
 Magarino{Magarino}
@@ -234,7 +234,7 @@ Micael{Micael}
 Salinas{Salinas}
 Mahala{Mahala}
 Tancredo{Tancredo}
-Pell√≥n{Pell√≥n}
+PellÛn{PellÛn}
 
 {=====| Curacao.c |=====}
 Hans{Hans}
@@ -543,7 +543,7 @@ Marpeut{Marpeut}
 Laure{Laure}
 Sinclair{Sinclair}
 Dubois{Dubois}
-Fran√ßois{Fran√ßois}
+FranÁois{FranÁois}
 de Vigny{de Vigny}
 Amarante{Amarante}
 Bontin{Bontin}
@@ -1041,10 +1041,10 @@ Cristobal{Cristobal}
 Leon{Leon}
 Escovar{Escovar}
 Entenza{Entenza}
-Se√±orita{Se√±orita}
+SeÒorita{SeÒorita}
 Hebe{Hebe}
 Constantino{Constantino}
-Avell√°n{Avell√°n}
+Avell·n{Avell·n}
 Growling{Growling}
 Bear{Bear}
 Kicking{Kicking}
@@ -1173,7 +1173,7 @@ Castrilli{Castrilli}
 Fadrique{Fadrique}
 Leonor{Leonor}
 Esperanza{Esperanza}
-Ram√≥n{Ram√≥n}
+RamÛn{RamÛn}
 Figueras{Figueras}
 Figaux{Figaux}
 Sophie{Sophie}
@@ -1220,7 +1220,7 @@ Tolman{Tolman}
 Voyant{Voyant}
 Fructoso{Fructoso}
 Juana{Juana}
-Garc√≠a{Garc√≠a}
+GarcÌa{GarcÌa}
 Ramos{Ramos}
 Fabiao{Fabiao}
 Dunga{Dunga}
@@ -1251,7 +1251,7 @@ Inocencia{Inocencia}
 Ussica{Ussica}
 Salvadore{Salvadore}
 Jimena{Jimena}
-L√≥pez{L√≥pez}
+LÛpez{LÛpez}
 
 {=====| Turks.c |=====}
 Dante{Dante}

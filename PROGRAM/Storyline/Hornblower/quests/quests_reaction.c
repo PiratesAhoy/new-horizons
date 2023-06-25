@@ -1472,7 +1472,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Big Bryan"));
 			LAi_ActorGoToLocator(characterFromID("Big Bryan"), "goto", "guard", "", 0.0);
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"FR_Sloop","Le RÃ¨ve",-1,FRANCE,true,true);
+			GiveShip2Character(pchar,"FR_Sloop","Le Rève",-1,FRANCE,true,true);
 			SetCrewQuantity(pchar, 150);
 			AddCharacterGoods(pchar, GOOD_BALLS, 500);
 			AddCharacterGoods(pchar, GOOD_GRAPES, 300);
@@ -3025,7 +3025,7 @@ void QuestComplete(string sQuestName)
 			LAi_Fade("", "");
 			SetCurrentTime(6, 0);
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"FR_Sloop","Le RÃ¨ve",-1,FRANCE,true,true);
+			GiveShip2Character(pchar,"FR_Sloop","Le Rève",-1,FRANCE,true,true);
 			SetCrewQuantity(pchar, 150);
 			AddCharacterGoods(pchar, GOOD_BALLS, 500);
 			AddCharacterGoods(pchar, GOOD_GRAPES, 300);
@@ -11374,7 +11374,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Rifleman Tongue"), "None", "");
 			ChangeCharacterAddress(characterFromID("Rifleman Mansfield"), "None", "");
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"FR_Sloop","Le RÃ¨ve",-1,FRANCE,true,true); // Teresa's ship
+			GiveShip2Character(pchar,"FR_Sloop","Le Rève",-1,FRANCE,true,true); // Teresa's ship
 			SetCrewQuantity(pchar, 100);
 			AddCharacterGoods(pchar, GOOD_RUM, 40);
 			AddCharacterGoods(pchar, GOOD_WHEAT, 40);
@@ -11812,7 +11812,7 @@ void QuestComplete(string sQuestName)
 		case "Hogan_Discussion":
 			LAi_SetActorType(characterFromID("Teresa Moreno"));
 			LAi_SetActorType(characterFromID("Richard Sharpe"));
-			ChangeCharacterAddress(characterFromID("FranÃ§ois de Vigny"), "None", "");
+			ChangeCharacterAddress(characterFromID("François de Vigny"), "None", "");
 			ChangeCharacterAddressGroup(characterFromID("Major Hogan"), "Guadeloupe_Plantation_inside", "goto", "goto8");
 			ChangeCharacterAddressGroup(characterFromID("Richard Sharpe"), "Guadeloupe_Plantation_inside", "goto", "goto1");
 			ChangeCharacterAddressGroup(characterFromID("Teresa Moreno"), "Guadeloupe_Plantation_inside", "goto", "goto2");
@@ -15851,7 +15851,7 @@ void QuestComplete(string sQuestName)
 
 		case "wolfes_ship":
 			pchar.quest.know_about_Wolfe = "None";
-			GiveShip2Character(characterFromID("Teresa Moreno"),"FR_Sloop","Le RÃ¨ve",-1,FRANCE,true,true);
+			GiveShip2Character(characterFromID("Teresa Moreno"),"FR_Sloop","Le Rève",-1,FRANCE,true,true);
 			setCharacterShipLocation(characterFromID("Teresa Moreno"), "Charlestown_port");
 			ChangeCharacterAddressGroup(characterFromID("Teresa Moreno"), "Mystery_House", "goto", "goto5");
 			LAi_SetGuardianType(characterFromID("Teresa Moreno"));

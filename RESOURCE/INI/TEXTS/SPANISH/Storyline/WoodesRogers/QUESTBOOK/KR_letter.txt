@@ -1,9 +1,9 @@
 title=Carta - Gobernador Walter
-text.t1=El ayuntamiento es el gran edifico de piedra en el centro de la ciudad. Siempre est√° vigilado por dragones. Es la residencia del gobernador Walter.
-text.t2=¬°El gobernador Walter vive en el edifico del ayuntamiento y s√© que est√° en el centro de la ciudad!
+text.t1=El ayuntamiento es el gran edifico de piedra en el centro de la ciudad. Siempre est· vigilado por dragones. Es la residencia del gobernador Walter.
+text.t2=°El gobernador Walter vive en el edifico del ayuntamiento y sÈ que est· en el centro de la ciudad!
 text.t3=Se ha vendido una carta al gobernador Walter.
 text.t4=Tengo la carta. Vamos a leerla.
-text.t5=En el reverso de la carta est√° escrito P.I.R.A.T.E. cun una pluma y por una mano diferente.
+text.t5=En el reverso de la carta est· escrito P.I.R.A.T.E. cun una pluma y por una mano diferente.
 text.t6=
 text.t7=
 text.t8=

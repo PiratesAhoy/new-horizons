@@ -1,4 +1,4 @@
-void LocationInitColombia(ref n)
+﻿void LocationInitColombia(ref n)
 {
 	// -------------------------------------------------
 	Locations[n].id = "Residence_Cartagena";

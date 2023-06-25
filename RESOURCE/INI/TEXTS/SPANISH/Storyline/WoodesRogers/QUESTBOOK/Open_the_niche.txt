@@ -1,7 +1,7 @@
 title=Abrir el nicho
 text.t1=Ya no necesito el barril para mantener abierta la trampilla.
-text.t2=DetrÃ¡s de la trampilla de metal hay un cofre colocado en el nicho de la pared.
-text.t3=Hay criaturas en la mina. Les asusta el fuego, y no tienen muy buena visiÃ³n.
-text.t4=He encontrado un hacha que abobviamernte se ha usado para cortar cabezas. Â¿Es eso lo que tengo que hacer?
-text.t5=Â¿Lo que venden en la tienda de antigÃ¼edades es robado? En cualquier caso, creo que hay que volver a la mina.
-text.t6=No estoy seguro de quÃ© hacer con la calavera. Pero probarÃ© a ponerla en la placa de presiÃ³n. 
+text.t2=Detrás de la trampilla de metal hay un cofre colocado en el nicho de la pared.
+text.t3=Hay criaturas en la mina. Les asusta el fuego, y no tienen muy buena visión.
+text.t4=He encontrado un hacha que abobviamernte se ha usado para cortar cabezas. ¿Es eso lo que tengo que hacer?
+text.t5=¿Lo que venden en la tienda de antigüedades es robado? En cualquier caso, creo que hay que volver a la mina.
+text.t6=No estoy seguro de qué hacer con la calavera. Pero probaré a ponerla en la placa de presión. 

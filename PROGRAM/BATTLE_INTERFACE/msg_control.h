@@ -1,7 +1,7 @@
 #ifndef __BATTLE_INTERFACE_MSG_CONTROL_
 #define __BATTLE_INTERFACE_MSG_CONTROL_
 
-// СЃРїРёСЃРѕРє Р°РєС‚РёРІРЅС‹С… РґРµР№СЃС‚РІРёР№
+// список активных действий
 #define BI_ACTIVE_MOOR				0
 #define BI_ACTIVE_SAIL_TO			1
 #define BI_ACTIVE_BOARD				2
@@ -12,7 +12,7 @@
 #define BI_ACTIVE_SAIL_AWAY			12
 #define BI_ACTIVE_HEAVE_TO_DRIFT	13
 
-// СЂРµР¶РёРј РІС‹Р±РѕСЂР°
+// режим выбора
 #define BI_COMMODE_MY_SHIP_SELECT		1
 #define BI_COMMODE_ENEMY_SHIP_SELECT	2
 #define BI_COMMODE_NEUTRAL_FORT_SELECT	4
@@ -46,33 +46,33 @@
 #define BI_EVENT_CHECK_SHIPSTATE_SHOW	"BI_CheckSSShow"
 #define BI_EVENT_GET_FORT_RELATION		"BI_GetFortRelation"
 
-// С‚РёРїС‹ РѕС‚РЅРѕС€РµРЅРёР№
+// типы отношений
 #define BI_RELATION_ENEMY		0
 #define BI_RELATION_FRIEND		1
 #define BI_RELATION_NEUTRAL		2
 
-// С‚РёРїС‹ РїРѕР»СѓС‡Р°РµРјС‹С… РґР°РЅРЅС‹С…
+// типы получаемых данных
 #define BIDT_SHIPPICTURE		0 // "l" (characterIdx)
 #define BIDT_GERALD_DATA		1 // "l" (characterIdx)
 
-// РєРѕРјР°РЅРґС‹ "Р·РµРјРЅРѕРіРѕ" РёРЅС‚РµСЂС„РµР№СЃР°
+// команды "земного" интерфейса
 #define MSG_BATTLE_LAND_START			46100 // ""
 #define MSG_BATTLE_LAND_END				46101 // ""
 #define MSG_BATTLE_LAND_SET_SHOW		46102 // "l" commandos show
 #define MSG_BATTLE_LAND_SET_MSGICONS	46103 // "e" &aref[4]
 #define MSG_BATTLE_LAND_SET_ICONTEX		46104 // "ls" texIdx, texName
 
-// РєРѕРјР°РЅРґС‹ РёРЅС‚РµСЂС„РµР№СЃР° РїРѕРґР·РѕСЂРЅРѕР№ С‚СЂСѓР±С‹
+// команды интерфейса подзорной трубы
 #define MSG_ISG_VISIBLE			46201 // "l" (set visible interface)
 #define MSG_ISG_UPDATE			46202 // "sslllfll" (ship name, ship type, hull, sail, crew, speed, cannons, charge)
 
-// РєРѕРјР°РЅРґС‹ РёРЅС‚РµСЂС„РµР№СЃР° РїРѕРґР·РѕСЂРЅРѕР№ С‚СЂСѓР±С‹
+// команды интерфейса подзорной трубы
 #define MSG_SP_CHANGESHIP		46301 // "l" (new character - ship owner)
 
-// РѕР±СЂР°С‰РµРЅРёРµ Рє РїР°СЂСѓСЃР°Рј
+// обращение к парусам
 #define MSG_SAIL_SCRIPT_PROCESSING	40099	// "s..."
 
-// РѕР±РЅРѕРІРёС‚СЊ СЃРїРёСЃРѕРє Р°РєС‚РёРІРёСЂРѕРІР°РЅРЅС‹С… СЃРїРѕСЃРѕР±РЅРѕСЃС‚РµР№
+// обновить список активированных способностей
 #define MSG_ACTIVE_PERK_LIST_REFRESH	47000
 
 #endif

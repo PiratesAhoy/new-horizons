@@ -111,7 +111,7 @@ go_indianstore {Indian Store}
 go_tavern2 {Second Tavern}
 go_eitc {East India Trading Company}
 go_dwic {Dutch West India Company}
-go_cdc {Casa de ContrataciÃ³n}
+go_cdc {Casa de Contratación}
 go_fwic {French West India Company}
 go_academy {Naval Academy}
 go_HQ {Naval HQ}

@@ -1,2 +1,2 @@
 title=Notificacion: Tiempos turbulentos
-text.t1=Parece que las cosas se est√°n poniendo intranquilas en el Caribe. Las naciones hacen y deshacen alianzas como por capricho. Ser√° mejor que preste atenci√≥n a todos los cambios recientes, no sea que me encuentre en medio de una guerra.
+text.t1=Parece que las cosas se est·n poniendo intranquilas en el Caribe. Las naciones hacen y deshacen alianzas como por capricho. Ser· mejor que preste atenciÛn a todos los cambios recientes, no sea que me encuentre en medio de una guerra.

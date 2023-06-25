@@ -1,2 +1,2 @@
 title=#stown# Assignment
-text.t1=Tras haber servido en las Indias Occidentales durante un par de aÃ±os, por fin me han nombrado comandante de mi propio barco con Ã³rdenes de salir de crucero en busca de presas. Esto me da una gran libertad de acciÃ³n; estoy tan cerca de ser amo y seÃ±or de mi propio destino como se puede estarlo en al Armada.
+text.t1=Tras haber servido en las Indias Occidentales durante un par de años, por fin me han nombrado comandante de mi propio barco con órdenes de salir de crucero en busca de presas. Esto me da una gran libertad de acción; estoy tan cerca de ser amo y señor de mi propio destino como se puede estarlo en al Armada.

@@ -29,7 +29,7 @@ string DLG_TEXT[107] = {
 "Innkeeper, I'll have what he has!",
 "...you must know, Diego Velazquez de Cuellar came to the new world with Columbus. But he stayed to become a hero in his own right!",
 "You mean when he became the founder of this town?",
-"This is certainly a reason. In fact, every time we come to #sSantiago#, I feel like his presence is still lingering. Imagine: Fifty years ago, the whole island was wild and empty. It was Velazquez de Cuellar's expedition that defeated the TaÃ­no, explored the land and built the first settlements. One of which soon grew into this beautiful town we see today!\nThus it is men like him, and their achievments, that make me proud of being a Spaniard and especially proud of serving the Spanish crown!",
+"This is certainly a reason. In fact, every time we come to #sSantiago#, I feel like his presence is still lingering. Imagine: Fifty years ago, the whole island was wild and empty. It was Velazquez de Cuellar's expedition that defeated the Taíno, explored the land and built the first settlements. One of which soon grew into this beautiful town we see today!\nThus it is men like him, and their achievments, that make me proud of being a Spaniard and especially proud of serving the Spanish crown!",
 "Does that include men like Hernan Cortes?", //31
 "Cortes eventually became his own man too, but when the Spanish presence was established on #sisland_Cuba#, he was merely an aide to Velazquez de Cuellar. Cortes' expedition to the mainland is another topic, but tonight, it's the great conquistador and governor, Velazquez de Cuellar, I want to celebrate!",
 "Let's raise our glasses then! To Diego Velazquez de Cuellar!",

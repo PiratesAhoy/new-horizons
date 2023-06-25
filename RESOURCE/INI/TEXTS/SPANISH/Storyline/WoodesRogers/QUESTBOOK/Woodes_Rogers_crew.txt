@@ -1,8 +1,8 @@
-title=La tripulaciÃ³n de Woodes Rogers
+title=La tripulación de Woodes Rogers
 text.t1=Justo lo que pensaba. Quieren la bandolera de pistolas. Puede que lo mejor sea volver a Port Royal con la familia Rogers.
-text.t2=Â¡Han matado al gobernaor! SeguirÃ© a Caroline para llegar hasta Ã©l.
-text.t3=SeguirÃ© ayudando a Caroline y tendrÃ© cuidado con los oficiales.
-text.t4=Nuestra Ãºltima oportunidad es conseguir ayuda de Charles Vane. Selkirk nos pondrÃ¡ en contacto...
-text.t5=La tripulaciÃ³n ha sido derrotada, pero alguos de lops oficiales siguen vivos.
-text.t6=Â¡Matamos a los Ãºltimos miembros de la tripulaciÃ³n, pero Courtney, Cook, Dampier y Dover lograron escapar! 
+text.t2=¡Han matado al gobernaor! Seguiré a Caroline para llegar hasta él.
+text.t3=Seguiré ayudando a Caroline y tendré cuidado con los oficiales.
+text.t4=Nuestra última oportunidad es conseguir ayuda de Charles Vane. Selkirk nos pondrá en contacto...
+text.t5=La tripulación ha sido derrotada, pero alguos de lops oficiales siguen vivos.
+text.t6=¡Matamos a los últimos miembros de la tripulación, pero Courtney, Cook, Dampier y Dover lograron escapar! 
 text.t7=

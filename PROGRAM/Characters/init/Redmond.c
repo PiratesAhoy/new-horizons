@@ -74,7 +74,7 @@ void CreateRedmondCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -112,7 +112,7 @@ void CreateRedmondCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -226,7 +226,7 @@ void CreateRedmondCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
-			//РіСЂСѓР·С‡РёРє РІ РїРѕСЂС‚Сѓ
+			//грузчик в порту
 	ch.old.name = "Docker";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Docker");
@@ -259,7 +259,7 @@ void CreateRedmondCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			//РіСЂСѓР·С‡РёРє РІ РїРѕСЂС‚Сѓ
+			//грузчик в порту
 	ch.old.name = "Docker";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Docker");
@@ -293,7 +293,7 @@ void CreateRedmondCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	
-	//Р”Р¶РёР»Р»РёР°РЅ Р­С‚С‚РµСЂР±РµСЂРё
+	//Джиллиан Эттербери
 	ch.old.name = "Gillian";
 	ch.old.lastname = "Atterbury";
 	ch.name = TranslateString("","Gillian");
@@ -326,7 +326,7 @@ void CreateRedmondCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			//Р“СЂРёС„С„РёС‚ РџРёР±РѕРґРё - РїСЂРµРґСЃС‚Р°РІРёС‚РµР»СЊ РІРµСЂС„Рё
+			//Гриффит Пибоди - представитель верфи
 	ch.old.name = "Griffith";
 	ch.old.lastname = "Peabody";
 	ch.name = TranslateString("","Griffith");
@@ -2125,7 +2125,7 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 // SJG For Hornblower5/20/2009 --->
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -2163,7 +2163,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";

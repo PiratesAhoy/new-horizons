@@ -6,10 +6,10 @@ void WorldMap_Compas_InitHelp()
 	string sectName = GetEventData();
 	if(sectName!="WorldMap_Compas") return;
 
-	// Р—Р°РїРѕР»РЅРёРј СЌРєСЂР°РЅ СЃРѕРґРµСЂР¶РёРјС‹Рј
-		// РєР°СЂРёРЅРєРё
+	// Заполним экран содержимым
+		// каринки
 	SetNewPicture("HELPPICTURE","interfaces\helppictures\WM_Compas.tga");
-		// СЃС‚СЂРѕРєРё
+		// строки
 	int strFileID = LanguageOpenFile("helpsections\WorldMap_Compas.txt");
 	SetFormatedText("TEXTWINDOW",LanguageConvertString(strFileID,"Compas_info"));
 	GameInterface.strings.HelpName = LanguageConvertString(strFileID,"Compas_title");
@@ -21,7 +21,7 @@ void WorldMap_Compas_ResetHelp()
 	string sectName = GetEventData();
 	if(sectName!="WorldMap_Compas_Clock") return;
 
-	// РЈРґР°Р»РёРј СЃ СЌСЂР°РЅР° РІСЃРµ
+	// Удалим с эрана все
 	SetNewPicture("HELPPICTURE","");
 	SetFormatedText("TEXTWINDOW","");
 }

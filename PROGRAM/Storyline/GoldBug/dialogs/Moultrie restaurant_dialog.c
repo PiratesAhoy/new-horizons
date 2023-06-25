@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
 
 			Dialog.defAni = "dialog_stay1";
@@ -55,7 +55,7 @@ void ProcessDialogEvent()
 				link.l2 = DLG_TEXT[34];
 				link.l2.go = "papers";
 			}
-			//fler alternativ hРґr
+			//fler alternativ hдr
 
 			link.l3 = DLG_TEXT[3];
 			link.l3.go = "rum";

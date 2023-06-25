@@ -19,7 +19,7 @@ string DLG_TEXT[23] = {
 "meu amigo",
 "mijn vriend",
 "my friend",
-"min v√§n",
+"min v‰n",
 "Hija de puta",
 "Hijo de puta",
 };

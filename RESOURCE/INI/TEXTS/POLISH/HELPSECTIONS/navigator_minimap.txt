@@ -4,19 +4,19 @@ Navigation Minimap
 }
 minimap_info
 {
-    Minimapa nawigacyjna (rys.1) pojawia siÃ— tylko na morzu. Pokazuje aktualny statek i prÃ—dkoâ€ºÅ¢ wiatru, typ okrÄ…gÅ‚y, ktÃ³ry zaÅ‚adowaÅ‚ armaty statkÃ³w i stan przeÅ‚adowania armat z kaÅ¾dej strony. RÃ³wnieÅ¾ kierunek i rozmieszczenie wyspy na kompasie i wietrze oraz sojusznicze i wrogie obiekty wokÃ³Å‚ statku gracza.
+    Minimapa nawigacyjna (rys.1) pojawia si× tylko na morzu. Pokazuje aktualny statek i pr×dko›Ş wiatru, typ okr¹g³y, który za³adowa³ armaty statków i stan prze³adowania armat z kadej strony. Równie kierunek i rozmieszczenie wyspy na kompasie i wietrze oraz sojusznicze i wrogie obiekty wokó³ statku gracza.
 
-    Lewy gÃ³rny numer na minimapie to prÃ—dkoâ€ºÅ¢ wiatru, prawy gÃ³rny numer - aktualna prÃ—dkoâ€ºÅ¢ statku. Parametry te sÄ… rÃ³wnieÅ¾ przedstawione graficznie: niebieski sektor wewnÃ—trzny po lewej stronie mapy min jest prÃ—dkoâ€ºciÄ… wiatru, a Å¾Ã³Å‚ty sektor po prawej stronie to prÃ—dkoâ€ºÅ¢ statku.
+    Lewy górny numer na minimapie to pr×dko›Ş wiatru, prawy górny numer - aktualna pr×dko›Ş statku. Parametry te s¹ równie przedstawione graficznie: niebieski sektor wewn×trzny po lewej stronie mapy min jest pr×dko›ci¹ wiatru, a ó³ty sektor po prawej stronie to pr×dko›Ş statku.
 
-    Stan przeÅ‚adowania armat pokazuje cztery zielone (lub czerwone, jeâ€ºli armaty nie sÄ… jeszcze zaÅ‚adowane) sektory wokÃ³Å‚ minimapy. Odpowiednio gÃ³rne, dolne, lewe i prawe sektory reprezentujÄ… odpowiednio stan zaÅ‚adowania dziaÅ‚ dziobowych, rufowych, larwalnych i prawych. MaÅ‚a ikona w prawym dolnym rogu minimapy pokazuje aktualny typ rundy armaty. MoÅ¾liwe typy rund moÅ¾na zobaczyÅ¢ na rys. 2 i sÄ… to noÅ¾e, bomby, kule armatnie i odÅ‚amki odpowiednio od lewej do prawej. Gdy nie ma wystarczajÄ…cej liczby rund typu sekcyjnego, aby zaÅ‚adowaÅ¢ wszystkie dziaÅ‚a, ikona zaczyna migaÅ¢.
+    Stan prze³adowania armat pokazuje cztery zielone (lub czerwone, je›li armaty nie s¹ jeszcze za³adowane) sektory wokó³ minimapy. Odpowiednio górne, dolne, lewe i prawe sektory reprezentuj¹ odpowiednio stan za³adowania dzia³ dziobowych, rufowych, larwalnych i prawych. Ma³a ikona w prawym dolnym rogu minimapy pokazuje aktualny typ rundy armaty. Moliwe typy rund mona zobaczyŞ na rys. 2 i s¹ to noe, bomby, kule armatnie i od³amki odpowiednio od lewej do prawej. Gdy nie ma wystarczaj¹cej liczby rund typu sekcyjnego, aby za³adowaŞ wszystkie dzia³a, ikona zaczyna migaŞ.
 
-    ZewnÃ—trzny krÄ…g minimapy to kompas. Obraca siÃ— wokÃ³Å‚ minimapy, poniewaÅ¾ poÅ‚oÅ¾enie statku gracza na minimapie jest staÅ‚e - Å‚uk statku gracza jest zawsze podniesiony, a rufa - do doÅ‚u.
+    Zewn×trzny kr¹g minimapy to kompas. Obraca si× wokó³ minimapy, poniewa po³oenie statku gracza na minimapie jest sta³e - ³uk statku gracza jest zawsze podniesiony, a rufa - do do³u.
 
-    Kierunek wiatru jest reprezentowany przez biaÅ‚Ä… strzaÅ‚kÃ—, ktÃ³ra przechodzi przez â€ºrodek minimapy.
+    Kierunek wiatru jest reprezentowany przez bia³¹ strza³k×, która przechodzi przez ›rodek minimapy.
 
-    Strefy strzelania dziaÅ‚ Å‚ukowych, rufowych i deskowych sÄ… pokazane z biaÅ‚ymi przezroczystymi sektorami.
+    Strefy strzelania dzia³ ³ukowych, rufowych i deskowych s¹ pokazane z bia³ymi przezroczystymi sektorami.
 
-    Na minimapie gracz widzi wyspÃ—, z ktÃ³rej pÅ‚ynie jego statek. RÃ³wnieÅ¾ wszystkie inne statki, ktÃ³re znajdujÄ… siÃ— w polu widzenia, pojawiÄ… siÃ— na minimapie. Sojusznicze statki bÃ—dÄ… pokazane na zielono, wrogowie - z czerwonymi i neutralnymi przedmiotami sÄ… szare (rys.3)
+    Na minimapie gracz widzi wysp×, z której p³ynie jego statek. Równie wszystkie inne statki, które znajduj¹ si× w polu widzenia, pojawi¹ si× na minimapie. Sojusznicze statki b×d¹ pokazane na zielono, wrogowie - z czerwonymi i neutralnymi przedmiotami s¹ szare (rys.3)
 
-    MoÅ¾esz zmieniÅ¢ skalÃ— minimapy za pomocÄ… przyciskÃ³w zoomu minimap.
+    Moesz zmieniŞ skal× minimapy za pomoc¹ przycisków zoomu minimap.
 }

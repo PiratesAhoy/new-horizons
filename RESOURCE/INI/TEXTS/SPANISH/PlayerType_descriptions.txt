@@ -13,9 +13,9 @@ Agent_Descr_b{Como parte del servicio secreto de}
 Agent_Descr_c{una de las potencias europeas,}
 Agent_Descr_d{te han ordenado infiltrarte}
 Agent_Descr_e{en una plaza enemiga.}
-Agent_Descr_f{Â¡Sin embargo, puede que}
+Agent_Descr_f{¡Sin embargo, puede que}
 Agent_Descr_g{tengas tus propios planes}
-Agent_Descr_h{una vez que llegues allÃ­!}
+Agent_Descr_h{una vez que llegues allí!}
 Agent_Descr_i{}
 
 Army Veteran_Descr_a{}
@@ -33,7 +33,7 @@ Corsair_Descr_b{Te has fogueado como}
 Corsair_Descr_c{marino a bordo de un barco}
 Corsair_Descr_d{corsario y ahora tus}
 Corsair_Descr_e{hermanos te han elegido}
-Corsair_Descr_f{como capitÃ¡n en reconocimiento}
+Corsair_Descr_f{como capitán en reconocimiento}
 Corsair_Descr_g{de tu destreza y astucia.}
 Corsair_Descr_h{}
 Corsair_Descr_i{}
@@ -50,22 +50,22 @@ Engineer_Descr_i{}
 
 Explorer_Descr_a{}
 Explorer_Descr_b{Buena parte del Nuevo Mundo}
-Explorer_Descr_c{estÃ¡ aun inexplorada y tÃº}
+Explorer_Descr_c{está aun inexplorada y tú}
 Explorer_Descr_d{tienes el trabajo de descubrir}
-Explorer_Descr_e{quÃ© hay mÃ¡s allÃ¡ de las}
+Explorer_Descr_e{qué hay más allá de las}
 Explorer_Descr_f{fronteras del poder colonial.}
 Explorer_Descr_g{}
 Explorer_Descr_h{}
 Explorer_Descr_i{}
 
 Gambler_Descr_a{}
-Gambler_Descr_b{Eres un tahÃºr profesional,}
+Gambler_Descr_b{Eres un tahúr profesional,}
 Gambler_Descr_c{has ganado tu barco en}
 Gambler_Descr_d{un juego de azar y ahora}
 Gambler_Descr_e{buscas aventuras y fortuna}
 Gambler_Descr_f{en alta mar.}
 Gambler_Descr_g{Esto te ha llevado a un duelo}
-Gambler_Descr_h{al amanecer con un 'don' espaÃ±ol.}
+Gambler_Descr_h{al amanecer con un 'don' español.}
 Gambler_Descr_i{}
 
 Gunner_Descr_a{}
@@ -89,10 +89,10 @@ Marine_Descr_h{}
 Marine_Descr_i{}
 
 Merchant_Descr_a{}
-Merchant_Descr_b{Eres el nuevo capitÃ¡n}
+Merchant_Descr_b{Eres el nuevo capitán}
 Merchant_Descr_c{de un buque mercante,}
-Merchant_Descr_d{despuÃ©s de comprarle su}
-Merchant_Descr_e{parte al anterior capitÃ¡n}
+Merchant_Descr_d{después de comprarle su}
+Merchant_Descr_e{parte al anterior capitán}
 Merchant_Descr_f{del barco, que se ha}
 Merchant_Descr_g{retirado a tierra firme.}
 Merchant_Descr_h{}
@@ -102,7 +102,7 @@ Naval Officer_Descr_a{}
 Naval Officer_Descr_b{Eres un oficial de marina}
 Naval Officer_Descr_c{con mando propio al servicio}
 Naval Officer_Descr_d{de una de las grandes naciones.}
-Naval Officer_Descr_e{Vives para servir a tu paÃ­s}
+Naval Officer_Descr_e{Vives para servir a tu país}
 Naval Officer_Descr_f{y proteger a sus ciudadanos.}
 Naval Officer_Descr_g{}
 Naval Officer_Descr_h{}
@@ -112,7 +112,7 @@ Physician_Descr_a{}
 Physician_Descr_b{Eres un antiguo cirujano naval,}
 Physician_Descr_c{te has adaptado a la vida}
 Physician_Descr_d{en el mar y ahora eres}
-Physician_Descr_e{capitÃ¡n de tu propio barco.}
+Physician_Descr_e{capitán de tu propio barco.}
 Physician_Descr_f{}
 Physician_Descr_g{}
 Physician_Descr_h{}
@@ -121,7 +121,7 @@ Physician_Descr_i{}
 Quartermaster_Descr_a{}
 Quartermaster_Descr_b{Te encargabas de las cuentas}
 Quartermaster_Descr_c{de a bordo, tomaste el mando}
-Quartermaster_Descr_d{como capitÃ¡n cuando el}
+Quartermaster_Descr_d{como capitán cuando el}
 Quartermaster_Descr_e{comandante del barco y}
 Quartermaster_Descr_f{el primer oficial murieron}
 Quartermaster_Descr_g{en un viaje anterior.}
@@ -133,33 +133,33 @@ Rebel_Descr_b{Como combatiente por la libertad}
 Rebel_Descr_c{que huye de las autoridades del}
 Rebel_Descr_d{Viejo Mundo, te has trasladado}
 Rebel_Descr_e{al Nuevo para probar suerte y}
-Rebel_Descr_f{buscar una vida mejor aquÃ­.}
+Rebel_Descr_f{buscar una vida mejor aquí.}
 Rebel_Descr_g{Los piratas te ofrecen refugio.}
 Rebel_Descr_h{}
 Rebel_Descr_i{}
 
 Rogue_Descr_a{}
-Rogue_Descr_b{Â¡Dominas el arte de la seducciÃ³n!}
-Rogue_Descr_c{Nada mÃ¡s huir de Europa}
+Rogue_Descr_b{¡Dominas el arte de la seducción!}
+Rogue_Descr_c{Nada más huir de Europa}
 Rogue_Descr_d{tras robarle a una dama el}
-Rogue_Descr_e{corazÃ³n y las joyas, te has}
+Rogue_Descr_e{corazón y las joyas, te has}
 Rogue_Descr_f{metido en un duelo con}
-Rogue_Descr_g{un caballero espaÃ±ol.}
+Rogue_Descr_g{un caballero español.}
 Rogue_Descr_h{}
 Rogue_Descr_i{}
 
 Sailor_Descr_a{}
 Sailor_Descr_b{Eras un humilde marinero, has}
 Sailor_Descr_c{pasado penurias y ahorrado toda}
-Sailor_Descr_d{tu vida con el sueÃ±o de}
-Sailor_Descr_e{tener algÃºn dÃ­a tu propio barco.}
-Sailor_Descr_f{Ese dÃ­a por fin ha llegado.}
+Sailor_Descr_d{tu vida con el sueño de}
+Sailor_Descr_e{tener algún día tu propio barco.}
+Sailor_Descr_f{Ese día por fin ha llegado.}
 Sailor_Descr_g{}
 Sailor_Descr_h{}
 Sailor_Descr_i{}
 
 Shipwright_Descr_a{}
-Shipwright_Descr_b{Tras aÃ±os diseÃ±ando y construyendo}
+Shipwright_Descr_b{Tras años diseñando y construyendo}
 Shipwright_Descr_c{barcos para otros, el ansia de}
 Shipwright_Descr_d{viajar se ha apoderado de ti y}
 Shipwright_Descr_e{ahora dejas el puerto a bordo}
@@ -171,18 +171,18 @@ Shipwright_Descr_i{}
 Smuggler_Descr_a{}
 Smuggler_Descr_b{Eras primer oficial de un}
 Smuggler_Descr_c{buque contrabandista, tu}
-Smuggler_Descr_d{estÃºpido capitÃ¡n se estÃ¡}
-Smuggler_Descr_e{pudriendo en prisiÃ³n y te ha}
+Smuggler_Descr_d{estúpido capitán se está}
+Smuggler_Descr_e{pudriendo en prisión y te ha}
 Smuggler_Descr_f{dejado al mando para que}
 Smuggler_Descr_g{organices las cosas a tu manera.}
 Smuggler_Descr_h{}
 Smuggler_Descr_i{}
 
 Social Climber_Descr_a{}
-Social Climber_Descr_b{Tienes intenciÃ³n de llegar}
+Social Climber_Descr_b{Tienes intención de llegar}
 Social Climber_Descr_c{muy lejos en esta vida.}
-Social Climber_Descr_d{Si un barco puede llevarte allÃ­,}
-Social Climber_Descr_e{que asÃ­ sea.}
+Social Climber_Descr_d{Si un barco puede llevarte allí,}
+Social Climber_Descr_e{que así sea.}
 Social Climber_Descr_f{}
 Social Climber_Descr_g{}
 Social Climber_Descr_h{}
@@ -193,35 +193,35 @@ Sword Master_Descr_b{Como 'magister' de esgrima en Europa,}
 Sword Master_Descr_c{has entrenado a soldados y nobles}
 Sword Master_Descr_d{para distinguir un extremo de la}
 Sword Master_Descr_e{espada del otro.}
-Sword Master_Descr_f{Como te aburrÃ­as de esa vida,}
+Sword Master_Descr_f{Como te aburrías de esa vida,}
 Sword Master_Descr_g{has comprado un barco}
 Sword Master_Descr_h{y puesto rumbo}
 Sword Master_Descr_i{al Caribe.}
 
 Cursed_Descr_a{}
 Cursed_Descr_b{Una isla que no puede ser encontrada,}
-Cursed_Descr_c{eso te dijeron. Â¡Pero tÃº}
-Cursed_Descr_d{la encontraste! Y allÃ­ estaba}
-Cursed_Descr_e{el cofre. Â¡Te lo llevaste todo!}
-Cursed_Descr_f{Pero ahora, Â¿intentarÃ¡s levantar}
-Cursed_Descr_g{la maldiciÃ³n resultante?}
-Cursed_Descr_h{Â¿O te aprovecharÃ¡s de}
+Cursed_Descr_c{eso te dijeron. ¡Pero tú}
+Cursed_Descr_d{la encontraste! Y allí estaba}
+Cursed_Descr_e{el cofre. ¡Te lo llevaste todo!}
+Cursed_Descr_f{Pero ahora, ¿intentarás levantar}
+Cursed_Descr_g{la maldición resultante?}
+Cursed_Descr_h{¿O te aprovecharás de}
 Cursed_Descr_i{los beneficios?}
 
 Castaway_Descr_a{}
 Castaway_Descr_b{Sin experiencia y sin posesiones}
-Castaway_Descr_c{tendrÃ¡s que hacer borrÃ³n y}
+Castaway_Descr_c{tendrás que hacer borrón y}
 Castaway_Descr_d{cuenta nueva.}
-Castaway_Descr_e{Â¡Un inicio duro, sin duda!}
-Castaway_Descr_f{Â¿SobrevivirÃ¡s a este desafÃ­o}
+Castaway_Descr_e{¡Un inicio duro, sin duda!}
+Castaway_Descr_f{¿Sobrevivirás a este desafío}
 Castaway_Descr_g{definitivo?}
 Castaway_Descr_h{}
 Castaway_Descr_i{}
 
 Custom_Descr_a{}
-Custom_Descr_b{Â¿De dÃ³nde vienes?}
-Custom_Descr_c{Â¿AdÃ³nde irÃ¡s?}
-Custom_Descr_d{Â¡Es un misterio!}
+Custom_Descr_b{¿De dónde vienes?}
+Custom_Descr_c{¿Adónde irás?}
+Custom_Descr_d{¡Es un misterio!}
 Custom_Descr_e{}
 Custom_Descr_f{}
 Custom_Descr_g{}

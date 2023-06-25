@@ -1,8 +1,8 @@
 string DLG_TEXT[5] = {
-"MÃ³w, o co ci chodzi.",
+"Mów, o co ci chodzi.",
 "Szukam Claussa Florensa.",
-"Przykro mi, nie ma tu Å¼adnego Claussa Florensa. WynoÅ› siÄ™, bo poÅ¼aÅ‚ujesz.",
-"Wiem, Å¼e tu jest. WedrÄ™ siÄ™ do miasta siÅ‚Ä…, jeÅ›li bÄ™dÄ™ musiaÅ‚.",
-"Dobrze, dobrze. JuÅ¼ mnie nie ma.",
+"Przykro mi, nie ma tu ¿adnego Claussa Florensa. Wynoœ siê, bo po¿a³ujesz.",
+"Wiem, ¿e tu jest. Wedrê siê do miasta si³¹, jeœli bêdê musia³.",
+"Dobrze, dobrze. Ju¿ mnie nie ma.",
 
 };

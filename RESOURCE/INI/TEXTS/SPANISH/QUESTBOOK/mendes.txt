@@ -1,5 +1,5 @@
-tle=MisiÃ³n secundaria: Escoltar al barco de Vigila Mendes.
+tle=Misión secundaria: Escoltar al barco de Vigila Mendes.
 text.t1=Vigila Mendes me ha contratado para proteger su barco durante el viaje a #sFalaise de Fleur#, en #sisland_Falaise de Fleur#, y de vuelta a #sIsla Muelle#, en #sisland_Isla Muelle#.
 text.t2=Hemos llegado a #sFalaise de Fleur#, y Vigila ha vendido su carga.
-text.t3=Una vez de vuelta en #sIsla Muelle#, Vigila me ha pagado por mis servicios. Me ofreciÃ³ un empleo para navegar como piloto en su barco, porque su viejo piloto, Zaid Murro, se ha retirado.
-text.t4=Por desgracia, Vigila Mendes ha muerto. No es un buen dÃ­a.
+text.t3=Una vez de vuelta en #sIsla Muelle#, Vigila me ha pagado por mis servicios. Me ofreció un empleo para navegar como piloto en su barco, porque su viejo piloto, Zaid Murro, se ha retirado.
+text.t4=Por desgracia, Vigila Mendes ha muerto. No es un buen día.

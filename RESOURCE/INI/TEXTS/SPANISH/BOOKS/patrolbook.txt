@@ -1,6 +1,6 @@
 TEXT	{
-Esta es la versi√≥n #dversion# del horario de patrulla para el territorio de #sIsland#.
+Esta es la versiÛn #dversion# del horario de patrulla para el territorio de #sIsland#.
 Debido a la cantidad de contrabando que se encuentra a la venta en esta isla, se ha decidido poner a la guardia costera en #sState#.
-Esto significa que el horario ser√° el siguiente:
+Esto significa que el horario ser· el siguiente:
 #sSchedule#
 }

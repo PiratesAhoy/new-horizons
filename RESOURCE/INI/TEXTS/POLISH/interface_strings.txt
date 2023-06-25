@@ -286,8 +286,8 @@ Redmond{Redmond}
 Isla Muelle{Isla Muelle}
 Oxbay{Oxbay}
 Greenford{Greenford}
-ConceiÃ§Ã£o{ConceiÃ§Ã£o}
-Conceicao{ConceiÃ§Ã£o}
+Conceição{Conceição}
+Conceicao{Conceição}
 Douwesen{Douwesen}
 Quebradas Costillas{Quebradas Costillas}
 Khael Roa{Khael Roa}
@@ -738,7 +738,7 @@ Boarding deck.{Boarding deck}
 Fort inside.{Fort inside}
 Boarding town.{Boarding town}
 
-House of AmÃ©rigo Vieira{House of Amerigo Vieira}
+House of Amérigo Vieira{House of Amerigo Vieira}
 Smithy{Smithy}
 Sunny Haven{Sunny Haven}
 Hidden Cave{Hidden Cave}
@@ -751,7 +751,7 @@ Smugglers Tavern{Smugglers Tavern}
 House of Leader of smugglers{House of Leader of smugglers}
 Rheims house in #stown_name#{Rheims house in #stown_name#}
 
-House of AmÃ©rigo Vieira.{House of Amerigo Vieira}
+House of Amérigo Vieira.{House of Amerigo Vieira}
 Smithy.{Smithy}
 Sunny Haven.{Sunny Haven}
 Hidden Cave.{Hidden Cave}

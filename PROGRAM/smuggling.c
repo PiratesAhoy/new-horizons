@@ -132,14 +132,14 @@ void setIslandSmugglingPauses(ref sisland)
 			{
 				sisland.smuggling.pause.(id).start = 10.0+((30+rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).end = 11.0+((30+rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).name = "petit d√©jeuner";
+				sisland.smuggling.pause.(id).name = "petit dÈjeuner";
 			}
 			id = 1;
 			if(pickpauses[sti(id)] == TRUE)
 			{
 				sisland.smuggling.pause.(id).start = 15.0+((rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).end = 16.0+((rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).name = "d√©jeuner";
+				sisland.smuggling.pause.(id).name = "dÈjeuner";
 			}
 			id = 2;
 			if(pickpauses[sti(id)] == TRUE)
@@ -163,7 +163,7 @@ void setIslandSmugglingPauses(ref sisland)
 			{
 				sisland.smuggling.pause.(id).start = 16.0+((rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).end = 18.0+((rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).name = "si√´sta";
+				sisland.smuggling.pause.(id).name = "siÎsta";
 			}
 			id = 2;
 			if(pickpauses[sti(id)] == TRUE)
@@ -229,7 +229,7 @@ void setIslandSmugglingPauses(ref sisland)
 			{
 				sisland.smuggling.pause.(id).start = 16.0+((rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).end = 18.0+((rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).name = "si√´sta";
+				sisland.smuggling.pause.(id).name = "siÎsta";
 			}
 			id = 2;
 			if(pickpauses[sti(id)] == TRUE)
@@ -258,7 +258,7 @@ void setIslandSmugglingPauses(ref sisland)
 				if(pickpauses[sti(id)] == TRUE){
 					sisland.smuggling.pause.(id).start = 20.0+((30+rand(5)*5)/60.0);
 					sisland.smuggling.pause.(id).end = 21.0+((30+rand(5)*5)/60.0);
-					sisland.smuggling.pause.(id).name = "kv√§llsvard";
+					sisland.smuggling.pause.(id).name = "kv‰llsvard";
 				}
 			}
 			if(GetCurrentPeriod() >= PERIOD_REVOLUTIONS){
@@ -329,7 +329,7 @@ void setIslandSmugglingPauses(ref sisland)
 				if(pickpauses[sti(id)] == TRUE){
 					sisland.smuggling.pause.(id).start = 20.0+((30+rand(5)*5)/60.0);
 					sisland.smuggling.pause.(id).end = 21.0+((30+rand(5)*5)/60.0);
-					sisland.smuggling.pause.(id).name = "kv√§llsvard";
+					sisland.smuggling.pause.(id).name = "kv‰llsvard";
 				}
 			break;
 		}

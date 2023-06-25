@@ -1,5 +1,5 @@
 string DLG_TEXT[2] = { 
-"Â¡EstÃ¡is arrestados en nombre de la Corona francesa! Â¡SÃ­, tÃº y este tipo disfrazado de soldado francÃ©s!",
-"Â¡Maldita sea!",
+"¡Estáis arrestados en nombre de la Corona francesa! ¡Sí, tú y este tipo disfrazado de soldado francés!",
+"¡Maldita sea!",
 
 };

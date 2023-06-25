@@ -27,7 +27,7 @@ void BothQuestComplete(string sQuestName)
 	string playerGun = "";
 // PB <--
 
-	//trace ("ÃÃÃŽÃ‚Ã…ÃÃŸÃ…Ã’Ã‘ÃŸ ÃŠÃ‚Ã…Ã‘Ã’ " + sQuestName);
+	//trace ("ÏÐÎÂÅÐßÅÒÑß ÊÂÅÑÒ " + sQuestName);
 	switch(sQuestName)
 	{
 
@@ -40,7 +40,7 @@ void BothQuestComplete(string sQuestName)
 
 		case "StartAdventure":
 // BoP ----- Start A family story Quest -->		
-            if (GetMySimpleOldName(PChar) == "JosÃ© JoaquÃ­m Almeida"){LAi_QuestDelay("madero_start", 0.0);}
+            if (GetMySimpleOldName(PChar) == "José Joaquím Almeida"){LAi_QuestDelay("madero_start", 0.0);}
 // BoP <-- Start A family story Quest -----
 
 // --- Renaming NPC's for some player characters -->

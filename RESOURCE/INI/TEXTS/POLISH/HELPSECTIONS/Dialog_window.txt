@@ -4,9 +4,9 @@ Dialogue window
 }
 Dialog_window_info
 {
-    Okno dialogowe pojawia siÃ— po naciâ€ºniÃ—ciu przycisku â€Akcjaâ€, pozostajÄ…c przed jakÄ…â€º postaciÄ…. Lub postacie mogÄ… same go inicjowaÅ¢, jeâ€ºli chcÄ… rozmawiaÅ¢ z postaciÄ… gracza.
-    W lewym gÃ³rnym rogu okna dialogowego widzisz twarz postaci, z ktÃ³rÄ… rozmawiasz. A do prawego gracza moÅ¾na zobaczyÅ¢ imiÃ— tej postaci.
-    W dolnej czÃ—â€ºci ekranu znajduje siÃ— okno tekstowe. Tutaj gracz widzi, co postaÅ¢ mu mÃ³wi, a takÅ¾e widzi listÃ— zwrotÃ³w, ktÃ³re moÅ¾e przekazaÅ¢ postaci. SÅ‚owa postaci sÄ… zÅ‚ote, a odpowiedzi gracza niebieskie. Aktualnie wybrana odpowiedÅº gracza jest wyrÃ³Å¾niona jasnym niebieskim kolorem (rys.2).
-    Czasami nie caÅ‚y tekst lub odpowiedzi mogÄ… pasowaÅ¢ do okna tekstowego. W tym przypadku gracz widzi zielone strzaÅ‚ki w gÃ³rÃ— iw dÃ³Å‚ w prawej czÃ—â€ºci okna tekstowego (rys.3). A jeâ€ºli sÄ… jakieâ€º linie tekstowe poniÅ¾ej strzaÅ‚ki w dÃ³Å‚, zostanÄ… one podâ€ºwietlone na zielono. To samo co strzaÅ‚ka w gÃ³rÃ— - zostanie podâ€ºwietlona, ??jeâ€ºli tekst jest powyÅ¾ej.
-    WybÃ³r odpowiedzi gracza moÅ¾e byÅ¢ dokonany za pomocÄ… przyciskÃ³w wyboru dialogÃ³w, a aktywacja wybranej odpowiedzi moÅ¾e byÅ¢ wykonana za pomocÄ… klawisza â€dialogâ€ akcji.
+    Okno dialogowe pojawia si× po naci›ni×ciu przycisku „Akcja”, pozostaj¹c przed jak¹› postaci¹. Lub postacie mog¹ same go inicjowaŞ, je›li chc¹ rozmawiaŞ z postaci¹ gracza.
+    W lewym górnym rogu okna dialogowego widzisz twarz postaci, z któr¹ rozmawiasz. A do prawego gracza mona zobaczyŞ imi× tej postaci.
+    W dolnej cz×›ci ekranu znajduje si× okno tekstowe. Tutaj gracz widzi, co postaŞ mu mówi, a take widzi list× zwrotów, które moe przekazaŞ postaci. S³owa postaci s¹ z³ote, a odpowiedzi gracza niebieskie. Aktualnie wybrana odpowiedŸ gracza jest wyróniona jasnym niebieskim kolorem (rys.2).
+    Czasami nie ca³y tekst lub odpowiedzi mog¹ pasowaŞ do okna tekstowego. W tym przypadku gracz widzi zielone strza³ki w gór× iw dó³ w prawej cz×›ci okna tekstowego (rys.3). A je›li s¹ jakie› linie tekstowe poniej strza³ki w dó³, zostan¹ one pod›wietlone na zielono. To samo co strza³ka w gór× - zostanie pod›wietlona, ??je›li tekst jest powyej.
+    Wybór odpowiedzi gracza moe byŞ dokonany za pomoc¹ przycisków wyboru dialogów, a aktywacja wybranej odpowiedzi moe byŞ wykonana za pomoc¹ klawisza „dialog” akcji.
 }

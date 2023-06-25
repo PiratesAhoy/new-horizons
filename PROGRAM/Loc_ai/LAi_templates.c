@@ -1,23 +1,23 @@
 
-//РџРѕРґРєР»СЋС‡С‘РЅРЅС‹Рµ С€Р°Р±Р»РѕРЅС‹ РґР»СЏ РёРЅС‚РµР»РµРєС‚Р°
+//Подключённые шаблоны для интелекта
 
-//РРіСЂРѕРє
+//Игрок
 #include "Loc_ai\templates\LAi_player.c"
-//РЎС‚РѕСЏРЅРёРµ
+//Стояние
 #include "Loc_ai\templates\LAi_stay.c"
-//Р“СѓР»СЏРЅРёРµ
+//Гуляние
 #include "Loc_ai\templates\LAi_walk.c"
-//Р”СЂР°РєР°
+//Драка
 #include "Loc_ai\templates\LAi_fight.c"
-//РРґС‚Рё РґРѕ Р»РѕРєР°С‚РѕСЂР°
+//Идти до локатора
 #include "Loc_ai\templates\LAi_goto.c"
-//Р‘РµР¶Р°С‚СЊ РґРѕ Р»РѕРєР°С‚РѕСЂР°
+//Бежать до локатора
 #include "Loc_ai\templates\LAi_runto.c"
-//РРґС‚Рё РґРѕ/Р·Р° РїРµСЂСЃРѕРЅР°Р¶РµРј
+//Идти до/за персонажем
 #include "Loc_ai\templates\LAi_follow.c"
-//Р”РёР°Р»РѕРі СЃ РїРµСЂСЃРѕРЅР°Р¶РµРј
+//Диалог с персонажем
 #include "Loc_ai\templates\LAi_dialog.c"
-//РђРЅРёРјР°С†РёСЏ
+//Анимация
 #include "Loc_ai\templates\LAi_animation.c"
-//Р‘РѕСЏР·РЅСЊ
+//Боязнь
 #include "Loc_ai\templates\LAi_afraid.c"

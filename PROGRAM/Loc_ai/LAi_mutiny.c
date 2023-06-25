@@ -29,10 +29,10 @@ void Return2SeaAfterMutinyDeck()
 	ref PChar = GetMainCharacter();
 	if (CheckAttribute(PChar, "Mutiny")) DeleteAttribute(PChar, "Mutiny");
 // <-- KK
-	//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С…РµРЅРґР»РµСЂС‹ РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё
+	//Установить хендлеры для обработки
 	SetEventHandler("FaderEvent_StartFade", "MutinyDeck_ReloadStartFadeAfter", 0);
 	SetEventHandler("FaderEvent_EndFade", "MutinyDeck_ReloadEndFadeAfter", 0);
-	//РЎРѕР·РґР°С‘Рј С„РµР№РґРµСЂ Рё Р·Р°РїСѓСЃРєР°РµРј
+	//Создаём фейдер и запускаем
 	CreateEntity(&boarding_fader, "fader");
 	SendMessage(&boarding_fader, "ls", FADER_PICTURE, FindReloadPicture("sea.tga")); // KK
 
@@ -134,7 +134,7 @@ void MutinyDeck_Start()
 	ResetSoundScheme();
 	PauseAllSounds();
 	int i, idx;
-	//РќР°СЃС‚СЂРѕРёРј РёРЅС‚РµСЂС„РµР№СЃ
+	//Настроим интерфейс
 	DeleteBattleInterface();
 	StartBattleLandInterface();
 	
@@ -164,7 +164,7 @@ void MutinyDeck_Start()
 	rDeck.id.label = "Boarding deck";
 // <-- KK
 
-	//Р’С‹СЃС‚Р°РІРёРј  Рё Р·Р°РїРѕРјРЅРёРј Р°РґСЂРµСЃР°
+	//Выставим  и запомним адреса
 	boarding_adr[0].location = mchr.location;
 	boarding_adr[0].group = mchr.location.group;
 	boarding_adr[0].locator = mchr.location.locator;
@@ -181,15 +181,15 @@ void MutinyDeck_Start()
 		boarding_adr[i].group = Characters[idx].location.group;
 		boarding_adr[i].locator = Characters[idx].location.locator;
 	}
-	//РЎС‚Р°СЂС‚СѓРµРј
+	//Стартуем
 	MutinyDeck_LoadLocation("MUTINY_Deck");		// LDH set the correct deck for this - 09Mar09
 }
 
-//Р—Р°РіСЂСѓР·РёС‚СЊ Р»РѕРєР°С†РёСЋ - Loading location
+//Загрузить локацию - Loading location
 void MutinyDeck_LoadLocation(string locationID)
 {
 	ReloadProgressStart();
-	//РС‰РµРј Р»РѕРєР°С†РёСЋ - Search for location
+	//Ищем локацию - Search for location
 	int locIndex = FindLocation(locationID);
 	Log_SetActiveAction("Nothing");
 	if(locIndex >= 0)
@@ -198,14 +198,14 @@ void MutinyDeck_LoadLocation(string locationID)
 		string chLocType = "rld";
 		string chLocLoc = "aloc";
 
-		//РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° - Sets main character
+		//Устанавливаем главного персонажа - Sets main character
 		ref mchr = GetMainCharacter();
 		mchr.location = locationID;
 		mchr.location.group = chLocType;
 		mchr.location.locator = "aloc0";
 // <-- KK
 
-		//РџРµСЂРµРіСЂСѓР¶Р°РµРјСЃСЏ РІ Р»РѕРєР°С†РёСЋ - Reloading to location
+		//Перегружаемся в локацию - Reloading to location
 		boarding_location = locIndex;
 		Locations[locIndex].boarding = "true";
 		if (LoadLocation(&Locations[locIndex])) {
@@ -230,12 +230,12 @@ trace("Officer "+GetMySimpleName(chr)+" on "+chLocType+":"+chr.location.locator)
 				i++;
 			}
 			BLI_UpdateOfficers();
-			//Р’С‹С‚Р°С‰РёРј СЃР°Р±Р»СЋ - Prepares to fight
+			//Вытащим саблю - Prepares to fight
 			SendMessage(&mchr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightMode", 1);
 			LAi_SetCurHPMax(mchr);
-			//Р—Р°РїСЂРµС‚РёРј РґРёР°Р»РѕРі - Disables dialogs
+			//Запретим диалог - Disables dialogs
 			dialogDisable = false;
-			//РЈСЃС‚Р°РЅРѕРІРёРј Р±РѕР№С†РѕРІ - Sets fighters
+			//Установим бойцов - Sets fighters
 			string model, ani;
 			float crewRatio = rand(10) / 10.0;
 			int actTotal = GetBoardingLimit(locIndex) * makeint(stf(mchr.Ship.Crew.Quantity) / GetMaxCrewQuantity(mchr));

@@ -1,9 +1,9 @@
 string DLG_TEXT[7] = {
-"Â¿SÃ­? Â¿QuÃ© es lo que quieres?",
+"¿Sí? ¿Qué es lo que quieres?",
 "Nada en particular. Ya me iba.",
-"Estoy aquÃ­ para saldar la deuda de ",
-"Espero que hayas traÃ­do suficiente dinero. Me debe una buena cantidad.",
+"Estoy aquí para saldar la deuda de ",
+"Espero que hayas traído suficiente dinero. Me debe una buena cantidad.",
 "Me ha ordenado que te pague en acero, no en oro.",
-"No es el prmero que lo intenta, y probablemente no serÃ¡ el Ãºltimo. En cuanto a ti, #sperson# imprudente: Â¡muchachos, haced que se arrepienta de su error!",
-"Â¿AsÃ­ que tienes miedo de enfrentarte a mÃ­ en persona? Â¡Perfecto, me vendrÃ¡ bien el ejercicio!",
+"No es el prmero que lo intenta, y probablemente no será el último. En cuanto a ti, #sperson# imprudente: ¡muchachos, haced que se arrepienta de su error!",
+"¿Así que tienes miedo de enfrentarte a mí en persona? ¡Perfecto, me vendrá bien el ejercicio!",
 };

@@ -67,7 +67,7 @@ This key seems to be suited to open a cell in this location.
 itmname_Montejo_Book {Montejo's Secret Book}
 itmdescr_Montejo_Book
 {
-This old book has belonged to the famous conquistador Francisco de Montejo y Alvarez who tried to conquer western Yucat√°n.
+This old book has belonged to the famous conquistador Francisco de Montejo y Alvarez who tried to conquer western Yucat·n.
 }
 
 itmname_skull_ring		{Skull Ring}

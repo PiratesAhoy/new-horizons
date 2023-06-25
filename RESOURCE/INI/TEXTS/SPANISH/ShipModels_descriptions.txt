@@ -1,1261 +1,1261 @@
-Caravel1_Descr{Este tipo tardÃ­o de caravela es mÃ¡s grande y tiene
+Caravel1_Descr{Este tipo tardío de caravela es más grande y tiene
 castillos de proa y de popa, como una nao. 
-Casco blanco y marrÃ³n con molduras doradas.
-32 caÃ±ones, navega bien de ceÃ±ida gracias a su aparejo latino.}
-Caravel2_Descr{Este tipo tardÃ­o de caravela es mÃ¡s grande y tiene
+Casco blanco y marrón con molduras doradas.
+32 cañones, navega bien de ceñida gracias a su aparejo latino.}
+Caravel2_Descr{Este tipo tardío de caravela es más grande y tiene
 castillos de proa y de popa, como una nao. 
 Casco blanco y rojo decorado con molduras doradas.
-32 caÃ±ones, navega mejor a favor del viento gracias a su aparejo redondo.}
+32 cañones, navega mejor a favor del viento gracias a su aparejo redondo.}
 FastCaravel_Descr{El siniestro aspecto de esta carabela no
-anuncia nada bueno para las vÃ­ctimas de Bartolomeu. 
+anuncia nada bueno para las víctimas de Bartolomeu. 
 Casco rojo sangre y negro con molduras doradas.
-32 caÃ±ones, navega bien de ceÃ±ida gracias a su aparejo latino.}
-CursedCaravel_Descr{"Â¡EstÃ¡ maldita! Â¡Maldita, os digo!"
-Su casco estÃ¡ podrido y cubierto de algas.
+32 cañones, navega bien de ceñida gracias a su aparejo latino.}
+CursedCaravel_Descr{"¡Está maldita! ¡Maldita, os digo!"
+Su casco está podrido y cubierto de algas.
 
-32 caÃ±ones, navega mejor a favor del viento gracias a su aparejo redondo.}
+32 cañones, navega mejor a favor del viento gracias a su aparejo redondo.}
 Carrack_Descr{Una carraca, o nao, fue el primer buque en dar la
-vuelta al mundo, al mando de Juan SebastiÃ¡n de Elcano. 
-Acabado de madera natural con decoraciÃ³n austera.
-30 caÃ±ones, anticuada y torpe en la maniobra pero robusta y bien armada.}
-PO_Caravel50_Descr{Este tipo tardÃ­o de caravela es mÃ¡s grande y tiene
+vuelta al mundo, al mando de Juan Sebastián de Elcano. 
+Acabado de madera natural con decoración austera.
+30 cañones, anticuada y torpe en la maniobra pero robusta y bien armada.}
+PO_Caravel50_Descr{Este tipo tardío de caravela es más grande y tiene
 castillos de proa y de popa, como una nao.
-Acabado de madera natural con decoraciÃ³n austera.
-32 caÃ±ones, es mÃ¡s versÃ¡til que otras carabelas gracias a su aparejo mixto.}
+Acabado de madera natural con decoración austera.
+32 cañones, es más versátil que otras carabelas gracias a su aparejo mixto.}
 
-Schooner1_Descr{Las goletas siempre son una buena elecciÃ³n 
+Schooner1_Descr{Las goletas siempre son una buena elección 
 tanto para corsarios como para comerciantes. 
 Acabado de madera oscura y popa decorada.
-20 caÃ±ones, navega bien de ceÃ±ida gracias a sus grandes velas cangrejas.}
-Schooner2_Descr{Las goletas siempre son una buena elecciÃ³n 
+20 cañones, navega bien de ceñida gracias a sus grandes velas cangrejas.}
+Schooner2_Descr{Las goletas siempre son una buena elección 
 tanto para corsarios como para comerciantes.
 Hermoso casco verde con molduras doradas.
-20 caÃ±ones, navega bien de ceÃ±ida gracias a sus grandes velas cangrejas.}
-SchoonerWar_Descr{Un pequeÃ±o barco de guerra, para labores de apoyo,
-exploraciÃ³n o guarda de costas.
+20 cañones, navega bien de ceñida gracias a sus grandes velas cangrejas.}
+SchoonerWar_Descr{Un pequeño barco de guerra, para labores de apoyo,
+exploración o guarda de costas.
 Acabado de madera oscura y popa decorada.
-20 caÃ±ones, con las velas cuadras del trinquete es mÃ¡s veloz pero no tan buena navegando de ceÃ±ida.}
-Schooner50_Descr{Las goletas siempre son una buena elecciÃ³n 
+20 cañones, con las velas cuadras del trinquete es más veloz pero no tan buena navegando de ceñida.}
+Schooner50_Descr{Las goletas siempre son una buena elección 
 tanto para corsarios como para comerciantes. 
 Casco pintado en tres colores.
-20 caÃ±ones, con el velacho en el trinquete es mÃ¡s veloz pero no tan buena navegando de ceÃ±ida.}
-US_Schooner47_Descr{Las goletas siempre son una buena elecciÃ³n 
+20 cañones, con el velacho en el trinquete es más veloz pero no tan buena navegando de ceñida.}
+US_Schooner47_Descr{Las goletas siempre son una buena elección 
 tanto para corsarios como para comerciantes.
 Casco blanco y negro, los colores de la US Navy.
-20 caÃ±ones, con las velas cuadras del trinquete es mÃ¡s veloz pero no tan buena navegando de ceÃ±ida.}
+20 cañones, con las velas cuadras del trinquete es más veloz pero no tan buena navegando de ceñida.}
 
-Hooker_Descr{El bergantÃ­n-goleta mezcla velas cuadras y cangrejas 
-para obtener la mayor superficie vÃ©lica posible.
+Hooker_Descr{El bergantín-goleta mezcla velas cuadras y cangrejas 
+para obtener la mayor superficie vélica posible.
 Un robusto casco negro y rojo le da un aspecto duro.
-20 caÃ±ones, las velas cuadras del trinquete reducen la velocidad navegando de ceÃ±ida.}
+20 cañones, las velas cuadras del trinquete reducen la velocidad navegando de ceñida.}
 
-Shnyava1_Descr{El paquebote parece un bergantÃ­n, pero iza su vela
-cangreja en un mÃ¡stil corto (esnÃ³n) tras el palo mayor. 
-El casco estÃ¡ pintado de blanco y negro.
-20 caÃ±ones, es maniobrable pero no navega bien de ceÃ±ida.}
-Shnyava2_Descr{El paquebote parece un bergantÃ­n, pero iza su vela
-cangreja en un mÃ¡stil corto (esnÃ³n) tras el palo mayor. 
+Shnyava1_Descr{El paquebote parece un bergantín, pero iza su vela
+cangreja en un mástil corto (esnón) tras el palo mayor. 
+El casco está pintado de blanco y negro.
+20 cañones, es maniobrable pero no navega bien de ceñida.}
+Shnyava2_Descr{El paquebote parece un bergantín, pero iza su vela
+cangreja en un mástil corto (esnón) tras el palo mayor. 
 Casco pintado de azul con molduras doradas.
-20 caÃ±ones, es maniobrable pero no navega bien de ceÃ±ida. }
+20 cañones, es maniobrable pero no navega bien de ceñida. }
 
 HMS_Bounty_Descr{Mercante de tres palos que recuerda al 'HMS Bounty'.
-Mejor mantenerte lejos de TahitÃ­...
+Mejor mantenerte lejos de Tahití...
 Casco pintado de negro, azul y amarillo. 
-14 caÃ±ones, aparejo redondo para navegar a favor del viento.}
+14 cañones, aparejo redondo para navegar a favor del viento.}
 
 BrigRoyal_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
-Casco de tres colores, escudo inglÃ©s en la popa.
-16 caÃ±ones, es rÃ¡pido pero le cuesta navegar de ceÃ±ida.}
+sino vuela, un velero bergantín', José de Espronceda.
+Casco de tres colores, escudo inglés en la popa.
+16 cañones, es rápido pero le cuesta navegar de ceñida.}
 
 Brig1_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
-Pintado de marrÃ³n claro con detalles en rojo y negro.
-22 caÃ±ones, es rÃ¡pido pero le cuesta navegar de ceÃ±ida.}
+sino vuela, un velero bergantín', José de Espronceda.
+Pintado de marrón claro con detalles en rojo y negro.
+22 cañones, es rápido pero le cuesta navegar de ceñida.}
 Brig2_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
+sino vuela, un velero bergantín', José de Espronceda.
 Casco pintado de blanco con detalles en rojo.
-22 caÃ±ones, es rÃ¡pido pero le cuesta navegar de ceÃ±ida.}
+22 cañones, es rápido pero le cuesta navegar de ceñida.}
 RN_Brig_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
-Pintura negra y amarilla, comÃºn en la Royal Navy.
-22 caÃ±ones, es rÃ¡pido pero le cuesta navegar de ceÃ±ida.}
+sino vuela, un velero bergantín', José de Espronceda.
+Pintura negra y amarilla, común en la Royal Navy.
+22 cañones, es rápido pero le cuesta navegar de ceñida.}
 BrigQeen1_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
+sino vuela, un velero bergantín', José de Espronceda.
 Casco de madera barnizada con una franja blanca.
-22 caÃ±ones, es rÃ¡pido pero le cuesta navegar de ceÃ±ida.}
+22 cañones, es rápido pero le cuesta navegar de ceñida.}
 BrigSW1_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
-Casco oscuro, con una cabeza de lobo por mascarÃ³n de proa.
-22 caÃ±ones, es rÃ¡pido pero le cuesta navegar de ceÃ±ida.}
+sino vuela, un velero bergantín', José de Espronceda.
+Casco oscuro, con una cabeza de lobo por mascarón de proa.
+22 cañones, es rápido pero le cuesta navegar de ceñida.}
 Brig3_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
-Casco barnizado, alcÃ¡zar verde y refuerzos rojos.
-16 canÃ±ones, un buque rÃ¡pido y adaptable pero navega mal de ceÃ±ida.}
+sino vuela, un velero bergantín', José de Espronceda.
+Casco barnizado, alcázar verde y refuerzos rojos.
+16 canñones, un buque rápido y adaptable pero navega mal de ceñida.}
 Brig_20_Gun1_181_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
+sino vuela, un velero bergantín', José de Espronceda.
 Casco oscuro con marcas rojas, al estilo pirata.
-16 canÃ±ones, un buque rÃ¡pido y adaptable pero navega mal de ceÃ±ida.}
+16 canñones, un buque rápido y adaptable pero navega mal de ceñida.}
 
-HMS_Interceptor_Descr{'No hay ningÃºn barco que pueda igualar al
+HMS_Interceptor_Descr{'No hay ningún barco que pueda igualar al
 Interceptor en velocidad'.
 Casco pintado de azul y amarillo.
-18 caÃ±ones, un bergantÃ­n de guerra excepcionalmente veloz y Ã¡gil.}
+18 cañones, un bergantín de guerra excepcionalmente veloz y ágil.}
 RN_Interceptor_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
-Casco con franjas en beige y negro, comÃºn en la Royal Navy.
-18 caÃ±ones, un bergantÃ­n de guerra muy veloz y Ã¡gil.}
+sino vuela, un velero bergantín', José de Espronceda.
+Casco con franjas en beige y negro, común en la Royal Navy.
+18 cañones, un bergantín de guerra muy veloz y ágil.}
 US_Interceptor_Descr{El 'Lady Washington' ha aparecido en varais peliculas,
 como "Piratas del Caribe" y "Star Trek: Generations".
 Casco amarillo y negro, con detalles rojos y azules.
-18 caÃ±ones, un bergantÃ­n versÃ¡til, muy veloz y Ã¡gil.}
+18 cañones, un bergantín versátil, muy veloz y ágil.}
 USS_Enterprise_Descr{'USS Enterprise' fue una goleta botada en Baltimore
-en 1799 y mÃ¡s tarde reconvertida en bergantÃ­n.
+en 1799 y más tarde reconvertida en bergantín.
 Casco blanco y negro, los colores de la US Navy.
-24 caÃ±ones, es rÃ¡pido pero no navega bien de ceÃ±ida.}
+24 cañones, es rápido pero no navega bien de ceñida.}
 
-Yacht1_Descr{Un mercante pequeÃ±o aparejado con tres mÃ¡stiles
+Yacht1_Descr{Un mercante pequeño aparejado con tres mástiles
 de velas cuadras.
 Pintura azul y varios ornamentos decoran el casco.
-16 caÃ±ones, no es muy rÃ¡pida navegando de ceÃ±ida.}
-Yacht2_Descr{Un mercante pequeÃ±o aparejado con tres mÃ¡stiles
+16 cañones, no es muy rápida navegando de ceñida.}
+Yacht2_Descr{Un mercante pequeño aparejado con tres mástiles
 de velas cuadras.
 Pintura negra y varios ornamentos decoran el casco.
-16 caÃ±ones, no es muy rÃ¡pida navegando de ceÃ±ida.}
+16 cañones, no es muy rápida navegando de ceñida.}
 
-Barque1_Descr{Un mercante pequeÃ±o con tres mÃ¡stiles, trinquete y
+Barque1_Descr{Un mercante pequeño con tres mástiles, trinquete y
 mayor con velas cuadras y mesana con vela cangreja.
-Casco pintado de azul y amarillo pÃ¡lido.
-16 caÃ±ones, navega bien con el viento a favor.}
-Barque2_Descr{Un mercante pequeÃ±o con tres mÃ¡stiles, trinquete y
+Casco pintado de azul y amarillo pálido.
+16 cañones, navega bien con el viento a favor.}
+Barque2_Descr{Un mercante pequeño con tres mástiles, trinquete y
 mayor con velas cuadras y mesana con vela cangreja.
 Sin pintar; es un mercante, no el carruaje de una dama.
-16 caÃ±ones, navega bien con el viento a favor.}
-Barkentine1_Descr{Un pequeÃ±o buque mercante con aparejo hÃ­brido.
-Casco marrÃ³n oscuro con profusa decoraciÃ³n.
+16 cañones, navega bien con el viento a favor.}
+Barkentine1_Descr{Un pequeño buque mercante con aparejo híbrido.
+Casco marrón oscuro con profusa decoración.
 
-16 caÃ±ones, navega bien de ceÃ±ida.}
+16 cañones, navega bien de ceñida.}
 
-BarqueHeavy_Descr{Un mercante pequeÃ±o aparejado con tres mÃ¡stiles
+BarqueHeavy_Descr{Un mercante pequeño aparejado con tres mástiles
 de velas cuadras.
 Desgastado casco negro y rojo con moludras doradas.
-16 caÃ±ones, navega bien con el viento a favor.}
+16 cañones, navega bien con el viento a favor.}
 
 Barque3_50_Descr{Este barco ha cambiado el aparejo redondo del
 mayor y el mesana por grandes velas latinas.
 La pintura roja y negra le da un aspecto siniestro.
-16 caÃ±ones, navega muy bien de ceÃ±ida gracias a su aparejo latino.}
+16 cañones, navega muy bien de ceñida gracias a su aparejo latino.}
 
-Barque4_47_Descr{Un adaptable velero aparejado con tres mÃ¡stiles
+Barque4_47_Descr{Un adaptable velero aparejado con tres mástiles
 de velas cuadras.
-Acabado de madera natural con decoraciÃ³n austera.
-16 caÃ±ones, navega bien con el viento a favor.}
+Acabado de madera natural con decoración austera.
+16 cañones, navega bien con el viento a favor.}
 
 US_Brig47_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
+sino vuela, un velero bergantín', José de Espronceda.
 Casco blanco y negro, los colores de la US Navy.
-22 caÃ±ones, es rÃ¡pido y Ã¡gil pero no navega muy bien de ceÃ±ida.}
-PiratBrig50_Descr{La corbeta es el buque de guerra mÃ¡s pequeÃ±o
-que puede llevar tres mÃ¡stiles de aparejo redondo.
-DiseÃ±o naval en verde y naranja.
-22 caÃ±ones, es rÃ¡pida y Ã¡gil pero no navega muy bien de ceÃ±ida.}
+22 cañones, es rápido y ágil pero no navega muy bien de ceñida.}
+PiratBrig50_Descr{La corbeta es el buque de guerra más pequeño
+que puede llevar tres mástiles de aparejo redondo.
+Diseño naval en verde y naranja.
+22 cañones, es rápida y ágil pero no navega muy bien de ceñida.}
 
 Brigantina1_Descr{Un adaptable barco de guerra con aparejo mixto.
 El casco presenta una franja blanca y molduras doradas.
 
-22 caÃ±ones, es capaz de navegar de ceÃ±ida a un Ã¡ngulo decente.}
+22 cañones, es capaz de navegar de ceñida a un ángulo decente.}
 Brigantina2_Descr{Un adaptable barco de guerra con aparejo mixto.
 El casco presenta una franja azul y molduras doradas.
 
-22 caÃ±ones, es capaz de navegar de ceÃ±ida a un Ã¡ngulo decente.}
+22 cañones, es capaz de navegar de ceñida a un ángulo decente.}
 BrigantineOld_Descr{Un ligero y adaptable barco de guerra
 con aparejo mixto.
-El casco estÃ¡ pintado con franjas blancas y negras.
-16 caÃ±ones, navega bien con viento de travÃ©s.}
+El casco está pintado con franjas blancas y negras.
+16 cañones, navega bien con viento de través.}
 
-Tartane1_Descr{Â¿Has perdido tu barco, capitÃ¡n?
-Una pequeÃ±a embarcaciÃ³n de cabotaje de un solo palo.
-La madera del casco estÃ¡ pintada de rojo.
-Sin armas, su pequeÃ±o tamaÃ±o y su Ãºnica vela latina la hacen bastante Ã¡gil.}
-Tartane2_Descr{Â¿Has perdido tu barco, capitÃ¡n?
-Una pequeÃ±a embarcaciÃ³n de cabotaje de un solo palo.
-Casco adornado con decoraciones geomÃ©tricas.
-Sin armas, su pequeÃ±o tamaÃ±o y su Ãºnica vela latina la hacen bastante Ã¡gil.}
+Tartane1_Descr{¿Has perdido tu barco, capitán?
+Una pequeña embarcación de cabotaje de un solo palo.
+La madera del casco está pintada de rojo.
+Sin armas, su pequeño tamaño y su única vela latina la hacen bastante ágil.}
+Tartane2_Descr{¿Has perdido tu barco, capitán?
+Una pequeña embarcación de cabotaje de un solo palo.
+Casco adornado con decoraciones geométricas.
+Sin armas, su pequeño tamaño y su única vela latina la hacen bastante ágil.}
 
-Tartane50_Descr{Â¿Has perdido tu barco, capitÃ¡n?
-Un pequeÃ±o bote auxiliar de un solo palo.
+Tartane50_Descr{¿Has perdido tu barco, capitán?
+Un pequeño bote auxiliar de un solo palo.
 El desgastado casco gris recuerda al 'Jolly Mon'.
-Sin armas, su pequeÃ±o tamaÃ±o y su vela cuadra lo hacen bastante Ã¡gil.}
+Sin armas, su pequeño tamaño y su vela cuadra lo hacen bastante ágil.}
 
-Gunboat_Descr{Mejor que nada, pero harÃ¡ de cualquier batalla un reto.
+Gunboat_Descr{Mejor que nada, pero hará de cualquier batalla un reto.
 Suelen cumplir funciones de apoyo y hostigamiento.
 Una sencilla lancha con acabado de madera natural.
-5 caÃ±ones, su pequeÃ±o tamaÃ±o y su Ãºnica vela latina la hacen bastante Ã¡gil.}
+5 cañones, su pequeño tamaño y su única vela latina la hacen bastante ágil.}
 
-TartaneWar_Descr{Por su tamaÃ±o es mÃ¡s bien un barco de recreo.
-Una pequeÃ±a embarcaciÃ³n de cabotaje de dos palos.
+TartaneWar_Descr{Por su tamaño es más bien un barco de recreo.
+Una pequeña embarcación de cabotaje de dos palos.
 Casco amarillo con decoraciones blancas y azules.
-8 caÃ±ones, su pequeÃ±o tamaÃ±o y sus velas latinas la hacen bastante Ã¡gil.}
+8 cañones, su pequeño tamaño y sus velas latinas la hacen bastante ágil.}
 
 Galeoth1_Descr{Su popa redondeada y su aparejo de queche
 recuerdan a las galeotas holandesas.
-DiseÃ±o naval espaÃ±ol con casco rojo decorado.
-16 caÃ±ones, maniobrable y veloz incluso de ceÃ±ida.}
+Diseño naval español con casco rojo decorado.
+16 cañones, maniobrable y veloz incluso de ceñida.}
 Galeoth2_Descr{Su popa redondeada y su aparejo de queche
 recuerdan a las galeotas holandesas.
-DiseÃ±o naval espaÃ±ol con casco decorado verde y amarillo.
-16 caÃ±ones, maniobrable y veloz incluso de ceÃ±ida.}
+Diseño naval español con casco decorado verde y amarillo.
+16 cañones, maniobrable y veloz incluso de ceñida.}
 
-Sloop1_Descr{Un pequeÃ±o barco de un solo palo de uso comÃºn en
-el Caribe, para el comercio, la guerra o la piraterÃ­a.
+Sloop1_Descr{Un pequeño barco de un solo palo de uso común en
+el Caribe, para el comercio, la guerra o la piratería.
 Casco pintado de azul con detalles blancos.
-16 caÃ±ones, es veloz y navega bien de ceÃ±ida gracias a su gran vela mayor cangreja.}
-FR_Sloop_Descr{'Le RÃªve' es una Ã¡gil balandra de guerra francesa.
-Pintura negra y roja, comÃºn en la Armada Francesa.
+16 cañones, es veloz y navega bien de ceñida gracias a su gran vela mayor cangreja.}
+FR_Sloop_Descr{'Le Rêve' es una ágil balandra de guerra francesa.
+Pintura negra y roja, común en la Armada Francesa.
 
-14 caÃ±ones, es veloz y navega bien de ceÃ±ida gracias a su gran vela mayor cangreja.}
-Sloop2_Descr{Un pequeÃ±o barco de un solo palo de uso comÃºn en
-el Caribe, para el comercio, la guerra o la piraterÃ­a.
-Casco pintado de color rojo pÃ¡lido.
-16 caÃ±ones, es veloz y navega bien de ceÃ±ida gracias a su gran vela mayor cangreja.}
-Sloop4_Descr{Un pequeÃ±o barco de un solo palo de uso comÃºn en
-el Caribe, para el comercio, la guerra o la piraterÃ­a.
+14 cañones, es veloz y navega bien de ceñida gracias a su gran vela mayor cangreja.}
+Sloop2_Descr{Un pequeño barco de un solo palo de uso común en
+el Caribe, para el comercio, la guerra o la piratería.
+Casco pintado de color rojo pálido.
+16 cañones, es veloz y navega bien de ceñida gracias a su gran vela mayor cangreja.}
+Sloop4_Descr{Un pequeño barco de un solo palo de uso común en
+el Caribe, para el comercio, la guerra o la piratería.
 El casco tiene un acabado de madera barnizada.
-14 caÃ±ones, es veloz y navega bien de ceÃ±ida gracias a su gran vela mayor cangreja}
+14 cañones, es veloz y navega bien de ceñida gracias a su gran vela mayor cangreja}
 
 SloopBermuda_Descr{Una variedad de balandra desarrollada en las
-Islas Bermudas, destaca por su mÃ¡stil inclinado.
-Casco amarillo y negro, un tÃ­pico diseÃ±o naval.
-10 caÃ±ones, navega bien de ceÃ±ida y su gran superficie vÃ©lica le permite ser muy veloz.}
+Islas Bermudas, destaca por su mástil inclinado.
+Casco amarillo y negro, un típico diseño naval.
+10 cañones, navega bien de ceñida y su gran superficie vélica le permite ser muy veloz.}
 
-Cutter1_Descr{Un pequeÃ±o barco de guerra con aparejo de balandra,
-para labores de apoyo, exploraciÃ³n o guarda de costas.
-Casco pintado de blanco y marrÃ³n.
-10 caÃ±ones, veloz y maniobrable incluso navegando de ceÃ±ida.}
-Cutter2_Descr{Un pequeÃ±o barco de guerra con aparejo de balandra,
-para labores de apoyo, exploraciÃ³n o guarda de costas.
-Pintura negra y amarilla, comÃºn en la Royal Navy.
-10 caÃ±ones, veloz y maniobrable incluso navegando de ceÃ±ida.}
+Cutter1_Descr{Un pequeño barco de guerra con aparejo de balandra,
+para labores de apoyo, exploración o guarda de costas.
+Casco pintado de blanco y marrón.
+10 cañones, veloz y maniobrable incluso navegando de ceñida.}
+Cutter2_Descr{Un pequeño barco de guerra con aparejo de balandra,
+para labores de apoyo, exploración o guarda de costas.
+Pintura negra y amarilla, común en la Royal Navy.
+10 cañones, veloz y maniobrable incluso navegando de ceñida.}
 
 Ketch_Descr{Los primeros queches eran barcos de pesca, que
-despuÃ©s se adaptaron al comercio y a la guerra.
+después se adaptaron al comercio y a la guerra.
 Casco de madera rojiza con algunas decoraciones.
-16 caÃ±ones, navega bien de ceÃ±ida gracias a su fino casco y sus velas cangrajas.}
+16 cañones, navega bien de ceñida gracias a su fino casco y sus velas cangrajas.}
 
-Lugger1_Descr{El lugre, o quechemarÃ­n, es un pequeÃ±o barco de 
-cabotaje aparejado con tres mÃ¡stiles de velas al tercio.
+Lugger1_Descr{El lugre, o quechemarín, es un pequeño barco de 
+cabotaje aparejado con tres mástiles de velas al tercio.
 Casco pintado de blanco, negro y amarillo.
-12 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
-Lugger2_Descr{El lugre, o quechemarÃ­n, es un pequeÃ±o barco de 
-cabotaje aparejado con tres mÃ¡stiles de velas al tercio.
-Casco marrÃ³n y amarillo, con detalles blancos.
-12 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
-LuggerCT_Descr{El lugre, o quechemarÃ­n, es un pequeÃ±o barco de 
-cabotaje aparejado con tres mÃ¡stiles de velas al tercio.
+12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+Lugger2_Descr{El lugre, o quechemarín, es un pequeño barco de 
+cabotaje aparejado con tres mástiles de velas al tercio.
+Casco marrón y amarillo, con detalles blancos.
+12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+LuggerCT_Descr{El lugre, o quechemarín, es un pequeño barco de 
+cabotaje aparejado con tres mástiles de velas al tercio.
 Casco pintado de blanco y negro.
-12 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
-Lugger4_Descr{El lugre, o quechemarÃ­n, es un pequeÃ±o barco de 
-cabotaje aparejado con tres mÃ¡stiles de velas al tercio.
+12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+Lugger4_Descr{El lugre, o quechemarín, es un pequeño barco de 
+cabotaje aparejado con tres mástiles de velas al tercio.
 Pintura azul y blanca muy desgastada.
-12 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
+12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
 
-LuggerVML_Descr{Un robusto lugre, o quechemarÃ­n, mercante.
-BrÃºjula incluida (pero no apunta al norte).
+LuggerVML_Descr{Un robusto lugre, o quechemarín, mercante.
+Brújula incluida (pero no apunta al norte).
 Acabado de madera oscura y desgastada.
-12 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
+12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
 
-PO_LuggerP_Descr{Un barco mercante adaptado para la prÃ¡ctica del corso.
+PO_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
 Casco blanco con acentos verdes y rojos.
-8 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
-SP_LuggerP_Descr{Un barco mercante adaptado para la prÃ¡ctica del corso.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+SP_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
 Casco negro con acentos azules y rojos.
-8 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
-NL_LuggerP_Descr{Un barco mercante adaptado para la prÃ¡ctica del corso.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+NL_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
 Casco amarillo con acentos verdes y rojos.
-8 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
-FR_LuggerP_Descr{Un barco mercante adaptado para la prÃ¡ctica del corso.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+FR_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
 Casco azul con acentos rojos.
-8 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
-RN_LuggerP_Descr{Un barco mercante adaptado para la prÃ¡ctica del corso.
-Casco marrÃ³n con acentos azules y amarillos.
-8 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable.}
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+RN_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
+Casco marrón con acentos azules y amarillos.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
 
-Lugger3_Descr{El lugre, o quechemarÃ­n, es un pequeÃ±o barco de 
-cabotaje aparejado con tres mÃ¡stiles de velas al tercio.
-Pintura desgastada de color negro y marrÃ³n.
-8 caÃ±ones, su pequeÃ±o tamaÃ±o lo hace veloz y maniobrable..}
+Lugger3_Descr{El lugre, o quechemarín, es un pequeño barco de 
+cabotaje aparejado con tres mástiles de velas al tercio.
+Pintura desgastada de color negro y marrón.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable..}
 
 EdinburghTrader_Descr{Mercante de tres palos que recuerda al
 'Edinburgh Trader'.
-Casco reciÃ©n pintado de verde y amarillo. 
-14 caÃ±ones, aparejo redondo para navegar a favor del viento.}
+Casco recién pintado de verde y amarillo. 
+14 cañones, aparejo redondo para navegar a favor del viento.}
 
 FastMerchantman1_Descr{Una fragata de guerra vendida en subasta y convertida
 en un buque mercante muy capaz de defenderse.
-Casco pintado de blanco y marrÃ³n oscuro.
-26 caÃ±ones, no tan especioso como otros mercantes pero lo compensa con su rapidez.}
+Casco pintado de blanco y marrón oscuro.
+26 cañones, no tan especioso como otros mercantes pero lo compensa con su rapidez.}
 FastMerchantman2_Descr{Una fragata de guerra vendida en subasta y convertida
 en un buque mercante muy capaz de defenderse.
 Pintura amarilla y negra muy desgastada.
-26 caÃ±ones, no tan especioso como otros mercantes pero lo compensa con su rapidez.}
+26 cañones, no tan especioso como otros mercantes pero lo compensa con su rapidez.}
 
-Fleut1_Descr{Ideado en los PaÃ­ses Bajos, el filibote es un mercante
+Fleut1_Descr{Ideado en los Países Bajos, el filibote es un mercante
 eficiente y espacioso, con una distintiva popa redonda.
-La madera marrÃ³n del casco estÃ¡ finamente decorada.
-20 caÃ±ones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
-Fleut2_Descr{Ideado en los PaÃ­ses Bajos, el filibote es un mercante
+La madera marrón del casco está finamente decorada.
+20 cañones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
+Fleut2_Descr{Ideado en los Países Bajos, el filibote es un mercante
 eficiente y espacioso, con una distintiva popa redonda.
 Casco azul y amarillo, un poco desgastado.
-20 caÃ±ones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
-NL_Fleut50_Descr{Ideado en los PaÃ­ses Bajos, el filibote es un mercante
+20 cañones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
+NL_Fleut50_Descr{Ideado en los Países Bajos, el filibote es un mercante
 eficiente y espacioso, con una distintiva popa redonda.
-Pintura verde con molduras doradas al estilo holandÃ©s.
-30 caÃ±ones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
+Pintura verde con molduras doradas al estilo holandés.
+30 cañones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
 
-PO_Fleut50_Descr{Ideado en los PaÃ­ses Bajos, el filibote es un mercante
+PO_Fleut50_Descr{Ideado en los Países Bajos, el filibote es un mercante
 eficiente y espacioso, con una distintiva popa redonda.
-Acabado de madera natural con decoraciÃ³n austera.
-30 caÃ±ones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
+Acabado de madera natural con decoración austera.
+30 cañones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
 
 FleutWar_Descr{Aunque se idearon como mercantes, los filibotes
-tambiÃ©n han sido adaptados para su uso en la guerra.
+también han sido adaptados para su uso en la guerra.
 Casco pintado de azul y finamente decorado.
-34 caÃ±ones,	decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
+34 cañones,	decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
 
 FleutWar2_Descr{Aunque se idearon como mercantes, los filibotes
-tambiÃ©n han sido adaptados para su uso en la guerra.
+también han sido adaptados para su uso en la guerra.
 Casco pintado de negro y rojo.
-34 caÃ±ones,	decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
+34 cañones,	decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
 
 FleutWarSat_Descr{Aunque se idearon como mercantes, los filibotes
-tambiÃ©n pueden usarse para propÃ³sitos mÃ¡s oscuros.
+también pueden usarse para propósitos más oscuros.
 Casco negro con siniestras marcas en rojo y blanco.
-34 caÃ±ones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
+34 cañones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
 
 FleutWarExSat_Descr{Un filibote bien armado que anteriormente fue
 usado por una siniestra secta.
 Pintura negra y amarilla para borrar su pasado animista.
-34 caÃ±ones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
+34 cañones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
 
 FR_LightPinnace_Descr{Un mercante de tres palos y aparejo redondo. Se
-llaman pinazas porque solÃ­an ser de madera de pino.
-Casco pintado de marrÃ³n y rojo al estilo francÃ©s.
-16 caÃ±ones, alcanza una velocidad decente pero no es muy maniobrable.}
+llaman pinazas porque solían ser de madera de pino.
+Casco pintado de marrón y rojo al estilo francés.
+16 cañones, alcanza una velocidad decente pero no es muy maniobrable.}
 
 Pinnace1_Descr{Un mercante de tres palos y aparejo redondo. Se
-llaman pinazas porque solÃ­an ser de madera de pino.
-Casco marrÃ³n con una franja blanca y molduras doradas.
-24 caÃ±ones, alcanza una velocidad decente pero no es muy maniobrable.}
+llaman pinazas porque solían ser de madera de pino.
+Casco marrón con una franja blanca y molduras doradas.
+24 cañones, alcanza una velocidad decente pero no es muy maniobrable.}
 Pinnace2_Descr{Un mercante de tres palos y aparejo redondo. Se
-llaman pinazas porque solÃ­an ser de madera de pino.
-Casco muy decorado, pintado en dos tonos de marrÃ³n.
-24 caÃ±ones, alcanza una velocidad decente pero no es muy maniobrable.}
+llaman pinazas porque solían ser de madera de pino.
+Casco muy decorado, pintado en dos tonos de marrón.
+24 cañones, alcanza una velocidad decente pero no es muy maniobrable.}
 
 NL_Pinnace_Descr{Un mercante de tres palos y aparejo redondo. Se
-llaman pinazas porque solÃ­an ser de madera de pino.
-Pintura verde al estilo holandÃ©s y popa decorada.
-26 caÃ±ones, alcanza una velocidad decente pero no es muy maniobrable.}
+llaman pinazas porque solían ser de madera de pino.
+Pintura verde al estilo holandés y popa decorada.
+26 cañones, alcanza una velocidad decente pero no es muy maniobrable.}
 
 SP_Pinnace50_Descr{Un mercante de tres palos y aparejo redondo. Se
-llaman pinazas porque solÃ­an ser de madera de pino.
-Pintura roja al estilo espaÃ±ol y molduras doradas.
-30 caÃ±ones, alcanza una velocidad decente pero no es muy maniobrable.}
+llaman pinazas porque solían ser de madera de pino.
+Pintura roja al estilo español y molduras doradas.
+30 cañones, alcanza una velocidad decente pero no es muy maniobrable.}
 
-HMS_Indefatigable_Descr{'HMS Indefatigable', un navÃ­o de la clase Ardent
-diseÃ±ado por Sir Thomas Slade, convertido en fragata.
-Casco beige y negro, comÃºn en la Royal Navy.
-48 caÃ±ones, veloz y robusta, aunque no muy maniobrable.}
-RN_Indefatigable_Descr{Un navÃ­o de dos puentes al que se ha rebajado una
+HMS_Indefatigable_Descr{'HMS Indefatigable', un navío de la clase Ardent
+diseñado por Sir Thomas Slade, convertido en fragata.
+Casco beige y negro, común en la Royal Navy.
+48 cañones, veloz y robusta, aunque no muy maniobrable.}
+RN_Indefatigable_Descr{Un navío de dos puentes al que se ha rebajado una
 cubierta para convertirlo en una fragata pesada.
-Casco beige y negro, comÃºn en la Royal Navy.
-48 caÃ±ones, veloz y robusta, aunque no muy maniobrable.}
-GEN_Indefatigable_Descr{Un navÃ­o de dos puentes al que se ha rebajado una
+Casco beige y negro, común en la Royal Navy.
+48 cañones, veloz y robusta, aunque no muy maniobrable.}
+GEN_Indefatigable_Descr{Un navío de dos puentes al que se ha rebajado una
 cubierta para convertirlo en una fragata pesada.
-Casco amarillo y negro, un tÃ­pico diseÃ±o naval.
-48 caÃ±ones, veloz y robusta, aunque no muy maniobrable.}
-FR_Indefatigable_Descr{Un navÃ­o de dos puentes al que se ha rebajado una
+Casco amarillo y negro, un típico diseño naval.
+48 cañones, veloz y robusta, aunque no muy maniobrable.}
+FR_Indefatigable_Descr{Un navío de dos puentes al que se ha rebajado una
 cubierta para convertirlo en una fragata pesada.
-Casco rojo y negro, comÃºn en la Armada Francesa.
-48 caÃ±ones, veloz y robusta, aunque no muy maniobrable.}
-SP_Indefatigable_Descr{Un navÃ­o de dos puentes al que se ha rebajado una
+Casco rojo y negro, común en la Armada Francesa.
+48 cañones, veloz y robusta, aunque no muy maniobrable.}
+SP_Indefatigable_Descr{Un navío de dos puentes al que se ha rebajado una
 cubierta para convertirlo en una fragata pesada.
-Casco rojo o scuro y negro, comÃºn en la Armada EspaÃ±ola.
-48 caÃ±ones, veloz y robusta, aunque no muy maniobrable.}
+Casco rojo o scuro y negro, común en la Armada Española.
+48 cañones, veloz y robusta, aunque no muy maniobrable.}
 NL_PinnaceofWar47_Descr{Un barco de guerra de gran capacidad. Se
-llaman pinazas porque solÃ­an ser de madera de pino.
-Pintura verde al estilo holandÃ©s y molduras doradas.
-54 caÃ±ones, alcanza una velocidad decente, pero no es muy maniobrable.}
+llaman pinazas porque solían ser de madera de pino.
+Pintura verde al estilo holandés y molduras doradas.
+54 cañones, alcanza una velocidad decente, pero no es muy maniobrable.}
 
 WallerPinnace_Descr{Un barco de guerra de gran capacidad. Se
-llaman pinazas porque solÃ­an ser de madera de pino.
-Casco marrÃ³n y dorado, con una franja blanca.
-54 caÃ±ones, alcanza una velocidad decente pero no es muy maniobrable.}
+llaman pinazas porque solían ser de madera de pino.
+Casco marrón y dorado, con una franja blanca.
+54 cañones, alcanza una velocidad decente pero no es muy maniobrable.}
 
 Galeon1_Descr{Las enormes bodegas de estos galeones pueden
-transportar tesoros... o mercancÃ­as mÃ¡s mundanas.
-Casco en dos tonos de marrÃ³n, con decoraciÃ³n austera.
-40 caÃ±ones, robusto y poderoso pero lento y poco maniobrable.}
+transportar tesoros... o mercancías más mundanas.
+Casco en dos tonos de marrón, con decoración austera.
+40 cañones, robusto y poderoso pero lento y poco maniobrable.}
 Galeon2_Descr{Las enormes bodegas de estos galeones pueden
-transportar tesoros... o mercancÃ­as mÃ¡s mundanas.
-Casco pintado de marrÃ³n, blanco y azul.
-36 caÃ±ones, robusto y poderoso pero lento y poco maniobrable.}
-PiratBattleGalleon_Descr{Un formidable galeÃ³n espaÃ±ol apresado y
-remodelado por un famoso pirata portuguÃ©s.
-Casco con cintones de refuerzo y austera decoraciÃ³n portuguesa.
-56 caÃ±ones, modificado para ser mÃ¡s rÃ¡pido y maniobrable.}
-SP_BattleGalleon_Descr{Un formidable galeÃ³n espaÃ±ol. Erizado de caÃ±ones 
+transportar tesoros... o mercancías más mundanas.
+Casco pintado de marrón, blanco y azul.
+36 cañones, robusto y poderoso pero lento y poco maniobrable.}
+PiratBattleGalleon_Descr{Un formidable galeón español apresado y
+remodelado por un famoso pirata portugués.
+Casco con cintones de refuerzo y austera decoración portuguesa.
+56 cañones, modificado para ser más rápido y maniobrable.}
+SP_BattleGalleon_Descr{Un formidable galeón español. Erizado de cañones 
 y lleno de fieros soldados, es un hueso duro de roer.
-Casco reforzado con austera decoraciÃ³n espaÃ±ola.
-56 caÃ±ones, robusto y poderoso pero lento y poco maniobrable.}
+Casco reforzado con austera decoración española.
+56 cañones, robusto y poderoso pero lento y poco maniobrable.}
 
 SP_Galeon50_Descr{Las enormes bodegas de estos galeones pueden
-transportar tesoros... o mercancÃ­as mÃ¡s mundanas.
-Madera natural con decoraciÃ³n roja y amarilla a la espaÃ±ola.
-40 caÃ±ones, robusto y poderoso pero lento y poco maniobrable.}
+transportar tesoros... o mercancías más mundanas.
+Madera natural con decoración roja y amarilla a la española.
+40 cañones, robusto y poderoso pero lento y poco maniobrable.}
 
 GaleonWar_Descr{Estos galeones bien armados pueden servir en la
-lÃ­nea de batalla o como escolta de un convoy mercante.
+línea de batalla o como escolta de un convoy mercante.
 Casco pintado de negro y profusamente deocrado.
-40 caÃ±ones, robusto y poderoso pero lento y poco maniobrable.}
+40 cañones, robusto y poderoso pero lento y poco maniobrable.}
 Galeon50_Descr{Estos galeones bien armados pueden servir en la
-lÃ­nea de batalla o como escolta de un convoy mercante.
+línea de batalla o como escolta de un convoy mercante.
 Casco pintado principalmente de negro y azul.
-40 caÃ±ones, robusto y poderoso pero lento y poco maniobrable.}
+40 cañones, robusto y poderoso pero lento y poco maniobrable.}
 
 NL_FleutWar_Descr{Aunque se idearon como mercantes, los filibotes
-tambiÃ©n han sido adaptados para su uso en la guerra.
-Pintura verde y roja, al estilo holandÃ©s.
-46 caÃ±ones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
+también han sido adaptados para su uso en la guerra.
+Pintura verde y roja, al estilo holandés.
+46 cañones, decentes cualidades marineras en cuanto a velocidad y maniobrabilidad.}
 
 PO_WarGalleon_Descr{Los barcos dedicados al comercio con las Indias
 Orientales deben ser grandes y capaces de defenderse.
-Casco blanco y marrÃ³n decorado a la portuguesa.
-52 caÃ±ones, decentes cualidades marineras.}
+Casco blanco y marrón decorado a la portuguesa.
+52 cañones, decentes cualidades marineras.}
 FR_WarGalleon_Descr{Los barcos dedicados al comercio con las Indias
 Orientales deben ser grandes y capaces de defenderse.
-Casco marrÃ³n y azul con flores de lis a la francesa.
-52 caÃ±ones, decentes cualidades marineras.}
+Casco marrón y azul con flores de lis a la francesa.
+52 cañones, decentes cualidades marineras.}
 RN_WarGalleon_Descr{Los barcos dedicados al comercio con las Indias
 Orientales deben ser grandes y capaces de defenderse.
-Casco pintado de marrÃ³n y azul oscuro.
-52 caÃ±ones, decentes cualidades marineras.}
+Casco pintado de marrón y azul oscuro.
+52 cañones, decentes cualidades marineras.}
 NL_WarGalleon_Descr{Los barcos dedicados al comercio con las Indias
 Orientales deben ser grandes y capaces de defenderse.
-Casco marrÃ³n y turquesa decorado a la holandesa.
-52 caÃ±ones, decentes cualidades marineras.}
+Casco marrón y turquesa decorado a la holandesa.
+52 cañones, decentes cualidades marineras.}
 SP_WarGalleon_Descr{Los barcos dedicados al comercio con las Indias
 Orientales deben ser grandes y capaces de defenderse.
-Casco rojo y negro decorado a la espaÃ±ola.
-52 caÃ±ones, decentees cualidades marineras.}
-FR_Licorne_Descr{Recuerda al navÃ­o francÃ©s 'La Licorne' (El Unicornio),
-del caballero FranÃ§ois de Hadoque.
+Casco rojo y negro decorado a la española.
+52 cañones, decentees cualidades marineras.}
+FR_Licorne_Descr{Recuerda al navío francés 'La Licorne' (El Unicornio),
+del caballero François de Hadoque.
 Casco amarillo y azul decorado a la francesa.
-52 caÃ±ones, decentes cualidades marineras.}
+52 cañones, decentes cualidades marineras.}
 
-FastGalleon1_Descr{Sus lÃ­neas esbeltas y sus altos mÃ¡stiles permiten
-a este galeÃ³n alcanzar velocidades sorprendentes.
+FastGalleon1_Descr{Sus líneas esbeltas y sus altos mástiles permiten
+a este galeón alcanzar velocidades sorprendentes.
 Casco azul, amarillo y rojo, con marcas blancas.
-38 caÃ±ones, bastante rÃ¡pido y maniobrable con el viento a favor.}
-FastGalleon2_Descr{Sus lÃ­neas esbeltas y sus altos mÃ¡stiles permiten
-a este galeÃ³n alcanzar velocidades sorprendentes.
-Casco pintado de blanco y marrÃ³n oscuro.
-38 caÃ±ones, bastante rÃ¡pido y maniobrable con el viento a favor.}
-FastGalleon3_Descr{Sus lÃ­neas esbeltas y sus altos mÃ¡stiles permiten
-a este galeÃ³n alcanzar velocidades sorprendentes.
-Casco de madera clara con decoraciÃ³n colorida.
-38 caÃ±ones, bastante rÃ¡pido y maniobrable con el viento a favor.}
-FastGalleon4_Descr{Sus lÃ­neas esbeltas y sus altos mÃ¡stiles permiten
-a este galeÃ³n alcanzar velocidades sorprendentes.
-Casco marrÃ³n oscuro y rojo muy decorado.
-38 caÃ±ones, bastante rÃ¡pido y maniobrable con el viento a favor.}
-FastGalleon5_Descr{Sus lÃ­neas esbeltas y sus altos mÃ¡stiles permiten
-a este galeÃ³n alcanzar velocidades sorprendentes.
-El casco de madera rojiza estÃ¡ decorado con vivos colores.
-38 caÃ±ones, bastante rÃ¡pido y maniobrable con el viento a favor.}
-PiratFastGal_Descr{Sus lÃ­neas esbeltas y sus altos mÃ¡stiles permiten
-a este galeÃ³n alcanzar velocidades sorprendentes.
+38 cañones, bastante rápido y maniobrable con el viento a favor.}
+FastGalleon2_Descr{Sus líneas esbeltas y sus altos mástiles permiten
+a este galeón alcanzar velocidades sorprendentes.
+Casco pintado de blanco y marrón oscuro.
+38 cañones, bastante rápido y maniobrable con el viento a favor.}
+FastGalleon3_Descr{Sus líneas esbeltas y sus altos mástiles permiten
+a este galeón alcanzar velocidades sorprendentes.
+Casco de madera clara con decoración colorida.
+38 cañones, bastante rápido y maniobrable con el viento a favor.}
+FastGalleon4_Descr{Sus líneas esbeltas y sus altos mástiles permiten
+a este galeón alcanzar velocidades sorprendentes.
+Casco marrón oscuro y rojo muy decorado.
+38 cañones, bastante rápido y maniobrable con el viento a favor.}
+FastGalleon5_Descr{Sus líneas esbeltas y sus altos mástiles permiten
+a este galeón alcanzar velocidades sorprendentes.
+El casco de madera rojiza está decorado con vivos colores.
+38 cañones, bastante rápido y maniobrable con el viento a favor.}
+PiratFastGal_Descr{Sus líneas esbeltas y sus altos mástiles permiten
+a este galeón alcanzar velocidades sorprendentes.
 Casco de color negro con aterradoras marcas piratas.
-38 caÃ±ones, bastante rÃ¡pido y maniobrable con el viento a favor.}
+38 cañones, bastante rápido y maniobrable con el viento a favor.}
 
 Xebec1_Descr{Las grandes velas y el afilado casco dan a este barco
-tÃ­pico del MediterrÃ¡neo un aspecto de depredador.
+típico del Mediterráneo un aspecto de depredador.
 Casco de madera rojiza y amarilla con franja decorativa.
-20 caÃ±ones, navega bien de ceÃ±ida gracias a su aparejo latino.}
+20 cañones, navega bien de ceñida gracias a su aparejo latino.}
 Xebec2_Descr{Las grandes velas y el afilado casco dan a este barco
-tÃ­pico del MediterrÃ¡neo un aspecto de depredador.
-Casco marrÃ³n y verde con motivos nÃ³rdicos en blanco.
-20 caÃ±ones, navega bien de ceÃ±ida gracias a su aparejo latino.}
+típico del Mediterráneo un aspecto de depredador.
+Casco marrón y verde con motivos nórdicos en blanco.
+20 cañones, navega bien de ceñida gracias a su aparejo latino.}
 Xebec3_Descr{Las grandes velas y el afilado casco dan a este barco
-tÃ­pico del MediterrÃ¡neo un aspecto de depredador.
-Casco azul y rojo con decoraciÃ³n morisca.
-20 caÃ±ones, navega bien de ceÃ±ida gracias a su aparejo latino.}
+típico del Mediterráneo un aspecto de depredador.
+Casco azul y rojo con decoración morisca.
+20 cañones, navega bien de ceñida gracias a su aparejo latino.}
 
-SchoonerXebec_Descr{Una gran goleta de tres mÃ¡stiles con un afilado
+SchoonerXebec_Descr{Una gran goleta de tres mástiles con un afilado
 casco que le permite cortar el agua a gran velocidad.
 Casco pintado de negro y amarillo.
-24 caÃ±ones, navega bien de ceÃ±ida gracias a sus grandes velas cangrejas.}
+24 cañones, navega bien de ceñida gracias a sus grandes velas cangrejas.}
 
 XebecAS_Descr{Es casi imposible para otros barcos alcanzar a este 
-jabeque cuando navega ciÃ±endo contra el viento.
+jabeque cuando navega ciñendo contra el viento.
 Casco blanco, negro y azul con detalles rojos.
-26 caÃ±ones, navega bien de ceÃ±ida gracias a sus grandes velas latinas.}
+26 cañones, navega bien de ceñida gracias a sus grandes velas latinas.}
 
-Corvette47_Descr{Una pequeÃ±a fragata del siglo XVIII,
-construida siguiendo un diseÃ±o de origen francÃ©s. 
+Corvette47_Descr{Una pequeña fragata del siglo XVIII,
+construida siguiendo un diseño de origen francés. 
 Casco pintado con franjas en negro y ocre.
-30 caÃ±ones, muy buenas cualidades marineras.}
+30 cañones, muy buenas cualidades marineras.}
 
 Corvette1_Descr{Una fragata de mediados del siglo XVIII,
 que combina movilidad y decente potencia de fuego.
-Casco pintado con un diseÃ±o rojo y marrÃ³n.
-30 caÃ±ones, muy buenas cualidades marineras.}
+Casco pintado con un diseño rojo y marrón.
+30 cañones, muy buenas cualidades marineras.}
 Corvette2_Descr{Una fragata de mediados del siglo XVIII,
 que combina movilidad y decente potencia de fuego.
-Casco pintado con un diseÃ±o beige y marrÃ³n oscuro.
-30 caÃ±ones, muy buenas cualidades marineras.}
+Casco pintado con un diseño beige y marrón oscuro.
+30 cañones, muy buenas cualidades marineras.}
 RN_Corvette_Descr{Una fragata de mediados del siglo XVIII,
 que combina movilidad y decente potencia de fuego.
-Casco ocre, azul y marrÃ³n, con molduras doradas.
-30 caÃ±ones, muy buenas cualidades marineras.}
+Casco ocre, azul y marrón, con molduras doradas.
+30 cañones, muy buenas cualidades marineras.}
 
 CursedCorvette_Descr{Una vieja fragata, de la que se dice
-que estÃ¡ poseÃ­da por una terrible maldiciÃ³n...
-El casco estÃ¡ cubierto de algas
-30 caÃ±ones, muy buenas cualidades marineras.}
+que está poseída por una terrible maldición...
+El casco está cubierto de algas
+30 cañones, muy buenas cualidades marineras.}
 
 PiratCorvette_Descr{Una fragata de mediados del siglo XVIII, apresada
 por piratas, que combina movilidad y potencia de fuego.
 Casco negro con siniestras decoraciones doradas.
-30 caÃ±ones, muy buenas cualidades marineras.}
+30 cañones, muy buenas cualidades marineras.}
 PiratCorvette50_Descr{Una fragata de mediados del siglo XVIII, apresada
 por piratas, que combina movilidad y potencia de fuego.
-Siniestro diseÃ±o de pintura roja y negra.
-30 caÃ±ones, muy buenas cualidades marineras.}
+Siniestro diseño de pintura roja y negra.
+30 cañones, muy buenas cualidades marineras.}
 CrimsonBlood_Descr{Una fragata apresada por piratas.
-Se dice que su tripulaciÃ³n estÃ¡ maldita...
-Velas carmesÃ­ y casco pintado de negro y rojo oscuro.
-30 caÃ±ones, muy buenas cualidades marineras.}
+Se dice que su tripulación está maldita...
+Velas carmesí y casco pintado de negro y rojo oscuro.
+30 cañones, muy buenas cualidades marineras.}
 
 PO_FastNavy_Descr{Una temprana fragata portuguesa con aparejo de 
 velas latinas en los palos de mayor y mesana.
-Casco negro y marrÃ³n con un elaborado friso decorativo.
-32 caÃ±ones, navega bien de ceÃ±ida gracias a sus velas latinas.}
+Casco negro y marrón con un elaborado friso decorativo.
+32 cañones, navega bien de ceñida gracias a sus velas latinas.}
 
-Frigate1_Descr{Una fragata de construcciÃ³n rusa de principios del
+Frigate1_Descr{Una fragata de construcción rusa de principios del
 siglo XVIII. Combina movilidad y potencia de fuego.
-Casco con tÃ­pica pintura naval amarilla y negra.
-36 caÃ±ones, buenas cualidades marineras.}
-Frigate2_Descr{Una fragata de construcciÃ³n rusa de principios del
+Casco con típica pintura naval amarilla y negra.
+36 cañones, buenas cualidades marineras.}
+Frigate2_Descr{Una fragata de construcción rusa de principios del
 siglo XVIII. Combina movilidad y potencia de fuego.
 Casco negro, blanco y verde, con detalles amarillos.
-36 caÃ±ones, buenas cualidades marineras.}
-NL_Frigate47_Descr{Una fragata de construcciÃ³n rusa de principios del
+36 cañones, buenas cualidades marineras.}
+NL_Frigate47_Descr{Una fragata de construcción rusa de principios del
 siglo XVIII. Combina movilidad y potencia de fuego.
-Casco negro, marrÃ³n y verde, al estilo holandÃ©s.
-36 caÃ±ones, buenas cualidades marineras.}
-FR_Frigate_Descr{Una fragata de construcciÃ³n rusa de principios del
+Casco negro, marrón y verde, al estilo holandés.
+36 cañones, buenas cualidades marineras.}
+FR_Frigate_Descr{Una fragata de construcción rusa de principios del
 siglo XVIII. Combina movilidad y potencia de fuego.
-Casco negro, melocotÃ³n y azul, al estilo francÃ©s.
-36 caÃ±ones, buenas cualidades marineras.}
-RN_Frigate_Descr{Una fragata de construcciÃ³n rusa de principios del
+Casco negro, melocotón y azul, al estilo francés.
+36 cañones, buenas cualidades marineras.}
+RN_Frigate_Descr{Una fragata de construcción rusa de principios del
 siglo XVIII. Combina movilidad y potencia de fuego.
-Casco negro, melocotÃ³n y azul, con la popa decorada.
-36 caÃ±ones, buenas cualidades marineras.}
+Casco negro, melocotón y azul, con la popa decorada.
+36 cañones, buenas cualidades marineras.}
 
 Frigate_sat_Descr{Una misteriosa fragata pesada del siglo XVIII
-Se dice que la tripulan miembros de una secta satÃ¡nica.
-Velas carmesÃ­ y casco negro, detalles en rojo oscuro.
-42 caÃ±ones, buenas cualidades marineras.}
+Se dice que la tripulan miembros de una secta satánica.
+Velas carmesí y casco negro, detalles en rojo oscuro.
+42 cañones, buenas cualidades marineras.}
 Frigate_Ex_Sat_Descr{Una fragata anteriormente triuplada por
-miembros de una secta satÃ¡nica.
+miembros de una secta satánica.
 Pintura amarilla y negra con molduras doradas.
-42 caÃ±ones, buenas cualidades marineras.}
+42 cañones, buenas cualidades marineras.}
 PiratFrigateSup_Descr{Una fragata de principios del siglo XVIII apresada
 por piratas, que combina movilidad y potencia de fuego.
 Casco rojo y negra, adornado con calaveras y huesos.
-36 caÃ±ones, buenas cualidades marineras.}
+36 cañones, buenas cualidades marineras.}
 PiratFrigateSat_Descr{Una fragata de principios del siglo XVIII apresada
-por una secta satÃ¡nica, un buque potente y Ã¡gil.
-El casco estÃ¡ pintado de negro y rojo.
-36 caÃ±ones, buenas cualidades marineras.}
+por una secta satánica, un buque potente y ágil.
+El casco está pintado de negro y rojo.
+36 cañones, buenas cualidades marineras.}
 PiratFrigateExSat_Descr{Una fragata de principios del siglo XVIII apresada
-por una secta satÃ¡nica, un buque potente y Ã¡gil.
+por una secta satánica, un buque potente y ágil.
 El casco ha sido repintado de amarillo y negro.
-36 caÃ±ones, buenas cualidades marineras.}
+36 cañones, buenas cualidades marineras.}
 
 USS_Constitution_Descr{'USS Constitution', una fragata grande y moderna
-construida segÃºn el diseÃ±o de Joshua Humphreys.
+construida según el diseño de Joshua Humphreys.
 Casco blanco y negro, los colores de la US Navy.
-56 caÃ±ones, muy buenas cualidades marineras.}
+56 cañones, muy buenas cualidades marineras.}
 US_BattleFrigate_Descr{Una fragata estadounidense grande y moderna, cuya
-potencia de fuego casi rivaliza con los navÃ­os de lÃ­nea.
+potencia de fuego casi rivaliza con los navíos de línea.
 Casco blanco y negro, los colores de la US Navy.
-56 caÃ±ones, muy buenas cualidades marineras.}
-RN_BattleFrigate_Descr{Una fragata britÃ¡nica grande y moderna.
-Estas 'superfragatas' rivalizan con los navÃ­os de lÃ­nea.
+56 cañones, muy buenas cualidades marineras.}
+RN_BattleFrigate_Descr{Una fragata británica grande y moderna.
+Estas 'superfragatas' rivalizan con los navíos de línea.
 Casco beige y negro, habitual en la Royal Navy.
-56 caÃ±ones, muy buenas cualidades marineras.}
+56 cañones, muy buenas cualidades marineras.}
 FR_BattleFrigate_Descr{Una fragata francesa grande y moderna.
-Estas 'superfragatas' rivalizan con los navÃ­os de lÃ­nea.
+Estas 'superfragatas' rivalizan con los navíos de línea.
 Casco rojo y negro, habitual en la Armada Francesa.
-56 caÃ±ones, muy buenas cualidades marineras.}
-SuperFrigate_Descr{Una gran fragata diseÃ±ada para
+56 cañones, muy buenas cualidades marineras.}
+SuperFrigate_Descr{Una gran fragata diseñada para
 patrullas de largo alcance.
 Acabado de madera natural con una franja negra.
-54 caÃ±ones, muy buenas cualidades marineras.}
+54 cañones, muy buenas cualidades marineras.}
 
-HMS_Surprise_Descr{'HMS Surprise', una fragata de construcciÃ³n inglesa
+HMS_Surprise_Descr{'HMS Surprise', una fragata de construcción inglesa
 que combina movilidad y potencia de fuego. 
 Casco beige y negro, habitual en la Royal Navy.
-32 caÃ±ones, muy buenas cualidades marineras.}
+32 cañones, muy buenas cualidades marineras.}
 FR_Boussole_Descr{Una poderosa y elegante fragata francesa
 que combina movilidad y potencia de fuego. 
 Casco amarillo y azul, con detalles dorados.
-42 caÃ±ones, buenas cualidades marineras.}
+42 cañones, buenas cualidades marineras.}
 FR_Razee_Descr{Una poderosa y elegante fragata francesa
 que combina movilidad y potencia de fuego. 
 Casco rojo y negro, habitual en la Armada Francesa.
-42 caÃ±ones, buenas cualidades marineras.}
-RN_Razee_Descr{Una poderosa y elegante fragata britÃ¡nica
+42 cañones, buenas cualidades marineras.}
+RN_Razee_Descr{Una poderosa y elegante fragata británica
 que combina movilidad y potencia de fuego. 
 Casco beige y negro, habitual en la Royal Navy.
-42 caÃ±ones, buenas cualidades marineras.}
+42 cañones, buenas cualidades marineras.}
 
 Lineship1_Descr{Este buque no tiene ni la movilidad de una
-fragata ni la potencia de un verdadero navÃ­o de lÃ­nea.
-El casco estÃ¡ pintado de un austero color negro.
-40 caÃ±ones, bastante lento y no muy maniobrable.}
+fragata ni la potencia de un verdadero navío de línea.
+El casco está pintado de un austero color negro.
+40 cañones, bastante lento y no muy maniobrable.}
 Lineship47_Descr{Este buque no tiene ni la movilidad de una
-fragata ni la potencia de un verdadero navÃ­o de lÃ­nea.
+fragata ni la potencia de un verdadero navío de línea.
 Casco blanco, negro y turquesa, detalles amarillos.
-40 caÃ±ones, bastante lento y no muy maniobrable.}
+40 cañones, bastante lento y no muy maniobrable.}
 
 PO_Warship_Descr{Este buque no tiene ni la movilidad de una
-fragata ni la potencia de un verdadero navÃ­o de lÃ­nea.
+fragata ni la potencia de un verdadero navío de línea.
 Casco pintado de blanco, amarillo y negro.
-44 caÃ±ones, bastante lento y no muy maniobrable.}
-RN_Warship_Descr{Buques como Ã©ste apenas cualifican como navÃ­os
-de lÃ­nea, pero su potencia de fuego no es desdeÃ±able.
-Casco a franjas negras y beige, tÃ­pico de la Royal Navy.
-52 caÃ±ones, bastante lento y no muy maniobrable.}
+44 cañones, bastante lento y no muy maniobrable.}
+RN_Warship_Descr{Buques como éste apenas cualifican como navíos
+de línea, pero su potencia de fuego no es desdeñable.
+Casco a franjas negras y beige, típico de la Royal Navy.
+52 cañones, bastante lento y no muy maniobrable.}
 SP_Warship_Descr{Este buque no tiene ni la movilidad de una
-fragata ni la potencia de un verdadero navÃ­o de lÃ­nea.
-Casco rojo oscuro, amarillo y negro, estilo espaÃ±ol.
-44 caÃ±ones, bastante lento y no muy maniobrable.}
-FR_Belette_Descr{Uno de los primeros 'setenta y cuatros', los navÃ­os de
-lÃ­nea mÃ¡s populares en las flotas del siglo XVIII.
-Desgastado casco marrÃ³n y azul, al estilo francÃ©s.
-74 caÃ±ones, bastante lento y no muy maniobrable.}
+fragata ni la potencia de un verdadero navío de línea.
+Casco rojo oscuro, amarillo y negro, estilo español.
+44 cañones, bastante lento y no muy maniobrable.}
+FR_Belette_Descr{Uno de los primeros 'setenta y cuatros', los navíos de
+línea más populares en las flotas del siglo XVIII.
+Desgastado casco marrón y azul, al estilo francés.
+74 cañones, bastante lento y no muy maniobrable.}
 
-SwedishIndiaman1_Descr{Un mercante armado de diseÃ±o sueco
+SwedishIndiaman1_Descr{Un mercante armado de diseño sueco
 con buena capcidad de carga.
-El casco estÃ¡ pintado de marrÃ³n, amarillo y azul.
-32 caÃ±ones, buenas cualidades marineras.}
+El casco está pintado de marrón, amarillo y azul.
+32 cañones, buenas cualidades marineras.}
 
-NL_Batavia_Descr{El 'Batavia' es un mercante armado de la CompaÃ±Ã­a 
+NL_Batavia_Descr{El 'Batavia' es un mercante armado de la Compañía 
 Holandesa de las Indias Orientales, botado en 1628.
-Casco marrÃ³n y verde a la holandesa, adornos dorados.
-28 caÃ±ones, aceptable velocidad pero poco maniobrable.}
+Casco marrón y verde a la holandesa, adornos dorados.
+28 cañones, aceptable velocidad pero poco maniobrable.}
 
-NL_SevenProvincien_Descr{NavÃ­o holandÃ©s 'Seven ProvinciÃ«n', construido
-segÃºn el diseÃ±o de Salomon Jansz van den Tempel.
-Casco marrÃ³n, turquesa y dorado, muy ornamentado.
-58 caÃ±ones, aceptable velocidad pero poco maniobrable.}
+NL_SevenProvincien_Descr{Navío holandés 'Seven Provinciën', construido
+según el diseño de Salomon Jansz van den Tempel.
+Casco marrón, turquesa y dorado, muy ornamentado.
+58 cañones, aceptable velocidad pero poco maniobrable.}
 
-NL_Lineship_Descr{Ã‰sta es la clase mÃ¡s pequeÃ±a de navÃ­o de lÃ­nea, pero
-su potencia de fuego sigue siendo mÃ¡s que respetable.
-Casco marrÃ³n y verde a la holandesa, adornos dorados.
-60 caÃ±ones, bastante lento y no muy maniobrable.}
+NL_Lineship_Descr{Ésta es la clase más pequeña de navío de línea, pero
+su potencia de fuego sigue siendo más que respetable.
+Casco marrón y verde a la holandesa, adornos dorados.
+60 cañones, bastante lento y no muy maniobrable.}
 
-NL_ConvoiShip_Descr{Aunque no tan poderoso como otros navÃ­os de lÃ­nea,
-es un formidable guardiÃ¡n de convoyes mercantes.
-Casco marrÃ³n y turquesa al estilo holandÃ©s.
-60 caÃ±ones, bastante lento y no muy maniobrable.}
+NL_ConvoiShip_Descr{Aunque no tan poderoso como otros navíos de línea,
+es un formidable guardián de convoyes mercantes.
+Casco marrón y turquesa al estilo holandés.
+60 cañones, bastante lento y no muy maniobrable.}
 
 NL_Amsterdam_Descr{El 'Amsterdam', un famoso buque de la Vereenigde 
 Oost-Indische Compagnie a mediados del siglo XVIII.
-Casco marrÃ³n y verde a la holandesa, adornos dorados.
-46 caÃ±ones, decentes cualidades marineras.}
+Casco marrón y verde a la holandesa, adornos dorados.
+46 cañones, decentes cualidades marineras.}
 
-Battleship1_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+Battleship1_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
-Casco amarillo y rojo con profusa decoraciÃ³n dorada.
-70 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-Battleship2_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+Casco amarillo y rojo con profusa decoración dorada.
+70 cañones, ni muy rápido ni muy maniobrable.}
+Battleship2_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
 Casco blanco y negro con detalles rojos y dorados.
-70 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-RN_Battleship_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+70 cañones, ni muy rápido ni muy maniobrable.}
+RN_Battleship_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
-Pintura negra y amarilla, comÃºn en la Royal Navy.
-70 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-SP_Battleship_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+Pintura negra y amarilla, común en la Royal Navy.
+70 cañones, ni muy rápido ni muy maniobrable.}
+SP_Battleship_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
 Pintura negra y roja bastante desgastada.
-70 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-Battleship5_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+70 cañones, ni muy rápido ni muy maniobrable.}
+Battleship5_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
-Colores tÃ­picos de los barcos espaÃ±oles, desgastados.
-70 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+Colores típicos de los barcos españoles, desgastados.
+70 cañones, ni muy rápido ni muy maniobrable.}
 
-RN_SuperiorWarship_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+RN_SuperiorWarship_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
-Pintura negra y beige, comÃºn en la Royal Navy.
-74 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-FR_SuperiorWarship_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+Pintura negra y beige, común en la Royal Navy.
+74 cañones, ni muy rápido ni muy maniobrable.}
+FR_SuperiorWarship_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
-Pintura negra y roja, comÃºn en la Armada Francesa.
-74 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+Pintura negra y roja, común en la Armada Francesa.
+74 cañones, ni muy rápido ni muy maniobrable.}
 
-Battleship3_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+Battleship3_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
-Pintura negra y amarilla, comÃºn en la Royal Navy.
-70 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+Pintura negra y amarilla, común en la Royal Navy.
+70 cañones, ni muy rápido ni muy maniobrable.}
 
 HeavyLineship_Descr{Una enorme pinaza armada con la potencia de
-fuego de un navÃ­o de lÃ­nea.
-Casco rojo y azul con profusa decoraciÃ³n dorada.
-82 caÃ±ones, lento y poco maniobrable.}
+fuego de un navío de línea.
+Casco rojo y azul con profusa decoración dorada.
+82 cañones, lento y poco maniobrable.}
 
-Battleship4_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+Battleship4_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
 Casco barnizado con franjas negras y detalles azules.
-80 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+80 cañones, ni muy rápido ni muy maniobrable.}
 
-FR_Battleship4_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+FR_Battleship4_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
-Casco marrÃ³n con franjas blancas y detalles azules.
-80 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+Casco marrón con franjas blancas y detalles azules.
+80 cañones, ni muy rápido ni muy maniobrable.}
 
-SP_Battleship4_Descr{La potencia de fuego de estos navÃ­os de lÃ­nea
+SP_Battleship4_Descr{La potencia de fuego de estos navíos de línea
 tiene un precio que pagan sus cualidades marineras.
 Casco barnizado con franjas rojas.
-80 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+80 cañones, ni muy rápido ni muy maniobrable.}
 
-HMS_Endeavour_Descr{'HMS Endeavour', buque insignia de la CompaÃ±Ã­a de
+HMS_Endeavour_Descr{'HMS Endeavour', buque insignia de la Compañía de
 las Indias Orientales, propiedad de Lord Cutler Beckett.
 Casco pintado a franjas negras y amarillas.
-102 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-HMS_Dauntless_Descr{'HMS Dauntless' ('ImpÃ¡vido'), el mavÃ­o de guerra
-mÃ¡s imponente de la Royal Navy.
+102 cañones, ni muy rápido ni muy maniobrable.}
+HMS_Dauntless_Descr{'HMS Dauntless' ('Impávido'), el mavío de guerra
+más imponente de la Royal Navy.
 Casco pintado a franjas azules y amarillas.
-102 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+102 cañones, ni muy rápido ni muy maniobrable.}
 
-SP_SotL_Descr{NavÃ­o de lÃ­nea de segunda clase, con tres
-cubiertas de artillerÃ­a repletas de caÃ±ones.
-Casco rojo oscuro y negro, comÃºn en la Armada EspaÃ±ola.
-94 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-FR_SotL_Descr{NavÃ­o de lÃ­nea de segunda clase, con tres
-cubiertas de artillerÃ­a repletas de caÃ±ones.
-Casco rojo y negro, comÃºn en la Armada Francesa.
-94 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-US_SotL_Descr{NavÃ­o de lÃ­nea de segunda clase, con tres
-cubiertas de artillerÃ­a repletas de caÃ±ones.
+SP_SotL_Descr{Navío de línea de segunda clase, con tres
+cubiertas de artillería repletas de cañones.
+Casco rojo oscuro y negro, común en la Armada Española.
+94 cañones, ni muy rápido ni muy maniobrable.}
+FR_SotL_Descr{Navío de línea de segunda clase, con tres
+cubiertas de artillería repletas de cañones.
+Casco rojo y negro, común en la Armada Francesa.
+94 cañones, ni muy rápido ni muy maniobrable.}
+US_SotL_Descr{Navío de línea de segunda clase, con tres
+cubiertas de artillería repletas de cañones.
 Casco blanco y negro, los colores de la US Navy.
-94 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-RN_SotL_Descr{NavÃ­o de lÃ­nea de segunda clase, con tres
-cubiertas de artillerÃ­a repletas de caÃ±ones.
-Casco negro y amarillo, un tÃ­pico diseÃ±o naval.
-94 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+94 cañones, ni muy rápido ni muy maniobrable.}
+RN_SotL_Descr{Navío de línea de segunda clase, con tres
+cubiertas de artillería repletas de cañones.
+Casco negro y amarillo, un típico diseño naval.
+94 cañones, ni muy rápido ni muy maniobrable.}
 
-Manowar1_Descr{Esta autÃ©ntica fortaleza flotante puede decidir el
+Manowar1_Descr{Esta auténtica fortaleza flotante puede decidir el
 curso de una batalla con una devastadora andanada.
 Casco pintado a franjas blancas y negras.
-100 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-Manowar2_Descr{Esta autÃ©ntica fortaleza flotante puede decidir el
+100 cañones, ni muy rápido ni muy maniobrable.}
+Manowar2_Descr{Esta auténtica fortaleza flotante puede decidir el
 curso de una batalla con una devastadora andanada.
 Casco blanco, amarillo y turquesa, muy decorado.
-100 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-Manowar_gub_Descr{Esta autÃ©ntica fortaleza flotante puede decidir el
+100 cañones, ni muy rápido ni muy maniobrable.}
+Manowar_gub_Descr{Esta auténtica fortaleza flotante puede decidir el
 curso de una batalla con una devastadora andanada.
 Casco negro y azul oscuro, con franjas blancas.
-100 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-SP_Manowar_Descr{Esta autÃ©ntica fortaleza flotante puede decidir el
+100 cañones, ni muy rápido ni muy maniobrable.}
+SP_Manowar_Descr{Esta auténtica fortaleza flotante puede decidir el
 curso de una batalla con una devastadora andanada.
-Casco rojo y amarillo, al estilo espaÃ±ol.
-100 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-PO_Manowar_Descr{Esta autÃ©ntica fortaleza flotante puede decidir el
+Casco rojo y amarillo, al estilo español.
+100 cañones, ni muy rápido ni muy maniobrable.}
+PO_Manowar_Descr{Esta auténtica fortaleza flotante puede decidir el
 curso de una batalla con una devastadora andanada.
-Casco blanco y marrÃ³n, profusamente decorado.
-100 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+Casco blanco y marrón, profusamente decorado.
+100 cañones, ni muy rápido ni muy maniobrable.}
 
 US_SteamFrigate_Descr{Prototipo de fragata propulsada a vapor, lo que le
 permite navegar sin depender del viento.
 Pintura blanca y negra, los colores de la US Navy. 
-46 caÃ±ones, la mÃ¡quina y las velas se manejan por separado.}
+46 cañones, la máquina y las velas se manejan por separado.}
 
 FR_SteamFrigate_Descr{Prototipo de fragata propulsada a vapor, lo que le
 permite navegar sin depender del viento.
-Pintura roja y negra, comÃºn en la Armada Francesa. 
-46 caÃ±ones, la mÃ¡quina y las velas se manejan por separado.}
+Pintura roja y negra, común en la Armada Francesa. 
+46 cañones, la máquina y las velas se manejan por separado.}
 
 RN_SteamFrigate_Descr{Prototipo de fragata propulsada a vapor, lo que le
 permite navegar sin depender del viento.
-Pintura beige y negra, comÃºn en la Royal Navy. 
-46 caÃ±ones, la mÃ¡quina y las velas se manejan por separado.}
+Pintura beige y negra, común en la Royal Navy. 
+46 cañones, la máquina y las velas se manejan por separado.}
 
 Pirate_SteamFrigate_Descr{Prototipo de fragata propulsada a vapor, lo que le
 permite navegar sin depender del viento.
 Casco rojo oscuro y negro, con marcas piratas. 
-46 caÃ±ones, la mÃ¡quina y las velas se manejan por separado.}
+46 cañones, la máquina y las velas se manejan por separado.}
 
-CursedDutchman_Descr{El galeÃ³n maldito de Davy Jones, capaz de sumergirse.
-'Â¡Convocad... al Kraken!'.
-El casco estÃ¡ cubierto de algas.
-58 caÃ±ones, increÃ­blemente rÃ¡pido y maniobrable.}
-FlyingDutchman_Descr{La verdadera forma del 'HolandÃ©s Errante', libre
-de su maldiciÃ³n.
+CursedDutchman_Descr{El galeón maldito de Davy Jones, capaz de sumergirse.
+'¡Convocad... al Kraken!'.
+El casco está cubierto de algas.
+58 cañones, increíblemente rápido y maniobrable.}
+FlyingDutchman_Descr{La verdadera forma del 'Holandés Errante', libre
+de su maldición.
 Acabado de madera natural con toques dorados.
-58 caÃ±ones, increÃ­blemente rÃ¡pido y maniobrable.}
+58 cañones, increíblemente rápido y maniobrable.}
 
-WickedWench_Descr{Un buque de la CompaÃ±Ã­a de las Indias Orientales;
-el primer mando del cpaitÃ¡n Jack Sparrow.
+WickedWench_Descr{Un buque de la Compañía de las Indias Orientales;
+el primer mando del cpaitán Jack Sparrow.
 Casco blanco y negro con toques amarillos y dorados
-36 caÃ±ones, muy buenas cualidades marineras.}
-BlackPearl_Descr{El querido navÃ­o del capitÃ¡n Jack Sparrow,
-libre de su maldiciÃ³n.
+36 cañones, muy buenas cualidades marineras.}
+BlackPearl_Descr{El querido navío del capitán Jack Sparrow,
+libre de su maldición.
 Casco pintado de un intimidante color negro.
-36 caÃ±ones, muy buenas cualidades marineras.}
+36 cañones, muy buenas cualidades marineras.}
 164_Descr{'Tripulada por condenados y capitaneada por un
 hombre tan malvado, que fue expulsado del mismo Infierno'.
 Casco pintado de un intimidante color negro.
-36 caÃ±ones, se dice que es el barco mÃ¡s rÃ¡pido del Caribe.}
-UncursedPearl_Descr{El querido navÃ­o del capitÃ¡n Jack Sparrow, tal como
-era antes de caer vÃ­ctima de una terrible maldiciÃ³n.
+36 cañones, se dice que es el barco más rápido del Caribe.}
+UncursedPearl_Descr{El querido navío del capitán Jack Sparrow, tal como
+era antes de caer víctima de una terrible maldición.
 Casco pintado de un intimidante color negro.
-36 caÃ±ones, se dice que es el barco mÃ¡s rÃ¡pido del Caribe.}
+36 cañones, se dice que es el barco más rápido del Caribe.}
 
-RN_FirstRate_Descr{Esta autÃ©ntica fortaleza flotante puede decidir el
+RN_FirstRate_Descr{Esta auténtica fortaleza flotante puede decidir el
 curso de una batalla con una devastadora andanada.
 Pintado con el ajedrezado beige y negro de Nelson.
-104 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-HMS_Victory_Descr{HMS Victory, el navÃ­o mÃ¡s famoso de la Royal Navy,
-construido segÃºn el diseÃ±o de Sir Thomas Slade.
+104 cañones, ni muy rápido ni muy maniobrable.}
+HMS_Victory_Descr{HMS Victory, el navío más famoso de la Royal Navy,
+construido según el diseño de Sir Thomas Slade.
 Pintado con el ajedrezado beige y negro de Nelson.
-104 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-US_FirstRate_Descr{Esta autÃ©ntica fortaleza flotante puede decidir el
+104 cañones, ni muy rápido ni muy maniobrable.}
+US_FirstRate_Descr{Esta auténtica fortaleza flotante puede decidir el
 curso de una batalla con una devastadora andanada.
 Casco blanco y negro, los colores de la US Navy.
-104 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-FR_FirstRate_Descr{Esta autÃ©ntica fortaleza flotante puede decidir el
+104 cañones, ni muy rápido ni muy maniobrable.}
+FR_FirstRate_Descr{Esta auténtica fortaleza flotante puede decidir el
 curso de una batalla con una devastadora andanada.
-Casco rojo y negro, comÃºn en la Armada Francesa.
-104 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-SP_FirstRate_Descr{Esta autÃ©ntica fortaleza flotante puede decidir el
+Casco rojo y negro, común en la Armada Francesa.
+104 cañones, ni muy rápido ni muy maniobrable.}
+SP_FirstRate_Descr{Esta auténtica fortaleza flotante puede decidir el
 curso de una batalla con una devastadora andanada.
-Casco rojo oscuro y negro, comÃºn en la Armada EspaÃ±ola.
-104 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+Casco rojo oscuro y negro, común en la Armada Española.
+104 cañones, ni muy rápido ni muy maniobrable.}
 
-FR_Superbe_Descr{NavÃ­o de la famosa clase 'TÃ©mÃ©raire', la clase de buque 
-capital mÃ¡s numerosa jamÃ¡s construida.
-Casco rojo y negro, comÃºn en la Armada Francesa.
-76 caÃ±ones, decentes cualidades marineras para su tamaÃ±o.}
-RN_Superbe_Descr{Un formidable navÃ­o de lÃ­nea de tercera clase,
-dotado con dos cubiertas de artillerÃ­a.
-Casco beige y negro, comÃºn en la Royal Navy.
-76 caÃ±ones, decentes cualidades marineras para su tamaÃ±o.}
-NL_Superbe_Descr{Un formidable navÃ­o de lÃ­nea de tercera clase,
-dotado con dos cubiertas de artillerÃ­a.
-El casco estÃ¡ pintado de marrÃ³n y negro.
-76 caÃ±ones, decentes cualidades marineras para su tamaÃ±o.}
+FR_Superbe_Descr{Navío de la famosa clase 'Téméraire', la clase de buque 
+capital más numerosa jamás construida.
+Casco rojo y negro, común en la Armada Francesa.
+76 cañones, decentes cualidades marineras para su tamaño.}
+RN_Superbe_Descr{Un formidable navío de línea de tercera clase,
+dotado con dos cubiertas de artillería.
+Casco beige y negro, común en la Royal Navy.
+76 cañones, decentes cualidades marineras para su tamaño.}
+NL_Superbe_Descr{Un formidable navío de línea de tercera clase,
+dotado con dos cubiertas de artillería.
+El casco está pintado de marrón y negro.
+76 cañones, decentes cualidades marineras para su tamaño.}
 
-HMS_Bellona_Descr{Un poderoso navÃ­o de lÃ­nea de tercera clase, basado
-en los navÃ­os de dos puentes de la clase 'Bellona'.
-Casco beige y negro, comÃºn en la Royal Navy.
-84 caÃ±ones, decentes cualidades marineras para su tamaÃ±o.}
-FR_Bellona_Descr{Un poderoso navÃ­o de lÃ­nea de tercera clase,
-dotado con dos cubiertas de artillerÃ­a.
-Casco rojo y negro, comÃºn en la Armada Francesa.
-84 caÃ±ones, decentes cualidades marineras para su tamaÃ±o.}
-US_Bellona_Descr{Un poderoso navÃ­o de lÃ­nea americano de tercera
-clase, dotado con dos cubiertas de artillerÃ­a.
-Casco blanco y negro, comÃºn en la Us Navy.
-84 caÃ±ones, decentes cualidades marineras para su tamaÃ±o.}
-KetchNavy_Descr{Queche de aparejo redondo tan Ã¡gil que puede cruzar
+HMS_Bellona_Descr{Un poderoso navío de línea de tercera clase, basado
+en los navíos de dos puentes de la clase 'Bellona'.
+Casco beige y negro, común en la Royal Navy.
+84 cañones, decentes cualidades marineras para su tamaño.}
+FR_Bellona_Descr{Un poderoso navío de línea de tercera clase,
+dotado con dos cubiertas de artillería.
+Casco rojo y negro, común en la Armada Francesa.
+84 cañones, decentes cualidades marineras para su tamaño.}
+US_Bellona_Descr{Un poderoso navío de línea americano de tercera
+clase, dotado con dos cubiertas de artillería.
+Casco blanco y negro, común en la Us Navy.
+84 cañones, decentes cualidades marineras para su tamaño.}
+KetchNavy_Descr{Queche de aparejo redondo tan ágil que puede cruzar
 la 'Garganta del Diablo'. Basado en el HMS 'Nonsuch'.
-El casco estÃ¡ pintado de marrÃ³n y azul.
-8 caÃ±ones, no muy rÃ¡pido pero muy maniobrable.}
+El casco está pintado de marrón y azul.
+8 cañones, no muy rápido pero muy maniobrable.}
 
 HMS_Greyhound_Descr{Esta corbeta, a veces llamada fragata de sexta clase,
-es ideal para cazar piratas. Â¡PreparÃ¡os, perros sarnosos!
-Casco beige y negro, comÃºn en la Royal Navy.
-22 caÃ±ones, buenas cualidades marineras.}
+es ideal para cazar piratas. ¡Preparáos, perros sarnosos!
+Casco beige y negro, común en la Royal Navy.
+22 cañones, buenas cualidades marineras.}
 FR_Greyhound_Descr{Esta corbeta, a veces llamada fragata de sexta clase,
-es ideal para cazar piratas. Â¡PreparÃ¡os, perros sarnosos!
-Casco rojo y negro, comÃºn en la Armada Francesa.
-22 caÃ±ones, buenas cualidades marineras.}
+es ideal para cazar piratas. ¡Preparáos, perros sarnosos!
+Casco rojo y negro, común en la Armada Francesa.
+22 cañones, buenas cualidades marineras.}
 PO_Greyhound_Descr{Esta corbeta, a veces llamada fragata de sexta clase,
-es ideal para cazar piratas. Â¡PreparÃ¡os, perros sarnosos!
+es ideal para cazar piratas. ¡Preparáos, perros sarnosos!
 Acabado de madera natural con franjas negras.
-22 caÃ±ones, buenas cualidades marineras.}
+22 cañones, buenas cualidades marineras.}
 
 HMS_Sophie_Descr{'...viento en popa, a toda vela, no corta el mar,
-sino vuela, un velero bergantÃ­n', JosÃ© de Espronceda.
-Casco beige y negro, comÃºn en la Royal Navy.
-18 caÃ±ones, bastante rÃ¡pido y maniobrable.}
+sino vuela, un velero bergantín', José de Espronceda.
+Casco beige y negro, común en la Royal Navy.
+18 cañones, bastante rápido y maniobrable.}
 
 US_Enterprise_Descr{Una goleta americana, construida en
 Baltimore en 1799 por Henry Spencer.
 Sencillo y elegante acabado de madera sin pintar.
-14 caÃ±ones, muy rÃ¡pida y maniobrable incluso navegando de ceÃ±ida.}
+14 cañones, muy rápida y maniobrable incluso navegando de ceñida.}
 
-HMS_Mordaunt_Descr{Un navÃ­o de lÃ­nea de cuarta clase de construcciÃ³n 
+HMS_Mordaunt_Descr{Un navío de línea de cuarta clase de construcción 
 privada, comprado por la Royal Navy.
-Casco marrÃ³n y blanco, profusamente decorado.
-58 caÃ±ones, buenas cualidades marineras para su tamaÃ±o.}
+Casco marrón y blanco, profusamente decorado.
+58 cañones, buenas cualidades marineras para su tamaño.}
 
-FR_Couronne_Descr{Un gran y emblemÃ¡tico galeÃ³n de la Armada Francesa,
+FR_Couronne_Descr{Un gran y emblemático galeón de la Armada Francesa,
 el primero de su tipo construido en Francia.
 Casco de madera rojiza con partes pintadas de azul.
-64 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+64 cañones, ni muy rápido ni muy maniobrable.}
 
-Couronne_pirate_Descr{Un gran galeÃ³n que perteneciÃ³ a la Armada Francesa,
+Couronne_pirate_Descr{Un gran galeón que perteneció a la Armada Francesa,
 ahora tomado por piratas.
 Casco negro cona centos rojos.
-64 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+64 cañones, ni muy rápido ni muy maniobrable.}
 
-SP_ApostolFelipe_Descr{'ApÃ³stol Felipe', uno de los seis galeones 
-construidos por MartÃ­n de Arana para el rey Felipe IV.
+SP_ApostolFelipe_Descr{'Apóstol Felipe', uno de los seis galeones 
+construidos por Martín de Arana para el rey Felipe IV.
 Casco de madera natural decorado con pinturas religiosas.
-30 caÃ±ones, lento y poco maniobrable.}
+30 cañones, lento y poco maniobrable.}
 
-US_Hannah_Descr{Una pequeÃ±a goleta americana contratada para el
+US_Hannah_Descr{Una pequeña goleta americana contratada para el
 servicio naval por el general George Washington.
 Acabado de madera natural con franjas negras.
-4 caÃ±ones, muy rÃ¡pida y maniobrable.}
-PiratHannah_Descr{Una pequeÃ±a goleta apresada por piratas.
+4 cañones, muy rápida y maniobrable.}
+PiratHannah_Descr{Una pequeña goleta apresada por piratas.
 Acabado de madera natural con franjas negras.
 
-12 caÃ±ones, muy rÃ¡pida y maniobrable.}
+12 cañones, muy rápida y maniobrable.}
 
-HMS_Speedy_Descr{Un versÃ¡til bergantÃ­n construido segÃºn el
-diseÃ±o de Thomas King.
-Casco beige y negro, comÃºn en la Royal Navy.
-14 caÃ±ones, muy rÃ¡pido y maniobrable.}
+HMS_Speedy_Descr{Un versátil bergantín construido según el
+diseño de Thomas King.
+Casco beige y negro, común en la Royal Navy.
+14 cañones, muy rápido y maniobrable.}
 
-PO_Poseidon_Descr{Un navÃ­o de lÃ­nea de tercera clase de construcciÃ³n
+PO_Poseidon_Descr{Un navío de línea de tercera clase de construcción
 danesa de principios del siglo XVIII.
-Casco amarillo pÃ¡lido y negro, popa muy decorada.
-66 caÃ±ones, no muy rÃ¡pido pero relativamente maniobrable para su tamaÃ±o.}
-FR_Fleuron_Descr{Un navÃ­o de lÃ­nea de tercera clase de construcciÃ³n
+Casco amarillo pálido y negro, popa muy decorada.
+66 cañones, no muy rápido pero relativamente maniobrable para su tamaño.}
+FR_Fleuron_Descr{Un navío de línea de tercera clase de construcción
 francesa de principios del siglo XVIII, 
-Casco marrÃ³n y negro con la popa muy decorada.
-66 caÃ±ones, no muy rÃ¡pido pero relativamente maniobrable para su tamaÃ±o.}
-RN_Poseidon_Descr{Un navÃ­o de lÃ­nea de tercera clase de construcciÃ³n
+Casco marrón y negro con la popa muy decorada.
+66 cañones, no muy rápido pero relativamente maniobrable para su tamaño.}
+RN_Poseidon_Descr{Un navío de línea de tercera clase de construcción
 danesa de principios del siglo XVIII.
 Casco amarillo y negro con la popa muy decorada.
-66 caÃ±ones, no muy rÃ¡pido pero relativamente maniobrable para su tamaÃ±o.}
-SP_Natividad_Descr{Un navÃ­o de lÃ­nea de cuarta clase de construcciÃ³n
-espaÃ±ola de finales del siglo XVIII.
+66 cañones, no muy rápido pero relativamente maniobrable para su tamaño.}
+SP_Natividad_Descr{Un navío de línea de cuarta clase de construcción
+española de finales del siglo XVIII.
 Casco amarillo y negro con la popa muy decorada.
-60 caÃ±ones, no muy rÃ¡pido pero relativamente maniobrable para su tamaÃ±o.}
+60 cañones, no muy rápido pero relativamente maniobrable para su tamaño.}
 
-RN_Surprise_Descr{Una elegante fragata britÃ¡nica,
-basada en un diseÃ±o francÃ©s.
-Casco beige y negro, comÃºn en la Rooyal Navy.
-32 caÃ±ones, excelentes cualidades marineras.}
+RN_Surprise_Descr{Una elegante fragata británica,
+basada en un diseño francés.
+Casco beige y negro, común en la Rooyal Navy.
+32 cañones, excelentes cualidades marineras.}
 FR_Surprise_Descr{Una elegante fragata francesa.
-Casco rojo y negro, comÃºn en la Armada Francesa.
+Casco rojo y negro, común en la Armada Francesa.
 
-32 caÃ±ones, excelentes cualidades marineras.}
-SP_Surprise_Descr{Una elegante fragata espaÃ±ola,
-basada en un diseÃ±o francÃ©s.
-Casco granate y negro, comÃºn en la Armada EspaÃ±ola.
-32 caÃ±ones, excelentes cualidades marineras.}
+32 cañones, excelentes cualidades marineras.}
+SP_Surprise_Descr{Una elegante fragata española,
+basada en un diseño francés.
+Casco granate y negro, común en la Armada Española.
+32 cañones, excelentes cualidades marineras.}
 
 SP_SanFelipe_Descr{Encargado por el rey en 1690, el 'San Felipe'
-era el navÃ­o mÃ¡s esplÃ©ndido de EspaÃ±a en su tiempo.
+era el navío más espléndido de España en su tiempo.
 Casco de madera rojiza, detalles negros y dorados.
-108 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-FR_SoleilRoyal_Descr{El navÃ­o de lÃ­nea francÃ©s 'Soleil Royal' es
+108 cañones, ni muy rápido ni muy maniobrable.}
+FR_SoleilRoyal_Descr{El navío de línea francés 'Soleil Royal' es
 un buque insignia barroco construido en 1670.
 Casco amarillo, negro y azul lujosamente decorado.
-112 caÃ±ones, lento y poco maniobrable.}
+112 cañones, lento y poco maniobrable.}
 
-RN_RevengeM_Descr{VersiÃ³n mercante de un galeÃ³n inglÃ©s
-de 4 palos de la Ã©poca isabelina.
-Casco marrÃ³n oscuro, decoraciones verdes y amarillas.
-40 caÃ±ones, no muy rÃ¡pido pero bastante maniobrable.}
-RN_RevengeW_Descr{VersiÃ³n militar de un galeÃ³n inglÃ©s
-de 4 palos de la Ã©poca isabelina.
-Casco marrÃ³n con decoraciones en blanco y amarillo.
-40 caÃ±ones, no muy rÃ¡pido pero bastante maniobrable.}
-RN_RevengeF_Descr{VersiÃ³n mÃ¡s rÃ¡pida de un galeÃ³n inglÃ©s
-de 4 palos de la Ã©poca isabelina.
-Casco marrÃ³n claro, decoraciones en verde y amarillo.
-40 caÃ±ones, mÃ¡s rÃ¡pido y mÃ¡s maniobrable que otros de su tipo.}
+RN_RevengeM_Descr{Versión mercante de un galeón inglés
+de 4 palos de la época isabelina.
+Casco marrón oscuro, decoraciones verdes y amarillas.
+40 cañones, no muy rápido pero bastante maniobrable.}
+RN_RevengeW_Descr{Versión militar de un galeón inglés
+de 4 palos de la época isabelina.
+Casco marrón con decoraciones en blanco y amarillo.
+40 cañones, no muy rápido pero bastante maniobrable.}
+RN_RevengeF_Descr{Versión más rápida de un galeón inglés
+de 4 palos de la época isabelina.
+Casco marrón claro, decoraciones en verde y amarillo.
+40 cañones, más rápido y más maniobrable que otros de su tipo.}
 
-PO_CaravelR_Descr{Buque de guerra portuguÃ©s especializado en labores de
+PO_CaravelR_Descr{Buque de guerra portugués especializado en labores de
 escolta en las rutas de Brasil y las Indias Orientales.
 Acabado de madera natural de tonos rojizos.
-10 caÃ±ones, regulares cualidades marineras.}
+10 cañones, regulares cualidades marineras.}
 
-QueenAnnesRevenge_Descr{El terrorÃ­fico barco de Barbanegra, armado con
-fuego griego en vez de los caÃ±ones de caza de proa.
-Casco negro y rojo oscuro, con decoraciÃ³n macabra.
-44 caÃ±ones, regulares cualidades marineras}
+QueenAnnesRevenge_Descr{El terrorífico barco de Barbanegra, armado con
+fuego griego en vez de los cañones de caza de proa.
+Casco negro y rojo oscuro, con decoración macabra.
+44 cañones, regulares cualidades marineras}
 
-PO_Hoy_Descr{Basado en el 'Lyon', este 'hoy' es un pequeÃ±o barco
+PO_Hoy_Descr{Basado en el 'Lyon', este 'hoy' es un pequeño barco
 de transporte con aparejo de balandra.
 Casco amarillo, azul y negro, a la portuguesa.
-8 caÃ±ones, buenas cualidades marineras sobre todo navegando de ceÃ±ida.}
-FR_Hoy_Descr{Basado en el 'Lyon', este 'hoy' es un pequeÃ±o barco
+8 cañones, buenas cualidades marineras sobre todo navegando de ceñida.}
+FR_Hoy_Descr{Basado en el 'Lyon', este 'hoy' es un pequeño barco
 de transporte con aparejo de balandra.
-El casco es azul y amarillo, al estilo francÃ©s.
-8 caÃ±ones, buenas cualidades marineras sobre todo navegando de ceÃ±ida.}
-SP_Hoy_Descr{Basado en el 'Lyon', este 'hoy' es un pequeÃ±o barco
+El casco es azul y amarillo, al estilo francés.
+8 cañones, buenas cualidades marineras sobre todo navegando de ceñida.}
+SP_Hoy_Descr{Basado en el 'Lyon', este 'hoy' es un pequeño barco
 de transporte con aparejo de balandra.
-El casco es negro y rojo, al estilo espaÃ±ol.
-8 caÃ±ones, buenas cualidades marineras sobre todo navegando de ceÃ±ida.}
+El casco es negro y rojo, al estilo español.
+8 cañones, buenas cualidades marineras sobre todo navegando de ceñida.}
 
-FR_Neptunus_Descr{Un barco corsario de construcciÃ³n holandesa
+FR_Neptunus_Descr{Un barco corsario de construcción holandesa
 de principios del siglo XVIII.
-Casco pintado de azul y amarillo, al estilo francÃ©s.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
-RN_Neptunus_Descr{Un barco corsario de construcciÃ³n holandesa
+Casco pintado de azul y amarillo, al estilo francés.
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
+RN_Neptunus_Descr{Un barco corsario de construcción holandesa
 de principios del siglo XVIII.
 Casco amarillo con decoraciones rojas y azules.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
-PO_Neptunus_Descr{Un barco corsario de construcciÃ³n holandesa
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
+PO_Neptunus_Descr{Un barco corsario de construcción holandesa
 de principios del siglo XVIII.
-Casco pintado de blanco y verde, al estilo portuguÃ©s.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
-SP_Neptunus_Descr{Un barco corsario de construcciÃ³n holandesa
+Casco pintado de blanco y verde, al estilo portugués.
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
+SP_Neptunus_Descr{Un barco corsario de construcción holandesa
 de principios del siglo XVIII.
-Casco marrÃ³n, negro y rojo, al estilo espaÃ±ol.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
-NL_Neptunus_Descr{Un barco corsario de construcciÃ³n holandesa
+Casco marrón, negro y rojo, al estilo español.
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
+NL_Neptunus_Descr{Un barco corsario de construcción holandesa
 de principios del siglo XVIII.
-Casco gris, rojo y verde, al estilo holandÃ©s.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
-PiratNeptunus_Descr{Un barco corsario de construcciÃ³n holandesa
+Casco gris, rojo y verde, al estilo holandés.
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
+PiratNeptunus_Descr{Un barco corsario de construcción holandesa
 de principios del siglo XVIII.
 Casco de madera barnizada con detalles amarillos.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
 
-PO_NeptunusE_Descr{Un barco corsario de construcciÃ³n holandesa
+PO_NeptunusE_Descr{Un barco corsario de construcción holandesa
 de finales del siglo XVII.
-Casco marrÃ³n y blanco, al estilo portuguÃ©s.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
-SP_NeptunusE_Descr{Un barco corsario de construcciÃ³n holandesa
+Casco marrón y blanco, al estilo portugués.
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
+SP_NeptunusE_Descr{Un barco corsario de construcción holandesa
 de finales del siglo XVII.
-Casco marrÃ³n y rojo, al estilo espaÃ±ol.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
-NL_NeptunusE_Descr{Un barco corsario de construcciÃ³n holandesa
+Casco marrón y rojo, al estilo español.
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
+NL_NeptunusE_Descr{Un barco corsario de construcción holandesa
 de finales del siglo XVII.
-Casco marrÃ³n y verde, al estilo holandÃ©s.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
-FR_NeptunusE_Descr{Un barco corsario de construcciÃ³n holandesa
+Casco marrón y verde, al estilo holandés.
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
+FR_NeptunusE_Descr{Un barco corsario de construcción holandesa
 de finales del siglo XVII.
-Casco marrÃ³n y azul, al estilo francÃ©s.
-16 caÃ±ones, buenas cualidades marineras sobre todo a favor del viento.}
+Casco marrón y azul, al estilo francés.
+16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
 
-NL_LightPinnace_Descr{Pinaza mercante construida segÃºn el diseÃ±o
-del 'Papegojan' holandÃ©s de 1627.
-Casco de madera rojiza y turquesa, al estilo holandÃ©s.
-20 caÃ±ones, decentes cualidades marineras.}
-PO_LightPinnace_Descr{Pinaza mercante construida segÃºn el diseÃ±o
-del 'Papegojan' holandÃ©s de 1627.
-Casco de madera rojiza y azul, al estilo portuguÃ©s.
-20 caÃ±ones, decentes cualidades marineras.}
-SP_LightPinnace_Descr{Pinaza mercante construida segÃºn el diseÃ±o
-del 'Papegojan' holandÃ©s de 1627.
-Casco de madera rojiza y granate, al estilo espaÃ±ol.
-20 caÃ±ones, decentes cualidades marineras.}
+NL_LightPinnace_Descr{Pinaza mercante construida según el diseño
+del 'Papegojan' holandés de 1627.
+Casco de madera rojiza y turquesa, al estilo holandés.
+20 cañones, decentes cualidades marineras.}
+PO_LightPinnace_Descr{Pinaza mercante construida según el diseño
+del 'Papegojan' holandés de 1627.
+Casco de madera rojiza y azul, al estilo portugués.
+20 cañones, decentes cualidades marineras.}
+SP_LightPinnace_Descr{Pinaza mercante construida según el diseño
+del 'Papegojan' holandés de 1627.
+Casco de madera rojiza y granate, al estilo español.
+20 cañones, decentes cualidades marineras.}
 
-NL_Derfflinger_Descr{Un filibote de construcciÃ³n alemana del siglo XVII.
-Casco de madera rojiza y turquesa, al estilo holandÃ©s.
+NL_Derfflinger_Descr{Un filibote de construcción alemana del siglo XVII.
+Casco de madera rojiza y turquesa, al estilo holandés.
 
-16 caÃ±ones, decentes cualidades marineras.}
-FR_Derfflinger_Descr{Un filibote de construcciÃ³n alemana del siglo XVII.
-Casco de madera rojiza y azul, al estilo francÃ©s.
+16 cañones, decentes cualidades marineras.}
+FR_Derfflinger_Descr{Un filibote de construcción alemana del siglo XVII.
+Casco de madera rojiza y azul, al estilo francés.
 
-16 caÃ±ones, decentes cualidades marineras.}
-SP_Derfflinger_Descr{Un filibote de construcciÃ³n alemana del siglo XVII.
-Casco de madera rojiza y granate, al estilo espaÃ±ol.
+16 cañones, decentes cualidades marineras.}
+SP_Derfflinger_Descr{Un filibote de construcción alemana del siglo XVII.
+Casco de madera rojiza y granate, al estilo español.
 
-16 caÃ±ones, decentes cualidades marineras.}
+16 cañones, decentes cualidades marineras.}
 
-NL_FWzP_Descr{Una gran fragata de dos cubiertas y construcciÃ³n alemana,
+NL_FWzP_Descr{Una gran fragata de dos cubiertas y construcción alemana,
 de finales del siglo XVII.
-Casco marrÃ³n y turquesa con la popa decorada.
-56 caÃ±ones, regulares cualidades marineras.}
+Casco marrón y turquesa con la popa decorada.
+56 cañones, regulares cualidades marineras.}
 
-HMS_Unicorn_Descr{Una potente fragata britÃ¡nica de mediados del
+HMS_Unicorn_Descr{Una potente fragata británica de mediados del
 siglo XVIII, una de las primeras de su tipo.
-Casco beige y negro, comÃºn en la Royal Navy.
-38 caÃ±ones, buenas cualidades marineras.}
+Casco beige y negro, común en la Royal Navy.
+38 cañones, buenas cualidades marineras.}
 
-FR_Unicorn_Descr{Una potente fragata britÃ¡nica de mediados del
-siglo XVIII, caÃ­da en manos francesas.
-Casco rojo y negro, comÃºn en la Armada Francesa.
-38 caÃ±ones, buenas cualidades marineras.}
+FR_Unicorn_Descr{Una potente fragata británica de mediados del
+siglo XVIII, caída en manos francesas.
+Casco rojo y negro, común en la Armada Francesa.
+38 cañones, buenas cualidades marineras.}
 
 FR_Dilligente_Descr{Una gran tartana armada francesa,
-aparejada con dos mÃ¡stiles de velas latinas.
+aparejada con dos mástiles de velas latinas.
 Casco pintado de naranja y rojo.
-4 caÃ±ones, su pequeÃ±o tamaÃ±o y sus velas latinas la hacen bastante Ã¡gil.}
+4 cañones, su pequeño tamaño y sus velas latinas la hacen bastante ágil.}
 
-RN_RaaFrigate_Descr{Una fragata de construcciÃ³n danesa
+RN_RaaFrigate_Descr{Una fragata de construcción danesa
 de principios del siglo XVIII
-Casco amarillo y negro, un tÃ­pico diseÃ±o naval.
-32 caÃ±ones, buenas cualidades marineras.}
+Casco amarillo y negro, un típico diseño naval.
+32 cañones, buenas cualidades marineras.}
 
 NL_Postillionen_Descr{En algunas marinas de guerra, estas corbetas grandes
 se pueden clasificar como fragatas de sexta clase.
-Casco verde y marrÃ³n, al estilo holandÃ©s.
-20 caÃ±ones, buenas cualidades marineras.}
+Casco verde y marrón, al estilo holandés.
+20 cañones, buenas cualidades marineras.}
 SP_Postillionen_Descr{En algunas marinas de guerra, estas corbetas grandes
 se pueden clasificar como fragatas de sexta clase.
-Casco rojo y amarillo, al estilo espaÃ±ol.
-20 caÃ±ones, buenas cualidades marineras.}
+Casco rojo y amarillo, al estilo español.
+20 cañones, buenas cualidades marineras.}
 PO_Postillionen_Descr{En algunas marinas de guerra, estas corbetas grandes
 se pueden clasificar como fragatas de sexta clase.
-Casco blanco, verde y marrÃ³n, al estilo portuguÃ©s.
-20 caÃ±ones, buenas cualidades marineras.}
+Casco blanco, verde y marrón, al estilo portugués.
+20 cañones, buenas cualidades marineras.}
 RN_Postillionen_Descr{En algunas marinas de guerra, estas corbetas grandes
 se pueden clasificar como fragatas de sexta clase.
-Casco amarillo y negro, un tÃ­pico diseÃ±o naval.
-20 caÃ±ones, buenas cualidades marineras.}
+Casco amarillo y negro, un típico diseño naval.
+20 cañones, buenas cualidades marineras.}
 FR_Postillionen_Descr{En algunas marinas de guerra, estas corbetas grandes
 se pueden clasificar como fragatas de sexta clase.
-Casco rojo y negro, comÃºn en la Armada Francesa.
-20 caÃ±ones, buenas cualidades marineras.}
+Casco rojo y negro, común en la Armada Francesa.
+20 cañones, buenas cualidades marineras.}
 
 PiratPostillionen_Descr{Una corbeta grande (a veces considerada una
-fragata pequeÃ±a) apresada por piratas.
-Casco pintado de marrÃ³n y negro.
-20 caÃ±ones, buenas cualidades marineras.}
+fragata pequeña) apresada por piratas.
+Casco pintado de marrón y negro.
+20 cañones, buenas cualidades marineras.}
 
-Empress_Descr{Un exÃ³tico junco chino propiedad del capitÃ¡n Sao Feng,
-dotado de unas cualidades marineras Ãºnicas.
+Empress_Descr{Un exótico junco chino propiedad del capitán Sao Feng,
+dotado de unas cualidades marineras únicas.
 Casco pintado de verde y rojo.
-10 caÃ±ones, velocidad aceptable y muy buena maniobrabilidad.}
+10 cañones, velocidad aceptable y muy buena maniobrabilidad.}
 
 CursedMariana_Descr{El espeluznante barco del Diablo, tripulado
 por los fantasmas de marineros malditos...
 Casco negro decorado con motivos macabros.
-38 caÃ±ones, buenas cualidades marineras.}}
+38 cañones, buenas cualidades marineras.}}
 
-US_PrinceNeufchatel_Descr{Un barco americano con altos mÃ¡stiles inclinados
-y una gran superficie vÃ©lica para maximizar su velocidad.
+US_PrinceNeufchatel_Descr{Un barco americano con altos mástiles inclinados
+y una gran superficie vélica para maximizar su velocidad.
 Casco blanco y negro, los colores de la US Navy.
-24 caÃ±ones, excelentes cualidades marineras, incluso navegando de ceÃ±ida.}
+24 cañones, excelentes cualidades marineras, incluso navegando de ceñida.}
 
-RN_Volage_Descr{Una corbeta de construcciÃ³n francesa
+RN_Volage_Descr{Una corbeta de construcción francesa
 de finales del siglo XVIII.
-Casco beige y negro, comÃºn en la Royal Navy.
-24 caÃ±ones, buenas cualidades marineras.}
-FR_Volage_Descr{Una corbeta de construcciÃ³n francesa
+Casco beige y negro, común en la Royal Navy.
+24 cañones, buenas cualidades marineras.}
+FR_Volage_Descr{Una corbeta de construcción francesa
 de finales del siglo XVIII.
-Casco rojo y negro, comÃºn en la Armada Francesa.
-24 caÃ±ones, buenas cualidades marineras.}
-SP_Volage_Descr{Una corbeta de construcciÃ³n francesa
+Casco rojo y negro, común en la Armada Francesa.
+24 cañones, buenas cualidades marineras.}
+SP_Volage_Descr{Una corbeta de construcción francesa
 de finales del siglo XVIII.
-Casco rojo oscuro y negro, comÃºn en la Armada EspaÃ±ola.
-24 caÃ±ones, buenas cualidades marineras.}
-PO_Volage_Descr{Una corbeta de construcciÃ³n francesa
+Casco rojo oscuro y negro, común en la Armada Española.
+24 cañones, buenas cualidades marineras.}
+PO_Volage_Descr{Una corbeta de construcción francesa
 de finales del siglo XVIII.
-Casco marrÃ³n y negro, al estilo portuguÃ©s.
-24 caÃ±ones, buenas cualidades marineras.}
-US_Volage_Descr{Una corbeta de construcciÃ³n francesa
+Casco marrón y negro, al estilo portugués.
+24 cañones, buenas cualidades marineras.}
+US_Volage_Descr{Una corbeta de construcción francesa
 de finales del siglo XVIII.
 Casco blanco y negro, los colores de la US Navy.
-24 caÃ±ones, buenas cualidades marineras.}
+24 cañones, buenas cualidades marineras.}
 
-FR_Trinity_Descr{Un navÃ­o de lÃ­nea de segunda clase de construcciÃ³n
-danesa con tres cubiertas de artillerÃ­a.
-Casco amarillo y azul, al estilo francÃ©s.
-96 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-PO_Trinity_Descr{Un navÃ­o de lÃ­nea de segunda clase de construcciÃ³n
-danesa con tres cubiertas de artillerÃ­a.
-Casco pintado de blanco, al estilo portuguÃ©s.
-96 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-RN_Trinity_Descr{Un navÃ­o de lÃ­nea de segunda clase de construcciÃ³n
-danesa con tres cubiertas de artillerÃ­a.
-Casco amarillo y negro, un tÃ­pico diseÃ±o naval.
-96 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
-SP_Trinity_Descr{Un navÃ­o de lÃ­nea de segunda clase de construcciÃ³n
-danesa con tres cubiertas de artillerÃ­a
-El casco estÃ¡ pintado de marrÃ³n y verde.
-96 caÃ±ones, ni muy rÃ¡pido ni muy maniobrable.}
+FR_Trinity_Descr{Un navío de línea de segunda clase de construcción
+danesa con tres cubiertas de artillería.
+Casco amarillo y azul, al estilo francés.
+96 cañones, ni muy rápido ni muy maniobrable.}
+PO_Trinity_Descr{Un navío de línea de segunda clase de construcción
+danesa con tres cubiertas de artillería.
+Casco pintado de blanco, al estilo portugués.
+96 cañones, ni muy rápido ni muy maniobrable.}
+RN_Trinity_Descr{Un navío de línea de segunda clase de construcción
+danesa con tres cubiertas de artillería.
+Casco amarillo y negro, un típico diseño naval.
+96 cañones, ni muy rápido ni muy maniobrable.}
+SP_Trinity_Descr{Un navío de línea de segunda clase de construcción
+danesa con tres cubiertas de artillería
+El casco está pintado de marrón y verde.
+96 cañones, ni muy rápido ni muy maniobrable.}
 
-US_Essex_Descr{Una gran fragata de construcciÃ³n americana,
+US_Essex_Descr{Una gran fragata de construcción americana,
 moderna y eficiente.
 Casco blanco y negro, los colores de la US Navy.
-46 caÃ±ones, buenas cualidades marineras.}
+46 cañones, buenas cualidades marineras.}
 RN_Essex_Descr{Una gran fragata construida al estilo americano,
 moderna y eficiente.
-Casco beige y negro, comÃºn en la Royal Navy.
-46 caÃ±ones, buenas cualidades marineras.}
+Casco beige y negro, común en la Royal Navy.
+46 cañones, buenas cualidades marineras.}
 NL_Essex_Descr{Una gran fragata construida al estilo americano,
 moderna y eficiente.
-Casco marrÃ³n y negro, al estilo holandÃ©s.
-46 caÃ±ones, buenas cualidades marineras.}
+Casco marrón y negro, al estilo holandés.
+46 cañones, buenas cualidades marineras.}
 FR_Essex_Descr{Una gran fragata construida al estilo americano,
 moderna y eficiente.
-Casco rojo y negro, comÃºn en la Armada Francesa.
-46 caÃ±ones, buenas cualidades marineras.}
+Casco rojo y negro, común en la Armada Francesa.
+46 cañones, buenas cualidades marineras.}
 SP_Essex_Descr{Una gran fragata construida al estilo americano,
 moderna y eficiente.
-Casco rojo oscuro y negro, comÃºn en la Armada EspaÃ±ola.
-46 caÃ±ones, buenas cualidades marineras.}
-Sat_Essex_Descr{Una misteriosa fragata de diseÃ±o americano de la
-que se dice que estÃ¡ tripulada por una secta satÃ¡nica.
-El casco estÃ¡ pintado de rojo oscuro y negro.
-46 caÃ±ones, buenas cualidades marineras.}
-UnSat_Essex_Descr{Una fragata pesada de diseÃ±o americano
-anteriormente tripulada por una secta satÃ¡nica.
+Casco rojo oscuro y negro, común en la Armada Española.
+46 cañones, buenas cualidades marineras.}
+Sat_Essex_Descr{Una misteriosa fragata de diseño americano de la
+que se dice que está tripulada por una secta satánica.
+El casco está pintado de rojo oscuro y negro.
+46 cañones, buenas cualidades marineras.}
+UnSat_Essex_Descr{Una fragata pesada de diseño americano
+anteriormente tripulada por una secta satánica.
 El casco ha sido repintado de blanco y negro.
-46 caÃ±ones, buenas cualidades marineras.}
+46 cañones, buenas cualidades marineras.}
 
 XebecVML_Descr{Un gran jabeque, bien armado y con excelentes
-cualidades marineras. El sueÃ±o de todo corsario.
+cualidades marineras. El sueño de todo corsario.
 Ornamentado casco pintado de rojo, azul y blanco.
-30 caÃ±ones, navega muy bien de ceÃ±ida gracias a su aparejo latino.}
+30 cañones, navega muy bien de ceñida gracias a su aparejo latino.}
 
-HMS_Centurion_Descr{Un navÃ­o de tercera clase de fabricaciÃ³n 
-britÃ¡nica, de principios del siglo XVIII.
-Casco marrÃ³n, negro y azul, elegantemente decorado.
-68 caÃ±ones, no muy rÃ¡pido pero relativamente maniobrable.}
+HMS_Centurion_Descr{Un navío de tercera clase de fabricación 
+británica, de principios del siglo XVIII.
+Casco marrón, negro y azul, elegantemente decorado.
+68 cañones, no muy rápido pero relativamente maniobrable.}
 
 Polacca_Descr{Un velero del siglo XVII, similar al jabeque.
 Tiene tres palos de una sola pieza y poco calado.
 Acabado de madera desgastada y sin pintar.
-14 caÃ±ones, decentes cualidades marineras.}
+14 cañones, decentes cualidades marineras.}
 Polacca_N_Descr{Un velero del siglo XVII, similar al jabeque.
 Tiene tres palos de una sola pieza y poco calado.
 Casco de madera rojiza, blanco y negro.
-14 caÃ±ones, decentes cualidades marineras.}
+14 cañones, decentes cualidades marineras.}
 
 PinnaceMerchant_Descr{Un gran barco mercante. Bien construido pero lento.
-AcompaÃ±ado de una escolta, es una mÃ¡quina de hacer dinero.
-Casco marrÃ³n, rojo y verde, al estilo holandÃ©s.
-26 caÃ±ones, lento y no muy maniobrable.}
+Acompañado de una escolta, es una máquina de hacer dinero.
+Casco marrón, rojo y verde, al estilo holandés.
+26 cañones, lento y no muy maniobrable.}
 
-PinnaceMedium_Descr{Bien construida y la mÃ¡s rÃ¡pida de su tipo,
+PinnaceMedium_Descr{Bien construida y la más rápida de su tipo,
 lo que tampoco es decir mucho.
-Casco marrÃ³n, rojo y verde, al estilo holandÃ©s.
-18 caÃ±ones, decentes cualidades marineras.}
+Casco marrón, rojo y verde, al estilo holandés.
+18 cañones, decentes cualidades marineras.}
 
-GoldenHind_Descr{'Golden Hind' circunnavegÃ³ el globo en 1577-1580.
+GoldenHind_Descr{'Golden Hind' circunnavegó el globo en 1577-1580.
 Drake le puso este nombre durante el viaje, en 1578.
 Casco negro con decoraciones rojas y amarillas.
-22 caÃ±ones, decentes cualidades marineras.}
-RN_Galeon_L_Descr{Un pequeÃ±o galeÃ³n de diseÃ±o inglÃ©s,
+22 cañones, decentes cualidades marineras.}
+RN_Galeon_L_Descr{Un pequeño galeón de diseño inglés,
 con armamento ligero. 
-Casco de madera aÂ¡barnizada con colorida decoraciÃ³n.
-22 caÃ±ones, decentes cualidades marineras.}
+Casco de madera a¡barnizada con colorida decoración.
+22 cañones, decentes cualidades marineras.}
 
 FR_CastelF_Descr{El 'Castell Friedrichsburg' fue construido en 1688
 y es un buque de patrulla costera con poco calado.
-Casco amarillo y azul, al estilo francÃ©s.
-16 caÃ±ones, buena velocidad y maniobrabilidad y navega bien de ceÃ±ida.}
+Casco amarillo y azul, al estilo francés.
+16 cañones, buena velocidad y maniobrabilidad y navega bien de ceñida.}
 NL_CastelF_Descr{El 'Castell Friedrichsburg' fue construido en 1688
 y es un buque de patrulla costera con poco calado.
-Casco marrÃ³n y turquesa, al estilo holandÃ©s.
-16 caÃ±ones, buena velocidad y maniobrabilidad y navega bien de ceÃ±ida.}
+Casco marrón y turquesa, al estilo holandés.
+16 cañones, buena velocidad y maniobrabilidad y navega bien de ceñida.}
 SP_CastelF_Descr{El 'Castell Friedrichsburg' fue construido en 1688
 y es un buque de patrulla costera con poco calado.
-Casco rojo oscuro y negro, al estilo espaÃ±ol.
-16 caÃ±ones, buena velocidad y maniobrabilidad y navega bien de ceÃ±ida.}
+Casco rojo oscuro y negro, al estilo español.
+16 cañones, buena velocidad y maniobrabilidad y navega bien de ceñida.}

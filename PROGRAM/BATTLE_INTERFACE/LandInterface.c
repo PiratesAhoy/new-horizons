@@ -384,9 +384,9 @@ void BLI_SetObjectData()
 {
 	DeleteAttribute(&objLandInterface,"");
 	objLandInterface.data.riskAlarm = 0;
-	// РёРЅРґРёРєР°С‚РѕСЂ С‚СЂРµРІРѕРіРё
+	// индикатор тревоги
 	objLandInterface.data.alarm = 0.0;
-	// РїРµСЂСЃС‹ РІРјРµСЃС‚Рµ СЃ РЅР°РјРё
+	// персы вместе с нами
 	ref mainCh = GetMainCharacter();
 	aref ar;
 	int i,cn;
@@ -406,7 +406,7 @@ void BLI_SetObjectData()
 	}
 	BLI_SetCommandParameters();
 	BLI_SetMassageParameters();
-	// С‚РµРєСЃС‚СѓСЂС‹
+	// текстуры
 	int idLngFile = LanguageOpenFile("commands_name.txt");
 	objLandInterface.CommandTextures.list.t0.name = "battle_interface\LandCommands.tga";
 	objLandInterface.CommandTextures.list.t0.xsize = 2;
@@ -463,7 +463,7 @@ void BLI_SetObjectData()
 // <-- KK
 
 	objLandInterface.CommandTextures.CommandTexNum = 0;
-	// СЃРїРёСЃРѕРє РєРѕРјР°РЅРґ
+	// список команд
 	objLandInterface.Commands.Cancel.enable			= false;
 	objLandInterface.Commands.Cancel.picNum			= 0;
 	objLandInterface.Commands.Cancel.texNum			= 3;
@@ -558,7 +558,7 @@ void BLI_SetObjectData()
 	objLandInterface.Commands.ActivateRush.event	= "BI_ActivateRush";
 	objLandInterface.Commands.ActivateRush.note		= LanguageConvertString(idLngFile, "land_ActivateRush");
 
-	// СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РєР°СЂС‚РёРЅРѕРє
+	// список пользовательских картинок
 		// cancel icon
 	objLandInterface.UserIcons.cancel.enable = true;
 	objLandInterface.UserIcons.cancel.pic = 0;
@@ -610,7 +610,7 @@ void BLI_SetShowParameters()
 	ar.heightHealth = RecalculateVIcon(16);
 	ar.distHealth = RecalculateVIcon(4);
 
-	// РІС‹СЃРѕС‚Р° Рё РѕС‚СЃС‚СѓРї РґР»СЏ РєРѕР»РёС‡РµСЃС‚РІР° Р·Р°СЂСЏРґРѕРІ РїРёСЃС‚РѕР»РµС‚Р°
+	// высота и отступ для количества зарядов пистолета
 	ar.GunShootHeight = RecalculateHIcon(16);
 	ar.GunShootSpace = RecalculateVIcon(2);
 

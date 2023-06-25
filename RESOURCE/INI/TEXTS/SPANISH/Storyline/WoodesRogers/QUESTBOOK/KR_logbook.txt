@@ -1,10 +1,10 @@
-title=Cuaderno de bitÃ¡cora - Casa Roja
-text.t1=La Casa Roja estÃ¡ situada en algÃºn lugar de la selva.
+title=Cuaderno de bitácora - Casa Roja
+text.t1=La Casa Roja está situada en algún lugar de la selva.
 text.t2=Hay una salida a la selva desde el centro de Kristiania. Pero no es la que lleva a la torre de Barbanegra.
-text.t3=Se ha vendido un cuaderno de bitÃ¡cora a la Casa Roja. Â¿Eh?
-text.t4=La selva es como un laberinto y los indios podrÃ­an ser hostiles.
-text.t5=Para encontrar un camino seguro a la Casa Roja a travÃ©s de la selva: Nunca derecha - derecha o izquierda - izquierda despuÃ©s de cada una.
-text.t6=Tengo el cuaderno de bitÃ¡cora.
+text.t3=Se ha vendido un cuaderno de bitácora a la Casa Roja. ¿Eh?
+text.t4=La selva es como un laberinto y los indios podrían ser hostiles.
+text.t5=Para encontrar un camino seguro a la Casa Roja a través de la selva: Nunca derecha - derecha o izquierda - izquierda después de cada una.
+text.t6=Tengo el cuaderno de bitácora.
 text.t7=Tengo los nombres de los tripulantes voluntario de 'La Concorde'.
 text.t8=
 text.t9=

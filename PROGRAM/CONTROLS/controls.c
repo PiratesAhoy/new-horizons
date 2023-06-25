@@ -194,39 +194,39 @@ bool KB_SetKeyboardMode(bool onoff)
 		// KK -->
 		switch (typeLanguage) {
 			case "Russian":
-				CI_CreateAndSetControls("", "NK_Key_Р°", CI_GetKeyCode("Key_f"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Р±", CI_GetKeyCode("VK_OEM_COMMA"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_РІ", CI_GetKeyCode("Key_d"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Рі", CI_GetKeyCode("Key_u"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Рґ", CI_GetKeyCode("Key_l"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Рµ", CI_GetKeyCode("Key_t"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_С‘", CI_GetKeyCode("VK_OEM_3"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Р¶", CI_GetKeyCode("VK_OEM_1"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Р·", CI_GetKeyCode("Key_p"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Рё", CI_GetKeyCode("Key_b"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Р№", CI_GetKeyCode("Key_q"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Рє", CI_GetKeyCode("Key_r"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Р»", CI_GetKeyCode("Key_k"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Рј", CI_GetKeyCode("Key_v"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_РЅ", CI_GetKeyCode("Key_y"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Рѕ", CI_GetKeyCode("Key_j"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Рї", CI_GetKeyCode("Key_g"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_СЂ", CI_GetKeyCode("Key_h"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_СЃ", CI_GetKeyCode("Key_c"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_С‚", CI_GetKeyCode("Key_n"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_Сѓ", CI_GetKeyCode("Key_e"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_С„", CI_GetKeyCode("Key_a"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_С…", CI_GetKeyCode("VK_OEM_4"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_С†", CI_GetKeyCode("Key_w"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_С‡", CI_GetKeyCode("Key_x"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_С€", CI_GetKeyCode("Key_i"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_С‰", CI_GetKeyCode("Key_o"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_С‹", CI_GetKeyCode("Key_s"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_СЉ", CI_GetKeyCode("VK_OEM_6"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_СЌ", CI_GetKeyCode("VK_OEM_7"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_СЊ", CI_GetKeyCode("Key_m"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_СЋ", CI_GetKeyCode("VK_OEM_PERIOD"), 0, false);
-				CI_CreateAndSetControls("", "NK_Key_СЏ", CI_GetKeyCode("KEY_z"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_а", CI_GetKeyCode("Key_f"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_б", CI_GetKeyCode("VK_OEM_COMMA"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_в", CI_GetKeyCode("Key_d"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_г", CI_GetKeyCode("Key_u"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_д", CI_GetKeyCode("Key_l"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_е", CI_GetKeyCode("Key_t"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ё", CI_GetKeyCode("VK_OEM_3"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ж", CI_GetKeyCode("VK_OEM_1"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_з", CI_GetKeyCode("Key_p"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_и", CI_GetKeyCode("Key_b"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_й", CI_GetKeyCode("Key_q"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_к", CI_GetKeyCode("Key_r"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_л", CI_GetKeyCode("Key_k"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_м", CI_GetKeyCode("Key_v"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_н", CI_GetKeyCode("Key_y"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_о", CI_GetKeyCode("Key_j"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_п", CI_GetKeyCode("Key_g"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_р", CI_GetKeyCode("Key_h"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_с", CI_GetKeyCode("Key_c"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_т", CI_GetKeyCode("Key_n"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_у", CI_GetKeyCode("Key_e"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ф", CI_GetKeyCode("Key_a"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_х", CI_GetKeyCode("VK_OEM_4"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ц", CI_GetKeyCode("Key_w"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ч", CI_GetKeyCode("Key_x"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ш", CI_GetKeyCode("Key_i"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_щ", CI_GetKeyCode("Key_o"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ы", CI_GetKeyCode("Key_s"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ъ", CI_GetKeyCode("VK_OEM_6"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_э", CI_GetKeyCode("VK_OEM_7"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ь", CI_GetKeyCode("Key_m"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_ю", CI_GetKeyCode("VK_OEM_PERIOD"), 0, false);
+				CI_CreateAndSetControls("", "NK_Key_я", CI_GetKeyCode("KEY_z"), 0, false);
 
 				CI_CreateAndSetControls( "", "NK_Key_.", CI_GetKeyCode("VK_OEM_2"), 0, false);
 			break;
@@ -582,7 +582,7 @@ void SetControlsByKey(string controlName, string keyName, int state)
 
 void MapControlToGroup(string controlName,string groupName)
 {
-	// РќР°Р№РґРµРј РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РєРѕРЅС‚СЂРѕР»Р°
+	// Найдем использование контрола
 	int i,nRootSize;
 	aref arRoot,arGroup;
 

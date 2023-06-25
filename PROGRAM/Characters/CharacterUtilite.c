@@ -1464,31 +1464,31 @@ float GetHullPercent(ref _refCharacter)
 	float fphp = 100.0*stf(_refCharacter.Ship.HP)/iHP;
 	return fphp;
 }
-float GetSailRPD(ref _refCharacter) // РїСЂРѕС†РµРЅС‚ СЂРµРјРѕРЅС‚Р° РїР°СЂСѓСЃРѕРІ РІ РґРµРЅСЊ
+float GetSailRPD(ref _refCharacter) // процент ремонта парусов в день
 {
 	int repairSkill = GetShipSkill(_refCharacter,SKILL_REPAIR);
 	float damagePercent = 100.0 - GetSailPercent(_refCharacter);
 	if(damagePercent==0.0) return 0.0;
 	return repairSkill*10.0 / damagePercent;
 }
-float GetHullRPD(ref _refCharacter) // РїСЂРѕС†РµРЅС‚ СЂРµРјРѕРЅС‚Р° РєРѕСЂРїСѓСЃР° РІ РґРµРЅСЊ
+float GetHullRPD(ref _refCharacter) // процент ремонта корпуса в день
 {
 	int repairSkill = GetShipSkill(_refCharacter,SKILL_REPAIR);
 	float damagePercent = 100.0 - GetHullPercent(_refCharacter);
 	if(damagePercent==0.0) return 0.0;
 	return repairSkill*10.0 / damagePercent;
 }
-int GetSailSPP(ref _refCharacter) // РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЂСѓСЃРёРЅС‹ РЅР° РѕРґРёРЅ РїСЂРѕС†РµРЅС‚ РїРѕС‡РёРЅРєРё
+int GetSailSPP(ref _refCharacter) // количество парусины на один процент починки
 {
 	return 9-GetCharacterShipClass(_refCharacter);
 }
-int GetHullPPP(ref _refCharacter) // РєРѕР»РёС‡РµСЃС‚РІРѕ РґРѕСЃРѕРє РЅР° РѕРґРёРЅ РїСЂРѕС†РµРЅС‚ РїРѕС‡РёРЅРєРё
+int GetHullPPP(ref _refCharacter) // количество досок на один процент починки
 {
 	return 9-GetCharacterShipClass(_refCharacter);
 }
 
 // Fellowtravels utilites
-// СЂР°Р±РѕС‚Р° СЃ РїР°СЃСЃР°Р¶РёСЂР°РјРё
+// работа с пассажирами
 int GetPassengersQuantity(ref _refCharacter)
 {
 	if(!CheckAttribute(_refCharacter,"Fellows.Passengers.Quantity")) return 0;
@@ -1729,7 +1729,7 @@ bool IsInParty(int mchridx, int chridx)
 	return false;
 }
 
-// СЂР°Р±РѕС‚Р° СЃ РєРѕРјРїР°РЅСЊРѕРЅР°РјРё
+// работа с компаньонами
 int SetCompanionIndex(ref _refCharacter,int _CompanionNum, int _CompanionIdx)
 {
 	if(_CompanionNum == -1)
@@ -1837,7 +1837,7 @@ int GetCompanionQuantity(ref _refCharacter)
 	return qn;
 }
 
-// СЂР°Р±РѕС‚Р° СЃ РѕС„РёС†РµСЂР°РјРё
+// работа с офицерами
 int GetOfficersQuantity(ref _refCharacter)
 {
 	int idx=0;

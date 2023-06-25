@@ -6,7 +6,7 @@ void CreateShipCharacters(ref n)
 
 	makeref(ch, chobj);
 
-			// Р Р°Р»СЊС„ РњР°С‚РµСЂ
+			// Ральф Матер
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
 	ch.name 	= XI_ConvertString("Crewmember");
@@ -42,7 +42,7 @@ void CreateShipCharacters(ref n)
 	LAi_group_MoveCharacter(ch, LAI_GROUP_PLAYER);
 	AddGameCharacter(n, ch);
 
-			//РіСЂСѓР·С‡РёРє РІ РїРѕСЂС‚Сѓ
+			//грузчик в порту
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
 	ch.name 	= XI_ConvertString("Crewmember");
@@ -76,7 +76,7 @@ void CreateShipCharacters(ref n)
 	LAi_group_MoveCharacter(ch, LAI_GROUP_PLAYER);
 	AddGameCharacter(n, ch);
 
-			//РіСЂСѓР·С‡РёРє РІ РїРѕСЂС‚Сѓ
+			//грузчик в порту
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
 	ch.name 	= XI_ConvertString("Crewmember");

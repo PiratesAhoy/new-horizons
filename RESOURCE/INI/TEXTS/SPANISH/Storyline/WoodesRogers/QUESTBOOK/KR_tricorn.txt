@@ -1,9 +1,9 @@
 title=Tricornio - Sastre
-text.t1=La sastrerÃ­a estÃ¡ en la parte alta de Nueva Suecia.
-text.t2=El cuarto privado del sastre es el que tiene una ventana con mirador. TendrÃ© que trepar por los tejados para llegar allÃ­. Â¿Pero por dÃ³nde empezar?
+text.t1=La sastrería está en la parte alta de Nueva Suecia.
+text.t2=El cuarto privado del sastre es el que tiene una ventana con mirador. Tendré que trepar por los tejados para llegar allí. ¿Pero por dónde empezar?
 text.t3=Se ha vendido un tricornio al sastre.
 text.t4=Tengo el tricornio.
-text.t5=Â¡SÃ­! HabÃ­a una llave escondida dentro.
+text.t5=¡Sí! Había una llave escondida dentro.
 text.t6=
 text.t7=
 text.t8=

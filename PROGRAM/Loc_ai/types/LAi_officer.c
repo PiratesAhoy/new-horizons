@@ -1,7 +1,7 @@
 /*
-РўРёРї: РѕС„РёС†РµСЂ
+Тип: офицер
 
-	РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С€Р°Р±Р»РѕРЅС‹:
+	Используемые шаблоны:
 		stay
 		dialog
 */
@@ -11,27 +11,27 @@
 #define LAI_TYPE_OFFICER		"officer"
 
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+//Инициализация
 void LAi_type_officer_Init(aref chr)
 {
-	//РќРѕРІС‹Р№ С‚РёРї
+	//Новый тип
 	DeleteAttribute(chr, "location.follower");
 	DeleteAttribute(chr, "chr_ai.type");
 	chr.chr_ai.type = LAI_TYPE_OFFICER;
 	LAi_tmpl_SetFollow(chr, GetMainCharacter(), -1.0);
-	//РЈСЃС‚Р°РЅРѕРІРёРј Р°РЅРёРјР°С†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Сѓ
+	//Установим анимацию персонажу
 	LAi_SetDefaultStayAnimation(chr);
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightWOWeapon", false);
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С‚РёРїР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование типа персонажа
 void LAi_type_officer_CharacterUpdate(aref chr, float dltTime)
 {
 	if(chr.chr_ai.tmpl == LAI_TMPL_DIALOG) return;
 	if (sti(chr.index) < 0) return;		// LDH fix for negative index
 	string btl = "";
     //Log_SetStringToLog("LAi_type_officer_CharacterUpdate "+chr.id ); //boal
-	//РџСЂРё РѕС‚СЂР°РІР»РµРЅРёРё РґРµС‚СЂР°РІРёРјСЃСЏ
+	//При отравлении детравимся
 	if(CheckAttribute(chr, "chr_ai.poison"))
 	{
 		if(LAi_GetCharacterRelHP(chr) < 0.8)
@@ -57,7 +57,7 @@ void LAi_type_officer_CharacterUpdate(aref chr, float dltTime)
 			DoCharacterUsedItem(&Characters[sti(chr.index)], btl);
 		}
 	}
-	//Р”РёСЃС‚Р°РЅС†РёСЏ РґРѕ РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+	//Дистанция до главного персонажа
 	float dist = 0.0;
 	float dhlt;
 	if(!GetCharacterDistByChr3D(chr, GetMainCharacter(), &dist)) dist = -1.0;
@@ -75,7 +75,7 @@ void LAi_type_officer_CharacterUpdate(aref chr, float dltTime)
 			DoCharacterUsedItem(&Characters[sti(chr.index)], btl);
 		}
 	}
-	//РўРµРєСѓС‰РµРµ РґРµР№СЃС‚РІРёРµ
+	//Текущее действие
 	if(chr.chr_ai.tmpl == LAI_TMPL_FOLLOW)
 	{
 		if(dist < 6.0)
@@ -85,7 +85,7 @@ void LAi_type_officer_CharacterUpdate(aref chr, float dltTime)
 	}else{
 		if(chr.chr_ai.tmpl == LAI_TMPL_FIGHT)
 		{
-			//РЎРјРѕС‚СЂРёРј РЅР° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р±СѓС‚С‹Р»РѕС‡РєРё
+			//Смотрим на использование бутылочки
 			if(!LAi_IsBottleWork(chr))
 			{
 				if(rand(100) < (50 + 49*LAi_GetCharacterFightLevel(chr)))
@@ -197,7 +197,7 @@ void LAi_type_officer_CharacterUpdate(aref chr, float dltTime)
 				{
 					if(dist > 12.0)
 					{
-						//РџРѕСЂР° РІРѕР·РІСЂР°С‰Р°С‚СЊСЃСЏ
+						//Пора возвращаться
 						LAi_tmpl_SetFollow(chr, GetMainCharacter(), -1.0);
 					}
 				}
@@ -206,83 +206,83 @@ void LAi_type_officer_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Р—Р°РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
+//Загрузка персонажа в локацию
 bool LAi_type_officer_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Р’С‹РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РёР· Р»РѕРєР°С†РёСЋ
+//Выгрузка персонажа из локацию
 bool LAi_type_officer_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ С‚РµРјРїР»РµР№С‚Р°
+//Завершение работы темплейта
 void LAi_type_officer_TemplateComplite(aref chr, string tmpl)
 {
 	if(chr.chr_ai.tmpl != LAI_TMPL_FOLLOW) LAi_tmpl_SetFollow(chr, GetMainCharacter(), -1.0);
 }
 
-//РЎРѕРѕР±С‰РёС‚СЊ Рѕ Р¶РµР»Р°РЅРёРё Р·Р°РІРµСЃС‚Рё РґРёР°Р»РѕРі
+//Сообщить о желании завести диалог
 void LAi_type_officer_NeedDialog(aref chr, aref by)
 {
 }
 
-//Р—Р°РїСЂРѕСЃ РЅР° РґРёР°Р»РѕРі, РµСЃР»Рё РІРѕР·РІСЂР°С‚РёС‚СЊ true С‚Рѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Запрос на диалог, если возвратить true то в этот момент можно начать диалог
 bool LAi_type_officer_CanDialog(aref chr, aref by)
 {
 	// NK allow dlg in boarding 05-07-12 - if(LAi_IsBoardingProcess()) return false;
-	//Р•СЃР»Рё СѓР¶Рµ РіРѕРІРѕСЂРёРј, С‚Рѕ РѕС‚РєР°Р¶РµРј
+	//Если уже говорим, то откажем
 	if(chr.chr_ai.tmpl == LAI_TMPL_DIALOG) return false;
 	if(chr.chr_ai.tmpl == LAI_TMPL_FIGHT) return false;
-	//РЎРѕРіР»Р°СЃРёРјСЃСЏ РЅР° РґРёР°Р»РѕРі
+	//Согласимся на диалог
 	return true;
 }
 
-//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Начать диалог
 void LAi_type_officer_StartDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
+	//Если мы пасивны, запускаем шаблон без времени завершения
 	LAi_CharacterSaveAy(chr);
 	CharacterTurnByChr(chr, by);
 	LAi_tmpl_SetActivatedDialog(chr, by);
 }
 
-//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
+//Закончить диалог
 void LAi_type_officer_EndDialog(aref chr, aref by)
 {
 	LAi_CharacterRestoreAy(chr);
 	LAi_tmpl_SetFollow(chr, GetMainCharacter(), -1.0);
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°Р» РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атаковал другого персонажа
 void LAi_type_officer_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚РѕРєРѕРІР°Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РІС€РµРіРѕСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атоковал заблокировавшегося персонажа
 void LAi_type_officer_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹СЃС‚СЂРµР»РёР»
+//Персонаж выстрелил
 void LAi_type_officer_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°РЅ
+//Персонаж атакован
 void LAi_type_officer_Attacked(aref chr, aref by)
 {
-	//РЎРІРѕРёС… РїСЂРѕРїСѓСЃРєР°РµРј
+	//Своих пропускаем
 	if(!LAi_group_IsEnemy(chr, by)) return;
 	float dist = -1.0;
-	//РџСЂРѕРІРµСЂСЏРµРј РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ СЃРјРµРЅС‹ С†РµР»Рё
-// boal РІСЃРµРіРґР° РјРµРЅСЏС‚СЊ С†РµР»СЊ, Р° РЅРµ С‚СѓРїРѕ Р±РµР¶Р°С‚СЊ РЅР° РјРµСЃС‚Рµ
+	//Проверяем возможность смены цели
+// boal всегда менять цель, а не тупо бежать на месте
 	/*if(chr.chr_ai.tmpl == LAI_TMPL_FIGHT)
 	{
 		bool canChange = false;
@@ -297,12 +297,12 @@ void LAi_type_officer_Attacked(aref chr, aref by)
 			if(dist < 5.0) return;
 		}
 	}*/
-	//РћРїСЂРµРґРµР»СЏРµРј РґРёСЃС‚Р°РЅС†РёСЋ РґРѕ РЅРѕРІРѕРіРѕ РїСЂРѕС‚РёРІРЅРёРєР°
+	//Определяем дистанцию до нового противника
 	dist = -1.0;
 	if(!GetCharacterDistByChr3D(chr, by, &dist)) return;
 	if(dist < 0.0) return;
 	if(dist > 20.0) return;
-	//РќР°С‚СЂР°РІР»РёРІР°РµРј
+	//Натравливаем
 	if(!LAi_tmpl_SetFight(chr, by))
 	{
 		LAi_type_officer_FindTarget(chr);
@@ -312,7 +312,7 @@ void LAi_type_officer_Attacked(aref chr, aref by)
 
 void LAi_type_officer_FindTarget(aref chr)
 {
-	//РџСЂРѕРІРµСЂРёРј РЅР°Р»РёС‡РёРµ РІСЂР°РіРѕРІ
+	//Проверим наличие врагов
 	int trg = LAi_group_GetTarget(chr);
 	if(trg >= 0)
 	{
@@ -339,7 +339,7 @@ void LAi_type_officer_FindTarget(aref chr)
 		{
 			if(!LAi_tmpl_SetFight(chr, &Characters[trg]))
 			{
-				//РќРµСЃРјРѕРіР»Рё РёРЅРёС†РёРёСЂРѕРІР°С‚СЊ С€Р°Р±Р»РѕРЅ
+				//Несмогли инициировать шаблон
 				LAi_tmpl_SetFollow(chr, GetMainCharacter(), -1.0);
 			}
 		}

@@ -1,3 +1,3 @@
 TEXT	{
-La bala rasa es usada por los caÃ±ones navales y a menudo puede atravesar varias filas de tripulantes, causando mÃºltiples bajas. Es como una bola de bolos que rebota y no se detiene despuÃ©s del impacto incial, sino que continÃºa y destroza todo en su camino. Puede rebotar al tocar el suelo, golpeando en cada rebote al que se ponga por delante.
+La bala rasa es usada por los cañones navales y a menudo puede atravesar varias filas de tripulantes, causando múltiples bajas. Es como una bola de bolos que rebota y no se detiene después del impacto incial, sino que continúa y destroza todo en su camino. Puede rebotar al tocar el suelo, golpeando en cada rebote al que se ponga por delante.
 }

@@ -350,7 +350,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 // Sumbhajee quest -->
-					// Bernardo Gamboa - РёСЃРїР°РЅРµС†. РєРѕСЂСЃР°СЂ РЅР° СЃР»СѓР¶Р±Рµ РіРѕР»Р»Р°РЅРґРёРё
+					// Bernardo Gamboa - испанец. корсар на службе голландии
 	ch.old.name = "Spanish";
 	ch.old.lastname = "Lieutenant";
 	ch.name = TranslateString("Spanish", "Lieutenant");
@@ -638,7 +638,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	//JRH ammo mod <--
 	AddGameCharacter(n, ch);
 
-					// Corentin Lucay - РїРѕРјРѕС‰РЅРёРє РїРµСЂРґС‹РґСѓС‰РµРіРѕ РїРµСЂСЃР°
+					// Corentin Lucay - помощник пердыдущего перса
 	ch.old.name = "Spanish";
 	ch.old.lastname = "Midshipman";
 	ch.name = TranslateString("Spanish", "Midshipman");

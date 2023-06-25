@@ -1,4 +1,4 @@
-
+﻿
 GetTime(){ return stf(Environment.time); }
 
 void QuestComplete(string sQuestName)

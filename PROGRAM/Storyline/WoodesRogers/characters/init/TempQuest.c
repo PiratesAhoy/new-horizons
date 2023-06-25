@@ -11318,9 +11318,9 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true; ch.HPBonus = 20; AddGameCharacter(n, ch);
 
 				//gm_crew17	fatmanmonk, MONK
-	ch.old.name = "PÃ¨re";
+	ch.old.name = "Père";
 	ch.old.lastname = "Labat";
-	ch.name = TranslateString("", "PÃ¨re");
+	ch.name = TranslateString("", "Père");
 	ch.lastname = TranslateString("", "Labat");
 	ch.id		= "gm_crew17";
 	ch.model = "gm_crew17";
@@ -12380,9 +12380,9 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true; ch.HPBonus = 10; AddGameCharacter(n, ch);
 
 	ch.old.name = "Anton";
-	ch.old.lastname = "BÃ¤cklin";
+	ch.old.lastname = "Bäcklin";
 	ch.name = TranslateString("", "Anton");
-	ch.lastname = TranslateString("", "BÃ¤cklin");
+	ch.lastname = TranslateString("", "Bäcklin");
 	ch.id		= "Kri_soldier_8";
 	ch.model	= "Soldier_Swe8_18";
 	ch.sex = "man";
@@ -12875,9 +12875,9 @@ void CreateTempQuestCharacters(ref n)
 	LAi_SetImmortal(ch, true);
 	ch.questchar = true; ch.HPBonus = 10; AddGameCharacter(n, ch);
 
-	ch.old.name = "SÃ©rgio Soares";
+	ch.old.name = "Sérgio Soares";
 	ch.old.lastname = "Gomes";
-	ch.name = "SÃ©rgio Soares";
+	ch.name = "Sérgio Soares";
 	ch.lastname = "Gomes";
 	ch.id		= "Kri_gunner_4";
 	ch.model	= "Gunner_Swe4_18";
@@ -13183,9 +13183,9 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true; ch.HPBonus = 10; AddGameCharacter(n, ch);
 
 	ch.old.name = "Emil";
-	ch.old.lastname = "KristrÃ¶m";
+	ch.old.lastname = "Kriström";
 	ch.name = TranslateString("", "Emil");
-	ch.lastname = TranslateString("", "KristrÃ¶m");
+	ch.lastname = TranslateString("", "Kriström");
 	ch.id		= "Kri_dragoon_3";
 	ch.model	= "Dragoon_Swe3_18";
 	ch.sex = "man";
@@ -13304,9 +13304,9 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true; ch.HPBonus = 10; AddGameCharacter(n, ch);
 
 	ch.old.name = "Johan";
-	ch.old.lastname = "LÃ¶fqvist";
+	ch.old.lastname = "Löfqvist";
 	ch.name = TranslateString("", "Johan");
-	ch.lastname = TranslateString("", "LÃ¶fqvist");
+	ch.lastname = TranslateString("", "Löfqvist");
 	ch.id		= "Kri_dragoon_6";
 	ch.model	= "Dragoon_Swe6_18";
 	ch.sex = "man";
@@ -13345,9 +13345,9 @@ void CreateTempQuestCharacters(ref n)
 //-------------------------------------------------------------------------------
 //Kristiania citizens
 	ch.old.name = "Pehr";
-	ch.old.lastname = "StÃ¥hlfot";
+	ch.old.lastname = "Ståhlfot";
 	ch.name = TranslateString("", "Pehr");
-	ch.lastname = TranslateString("", "StÃ¥hlfot");
+	ch.lastname = TranslateString("", "Ståhlfot");
 	ch.id		= "Kristiania_shipyard_owner";
 	ch.model	= "bocman18";
 	ch.sex = "man";
@@ -15299,9 +15299,9 @@ ch.Ship.Stopped = true;				//Q2: 4:th sloop from QAR cabin2
 //Kristiania citizens
 
 	ch.old.name = "Angelica";
-	ch.old.lastname = "LindstrÃ¶m";
+	ch.old.lastname = "Lindström";
 	ch.name = TranslateString("","Angelica");
-	ch.lastname = TranslateString("","LindstrÃ¶m");
+	ch.lastname = TranslateString("","Lindström");
 	ch.id		= "Kr_cit1";
 	ch.model = "33_Blazie";
 	ch.model.animation = "33_Blazie";
@@ -15335,9 +15335,9 @@ ch.Ship.Stopped = true;				//Q2: 4:th sloop from QAR cabin2
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Wilma S";
-	ch.old.lastname = "ForsstrÃ¶m";
+	ch.old.lastname = "Forsström";
 	ch.name = TranslateString("","Wilma S");
-	ch.lastname = TranslateString("","ForsstrÃ¶m");
+	ch.lastname = TranslateString("","Forsström");
 	ch.id		= "Kr_cit2";
 	ch.model = "towngirl6";
 	ch.model.animation = "woman_sit";
@@ -15478,9 +15478,9 @@ ch.Ship.Stopped = true;				//Q2: 4:th sloop from QAR cabin2
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Thomina";
-	ch.old.lastname = "SundstrÃ¶m";
+	ch.old.lastname = "Sundström";
 	ch.name = TranslateString("","Thomina");
-	ch.lastname = TranslateString("","SundstrÃ¶m");
+	ch.lastname = TranslateString("","Sundström");
 	ch.id		= "Kr_cit6";					
 	ch.model = "prisoner_Sarah_Fitter";
 	ch.sound_type = "female_citizen";
@@ -15591,9 +15591,9 @@ ch.Ship.Stopped = true;				//Q2: 4:th sloop from QAR cabin2
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Tobias";
-	ch.old.lastname = "HÃ¤llgren";
+	ch.old.lastname = "Hällgren";
 	ch.name = TranslateString("","Tobias");
-	ch.lastname = TranslateString("","HÃ¤llgren");
+	ch.lastname = TranslateString("","Hällgren");
 	ch.id		= "Kr_cit9";
 	ch.model = "Edmundo";
 	ch.sound_type = "male_citizen";
@@ -15708,9 +15708,9 @@ ch.Ship.Stopped = true;				//Q2: 4:th sloop from QAR cabin2
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Joel";
-	ch.old.lastname = "BjÃ¶rk";
+	ch.old.lastname = "Björk";
 	ch.name = TranslateString("","Joel");
-	ch.lastname = TranslateString("","BjÃ¶rk");
+	ch.lastname = TranslateString("","Björk");
 	ch.id		= "Kr_cit12";
 	ch.model = "indian2";
 	ch.sound_type = "male_citizen";
@@ -16225,9 +16225,9 @@ ch.Ship.Stopped = true;				//Q2: 4:th sloop from QAR cabin2
 	ch.questchar = true;  
 	AddGameCharacter(n, ch);
 
-	ch.old.name = "AndrÃ©";
+	ch.old.name = "André";
 	ch.old.lastname = "Jensen";
-	ch.name = TranslateString("","AndrÃ©");
+	ch.name = TranslateString("","André");
 	ch.lastname = TranslateString("","Jensen");
 	ch.id		= "Kr_cit27";
 	ch.model = "BillyBrock";
@@ -16259,9 +16259,9 @@ ch.Ship.Stopped = true;				//Q2: 4:th sloop from QAR cabin2
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Albin";
-	ch.old.lastname = "HÃ¶gman";
+	ch.old.lastname = "Högman";
 	ch.name = TranslateString("","Albin");
-	ch.lastname = TranslateString("","HÃ¶gman");
+	ch.lastname = TranslateString("","Högman");
 	ch.id		= "Kr_cit28";
 	ch.model = "bocman8";
 	ch.sound_type = "male_citizen";
@@ -16292,9 +16292,9 @@ ch.Ship.Stopped = true;				//Q2: 4:th sloop from QAR cabin2
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Lukas";
-	ch.old.lastname = "HammarstrÃ¶m";
+	ch.old.lastname = "Hammarström";
 	ch.name = TranslateString("","Lukas");
-	ch.lastname = TranslateString("","HammarstrÃ¶m");
+	ch.lastname = TranslateString("","Hammarström");
 	ch.id		= "Kr_cit29";
 	ch.model = "pirat2";
 	ch.sound_type = "male_citizen";
@@ -16358,9 +16358,9 @@ ch.Ship.Stopped = true;				//Q2: 4:th sloop from QAR cabin2
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Emil";
-	ch.old.lastname = "LÃ¶fgren";
+	ch.old.lastname = "Löfgren";
 	ch.name = TranslateString("","Emil");
-	ch.lastname = TranslateString("","LÃ¶fgren");
+	ch.lastname = TranslateString("","Löfgren");
 	ch.id		= "Kr_cit31";
 	ch.model = "Jeremy_Tripper";
 	ch.sound_type = "male_citizen";
@@ -24344,7 +24344,7 @@ ch.old.name = "";
 	ch.questchar = true;
 	LAi_SetImmortal(ch, true);
 	AddGameCharacter(n, ch);
-//pÃ¤r
+//pär
 //---------------------------------------------------------
 
 	ch.old.name = "Old";

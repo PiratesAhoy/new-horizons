@@ -1230,7 +1230,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 	
-			// Jean Filaut (РІРµСЂС„СЊ)
+			// Jean Filaut (верфь)
 	ch.old.name = "Thomas";
 	ch.old.lastname = "Modiford";
 	ch.name = TranslateString("", "Thomas");
@@ -1266,7 +1266,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 //-----------End CHARLESTOWN mod-------------------------------
 
 //-----------SJG CHARLESTOWN mod-------------------------------
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1304,7 +1304,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
+			//Soldier на входе в город
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";

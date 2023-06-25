@@ -1,16 +1,16 @@
 /*
-РўРёРї: СЃС‚РѕСЏС‡РёР№, РІСЃРµРіРґР° СЃС‚РѕРёС‚, РѕС‚РІРµС‡Р°РµС‚ РЅР° РґРёР°Р»РѕРіРё, РЅРёРєРѕРіРґР° РЅРµ Р±РѕРёС‚СЃСЏ
+Тип: стоячий, всегда стоит, отвечает на диалоги, никогда не боится
 
-	РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С€Р°Р±Р»РѕРЅС‹:
+	Используемые шаблоны:
 		stay
 		dialog
 
 
 
-	РіСЂСѓРїРїР°: barmen
-		Р»РѕРєР°С‚РѕСЂ РѕСЃРЅРѕРІРЅРѕРіРѕ СЃС‚РѕСЏРЅРёСЏ Р»РѕРєР°С‚РѕСЂР°: stay
-		Р»РѕРєР°С‚РѕСЂ РІРѕР·Р»Рµ С€РєР°С„Р° Р·Р° СЃРїРёРЅРѕР№ (СЃРїСЂР°РІР°): bar1
-		Р»РѕРєР°С‚РѕСЂ РІРѕР·Р»Рµ С€РєР°С„Р° СЃРїСЂР°РІР° (РµСЃР»Рё РЅРµС‚ С‚Рѕ РґР°Р»СЊС€Рµ РѕС‚ bar1): bar2
+	группа: barmen
+		локатор основного стояния локатора: stay
+		локатор возле шкафа за спиной (справа): bar1
+		локатор возле шкафа справа (если нет то дальше от bar1): bar2
 
 */
 
@@ -19,7 +19,7 @@
 #define LAI_TYPE_BARMAN		"barman"
 
 
-//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
+//Инициализация
 void LAi_type_barman_Init(aref chr)
 {
 	DeleteAttribute(chr, "location.follower");
@@ -32,12 +32,12 @@ void LAi_type_barman_Init(aref chr)
 	chr.chr_ai.type.locator = "stay";
 	chr.chr_ai.type.wait = 5.0;
 	LAi_tmpl_stay_InitTemplate(chr);
-	//РЈСЃС‚Р°РЅРѕРІРёРј Р°РЅРёРјР°С†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Сѓ
+	//Установим анимацию персонажу
 	LAi_SetDefaultStayAnimation(chr);
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightWOWeapon", false);
 }
 
-//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С‚РёРїР° РїРµСЂСЃРѕРЅР°Р¶Р°
+//Процессирование типа персонажа
 void LAi_type_barman_CharacterUpdate(aref chr, float dltTime)
 {
 	float time, tw;
@@ -51,7 +51,7 @@ void LAi_type_barman_CharacterUpdate(aref chr, float dltTime)
 	}
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY)
 	{
-		//РЎРјРѕС‚СЂРёРј Р±Р»РёР·РєРѕ РїСЂРѕС…РѕРґСЏС‰РёС… РїРµСЂСЃРѕРЅР°Р¶РµР№
+		//Смотрим близко проходящих персонажей
 		int num = FindNearCharacters(chr, 3.0, -1.0, -1.0, 0.001, false, true);
 		if(num > 0)
 		{
@@ -73,7 +73,7 @@ void LAi_type_barman_CharacterUpdate(aref chr, float dltTime)
 					if(Characters[ichr].chr_ai.type == LAI_TYPE_WAITRESS)
 					{
 						isTrp = false;
-						//РўСЂРµРїРёРјСЃСЏ СЃ РѕС„РёС†РёРЅС‚РєРѕР№
+						//Трепимся с официнткой
 						if(rand(100) == 55)
 						{
 							if(chr.sex!="woman") LAi_CharacterPlaySound(chr, "barman_wtrs");//MAXIMUS
@@ -83,7 +83,7 @@ void LAi_type_barman_CharacterUpdate(aref chr, float dltTime)
 				}
 				if(isTrp)
 				{
-					//РўСЂРµРїРёРјСЃСЏ СЃ РїРѕРґРѕС€РµРґС€РёРј
+					//Трепимся с подошедшим
 					time = stf(chr.chr_ai.type.time);
 					time = time + dltTime;
 					chr.chr_ai.type.time = time;
@@ -101,7 +101,7 @@ void LAi_type_barman_CharacterUpdate(aref chr, float dltTime)
 						{
 							if(rand(100) < 30)
 							{
-								//Р—Р°РїСѓСЃС‚РёРј СЂРµР¶РёРј Р·Р°РјР°РЅРёРІР°РЅРёСЏ РїРѕРєСѓРїР°С‚РµР»РµР№
+								//Запустим режим заманивания покупателей
 								LAi_type_barman_Ask(chr);
 								chr.chr_ai.type.timewait = "0";
 								CharacterTurnByChr(chr, &Characters[ichr]);
@@ -119,7 +119,7 @@ void LAi_type_barman_CharacterUpdate(aref chr, float dltTime)
 					if(rand(100) < 10) LAi_type_barman_PlayWaitAni(chr);
 				}
 			}else{
-				//Р‘РѕРёРјСЃСЏ
+				//Боимся
 				chr.chr_ai.type.state = "afraid";
 				LAi_tmpl_ani_PlayAnimation(chr, "afraid", -1.0);
 				LAi_SetAfraidDead(chr);
@@ -143,7 +143,7 @@ void LAi_type_barman_CharacterUpdate(aref chr, float dltTime)
 			chr.chr_ai.type.who = "-1";
 			chr.chr_ai.type.timewait = "3";
 		}else{
-			//РЎРјРѕС‚СЂРёРј Р±Р»РёР·РєРѕ РїСЂРѕС…РѕРґСЏС‰РёС… РїРµСЂСЃРѕРЅР°Р¶РµР№
+			//Смотрим близко проходящих персонажей
 			time = stf(chr.chr_ai.type.time);
 			num = FindNearCharacters(chr, 4.5, -1.0, -1.0, 0.001, false, false);
 			if(num > 0)
@@ -164,19 +164,19 @@ void LAi_type_barman_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Р—Р°РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
+//Загрузка персонажа в локацию
 bool LAi_type_barman_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Р’С‹РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РёР· Р»РѕРєР°С†РёСЋ
+//Выгрузка персонажа из локацию
 bool LAi_type_barman_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ С‚РµРјРїР»РµР№С‚Р°
+//Завершение работы темплейта
 void LAi_type_barman_TemplateComplite(aref chr, string tmpl)
 {
 	switch(chr.chr_ai.type.state)
@@ -186,7 +186,7 @@ void LAi_type_barman_TemplateComplite(aref chr, string tmpl)
 		chr.chr_ai.type.state = "stay";
 		break;
 	case "goto":
-		//Р”Р°РґРёРј РЅРѕРІРѕРµ Р·Р°РґР°РЅРёРµ
+		//Дадим новое задание
 		LAi_type_barman_SetAfterGoto(chr);
 		break;
 	case "work":
@@ -198,31 +198,31 @@ void LAi_type_barman_TemplateComplite(aref chr, string tmpl)
 	}
 }
 
-//РЎРѕРѕР±С‰РёС‚СЊ Рѕ Р¶РµР»Р°РЅРёРё Р·Р°РІРµСЃС‚Рё РґРёР°Р»РѕРі
+//Сообщить о желании завести диалог
 void LAi_type_barman_NeedDialog(aref chr, aref by)
 {
 }
 
-//Р—Р°РїСЂРѕСЃ РЅР° РґРёР°Р»РѕРі, РµСЃР»Рё РІРѕР·РІСЂР°С‚РёС‚СЊ true С‚Рѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Запрос на диалог, если возвратить true то в этот момент можно начать диалог
 bool LAi_type_barman_CanDialog(aref chr, aref by)
 {
-	//РЎРѕРіР»Р°СЃРёРјСЃСЏ РЅР° РґРёР°Р»РѕРі
+	//Согласимся на диалог
 	if(chr.chr_ai.type.state == "afraid") return false;
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY) return true;
 	if(chr.chr_ai.tmpl == LAI_TMPL_ANI) return true;
 	return false;
 }
 
-//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
+//Начать диалог
 void LAi_type_barman_StartDialog(aref chr, aref by)
 {
-	//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
+	//Если мы пасивны, запускаем шаблон без времени завершения
 	LAi_CharacterSaveAy(chr);
 	CharacterTurnByChr(chr, by);
 	LAi_tmpl_SetActivatedDialog(chr, by);
 }
 
-//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
+//Закончить диалог
 void LAi_type_barman_EndDialog(aref chr, aref by)
 {
 	if(chr.chr_ai.type.state == "goto")
@@ -235,35 +235,35 @@ void LAi_type_barman_EndDialog(aref chr, aref by)
 	}
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°Р» РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атаковал другого персонажа
 void LAi_type_barman_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚РѕРєРѕРІР°Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РІС€РµРіРѕСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
+//Персонаж атоковал заблокировавшегося персонажа
 void LAi_type_barman_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//РџРµСЂСЃРѕРЅР°Р¶ РІС‹СЃС‚СЂРµР»РёР»
+//Персонаж выстрелил
 void LAi_type_barman_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 
 }
 
 
-//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°РЅ
+//Персонаж атакован
 void LAi_type_barman_Attacked(aref chr, aref by)
 {
 	
 }
 
-//РџСЂРѕРёРіСЂР°С‚СЊ Р°РЅРёРјР°С†РёСЋ Р·Р°Р·С‹РІР°РЅРёСЏ РїРѕРєСѓРїР°РЅРµР»РµР№
+//Проиграть анимацию зазывания покупанелей
 void LAi_type_barman_Ask(aref chr)
 {
-	//Р’С‹Р±РёСЂР°РµРј Р°РЅРёРјР°С†РёСЋ
+	//Выбираем анимацию
 	string animation;
 	switch(rand(3))
 	{
@@ -281,18 +281,18 @@ void LAi_type_barman_Ask(aref chr)
 		break;
 	};
 	LAi_tmpl_ani_PlayAnimation(chr, animation, -1.0);
-	//Р’С‹Р±РёСЂР°РµРј РїСЂРѕРёРіСЂС‹РІР°РµРјС‹Р№ Р·РІСѓРє
+	//Выбираем проигрываемый звук
 	if(chr.sex!="woman") LAi_CharacterPlaySound(chr, "barman");//MAXIMUS
 	else LAi_CharacterPlaySound(chr, "waitress_brm");
 }
 
-//РћСЂРёРµРЅС‚РёСЂРѕРІР°С‚СЊСЃСЏ РїРѕ С‚РµРєСѓС‰РµРјСѓ Р»РѕРєР°С‚РѕСЂСѓ
+//Ориентироваться по текущему локатору
 void LAi_type_barman_RestoreAngle(aref chr)
 {
 	CharacterTurnByLoc(chr, "barmen", chr.chr_ai.type.locator);
 }
 
-//РќР°Р№С‚Рё РІСЂР°РіР°
+//Найти врага
 int LAi_type_barman_FindEnemy(aref chr, int num)
 {
 	for(int i = 0; i < num; i++)
@@ -303,20 +303,20 @@ int LAi_type_barman_FindEnemy(aref chr, int num)
 	return -1;
 }
 
-//РЎ Р·Р°РґР°РЅРѕР№ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊСЋ Р·Р°РїСѓСЃС‚РёС‚СЊ Р°РЅРёРјР°С†РёСЋ РѕР±Р»Р°РєР°С‡РёРІР°РЅРёСЏ РЅР° СЃС‚РѕР»
+//С заданой вероятностью запустить анимацию облакачивания на стол
 void LAi_type_barman_PlayWaitAni(aref chr)
 {
 	if(chr.chr_ai.type.state != "stay") return;
 	if(rand(100) > 20) return;
 	if(stf(chr.chr_ai.type.wait) > 0.0) return;
-	//Р РµС€РёР»Рё РѕРїРµСЂРµС‚СЃСЏ РЅР° СЃС‚РѕР№РєСѓ
+	//Решили оперется на стойку
 	chr.chr_ai.type.state = "waiting";
 	float wait = 5.0 + rand(10);
 	LAi_tmpl_ani_PlayAnimation(chr, "Barman_look_around", wait);
 	chr.chr_ai.type.wait = wait + 5.0 + rand(10);
 }
 
-//РћС‚РїСЂР°РІРёС‚СЊ Р±Р°СЂРјРµРЅР° РІ РґСЂСѓРіРѕР№ Р»РѕРєР°С‚РѕСЂ
+//Отправить бармена в другой локатор
 void LAi_type_barman_SetGoto(aref chr)
 {
 	if(chr.chr_ai.type.locator == "stay")
@@ -335,7 +335,7 @@ void LAi_type_barman_SetGoto(aref chr)
 	chr.chr_ai.type.state = "goto";
 }
 
-//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Р·Р°РґР°РЅРёРµ РїРѕСЃР»Рµ РїСЂРёС…РѕРґР° РІ Р»РѕРєР°С‚РѕСЂ
+//Установить задание после прихода в локатор
 void LAi_type_barman_SetAfterGoto(aref chr)
 {
 	LAi_type_barman_RestoreAngle(chr);

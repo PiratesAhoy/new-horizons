@@ -1,22 +1,22 @@
 TEXT	{
-Â¿AsÃ­ que quieres aprender a ser pirata?  Este libro te enseÃ±arÃ¡ todo lo que necesitas saber sobre el noble arte del saqueo en alta mar.
+¿Así que quieres aprender a ser pirata?  Este libro te enseñará todo lo que necesitas saber sobre el noble arte del saqueo en alta mar.
 
-Probablemente te has convertido en pirata atacando a los barcos que no debÃ­as. Un jugoso mercante es una magnÃ­fica presa, pero los Ãºnicos que pueden atacarlo son la Armada
- de un paÃ­s enemigo, corsarios enemigos o piratas. Si no tienes un nombramiento de la Armada o una patente de corso de un gobernador, entonces eres un pirata: Â¡Arr!
+Probablemente te has convertido en pirata atacando a los barcos que no debías. Un jugoso mercante es una magnífica presa, pero los únicos que pueden atacarlo son la Armada
+ de un país enemigo, corsarios enemigos o piratas. Si no tienes un nombramiento de la Armada o una patente de corso de un gobernador, entonces eres un pirata: ¡Arr!
 
 O puede que hayas elegido ser un pirata desde el principio de tu carrera.
 
-Todas las naciones son tus enemigas; puede que odies a una mÃ¡s que a otra y prefieras atacar sus barcos, o quieras dejar en paz a tu naciÃ³n favorita, pero eso no evitarÃ¡ que
-las mal llamadas naciones civilizadas te ataquen en cuanto te vean. Por lo tanto, tendrÃ¡s que usar banderas falsas. Una bandera falsa puede hacer que un barco piense que eres
-de los suyos, hasta que la arrÃ­as, izas tu bandera pirata y le sacudes una andanada. Algunos bellacos no se molestan en izar la bandera pirata pero solo la peor escoria abre
-fuego bajo bandera falsa, asÃ­ que usa tu bandera pirata, para algo la tienes. AdemÃ¡s, si quieres atracar en un puerto, necesitarÃ¡s una bandera amistosa para que el fuerte no
+Todas las naciones son tus enemigas; puede que odies a una más que a otra y prefieras atacar sus barcos, o quieras dejar en paz a tu nación favorita, pero eso no evitará que
+las mal llamadas naciones civilizadas te ataquen en cuanto te vean. Por lo tanto, tendrás que usar banderas falsas. Una bandera falsa puede hacer que un barco piense que eres
+de los suyos, hasta que la arrías, izas tu bandera pirata y le sacudes una andanada. Algunos bellacos no se molestan en izar la bandera pirata pero solo la peor escoria abre
+fuego bajo bandera falsa, así que usa tu bandera pirata, para algo la tienes. Además, si quieres atracar en un puerto, necesitarás una bandera amistosa para que el fuerte no
 convierta tu barco en astillas y los comerciantes no te manden a la porra. Aunque, si eres famoso, puede que te reconozcan como el pirata que eres a pesar de todo.
 
-Donde puedes estar seguro de ser bienvenido es en puertos gobernados por otros piratas. Y si te unes a nuestra Hermandad, podrÃ¡s vender tu botÃ­n a un precio mejor del que
-obtendrÃ­as en ningÃºn otro sitio. TambiÃ©n puedes ascender en la jerarquÃ­a como si estuvieras en una de esas Armadas y conseguir que tu nombre sea temido en todo el Caribe.
+Donde puedes estar seguro de ser bienvenido es en puertos gobernados por otros piratas. Y si te unes a nuestra Hermandad, podrás vender tu botín a un precio mejor del que
+obtendrías en ningún otro sitio. También puedes ascender en la jerarquía como si estuvieras en una de esas Armadas y conseguir que tu nombre sea temido en todo el Caribe.
 
-Por supuesto, puede que decidas dejar de ser un pirata. Simplemente ve arrastrÃ¡ndote ante algÃºn rico gobernador, paga una parte del botÃ­n que tento te costÃ³ robar, y te
-otorgarÃ¡ el perdÃ³n. Si pagas todavÃ­a mÃ¡s, hasta te darÃ¡ una patente de corso, lo que significa que en vez de atacar cualquier barco que quieras, solo podrÃ¡s atacar los
-que Ã©l quiera. Porque si atacas al barco equivocado, estarÃ¡s dando un paso para volver a convertirte en pirata. Â¡Arr!
+Por supuesto, puede que decidas dejar de ser un pirata. Simplemente ve arrastrándote ante algún rico gobernador, paga una parte del botín que tento te costó robar, y te
+otorgará el perdón. Si pagas todavía más, hasta te dará una patente de corso, lo que significa que en vez de atacar cualquier barco que quieras, solo podrás atacar los
+que él quiera. Porque si atacas al barco equivocado, estarás dando un paso para volver a convertirte en pirata. ¡Arr!
 
 }

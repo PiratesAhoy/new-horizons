@@ -2,8 +2,8 @@
 {=====| Antigua.c |=====}
 Portadmiral{Almirante del puerto}
 Lord Barham{Lord Barham}
-Regulating{Capit√°n}
-RCaptain{de regulaci√≥n}
+Regulating{Capit·n}
+RCaptain{de regulaciÛn}
 
 {=====| Aruba.c |=====}
 Hendrick{Hendrick}
@@ -102,7 +102,7 @@ Chima{Chima}
 Alejandro{Alejandro}
 de Mendoza{de Mendoza}
 Arturo{Arturo}
-de C√°diz{de C√°diz}
+de C·diz{de C·diz}
 Librarian{Librarian}
 
 {=====| CommonQuest.c |=====}
@@ -118,12 +118,12 @@ Vas{Vas}
 de Torres{de Torres}
 Reginald{Reginald}
 de Boeuf{de Boeuf}
-Bj√∂rn{Bj√∂rn}
-Roos af Hjelms√§ter{Roos af Hjelms√§ter}
+Bjˆrn{Bjˆrn}
+Roos af Hjelms‰ter{Roos af Hjelms‰ter}
 Charlie{Charlie}
 Allen{Allen}
 Edgar{Edgar}
-Lu√≠s{Lu√≠s}
+LuÌs{LuÌs}
 Buchinho{Buchinho}
 Abelard{Abelard}
 Laviniere{Laviniere}
@@ -221,12 +221,12 @@ Ibiza{Ibiza}
 Higini{Higini}
 Seat{Seat}
 Probello{Probello}
-Jose Jalapeno{Jos√© Jalape√±o}
+Jose Jalapeno{JosÈ JalapeÒo}
 on the stalk{de la Rama}
 Eustacio{Eustacio}
 Ocampo{Ocampo}
 Patricia{Patricia}
-Sant√°ngel{Sant√°ngel}
+Sant·ngel{Sant·ngel}
 Isidoro{Isidoro}
 Figueroa{Figueroa}
 Magarino{Magarino}
@@ -234,7 +234,7 @@ Micael{Micael}
 Salinas{Salinas}
 Mahala{Mahala}
 Tancredo{Tancredo}
-Pell√≥n{Pell√≥n}
+PellÛn{PellÛn}
 
 {=====| Curacao.c |=====}
 Hans{Hans}
@@ -543,7 +543,7 @@ Marpeut{Marpeut}
 Laure{Laure}
 Sinclair{Sinclair}
 Dubois{Dubois}
-Fran√ßois{Fran√ßois}
+FranÁois{FranÁois}
 de Vigny{de Vigny}
 Amarante{Amarante}
 Bontin{Bontin}
@@ -675,9 +675,9 @@ Cabellodoferro{Cabellodoferro}
 
 {=====| NK.c |=====}
 First{Primero}
-Last{√öltimo}
-Ye Keeper{El Guardi√°n}
-o' ye Hoarde{del Bot√≠n}
+Last{⁄ltimo}
+Ye Keeper{El Guardi·n}
+o' ye Hoarde{del BotÌn}
 
 {=====| Officers.c |=====}
 Fred{Fred}
@@ -951,7 +951,7 @@ Haley{Haley}
 Gyles{Gyles}
 Peat{Peat}
 Gordon{Gordon}
-Dark Captain{Capit√°n oscuro}
+Dark Captain{Capit·n oscuro}
 Giraldo{Giraldo}
 Figuiera{Figuiera}
 1{1}
@@ -974,12 +974,12 @@ Bricenos{Bricenos}
 Santos{Santos}
 Desiree'{Desiree}
 Muerte{Muerte}
-Thug{Mat√≥n}
+Thug{MatÛn}
 Vassal{Vassal}
 Bethune{Bethune}
 Daryl{Daryl}
 Larry{Larry}
-Captain Jack{Capit√°n Jack}
+Captain Jack{Capit·n Jack}
 Sparrow{Sparrow}
 Camille{Camille}
 Leone{Leone}
@@ -1004,10 +1004,10 @@ Dusac{Dusac}
 Konrad{Konrad}
 Kulczycki{Kulczycki}
 Silver{Plata}
-Nathaniel's Crewmember{Miembro de tu tripulaci√≥n}
+Nathaniel's Crewmember{Miembro de tu tripulaciÛn}
 Clair{Clair}
 Larrousse{Larrousse}
-France_bukaner_01{Bucanero franc√©s}
+France_bukaner_01{Bucanero francÈs}
 Skull{Calavera}
 Will{Will}
 Turner{Turner}
@@ -1026,7 +1026,7 @@ Cook{Cook}
 Dusty{Dusty}
 Broome{Broome}
 Surgeon{Cirujano}
-Priest{Capell√°n}
+Priest{Capell·n}
 Boatswain{Contramaestre}
 Navigator{Oficial de derrota}
 Voigt{Voigt}
@@ -1041,12 +1041,12 @@ Cristobal{Cristobal}
 Leon{Leon}
 Escovar{Escovar}
 Entenza{Entenza}
-Se√±orita{Se√±orita}
+SeÒorita{SeÒorita}
 Hebe{Hebe}
 Constantino{Constantino}
-Avell√°n{Avell√°n}
+Avell·n{Avell·n}
 Growling{Oso}
-Bear{Que Gru√±e}
+Bear{Que GruÒe}
 Kicking{Cuervo}
 Raven{Que Patea}
 Lewis{Lewis}
@@ -1173,7 +1173,7 @@ Castrilli{Castrilli}
 Fadrique{Fadrique}
 Leonor{Leonor}
 Esperanza{Esperanza}
-Ram√≥n{Ram√≥n}
+RamÛn{RamÛn}
 Figueras{Figueras}
 Figaux{Figaux}
 Sophie{Sophie}
@@ -1220,7 +1220,7 @@ Tolman{Tolman}
 Voyant{Voyant}
 Fructoso{Fructoso}
 Juana{Juana}
-Garc√≠a{Garc√≠a}
+GarcÌa{GarcÌa}
 Ramos{Ramos}
 Fabiao{Fabiao}
 Dunga{Dunga}
@@ -1251,7 +1251,7 @@ Inocencia{Inocencia}
 Ussica{Ussica}
 Salvadore{Salvadore}
 Jimena{Jimena}
-L√≥pez{L√≥pez}
+LÛpez{LÛpez}
 
 {=====| Turks.c |=====}
 Dante{Dante}
@@ -1336,7 +1336,7 @@ Tuck{Tuck}
 {=====| Others |=====}
 Maltese{Caballero}
 Knight{de Malta}
-Weird{Extra√±o}
+Weird{ExtraÒo}
 Warriormonk{monje guerrero}
 Maccus{Maccus}
 Hadras{Hadras}

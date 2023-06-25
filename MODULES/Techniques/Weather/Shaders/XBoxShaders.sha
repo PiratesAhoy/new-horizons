@@ -1,0 +1,51 @@
+PixelShader SeaPS_XBoxReflect
+{
+	asm
+	{
+		; Pixel shader - Bumped surface reflections.
+		; Transforms the bumpmap into the local coordinate system
+		; by the basis vectors supplied from the vertex shader.
+		; Then uses the normal and eye vector to generate a 
+		; reflection vector which looks into a cubemap.
+
+		#include "reflect.h"
+ 
+		; Declare pixel shader version 1.0
+		ps.1.1
+
+		; Define t0 as a standard 3-vector from bumpmap
+		tex t0			
+
+		; Perform matrix multiply to get a local normal bump.  Then
+		; reflect the eye vector through the normal and sample from 
+		; a cubic environment map.
+		texm3x3pad t1, t0_bx2
+		texm3x3pad t2, t0_bx2
+		texm3x3vspec t3, t0_bx2
+
+		; result goes in output color
+
+		mov r0, t3
+		mul r0, r0, v0
+		add r0.rgb, r0, v1
+	}
+}
+
+PixelShader SeaPS_XBoxReflectSunRoad
+{
+	asm
+	{
+		#include "reflect.h"
+ 
+		ps.1.1
+
+		tex t0			
+
+		texm3x3pad t1, t0_bx2
+		texm3x3pad t2, t0_bx2
+		texm3x3vspec t3, t0_bx2
+
+		mov r0, t3
+		mul r0.rgb, r0, v1.a
+	}
+}

@@ -24,7 +24,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
 			Dialog.defAni = "Gov_Dialog_1";
 			Dialog.defCam = "1";
@@ -49,7 +49,7 @@ void ProcessDialogEvent()
 			}
 			if (CheckQuestAttribute("ANIMISTS", "to_prison_for_teacher_3"))
 			{
-				//РїСЂРёРєР°Р· РѕР± РѕСЃРІРѕР±РѕР¶РґРµРЅРёРё
+				//приказ об освобождении
 				link.l2 = DLG_TEXT[8];
 				link.l2.go = "freedom_letter";
 			}

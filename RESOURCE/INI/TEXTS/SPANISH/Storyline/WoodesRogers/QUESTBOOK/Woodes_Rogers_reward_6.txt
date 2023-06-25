@@ -1,6 +1,6 @@
 title=La sexta recompensa de Woodes Rogers
-text.t1=Hay una pistola mÃ¡s, la Ãºltima (Â¡por fÃ­n!). Rogers me ha invitado a tomar un trago en los alojamientos de la tripulaciÃ³n.
-text.t2=Esta deberÃ­a ser la Ãºltima... Me pregunto quiÃ©n serÃ­a 'Basilica Hands'.
-text.t3=Oh, no. Ahora que por fin me he hecho con la Ãºltima pistola, Â¡he acabado encerrado en la prisiÃ³n! Tengo que explorar la celda con atenciÃ³n.
+text.t1=Hay una pistola más, la última (¡por fín!). Rogers me ha invitado a tomar un trago en los alojamientos de la tripulación.
+text.t2=Esta debería ser la última... Me pregunto quién sería 'Basilica Hands'.
+text.t3=Oh, no. Ahora que por fin me he hecho con la última pistola, ¡he acabado encerrado en la prisión! Tengo que explorar la celda con atención.
 text.t4=
 text.t5=

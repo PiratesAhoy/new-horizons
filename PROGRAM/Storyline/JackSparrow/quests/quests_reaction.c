@@ -2137,7 +2137,7 @@ void QuestComplete(string sQuestName)
 
 		case "Now_get_to_see_Petros_house":
 			Pchar.Quest.Captured_on_Guadeloupe.over = "yes";
-			ChangeCharacterAddress(characterFromID("FranÃ§ois de Vigny"), "None", "");
+			ChangeCharacterAddress(characterFromID("François de Vigny"), "None", "");
 			ChangeCharacterAddressGroup(characterFromID("Konrad Kulczycki"),"Guadeloupe_Plantation_inside", "goto", "goto5");
 			ChangeCharacterAddressGroup(characterFromID("Petros"),"Guadeloupe_Plantation_inside", "sit", "sit1");
 			LAi_SetSitType(characterfromID("Petros"));
@@ -8814,7 +8814,7 @@ void QuestComplete(string sQuestName)
 //			AddQuestRecord("Contact", 13);
 			AddQuestRecord("Contact", 15);	// GR: Line 13 is about Marigot governor.  Line 15 is about Tia Dalma.
 			CloseQuestHeader("Contact");
-		//END OF Justine Le Moigneâ€™s Disappearance
+		//END OF Justine Le Moigne’s Disappearance
 		break;
 
 		case "reload_to_sea_after_davy":

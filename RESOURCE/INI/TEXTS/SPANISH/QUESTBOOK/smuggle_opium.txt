@@ -1,5 +1,5 @@
-title=MisiÃ³n general: Traficar con opio para #sbuyer#.
+title=Misión general: Traficar con opio para #sbuyer#.
 text.t1=He habalado con #sbuyer#, de #splace#. Me ha pedido que le consiga #samount# plantas de opio antes de que pasen 2 meses. Es hora de dirigirme al fumadero de opio.
 text.t2=He conseguido el opio en #splace#. Ahora, de vuelta con el cliente.
-text.t3=Le traje el opio al cliente y parecÃ­a satisfecho. Me dijo que ya tenÃ­a suficiente por ahora y que debo probar con otros clientes. Cuando haya ayudado al menos a uno de ellos, podrÃ© volver a intentarlo con Ã©ste.
-text.t4=El plazo se ha acabado y no he podido cerrar el trato. Espero que esto no perjudique demasiado mi relaciÃ³n con los contrabandistas.
+text.t3=Le traje el opio al cliente y parecía satisfecho. Me dijo que ya tenía suficiente por ahora y que debo probar con otros clientes. Cuando haya ayudado al menos a uno de ellos, podré volver a intentarlo con éste.
+text.t4=El plazo se ha acabado y no he podido cerrar el trato. Espero que esto no perjudique demasiado mi relación con los contrabandistas.

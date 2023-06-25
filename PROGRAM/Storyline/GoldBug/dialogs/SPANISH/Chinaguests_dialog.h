@@ -1,19 +1,19 @@
 string DLG_TEXT[16] = { 
-"Â¿No ve que tengo otros asuntos entre manos?",
-"Â¿QuerÃ­a usted algo?",
-"La comida es fantÃ¡stica, tiene que probarla.",
+"¿No ve que tengo otros asuntos entre manos?",
+"¿Quería usted algo?",
+"La comida es fantástica, tiene que probarla.",
 "Comamos y bebamos.",
-"Si quiere charlar, bÃºsquese a otro.",
-"Solo me preguntaba si estaba vivo o no. EstÃ¡ quieto como una estatua.",
-"DigÃ¡melo en otro momento. Estoy comiendo.",
-"VÃ¡yase, no me moleste.",
+"Si quiere charlar, búsquese a otro.",
+"Solo me preguntaba si estaba vivo o no. Está quieto como una estatua.",
+"Digámelo en otro momento. Estoy comiendo.",
+"Váyase, no me moleste.",
 "Muy bien, vamos a emborracharnos.",
-"TÃ³mese una copa a mi salud.",
-"EstÃ¡ bien, estÃ¡ bien.",	//10
+"Tómese una copa a mi salud.",
+"Está bien, está bien.",	//10
 "No, yo...",
-"Conque sÃ­, Â¿eh?",
+"Conque sí, ¿eh?",
 "Bueno, yo...",
-"Â¡Â¿QuÃ©?!",
+"¡¿Qué?!",
 "Como usted diga.",
 
 };

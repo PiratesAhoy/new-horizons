@@ -29,7 +29,7 @@ string DLG_TEXT[99] = {
 "I am listening to you, captain.",
 "What's interesting going on in the town?",
 "Let's end this idle talk and get down to business.",
-"What's interesting...? Well, I don't even know what to tell you about. Everyone has his own interests â€“ a trader is interested in one thing, a sailor in another. Well, I know that ",
+"What's interesting...? Well, I don't even know what to tell you about. Everyone has his own interests – a trader is interested in one thing, a sailor in another. Well, I know that ",
 "Claire Larrouse",
 "Claire Larrouse",
 " arrived in the town recently. They say she is making up a crew for her new expedition.",

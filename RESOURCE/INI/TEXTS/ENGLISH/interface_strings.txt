@@ -316,8 +316,8 @@ Redmond{Redmond}
 Isla Muelle{Isla Muelle}
 Oxbay{Oxbay}
 Greenford{Greenford}
-Concei√ß√£o{Concei√ß√£o}
-Conceicao{Concei√ß√£o}
+ConceiÁ„o{ConceiÁ„o}
+Conceicao{ConceiÁ„o}
 Douwesen{Douwesen}
 Quebradas Costillas{Quebradas Costillas}
 Khael Roa{Khael Roa}
@@ -325,7 +325,7 @@ Cayman{Cayman}
 Hispaniola{Hispaniola}
 Cuba{Cuba}
 Guadeloupe{Guadeloupe}
-Santa Maria de Guadalupe de Extremadura{Santa Mar√≠a de Guadalupe}
+Santa Maria de Guadalupe de Extremadura{Santa MarÌa de Guadalupe}
 Saint Martin{Saint Martin}
 Antigua{Antigua}
 Turks{Turks}
@@ -933,7 +933,7 @@ Boarding deck.{Boarding deck}
 Fort inside.{Fort inside}
 Boarding town.{Boarding town}
 
-House of Am√©rigo Vieira{House of Amerigo Vieira}
+House of AmÈrigo Vieira{House of Amerigo Vieira}
 Smithy{Smithy}
 Sunny Haven{Sunny Haven}
 Hidden Cave{Hidden Cave}
@@ -946,7 +946,7 @@ Smugglers Tavern{Smugglers Tavern}
 House of Leader of smugglers{House of Leader of smugglers}
 Rheims house in #stown_name#{Rheims house in #stown_name#}
 
-House of Am√©rigo Vieira.{House of Amerigo Vieira}
+House of AmÈrigo Vieira.{House of Amerigo Vieira}
 Smithy.{Smithy}
 Sunny Haven.{Sunny Haven}
 Hidden Cave.{Hidden Cave}
@@ -1142,14 +1142,14 @@ Barracks{Barracks}
 Church{Church}
 Entrance to plantation{Entrance to plantation}
 Anse Casse-Bois{Anse Casse-Bois}
-Bah√≠a Grande{Bah√≠a Grande}
+BahÌa Grande{BahÌa Grande}
 Ensenada del Bosque Quebrado{Ensenada del Bosque Quebrado}
 
 Barracks.{Barracks}
 Church.{Church}
 Entrance to plantation.{Entrance to plantation}
 Anse Casse-Bois.{Anse Casse-Bois}
-Bah√≠a Grande.{Bah√≠a Grande}
+BahÌa Grande.{BahÌa Grande}
 Ensenada del Bosque Quebrado.{Ensenada del Bosque Quebrado}
 
 Storehouse{Storehouse}
@@ -2250,7 +2250,7 @@ No, I have no more business there.{No, I have no more business there.}
 Crewmember of{Crewmember of}
 's crewmember{'s crewmember}
 
-Taino Village{Ta√≠no Village}
+Taino Village{TaÌno Village}
 House of Gilbert Downing{House of Gilbert Downing}
 Old Inquisition prison{Old Inquisition prison}
 Archives{Archives}
@@ -2287,8 +2287,8 @@ Hint: To make an officer available to command your ship, assign that officer to 
 Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.{Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
-Capit√°n{Capit√°n}
-Capit√ùo{Capit√ùo}
+Capit·n{Capit·n}
+Capit›o{Capit›o}
 
 That coward is trying to escape! Go after him!{That coward is trying to escape! Go after him!}
 Keep going, he can't run from you forever!{Keep going, he can't run from you forever!}

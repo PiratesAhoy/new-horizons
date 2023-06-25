@@ -1,12 +1,12 @@
 string DLG_TEXT[9] = {
-"Â¿SÃ­, capitÃ¡n?",
+"¿Sí, capitán?",
 "Lo siento. Sigue con lo tuyo.",
-"Â¡Espera! Â¡Mira a quiÃ©n tenemos aquÃ­! Â¡Si es ",
-"! Â¿QuÃ© tal te trata la mar?",
-"Bien. Â¿QuÃ© estÃ¡is haciendo aquÃ­ ",
+"¡Espera! ¡Mira a quién tenemos aquí! ¡Si es ",
+"! ¿Qué tal te trata la mar?",
+"Bien. ¿Qué estáis haciendo aquí ",
 "Danielle",
-" y tÃº?",
-"Pues..., verÃ¡s, tenemos unos asuntos que atender. Si te interesa, tal vez deberÃ­as preguntar a #scaptain#.",
+" y tú?",
+"Pues..., verás, tenemos unos asuntos que atender. Si te interesa, tal vez deberías preguntar a #scaptain#.",
 "Tal vez lo haga.",
 
 };

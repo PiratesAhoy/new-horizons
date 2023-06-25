@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -134,7 +134,7 @@ void ProcessDialogEvent()
 			Dialog.snd = "voice\ZAMU\ZAMU010";
 			Dialog.text = DLG_TEXT[50];
 			//////////////////////////////
-			// Р’С‹РґР°С‡Р° РєРІРµСЃС‚РѕРІ
+			// Выдача квестов
 			//////////////////////////////
 			if (npchar.quest_begin == "0")
 			{

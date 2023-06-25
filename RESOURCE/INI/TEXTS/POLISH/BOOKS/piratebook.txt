@@ -1,22 +1,22 @@
 TEXT	{
-Chcesz siÃ— dowiedzieÅ¢ o piractwie? Ta ksiÄ…Å¾ka powie ci wszystko, co musisz wiedzieÅ¢ o piÃ—knej sztuce grabieÅ¾y.
+Chcesz si× dowiedzieŞ o piractwie? Ta ksi¹ka powie ci wszystko, co musisz wiedzieŞ o pi×knej sztuce grabiey.
 
-Prawdopodobnie staÅ‚eâ€º siÃ— piratem albo przez obijanie statkÃ³w, ktÃ³rych nie powinieneâ€º. Gruby kupiec jest dobrym celem, ale jedynymi typami, ktÃ³re bÃ—dÄ… go atakowaÅ¢, sÄ… floty wroga,
-wrogich korsarzy i piratÃ³w. Jeâ€ºli nie masz prowizji w czyjejâ€º marynarce ani Listu Marque od gubernatora, to bÄ…dÅº piratem - arr!
+Prawdopodobnie sta³e› si× piratem albo przez obijanie statków, których nie powiniene›. Gruby kupiec jest dobrym celem, ale jedynymi typami, które b×d¹ go atakowaŞ, s¹ floty wroga,
+wrogich korsarzy i piratów. Je›li nie masz prowizji w czyjej› marynarce ani Listu Marque od gubernatora, to b¹dŸ piratem - arr!
 
-A moÅ¾e zdecydowaÅ‚eâ€º siÃ— zostaÅ¢ piratem na poczÄ…tku swojej kariery.
+A moe zdecydowa³e› si× zostaŞ piratem na pocz¹tku swojej kariery.
 
-Wszystkie narody sÄ… twoimi wrogami - moÅ¾esz nienawidziÅ¢ jednego bardziej niÅ¾ drugiego i wolisz atakowaÅ¢ statki jednego narodu, lub zostawiÅ¢ swÃ³j ulubiony narÃ³d w spokoju, ale to nie powstrzyma wszystkich
-tak zwane cywilizowane narody nie atakujÄ… ciÃ— na widok. WiÃ—c bÃ—dziesz chciaÅ‚ dobrze wykorzystaÅ¢ faÅ‚szywe flagi. FaÅ‚szywa flaga moÅ¾e sprawiÅ¢, Å¾e statki myâ€ºlÄ…, Å¾e jesteâ€º jej przyjacielem
-aÅ¾ upuâ€ºcisz, podnieâ€º swojÄ… pirackÄ… flagÃ— i daj jej burtÃ—. NiektÃ³rzy prawdziwi zÅ‚oczyÄ‘cy nie zawracajÄ… sobie gÅ‚owy flagÄ… piratÃ³w, ale tylko najgorszym szumowinÄ…, wciÄ…Å¾ udajÄ…c
-byÅ¢ przyjacielem ofiary, wiÃ—c uÅ¾ywaj swojej pirackiej flagi, po to jest. Ponadto, jeâ€ºli chcesz popÅ‚ynÄ…Å¢ do portu, bÃ—dziesz chciaÅ‚ mieÅ¢ przyjaznÄ… flagÃ—, wiÃ—c fort nie zaatakuje 
-ciebie i sklepikarze nie powie ci, Å¾ebyâ€º siÃ— odwaliÅ‚. ChociaÅ¾ jeâ€ºli jesteâ€º sÅ‚awny, moÅ¾ecsz byÅ¢ uznany za pirata, tak czy owak.
+Wszystkie narody s¹ twoimi wrogami - moesz nienawidziŞ jednego bardziej ni drugiego i wolisz atakowaŞ statki jednego narodu, lub zostawiŞ swój ulubiony naród w spokoju, ale to nie powstrzyma wszystkich
+tak zwane cywilizowane narody nie atakuj¹ ci× na widok. Wi×c b×dziesz chcia³ dobrze wykorzystaŞ fa³szywe flagi. Fa³szywa flaga moe sprawiŞ, e statki my›l¹, e jeste› jej przyjacielem
+a upu›cisz, podnie› swoj¹ pirack¹ flag× i daj jej burt×. Niektórzy prawdziwi z³oczyğcy nie zawracaj¹ sobie g³owy flag¹ piratów, ale tylko najgorszym szumowin¹, wci¹ udaj¹c
+byŞ przyjacielem ofiary, wi×c uywaj swojej pirackiej flagi, po to jest. Ponadto, je›li chcesz pop³yn¹Ş do portu, b×dziesz chcia³ mieŞ przyjazn¹ flag×, wi×c fort nie zaatakuje 
+ciebie i sklepikarze nie powie ci, eby› si× odwali³. Chocia je›li jeste› s³awny, moecsz byŞ uznany za pirata, tak czy owak.
 
-Tam, gdzie moÅ¾esz byÅ¢ pewien, Å¾e sÄ… mile widziane, sÄ… to porty prowadzone przez innych piratÃ³w. A jeâ€ºli doÅ‚Ä…czysz do naszego Bractwa, moÅ¾esz sprzedaÅ¢ swÃ³j Å‚up za wiÃ—cej niÅ¾ dostaniesz gdziekolwiek indziej. CzÅ‚ek
-moÅ¾e rÃ³wnieÅ¾ wznieâ€ºÅ¢ siÃ— przez szeregi tak, jakbyâ€º byÅ‚ w jednej z nich, tworzÄ…c prawdziwe imiÃ— dla siebie.
+Tam, gdzie moesz byŞ pewien, e s¹ mile widziane, s¹ to porty prowadzone przez innych piratów. A je›li do³¹czysz do naszego Bractwa, moesz sprzedaŞ swój ³up za wi×cej ni dostaniesz gdziekolwiek indziej. Cz³ek
+moe równie wznie›Ş si× przez szeregi tak, jakby› by³ w jednej z nich, tworz¹c prawdziwe imi× dla siebie.
 
-Oczywiâ€ºcie, moÅ¾esz zdecydowaÅ¢ przestaÅ¢ byÅ¢ piratem. Po prostu peÅ‚znij na kolanach do jakiegoâ€º bogatego gubernatora, zapÅ‚aÅ¢ mu trochÃ— ciÃ—Å¾ko zarobionego Å‚upu, a on ci wybaczy. MoÅ¾esz nawet wtedy
-zapÅ‚aciÅ¢ mu jeszcze wiÃ—cej i zdobyÅ¢ sobie List Marque, co oznacza, Å¾e ??zamiast atakowaÅ¢ jakikolwiek statek, ktÃ³rego chcesz, moÅ¾ecie atakowaÅ¢ tylko te statki, ktÃ³re moÅ¾esz. Bo jeâ€ºli trafisz
-ZÅ‚y statek, bÃ—dziesz w drodze powrotnej do bycia piratem. Arr!
+Oczywi›cie, moesz zdecydowaŞ przestaŞ byŞ piratem. Po prostu pe³znij na kolanach do jakiego› bogatego gubernatora, zap³aŞ mu troch× ci×ko zarobionego ³upu, a on ci wybaczy. Moesz nawet wtedy
+zap³aciŞ mu jeszcze wi×cej i zdobyŞ sobie List Marque, co oznacza, e ??zamiast atakowaŞ jakikolwiek statek, którego chcesz, moecie atakowaŞ tylko te statki, które moesz. Bo je›li trafisz
+Z³y statek, b×dziesz w drodze powrotnej do bycia piratem. Arr!
 
 }
