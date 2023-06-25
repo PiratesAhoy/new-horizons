@@ -15,10 +15,10 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	// DeathDaisy -->
 	if(PChar.sex == "woman"){
-		Preprocessor_Add("child", "girl");
+		Preprocessor_Add("child", XI_ConvertString("girl"));
 	}
 	else{
-		Preprocessor_Add("child", "boy");
+		Preprocessor_Add("child", XI_ConvertString("boy"));
 	}
 	// DeathDaisy <--
 	

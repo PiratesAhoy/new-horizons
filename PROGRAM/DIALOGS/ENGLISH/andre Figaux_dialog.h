@@ -37,7 +37,7 @@ string DLG_TEXT[58] = {
 "All right, all right! I'm already gone!",
 "If he is they prefer to sail in with less satellites, you know this", 
 "Yes, I forgot. Alright, I'll come back later, when I have fewer ships, ha-ha.",
-"I don't want to help you. You've done caused too much trouble for my country",
+"I don't want to help you. You've caused too much trouble for my country.",
 "Just look at this patriot. Well, goodbye.", 
 "Your hands are covered in blood. You don't seriously think that anyone would travel with you, do you?",
 "You are right, everyone's afraid of me! Ha-ha!",

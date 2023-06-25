@@ -13,6 +13,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -58,7 +60,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Bush_Sawyer_Reply1":
-			PlaySound("VOICE\ENGLISH\Bush02.wav");
+			PlaySound(voice_path + "Bush02.wav");
 			dialog.text = DLG_TEXT[43];
 			link.l1.go = "Exit_Bush_Sawyer_Reply1";
 		break;
@@ -70,7 +72,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Bush_Sawyer_Reply2":
-			PlaySound("VOICE\ENGLISH\Bush03.wav");
+			PlaySound(voice_path + "Bush03.wav");
 			dialog.text = DLG_TEXT[44];
 			link.l1.go = "Exit_Bush_Sawyer_Reply2";
 		break;
@@ -316,7 +318,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Pay_in_advance":
-			PlaySound("VOICE\ENGLISH\Bush04.wav");
+			PlaySound(voice_path + "Bush04.wav");
 			dialog.text = DLG_TEXT[16];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "Exit_Pay_in_advance";
@@ -329,7 +331,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Maria_likes_you":
-			PlaySound("VOICE\ENGLISH\Bush05.wav");
+			PlaySound(voice_path + "Bush05.wav");
 			dialog.text = DLG_TEXT[17];
 			link.l1 = DLG_TEXT[18];
 			link.l1.go = "Maria_likes_you2";
@@ -354,7 +356,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "What_does_he_want":
-			PlaySound("VOICE\ENGLISH\Bush06.wav");
+			PlaySound(voice_path + "Bush06.wav");
 			dialog.text = DLG_TEXT[23];
 			link.l1 = DLG_TEXT[24];
 			link.l1.go = "Exit_What_does_he_want";
@@ -421,14 +423,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "Styles_needs_a_job":
-			PlaySound("VOICE\ENGLISH\Bush07.wav");
+			PlaySound(voice_path + "Bush07.wav");
 			dialog.text = DLG_TEXT[80];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "Styles_needs_a_job2";
 		break;
 
 		case "Styles_needs_a_job2":
-			PlaySound("VOICE\ENGLISH\Bush08.wav");
+			PlaySound(voice_path + "Bush08.wav");
 			dialog.text = DLG_TEXT[81];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "Exit_Styles_needs_a_job";
@@ -443,7 +445,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Experience":
-			PlaySound("VOICE\ENGLISH\Bush09.wav");
+			PlaySound(voice_path + "Bush09.wav");
 			dialog.text = DLG_TEXT[82];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "Exit_Experience";
@@ -456,7 +458,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Why_here":
-			PlaySound("VOICE\ENGLISH\Bush10.wav");
+			PlaySound(voice_path + "Bush10.wav");
 			dialog.text = DLG_TEXT[83];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "Exit_Why_here";
@@ -469,7 +471,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Sign_here_coxswain":
-			PlaySound("VOICE\ENGLISH\Bush11.wav");
+			PlaySound(voice_path + "Bush11.wav");
 			dialog.text = DLG_TEXT[84];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "Exit_Sign_here_coxswain";
@@ -654,28 +656,28 @@ void ProcessDialogEvent()
 		break;
 
 		case "Standby_for_action":
-			PlaySound("VOICE\ENGLISH\Bush12.wav");
+			PlaySound(voice_path + "Bush12.wav");
 			dialog.text = DLG_TEXT[8];
 			link.l1 = DLG_TEXT[121];
 			link.l1.go = "Standby_for_action2";
 		break;
 
 		case "Standby_for_action2":
-			PlaySound("VOICE\ENGLISH\Bush13.wav");
+			PlaySound(voice_path + "Bush13.wav");
 			dialog.text = DLG_TEXT[122];
 			link.l1 = DLG_TEXT[123];
 			link.l1.go = "Standby_for_action3";
 		break;
 
 		case "Standby_for_action3":
-			PlaySound("VOICE\ENGLISH\Bush14.wav");
+			PlaySound(voice_path + "Bush14.wav");
 			dialog.text = DLG_TEXT[124];
 			link.l1 = DLG_TEXT[125];
 			link.l1.go = "Standby_for_action4";
 		break;
 
 		case "Standby_for_action4":
-			PlaySound("VOICE\ENGLISH\Bush15.wav");
+			PlaySound(voice_path + "Bush15.wav");
 			dialog.text = DLG_TEXT[126];
 //			link.l1 = DLG_TEXT[121];
 			link.l1.go = "Exit_Standby_for_action";
@@ -688,7 +690,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Line_astern":
-			PlaySound("VOICE\ENGLISH\Bush20.wav");
+			PlaySound(voice_path + "Bush20.wav");
 			dialog.text = DLG_TEXT[127];
 			link.l1 = DLG_TEXT[128];
 			link.l1.go = "Exit_Line_astern";
@@ -707,14 +709,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "Dont_like_look2":
-			PlaySound("VOICE\ENGLISH\Bush16.wav");
+			PlaySound(voice_path + "Bush16.wav");
 			dialog.text = DLG_TEXT[8];
 			link.l1 = DLG_TEXT[130];
 			link.l1.go = "Dont_like_look2A";
 		break;
 
 		case "Dont_like_look2A":
-			PlaySound("VOICE\ENGLISH\Bush17.wav");
+			PlaySound(voice_path + "Bush17.wav");
 			dialog.text = DLG_TEXT[131];
 //			link.l1 = DLG_TEXT[130];
 			link.l1.go = "Exit_Dont_like_look";
@@ -733,14 +735,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "Bring_her_inshore":
-			PlaySound("VOICE\ENGLISH\Bush18.wav");
+			PlaySound(voice_path + "Bush18.wav");
 			dialog.text = DLG_TEXT[132];
 			link.l1 = DLG_TEXT[133];
 			link.l1.go = "Bring_her_inshore2";
 		break;
 
 		case "Bring_her_inshore2":
-			PlaySound("VOICE\ENGLISH\Bush19.wav");
+			PlaySound(voice_path + "Bush19.wav");
 			dialog.text = DLG_TEXT[134];
 			link.l1 = DLG_TEXT[135];
 			link.l1.go = "Exit_Bring_her_inshore";

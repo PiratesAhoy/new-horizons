@@ -1946,7 +1946,7 @@ void QuestComplete(string sQuestName)
 				ChangeCharacterAddressGroup(characterFromID("Doolin Becart"), "PoPrince_Port", "goto", "goto6");
 				Characters[GetCharacterIndex("Doolin Becart")].dialog.CurrentNode = "sell_fish";
 				LAi_SetCitizenType(characterFromID("Doolin Becart"));
-				GiveShip2Character(characterFromID("Doolin Becart"),"Tartane2","Jacqueline",-1,SPAIN,true,true); // May as well put his ship in port as well
+				GiveShip2Character(characterFromID("Doolin Becart"),"Tartane2",TranslateString("","Jacqueline"),-1,SPAIN,true,true); // May as well put his ship in port as well
 				setCharacterShipLocation(characterFromID("Doolin Becart"), "PoPrince_Port");
 			}
 			else ChangeCharacterAddress(characterFromID("Doolin Becart"), "None", "");
@@ -5201,11 +5201,25 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.leave_church.win_condition.l1 = "location";
 			Pchar.quest.leave_church.win_condition.l1.location = "Santiago_town_01";
 			Pchar.quest.leave_church.win_condition = "leave_church";
-			if (PChar.sex == "man") WriteNewLogEntry("Married my beautiful wife", "On this wonderful day I married my beautiful wife, "+GetMySimpleName(romance)+". We're both very happy, and now I am going to finish this writing, because I have something more important to do...","Personal",true);
-			else WriteNewLogEntry("Married my handsome husband", "On this wonderful day I married my handsome husband, "+GetMySimpleName(romance)+". We're both very happy, and now I am going to finish this writing, because I have something more important to do...","Personal",true);
+//			if (PChar.sex == "man") WriteNewLogEntry("Married my beautiful wife", "On this wonderful day I married my beautiful wife, "+GetMySimpleName(romance)+". We're both very happy, and now I am going to finish this writing, because I have something more important to do...","Personal",true);
+//			else WriteNewLogEntry("Married my handsome husband", "On this wonderful day I married my handsome husband, "+GetMySimpleName(romance)+". We're both very happy, and now I am going to finish this writing, because I have something more important to do...","Personal",true);
+			string title, text;
+			switch(GetAttribute(PChar, "sex"))
+			{
+				case "man": Preprocessor_Add("spouse", GetTranslatedLog("my beautiful wife")); break;
+				case "woman": Preprocessor_Add("spouse", GetTranslatedLog("my handsome husband")); break;
+				// neither "man" nor "woman" - the line below should never be seen, if it is then I want to know why! - GR
+				Preprocessor_Add("spouse", GetTranslatedLog("my pet human"));
+			}
+			Preprocessor_Add("name", GetMySimpleName(romance));
+			title = GetTranslatedLog("Married #sspouse#"));
+			text = GetTranslatedLog("On this wonderful day I married #sspouse#, #sname#. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...");
+			WriteNewLogEntry(PreprocessText(title), PreprocessText(text),"Personal",true);
 			Preprocessor_AddQuestData("romance", GetMySimpleName(romance));
 			AddQuestRecord("Marriage", 11);
 			Preprocessor_Remove("romance");
+			Preprocessor_Remove("spouse");
+			Preprocessor_Remove("name");
 			ChangeCharacterReputation(PChar, 5);
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -5417,7 +5431,7 @@ void QuestComplete(string sQuestName)
 				Preprocessor_Save("romance", GetMySimpleName(romance));
 				GiveItem2Character(PChar, "BetrayedLetter");
 				ChangeCharacterAddress(romance, "None", "");
-				WriteNewLogEntry(GetMySimpleName(romance) + " deserts", GetMySimpleName(romance) + " didn't take too kindly to my actions against Spain, and has left me.", "Personal", true);
+				WriteNewLogEntry(GetMySimpleName(romance) + " " + GetTranslatedLog("deserts"), GetMySimpleName(romance) + " " + GetTranslatedLog("didn't take too kindly to my actions against Spain, and has left me."), "Personal", true);
 			}
 			else
 			{
@@ -5427,7 +5441,7 @@ void QuestComplete(string sQuestName)
 					characters[romanceidx].Dialog.CurrentNode = "dont_talk_to_me";
 					if (characters[getCharacterIndex(PChar.quest.romance)].married.id == PChar.id)
 					{
-						WriteNewLogEntry(GetMySimpleName(romance) + " deserts", GetMySimpleName(romance) + " didn't take too kindly to my actions against Spain, and has left me.", "Personal", true);
+						WriteNewLogEntry(GetMySimpleName(romance) + " " + GetTranslatedLog("deserts"), GetMySimpleName(romance) + " " + GetTranslatedLog("didn't take too kindly to my actions against Spain, and has left me."), "Personal", true);
 					}
 				}
 			}
@@ -5455,7 +5469,7 @@ void QuestComplete(string sQuestName)
 			GiveModel2Player("Lucia_1", false);
 			GiveModel2Player("lucia_2", false);
 			SetModelfromID(romance, "lucia_2");
-			WriteNewLogEntry(GetMyName(romance) + "'s new clothes", GetMySimpleName(romance) + " has taken some silk from our hold without bothering to ask. But after seeing the new clothes she made for herself with it, I'm not complaining!","Personal",true);
+			WriteNewLogEntry(GetMyName(romance) + GetTranslatedLog("'s new clothes"), GetMySimpleName(romance) + " " + GetTranslatedLog("has taken some silk from our hold without bothering to ask. But after seeing the new clothes she made for herself with it, I'm not complaining!"),"Personal",true);
 		break;
 
 		case "finale_marriage_villain_interrupts":
@@ -6211,7 +6225,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetOfficerType(romance);
 			if (CheckQuestAttribute("revenge_type", "kidnap_rescue") || GetCharacterShipID(PChar) == SHIP_NOTUSED_TYPE_NAME)
 			{
-				GiveShip2Character(PChar, "RN_WarGalleon", "Phaeton", -1, ENGLAND, false, true);
+				GiveShip2Character(PChar, "RN_WarGalleon", TranslateString("","Phaeton"), -1, ENGLAND, false, true);
 				AddCharacterGoods(PChar, GOOD_WHEAT, 100);
 				AddCharacterGoods(PChar, GOOD_RUM, 50);
 //				ExchangeCharacterShip(Pchar, characterFromID("Convoy_Captain1"));	// You take the captured convoy ship
@@ -6222,7 +6236,7 @@ void QuestComplete(string sQuestName)
 			else
 			{
 				ExchangeCharacterShip(PChar, CharacterFromID("Javier Balboa"));		// Use Santiago governor as store for your original ship
-				GiveShip2Character(PChar, "RN_WarGalleon", "Phaeton", -1, ENGLAND, false, true);
+				GiveShip2Character(PChar, "RN_WarGalleon", TranslateString("","Phaeton"), -1, ENGLAND, false, true);
 				AddCharacterGoods(PChar, GOOD_WHEAT, 100);
 				AddCharacterGoods(PChar, GOOD_RUM, 50);
 //				ExchangeCharacterShip(Pchar, characterFromID("Convoy_Captain1"));	// You take the captured convoy ship
@@ -6588,7 +6602,7 @@ void QuestComplete(string sQuestName)
 			ExchangeCharacterShip(PChar, CharacterFromID("Javier Balboa")); // Captured ship goes to Santiago governor, you get your own ship
 			if (GetCharacterShipID(PChar) == SHIP_NOTUSED_TYPE_NAME)	// If you don't have a ship, get a minimal dinghy so you can do things in the shipyard
 			{
-				GiveShip2Character(PChar, "Tartane50", "Dinghy", -1, SPAIN, false, false);	
+				GiveShip2Character(PChar, "Tartane50", TranslateString("","Dinghy"), -1, SPAIN, false, false);	
 			}
 			LAi_SetActorType(romance);
 			Characters[romanceidx].dialog.CurrentNode = "convoy_propose_trade";
@@ -8270,7 +8284,7 @@ void QuestComplete(string sQuestName)
 			DeleteAttribute(&Locations[FindLocation("Redmond_prison")],"vcskip");
 			Preprocessor_AddQuestData("villain", GetMySimpleName(villain));
 			Preprocessor_AddQuestData("pronoun", villain.sex);
-			Preprocessor_AddQuestData("pronoun2", GetMyPronounObj(villain));
+			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(villain)));
 			SetQuestHeader("Villain_Hunt");
 			AddQuestRecord("Villain_Hunt", 1);
 			Preprocessor_Remove("pronoun2");
@@ -8283,7 +8297,7 @@ void QuestComplete(string sQuestName)
 
 		case "hunt_villain_to_st_martin":
 			PChar.quest.ardent_hunt_status = "searching";
-			GiveShip2Character(villain, "SwedishIndiaman1", "Entreprenant", -1, ENGLAND, true, true);
+			GiveShip2Character(villain, "SwedishIndiaman1", TranslateString("","Entreprenant"), -1, ENGLAND, true, true);
 			setCharacterShipLocation(CharacterFromId("French_Amiral"), "Marigot_port");
 //			if (!LAi_IsDead(characterfromID("French_Captain2"))) setCharacterShipLocation(CharacterFromId("French_Captain2"), "Marigot_port");
 //			if (!LAi_IsDead(characterfromID("French_Captain3"))) setCharacterShipLocation(CharacterFromId("French_Captain3"), "Marigot_port");
@@ -9169,10 +9183,9 @@ void QuestComplete(string sQuestName)
 			LAi_SetImmortal(romance, true);
 			Preprocessor_AddQuestData("villain", GetMySimpleName(villain));
 			Preprocessor_AddQuestData("romance", GetMySimpleName(romance));
-			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(characterFromID(PChar.quest.romance))));
-			if (PChar.sex == "man") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
-			else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
-			Preprocessor_AddQuestData("villain_pronoun", XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.villain))));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID(PChar.quest.romance))));
+			Preprocessor_AddQuestData("pronoun3", XI_ConvertString(GetMyPronounPossessive(CharacterFromID(PChar.quest.romance))));
+			Preprocessor_AddQuestData("villain_pronoun", XI_ConvertString(GetMyPronounObj(CharacterFromID(PChar.quest.villain))));
 			AddQuestRecord("Villain_Hunt", 18);
 			Preprocessor_Remove("villain_pronoun");
 			Preprocessor_Remove("pronoun3");
@@ -10962,9 +10975,13 @@ void QuestComplete(string sQuestName)
 			if (GetNationRelation(SPAIN, FRANCE) != RELATION_ENEMY)			// If Spain and France have randomly made peace, they're at war again
 			{
 				SetNationRelationBoth(SPAIN, FRANCE, RELATION_ENEMY);
-				logTitle = GetNationNameByType(SPAIN) + " is at war with " + GetNationNameByType(FRANCE);
-				logEntry = GetNationNameByType(SPAIN) + " and " + GetNationNameByType(FRANCE) + " have resumed their hostilities.";
-				WriteNewLogEntry(logTitle, logEntry, "General",false);
+				Preprocessor_Add("nationname1", XI_ConvertString(GetNationNameByType(SPAIN)));
+				Preprocessor_Add("nationname2", XI_ConvertString(GetNationNameByType(FRANCE)));
+				logTitle = GetTranslatedLog("#snationname1# is at war with #snationname2#");
+				logEntry = GetTranslatedLog("#snationname1# and #snationname2# have resumed their hostilities.");
+				WriteNewLogEntry(PreprocessText(logTitle), PreprocessText(logEntry), "General",false);
+				Preprocessor_Delete("nationname2");
+				Preprocessor_Delete("nationname1");
 			}
 			if (GetNationRelation(ENGLAND, FRANCE) == RELATION_FRIEND)		// If Britain and France randomly allied, break the alliance
 			{
@@ -10974,7 +10991,7 @@ void QuestComplete(string sQuestName)
 
 			DeleteQuestAttribute("imperial_escort_enable");
 			NPChar = CharacterFromID("Imperial_Captain");
-			GiveShip2Character(NPChar, "FastGalleon5", "San Lorenzo", -1, SPAIN, true, true);
+			GiveShip2Character(NPChar, "FastGalleon5", TranslateString("","San Lorenzo"), -1, SPAIN, true, true);
 			NPChar.Ship.EmblemedSails.normalTex = "sail_weathered_common.tga";
 			NPChar.Ship.EmblemedSails.nationFileName = "sail_holy_roman_empire.tga";
 
@@ -12073,7 +12090,7 @@ void QuestComplete(string sQuestName)
 				else PChar.quest.imperial_escort.(temp) = "*NULL*";
 			}
 			ExchangeCharacterShip(PChar, CharacterFromID("Grigorio Formoselle"));
-			GiveShip2Character(PChar, "Barque1", "Mayordomo", -1, SPAIN, true, true);
+			GiveShip2Character(PChar, "Barque1", TranslateString("","Mayordomo"), -1, SPAIN, true, true);
 			SetCharacterShipLocation(PChar, "Cuba_Shore_03");
 
 			PChar.quest.imperial_escort_goto_beach.win_condition.l1 = "location";

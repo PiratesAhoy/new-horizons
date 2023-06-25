@@ -49,6 +49,8 @@
 #event_handler("FaderEvent_EndFade","ProcBreakInterface");
 #event_handler("FaderEvent_EndFadeIn","ProcBreakInterface");
 
+// #event_handler("Fader_GetTipsPath","procGetTipsPath");
+
 #event_handler("evntOptionsBreak","procOptionsBreak");
 
 bool EnableVideoBreak = false;
@@ -268,7 +270,7 @@ string CreateLocDescribe()
 	string locLabel = pchar.location;
 	int locidx = FindLocation(pchar.location);
 	if (IsEntity(&worldMap)) {
-		locLabel = "Open Sea";
+		locLabel = XI_ConvertString("Open Sea");
 	} else {
 		if (locidx >= 0) {
 			int islandidx = locidx;
@@ -283,29 +285,29 @@ string CreateLocDescribe()
 						else
 							Preprocessor_Add("town_name", "");
 					} else {
-						locLabel = "Open Sea";
+						locLabel = XI_ConvertString("Open Sea");
 					}
 				} else {
 					Preprocessor_Add("town_name", FindTownName(Locations[locidx].townsack));
 				}
-				locLabel = GetIslandNameByLocationID(Locations[islandidx].id) + ". " + Locations[locidx].id.label;
-				if (bOnDeck) locLabel += " " + TranslateString("", "on ship in") + " " + Locations[islandidx].id.label;
+				locLabel = GetIslandNameByLocationID(Locations[islandidx].id) + ". " + TranslateString("",Locations[locidx].id.label);
+				if (bOnDeck) locLabel += " " + TranslateString("", "on ship in") + " " + TranslateString("",Locations[islandidx].id.label);
 				locLabel = PreprocessText(locLabel);
 				Preprocessor_Remove("town_name");
 				Preprocessor_Remove("island_name");
 			} else {
-				locLabel = "Open Sea";
+				locLabel = XI_ConvertString("Open Sea");
 			}
 		} else {
 			if (bSeaActive) {
-				if (pchar.location == "") locLabel = "Open Sea";
+				if (pchar.location == "") locLabel = XI_ConvertString("Open Sea");
 				if (FindIsland(pchar.location) >= 0) {
 					Preprocessor_Add("island_name", FindIslandName(pchar.location));
 					locLabel = PreprocessText(TranslateString("", "#sisland_name# Waters"));
 					Preprocessor_Remove("island_name");
 				}
 			} else {
-				locLabel = "Unknown location";
+				locLabel = XI_ConvertString("Unknown location");
 			}
 		}
 	}
@@ -2214,3 +2216,14 @@ void procOptionsBreak()
 {
 	g_bOptionsBreak = true;
 }
+
+/*
+string g_sTipsPath;
+ref procGetTipsPath()
+{
+	string sLngID = LanguageGetLanguage();
+	if(sLngID != "SPANISH")    g_sTipsPath = "tips";
+	else g_sTipsPath = "tips\" + sLngID;
+	return &g_sTipsPath;
+}
+*/

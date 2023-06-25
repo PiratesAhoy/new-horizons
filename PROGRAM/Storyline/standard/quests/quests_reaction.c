@@ -171,6 +171,20 @@ void QuestComplete(string sQuestName)
 				Locations[FindLocation("Oxbay_town")].reload.l55.disable = false;
 			}
 // <-- KK
+			switch(LanguageGetLanguage())
+			{
+				case "SPANISH": temp = TranslateString("","Crewmember of") + " " + GetMyName(PChar); break;
+				case "RUSSIAN":
+					if(strright(GetMyName(PChar),1) == "ь") temp = strleft(GetMyName(PChar), strlen(GetMyName(PChar))-1);
+					else temp = GetMyName(PChar);
+					temp = TranslateString("","Crewmember of") + " " + temp + "я";
+				break;
+				temp = GetMyName(PChar) + TranslateString("","'s crewmember");
+			}
+			for(n=1; n<=3; n++)
+			{
+				Characters[GetCharacterIndex("Blaze_Crewmember_0"+n)].name = temp;
+			}
 		break;
 
 //TIH -->
@@ -178,7 +192,8 @@ void QuestComplete(string sQuestName)
 		case "Story_InvasionVideoAfterLeaveOxbay":
 			// worldmap cancel screwup prevention
 			CI_CreateAndSetControls( "WorldMapControls", "WMapCancel", -1, 0, true );
-			PostVideoAndQuest("Invasion",1,"Story_MapLoadAfterleavingOxbay");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("standard\RUSSIAN\Invasion",1,"Story_MapLoadAfterleavingOxbay");
+			else PostVideoAndQuest("Invasion",1,"Story_MapLoadAfterleavingOxbay");
 		break;
 //TIH <--
 
@@ -2298,8 +2313,7 @@ void QuestComplete(string sQuestName)
 			pchar.location.locator = "";
 			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
-			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
-			else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
+			Preprocessor_AddQuestData("pronoun3", XI_ConvertString(GetMyPronounPossessive(CharacterFromID("Danielle"))));
 			Preprocessor_AddQuestData("Pronoun_upper", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle")))));
 			AddQuestRecord("Meet_Danielle_on_Muelle", 4);
 			Preprocessor_Remove("Pronoun_upper");
@@ -3367,12 +3381,13 @@ void QuestComplete(string sQuestName)
 			LAi_SetHP(characterFromID("Blaze_CrewMember_01"), 80.0, 80.0);
 			LAi_SetActorType(characterFromID("Blaze_CrewMember_01"));
 			ChangeCharacterAddressGroup(characterFromID("Blaze_Crewmember_01"), "Greenford_tavern", "reload", "reload1");
-// KK -->
+/* // KK -->
+// GR: made translatable, moved to case "Story_leavingOxbay", applied to all three "Blaze_Crewmember" characters
 			if (CheckAttribute(PChar,"firstname"))
 				Characters[GetCharacterIndex("Blaze_Crewmember_01")].name = pchar.firstname + "'s crewmember";
 			else
 				Characters[GetCharacterIndex("Blaze_Crewmember_01")].name = pchar.name + "'s crewmember";
-// <-- KK
+// <-- KK */
 			Characters[GetCharacterIndex("Blaze_Crewmember_01")].Dialog.Filename = "EnglishAttack_dialog.c";
 			Characters[GetCharacterIndex("Blaze_Crewmember_01")].Dialog.CurrentNode = "First time";
 			LAi_ActorDialog(characterfromID("Blaze_Crewmember_01"), pchar, "player_back", 2.0, 1.0);
@@ -3578,7 +3593,8 @@ void QuestComplete(string sQuestName)
 
 		case "Story_KillTheFinalBoss_2":
 			DelEventHandler(EVENT_END_VIDEO,"LaunchMainMenu_afterVideo");
-			PostVideoAndQuest("standard\ending",100, "credits");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("standard\RUSSIAN\ending",100, "credits");
+			else PostVideoAndQuest("standard\ending",100, "credits");
 		break;
 
 		case "credits":
@@ -3793,14 +3809,13 @@ void QuestComplete(string sQuestName)
 			pchar.quest.main_line = "fawn_death";
 			Preprocessor_AddQuestData("Danielle", GetMyName(characterFromID("Danielle")));
 			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(characterFromID("Danielle"))));
+			Preprocessor_AddQuestData("pronoun3", XI_ConvertString(GetMyPronounPossessive(CharacterFromID("Danielle"))));
 			if (characters[GetCharacterIndex("Danielle")].sex == "woman")
 			{
-				Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
 				Preprocessor_AddQuestData("kid", XI_ConvertString("girl"));
 			}
 			else
 			{
-				Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
 				Preprocessor_AddQuestData("kid", XI_ConvertString("lad"));
 			}
 			AddQuestRecord("Blaze_out_from_silehard", 2);
@@ -5292,7 +5307,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "danielle_death":
-			Log_SetStringToLog(QUEST_MESSAGE1);
+			Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE1"));
 			Lai_KillCharacter(pchar);
 		break;
 
@@ -5973,15 +5988,14 @@ void QuestComplete(string sQuestName)
 			pchar.quest.main_line = "danielle_speak_with_almost_dead_rheims_complete";
 			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID("Danielle"))));
+			Preprocessor_AddQuestData("pronoun3", XI_ConvertString(GetMyPronounPossessive(CharacterFromID("Danielle"))));
 			if (Characters[GetCharacterIndex("Danielle")].sex == "woman")
 			{
 				Preprocessor_AddQuestData("kid", XI_ConvertString("girl"));
-				Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
 			}
 			else
 			{
 				Preprocessor_AddQuestData("kid", XI_ConvertString("lad"));
-				Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
 			}
 			AddQuestRecord("again_find_rheims", 7);
 			CloseQuestHeader("again_find_rheims");

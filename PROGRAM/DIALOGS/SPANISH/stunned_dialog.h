@@ -18,7 +18,7 @@ string DLG_TEXT[22] = {
 "En garde! ¡Necesitamos este barco!",
 "En garde!",
 "¡Oh, pobre muchacha! ¿Algún accidente? Oh, ¿te has desmayado otra vez? Así que no te importará si me llevo tus pertenencias y tu oro, ¿eh? ... Gracias, y que duermas bien. ",
-"Vaya, ¿qué tenemos aquí? ¿Un bolsillo lleno de dinero robado? Y parte de ese dinero es mío. Creó que lo ocnfiscaré todo.",
+"Vaya, ¿qué tenemos aquí? ¿Un bolsillo lleno de dinero robado? Y parte de ese dinero es mío. Creó que lo confiscaré todo.",
 "Te voy a dar un consejo amistoso. Si quieres conservar los dedos, mantenlos alejados de los bolsillos ajenos. Especialmente, de los míos.",
 "Hoy no es tu día, ¿verdad? Primero le robas el dinero a otra persona. Después te tropiezas, te das un golpe en la cabeza, te desmayas y pierdes todo el dinero. Yo lo llamo justicia poética.",
 };

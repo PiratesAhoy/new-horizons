@@ -1,4 +1,4 @@
-string DLG_TEXT[60] = {
+string DLG_TEXT[63] = {
 "Ah! A new visitor in my tavern! Welcome, ",
 "! The finest hospitality in the archipelago is at your disposal!",
 "Hello. My name is ",
@@ -59,4 +59,7 @@ string DLG_TEXT[60] = {
 "I'm looking for someone who knows his way around the jungle, who has perhaps found an old temple.",
 "Ah, yes! Mauricio Juradu over there said something about how he barely got away from a temple surrounded by Indians.",
 "Thanks! He sounds as though he could help.",
+"I'm looking for a man who seems to go by the name Marcel Jauri. Have you ever heard from him?",
+"Strange name. Hmm, I'm afraid I can't help you here, it doesn't ring a bell.",
+"Oh dear! How am I going to find that fellow?",
 };

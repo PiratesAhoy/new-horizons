@@ -13,6 +13,10 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 	ref lcn = &Locations[FindLocation(PChar.location)];
+
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
+
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -35,14 +39,14 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
 
-			PlaySound("VOICE\ENGLISH\Wharf01.wav");	
+			PlaySound(voice_path + "Wharf01.wav");	
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";
 		break;
 
 		case "our_first_meeting":
-			PlaySound("VOICE\ENGLISH\Wharf03.wav");
+			PlaySound(voice_path + "Wharf03.wav");
 			dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3];
 			link.l1.go = "our_first_meeting2";
@@ -67,7 +71,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Meet_in_Spanish_prison":
-			PlaySound("VOICE\ENGLISH\Wharf02.wav");
+			PlaySound(voice_path + "Wharf02.wav");
 			dialog.text = DLG_TEXT[8];
 			link.l1 = DLG_TEXT[9];
 			link.l1.go = "Exit_Meet_in_Spanish_prison";
@@ -80,7 +84,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Duchess_on_the_Beach":
-			PlaySound("VOICE\ENGLISH\Wharf01.wav");
+			PlaySound(voice_path + "Wharf01.wav");
 			dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];
 			link.l1.go = "Duchess_on_the_Beach2";
@@ -130,7 +134,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "First_words_Duchess":
-			PlaySound("VOICE\ENGLISH\Wharf04.wav");
+			PlaySound(voice_path + "Wharf04.wav");
 			dialog.text = DLG_TEXT[22];
 			link.l1 = DLG_TEXT[23];
 			link.l1.go = "Exit_First_words_Duchess";
@@ -203,7 +207,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "After_Dinner_Talk5":
-			PlaySound("VOICE\ENGLISH\Wharf01.wav");
+			PlaySound(voice_path + "Wharf01.wav");
 			dialog.text = DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
 			link.l1.go = "Exit_After_Dinner_Talk";
@@ -240,14 +244,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "The_next_day_Talk":
-			PlaySound("VOICE\ENGLISH\Hornblwr02.wav");
+			PlaySound(voice_path + "Hornblwr02.wav");
 			dialog.text = GetMyName(PChar);
 			link.l1 = DLG_TEXT[40];
 			link.l1.go = "The_next_day_Talk2";
 		break;
 
 		case "The_next_day_Talk2":
-			PlaySound("VOICE\ENGLISH\Wharf05.wav");
+			PlaySound(voice_path + "Wharf05.wav");
 			dialog.text = DLG_TEXT[41];
 			link.l1 = DLG_TEXT[42];
 			link.l1.go = "The_next_day_Talk3";

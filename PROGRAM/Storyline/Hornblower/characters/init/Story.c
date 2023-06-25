@@ -1356,7 +1356,7 @@ void CreateStoryCharacters(ref n)
 //	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-	SetRankTitle(ch, TranslateString("", "Doctor"));
+	SetRankTitle(ch, TranslateString("", "DoctorW"));
 	ch.quest.officertype = OFFIC_TYPE_DOCTOR;
 	ch.questchar = true;
 	AddGameCharacter(n, ch);

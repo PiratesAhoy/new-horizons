@@ -15,48 +15,49 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	
 	// DeathDaisy -->
-	int iNation = sti(PChar.nation);
+	int iNation = GetServedNation();
 	string sNation = iNation;
 	switch(iNation)
 	{
 		case FRANCE:
-			Preprocessor_Add("hello", "Bonjour");
-			Preprocessor_Add("captain", "Capitaine");
-			Preprocessor_Add("mygod", "Mon dieu");
-			Preprocessor_Add("assault", "Oui, a l'assaut");
-			Preprocessor_Add("yes", "Oui");
+			Preprocessor_Add("hello", DLG_TEXT[33]);
+			Preprocessor_Add("captain", DLG_TEXT[34]);
+			Preprocessor_Add("mygod", DLG_TEXT[35]);
+			Preprocessor_Add("assault", DLG_TEXT[36]);
+			Preprocessor_Add("yes", DLG_TEXT[37]);
 		break;
 
 		case SPAIN:
-			Preprocessor_Add("hello", "Hola");
-			Preprocessor_Add("captain", "CapitÃ¡n");
-			Preprocessor_Add("mygod", "Dios mio");
-			Preprocessor_Add("assault", "Si, al ataque");
-			Preprocessor_Add("yes", "Si");
+			Preprocessor_Add("hello", DLG_TEXT[38]);
+			Preprocessor_Add("captain", DLG_TEXT[39]);
+			Preprocessor_Add("mygod", DLG_TEXT[40]);
+			Preprocessor_Add("assault", DLG_TEXT[41]);
+			Preprocessor_Add("yes", DLG_TEXT[42]);
 		break;
 
 		case PORTUGAL:
-			Preprocessor_Add("hello", "Ola");
-			Preprocessor_Add("captain", "CapitÃo");
-			Preprocessor_Add("mygod", "Meu Deus");
-			Preprocessor_Add("assault", "Sim, assalto");
-			Preprocessor_Add("yes", "Sim");
+			Preprocessor_Add("hello", DLG_TEXT[43]);
+		//	Preprocessor_Add("captain", DLG_TEXT[44]);			// Doesn't work, displays "CapitÝo" without converting "Ý"
+			Preprocessor_Add("captain", TranslateString("","CapitÝo"));	// But this does work!
+			Preprocessor_Add("mygod", DLG_TEXT[45]);
+			Preprocessor_Add("assault", DLG_TEXT[46]);
+			Preprocessor_Add("yes", DLG_TEXT[47]);
 		break;
 
 		case HOLLAND:
-			Preprocessor_Add("hello", "Hallo");
-			Preprocessor_Add("captain", "Kapitein");
-			Preprocessor_Add("mygod", "Mijn God");
-			Preprocessor_Add("assault", "Ja, aanval");
-			Preprocessor_Add("yes", "Ja");
+			Preprocessor_Add("hello", DLG_TEXT[48]);
+			Preprocessor_Add("captain", DLG_TEXT[49]);
+			Preprocessor_Add("mygod", DLG_TEXT[50]);
+			Preprocessor_Add("assault", DLG_TEXT[51]);
+			Preprocessor_Add("yes", DLG_TEXT[52]);
 		break;
 
 		case ENGLAND:
-			Preprocessor_Add("hello", "Hello");
-			Preprocessor_Add("captain", "Captain");
-			Preprocessor_Add("mygod", "My God");
-			Preprocessor_Add("assault", "Yes, attack");
-			Preprocessor_Add("yes", "Yes");
+			Preprocessor_Add("hello", DLG_TEXT[53]);
+			Preprocessor_Add("captain", DLG_TEXT[54]);
+			Preprocessor_Add("mygod", DLG_TEXT[55]);
+			Preprocessor_Add("assault", DLG_TEXT[56]);
+			Preprocessor_Add("yes", DLG_TEXT[57]);
 		break;
 
 		case PIRATE:
@@ -78,19 +79,19 @@ void ProcessDialogEvent()
 		case GUEST1_NATION:
 			if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
 			{
-				Preprocessor_Add("hello", "HallÃ¥");
-				Preprocessor_Add("captain", "Kapten");
-				Preprocessor_Add("mygod", "Min Gud");
-				Preprocessor_Add("assault", "Ja, angrip");
-				Preprocessor_Add("yes", "Ja");
+				Preprocessor_Add("hello", DLG_TEXT[58]);
+				Preprocessor_Add("captain", DLG_TEXT[59]);
+				Preprocessor_Add("mygod", DLG_TEXT[60]);
+				Preprocessor_Add("assault", DLG_TEXT[61]);
+				Preprocessor_Add("yes", DLG_TEXT[62]);
 			}
 			else
 			{
-				Preprocessor_Add("hello", "Hello");
-				Preprocessor_Add("captain", "Captain");
-				Preprocessor_Add("mygod", "My God");
-				Preprocessor_Add("assault", "Yes, attack");
-				Preprocessor_Add("yes", "Yes");
+				Preprocessor_Add("hello", DLG_TEXT[53]);
+				Preprocessor_Add("captain", DLG_TEXT[54]);
+				Preprocessor_Add("mygod", DLG_TEXT[55]);
+				Preprocessor_Add("assault", DLG_TEXT[56]);
+				Preprocessor_Add("yes", DLG_TEXT[57]);
 			}
 		break;
 	}
@@ -99,7 +100,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Ð”Ð¸Ð°Ð»Ð¾Ð³ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ - Ð¿ÐµÑ€Ð²Ð°Ñ Ð²ÑÑ‚Ñ€ÐµÑ‡Ð°
+		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";

@@ -270,6 +270,13 @@ string TranslateString(string strData1, string strData2)
 
 	str1 = strData1;
 	str2 = strData2;
+	resultString = SpellString("", "storyline_strings.txt", &str1, &str2, joinString);
+	if (resultString != "") return resultString;
+	if (rStr1 == "") rStr1 = str1;
+	if (rStr2 == "") rStr2 = str2;
+
+	str1 = strData1;
+	str2 = strData2;
 	resultString = SpellString(GetStorylinePath(FindCurrentStoryline()), "storyline_strings.txt", &str1, &str2, joinString);
 	if (resultString != "") return resultString;
 	if (rStr1 == "") rStr1 = str1;
@@ -1211,7 +1218,7 @@ string returnRandomDeadItem()
 	return "potion";
 }
 
-//----------------------------- Недописанные функции, введенные для прописывания в диалоги ---------------------------
+//----------------------------- Íåäîïèñàííûå ôóíêöèè, ââåäåííûå äëÿ ïðîïèñûâàíèÿ â äèàëîãè ---------------------------
 
 
 string TimeGreeting()
@@ -2783,9 +2790,15 @@ void RansomColony(string TownName, int nBooty)
 	SetTownCapturedState(TownName, true);
 	OccupyTown(TownName);
 
-	string sLogTitle = "Ransacked " + FindTownName(TownName);
-	string sLogEntry = "My men pillaged and plundered to their heart's content. Of course " + GetNationNameByType(iNation) + " and their allies aren't happy about this, but it made for an extra " + MakeMoneyShow(nBooty,MONEY_SIGN,MONEY_DELIVER) + " gold in the ship's chest. Hopefully it was worth it.";
-	WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+	Preprocessor_Add("town", FindTownName(TownName));
+	Preprocessor_Add("nation", XI_ConvertString(GetNationNameByType(iNation)));
+	Preprocessor_Add("booty", MakeMoneyShow(nBooty,MONEY_SIGN,MONEY_DELIVER));
+	string sLogTitle = GetTranslatedLog("Ransacked #stown#");
+	string sLogEntry = GetTranslatedLog("My men pillaged and plundered to their heart's content. Of course #snation# and their allies aren't happy about this, but it made for an extra #sbooty# gold in the ship's chest. Hopefully it was worth it.");
+	WriteNewLogEntry(PreprocessText(sLogTitle),PreprocessText(sLogEntry), "Personal", true);
+	Preprocessor_Delete("town");
+	Preprocessor_Delete("nation");
+	Preprocessor_Delete("booty");
 }
 
 void CaptureColony(string TownName, int toNation)
@@ -2815,18 +2828,26 @@ void CaptureColony(string TownName, int toNation)
 	
 	string sLogTitle;
 	string sLogEntry;
+	Preprocessor_Add("town", FindTownName(TownName));
+	Preprocessor_Add("nation", XI_ConvertString(GetNationNameByType(iNation)));
+	Preprocessor_Add("tonation", XI_ConvertString(GetNationNameByType(toNation)));
+	Preprocessor_Add("nationdesc", XI_ConvertString(GetNationDescByType(iNation)));
 	if (toNation != PERSONAL_NATION) {
 		ChangeRMRelation(PChar, toNation, 10.0);
 		if(GetRMRelation(PChar, toNation) < REL_AMNESTY)	SetRMRelation(PChar, toNation, REL_AMNESTY); // PB: Destination Nation to Turn Friendly
-		sLogTitle = "Captured " + FindTownName(TownName) + " for " + GetNationNameByType(toNation);
-		sLogEntry = "The " + GetNationDescByType(iNation) + " and their allies will not be happy about this. But " + GetNationNameByType(toNation) + " and their friends most certainly will be!";
+		sLogTitle = GetTranslatedLog("Captured #stown# for #stonation#");
+		sLogEntry = GetTranslatedLog("The #snationdesc# and their allies will not be happy about this. But #stonation# and their friends most certainly will be!");
 	}
 	else
 	{
-		sLogTitle = "Captured " + FindTownName(TownName) + " for myself";
-		sLogEntry = "What used to belong to " + GetNationNameByType(iNation) + " now belongs to me. The original owners of course won't be pleased and neither will their allies. But that is the price to pay for building my personal empire.";
+		sLogTitle = GetTranslatedLog("Captured #stown# for myself");
+		sLogEntry = GetTranslatedLog("What used to belong to #snation# now belongs to me. The original owners of course won't be pleased and neither will their allies. But that is the price to pay for building my personal empire.");
 	}
-	WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+	WriteNewLogEntry(PreprocessText(sLogTitle),PreprocessText(sLogEntry), "Personal", true);
+	Preprocessor_Delete("town");
+	Preprocessor_Delete("nation");
+	Preprocessor_Delete("tonation");
+	Preprocessor_Delete("nationdesc");
 
 	nExp = troops * 50;
 	SetTownNumTroops(TownName, makeint(makefloat(troops) * SACK_TROOPS_DECREASE * (0.75 + frand(0.5))));
@@ -2872,32 +2893,37 @@ string GetShipDescribe(string charId, bool nation, bool nguns, bool shipname, bo
 //	if (nation) shipDescribe += XI_ConvertString("sw_" + GetNationDescByType(sti(chr.nation))) + " "; // MAXIMUS 30.05.2019: moved to the end of function for correct phrase spelling
 	if (nguns) shipDescribe += GetMaxCannonQuantity(chr) + XI_ConvertString("cannonsQuantity") + " ";
 	tmpDescr = shipDescribe + strlower(XI_ConvertString(shipType));
-	if (accusative) {
-		switch (LanguageGetLanguage()) {
-			case "Polish":
+	switch (LanguageGetLanguage())
+	{
+		case "Spanish":	
+			tmpDescr = strlower(XI_ConvertString(shipType));
+			if (shipname) tmpDescr += " " + GetMyShipNameShow(chr);
+			if (nguns) tmpDescr += + " " + "de" + " " + GetMaxCannonQuantity(chr) + XI_ConvertString("cannonsQuantity");
+		break;
+
+		case "Polish":
+			if (accusative)
+			{
 				int dl = strlen(tmpDescr);
-				if (GetSymbol(tmpDescr, dl - 1) == "a") {
+				if (GetSymbol(tmpDescr, dl - 1) == "a")
+				{
 					string tmpstr = "";
-					for (int i = 0; i < dl - 1; i++) {
+					for (int i = 0; i < dl - 1; i++)
+					{
 						if (GetSymbol(tmpDescr, i + 1) == " ")
 							tmpstr += "¹";
 						else
 							tmpstr += strcut(tmpDescr, i, i);
 					}
 					tmpstr += "×";
-					shipDescribe = tmpstr;
 				}
-			break;
-			shipDescribe = tmpDescr;
-			// default:
-		}
+			}
+			if (shipname) tmpDescr += " " + GetMyShipNameShow(chr);
+		break;
+		if (shipname) tmpDescr += " " + GetMyShipNameShow(chr);
 	}
-	else {
-		shipDescribe += strlower(XI_ConvertString(shipType));
-	}
-	if (shipname) shipDescribe += " " + GetMyShipNameShow(chr);
-	if (nation) shipDescribe += " " + TranslateString("", "flying the colors of") + " " + XI_ConvertString("q" + GetNationDescByType(sti(chr.nation))); // MAXIMUS 30.05.2019: placed here for correct phrase spelling
-
+	if (nation) tmpDescr += ", " + TranslateString("", "flying the colors of") + " " + XI_ConvertString("q" + GetNationDescByType(sti(chr.nation))); // MAXIMUS 30.05.2019: placed here for correct phrase spelling
+	shipDescribe = tmpDescr;
 // GR: what is this supposed to achieve?
 /*
 	if(HasSubStr(shipType,"0") || HasSubStr(shipType,"1") || HasSubStr(shipType,"2") || HasSubStr(shipType,"3") || HasSubStr(shipType,"4") || HasSubStr(shipType,"5") || HasSubStr(shipType,"6") || HasSubStr(shipType,"7") || HasSubStr(shipType,"8") || HasSubStr(shipType,"9"))

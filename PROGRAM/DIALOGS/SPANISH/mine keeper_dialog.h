@@ -1,9 +1,9 @@
 string DLG_TEXT[6] = {
-"Muevanse.",
+"Muévete.",
 "...",
-"Esta mina esta bajo mi proteccion. Si usted tiene negocios legitimos aqui, usted puede discutirlo con el jefe. Esta en la casa frente a la entrada de la mina.",
-"Eso esta bastante claro.",
-"Te dije que no pusieras un pie en las minas!",
-"Claro, esta bien.",
+"Esta mina está bajo mi protección. Si tienes negocios legítimos que te traigan aquí, puedes discutirlos con el jefe. Está en la casa frente a la entrada de la mina.",
+"Queda claro.",
+"¡Te dije que no pusieras un pie en las minas!",
+"Claro, claro.",
 
 };

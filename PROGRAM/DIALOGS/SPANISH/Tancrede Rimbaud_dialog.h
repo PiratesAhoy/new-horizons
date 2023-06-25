@@ -1,8 +1,8 @@
 string DLG_TEXT[5] = {
 "Lo siento, ",
-", pero estoy hablando ",
+", pero estoy hablando con ",
 "Virgile Boon",
-", asi que tendras que esperar.",
-"Bueno, que sea estrategia. No tengo mucho tiempo.",
+", así que tendrás que esperar.",
+"Bueno, pero que sea rápido. No tengo mucho tiempo.",
 
 };

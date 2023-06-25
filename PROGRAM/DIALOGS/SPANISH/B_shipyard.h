@@ -31,7 +31,7 @@ string DLG_TEXT[34] = {
 ", antes de que llame a los guardias.",
 "Muy bien.",
 "Bien, mi muelle junto al fuerte está disponible para ti. Si te parece bien, le diré al capataz del muelle que remolque tu barco hasta allí.",
-"¿¿MUELLE AL LADO DEL FUERTE?? Uhh... Acabo de recordar que tengo... eh... otros asuntos urgentes que debo atender primero. Adiós.",
+"¿¿MUELLE JUNTO AL FUERTE?? Uhh... Acabo de recordar que tengo... eh... otros asuntos urgentes que debo atender primero. Adiós.",
 "Esta bien, veamos lo que ofrecen tus instalaciones.",
 
 };

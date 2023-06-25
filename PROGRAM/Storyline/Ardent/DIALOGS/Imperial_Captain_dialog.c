@@ -53,7 +53,7 @@ void ProcessDialogEvent()
 
 		case "Meeting_in_San_Juan3":
 			dialog.text = DLG_TEXT[7];
-			link.l1 = DLG_TEXT[8] + GetRankName(CharacterFromID("Jusepe Guimaraes"), SPAIN) + DLG_TEXT[9];
+			link.l1 = DLG_TEXT[8] + XI_ConvertString(GetRankName(CharacterFromID("Jusepe Guimaraes"), SPAIN)) + DLG_TEXT[9];
 			link.l1.go = "Meeting_in_San_Juan4";
 		break;
 

@@ -920,15 +920,15 @@ void changeIslandSmugglingState(ref sisland, int change)
 	
 	if(change>0) 
 	{
-		logTitle = sisland.name+" "+TranslateString("","Increase_Patrol");
-		logEntry = TranslateString("","Increase_Message1")+" "+sisland.name+TranslateString("Increase_Message2",SmugglingState)+".";
+		logTitle = XI_ConvertString(sisland.name)+" "+TranslateString("","Increase_Patrol");
+		logEntry = TranslateString("","Increase_Message1")+" "+XI_ConvertString(sisland.name)+TranslateString("Increase_Message2",SmugglingState)+".";
 		WriteNewLogEntry(logTitle, logEntry, "General", false);
 		if(DEBUG_SMUGGLING>0) trace("SMUGGLING increased state of "+sisland.id+" to: "+sisland.smuggling.state);
 	}
 	if(change<0) 
 	{
-		logTitle = sisland.name+" "+TranslateString("","Decrease_Patrol");
-		logEntry = TranslateString("","Decrease_Message1")+" "+sisland.name+TranslateString("Decrease_Message2",SmugglingState)+".";
+		logTitle = XI_ConvertString(sisland.name)+" "+TranslateString("","Decrease_Patrol");
+		logEntry = TranslateString("","Decrease_Message1")+" "+XI_ConvertString(sisland.name)+TranslateString("Decrease_Message2",SmugglingState)+".";
 		WriteNewLogEntry(logTitle, logEntry, "General", false);
 		if(DEBUG_SMUGGLING>0) trace("SMUGGLING decreased state of "+sisland.id+" to: "+sisland.smuggling.state);
 	}
@@ -1087,7 +1087,7 @@ string GetPatrolTimeText(ref sisland, int best)
 		string patrol = GetAttributeName(GetAttributeN(patrols,best));
 		string start  = GetTimeText(stf(sisland.smuggling.patrol.(patrol).start));
 		string end    = GetTimeText(stf(sisland.smuggling.patrol.(patrol).end));
-		return "between "+start+" and "+end;
+		return TranslateString("","between") +" "+ start +" "+ TranslateString("","and") +" "+ end;
 	}
 	return "";
 }

@@ -2963,38 +2963,52 @@ void ShipDead(int iDeadCharacterIndex, int iKillStatus, int iKillerCharacterInde
 				// RM <--
 				
 				// Sulan : Ship's log -->
-				sLogTitle="Sunk a "+sSunkShipType;
+				Preprocessor_Add("shiptype", sSunkShipType);
+				Preprocessor_Add("shipname", GetMyShipNameShow(rDead));
+				Preprocessor_Add("nationdesc", XI_ConvertString(GetNationDescByType(iNation)));
+				Preprocessor_Add("nationdescflag", XI_ConvertString(GetNationDescByType(GetCurrentFlag())));
+				Preprocessor_Add("myshipname", GetMyShipNameShow(rKillerCharacter));
+				Preprocessor_Add("deadcrew", +abs(sti(rDead.Ship.Crew.Quantity)));
+				Preprocessor_Add("money", rDead.ShipMoney);
+				sLogTitle = GetTranslatedLog("Sunk a #sshiptype#");
 				switch (iKillStatus)
 				{
 					case KILL_BY_TOUCH:
-						sLogEntry = GetLogTime()+" we encountered the "+GetMyShipNameShow(rDead)+", a "+sSunkShipType+" flying "+GetNationDescByType(iNation)+" colours while under "+GetNationDescByType(GetCurrentFlag())+" flag ourselves.\nWe closed in on the ship and fired a broadside. In the following battle their captain tried to evade our cannonfire and almost escaped with a risky maneuver. The battle was ended by the "+GetMyShipNameShow(rKillerCharacter)+" ramming their ship. The hull shattered and the "+GetMyShipNameShow(rDead)+" sank like a stone within minutes.";
-						if (bPirated) sLogEntry +=" This was not considered to be a legal attack.";
-						if (abs(sti(rDead.Ship.Crew.Quantity))>0) sLogEntry +="\nAbout "+abs(sti(rDead.Ship.Crew.Quantity))+" sailors followed her to Davy Jones.";
+						sLogEntry = GetLogTime()+GetTranslatedLog(", we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\nWe closed in on the ship and fired a broadside. In the following battle their captain tried to evade our cannonfire and almost escaped with a risky maneuver. The battle was ended by the #smyshipname# ramming their ship. The hull shattered and the #sshipname# sank like a stone within minutes.");
+						if (bPirated) sLogEntry += " " + GetTranslatedLog("This was not considered to be a legal attack.");
+						if (abs(sti(rDead.Ship.Crew.Quantity))>0) sLogEntry += GetTranslatedLog("\nAbout #sdeadcrew# sailors followed her to Davy Jones.");
 					break;
 					case KILL_BY_BALL:
-						sLogEntry = GetLogTime()+" we encountered the "+GetMyShipNameShow(rDead)+", a "+sSunkShipType+" flying "+GetNationDescByType(iNation)+" colours while under "+GetNationDescByType(GetCurrentFlag())+" flag ourselves.\nWhen they were in reach of our cannons, we opened fire. Our cannons tore their sails to tatters and shattered their hull. After a ferocious battle, the "+GetMyShipNameShow(rKillerCharacter)+" fired her cannons a last time at the "+sSunkShipType+". Its hull was already heavily damaged from a previous broadside and the ship sank like a stone.";      
-						if (bPirated) sLogEntry +=" This was not considered to be a legal attack.";
-						if (abs(sti(rDead.Ship.Crew.Quantity))>0) sLogEntry += "\nAbout "+abs(sti(rDead.Ship.Crew.Quantity))+" sailors went down with her to Davy Jones.";
+						sLogEntry = GetLogTime()+GetTranslatedLog(", we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\nWhen they were in reach of our cannons, we opened fire. Our cannons tore their sails to tatters and shattered their hull. After a ferocious battle, the #smyshipname# fired her cannons a last time at the #sshipname#. Its hull was already heavily damaged from a previous broadside and the ship sank like a stone.");      
+						if (bPirated) sLogEntry += " " + GetTranslatedLog("This was not considered to be a legal attack.");
+						if (abs(sti(rDead.Ship.Crew.Quantity))>0) sLogEntry += GetTranslatedLog("\nAbout #sdeadcrew# sailors went down with her to Davy Jones.");
 					break;
 					case KILL_BY_ABORDAGE:
-						sLogEntry = GetLogTime()+" we encountered the "+GetMyShipNameShow(rDead)+", a "+sSunkShipType+" flying "+GetNationDescByType(iNation)+" colours while under "+GetNationDescByType(GetCurrentFlag())+" flag ourselves.\n";
+						sLogEntry = GetLogTime()+GetTranslatedLog(", we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\n");
 						if (CheckAttribute(rDead, "surrendered") == true && sti(rDead.surrendered) == 1)
 						{
-							sLogEntry += "When we opened fire, they tried to escape, but we chased them and finally were in reach for boarding, when the cowards raised the white flag and surrendered the ship. We brought our ship alongside and boarded.";
+							sLogEntry += GetTranslatedLog("When we opened fire, they tried to escape, but we chased them and finally were in reach for boarding, when the cowards raised the white flag and surrendered the ship. We brought our ship alongside and boarded.");
 						}
 						else
 						{
-							sLogEntry += "Our cannons gave them a warm and hearty welcome when we closed for battle. Once they were in reach of our grappling hooks, we boarded the ship and I defeated the captain.";
+							sLogEntry += GetTranslatedLog("Our cannons gave them a warm and hearty welcome when we closed for battle. Once they were in reach of our grappling hooks, we boarded the ship and I defeated the captain.");
 						}
-						if (bPirated) sLogEntry +=" This was not considered to be a legal attack.";
-						sLogEntry += "\nWe plundered her";
-						if (CheckAttribute(rDead,"ShipMoney")) sLogEntry += ", moved the "+rDead.ShipMoney+" gold from their ship's chest to ours";
-						sLogEntry += " and sent the "+GetMyShipNameShow(rDead)+" down to Davy Jones.";
-						if (abs(sti(rDead.Ship.Crew.Quantity))>0) sLogEntry += "\nAbout "+abs(sti(rDead.Ship.Crew.Quantity))+" sailors accompanied her on her journey.";
-						sLogEntry += "\n \nThe "+GetMyShipNameShow(rDead)+" was loaded with the following cargo:\n"+GetCargoList(rDead);
+						if (bPirated) sLogEntry += " " + GetTranslatedLog("This was not considered to be a legal attack.");
+						sLogEntry += GetTranslatedLog("\nWe plundered her");
+						if (CheckAttribute(rDead,"ShipMoney")) sLogEntry += GetTranslatedLog(", moved the #smoney# gold from their ship's chest to ours");
+						sLogEntry += " " + GetTranslatedLog("and sent the #sshipname# down to Davy Jones.");
+						if (abs(sti(rDead.Ship.Crew.Quantity))>0) sLogEntry += GetTranslatedLog("\nAbout #sdeadcrew# sailors accompanied her on her journey.");
+						sLogEntry += GetTranslatedLog("\n \nThe #sshipname# was loaded with the following cargo:\n")+GetCargoList(rDead);
 					break;
 				}
-				WriteNewLogEntry(sLogTitle,sLogEntry, "Battle", true);
+				WriteNewLogEntry(PreprocessText(sLogTitle),PreprocessText(sLogEntry), "Battle", true);
+				Preprocessor_Delete("shiptype");
+				Preprocessor_Delete("shipname");
+				Preprocessor_Delete("nationdesc");
+				Preprocessor_Delete("nationdescflag");
+				Preprocessor_Delete("myshipname");
+				Preprocessor_Delete("deadcrew");
+				Preprocessor_Delete("money");
 				UpdateStatistics("ShipsSunk",1);
 				// Sulan : Ship's log <--
 			}
@@ -3164,21 +3178,31 @@ bool ShipTaken(int iDeadCharacterIndex, int iKillStatus, int iKillerCharacterInd
 			// RM <--
 			
 			// Sulan: Ship's log -->
-			sLogTitle = "Captured a "+sSunkShipType;
-			sLogEntry = GetLogTime()+" we encountered the "+GetMyShipNameShow(rDead)+", a "+sSunkShipType+" flying "+GetNationDescByType(iNation)+" colours while under "+GetNationDescByType(GetCurrentFlag())+" flag ourselves.\n";
+			Preprocessor_Add("shiptype", sSunkShipType);
+			Preprocessor_Add("shipname", GetMyShipNameShow(rDead));
+			Preprocessor_Add("nationdesc", XI_ConvertString(GetNationDescByType(iNation)));
+			Preprocessor_Add("nationdescflag", XI_ConvertString(GetNationDescByType(GetCurrentFlag())));
+			if (CheckAttribute(rDead,"ShipMoney")) Preprocessor_Add("money", rDead.ShipMoney);
+			sLogTitle = GetTranslatedLog("Captured a #sshiptype#");
+			sLogEntry = GetLogTime()+ GetTranslatedLog(", we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\n");
 			if(CheckAttribute(rDead, "surrendered") == true && sti(rDead.surrendered) == 1)
 			{
-				sLogEntry += "When we opened fire, they tried to escape, but we chased them and finally were in reach for boarding, when the cowards raised the white flag and surrendered the ship. We brought our ship alongside and boarded.";
+				sLogEntry += GetTranslatedLog("When we opened fire, they tried to escape, but we chased them and finally were in reach for boarding, when the cowards raised the white flag and surrendered the ship. We brought our ship alongside and boarded.");
 			}
 			else
 			{
-				sLogEntry += "When they were in reach of our cannons, we fired and a ferocious sea battle began. Finally we brought our ship alongside and boarded. After a bloody deckfight I defeated the enemy captain in a duel, thus capturing the ship.";      
+				sLogEntry += GetTranslatedLog("When they were in reach of our cannons, we fired and a ferocious sea battle began. Finally we brought our ship alongside and boarded. After a bloody deckfight I defeated the enemy captain in a duel, thus capturing the ship.");      
 			}
-			if (bPirated) sLogEntry +=" This was not considered to be a legal attack.";
+			if (bPirated) sLogEntry += " " + GetTranslatedLog("This was not considered to be a legal attack.");
 			sLogEntry += "\n"+GetSailStatus(rDead)+" "+GetHullStatus(rDead)+"\n \n";
-			sLogEntry += "The "+sSunkShipName+" was loaded with the following cargo:\n"+GetCargoList(rDead);
-			if (CheckAttribute(rDead,"ShipMoney")) sLogEntry += "Additionally we found "+rDead.ShipMoney+" gold in the ship's chest.";
-			WriteNewLogEntry(sLogTitle,sLogEntry, "Battle", true);)
+			sLogEntry += GetTranslatedLog("The #sshipname# was loaded with the following cargo:\n")+GetCargoList(rDead);
+			if (CheckAttribute(rDead,"ShipMoney")) sLogEntry += GetTranslatedLog("Additionally we found #smoney# gold in the ship's chest.");
+			WriteNewLogEntry(PreprocessText(sLogTitle),PreprocessText(sLogEntry), "Battle", true);
+			Preprocessor_Delete("shiptype");
+			Preprocessor_Delete("shipname");
+			Preprocessor_Delete("nationdesc");
+			Preprocessor_Delete("nationdescflag");
+			if (CheckAttribute(rDead,"ShipMoney")) Preprocessor_Delete("money");
 			UpdateStatistics("ShipsCaptured",1);
 			// <-- Sulan
 		} // NK
@@ -3194,12 +3218,12 @@ void Ship_SailHitEvent()
 string GetSailStatus(ref rShip)
 {
 	string sRet = "";
-	if(GetSailPercent(rShip)>=90) sRet = "The sails were in nearly perfect condition. Sometimes not using cannons pays off."; 
-	if(GetSailPercent(rShip)<90) sRet = "The sails were in a quite good condition for a ship captured in a seafight."; 
-	if(GetSailPercent(rShip)<75) sRet = "Compared to the amount of balls we shot at the ship the sails were in acceptable condition. Nevertheless, repairing the damage will cost quite some sailcloth.";
-	if(GetSailPercent(rShip)<50) sRet = "The sails were badly damaged, but at least allowed the ship basic maneuvers.";
-	if(GetSailPercent(rShip)<25) sRet = "The sails were almost completely in tatters. We'll need quite a lot of sailcloth to repair that.";  
-	if(GetSailPercent(rShip)<=10) sRet = "Our cannons did their job. The sails and the rigging were in tatters, there was barely a squarefeet of sails left intact.";
+	if(GetSailPercent(rShip)>=90) sRet = GetTranslatedLog("The sails were in nearly perfect condition. Sometimes not using cannons pays off."); 
+	if(GetSailPercent(rShip)<90) sRet = GetTranslatedLog("The sails were in a quite good condition for a ship captured in a seafight."); 
+	if(GetSailPercent(rShip)<75) sRet = GetTranslatedLog("Compared to the amount of balls we shot at the ship the sails were in acceptable condition. Nevertheless, repairing the damage will cost quite some sailcloth.");
+	if(GetSailPercent(rShip)<50) sRet = GetTranslatedLog("The sails were badly damaged, but at least allowed the ship basic maneuvers.");
+	if(GetSailPercent(rShip)<25) sRet = GetTranslatedLog("The sails were almost completely in tatters. We'll need quite a lot of sailcloth to repair that.");  
+	if(GetSailPercent(rShip)<=10) sRet = GetTranslatedLog("Our cannons did their job. The sails and the rigging were in tatters, there was barely a squarefeet of sails left intact.");
 
 	return sRet;
 }
@@ -3207,12 +3231,12 @@ string GetSailStatus(ref rShip)
 string GetHullStatus(ref rShip)
 {
 	string sRet = "";
-	if(GetHullPercent(rShip)>=90) sRet = "The hull was in very good order. It almost took no damage at all from the battle."; 
-	if(GetHullPercent(rShip)<90) sRet = "The hull was in good condition. Our balls did some damage but nothing serious."; 
-	if(GetHullPercent(rShip)<75) sRet = "The hull had a few holes and the deck was quite a mess, but it seems the damage can be repaired.";
-	if(GetHullPercent(rShip)<50) sRet = "The hull was leaking, the deck full of splinters and overall the ship was in a bad condition.";
-	if(GetHullPercent(rShip)<25) sRet = "The ship has spung a large leak in the hull and water was pouring in, but we were able to close it. In summary the ship's hull was as full of holes as a Swiss cheese.";  
-	if(GetHullPercent(rShip)<=10) sRet = "The ship was about to sink when we captured her. We spotted three leaks in the hull and did some quick repairs. The ship is badly in need of a shipyard.";
+	if(GetHullPercent(rShip)>=90) sRet = GetTranslatedLog("The hull was in very good order. It almost took no damage at all from the battle."); 
+	if(GetHullPercent(rShip)<90) sRet = GetTranslatedLog("The hull was in good condition. Our balls did some damage but nothing serious."); 
+	if(GetHullPercent(rShip)<75) sRet = GetTranslatedLog("The hull had a few holes and the deck was quite a mess, but it seems the damage can be repaired.");
+	if(GetHullPercent(rShip)<50) sRet = GetTranslatedLog("The hull was leaking, the deck full of splinters and overall the ship was in a bad condition.");
+	if(GetHullPercent(rShip)<25) sRet = GetTranslatedLog("The ship has spung a large leak in the hull and water was pouring in, but we were able to close it. In summary the ship's hull was as full of holes as a Swiss cheese.");  
+	if(GetHullPercent(rShip)<=10) sRet = GetTranslatedLog("The ship was about to sink when we captured her. We spotted three leaks in the hull and did some quick repairs. The ship is badly in need of a shipyard.");
 
 	return sRet;
 }
@@ -3453,7 +3477,7 @@ void Ship_HullHitEvent()
 	if(sti(GetAttribute(AIBalls, "GreekFire")))
 	{
 		bInflame = true;
-		LogIt("Greek Fire hits the " + rOurCharacter.ship.name + "!")
+		LogIt(TranslateString("","Greek Fire hits the") +" "+ rOurCharacter.ship.name + "!")
 	}
 	// PB: Queen Anne's Revenge <--
 
@@ -3479,7 +3503,7 @@ void Ship_HullHitEvent()
 			{
 				if (sti(rOurCharacter.nation) != PIRATE && !CheckAttribute(rBallCharacter, "false_flag_note") && !CheckAttribute(rOurCharacter, "skipRM"))
 				{
-					LogIt("Captain, we are under a flag friendly to the ship we're attacking. We may be branded a pirate if we don't hoist our true colours!");
+					LogIt(TranslateString("", "Captain, we are under a flag friendly to the ship we're attacking. We may be branded a pirate if we don't hoist our true colours!"));
 					PlaySound("INTERFACE\notebook.wav");
 					rBallCharacter.false_flag_note = true;
 				}

@@ -195,8 +195,7 @@ void ProcessDialogEvent()
 
 		case "imperial_escort_agents_report2":
 			Preprocessor_Add("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
-			if(PChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-			else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(PChar)));
 //			if(CheckQuestAttribute("imperial_escort.status", "ship_missing")) dialog.text = DLG_TEXT[55] + GetMySimpleName(PChar) + DLG_TEXT[56] + DLG_TEXT[50];
 			if(GetCharacterShipModel(CharacterfromID("Pelayo Nunez")) == GetAttribute(PChar, "quest.imperial_escort.shiptype")) dialog.text = DLG_TEXT[55] + GetMySimpleName(PChar) + DLG_TEXT[56] + DLG_TEXT[50];
 			else dialog.text =  dialog.text = DLG_TEXT[55] + GetMySimpleName(PChar) + DLG_TEXT[56] + DLG_TEXT[51];

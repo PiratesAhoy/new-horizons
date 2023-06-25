@@ -71,7 +71,7 @@ void ProcessDialogEvent()
 		// PB -->
 		case "SHIPYARD_interface":
 			GiveShip2Character(pchar,pchar.ship.type,pchar.ship.name,-1,ENGLAND,true,true);
-			LogIt("The " + GetMyShipNameShow(PChar) + " was repaired and reprovisioned");
+			LogIt(TranslateString("","The") +" "+ GetMyShipNameShow(PChar) +" "+ TranslateString("","was repaired and reprovisioned"));
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();
 		break;
@@ -88,7 +88,7 @@ void ProcessDialogEvent()
 				DeleteAttribute(pchar,"quest.Get_bigger_guns");
 			}
 			GiveShip2Character(pchar,pchar.ship.type,pchar.ship.name,-1,ENGLAND,false,false);
-			LogIt("The " + GetMyShipNameShow(PChar) + " was repaired and new guns were installed");
+			LogIt(TranslateString("","The") +" "+ TranslateString("","was repaired and new guns were installed"));
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();
 		break;

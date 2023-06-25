@@ -1,4 +1,4 @@
-string DLG_TEXT[45] = {
+string DLG_TEXT[47] = {
 "¡Bienvenido! Tome asiento en la mesa libre. ¿Qué le gustaría pedir, ",
 "?",
 "Nada. Estoy aquí por negocios.",
@@ -44,5 +44,6 @@ string DLG_TEXT[45] = {
 "¿En serio? Por casualidad no sabes a dónde se dirigía, ¿verdad?",
 "No, no tengo idea, aunque recuerdo que estaba buscando marineros que conocieran las islas del sur.",
 "¡Oh! Bien. Gracias por tu ayuda.",
-
+"I'm sorry, we have no vacancies available this evening. We're fully booked because of a pirate congress.",
+"A PIRATE CONGRESS??? You're kidding me, right?",
 };

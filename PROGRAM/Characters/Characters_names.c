@@ -495,7 +495,7 @@ void InitCharactersNames()
 	n = AddStr2Array(&sFrFamilies, n, "Goulet,Goupil,Gouron,Gouteyron,Gouvenou,Gouverne,Goyette,Grand,Grandet,Grandin,Grandjean,Grandmont");
 	n = AddStr2Array(&sFrFamilies, n, "Grandon,Granet,Grataloup,Gratien,Grava,Gravel,Gravier,Grebaut,Grelot,Grignion,Grignon,Grillon,Grimault");
 	n = AddStr2Array(&sFrFamilies, n, "Grimmette,Groisard,Grony,Gros,Grosbelhomme,Grosjean,Groulx,Grumiaux,Gruson,Guenier,Guepy,Guerard,Guerbois");
-	n = AddStr2Array(&sFrFamilies, n, "Guerin,Guerin.,Guerrier,Guesdon,Guichard,Guidry,Guihard,Guilbert,Guillaut,Guillemani,Guillemet,Guillermin");
+	n = AddStr2Array(&sFrFamilies, n, "Guerin,Guerin,Guerrier,Guesdon,Guichard,Guidry,Guihard,Guilbert,Guillaut,Guillemani,Guillemet,Guillermin");
 	n = AddStr2Array(&sFrFamilies, n, "Guillon,Guillot,Guims,Guines,Guiomar,Guiraud,Guisset,Guitry,Guivarch,Guizet,Guizot,Gumy,Gusmeroli");
 	n = AddStr2Array(&sFrFamilies, n, "Guys,Habig,Hainault,Hainault,Halard,Ham,Hamoncourt,Hanchard,Hanequart,Hanotel,Harend,Harnoncourt,Hasse");
 	n = AddStr2Array(&sFrFamilies, n, "Hebert,Heinis,Helleu,Hennecart,Herbaut,Herbaux,Herlemont,Hermant,Herment,Herve,Heumont,Higounet,Hilaire");

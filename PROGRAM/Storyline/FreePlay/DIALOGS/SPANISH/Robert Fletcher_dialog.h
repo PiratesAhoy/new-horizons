@@ -310,6 +310,6 @@ string DLG_TEXT[313] = {
 "; aún tienes mucho que aprender. Este es un negocio que te puede costar la vida. Ahora, tengo que echar el ancla aquí. Tengo agunas cosas que arreglar antes de volver a zarpar.",
 "Hemos llegado a puerto, #ssir#.",
 "Bien. Fondearemos aquí y nos prepararemos para nuestro próximo viaje.",
-"Ahora que nos hemos librado del resto de la tripulación, vamos al bote. Tendremos que tirar nuestras armas por la borda antes de iornos, solo añadirían peso al bote.",
+"Ahora que nos hemos librado del resto de la tripulación, vamos al bote. Tendremos que tirar nuestras armas por la borda antes de irnos, solo añadirían peso al bote.",
 "Gracias de nuevo por liberarme. En cuanto a las armas, ya encontraremos algo cuando alcancemos la orilla.",
 }

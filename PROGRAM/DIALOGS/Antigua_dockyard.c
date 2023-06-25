@@ -51,7 +51,7 @@ void ProcessDialogEvent()
 				{
 					
 					if(sti(GetAttribute(NPChar, "nation")) == PERSONAL_NATION) d.Text = DLG_TEXT[29] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + DLG_TEXT[30];
-					else d.Text = DLG_TEXT[29] + GetRankName(PChar, sti(GetAttribute(NPChar, "nation"))) + DLG_TEXT[30];
+					else d.Text = DLG_TEXT[29] + XI_ConvertString(GetRankName(PChar, sti(GetAttribute(NPChar, "nation")))) + DLG_TEXT[30];
 					Link.l1 = DLG_TEXT[31];
 					Link.l1.go = "navalrepair";
 					Link.l2 = DLG_TEXT[5];

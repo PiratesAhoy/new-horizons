@@ -17,8 +17,8 @@ void ProcessDialogEvent()
 	string your_rank_name;
 	string el_supremo_short_name = GetAttribute(CharacterFromID("El Supremo"), "title") + " " + GetMyName(CharacterFromID("El Supremo"));
 
-	if (your_rank == 6) your_rank_name = "Captain";
-	else your_rank_name = GetRankName(PChar, ENGLAND);
+	if (your_rank == 6) your_rank_name = XI_ConvertString("Captain");
+	else your_rank_name = XI_ConvertString(GetRankName(PChar, ENGLAND));
 	
 	switch(Dialog.CurrentNode)
 	{

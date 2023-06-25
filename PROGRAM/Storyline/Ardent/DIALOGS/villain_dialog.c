@@ -271,8 +271,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "hunt_better_idea":
-			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
-			else Preprocessor_Add("pronoun", XI_ConvertString("her"));
+		//	if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
+		//	else Preprocessor_Add("pronoun", XI_ConvertString("her"));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounPossessive(PChar)));
 			dialog.text = DLG_TEXT[66];
 			link.l1 = "";
 			link.l1.go = "exit";
@@ -376,9 +377,10 @@ void ProcessDialogEvent()
 		break;
 
 		case "hunt_villain_plans2":
-			Preprocessor_Add("person", XI_ConvertString(Characters[GetCharacterIndex(PChar.quest.villain)].sex));
-			if (Characters[GetCharacterIndex(PChar.quest.villain)].sex == "man") PreProcessor_Add("pronoun2", XI_ConvertString("his"));
-			else PreProcessor_Add("pronoun2", XI_ConvertString("her"));
+			Preprocessor_Add("person", XI_ConvertString(NPChar.sex));
+		//	if (Characters[GetCharacterIndex(PChar.quest.villain)].sex == "man") PreProcessor_Add("pronoun2", XI_ConvertString("his"));
+		//	else PreProcessor_Add("pronoun2", XI_ConvertString("her"));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 			dialog.text = DLG_TEXT[93];
 			link.l1 = DLG_TEXT[94];
 			link.l1.go = "hunt_villain_plans3";

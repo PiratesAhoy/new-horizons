@@ -737,9 +737,15 @@ bool UpdateRMRelation(ref char, int iNation, float fPoints)
 					if (makeint(rel) <= REL_AFTERATTACK) relChange = fPoints;							// They are already Wary, so just subtract the number
 					else														// Else, add an explanatory text message
 					{
-						sLogTitle = GetNationNameByType(i) + " turned Wary of me";
-						sLogEntry = "The " + GetNationDescByType(i) + " government turned wary of me because of my attack on their " + GetNationDescByType(iNation) + " allies.";
-						WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+						Preprocessor_Add("nationnamei", XI_ConvertString(GetNationNameByType(i)));
+						Preprocessor_Add("nationdesci", XI_ConvertString(GetNationDescByType(i)));
+						Preprocessor_Add("nationdesc", XI_ConvertString(GetNationDescByType(iNation)));
+						sLogTitle = GetTranslatedLog("#snationnamei# turned Wary of me");
+						sLogEntry = GetTranslatedLog("The #snationdesci# government turned wary of me because of my attack on their #snationdesc# allies.");
+						WriteNewLogEntry(PreprocessText(sLogTitle),PreprocessText(sLogEntry), "Personal", true);
+						Preprocessor_Delete("nationnamei");
+						Preprocessor_Delete("nationnamej");
+						Preprocessor_Delete("nationdesc");
 						if (IsInServiceOf(i)) LeaveService(char, i, true);							// If you had a naval commission or LoM with this nation, lose it
 					}
 					if (ServedNation != PERSONAL_NATION && iActOfPiracy == 0)							// Only if you are serving ONE specific nation and committed no act of piracy
@@ -799,8 +805,8 @@ bool UpdateRMRelation(ref char, int iNation, float fPoints)
 		// If you just became Wary to the pirates through an act of piracy, you are now marked as a TRAITOR
 		if (GetServedNation() != PIRATE && makeint(rel) >= REL_AFTERATTACK)
 		{
-			sLogTitle = "Marked as a Pirate";
-			sLogEntry = "The civilized nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. It may be possible to rectify this by declaring my loyalties as a Privateer. On the other hand, joining the Brethren of the Coast could be much more profitable.";
+			sLogTitle = GetTranslatedLog("Marked as a Pirate");
+			sLogEntry = GetTranslatedLog("The civilized nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. It may be possible to rectify this by declaring my loyalties as a Privateer. On the other hand, joining the Brethren of the Coast could be much more profitable.");
 			WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
 			SetServedNation(PIRATE);
 		}
@@ -1098,8 +1104,8 @@ void Process_Execution(int exec_score)
 		}
 		PChar.executions = 0;
 		SetServedNation(PIRATE);								// If you're going to behave like a pirate, you can become one!
-		sLogTitle = "Marked as a Pirate";
-		sLogEntry = "The civilised nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. Joining the Brethren of the Coast could be rather profitable. And they don't care what I do to prisoners!";
+		sLogTitle = GetTranslatedLog("Marked as a Pirate");
+		sLogEntry = GetTranslatedLog("The civilised nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. Joining the Brethren of the Coast could be rather profitable. And they don't care what I do to prisoners!");
 		WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
 	}
 }
@@ -1566,7 +1572,7 @@ void RandomNationsRelationsChange()
 		// STEP 1: Find nations for relation change
 		i = PERSONAL_NATION;
 		j = PERSONAL_NATION;
-		while(i==PERSONAL_NATION || i==PIRATE)				// Pirate relation doesn't change
+		while(i==PERSONAL_NATION || i==PIRATE)			// Pirate relation doesn't change
 		{
 			i = rand(NATIONS_QUANTITY-1);
 		}
@@ -1576,75 +1582,124 @@ void RandomNationsRelationsChange()
 		}
 
 		// STEP 2: Figure out what to do with them
+		Preprocessor_Add("nationnamei", XI_ConvertString(GetNationNameByType(i)));
+		Preprocessor_Add("nationnamej", XI_ConvertString(GetNationNameByType(j)));
+		Preprocessor_Add("nationdesci", XI_ConvertString(GetNationDescByType(i)));
+		Preprocessor_Add("nationdescj", XI_ConvertString(GetNationDescByType(j)));
+		Preprocessor_Add("nationtown2", XI_ConvertString(GetTownByNation(i)))
 		switch(GetNationRelation(i,j))
 		{
 			case RELATION_ENEMY:
-				logTitle = GetNationNameByType(i)+" and "+GetNationNameByType(j)+" make peace";
-				logEntry = "After some time of bloody warfare "+GetNationNameByType(i)+" and "+GetNationNameByType(j)+" have declared a ceasefire.";
-				if(GetNationRelation2MainCharacter(i)==RELATION_FRIEND && GetNationRelation2MainCharacter(j)==RELATION_FRIEND) logEntry += " This is good news as it was a very hard time to keep friendly relations with two warfaring parties.";
-				if(IsInServiceOf(i) && GetNationRelation2MainCharacter(j)==RELATION_ENEMY) logEntry += "\n \nAlthough good news in general, this is bad news for me. Attacking "+GetNationDescByType(j)+" ships and towns will not raise my reputation with the "+GetNationDescByType(i)+" anymore.";
-				if(IsInServiceOf(j) && GetNationRelation2MainCharacter(i)==RELATION_ENEMY) logEntry += "\n \nAlthough good news in general, this is bad news for me. Attacking "+GetNationDescByType(i)+" ships and towns will not raise my reputation with the "+GetNationDescByType(j)+" anymore.";
-				WriteNewLogEntry(logTitle, logEntry, "General",false);
+				logTitle = GetTranslatedLog("#snationnamei# and #snationnamej# make peace");
+				logEntry = GetTranslatedLog("After some time of bloody warfare #snationnamei# and #snationnamej# have declared a ceasefire.");
+				if(GetNationRelation2MainCharacter(i)==RELATION_FRIEND && GetNationRelation2MainCharacter(j)==RELATION_FRIEND) logEntry += " " + GetTranslatedLog("This is good news as it was a very hard time to keep friendly relations with two warfaring parties.");
+				if(IsInServiceOf(i) && GetNationRelation2MainCharacter(j)==RELATION_ENEMY)
+				{
+					Preprocessor_Add("nationdesc1", XI_ConvertString(GetNationDescByType(j)));
+					Preprocessor_Add("nationdesc2", XI_ConvertString(GetNationDescByType(i)));
+					logEntry += GetTranslatedLog("\n \nAlthough good news in general, this is bad news for me. Attacking #snationdesc1# ships and towns will not raise my reputation with the #snationdesc2# anymore.");
+				}
+				if(IsInServiceOf(j) && GetNationRelation2MainCharacter(i)==RELATION_ENEMY)
+				{
+					Preprocessor_Add("nationdesc1", XI_ConvertString(GetNationDescByType(i)));
+					Preprocessor_Add("nationdesc2", XI_ConvertString(GetNationDescByType(j)));
+					logEntry += GetTranslatedLog("\n \nAlthough good news in general, this is bad news for me. Attacking #snationdesc1# ships and towns will not raise my reputation with the #snationdesc2# anymore.");
+				}
 				newRelation = RELATION_NEUTRAL;
-				break;
+			break;
 			case RELATION_NEUTRAL:
 				random = rand(2);
 				if(random==0)
 				{
-					logTitle = GetNationNameByType(i)+" and "+GetNationNameByType(j)+" have allied";
-					logEntry = GetNationNameByType(i)+" and "+GetNationNameByType(j)+" have formed an alliance. Attacking ships or towns of either nation will also decrease the standing with the ally.";
-					if(GetNationRelation2MainCharacter(i)==RELATION_FRIEND && GetNationRelation2MainCharacter(j)==RELATION_FRIEND) logEntry += " Very good news, indeed. Working for the "+GetNationDescByType(i)+" and the "+GetNationDescByType(j)+", as I currently do, my deeds will raise my standing with both nations.";
-					if(GetNationRelation2MainCharacter(i)==RELATION_ENEMY && GetNationRelation2MainCharacter(j)==RELATION_ENEMY) logEntry += " Whoops! It seems I have bothered them a little too much. But their alliance won't stop me.";
-					if(IsInServiceOf(i) && GetNationRelation2MainCharacter(j)==RELATION_ENEMY) logEntry += "\n \nThis makes working for the "+GetNationDescByType(i)+" somewhat more difficult, as sinking "+GetNationDescByType(j)+" ships is no longer an option.";
-					if(IsInServiceOf(j) && GetNationRelation2MainCharacter(i)==RELATION_ENEMY) logEntry += "\n \nThis makes working for the "+GetNationDescByType(j)+" somewhat more difficult, as sinking "+GetNationDescByType(i)+" ships is no longer an option.";
-					WriteNewLogEntry(logTitle, logEntry, "General",false);
+					logTitle = GetTranslatedLog("#snationnamei# and #snationnamej# have allied");
+					logEntry = GetTranslatedLog("#snationnamei# and #snationnamej# have formed an alliance. Attacking ships or towns of either nation will also decrease the standing with the ally.");
+					if(GetNationRelation2MainCharacter(i)==RELATION_FRIEND && GetNationRelation2MainCharacter(j)==RELATION_FRIEND) logEntry += " " + GetTranslatedLog("Very good news, indeed. Working for the #snationdesci# and the #snationdescj#, as I currently do, my deeds will raise my standing with both nations.");
+					if(GetNationRelation2MainCharacter(i)==RELATION_ENEMY && GetNationRelation2MainCharacter(j)==RELATION_ENEMY) logEntry += " " + GetTranslatedLog("Whoops! It seems I have bothered them a little too much. But their alliance won't stop me.");
+					if(IsInServiceOf(i) && GetNationRelation2MainCharacter(j)==RELATION_ENEMY)
+					{
+						Preprocessor_Add("nationdesc1", XI_ConvertString(GetNationDescByType(i)));
+						Preprocessor_Add("nationdesc2", XI_ConvertString(GetNationDescByType(j)));
+						logEntry += GetTranslatedLog("\n \nThis makes working for the #snationdesc1# somewhat more difficult, as sinking #snationdesc2# ships is no longer an option.");
+					}
+					if(IsInServiceOf(j) && GetNationRelation2MainCharacter(i)==RELATION_ENEMY)
+					{
+						Preprocessor_Add("nationdesc2", XI_ConvertString(GetNationDescByType(i)));
+						Preprocessor_Add("nationdesc1", XI_ConvertString(GetNationDescByType(j)));
+						logEntry += GetTranslatedLog("\n \nThis makes working for the #snationdesc1# somewhat more difficult, as sinking #snationdesc2# ships is no longer an option.");
+					}
 					newRelation = RELATION_FRIEND;
 				}
 				if(random==1)  // i declared war on j
 				{
-					logTitle = GetNationNameByType(i)+" is at war with "+GetNationNameByType(j);
-					logEntry = GetNationNameByType(i)+" has declared war on "+GetNationNameByType(j)+". "+GetNationDescByType(i)+" ships have attacked a small "+GetNationDescByType(j)+" settlement, as I was told.";
-					if(IsInServiceOf(i) && GetNationRelation2MainCharacter(j)==RELATION_ENEMY) logEntry += "\n \nIt was about time to show those "+GetNationDescByType(j)+" landlubbers who's in charge in the caribbean!";
-					if(IsInServiceOf(j) && GetNationRelation2MainCharacter(i)==RELATION_ENEMY) logEntry += "\n \nThose bloody cowards! The next "+GetNationDescByType(i)+" ship we encounter will surely pay for this.";
-					WriteNewLogEntry(logTitle, logEntry, "General",false);
+					Preprocessor_Add("nationdesc1", XI_ConvertString(GetNationDescByType(i)));
+					Preprocessor_Add("nationdesc2", XI_ConvertString(GetNationDescByType(j)));
+					Preprocessor_Add("nationname1", XI_ConvertString(GetNationNameByType(i)));
+					Preprocessor_Add("nationname2", XI_ConvertString(GetNationNameByType(j)));
+					logTitle = GetTranslatedLog("#snationname1# is at war with #snationname2#");
+					logEntry = GetTranslatedLog("#snationname1# has declared war on #snationname2#.") + " " + GetTranslatedLog("#snationdesc1# ships have attacked a small #snationdesc2# settlement, as I was told.");
+				// original condition was 'if(IsInServiceOf(i) && GetNationRelation2MainCharacter(j)==RELATION_ENEMY)', which doesn't work because you haven't been set hostile to the other nation yet
+				// Only add extra text if you are solely in the service of i or j. You're a patriot and you'll be at war in step 3.  Multi-LoM privateers don't care as much.
+					if(ServedNation == i) logEntry += GetTranslatedLog("\n \nIt was about time to show those #snationdesc2# landlubbers who's in charge in the Caribbean!");
+					if(ServedNation == j) logEntry += GetTranslatedLog("\n \nThose bloody cowards! The next #snationdesc1# ship we encounter will surely pay for this.");
 					newRelation = RELATION_ENEMY;
 				}
 				if(random==2)  // j declared war on i
 				{
-					logTitle = GetNationNameByType(j)+" is at war with "+GetNationNameByType(i);
-					logEntry = GetNationNameByType(j)+" has declared war on "+GetNationNameByType(i)+". "+GetNationDescByType(j)+" troops have landed near  "+GetTownByNation(i)+", as I was told.";
-					if(IsInServiceOf(i) && GetNationRelation2MainCharacter(j)==RELATION_ENEMY) logEntry += "\n \nThose bloody cowards! The next "+GetNationDescByType(j)+" ship we encounter will surely pay for this.";
-					if(IsInServiceOf(j) && GetNationRelation2MainCharacter(i)==RELATION_ENEMY) logEntry += "\n \nIt was about time to show those "+GetNationDescByType(i)+" landlubbers who's in charge in the caribbean!";
-					WriteNewLogEntry(logTitle, logEntry, "General",false);
+					Preprocessor_Add("nationdesc1", XI_ConvertString(GetNationDescByType(j)));
+					Preprocessor_Add("nationdesc2", XI_ConvertString(GetNationDescByType(i)));
+					Preprocessor_Add("nationname1", XI_ConvertString(GetNationNameByType(j)));
+					Preprocessor_Add("nationname2", XI_ConvertString(GetNationNameByType(i)));
+					logTitle = GetTranslatedLog("#snationname1# is at war with #snationname2#");
+					logEntry = GetTranslatedLog("#snationname1# has declared war on #snationname2#.") + " " + GetTranslatedLog("#snationdesc1# troops have landed near #snationtown2#, as I was told.");
+					if(ServedNation == i) logEntry += GetTranslatedLog("\n \nThose bloody cowards! The next #snationdesc1# ship we encounter will surely pay for this.");
+					if(ServedNation == j) logEntry += GetTranslatedLog("\n \nIt was about time to show those #snationdesc2# landlubbers who's in charge in the Caribbean!");
 					newRelation = RELATION_ENEMY;
 				}
-				break;
+			break;
 			case  RELATION_FRIEND:
 				random = rand(2);
 				if(random==0)
 				{
-					logTitle = GetNationNameByType(i)+" and "+GetNationNameByType(j)+" broke their alliance";
-					logEntry = GetNationNameByType(i)+" and "+GetNationNameByType(j)+" have broken their alliance, but are currently peaceful. Observers report military activity on both sides, but so far an open conflict has been avoided.";
+					Preprocessor_Add("nationname1", XI_ConvertString(GetNationNameByType(i)));
+					Preprocessor_Add("nationname2", XI_ConvertString(GetNationNameByType(j)));
+					logTitle = GetTranslatedLog("#snationname1# and #snationname2# broke their alliance");
+					logEntry = GetTranslatedLog("#snationname1# and #snationname2# have broken their alliance, but are currently peaceful. Observers report military activity on both sides, but so far an open conflict has been avoided.");
 					newRelation = RELATION_NEUTRAL;
 				}
 				if(random==1) // i broke the alliance
 				{
-					logTitle = GetNationNameByType(i)+" and "+GetNationNameByType(j)+" broke their alliance";
-					logEntry = GetNationNameByType(i)+" and "+GetNationNameByType(j)+" have broken their alliance and are now at war! It was reported that "+GetNationNameByType(i)+" broke the alliance by "+GetBreakAllianceReason(i,j);
-					if(IsInServiceOf(j) && GetNationRelation2MainCharacter(i)==RELATION_ENEMY) logEntry += "\n \nThose treacherous bastards! The "+GetNationDescByType(i)+" will pay for this betrayal. I have ordered to open fire on sight of any "+GetNationDescByType(i)+" ship.";
-					WriteNewLogEntry(logTitle, logEntry, "General",false);
+					Preprocessor_Add("nationdesc1", XI_ConvertString(GetNationDescByType(i)));
+					Preprocessor_Add("nationdesc2", XI_ConvertString(GetNationDescByType(j)));
+					Preprocessor_Add("nationname1", XI_ConvertString(GetNationNameByType(i)));
+					Preprocessor_Add("nationname2", XI_ConvertString(GetNationNameByType(j)));
+					logTitle = GetTranslatedLog("#snationname1# and #snationname2# broke their alliance");
+					logEntry = GetTranslatedLog("#snationname1# and #snationname2# have broken their alliance and are now at war! It was reported that #snationname1# broke the alliance by")+ " " +GetBreakAllianceReason(i,j);
+					if(ServedNation == j) logEntry += GetTranslatedLog("\n \nThose treacherous bastards! The #snationdesc1# will pay for this betrayal. I have ordered to open fire on sight of any #snationdesc1# ship.");
 					newRelation = RELATION_NEUTRAL;
 				}
 				if(random==2) // j broke the alliance
 				{
-					logTitle = GetNationNameByType(j)+" and "+GetNationNameByType(i)+" broke their alliance";
-					logEntry = GetNationNameByType(j)+" and "+GetNationNameByType(i)+" have broken their alliance and are now at war! It was reported that "+GetNationNameByType(j)+" broke the alliance by "+GetBreakAllianceReason(j,i);
-					if(IsInServiceOf(i) && GetNationRelation2MainCharacter(j)==RELATION_ENEMY) logEntry += "\n \nThose treacherous bastards! The "+GetNationDescByType(j)+" will pay for this betrayal. I have ordered to open fire on sight of any "+GetNationDescByType(j)+" ship.";
-					WriteNewLogEntry(logTitle, logEntry, "General",false);
+					Preprocessor_Add("nationdesc1", XI_ConvertString(GetNationDescByType(j)));
+					Preprocessor_Add("nationdesc2", XI_ConvertString(GetNationDescByType(i)));
+					Preprocessor_Add("nationname1", XI_ConvertString(GetNationNameByType(j)));
+					Preprocessor_Add("nationname2", XI_ConvertString(GetNationNameByType(i)));
+					logTitle = GetTranslatedLog("#snationname1# and #snationname2# broke their alliance");
+					logEntry = GetTranslatedLog("#snationname1# and #snationname2# have broken their alliance and are now at war! It was reported that #snationname1# broke the alliance by")+ " " +GetBreakAllianceReason(j,i);
+					if(ServedNation == i) logEntry += GetTranslatedLog("\n \nThose treacherous bastards! The #snationdesc1# will pay for this betrayal. I have ordered to open fire on sight of any #snationdesc1# ship.");
 					newRelation = RELATION_ENEMY;
 				}
 			break;
 		}
+		WriteNewLogEntry(PreprocessText(logTitle), PreprocessText(logEntry), "General",false);
+		Preprocessor_Delete("nationnamei");
+		Preprocessor_Delete("nationnamej");
+		Preprocessor_Delete("nationdesci");
+		Preprocessor_Delete("nationdescj");
+		Preprocessor_Delete("nationtown2");
+		Preprocessor_Delete("nationname2");
+		Preprocessor_Delete("nationname1");
+		Preprocessor_Delete("nationdesc2");
+		Preprocessor_Delete("nationdesc1");
 
 		// STEP 3: Change relation and match player if required
 		SetNationRelationBoth(i, j, newRelation);
@@ -1671,17 +1726,20 @@ void RandomNationsRelationsChange()
 
 string GetBreakAllianceReason(int traitor, int victim)
 {
+	Preprocessor_Add("nationdescv", XI_ConvertString(GetNationDescByType(victim)));
+	Preprocessor_Add("nationnamet", XI_ConvertString(GetNationNameByType(traitor)));
 	int random;
-
 	string sReasons[6];
-	sReasons[0] = "'accidently' sinking the "+GetNationDescByType(victim)+" military supply convoy.";
-	sReasons[1] = "treating the "+GetNationDescByType(victim)+" ambassador in a 'disrespectful' manner, as was reported from Europe.";
-	sReasons[2] = "brutally burning down a small settlement of the "+GetNationDescByType(victim)+", leaving no one alive (I am curious how they got this report then?).";
-	sReasons[3] = "officially knighting a notorious freebooter, who plundered the "+GetNationDescByType(victim)+" colonies in the previous war.";
-	sReasons[4] = "inciting a slave revolt in a major "+GetNationDescByType(victim)+" colony.";
-	sReasons[5] = "sending a horde of French squirrels with blond wigs to pillage a Spanish monastery.\n \n This doesn't make any sense at all and does not really explain why "+GetNationNameByType(traitor)+" broke their alliance, but that's what they did.";
+	sReasons[0] = GetTranslatedLog("'accidently' sinking the #snationdescv# military supply convoy.");
+	sReasons[1] = GetTranslatedLog("treating the #snationdescv# ambassador in a 'disrespectful' manner, as was reported from Europe.");
+	sReasons[2] = GetTranslatedLog("brutally burning down a small settlement of the #snationdescv#, leaving no one alive (I am curious how they got this report then?).");
+	sReasons[3] = GetTranslatedLog("officially knighting a notorious freebooter, who plundered the #snationdescv# colonies in the previous war.");
+	sReasons[4] = GetTranslatedLog("inciting a slave revolt in a major #snationdescv# colony.");
+	sReasons[5] = GetTranslatedLog("sending a horde of French squirrels with blond wigs to pillage a Spanish monastery.\n \n This doesn't make any sense at all and does not really explain why #snationnamet# broke their alliance, but that's what they did.");
 
 	random = rand(5);
 	return sReasons[random];
+	Preprocessor_Delete("nationdescv");
+	Preprocessor_Delete("nationnamet");
 }
 // <-- Sulan

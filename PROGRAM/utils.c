@@ -792,40 +792,40 @@ string touppereng(string c)
 		case "y": return "Y"; break;
 		case "z": return "Z"; break;
 
-		case "Ð°": return "Ð"; break;
-		case "Ð±": return "Ð‘"; break;
-		case "Ð²": return "Ð’"; break;
-		case "Ð³": return "Ð“"; break;
-		case "Ð­": return "Ð“"; break; // PB: Needed to display this properly
-		case "Ð´": return "Ð”"; break;
-		case "Ðµ": return "Ð•"; break;
-		case "Ñ‘": return "Ð"; break;
-		case "Ð¶": return "Ð–"; break;
-		case "Ð·": return "Ð—"; break;
-		case "Ð¸": return "Ð˜"; break;
-		case "Ð¹": return "Ð™"; break;
-		case "Ðº": return "Ðš"; break;
-		case "Ð»": return "Ð›"; break;
-		case "Ð¼": return "Ðœ"; break;
-		case "Ð½": return "Ð"; break;
-		case "Ð¾": return "Ðž"; break;
-		case "Ð¿": return "ÐŸ"; break;
-		case "Ñ€": return "Ð "; break;
-		case "Ñ": return "Ð¡"; break;
-		case "Ñ‚": return "Ð¢"; break;
-		case "Ñƒ": return "Ð£"; break;
-		case "Ñ„": return "Ð¤"; break;
-		case "Ñ…": return "Ð¥"; break;
-		case "Ñ†": return "Ð¦"; break;
-		case "Ñ‡": return "Ð§"; break;
-		case "Ñˆ": return "Ð¨"; break;
-		case "Ñ‰": return "Ð©"; break;
-		case "ÑŠ": return "Ðª"; break;
-		case "Ñ‹": return "Ð«"; break;
-		case "ÑŒ": return "Ð¬"; break;
-		case "Ñ": return "Ð­"; break;
-		case "ÑŽ": return "Ð®"; break;
-		case "Ñ": return "Ð¯"; break;
+		case "à": return "À"; break;
+		case "á": return "Á"; break;
+		case "â": return "Â"; break;
+		case "ã": return "Ã"; break;
+		case "Ý": return "Ã"; break; // PB: Needed to display this properly
+		case "ä": return "Ä"; break;
+		case "å": return "Å"; break;
+		case "¸": return "¨"; break;
+		case "æ": return "Æ"; break;
+		case "ç": return "Ç"; break;
+		case "è": return "È"; break;
+		case "é": return "É"; break;
+		case "ê": return "Ê"; break;
+		case "ë": return "Ë"; break;
+		case "ì": return "Ì"; break;
+		case "í": return "Í"; break;
+		case "î": return "Î"; break;
+		case "ï": return "Ï"; break;
+		case "ð": return "Ð"; break;
+		case "ñ": return "Ñ"; break;
+		case "ò": return "Ò"; break;
+		case "ó": return "Ó"; break;
+		case "ô": return "Ô"; break;
+		case "õ": return "Õ"; break;
+		case "ö": return "Ö"; break;
+		case "÷": return "×"; break;
+		case "ø": return "Ø"; break;
+		case "ù": return "Ù"; break;
+		case "ú": return "Ú"; break;
+		case "û": return "Û"; break;
+		case "ü": return "Ü"; break;
+		case "ý": return "Ý"; break;
+		case "þ": return "Þ"; break;
+		case "ÿ": return "ß"; break;
 
 		case "1": return "!"; break;
 		case "2": return "@"; break;
@@ -893,43 +893,43 @@ string toupperrus (string c)
 {
 	switch(c)
 	{
-		case "Ð°": return "Ð"; break;
-		case "Ð±": return "Ð‘"; break;
-		case "Ð²": return "Ð’"; break;
-		case "Ð³": return "Ð“"; break;
-		case "Ð´": return "Ð”"; break;
-		case "Ðµ": return "Ð•"; break;
-		case "Ñ‘": return "Ð"; break;
-		case "Ð¶": return "Ð–"; break;
-		case "Ð·": return "Ð—"; break;
-		case "Ð¸": return "Ð˜"; break;
-		case "Ð¹": return "Ð™"; break;
-		case "Ðº": return "Ðš"; break;
-		case "Ð»": return "Ð›"; break;
-		case "Ð¼": return "Ðœ"; break;
-		case "Ð½": return "Ð"; break;
-		case "Ð¾": return "Ðž"; break;
-		case "Ð¿": return "ÐŸ"; break;
-		case "Ñ€": return "Ð "; break;
-		case "Ñ": return "Ð¡"; break;
-		case "Ñ‚": return "Ð¢"; break;
-		case "Ñƒ": return "Ð£"; break;
-		case "Ñ„": return "Ð¤"; break;
-		case "Ñ…": return "Ð¥"; break;
-		case "Ñ†": return "Ð¦"; break;
-		case "Ñ‡": return "Ð§"; break;
-		case "Ñˆ": return "Ð¨"; break;
-		case "Ñ‰": return "Ð©"; break;
-		case "ÑŠ": return "Ðª"; break;
-		case "Ñ‹": return "Ð«"; break;
-		case "ÑŒ": return "Ð¬"; break;
-		case "Ñ": return "Ð­"; break;
-		case "ÑŽ": return "Ð®"; break;
-		case "Ñ": return "Ð¯"; break;
+		case "à": return "À"; break;
+		case "á": return "Á"; break;
+		case "â": return "Â"; break;
+		case "ã": return "Ã"; break;
+		case "ä": return "Ä"; break;
+		case "å": return "Å"; break;
+		case "¸": return "¨"; break;
+		case "æ": return "Æ"; break;
+		case "ç": return "Ç"; break;
+		case "è": return "È"; break;
+		case "é": return "É"; break;
+		case "ê": return "Ê"; break;
+		case "ë": return "Ë"; break;
+		case "ì": return "Ì"; break;
+		case "í": return "Í"; break;
+		case "î": return "Î"; break;
+		case "ï": return "Ï"; break;
+		case "ð": return "Ð"; break;
+		case "ñ": return "Ñ"; break;
+		case "ò": return "Ò"; break;
+		case "ó": return "Ó"; break;
+		case "ô": return "Ô"; break;
+		case "õ": return "Õ"; break;
+		case "ö": return "Ö"; break;
+		case "÷": return "×"; break;
+		case "ø": return "Ø"; break;
+		case "ù": return "Ù"; break;
+		case "ú": return "Ú"; break;
+		case "û": return "Û"; break;
+		case "ü": return "Ü"; break;
+		case "ý": return "Ý"; break;
+		case "þ": return "Þ"; break;
+		case "ÿ": return "ß"; break;
 
 		case "1": return "!"; break;
 		case "2": return "''"; break;
-		case "3": return "â„–"; break;
+		case "3": return "¹"; break;
 		case "4": return ";"; break;
 		case "5": return "%"; break;
 		case "6": return ":"; break;
@@ -949,39 +949,39 @@ string tolowerrus(string c)
 {
 	switch(c)
 	{
-		case "Ð°": return "Ð°"; break;
-		case "Ð±": return "Ð±"; break;
-		case "Ð²": return "Ð²"; break;
-		case "Ð³": return "Ð³"; break;
-		case "Ð´": return "Ð´"; break;
-		case "Ðµ": return "Ðµ"; break;
-		case "Ñ‘": return "Ñ‘"; break;
-		case "Ð¶": return "Ð¶"; break;
-		case "Ð·": return "Ð·"; break;
-		case "Ð¸": return "Ð¸"; break;
-		case "Ð¹": return "Ð¹"; break;
-		case "Ðº": return "Ðº"; break;
-		case "Ð»": return "Ð»"; break;
-		case "Ð¼": return "Ð¼"; break;
-		case "Ð½": return "Ð½"; break;
-		case "Ð¾": return "Ð¾"; break;
-		case "Ð¿": return "Ð¿"; break;
-		case "Ñ€": return "Ñ€"; break;
-		case "Ñ": return "Ñ"; break;
-		case "Ñ‚": return "Ñ‚"; break;
-		case "Ñƒ": return "Ñƒ"; break;
-		case "Ñ„": return "Ñ„"; break;
-		case "Ñ…": return "Ñ…"; break;
-		case "Ñ†": return "Ñ†"; break;
-		case "Ñ‡": return "Ñ‡"; break;
-		case "Ñˆ": return "Ñˆ"; break;
-		case "Ñ‰": return "Ñ‰"; break;
-		case "ÑŠ": return "ÑŠ"; break;
-		case "Ñ‹": return "Ñ‹"; break;
-		case "ÑŒ": return "ÑŒ"; break;
-		case "Ñ": return "Ñ"; break;
-		case "ÑŽ": return "ÑŽ"; break;
-		case "Ñ": return "Ñ"; break;
+		case "à": return "à"; break;
+		case "á": return "á"; break;
+		case "â": return "â"; break;
+		case "ã": return "ã"; break;
+		case "ä": return "ä"; break;
+		case "å": return "å"; break;
+		case "¸": return "¸"; break;
+		case "æ": return "æ"; break;
+		case "ç": return "ç"; break;
+		case "è": return "è"; break;
+		case "é": return "é"; break;
+		case "ê": return "ê"; break;
+		case "ë": return "ë"; break;
+		case "ì": return "ì"; break;
+		case "í": return "í"; break;
+		case "î": return "î"; break;
+		case "ï": return "ï"; break;
+		case "ð": return "ð"; break;
+		case "ñ": return "ñ"; break;
+		case "ò": return "ò"; break;
+		case "ó": return "ó"; break;
+		case "ô": return "ô"; break;
+		case "õ": return "õ"; break;
+		case "ö": return "ö"; break;
+		case "÷": return "÷"; break;
+		case "ø": return "ø"; break;
+		case "ù": return "ù"; break;
+		case "ú": return "ú"; break;
+		case "û": return "û"; break;
+		case "ü": return "ü"; break;
+		case "ý": return "ý"; break;
+		case "þ": return "þ"; break;
+		case "ÿ": return "ÿ"; break;
 
 		case ".": return "."; break;
 	}
@@ -994,22 +994,22 @@ string toupperfra(string c)
 {
 	switch(c)
 	{
-		case "Ð°": return "Ð"; break;
-		case "Ð²": return "Ð’"; break;
-		case "Ð·": return "Ð—"; break;
-		case "Ð¸": return "Ð˜"; break;
-		case "Ð¹": return "Ð™"; break;
-		case "Ð»": return "Ð›"; break;
-		case "Ðº": return "Ðš"; break;
-		case "Ð¶": return "Ð–"; break;
-		case "Ð¿": return "ÐŸ"; break;
-		case "Ð¾": return "Ðž"; break;
-		case "Ñ„": return "Ð¤"; break;
-		case "Ñ": return "Ð¡"; break;
-		case "Ñš": return "ÐŠ"; break;
-		case "ÑŒ": return "Ð¬"; break;
-		case "Ð•": return "Ð“"; break;
-		case "Ñ‰": return "Ð©"; break;
+		case "à": return "À"; break;
+		case "â": return "Â"; break;
+		case "ç": return "Ç"; break;
+		case "è": return "È"; break;
+		case "é": return "É"; break;
+		case "ë": return "Ë"; break;
+		case "ê": return "Ê"; break;
+		case "æ": return "Æ"; break;
+		case "ï": return "Ï"; break;
+		case "î": return "Î"; break;
+		case "ô": return "Ô"; break;
+		case "ñ": return "Ñ"; break;
+		case "œ": return "Œ"; break;
+		case "ü": return "Ü"; break;
+		case "Å": return "Ã"; break;
+		case "ù": return "Ù"; break;
 	}
 	return touppereng(c);
 }
@@ -1018,22 +1018,22 @@ string tolowerfra(string c)
 {
 	switch(c)
 	{
-		case "Ð": return "Ð°"; break;
-		case "Ð’": return "Ð²"; break;
-		case "Ð—": return "Ð·"; break;
-		case "Ð˜": return "Ð¸"; break;
-		case "Ð˜": return "Ð¹"; break;
-		case "Ð›": return "Ð»"; break;
-		case "Ð›": return "Ðº"; break;
-		case "Ð–": return "Ð¶"; break;
-		case "ÐŸ": return "Ð¿"; break;
-		case "Ðž": return "Ð¾"; break;
-		case "Ð¤": return "Ñ„"; break;
-		case "Ð¡": return "Ñ"; break;
-		case "ÐŠ": return "Ñš"; break;
-		case "Ð¬": return "ÑŒ"; break;
-		case "Ð“": return "Ð•"; break;
-		case "Ð©": return "Ñ‰"; break;
+		case "À": return "à"; break;
+		case "Â": return "â"; break;
+		case "Ç": return "ç"; break;
+		case "È": return "è"; break;
+		case "È": return "é"; break;
+		case "Ë": return "ë"; break;
+		case "Ë": return "ê"; break;
+		case "Æ": return "æ"; break;
+		case "Ï": return "ï"; break;
+		case "Î": return "î"; break;
+		case "Ô": return "ô"; break;
+		case "Ñ": return "ñ"; break;
+		case "Œ": return "œ"; break;
+		case "Ü": return "ü"; break;
+		case "Ã": return "Å"; break;
+		case "Ù": return "ù"; break;
 	}
 	return tolowereng(c);
 }
@@ -1042,10 +1042,10 @@ string toupperger(string c)
 {
 	switch(c)
 	{
-		case "Ð´": return "Ð”"; break;
-		case "Ñ†": return "Ð¦"; break;
-		case "Ð¯": return "Ð¯"; break;
-		case "ÑŒ": return "Ð¬"; break;
+		case "ä": return "Ä"; break;
+		case "ö": return "Ö"; break;
+		case "ß": return "ß"; break;
+		case "ü": return "Ü"; break;
 	}
 	return touppereng(c);
 }
@@ -1054,10 +1054,10 @@ string tolowerger(string c)
 {
 	switch(c)
 	{
-		case "Ð”": return "Ð´"; break;
-		case "Ð¦": return "Ñ†"; break;
-		case "Ð¯": return "Ð¯"; break;
-		case "Ð¬": return "ÑŒ"; break;
+		case "Ä": return "ä"; break;
+		case "Ö": return "ö"; break;
+		case "ß": return "ß"; break;
+		case "Ü": return "ü"; break;
 	}
 	return tolowereng(c);
 }
@@ -1066,13 +1066,13 @@ string toupperspa(string c)
 {
 	switch(c)
 	{
-		case "Ð±": return "Ð‘"; break;
-		case "Ð¹": return "Ð™"; break;
-		case "Ð½": return "Ð"; break;
-		case "Ñ": return "Ð¡"; break;
-		case "Ñƒ": return "Ð£"; break;
-		case "ÑŠ": return "Ðª"; break;
-		case "ÑŒ": return "Ð¬"; break;
+		case "á": return "Á"; break;
+		case "é": return "É"; break;
+		case "í": return "Í"; break;
+		case "ñ": return "Ñ"; break;
+		case "ó": return "Ó"; break;
+		case "ú": return "Ú"; break;
+		case "ü": return "Ü"; break;
 	}
 	return touppereng(c);
 }
@@ -1081,13 +1081,13 @@ string tolowerspa(string c)
 {
 	switch(c)
 	{
-		case "Ð‘": return "Ð±"; break;
-		case "Ð™": return "Ð¹"; break;
-		case "Ð": return "Ð½"; break;
-		case "Ð¡": return "Ñ"; break;
-		case "Ð£": return "Ñƒ"; break;
-		case "Ðª": return "ÑŠ"; break;
-		case "Ð¬": return "ÑŒ"; break;
+		case "Á": return "á"; break;
+		case "É": return "é"; break;
+		case "Í": return "í"; break;
+		case "Ñ": return "ñ"; break;
+		case "Ó": return "ó"; break;
+		case "Ú": return "ú"; break;
+		case "Ü": return "ü"; break;
 	}
 	return tolowereng(c);
 }
@@ -1096,15 +1096,15 @@ string toupperpol(string c)
 {
 	switch(c)
 	{
-		case "â„–": return "Ò"; break;
-		case "Ð®": return "ÑŽ"; break;
-		case "Ð§": return "Ð…"; break;
-		case "Ñ–": return "Ðˆ"; break;
-		case "Ñ€": return "Ñ"; break;
-		case "Ñƒ": return "Ð£"; break;
-		case "â€º": return "ÐŒ"; break;
-		case "ÑŸ": return "Ð"; break;
-		case "Ñ›": return "Ð‡"; break;
+		case "¹": return "¥"; break;
+		case "Þ": return "þ"; break;
+		case "×": return "½"; break;
+		case "³": return "£"; break;
+		case "ð": return "ý"; break;
+		case "ó": return "Ó"; break;
+		case "›": return ""; break;
+		case "Ÿ": return ""; break;
+		case "ž": return "¯"; break;
 	}
 	return touppereng(c);
 }
@@ -1113,15 +1113,15 @@ string tolowerpol(string c)
 {
 	switch(c)
 	{
-		case "Ò": return "â„–"; break;
-		case "ÑŽ": return "Ð®"; break;
-		case "Ð…": return "Ð§"; break;
-		case "Ðˆ": return "Ñ–"; break;
-		case "Ñ": return "Ñ€"; break;
-		case "Ð£": return "Ñƒ"; break;
-		case "ÐŒ": return "â€º"; break;
-		case "Ð": return "ÑŸ"; break;
-		case "Ð‡": return "Ñ›"; break;
+		case "¥": return "¹"; break;
+		case "þ": return "Þ"; break;
+		case "½": return "×"; break;
+		case "£": return "³"; break;
+		case "ý": return "ð"; break;
+		case "Ó": return "ó"; break;
+		case "": return "›"; break;
+		case "": return "Ÿ"; break;
+		case "¯": return "ž"; break;
 	}
 	return tolowereng(c);
 }
@@ -1130,9 +1130,9 @@ string toupperswe(string c)
 {
 	switch(c)
 	{
-		case "Ðµ": return "Â§"; break;
-		case "Ð´": return "Ð”"; break;
-		case "Ñ†": return "Ð¦"; break;
+		case "å": return "§"; break;
+		case "ä": return "Ä"; break;
+		case "ö": return "Ö"; break;
 	}
 	return touppereng(c);
 }
@@ -1141,9 +1141,9 @@ string tolowerswe(string c)
 {
 	switch(c)
 	{
-		case "Â§": return "Ðµ"; break;
-		case "Ð”": return "Ð´"; break;
-		case "Ð¦": return "Ñ†"; break;
+		case "§": return "å"; break;
+		case "Ä": return "ä"; break;
+		case "Ö": return "ö"; break;
 	}
 	return tolowereng(c);
 }
@@ -1155,62 +1155,62 @@ string GetDiacriticalChar(string c, string lang)
 	switch (lang) {
 		case "French":
 			switch (c) {
-				case "a": return "Ð°"; break;
-				case "s": return "Ð²"; break;
-				case "c": return "Ð·"; break;
-				case "w": return "Ð¸"; break;
-				case "e": return "Ð¹"; break;
-				case "d": return "Ðº"; break;
-				case "i": return "Ð¿"; break;
-				case "q": return "Ð¶"; break;
-				case "r": return "Ð»"; break;
-				case "t": return "Ñš"; break;
-				case "n": return "Ñ"; break;
-				case "o": return "Ñ„"; break;
-				case "h": return "ÑŒ"; break;
-				case "y": return "Ð•"; break;
-				case "u": return "Ñ‰"; break;
+				case "a": return "à"; break;
+				case "s": return "â"; break;
+				case "c": return "ç"; break;
+				case "w": return "è"; break;
+				case "e": return "é"; break;
+				case "d": return "ê"; break;
+				case "i": return "ï"; break;
+				case "q": return "æ"; break;
+				case "r": return "ë"; break;
+				case "t": return "œ"; break;
+				case "n": return "ñ"; break;
+				case "o": return "ô"; break;
+				case "h": return "ü"; break;
+				case "y": return "Å"; break;
+				case "u": return "ù"; break;
 			}
 		break;
 		case "German":
 			switch (c) {
-				case "a": return "Ð´"; break;
-				case "o": return "Ñ†"; break;
-				case "s": return "Ð¯"; break;
-				case "u": return "ÑŒ"; break;
+				case "a": return "ä"; break;
+				case "o": return "ö"; break;
+				case "s": return "ß"; break;
+				case "u": return "ü"; break;
 			}
 		break;
 		case "Spanish":
 			switch (c) {
-				case "a": return "Ð±"; break;
-				case "e": return "Ð¹"; break;
-				case "i": return "Ð½"; break;
-				case "n": return "Ñ"; break;
-				case "o": return "Ñƒ"; break;
-				case "u": return "ÑŠ"; break;
-				case "y": return "ÑŒ"; break;
-				case "/": return "Ñ—"; break;
-				case "1": return "ÐŽ"; break;
+				case "a": return "á"; break;
+				case "e": return "é"; break;
+				case "i": return "í"; break;
+				case "n": return "ñ"; break;
+				case "o": return "ó"; break;
+				case "u": return "ú"; break;
+				case "y": return "ü"; break;
+				case "/": return "¿"; break;
+				case "1": return "¡"; break;
 			}
 		break;
 		case "Polish":
 			switch (c) {
-				case "a": return "â„–"; break;
-				case "c": return "Ð®"; break;
-				case "e": return "Ð§"; break;
-				case "l": return "Ñ–"; break;
-				case "n": return "Ñ€"; break;
-				case "o": return "Ñƒ"; break;
-				case "s": return "â€º"; break;
-				case "x": return "ÑŸ"; break;
-				case "z": return "Ñ›"; break;
+				case "a": return "¹"; break;
+				case "c": return "Þ"; break;
+				case "e": return "×"; break;
+				case "l": return "³"; break;
+				case "n": return "ð"; break;
+				case "o": return "ó"; break;
+				case "s": return "›"; break;
+				case "x": return "Ÿ"; break;
+				case "z": return "ž"; break;
 			}
 		break;
 		case "Swedish":
 			switch (c) {
-				case "q": return "Ðµ"; break;
-				case "a": return "Ð´"; break;
-				case "o": return "Ñ†"; break;
+				case "q": return "å"; break;
+				case "a": return "ä"; break;
+				case "o": return "ö"; break;
 			}
 		break;
 	}
@@ -1328,122 +1328,122 @@ string ChrFromCode(int code)
 		case 137: return ""; break;
 		case 138: return ""; break;
 		case 139: return ""; break;
-		case 140: return "ÐŠ"; break;
-		case 141: return "ÐŒ"; break;
+		case 140: return "Œ"; break;
+		case 141: return ""; break;
 		case 142: return ""; break;
-		case 143: return "Ð"; break;
+		case 143: return ""; break;
 		case 144: return ""; break;
-		case 145: return "â€˜"; break;
-		case 146: return "â€™"; break;
-		case 147: return "â€œ"; break;
-		case 148: return "â€"; break;
+		case 145: return "‘"; break;
+		case 146: return "’"; break;
+		case 147: return "“"; break;
+		case 148: return "”"; break;
 		case 149: return ""; break;
-		case 150: return "â€“"; break;
-		case 151: return "â€”"; break;
+		case 150: return "–"; break;
+		case 151: return "—"; break;
 		case 152: return ""; break;
 		case 153: return ""; break;
 		case 154: return ""; break;
-		case 155: return "â€º"; break;
-		case 156: return "Ñš"; break;
+		case 155: return "›"; break;
+		case 156: return "œ"; break;
 		case 157: return ""; break;
-		case 158: return "Ñ›"; break;
-		case 159: return "ÑŸ"; break;
+		case 158: return "ž"; break;
+		case 159: return "Ÿ"; break;
 		case 160: return ""; break;
-		case 161: return "ÐŽ"; break;
+		case 161: return "¡"; break;
 		case 162: return ""; break;
-		case 163: return "Ðˆ"; break;
-		case 164: return "Â¤"; break;
-		case 165: return "Ò"; break;
+		case 163: return "£"; break;
+		case 164: return "¤"; break;
+		case 165: return "¥"; break;
 		case 166: return ""; break;
-		case 167: return "Â§"; break;
-		case 168: return "Ð"; break;
+		case 167: return "§"; break;
+		case 168: return "¨"; break;
 		case 169: return ""; break;
 		case 170: return ""; break;
-		case 171: return "Â«"; break;
+		case 171: return "«"; break;
 		case 172: return ""; break;
-		case 173: return "Â­"; break;
+		case 173: return "­"; break;
 		case 174: return ""; break;
-		case 175: return "Ð‡"; break;
+		case 175: return "¯"; break;
 		case 176: return ""; break;
 		case 177: return ""; break;
 		case 178: return ""; break;
-		case 179: return "Ñ–"; break;
+		case 179: return "³"; break;
 		case 180: return ""; break;
 		case 181: return ""; break;
 		case 182: return ""; break;
 		case 183: return ""; break;
 		case 184: return ""; break;
-		case 185: return "â„–"; break;
+		case 185: return "¹"; break;
 		case 186: return ""; break;
-		case 187: return "Â»"; break;
+		case 187: return "»"; break;
 		case 188: return ""; break;
-		case 189: return "Ð…"; break;
+		case 189: return "½"; break;
 		case 190: return ""; break;
-		case 191: return "Ñ—"; break;
-		case 192: return "Ð"; break;
-		case 193: return "Ð‘"; break;
-		case 194: return "Ð’"; break;
-		case 195: return "Ð“"; break;
-		case 196: return "Ð”"; break;
-		case 197: return "Ð•"; break;
-		case 198: return "Ð–"; break;
-		case 199: return "Ð—"; break;
-		case 200: return "Ð˜"; break;
-		case 201: return "Ð™"; break;
-		case 202: return "Ðš"; break;
-		case 203: return "Ð›"; break;
-		case 204: return "Ðœ"; break;
-		case 205: return "Ð"; break;
-		case 206: return "Ðž"; break;
-		case 207: return "ÐŸ"; break;
-		case 208: return "Ð "; break;
-		case 209: return "Ð¡"; break;
-		case 210: return "Ð¢"; break;
-		case 211: return "Ð£"; break;
-		case 212: return "Ð¤"; break;
-		case 213: return "Ð¥"; break;
-		case 214: return "Ð¦"; break;
-		case 215: return "Ð§"; break;
-		case 216: return "Ð¨"; break;
-		case 217: return "Ð©"; break;
-		case 218: return "Ðª"; break;
-		case 219: return "Ð«"; break;
-		case 220: return "Ð¬"; break;
-		case 221: return "Ð­"; break;
-		case 222: return "Ð®"; break;
-		case 223: return "Ð¯"; break;
-		case 224: return "Ð°"; break;
-		case 225: return "Ð±"; break;
-		case 226: return "Ð²"; break;
-		case 227: return "Ð³"; break;
-		case 228: return "Ð´"; break;
-		case 229: return "Ðµ"; break;
-		case 230: return "Ð¶"; break;
-		case 231: return "Ð·"; break;
-		case 232: return "Ð¸"; break;
-		case 233: return "Ð¹"; break;
-		case 234: return "Ðº"; break;
-		case 235: return "Ð»"; break;
-		case 236: return "Ð¼"; break;
-		case 237: return "Ð½"; break;
-		case 238: return "Ð¾"; break;
-		case 239: return "Ð¿"; break;
-		case 240: return "Ñ€"; break;
-		case 241: return "Ñ"; break;
-		case 242: return "Ñ‚"; break;
-		case 243: return "Ñƒ"; break;
-		case 244: return "Ñ„"; break;
-		case 245: return "Ñ…"; break;
-		case 246: return "Ñ†"; break;
-		case 247: return "Ñ‡"; break;
-		case 248: return "Ñˆ"; break;
-		case 249: return "Ñ‰"; break;
-		case 250: return "ÑŠ"; break;
-		case 251: return "Ñ‹"; break;
-		case 252: return "ÑŒ"; break;
-		case 253: return "Ñ"; break;
-		case 254: return "ÑŽ"; break;
-		case 255: return "Ñ"; break; // was lost
+		case 191: return "¿"; break;
+		case 192: return "À"; break;
+		case 193: return "Á"; break;
+		case 194: return "Â"; break;
+		case 195: return "Ã"; break;
+		case 196: return "Ä"; break;
+		case 197: return "Å"; break;
+		case 198: return "Æ"; break;
+		case 199: return "Ç"; break;
+		case 200: return "È"; break;
+		case 201: return "É"; break;
+		case 202: return "Ê"; break;
+		case 203: return "Ë"; break;
+		case 204: return "Ì"; break;
+		case 205: return "Í"; break;
+		case 206: return "Î"; break;
+		case 207: return "Ï"; break;
+		case 208: return "Ð"; break;
+		case 209: return "Ñ"; break;
+		case 210: return "Ò"; break;
+		case 211: return "Ó"; break;
+		case 212: return "Ô"; break;
+		case 213: return "Õ"; break;
+		case 214: return "Ö"; break;
+		case 215: return "×"; break;
+		case 216: return "Ø"; break;
+		case 217: return "Ù"; break;
+		case 218: return "Ú"; break;
+		case 219: return "Û"; break;
+		case 220: return "Ü"; break;
+		case 221: return "Ý"; break;
+		case 222: return "Þ"; break;
+		case 223: return "ß"; break;
+		case 224: return "à"; break;
+		case 225: return "á"; break;
+		case 226: return "â"; break;
+		case 227: return "ã"; break;
+		case 228: return "ä"; break;
+		case 229: return "å"; break;
+		case 230: return "æ"; break;
+		case 231: return "ç"; break;
+		case 232: return "è"; break;
+		case 233: return "é"; break;
+		case 234: return "ê"; break;
+		case 235: return "ë"; break;
+		case 236: return "ì"; break;
+		case 237: return "í"; break;
+		case 238: return "î"; break;
+		case 239: return "ï"; break;
+		case 240: return "ð"; break;
+		case 241: return "ñ"; break;
+		case 242: return "ò"; break;
+		case 243: return "ó"; break;
+		case 244: return "ô"; break;
+		case 245: return "õ"; break;
+		case 246: return "ö"; break;
+		case 247: return "÷"; break;
+		case 248: return "ø"; break;
+		case 249: return "ù"; break;
+		case 250: return "ú"; break;
+		case 251: return "û"; break;
+		case 252: return "ü"; break;
+		case 253: return "ý"; break;
+		case 254: return "þ"; break;
+		case 255: return "ÿ"; break; // was lost
 	}
 	return "";
 }
@@ -1547,97 +1547,97 @@ int ascii(string chr)
 		case "{": return 123; break;
 		case "|": return 124; break;
 		case "}": return 125; break;
-		case "ÐŠ": return 140; break;
-		case "ÐŒ": return 141; break;
-		case "Ð": return 143; break;
-		case "â€˜": return 145; break;
-		case "â€™": return 146; break;
-		case "â€œ": return 147; break;
-		case "â€": return 148; break;
-		case "â€“": return 150; break;
-		case "â€”": return 151; break;
-		case "â€º": return 155; break;
-		case "Ñš": return 156; break;
-		case "Ñ›": return 158; break;
-		case "ÑŸ": return 159; break;
-		case "ÐŽ": return 161; break;
-		case "Ðˆ": return 163; break;
-		case "Â¤": return 164; break;
-		case "Ò": return 165; break;
-		case "Â§": return 167; break;
-		case "Ð": return 168; break; 
-		case "Â«": return 171; break;
-		case "Â­": return 173; break;
-		case "Ð‡": return 175; break;
-		case "Ñ–": return 179; break;
-		case "â„–": return 185; break;
-		case "Â»": return 187; break;
-		case "Ð…": return 189; break;
-		case "Ñ—": return 191; break;
-		case "Ð": return 192; break;
-		case "Ð‘": return 193; break;
-		case "Ð’": return 194; break;
-		case "Ð“": return 195; break;
-		case "Ð”": return 196; break;
-		case "Ð•": return 197; break;
-		case "Ð–": return 198; break;
-		case "Ð—": return 199; break;
-		case "Ð˜": return 200; break;
-		case "Ð™": return 201; break;
-		case "Ðš": return 202; break;
-		case "Ð›": return 203; break;
-		case "Ðœ": return 204; break;
-		case "Ð": return 205; break;
-		case "Ðž": return 206; break;
-		case "ÐŸ": return 207; break;
-		case "Ð ": return 208; break;
-		case "Ð¡": return 209; break;
-		case "Ð¢": return 210; break;
-		case "Ð£": return 211; break;
-		case "Ð¤": return 212; break;
-		case "Ð¥": return 213; break;
-		case "Ð¦": return 214; break;
-		case "Ð§": return 215; break;
-		case "Ð¨": return 216; break;
-		case "Ð©": return 217; break;
-		case "Ðª": return 218; break;
-		case "Ð«": return 219; break;
-		case "Ð¬": return 220; break;
-		case "Ð­": return 221; break;
-		case "Ð®": return 222; break;
-		case "Ð¯": return 223; break;
-		case "Ð°": return 224; break;
-		case "Ð±": return 225; break;
-		case "Ð²": return 226; break;
-		case "Ð³": return 227; break;
-		case "Ð´": return 228; break;
-		case "Ðµ": return 229; break;
-		case "Ð¶": return 230; break;
-		case "Ð·": return 231; break;
-		case "Ð¸": return 232; break;
-		case "Ð¹": return 233; break;
-		case "Ðº": return 234; break;
-		case "Ð»": return 235; break;
-		case "Ð¼": return 236; break;
-		case "Ð½": return 237; break;
-		case "Ð¾": return 238; break;
-		case "Ð¿": return 239; break;
-		case "Ñ€": return 240; break;
-		case "Ñ": return 241; break;
-		case "Ñ‚": return 242; break;
-		case "Ñƒ": return 243; break;
-		case "Ñ„": return 244; break;
-		case "Ñ…": return 245; break;
-		case "Ñ†": return 246; break;
-		case "Ñ‡": return 247; break;
-		case "Ñˆ": return 248; break;
-		case "Ñ‰": return 249; break;
-		case "ÑŠ": return 250; break;
-		case "Ñ‹": return 251; break;
-		case "ÑŒ": return 252; break;
-		case "Ñ": return 253; break;
-		case "ÑŽ": return 254; break;
-		case "Ñ": return 255; break; // was lost
+		case "Œ": return 140; break;
+		case "": return 141; break;
+		case "": return 143; break;
+		case "‘": return 145; break;
+		case "’": return 146; break;
+		case "“": return 147; break;
+		case "”": return 148; break;
+		case "–": return 150; break;
+		case "—": return 151; break;
+		case "›": return 155; break;
+		case "œ": return 156; break;
+		case "ž": return 158; break;
+		case "Ÿ": return 159; break;
+		case "¡": return 161; break;
+		case "£": return 163; break;
+		case "¤": return 164; break;
+		case "¥": return 165; break;
+		case "§": return 167; break;
+		case "¨": return 168; break; 
+		case "«": return 171; break;
+		case "­": return 173; break;
+		case "¯": return 175; break;
+		case "³": return 179; break;
+		case "¹": return 185; break;
+		case "»": return 187; break;
+		case "½": return 189; break;
+		case "¿": return 191; break;
+		case "À": return 192; break;
+		case "Á": return 193; break;
+		case "Â": return 194; break;
+		case "Ã": return 195; break;
+		case "Ä": return 196; break;
+		case "Å": return 197; break;
+		case "Æ": return 198; break;
+		case "Ç": return 199; break;
+		case "È": return 200; break;
+		case "É": return 201; break;
+		case "Ê": return 202; break;
+		case "Ë": return 203; break;
+		case "Ì": return 204; break;
+		case "Í": return 205; break;
+		case "Î": return 206; break;
+		case "Ï": return 207; break;
+		case "Ð": return 208; break;
+		case "Ñ": return 209; break;
+		case "Ò": return 210; break;
+		case "Ó": return 211; break;
+		case "Ô": return 212; break;
+		case "Õ": return 213; break;
+		case "Ö": return 214; break;
+		case "×": return 215; break;
+		case "Ø": return 216; break;
+		case "Ù": return 217; break;
+		case "Ú": return 218; break;
+		case "Û": return 219; break;
+		case "Ü": return 220; break;
+		case "Ý": return 221; break;
+		case "Þ": return 222; break;
+		case "ß": return 223; break;
+		case "à": return 224; break;
+		case "á": return 225; break;
+		case "â": return 226; break;
+		case "ã": return 227; break;
+		case "ä": return 228; break;
+		case "å": return 229; break;
+		case "æ": return 230; break;
+		case "ç": return 231; break;
+		case "è": return 232; break;
+		case "é": return 233; break;
+		case "ê": return 234; break;
+		case "ë": return 235; break;
+		case "ì": return 236; break;
+		case "í": return 237; break;
+		case "î": return 238; break;
+		case "ï": return 239; break;
+		case "ð": return 240; break;
+		case "ñ": return 241; break;
+		case "ò": return 242; break;
+		case "ó": return 243; break;
+		case "ô": return 244; break;
+		case "õ": return 245; break;
+		case "ö": return 246; break;
+		case "÷": return 247; break;
+		case "ø": return 248; break;
+		case "ù": return 249; break;
+		case "ú": return 250; break;
+		case "û": return 251; break;
+		case "ü": return 252; break;
+		case "ý": return 253; break;
+		case "þ": return 254; break;
+		case "ÿ": return 255; break; // was lost
 	}
 	return 0;
 }
@@ -1836,6 +1836,7 @@ string GetHumanDate(int year, int month, int day)
 		case ILANG_GER:
 		break;
 		case ILANG_SPA:
+			formatted =  day + XI_ConvertString(sufix) + " de " + XI_ConvertString("g_month_" + month) + " de " + year + XI_ConvertString("yr");
 		break;
 		case ILANG_POL:
 		break;
@@ -2060,7 +2061,7 @@ void Preprocessor_Init()
 	Preprocessor_Save("island_Isla Mona", FindIslandName("IslaMona"));
 	Preprocessor_Save("island_Isla De Muerte", FindIslandName("Isla De Muerte"));
 	Preprocessor_Save("island_Colombia", FindIslandName("Colombia"));
-	Preprocessor_Save("cursed_ship", "Black Pearl");		// PB: For Jack Sparrow storyline
+	Preprocessor_Save("cursed_ship", "Black Pearl");	// PB: For Jack Sparrow storyline
 	Preprocessor_Save("uncursed_ship", "Crimson Blood");	// PB: For Jack Sparrow storyline
 	if (GetCharacterIndex("Father Bernard") >= 0) // PB: Not initialized yet the first time this function is called
 	{

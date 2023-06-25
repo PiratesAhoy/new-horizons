@@ -13,6 +13,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -102,7 +104,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Foster_exam_one":
-			PlaySound("VOICE\ENGLISH\Foster01.wav");
+			PlaySound(voice_path + "Foster01.wav");
 			dialog.text = DLG_TEXT[22];
 //			link.l1 = DLG_TEXT[18];
 			link.l1.go = "Exit_Foster_exam_one";
@@ -115,14 +117,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "Foster_exam_two":
-			PlaySound("VOICE\ENGLISH\Foster02.wav");
+			PlaySound(voice_path + "Foster02.wav");
 			dialog.text = DLG_TEXT[23];
 			link.l1 = DLG_TEXT[24];
 			link.l1.go = "Foster_exam_two2";
 		break;
 
 		case "Foster_exam_two2":
-			PlaySound("VOICE\ENGLISH\Foster03.wav");
+			PlaySound(voice_path + "Foster03.wav");
 			dialog.text = DLG_TEXT[25];
 //			link.l1 = DLG_TEXT[24];
 			link.l1.go = "Exit_Foster_exam_two";
@@ -184,7 +186,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Where_were_you":
-			PlaySound("VOICE\ENGLISH\Foster04.wav");
+			PlaySound(voice_path + "Foster04.wav");
 			dialog.text = DLG_TEXT[41];
 			link.l1.go = "Exit_Where_were_you";
 		break;
@@ -196,7 +198,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "read implications":
-			PlaySound("VOICE\ENGLISH\Foster05.wav");
+			PlaySound(voice_path + "Foster05.wav");
 			dialog.text = DLG_TEXT[42];
 			link.l1.go = "Exit_read implications";
 		break;
@@ -208,7 +210,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "perspicacity":
-			PlaySound("VOICE\ENGLISH\Foster06.wav");
+			PlaySound(voice_path + "Foster06.wav");
 			dialog.text = DLG_TEXT[43];
 			link.l1.go = "Exit_perspicacity";
 		break;
@@ -220,7 +222,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "no_appology":
-			PlaySound("VOICE\ENGLISH\Foster07.wav");
+			PlaySound(voice_path + "Foster07.wav");
 			dialog.text = DLG_TEXT[44];
 			link.l1.go = "Exit_no_appology";
 		break;
@@ -232,7 +234,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "your_appology":
-			PlaySound("VOICE\ENGLISH\Foster08.wav");
+			PlaySound(voice_path + "Foster08.wav");
 			dialog.text = DLG_TEXT[45];
 			link.l1.go = "Exit_your_appology";
 		break;
@@ -244,7 +246,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "most_welcome":
-			PlaySound("VOICE\ENGLISH\Foster09.wav");
+			PlaySound(voice_path + "Foster09.wav");
 			dialog.text = DLG_TEXT[46];
 			link.l1.go = "Exit_most_welcome";
 		break;
@@ -256,7 +258,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Look_forward":
-			PlaySound("VOICE\ENGLISH\Foster10.wav");
+			PlaySound(voice_path + "Foster10.wav");
 			dialog.text = DLG_TEXT[47];
 			link.l1.go = "Exit_Look_forward";
 		break;
@@ -268,7 +270,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "staring_at":
-			PlaySound("VOICE\ENGLISH\Foster11.wav");
+			PlaySound(voice_path + "Foster11.wav");
 			dialog.text = DLG_TEXT[48];
 			link.l1 = DLG_TEXT[49];
 			link.l1.go = "Exit_staring_at";
@@ -281,7 +283,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "owe_life":
-			PlaySound("VOICE\ENGLISH\Foster12.wav");
+			PlaySound(voice_path + "Foster12.wav");
 			dialog.text = DLG_TEXT[50];
 			link.l1 = DLG_TEXT[51];
 			link.l1.go = "Exit_owe_life";

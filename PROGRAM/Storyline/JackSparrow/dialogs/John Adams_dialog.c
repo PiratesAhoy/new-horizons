@@ -126,8 +126,8 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = "I'm sorry, we have no vacancies available this evening. We're fully booked because of a pirate congress.";
-				link.l1 = "A PIRATE CONGRESS??? You're kidding me, right?";
+				dialog.text = DLG_TEXT[45];
+				link.l1 = DLG_TEXT[46];
 				link.l1.go = "exit";
 				AddDialogExitQuest("opening_1");
 			}

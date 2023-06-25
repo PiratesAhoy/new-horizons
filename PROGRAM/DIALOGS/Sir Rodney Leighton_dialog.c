@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	string el_supremo_short_name = GetAttribute(CharacterFromID("El Supremo"), "title") + " " + GetMyName(CharacterFromID("El Supremo"));
 
 	if (your_rank == 6) your_rank_name = XI_ConvertString("Captain");
-	else your_rank_name = GetRankName(PChar, ENGLAND);
+	else your_rank_name = XI_ConvertString(GetRankName(PChar, ENGLAND));
 
 	PChar.quest.powder_needed = 500;
 	PChar.quest.muskets_needed = 100;
@@ -52,7 +52,7 @@ void ProcessDialogEvent()
 
 			if (your_rank < 6)
 			{
-				dialog.text = DLG_TEXT[0] + GetRankName(PChar, ENGLAND) + DLG_TEXT[1];
+				dialog.text = DLG_TEXT[0] + XI_ConvertString(GetRankName(PChar, ENGLAND)) + DLG_TEXT[1];
 				link.l1 = DLG_TEXT[2];
 				link.l1.go = "Exit";
 			}
@@ -83,7 +83,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "congrats":
-			dialog.text = DLG_TEXT[8] + GetRankName(PChar, ENGLAND) + ".";
+			dialog.text = DLG_TEXT[8] + XI_ConvertString(GetRankName(PChar, ENGLAND)) + ".";
 			link.l1 = DLG_TEXT[9];
 			link.l1.go = "exit";
 			if (your_rank == 6) link.l1.go = "mission1_1";

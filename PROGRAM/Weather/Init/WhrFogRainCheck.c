@@ -199,10 +199,10 @@ void Whr_FogRainCheck(){
 				// DeathDaisy added a string here instead off GetMyAddressForm, because I thought it would be weird if your crew called you Señor or similar
 					string PCCaptainTitle;
 					if(PChar.sex == "woman")
-						PCCaptainTitle = "Ma'am";
+						PCCaptainTitle = FirstLetterUp(XI_ConvertString("ma'am"));
 					else
-						PCCaptainTitle = "Sir";
-					LogIt(PCCaptainTitle + ", she's coming onto blow!");
+						PCCaptainTitle = FirstLetterUp(XI_ConvertString("sir"));
+					LogIt(PCCaptainTitle + ", " + TranslateString("","she's coming onto blow!"));
 			}
 		}
 		Weathers.Rainbow.Texture = "weather\rainbow\rainbow.tga";

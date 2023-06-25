@@ -74,10 +74,10 @@ string DLG_TEXT[145] = {
 "Aquí están.",
 "¡No tan rápido, padre!", // 73
 "¿Qué quieres decir, #saddr#?",
-"He descubierto qué tipo de papeles son estos, así que, naturalmente, su precio ha Subido.",
+"He descubierto qué tipo de papeles son estos, así que, naturalmente, su precio ha subido.",
 "¿Me estás chantajeando?!",
-"¿Creías que tus vestiduras sacerdotales te hacían inmune a un honrado intneto de extorsión? Si no quieres que estos papeles caigan en las manos equivocadas, me darás acceso a la biblioteca y 5.000 piezas de oro.",
-"¿No tiene stemor de Dios? ¿De dónde voy a sacar ese dinero?",
+"¿Creías que tus vestiduras sacerdotales te hacían inmune a un honrado intento de extorsión? Si no quieres que estos papeles caigan en las manos equivocadas, me darás acceso a la biblioteca y 5.000 piezas de oro.",
+"¿No tienes temor de Dios? ¿De dónde voy a sacar ese dinero?",
 "Bueno, vamos a comprobar estas notas, ¿de acuerdo? Sí, aquí está: '...17.000 piezas de oro fueron entregadas para equipar el barco y contratar marineros... Lo que estoy pidiendo es solo una fracción de esa cantidad.",
 "¡Basta! Pueden oírnos. Aquí está tu dinero. ¡Ahora, dame esos papeles!",
 "Son todos tuyos. ¿Y la biblioteca?", // 81
@@ -87,7 +87,7 @@ string DLG_TEXT[145] = {
 "Gracias, padre.",
 "Me temo que eso no es posible. La biblioteca está cerrada a los laicos.",
 "Tal vez puedas hacer una excepción por mí. Mira, tengo mi propio barco y tripulación. Si me ayudas con mi problema, tal vez pueda ayudarte con alguno de los tuyos.",
-"¿Eres capitán? Entonces quizás puedas ayudarme a mi y a la Iglesia espanola.",
+"¿Eres capitán? Entonces, quizás puedas ayudarme a mi y a la Iglesia española.",
 "¡Excelente! ¿Qué quieres que haga?", // 89
 "Algunos papeles muy importantes fueron robados hace varios dias de la iglesia. Sospecho que se los llevó ",
 "Ferro Cerezo",
@@ -98,7 +98,7 @@ string DLG_TEXT[145] = {
 "¿Dónde puedo encontrar a este hombre?",
 "Me las he arreglado para averiguar que tiene su propio barco. Es una balandra, si no me equivoco. Y a menudo se le ve en #sConceicao#; probablemente, está involucrado en el contrabando.",
 "Lo encontraré. ¿Me permitirás acceder a la biblioteca si traigo los papeles?", // 98
-"Ciertamente. Podrás pasar un día entero allí, aunque no entiendo qué interé spuede tener ese lugar para un marino.",
+"Ciertamente. Podrás pasar un día entero allí, aunque no entiendo qué interés puede tener ese lugar para un marino.",
 "En ese caso, bendíceme, padre, y me pondré en camino.",
 "Por supuesto, #saddr#. ¿Cuánto quieres donar?",
 "Lo siento, padre, pero no puedo hacer una donación en este momento.",

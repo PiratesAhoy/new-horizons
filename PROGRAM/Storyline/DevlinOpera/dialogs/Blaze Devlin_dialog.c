@@ -329,5 +329,65 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("glue_map");
 		break;
 
+//-------------------------------------------------
+
+		case "Gambling_SD":
+			dialog.text = DLG_TEXT[71];
+			link.l1 = DLG_TEXT[72];
+			link.l1.go = "Gambling_SD2";
+		break;
+
+		case "Gambling_SD2":
+			dialog.text = DLG_TEXT[73];
+			link.l1 = DLG_TEXT[74];
+			link.l1.go = "exit";
+			AddDialogExitQuest("two_idiots");
+		break;
+
+		case "afteridiots":
+			dialog.text = DLG_TEXT[75];
+			link.l1 = DLG_TEXT[76];
+			link.l1.go = "afteridiots2";
+		break;
+
+		case "afteridiots2":
+			AddMoneyToCharacter(pchar, 10000);
+			PlaySound("INTERFACE\coins8.wav");
+			dialog.text = DLG_TEXT[77];
+			link.l1 = DLG_TEXT[78];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Domingo_Debriefing");
+		break;
+
+		case "Blaze_SD_Deb":
+			dialog.text = DLG_TEXT[79];
+			link.l1 = DLG_TEXT[80];
+			link.l1.go = "Blaze_SD_Deb2";
+		break;
+
+		case "Blaze_SD_Deb2":
+			dialog.text = DLG_TEXT[81];
+			link.l1 = DLG_TEXT[82];
+			link.l1.go = "Blaze_SD_Deb3";
+		break;
+
+		case "Blaze_SD_Deb3":
+			dialog.text = DLG_TEXT[83];
+			link.l1 = DLG_TEXT[84];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Domingo_Debriefing5");
+		break;
+
+//-------------------------------------------------
+
+		case "mensjob":
+			dialog.text = DLG_TEXT[85];
+			link.l1 = DLG_TEXT[86];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Switch_to_Blaze");
+			AddDialogExitQuest("Blaze_Cayman_start");
+		break;
+
+
 	}
 }

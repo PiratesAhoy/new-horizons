@@ -12,7 +12,10 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
-	
+
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
+
 	switch(Dialog.CurrentNode)
 
 	{
@@ -27,7 +30,7 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 
-			PlaySound("VOICE\ENGLISH\Edrington1.wav");
+			PlaySound(voice_path + "Edrington1.wav");
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";
@@ -46,7 +49,7 @@ void ProcessDialogEvent()
 			LAi_SetActorType(characterFromID("Rifleman Harris"));
 			LAi_SetActorType(characterFromID("Rifleman Haggman"));
 			LAi_SetActorType(characterFromID("Rifleman Mansfield"));
-			PlaySound("VOICE\ENGLISH\Edrington1.wav");
+			PlaySound(voice_path + "Edrington1.wav");
 			dialog.text = DLG_TEXT[4];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Who's_in_charge3";
@@ -101,7 +104,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Who's_in_charge7":
-			PlaySound("VOICE\ENGLISH\Edrington3.wav");
+			PlaySound(voice_path + "Edrington3.wav");
 			dialog.text = DLG_TEXT[19];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Who's_in_charge8";
@@ -189,7 +192,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "You_are_under_arrest":
-			PlaySound("VOICE\ENGLISH\Edrington4.wav");
+			PlaySound(voice_path + "Edrington4.wav");
 			dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3];
 			link.l1.go = "You_are_under_arrest2";

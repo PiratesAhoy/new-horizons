@@ -6,7 +6,7 @@ void QuestComplete(string sQuestName)
 	switch(sQuestName)
 	{
 		////////////////////////////////////////////////////////////////////////
-		//  Квест про проклятые монетки
+		//  Êâåñò ïðî ïðîêëÿòûå ìîíåòêè
 		////////////////////////////////////////////////////////////////////////
 	
 		case "Start":
@@ -17,6 +17,11 @@ void QuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(PChar, NPChar);
 			LAi_ActorFollow(NPChar, PChar, "Start_1", -1);
 			SetNextWeather("Blue Sky"); 
+
+			Locations[FindLocation("Devlin_tavern_outside")].reload.l2.disable = true;
+
+                        DeleteAttribute(PChar, "shiplog");
+                        WriteNewLogEntry(GetTranslatedLog("New captain's log"), GetTranslatedLog("My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, His Majesty’s representative was impressed by my tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world. This is where my father disappeared... And I think my rascal brother should also be somewhere in these waters."),"Personal",true);
 		break;
 
 		case "Start_1":
@@ -2398,21 +2403,444 @@ void QuestComplete(string sQuestName)
                         QuestToSeaLogin_PrepareLoc("Cuba", "Reload", "Reload_1", false);
                         QuestToSeaLogin_Launch();
 
-			Pchar.quest.Endlog.win_condition.l1 = "location";
-			Pchar.quest.Endlog.win_condition.l1.location = "Cuba";
-			Pchar.quest.Endlog.win_condition = "Endlog";
-		break;
-
-		case "Endlog":
-			logit(TranslateString("","To be continued... Hopefully soon!"));
+			SetQuestHeader("The Road to El Dorado");
+			AddQuestRecord("The Road to El Dorado", 1);
+			DeleteQuestHeader("El Navegante");
 
 			PChar.quest.restore_flag_detection.win_condition.l1 = "MapEnter";
 			PChar.quest.restore_flag_detection.win_condition = "restore_flag_detection";
+
+			Pchar.quest.Domingo_start.win_condition.l1 = "location";
+			PChar.quest.Domingo_start.win_condition.l1.character = Pchar.id;
+			Pchar.quest.Domingo_start.win_condition.l1.location = "Santo_Domingo_port";
+			Pchar.quest.Domingo_start.win_condition = "Domingo_start";
 		break;
 
 		case "restore_flag_detection":
 			iForceDetectionFalseFlag = 0;
 		break;
+
+//=========================== SANTO DOMINGO ===========================================//
+
+
+		case "Domingo_start":
+			Pchar.quest.Domingo_start.over = "yes";
+			SetCurrentTime(08.00, 0);
+			SetNextWeather("Blue Sky"); 
+
+		        SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));	// Force Bonnie and Blaze back to being officers
+		        SetOfficersIndex(Pchar, 2, getCharacterIndex("Blaze Devlin"));	// in case player hired new officers on the way here
+
+			LAi_SetActorType(characterFromID("Bonnie Devlin"));
+			Characters[GetCharacterIndex("Bonnie Devlin")].Dialog.CurrentNode = "Domingo_arrival";
+			LAi_ActorDialog(characterFromID("Bonnie Devlin"), Pchar, "", 2.0, 0);
+		break;
+
+		case "to_Domingo_tavern":
+			LAi_SetOfficerType(characterFromID("Bonnie Devlin"));
+			pchar.quest.OPERA = "ask_Ramos_for_Jauri";
+		break;
+
+		case "enter_the_kid":
+			pchar.quest.OPERA = "asked_Ramos_for_Jauri";
+			ChangeCharacterAddressGroup(characterFromID("Guille the Kid"), "Santo_Domingo_tavern", "reload", "reload1");
+			LAi_SetActorType(characterFromID("Guille the Kid"));
+			LAi_ActorDialog(characterFromID("Guille the Kid"), Pchar, "", 3.0, 0);
+		break;
+
+		case "Guille_leave_tavern":
+			LAi_ActorRunToLocator(characterFromID("Guille the Kid"), "reload", "reload1", "byebye_Guille", 3.0);
+		break;
+
+		case "Byebye_Guille":
+			ChangeCharacterAddress(characterfromID("Guille the Kid"),"none", "");
+                        bQuestDisableSeaEnter = true
+			DisableFastTravel(true);
+
+			Pchar.quest.meet_kid_outside.win_condition.l1 = "location";
+			PChar.quest.meet_kid_outside.win_condition.l1.character = Pchar.id;
+			Pchar.quest.meet_kid_outside.win_condition.l1.location = "Santo_Domingo_town";
+			Pchar.quest.meet_kid_outside.win_condition = "meet_kid_outside";
+		break;
+
+		case "meet_kid_outside":
+			ChangeCharacterAddressGroup(characterFromID("Guille the Kid"), "Santo_Domingo_town", "quest", "quest1");
+			ChangeCharacterAddressGroup(characterFromID("Buffoon1"), "Santo_Domingo_town", "quest", "quest2");
+			ChangeCharacterAddressGroup(characterFromID("Buffoon2"), "Santo_Domingo_town", "quest", "quest3");
+			LAi_SetActorType(characterFromID("Buffoon1"));
+			LAi_SetActorType(characterFromID("Buffoon2"));
+
+			Characters[GetCharacterIndex("Guille the Kid")].Dialog.CurrentNode = "Kid_out";
+			LAi_ActorDialog(characterFromID("Guille the Kid"), Pchar, "", 1.0, 0);
+		break;
+
+		case "Kid_run_to_trap":
+			LAi_ActorRunToLocator(characterFromID("Guille the Kid"), "quest", "quest4", "Kid_run_to_trap2", 30.0);
+			LAi_ActorRunToLocator(characterFromID("Buffoon1"), "quest", "quest5", "Kid_run_to_trap2", 30.0);
+			LAi_ActorRunToLocator(characterFromID("Buffoon2"), "quest", "quest6", "Kid_run_to_trap2", 30.0);
+		break;
+
+		case "Kid_run_to_trap2":
+			LAi_SetActorType(pchar);
+			LAi_ActorRunToLocator(pchar, "quest", "quest7", "Kid_run_to_trap3", 4.0);
+		break;
+
+		case "Kid_run_to_trap3":
+			LAi_SetPlayerType(pchar);
+			Characters[GetCharacterIndex("Guille the Kid")].Dialog.CurrentNode = "AdmiralAckbar";
+			LAi_ActorDialog(characterFromID("Guille the Kid"), Pchar, "", 1.0, 0);
+		break;
+
+		case "Lorena_appear":
+			LAi_SetActorType(pchar);
+			ChangeCharacterAddressGroup(characterFromID("Lorena Lopez"), "Santo_Domingo_town", "quest", "quest8");
+			LAi_SetActorType(characterFromID("Lorena Lopez"));
+			LAi_ActorWaitDialog(pchar, characterFromID("Lorena Lopez"));
+			Lai_ActorFollow(characterFromID("Lorena Lopez"), pchar, "Lorena_appear2", 6.0);
+		break;
+
+		case "Lorena_appear2":
+			LAi_ActorDialog(characterFromID("Lorena Lopez"), Pchar, "", 6.0, 0);
+		break;
+
+		case "Lorena_Guille_1":
+			LAi_SetPlayerType(pchar);
+			Characters[GetCharacterIndex("Guille the Kid")].Dialog.CurrentNode = "Hag";
+			LAi_ActorDialog(characterFromID("Guille the Kid"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Lorena_Guille_2":
+			Characters[GetCharacterIndex("Lorena Lopez")].Dialog.CurrentNode = "Hagback";
+			LAi_ActorDialog(characterFromID("Lorena Lopez"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Lorena_Guille_3":
+			Characters[GetCharacterIndex("Guille the Kid")].Dialog.CurrentNode = "Hagway";
+			LAi_ActorDialog(characterFromID("Guille the Kid"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Lorena_Guille_4":
+			LAi_ActorRunToLocator(characterFromID("Guille the Kid"), "reload", "reload26", "ByeBye_Guillefriends", 20.0);
+			LAi_ActorRunToLocator(characterFromID("Buffoon1"), "reload", "reload26", "ByeBye_Guillefriends", 20.0);
+			LAi_ActorRunToLocator(characterFromID("Buffoon2"), "reload", "reload26", "ByeBye_Guillefriends", 20.0);
+
+			Characters[GetCharacterIndex("Lorena Lopez")].Dialog.CurrentNode = "Welcome";
+			LAi_ActorDialog(characterFromID("Lorena Lopez"), Pchar, "", 0.5, 0);
+		break;
+
+		case "ByeBye_Guillefriends":
+			ChangeCharacterAddressGroup(characterFromID("Guille the Kid"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Buffoon1"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Buffoon2"), "none", "", "");
+		break;
+
+		case "Lorena_home":
+			LAi_ActorRunToLocator(characterFromID("Lorena Lopez"), "reload", "reload10", "Lorena_go_inside", 40.0);
+		break;
+
+		case "Lorena_go_inside":
+			ChangeCharacterAddressGroup(characterFromID("Lorena Lopez"), "lorena_shop", "sit", "sit1");
+			LAi_SetHuberType(characterFromID("Lorena Lopez"));
+			Characters[GetCharacterIndex("Lorena Lopez")].Dialog.CurrentNode = "Store";
+		break;
+
+		case "to_puzzle_tavern":
+			pchar.quest.LORENA = "between";
+			AddQuestRecord("The Road to El Dorado", 5);
+
+			Pchar.quest.PT_entrance.win_condition.l1 = "location";
+			PChar.quest.PT_entrance.win_condition.l1.character = Pchar.id;
+			Pchar.quest.PT_entrance.win_condition.l1.location = "Devlin_tavern_outside";
+			Pchar.quest.PT_entrance.win_condition = "PT_entrance";
+		break;
+
+		case "PT_entrance":
+			Pchar.quest.PT_entrance.over = "yes";
+			Locations[FindLocation("Devlin_tavern_outside")].reload.l1.disable = true;
+			Locations[FindLocation("Devlin_tavern_outside")].reload.l3.disable = true;
+
+		        SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));	// Force Bonnie and Blaze back to being officers
+		        SetOfficersIndex(Pchar, 2, getCharacterIndex("Blaze Devlin"));	// in case player hired new officers on the way here
+
+			ChangeCharacterAddressGroup(characterFromID("Mystery Messenger"), "Devlin_tavern_outside", "goto", "locator4");
+			Characters[GetCharacterIndex("Mystery Messenger")].dialog.currentnode = "Outside_puzzle";
+			LAi_ActorDialog(characterFromID("Mystery Messenger"), Pchar, "", 4.0, 0);
+		break;
+
+		case "Outside_puzzle_Bonnie":
+			LAi_ActorRunToLocator(characterFromID("Mystery Messenger"), "reload", "reload1", "Byebye_MM", 4.0);
+
+			LAi_SetActorType(characterFromID("Bonnie Devlin"));
+			Characters[GetCharacterIndex("Bonnie Devlin")].Dialog.CurrentNode = "Good_luck";
+			LAi_ActorDialog(characterFromID("Bonnie Devlin"), Pchar, "", 1.0, 0);
+		break;
+
+		case "in_Puzzle_tavern":
+			LAi_SetActorType(characterFromID("Blaze Devlin"));
+			Locations[FindLocation("Devlin_tavern_outside")].reload.l2.disable = false;
+			RemovePassenger(Pchar, characterFromID("Bonnie Devlin"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Bonnie Devlin"));
+			RemovePassenger(Pchar, characterFromID("Blaze Devlin"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Blaze Devlin"));
+
+			Pchar.quest.Puzzle_start.win_condition.l1 = "location";
+			PChar.quest.Puzzle_start.win_condition.l1.character = Pchar.id;
+			Pchar.quest.Puzzle_start.win_condition.l1.location = "Puzzle_tavern";
+			Pchar.quest.Puzzle_start.win_condition = "Puzzle_start";
+		break;
+
+//-------------------------------- TAVERN PUZZLE IN BOTH REACTIONS
+
+		case "Jauris_map":
+			ResumeAllSounds();
+			PlaySound("INTERFACE\key_unlock.wav")
+			Locations[FindLocation("Puzzle_tavern")].reload.l1.disable = false;
+			GiveItem2Character(PChar, "jauri_map");
+			AddQuestRecord("The Road to El Dorado", 3);
+
+			CloseQuestHeader("My Life as a Waitress");
+			DeleteQuestHeader("My Life as a Waitress");
+
+			Pchar.quest.where_are_siblings.win_condition.l1 = "location";
+			PChar.quest.where_are_siblings.win_condition.l1.character = Pchar.id;
+			Pchar.quest.where_are_siblings.win_condition.l1.location = "Devlin_tavern_outside";
+			Pchar.quest.where_are_siblings.win_condition = "where_are_siblings";
+		break;
+
+		case "where_are_siblings":
+			Pchar.quest.where_are_siblings.over = "yes";
+			SetCurrentTime(15.00, 0);
+			Locations[FindLocation("Devlin_tavern_outside")].reload.l2.disable = true;
+			ChangeCharacterAddressGroup(characterFromID("Blaze Devlin"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Bonnie Devlin"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Crewmember Devlin"), "Devlin_tavern_outside", "goto", "locator12");
+			LAi_SetStayType(characterFromID("Crewmember Devlin"));
+			Characters[GetCharacterIndex("Crewmember Devlin")].Dialog.CurrentNode = "Siblings_gone";
+		break;
+
+		case "Find_BB_in_SD":
+			LAi_SetActorType(characterFromID("Crewmember Devlin"));
+			LAi_ActorRunToLocator(characterFromID("Crewmember Devlin"), "reload", "reload1", "Byebye_CM", 9.0);
+
+			Locations[FindLocation("Devlin_tavern_outside")].reload.l1.disable = false;
+			Locations[FindLocation("Devlin_tavern_outside")].reload.l3.disable = false;
+			AddQuestRecord("The Road to El Dorado", 4);
+			ChangeCharacterAddressGroup(characterFromID("Bonnie Devlin"), "Santo_Domingo_town", "goto", "goto6");
+			LAi_SetStayType(characterFromID("Bonnie Devlin"));
+			SetModelfromID(CharacterFromID("Bonnie Devlin"), "BeatriceB");
+			Characters[GetCharacterIndex("Bonnie Devlin")].Dialog.CurrentNode = "New_look";
+		break;
+
+		case "Blaze_gambling_again":
+			AddPassenger(Pchar, characterFromID("Bonnie Devlin"), 0);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));
+                        Locations[FindLocation("Santo_Domingo_Tavern")].vcskip = true;
+			Characters[GetCharacterIndex("Blaze Devlin")].Dialog.CurrentNode = "Gambling_SD";
+
+			ChangeCharacterAddressGroup(characterFromID("Blaze Devlin"), "Santo_Domingo_tavern", "sit", "sit5");
+			LAi_SetSitType(characterFromID("Blaze Devlin"));
+			ChangeCharacterAddressGroup(characterFromID("Compulsive Gambler"), "Santo_Domingo_tavern", "sit", "sit4");
+			ChangeCharacterAddressGroup(characterFromID("Village Idiot"), "Santo_Domingo_tavern", "sit", "sit14");
+			LAi_SetActorType(characterFromID("Compulsive Gambler"));
+			LAi_SetActorType(characterFromID("Village Idiot"));
+			LAi_ActorSetSitMode(characterFromID("Compulsive Gambler"));
+			LAi_ActorSetSitMode(characterFromID("Village Idiot"));
+		break;
+
+		case "two_idiots":
+			Characters[GetCharacterIndex("Compulsive Gambler")].Dialog.CurrentNode = "Compulsive Gambler";
+			LAi_ActorDialog(characterFromID("Compulsive Gambler"), Pchar, "", 0.5, 0);
+		break;
+
+		case "two_idiots2":
+			Characters[GetCharacterIndex("Village Idiot")].Dialog.CurrentNode = "Village Idiot";
+			LAi_ActorDialog(characterFromID("Village Idiot"), Pchar, "", 0.5, 0);
+		break;
+
+		case "after_idiots":
+			LAi_SetActorType(characterFromID("Blaze Devlin"));
+			LAi_ActorSetSitMode(characterFromID("Blaze Devlin"));
+			Characters[GetCharacterIndex("Blaze Devlin")].Dialog.CurrentNode = "afteridiots";
+			LAi_ActorDialog(characterFromID("Blaze Devlin"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Domingo_Debriefing":
+			LAi_Fade("Domingo_Debriefing2", "Domingo_Debriefing3");
+			ChangeCharacterAddressGroup(characterFromID("Compulsive Gambler"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Village Idiot"), "none", "", "");
+		break;
+
+		case "Domingo_Debriefing2":
+			AddMoneyToCharacter(pchar, -3);
+			LAi_SetActorType(pchar);
+			LAi_ActorSetSitMode(pchar);
+			ChangeCharacterAddressGroup(pchar, "Santo_Domingo_tavern", "sit", "sit5");
+			ChangeCharacterAddressGroup(characterFromID("Blaze Devlin"), "Santo_Domingo_tavern", "sit", "sit4");
+			ChangeCharacterAddressGroup(characterFromID("Bonnie Devlin"), "Santo_Domingo_tavern", "sit", "sit14");
+			LAi_SetSitType(characterFromID("Bonnie Devlin"));
+                        LAi_SetSitType(characterFromID("Blaze Devlin"));
+		break;
+
+		case "Domingo_Debriefing3":
+			Characters[GetCharacterIndex("Bonnie Devlin")].Dialog.CurrentNode = "Bonnie_SD_Deb";
+			LAi_ActorDialogNow(Pchar, characterFromID("Bonnie Devlin"), "", 1.0);
+		break;
+
+		case "Domingo_Debriefing4":
+			Characters[GetCharacterIndex("Blaze Devlin")].Dialog.CurrentNode = "Blaze_SD_Deb";
+			LAi_ActorDialogNow(Pchar, characterFromID("Blaze Devlin"), "", 0.5);
+		break;
+
+		case "Domingo_Debriefing5":
+			Characters[GetCharacterIndex("Bonnie Devlin")].Dialog.CurrentNode = "Bonnie_SD_Deb2";
+			LAi_ActorDialogNow(Pchar, characterFromID("Bonnie Devlin"), "", 0.5);
+		break;
+
+		case "Domingo_Debriefingfin":
+			AddQuestRecord("The Road to El Dorado", 6);
+			SetCurrentTime(19.00, 0);
+			ChangeCharacterAddressGroup(pchar, "Santo_Domingo_tavern", "goto", "goto3");
+			ChangeCharacterAddressGroup(characterFromID("Blaze Devlin"), "Santo_Domingo_tavern", "goto", "goto4");
+			ChangeCharacterAddressGroup(characterFromID("Bonnie Devlin"), "Santo_Domingo_tavern", "goto", "goto2");
+
+			pchar.quest.LORENA = "hirable";
+
+			LAi_SetPlayerType(pchar);
+			AddPassenger(Pchar, characterFromID("Blaze Devlin"), 0);
+			SetOfficersIndex(Pchar, 2, getCharacterIndex("Blaze Devlin"));
+			LAi_SetOfficerType(characterFromID("Bonnie Devlin"));
+			LAi_SetOfficerType(characterFromID("Blaze Devlin"));
+                        Locations[FindLocation("Santo_Domingo_Tavern")].vcskip = false;
+                        bQuestDisableSeaEnter = false
+			DisableFastTravel(false);
+
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Leadership", 3000);
+				AddPartyExpChar(pchar, "Sneak", 2000);
+				AddPartyExpChar(pchar, "Sailing", 7000);
+			}
+			else { AddPartyExp(pchar, 12000); }
+
+			Pchar.quest.Cayman_map.win_condition.l1 = "item";
+			PChar.quest.Cayman_map.win_condition.l1.character = Pchar.id;
+			Pchar.quest.Cayman_map.win_condition.l1.item = "mapCayman";
+			Pchar.quest.Cayman_map.win_condition = "Cayman_map";
+
+			Pchar.quest.Domingo_start.win_condition.l1 = "location";
+			PChar.quest.Domingo_start.win_condition.l1.character = Pchar.id;
+			Pchar.quest.Domingo_start.win_condition.l1.location = "Cayman_Shore_01";
+			Pchar.quest.Domingo_start.win_condition = "Cayman_start";
+		break;
+
+		case "Cayman_map":
+			AddQuestRecord("The Road to El Dorado", 7);
+			Pchar.quest.Cayman_map.over = "yes";
+		break;
+
+
+//=========================== CAYMAN / LAS TORTUGAS ===========================================//
+
+
+		case "Cayman_start":
+			SetCurrentTime(09.00, 0);
+		        SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));	// Force Bonnie and Blaze back to being officers
+		        SetOfficersIndex(Pchar, 2, getCharacterIndex("Blaze Devlin"));	// in case player hired new officers on the way here
+
+			ChangeCharacterAddressGroup(characterFromID("Mystery Messenger"), "Cayman_Shore_01", "goto", "locator11");
+			Characters[GetCharacterIndex("Mystery Messenger")].dialog.currentnode = "Welcome_Cayman";
+			LAi_ActorDialog(characterFromID("Mystery Messenger"), Pchar, "", 5.0, 0);
+		break;
+
+		case "Snakes_Questionmark":
+			LAi_ActorRunToLocator(characterFromID("Mystery Messenger"), "reload", "reload1", "Byebye_MM", 4.0);
+
+			LAi_SetActorType(characterFromID("Bonnie Devlin"));
+			Characters[GetCharacterIndex("Bonnie Devlin")].Dialog.CurrentNode = "Snakes";
+			LAi_ActorDialog(characterFromID("Bonnie Devlin"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Blaze_matters_hands":
+			LAi_SetActorType(characterFromID("Blaze Devlin"));
+			Characters[GetCharacterIndex("Blaze Devlin")].Dialog.CurrentNode = "mensjob";
+			LAi_ActorDialog(characterFromID("Blaze Devlin"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Blaze_Cayman_start":
+			ChangeCharacterAddressGroup(characterFromID("Bonnie Devlin"), "none", "", "");	//just to be sure
+			ChangeCharacterAddressGroup(characterFromID("Blaze Devlin"), "none", "", "");	//just to be sure
+			RemovePassenger(Pchar, characterFromID("Bonnie Devlin"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Bonnie Devlin"));
+			RemovePassenger(Pchar, characterFromID("Blaze Devlin"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Blaze Devlin"));
+
+			DoQuestReloadToLocation("Cayman_Shore_01", "officers", "reload1_2" ,"Blaze_Cayman_start2");
+			
+			SetQuestHeader("Hermit and the Frogs");
+			AddQuestRecord("Hermit and the Frogs", 1);
+                        bQuestDisableSeaEnter = true
+			DisableFastTravel(true);
+		break;
+
+		case "Blaze_Cayman_start2":
+			SetNextWeather("Blue Sky");
+
+                        Locations[FindLocation("Devlin_Cayman_01")].vcskip = true;
+                        Locations[FindLocation("Devlin_Cayman_02")].vcskip = true;
+                        Locations[FindLocation("Devlin_Cayman_03")].vcskip = true;
+                        Locations[FindLocation("Byrne_outside")].vcskip = true;
+                        Locations[FindLocation("Byrne_inside")].vcskip = true;
+
+			ChangeCharacterAddressGroup(characterFromID("Killian O'Byrne"), "Byrne_inside", "sit", "sit2");
+                break;
+
+		case "welcome_Annie":
+			ChangeCharacterAddressGroup(characterFromID("Annie O'Byrne"), "Byrne_inside", "reload", "reload1");
+                        PlaySound("PEOPLE\creak.wav");
+                        LAi_QuestDelay("welcome_Annie2", 1.0);
+		break;
+
+		case "welcome_Annie2":
+			LAi_SetActorType(characterFromID("Annie O'Byrne"));
+			LAi_ActorDialog(characterFromID("Annie O'Byrne"), Pchar, "", 1.0, 0);
+		break;
+
+		case "Father_introduces_daughter":
+			LAi_SetActorType(characterFromID("Killian O'Byrne"));
+			LAi_ActorSetSitMode(characterFromID("Killian O'Byrne"));
+			Characters[GetCharacterIndex("Killian O'Byrne")].Dialog.CurrentNode = "introduces_Annie";
+			LAi_ActorDialog(characterFromID("Killian O'Byrne"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Annie_freaking":
+			Characters[GetCharacterIndex("Annie O'Byrne")].Dialog.CurrentNode = "Annie_freaking";
+			LAi_ActorDialog(characterFromID("Annie O'Byrne"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Talking_about_frogs":
+			Characters[GetCharacterIndex("Killian O'Byrne")].Dialog.CurrentNode = "Talking_about_frogs";
+			LAi_ActorDialog(characterFromID("Killian O'Byrne"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Annie_patrols":
+			Characters[GetCharacterIndex("Annie O'Byrne")].Dialog.CurrentNode = "Annie_patrols";
+			LAi_ActorDialog(characterFromID("Annie O'Byrne"), Pchar, "", 0.5, 0);
+		break;
+
+		case "to_Cayman_for_governor":
+			AddQuestRecord("Hermit and the Frogs", 2);
+			ChangeCharacterAddressGroup(characterFromID("Annie O'Byrne"), "none", "", "");
+			pchar.quest.KILLIAN = "governor";
+			LAi_SetSitType(characterFromID("Killian O'Byrne"));
+			Characters[GetCharacterIndex("Edmund Christobel Shaw")].dialog.Filename = "Fake Shaw_dialog.c"; // Separate dialog file for the governor
+		break;
+
+		case "Back_from_Cayman_City":
+			AddQuestRecord("Hermit and the Frogs", 3);
+			pchar.quest.GOVERNOR = "angry";
+		break;
+
+
 
 //=========================== CHARACTER SWITCHES ===========================================//
 
@@ -2582,7 +3010,7 @@ void QuestComplete(string sQuestName)
                         else
                         {
                         GiveItem2Character(pchar, "pistol27");
-                        EquipCharacterByItem(pchar, "pisto27");
+                        EquipCharacterByItem(pchar, "pistol27");
                         }
 			GiveItem2Character(PChar, "first_part_map");
 
@@ -2633,7 +3061,7 @@ void QuestComplete(string sQuestName)
                         else
                         {
                         GiveItem2Character(pchar, "pistol27");
-                        EquipCharacterByItem(pchar, "pisto27");
+                        EquipCharacterByItem(pchar, "pistol27");
                         }
 			GiveItem2Character(PChar, "first_part_map");
 
@@ -2659,6 +3087,129 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Sailing", 2000);
 			}
 			else { AddPartyExp(pchar, 10000); }
+		break;
+
+		case "Jump_Domingo":
+			SetQuestHeader("The Road to El Dorado");
+			AddQuestRecord("The Road to El Dorado", 1);
+
+			DeleteQuestHeader("Mystery Messenger and a letter");
+
+			GiveItem2Character(PChar, "compass3");
+			EquipCharacterByItem(pchar, "compass3");
+			GiveItem2Character(pchar, "spyglass3");
+			EquipCharacterByItem(pchar, "spyglass3");
+                        if(ENABLE_WEAPONSMOD)
+                        {
+                        GiveItem2Character(pchar, "blade47+1");
+                        EquipCharacterByItem(pchar, "blade47+1");
+                        }
+                        else
+                        {
+                        GiveItem2Character(pchar, "blade47");
+                        EquipCharacterByItem(pchar, "blade47");
+                        }
+
+                        if(ENABLE_WEAPONSMOD)
+                        {
+                        GiveItem2Character(pchar, "pistol27+2");
+                        EquipCharacterByItem(pchar, "pistol27+2");
+                        }
+                        else
+                        {
+                        GiveItem2Character(pchar, "pistol27");
+                        EquipCharacterByItem(pchar, "pistol27");
+                        }
+			GiveItem2Character(PChar, "full_map");
+
+			AddPassenger(Pchar, characterFromID("Bonnie Devlin"), 0);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));
+			LAi_SetImmortal(characterFromID("Bonnie Devlin"), true);
+			AddPassenger(Pchar, characterFromID("Blaze Devlin"), 0);
+			SetOfficersIndex(Pchar, 2, getCharacterIndex("Blaze Devlin"));
+			LAi_SetImmortal(characterFromID("Blaze Devlin"), true);
+
+			SetCharacterShipLocation(Pchar, "Santo_Domingo_port");
+
+			DoQuestReloadToLocation("Santo_Domingo_port", "reload", "reload1_back" ,"Domingo_start");
+
+			AddMoneyToCharacter(pchar, 30000);
+
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Leadership", 3000);
+				AddPartyExpChar(pchar, "Sneak", 3000);
+				AddPartyExpChar(pchar, "Fencing", 3000);
+				AddPartyExpChar(pchar, "Defence", 3000);
+				AddPartyExpChar(pchar, "Sailing", 3000);
+			}
+			else { AddPartyExp(pchar, 15000); }
+		break;
+
+		case "Jump_Cayman":
+			SetQuestHeader("The Road to El Dorado");
+			AddQuestRecord("The Road to El Dorado", 1);
+			AddQuestRecord("The Road to El Dorado", 2);
+			AddQuestRecord("The Road to El Dorado", 3);
+			AddQuestRecord("The Road to El Dorado", 4);
+			AddQuestRecord("The Road to El Dorado", 5);
+			AddQuestRecord("The Road to El Dorado", 6);
+			AddQuestRecord("The Road to El Dorado", 7);
+
+			DeleteQuestHeader("Mystery Messenger and a letter");
+
+			GiveItem2Character(PChar, "compass3");
+			EquipCharacterByItem(pchar, "compass3");
+			GiveItem2Character(pchar, "spyglass3");
+			EquipCharacterByItem(pchar, "spyglass3");
+                        if(ENABLE_WEAPONSMOD)
+                        {
+                        GiveItem2Character(pchar, "blade47+1");
+                        EquipCharacterByItem(pchar, "blade47+1");
+                        }
+                        else
+                        {
+                        GiveItem2Character(pchar, "blade47");
+                        EquipCharacterByItem(pchar, "blade47");
+                        }
+
+                        if(ENABLE_WEAPONSMOD)
+                        {
+                        GiveItem2Character(pchar, "pistol27+2");
+                        EquipCharacterByItem(pchar, "pistol27+2");
+                        }
+                        else
+                        {
+                        GiveItem2Character(pchar, "pistol27");
+                        EquipCharacterByItem(pchar, "pistol27");
+                        }
+			GiveItem2Character(PChar, "full_map");
+			GiveItem2Character(PChar, "jauri_map");
+
+			AddPassenger(Pchar, characterFromID("Bonnie Devlin"), 0);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));
+			LAi_SetImmortal(characterFromID("Bonnie Devlin"), true);
+			AddPassenger(Pchar, characterFromID("Blaze Devlin"), 0);
+			SetOfficersIndex(Pchar, 2, getCharacterIndex("Blaze Devlin"));
+			LAi_SetImmortal(characterFromID("Blaze Devlin"), true);
+
+			SetModelfromID(CharacterFromID("Bonnie Devlin"), "BeatriceB");
+
+			SetCharacterShipLocation(Pchar, "Cayman_Shore_01");
+
+			DoQuestReloadToLocation("Cayman_Shore_01", "reload", "reload1" ,"Cayman_start");
+
+			AddMoneyToCharacter(pchar, 50000);
+
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Leadership", 4000);
+				AddPartyExpChar(pchar, "Sneak", 4000);
+				AddPartyExpChar(pchar, "Fencing", 4000);
+				AddPartyExpChar(pchar, "Defence", 4000);
+				AddPartyExpChar(pchar, "Sailing", 4000);
+			}
+			else { AddPartyExp(pchar, 20000); }
 		break;
 
 //=========================== OLD QUEST STUFF ==============================================//

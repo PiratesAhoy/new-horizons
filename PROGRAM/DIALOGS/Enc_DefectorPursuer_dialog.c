@@ -68,8 +68,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "Node_2":
-			if(PChar.sex == "woman") Preprocessor_Add("pronoun", XI_ConvertString("her"));
-			else Preprocessor_Add("pronoun", XI_ConvertString("his"));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounPossessive(PChar)));
+		//	if(PChar.sex == "woman") Preprocessor_Add("pronoun", XI_ConvertString("her"));
+		//	else Preprocessor_Add("pronoun", XI_ConvertString("his"));
 			d.Text = DLG_TEXT[9];
 			Link.l1 = DLG_TEXT[10];
 			Link.l1.go = "Exit_Fight";

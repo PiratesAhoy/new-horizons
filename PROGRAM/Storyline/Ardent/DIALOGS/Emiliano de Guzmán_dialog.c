@@ -77,7 +77,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finest_swordsman":
-			dialog.text = DLG_TEXT[18] + GetRankName(PChar, sti(NPChar.nation)) + DLG_TEXT[19];
+			dialog.text = DLG_TEXT[18] + XI_ConvertString(GetRankName(PChar, sti(NPChar.nation))) + DLG_TEXT[19];
 			if (PChar.sex == "woman")
 			{
 				link.l1 = DLG_TEXT[21];

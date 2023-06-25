@@ -178,7 +178,7 @@ void CreateDouwesenCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-		// Reynard Grueneveldt -- ГУБЕРНАТОР
+		// Reynard Grueneveldt -- √”Ѕ≈–Ќј“ќ–
 	ch.old.name = "Reynard";
 	ch.old.lastname = "Grueneveldt";
 	ch.name = TranslateString("","Reynard");
@@ -1527,7 +1527,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_douwesen pirate";
 	AddGameCharacter(n, ch);
 
-		// Alistair Garcilaso -- глава пиратов на Дувезене
+		// Alistair Garcilaso -- глава пиратов на ƒувезене
 	ch.old.name = "Alistair";
 	ch.old.lastname = "Garcilaso";
 	ch.name = TranslateString("","Alistair");

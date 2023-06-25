@@ -143,7 +143,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -197,7 +197,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.old.Dialog.Filename = ch.Dialog.Filename; // KK
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "666"; // KK
+	ch.Ship.Name = TranslateString("","666"); // KK
 	ch.Ship.Type = "Brig2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -339,7 +339,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Volcano";
+	ch.Ship.Name = TranslateString("","Volcano");
 	ch.Ship.Type = "Battleship1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;
@@ -367,7 +367,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.location	= "Gamboa_ship";
 	ch.location.group = "goto";
 	ch.location.locator = "goto4";
-	ch.Ship.Name = "Neptunus";
+	ch.Ship.Name = TranslateString("","Neptunus");
 	ch.Ship.Type = "SP_Neptunus"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;

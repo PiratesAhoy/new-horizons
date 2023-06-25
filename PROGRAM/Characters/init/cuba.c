@@ -411,7 +411,7 @@ if (ENABLE_WEAPONSMOD)
 	// SOLDIERS
 	///////////////////////////////////////////////////////////////////////////////////////////////
 
-			//Soldier на выходе из порта
+			//Soldier íà âûõîäå èç ïîðòà
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -449,7 +449,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_isla muelle soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier íà âûõîäå èç ïîðòà -- åùå îäèí
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -2158,9 +2158,9 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
    
 	ch.old.name = "Patricia";
-	ch.old.lastname = "Santбngel";
+	ch.old.lastname = "Santángel";
 	ch.name    = TranslateString("","Patricia");
-	ch.lastname    = TranslateString("","Santбngel");
+	ch.lastname    = TranslateString("","Santángel");
 	ch.id        = "Patricia Santangel";
 	ch.model    = "towngirl7_2";
 	ch.sex = "woman";

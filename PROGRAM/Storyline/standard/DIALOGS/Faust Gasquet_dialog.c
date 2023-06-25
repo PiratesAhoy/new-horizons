@@ -94,12 +94,12 @@ void ProcessDialogEvent()
 	
 		case "Node_7":
 			dialog.snd = "Voice\FAGA\FAGA008";
-			if(PChar.sex == "woman"){
+		/*	if(PChar.sex == "woman"){
 				Preprocessor_Add("sir", XI_ConvertString("ma'am"));
 			}
 			else{
 				Preprocessor_Add("sir", XI_ConvertString("sir"));
-			}
+			}*/
 			d.Text = DLG_TEXT[25] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[26];
 			Link.l1 = DLG_TEXT[27];
 			Link.l1.go = "Node_8";

@@ -13,7 +13,7 @@ string DLG_TEXT[135] = {
 "De todas las ",
 " personas que hay en esta isla, tuve que tropezarme contigo...",
 "Espera ahí, camarada. Solo necesito información sobre la colonia. Puede que haya algo de ron para ti, si me resultas útil.",
-"*suspiro* De acuerdo, pregunta, pero que se rápido.",
+"*suspiro* De acuerdo, pregunta, pero que sea rápido.",
 "Date prisa. Tengo un buen grog, un montón de botin y unas mozas bien dispuestas esperando en mi camarote.",
 "Será mejor que te des prisita, antes de que se me pase la alegría del ron.",
 "Por pequeño que sea tu pueblo, necesito algunas indicaciones.",

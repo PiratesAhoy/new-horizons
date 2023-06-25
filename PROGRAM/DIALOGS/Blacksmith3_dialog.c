@@ -384,7 +384,7 @@ void ProcessDialogEvent()
 		link.l95 = DLG_TEXT[24];
 		link.l95.go = "exit";
 
-		LogIt(GunCount+" hours pass until the work is completed and you receive the guns back.");
+		LogIt(GunCount+ " "+ TranslateString("","hours pass until the work is completed and you receive the guns back."));
 		WaitDate("", 0, 0, 0, GunCount, 0);
 		break;
 
@@ -454,7 +454,7 @@ void ProcessDialogEvent()
 		link.l95 = DLG_TEXT[24];
 		link.l95.go = "exit";
 
-		LogIt(GunCount+" hours pass until the work is completed and you receive the guns back.");
+		LogIt(GunCount+ " "+ TranslateString("","hours pass until the work is completed and you receive the guns back."));
 		WaitDate("", 0, 0, 0, GunCount, 0);
 
 		break;
@@ -525,7 +525,7 @@ void ProcessDialogEvent()
 		link.l95 = DLG_TEXT[24];
 		link.l95.go = "exit";
 
-		LogIt(GunCount+" hours pass until the work is completed and you receive the guns back.");
+		LogIt(GunCount+ " "+ TranslateString("","hours pass until the work is completed and you receive the guns back."));
 		WaitDate("", 0, 0, 0, GunCount, 0);
 
 		break;
@@ -596,7 +596,7 @@ void ProcessDialogEvent()
 		link.l95 = DLG_TEXT[24];
 		link.l95.go = "exit";
 
-		LogIt(GunCount+" hours pass until the work is completed and you receive the guns back.");
+		LogIt(GunCount+ " "+ TranslateString("","hours pass until the work is completed and you receive the guns back."));
 		WaitDate("", 0, 0, 0, GunCount, 0);
 
 		break;

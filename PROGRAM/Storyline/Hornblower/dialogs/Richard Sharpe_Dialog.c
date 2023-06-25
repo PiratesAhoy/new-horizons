@@ -12,7 +12,10 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
-	
+
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
+
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -37,21 +40,21 @@ void ProcessDialogEvent()
 
 			if(CheckQuestAttribute("Soldier_Company", "Foot"))
 			{
-				PlaySound("VOICE\ENGLISH\Sharpe01.wav");
+				PlaySound(voice_path + "Sharpe01.wav");
 				dialog.text = DLG_TEXT[0];
 				link.l1 = DLG_TEXT[1];
 				link.l1.go = "Exit";
 			}
 			if(CheckQuestAttribute("Soldier_Company", "Sergeant"))
 			{
-				PlaySound("VOICE\ENGLISH\Sharpe05.wav");
+				PlaySound(voice_path + "Sharpe05.wav");
 				dialog.text = DLG_TEXT[0];
 				link.l1 = DLG_TEXT[1];
 				link.l1.go = "Exit";
 			}
 			if(CheckQuestAttribute("Soldier_Company", "Lieutenant"))
 			{
-				PlaySound("VOICE\ENGLISH\Sharpe06.wav");
+				PlaySound(voice_path + "Sharpe06.wav");
 				dialog.text = DLG_TEXT[0];
 				link.l1 = DLG_TEXT[1];
 				link.l1.go = "Exit";
@@ -75,7 +78,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "our_first_meeting2":
-			PlaySound("VOICE\ENGLISH\Sharpe01.wav");
+			PlaySound(voice_path + "Sharpe01.wav");
 			dialog.text = DLG_TEXT[4];
 			link.l1 = DLG_TEXT[5];
 			link.l1.go = "our_first_meeting3";
@@ -315,7 +318,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "A_new_detachment":
-			PlaySound("VOICE\ENGLISH\Sharpe05.wav");
+			PlaySound(voice_path + "Sharpe05.wav");
 			dialog.text = DLG_TEXT[95];
 			link.l1 = DLG_TEXT[96];
 			link.l1.go = "A_new_detachment2";
@@ -328,7 +331,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "A_new_detachment3":
-			PlaySound("VOICE\ENGLISH\Sharpe02.wav");
+			PlaySound(voice_path + "Sharpe02.wav");
 			dialog.text = DLG_TEXT[99];
 			link.l1 = DLG_TEXT[100];
 			link.l1.go = "A_new_detachment4";
@@ -509,7 +512,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Answer_with_Name":
-			PlaySound("VOICE\ENGLISH\Sharpe05.wav");
+			PlaySound(voice_path + "Sharpe05.wav");
 			dialog.text = DLG_TEXT[183];
 			link.l1.go = "Exit_Answer_with_Name";
 		break;

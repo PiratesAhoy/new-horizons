@@ -36,8 +36,9 @@ void ProcessDialogEvent()
 
 			if (ProfessionalNavyNation() != UNKNOWN_NATION)
 			{
-				if (PChar.sex == "woman") Preprocessor_Add("pronoun", "her");
-				else Preprocessor_Add("pronoun", "his");
+				Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounPossessive(PChar)));
+			//	if (PChar.sex == "woman") Preprocessor_Add("pronoun", "her");
+			//	else Preprocessor_Add("pronoun", "his");
 				dialog.text = DLG_TEXT[0];
 				link.l1 = DLG_TEXT[1];
 				link.l1.go = "exit";	// was "exit_permanent_refusal", but that means you can't try again if you lose your naval commission

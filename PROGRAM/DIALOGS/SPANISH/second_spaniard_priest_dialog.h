@@ -1,15 +1,15 @@
 string DLG_TEXT[12] = {
-"Padre Domingues",
-"fue secuestrado por unos salvajes! Senor, Dame guia, lo que debo hacer, lo que debo hacer...",
-"Senor, Dame fuerza! Estoy empezando a odiar todo esto! Maldita sea!",
-"Dejar de blasfemar en la casa de nuestro Senor!",
-"Oh, perdoneme, solo se deslizo de la lengua.",
-"En serio? ?Y que pasara si digo algo mas? Oh, por ejemplo: diablo! .. Whoa... Que ha sido eso?!",
-"Un milagro! Fue un milagro! !El Senor por alguna razon ha decidido recordarte su existencia! hoy recitare 'nuestro Padre' 20 veces... no, ahora mismo, y voy a pedir un Servicio adicional!",
-"Ejica. Haga lo que quiera, Padre. Ya me voy, gracias.",
-"Espera, #saddr#! Y el Padre Domingues?", // --> Cat
-"*SUSPIRO! Esta bien, esta bien. Vere que puedo hacer.",
-"Espera, #saddr#! Y el Padre Domingues?",
-"*SUSPIRO! Esta bien, esta bien. Vere que puedo hacer.", // <-- Cat
+"¡El padre Domingues",
+" ha sido secuestrado por unos matones! Señor, guíame, ¿qué debo hacer, qué debo hacer...",
+"¡Señor, dame fuerzas! ¡Estoy empezando a hartarme de todo esto, maldita sea!",
+"Deja de blasfemar en la casa de nuestro Señor!",
+"Oh, perdóname, se me fue la lengua.",
+"¿En serio? ¿Y que pasará si digo algo más? Oh, por ejemplo: ¡diablos!... ¡Oh!... ¡¿Qué ha sido eso?!",
+"¡Un milagro! ¡Ha sido un milagro! ¡El Señor, por alguna razón, ha decidido recordarte su existencia! \n¡Oh, hoy rezaré veinte padrenuestros!... ¡No, treinta! ¡Y voy a encargar una misa adicional!",
+"Ajá. Haz lo que quieras, padre. Yo ya me voy, gracias.",
+"¡Espera, #saddr#! ¿Y el Padre Domingues?", // --> Cat
+"*SUSPIRO* Está bien, está bien. Veré qué puedo hacer.",
+"¡Espera, #saddr#! ¿Y el Padre Domingues?",
+"*SUSPIRO* Está bien, está bien. Veré qué puedo hacer.",, // <-- Cat
 
 };

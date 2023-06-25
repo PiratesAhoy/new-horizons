@@ -13,6 +13,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -197,21 +199,21 @@ void ProcessDialogEvent()
 		break;
 
 		case "the_ship_recovered":
-			PlaySound("VOICE\ENGLISH\Hornblwr02.wav");
+			PlaySound(voice_path + "Hornblwr02.wav");
 			dialog.text = DLG_TEXT[37];
 			link.l1 = DLG_TEXT[38];
 			link.l1.go = "the_ship_recovered2";
 		break;
 
 		case "the_ship_recovered2":
-			PlaySound("VOICE\ENGLISH\Buckland03.wav");
+			PlaySound(voice_path + "Buckland03.wav");
 			dialog.text = DLG_TEXT[39];
 			link.l1 = DLG_TEXT[40];
 			link.l1.go = "the_ship_recovered3";
 		break;
 
 		case "the_ship_recovered3":
-			PlaySound("VOICE\ENGLISH\Buckland04.wav");
+			PlaySound(voice_path + "Buckland04.wav");
 			dialog.text = DLG_TEXT[41];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "Exit_the_ship_recovered";
@@ -243,7 +245,7 @@ void ProcessDialogEvent()
 
 		case "why_were_you_late":
 //			dialog.snd = "Voice\ARSI\ARSI003";
-			PlaySound("VOICE\ENGLISH\Buckland01.wav");
+			PlaySound(voice_path + "Buckland01.wav");
 			dialog.text = DLG_TEXT[19];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "why_were_you_late2";

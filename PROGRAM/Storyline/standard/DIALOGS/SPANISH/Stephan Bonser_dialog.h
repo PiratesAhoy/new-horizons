@@ -1,8 +1,8 @@
 string DLG_TEXT[6] = {
 "Espera, tenemos que hablar.",
-"Sobre que?",
-"Puedo decir que tu y tus companeros son companeros fuertes y necesitamos dinero.",
-"No entendi bien lo que dijiste.",
-"No te preocupes, lo entenderas mas tarde.",
-"Basta de acertijos!",
+"¿De qué?",
+"Puedo ver que tú y tus compañeros sois gente robusta y nosotros necesitamos dinero.",
+"No entiendo muy bien lo que quieres decir.",
+"No te preocupes, ya lo entenderás.",
+"¡Basta de acertijos!",
 };

@@ -1,4 +1,4 @@
-Build Version: Thursday 6th April March 2023
+Build Version: Friday 9th June 2023
 Build 14
 
 ==========================
@@ -61,6 +61,8 @@ Build 14:
   . Ships Stats and Recognition Guide by HellSailor
   . Sabine Matton as officer can be given discretionary salary raises or standard officer salary, by pedrwyth
   . Sound tracks "Hail Captain Murphy", "Final Salute" by Flannery
+  . Female privateers get different rank titles by Grey Roger
+
 - Gameplay/Balancing Updates:
   . Boarding skill decrease for surrendered captains disabled by Tingyun
   . Assigning of skill bonuses made nation-dependent by Levis
@@ -103,6 +105,9 @@ Build 14:
   . Function 'AttackRMRelation' called from within 'UpdateRMRelation' to ensure that you lose rank, title and land for treacherously attacking a friendly ship, by Fluen and Grey Roger
   . Antigua store and shipyard don't demand LoM if you have conquered Antigua for yourself, by Fluen
   . Trap for Martinique bridge set when game starts, by Grey Roger
+  . Russian voice files for "Hornblower", and videos for "Tales of a Sea Hawk", "Hornblower" and "Hoist the Colours", added by AkrimalS
+  . Random town events made translatable by Homo Eructus
+  . Ship names translated into Russian by AkrimalS
 
 - Code Updates:
   . Limited number of soldiers in Merchant Guild attacks by Pieter Boelen
@@ -189,6 +194,12 @@ Build 14:
   . Talking heads show armour by Grey Roger
   . Point a Pitre citizens now tell you there is no blacksmith instead of telling you about Martinique blacksmith, by Grey Roger
   . "Watch_dialog" attack commands and "Celestino Villalobos" greetings made translatable by Grey Roger, translated into Russian by AkrimalS
+  . "PROGRAM\INTERFACE\kam_shipberthing.c": "Exit" button no longer highlighted by default so it is possible to quit using Esc key, by Baste
+  . "PROGRAM\NATIONS\nations_init.c": Swedish rank titles improved by Jack Rackham
+  . "PROGRAM\SHIPS\ships_name.c: Spanish ship names improved by Homo Eructus, some names made period-dependent by Grey Roger
+  . Map legends made translatable by Homo Eructus
+  . 'TranslateString' checks general "storyline_strings.txt" as well as storyline-specific versions by Grey Roger
+  . Log entries for weddings made translatable by Homo Eructus
 
 - Bug Fixes:
   . Fix to prevent Merchant Guild attack when player group was not responsible by Pieter Boelen
@@ -331,6 +342,7 @@ Build 14:
   . "PROGRAM\Screwface_functions.c": function 'GetFortRelationToPirates' always checks relations if the fort commander is PERSONAL_NATION to prevent forts firing on pirate players who should be friendly, by Grey Roger
   . Malcolm Hatcher dialog fixed to correctly show one or two goods for favourable trade, and where to take it/them, by Grey Roger
   . Double translating of island names in ship berthing, resulting in some islands showing blank names, fixed by Grey Roger
+  . "PROGRAM\MAXIMUS_functions.c": functions 'FirstLetter', 'FirstLetterUp' and 'FirstLetterDown' changed to use multinational 'ToUpper' and 'ToLower' instead of English-specific 'ToUpperEng' and 'ToLowerEng', by Grey Roger
 
 - Storyline Updates:
   . Sidequests:
@@ -434,6 +446,7 @@ Build 14:
     > Code to remove companions after storm and restore them at San Juan rewritten to be more reliable by Grey Roger
     > Bridgetown soldiers restored to normal behaviour after stealing idol, monster detection radius restored to normal after temple, by Grey Roger
     > Option to make Virgile Boone join you at Octopus Bay if your ship is moored there, by Grey Roger
+    > "Blaze_Crewmember_01" and similar changed to use player character's actual name instead of "Nathaniel" (also in Claire Larrouse sidequest) by Grey Roger
   . Ardent storyline:
     > New chapter "Imperial Escort" by Grey Roger
     > Various bugs fixed; camouflaged door to Downing's Dungeon added, by Grey Roger
@@ -486,6 +499,7 @@ Build 14:
     > Upon promotion to Post Captain, new quest "The Natividad Incident" by Grey Roger (also works for Hornblower as FreePlay character)
     > Monk on Martinique shore removed for battle scene, restored when you reach Speightstown, by Grey Roger
     > Various characters changed from "GuardianType" to "GuardianTypeNoGroup" or "CivilianGuardianType" to prevent them from always carrying muskets, by Grey Roger
+    > Russian voice and video files used when playing in Russian, by AkrimalS
   . Jack Sparrow storyline:
     > First Contact bugs fixed by Pieter Boelen
     > Various bugs fixed by Grey Roger
@@ -499,7 +513,8 @@ Build 14:
     > Dialog for Cutler Beckett in lighthouse arrest scene now uses AWE line about liberating cargo, by Grey Roger
     > New quests to cover DMC by Sebrian
     > New cut-scene videos from DMC by Sebrian
-    > New locations for DMC by Jack Rackham
+    > New locations for DMC by Jack Rackham"
+    > Addition to Ines Diaz dialog to allow sleeping on the table in "Brinkley" path if you have knocked out Susan Shaypen, by Grey Roger
   . Woodes Rogers storyline:
     > More new WIP content added by Jack Rackham
     > Part 2 extension added and playable by Jack Rackham
@@ -513,6 +528,7 @@ Build 14:
     > New quests "My Brother, Ladies and Gentlemen" and "Yo Ho Ho and a shipment of rum", choice of ways to complete "Yo Ho Ho and a shipment of rum", by BathtubPirate
     > Blaze Devlin's fight scene checks for stunned opponents by Grey Roger
     > New quest "El Navegante" with choice of ways to complete it, by BathtubPirate
+    > New quests starting in Santo Domingo by BathtubPirate
 
 - Model and Texture Updates:
   . Improved jungle grass and sky textures by Corsairs-Harbour.ru

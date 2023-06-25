@@ -450,7 +450,7 @@ void initFastReloadTable()
 	curTable.l8.location = "IM_blacksmith";
 // <-- KK
 
-	makearef(curTable,objFastReloadTable.table.KhaelRoa); // нет ничего, кроме причала
+	makearef(curTable,objFastReloadTable.table.KhaelRoa); // íåò íè÷åãî, êðîìå ïðè÷àëà
 
 	makearef(curTable,objFastReloadTable.table.Oxbay);
 	// store

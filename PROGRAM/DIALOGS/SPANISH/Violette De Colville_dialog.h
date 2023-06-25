@@ -42,7 +42,7 @@ string DLG_TEXT[48] = {
 "Siempre es un placer.",
 "Lamentablemente, no necesito tus servicios en este momento.",
 "Siento oír eso. Entonces, hablemos de otra cosa.",
-"Me niego a comerciar con una persona con tu reputacion y relaciones. Ahora, vete, ",
+"No me gusta tu reputación ni las compañías que frecuentas. Me niego a comerciar contigo. Ahora, vete, ",
 ", antes de que llame a los guardias.",
 "Muy bien.",
 "Sí, estoy esperado uncargamento de #squantity# toneladas de #scargo#. ¿Lo tienes?",

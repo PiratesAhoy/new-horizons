@@ -201,9 +201,10 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_hunt_which_ship":
-			Preprocessor_Add("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
-			if (Characters[GetCharacterIndex(PChar.quest.villain)].sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
-			else Preprocessor_Add("pronoun", XI_ConvertString("her"));
+			Preprocessor_Add("villain", GetMyFullName(CharacterFromID(PChar.quest.villain)));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounPossessive(CharacterFromID(PChar.quest.villain))));
+		//	if (Characters[GetCharacterIndex(PChar.quest.villain)].sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
+		//	else Preprocessor_Add("pronoun", XI_ConvertString("her"));
 			d.text = DLG_TEXT[63] + GetMyName(PChar) + DLG_TEXT[64];
 			link.l1 = DLG_TEXT[65];
 			link.l1.go = "ardent_hunt_which_ship2");

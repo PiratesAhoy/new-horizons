@@ -52,7 +52,7 @@ string DLG_TEXT[58] = {
 "Por desgracia, ",
 ", los franceses han confiscado la munición y la mayor parte de mis mercancías, y me han prohibido vender el resto hasta que la guerra haya terminado.",
 "¡Maldita sea mi suerte!",
-"Me niego a comerciar con una persona con tu reputación y relaciones. Márchate ahora mismo, ",
+"No me gusta tu reputación ni las compañías que frecuentas. Me niego a comerciar contigo. Márchate ahora mismo, ",
 ", antes de que llame a los guardias.",
 "Muy bien.",
 "Ah, sí. Estoy esperando una entrega de #squantity# quintales de #scargo#. ¿Lo tienes?",

@@ -141,7 +141,7 @@ string DLG_TEXT[185] = {
 "No, la verdad. Aparte de unas pocas plantaciones, el resto de la región está completamente desierto.",
 "¿Qué más puedes decirme sobre la colonia?",
 "¿Qué más puedes decirme?",
-"#sCartagena# es un puerto en la ruta de la flota española de Indias, que trae armas, caballos y herramientas de Europa y lleva de vuelt aoro y plata.",
+"#sCartagena# es un puerto en la ruta de la flota española de Indias, que trae armas, caballos y herramientas de Europa y lleva de vuelta oro y plata.",
 "Ya veo. ¿Qué más?",
 "No. Encontrarás un par de plantaciones y casas en los alrededores, pero la región está poco desarrollada.",
 "En ese caso, tal vez me puedes decir algo más acerca de la colonia.",

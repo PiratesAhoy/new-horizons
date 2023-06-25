@@ -13,6 +13,9 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 	ref lcn = &Locations[FindLocation(PChar.location)];
+	
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -52,14 +55,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "First_orders3":
-			PlaySound("VOICE\ENGLISH\Keene02.wav");
+			PlaySound(voice_path + "Keene02.wav");
 			dialog.text = DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "Exit_First_orders";
 		break;
 
 		case "Board_at_Charlestown":
-			PlaySound("VOICE\ENGLISH\Keene01.wav");
+			PlaySound(voice_path + "Keene01.wav");
 			dialog.text = DLG_TEXT[17];
 			link.l1.go = "Board_at_Charlestown1";
 		break;
@@ -77,7 +80,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Board_at_Charlestown3":
-			PlaySound("VOICE\ENGLISH\Keene03.wav");
+			PlaySound(voice_path + "Keene03.wav");
 			dialog.text = DLG_TEXT[18];
 			link.l1.go = "Exit_Board_at_Charlestown";
 		break;

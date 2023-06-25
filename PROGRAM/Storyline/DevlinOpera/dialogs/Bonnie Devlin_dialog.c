@@ -191,6 +191,77 @@ void ProcessDialogEvent()
 
 //--------------------------------------------------------------
 
+		case "Domingo_arrival":
+			dialog.text = DLG_TEXT[46];
+			link.l1 = DLG_TEXT[47];
+			link.l1.go = "Domingo_arrival2";
+		break;
+
+		case "Domingo_arrival2":
+			dialog.text = DLG_TEXT[48];
+			link.l1 = DLG_TEXT[49];
+			link.l1.go = "exit";
+			AddDialogExitQuest("to_Domingo_tavern");
+		break;
+//--------------------------------------------------------------
+
+		case "Good_luck":
+			dialog.text = DLG_TEXT[50];
+			link.l1 = DLG_TEXT[51];
+			link.l1.go = "exit";
+			AddDialogExitQuest("in_Puzzle_tavern");
+		break;
+
+		case "New_look":
+			dialog.text = DLG_TEXT[52];
+			link.l1 = DLG_TEXT[53];
+			link.l1.go = "New_look2";
+		break;
+
+		case "New_look2":
+			dialog.text = DLG_TEXT[54];
+			link.l1 = DLG_TEXT[55];
+			link.l1.go = "New_look3";
+		break;
+
+		case "New_look3":
+			dialog.text = DLG_TEXT[56];
+			link.l1 = DLG_TEXT[57];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Blaze_gambling_again");
+		break;
+
+		case "Bonnie_SD_Deb":
+			dialog.text = DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Domingo_Debriefing4");
+		break;
+
+		case "Bonnie_SD_Deb2":
+			dialog.text = DLG_TEXT[60];
+			link.l1 = DLG_TEXT[61];
+			link.l1.go = "Bonnie_SD_Deb3";
+		break;
+
+		case "Bonnie_SD_Deb3":
+			dialog.text = DLG_TEXT[62];
+			link.l1 = DLG_TEXT[63];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Domingo_Debriefingfin");
+		break;
+
+//--------------------------------------------------------------
+
+		case "Snakes":
+			dialog.text = DLG_TEXT[64];
+			link.l1 = DLG_TEXT[65];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Blaze_matters_hands");
+		break;
+
+//--------------------------------------------------------------
+
 		case "Standard":
 			dialog.snd = "Voice\ARSI\ARSI003";
 			dialog.text = DLG_TEXT[0];

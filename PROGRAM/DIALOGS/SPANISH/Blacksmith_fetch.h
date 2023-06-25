@@ -1,7 +1,7 @@
 string DLG_TEXT[19] = {
 "Dicen que tienes un gran encargo entre manos. ¿Necesitas ayuda?",
 "La verdad es que sí, #ssir#. Ni siquiera la tienda puede satisfacer mi demanda. ¿Podrías ir a buscarme ",
-"Te pagaré ",
+"? Te pagaré ",
 " monedas de oro. Por favor, consíguelo antes de ",
 "No hallarás mejor #sgender# que yo para este trabajo. Tendrás esos suministros en poco tiempo.",
 "Lo siento, no puedo ayudarte.",

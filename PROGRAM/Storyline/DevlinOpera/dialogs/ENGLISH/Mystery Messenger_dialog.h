@@ -1,4 +1,4 @@
-string DLG_TEXT[8] = {
+string DLG_TEXT[28] = {
 "Are you ",
 "Yes, it's me. How can I help you?",
 "The Harbour Master gave me this letter to give to you.",
@@ -6,5 +6,25 @@ string DLG_TEXT[8] = {
 "Pardon me. You are asking about the 'Villa de Malaga', Captain?",
 "Wait... Where do I know you from? Right, you're...!",
 "Who I am is of no importance. But the knowledge I deliver is. I've seen the 'Villa de Malaga', Miss Devlin. She got badly damaged in a storm after leaving #sGreenford# and thus headed for #sSantiago# to undergo repairs.",
-"You're a lifesaver, Mystery Messenger!",
+"You're a lifesaver, Mystery Messenger!", //7
+"Ah, Captain Devlin. You made it.",
+"Mystery Messenger. I should have guessed!",
+"I know you are looking for Marcel Jauri. He is in that tavern behind me, but I am afraid he can't speak to you right now.",
+"And why is that?",
+"What do you think? He is way too busy! All the regulars are in the tavern right now, awaiting a refreshing beverage, and he has his hands full taking the orders and handing out the drinks.",
+"If I helped him with that, he would be done way sooner and would have time, to answer my questions, wouldn't he? After all, waiting tables was my first after school job. How hard can it be?",
+"That's a great idea! But I must warn you, the task may be trickier - and more dangerous - than you think.",
+"How so?",
+"The patrons who frequent this tavern are an odd bunch. They will never give a straight drink order, at best they may give hints and clues about what the others would like to drink\nAnd if you serve the wrong beverage, truly horrible things may happen to you! So it is important, to follow a few simple rules.",
+"Can you tell me the rules?",
+"First: Only ever choose a persons drink when you're sure about it. You can always come back to any patron, so no pressure\nSecond: No guessing is required. You can get there through logic and the process of elimination\nThird: Only a hat is a hat. Wigs and hoods don't count as hats\nFourth: If in doubt where to start, remember that dead men don't drink\nFifth: You must go in alone. Your friends will have to wait outside\nAnd sixth: Before you start, SAVE!",
+"Okay, I understand! [THINKS:] What does he mean with 'save', though?",
+"Good luck, Captain!",
+"Bye, Mystery Messenger!", // 21
+"Captain Devlin, welcome to the island of #sisland_Cayman#!",
+"Seriously, how do you travel between islands so quickly? And don't tell me any sea turtles jokes, I've heard them all.",
+"That's a pity. I know some really good sea turtle jokes.",
+"What now? I guess you are once again going to lead us into a strange and vague adventure...",
+"I am here because you are looking for another name on your map. And I am here because I must warn you that this man lives deep in the island's jungle as a hermit. He owns a hovel off the trail to the settlement of #sGrand Cayman#, but outside of the town walls. Surrounded by mosquitoes, bugs and snakes.",
+"...",
 }

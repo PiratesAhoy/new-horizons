@@ -1,4 +1,4 @@
-string DLG_TEXT[133] = {
+string DLG_TEXT[137] = {
 "Te doy la bienvenida, ",
 ". Considérate en tu casa, ¡y a mí como tu familia!",
 "Hum..., sí. Gracias. Soy ",
@@ -28,7 +28,7 @@ string DLG_TEXT[133] = {
 "Ciertamente. ¿De qué te gustaría hablar, capitán ",
 "?",
 "Seguro que un tipo amistoso como tú escucha un montón de rumores interesantes Me gustaríaa saber que está pasando estos días.",
-"Tengo algo en emnte...",
+"Tengo algo en mente...",
 "¿Sí?",
 ", un hombre llamado ",
 "Ewan Glover",

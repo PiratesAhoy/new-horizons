@@ -59,7 +59,7 @@ string DLG_TEXT[183] = {
 "De acuerdo.",
 "Ya veo. Bueno, me veo obligado a decir esto... Tengo que perdonarte todos tus crímenes contra mi país...",
 "¡Cuánto honor, señor!",
-"¡Cuidado con tu sarcasmo! Si dependiera de mí, colgarías de una soga en la plaza de la ciudad. Agradece mi generosidad ala joven a la que salvaste.",
+"¡Cuidado con tu sarcasmo! Si dependiera de mí, colgarías de una soga en la plaza de la ciudad. Agradece mi generosidad a la joven a la que salvaste.",
 "¡Mi gratitud es infinita, señor!",
 "Estoy seguro de ello. Además, se me ha ordenado pagarte una recompensa. Aquí está. Y ahora, por favor, hazme un favor: vete.",
 "Con mucho gusto, señor.",

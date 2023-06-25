@@ -161,8 +161,9 @@ void ProcessDialogEvent()
 		case "assassination_examine_ring":
 			PreProcessor_Add("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
 			PreProcessor_Add("romance", GetMyFullName(characterFromID(PChar.quest.romance)));
-			if (PChar.sex == "man") PreProcessor_Add("pronoun", XI_ConvertString("his"));
-			else PreProcessor_Add("pronoun", XI_ConvertString("her"));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounPossessive(CharacterFromID(PChar.quest.villain))));
+		//	if (PChar.sex == "man") PreProcessor_Add("pronoun", XI_ConvertString("his"));
+		//	else PreProcessor_Add("pronoun", XI_ConvertString("her"));
 			dialog.text = DLG_TEXT[47];
 			link.l1 = DLG_TEXT[48];
 			link.l1.go = "exit";

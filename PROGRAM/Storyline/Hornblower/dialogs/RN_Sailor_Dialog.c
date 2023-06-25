@@ -12,7 +12,10 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
-	
+
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
+
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -116,14 +119,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "Nail_up_house":
-			PlaySound("VOICE\ENGLISH\Hornblwr06.wav");
+			PlaySound(voice_path + "Hornblwr06.wav");
 			dialog.text = DLG_TEXT[26];
 			link.l1 = DLG_TEXT[24];
 			link.l1.go = "Nail_up_house2";
 		break;
 
 		case "Nail_up_house2":
-			PlaySound("VOICE\ENGLISH\Hornblwr07.wav");
+			PlaySound(voice_path + "Hornblwr07.wav");
 			dialog.text = DLG_TEXT[25];
 			link.l1 = DLG_TEXT[27];
 			link.l1.go = "Exit_Nail_up_house";

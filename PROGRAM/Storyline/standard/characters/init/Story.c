@@ -2340,7 +2340,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "10";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.sinktenpercent = false;
-	ch.Ship.Name = "Black Pearl";
+	ch.Ship.Name = TranslateString("","Black Pearl");
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.SwordplayProfessional = true;

@@ -12,7 +12,7 @@ string DLG_TEXT[52] = {
 "¡Vaya! ¡Pero si es mi camarada de los viejos tiempos, ",
 "! Te he echado de menos, nunca me divertí tanto como cuando nos dedicábamos al pillaje juntos. ¿Recuerdas cómo asaltamos las murallas de Portobelo mientras usábamos a esas monjas como escudos humanos? ¿Cómo los 'Dons' nos dispararon a pesar de todo, pero la mayoría de las balas cayeron sobre las sagradas hermanas?... ¡JA, JA, JA, JA, JA!",
 "Ah, sí.. Fue una broma muy graciosa... Menuda banda de bromistas estábamos hechos, ¿eh? Deberíamos escribir un libro sobre nuestras aventuras.",
-"Sí, lo recuerdo... ¡y ese recuerdo me hace estremecerme de vergüenza! Pero, al ocntrario que tú, yo me he reformado y he abandonado esa mala vida: ¡hoy en día lucho contra los piratas!",
+"Sí, lo recuerdo... ¡y ese recuerdo me hace estremecerme de vergüenza! Pero, al contrario que tú, yo me he reformado y he abandonado esa mala vida: ¡hoy en día lucho contra los piratas!",
 "Disculpa, señor mío, nunca te he visto antes, y NUNCA he hecho nada semejante a lo que cuentas. Buenos días.",
 "¿Qué? ¿Yo, navegando contigo? ¡Nunca! ¡Me dedico honradamente al comercio y me niego siquiera a hablar con gente de tu calaña!",
 "Hum... esto..., debes confundirme con otra persona. ¡Puedo decir con absoluta seguridad que nunca nos hemos visto antes!",

@@ -741,8 +741,6 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
-//				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-//				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 				Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 				link.l4 = DLG_TEXT[76];
 				link.l4.go = "take_as_prisoner";
@@ -789,14 +787,14 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 				PlayStereoSound("INTERFACE\important_item.wav");
 //				GiveItem2Character(PChar, NPSword);
 				stuff_idx = GetItemIndex(NPSword);
-				if(stuff_idx >= 0) stuff_given = TranslateString("a",Items[stuff_idx].name);
+				if(stuff_idx >= 0) stuff_given = XI_ConvertString("a") + " " + TranslateString("",Items[stuff_idx].name);
 				else stuff_given = "INVALID BLADE '" + NPSword + "'";
 			}
 			if(NPGun != "")
 			{
 //				GiveItem2Character(PChar, NPGun);
 				stuff_idx = GetItemIndex(NPGUN);
-				if(stuff_idx >= 0) stuff_given = stuff_given + " " + XI_ConvertString("and") + " " + TranslateString("a",Items[stuff_idx].name);
+				if(stuff_idx >= 0) stuff_given = stuff_given + " " + XI_ConvertString("and") + " " + XI_ConvertString("a") + " " + TranslateString("",Items[stuff_idx].name);
 				else stuff_given = stuff_given + ", INVALID GUN '" + NPGun + "'";
 			}
 			traceandlog(TranslateString("","You got ") + stuff_given + ".");
@@ -960,8 +958,6 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
-//				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-//				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 				Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 				link.l3 = DLG_TEXT[76];
 				link.l3.go = "take_as_prisoner";
@@ -999,8 +995,6 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
-//				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-//				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 				Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 				link.l3 = DLG_TEXT[76];
 				link.l3.go = "take_as_prisoner";

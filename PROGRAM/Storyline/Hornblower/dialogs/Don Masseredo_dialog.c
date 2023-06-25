@@ -13,6 +13,9 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 	
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -34,7 +37,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 //			Dialog.snd = "dialogs\0\009";
 
-			PlaySound("VOICE\ENGLISH\Don03.wav");
+			PlaySound(voice_path + "Don03.wav");
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";
@@ -107,7 +110,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Come_to_dinner":
-			PlaySound("VOICE\ENGLISH\Don02.wav");
+			PlaySound(voice_path + "Don02.wav");
 			dialog.text = DLG_TEXT[11] + Pchar.lastname + DLG_TEXT[22];
 			link.l1 = DLG_TEXT[23];
 			link.l1.go = "Exit_Come_to_dinner";
@@ -132,7 +135,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Masseredo_one":
-			PlaySound("VOICE\ENGLISH\Don01.wav");
+			PlaySound(voice_path + "Don01.wav");
 			dialog.text = DLG_TEXT[26];
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "Exit_Masseredo_one";

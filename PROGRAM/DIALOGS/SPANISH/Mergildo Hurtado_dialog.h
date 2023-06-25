@@ -1,14 +1,17 @@
-string DLG_TEXT[11] = {
+string DLG_TEXT[15] = {
 "Es hora de zarpar.",
-"Acordar.",
-"A menos que me equivoque, eres el capitan que esperabamos conocer. Gracias por su ayuda! Si no fuera por ti, estaria descansando en el fondo del mar con el resto de mi tripulacion.",
-"Verdadero. ?Pero por que decidiste echar el ancla aqui? Tengo ordenes de escoltarte a #sIsla Muelle#.",
-"Tuve que llevar a un pasajero a tierra. Yo tambien tengo ordenes.",
-"No me dijeron nada de eso, pero es justo. Es asunto tuyo, no mio.",
-"Eso es correcto, ",
+"De acuerdo.",
+"A menos que me equivoque, tú eres el capitán que esperábamos. ¡Gracias por tu ayuda! Si no fuera por ti, estaría descansando en el fondo del mar con el resto de mi tripulación.",
+"Cierto. ¿Pero por qué decidiste echar el ancla aquí? Tengo órdenes de escoltarte a #sIsla Muelle#.",
+"Tenía que desembarcar a un pasajero. Yo también tengo órdenes.",
+"No me dijeron nada de eso, pero de acuerdo. Es asunto tuyo, no mío.",
+"Eso es, ",
 ". Cada uno tenemos nuestros deberes, y no necesitamos discutirlos.",
-"Efectivamente. Podemos partir ahora? Me gustaria ponerte a salvo a ti y a tu nave lo antes posible.",
-"Nada me retiene aqui ahora.",
-"Genial! !Entonces no perdamos mas tiempo!",
-
+"Efectivamente. ¿Podemos partir ya? Me gustaría poneros a salvo a ti y a tu barco lo antes posible.",
+"Ya nada me retiene aquí.",
+"¡Perfecto! ¡No perdamos más tiempo!",
+"Eso no va a ser posible. No puedo unirme a tu flota porque ya tienes #snumships# barcos.",
+"¡Oh! Espera aquí, entonces. Dejaré atracado o venderé uno de mis barcos.",
+"Ahora sí puedo unbirme a ti. Me gustaría zarpar cuanto antes.",
+"Todavía tienes demadiados barcos. No puedo unirme a tu flota.",
 };

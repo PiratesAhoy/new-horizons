@@ -410,7 +410,8 @@ void DailyCrewUpdate()
 				float uncursed_percentage = stf(crewQ)/GetSquadronTotalCrewQuantity(pchar);
 				moralescale = moralescale * uncursed_percentage;
 				if(moralescale < 0.5)	moralescale = 0.5;
-				LogIt("Captain, " + makeint((1-uncursed_percentage)*100) + "% of the crew is cursed due to " + CursedCoins + " Aztec coins");
+			//	LogIt("Captain, " + makeint((1-uncursed_percentage)*100) + "% of the crew is cursed due to " + CursedCoins + " Aztec coins");
+				LogIt(TranslateString("","Captain") + ", " + makeint((1-uncursed_percentage)*100) + "% " + TranslateString("","of the crew is cursed due to") + " "  + CursedCoins + " " + TranslateString("","Aztec coins") );
 			}
 
 			for (i = 0; i < COMPANION_MAX; i++)
@@ -423,8 +424,8 @@ void DailyCrewUpdate()
 					chref.curseddays = sti(chref.curseddays) + 1;
 				}
 			}
-			if(sti(pchar.curseddays)==25)	LogIt("Captain, the crew is really not happy with this whole curse business. They work SO HARD at repairing the sails, but it appears to have no effect!");
-			if(sti(pchar.curseddays)==35)	LogIt("Captain, now the crew can't even see where they're going anymore with all this unnatural fog! Cannot you be persuaded to attempt to lift the curse?");
+			if(sti(pchar.curseddays)==25)	LogIt(TranslateString("","Captain, the crew is really not happy with this whole curse business. They work SO HARD at repairing the sails, but it appears to have no effect!"));
+			if(sti(pchar.curseddays)==35)	LogIt(TranslateString("","Captain, now the crew can't even see where they're going anymore with all this unnatural fog! Cannot you be persuaded to attempt to lift the curse?"));
 		}
 		// PB: Cursed Coins <--
 
@@ -523,10 +524,19 @@ void DailyCrewUpdate()
 //trace("DailyCrewUpdate: old morale = " + pchar.Ship.Crew.Morale + ", norm_morale = " + norm_morale + ", moralemod = " + moralemod + ", moralech = " + moralech + ", new morale = " + morale);
 		pchar.Ship.Crew.Morale = morale;
 
-		if (morale <= 10) KAM_Mutiny(); //MAXIMUS: new "Mutiny"
-		if(LogsToggle > LOG_QUIET) Log_SetStringToLog(TranslateString("","The crew now has") + " " + XI_ConvertString(GetMoraleName(morale)) + " " + XI_ConvertString("morale") + " (" + makeint(morale) + ").");
+        	if (morale <= 10) KAM_Mutiny(); //MAXIMUS: new "Mutiny"
+		if(LogsToggle > LOG_QUIET)
+		{
+	        	switch (LanguageGetLanguage())
+			{
+				case "Spanish":
+					Log_SetStringToLog(TranslateString("","The crew now has") + " " + XI_ConvertString("morale") + " " + XI_ConvertString(GetMoraleName(morale)) + " (" + makeint(morale) + ").");            
+				break;
+				// default:
+				Log_SetStringToLog(TranslateString("","The crew now has") + " " + XI_ConvertString(GetMoraleName(morale)) + " " + XI_ConvertString("morale") + " (" + makeint(morale) + ").");
+			}
+		}
 		if(!CheckFood) { pchar.foodoff = true; }
-
 		
 	//set values for next time and play sounds.
 		explength++;
@@ -583,7 +593,7 @@ void DailyCrewUpdate()
 						if(!CheckAttribute(chref, "mutiny_note") && GetDifficulty() < DIFFICULTY_SEADOG) // Hints only on Landlubber and Mariner
 						{
 							chref.mutiny_note = true;	
-							LogIt("Captain, the crew of the " + XI_ConvertString(GetShipString(GetCharacterShipType(chref))) + " " + GetMyShipNameShow(chref) + " " + TranslateString("", "commanded by") + " " + GetMySimpleName(chref) + " has less than Low morale. Beware of mutiny!");
+							LogIt(TranslateString("","Captain, the crew of the") +" "+ XI_ConvertString(GetShipString(GetCharacterShipType(chref))) +" "+ GetMyShipNameShow(chref) +" "+ TranslateString("", "commanded by") + " " + GetMySimpleName(chref) +" "+ TranslateString("","has less than Low morale. Beware of mutiny!"));
 						}
 					}
 				}
@@ -664,7 +674,7 @@ void DailyCrewUpdate()
 		
 			if (GetWoundedCrewQuantity(chref) > 0 || healed_qty > 0 || killed_qty > 0)
 			{
-				LogIt(GetWoundedCrewQuantity(chref) + " wounded crewmembers: " + healed_qty + " healed and " + killed_qty + " died from gangrene on "+GetMyShipNameShow(chref)+".");
+				LogIt(GetWoundedCrewQuantity(chref) +" "+ TranslateString("","wounded crewmembers:") +" "+ healed_qty +" "+ TranslateString("","healed and") +" "+ killed_qty +" "+ TranslateString("","died from gangrene on")+ " "+ GetMyShipNameShow(chref)+".");
 			} // Serge Grey: moved and changed for ship's name outputting (24.05.2018).
 		}
 		LAi_SetCurHPMax(chref);		// GR: routine personal healing doesn't seem to happen at sea, so heal fully instead

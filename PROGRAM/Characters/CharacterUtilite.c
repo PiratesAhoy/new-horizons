@@ -2447,14 +2447,17 @@ string GetRankNameDirect(ref char, int iNation, int rank)
 		if(CheckAttribute(Nations[PIRATE],"Ranks."+rn))		return Nations[PIRATE].Ranks.(rn);		// PB: Fame Levels
 	}
 
-//	if (ProfessionalNavyNation() == iNation)
-	if (ProfessionalNavyNationChar(char) == iNation)	// GR: Look at whether this char, not player char, is in the navy
+	if (ProfessionalNavyNationChar(char) == iNation)		// GR: Look at whether this char, not player char, is in the navy
 	{
 		if(CheckAttribute(Nations[iNation],"Ranks."+rn))	return Nations[iNation].Ranks.(rn);		// NK: Navy Ranks
 	}
 	else
 	{
-		if(CheckAttribute(Nations[iNation],"Titles."+rn))	return Nations[iNation].Titles.(rn);	// PB: Privateer Titles
+		if(CheckAttribute(Nations[iNation],"Titles."+rn))	// PB: Privateer Titles
+		{
+			if(GetAttribute(char, "sex") == "woman" && rank > 6)	return Nations[iNation].Titles.(rn) + "_f";	// GR: women may have different titles
+			else							return Nations[iNation].Titles.(rn);
+		}
 	}
 // KK -->
 	rn = "" + iNation;
@@ -2522,15 +2525,26 @@ int Promote(ref char, ref gov, int iNation)
 	GivePromotionReward(iNation); // PB
 //	bool NoLandGiven = ProfessionalNavyNation() != UNKNOWN_NATION && curRank < 7;
 	bool NoLandGiven = curRank < 7;	// GR: no land for navy OR privateers until you are landed gentry
-	if(NoLandGiven || iNation == PIRATE)
-	{
-		if (!InTutDeck) WriteNewLogEntry("Promoted to "+GetNationDescByType(iNation)+" "+GetRankNameDirect(char, iNation, currank),"My dedication and faithful service for "+GetNationNameByType(iNation)+" have earned me the rank of "+GetRankNameDirect(char, iNation, currank)+".","Personal",true);
-	}
-	else
+	string title, text;
+
+	Preprocessor_Add("nationdesc", XI_ConvertString(GetNationDescByType(iNation)));
+	Preprocessor_Add("nationname", XI_ConvertString(GetNationNameByType(iNation)));
+	Preprocessor_Add("rank", XI_ConvertString(GetRankNameDirect(char, iNation, currank)));
+	Preprocessor_Add("govname", GetMySimpleName(gov));
+	Preprocessor_Add("newland", "" + curRank*LAND_PER_RANK);
+	title = GetTranslatedLog("Promoted to #snationdesc# #srank#");
+	text = GetTranslatedLog("My dedication and faithful service for #snationname# have earned me the rank of #srank#.")
+	if(!NoLandGiven && iNation != PIRATE)
 	{
 		AddLandToCharacter(&char, Locations[FindLocation(gov.location)].island, iNation, curRank*LAND_PER_RANK); // KK
-		if (!InTutDeck) WriteNewLogEntry("Promoted to "+GetNationDescByType(iNation)+" "+GetRankNameDirect(char, iNation, currank),"My dedication and faithful service for "+GetNationNameByType(iNation)+" have earned me the title of "+GetRankNameDirect(char, iNation, currank)+". The "+GetNationDescByType(iNation)+" governor "+gov.name+" "+gov.lastname+" awarded me with the title and "+curRank*LAND_PER_RANK+" acres of land.","Personal",true);
+		text = text + " " + GetTranslatedLog("The #snationdesc# governor #sgovname# awarded me with the title and #snewland# acres of land.");
 	}
+	if (!InTutDeck) WriteNewLogEntry(PreprocessText(title), PreprocessText(text),"Personal",true);
+	Preprocessor_Delete("newland");
+	Preprocessor_Delete("govname");
+	Preprocessor_Delete("rank");
+	Preprocessor_Delete("nationname");
+	Preprocessor_Delete("nationdesc");
 	//UpdateTitle(&char);
 	return curRank;
 }
@@ -2575,9 +2589,13 @@ float SetRank(ref char, int iNation, int newrank)
 				//UpdateTitle(&char);
 				points = RequiredNextRankDirect(newrank);
 			}
-			string sLogTitle = "Joined Service of " + GetNationNameByType(iNation);
-			string sLogEntry = "I received a Letter of Marque from " + GetNationNameByType(iNation) + ". Now I am in their service, I can legally sink and capture ships, which means prize money and potential promotions for me in the future.";
-			WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+			string title, text;
+			
+			Preprocessor_Add("nationname", XI_ConvertString(GetNationNameByType(iNation)));
+			title = GetTranslatedLog("Joined Service of #snationname#");
+			text = GetTranslatedLog("I received a Letter of Marque from #snationname#. Now I am in their service, I can legally sink and capture ships, which means prize money and potential promotions for me in the future.");
+			WriteNewLogEntry(PreprocessText(title), PreprocessText(text),"Personal",true);
+			Preprocessor_Delete("nationname");
 		}
 		if(points < 0.0) points = 0.0;
 		SetRMRelation(char, iNation, points);
@@ -2669,15 +2687,19 @@ bool LeaveService(ref char, int iNation, bool override)
 	}
 
 	// Lost LoM
-	string sLogTitle = "Left Service of " + GetNationNameByType(iNation);
-	string sLogEntry = "This marks the end of my service for " + GetNationNameByType(iNation) + ". But at least I am free now to pursue other goals.";
+	string title, text;
+			
+	Preprocessor_Add("nationname", XI_ConvertString(GetNationNameByType(iNation)));
+	title = GetTranslatedLog("Left Service of #snationname#");
+	text = GetTranslatedLog("This marks the end of my service for #snationname#. But at least I am free now to pursue other goals.");
 	if(leavebad)
 	{
-		sLogEntry += " My leaving was on rather bad terms and left me with decidedly less friends than I had.";
+		text = text + " " + GetTranslatedLog("My leaving was on rather bad terms and left me with decidedly less friends than I had.");
 		SetServedNation(PIRATE); // PB
 	}
-	WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+	WriteNewLogEntry(PreprocessText(title), PreprocessText(text),"Personal",true);
 	LooseLetterOfMarque(iNation);
+	Preprocessor_Delete("nationname");
 
 	DeleteAttribute(char, "professionalnavy"); // PB: No more navy
 	DeleteAttribute(char, "isnotcaptain"); // LDH 16Apr09

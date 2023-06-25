@@ -79,7 +79,13 @@ void InitInterface_RR(string iniName,ref pCharacter,ref enemyCh)
 				break;
 
 				case "corpse":
-					curEnemyName = XI_ConvertString("Dead") + " " + XI_ConvertString("s"+"captain");
+					switch (LanguageGetLanguage())
+					{
+						case "Spanish":
+							curEnemyName = XI_ConvertString("captain") + " " + strlower(XI_ConvertString("Dead"));
+						break;
+						curEnemyName = XI_ConvertString("Dead") + " " + strlower(XI_ConvertString("captain"));
+					}
 					SetNewPicture("ENEMYPICT", "interfaces\portraits\128\face_skull.tga");
 					//CreateString(true,"EnemyName",XI_ConvertString("Dead") + " " + XI_ConvertString("captain"),FONT_NORMAL,COLOR_NORMAL,478,170,SCRIPT_ALIGN_CENTER,1.0);
 				break;

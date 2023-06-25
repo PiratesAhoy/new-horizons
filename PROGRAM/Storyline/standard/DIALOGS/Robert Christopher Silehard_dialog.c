@@ -683,8 +683,7 @@ void ProcessDialogEvent()
 
 		case "both_talk_with_Silehard_3":
 			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(PChar)));
-			if (PChar.sex == "woman") Preprocessor_Add("Pronoun3_upper", FirstLetterUp(XI_ConvertString("her")));
-			else Preprocessor_Add("Pronoun3_upper", FirstLetterUp(XI_ConvertString("his")));
+			Preprocessor_AddQuestData("Pronoun3_upper", FirstLetterUp(XI_ConvertString(GetMyPronounPossessive(PChar))));
 			dialog.text = DLG_TEXT[165] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[166])]) + DLG_TEXT[167];
 			Link.l1 = DLG_TEXT[168];
 			Link.l1.go = "both_talk_with_Silehard_4";

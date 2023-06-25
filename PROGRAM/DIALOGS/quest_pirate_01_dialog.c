@@ -138,7 +138,7 @@ void ProcessDialogEvent()
 
 		case "blaze_to_incas_collection_begin_4":
 			Dialog.snd = "voice\QUP1\QUP1016";
-			Preprocessor_Add("gentleman", "gentle" + PChar.sex);
+			Preprocessor_Add("gentleman", XI_ConvertString("gentle" + PChar.sex));
 			dialog.text = DLG_TEXT[34];
 			link.l1 = DLG_TEXT[35];
 			link.l1.go = "blaze_to_incas_collection_begin_exit";

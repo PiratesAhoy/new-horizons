@@ -1,4 +1,4 @@
-string DLG_TEXT[199] = {
+string DLG_TEXT[204] = {
 "What are you staring at? Didn't expect a woman to be in charge here, did you? Well, this old woman, ",
 ", can show you that she still has a little gunpowder in her keg!",
 "Hey, where do you get your manners, ",
@@ -198,5 +198,9 @@ string DLG_TEXT[199] = {
 ". Who is this woman with you?",
 "This young lass is ",
 "... Savvy.",
-
+"What, at this time of night?",
+"No! If you can't find anything better to do until morning, you can sleep on a table. Or on the floor.",
+"You must be joking! ",
+"There should be somewhere else to spend a night around here.",
+"I'll return to my ship for the night.",
 };

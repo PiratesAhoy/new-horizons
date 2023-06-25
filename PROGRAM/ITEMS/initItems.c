@@ -4834,6 +4834,9 @@ int InitQuestItem(  ref ItemIndex, string id, string txtname, string model,
 	case "engineer_letter1":		qstitm.groupID		= EXAMINE_ITEM_TYPE; 			break;
 	case "engineer_letter2":		qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
 	case "engineer_letter3":		qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
+
+	case "full_map":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // BTP: Devlin Opera
+	case "full_map_scaled":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // BTP: Devlin Opera
   }
   if ( setshown == 1 ) qstitm.shown = shownval;
 

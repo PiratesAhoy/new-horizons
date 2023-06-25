@@ -136,7 +136,7 @@ string DLG_TEXT[429] = {
 "Digo que he creado un monstruo, ",
 ". ¡Pero estaré lista cuando tú lo estés!",
 "Cálmate! ¿Qué ha pasado?",
-"¿Qué  ha pasado? ¡Me dijeron que habías muerto! Navegué hasta Greenford para averiguar lo que había ocurrido realmente. El dueño de la taberna me dijo que no te había visto. Entonces un muchacho se acercó de repente y dijo que sabía donde estabas. ¡Y yo me lo creí ocmo una tonta!",
+"¿Qué  ha pasado? ¡Me dijeron que habías muerto! Navegué hasta Greenford para averiguar lo que había ocurrido realmente. El dueño de la taberna me dijo que no te había visto. Entonces un muchacho se acercó de repente y dijo que sabía donde estabas. ¡Y yo me lo creí como una tonta!",
 "Relájate. Ahora todo está bien. ¿Qué paso entonces?",
 "Navegué aquí a #sIsla Muelle# con ese perro mentiroso. Dijo que nos encontraríamos con los piratas que te tenían prisionero. Me condujo al interior de la selva... y después escapó mientras dos de sus amigos se me echaban encima. Para cuando pude encargarme de ellos y volver a la costa, ya se había ido. ¡Y mi barco también!",
 "¿Pasaste por todo eso por mí? ¡La fría y altiva Danielle lanzándose a mi rescate sin pensárselo dos veces!",
@@ -299,7 +299,7 @@ string DLG_TEXT[429] = {
 "Ahora, procedamos a una investigación más...",
 "... metódica del pergamino.",
 "¡Ahora el cráneo ha desaparecido! Solo queda mi boceto del escarabajo. Déjame pensar:",	//299
-"Al dibujar el escarabajo no había ningún cráneo en el pergamino. Al completar mi boceto, se lo pasé a Mr. Poe, y no dejé de observarlo de cerca hasta que me lo devolvió. Él, por lo tanto, no pudo haber dibujado la calavera, y no había presente nadie más que pudiera haberlo hecho. De modo que podemos asegurar que no apareció por intervención humana. Pero no obstante, apareció.",
+"Al dibujar el escarabajo no había ningún cráneo en el pergamino. Al completar mi boceto, se lo pasé a Mr. Poe, y no dejé de observarlo de cerca hasta que me lo devolvió. Él, por lo tanto, no pudo haber dibujado la calavera, y no había presente nadie más que pudiera haberlo hecho. De modo que podemos asegurar que no apareció por intervención humana. Pero, no obstante, apareció.",
 "El tiempo había refrescado (¡oh, raro y feliz accidente!) y ardía un fuego en el hogar.",
 "Como mi caminata me había hecho entrar en calor, me senté cerca de la mesa. Pero Mr. Poe acercó su silla a la chimenea.",
 "Considerando todos estos detalles, no dudo ni por un instante que el calor fue el agente que hizo surgir en la superficie del pergamino el cráneo que encontré dibujado en él.",
@@ -335,9 +335,9 @@ string DLG_TEXT[429] = {
 "¿Qué se supone que tengo que hacer aquí?",
 "¿Admirar las vistas?",
 "Muy bien, he encontrado la 'Silla del Diablo'. Ahora volvamos a Charleston...",	//335
-"... El 'vaso' o 'cristal' (glass) deber referirse a un catalejo (spyglass); también necesitaré una brújula y un sextante para resolver esto.",
+"... El 'vaso' o 'cristal' (glass) debe referirse a un catalejo (spyglass); también necesitaré una brújula y un sextante para resolver esto.",
 "¡Ahí está! Exactamente igual que en el dibujo,",
-"ahora tengo que encontrar una forma de trepar a lo alto de la roca.",
+" ahora tengo que encontrar una forma de trepar a lo alto de la roca.",
 "Esperaba que se hubieran ido. ¿Qué hacemos ahora, Júpiter?...",
 "... ¿Nos damos la vuelta?",							//340
 "Júpiter, por favor, ¿puedes ir a Fort Moultrie y visitar al teniente G?...",
@@ -347,7 +347,7 @@ string DLG_TEXT[429] = {
 "Tengo que intentar usar la botavara como palanca... ",
 "... para abrir la escotilla.",
 "Primero, enrollaré el dibujo de la montaña... ",
-"... ¡y después relleneré el rollo de pólvora!",
+"... ¡y después rellenaré el rollo de pólvora!",
 "El único lugar donde puedo ponerme a cubierto...",
 "... es en la esquina detrás de la librería.",
 "¡Aquí no hay naide!",

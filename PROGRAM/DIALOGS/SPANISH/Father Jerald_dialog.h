@@ -18,7 +18,7 @@ string DLG_TEXT[87] = {
 "Gracias, #sFather#, pero debo irme.",
 "¿Esto tiene que ver con tu fe?",
 "En realidad, se trata de tu fe.",
-"De hecho, tiene que ver ocntigo.",
+"De hecho, tiene que ver contigo.",
 "Lo siento, pero he reunido pruebas que demuestran que has roto tus votos como sacerdote.",
 "No. Y hablemos de otra cosa.",
 "¿Qué quieres decir?",

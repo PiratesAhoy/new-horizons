@@ -1,11 +1,11 @@
 string DLG_TEXT[8] = {
-"Sera mejor que vayas a la ciudad.",
-"Si - supongo que no tengo eleccion.",
-"Estas vivo? Deberias considerarte bendecido para sobrevivir a semejante tormenta. !No he visto una tormenta como esa en todos mis anos!",
-"Entonces, donde estoy?",
-"#sisland_Douwesen#. Parece que el mar te trajo aqui.",
-"Cualquier signo de mi nave y tripulacion! Donde estan?",
-"No. Deberias agradecer a tus estrellas que estuviera aqui para sacarte del agua. Si yo fuera tu, me iria a la ciudad. Tu tripulacion puede que ya este alli buscandote.",
+"Será mejor que vayas a la ciudad.",
+"Sí, supongo que no tengo elección.",
+"¿Sigues con vida? Deberias considerarte bendecido para sobrevivir a semejante tormenta. !No he visto una tormenta como esa en todos mis anos!",
+"Entonces, ¿dónde estoy?",
+"En #sisland_Douwesen#. Parece que el mar te arrastró hasta aquí.",
+"¿Algún signo de mi barco y tripulación? ¿Dónde están?",
+"No. Deberías dar gracias a tu suerte de que yo estuviera aquí para sacarte del agua. Si yo fuera tú, me iría a la ciudad. Puede que tu tripulación ya esté allí buscándote.",
 "Esa es una buena idea. Gracias.",
 
 };

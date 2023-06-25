@@ -39,7 +39,7 @@ void WriteNewLogEntry(string logTitle, string logEntry, string logCategory, bool
 			{
 				newLog += pchar.shiplog.Entry.log0;
 				newLog += "\n \n";
-				if(GetStringDate(GetDataYear(), GetDataMonth(), GetDataDay()) != pchar.shiplog.Date.log0) newLog += GetDayName(GetWeekday(GetDataDay(), GetDataMonth(), GetDataYear()))+", "+GetHumanDate(GetDataYear(), GetDataMonth(), GetDataDay())+": ";
+				if(GetStringDate(GetDataYear(), GetDataMonth(), GetDataDay()) != pchar.shiplog.Date.log0) newLog += XI_ConvertString(GetDayName(GetWeekday(GetDataDay(), GetDataMonth(), GetDataYear())))+", "+GetHumanDate(GetDataYear(), GetDataMonth(), GetDataDay())+": ";
 				newLog += logEntry;
 				pchar.shiplog.Entry.log0 = newLog;
 				bUpdate = true;
@@ -213,6 +213,6 @@ string GetLogTime()
 		break;
 	}
 
-	sDateTime=GetTranslatedLog("On ")+GetDayName(GetWeekday(GetDataDay(), GetDataMonth(), GetDataYear()))+", "+GetHumanDate(GetDataYear(), GetDataMonth(), GetDataDay())+" "+GetTranslatedLog(tmp);
+	sDateTime = GetTranslatedLog("On")+ " " + XI_ConvertString(GetDayName(GetWeekday(GetDataDay(), GetDataMonth(), GetDataYear())))+", "+GetHumanDate(GetDataYear(), GetDataMonth(), GetDataDay())+", "+GetTranslatedLog(tmp);
 	return sDateTime;
 }

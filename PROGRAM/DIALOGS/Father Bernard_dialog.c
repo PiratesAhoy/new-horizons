@@ -656,7 +656,9 @@ void ProcessDialogEvent()
 // GR: Ardent storyline -->
 		case "ardent_abduction_sad_marriage1":
 			Preprocessor_Add("romance", GetMyFullName(characterFromID(PChar.quest.romance)));
-			if (PChar.sex == "man")
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounPossessive(PChar)));
+		/*	if (PChar.sex == "man")
 			{
 				Preprocessor_Add("pronoun", XI_ConvertString("she"));
 				Preprocessor_Add("pronoun2", XI_ConvertString("her"));
@@ -665,7 +667,7 @@ void ProcessDialogEvent()
 			{
 				Preprocessor_Add("pronoun", XI_ConvertString("he"));
 				Preprocessor_Add("pronoun2", XI_ConvertString("his"));
-			}
+			}*/
 			dialog.text = DLG_TEXT[171];
 			link.l1 = DLG_TEXT[172];
 			link.l1.go = "ardent_abduction_sad_marriage2";

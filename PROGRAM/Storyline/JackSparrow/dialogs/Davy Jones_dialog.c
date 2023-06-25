@@ -260,9 +260,9 @@ void ProcessDialogEvent()
 			link.l1.go = "ForDavyJones9";
 			SetShipRemovable(pchar, true);
 			if (PreprocessText("#scursed_ship#") == "Black Pearl")
-				GiveShip2Character(pchar,"UncursedPearl",PreprocessText("#scursed_ship#"),-1,PIRATE,true,true);
+				GiveShip2Character(pchar,"UncursedPearl",TranslateString("",PreprocessText("#scursed_ship#")),-1,PIRATE,true,true);
 			else
-				GiveShip2Character(pchar,"CrimsonBlood", PreprocessText("#scursed_ship#"),-1,PIRATE,true,true);
+				GiveShip2Character(pchar,"CrimsonBlood", TranslateString("",PreprocessText("#scursed_ship#")),-1,PIRATE,true,true);
 			HoistFlag(PIRATE);
 			if (PChar.location == "Oxbay_shore_01")
 			{
@@ -364,9 +364,9 @@ void ProcessDialogEvent()
 			GiveModel2Player("Jack", true);
 			SetShipRemovable(pchar, true);
 			if (PreprocessText("#scursed_ship#") == "Black Pearl")
-				GiveShip2Character(pchar,"UncursedPearl",PreprocessText("#scursed_ship#"),-1,PIRATE,true,true);
+				GiveShip2Character(pchar,"UncursedPearl",TranslateString("",PreprocessText("#scursed_ship#")),-1,PIRATE,true,true);
 			else
-				GiveShip2Character(pchar,"CrimsonBlood", PreprocessText("#scursed_ship#"),-1,PIRATE,true,true);
+				GiveShip2Character(pchar,"CrimsonBlood", TranslateString("",PreprocessText("#scursed_ship#")),-1,PIRATE,true,true);
 			setCharacterShipLocation(pchar, "Oxbay_shore_01");
 			HoistFlag(PIRATE);
 			EnableEquip(pchar, BLADE_ITEM_TYPE, true);

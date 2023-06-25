@@ -218,7 +218,7 @@ void CreateSideQuestCharacters(ref n)
 //	ch.questchar = true;//MAXIMUS: identifier for captives, commented out by Grey Roger to allow name to change
 	AddGameCharacter(n, ch);
 
-				// Mergildo Hurtado - капитан барка со священниками
+				// Mergildo Hurtado - êàïèòàí áàðêà ñî ñâÿùåííèêàìè
 	ch.old.name = "Mergildo";
 	ch.old.lastname = "Hurtado";
 	ch.name = TranslateString("", "Mergildo");
@@ -265,7 +265,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// Jordano - сын кузнеца на Муэле
+				// Jordano - ñûí êóçíåöà íà Ìóýëå
 	ch.old.name = "Jordano";
 	ch.old.lastname = "";
 	ch.name = TranslateString("", "Jordano");
@@ -303,7 +303,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				//Yedam Kinne - дивет в Гринфорде - подделывает документы и подчерки.
+				//Yedam Kinne - äèâåò â Ãðèíôîðäå - ïîääåëûâàåò äîêóìåíòû è ïîä÷åðêè.
 	ch.old.name = "Yedam";
 	ch.old.lastname = "Kinne";
 	ch.name = TranslateString("", "Yedam");
@@ -1398,7 +1398,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-// первый наймит губернатора для нападения на Даниель
+// ïåðâûé íàéìèò ãóáåðíàòîðà äëÿ íàïàäåíèÿ íà Äàíèåëü
 	ch.old.name = "killer";
 	ch.old.lastname = "";
 	ch.name = TranslateString("", "killer");
@@ -2746,7 +2746,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.old.name = "Gordon";
 	ch.old.lastname = "Carpenter";
 	ch.name = TranslateString("", "Gordon");
-	ch.lastname = TranslateString("", "Carpenter");
+	ch.lastname = TranslateString("", "Carpenter1");
 	ch.id		= "Gordon Carpenter";
 	ch.model = "bocman4";
 	ch.sex = "man";
@@ -3145,7 +3145,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// Ethilrede Claar - пират, который продал в рабство одного из наших офицеров () Leborio Drago
+				// Ethilrede Claar - ïèðàò, êîòîðûé ïðîäàë â ðàáñòâî îäíîãî èç íàøèõ îôèöåðîâ () Leborio Drago
 	ch.old.name = "Ethilrede";
 	ch.old.lastname = "Claar";
 	ch.name = TranslateString("", "Ethilrede");

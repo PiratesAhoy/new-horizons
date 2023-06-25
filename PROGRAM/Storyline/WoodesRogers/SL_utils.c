@@ -22671,7 +22671,7 @@ void LAi_CharacterFireExecute_WR(aref attack, aref enemy, float kDist, int isFin
 	//ccc aref enemy = GetEventData();
 	//ccc float kDist = GetEventData();
 	//ccc int isFindedEnemy = GetEventData();
-	//Заряд персонажа
+	//Çàðÿä ïåðñîíàæà
 	if(!CheckAttribute(attack, "chr_ai.charge")) attack.chr_ai.charge = "0";
 	float charge = stf(attack.chr_ai.charge) - 1.0;
 	if(charge <= 0.0)
@@ -22680,7 +22680,7 @@ void LAi_CharacterFireExecute_WR(aref attack, aref enemy, float kDist, int isFin
 		attack.chr_ai.chargeprc = "1";
 	}
 	attack.chr_ai.charge = charge;
-	//Если промахнулись, то ничего не делаем
+	//Åñëè ïðîìàõíóëèñü, òî íè÷åãî íå äåëàåì
 
 //JRH moved up block from below
 	string weaponID = GetCharacterEquipByGroup(attack,GUN_ITEM_TYPE);	// defines weaponname
@@ -22699,7 +22699,7 @@ void LAi_CharacterFireExecute_WR(aref attack, aref enemy, float kDist, int isFin
 
 	if(isFindedEnemy == 0)
 	{
-		//здесь можно поднимать тревогу в случае близкого выстрела
+		//çäåñü ìîæíî ïîäíèìàòü òðåâîãó â ñëó÷àå áëèçêîãî âûñòðåëà
 
 		if(CheckAttribute(weapon, "id") && weapon.id == "pistoltinderbox")
 		{

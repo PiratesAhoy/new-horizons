@@ -109,8 +109,7 @@ void ProcessDialogEvent()
 		
 		case "without_ship":
 			Dialog.snd = "voice\REDI\REDI010";
-			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-			else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(CharacterFromID("Danielle"))));
 			dialog.text = DLG_TEXT[25];
 			link.l1 = DLG_TEXT[26] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[27])]) + DLG_TEXT[28];
 			link.l1.go = "without_ship_2";
@@ -291,8 +290,7 @@ void ProcessDialogEvent()
 
 		case "I go to the right_1":
 			Dialog.snd = "voice\REDI\REDI021";
-			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-			else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(CharacterFromID("Danielle"))));
 			d.Text = DLG_TEXT[50] + GetMyName(Pchar) + DLG_TEXT[51];
 			Link.l1 = DLG_TEXT[52];
 			Link.l1.go = "exit";

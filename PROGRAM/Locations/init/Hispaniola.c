@@ -4621,7 +4621,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].filespath.models = "locations\Inside\SmallTavern";	
 
 	Locations[n].id = "BC_Tavern";
-	locations[n].id.label = "Buccaneers Camp tavern";
+	locations[n].id.label = "#stown_name# tavern";
 	Locations[n].image = "Inside_SmallTavern.tga";
 	//Town sack
 	Locations[n].townsack = "Buccaneers Camp"; // NK - "Oxbay";
@@ -4670,7 +4670,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].filespath.models = "locations\Inside\SmallHome";	
 
 	Locations[n].id = "BC_tavern_upstairs";
-	locations[n].id.label = "Room in Buccaneers Camp tavern";
+	locations[n].id.label = "Room in #stown_name# tavern";
 	Locations[n].image = "Inside_Doubleflour_House_Room.tga"; // ccc: Skip VC in room
 	//Town sack
 	Locations[n].townsack = "Buccaneers Camp";

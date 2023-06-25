@@ -361,8 +361,9 @@ void ProcessDialogEvent()
 
 		case "kapitein_trial3":
 			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
-			if (PChar.sex == "woman") Preprocessor_Add("pronoun2", XI_ConvertString("her"));
-			else Preprocessor_Add("pronoun2", XI_ConvertString("his"));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounPossessive(PChar)));
+		//	if (PChar.sex == "woman") Preprocessor_Add("pronoun2", XI_ConvertString("her"));
+		//	else Preprocessor_Add("pronoun2", XI_ConvertString("his"));
 			dialog.text = DLG_TEXT[166] + GetMySimpleName(CharacterFromID("assisting_soldier")) + DLG_TEXT[167];
 			link.l1 = "";
 			link.l1.go = "exit";

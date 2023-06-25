@@ -1172,7 +1172,7 @@ void BI_LaunchCommand()
 // PB: Black Pearl -->
 	case "BI_PearlSweeps":
 		AddPerkToActiveList("PearlSweeps");
-		LogIt("Haul on the main brace! Make ready the guns! And run out the sweeps...");
+		LogIt(TranslateString("","Haul on the main brace! Make ready the guns! And run out the sweeps..."));
 		PChar.ship.speedburst = "PearlSweeps";
 		PChar.Ship.Impulse.Rotate.z = 0.08; // = 4 knots max
 		PostEvent("FinishSpeedBurst",120000);
@@ -1210,7 +1210,7 @@ void BI_LaunchCommand()
 		pchar.skipWeatherLogs = true;
 		if(Whr_IsStorm())
 		{
-			LogIt("By the power of Neptune, I command this storm to end!");
+			LogIt(TranslateString("","By the power of Neptune, I command this storm to end!"));
 			while(Whr_IsStorm())
 			{
 				SetNextWind(-1, 20);
@@ -1221,7 +1221,7 @@ void BI_LaunchCommand()
 		}
 		else
 		{
-			LogIt("I call upon the sea goddess Calypso to bring a storm onto my foes!");
+			LogIt(TranslateString("","I call upon the sea goddess Calypso to bring a storm onto my foes!"));
 			while(!Whr_IsStorm())
 			{
 				SetNextWeather("Heavy Storm");

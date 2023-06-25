@@ -48,7 +48,7 @@ string DLG_TEXT[149] = {
 "Arnaud Matton",
 ", me robó todo lo que tenía y se quedó con mi tienda. \nYo estaba dispuesto a trabajar, a volver a levantarme, pero nadie quería prestarme dinero, excepto el mismo ",
 "Arnaud Matton",
-". \nMi posición era desesperada. ¿Qué podía hacer excepto aceptar? Pero logró engañarme otra vez, y ahora me encuentro peor que arruinado, porque le debo por deber 2500 piezas de oro. Asi que estoy endeudado hasta la cejas.",
+". \nMi posición era desesperada. ¿Qué podía hacer excepto aceptar? Pero logró engañarme otra vez, y ahora me encuentro peor que arruinado, porque le debo 2500 piezas de oro. Asi que estoy endeudado hasta la cejas.",
 "Tal vez haya alguna manera en que yo pueda ayudar.",
 "Me encantaría poder ayudarte..., pero no de forma gratuita, por supuesto.",
 "Es una historia muy triste, pero no veo como yo podría ayudar. Y debo irme.",
