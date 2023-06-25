@@ -573,9 +573,9 @@ Your second basic collection of animated old bones covered in seaweed.{Ваша 
 Your third basic collection of animated old bones covered in seaweed.{Ваша третья базовая коллекция оживленных старых костей, покрытых водорослями.}
 Your fourth basic collection of animated old bones covered in seaweed.{Ваша четвертая базовая коллекция оживленных старых костей, покрытых водорослями.}
 Your fifth basic collection of animated old bones covered in seaweed.{Ваша пятая базовая коллекция оживленных старых костей, покрытых водорослями.}
-Half man, half shellfish - one of Davy Jones' crew.{Наполовину человек, наполовину моллюск - один из команды Дэви Джонса.}
-Half man, half hammerhead shark - one of Davy Jones' crew.{Наполовину человек, наполовину акула-молот - один из команды Дэви Джонса.}
-Half man, half lobster - one of Davy Jones' crew.{Наполовину человек, наполовину лобстер - один из команды Дэви Джонса.}
+Half man, half shellfish - one of Davy Jones' crew.{Наполовину человек, наполовину моллюск - один из команды Дэйви Джонса.}
+Half man, half hammerhead shark - one of Davy Jones' crew.{Наполовину человек, наполовину акула-молот - один из команды Дэйви Джонса.}
+Half man, half lobster - one of Davy Jones' crew.{Наполовину человек, наполовину лобстер - один из команды Дэйви Джонса.}
 A very strange collection of animated bones, was it ever human.{Очень странная коллекция оживленных костей, была ли она человеком.}
 I need to kill a lot of people, but very quietly!{Мне нужно убить много людей, но очень тихо!}
 You have business with me, senor?{У вас есть дело ко мне, сеньор?}

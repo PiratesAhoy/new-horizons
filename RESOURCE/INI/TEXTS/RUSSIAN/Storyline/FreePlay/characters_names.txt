@@ -16,18 +16,41 @@ Cardinal{Кардинал}
 Richelieu{Ришелье}
 Mazarin{Мазарини}
 Teague{Тиг}
-Sparrow{Спэрроу}
+Sparrow{Воробей}
 Franзois{Франсуа}
-de Hadoque{де Хадоке}
+de Hadoque{Де Хадоке}
 Koleniko{Коленико}
 Ragetti{Раджетти}
+Mother{Мать}
 Bootstrap Bill{Прихлоп Билл}
+Mateo{Матео}
+Black Caesar{Чёрный Цезарь}
+Raoul{Рауль}
+Dupont{Дюпон}
+Askay{Аскай}
+Pusasn{Пусасн}
+Lian{Лиан}
+Park{Парк}
+Tai{Тай}
+Huang{Хуанг}
+Twigg{Твигг}
+Bo'sun{Боцман}
+Pintel{Пинтел}
+Ian{Иан}
+Mercer{Мерсер}
+Bligh{Блай}
 
 {=====| quests_reaction.c |=====}
-Bartolomeu{Бартоломео}
-Portugues{Португальский}
+Bartolomeu{Бартоломью}
+Portugues{Португалец}
 Guillaume{Гилм}
 Auger{Уга}
+
+{=====| both_reaction.c |=====}
+Weatherby{Уэзерби}
+Swann{Суонн}
+Christopher{Кристофер}
+Silehard{Сайлхард}
 
 {=====| Officers.c |=====}
 William{Уильям}
@@ -45,6 +68,8 @@ O'Bannon{О'Беннон}
 Angus{Ангус}
 Calhoun{Кэлхаун}
 Bush{Буш}
+Dark Captain{Тёмный Капитан}
+Dark Cannoneer{Тёмный Канонир}
 
 {=====| TempQuest.c |=====}
 Bart{Барт}
@@ -56,6 +81,7 @@ Villalobos{Виллалобос}
 Crewmember{Член команды}
 Spanish{Испанский}
 Commander{Командующий}
+Spanish Commander{Испанский Командир}
 Padre{Падре}
 Gerardo{Жерардо}
 Soldier{Солдат}
@@ -70,6 +96,7 @@ Keene{Кин}
 Fernando{Фернандо}
 Suarez{Суарез}
 Elvira{Эльвира}
+Carranza{Карранса}
 Alonso{Алонсо}
 Madero{Мадеро}
 Arnaldo{Арнальдо}
@@ -78,13 +105,14 @@ Chaparro{Чапарро}
 {=====| TempQuestEnemy.c |=====}
 Prison{Арестант}
 Guard{Стражник}
+Prison Guard{Тюремный Стражник}
 Arnold{Арнольд}
 McGill{МакГилл}
 Smuggler{Контрабандист}
 Acre{Акр}
 Jourdain{Журден}
 Anjou{Анжу}
-Edam{Едам}
+Edam{Эдам}
 De Cow{Де Коу}
 Abel{Абель}
 Barco{Барко}

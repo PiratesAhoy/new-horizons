@@ -9,7 +9,7 @@ Pyle{Пайл}
 Israel{Израэль}
 Hands{Хэндс}
 Samuel{Сэмюэль}
-Odel{}
+Odel{Одэл}
 Edward{Эдвард}
 Teach{Тич}
 
@@ -20,7 +20,7 @@ Natalia{Наталиа}
 Decoteau{Декото}
 Serena{Серена}
 Tisserand{Тиссеранд}
-Caroline{Кэролайн}
+Caroline{Каролина}
 K{K}
 Valentina{Валентина}
 Malter{Мальтер}
@@ -29,39 +29,39 @@ Hilder{Хилдер}
 
 {=====| TempQuest.c |=====}
 Richard{Ричард}
-Bolitho{}
-Midshipman{}
-Herrick{}
-Marine{}
-Seaman{}
-Buccaneer{Буканьер}
+Bolitho{Болито}
+Midshipman{Мичман}
+Herrick{Херрик}
+Marine{Моряк}
+Seaman{Матрос}
+Buccaneer{Пират}
 Fletcher{Флэтчер}
-Christian{}
-Constable{}
-Mills{}
-Young{}
-Mutineer{}
+Christian{Кристиан}
+Constable{Констебль}
+Mills{Миллс}
+Young{Юнга}
+Mutineer{Бунтовщик}
 Thug{Громила}
 Leading{Главный}
 Coastbrother{Буканьер}
 Admiral{Адмирал}
 John{Джон}
-Connely{}
+Connely{Коннели}
 Cook{Кук}
 William{Уильям}
 Dampier{Дампье}
 Steven{Стивен}
 Courtney{Кортни}
 Charles{Чарльз}
-Pope{}
+Pope{Падре}
 Thomas{Томас}
 Dover{Довер}
 Robert{Роберт}
-Fry{}
-Stretton{}
-Rogers'{}
-Crew{}
-Former Crew{}
+Fry{Фрай}
+Stretton{Стреттон}
+Rogers'{Роджерс}
+Crew{Команда}
+Former Crew{Бывшая Команда}
 Vane{Вэйн}
 Bellamy{Беллэми}
 Paul{Пол}
@@ -77,12 +77,12 @@ Low{Лау}
 Phineas{Финеас}
 Bunce{Бёнс}
 Gow{Гау}
-Charles Vane's{}
+Charles Vane's{Чарльз Вейн}
 Walter{Уолтер}
 Kennedy{Кеннеди}
 England{Ингленд}
-Bartholomew{Bartholomew}
-Roberts{Roberts}
+Bartholomew{Бартоломью}
+Roberts{Робертс}
 George{Джордж}
 Lowther{Лаутер}
 Calico Jack{Калико Джек}
@@ -116,22 +116,22 @@ Edna{Эдна}
 Alexander{Александр}
 Selkirk{Селкирк}
 Friday{Пятница}
-Powdermonkey{}
+Powdermonkey{"Пороховая Обезьянка"}
 Daniel{Даниель}
 De Foe{Дефо}
-Citizen{}
+Citizen{Горожанин}
 Claire{Клэр}
 Voyant{Провидица}
 Minerva{Минерва}
 Mather-Wren{Матэ-Врэн}
 Silehard{Сайлхард}
-Sarah{}
-Fitter{}
+Sarah{Сара}
+Fitter{Мастер}
 Laurence{Лоурэнс}
 Wellman{Вэлмэн}
 Father{Отец}
 Bernard{Бернард}
-Soldier{}
+Soldier{Солдат}
 Docker{Портовый грузчик}
 Gillian{Джиллиан}
 Atterbury{Эттербери}
@@ -161,19 +161,19 @@ Flann{Флэнн}
 Marrow{Марроу}
 Mortimer{Мортимер}
 Pitchblende{Питчбленд}
-Guncrew{}
+Guncrew{Канониры}
 Benjamin{Бенджамин}
 Hornigold{Хорнигольд}
-lieutenant{лейтенант}
+lieutenant{Лейтенант}
 Richards{Ричардс}
 Caesar{Цезарь}
-JRH{JRH}
-Nils{}
-Holgersson{}
-Wake{}
-Maze{}
+JRH{ЯРХ}
+Nils{Нильс}
+Holgersson{Хольгерссон}
+Wake{Вейк}
+Maze{Мэйз}
 Basil{Бэзил}
-Ringrose{}
+Ringrose{Рингроуз}
 Prosper{Проспер}
 Chingachgook{Чингачгук}
 Uncas{Анкас}
@@ -181,241 +181,241 @@ King{Кинг}
 Mah{Ма}
 Jong{Джонг}
 Pierre{Пьер}
-le Grand{}
-don Carlos Berto{дон Карлос Берто}
+le Grand{Легран}
+don Carlos Berto{Дон Карлос Берто}
 Agnesi{Агнесса}
 Long{Долговязый}
 Tall Sally{Дылда Салли}
 Moore{Мур}
-Ireland{}
+Ireland{Ирландия}
 Sergej{Сергей}
 Prokofiev{Прокофьев}
 Barbecue{Барбекю}
 Pиre{Падре}
 Labat{Лабат}
 Laurens{Лоуренс}
-de Graaf{}
-Piet{}
-Heyn{}
-Vasco da{Васко да}
+de Graaf{Де Грааф}
+Piet{Пит}
+Heyn{Хейн}
+Vasco da{Васко Да}
 Gama III{Гама III}
 Jupiter{Юпитер}
 Laurentius{Лорентиус}
 Johannes{Йоханнес}
 Juan{Хуан}
-Florin{}
+Florin{Флорин}
 Peter{Питер}
 Blowhorn{Блоухорн}
-Mummy{}
-Blackbeard's{Черной Бороды}
-head{голова}
-Swedish{}
+Mummy{Мумия}
+Blackbeard's{Чёрной Бороды}
+head{Голова}
+Swedish{Шведский}
 Guy{Гай}
 Konrad{Конрад}
-Ljungberg{}
-Abraham{}
+Ljungberg{Люнгберг}
+Abraham{Абрахам}
 Hendrick{Хендрик}
-Quintor{}
-Alonzo{}
-Bosco{}
-Hieronymus{}
+Quintor{Квинтор}
+Alonzo{Алонзо}
+Bosco{Боско}
+Hieronymus{Иероним}
 Bosch{Бош}
 Victor{Виктор}
-Hall{}
-Knut{}
-Ellingsen{}
-Anton{}
-Bдcklin{}
+Hall{Холл}
+Knut{Кнут}
+Ellingsen{Эллингсен}
+Anton{Антон}
+Bдcklin{Беклин}
 Felix{Феликс}
-Nilsson{}
-Westlund{}
-Viktor{}
-Olsson{}
+Nilsson{Нильсон}
+Westlund{Вестлунд}
+Viktor{Виктор}
+Olsson{Ольсон}
 Diego{Диего}
-Grillo{}
-Amcoff{}
-Albert{}
-Persson{}
-Filip{}
-Berglund{}
-Garcia{}
+Grillo{Грильо}
+Amcoff{Амкофф}
+Albert{Альберт}
+Persson{Перссон}
+Filip{Филип}
+Berglund{Берглунд}
+Garcia{Гарсия}
 Emilio{Эмилио}
 Gomes{Гомес}
 Sйrgio Soares{Серджио Соарез}
-Sergio{}
-Cloise{}
-Sundin{}
-Emil{}
-Larsson{}
-Ossian{}
-Rodriguez{}
-Felipe{}
-Kristrцm{}
-Nathalie{}
-Sebastian{}
-Bylund{}
+Sergio{Серхио}
+Cloise{Клуаз}
+Sundin{Сундин}
+Emil{Эмиль}
+Larsson{Ларссон}
+Ossian{Оссиан}
+Rodriguez{Родригес}
+Felipe{Фелипе}
+Kristrцm{Кристрём}
+Nathalie{Натали}
+Sebastian{Себастьян}
+Bylund{Бюлунд}
 Johan{Йоган}
-Lцfqvist{}
-Pehr{}
-Stеhlfot{}
-Sister{}
+Lцfqvist{Лёфквист}
+Pehr{Пер}
+Stеhlfot{Стехлфот}
+Sister{Систер}
 Jean{Жан}
-Dubou{}
+Dubou{Дюбо}
 Marc{Марк}
-Bourgneuf{}
+Bourgneuf{Бурньёф}
 Claude{Клод}
-Deshayes{}
+Deshayes{Дешэй}
 Nicholas{Николас}
-Gautrain{}
-Leontina{}
+Gautrain{Готрен}
+Leontina{Леонтина}
 Barreto{Баррето}
 Bertrand{Бертран}
 Ogeron{Ожерон}
-Maynard{}
+Maynard{Майнард}
 Bandit{Бандит}
-Bandit's{}
-leader{}
-Maltese{}
-Sir William{}
-Stapelton{}
-Clerk{}
-Surgeon{}
+Bandit's{Бандиты}
+leader{Лидер}
+Maltese{Мальтийский}
+Sir William{Сэр Уильям}
+Stapelton{Стэплтон}
+Clerk{Клерк}
+Surgeon{Хирург}
 Captain{Капитан}
-Chaplain{}
-German{}
-Knight{}
-Margaret{}
-Pough{}
+Chaplain{Капеллан}
+German{Немец}
+Knight{Рыцарь}
+Margaret{Маргарет}
+Pough{Поу}
 Native{Абориген}
 Louis{Луи}
-Arot{}
-Anna H{}
-Trafvenfeldt{}
-Angelica{}
-Lindstrцm{}
-Wilma S{}
-Forsstrцm{}
-Madelaine{}
-Hansson{}
-Linn{}
-Brorsson{}
-Ebba{}
-Modin{}
-Thomina{}
-Sundstrцm{}
-Elin{}
-Asp{}
+Arot{Арот}
+Anna H{Анна Х}
+Trafvenfeldt{Трафвенфельдт}
+Angelica{Анжелика}
+Lindstrцm{Линдстрем}
+Wilma S{Вилма С}
+Forsstrцm{Форсстрём}
+Madelaine{Мадлен}
+Hansson{Ханссон}
+Linn{Линн}
+Brorsson{Брорссон}
+Ebba{Эбба}
+Modin{Модин}
+Thomina{Томина}
+Sundstrцm{Сундстрем}
+Elin{Элин}
+Asp{Асп}
 Martin{Мартин}
-Schmidt{}
-Tobias{}
-Hдllgren{}
-Axel{}
-Joel{}
-Bjцrk{}
-Hildingsson{}
-Erik{}
-Ejvind{}
-Ajmal{}
-Sakhizada{}
-Jens{}
-Rehnfeldt{}
-Cahling{}
-Kolmodin{}
-Isak{}
-Karlsson{}
+Schmidt{Шмидт}
+Tobias{Тобиас}
+Hдllgren{Хелльгрен}
+Axel{Аксель}
+Joel{Джоэл}
+Bjцrk{Бьёрк}
+Hildingsson{Хилдингсон}
+Erik{Эрик}
+Ejvind{Эйвинд}
+Ajmal{Аджмал}
+Sakhizada{Сахизада}
+Jens{Йенс}
+Rehnfeldt{Ренфельдт}
+Cahling{Калинг}
+Kolmodin{Колмодин}
+Isak{Изак}
+Karlsson{Карлссон}
 Marcus{Маркус}
-Engberg{}
-Wallberg{}
-Svalberg{}
-Iman{}
-Razuli{}
+Engberg{Энгберг}
+Wallberg{Валлберг}
+Svalberg{Свальберг}
+Iman{Иман}
+Razuli{Разули}
 Jakob{Джейкоб}
-Andrй{}
-Jensen{}
+Andrй{Андрэ}
+Jensen{Йенсен}
 Albin{Альбин}
-Hцgman{}
-Lukas{}
-Hammarstrцm{}
-Mar la{}
-Kie{}
-Lцfgren{}
+Hцgman{Хёгман}
+Lukas{Лукас}
+Hammarstrцm{Хаммарстрём}
+Mar la{Марла}
+Kie{Ки}
+Lцfgren{Лёфгрен}
 Simon{Саймон}
-Grandell{}
-Cardinal Gabr{}
-Fortelius{}
-Vatican{}
-priest{}
-monk{}
-Petrus{}
-Aboensis{}
-Olof{}
-Tomasson{}
-Postman{}
-Greensail{}
+Grandell{Гранделл}
+Cardinal Gabr{Кардинал Габр}
+Fortelius{Фортелюс}
+Vatican{Ватикан}
+priest{Священник}
+monk{Монах}
+Petrus{Петрус}
+Aboensis{Абоенсис}
+Olof{Олоф}
+Tomasson{Томассон}
+Postman{Почтальон}
+Greensail{Гринсейл}
 Joseph{Жозеф}
-Brooks Jr{}
-James{}
-Blake{}
-Philips{}
-gunner Phillip{}
-Morton{}
+Brooks Jr{Брукс младший}
+James{Джеймс}
+Blake{Блейк}
+Philips{Филипс}
+gunner Phillip{Канонир Филипп}
+Morton{Мортон}
 Nathaniel{Натаниэль}
-Jackson{}
-quartermaster Thomas{}
-Miller{}
+Jackson{Джексон}
+quartermaster Thomas{Казначей Томас}
+Miller{Миллер}
 White{Белый}
-Gills{}
-Gates{}
-Brooks Sr{}
-Robbins{}
-Curtice{}
-Husk{}
-boatswain Garrat{}
-Gibbens{}
-carpenter Owen{}
+Gills{Гиллс}
+Gates{Гейтс}
+Brooks Sr{Брукс-Старший}
+Robbins{Роббинс}
+Curtice{Кёртис}
+Husk{Хуск}
+boatswain Garrat{Боцман Гаррэт}
+Gibbens{Гиббенс}
+carpenter Owen{Плотник Оуэн}
 Stephen{Стивен}
-Stiles{}
-Salter{}
-Carnes{}
-Boardman Hawes{}
-Major Stede{}
-Bonnet{}
+Stiles{Стайлс}
+Salter{Сэлтер}
+Carnes{Карнес}
+Boardman Hawes{Бордман Хейз}
+Major Stede{Майор Стед}
+Bonnet{Боннет}
 David{Дэвид}
-Herriot{}
-Ignatius{}
-Pell{}
-Jessica{}
-Ida{}
-Emma{}
-Linnea{}
-Elina{}
-Erica{}
-Abbess{}
-Lovisa{}
-Brother{}
-Kristian{}
-Hannes{}
+Herriot{Херриот}
+Ignatius{Игнатиус}
+Pell{Пэлл}
+Jessica{Джессика}
+Ida{Ида}
+Emma{Эмма}
+Linnea{Линнеа}
+Elina{Элина}
+Erica{Эрика}
+Abbess{Настоятельница}
+Lovisa{Ловиса}
+Brother{Брат}
+Kristian{Кристиан}
+Hannes{Ханнес}
 Servant{Слуга}
 Governor Charles{Губернатор Чарльз}
-Eden{}
+Eden{Иден}
 Secretary Tobias{Секретарь Тобиас}
 Beggar{Нищий}
 Pilot{Лоцман}
 Merchant{Торговец}
 Anne{Анни}
-Russel Stapelton{}
+Russel Stapelton{Рассел Стэпелтон}
 Don{Дон}
-van Vliet{}
-Vincent Z{}
-Officer{}
-on guard duty{}
-Tookerman{}
+van Vliet{Ван Влиет}
+Vincent Z{Винсент З}
+Officer{Офицер}
+on guard duty{караульной службы}
+Tookerman{Тукерман}
 Guard{Стражник}
-Gerrard{}
-Jonathan{}
-Clarke{}
-Rowland{}
-Sharp{}
+Gerrard{Джеррард}
+Jonathan{Джонатан}
+Clarke{Кларк}
+Rowland{Роулэнд}
+Sharp{Шарп}
 Deserter{Дезертир}
 Thief{Вор}
 Legrand{Легран}
@@ -428,4 +428,4 @@ Conquistador{Конкистадор}
 Templar{Тамплиер}
 Demon{Демон}
 
-{=====| 523 characters |=====}
+{=====| 570 characters |=====}

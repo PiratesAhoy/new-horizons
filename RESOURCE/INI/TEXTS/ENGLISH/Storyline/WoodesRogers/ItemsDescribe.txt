@@ -1822,7 +1822,7 @@ A simple cross and chain in silver.
 itmname_treasure7		{Relic}
 itmdescr_treasure7
 {
-The supposed finger and ring of the 1100th century female Pope. 
+The supposed finger and ring of the 12th century female Pope. 
 }
 
 itmname_icon			{Icon}

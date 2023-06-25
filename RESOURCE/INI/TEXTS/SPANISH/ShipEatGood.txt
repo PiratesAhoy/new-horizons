@@ -3,7 +3,7 @@ Ship_cant_got_good	{No puedes cargar %1 - ¡Bodega llena!}
 
 seg_Balls		{Balas rasas}
 seg_Grapes		{Metralla}
-seg_Knippels	{Palanquetas}
+seg_Knippels	{Balas encadenadas}
 seg_Bombs		{Bombas}
 seg_Sailcloth	{Lona}
 seg_Planks		{Tablas}

@@ -1,3 +1,4 @@
-title=Benjamin Hornigold
-text.t1=Hornigold's ship was the starting point for many of the more famous pirates.
-text.t2=I have got the map, but it's only a piece of a larger Caribbean Map.
+title=Бенджамин Хорниголд
+text.t1=Корабль Хорнигольда был отправной точкой для многих наиболее известных пиратов.
+text.t2=У меня есть карта. Это Эспаньола?
+text.t3=Один порт на Эспаньоле отмечен красным. Однако эти две синие буквы... Должно быть больше карт, чтобы извлечь из этого хоть какой-то смысл.

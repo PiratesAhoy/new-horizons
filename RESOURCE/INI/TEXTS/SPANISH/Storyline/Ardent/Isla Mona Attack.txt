@@ -1,0 +1,17 @@
+title=La batalla de Isla Mona
+text.t1=¡Los franceses han ocupado #sisland_Isla Mona#! Al parecer se trata solamente de una única fragata. La verdad es que me atrae la idea de tomar una fragata.
+text.t2=Me he encargado de la fragata. Me pregunto con qué clase de fuerzas han desembarcado. Quizás pueda devolver a la isla  su condición de territorio libre.
+text.t3=A los taínos no les ha gustado que derrotara a los franceses en su aldea. Temen represalias. Me ganaré su confianza si derroto también a los franceses que han ocupado el viejo fuerte.
+text.t4=Los franceses se habían instalado en el viejo fuerte inglés pero no habían terminado de reconstruir sus defensas. Y yo he capturado a su capitán. Por desgracia, me ha dicho que una fuerza mucho mayor está en camino. Es hora de averiguar si los taínos se unirán a la defensa.
+text.t5=He ordenado a mis otros barcos que zarpen rumbo a #sSanto Domingo#. Cuando llegue la nueva fuerza francesa, la derrotaré, o si es demasiado grande, nos haremos pasar por franceses e intetaremos alejarnos sin despertar sus sospechas. En cualquier caso, más tarde podré reunirme con mis otros barcos en #sSanto Domingo#.
+text.t6=Muy bien, tenemos un plan. Si los franceses atacan el fuerte, los taínos les atacarán por la retaguardia. Si los franceses atacan la aldea de los taínos, nosotros les atacaremos por la retaguardia. En cualquiera de los dos casos, los franceses se verán atrapados entre dos fuegos. Eso espero...
+text.t7=La fuerza principal ha sido aniquilada. Pero tenemos que convencer a la flota de que sus tropas están en posición. Estarán esperando ver cómo las tropas de la fragata regresan a bordo, así que eso es exactamente lo que verán, solo que serán mis hombres vestidos con uniformes franceses. ¡Hay muchos uniformes que se han quedado sin dueño!
+text.t8=También será buena idea mover mis otros barcos fuera de aquí. Uno de mis capitanes debería estar en la playa.
+text.t9=Todo esto era parte de un plan mucho mayor. Los franceses planean un ataque sorpresa contra #sRedmond#. Y #svillain# va a facilitarles la entrada. Pero lo primero que tengo que hacer ahora es escapar de la flota francesa, aprovechando la oscuridad de la noche. Entonces decidiré si dejo #sRedmond# a su suerte, o intento advertirles; tal vez el gobernador me recompense.
+text.t10=Todo esto no era más que una distracción. Los franceses confían en que, cuando sus enemigos sepan que han ocupado #sisland_Isla Mona#, creerán que Francia planea atacar las cercanas ciudades de #sSanto Domingo# o #sIsla Muelle#. Mientras tanto, su verdadero objetivo es otro...
+text.t11=En cuanto caiga la noche, intantaré escabullirme de la flota francesa.
+text.t12=He logrado escabullirme de la flota francesa.
+text.t13=He logrado escabullirme de la flota francesa. Ahora debo reunirme con mi propia flota en #sSanto Domingo#.
+text.t14=Me he reunido con mi flota.
+text.t15=¡Toma esa, Armada francesa! ¡Dos fragatas y un navío de tercera clase, y los he derrotado a todos!
+text.t16=¡Toma esa, Armada Francesa! ¡Dos fragatas y un navío de tercera clase, y los he derrotado a todos! Ahora debo reunirme con mi propia flota en #sSanto Domingo#.

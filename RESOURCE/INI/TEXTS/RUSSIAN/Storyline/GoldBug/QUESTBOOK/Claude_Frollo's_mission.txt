@@ -1,6 +1,6 @@
-title=Claude Frollo's mission
-text.t1=If I deliver The priest's Hymn Book from the Church to the Brothel I'll get a reward. 
-text.t2=The Brothel is opposite Mr Dupin's office.
-text.t3=I found the Hymn Book.
-text.t4=Okay, I have delivered the Book and the Letter to Father Frollo. Let's see what the reward may be!
-text.t5=Aha, it's a Love Letter. That explains father Frollo's interest in this matter.
+title=Задание Клода Фролло
+text.t1=Если я доставлю сборник церковных гимнов священника из церкви в Бордель, то я получу награду.
+text.t2=Бордель находится напротив офиса мистера Дюпена.
+text.t3=Я нашел сборник церковных гимнов.
+text.t4=Хорошо, я доставил сборник церковных гимнов и Письмо Отцу Фролло. Теперь надо взглянуть на награду!
+text.t5=Ага, любовное письмо. Это объясняет интерес отца Фролло к этому вопросу.

@@ -1,29 +1,29 @@
-itmname_Map_Doc_1 {Document Package}
+itmname_Map_Doc_1 {Часть Карты}
 itmdescr_Map_Doc_1
 {
-A quarter of an old map to the treasure of Cortez which shows part of an island but not where it is.
+Часть старой карты сокровищ Кортеса, на которой показана часть острова, но не указано, где он находится.
 }
 
-itmname_Map_Doc_2 {Document Package}
+itmname_Map_Doc_2 {Часть Карты}
 itmdescr_Map_Doc_2
 {
-A quarter of an old map to the treasure of Cortez which joins other map segment.
+Часть старой карты сокровищ Кортеса, которая присоединяется к другой части карты.
 }
 
-itmname_Map_Doc_3 {Document Package}
+itmname_Map_Doc_3 {Часть Карты}
 itmdescr_Map_Doc_3
 {
-A quarter of an old map to the treasure of Cortez shows more of the island and part of a trail inland.
+Часть старой карты, на которой показана большая часть острова и часть тропы вглубь острова к сокровищам Кортеса.
 }
 
-itmname_Map_Doc_4 {Document Package}
+itmname_Map_Doc_4 {Часть Карты}
 itmdescr_Map_Doc_4
 {
-A quarter of an old map which shows the rest of the inland trail to the treasure of Cortez, books on currents and wind, but the co-ordinates of the island are missing.
+Часть старой карты, на которой показана остальная часть внутренней тропы к сокровищам Кортеса, течение и ветер, но отсутствуют координаты острова.
 }
 
-itmname_small_chestJS	{Small Chest}
+itmname_small_chestJS	{Небольшой Сундук}
 itmdescr_small_chestJS
 {
-The documents in this chest prove that the ship that sank at Baie d'Orient was indeed the French frigate 'La Foudre'. It says: 'The ship is sinking. We are being dragged down. Now we will never find Miss Le Moigne. My governor will be so disappointed.' - Captain Patric Robert Sondre.
+Бумаги в этом сундуке доказывают, что корабль, затонувший в Восточной Бухте, действительно был французским фрегатом 'Ла Фудр'. Там написано: 'Корабль тонет. Нас тянет вниз. Теперь мы никогда не найдем мисс Ле Муань. Мой губернатор будет очень разочарован.' - Капитан Патрик Роберт Сондре.
 }

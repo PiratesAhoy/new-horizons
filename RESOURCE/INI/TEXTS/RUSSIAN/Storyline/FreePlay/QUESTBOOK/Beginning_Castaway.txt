@@ -1,3 +1,3 @@
-title=Down on my luck
-text.t1=It was my own fault that I went to see the captain and complain about this raging storm. Little did I know how stupid and risky that was! As soon as I stepped out on deck again, I was swept off my feet by a massive wave and washed overboard. I suppose I should consider myself lucky to be still alive.
-text.t2=With my possessions still in my cabin and the ship long gone, I have nothing left in this world. But I did see one of the lifeboats going overboard by the same wave that took me. It should still be around here somewhere...
+title=Моя Удача Отвернулась от Меня
+text.t1=Это была моя большая ошибка, что я пошел к капитану доложить о бушующем шторме. Я и не подозревал, насколько это глупо и рискованно! Как только я снова вышел на палубу, огромная волна сбила меня с ног и смыла за борт. Полагаю, я должен считать, что мне повезло, что я всё ещё жив.
+text.t2=Поскольку мои пожитки всё ещё находятся в моей каюте, а корабль давно уплыл, у меня ничего не осталось. Но я видел, как одну из спасательных шлюпок унесло за борт той же волной, что и меня. Она всё ещё должна быть где-то здесь...

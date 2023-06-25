@@ -534,7 +534,7 @@ More of a Dress Sword than a combat weapon. It allows you to impress the ladies 
 itmname_blade50	{Venetian Navy Cutlass}
 itmdescr_blade50
 {
-Robust enough to hack through ropes, canvas and wood yet short enough to weild on a compact ship deck. This Cutlass is the weapon of choice for any self-respecting Pirate.
+Robust enough to hack through ropes, canvas and wood yet short enough to wield on a compact ship deck. This Cutlass is the weapon of choice for any self-respecting Pirate.
 }
 
 itmname_blade51	{French Court Sword}

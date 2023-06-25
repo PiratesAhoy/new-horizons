@@ -69,3 +69,9 @@ itmdescr_full_map
 {
 But... What is this? The Treasure Map shows three marked places all over the West Indies, each with a person's name next to it!
 }
+
+itmname_jauri_map	{Map (Marcel Jauri)}
+itmdescr_jauri_map
+{
+But... What is this? The Treasure Map shows three marked places all over the West Indies, each with a person's name next to it!
+}

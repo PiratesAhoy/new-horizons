@@ -1,10 +1,25 @@
-title=Caesar
-text.t1=A Negro. Member of Teach's crew. Was much liked and trusted by Teach.
-text.t2=Hanged in Williamsburg 1719. Where in the Caribbean did he hide his map-piece?
-text.t3=Teach placed a crewmember, a trusted negro, in the hold with a lighted match. Very likely to be Caesar.
-text.t4=Lieutenant Maynard kept Teach's fourth sloop. He's living in Citadel Rock, Eleuthera.
-text.t5=Maynard sold the sloop to a shipwreck dealer in Grand Turk port. He's office is in the old Fort. To the left when when you exit the Town to the jungle.
-text.t6=Explosives yes. Must be something useful in the Armory.
-text.t7=I'll find the way to the shipwrecks via the Tavern kitchen and a bedroom upstairs.
-text.t8=I'll need a workbench and tools to process this pile of dried Gunpowder.
-text.t9=I have got Caesar's map, but again it's only a piece of a larger Caribbean Map.
+title=Цезарь
+text.t1=Негр. Член команды Тича. Был очень любим и доверял Тичу.
+text.t2=Повешен в Вильямсбурге в 1719 году. Где на Карибах он спрятал свою карту?
+text.t3=Тич поместил члена команды, доверенного негра, в трюм с зажженной спичкой. Скорее всего Цезаря.
+text.t4=Лейтенант Мейнард оставил себе четвертый шлюп Тича. Он живет в Цитадели, которая находится в скале города Эльютеры. Возможно, из Таверны есть путь в Цитадель.
+text.t5=Мейнард продал шлюп торговцу кораблекрушениями в порту Большого Тёркса. Его кабинет находится в старом форте. Налево при выходе из города в джунгли.
+text.t6=Взрывчатка - да. Должно быть что-то полезное в Оружейной.
+text.t7=Я найду путь к затонувшим кораблям через кухню Таверны и спальню наверху.
+text.t8=Мне понадобится верстак, а также инструменты и, возможно, немного жидкости, чтобы обработать эту кучу засохшего пороха.
+text.t9=У меня есть карта Цезаря!
+text.t10=Цезарь выжил! Поэтому номера повешенных пиратов в газете не совпадали.
+text.t11=В спальне торговца кораблекрушения может быть что-то ценное.
+text.t12=Я должен вернуться в Тёркс к обломкам шлюпа. Карта Цезаря всё ещё может быть на пороховом складе.
+text.t13=Сначала я должен найти обломки шлюпа. Карта Цезаря всё ещё может быть на пороховом складе.
+text.t14=Мейнард заперт бандитами. Лидер - монах, у которого есть рычаг, который мне понадобится.
+text.t15=Цитадель повреждена, поэтому я могу вывести его только через верхнюю дверь башни.
+text.t16=Я могу использовать якорь, чтобы заблокировать мост. По скалам можно прогуляться вокруг залива!
+text.t17=На карте отмечен порт Залив Серой Скалы. Но я не вижу никаких синих букв, она слишком грязная.
+text.t18=Когда большая часть грязи исчезнет, я смогу увидеть буквы I и A.
+text.t19=Я должен обыскать затонувший корабль и берег в поисках инструментов и жидкости.
+text.t20=Я вернусь на пороховой склад, когда у меня будет больше информации.
+
+
+
+

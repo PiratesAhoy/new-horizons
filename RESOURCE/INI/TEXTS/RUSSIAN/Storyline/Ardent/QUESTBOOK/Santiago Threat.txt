@@ -1,7 +1,7 @@
-title=#sSantiago# Threatened
-text.t1=#svillain# is now the governor of #sRedmond#, in the pay of France. I have promised #sromance# that we will sail quickly to #sSantiago#. We were not in time to prevent the fall of #sRedmond#; if I want to prevent #sSantiago# from being taken as well, I must not delay.
-text.t2=#svillain# is now the governor of #sRedmond#, in the pay of France. If I remember correctly, the commander of the French fleet at #sisland_Isla Mona# mentioned #sisland_Cuba#. If that is their next target then #sSantiago# may be in the firing line. The governor might reward me for that information.
-text.t3=#sgovernor# wants me to try to find plans for the attack on #sSantiago#, which are likely to be in the naval building in #sPointe a Pitre#, #sisland_Guadeloupe#. A bit of night-time burglary through a convenient window is probably what is needed.
-text.t4=I found the battle plans for the attack on #sSantiago#! Now to get them back to #sgovernor#. Quickly, too - they won't be much use if the French have already used them to attack #sSantiago#...
-text.t5=#sgovernor# rewarded me for bringing back the battle plans. Now he wants me to take them to the admiral in #sHavana#.
-text.t6=The admiral does not believe he can prevent the French invasion of #starget#, so I am to go there and evacuate the governor.
+title=#sSantiago# Под Угрозой
+text.t1=#svillain# теперь губернатор #sRedmond#, на содержании Франции. Я обещал #sromance#, что мы быстро отплывем в #sSantiago#. Мы не успели предотвратить падение #sRedmond#; если я хочу, чтобы #sSantiago# также не был взят, я не должен медлить.
+text.t2=#svillain# теперь губернатор #sRedmond#, на содержании Франции. Если я правильно помню, командующий французским флотом в #sisland_Isla Mona# упоминал #sisland_Cuba#. Если это их следующая цель, то #sSantiago# может оказаться на линии огня. Губернатор может наградить меня за эту информацию.
+text.t3=#sgovernor# хочет, чтобы я попытался найти планы нападения на #sSantiago#, которые, вероятно, находятся в здании военно-морского флота в #sPointe a Pitre#, #sisland_Guadeloupe#. Небольшая ночная кража со взломом через удобное окно - это, вероятно, то, что нужно.
+text.t4=Я нашел планы сражения для атаки на #sSantiago#! Теперь нужно вернуть их #sgovernor#. И побыстрее - от них будет мало толку, если французы уже использовали их для атаки на #sSantiago#...
+text.t5=#sgovernor# наградил меня за то, что я вернул планы сражений. Теперь он хочет, чтобы я отвез их адмиралу в #sHavana#.
+text.t6=Адмирал не верит, что сможет предотвратить вторжение французов в #starget#, поэтому я должен отправиться туда и вывезти губернатора.

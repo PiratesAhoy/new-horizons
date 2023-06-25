@@ -4,44 +4,46 @@ Jack{Джек}
 Sparrow{Воробей}
 
 {=====| StartStoryline.c |=====}
+Verbinski{Вербинский}
 
 {=====| quests_reaction.c |=====}
-Heumac{}
-Tezcacoatl{}
-Angler{}
-Ogilvey{}
-Maccus{}
-Clanker{}
+Heumac{Хьюмак}
+Tezcacoatl{Тезкакоатль}
+Angler{Англер}
+Ogilvey{Огилвей}
+Maccus{Маккус}
+Clanker{Кланкер}
 James{Джеймс}
 Norrington{Норрингтон}
 Lieutenant{Лейтенант}
-Gillette{}
-Helmsman{Рулевой}
-French{}
-Soldier{}
-Hadras{}
-Urchin{}
-Wheelback{}
-Wyvern{}
-Quittance{}
-Penrod{}
+Gillette{Джилетт}
+Helmsman{Хэлмсмэн}
+French{Французский}
+Soldier{Солдат}
+Hadras{Хадрас}
+Urchin{Урчин}
+Wheelback{Уилбэк}
+Wyvern{Вайверн}
+Quittance{Квитанс}
+Penrod{Пэнрод}
+French Soldier{Французский Солдат}
 
 {=====| Officers.c |=====}
-Captaine{}
-Chevalle{}
+Captaine{Капитан}
+Chevalle{Шевалье}
 Lucas{Лукас}
 Da Saldanha{Де Салданья}
 Jaoquin{Хоакин}
 De Masse{Де Массе}
-Gombo{}
-the Slave{}
-Prognatus{}
-Solvo{}
+Gombo{Гомбо}
+the Slave{Раб}
+Prognatus{Прогнатус}
+Solvo{Сольво}
 
 {=====| QuebradasCostillas.c |=====}
-Ines{Ines}
-Diaz{Diaz}
-Skull{Skull}
+Ines{Инес}
+Diaz{Диас}
+Skull{Скулл}
 
 {=====| Redmond.c |=====}
 Henry{Генри}
@@ -50,9 +52,10 @@ Swann{Суонн}
 
 {=====| Story.c |=====}
 Joshamee{Джошеми}
-Gibbs{}
-Random{}
-Drunk{}
+Gibbs{Гиббс}
+Random{Случайный}
+Drunk{Пьяница}
+Random Drunk{Случайный Пьяница}
 
 {=====| TempQuest.c |=====}
 Matthew{Мэтью}
@@ -64,30 +67,30 @@ Edward{Эдвард}
 Teague{Тиг}
 Oswald{Освальд}
 Chappel{Чаппель}
-Sir Christopher{Sir Christopher}
-Mings{Mings}
+Sir Christopher{Сэр Кристофер}
+Mings{Мингс}
 Will{Уилл}
 Turner{Тёрнер}
 Annabella{Аннабелла}
 Brin{Брин}
-Bella{}
-Susan{Сюзанна}
-Shaypen{Шейпен}
+Bella{Белла}
+Susan{Сьюзан}
+Shaypen{Шаупен}
 Bootstrap Bill{Прихлоп Билл}
 Cutler{Катлер}
-Beckett{Бекетт}
+Beckett{Беккет}
 Brinkley{Бринкли}
-Anamaria{Анамария}
+Anamaria{Аннамария}
 Tia{Тиа}
-Dalma{Дальма}
+Dalma{Далма}
 Pirate{Пират}
 1{1-й}
 2{2-й}
 3{3-й}
 Morris{Моррис}
-Murtogg{Метог}
-Malvert{Малвет}
-Mullroy{Малрой}
+Murtogg{Муртогг}
+Malvert{Малверт}
+Mullroy{Маллрой}
 Captain{Капитан}
 Elizabeth{Элизабет}
 Simon{Саймон}
@@ -95,42 +98,42 @@ Blunden{Бланден}
 Turpin{Турпин}
 Cabanel{Кабанель}
 Pieter{Питер}
-Boelen{Буле}
+Boelen{Боэлен}
 John{Джон}
 Clifford{Клиффорд}
 Hector{Гектор}
 Barbossa{Барбосса}
-Anne{Анни}
+Anne{Энни}
 Bonny{Бонни}
 Davy{Дэйви}
 Jones{Джонс}
-Konrad{Konrad}
-Kulczycki{Kulczycki}
-Petros{Petros}
+Konrad{Конрад}
+Kulczycki{Кульчицкий}
+Petros{Петрос}
 Maykin{Мэйкин}
 Blundas{Бландез}
-Cap'n{Cap'n}
-Drow{Drow}
-Thomas{Thomas}
-the Terror{the Terror}
-Nathan{Nathan}
-Kell{Kell}
+Cap'n{Капитан}
+Drow{Дроу}
+Thomas{Томас}
+the Terror{Террор}
+Nathan{Нэйтан}
+Kell{Келл}
 Rackham{Рэкхем}
 Peter{Питер}
-Willemoes{Willemoes}
-Damski{Damski}
-Maximus{Maximus}
-Philippe{Philippe}
-Couch Captain{Couch Captain}
-Charles{Charles}
+Willemoes{Виллемоус}
+Damski{Дамски}
+Maximus{Максимус}
+Philippe{Филипп}
+Couch Captain{Капитан Коуч}
+Charles{Чарльз}
 Claudio{Клаудио}
-Burrieza{Бурьеца}
+Burrieza{Бурриеза}
 Port Guard{Портовый Стражник}
 Silas{Сайлес}
 Simpkins{Симпкинс}
 Tipman{Типмен}
 William{Уильям}
-Wanderman{Вундерман}
+Wanderman{Вандермэн}
 Arthur{Артур}
 Straightly{Стрэйтли}
 Stephen{Стивен}
@@ -139,79 +142,93 @@ Howard{Говард}
 Cummins{Камминс}
 Ragetti{Раджетти}
 Pintel{Пинтел}
-Bartolomeu{}
-o Portugues{}
-Paul Jones{}
-Seb'{}
-Hylie{}
-Pistof{}
-Jean-Bart{}
-Lafin{}
+Bartolomeu{Бартоломью}
+o Portugues{Португалец}
+Paul Jones{Пол Джонс}
+Seb'{Себ}
+Hylie{Хайли}
+Pistof{Пистоф}
+Jean-Bart{Жан-Барт}
+Lafin{Лафин}
 Johan{Йоган}
-Klaesz{}
-Eduardo{}
-Villanueva{}
+Klaesz{Клаз}
+Eduardo{Эдуардо}
+Villanueva{Вильянуэва}
 Francois{Франсуа}
 de Hadoque{де Хадоке}
-Sri Sumbhajee{}
-Angria{}
-Pusasn{}
-Askay{}
-Ammand{}
-the Corsair{}
+Sri Sumbhajee{Шри Сумбаджи}
+Angria{Ангрия}
+Pusasn{Пусан}
+Askay{Аскай}
+Ammand{Аман}
+the Corsair{Корсар}
 Yedam{Йедам}
 Kinne{Кинн}
-Captain Sao{}
-Feng{}
-Park{}
-Lian{}
-Tai{}
-Huang{}
-Short{}
+Captain Sao{Капитан Сяо}
+Feng{Фэнь}
+Park{Парк}
+Lian{Лиан}
+Tai{Тай}
+Huang{Хуанг}
+Short{Коротышка}
 Mergildo{Мергильдо}
 Hurtado{Хартадо}
 Jordano{Джордано}
-Marbatico{}
-Masked Man{}
-Old Salt{}
-Meigger{}
-Stallion{}
-Skyliner{}
-Morgan{}
-Terror{}
-Bos'un{}
+Marbatico{Марбатико}
+Masked Man{Человек в Маске}
+Old Salt{Старый Моряк}
+Meigger{Мэйггер}
+Stallion{Сталион}
+Skyliner{Скайлайнер}
+Morgan{Морган}
+Terror{Террор}
+Bos'un{Босун}
 Joaquin{Хоакин}
-Justine{}
-Le Moigne{Ле Мойн}
-Justine's guard{}
+Justine{Жюстин}
+Le Moigne{Ле Муань}
+Justine's guard{Охранник Жюстина}
 Smith{Смит}
 Snorri{Снорри}
 Baldursson{Балдурсон}
 Francis{Франсис}
 Snake{Снэйк}
-Maggee{Маги}
-Reynoud{Рейнойд}
+Maggee{Мэгги}
+Reynoud{Рейноуд}
 Verheugen{Верхейге}
 Palafico{Палафико}
 Jimmy{Джимми}
 Legs{Легс}
-Port Admiral{}
-Talicerdor{}
+Port Admiral{Начальник Порта}
+Talicerdor{Талицердор}
+Guard Captain {Начальник Стражи}
+Prison Guard {Тюремный Стражник}
+Atwood {Этвуд}
+Paddley {Паддли}
+Elton {Элтон}
+Garfield {Гарфилд}
+Cannibal Chief {Вождь Каннибалов}
+Cannibal{Каннибал}
 
 {=====| TempQuestEnemy.c |=====}
 Ronald{Рональд}
 Blacklock{Блэклок}
 Harris{Харрис}
-Spanish{Испанский}
-Solider{}
+Spanish{Испанец}
 Prison{Арестант}
-Commendant{}
-Officer{}
-Midshipman{}
-Crewmember{Член команды}
+Commendant{Комендант}
+Officer{Офицер}
+Midshipman{Мичман}
+Crewmember{Член Команды}
 Mr.{Мистер}
 Mercer{Мерсер}
 Gentleman{Джентельмен}
 Jocard{Жокар}
+Spanish Lieutenant{Испанский Лейтенант}
+Spanish Officer{Испанский Офицер}
+Prison Commendant{Комендант Тюрьмы}
+Spanish Midshipman{Испанский Мичман}
+
+{=====| Others |=====}
+Nigel{Найджел}
 
 {=====| 189 characters |=====}

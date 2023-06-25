@@ -17,4 +17,4 @@ text.t15=The assassin is disguised as a soldier. But he's not carrying a musket.
 text.t16=The assassin was carrying a ring from #svillain#. So #svillain# probably hired him.
 text.t17=#sromance# has made a full recovery, thank goodness! Now to hit back at #svillain#...
 text.t18=As part of the reward for defeating the French, #sgovernor# has suggested that I marry #sromance#, who is very much in favour of the idea. I have accepted.
-text.t19=Now I need to wait in the tavern while #sgovernor makes the preparations for the wedding.
+text.t19=Now I need to wait in the tavern while #sgovernor# makes the preparations for the wedding.

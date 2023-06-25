@@ -1,3 +1,30 @@
 Ardent{Ардент}
 Fortune{Фортуна}
-Time to put the 'gold' and 'piracy' into the Golden Age of Piracy! Kidnap, burglary and outright piracy - Charles Ardent does it all! (Though there are those that say Ardent was actually a woman, Helen.){Пора сложить 'золото' и 'пиратство' в Золотой Век Пиратства! Похищения, кражи со взломом и откровенное пиратство - Чарльз Ардент делал все это! (Хотя есть те, кто утверждает, что Ардент - на самом деле была женщиной Хелен.)}
+Time to put the 'gold' and 'piracy' into the Golden Age of Piracy! Kidnap, burglary and outright piracy - Charles Ardent does it all! (Though there are those that say Ardent was actually a woman, Helen.){Пора поместить 'золото' и 'пиратство' в Золотой Век Пиратства! Похищения, кражи со взломом и откровенное пиратство - Чарльз Ардент делал все это! (Хотя есть те, кто утверждает, что Ардент - на самом деле была женщиной Хелен.)}
+
+Esme{Эсме}
+Hasta{Хаста}
+Neptuno{Нептун}
+Sabina{Сабина}
+Siroco{Сирокко}
+Tonina{Тонина}
+Jacqueline{Жаклин}
+Phaeton{Фаэтон}
+Assurance{Гарантия}
+Cygnet{Лебедь}
+Sirius{Сириус}
+Joli{Привлекательный}
+Bolontaire{Болонтарный}
+Salamine{Саламин}
+Conquйrante{Завоеватель}
+Dauphin Royal{Королевский Дофин}
+Victorieuse{Победоносный}
+Rйsistance{Сопротивление}
+Reprisal{Расправа}
+Impйtueuse{Импульсивный}
+Tarantula{Тарантул}
+San Lorenzo{Святой Лоренцо}
+Entreprenant{Предприимчивый}
+Mayordomo{Дворецкий}
+Hasta{Хаста}
+Neptuno{Нептун}

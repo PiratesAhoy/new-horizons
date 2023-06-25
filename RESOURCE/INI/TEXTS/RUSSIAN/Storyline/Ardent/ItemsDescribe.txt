@@ -1,102 +1,108 @@
 
-itmname_key3		{Large Key}
+itmname_key3		{Большой Ключ}
 itmdescr_key3
 {
-A robust key to a heavy lock.
+Прочный ключ для тяжелого замка.
 }
 
-itmname_key4		{Ordinary Key}
+itmname_key4		{Обыкновенный Ключ}
 itmdescr_key4
 {
-A thin key to a standard lock.
+Тонкий ключ для стандартного замка.
 }
 
-itmname_SecurityLetter	{Letter to Prison Commandant}
+itmname_SecurityLetter	{Письмо Коменданту Тюрьмы}
 itmdescr_SecurityLetter
 {
-This document orders the commandant to provide security troops for a payroll ship which will depart from #sHavana#.
+Этот документ приказывает коменданту выделить войска для охраны корабля, который будет отплывать из города #sHavana#.
 }
 
-itmname_TainoRug	{Taino Rug}
+itmname_TainoRug	{Ковер Таино}
 itmdescr_TainoRug
 {
-A woven rug, possibly very old, possibly of Taino origin.
+Тканый ковер, возможно, очень древний, возможно, происхождения Таино.
 }
 
-itmname_SignetRing	{Signet Ring}
+itmname_SignetRing	{Кольцо со Знаком}
 itmdescr_SignetRing
 {
-A signet ring which marks you as a trusted agent of the Downing family.
+Перстень со знаком, свидетельствующим о том, что вы доверенный агент семьи Даунинг.
 }
 
-itmname_WeddingRing	{Wedding Ring}
+itmname_WeddingRing	{Обручальное Кольцо}
 itmdescr_WeddingRing
 {
-A precious ring signifying that you are married. The markings are very old and not in any known language.
+Драгоценное кольцо, которое означает, что вы вступили в брак. Маркировка очень древняя и не написана ни на одном из известных языков.
 }
 
-itmname_jewelry7_q	{Golden Ring}
+itmname_jewelry7_q	{Золотое Кольцо}
 itmdescr_jewelry7_q
 {
-A gold ring with a fine emerald. You are keeping it safe for use as a wedding ring.
+Золотое кольцо с прекрасным изумрудом. Вы бережете его для использования в качестве обручального кольца.
 }
 
-itmname_jewelry10_q	{Luxurious Golden Ring}
+itmname_jewelry10_q	{Роскошное Золотое Кольцо}
 itmdescr_jewelry10_q
 {
-A gold ring inlaid with fine sapphires. You are keeping it safe for use as a wedding ring.
+Золотое кольцо, инкрустированное прекрасными сапфирами. Вы бережно храните его для использования в качестве обручального кольца.
 }
 
-itmname_ExplainLetter	{Letter to Governor}
+itmname_ExplainLetter	{Письмо Губернатору}
 itmdescr_ExplainLetter
 {
-A personal letter to the governor of #sSantiago#.
+Личное письмо губернатору города #sSantiago#.
 }
 
-itmname_CourtingLetter	{Private letter}
+itmname_CourtingLetter	{Личное Письмо}
 itmdescr_CourtingLetter
 {
-A personal, confidential letter with an elaborate seal.
+Личное, конфиденциальное письмо с искусной печатью.
 }
 
-itmname_BetrayedLetter	{Letter to you}
+itmname_BetrayedLetter	{Письмо для Вас}
 itmdescr_BetrayedLetter
 {
-To Captain Ardent. As you are once again an enemy of Spain, I have left. Do not try to find me. #sromance#
+Капитану Арденту. Поскольку вы снова стали врагом Испании, я ушла. Не пытайтесь меня найти. #sromance#
 }
 
-itmname_PrisonPass	{Prison pass}
+itmname_PrisonPass	{Пропуск в Тюрьму}
 itmdescr_PrisonPass
 {
-A pass allowing you to visit a prisoner.
+Пропуск, позволяющий посещать заключенного.
 }
 
-itmname_FakePrisonPass	{Fake prison pass}
+itmname_FakePrisonPass	{Поддельный Тюремный Пропуск}
 itmdescr_FakePrisonPass
 {
-A forged pass allowing you to visit a prisoner.
+Поддельный пропуск, позволяющий посещать заключенного.
 }
 
-itmname_BattleOrders	{Battle Orders}
+itmname_BattleOrders	{Боевые Приказы}
 itmdescr_BattleOrders
 {
-Orders stolen from #sPointe a Pitre# Admiralty detailing a French attack on #sRedmond#.
+Приказы, похищенные из Адмиралтейства города #sPointe a Pitre#, с подробным описанием французской атаки на #sRedmond#.
 }
 
-itmname_BattleOrders2	{Battle Orders}
+itmname_BattleOrders2	{Боевые Приказы}
 itmdescr_BattleOrders2
 {
-Orders stolen from #sPointe a Pitre# Admiralty detailing a French attack on #sSantiago#.
+Приказы, похищенные из Адмиралтейства города #sPointe a Pitre#, с подробным описанием французской атаки на #sSantiago#.
 }
 
-itmname_fake_fort_release	{Forged release papers}
+itmname_fake_fort_release	{Поддельные Документы об Освобождении}
 itmdescr_fake_fort_release
 {
-Forged papers releasing prisoners from #sPort au Prince# fort into your custody.
+Поддельные документы, освобождающие заключенных из форта города #sPort au Prince# под вашу опеку.
 }
 
-itmname_medal1	{Cross of Santa Isabella}
+itmname_medal1	{Крестик Святой Изабеллы}
 itmdescr_medal1
 {
-A medal awarded to you for bringing plans for the invasion of #sSantiago# back to its governor.
+Подарок, присужденный вам за то, что вы раскрыли планы вторжения в город #sSantiago# его губернатору.
+}
+
+itmname_AdmiralLetter	{Письмо от Альмиранте Жузепе Гимарайнши}
+itmdescr_AdmiralLetter
+{
+В этом письме от Альмиранте Жузепе Гимарайнши говорится, что вы действуете от этого имени по соображениям государственной безопасности.
 }

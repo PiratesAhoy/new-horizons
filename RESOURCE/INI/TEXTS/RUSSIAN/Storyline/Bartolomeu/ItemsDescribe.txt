@@ -1,243 +1,243 @@
-Potion parameters{Medical Remedy}
-health value{Health}
-weapon blade parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, piercing #dpiercing#%, block #dblock#%.}
-weapon gun parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, reload time #dchargespeed#sec, accuracy #daccuracy#%.}
-weapon armor parameters{Armor: Coverage #dcoverage#%, Chance to stop / Percent of damage taken if not stopped, for: Sword #dbladestop#% / #dbladefrac#%, Gun #dgunstop#% / #dgunfrac#%.}
+Potion parameters{Лечебное Средство}
+health value{Здоровья}
+weapon blade parameters{Хлодное оружие: Урон (мин/макс) - #ddmg_min#/#ddmg_max#; Пробой брони - #dpiercing#%; Блок - #dblock#%.}
+weapon gun parameters{Огнестрельное оружие: Урон (мин/макс) - #ddmg_min#/#ddmg_max#; Перезарядка - #dchargespeed# сек.; Точность - #daccuracy#%.}
+weapon armor parameters{Кираса: Защита - #dcoverage#%; (Шанс отразить удар / Процент поражения, если пропущен удар) : Холодн. оруж. - #dbladestop#% / #dbladefrac#%; Огнестр. оруж. - #dgunstop#% / #dgunfrac#%.}
 
-itmname_Letter_Governor	{Letter for the #sDouwesen# Governor}
+itmname_Letter_Governor	{Письмо для Губернатора Города #sDouwesen#}
 itmdescr_Letter_Governor
 {
-This letter written by the Governor of #sConceicao# aims to ask the Dutch help in a possible attack of Cartagena.
+Это письмо, написанное губернатором города #sConceicao#, направлено на просьбу о помощи голландцев в возможной атаке на Картахену.
 }
 
-itmname_Letter_King	{Letter for the Cartagena Governor}
+itmname_Letter_King	{Письмо для Губернатора Картахены}
 itmdescr_Letter_King
 {
-Letter written by the Spanish King and asking to inform the envoy about the situation of Cartagena in many aspects.
+Письмо, написанное испанским королем, в котором просится информировать представителя о ситуации в Картахене во многих аспектах.
 }
 
-itmname_darien_idol	{Darien Idol}
+itmname_darien_idol	{Идол Дарьена}
 itmdescr_darien_idol
 {
-This golden idol belongs to a tribe of cannibals. It represents their god of war. Whoever steals it will be in BIG trouble.
+Этот золотой идол принадлежит племени каннибалов. Он представляет их бога войны. Кто украдет его, попадет в БОЛЬШИЕ неприятности.
 }
 
-itmname_navy_papers	{Navy Papers}
+itmname_navy_papers	{Документы Флота}
 itmdescr_navy_papers
 {
-These documents confirm you work for the Portuguese Navy and you get its protection against the Pirates and enemies of Portugal.
+Эти документы подтверждают, что вы работаете на португальский флот и получаете его защиту от пиратов и врагов Португалии.
 }
 
-itmname_Letter_Spy	{Letter for the Spy}
+itmname_Letter_Spy	{Письмо для Шпиона}
 itmdescr_Letter_Spy
 {
-Thanks to this letter, the spy in San Juan will help you in your search.
+Благодаря этому письму шпион в Сан-Хуане поможет вам в вашем поиске.
 }
 
-itmname_Fort_Keys	{Fort's Keys}
+itmname_Fort_Keys	{Ключи от Форта}
 itmdescr_Fort_Keys
 {
-The prison's keys. You can find the jail downstairs. 
+Ключи от тюрьмы. Тюрьма находится внизу.
 }
 
-itmname_muerte_map	{Isla de Muerte Map}
+itmname_muerte_map	{Карта Исла-де-Муэрте}
 itmdescr_muerte_map
 {
-This is the map of an island called Isla de Muerte. The island is a long way south of Cayman.
+Это карта острова, называемого Исла-де-Муэрте. Остров находится далеко на юге от Каймана.
 }
 
-itmname_Animist_cloth		{Monk habit}
+itmname_Animist_cloth		{Одежда Монаха}
 itmdescr_Animist_cloth
 {
-A Monk's outfit in the same style as mine. Perfect for Elting when we have escaped this horrid place.
+Одежда монаха в том же стиле, что и моя. Идеально подойдет для Элтинга, когда мы выберемся из этого ужасного места.
 }
 
-itmname_key3			{Big Key}
+itmname_key3			{Большой Ключ}
 itmdescr_key3
 {
-Is it the key to open the gate?
+Это ключ, который открывает ворота?
 }
 
-itmname_key4			{Small Key}
+itmname_key4			{Маленький Ключ}
 itmdescr_key4
 {
-This key seems to be suited to open a cell in this location.
+Этот ключ, похоже, подходит для открытия тюремной камеры в этом месте.
 }
 
-itmname_Montejo_Book {Montejo's Secret Book}
+itmname_Montejo_Book {Секретная Книга Монтехо}
 itmdescr_Montejo_Book
 {
-This old book has belonged to the famous conquistador Francisco de Montejo y Alvarez who tried to conquer western Yucatбn.
+Эта старая книга принадлежала знаменитому конкистадору Франциско де Монтехо и Альваресу, который пытался завоевать западный Юкатан.
 }
 
-itmname_skull_ring		{Skull Ring}
+itmname_skull_ring		{Кольцо с Черепом}
 itmdescr_skull_ring
 {
-The Ring looks evil, will it give you extra power or the opposite?
+Кольцо выглядит зловеще, даст ли оно вам дополнительную силу или наоборот?
 }
 
-itmname_moccasins		{Moccasins}
+itmname_moccasins		{Мокасины}
 itmdescr_moccasins
 {
-The Moccasines once belonged to The Bounding Elk. Can they be useful to you?  
+Мокасины принадлежали Боундингу Елк. Могут ли они быть полезны?
 }
 
-itmname_mayan_compass		{Mayan compass}
+itmname_mayan_compass		{Компас Майя}
 itmdescr_mayan_compass
 {
-What secrets will this engraved stone disc reveal?
+Какие секреты раскроет этот гравированный диск-камень?
 }
 
-itmname_filled_pipe		{Filled Pipe}
+itmname_filled_pipe		{Наполненная Трубка}
 itmdescr_filled_pipe
 {
-The Corn Cob Pipe is filled with pulverized, dried mushrooms.
+Кукурузная трубка заполнена измельченными сушеными грибами.
 }
 
-itmname_dried_mushrooms		{Dried Mushrooms}
+itmname_dried_mushrooms		{Сушеные Грибы}
 itmdescr_dried_mushrooms
 {
-Is it a Fly Agaric and two King Bolete?
+Это Мухомор и два Королевских Белых Гриба?
 }
 
-itmname_pulverized_mushrooms	{Pulverized Mushrooms}
+itmname_pulverized_mushrooms	{Измельченные Грибы}
 itmdescr_pulverized_mushrooms
 {
-The Mushrooms are ready for the Pipe.
+Грибы готовы для трубки.
 }
 
 //JRH Cartagena items -->
 
-itmname_bladecannon_ball	{Cannon Ball}
+itmname_bladecannon_ball	{Пушечное Ядро}
 itmdescr_bladecannon_ball
 {
-This is a very heavy one!
+Очень тяжелое!
 }
 
-itmname_bladeclockkey		{Key}
+itmname_bladeclockkey		{Ключ}
 itmdescr_bladeclockkey
 {
-Ouch, it's still hot.
+Ой, он ещё горячий.
 }
 
-itmname_bladelever		{Lever}
+itmname_bladelever		{Рычаг}
 itmdescr_bladelever
 {
-Hmm, where should I place it?
+Хм, а куда его поставить?
 }
 
-itmname_bladefire_irons		{Fire Irons}
+itmname_bladefire_irons		{Кочерга}
 itmdescr_bladefire_irons
 {
-Ok? To the Fireplace then.
+Хорошо? Тогда к печке.
 }
 
 //<-- JRH Cartagena items
 
-itmname_bladeacid		{Acid}
+itmname_bladeacid		{Кислота}
 itmdescr_bladeacid
 {
-A bottle of Acid with a very poisonous color. God only knows what the Priest used this for.
+Бутылка кислоты с очень ядовитым цветом. Только бог знает, для чего использовал её священник.
 }
 
-itmname_bladepclub203		{Pistol Club}
+itmname_bladepclub203		{Пистолет-Дубинка}
 itmdescr_bladepclub203
 {
-A heavy pistol can be used as a club. Makes more damage than your fists.
+Тяжелый пистолет, который можно использовать как дубинку. Наносит больший урон, чем кулаки.
 }
 
-itmname_pistol203 		{Pistol}
+itmname_pistol203 		{Пистолет}
 itmdescr_pistol203
 {
-A heavy gun that seems to have been used as a club.
+Тяжелое оружие, которое, кажется, использовалось как дубинка.
 }
 
-itmname_pistolmaquahuitl	{Maquahuitl}
+itmname_pistolmaquahuitl	{Макуауитль}
 itmdescr_pistolmaquahuitl
 {
-This Maquahuitl is cursed and can invoke the thundergod Chaac.
+Этот макуауитль проклят и может призвать бога грома Чака.
 }
 
-itmname_halberd			{Rusty Halberd}
+itmname_halberd			{Ржавый Халберд}
 itmdescr_halberd
 {
-An ancient but powerful weapon - or it was once before the rust took over.
+Древнее, но мощное оружие, которое когда-то было таким, пока ржавчина не поглотила его.
 }
 
-itmname_bladeflint		{Flint}
+itmname_bladeflint		{Кремень}
 itmdescr_bladeflint
 {
-Combined with a Steel you can make fire.
+В сочетании со сталью вы можете разжечь огонь.
 }
 
-itmname_pistolsteel		{Steel}
+itmname_pistolsteel		{Сталь}
 itmdescr_pistolsteel
 {
-Combined with a Flint you can make fire.
+Совместно с кремнем вы можете зажечь огонь.
 }
 
-itmname_empty_pipe		{Empty Pipe}
+itmname_empty_pipe		{Пустая Трубка}
 itmdescr_empty_pipe
 {
-An empty Corn Cob Pipe.
+Пустая трубка из кукурузных початков.
 }
 
-itmname_calabash		{Calabash with an Antidote}
+itmname_calabash		{Сосуд с Антидотом}
 itmdescr_calabash
 {
-This unknown liquid cures poison.
+Эта неизвестная жидкость лечит от яда.
 }
 
-itmname_herbs			{Bag of Herbs}
+itmname_herbs			{Мешочек с Травами}
 itmdescr_herbs
 {
-A mixture of herbs that cures light wounds.
+Смесь трав, которая лечит легкие раны.
 }
 
-itmname_blowgun			{Blowgun}
+itmname_blowgun			{Духовая Трубка}
 itmdescr_blowgun
 {
-The Maya used the Blowgun to hunt birds and small animals. A tube for poisoned darts is attached to the pipe. 
+Майя использовали Духовую Трубку для охоты на птиц и мелких животных. К трубке прикреплен тубус для отравленных дротиков.
 }
 
-itmname_arrows2			{Poisoned Darts}
+itmname_arrows2			{Отравленные Дротики}
 itmdescr_arrows2	
 {
-Some cultures dip the tip of the darts in curare or other poisons in order to paralyze the target.
+Некоторые культуры погружают кончик дротика в куранаре или другие яды, чтобы парализовать цель.
 }
 
-itmname_shield_hand		{Shield}
+itmname_shield_hand		{Щит}
 itmdescr_shield_hand	
 {
-This wooden Shield may protect you against many weapons. Especially useful when attacked by Arrows.
+Этот деревянный щит может защитить вас от многих видов оружия. Особенно полезен, когда на вас нападают с луком и стрелами.
 }
 
-itmname_shield_back		{Shield}
+itmname_shield_back		{Щит}
 itmdescr_shield_back	
 {
-This wooden Shield may protect you against many weapons. Especially useful when attacked by Arrows.
+Этот деревянный щит может защитить вас от многих видов оружия. Особенно полезен, когда на вас нападают с луком и стрелами.
 }
 
-itmname_pistolrocket	{Rocket Launcher}
+itmname_pistolrocket	{Ракетница}
 itmdescr_pistolrocket
 {
-Basically a metal cylinder on a bamboo stick. Makes a lot of damage to a group of enemies but also to yourself if being too close. 
+По сути, это металлический цилиндр на бамбуковой палке. Наносит большой урон группе врагов, но также и вам, если вы слишком близко.
 }
 
-itmname_rockets			{Rockets}
+itmname_rockets			{Ракеты}
 itmdescr_rockets
 {
-Ammunition to the Rocket Launcher. You'll need Gunpowder as well to fire these projectiles. 
+Боеприпасы для Ракетницы. Вам также потребуется порох, чтобы стрелять этими снарядами.
 }
 
-itmname_rocketbag		{Bag for Rockets}
+itmname_rocketbag		{Сумка для Ракет}
 itmdescr_rocketbag
 {
-With the Rocket Bag equipped you can carry eight Rockets else only two. 
+Если у вас экипирована Сумка для Ракет, вы сможете носить до восьми ракет, в противном случае только две.
 }
 
-itmname_pistolwhip		{Bullwhip}
+itmname_pistolwhip		{Кнут}
 itmdescr_pistolwhip
 {
-A single-tailed whip, made of braided leather, designed as a tool for working with livestock. Use it to disarm your enemies.
+Кнут, сделанный из сплетенной кожи, предназначенный как инструмент для работы с животными. Используйте его, чтобы обезоружить своих врагов.
 }

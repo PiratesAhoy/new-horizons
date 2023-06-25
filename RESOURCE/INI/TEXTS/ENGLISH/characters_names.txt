@@ -673,8 +673,6 @@ Cervano{Cervano}
 Robierto{Robierto}
 Cabellodoferro{Cabellodoferro}
 
-{=====| monks.c |=====}
-
 {=====| NK.c |=====}
 First{First}
 Last{Last}
@@ -1053,6 +1051,7 @@ Kicking{Kicking}
 Raven{Raven}
 Lewis{Lewis}
 Vickers{Vickers}
+Carpenter1{Carpenter}
 
 {=====| StoreOwners.c |=====}
 Agent-Victualler{Agent-Victualler}
@@ -1322,6 +1321,17 @@ Orswood{Orswood}
 
 {=====| 1368 characters |=====}
 
+{=====| monks.c |=====}
+Kanhoji{Kanhoji}
+Angria{Angria}
+Surcouf{Surcouf}
+Yusuf{Yusuf}
+Rais{Rais}
+Uela{Uela
+de Marisco{de Marisco}
+Hugues{Hugues}
+Nantucket{Nantucket}
+Tuck{Tuck}
 
 {=====| Others |=====}
 Maltese{Maltese}
@@ -1343,3 +1353,4 @@ Harriett{Harriett}
 Anamaria{Anamaria}
 Scared Monk{Scared Monk}
 Cursed Skeleton{Cursed Skeleton}
+Monk{Monk}

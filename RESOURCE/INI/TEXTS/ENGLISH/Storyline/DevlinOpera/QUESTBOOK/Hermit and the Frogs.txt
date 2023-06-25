@@ -1,0 +1,4 @@
+title=Hermit and The Frogs
+text.t1=I'm looking for K. O'Byrne, a hermit, living in the jungle of #sisland_Cayman#. His hut must be somehwere off the trail to the settlement of #sGrand Cayman#.
+text.t2=I must go through the jungle to #sGrand Cayman# and talk to the local bigwig at the town hall about the pirate problem. Hopefully he will help Annie and the old O'Byrne.
+text.t3=O'Byrne was right! The spineless monkey these poor colonists accepted as their governor won't lift a finger. I must return to the house in the jungle and discuss things with O'Byrne and Annie.

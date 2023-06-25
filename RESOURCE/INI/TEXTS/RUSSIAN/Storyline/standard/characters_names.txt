@@ -1,7 +1,7 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| standard.c |=====}
 Nathaniel{Натаниэль}
-Hawk{Хок}
+Hawk{Хаук}
 
 {=====| StartStoryline.c |=====}
 
@@ -9,133 +9,133 @@ Hawk{Хок}
 
 {=====| Officers.c |=====}
 Danielle{Даниэль}
-Greene{}
+Greene{Грин}
 Ralph{Ральф}
 Fawn{Фавн}
-Clement{}
-Barnabas{}
-Aurentius{}
-Leborio{}
-Drago{}
-Gervasio{}
-Serrao{}
+Clement{Клемент}
+Barnabas{Барнабас}
+Aurentius{Аврентий}
+Leborio{Леборио}
+Drago{Драго}
+Gervasio{Гервасио}
+Serrao{Серрао}
 
 {=====| Story.c |=====}
-Vincent{}
+Vincent{Винсент}
 Bethune{Битюн}
-Waulter{}
-Tomlison{}
+Waulter{Волтер}
+Tomlison{Томлисон}
 Remy{Реми}
 Gatien{Гатье}
-Yves{}
-Giner{}
-Begon{}
-Monchaty{}
-Isaac{}
-Razilly{}
-Jacques{}
-Belmondo{}
+Yves{Ив}
+Giner{Гинер}
+Begon{Бегон}
+Monchaty{Моншати}
+Isaac{Исаак}
+Razilly{Разилли}
+Jacques{Жак}
+Belmondo{Бельмондо}
 Pierre{Пьер}
-Leverrier{}
-Abelard{}
-Tarnaud{}
-Wigayn{}
-Ratel{}
+Leverrier{Леверрье}
+Abelard{Абеляр}
+Tarnaud{Тарно}
+Wigayn{Вигейн}
+Ratel{Ратэл}
 Raoul{Рауль}
-Rheims{}
-Valentin{}
-Massoni{}
-Amiel{}
-Berangere{}
-Faust{}
-Gasquet{}
-Virgile{}
-Boon{}
-Tobias{}
-Ewan{}
-Glover{}
+Rheims{Реймс}
+Valentin{Валентин}
+Massoni{Массони}
+Amiel{Эмиль}
+Berangere{Беранже}
+Faust{Фауст}
+Gasquet{Гаске}
+Virgile{Вирджил}
+Boon{Бун}
+Tobias{Тобиас}
+Ewan{Эван}
+Glover{Гловер}
 Wilfred{Уилфред}
-English Soldier{}
-French Soldier{}
-Rabel{}
-Yverneau{}
-Anacleto{}
-Rui Sa{}
-Pinto{}
-Sidonio{}
-Ogarrio{}
+English Soldier{Английский Солдат}
+French Soldier{Французский Солдат}
+Rabel{Рабэл}
+Yverneau{Иверно}
+Anacleto{Анаклето}
+Rui Sa{Руй Са}
+Pinto{Пинто}
+Sidonio{Сидонио}
+Ogarrio{Огаррио}
 Lieutenant{Лейтенант}
 Harris{Харрис}
 Malcolm{Малькольм}
 Hart{Харт}
 Henry{Генри}
-Banfield{}
-Wauter{}
-Keech{}
-Lewellyn{}
+Banfield{Бэнфилд}
+Wauter{Ваутэр}
+Keech{Кич}
+Lewellyn{Льюэллин}
 Belt{Белт}
 Thomas{Томас}
 Norton{Нортон}
 Brian{Брайан}
-The Slayer{}
-Ferro{}
-Cerezo{}
-Hector{}
-Barbossa{}
+The Slayer{Истребитель}
+Ferro{Ферро}
+Cerezo{Церезо}
+Hector{Гектор}
+Barbossa{Барбосса}
 Robert{Роберт}
 Christopher{Кристофер}
 Silehard{Сайлхард}
 
 {=====| TempQuest.c |=====}
-Bythesea{}
-Harold{}
-Barrat{}
+Bythesea{Байтси}
+Harold{Харольд}
+Barrat{Баррат}
 Sailor{Моряк}
 Pirate{Пират}
-Fernam{}
-Barrios{}
+Fernam{Фернам}
+Barrios{Барриос}
 Violate{Виолате}
 Gyles{Жиль}
 Dubois{Дюбуа}
-citizen{}
-Soldier{}
+citizen{Горожанин}
+Soldier{Солдат}
 Ragetti{Раджетти}
 Pintel{Пинтел}
 
 {=====| TempQuestEnemy.c |=====}
 Captain{Капитан}
-Kalen{}
-Mottram{}
-French Patrol{}
-French{}
-Sapper{}
+Kalen{Кален}
+Mottram{Моттрэм}
+French Patrol{Французский Патруль}
+French{Француз}
+Sapper{Саппер}
 Simon{Саймон}
-Buck{}
+Buck{Бак}
 Rene{Ренэ}
-Bouillon{}
-Bodyguard{}
-Dutruel{}
-Ian{}
-Bigg{}
-Bonnat{}
+Bouillon{Буйон}
+Bodyguard{Телохранитель}
+Dutruel{Дютруэль}
+Ian{Ян}
+Bigg{Бигг}
+Bonnat{Боннэт}
 Brendan{Брендан}
-Attwick{}
-Edd{}
-Pease{}
-Kevin{}
-Renner{}
+Attwick{Этвик}
+Edd{Эдд}
+Pease{Пиз}
+Kevin{Кевин}
+Renner{Реннер}
 Terry{Терри}
-Sellar{}
+Sellar{Селлар}
 Donald{Дональд}
-Drake{}
+Drake{Дрейк}
 David{Дэвид}
-Much{}
-Cole{}
+Much{Муч}
+Cole{Коул}
 Brock{Брок}
-Shaggy{}
+Shaggy{Шегги}
 Harry{Гарри}
-Stephan{}
-Bonser{}
+Stephan{Стефан}
+Bonser{Бонсер}
 Oswald{Освальд}
 Chappel{Чаппель}
 

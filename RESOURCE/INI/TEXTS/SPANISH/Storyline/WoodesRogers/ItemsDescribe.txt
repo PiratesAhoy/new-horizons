@@ -1705,7 +1705,7 @@ Una simple cruz en una cadena de plata.
 itmname_treasure7		{Reliquia}
 itmdescr_treasure7
 {
-El supuesto dedo y el anillo de la mujer papisa del siglo XI. 
+El supuesto dedo y el anillo de la mujer papisa del siglo XII. 
 }
 
 itmname_icon			{Icono}

@@ -53,7 +53,7 @@ About_Build_3
 
 - Con algunas armas grandes, puedes entrar en el "modo escopeta" pulsando [TAB] cuando tu espada esté desenvainada. Para disparar pulsa [Q]
 
-- Asegúrate de mirar el inventario despues de un combate. Puede que uno de tus enemigos haya dejado un arma mejor que la tuya. También puedes pulsar [F] para equipar rápidamente la mejor arma que tengas (también funciona durante el combate).
+- Asegúrate de mirar el inventario después de un combate. Puede que uno de tus enemigos haya dejado un arma mejor que la tuya. También puedes pulsar [F] para equipar rápidamente la mejor arma que tengas (también funciona durante el combate).
 
 }
 
@@ -80,7 +80,7 @@ About_Build_4
 
 - Puedes cambiar la apariencia de tus velas en F2>Barco>Velas.
 
-- Si la suerte en una batalla se pone en tu contra, carga los cañones con palanquetas e intenta derribar los mástiles del enemigo. Así te será mucho más fácil escapar.
+- Si la suerte en una batalla se pone en tu contra, carga los cañones con balas encadenadas e intenta derribar los mástiles del enemigo. Así te será mucho más fácil escapar.
 
 - Abordar será mucho más fácil si tienes una tripulación con buena moral. Además, es muy efectivo cargar los cañones con metralla y disparar un par de andanadas antes de abordar.
 

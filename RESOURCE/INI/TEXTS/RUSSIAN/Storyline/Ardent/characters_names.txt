@@ -9,7 +9,7 @@ McMurrough{МакМарра}
 O'Brien{О'Брайен}
 
 {=====| quests_reaction.c |=====}
-de la Vega{де ла Вега}
+de la Vega{Де Ла Вега}
 Two Dogs{Два Пса}
 Fighting{Дерущихся}
 not-Fighting{не-Дерущихся}
@@ -50,22 +50,14 @@ Dawson{Доусон}
 {=====| TempQuest.c |=====}
 Inquisitor{Инквизитор}
 Monkey{Обезьяна}
-Crescent{Растущая}
-Moon{Луна}
-Rain{Грозовая}
-Cloud{Туча}
-Golden{Золотой}
-Flower{Цветок}
-Nervous{Нервный}
-Elk{Лось}
-Ringboned{Мозоленогий}
-Wolf{Волк}
-Strong{Сильный}
-Deer{Олень}
-White1{Белый}
-Crow{Ворон}
-Soaring{Парящий}
-Hawk1{Ястреб}
+Crescent Moon{Растущая Луна}
+Rain Cloud{Грозовая Туча}
+Golden Flower{Золотой Цветок}
+Nervous Elk{Нервный Лось}
+Ringboned Wolf{Мозоленогий Волк}
+Strong Deer{Сильный Олень}
+White Crow{Белый Ворон}
+Soaring Hawk{Парящий Ястреб}
 Ronald{Рональд}
 McDonald{МакДональд}
 Doolin{Дулин}
@@ -136,7 +128,7 @@ Philip{Филип}
 de Malvoisin{де Мальвозан}
 Franзois-Louis{Франсуа-Луи}
 Rousselet{Русселе}
-de Chвteaurenault{де Шато-Рено}
+de Chвteaurenault{Де Шато-Рено}
 4{4-й}
 Guibert{Гиберт}
 Mollaret{Молларе}
@@ -153,7 +145,7 @@ Lezcano{Лескано}
 Pelayo{Пелайо}
 Nъсez{Нусез}
 Emiliano{Эмильяно}
-de Guzmбn{де Гузман}
+de Guzmбn{Де Гузман}
 Gilles{Жиль}
 Clouzot{Клозу}
 

@@ -1,3 +1,3 @@
-title=A New Beginning
-text.t1=I've finally arrived at #stown#. Now I'm off to do the necessary preparations before we set out to sea for our next voyage.
-text.t2=At last I've got my new boat - a lovely #sshiptype# which I named #sshipname#. Now, I set out to sea to pursue my new dream as a captain.
+title=Новое Начало
+text.t1=Наконец-то я добрался до города #stown#. А теперь я отправляюсь делать необходимые приготовления, прежде чем мы отправимся в наше следующее путешествие.
+text.t2=Наконец-то у меня появилось моё новое судно - корабль #sshiptype#, который я назвал #sshipname#. Теперь я отправляюсь в море, чтобы осуществить свою новую мечту в качестве капитана.

@@ -1,83 +1,83 @@
-itmname_chest	{McDorey's Chest}
+itmname_chest	{Сундучок МакДори}
 itmdescr_chest
 {
-A small chest that Oweyn McDorey has asked you to deliver to Charles Windem on #sisland_Redmond#.
+Небольшой сундучок, который Оуэн МакДори попросил вас доставить Чарльзу Уиндему на #sisland_Redmond#.
 }
 
-itmname_coins	{Cursed Coins}
+itmname_coins	{Проклятые Монеты}
 itmdescr_coins
 {
-Large golden coins with a skull depiction. You don't like the look of them.
+Крупные золотые монеты с изображением черепа. Улыбочка у него та ещё.
 }
 
-itmname_gov_letter	{Governor's letter}
+itmname_gov_letter	{Письмо Губернатора}
 itmdescr_gov_letter
 {
-A letter from Governor Silehard that he entrusted you to deliver to Isenbrandt Jurcksen on #sisland_Quebradas Costillas#.
+Письмо от губернатора Сайлхарда, которое он поручил нам доставить Изенбрандту Юрксену на #sisland_Quebradas Costillas#.
 }
 
-itmname_incas_idol	{Golden idol}
+itmname_incas_idol	{Золотой Идол}
 itmdescr_incas_idol
 {
-A golden idol of Hurukacelitipochtli, the Incan god of death.
+Золотой идол Хурукацелитипочтли, индейского бога смерти.
 }
 
-itmname_incas_collection	{Incan treasure collection}
+itmname_incas_collection	{Сокровища Инков}
 itmdescr_incas_collection
 {
-A collection of Incan treasures.
+Коллекция сокровищ инков.
 }
 
-itmname_piece_of_legend	{Tablet}
+itmname_piece_of_legend	{Скрижаль}
 itmdescr_piece_of_legend
 {
-A piece of a clay tablet covered with ancient Incan characters
+Половинка глиняной таблички, покрытой древними письменами инков.
 }
 
-itmname_notes_of_legend	{Text of the legend}
+itmname_notes_of_legend	{Запись Легенды}
 itmdescr_notes_of_legend
 {
-Text of the ancient Incan legend, written on paper.
+Текст древней легенды инков, переписанный на бумагу.
 }
 
-itmname_copyes_of_legend	{Copy of the legend's text}
+itmname_copyes_of_legend	{Копия Легенды}
 itmdescr_copyes_of_legend
 {
-A copy of the ancient Incan legend text.
+Копия текста древней легенды инков.
 }
 
-itmname_rheims_journal	{Rheims' Journal}
+itmname_rheims_journal	{Судовой Журнал Реймса}
 itmdescr_rheims_journal
 {
-Journal of captain Rheims.
+Судовой журнал капитана Реймса.
 }
 
-itmname_compramat_to_domigues	{Compromising documents}
+itmname_compramat_to_domigues	{Компрометирующие Документы}
 itmdescr_compramat_to_domigues
 {
-Documents completely discrediting Padre Domingues.
+Документы, полностью дискредитирующие падре Домингеса.
 }
 
-itmname_rheims_letter	{Rheims' letter}
+itmname_rheims_letter	{Письмо Реймса}
 itmdescr_rheims_letter
 {
-A letter from Captain Rheims to the governor of #sRedmond# on #sisland_Redmond#, Robert Christopher Silehard.
+Письмо от капитана Реймса губернатору города #sRedmond# на #sisland_Redmond#, Роберту Кристоферу Сайлхарду.
 }
 
-itmname_massoni_papers	{Valentin Massoni's papers}
+itmname_massoni_papers	{Бумаги Валентина Массони}
 itmdescr_massoni_papers
 {
-These papers say that the supply barque is at #sFalaise de Fleur# on #sisland_Falaise de Fleur# right now, waiting for a convoy vessel.
+Бумаги, из которых следует, что барк с боеприпасами сейчас находится в #sFalaise de Fleur# на #sisland_Falaise de Fleur#, и ждёт судно сопровождения.
 }
 
-itmname_artefact	{Artefact}
+itmname_artefact	{Артефакт}
 itmdescr_artefact
 {
-The mysterious artefact that you found in the ancient temple. There is a tingling sensation in your hands when you hold it.
+Таинственный артефакт, который вы нашли в древнем храме. Когда вы держите его в руках, в ладонях ощущается покалывание.
 }
 
-itmname_story_gramota	{Documents}
+itmname_story_gramota	{Документы}
 itmdescr_story_gramota
 {
-These papers give permission to escort the ship 'Oiseau' and need to be shown to the harbour master.
+Эти документы дают вам право сопровождать 'Птица' и должны быть предъявлены начальнику порта.
 }

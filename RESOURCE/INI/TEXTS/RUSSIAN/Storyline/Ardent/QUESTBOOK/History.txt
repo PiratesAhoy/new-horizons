@@ -1,2 +1,2 @@
-title=Historical Note
-text.t1=Several warships would subsequently be named 'Ardent'. One, launched in 1764, was the first of a class of third-rate ships of the line; another ship of this class was 'КЕВ Неутомимый', which was converted to a 44 gun razee frigate. You will sail on this ship if you play the "Hornblower" storyline.
+title=Историческая Справка
+text.t1=Несколько военных кораблей впоследствии получили имя 'Ардент'. Один из них, спущенный на воду в 1764 году, был первым в категории линейных кораблей 3 класса; другим кораблем этого класса был "КЕВ Неутомимый", который был переоборудован в 44-орудийный фрегат "Рейзи". Вы будете плавать на этом корабле, если пройдете сюжетную линию "Хорнблауэра".

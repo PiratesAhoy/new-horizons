@@ -140,9 +140,10 @@ Beatrice{Beatrice}
 Devlin{Devlin}
 Caribbean Tales{Caribbean Tales}
 Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?{Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?}
-Quicksilver{Quicksilver}
+Discovery{Discovery}
 
 Bonnie{Bonnie}
+Quicksilver{Quicksilver}
 
 Desmond Ray{Desmond Ray}
 Beltrop{Beltrop}

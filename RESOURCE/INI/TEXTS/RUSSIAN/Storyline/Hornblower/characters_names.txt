@@ -11,8 +11,8 @@ Hammond{Хэммонд}
 Lt. William{Лт. Уильям}
 Bush{Буш}
 Thomas{Томас}
-Wolfe{Вольф}
-Matthews{Мэтьюс}
+Wolfe{Вульф}
+Matthews{Мэтьюз}
 Lt.{Лт.}
 Chadd{Чад}
 
@@ -29,7 +29,7 @@ Clayton{Клейтон}
 Hunter{Хантер}
 Henry{Генри}
 Wellard{Вэйлард}
-Helmsman{Рулевой}
+Helmsman{Штурман}
 Styles{Стайлс}
 Perrin{Перрин}
 Oldroyd{Олдройд}
@@ -47,19 +47,20 @@ Ebeneezer{Эбенизер}
 Bracegirdle{Брейсгедл}
 William{Уильям}
 Uriah{Урия}
-Quelp{Келп}
+Quelp{Куэлп}
 The Earl of{Граф}
 Edrington{Эдрингтон}
 Arthur{Артур}
-Wellesley{Уэлсли}
+Wellesley{Уэллсли}
 Chumley{Чамли}
 Barbara{Барбара}
 Maria{Мария}
 Mason{Мэйсон}
+Ellen{Эллен}
 The Duchess of{Герцогиня}
 Wharfedale{Ворфдейл}
 Teresa{Тереза}
-Moreno{Морино}
+Moreno{Морено}
 Etienne{Этьен}
 de Vergasse{де Вергасс}
 Archie{Арчи}
@@ -103,6 +104,10 @@ Two{второй}
 Three{третий}
 Donatien{Донасьё}
 Thibaud{Тибо}
+Rifleman{Стрелок}
+Major{Мажор}
+DoctorW{Доктор}
+Able Seaman{Способный Моряк}
 
 {=====| TempQuest.c |=====}
 Captain{Капитан}

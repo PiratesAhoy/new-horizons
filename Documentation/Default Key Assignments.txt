@@ -1,0 +1,141 @@
+Dialogue: use the W and S keys to move up and down the preferred dialogue option,
+then use the Action key(Space) to select it.
+
+
+================================
+General:
+================================
+
+R = Speed UP time in steps from 1x to 3x, 5x, 10x and 20x
+G = Slow DOWN time in steps from 20x to 10x, 5x, 3x and back to 1x
+L = Toggle extra log info, such as exact skill increases in %
+M = Show archipelago map (if you have one)
+O = Show info for character in front, do bugfixing. In event of a crash, reload the game and press this
+F1 = Main menu
+F2 = Character screen
+F3 = perform the action currently displayed in the top left corner of your screen (hot action, mostly the same same functionality as space when on land)
+F5 = Quicksave
+F6 = Quickload
+F8 = Screenshot (saved in TGA format in top level of game installation folder)
+ESC = Cancel Menu
+F11 = Re-initialise
+F12 = Execute console
+
+================================
+On land (third/first person):
+================================
+
+F = Quick-equip button
+E = Draw/Sheath sword
+Left  Mouse = Attack
+Right Mouse = Block
+Q = Fire pistol/musket
+Z = Dodge/Jump backwards (when in combat only)
+C = Use healing item (indiscriminate)
+H = Start rush mode (used to be an ability)
+
+W = Move forward
+S = Move back
+X-axis Mouse = Left/Right player view
+Y-axis Mouse = Up/Down player view
+Shift (hold) = Run
+A = Sidestep left  {These are modded features and have the odd effect of 'sliding' your character through objects!}
+D = Sidestep right {Only available by editing "PROGRAM\InternalSettings.h" and setting SIDESTEP_ENABLED to 1}
+TAB = Switch between third/first person view
+
+Enter = Quick Command menu
+Space = Accept/Activate/Action key
+
+K = Always run on/off
+
+1 = Equip Regular Blade
+2 = Equip Regular Gun
+3 = Equip Cobblestone
+4 = Equip Sandbag
+5 = Equip Etherbottle
+6 = Equip Thief's Knife
+7 = Equip Poisoned Throwingknife
+8 = Equip Stinkpot
+9 = Equip Grenade
+0 = Equip Your Trusty Fists
+
+================================
+Sailing (3D view/first person):
+================================
+
+W = Raise sails
+S = Lower sails
+A = Turn to port (left)
+D = Turn to starboard (right)
+Left   Mouse = Zoom in (flying camera)
+Right  Mouse = Zoom out (flying camera)
+
+Numpad + = Increase engine power    (steamships only)
+Numpad - = Decrease engine power    (steamships only)
+Numpad * = Set engine power to zero (steamships only)
+
+1 = Load cannon balls
+2 = Load grapeshot
+3 = Load chainshot
+4 = Load bombs (only with realistic cannons off)
+
+9 = Launch anti-ship mine (a barrel of gunpowder required)
+
+K = Select "Clubhauling" ability direction (starboard or port)
+
+0 = Toggle Directsail mod (to prevent reloads of the sea environment when unwanted)
+
+V = Manual aim
+Space = Fire cannons
+C = Execute firedrill (when your ship is on fire. Can only be used with basic defence ability)
+Enter = Quick Command menu
+
+Left   Mouse = Move forward (on deck)
+Right  Mouse = Move back (on deck)
+X-axis Mouse = Left/Right player view
+Y-axis Mouse = Up/Down player view
+
+Ctrl = Toggle spyglass (on deck only, so press tab first)
+
+E = Zoom in on minimap
+F = Zoom out on minimap
+
+TAB = Switch between flying camera/on deck view
+
+================================
+Sailing (navi map/third person):
+================================
+
+W = Move forward
+S = Move back
+A = Turn to port (left)
+D = Turn to starboard (right)
+
+X axis mouse = Left/Right camera orbit
+y axis mouse = Up/Down camera view
+Left   Mouse = Zoom in (flying camera)
+Right  Mouse = Zoom out (flying camera)
+
+TAB (on/off) = Change camera mode
+Ctrl = Enable camera slide and rotation
+
+Space = Enter 3D sailing mode
+Enter = Quick Command menu
+
+================================
+Cheats:
+================================
+ These only work if ENABLE_CHEATMODE is on
+ at the bottom of PROGRAM\InternalSettings.h
+
+Numpad 0 = Character:	God Mode (Character can't be damaged, neither can ship.  Masts CAN still be destroyed.)
+Numpad 1 = Scroll Characters LEFT
+Numpad 2 = Select Main Character
+Numpad 3 = Scroll Characters RIGHT
+Numpad 4 = Character:	Level-Up
+Numpad 5 = Character:	Fake Level Up
+Numpad 6 = Player:	+ 100000 Gold and + 10000 Wealth
+Numpad 7 = Character:	Cycle through reputations (increase/decrease reputation)
+Numpad 8 = Disable worldmap storms and ships chasing you
+Numpad 9 = Trigger enemy attack (cheatmode OFF) / Promotion (cheatmode ON)
+TAB      = Shotgun Mode: If you have a shotgun equipped in Fight Mode, or any gun if you have the "Expert Marksman" ability
