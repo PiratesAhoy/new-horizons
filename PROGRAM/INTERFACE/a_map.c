@@ -59,22 +59,22 @@ void ShowMap()
 	{
 		int x,y;
 		x = 45; y = 105;
-		CreateString(true,"LEGEND","- LEGEND -","seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
+		CreateString(true,"LEGEND",TranslateString("","- LEGEND -"),"seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
 		
 		x = x-10; y = y+20;
-		CreateString(true,"SHIP_LEGEND",": Ship Position","seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
+		CreateString(true,"SHIP_LEGEND",TranslateString("",": Ship Position"),"seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
 		CreateImage("SHIP_ICON", "SHIPS16", "Brig1", sti(x-picScale), sti(y-picScale)+2, sti(x+picScale), sti(y+picScale)+2);
 
 		y = y+20;
-		CreateString(true,"CONVOY_LEGEND",": Escort Destination","seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
+		CreateString(true,"CONVOY_LEGEND",TranslateString("",": Escort Destination"),"seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
 		CreateImage("CONVOY_ICON", "ICONS", "ship speed icon", sti(x-picScale), sti(y-picScale)+2, sti(x+picScale), sti(y+picScale)+2);
 
 		y = y+20;
-		CreateString(true,"CARGO_LEGEND",": Cargo Destination","seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
+		CreateString(true,"CARGO_LEGEND",TranslateString("",": Cargo Destination"),"seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
 		CreateImage("CARGO_ICON", "ICONS", "ship capacity icon", sti(x-picScale), sti(y-picScale)+2, sti(x+picScale), sti(y+picScale)+2);
 
 		y = y+20;
-		CreateString(true,"TREASURE_LEGEND",": Hidden Treasure","seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
+		CreateString(true,"TREASURE_LEGEND",TranslateString("",": Hidden Treasure"),"seadogs_small",COLOR_YELLOW_LIGHT,x+10,y-5,SCRIPT_ALIGN_LEFT,0.7);
 		CreateImage("TREASURE_ICON", "MARK", "mark", sti(x-picScale), sti(y-picScale)+2, sti(x+picScale), sti(y+picScale)+2);
 	}
 	// PB: Legend <--

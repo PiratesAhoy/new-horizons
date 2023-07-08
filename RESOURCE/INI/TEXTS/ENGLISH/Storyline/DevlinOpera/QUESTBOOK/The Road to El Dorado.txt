@@ -1,0 +1,8 @@
+title=The Road to El Dorado
+text.t1=There are three marked places on the map, each with a persons name. I think the first one that we will try is the name 'Marcel Jauri', marking the town of #sSanto Domingo#, #sisland_Hispaniola#.
+text.t2=Lorena Lopez has told me how to find Marcel Jauri's tavern near #sSanto Domingo#: Go through the town gates and follow the path. When I get to the tower, go straight ahead. At the next crossing, near the cliff, turn left.
+text.t3=Marcel Jauri has told a very interesting story and given me a map... But there are just more marks all over the caribbean on it!
+text.t4=Blaze and Bonnie have already gone back to #sSanto Domingo#! Typical!
+text.t5=Lorena seems like a good person who's had some bad luck. Perhaps I should visit her again later.
+text.t6=The map scale is too small on this one. If we don't want to comb every beach and cove on #sisland_Cayman#, we're going to need a map of the place.
+text.t7=I found a more detailed map of the island #sisland_Cayman#, and looking at it carefully, it seems like the marker with the name 'Killian O'Byrne' points to a cove named Eden Rock. I think we found our next destination!

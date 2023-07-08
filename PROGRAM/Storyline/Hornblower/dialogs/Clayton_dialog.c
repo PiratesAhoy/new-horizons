@@ -12,6 +12,9 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -25,7 +28,7 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 
-			PlaySound("VOICE\ENGLISH\Clayton01.wav");
+			PlaySound(voice_path + "Clayton01.wav");
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";

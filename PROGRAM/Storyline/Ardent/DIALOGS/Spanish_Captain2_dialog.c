@@ -48,7 +48,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				logit("HINT: The captain will be more willing to talk to someone who looks like a soldier.");
+				logit(TranslateString("","HINT: The captain will be more willing to talk to someone who looks like a soldier."));
 				dialog.text = DLG_TEXT[0];
 				link.l1 = DLG_TEXT[1];
 				AddDialogExitQuest("tavern_for_payroll2");

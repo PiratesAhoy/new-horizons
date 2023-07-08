@@ -12,6 +12,9 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -26,7 +29,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 
 //			dialog.snd = "Voice\ARSI\ARSI001";
-			PlaySound("VOICE\ENGLISH\Archie01.wav");
+			PlaySound(voice_path + "Archie01.wav");
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";
@@ -52,7 +55,7 @@ void ProcessDialogEvent()
 
 		case "Jamaica Port":
 //			dialog.snd = "Voice\ARSI\ARSI003";
-			PlaySound("VOICE\ENGLISH\Archie01.wav");
+			PlaySound(voice_path + "Archie01.wav");
 			dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3];
 			link.l1.go = "Jamaica Port2";
@@ -95,7 +98,7 @@ void ProcessDialogEvent()
 
 		case "Archie_at_Charlestown":
 //			dialog.snd = "Voice\ARSI\ARSI003";
-			PlaySound("VOICE\ENGLISH\Archie01.wav");
+			PlaySound(voice_path + "Archie01.wav");
 			AddDialogExitQuest("Get_on_with_it_Gentlemen");
 			dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];

@@ -1,27 +1,27 @@
 string DLG_TEXT[24] = {
-"Entonces, ?averiguaste algo? Como estan nuestros hijos?!",
-"No se mucho en este momento, pero el conc me ha pedido que investigue. Esto puede tomar un tiempo, asi que, senoritas, sera mejor que se vayan a casa hasta que vuelva con noticias.",
-"Que estas mirando? Viniste a reirte junto con el resto de ellos?",
-"Calmate. Cual es el problema?",
+"Entonces, ¿averiguaste algo? ¡¿Cómo están nuestros hijos?!",
+"Aún no sé mucho, pero el gobernador me ha pedido que investigue. Esto puede llevar un tiempo, así que, señoras, será mejor que se vayan a casa hasta que vuelva con noticias.",
+"¿Qué estás mirando? ¿Has venido a reírte con todos los demás?",
+"Cálmate. ¿Cuál es el problema?",
 "Lo siento. No puedo ayudarte.",
-"Averiguaste algo?",
-"He devuelto a sus hijos. Estan siendo transferidos a la orilla ahora mismo.",
-"Oh, gracias, gracias, eres muy amable.",
-"Despedir.",
-"!Oh, aqui hay otro! !Cree que esta bien reirse y burlarse de nosotros!",
-"No entiendo lo que esta pasando aqui, tal vez usted me puede decir?",
-"!Nuestros hijos fueron secuestrados anoche y nuestro conc ni siquiera mumb un dedo!",
-"Espera, que quieres decir con que fueron secuestrados? Quien hizo eso?",
-"!No lo se! Cuando me dormi, mi bebe estaba en la vagina. Me desperte y mire en el puto pero mi bebe no estaba alli!",
-"Eso es terrible! ?Que hay de sus maridos, estan buscando?", // --cat
-"!No quiere salir y Mostrar su cara! !Tiene miedo! Un cobarde!",
-"Por favor, trata de calmarte. Intentare hablar con el conc.",
-"!Bendito seas, Bendito seas!",
+"¿Averiguaste algo?",
+"He traído de vuelta a vuestros hijos. Están desembarcando en la orilla ahora mismo.",
+"¡Oh, gracias, gracias, eres muy amable!",
+"Adiós.",
+"¡Oh, aquí hay otro! ¡Cree que está bien reírse y burlarse de nosotras!",
+"No entiendo lo que está pasando aquí. ¿Tal vez me lo puedes explicar?",
+"¡Nuestros hijos fueron secuestrados anoche y nuestro gobernador ni siquiera mueve un dedo!",
+"Espera, ¿qué quieres decir con que fueron secuestrados? ¿Quién lo hizo?",
+"¡No lo sé! Cuando me dormí, mi pequeño estaba en la cuna. ¡Cuando me desperté y fui a mirar, ya no estaba allí!",
+"¡Eso es terrible! ¿Qué hay de vuestros maridos, han salido a buscarlos?", // --cat
+"¡No quiere salir y dar la cara! ¡Tiene miedo! ¡Un cobarde!",
+"Por favor, trata de calmarte. Intentaré hablar con el gobernador.",
+"¡Bendito seas, bendito seas!",
 "Espera a que regrese.",
-"No descansaremos hasta que escuchemos algunas noticias. Estaremos aqui cuando regreses. Y te bendigo por ayudar, amable #Stille#.", // --cat
-"Bueno, vere que puedo hacer.", // --cat
-"Our husbands are away at sea, Captain.", // --cat
-"Ah. ?Y ustedes trataron de hablar con el Governador?", // --cat
-"!Oh, aqui hay otro! !Cree que esta bien reirse y burlarse de nosotros!",
+"No descansaremos hasta que tengamos alguna noticias. Estaremos aquí cuando regreses. Y Dios te bendiga por ayudar, amable #Stille#.", // --cat
+"Bueno, veré qué puedo hacer.", // --cat
+"Nuestros maridos están ganándose la vida en alta mar, capitán.", // --cat
+"Ah. ¿Y habéis intentado hablar con el gobernador?", // --cat
+"¡Oh, aquí hay otro! ¡Cree que está bien reírse y burlarse de nosotras!",
 
 };

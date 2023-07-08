@@ -147,7 +147,7 @@ string DLG_TEXT[201] = {
 "Fue solo un desacuerdo.",
 "¡¿Llamáis desacuerdo a un duelo?! Don Sebastián es una de las personas más importantes de mi ciudad. ¿Es esa vuestra manera de agradecer mi hospitalidad?",
 "Lo siento, gobernador. No volverá a pasar.",
-"Espero que no, porque de lo contrario, tendré que informar de vuestro ocmportamiento a nuestro Rey. No estoy seguro de que lo aprecie. De todos modos, hay otro problema. Conozco la razón de ese duelo. Parece que queréis cortejar a mi hija.",
+"Espero que no, porque de lo contrario, tendré que informar de vuestro comportamiento a nuestro Rey. No estoy seguro de que lo aprecie. De todos modos, hay otro problema. Conozco la razón de ese duelo. Parece que queréis cortejar a mi hija.",
 "Tenemos muchas afinidades...",
 "Y no puedo aceptar esta situación. Le prometí la mano de mi hija a los padres de Ortega. Quiero que esta boda sirva para unir a nuestras familias.",
 "Gobernador, vuestra hija no ama a don Sebastián Ortega.",

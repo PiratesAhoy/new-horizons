@@ -29,7 +29,7 @@ void StartStoryLine()
 	PChar.name = TranslateString("", "Guy");
 	PChar.lastname = TranslateString("", "Verbinski"); 
 	// MAXIMUS 05.09.2018 <==
-	GiveShip2Character(pchar,"KetchNavy","White Swan",-1,PIRATE,true,true);
+	GiveShip2Character(pchar,"KetchNavy",TranslateString("","White Swan"),-1,PIRATE,true,true);
 
 	GiveItem2Character(Pchar, "bladeX4");	// PB: Gives you your fists
 	TakeNItems(PChar, "blade1", 1);

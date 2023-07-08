@@ -1,9 +1,9 @@
 string DLG_TEXT[6] = {        
-"Hej, wy! Stać! Dokąd idziecie?",
-"Mój kapitan i ja wybieramy się na spacer.",
+"Hej, wy! Staæ! Dok¹d idziecie?",
+"Mój kapitan i ja wybieramy siê na spacer.",
 "Spacer?",
-"Nie wierzysz mi? Może więc spytasz pana kapitana?",
-"Dobrze, już dobrze. Idźcie sobie, gdzie chcecie.",
+"Nie wierzysz mi? Mo¿e wiêc spytasz pana kapitana?",
+"Dobrze, ju¿ dobrze. IdŸcie sobie, gdzie chcecie.",
 "...",
 
 };

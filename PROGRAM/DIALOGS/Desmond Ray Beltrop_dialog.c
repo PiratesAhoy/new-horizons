@@ -21,7 +21,7 @@ void ProcessDialogEvent()
 	else
 		PCharDiminutive = "boy";
 	
-	Preprocessor_Add("diminutive", PCharDiminutive);
+	Preprocessor_Add("diminutive", XI_ConvertString(PCharDiminutive));
 	// DeathDaisy <--
 	
 	switch(Dialog.CurrentNode)

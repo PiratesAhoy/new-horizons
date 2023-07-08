@@ -14,6 +14,9 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	ref lcn = &Locations[FindLocation(PChar.location)];
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
+
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
@@ -34,7 +37,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "First_orders":
-			PlaySound("VOICE\ENGLISH\simpson01.wav");
+			PlaySound(voice_path + "simpson01.wav");
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "First_orders2XX";
@@ -65,7 +68,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Fight_at_Charlestown":
-			PlaySound("VOICE\ENGLISH\simpson01.wav");
+			PlaySound(voice_path + "simpson01.wav");
 			dialog.text = DLG_TEXT[13];
 			link.l1 = DLG_TEXT[14];
 			link.l1.go = "Fight_at_Charlestown2";

@@ -19,6 +19,9 @@ void QuestComplete(string sQuestName)
 	string nearloc;// MAXIMUS
 	aref arship; // PB
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
+	
 	switch(sQuestName)
 	{
 		case "Start":
@@ -53,11 +56,11 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Major Dunnitt"), "Antigua_Port", "goto", "goto5");
 			LAi_SetGuardianTypeNoGroup(characterFromID("Major Dunnitt"));
 
-			LAi_ActorGoToLocator(characterfromID("Rifleman Cooper"), "merchant", "merchant2", "", 0.0);
-			LAi_ActorGoToLocator(characterfromID("Rifleman Haggman"), "merchant", "merchant2", "", 0.0);
-			LAi_ActorGoToLocator(characterfromID("Rifleman Harris"), "merchant", "merchant2", "", 0.0);
-			LAi_ActorGoToLocator(characterfromID("Rifleman Higgins"), "merchant", "merchant2", "", 0.0);
-			LAi_ActorGoToLocator(characterfromID("Rifleman Tongue"), "merchant", "merchant2", "", 0.0);
+			LAi_ActorGoToLocator(characterfromID("Rifleman Cooper"), "goto", "goto21", "", 0.0);
+			LAi_ActorGoToLocator(characterfromID("Rifleman Haggman"), "goto", "goto21", "", 0.0);
+			LAi_ActorGoToLocator(characterfromID("Rifleman Harris"), "goto", "goto21", "", 0.0);
+			LAi_ActorGoToLocator(characterfromID("Rifleman Higgins"), "goto", "goto21", "", 0.0);
+			LAi_ActorGoToLocator(characterfromID("Rifleman Tongue"), "goto", "goto21", "", 0.0);
 
 			LAi_SetCitizenType(characterFromID("Able Seaman Wilks"));
 			LAi_SetCitizenType(characterFromID("Able Seaman Tompkins"));
@@ -109,8 +112,22 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Oldroyd"));
 			LAi_SetActorType(characterFromID("Styles"));
 
+			LAi_QuestDelay("reset_riflemen", 0.0);
 			LAi_QuestDelay("Antigua_for_battle", 0.0);
 		break; // end testing
+
+		case "reset_riflemen":
+			LAi_SetActorType(characterFromID("Rifleman Cooper"));
+			LAi_SetActorType(characterFromID("Rifleman Haggman"));
+			LAi_SetActorType(characterFromID("Rifleman Harris"));
+			LAi_SetActorType(characterFromID("Rifleman Higgins"));
+			LAi_SetActorType(characterFromID("Rifleman Tongue"));
+			LAi_type_Actor_Reset(characterFromID("Rifleman Cooper"));
+			LAi_type_Actor_Reset(characterFromID("Rifleman Haggman"));
+			LAi_type_Actor_Reset(characterFromID("Rifleman Harris"));
+			LAi_type_Actor_Reset(characterFromID("Rifleman Higgins"));
+			LAi_type_Actor_Reset(characterFromID("Rifleman Tongue"));
+		break;
 
 		case "Join_the_ship_crew":
 			locations[FindLocation("Antigua_port")].type = "port";
@@ -120,11 +137,12 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Rifleman Harris"), "None", "");
 			ChangeCharacterAddress(characterFromID("Rifleman Higgins"), "None", "");
 			ChangeCharacterAddress(characterFromID("Rifleman Tongue"), "None", "");
+			LAi_QuestDelay("reset_riflemen", 0.0);
 			ChangeCharacterAddressGroup(CharacterFromID("C.S. Forester"), "none", "", ""); // PB
 
 			ChangeCharacterAddressGroup(characterFromID("Captain Keene"), "Antigua_academy", "goto", "goto4");
 			ChangeCharacterAddressGroup(characterFromID("Captain James Sawyer"), "Antigua_academy", "sit", "sit1");
-			LAi_ActorSetSitMode(characterFromID("Captain James Sawyer"));
+//			LAi_ActorSetSitMode(characterFromID("Captain James Sawyer"));
 			ChangeCharacterAddressGroup(characterFromID("Jack Simpson"), "Antigua_Academy", "goto", "goto6");
 			ChangeCharacterAddressGroup(characterFromID("Archie Kennedy"), "Antigua_Academy", "goto", "goto3");
 			ChangeCharacterAddressGroup(characterFromID("Clayton"), "Antigua_Academy", "goto", "goto2");
@@ -133,8 +151,8 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("William Chumley"), "Antigua_Academy", "goto", "goto5");
 			LAi_SetActorType(characterFromID("William Chumley"));
 			LAi_SetActorType(characterFromID("Jack Simpson"));
+//			LAi_SetActorType(characterFromID("Captain James Sawyer"));
 			LAi_SetSitType(characterfromID("Captain James Sawyer"));
-			LAi_SetActorType(characterFromID("Captain James Sawyer"));
 			characters[GetCharacterIndex("Captain James Sawyer")].Dialog.Filename = "Captain James Sawyer_dialog.c";
 			Characters[GetCharacterIndex("Captain James Sawyer")].dialog.currentnode = "Continue_with_Justinian";
 			LAi_SetActorType(pchar);
@@ -144,7 +162,7 @@ void QuestComplete(string sQuestName)
 		case "arrived_from_England":
 			LAi_SetPlayerType(pchar);
 			LAi_SetActorType(characterFromID("Captain James Sawyer"));
-			LAi_ActorSetSitMode(characterFromID("Captain James Sawyer"));
+//			LAi_ActorSetSitMode(characterFromID("Captain James Sawyer"));
 			LAi_ActorDialog(characterfromID("Captain James Sawyer"), pchar, "", 1.0, 1.0);
 			Characters[GetCharacterIndex("Captain James Sawyer")].dialog.currentnode = "Continue_with_Justinian";
 			Characters[GetCharacterIndex("Captain Keene")].dialog.currentnode = "Board_at_Charlestown";
@@ -158,6 +176,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Agent_supply_run":
+			LAi_SetSitType(characterfromID("Captain James Sawyer"));
 			AddQuestRecord("My First Ship", 8);
 			AddQuestRecord("My First Ship", 9);
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Archie Kennedy"));
@@ -189,7 +208,7 @@ void QuestComplete(string sQuestName)
 
 		case "more_of_the_same2":
 			LAi_SetPlayerType(pchar);
-			PlaySound("VOICE\ENGLISH\Clayton01.wav");
+			PlaySound(voice_path + "Clayton01.wav");
 			LAi_SetActorType(characterFromID("Clayton"));
 			LAi_SetActorType(characterFromID("Archie Kennedy"));
 			LAi_ActorDialog(characterfromID("Clayton"), pchar, "", 1.0, 1.0);
@@ -202,12 +221,6 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Rifleman Harris"), "Antigua_port", "reload", "houseS4");
 			ChangeCharacterAddressGroup(characterFromID("Rifleman Higgins"), "Antigua_port", "reload", "houseS4");
 			ChangeCharacterAddressGroup(characterFromID("Rifleman Tongue"), "Antigua_port", "reload", "houseS4");
-
-			LAi_SetActorType(characterFromID("Rifleman Cooper"));
-			LAi_SetActorType(characterFromID("Rifleman Haggman"));
-			LAi_SetActorType(characterFromID("Rifleman Harris"));
-			LAi_SetActorType(characterFromID("Rifleman Higgins"));
-			LAi_SetActorType(characterFromID("Rifleman Tongue"));
 
 			LAi_ActorDialog(characterfromID("Archie Kennedy"), pchar, "", 1.0, 1.0);
 		break;
@@ -234,6 +247,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Sir Hew Dalrymple"), "Antigua_Residence", "goto", "goto8");
 			ChangeCharacterAddressGroup(characterFromID("Archie Kennedy"), "Antigua_Residence", "goto", "goto4");
 			ChangeCharacterAddressGroup(characterFromID("Clayton"), "Antigua_Residence", "goto", "goto6");
+			LAi_QuestDelay("reset_riflemen", 0.0);
 			LAi_QuestDelay("First Briefing2", 0.0);
 		break;
 
@@ -310,7 +324,7 @@ void QuestComplete(string sQuestName)
 
 		case "Simpson_runs_off":
 			LAi_SetImmortal(Pchar, false);
-			PlaySound("VOICE\ENGLISH\Clayton01.wav");
+			PlaySound(voice_path + "Clayton01.wav");
 			LAi_ActorRunToLocator(characterFromID("Jack Simpson"), "goto", "goto9", "",10);
 			LAi_ActorDialog(characterfromID("Clayton"), pchar, "", 1.0, 1.0);
 			Characters[GetCharacterIndex("Clayton")].dialog.currentnode = "Charlestown_fight";
@@ -325,6 +339,11 @@ void QuestComplete(string sQuestName)
 			LAi_SetOfficerType(characterFromID("Clayton"));
 			LAi_SetOfficerType(characterFromID("Archie Kennedy"));
 
+			ChangeCharacterAddressGroup(characterFromID("Rifleman Cooper"), "Antigua_port", "goto", "goto3");
+			ChangeCharacterAddressGroup(characterFromID("Rifleman Haggman"), "Antigua_port", "goto", "goto3");
+			ChangeCharacterAddressGroup(characterFromID("Rifleman Harris"), "Antigua_port", "goto", "goto3");
+			ChangeCharacterAddressGroup(characterFromID("Rifleman Higgins"), "Antigua_port", "goto", "goto3");
+			ChangeCharacterAddressGroup(characterFromID("Rifleman Tongue"), "Antigua_port", "goto", "goto3");
 			LAi_ActorGoToLocator(characterfromID("Rifleman Cooper"), "reload", "houseS4", "", 0.0);
 			LAi_ActorGoToLocator(characterfromID("Rifleman Haggman"), "reload", "houseS4", "", 0.0);
 			LAi_ActorGoToLocator(characterfromID("Rifleman Harris"), "reload", "houseS4", "", 0.0);
@@ -335,6 +354,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Now_Join_The_Justinian":
+			LAi_QuestDelay("reset_riflemen", 0.0);
 			Locations[FindLocation("Antigua_port")].reload.l3.disable = 0;
 			Locations[FindLocation("Antigua_port")].reload.l5.disable = 0;
 			LAi_Fade("", "");
@@ -1021,7 +1041,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Rally_the_crew":
-			PostVideoAndQuest("Hornblower\Declaration of War",100, "");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("Hornblower\RUSSIAN\Declaration of War",100, "");
+			else PostVideoAndQuest("Hornblower\Declaration of War",100, "");
 		break;
 
 		case "French_Battle_Setup":
@@ -1625,7 +1646,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Now_take_the_ship3":
-			PostVideoAndQuest("Hornblower\Capture Le Reve", 100, "Back_to_the_Indy");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("Hornblower\RUSSIAN\Capture Le Reve", 100, "Back_to_the_Indy");
+			else PostVideoAndQuest("Hornblower\Capture Le Reve", 100, "Back_to_the_Indy");
 			bMainMenuLaunchAfterVideo = true;
 		break;
 
@@ -3278,7 +3300,8 @@ void QuestComplete(string sQuestName)
 		case "Le_Reve_Capture_at_sea2":
 			CI_CreateAndSetControls( "WorldMapControls", "WMapCancel", -1, 0, true );// TIH worldmap cancel screwup prevention Sep3'06
 			StorePassengers("Blaze");
-			PostVideoAndQuest("Hornblower\Le Reve Capture",100, "Go_to_Beach_for_Prison");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("Hornblower\RUSSIAN\Le Reve Capture",100, "Go_to_Beach_for_Prison");
+			else PostVideoAndQuest("Hornblower\Le Reve Capture",100, "Go_to_Beach_for_Prison");
 			bMainMenuLaunchAfterVideo = true;
 			SetNextWeather("Blue Sky");
 		break;
@@ -4225,7 +4248,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "rescue_boat_to_sea2":
-			PostVideoAndQuest("Hornblower\SHIPWRECK_0001", 100, "Again_Back_to_the_Indy");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("Hornblower\RUSSIAN\SHIPWRECK_0001", 100, "Again_Back_to_the_Indy");
+			else PostVideoAndQuest("Hornblower\SHIPWRECK_0001", 100, "Again_Back_to_the_Indy");
 			bMainMenuLaunchAfterVideo = true;
 		break;
 
@@ -10275,7 +10299,8 @@ void QuestComplete(string sQuestName)
 		case "Attack_the_Midshipman":
 			LAi_SetOfficerType(characterFromID("Lt. Uriah Quelp"));
 
-			Locations[FindLocation("Oxbay_Lighthouse")].locators_radius.goto.goto25 = 5.0;
+		//	Locations[FindLocation("Oxbay_Lighthouse")].locators_radius.goto.goto25 = 5.0;		// Permanent change, needs to be done before loading this location
+			SetLocatorRadius(locations[FindLocation("Oxbay_Lighthouse")], "goto", "goto25", 5.0);	// Temporary change, effective immediately
 			Pchar.quest.Attack_the_Midshipman2.win_condition.l1 = "locator";
 			Pchar.quest.Attack_the_Midshipman2.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Attack_the_Midshipman2.win_condition.l1.location = "Oxbay_Lighthouse";
@@ -15446,7 +15471,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorRunToLocator(characterFromID("Thomas Wolfe"), "reload", "locator3_back", "", 40);
 			LAi_ActorRunToLocator(characterFromID("Black Charlie Hammond"), "goto", "goto03", "", 40);
 
-			PlaySound("VOICE\ENGLISH\Bush21.wav");
+			PlaySound(voice_path + "Bush21.wav");
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			LAi_group_FightGroups("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, true);
 			LAi_group_SetCheck("FRANCE_SOLDIERS", "Hammond Suicide");

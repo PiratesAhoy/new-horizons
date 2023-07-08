@@ -29,7 +29,7 @@ void RegisterStoryline(int n)
 	{
 		case "Polish":
 			sl.(sn).title = "Nowe horyzonty";
-			sl.(sn).description = "Jako odwažny korsarz musisz walczyĺ ze zdradliwymi gubernatorami i niezwykle wrednym kapitanem piratów. Možesz w to wierzyĺ jeĺli tego pragniesz; možesz okłamywaĺ siebie že wielko›ĺ statku i ilo›ĺ dział jest najwažniejsza. Na pewno walczysz o bogactwo i sław×. Lecz wszystko sprowadza si× do znalezienia odpowiedzi na jedyne prawdziwe pytanie: czy Danielle wróci do Ciebie?";
+			sl.(sn).description = "Jako odwažny korsarz musisz walczyå ze zdradliwymi gubernatorami i niezwykle wrednym kapitanem piratów. Možesz w to wierzyå jeåli tego pragniesz; možesz ok³amywaå siebie že wielko›å statku i ilo›å dzia³ jest najwažniejsza. Na pewno walczysz o bogactwo i s³aw×. Lecz wszystko sprowadza si× do znalezienia odpowiedzi na jedyne prawdziwe pytanie: czy Danielle wróci do Ciebie?";
 		break;
 		// default:
 			sl.(sn).title = "Tales of a Sea Hawk";

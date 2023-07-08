@@ -397,6 +397,10 @@ Arrowsmith{Arrowsmith}
 Slave{Esclavo}
 Worker{Trabajador}
 Slaver{Esclavista}
+Josie{Josie}
+Sweat Shop{Sweat Shop}
+Sally{Sally}
+Sweat Shop Sally{Sweat Shop Sally}
 
 {=====| FalaiseDeFleur.c |=====}
 Milon{Milon}
@@ -669,8 +673,6 @@ Cervano{Cervano}
 Robierto{Robierto}
 Cabellodoferro{Cabellodoferro}
 
-{=====| monks.c |=====}
-
 {=====| NK.c |=====}
 First{Primero}
 Last{Último}
@@ -860,8 +862,6 @@ McGillicutty{McGillicutty}
 Sullivan{Sullivan}
 James{James}
 Lancaster{Lancaster}
-Cutler{Cutler}
-Beckett{Beckett}
 
 {=====| SaintMartin.c |=====}
 Dickman{Dickman}
@@ -1004,7 +1004,7 @@ Dusac{Dusac}
 Konrad{Konrad}
 Kulczycki{Kulczycki}
 Silver{Plata}
-Nathaniel's Crewmember{Marinero de Nathaniel}
+Nathaniel's Crewmember{Miembro de tu tripulación}
 Clair{Clair}
 Larrousse{Larrousse}
 France_bukaner_01{Bucanero francés}
@@ -1051,6 +1051,7 @@ Kicking{Cuervo}
 Raven{Que Patea}
 Lewis{Lewis}
 Vickers{Vickers}
+Carpenter1{Carpenter}
 
 {=====| StoreOwners.c |=====}
 Agent-Victualler{Agente de avituallamiento}
@@ -1320,6 +1321,17 @@ Orswood{Orswood}
 
 {=====| 1368 characters |=====}
 
+{=====| monks.c |=====}
+Kanhoji{Kanhoji}
+Angria{Angria}
+Surcouf{Surcouf}
+Yusuf{Yusuf}
+Rais{Rais}
+Uela{Uela
+de Marisco{de Marisco}
+Hugues{Hugues}
+Nantucket{Nantucket}
+Tuck{Tuck}
 
 {=====| Others |=====}
 Maltese{Caballero}
@@ -1341,3 +1353,4 @@ Harriett{Harriett}
 Anamaria{Anamaria}
 Scared Monk{Monje asustado}
 Cursed Skeleton{Esqueleto maldito}
+Monk{Monje}

@@ -1,0 +1,10 @@
+title=Traición en #sRedmond#
+text.t1=El plan francés es invadir #sRedmond# con la ayuda de #svillain#. Cuando los franceses lleguen a la puerta que da tierra adentro, los hombres de #svillain# tenderán una emboscada a los guardias y abrirán la puerta para dejar entrar a la fuerza francesa. Tal vez el gobernador de #sRedmond# esté dispuesto a pagar una recompensa a cambio de esta información.
+text.t2=No pude evitar la invasión y Francia ha tomado #sRedmond#. Este es un golpe amargo para la Gran Alianza. Pero tal vez me abre nuevas posibilidades de saqueo.
+text.t3=La invasión se ha producido: Francia ha conquistado #sRedmond#. Mala suerte para Inglaterra; no es que a mí me importe, de una manera u otra.
+text.t4=Vive la France! Los franceses han tenido éxito en su plan para conquistar #sRedmond#. Una base menos para nuestros enemigos, otro puerto amistoso para mi.
+text.t5=#sgovernor# no creyó mi advertencia sobre la invasión. Si quiero evitar que la banda de #svillain# permita que los franceses entren en #sRedmond#, tendré que vigilar #spronoun# casa por la noche para ver cuándo aparecen.
+text.t6=¡Vaya una recompensa! Estoy en la cárcel de nuevo. Afortunadamente los ingleses tiene mejores almohadas que los españoles. Desgraciadamente, eso significa que no puedo usarla para golpear a nadie en la cabeza.
+text.t7=Ayudar a prevenir la invasión de #sRedmond# ha tenido su recompensa después de todo. He recibido un indulto completo por mis crímenes pasados contra Inglaterra.
+text.t8=Ayudar a prevenir la invasión de #sRedmond# ha tenido su recompensa después de todo. He recibido una bonita bolsa de oro del gobernador.
+text.t9=Me pregunto qué intentarán hacer los franceses a continuación, ahora que han tomado #sisland_Redmond#. Cualquiera que sea su plan, tengo que encontrar una forma de sacar algo de oro de todo esto. Tal vez pueda persuadir, engañar o simplemente pedirle al nuevo gobernador de #sRedmond# que me lo diga.

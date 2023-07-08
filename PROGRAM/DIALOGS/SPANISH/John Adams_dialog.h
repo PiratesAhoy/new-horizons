@@ -22,7 +22,7 @@ string DLG_TEXT[40] = {
 "Bien. Te costará cinco piezas de oro.",
 "Muy bien. Aquí tienes.",
 "¿Tanto? Me parece que voy a pasar la noche en el salón de la taberna.",
-"¿Qué pago ocn eso? ¿La residencia del gobernador? No, gracias.",
+"¿Qué pago con eso? ¿La residencia del gobernador? No, gracias.",
 "Lo pensaré. Por ahora, déjame hacerte otra pregunta.",
 "Te costará cinco piezas de oro.",
 "Muy bien. Aquí tienes.",

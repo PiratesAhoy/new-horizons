@@ -1,7 +1,7 @@
 
 
 
-//Запретить сражаться персонажам в заданной локации
+//«апретить сражатьс€ персонажам в заданной локации
 void LAi_LocationFightDisable(ref location, bool isDisable)
 {
 	if(isDisable)
@@ -12,7 +12,7 @@ void LAi_LocationFightDisable(ref location, bool isDisable)
 	}
 }
 
-//Разрешить или запретить генерации монстров
+//–азрешить или запретить генерации монстров
 void LAi_LocationMonstersGen(ref location, bool isEnable)
 {
 	if(isEnable)
@@ -23,7 +23,7 @@ void LAi_LocationMonstersGen(ref location, bool isEnable)
 	}
 }
 
-//Установить время генерации монстров
+//”становить врем€ генерации монстров
 void LAi_LocationSetMonstersTime(ref location, float start, float end)
 {
 	//!!!
@@ -39,10 +39,10 @@ void LAi_LocationSetMonstersTime(ref location, float start, float end)
 
 bool LAi_LocationIsMonstersGen(ref location)
 {
-	//Проверим разрешение на генерацию монстров
+	//ѕроверим разрешение на генерацию монстров
 	if(CheckAttribute(location, "monsters") == false) return false;
 	if(sti(location.monsters) == 0) return false;
-	//Проверим время логина
+	//ѕроверим врем€ логина
 	if(CheckAttribute(location, "monsters.stime"))
 	{
 		if(CheckAttribute(location, "monsters.etime"))
@@ -55,7 +55,7 @@ bool LAi_LocationIsMonstersGen(ref location)
 	return true;
 }
 
-//Разрешить или запретить генерации фантомов при убийстве в данной локации
+//–азрешить или запретить генерации фантомов при убийстве в данной локации
 void LAi_LocationFantomsGen(ref location, bool isEnable)
 {
 	if(isEnable)

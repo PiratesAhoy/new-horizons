@@ -27,7 +27,7 @@ void BothQuestComplete(string sQuestName)
 	string playerGun = "";
 // PB <--
 
-	//trace ("ПРОВЕРЯЕТСЯ КВЕСТ " + sQuestName);
+	//trace ("ÏÐÎÂÅÐßÅÒÑß ÊÂÅÑÒ " + sQuestName);
 	switch(sQuestName)
 	{
 

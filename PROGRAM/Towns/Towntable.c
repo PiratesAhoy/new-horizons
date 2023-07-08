@@ -941,11 +941,12 @@ void LaunchRandomTownEvent(ref ctown)
 //	if(GetTownNation(ctown.id) == PIRATE)			return; // PB: Specific events cancelled for pirate towns
 
 	random = rand(RANDOM_TOWN_EVENTS_QTY-1);
+	Preprocessor_Add("town", FindTownName(ctown.id));
 	switch(random)
 	{
 		case RANDOM_TOWN_EVENT_MALARIA:
-			logTitle = "Malaria strikes "+FindTownName(ctown.id);
-			logEntry = "An increasing number of people in "+FindTownName(ctown.id)+" are reported to have died from Malaria. The civilian losses were quite high, but the soldiers in the local garrison have suffered even more.";
+			logTitle = GetTranslatedLog("Malaria strikes #stown#");
+			logEntry = GetTranslatedLog("An increasing number of people in #stown# are reported to have died from Malaria. The civilian losses were quite high, but the soldiers in the local garrison have suffered even more.");
 			iSize = GetTownSize(ctown.id);
 			SetTownSize(ctown.id, abs(iSize * 2/3));
 			iTroops = GetTownNumTroops(ctown.id);
@@ -955,8 +956,8 @@ void LaunchRandomTownEvent(ref ctown)
 		case RANDOM_TOWN_EVENT_PIRATES:
 			if(GetTownNation(ctown.id) == PIRATE)
 			{
-				logTitle = "Indians attack "+FindTownName(ctown.id);
-				logEntry = "A major attack of indians on "+FindTownName(ctown.id)+" has been reported by travellers. The indians seem to have plundered and massacred the civilian population as well as the local garrison. Finally the cannons of the garrison drove them away, leaving the town completely desolate.";
+				logTitle = GetTranslatedLog("Indians attack #stown#");
+				logEntry = GetTranslatedLog("A major attack of indians on #stown# has been reported by travellers. The indians seem to have plundered and massacred the civilian population as well as the local garrison. Finally the cannons of the garrison drove them away, leaving the town completely desolate.");
 				iSize = GetTownSize(ctown.id);
 				SetTownSize(ctown.id, abs(iSize * 1/3));
 				iTroops = GetTownNumTroops(ctown.id);
@@ -967,8 +968,8 @@ void LaunchRandomTownEvent(ref ctown)
 			}
 			else
 			{
-				logTitle = "Pirates plunder "+FindTownName(ctown.id);
-				logEntry = "A pirate assault on "+FindTownName(ctown.id)+" has been reported. Some pirates seem to have sneaked into town before their ships attacked the harbor in the middle of the night. Those in town took the garrison by surprise and kept the town gates open for their comrades. The whole attack didn't last much longer than two hours. The pirates escaped with a vast amount of gold, before the fort commander was able to gather his troops for defence. Several people died in the brutal attack, as they tried to defend their possesions on their own.";
+				logTitle = GetTranslatedLog("Pirates plunder #stown#");
+				logEntry = GetTranslatedLog("A pirate assault on #stown# has been reported. Some pirates seem to have sneaked into town before their ships attacked the harbor in the middle of the night. Those in town took the garrison by surprise and kept the town gates open for their comrades. The whole attack didn't last much longer than two hours. The pirates escaped with a vast amount of gold, before the fort commander was able to gather his troops for defence. Several people died in the brutal attack, as they tried to defend their possesions on their own.");
 				iSize = GetTownSize(ctown.id);
 				SetTownSize(ctown.id, abs(iSize * 5/6));
 				iTroops = GetTownNumTroops(ctown.id);
@@ -979,8 +980,8 @@ void LaunchRandomTownEvent(ref ctown)
 			}
 		break;
 		case RANDOM_TOWN_EVENT_GOLDFOUND:
-			logTitle = "Gold found near "+FindTownName(ctown.id);
-			logEntry = "Miners from "+FindTownName(ctown.id)+" have struck a rich vein of gold. A new gold mine has been opened and the governor has sent for more troops in order to better protect the town from possible attacks. The new riches attract all kind of people, so "+FindTownName(ctown.id)+" is expected to grow.";
+			logTitle = GetTranslatedLog("Gold found near #stown#");
+			logEntry = GetTranslatedLog("Miners from #stown# have struck a rich vein of gold. A new gold mine has been opened and the governor has sent for more troops in order to better protect the town from possible attacks. The new riches attract all kind of people, so #stown# is expected to grow.");
 			iSize = GetTownSize(ctown.id) + 300;
 			SetTownSize(ctown.id, iSize);
 			iTroops = GetTownNumTroops(ctown.id) + 100;
@@ -990,8 +991,8 @@ void LaunchRandomTownEvent(ref ctown)
 			AdjustTownEconomy(ctown, 2);
 		break;
 		case RANDOM_TOWN_EVENT_SILVERFOUND:
-			logTitle = "Silver found near "+FindTownName(ctown.id);
-			logEntry = "Miners from "+FindTownName(ctown.id)+" have struck a rich vein of silver. A new silver mine has been opened and the governor has sent for more troops in order to better protect the town from possible attacks. The new riches attract all kind of people, so "+FindTownName(ctown.id)+" is expected to grow.";
+			logTitle = GetTranslatedLog("Silver found near #stown#");
+			logEntry = GetTranslatedLog("Miners from #stown# have struck a rich vein of silver. A new silver mine has been opened and the governor has sent for more troops in order to better protect the town from possible attacks. The new riches attract all kind of people, so #stown# is expected to grow.");
 			iSize = GetTownSize(ctown.id) + 200;
 			SetTownSize(ctown.id, iSize);
 			iTroops = GetTownNumTroops(ctown.id) + 60;
@@ -1001,8 +1002,8 @@ void LaunchRandomTownEvent(ref ctown)
 			AdjustTownEconomy(ctown, 1);
 		break;
 		case RANDOM_TOWN_EVENT_INDIANS:
-			logTitle = "Indians attack "+FindTownName(ctown.id);
-			logEntry = "A major attack of indians on "+FindTownName(ctown.id)+" has been reported by travellers. The indians seem to have plundered and massacred the civilian population as well as the local garrison. Finally the cannons of the garrison drove them away, leaving the town completely desolate.";
+			logTitle = GetTranslatedLog("Indians attack #stown#");
+			logEntry = GetTranslatedLog("A major attack of indians on #stown# has been reported by travellers. The indians seem to have plundered and massacred the civilian population as well as the local garrison. Finally the cannons of the garrison drove them away, leaving the town completely desolate.");
 			iSize = GetTownSize(ctown.id);
 			SetTownSize(ctown.id, abs(iSize * 1/3));
 			iTroops = GetTownNumTroops(ctown.id);
@@ -1012,8 +1013,8 @@ void LaunchRandomTownEvent(ref ctown)
 			AdjustTownEconomy(ctown, -2);
 		break;
 		case RANDOM_TOWN_EVENT_SLAVEREVOLT:
-			logTitle = "Slave revolt at "+FindTownName(ctown.id);
-			logEntry = "The governor of "+FindTownName(ctown.id)+" spread news that a slave revolt has been put down by the local garrison. All surviving marauders were hanged as a warning. Although the rebellion has been put down, the loss of quite a lot of slaves is expected to have a bad impact on the economy of "+FindTownName(ctown.id)+".";
+			logTitle = GetTranslatedLog("Slave revolt at #stown#");
+			logEntry = GetTranslatedLog("The governor of #stown# spread news that a slave revolt has been put down by the local garrison. All surviving marauders were hanged as a warning. Although the rebellion has been put down, the loss of quite a lot of slaves is expected to have a bad impact on the economy of #stown#.");
 			iSize = GetTownSize(ctown.id);
 			SetTownSize(ctown.id, abs(iSize * 3/4));
 			iTroops = GetTownNumTroops(ctown.id);
@@ -1021,8 +1022,8 @@ void LaunchRandomTownEvent(ref ctown)
 			AdjustTownEconomy(ctown, -1);
 		break;
 		case RANDOM_TOWN_EVENT_FIRE:
-			logTitle = "Serious fire in "+FindTownName(ctown.id);
-			logEntry = "A serious fire has laid waste to parts of "+FindTownName(ctown.id)+". The fire erupted near the harbor, where a warehouse suddenly exploded into flames. There is rumor it was stocked with oil or gunpowder or even both. The fire quickly spread and could not be quenched until two days later. Quite a lot of people are reported to have died in the attempt to save their belongings from the flames.";
+			logTitle = GetTranslatedLog("Serious fire in #stown#");
+			logEntry = GetTranslatedLog("A serious fire has laid waste to parts of #stown#. The fire erupted near the harbor, where a warehouse suddenly exploded into flames. There is rumor it was stocked with oil or gunpowder or even both. The fire quickly spread and could not be quenched until two days later. Quite a lot of people are reported to have died in the attempt to save their belongings from the flames.");
 			iSize = GetTownSize(ctown.id);
 			SetTownSize(ctown.id, abs(iSize * 4/5));
 			iGold = GetTownGold(ctown.id);
@@ -1030,8 +1031,8 @@ void LaunchRandomTownEvent(ref ctown)
 			AdjustTownEconomy(ctown, -1);
 		break;
 		case RANDOM_TOWN_EVENT_HURRICANE:
-			logTitle = "Hurricane strikes "+FindTownName(ctown.id);
-			logEntry = FindTownName(ctown.id)+" has been struck by a serious hurricane. Wind and water destroyed many buildings in town, especially the poorer parts were hit badly. Several ships in the harbor sunk as a result of the hurricane. Diseases are expected to spread throughout town as usual after such disasters.";
+			logTitle = GetTranslatedLog("Hurricane strikes #stown#");
+			logEntry = GetTranslatedLog("#stown# has been struck by a serious hurricane. Wind and water destroyed many buildings in town, especially the poorer parts were hit badly. Several ships in the harbor sunk as a result of the hurricane. Diseases are expected to spread throughout town as usual after such disasters.");
 			iSize = GetTownSize(ctown.id);
 			SetTownSize(ctown.id, abs(iSize * 4/5));
 			iTroops = GetTownNumTroops(ctown.id);
@@ -1041,8 +1042,8 @@ void LaunchRandomTownEvent(ref ctown)
 			AdjustTownEconomy(ctown, -1);
 		break;
 		case RANDOM_TOWN_EVENT_SETTLERS:
-			logTitle = "New settlers at "+FindTownName(ctown.id);
-			logEntry = "A convoy of ships bringing new settlers from Europe has arrived at "+FindTownName(ctown.id)+". The new settlers are badly needed to strengthen the economy of the town. It has been reported that the convoi also brought luxory goods and new inventions from Europe to the colonies, as well as a small battalion of soldiers.";
+			logTitle = GetTranslatedLog("New settlers at #stown#");
+			logEntry = GetTranslatedLog("A convoy of ships bringing new settlers from Europe has arrived at #stown#. The new settlers are badly needed to strengthen the economy of the town. It has been reported that the convoy also brought luxury goods and new inventions from Europe to the colonies, as well as a small battalion of soldiers.");
 			iSize = GetTownSize(ctown.id) + 150;
 			SetTownSize(ctown.id, iSize);
 			iTroops = GetTownNumTroops(ctown.id)+50;
@@ -1052,8 +1053,8 @@ void LaunchRandomTownEvent(ref ctown)
 			AdjustTownEconomy(ctown, 1);
 		break;  
 		case RANDOM_TOWN_EVENT_EXPEDITION:
-			logTitle = "Expedition returns to "+FindTownName(ctown.id);
-			logEntry = "An expedition into the jungle has returned to "+FindTownName(ctown.id)+". The expedition was a great success, as the explorers found a gold vein not far away, which was exploited by a native tribe. The explorers captured the village and enslaved the surviving indians in order to establish a new mining camp. The expedition finally returned with a great amount of goods and gold, several hitherto unknown plants and a number of slaves.";
+			logTitle = GetTranslatedLog("Expedition returns to #stown#");
+			logEntry = GetTranslatedLog("An expedition into the jungle has returned to #stown#. The expedition was a great success, as the explorers found a gold vein not far away, which was exploited by a native tribe. The explorers captured the village and enslaved the surviving indians in order to establish a new mining camp. The expedition finally returned with a great amount of goods and gold, several hitherto unknown plants and a number of slaves.");
 			iSize = GetTownSize(ctown.id)+200;
 			SetTownSize(ctown.id, iSize);
 			iTroops = GetTownNumTroops(ctown.id);
@@ -1066,7 +1067,8 @@ void LaunchRandomTownEvent(ref ctown)
 			AdjustTownEconomy(ctown, 1);
 		break;
 	}
-	if(logTitle != "") WriteNewLogEntry(logTitle, logEntry, "General", false);
+	if(logTitle != "") WriteNewLogEntry(PreprocessText(logTitle), PreprocessText(logEntry), "General", false);
+	Preprocessor_Delete("town");
 }
 // <-- Sulan
 
@@ -1855,23 +1857,27 @@ void AddTown(ref n, ref ctown)
 		makearef(archr, rPeriod.Towns.(stmp).gov);
 		if (CheckAttribute(archr, "name")) {
 			chr.old.name = archr.name;
-			chr.name = TranslateString("", chr.old.name);
+		//	chr.name = TranslateString("", chr.old.name);
+			chr.name = GetTranslatedPeriod(chr.old.name);
 		}
 		if (CheckAttribute(archr, "middlename")) {
 			chr.old.middlename = archr.middlename;
-			chr.middlename = TranslateString("", chr.old.middlename);
+		//	chr.middlename = TranslateString("", chr.old.middlename);
+			chr.middlename = GetTranslatedPeriod(chr.old.middlename);
 		} else {
 			if (CheckAttribute(chr, "middlename")) DeleteAttribute(chr, "middlename");
 		}
 		if (CheckAttribute(archr, "nickname")) {
 			chr.old.nickname = archr.nickname;
-			chr.nickname = TranslateString("", chr.old.nickname);
+		//	chr.nickname = TranslateString("", chr.old.nickname);
+			chr.nickname = GetTranslatedPeriod(chr.old.nickname);
 		} else {
 			if (CheckAttribute(chr, "nickname")) DeleteAttribute(chr, "nickname");
 		}
 		if (CheckAttribute(archr, "lastname")) {
 			chr.old.lastname = archr.lastname;
-			chr.lastname = TranslateString("", chr.old.lastname);
+		//	chr.lastname = TranslateString("", chr.old.lastname);
+			chr.lastname = GetTranslatedPeriod(chr.old.lastname);
 		}
 		if (CheckAttribute(archr, "sex")) chr.sex = archr.sex;
 		if (CheckAttribute(archr, "model")) SetModelFromID(chr, archr.model);

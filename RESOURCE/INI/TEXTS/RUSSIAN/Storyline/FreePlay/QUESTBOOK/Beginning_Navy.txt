@@ -1,2 +1,2 @@
-title=#stown# Assignment
-text.t1=Having served in the West Indies for a couple of years, I've finally been appointed commander of my own ship with orders to cruise for prizes. This gives me immense freedom - I am as close to the master of my own fate as one could be in the service.
+title=Назначение Командира в городе #stown#.
+text.t1=Прослужив пару лет в Вест-Индии, я наконец-то был назначен командиром собственного корабля с приказом отправиться в плавание за призами. Это дает мне огромную свободу - я настолько близок к хозяину своей судьбы, насколько это возможно на службе.

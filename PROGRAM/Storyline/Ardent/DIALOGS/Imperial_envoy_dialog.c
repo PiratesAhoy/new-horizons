@@ -19,7 +19,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -227,10 +227,8 @@ void ProcessDialogEvent()
 		case "believe_ardent":
 			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
 			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(PChar)));
-//			if (PChar.sex == "man") Preprocessor_Add("pronoun3", XI_ConvertString("his"));
-//			else Preprocessor_Add("pronoun3", XI_ConvertString("her"));
 			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(PChar)));
-			dialog.text = DLG_TEXT[69] + GetRankName(CharacterFromID("Jusepe Guimaraes"), sti(Characters[GetCharacterIndex("Jusepe Guimaraes")].nation)) + DLG_TEXT[70] + GetMyLastName(PChar) + DLG_TEXT[71] + GetMyLastName(PChar) + DLG_TEXT[72] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[73];
+			dialog.text = DLG_TEXT[69] + XI_ConvertString(GetRankName(CharacterFromID("Jusepe Guimaraes"), sti(Characters[GetCharacterIndex("Jusepe Guimaraes")].nation))) + DLG_TEXT[70] + GetMyLastName(PChar) + DLG_TEXT[71] + GetMyLastName(PChar) + DLG_TEXT[72] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[73];
 			link.l1 = "";
 			link.l1.go = "exit";
 		break;
@@ -238,8 +236,6 @@ void ProcessDialogEvent()
 		case "demand_justice":
 			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
 			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(PChar)));
-//			if (PChar.sex == "man") Preprocessor_Add("pronoun3", XI_ConvertString("his"));
-//			else Preprocessor_Add("pronoun3", XI_ConvertString("her"));
 			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(PChar)));
 			string finally = "";
 			if(!LAi_IsDead(CharacterFromID("Emiliano de Guzmán"))) finally = DLG_TEXT[77] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[78];
@@ -267,7 +263,7 @@ void ProcessDialogEvent()
 
 		case "report_admiral_good":
 			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(PChar)));
-			dialog.text = GetRankName(CharacterFromID("Jusepe Guimaraes"), sti(Characters[GetCharacterIndex("Jusepe Guimaraes")].nation)) + DLG_TEXT[85] + PCname + DLG_TEXT[86];
+			dialog.text = XI_ConvertString(GetRankName(CharacterFromID("Jusepe Guimaraes"), sti(Characters[GetCharacterIndex("Jusepe Guimaraes")].nation))) + DLG_TEXT[85] + PCname + DLG_TEXT[86];
 			link.l1 = "";
 			link.l1.go = "exit";
 		break;

@@ -64,7 +64,7 @@ void ProcessDialogEvent()
 				if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")) || sti(GetAttribute(NPChar, "nation")) == PERSONAL_NATION)
 				{
 					if(sti(GetAttribute(NPChar, "nation")) == PERSONAL_NATION) d.Text = DLG_TEXT[68] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + DLG_TEXT[69];
-					else d.Text = DLG_TEXT[68] + GetRankName(PChar, sti(GetAttribute(NPChar, "nation"))) + DLG_TEXT[69];
+					else d.Text = DLG_TEXT[68] + XI_ConvertString(GetRankName(PChar, sti(GetAttribute(NPChar, "nation")))) + DLG_TEXT[69];
 					Link.l1 = DLG_TEXT[70];
 					Link.l1.go = "trade";
 					Link.l2 = DLG_TEXT[5];
@@ -383,7 +383,7 @@ void ProcessDialogEvent()
 				//проверка враждебности нам страны торговца
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
-					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
+					Preprocessor_Add("nation_desc", XI_ConvertString(GetNationDescByType(sti(NPChar.nation))));
 					dialog.text = DLG_TEXT[51];
 					link.l1 = DLG_TEXT[52];
 					link.l1.go = "exit";

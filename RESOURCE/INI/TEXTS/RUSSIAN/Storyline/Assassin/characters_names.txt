@@ -8,13 +8,15 @@ Elting{Элтинг}
 {=====| quests_reaction.c |=====}
 
 {=====| Story.c |=====}
-Salvadore{}
+Salvadore{Сальвадор}
 Benavides{Бенавидес}
-Soldier{}
+Soldier{Солдат}
 Indian{Индеец}
 Street{Уличный}
 Merchant{Торговец}
 Chief{Вождь}
+Indian Chief{Вождь Индейцев}
+Street Merchant{Уличный Торговец}
 
 {=====| TempQuest.c |=====}
 Enrique{Энрике}
@@ -22,21 +24,21 @@ Padilla{Падилья}
 Baltasar{Бальтазар}
 Salgada{Сальгада}
 Captain{Капитан}
-Damski{Damski}
+Damski{Дамски}
 Chico{Чико}
 Cois{Коис}
 Dominico{Доминико}
 Cuellar{Куэльяр}
-Harold{}
+Harold{Хэролд}
 Flesher{Флешер}
 Pelagius{Пелагий}
 Lizarraga{Лизаррага}
 Gabriel{Габриэль}
 Brugera{Бругера}
-Tello{}
-Basadre{}
-Aurelien{}
-Bergerat{}
+Tello{Телло}
+Basadre{Басадре}
+Aurelien{Аврельен}
+Bergerat{Бержерат}
 Ambroz{Амброз}
 Bricenos{Бриценос}
 Mateus{Матеус}
@@ -48,11 +50,11 @@ Vassal{Вассал}
 Bethune{Битюн}
 Daryl{Дэрил}
 Larry{Ларри}
-Thomas the{}
-Terror{}
+Thomas the{Томас}
+Terror{Террор}
 Camille{Камилла}
 Leone{Леоне}
-Prisoner{}
+Prisoner{Заключенный}
 Geffrey{Джеффри}
 Bampfylde{Бампфилд}
 Bucho{Бучо}
@@ -63,70 +65,70 @@ Vito{Вито}
 Amerigo{Америго}
 Vieira{Виейра}
 Nicholas{Николас}
-Butcher{}
+Butcher{Батчер}
 Roche{Роше}
-Brasiliano{}
-Renouart{}
-Baumont{}
-Lady{}
-Gaga{}
-Blaas{}
-Davids{}
-Paul{}
-Brink{}
-Sampson{}
-Burrell{}
-Cesario{}
-de Rosas{}
+Brasiliano{Бразилиано}
+Renouart{Ренуарт}
+Baumont{Баумонт}
+Lady{Леди}
+Gaga{Гага}
+Blaas{Блаас}
+Davids{Дэвидс}
+Paul{Пол}
+Brink{Бринк}
+Sampson{Сэмпсон}
+Burrell{Баррел}
+Cesario{Чезарио}
+de Rosas{де Розас}
 Hans{Ханс}
-Delorme{}
-Rabel{}
-Chardon{}
-Jeremy{}
-Tripper{}
-Clement{}
-Bossicar{}
+Delorme{Делорм}
+Rabel{Рабэл}
+Chardon{Шардон}
+Jeremy{Джереми}
+Tripper{Триппер}
+Clement{Клемент}
+Bossicar{Боссикар}
 Wilfred{Уилфред}
-Larner{}
-Bartolomeu{}
-o Portugues{}
+Larner{Ларнер}
+Bartolomeu{Бартоломью}
+o Portugues{Португалец}
 Emilio{Эмилио}
 Soares{Соарес}
 Henry{Генри}
-Morgan{}
-Berend{}
-de Voor{}
+Morgan{Морган}
+Berend{Беренд}
+de Voor{де Вур}
 Leonardo{Леонардо}
-Corrales{}
-Andrew{}
-Parson{}
+Corrales{Корралес}
+Andrew{Эндрю}
+Parson{Парсон}
 William{Уильям}
-Cotter{}
-Roxanne{}
-Lalliere{}
+Cotter{Коттер}
+Roxanne{Роксанна}
+Lalliere{Лаллиера}
 Guibert{Гиберт}
-Daudet{}
-Diablo{}
-Villalobos{}
+Daudet{Додэ}
+Diablo{Дьябло}
+Villalobos{Вильялобос}
 Pirate{Пират}
-Capitan{}
-Caceres{}
+Capitan{Капитан}
+Caceres{Касерес}
 
 {=====| TempQuestEnemy.c |=====}
 Gilles{Жиль}
-Chennault{}
-Aimery{}
-Bourgouin{}
-d'Aigreville{}
-Barnabas{}
-Delbridge{}
+Chennault{Шеннолт}
+Aimery{Эймери}
+Bourgouin{Бургуин}
+d'Aigreville{д'Эгревиль}
+Barnabas{Барнабас}
+Delbridge{Делбридж}
 David{Дэвид}
-Fewster{}
+Fewster{Фьюстер}
 Laurence{Лоурэнс}
-Damson{}
+Damson{Дэмсон}
 Grigorio{Григорио}
-Cadena{}
-Bautista{}
-Lozano{}
+Cadena{Кадена}
+Bautista{Баутиста}
+Lozano{Лозано}
 
 {=====| 143 characters |=====}

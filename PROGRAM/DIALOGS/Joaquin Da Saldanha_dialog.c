@@ -34,7 +34,7 @@ void ProcessDialogEvent()
 
 			if  (makeint(pchar.reputation) >= REPUTATION_PLAIN && PChar.quest.Lucas == "")
 			{
-				Preprocessor_Add("person", PChar.sex);
+				Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 				dialog.text = DLG_TEXT[2] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[3])]) + DLG_TEXT[5];
 				link.l1 = DLG_TEXT[6];
 				link.l1.go = "Find_Lucas2";

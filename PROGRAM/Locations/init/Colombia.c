@@ -3396,7 +3396,7 @@ void LocationInitColombia(ref n)
 	n = n + 1;
 
 	//--------------------------------------------------------------------------
-//pär
+//pÃ¤r
 	Locations[n].id = "New_cloister_library";
 	locations[n].id.label = "Library";
 	Locations[n].filespath.models = "locations\inside\Dungeon_2\\";

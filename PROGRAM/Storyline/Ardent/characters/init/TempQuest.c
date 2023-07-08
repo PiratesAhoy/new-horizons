@@ -812,7 +812,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Hasta";
+	ch.Ship.Name = TranslateString("","Hasta");
 	ch.Ship.Type = "FastGalleon3";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -855,7 +855,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Neptuno";
+	ch.Ship.Name = TranslateString("","Neptuno");
 	ch.Ship.Type = "FastGalleon4";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -950,7 +950,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "San Lorenzo";
+	ch.Ship.Name = TranslateString("","San Lorenzo");
 	ch.Ship.Type = "FastGalleon5";
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 5;

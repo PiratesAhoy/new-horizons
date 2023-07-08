@@ -1,5 +1,5 @@
 string DLG_TEXT[125] = {
-"Me han dicho que has insistido mucho para para hablar conmigo. Mi nombre es ",
+"Me han dicho que has insistido mucho para hablar conmigo. Mi nombre es ",
 ". Ahora, por favor, dime el propósito de tu visita, ",
 ".",
 "Mi nombre es ",

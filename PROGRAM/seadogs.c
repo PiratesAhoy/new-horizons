@@ -1359,12 +1359,12 @@ void ProcessControls()
 					if(sti(GetAttribute(GetMainCharacter(), "clubhauling")) == 1 )
 					{
 						Characters[GetMaincharacterIndex()].clubhauling = -1;
-						LogIt("Clubhauling default direction set to PORT");
+						LogIt(TranslateString("","Clubhauling default direction set to PORT"));
 					}
 					else
 					{
 						Characters[GetMaincharacterIndex()].clubhauling = 1;
-						LogIt("Clubhauling default direction set to STARBOARD");
+						LogIt(TranslateString("","Clubhauling default direction set to STARBOARD"));
 					}
 				}
 			break;
@@ -2134,7 +2134,7 @@ void ProcessControls()
 				}
 				else
 				{
-					LogIt("You don't have a map of the archipelago.");
+					LogIt(TranslateString("","You don't have a map of the archipelago."));
 				}
 			break;
 // dchaley <--

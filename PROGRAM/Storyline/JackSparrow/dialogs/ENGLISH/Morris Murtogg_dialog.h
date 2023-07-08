@@ -6,7 +6,7 @@ string DLG_TEXT[43] = {
 "Cos the Governor his-self said so. There's a big to-do up at the Fort and at the Residence and he doesn't want no interruptions sailin' between the two.",
 "It's a fine goal to be sure but it seems to me that with all these ships here, there's not much chance of interruption. In fact with a ship like the Dauntless out there in the harbour, it makes the Interceptor tied up here a bit superfluous, really.",
 "Oh, the Dauntless is the power in these waters, true enough, but there's no ship as can match the Interceptor for speed.",
-"I've heard of one, supposed to be very fast - nigh un-catchable...the #scursed_ship#.",
+"I've heard of one, supposed to be very fast - nigh un-catchable...the #scursedship#.",
 "'Ere, What's your name then?",
 "Smith, or Smithy, if you like.",
 "Yea, and no lies mind you.",

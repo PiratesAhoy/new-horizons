@@ -111,8 +111,8 @@ Harper{Харпер}
 Haggman{Хаггман}
 Harris{Харрис}
 Lafitte{Лафитт}
-Bartolomeu{Бартоломео}
-o Portugues{Португальский}
+Bartolomeu{Бартоломью}
+o Portugues{Португалец}
 Emilio{Эмилио}
 Soares{Соарес}
 Johan{Йоган}

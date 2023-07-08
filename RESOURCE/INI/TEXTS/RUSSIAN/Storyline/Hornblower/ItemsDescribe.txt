@@ -1,0 +1,6 @@
+
+itmname_MariasLetter		{Письмо от Марии}
+itmdescr_MariasLetter
+{
+Письмо от Марии, написанное незадолго до её смерти.
+}

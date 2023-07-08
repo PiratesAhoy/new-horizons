@@ -202,7 +202,7 @@ void ProcessCommandExecute()
 				if (comName == "activate" || comName == "click")
 				{
 					DoSelectNextTown();
-					SetCurrentNode("EXIT_BUTTON");
+				//	SetCurrentNode("EXIT_BUTTON");
 				}
 			} // Screwface : end
 			if (nodName == "BERTHASHIPHEREBTN")
@@ -211,7 +211,7 @@ void ProcessCommandExecute()
 				{
 					SelectedPort = CurrentPortNumber;
 					ChangeWindow("Berth Ship - Choose Ship");
-				    SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -220,7 +220,7 @@ void ProcessCommandExecute()
 				if (comName == "activate" || comName == "click")
 				{
 					ProcessCancelExit();
-				    SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -229,7 +229,7 @@ void ProcessCommandExecute()
 				SelectedBerthingSlot = 1;
 				SelectedPort = nCurTown; // Sulan
 				ChangeWindow("Berthed Ship Details");
-				SetCurrentNode("EXIT_BUTTON");
+			//	SetCurrentNode("EXIT_BUTTON");
 			}
 
 			if (nodName == "SHIP2STATUSTXT" && comName == "click" && PChar.ShipBerthing.(tempstring1).slot2.status > 0)
@@ -237,7 +237,7 @@ void ProcessCommandExecute()
 				SelectedBerthingSlot = 2;
 				SelectedPort = nCurTown; // Sulan
 				ChangeWindow("Berthed Ship Details");
-				SetCurrentNode("EXIT_BUTTON");
+			//	SetCurrentNode("EXIT_BUTTON");
 			}
 
 			if (nodName == "SHIP3STATUSTXT" && comName == "click" && PChar.ShipBerthing.(tempstring1).slot3.status > 0)
@@ -245,7 +245,7 @@ void ProcessCommandExecute()
 				SelectedBerthingSlot = 3;
 				SelectedPort = nCurTown; // Sulan
 				ChangeWindow("Berthed Ship Details");
-				SetCurrentNode("EXIT_BUTTON");
+			//	SetCurrentNode("EXIT_BUTTON");
 			}
 
 			if (nodName == "SHIP4STATUSTXT" && comName == "click" && PChar.ShipBerthing.(tempstring1).slot4.status > 0)
@@ -253,7 +253,7 @@ void ProcessCommandExecute()
 				SelectedBerthingSlot = 4;
 				SelectedPort = nCurTown; // Sulan
 				ChangeWindow("Berthed Ship Details");
-				SetCurrentNode("EXIT_BUTTON");
+			//	SetCurrentNode("EXIT_BUTTON");
 			}
 
 		break;
@@ -268,7 +268,7 @@ void ProcessCommandExecute()
 					SelectedBerthingSlot = 1;
 					SelectedPort = nCurTown; // Sulan
 					ChangeWindow("Base");
-				    SetCurrentNode("BERTHASHIPHEREBTN");
+					SetCurrentNode("BERTHASHIPHEREBTN");
 				}
 			}
 
@@ -277,7 +277,7 @@ void ProcessCommandExecute()
 				if (comName == "activate" || comName == "click")
 				{
 					ChangeWindow("Relaunch Berthed Ship - Choose Slot");
-				    SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -286,7 +286,7 @@ void ProcessCommandExecute()
 				if (comName == "activate" || comName == "click")
 				{
 					ConfirmationWindow("Scrap berthed ship");
-				    SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -302,7 +302,7 @@ void ProcessCommandExecute()
 					{
 						ConfirmationWindow("Scrap berthed ship");
 					}
-				    SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -323,7 +323,7 @@ void ProcessCommandExecute()
 					SwapMethod = 1;
 				}
 				ChangeWindow("Final Details");
-				SetCurrentNode("EXIT_BUTTON");
+			//	SetCurrentNode("EXIT_BUTTON");
 			}
 
 			if (nodName == "SHIP2STATUSTXT" && comName == "click")
@@ -343,7 +343,7 @@ void ProcessCommandExecute()
 							SwapMethod = 1;
 						}
 						ChangeWindow("Final Details");
-					    SetCurrentNode("EXIT_BUTTON");
+			//			SetCurrentNode("EXIT_BUTTON");
 					}
 				}
 				else
@@ -370,7 +370,7 @@ void ProcessCommandExecute()
 							SwapMethod = 1;
 						}
 						ChangeWindow("Final Details");
-					    SetCurrentNode("EXIT_BUTTON");
+			//			SetCurrentNode("EXIT_BUTTON");
 					}
 				}
 				else
@@ -397,7 +397,7 @@ void ProcessCommandExecute()
 							SwapMethod = 1;
 						}
 						ChangeWindow("Final Details");
-					    SetCurrentNode("EXIT_BUTTON");
+			//			SetCurrentNode("EXIT_BUTTON");
 					}
 				}
 				else
@@ -412,7 +412,7 @@ void ProcessCommandExecute()
 				if (comName == "activate" || comName == "click")
 				{
 					ChangeWindow("Berthed Ship Details");
-				    SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -428,7 +428,7 @@ void ProcessCommandExecute()
 				{
 					SelectedCompanionSlot = 1;
 					ChangeWindow("Berth Ship - Choose Slot");
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 				else
 				{
@@ -444,7 +444,7 @@ void ProcessCommandExecute()
 					SelectedCompanionSlot = 2;
 					ChangeWindow("Berth Ship - Choose Slot");
 				}
-				SetCurrentNode("EXIT_BUTTON");
+			//	SetCurrentNode("EXIT_BUTTON");
 			}
 
 			if (nodName == "SHIP3STATUSTXT" && comName == "click")
@@ -454,7 +454,7 @@ void ProcessCommandExecute()
 					SelectedCompanionSlot = 3;
 					ChangeWindow("Berth Ship - Choose Slot");
 				}
-				SetCurrentNode("EXIT_BUTTON");
+			//	SetCurrentNode("EXIT_BUTTON");
 			}
 
 			if (nodName == "SHIP4STATUSTXT" && comName == "click")
@@ -464,7 +464,7 @@ void ProcessCommandExecute()
 					SelectedCompanionSlot = 4;
 					ChangeWindow("Berth Ship - Choose Slot");
 				}
-				SetCurrentNode("EXIT_BUTTON");
+			//	SetCurrentNode("EXIT_BUTTON");
 			}
 
 			if (nodName == "RBSCS_CANCELBTN")
@@ -521,7 +521,7 @@ void ProcessCommandExecute()
 					SwapMethod = 2;
 					ChangeWindow("Final Details");
 				}
-				SetCurrentNode("EXIT_BUTTON");
+			//	SetCurrentNode("EXIT_BUTTON");
 			}
 
 			if (nodName == "RBSCS_CANCELBTN")
@@ -529,7 +529,7 @@ void ProcessCommandExecute()
 				if (comName == "activate" || comName == "click")
 				{
 					ChangeWindow("Berth Ship - Choose Ship");
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -545,7 +545,7 @@ void ProcessCommandExecute()
 				{
 					ChoosingCaptain = 1;
 					ChangeWindow("Choose a Captain");
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -555,7 +555,7 @@ void ProcessCommandExecute()
 				{
 					ChoosingCaptain = 2;
 					ChangeWindow("Choose a Captain");
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -566,7 +566,7 @@ void ProcessCommandExecute()
 					BerthingMethod++;
 					if (BerthingMethod == 2) { BerthingMethod = 0; }
 					UpdateFDDisplay();
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -582,7 +582,7 @@ void ProcessCommandExecute()
 					{
 						ChangeWindow("Relaunch Berthed Ship - Choose Slot");
 					}
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -592,7 +592,7 @@ void ProcessCommandExecute()
 				{
 					ChoosingCaptain = 1;
 					ConfirmationWindow("Ship Berthing");
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -612,7 +612,7 @@ void ProcessCommandExecute()
 						if (listcurrent == 0) { listcurrent = listnum; }
 						UpdateCCDisplay();
 					}
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -626,7 +626,7 @@ void ProcessCommandExecute()
 						if (listcurrent > listnum) { listcurrent = 1; }
 						UpdateCCDisplay();
 					}
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -636,7 +636,7 @@ void ProcessCommandExecute()
 				{
 					DeleteAttribute(PChar,"ShipBerthing.templist");
 					ChangeWindow("Final Details");
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -659,7 +659,7 @@ void ProcessCommandExecute()
 					DeleteAttribute(PChar,"ShipBerthing.templist");
 					ChangeWindow("Final Details");
 					ChoosingCaptain = 0;
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				}
 			}
 
@@ -680,7 +680,7 @@ void ProcessCommandExecute()
 							ChangeWindow("Final Details");
 							FCControlsID = "";
 							ChoosingCaptain = 0;
-							SetCurrentNode("EXIT_BUTTON");
+			//				SetCurrentNode("EXIT_BUTTON");
 						}
 					}
 
@@ -727,7 +727,7 @@ void ProcessCommandExecute()
 						{
 							ChangeWindow("Berthed Ship Details");
 							FCControlsID = "";
-							SetCurrentNode("EXIT_BUTTON");
+					//		SetCurrentNode("EXIT_BUTTON");
 						}
 					}
 
@@ -738,7 +738,7 @@ void ProcessCommandExecute()
 							ShipLUFromSO(SelectedPort,SelectedBerthingSlot);
 							ChangeWindow("Base");
 							FCControlsID = "";
-							SetCurrentNode("EXIT_BUTTON");
+					//		SetCurrentNode("EXIT_BUTTON");
 						}
 					}
 
@@ -754,7 +754,7 @@ void ProcessCommandExecute()
 						{
 							ChangeWindow("Berthed Ship Details");
 							FCControlsID = "";
-							SetCurrentNode("EXIT_BUTTON");
+					//		SetCurrentNode("EXIT_BUTTON");
 						}
 					}
 
@@ -765,7 +765,7 @@ void ProcessCommandExecute()
 							ShipScrapping(SelectedPort,SelectedBerthingSlot);
 							ChangeWindow("Base");
 							FCControlsID = "";
-							SetCurrentNode("EXIT_BUTTON");
+					//		SetCurrentNode("EXIT_BUTTON");
 						}
 					}
 
@@ -791,7 +791,7 @@ void ProcessCancelExit()
 	{
 		case "Base":
 			IDoExit(RC_INTERFACE_KAM_SHIPBERTHING_EXIT);
-			SetCurrentNode("EXIT_BUTTON");
+		//	SetCurrentNode("EXIT_BUTTON");
 		break;
 
 		case "Berthed Ship Details":
@@ -813,7 +813,7 @@ void ProcessCancelExit()
 
 		case "Berth Ship - Choose Slot":
 			ChangeWindow("Berth Ship - Choose Ship");
-			SetCurrentNode("EXIT_BUTTON");
+		//	SetCurrentNode("EXIT_BUTTON");
 		break;
 
 		case "Final Details":
@@ -825,13 +825,13 @@ void ProcessCancelExit()
 			{
 				ChangeWindow("Relaunch Berthed Ship - Choose Slot");
 			}
-			SetCurrentNode("EXIT_BUTTON");
+		//	SetCurrentNode("EXIT_BUTTON");
 		break;
 
 		case "Choose a Captain":
 			DeleteAttribute(PChar,"ShipBerthing.templist");
 			ChangeWindow("Final Details");
-			SetCurrentNode("EXIT_BUTTON");
+		//	SetCurrentNode("EXIT_BUTTON");
 		break;
 
 		//default:
@@ -841,19 +841,19 @@ void ProcessCancelExit()
 					ChangeWindow("Final Details");
 					FCControlsID = "";
 					ChoosingCaptain = 0;
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				break;
 
 				case "Lay up ship on shore leave":
 					ChangeWindow("Berthed Ship Details");
 					FCControlsID = "";
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				break;
 
 				case "Scrap berthed ship":
 					ChangeWindow("Berthed Ship Details");
 					FCControlsID = "";
-					SetCurrentNode("EXIT_BUTTON");
+			//		SetCurrentNode("EXIT_BUTTON");
 				break;
 			}
 		break;

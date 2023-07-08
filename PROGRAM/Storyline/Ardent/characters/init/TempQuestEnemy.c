@@ -313,7 +313,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Sabina";
+	ch.Ship.Name = TranslateString("","Sabina");
 	ch.Ship.Type = "FastGalleon4";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -376,7 +376,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.money = "1000";
 	LAi_SetSitType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Siroco";
+	ch.Ship.Name = TranslateString("","Siroco");
 	ch.Ship.Type = "SP_CastelF";
 	ch.Ship.Stopped = true;
 	LAi_SetHP(ch, 200.0, 200.0);
@@ -430,7 +430,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.money = "1000";
 	LAi_SetSitType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Tonina";
+	ch.Ship.Name = TranslateString("","Tonina");
 	ch.Ship.Type = "Shnyava2";
 	ch.Ship.Stopped = true;
 	LAi_SetHP(ch, 200.0, 200.0);
@@ -488,7 +488,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;
 	LAi_SetSitType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Jacqueline";
+	ch.Ship.Name = TranslateString("","Jacqueline");
 	ch.Ship.Type = "Tartane2";
 	ch.Ship.Stopped = true;
 	LAi_SetHP(ch, 160.0, 160.0);
@@ -611,7 +611,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.skill.Commerce = "7";
 	ch.skill.Sneak = "1";
 	ch.money = "4000";
-	ch.Ship.Name = "Phaeton";
+	ch.Ship.Name = TranslateString("","Phaeton");
 	ch.Ship.Type = "RN_WarGalleon";
 	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 65;
@@ -678,7 +678,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.CriticalHit = true;
 	Ch.Perks.list.Toughness = true;
 	ch.money = "4000";
-	ch.Ship.Name = "Assurance";
+	ch.Ship.Name = TranslateString("","Assurance");
 	ch.Ship.Type = "RN_WarGalleon";
 	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 65;
@@ -727,7 +727,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.SwordplayProfessional = true;
 	ch.money = "2000";
-	ch.Ship.Name = "Cygnet";
+	ch.Ship.Name = TranslateString("","Cygnet");
 	ch.Ship.Type = "Pinnace1";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -774,7 +774,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.SwordplayProfessional = true;
 	ch.money = "2000";
-	ch.Ship.Name = "Sirius";
+	ch.Ship.Name = TranslateString("","Sirius");
 	ch.Ship.Type = "PinnaceMerchant2";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -966,7 +966,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Joli";
+	ch.Ship.Name = TranslateString("","Joli");
 	ch.Ship.Type = "RN_RaaFrigate";
 	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 65;
@@ -1082,7 +1082,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Bolontaire";
+	ch.Ship.Name = TranslateString("","Bolontaire");
 	ch.Ship.Type = "FR_Frigate";
 	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 60;
@@ -1136,7 +1136,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Salamine";
+	ch.Ship.Name = TranslateString("","Salamine");
 	ch.Ship.Type = "FR_Frigate";
 	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 65;
@@ -1206,7 +1206,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Conquérante";
+	ch.Ship.Name = TranslateString("","Conquérante");
 	ch.Ship.Type = "FR_Fleuron";
 	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 65;
@@ -1280,7 +1280,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Dauphin Royal";
+	ch.Ship.Name = TranslateString("","Dauphin Royal");
 	ch.Ship.Type = "FR_SoleilRoyal";
 	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 75;
@@ -1571,7 +1571,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Victorieuse";
+	ch.Ship.Name = TranslateString("","Victorieuse");
 	ch.Ship.Type = "Battleship2";
 //	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 70;
@@ -1633,7 +1633,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Résistance";
+	ch.Ship.Name = TranslateString("","Résistance");
 	ch.Ship.Type = "FR_Frigate";
 //	ch.Ship.Stopped = true;
 	LAi_SetHP(ch, 300.0, 300.0);
@@ -1695,7 +1695,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Reprisal";
+	ch.Ship.Name = TranslateString("","Reprisal");
 	ch.Ship.Type = "FR_Frigate";
 //	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 65;
@@ -1757,7 +1757,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Impétueuse";
+	ch.Ship.Name = TranslateString("","Impétueuse");
 	ch.Ship.Type = "RN_RaaFrigate";
 //	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 65;
@@ -1884,7 +1884,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_NoRebirthEnable(ch);
 	LAi_SetCitizenType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = "Tarantula";
+	ch.Ship.Name = TranslateString("","Tarantula");
 	ch.Ship.Type = "Brig3";
 	ch.Ship.Stopped = true;
 	LAi_SetHP(ch, 200.0, 200.0);

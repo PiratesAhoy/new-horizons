@@ -1,3 +1,8 @@
-title=Sabotage #stown#
-text.t1=I have arrived at #sisland# under the guise of a false flag and am to stir up as much trouble there as I can. However, I am a free man and quite capable of deciding what to do for myself.
-text.t2=I have arrived at #sisland# under the guise of a false flag and am to stir up as much trouble there as I can. However, I am a free woman and quite capable of deciding what to do for myself.
+title=Под Прикрытием в #stown#
+text.t1=Я прибыл в #sisland# под чужим флагом и собираюсь устроить там столько неприятностей, сколько смогу. Сначала #sofficer# сказал мне, что я должен найти #sname#, чье настоящее имя #sname2# и который, вероятно, находится в местной таверне. Если меня спросят о моем корабле, я должен сказать, что он был заражен термитами, но я избавился от них и устранил повреждения.
+text.t2=#sname# действительно спросил о моем корабле, был удовлетворен моим ответом и подтвердил личность #spronoun3#, указав #spronoun3# истинное имя как #sname2#.
+text.t3=Теперь я должен переместить свой корабль, так как власти #snation# будут искать #sname2#, пытающегося сесть на корабль в главном порту.
+text.t4=#sname2# хочет, чтобы его доставили в #sdestination#.
+text.t5=Мы благополучно прибыли к месту назначения. Я принял каперское свидетельство от #snation#. Теперь я продолжу свою собственную тайную деятельность...
+text.t6=Мы благополучно прибыли к месту назначения. Мне дали немного денег в качестве вознаграждения. Теперь я продолжу свою собственную тайную деятельность...
+

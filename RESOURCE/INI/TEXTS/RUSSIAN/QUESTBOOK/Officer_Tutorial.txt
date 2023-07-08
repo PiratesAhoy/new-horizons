@@ -1,3 +1,3 @@
-title=Обучение - совет старого капитана
-text.t1=Я встретил в таверне офицера и когда попытался его нанять, ко мне подошел старый капитан. Он сказал, что офицеры уже не те. Теперь офицеры специализируются в различных аспектах. Он предложил узнать больше об этих типах офицеров. Я должен отправится в город #sOranjestad# и встретить его там, в течении 3 месяцев.
-text.t2=На данный момент капитан ничего не может мне рассказать. Следует дождаться обновления этого мира (Новой версии аддона:)).
+title=Tutorial - The Old Captain's Advice
+text.t1=I met an officer in a tavern and when I tried to hire him an old captain approached me. He told me officers aren't what they used to be. Nowadays all officers are specilized in different aspects. He offered to learn me more about these different types of officers. I should go to #sOranjestad# and meet him there before 3 months have passed.
+text.t2=For now the captain can't teach me anything. I should try this again after a new update.

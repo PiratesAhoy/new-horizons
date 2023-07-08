@@ -95,7 +95,7 @@ string DLG_TEXT[173] = {
 "!",
 "Entonces comparte tu experiencia conmigo.",
 "Hmm, bueno, esta bien, te vere mas tarde.",
-"Apenas puedo darte un Consejo sobre navegacion o maniobras ya que no soy un oficial. \n Pero en cuanto a algunas otras cosas Eestare encantado de ayudarle.",
+"Apenas puedo darte un Consejo sobre navegacion o maniobras ya que no soy un oficial. \n Pero en cuanto a algunas otras cosas ï¿½Eestare encantado de ayudarle.",
 "Perfecto. ?Que puede decirme sobre lo que el capitan debe saber?",
 "Como debo tratar a mi tripulacion?",
 "Que tal un par de consejos de marineros?",
@@ -164,7 +164,7 @@ string DLG_TEXT[173] = {
 "Cuanto necesitas?",
 "500 de oro. Acto que es mucho dinero.",
 "Trato hecho, aqui esta el dinero.",
-"En serio, es una gran suma. No puedo permitirme eso ahora.", / / PB: Cambiado para salvar la confusion
+"En serio, es una gran suma. No puedo permitirme eso ahora.", // PB: Cambiado para salvar la confusion
 "capitan. Es bueno verte y bueno que sigas vivo. Es peligroso ser capitan estos dias.",
 "Escuchar, ",
 ", podria por favor decirme que hace a un buen capitan una vez mas?",

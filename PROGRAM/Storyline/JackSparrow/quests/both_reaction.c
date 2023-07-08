@@ -85,7 +85,7 @@ void BothQuestComplete(string sQuestName)
 				{
 					Pchar.quest.Tortuga_ships = "5";
 		
-					GiveShip2Character(characterFromID("Tor_soldier_3"),"MerchantPinnace","Victory",-1,PIRATE,true,true);
+					GiveShip2Character(characterFromID("Tor_soldier_3"),"MerchantPinnace",TranslateString("","Victory1"),-1,PIRATE,true,true);
 					setCharacterShipLocation(characterFromID("Tor_soldier_3"), "Tortuga_port");
 				}
 				else
@@ -94,8 +94,8 @@ void BothQuestComplete(string sQuestName)
 					{
 						Pchar.quest.Tortuga_ships = "4";
 
-						GiveShip2Character(characterFromID("Tor_patrol_1"),"SchoonerXebec","Victory",-1,PIRATE,true,true);
-						GiveShip2Character(characterFromID("Tor_patrol_2"),"FR_Sloop","Victory",-1,PIRATE,true,true);
+						GiveShip2Character(characterFromID("Tor_patrol_1"),"SchoonerXebec",TranslateString("","Victory1"),-1,PIRATE,true,true);
+						GiveShip2Character(characterFromID("Tor_patrol_2"),"FR_Sloop",TranslateString("","Victory1"),-1,PIRATE,true,true);
 						setCharacterShipLocation(characterFromID("Tor_patrol_1"), "Tortuga_port");
 						setCharacterShipLocation(characterFromID("Tor_patrol_2"), "Tortuga_port");
 					}
@@ -103,8 +103,8 @@ void BothQuestComplete(string sQuestName)
 					{
 						Pchar.quest.Tortuga_ships = "2";
 
-						GiveShip2Character(characterFromID("Tor_soldier_1"),"Sloop2","Victory",-1,PIRATE,true,true);
-						GiveShip2Character(characterFromID("Tor_soldier_2"),"PiratBrig50","Victory",-1,PIRATE,true,true);
+						GiveShip2Character(characterFromID("Tor_soldier_1"),"Sloop2",TranslateString("","Victory1"),-1,PIRATE,true,true);
+						GiveShip2Character(characterFromID("Tor_soldier_2"),"PiratBrig50",TranslateString("","Victory1"),-1,PIRATE,true,true);
 						setCharacterShipLocation(characterFromID("Tor_soldier_1"), "Tortuga_port"); 	
 						setCharacterShipLocation(characterFromID("Tor_soldier_2"), "Tortuga_port");	
 					}
@@ -782,7 +782,7 @@ void BothQuestComplete(string sQuestName)
 			LAi_SetCitizenType(characterFromID("Captaine Chevalle"));
 			if (GetAttribute(pchar, "Chevalle") == "Mutiny")
 			{
-				GiveShip2Character(pchar,"SP_Neptunus","Sargento",-1,SPAIN,true,true);
+				GiveShip2Character(pchar,"SP_Neptunus",TranslateString("","Sargento"),-1,SPAIN,true,true);
 			}
 			else
 			{

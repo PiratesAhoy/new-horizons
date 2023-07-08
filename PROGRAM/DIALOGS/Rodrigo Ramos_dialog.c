@@ -87,6 +87,11 @@ void ProcessDialogEvent()
 				link.l9 = DLG_TEXT[57];
 				link.l9.go = "temple_guide";
 			}
+			if (CheckQuestAttribute("OPERA", "ask_Ramos_for_Jauri"))
+			{
+				link.l1 = DLG_TEXT[60];
+				link.l1.go = "Jauri1";
+			}
 			if (!CheckQuestAttribute("generate_convoy_quest_progress", "begin") && npchar.work != lastspeak_date)
 			{
 				link.l10 = DLG_TEXT[27];
@@ -303,6 +308,13 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[58];
 			link.l1 = DLG_TEXT[59];
 			link.l1.go = "Exit";
+		break;
+
+		case "Jauri1":
+			dialog.text = DLG_TEXT[61];
+			link.l1 = DLG_TEXT[62];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("enter_the_kid");
 		break;
 	}
 }

@@ -2746,7 +2746,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.old.name = "Gordon";
 	ch.old.lastname = "Carpenter";
 	ch.name = TranslateString("", "Gordon");
-	ch.lastname = TranslateString("", "Carpenter");
+	ch.lastname = TranslateString("", "Carpenter1");
 	ch.id		= "Gordon Carpenter";
 	ch.model = "bocman4";
 	ch.sex = "man";

@@ -1,14 +1,14 @@
-QUEST_MESSAGE1 {Has fracasado en la misión. ¡Danielle ha muerto! PARTIDA TERMINADA.}
+QUEST_MESSAGE1 {Has fracasado en la misión. ¡Tu acompañante ha muerto! PARTIDA TERMINADA.}
 QUEST_MESSAGE2 {El plazo para entregar el envío ha expirado.}
-QUEST_MESSAGE3 {Ya eres demasiado viejo para resistir a la maldición del oro azteca...}
+QUEST_MESSAGE3 {Ya has envejecido demasiado para resistir a la maldición del oro azteca...}
 QUEST_MESSAGE4 {¡Has encontrado un tesoro de plata!}
 QUEST_MESSAGE5 {¡Nigel Blythe está atacando la corbeta con el contrabando!}
 QUEST_MESSAGE6 {¡Nigel Blythe te ha abandonado!}
 QUEST_MESSAGE7 {¡Capitán, hemos encontrado a la Perla Negra!}
 QUEST_MESSAGE8 {¡Muy bien, has matado a tu maestro!}
-QUEST_MESSAGE9 {¡Ahora estás solo en este mundo cruel!}
-QUEST_MESSAGE10 {¡Le daremos una recompensa secreta}
-QUEST_MESSAGE11 {a un pirata con un corazón despiadado!}
+QUEST_MESSAGE9 {¡Ahora no tienes a nadie en este mundo cruel!}
+QUEST_MESSAGE10 {¡A un pirata de corazón despiadado}
+QUEST_MESSAGE11 {le daremos unpremio inesperado!}
 QUEST_MESSAGE12 {¡Lo siento, pero ya tienes demasiados oficiales! ¡Despide a alguno y vuelve a intentarlo!}
   
 Address_Form_Spa {Señor}

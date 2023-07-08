@@ -4,6 +4,7 @@ Jack{Jack}
 Sparrow{Sparrow}
 
 {=====| StartStoryline.c |=====}
+Verbinski{Verbinski}
 
 {=====| quests_reaction.c |=====}
 Heumac{Heumac}

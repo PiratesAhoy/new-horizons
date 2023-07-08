@@ -1,59 +1,59 @@
-itmname_order	{Order of Mission}
+itmname_order	{Орден за Выполнение Миссии}
 itmdescr_order
 {
-This letter confirms captain Aurelien Bergerat has the secret mission of helping the Portuguese colony of Grenada and the governor of Martinique must help him. Letter signed by King Louis XIV.
+Это письмо подтверждает, что капитан Орельен Бержерат имеет секретную миссию помочь португальской колонии Гренада, и губернатор Мартиники должен ему помочь. Письмо подписано королем Людовиком XIV.
 }
 
-itmname_report	{Report}
+itmname_report	{Отчет}
 itmdescr_report
 {
-This report explains in detail the military activities these last months on Cayman, like ships and troops.
+В этом отчете подробно рассказывается о военной деятельности в последние месяцы на Каймане, о кораблях и войсках.
 }
 
-itmname_time_bomb	{Time-Bomb}
+itmname_time_bomb	{Бомба Замедленного Действия}
 itmdescr_time_bomb
 {
-It's a big grenade with a long fuse. A basic model but very effective.
+Это большая бомба с длинным запалом. Базовая модель, но очень эффективная.
 }
 
-itmname_Gaga_Keys	{Lady Gaga's Keys}
+itmname_Gaga_Keys	{Ключи Леди Гаги}
 itmdescr_Gaga_Keys
 {
-The keys of the Lady Gaga's house. The house is between the Church and the Townhall. 
+Ключи от дома Леди Гаги. Дом находится между церковью и резиденцией.
 }
 
-itmname_Roche_letter	{Roche's letter}
+itmname_Roche_letter	{Письмо Роше}
 itmdescr_Roche_letter
 {
-A letter from Roche Brasiliano that he reveals he has to stay on Curacao over the next months.
+Письмо от Роше Бразилиано, в котором он сообщает, что вынужден остаться на Кюрасао в течение следующих месяцев.
 }
 
-itmname_Medal_B	{Medal of the Santiago's Order}
+itmname_Medal_B	{Медаль Ордена Сантьяго}
 itmdescr_Medal_B
 {
-This Medal rewards people for their military action against the enemies of Spain.  
+Этой медалью награждаются люди за военные действия против врагов Испании. 
 }
 
-itmname_Pass	{Free-Pass}
+itmname_Pass	{Бесплатный Пропуск}
 itmdescr_Pass
 {
-This pass lets you moor and stay on Isla Mona during the mission.
+Этот пропуск позволяет вам причалить и остаться на острове Мона во время выполнения задания.
 }
 
-itmname_purse	{Purse}
+itmname_purse	{Кошелек}
 itmdescr_purse
 {
-This purse contains 50 000 gold coins for the indians of Aruba.
+В этом кошельке находится 50000 золотых монет для индейцев Арубы.
 }
 
-itmname_fougasse	{Fougasse}
+itmname_fougasse	{Фугас}
 itmdescr_fougasse
 {
-It's a kind of Mine. Linked to a door, it explodes when someone opens it.
+Это своего рода мина. Связанная с дверью, она взрывается, когда кто-то открывает её.
 }
 
-itmname_Medal_A	{Medal of King Charles II}
+itmname_Medal_A	{Медаль Короля Карла II}
 itmdescr_Medal_A
 {
-This medal is the most important reward that can be given by the Spanish authorities. Normally, only Spaniards can get it.
+Эта медаль является самой важной наградой, которую могут вручить испанские власти. Обычно её могут получить только испанцы.
 }

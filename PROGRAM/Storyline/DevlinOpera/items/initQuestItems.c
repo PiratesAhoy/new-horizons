@@ -21,5 +21,6 @@ void InitQuestItems()
 	n = InitQuestItem(n,"blue_robe",	"blue_robe",			"",	"JRH17", 11,	0,0,	"",	"",	"","",	"","",""); //Blue Robe
 	n = InitQuestItem(n,"second_part_map",	"second_part_map",		"",	"BTP2",	2,	0,0,	"",	"",	"","",	"","",""); //Blaze's map piece
 	n = InitQuestItem(n,"full_map",	        "full_map",		        "",	"BTP",	8,	0,0,	"",	"",	"","",	"","",""); //Full map
+	n = InitQuestItem(n,"jauri_map",	"jauri_map",		        "",	"BTP",	10,	0,0,	"",	"",	"","",	"","",""); //Jauri's map
 	QUESTITEMS_QUANTITY = n;
 }

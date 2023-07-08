@@ -86,21 +86,21 @@ void ProcessDialogEvent()
 			{
 				dialog.snd = "Voice\BIBR\BIBR006";
 				ChangeCharacterReputation(pchar, +5);
-				GiveShip2Character(pchar, "HMS_Unicorn","Sparrow Hawk",-1,ENGLAND,true,true);
+				GiveShip2Character(pchar, "HMS_Unicorn",TranslateString("","Sparrow Hawk"),-1,ENGLAND,true,true);
 				SetCharacterGoods(pChar, GOOD_GOLD, 51.0);
 			}
 			if ((tmpcalcgldnm >= 1) && (tmpcalcgldnm <= 50))
 			{
 				dialog.snd = "Voice\BIBR\BIBR006";
 				ChangeCharacterReputation(pchar, +5);
-				GiveShip2Character(pchar, "HMS_Unicorn","Sparrow Hawk",-1,ENGLAND,true,true);
+				GiveShip2Character(pchar, "HMS_Unicorn",TranslateString("","Sparrow Hawk"),-1,ENGLAND,true,true);
 				SetCharacterGoods(pChar, GOOD_GOLD, 45.0);
 			}
 			if (tmpcalcgldnm <= 0)
 			{
 				dialog.snd = "Voice\BIBR\BIBR006";
 				ChangeCharacterReputation(pchar, +5);
-				GiveShip2Character(pchar, "HMS_Unicorn","Sparrow Hawk",-1,ENGLAND,true,true);
+				GiveShip2Character(pchar, "HMS_Unicorn",TranslateString("","Sparrow Hawk"),-1,ENGLAND,true,true);
 				SetCharacterGoods(pChar, GOOD_GOLD, 0.0);
 			}
 			Dialog.Text = DLG_TEXT[10];
@@ -134,7 +134,7 @@ void ProcessDialogEvent()
 			Dialog.Text = DLG_TEXT[65];
 			Link.l1 = DLG_TEXT[11];
 			Link.l1.go = "Prepare_to_leave_Oxbay";
-			GiveShip2Character(pchar, "WickedWench","Wicked Wench",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar, "WickedWench",TranslateString("","Wicked Wench"),-1,ENGLAND,true,true);
 			PChar.quest.wench_given_by = "Brin";
 			SetCharacterShipLocation(Pchar, "Oxbay_port");
 		break;

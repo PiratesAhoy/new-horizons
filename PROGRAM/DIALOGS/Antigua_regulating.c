@@ -39,7 +39,7 @@ void ProcessDialogEvent()
 
 			if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")))
 			{
-				d.Text = DLG_TEXT[32] + GetRankName(PChar, sti(GetAttribute(NPChar, "nation"))) + DLG_TEXT[33];
+				d.Text = DLG_TEXT[32] + XI_ConvertString(GetRankName(PChar, sti(GetAttribute(NPChar, "nation")))) + DLG_TEXT[33];
 				Link.l1 = DLG_TEXT[5];
 				Link.l1.go = "admiral";
 				Link.l2 = DLG_TEXT[6];

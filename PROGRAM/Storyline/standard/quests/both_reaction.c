@@ -28,12 +28,12 @@ void BothQuestComplete(string sQuestName)
 	string playerSpyglass = "";
 // PB <--
 
-	//trace ("ПРОВЕРЯЕТСЯ КВЕСТ " + sQuestName);
+	//trace ("ÏÐÎÂÅÐßÅÒÑß ÊÂÅÑÒ " + sQuestName);
 	switch(sQuestName)
 	{
 
 		////////////////////////////////////////////////////////////////////////
-		//  Квест про проклятые монетки
+		//  Êâåñò ïðî ïðîêëÿòûå ìîíåòêè
 		////////////////////////////////////////////////////////////////////////
 
 		case "Story_CursedCoinsStarted":
@@ -116,7 +116,7 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "Seen_Black_Pearl":
-			Log_SetStringToLog(QUEST_MESSAGE7);
+			Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE7"));
 
 			Group_CreateGroup("Big Boss");
 			Group_AddCharacter("Big Boss", "Barbossa");
@@ -486,8 +486,8 @@ void BothQuestComplete(string sQuestName)
 		// 05-04-06 now do while still loading so we get nice reloadprogress update stuff...case "do_reinit": SD_Reinit(); break; // NK
 
 		case "Tut_KillTutor":
-			Log_SetStringToLog(QUEST_MESSAGE8);
-			Log_SetStringToLog(QUEST_MESSAGE9);
+			Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE8"));
+			Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE9"));
 			ChangeCharacterReputation(PChar, -10);
 
 			PChar.quest.Tut_RewardForKillingTutor.win_condition.l1 = "rank";
@@ -582,8 +582,8 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "Tut_RewardForKillingTutor":
-			Log_SetStringToLog(QUEST_MESSAGE10); 
-			Log_SetStringToLog(QUEST_MESSAGE11);
+			Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE10")); 
+			Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE11"));
 
 			TakeNItems(PChar,"bladeMH", 1);		// GR: originally blade23 ("Windmill Slayer"), then blade6 (Schiavona)
 		break;

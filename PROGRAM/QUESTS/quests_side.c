@@ -5,7 +5,7 @@ void SideQuestComplete(string sQuestName)
 	int iPassenger, cidx, i, j, n, indianid;
 	float locx, locy, locz, parx, pary, parz;
 	float x1,x2,y1,y2,z1,z2,x,y,z;
-	string homelocation, homegroup, homelocator, attr, locatorName, deck, shipname;
+	string homelocation, homegroup, homelocator, attr, locatorName, deck, shipname, temp;
 // <-- KK
 	ref ch;
 	int limit;
@@ -3551,7 +3551,7 @@ void SideQuestComplete(string sQuestName)
 		case "mendes_away_forewer":
 			LAi_SetActorType(characterFromID("Vigila Mendes"));
 			LAi_ActorGoToLocation(characterFromID("Vigila Mendes"), "reload", "locator2", "none", "", "", "", 3.0);
-			//ZAID MURRO - закрываем возможность проходить этот квест
+			//ZAID MURRO - çàêðûâàåì âîçìîæíîñòü ïðîõîäèòü ýòîò êâåñò
 			//ChangeCharacterAddress(characterFromID("Zaid Murro"), "none", ""); //NK disable this (dunno why it's here but it breaks Zaid)
 		break;
 
@@ -5390,6 +5390,7 @@ void SideQuestComplete(string sQuestName)
 			Pchar.quest.Bartolomeu.l1.character = "Bartolomeu o Portugues";
 			Pchar.quest.Bartolomeu.win_condition.l1.location = "Redmond_Town_01";
 			PChar.quest.Bartolomeu.win_condition = "mercenaires";
+			Locations[FindLocation("Redmond_Town_01")].vcskip = true;
 		break;
 
 		case "mercenaires":
@@ -5456,6 +5457,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "findefin":
+			DeleteAttribute(&Locations[FindLocation("Redmond_Town_01")],"vcskip");
 			Locations[FindLocation("Redmond_Town_01")].reload.l1.disable = false;
 			Locations[FindLocation("Redmond_Town_01")].reload.l2.disable = false;
 			Locations[FindLocation("Redmond_Town_01")].reload.l3.disable = false;
@@ -9596,7 +9598,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "treasure_found":
 			AddMoneyToCharacter(PChar, 50000);
-			Log_SetStringToLog(QUEST_MESSAGE4);
+			Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE4"));
 			AddQuestRecord("artois", 18);
 			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Sneak", 15000); }
 			else { AddPartyExp(pchar, 15000); }
@@ -9800,7 +9802,7 @@ void SideQuestComplete(string sQuestName)
 				Island_SetReloadEnableGlobal(PChar.location, false);
 				PChar.quest.blythebattlelockedisland = PChar.location;// TIH store what island was locked Oct31'06
 
-				Log_SetStringToLog(QUEST_MESSAGE5);
+				Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE5"));
 
 				SetCharacterRelationBoth(GetCharacterIndex("Nigel Blythe"),GetMainCharacterIndex(),RELATION_FRIEND);
 				SetCharacterRelationBoth(GetCharacterIndex("Nigel Blythe"),GetCharacterIndex("Pirates_7"),RELATION_ENEMY);
@@ -9976,7 +9978,7 @@ void SideQuestComplete(string sQuestName)
 				//LAi_SetSitType(CharacterFromID("Claudio Murena"));
 				characters[GetCharacterIndex("Ermegildo Caminero")].Dialog.Filename = "Caminero_dialog.c";
 				pchar.quest.nigel_away_for_ship = "begin";
-				Log_SetStringToLog(QUEST_MESSAGE6);
+				Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE6"));
 				Pchar.quest.Nigel_Blythe1.win_condition.l1 = "location";
 				Pchar.quest.Nigel_Blythe1.win_condition.l1.location = "Muelle_port";
 				Pchar.quest.Nigel_Blythe1.win_condition = "Muelle_Blythe";
@@ -10326,6 +10328,21 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "to_oxbay_mines_with_larrouse_complete_2":
+			switch(LanguageGetLanguage())
+			{
+				case "SPANISH": temp = TranslateString("","Crewmember of") + " " + GetMyName(PChar); break;
+				case "RUSSIAN":
+					if(strright(GetMyName(PChar),1) == "ü") temp = strleft(GetMyName(PChar), strlen(GetMyName(PChar))-1);
+					else temp = GetMyName(PChar);
+					temp = TranslateString("","Crewmember of") + " " + temp + "à";
+				break;
+				temp = GetMyName(PChar) + TranslateString("","'s crewmember");
+			}
+			for(n=1; n<=3; n++)
+			{
+				Characters[GetCharacterIndex("Blaze_Crewmember_0"+n)].name = temp;
+			}
+
 			if(GetOfficersIndex(Pchar, 1) == -1)
 			{
 				Pchar.Temp.Officer.idx1 = GetCharacterIndex("Blaze_Crewmember_01");

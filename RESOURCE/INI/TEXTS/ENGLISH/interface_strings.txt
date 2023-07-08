@@ -1,5 +1,7 @@
 Delete savefile confirm{Are you sure you want to remove this game?}
 Overwrite savefile confirm{Are you sure you want to overwrite this game?}
+Delete profile confirm{Are you sure you want to remove this profile?}
+Warning: this profile is currently active!{Warning: this profile is currently active!}
 Low storage and unable save create{Insufficent space on your harddrive. Unable to save.}
 Load game confirm{Are you sure you want to load this game?}
 Unable to Load save game{Unable to load save game.}
@@ -25,6 +27,7 @@ Transfer cannons confirm3{By transferring cannons equal or less than the maximum
 Transfer cannons confirm4{By transferring cannons more than the maximum caliber you will get cannons of}
 Exit from cannons confirm{The purchase isn't confirmed. Do you really want to exit?}
 Adding{Replaces only damaged cannons}
+Min/Max Crew{Min/Max Crew}
 Exit from abordage confirm{Do you really want to leave this ship?}
 Exit from fortabordage confirm{Do you really want to halt the fort robbery?}
 Exit from exchange confirm{Do you really want to exit?}
@@ -44,6 +47,9 @@ Nomoney{Not enough money}
 NoCannons{No cannons installed on ship}
 Installed{Cannons currently installed}
 Bigcaliber{Too big caliber for your ship!}
+Only available in Pirate Shipyards!{Only available in Pirate Shipyards!}
+Click Install to Remove the upgrade{Click Install to Remove the upgrade}
+This upgrade can't be removed{This upgrade can't be removed}
 CanBuyMax{You can buy a maximum of}
 cannons.{cannons.}
 Repairs are completed{Repairs are completed}
@@ -63,7 +69,7 @@ tax_normal{Normal}
 tax_high{High}
 tax_plunder{Very high}
 
-This officer can command ships up to tier{This officer can command ships up to tier}
+This officer can command ships up to class{This officer can command ships up to class}
 
 Broken{Broken}
 Badly worn{Badly worn}
@@ -94,9 +100,10 @@ to equip{to equip}
 You equipped{You equipped}
 All hands execute fire drill ! NOW !!{All hands execute fire drill ! NOW !!}
 Sails and cartridges jettisoned.{Sails and cartridges jettisoned.}
-?? Captain, what's a firedrawl ?{?? Captain, what's a firedrawl ?}
-Your crew seems to lack SHIPDEFENCE ability...{Your crew seems to lack SHIPDEFENCE ability...}
+Captain, what's a firedrawl?{?? Captain, what's a firedrawl ?}
+Your crew seems to lack the SHIP DEFENCE ability...{Your crew seems to lack the DAMAGE CONTROL ability...}
 Used potion{Used potion}
+You don't have a map of the archipelago.{You don't have a map of the archipelago.}
 You equipped{You equipped}
 You don't have a regular blade to equip.{You don't have a regular blade to equip.}
 You don't have a regular gun to equip.{You don't have a regular gun to equip.}
@@ -185,7 +192,7 @@ Neutral{neutral}
 Wary{wary}
 Hostile{hostile}
 Letter of Marque{Letter of Marque}
-ALARM !  AN AMBUSH !!!!{ALARM !  AN AMBUSH !!!!}
+ALARM!  AN AMBUSH!!!{ALARM!  AN AMBUSH!!!}
 Gamlet{Only Hamlet spoke to the dead, and even he didn't expect them to talk back.}
 NoItems{There is nothing to take}
 Captain, the crew is envious of the amount of money we have on board and wants to sign articles{Captain, the crew is envious of the amount of money we have on board and wants to sign articles}
@@ -204,6 +211,8 @@ crew have died from starvation.{crew have died from starvation.}
 We've been out{We've been out}
 The crew now has{The crew now has}
 days out.{days out.}
+You get your ship{You get your ship}
+days later.{days later.}
 You made{You made}
 gold from your estates.{gold from your estates.}
 gold as taxes from controlled towns.{gold as taxes from controlled towns.}
@@ -226,6 +235,10 @@ starboard{starboard}
 bow{bow}
 stern{stern}
 days.{days.}
+of the crew is cursed due to{of the crew is cursed due to}
+Aztec coins{Aztec coins}
+Captain, the crew is really not happy with this whole curse business. They work SO HARD at repairing the sails, but it appears to have no effect!{Captain, the crew is really not happy with this whole curse business. They work SO HARD at repairing the sails, but it appears to have no effect!}
+Captain, now the crew can't even see where they're going anymore with all this unnatural fog! Cannot you be persuaded to attempt to lift the curse?{Captain, now the crew can't even see where they're going anymore with all this unnatural fog! Cannot you be persuaded to attempt to lift the curse?}
 Reinitializing...{Reinitializing...}
 LOADED NEW INTERFACE{LOADED NEW INTERFACE}
 LOADED OLD INTERFACE{LOADED OLD INTERFACE}
@@ -246,6 +259,12 @@ Stores...{Stores...}
 Always run is now on{Always run is now on}
 Always run is now off{Always run is now off}
 Log level is now set to{Log level is now set to}
+Quiet{Quiet}
+Laconic{Laconic}
+Normal{Normal}
+Verbose{Verbose}
+Clubhauling default direction set to PORT{Clubhauling default direction set to PORT}
+Clubhauling default direction set to STARBOARD{Clubhauling default direction set to STARBOARD}
 Mantrap set! grp:{Mantrap set! grp:}
 port authority{port authority}
 from your party in berthing duties.{from your party in berthing duties.}
@@ -438,6 +457,43 @@ Dir_WNW{WNW}
 Dir_NW{NW}
 Dir_NNW{NNW}
 
+ROLL_Roll angle is{Roll angle is}
+ROLL_degrees to starboard{degrees to starboard}
+ROLL_degrees to port{degrees to port}
+ROLL_degrees{degrees}
+Captain, we have to put our bow to the waves to decrease the rolling movement of the ship{Captain, we have to put our bow to the waves to decrease the rolling movement of the ship}
+Captain, the morale of the crew decreased from{Captain, the morale of the crew decreased from}
+ROLL_to{to}
+because the ship's rolling is making them seasick{because the ship's rolling is making them seasick}
+Captain, the cargo has started shifting due to the rolling and{Captain, the cargo has started shifting due to the rolling and}
+went overboard{went overboard}
+crewmembers are heard yelling from inside the empty cargo hold{crewmembers are heard yelling from inside the empty cargo hold}
+Captain, shifting cargo did{Captain, shifting cargo did}
+damage to the hull{damage to the hull}
+Captain, that last violent roll washed{Captain, that last violent roll washed}
+crewmembers overboard{crewmembers overboard}
+Captain, we're capsizing to starboard... ABANDON SHIP!{Captain, we're capsizing to starboard... ABANDON SHIP!}
+Captain, we're capsizing to port... ABANDON SHIP!{Captain, we're capsizing to port... ABANDON SHIP!}
+she's coming onto blow!{she's coming onto blow!}
+
+You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.{You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.}
+Captain, we're being attacked by the Kraken!{Captain, we're being attacked by the Kraken!}
+Captain, the{Captain, the}
+is under attack by the Kraken!{is under attack by the Kraken!}
+Captain, the Kraken has finished its attack on the{Captain, the Kraken has finished its attack on the}
+Captain, the Kraken is ready for another attack!{Captain, the Kraken is ready for another attack!}
+Captain, the crew is ready for another go at the oars!{Captain, the crew is ready for another go at the oars!}
+Captain, the Sword of Triton has recharged itself!{Captain, the Sword of Triton has recharged itself!}
+
+Engines: Full{Engines: Full}
+Engines: Half{Engines: Half}
+Engines: Slow{Engines: Slow}
+Engines: Dead Slow{Engines: Dead Slow}
+Engines: ALL STOP{Engines: ALL STOP}
+Ahead{Ahead}
+Astern{Astern}
+Engines: NO FUEL{Engines: NO FUEL}
+
 Emblem{Emblem}
 Special Sail{Special Sail}
 sails with pirate emblem.{sails with pirate emblem.}
@@ -572,6 +628,12 @@ mutinied and turned against you{mutinied and turned against you}
 Captain{Captain}
 of the{of the}
 does not approve of your actions and turned against you{does not approve of your actions and turned against you}
+Captain, the crew of the{Captain, the crew of the}
+has less than Low morale. Beware of mutiny!{has less than Low morale. Beware of mutiny!}
+wounded crewmembers:{wounded crewmembers:}
+healed and{healed and}
+died from gangrene.{died from gangrene.}
+
 Captain, we're out of crew!{Captain, we're out of crew!}
 Captain, we're out of food!{Captain, we're out of food!}
 Captain, we're out of rum!{Captain, we're out of rum!}
@@ -724,6 +786,7 @@ Mansion{Mansion}
 SeaPort{Port}
 SeaFort{Fort}
 Cave{Cave}
+Small Cave{Small Cave}
 Sea{Sea}
 Ship{Ship}
 Pitfall!!!!{Pitfall!!!}
@@ -765,6 +828,8 @@ Indian Village{Indian Village}
 Casa de Contratacion{Casa de Contratacion}
 French West India Company{French West India Company}
 #stown_name# Gambling House{#stown_name# Gambling House}
+Vice Admiral's residence{Vice Admiral's residence}
+Admiralty{Admiralty}
 
 Brothel.{Brothel}
 Loanshark's Office.{Loanshark's Office}
@@ -826,6 +891,9 @@ Town.{Town}
 Casa de Contratacion.{Casa de Contratacion.}
 French West India Company.{French West India Company.}
 Gaming House.{Gaming House.}
+The Dark Frigate{The Dark Frigate}
+The Faithful Bride{The Faithful Bride}
+Will Turner's House{Will Turner's House}
 
 Khael Roa Shore{Khael Roa Shore}
 Incas Temple{Incas Temple}
@@ -916,7 +984,7 @@ House of Sidonio Ogarrio{House of Sidonio Ogarrio}
 Sea Passage{Sea Passage}
 #sisland_name# passage{#sisland_name# passage}
 Oyster Beach{Oyster Beach}
-Entrace to #sisland_name# cave{Entrace to #sisland_name# cave}
+Entrace to #sisland_name# cave{Entrance to #sisland_name# cave}
 Shore{Shore}
 ANIMISTS Lair{ANIMISTS Lair}
 Satanists Lair{Satanists Lair}
@@ -927,7 +995,7 @@ House of Sidonio Ogarrio.{House of Sidonio Ogarrio}
 Sea Passage.{Sea Passage}
 #sisland_name# passage.{#sisland_name# passage}
 Oyster Beach.{Oyster Beach}
-Entrace to #sisland_name# cave.{Entrace to #sisland_name# cave}
+Entrace to #sisland_name# cave.{Entrance to #sisland_name# cave}
 Shore.{Shore}
 ANIMISTS Lair.{ANIMISTS Lair}
 Satanists Lair.{Satanists Lair}
@@ -993,6 +1061,7 @@ House in Jungle{House in Jungle}
 Rheims house on #sisland_name#{Rheims house on #sisland_name#}
 Room in Pirate tavern{Room in Pirate tavern}
 The cavern{The cavern}
+Smuggler's Home{Smuggler's Home}
 #sisland_name# shore ship{#sisland_name# shore ship}
 
 Exit from #stown_name#.{Exit from #stown_name#}
@@ -1046,6 +1115,7 @@ Cellar{Cellar}
 Muscetto Cove{Muscetto Cove}
 Mixteca Bay{Mixteca Bay}
 Darien Beach{Darien Beach}
+Bullen Bay{Bullen Bay}
 
 Tradepost.{Tradepost}
 Inn.{Inn}
@@ -1066,6 +1136,7 @@ Buccaneers Camp{Buccaneers Camp}
 Buccaneers Camp.{Buccaneers Camp}
 Village{Village}
 Village.{Village}
+Village church{Village church}
 
 Barracks{Barracks}
 Church{Church}
@@ -1094,6 +1165,33 @@ Lighthouse{Lighthouse}
 Lighthouse.{Lighthouse}
 Arsenal{Barracks}
 Arsenal.{Barracks}
+#stown_name# Naval HQ{#stown_name# Naval HQ}
+Officer Commanding #stown_name# Naval HQ{Officer Commanding #stown_name# Naval HQ}
+Mrs. Mason's House{Mrs. Mason's House}
+Office{Office}
+Naval Store{Naval Store}
+Naval Shipyard{Naval Shipyard}
+British Naval Headquarters{British Naval Headquarters}
+British Naval Headquarters Study{British Naval Headquarters Study}
+#stown_name# Plantation{#stown_name# Plantation}
+Plantation{Plantation}
+Fire Ship deck{Fire Ship deck}
+HMS Hotspur{HMS Hotspur}
+French Battery{French Battery}
+Mystery_House{Mystery House}
+Back Room{Back Room}
+Beach Tunnel{Beach Tunnel}
+Pirate Entrance{Pirate Entrance}
+Pirate House{Pirate House}
+Spanish Prison{Spanish Prison}
+Prison Shore{Prison Shore}
+Smugglers Fort{Smugglers Fort}
+Santiago warehouse{Santiago warehouse}
+Prison Dining Room{Prison Dining Room}
+Rebel Shore{Rebel Shore}
+Rebel Fort{Rebel Fort}
+Don Julian Alvarado's Quarters{Don Julian Alvarado's Quarters}
+Smuggler ship{Smuggler ship}
 
 To Fort{To Fort}
 Cayman Kai{Cayman Kai}
@@ -1224,6 +1322,7 @@ CrewMutinyArticles3{Well, captain. Follow the conditions of our agreement in the
 CrewMutinyArticles4{You don't have rum...}
 CrewMutinyArticles5{Your pockets are empty...}
 GainedPerk{gained new Ability -}
+You unlocked the perk:{You unlocked the perk:}
 PlaguevictimsGrave{Curse? A plaguevictims grave? Whatever, you suddenly feel terribly sick!}
 Petit Tabac{Petit Tabac}
 Battle_Rocks{Petit Tabac}
@@ -1275,6 +1374,22 @@ Directsail mod deactivated{Directsail mod deactivated}
 Directsail toggled, press 0 to enable{Directsail toggled, press "0" to enable}
 Governor Ship Hunting quest active, DirectSail disabled to prevent target ship from disappearing{Governor Ship Hunting quest active, DirectSail disabled to prevent target ship from disappearing}
 Our position from{Our position from}
+dead ahead{dead ahead}
+fine on the starboard bow{fine on the starboard bow}
+on the starboard bow{on the starboard bow}
+broad on the starboard bow{broad on the starboard bow}
+on the starboard beam{on the starboard beam}
+broad on the starboard quarter{broad on the starboard quarter}
+on the starboard quarters{on the starboard quarters}
+fine on the starboard quarter{fine on the starboard quarter}
+astern{astern}
+fine on the port quarter{fine on the port quarter}
+on the port quarter{on the port quarter}
+broad on the port quarter{broad on the port quarter}
+on the port beam{on the port beam}
+broad on the port bow{broad on the port bow}
+on the port bow{on the port bow}
+fine on the port bow{fine on the port bow}
 
 #stown_name# Gunsmith{#stown_name# Gunsmith}
 #stown_name# Blacksmith{#stown_name# Blacksmith}
@@ -1308,6 +1423,8 @@ Sandy Point{Sandy Point}
 White Reefs{White Reefs}
 Wreckage shore{Wreckage shore}
 Dolphin Sands{Dolphin Sands}
+Citadel Rock{Citadel Rock}
+Citadel Rock.{Citadel Rock}
 
 Portugese Blacksmith.{Portugese Blacksmith}
 French Blacksmith.{French Blacksmith}
@@ -1335,9 +1452,13 @@ Mine.{Mine}
 Sandy Point.{Sandy Point}
 White Reefs.{White Reefs}
 Wreckage shore.{Wreckage shore}
-Dolphin Sands.{Dolphin Sands.}
+Dolphin Sands.{Dolphin Sands}
 Boca de Yuman{Boca de Yuman}
+Boca de Yuman.{Boca de Yuman}
 Boca de Hubon{Boca de Hubon}
+Boca de Hubon.{Boca de Hubon}
+Ile a Vache{Ile a Vache}
+Ile a Vache.{Ile a Vache}
 Bahia de San Antonio{Bahia de San Antonio}
 Playa de Sabana{Playa de Sabana}
 Punta de Maisi{Punta de Maisi}
@@ -1356,6 +1477,8 @@ Tortuga prison{Tortuga prison}
 Tortuga Townhall{Tortuga Townhall}
 House of Pablo Escriva.{House of Pablo Escriva.}
 Captain Murphy's House{Captain Murphy's House}
+Entrance Hall{Entrance Hall}
+Cardroom{Cardroom}
 
 have declared a ceasefire!{have declared a ceasefire!}
 have formed an alliance!{have formed an alliance!}
@@ -1410,9 +1533,11 @@ Tavern storeroom{Tavern storeroom}
 Charles Windem's room{Charles Windem's room}
 Woodes Rogers' library{Woodes Rogers' library}
 Caroline K's drawing room{Caroline K's drawing room}
+Caroline's drawing room.{Caroline's drawing room.}
 Woodes Rogers' study{Woodes Rogers' study}
 Woodes Rogers' secret room{Woodes Rogers' secret room}
 Woodes Rogers' residence{Woodes Rogers' residence}
+Woodes Rogers' residence.{Woodes Rogers' residence}
 Loanshark cellar{Loanshark cellar}
 Woodes Rogers' booty room{Woodes Rogers' booty room}
 Fried Egg's Room{Fried Egg's Room}
@@ -1423,6 +1548,7 @@ Woodes Rogers' port{Woodes Rogers' port}
 Woodes Rogers' armory{Woodes Rogers' armory}
 Gunpowder storage{Gunpowder storage}
 Crew's quarter{Crew's quarter}
+Crew's quarter.{Crew's quarter}
 Gunroom{Gunroom}
 Storeroom attic{Storeroom attic}
 Rogers' Paintings Furniture & Weapons{Rogers' Paintings Furniture & Weapons}
@@ -2014,6 +2140,7 @@ Sacristy{Sacristy}
 Graveyard{Graveyard}
 Crypt{Crypt}
 Cell{Cell}
+Library{Library}
 Fort Waxholm{Fort Waxholm}
 
 Something under that straw?{Something under that straw?}
@@ -2120,6 +2247,9 @@ CALL MATES{CALL MATES}
 AWAY BOAT{AWAY BOAT}
 No, I have no more business there.{No, I have no more business there.}
 
+Crewmember of{Crewmember of}
+'s crewmember{'s crewmember}
+
 Taino Village{Taíno Village}
 House of Gilbert Downing{House of Gilbert Downing}
 Old Inquisition prison{Old Inquisition prison}
@@ -2158,6 +2288,7 @@ Hint: To make an officer available to command your ship, assign that officer to 
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
 Capitán{Capitán}
+CapitÝo{CapitÝo}
 
 That coward is trying to escape! Go after him!{That coward is trying to escape! Go after him!}
 Keep going, he can't run from you forever!{Keep going, he can't run from you forever!}
@@ -2172,6 +2303,8 @@ You failed to rescue{You failed to rescue}
 Two months later...{Two months later...}
 
 Three days later...{Three days later...}
+
+Ten years later...{Ten years later...}
 
 The fort gate is closed. Wait for Admiral Hernandez to open it.{The fort gate is closed. Wait for Admiral Hernandez to open it.}
 
@@ -2203,3 +2336,25 @@ There's poor Sakharine again.{There's poor Sakharine again.}
 I need Tools to assemble this thing.{I need Tools to assemble this thing.}
 I don't have all parts yet.{I don't have all parts yet.}
 No, that's not the right part.{No, that's not the right part.}
+
+Captain, we are under a flag friendly to the ship we're attacking. We may be branded a pirate if we don't hoist our true colours!{Captain, we are under a flag friendly to the ship we're attacking. We may be branded a pirate if we don't hoist our true colours!}
+Greek Fire hits the[Greek Fire hits the]
+
+hours pass until the work is completed and you receive the blades back.{hours pass until the work is completed and you receive the blades back.}
+hours pass until the work is completed and you receive the guns back.{hours pass until the work is completed and you receive the guns back.}
+
+Haul on the main brace! Make ready the guns! And run out the sweeps...{Haul on the main brace! Make ready the guns! And run out the sweeps...}
+By the power of Neptune, I command this storm to end!{By the power of Neptune, I command this storm to end!}
+I call upon the sea goddess Calypso to bring a storm onto my foes!{I call upon the sea goddess Calypso to bring a storm onto my foes!}
+
+You take a uniform from one of the dead soldiers{You take a uniform from one of the dead soldiers}
+
+The{The}
+was repaired and reprovisioned{was repaired and reprovisioned}
+was repaired and new guns were installed{was repaired and new guns were installed}
+
+- LEGEND -{- LEGEND -}
+: Ship Position{: Ship Position}
+: Escort Destination{: Escort Destination}
+: Cargo Destination{: Cargo Destination}
+: Hidden Treasure{: Hidden Treasure}

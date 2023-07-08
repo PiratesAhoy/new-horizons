@@ -161,7 +161,7 @@ void InitOptionalMusic()
 	tmpref.music_ship_dead.f1.name = "MUSIC\DaisyMusic\Death.ogg";
 
 	//============== DEATH ===============================
-	tmpref.music_death.f1.name = "MUSIC\DaisyMusic\Death.ogg";				// Daisy: Vàli
+	tmpref.music_death.f1.name = "MUSIC\DaisyMusic\Death.ogg";				// Daisy: VÃ li
 
 	//============ ABORDAGE =======
 	tmpref.music_land_abordage.f1.name = "MUSIC\DaisyMusic\Pyrates Beware.ogg";		// Daisy: AC Black Flag 

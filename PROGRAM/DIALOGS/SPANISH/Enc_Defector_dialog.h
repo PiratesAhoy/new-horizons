@@ -5,7 +5,7 @@ string DLG_TEXT[23] = {
 "¿Qué está pasando aquí?",
 "¿De qué se trata todo esto?",
 "¿Cuál es el problema?",
-"Yo estaba en una banda con ellos... Pero me he dado cuento del error que cometía y quiero vivir una vida honrada de la que pueda estar orgulloso. ¡Pero esos bastardos prefieren verme muerto que libre!",
+"Yo estaba en una banda con ellos... Pero me he dado cuenta del error que cometía y quiero vivir una vida honrada de la que pueda estar orgulloso. ¡Pero esos bastardos prefieren verme muerto que libre!",
 "Estos bandidos... Una vez fui un ladrón, pero he encontrado la fe y solo quiero sentar la cabeza y vivir una vida honrada. ¡Intenté escabullirme, pero me vieron y ahora me llevarán de vuelta y me torturarán! ¡Por favor, ayúdame!",
 "¡En el nombre de Dios, #ssir#, tienes que ayudarme! ¡Quiero dejar esta vida de crimen, pero ahora mis antiguos 'amigos' no se detendrán ante nada para hacerme sufrir, para servir de ejemplo a los demás!",
 "Ah, ahora entiendo.",

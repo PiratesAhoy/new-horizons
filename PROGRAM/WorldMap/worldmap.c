@@ -279,16 +279,16 @@ bool wdmGetShorePos(string locid, ref x, ref z)
 
 float wdmGetDays(int year, int month, int day, int hour)
 {
-	//Считаем дни по годам
+	//РЎС‡РёС‚Р°РµРј РґРЅРё РїРѕ РіРѕРґР°Рј
 	if(year < 0) year = 0;
 	if(year > 3000) year = 3000;
 	year = year*365;
-	//Считаем целые дни
+	//РЎС‡РёС‚Р°РµРј С†РµР»С‹Рµ РґРЅРё
 	for(int i = 1; i < month; i++)
 	{
 		day = day + GetMonthDays(i, year);
 	}
-	//Считаем полные дни
+	//РЎС‡РёС‚Р°РµРј РїРѕР»РЅС‹Рµ РґРЅРё
 	float days = year + day + (hour/24.0);
 	return days;
 }

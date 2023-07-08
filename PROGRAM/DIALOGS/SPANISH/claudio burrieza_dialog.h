@@ -1,5 +1,5 @@
 string DLG_TEXT[114] = {
-"Ah, ¡Una cara nueva en mi taberna! ¡Te doy la bienvenida, ",
+"¡Ah, una cara nueva en mi taberna! ¡Te doy la bienvenida, ",
 "! ¡La mejor hospitalidad del archipiélago está a tu disposición!",
 "Hola. Mi nombre es ",
 ".",

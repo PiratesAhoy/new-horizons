@@ -13,6 +13,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -90,7 +92,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Continue_with_Justinian":
-			PlaySound("VOICE\ENGLISH\Sawyer01.wav");
+			PlaySound(voice_path + "Sawyer01.wav");
 			dialog.text = DLG_TEXT[24];
 			link.l1.go = "Continue_with_Justinian1";
 		break;
@@ -193,7 +195,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Bush_on_board":
-			PlaySound("VOICE\ENGLISH\Sawyer02.wav");
+			PlaySound(voice_path + "Sawyer02.wav");
 			dialog.text = DLG_TEXT[37];
 			link.l1.go = "Exit_Bush_on_board";
 		break;
@@ -205,14 +207,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "Bush_reported":
-			PlaySound("VOICE\ENGLISH\Sawyer03.wav");
+			PlaySound(voice_path + "Sawyer03.wav");
 			dialog.text = DLG_TEXT[38];
 			link.l1 = DLG_TEXT[39];
 			link.l1.go = "Bush_reported2";
 		break;
 
 		case "Bush_reported2":
-			PlaySound("VOICE\ENGLISH\Sawyer04.wav");
+			PlaySound(voice_path + "Sawyer04.wav");
 			dialog.text = DLG_TEXT[40];
 			link.l1.go = "Exit_Bush_reported";
 		break;
@@ -224,7 +226,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Get_the_ship_underway":
-			PlaySound("VOICE\ENGLISH\Sawyer05.wav");
+			PlaySound(voice_path + "Sawyer05.wav");
 			dialog.text = DLG_TEXT[41];
 			link.l1.go = "Get_the_ship_underway2";
 		break;

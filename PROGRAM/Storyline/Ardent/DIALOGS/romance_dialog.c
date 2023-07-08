@@ -25,13 +25,11 @@ void ProcessDialogEvent()
 	{
 		gov_kid = XI_ConvertString("daughter");
 		merch_kid = XI_ConvertString("son");
-//		merch_kid_pronoun3 = XI_ConvertString("his");
 	}
 	else
 	{
 		gov_kid = XI_ConvertString("son");
 		merch_kid = XI_ConvertString("daughter");
-//		merch_kid_pronoun3 = XI_ConvertString("her");
 	}
 
 	switch(Dialog.CurrentNode)

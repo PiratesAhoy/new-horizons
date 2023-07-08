@@ -1,3 +1,3 @@
-title=Обучение - Под 'Веселым Роджером'
-text.t1=I have committed a blatant act of piracy, so I'm a pirate. The navies of the world will be after me. I'd better learn the tricks of the 'trade' if I'm to avoid the hangman's noose.
-text.t2=I've acquired a book with all sorts of useful hints. That, along with a good ship, a loyal crew and a bottle of rum, should keep me one step ahead of the pirate-hunters.
+title=Обучение: Под Веселым Роджером
+text.t1=Я совершил вопиющий акт пиратства, поэтому я пират. За мной будут охотиться военно-морские силы всего мира. Чтобы избежать петли палача, мне лучше научиться хитростям "ремесла".
+text.t2=Я приобрел книгу со всевозможными полезными советами. Это, наряду с хорошим кораблем, преданной командой и бутылкой рома, должно держать меня на шаг впереди охотников за пиратами.

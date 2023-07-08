@@ -47,6 +47,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "speak3":
+			Preprocessor_Add("cursedship", TranslateString(PreprocessText("#scursed_ship#"), ""));
 			dialog.text = DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "exitMurtogg1";

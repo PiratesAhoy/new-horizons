@@ -7,7 +7,7 @@ Ciri and I were on the hunt for a 'dragon' that had killed five villagers. Howev
 Today I begin my new life as a ship’s captain. I have left the service of the crown and the life of a spy behind me once and for all. If I had any doubts about retiring from that line of work they ended with the episode in Madagascar. It was nothing short of a miracle that I wasn’t arrested and killed along with my counterparts from the other great powers. With my severance from the secret service I have purchased a vessel and made my way to the new world where, I hope, my past will not catch up with me.{Today I begin my new life as a ship’s captain. I have left the service of the crown and the life of a spy behind me once and for all. If I had any doubts about retiring from that line of work they ended with the episode in Madagascar. It was nothing short of a miracle that I wasn’t arrested and killed along with my counterparts from the other great powers. With my severance from the secret service I have purchased a vessel and made my way to the new world where, I hope, my past will not catch up with me.}
 This is a truly momentous occasion. I have worked towards this since I went on account all those years back as a young, know-nothing scallywag with more spine than brains. The crew has elected me captain, replacing our departed leader who lost his head to a cannon ball during our last cruise. Bad for him, good for me. The old man was a good captain and ran a tight ship but I’ve always had my own ideas about how things should be done. Now I get to see if I’m right!{This is a truly momentous occasion. I have worked towards this since I went on account all those years back as a young, know-nothing scallywag with more spine than brains. The crew has elected me captain, replacing our departed leader who lost his head to a cannon ball during our last cruise. Bad for him, good for me. The old man was a good captain and ran a tight ship but I’ve always had my own ideas about how things should be done. Now I get to see if I’m right!}
 I have spent most of my adult life on solid ground, as solid as a battlefields gets in any case, as a military engineer in the service of the crown. With my earnings I have decided to leave the army and invest in a ship. I have arrived in the Caribbean where they say enterprising captains with a solid vessel can do very well for themselves. We shall see. While I must confess that I am not much of a seaman yet, I am past the stage of turning green in poor weather and should pick the rest up quickly as I go.{I have spent most of my adult life on solid ground, as solid as a battlefields gets in any case, as a military engineer in the service of the crown. With my earnings I have decided to leave the army and invest in a ship. I have arrived in the Caribbean where they say enterprising captains with a solid vessel can do very well for themselves. We shall see. While I must confess that I am not much of a seaman yet, I am past the stage of turning green in poor weather and should pick the rest up quickly as I go.}
-My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, his majesty’s representative was impressed by my harrowing tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world.{My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, his majesty’s representative was impressed by my harrowing tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world.}
+My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, his majesty’s representative was impressed by my harrowing tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world.{My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, His Majesty’s representative was impressed by my harrowing tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world.}
 I have always had the luck of the cards but this is a true windfall even by my own high standards! I am the proud new owner of a fully-outfitted sailing vessel. The old sea dog thought his four kings had me beat but my royal straight flush took the grin from his face fast enough. Ha! I didn’t even cheat. I was concerned the crew wouldn’t take kindly to the situation but it seems the old man’s bad luck had been rubbing off on them as well of late and there were no tears at the change in management.{I have always had the luck of the cards but this is a true windfall even by my own high standards! I am the proud new owner of a fully-outfitted sailing vessel. The old sea dog thought his four kings had me beat but my royal straight flush took the grin from his face fast enough. Ha! I didn’t even cheat. I was concerned the crew wouldn’t take kindly to the situation but it seems the old man’s bad luck had been rubbing off on them as well of late and there were no tears at the change in management.}
 Ten long years I have spent in the navy over hot, roaring cannon. I’m half deaf and my body is riddled with grape shot and splinters but I have saved my wages diligently and today I am the proud owner of my own ship. I have a solid crew under my command who respect my time in service and the scars I carry. My days of shattered ships and drowning men may not be over but at least I’ll be pointing those guns where I choose now.{Ten long years I have spent in the navy over hot, roaring cannon. I’m half deaf and my body is riddled with grape shot and splinters but I have saved my wages diligently and today I am the proud owner of my own ship. I have a solid crew under my command who respect my time in service and the scars I carry. My days of shattered ships and drowning men may not be over but at least I’ll be pointing those guns where I choose now.}
 Once I was a marine in the navy, but I managed to save my salary until I could afford a way out. Investing this in a new ship seems like a great way of giving me the freedom I've always wished for. So now here I am, ready to set sail on my first venture!{Once I was a marine in the navy, but I managed to save my salary until I could afford a way out. Investing this in a new ship seems like a great way of giving me the freedom I've always wished for. So now here I am, ready to set sail on my first venture!}
@@ -66,4 +66,193 @@ in the night{in the night}
 Unreadable page{Unreadable page}
 This page of the ship's log is drenched in rum. It's no longer readable. [ the code has an error :) ]{This page of the ship's log is drenched in rum. It's no longer readable. [ the code has an error :) ]}
 
-{=====| 27 log entrys |=====}
+{=====| Gov MR_dialog.c |=====}
+Married{Married}
+Married #sspouse#{Married #sspouse#}
+On this wonderful day I married #sspouse#, #sname#, #srelation# of #sgovernor#, the governor of #stown#. I won #spronoun3# heart with my wit and charm, and last but not least with my swordmanship, as I had to defeat #spronoun3# jealous suitor, before #spronoun1# could agree to a marriage. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...{On this wonderful day I married #sspouse#, #sname#, #srelation# of #sgovernor#, the governor of #stown#. I won #spronoun3# heart with my wit and charm, and last but not least with my swordmanship, as I had to defeat #spronoun3# jealous suitor, before #spronoun1# could agree to a marriage. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...}
+On this wonderful day I married #sspouse#, #sname#. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...{On this wonderful day I married #sspouse#, #sname#. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...}
+my beautiful wife{my beautiful wife}
+my handsome husband{my handsome husband}
+my pet human{my pet human}
+
+{=====| CharacterUtilite.c |=====}
+Promoted to #snationdesc# #srank#{Promoted to #snationdesc# #srank#}
+My dedication and faithful service for #snationname# have earned me the rank of #srank#.{My dedication and faithful service for #snationname# have earned me the rank of #srank#.}
+The #snationdesc# governor #sgovname# awarded me with the title and #snewland# acres of land.{The #snationdesc# governor #sgovname# awarded me with the title and #snewland# acres of land.}
+
+Joined Service of #snationname#{Joined Service of #snationname#}
+I received a Letter of Marque from #snationname#. Now I am in their service, I can legally sink and capture ships, which means prize money and potential promotions for me in the future.{I received a Letter of Marque from #snationname#. Now I am in their service, I can legally sink and capture ships, which means prize money and potential promotions for me in the future.}
+
+Left Service of #snationname#{Left Service of #snationname#}
+This marks the end of my service for #snationname#. But at least I am free now to pursue other goals.{This marks the end of my service for #snationname#. But at least I am free now to pursue other goals.}
+My leaving was on rather bad terms and left me with decidedly less friends than I had.{My leaving was on rather bad terms and left me with decidedly less friends than I had.}
+
+{=====| nations.c |=====}
+#snationnamei# turned Wary of me{#snationnamei# turned Wary of me}
+The #snationdesci# government turned wary of me because of my attack on their #snationdesc# allies.{The #snationdesci# government turned wary of me because of my attack on their #snationdesc# allies.}
+
+Marked as a Pirate{Marked as a Pirate}
+The civilized nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. It may be possible to rectify this by declaring my loyalties as a Privateer. On the other hand, joining the Brethren of the Coast could be much more profitable.{The civilised nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. It may be possible to rectify this by declaring my loyalties as a Privateer. On the other hand, joining the Brethren of the Coast could be much more profitable.}
+
+The civilized nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. Joining the Brethren of the Coast could be rather profitable. And they don't care what I do to prisoners!{The civilised nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. Joining the Brethren of the Coast could be rather profitable. And they don't care what I do to prisoners!}
+
+#snationnamei# and #snationnamej# make peace{#snationnamei# and #snationnamej# make peace}
+After some time of bloody warfare #snationnamei# and #snationnamej# have declared a ceasefire.{After some time of bloody warfare #snationnamei# and #snationnamej# have declared a ceasefire.}
+This is good news as it was a very hard time to keep friendly relations with two warfaring parties.{This is good news as it was a very hard time to keep friendly relations with two warfaring parties.}
+\n \nAlthough good news in general, this is bad news for me. Attacking #snationdesc1# ships and towns will not raise my reputation with the #snationdesc2# anymore.{\n \nAlthough good news in general, this is bad news for me. Attacking #snationdesc1# ships and towns will not raise my reputation with the #snationdesc2# anymore.}
+
+#snationnamei# and #snationnamej# have allied{#snationnamei# and #snationnamej# have allied}
+#snationnamei# and #snationnamej# have formed an alliance. Attacking ships or towns of either nation will also decrease the standing with the ally.{#snationnamei# and #snationnamej# have formed an alliance. Attacking ships or towns of either nation will also decrease the standing with the ally.}
+Very good news, indeed. Working for the #snationdesci# and the #snationdescj#, as I currently do, my deeds will raise my standing with both nations.{Very good news, indeed. Working for the #snationdesci# and the #snationdescj#, as I currently do, my deeds will raise my standing with both nations.}
+Whoops! It seems I have bothered them a little too much. But their alliance won't stop me.{Whoops! It seems I have bothered them a little too much. But their alliance won't stop me.}
+\n \nThis makes working for the #snationdesc1# somewhat more difficult, as sinking #snationdesc2# ships is no longer an option.{\n \nThis makes working for the #snationdesc1# somewhat more difficult, as sinking #snationdesc2# ships is no longer an option.}
+
+#snationname1# is at war with #snationname2#{#snationname1# is at war with #snationname2#}
+#snationname1# has declared war on #snationname2#.{#snationname1# has declared war on #snationname2#.}
+#snationdesc1# ships have attacked a small #snationdesc2# settlement, as I was told.{#snationdesc1# ships have attacked a small #snationdesc2# settlement, as I was told.}
+#snationdesc1# troops have landed near #snationtown2#, as I was told.{#snationdesc1# troops have landed near #snationtown2#, as I was told.}
+
+\n \nIt was about time to show those #snationdesc2# landlubbers who's in charge in the Caribbean!{\n \nIt was about time to show those #snationdesc2# landlubbers who's in charge in the Caribbean!}
+\n \nThose bloody cowards! The next #snationdesc1# ship we encounter will surely pay for this.{\n \nThose bloody cowards! The next #snationdesc1# ship we encounter will surely pay for this.}
+
+#snationname1# and #snationname2# broke their alliance{#snationname1# and #snationname2# broke their alliance}
+#snationname1# and #snationname2# have broken their alliance, but are currently peaceful. Observers report military activity on both sides, but so far an open conflict has been avoided.{#snationname1# and #snationname2# have broken their alliance, but are currently peaceful. Observers report military activity on both sides, but so far an open conflict has been avoided.}
+#snationname1# and #snationname2# have broken their alliance and are now at war! It was reported that #snationname1# broke the alliance by{#snationname1# and #snationname2# have broken their alliance and are now at war! It was reported that #snationname1# broke the alliance by}
+\n \nThose treacherous bastards! The #snationdesc1# will pay for this betrayal. I have ordered to open fire on sight of any #snationdesc1# ship.{\n \nThose treacherous bastards! The #snationdesc1# will pay for this betrayal. I have ordered to open fire on sight of any #snationdesc1# ship.}
+
+'accidently' sinking the #snationdescv# military supply convoy.{'accidentally' sinking the #snationdescv# military supply convoy.}
+treating the #snationdescv# ambassador in a 'disrespectful' manner, as was reported from Europe.{treating the #snationdescv# ambassador in a 'disrespectful' manner, as was reported from Europe.}
+brutally burning down a small settlement of the #snationdescv#, leaving no one alive (I am curious how they got this report then?).{brutally burning down a small settlement of the #snationdescv#, leaving no one alive (I am curious how they got this report then?).}
+officially knighting a notorious freebooter, who plundered the #snationdescv# colonies in the previous war.{officially knighting a notorious freebooter, who plundered the #snationdescv# colonies in the previous war.}
+inciting a slave revolt in a major #snationdescv# colony.{inciting a slave revolt in a major #snationdescv# colony.}
+sending a horde of French squirrels with blond wigs to pillage a Spanish monastery.\n \n This doesn't make any sense at all and does not really explain why #snationnamet# broke their alliance, but that's what they did.{sending a horde of French squirrels with blond wigs to pillage a Spanish monastery.\n \n This doesn't make any sense at all and does not really explain why #snationnamet# broke their alliance, but that's what they did.}
+
+{=====| AIShip.c |=====}
+Sunk a #sshiptype#{Sunk a #sshiptype#}
+, we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\nWe closed in on the ship and fired a broadside. In the following battle their captain tried to evade our cannonfire and almost escaped with a risky maneuver. The battle was ended by the #smyshipname# ramming their ship. The hull shattered and the #sshipname# sank like a stone within minutes.{, we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\nWe closed in on the ship and fired a broadside. In the following battle their captain tried to evade our cannonfire and almost escaped with a risky maneuver. The battle was ended by the #smyshipname# ramming their ship. The hull shattered and the #sshipname# sank like a stone within minutes.}
+This was not considered to be a legal attack.{This was not considered to be a legal attack.}
+\nAbout #sdeadcrew# sailors followed her to Davy Jones.{\nAbout #sdeadcrew# sailors followed her to Davy Jones.}
+, we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\nWhen they were in reach of our cannons, we opened fire. Our cannons tore their sails to tatters and shattered their hull. After a ferocious battle, the #smyshipname# fired her cannons a last time at the #sshipname#. Its hull was already heavily damaged from a previous broadside and the ship sank like a stone.{, we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\nWhen they were in reach of our cannons, we opened fire. Our cannons tore their sails to tatters and shattered their hull. After a ferocious battle, the #smyshipname# fired her cannons a last time at the #sshipname#. Its hull was already heavily damaged from a previous broadside and the ship sank like a stone.}
+\nAbout #sdeadcrew# sailors went down with her to Davy Jones.{\nAbout #sdeadcrew# sailors went down with her to Davy Jones.}
+, we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\n{, we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\n}
+When we opened fire, they tried to escape, but we chased them and finally were in reach for boarding, when the cowards raised the white flag and surrendered the ship. We brought our ship alongside and boarded.{When we opened fire, they tried to escape, but we chased them and finally were in reach for boarding, when the cowards raised the white flag and surrendered the ship. We brought our ship alongside and boarded.}
+Our cannons gave them a warm and hearty welcome when we closed for battle. Once they were in reach of our grappling hooks, we boarded the ship and I defeated the captain.{Our cannons gave them a warm and hearty welcome when we closed for battle. Once they were in reach of our grappling hooks, we boarded the ship and I defeated the captain.}
+\nWe plundered her{\nWe plundered her}
+, moved the #smoney# gold from their ship's chest to ours{, moved the #smoney# gold from their ship's chest to ours}
+and sent the #sshipname# down to Davy Jones.{and sent the #sshipname# down to Davy Jones.}
+\nAbout #sdeadcrew# sailors accompanied her on her journey.{\nAbout #sdeadcrew# sailors accompanied her on her journey.}
+\n \nThe #sshipname# was loaded with the following cargo:\n{\n \nThe #sshipname# was loaded with the following cargo:\n}
+Captured a #sshiptype#{Captured a #sshiptype#}
+When they were in reach of our cannons, we fired and a ferocious sea battle began. Finally we brought our ship alongside and boarded. After a bloody deckfight I defeated the enemy captain in a duel, thus capturing the ship.{When they were in reach of our cannons, we fired and a ferocious sea battle began. Finally we brought our ship alongside and boarded. After a bloody deckfight I defeated the enemy captain in a duel, thus capturing the ship.}
+The #sshipname# was loaded with the following cargo:\n{The #sshipname# was loaded with the following cargo:\n}
+Additionally we found #smoney# gold in the ship's chest.{Additionally we found #smoney# gold in the ship's chest.}
+
+The sails were in nearly perfect condition. Sometimes not using cannons pays off.{The sails were in nearly perfect condition. Sometimes not using cannons pays off.}
+The sails were in a quite good condition for a ship captured in a seafight.{The sails were in a quite good condition for a ship captured in a seafight.}
+Compared to the amount of balls we shot at the ship the sails were in acceptable condition. Nevertheless, repairing the damage will cost quite some sailcloth.{Compared to the amount of balls we shot at the ship the sails were in acceptable condition. Nevertheless, repairing the damage will cost quite some sailcloth.}
+The sails were badly damaged, but at least allowed the ship basic maneuvers.{The sails were badly damaged, but at least allowed the ship basic maneuvers.}
+The sails were almost completely in tatters. We'll need quite a lot of sailcloth to repair that.{The sails were almost completely in tatters. We'll need quite a lot of sailcloth to repair that.}
+Our cannons did their job. The sails and the rigging were in tatters, there was barely a squarefeet of sails left intact.{Our cannons did their job. The sails and the rigging were in tatters, there was barely a square foot of sails left intact.}
+
+The hull was in very good order. It almost took no damage at all from the battle.{The hull was in very good order. It almost took no damage at all from the battle.}
+The hull was in good condition. Our balls did some damage but nothing serious.{The hull was in good condition. Our balls did some damage but nothing serious.}
+The hull had a few holes and the deck was quite a mess, but it seems the damage can be repaired.{The hull had a few holes and the deck was quite a mess, but it seems the damage can be repaired.}
+The hull was leaking, the deck full of splinters and overall the ship was in a bad condition.{The hull was leaking, the deck full of splinters and overall the ship was in a bad condition.}
+The ship has spung a large leak in the hull and water was pouring in, but we were able to close it. In summary the ship's hull was as full of holes as a Swiss cheese.{The ship has spung a large leak in the hull and water was pouring in, but we were able to close it. In summary the ship's hull was as full of holes as a Swiss cheese.}
+The ship was about to sink when we captured her. We spotted three leaks in the hull and did some quick repairs. The ship is badly in need of a shipyard.{The ship was about to sink when we captured her. We spotted three leaks in the hull and did some quick repairs. The ship is badly in need of a shipyard.}
+
+{=====| shipyard.c |=====}
+Visited{Visited}
+Visited the local shipwright.{Visited the local shipwright.}
+The shipwright agreed to repair the '#sshipname#' for the amount of #scost# pieces of gold.{The shipwright agreed to repair the '#sshipname#' for the amount of #scost# pieces of gold.}
+Sold the '#sarcurship#', a #srship# for #ssellprice# pieces of gold.{Sold the '#sarcurship#', a #srship# for #ssellprice# pieces of gold.}
+Bought a new ship, the '#snewship#' for #sbprice# pieces of gold.{Bought a new ship, the '#snewship#' for #sbprice# pieces of gold.}
+Had the sails of the '#sarcurship#' repaired for #ssailcost# pieces of gold.{Had the sails of the '#sarcurship#' repaired for #ssailcost# pieces of gold.}
+Had the hull of the '#sarcurship#' repaired for #shullcost# pieces of gold.{Had the hull of the '#sarcurship#' repaired for #shullcost# pieces of gold.}
+Had the cannons of the '#sarcurship#' repaired for #sguncost# pieces of gold.{Had the cannons of the '#sarcurship#' repaired for #sguncost# pieces of gold.}
+Installed new cannons on the '#sarcurship#' for #stopay# pieces of gold.{Installed new cannons on the '#sarcurship#' for #stopay# pieces of gold.}
+Upgraded the '#sarcurship#' with new #supgrade# for #scost# pieces of gold.{Upgraded the '#sarcurship#' with new #supgrade# for #scost# pieces of gold.}
+
+{=====| store.c |=====}
+Visited the local merchant, sold off our cargo and refilled our supplies. The trade earned me"{Visited the local merchant, sold off our cargo and refilled our supplies. The trade earned me}
+pieces of gold.{pieces of gold.}
+Visited the local merchant to refill our supplies. I had to leave{Visited the local merchant to refill our supplies. I had to leave}
+pieces of gold to the storekeeper.{pieces of gold to the storekeeper.}
+
+{=====| quests_common.c |=====}
+The #srequester# of #stown# needs help.{The #srequester# of #stown# needs help.}
+The governor ordered to build more ships but there aren't enough resources on the island to make them. Looks like they need help to get these goods.{The governor ordered to build more ships but there aren't enough resources on the island to make them. Looks like they need help to get these goods.}
+The governor wants to increase the amount of troops on the island and they will all need new uniforms. They need help to get the resources required.{The governor wants to increase the amount of troops on the island and they will all need new uniforms. They need help to get the resources required.}
+The military ordered new weapons as it is time to amortize their current stock. The blacksmith needs help to acquire the resources to make them.{The military ordered new weapons as it is time to amortize their current stock. The blacksmith needs help to acquire the resources to make them.}
+The gunsmith has gotten lots of new orders lately. Everyone wants a new sword or a firearm and he doesn't have the means to make them all.{The gunsmith has gotten lots of new orders lately. Everyone wants a new sword or a firearm and he doesn't have the means to make them all.}
+There has been a serious outbreak of disease lately, and the Apothecary is running out of medicines to treat the sick. He needs help to get supplies.{There has been a serious outbreak of disease lately, and the Apothecary is running out of medicines to treat the sick. He needs help to get supplies.}
+
+{=====| Towntables.c |=====}
+Malaria strikes #stown#{Malaria strikes #stown#}
+An increasing number of people in #stown# are reported to have died from Malaria. The civilian losses were quite high, but the soldiers in the local garrison have suffered even more.{An increasing number of people in #stown# are reported to have died from Malaria. The civilian losses were quite high, but the soldiers in the local garrison have suffered even more.}
+
+Pirates plunder #stown#{Pirates plunder #stown#}
+A pirate assault on #stown# has been reported. Some pirates seem to have sneaked into town before their ships attacked the harbor in the middle of the night. Those in town took the garrison by surprise and kept the town gates open for their comrades. The whole attack didn't last much longer than two hours. The pirates escaped with a vast amount of gold, before the fort commander was able to gather his troops for defence. Several people died in the brutal attack, as they tried to defend their possesions on their own.{A pirate assault on #stown# has been reported. Some pirates seem to have sneaked into town before their ships attacked the harbor in the middle of the night. Those in town took the garrison by surprise and kept the town gates open for their comrades. The whole attack didn't last much longer than two hours. The pirates escaped with a vast amount of gold, before the fort commander was able to gather his troops for defence. Several people died in the brutal attack, as they tried to defend their possesions on their own.}
+
+Gold found near #stown#{Gold found near #stown#}
+Miners from #stown# have struck a rich vein of gold. A new gold mine has been opened and the governor has sent for more troops in order to better protect the town from possible pirate attacks. The new riches attract all kind of people, so #stown# is expected to grow.{Miners from #stown# have struck a rich vein of gold. A new gold mine has been opened and the governor has sent for more troops in order to better protect the town from possible pirate attacks. The new riches attract all kind of people, so #stown# is expected to grow.}
+
+Silver found near #stown#{Silver found near #stown#}
+SILVERFOUND_entry {Miners from #stown# have struck a rich vein of silver. A new silver mine has been opened and the governor has sent for more troops in order to better protect the town from possible pirate attacks. The new riches attract all kind of people, so #stown# is expected to grow.}
+
+Indians attack #stown#{Indians attack #stown#}
+A major attack of indians on #stown# has been reported by travellers. The indians seem to have plundered and massacred the civilian population as well as the local garrison. Finally the cannons of the garrison drove them away, leaving the town completely desolate.{A major attack of indians on #stown# has been reported by travellers. The indians seem to have plundered and massacred the civilian population as well as the local garrison. Finally the cannons of the garrison drove them away, leaving the town completely desolate.}
+
+Slave revolt at #stown#{Slave revolt at #stown#}
+The governor of #stown# spread news that a slave revolt has been put down by the local garrison. All surviving marauders were hanged as a warning. Although the rebellion has been put down, the loss of quite a lot of slaves is expected to have a bad impact on the economy of #stown#.{The governor of #stown# spread news that a slave revolt has been put down by the local garrison. All surviving marauders were hanged as a warning. Although the rebellion has been put down, the loss of quite a lot of slaves is expected to have a bad impact on the economy of #stown#.}
+
+Serious fire in #stown#{Serious fire in #stown#}
+A serious fire has laid waste to parts of #stown#. The fire erupted near the harbor, where a warehouse suddenly exploded into flames. There is rumor it was stocked with oil or gunpowder or even both. The fire quickly spread and could not be quenched until two days later. Quite a lot of people are reported to have died in the attempt to save their belongings from the flames.{A serious fire has laid waste to parts of #stown#. The fire erupted near the harbor, where a warehouse suddenly exploded into flames. There is rumor it was stocked with oil or gunpowder or even both. The fire quickly spread and could not be quenched until two days later. Quite a lot of people are reported to have died in the attempt to save their belongings from the flames.}
+
+Hurricane strikes #stown#{Hurricane strikes #stown#}
+#stown# has been struck by a serious hurricane. Wind and water destroyed many buildings in town, especially the poorer parts were hit badly. Several ships in the harbor sunk as a result of the hurricane. Diseases are expected to spread throughout town as usual after such disasters.{#stown# has been struck by a serious hurricane. Wind and water destroyed many buildings in town, especially the poorer parts were hit badly. Several ships in the harbor sunk as a result of the hurricane. Diseases are expected to spread throughout town as usual after such disasters.}
+
+New settlers at #stown#{New settlers at #stown#}
+A convoy of ships bringing new settlers from Europe has arrived at #stown#. The new settlers are badly needed to strengthen the economy of the town. It has been reported that the convoy also brought luxury goods and new inventions from Europe to the colonies, as well as a small battalion of soldiers.{A convoy of ships bringing new settlers from Europe has arrived at #stown#. The new settlers are badly needed to strengthen the economy of the town. It has been reported that the convoy also brought luxury goods and new inventions from Europe to the colonies, as well as a small battalion of soldiers.}
+
+EXPEDITION_title {Expedition returns to #stown#}
+An expedition into the jungle has returned to #stown#. The expedition was a great success, as the explorers found a gold vein not far away, which was exploited by a native tribe. The explorers captured the village and enslaved the surviving indians in order to establish a new mining camp. The expedition finally returned with a great amount of goods and gold, several hitherto unknown plants and a number of slaves.{An expedition into the jungle has returned to #stown#. The expedition was a great success, as the explorers found a gold vein not far away, which was exploited by a native tribe. The explorers captured the village and enslaved the surviving indians in order to establish a new mining camp. The expedition finally returned with a great amount of goods and gold, several hitherto unknown plants and a number of slaves.}
+
+{=====| Dialog_func.c |=====}
+Ransacked #stown#{Ransacked #stown#}
+My men pillaged and plundered to their heart's content. Of course #snation# and their allies aren't happy about this, but it made for an extra #sbooty# gold in the ship's chest. Hopefully it was worth it.{My men pillaged and plundered to their heart's content. Of course #snation# and their allies aren't happy about this, but it made for an extra #sbooty# gold in the ship's chest. Hopefully it was worth it.}
+Captured #stown# for #stonation#{Captured #stown# for #stonation#}
+The #snationdesc# and their allies will not be happy about this. But #stonation# and their friends most certainly will be!{The #snationdesc# and their allies will not be happy about this. But #stonation# and their friends most certainly will be!}
+Captured #stown# for myself{Captured #stown# for myself}
+What used to belong to #snation# now belongs to me. The original owners of course won't be pleased and neither will their allies. But that is the price to pay for building my personal empire.{What used to belong to #snation# now belongs to me. The original owners of course won't be pleased and neither will their allies. But that is the price to pay for building my personal empire.}
+
+{=====| governor.c |=====}
+Prisoner Executions{Prisoner Executions}
+The #snationdesc# government did not take kindly to my treatment of prisoners. I had better stop executing them if I want to remain in the service of #snation#.{The #snationdesc# government did not take kindly to my treatment of prisoners. I had better stop executing them if I want to remain in the service of #snation#.}
+
+{=====| CCCFunctions.c |=====}
+Merchant Guild Member Killed{Merchant Guild Member Killed}
+I do not remember the specifics, but a #snationdesc# merchant got killed in my presence. Was it one of my officers who did it? Myself? Or a complete accident? Either way, the Merchant Guild blamed me and I was lucky to escape with my life. This has had a notable effect on my relations and reputation.{I do not remember the specifics, but a #snationdesc# merchant got killed in my presence. Was it one of my officers who did it? Myself? Or a complete accident? Either way, the Merchant Guild blamed me and I was lucky to escape with my life. This has had a notable effect on my relations and reputation.}
+
+{=====| Itemtrade.c |=====}
+Traded off all the collected blades, pistols, gems and other junk to a local merchant. The trade earned me{Traded off all the collected blades, pistols, gems and other junk to a local merchant. The trade earned me}
+Found some interesting new items while browsing through the inventory of a local merchant. I had to pay{Found some interesting new items while browsing through the inventory of a local merchant. I had to pay}
+
+{=====| Usurer_dialog.c |=====}
+I was desperate enough to borrow some money from the local loanshark. Now I have to return #sammount# plus interest to #sloanshark# by #sdeadline#.{I was desperate enough to borrow some money from the local loanshark. Now I have to return #sammount# plus interest to #sloanshark# by #sdeadline#.}
+I deposited some money at the local loanshark. #sloanshark# promised a good interest for my{I deposited some money at the local loanshark. #sloanshark# promised a good interest for my}
+
+{=====| Ardent: both_reaction.c |=====}
+Captured!{Captured!}
+Damnation! That was one smuggling run too many. The patrol ships were too much for ours to take on and the wind wouldn't let us escape to sea.{Damnation! That was one smuggling run too many. The patrol ships were too much for ours to take on and the wind wouldn't let us escape to sea.}
+Damnation! That ship wasn't an easy merchant after all, but a fighting ship filled with soldiers. That will teach me to look at a ship's flag before attacking, though as we're being boarded, I may not have time to make use of the lesson.{Damnation! That ship wasn't an easy merchant after all, but a fighting ship filled with soldiers. That will teach me to look at a ship's flag before attacking, though as we're being boarded, I may not have time to make use of the lesson.}
+
+{=====| Ardent: quests_reaction.c |=====}
+deserts{deserts}
+didn't take too kindly to my actions against Spain, and has left me.{didn't take too kindly to my actions against Spain, and has left me.}
+'s new clothes{'s new clothes}
+has taken some silk from our hold without bothering to ask. But after seeing the new clothes she made for herself with it, I'm not complaining!{has taken some silk from our hold without bothering to ask. But after seeing the new clothes she made for herself with it, I'm not complaining!}
+#snationname1# and #snationname2# have resumed their hostilities.{#snationname1# and #snationname2# have resumed their hostilities.}
+
+{=====| Devlin Opera: quests_reaction.c |=====}
+My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, His Majesty’s representative was impressed by my tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world. This is where my father disappeared... And I think my rascal brother should also be somewhere in these waters.{My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, His Majesty’s representative was impressed by my tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world. This is where my father disappeared... And I think my rascal brother should also be somewhere in these waters.}

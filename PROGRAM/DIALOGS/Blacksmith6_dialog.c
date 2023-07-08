@@ -399,7 +399,7 @@ void ProcessDialogEvent()
 		link.l95 = DLG_TEXT[24];
 		link.l95.go = "exit";
 
-		LogIt(BladeCount*2+" hours pass until the work is completed and you receive the blades back.");
+		LogIt(BladeCount*2+ " "+ TranslateString("","hours pass until the work is completed and you receive the blades back."));
 		WaitDate("", 0, 0, 0, BladeCount*2, 0);
 		break;
 
@@ -472,7 +472,7 @@ void ProcessDialogEvent()
 		link.l95 = DLG_TEXT[24];
 		link.l95.go = "exit";
 
-		LogIt(BladeCount*2+" hours pass until the work is completed and you receive the blades back.");
+		LogIt(BladeCount*2+ " "+ TranslateString("","hours pass until the work is completed and you receive the blades back."));
 		WaitDate("", 0, 0, 0, BladeCount*2, 0);
 
 		break;
@@ -546,7 +546,7 @@ void ProcessDialogEvent()
 		link.l95 = DLG_TEXT[24];
 		link.l95.go = "exit";
 
-		LogIt(BladeCount*2+" hours pass until the work is completed and you receive the blades back.");
+		LogIt(BladeCount*2+ " "+ TranslateString("","hours pass until the work is completed and you receive the blades back."));
 		WaitDate("", 0, 0, 0, BladeCount*2, 0);
 
 		break;
@@ -620,7 +620,7 @@ void ProcessDialogEvent()
 		link.l95 = DLG_TEXT[24];
 		link.l95.go = "exit";
 
-		LogIt(BladeCount*2+" hours pass until the work is completed and you receive the blades back.");
+		LogIt(BladeCount*2+ " "+ TranslateString("","hours pass until the work is completed and you receive the blades back."));
 		WaitDate("", 0, 0, 0, BladeCount*2, 0);
 
 		break;

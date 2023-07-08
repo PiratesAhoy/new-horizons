@@ -7,7 +7,7 @@ string DLG_TEXT[40] = {
 "No tan rápido. Quiero hablar contigo.",
 "Soy todo oídos. ¿Cómo puedo ayudarte?",
 "Necesito enrolar a algunos marineros.",
-"Quiero añadir alguans manos a mi tripulacion.",
+"Quiero añadir alguans espaldas fuertes a mi tripulación.",
 "Hablemos de negocios.",
 "Me gustaría alquilar una habitación.",
 "¿Tienes una habitación libre en este lugar?",

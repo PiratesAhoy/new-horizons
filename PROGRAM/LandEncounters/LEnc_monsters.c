@@ -679,7 +679,7 @@ bool LEnc_MonstersLoginStart(ref location)
 		LEnc_MonstersLoginObject.monkey = "0";
 		LEnc_MonstersLoginObject.mummy = "0";
 		LEnc_MonstersLoginObject.vagabond = "0";	// ccc Nov05 "0.1";
-		Logit("You are ALONE now. No other LIVING soul dares to enter here..");	// ccc Nov05
+		Logit(TranslateString("","You are ALONE now. No other LIVING soul dares to enter here.."));	// ccc Nov05
 	}
 
 	// ccc to enable encounters in fake forts

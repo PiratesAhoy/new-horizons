@@ -956,6 +956,10 @@ void SetSchemeForLocation(ref loc)
 			SetSoundScheme("jungle");
 			SetMusicAlarm("OP_wood");
 			break;
+                case "yohoho_tavern":
+                        SetSoundScheme("tavern");
+                        SetMusicAlarm("music_yohoho");
+                        break;
 	//<-- DEVLIN
 	// CARTAGENA -->
 		case "inquisition":

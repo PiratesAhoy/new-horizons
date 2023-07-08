@@ -697,7 +697,7 @@ void ProcessDialogEvent()
 				//проверка враждебности нам страны торговца
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
-					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
+					Preprocessor_Add("nation_desc", XI_ConvertString(GetNationDescByType(sti(NPChar.nation))));
 					dialog.text = DLG_TEXT[180];
 					link.l1 = DLG_TEXT[181];
 					link.l1.go = "exit";

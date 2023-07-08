@@ -56,6 +56,7 @@ Chumley{Chumley}
 Barbara{Barbara}
 Maria{Maria}
 Mason{Mason}
+Ellen{Ellen}
 The Duchess of{La duquesa de}
 Wharfedale{Wharfedale}
 Teresa{Teresa}
@@ -103,6 +104,10 @@ Two{Dos}
 Three{Tres}
 Donatien{Donatien}
 Thibaud{Thibaud}
+Rifleman{Rifleman}
+Major{Major}
+DoctorW{Doctor}
+Able Seaman{Able Seaman}
 
 {=====| TempQuest.c |=====}
 Captain{Captain}

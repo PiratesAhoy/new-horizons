@@ -118,7 +118,7 @@ string DLG_TEXT[230] = {
 "¿Así que no sabemos si este pirata atracó en #sisland_Oxbay# o no?",
 "No. Envié a un diplomático allí tan solo unos días después, pero los ingleses no estaban interesados en ayudarnos.",
 "Extraño, los ingleses protegiendo a un pirata. ¿Cree Su Excelencia que esto significa algo?",
-"Como te dije, no puedo confirmar si trabaja para ellos o no, pero es inevitable que lo haga. Mi diplomático solo ha podido ocnfirmar que vio el barco en ninguno de los puertos de la isla.",
+"Como te dije, no puedo confirmar si trabaja para ellos o no, pero es inevitable que lo haga. Mi diplomático solo ha podido confirmar que vio el barco en ninguno de los puertos de la isla.",
 "Solo una pregunta más. ¿El capitán de Su Excelencia dañó el barco pirata o solo lo persiguió?",
 "Logró dañar ligeramente la carabela. Pero el pirata se las arregló para escapar. ¿Por qué preguntas?",
 "Iré a #sisland_Oxbay#. Tal vez pueda obtener mas información que ese diplomático.",

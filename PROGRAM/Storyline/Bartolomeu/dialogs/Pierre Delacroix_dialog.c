@@ -34,29 +34,29 @@ void ProcessDialogEvent()
 
 			if(ENABLE_CHEATMODE)
 			{
-				link.l2 = "Never mind about that. I want to skip right away to part two of this story; the one with my expedition in Cuba.";
+				link.l2 = DLG_TEXT[12];
 				link.l2.go = "Bart_part2";
-				link.l3 = "Never mind about that. I want to skip right away to part three of this story; the one with my first work for the Portuguese Governor of #sisland_Conceicao#.";
+				link.l3 = DLG_TEXT[13];
 				link.l3.go = "Bart_part3";
-				link.l4 = "Never mind about that. I want to skip right away to part four of this story; the one with the Anaconda's Capture.";
+				link.l4 = DLG_TEXT[14];
 				link.l4.go = "Bart_part4";
-				link.l5 = "Never mind about that. I want to skip right away to part five of this story; the one with the Spanish battleship's attack.";
+				link.l5 = DLG_TEXT[15];
 				link.l5.go = "Bart_part5";
-				link.l6 = "Never mind about that. I want to skip right away to part six of this story; the one I must save my crew.";
+				link.l6 = DLG_TEXT[16];
 				link.l6.go = "Bart_part6";
-				link.l7 = "Never mind about that. I want to skip right away to part seven of this story; the one I recover my beloved 'Santiago'.";
+				link.l7 = DLG_TEXT[17];
 				link.l7.go = "Bart_part7";
-				link.l8 = "Never mind about that. I want to skip right away to part eight of this story; the one I must find the statuette.";
+				link.l8 = DLG_TEXT[18];
 				link.l8.go = "Bart_part8";
-				link.l9 = "Never mind about that. I want to skip right away to part nine of this story; the one with the Silver Train.";
+				link.l9 = DLG_TEXT[19];
 				link.l9.go = "Bart_part9";				
-				link.l10 = "Never mind about that. I want to skip right away to part ten of this story; the one I see Johan Elting.";
+				link.l10 = DLG_TEXT[20];
 				link.l10.go = "Bart_part10";
-				link.l11 = "Never mind about that. I want to skip right away to part eleven of this story; the one with the battle of Aguadilla.";
+				link.l11 = DLG_TEXT[21];
 				link.l11.go = "Bart_part11";
-				link.l12 = "Never mind about that. I want to skip right away to part twelve of this story; the one with the Aztec treasure.";
+				link.l12 = DLG_TEXT[22];
 				link.l12.go = "Bart_part12";					
-				link.l13 = "Never mind about that. I want to skip right away to part thirteen of this story; the one I must attack Cartagena.";
+				link.l13 = DLG_TEXT[23];
 				link.l13.go = "Bart_part13";
 			}
 		break;

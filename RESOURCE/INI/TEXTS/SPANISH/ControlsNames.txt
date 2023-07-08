@@ -33,7 +33,7 @@ Reestablecer cámara a posición por defecto
 
 Sulan_ArchipelagoMap
 {
-Mostrar mapa del archipiélago map (si tienes uno)
+Mostrar mapa del archipiélago (si tienes uno)
 
 }
 
@@ -315,12 +315,12 @@ Abrir selector de temas de ayuda
 
 BICommandsActivate
 {
-Abrir menú de iconos de comando
+Abrir menú de comandos
 
 }
 LICommandsActivate
 {
-Abrir menú de iconos de comando
+Abrir menú de comandos
 
 }
 BICommandsConfirm
@@ -330,7 +330,7 @@ Activar icono de comando seleccionado
 }
 BICommandsCancel
 {
-Cancelar actual menú de iconos de comando
+Cancelar actual menú de comandos
 
 }
 BICommandsLeft
@@ -451,7 +451,7 @@ Recargar con metralla
 
 BI_ChargeKnippels
 {
-Recargar con palanquetas
+Recargar con balas encadenadas
 
 }
 
@@ -493,7 +493,7 @@ Iniciar modo embestida
 
 BOAL_Control
 {
-Acelerar el tiempo en incrementos de 1x, 3x, 10x y 30x
+Acelerar el tiempo en incrementos de 1x, 3x, 5x 10x y 20x
 
 }
 
@@ -505,7 +505,7 @@ Mostrar información del personaje, arreglar bugs. Si el juego sufre un crash, r
 
 BOAL_Control0
 {
-Reducir velocidad del tiempo de 30x a 10x, 3x y 1x
+Reducir velocidad del tiempo de 20x a 10x, 5x, 3x y 1x
 
 }
 

@@ -13,6 +13,9 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 	
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -132,7 +135,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Defeat_crack_troops3":
-			PlaySound("VOICE\ENGLISH\Well03.wav");
+			PlaySound(voice_path + "Well03.wav");
 			dialog.text = DLG_TEXT[34];
 			link.l1 = DLG_TEXT[35];
 			link.l1.go = "Defeat_crack_troops4";
@@ -257,7 +260,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Safe_and_Promotion2":
-			PlaySound("VOICE\ENGLISH\Well01.wav");
+			PlaySound(voice_path + "Well01.wav");
 			dialog.text = DLG_TEXT[55];
 			link.l1.go = "Exit_Safe_and_Promotion";
 		break;
@@ -269,7 +272,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Promotion_Confirmed":
-			PlaySound("VOICE\ENGLISH\Well02.wav");
+			PlaySound(voice_path + "Well02.wav");
 			dialog.text = DLG_TEXT[57];
 			link.l1 = DLG_TEXT[58];
 			link.l1.go = "Promotion_Confirmed2";

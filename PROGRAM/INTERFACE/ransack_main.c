@@ -176,7 +176,13 @@ void InitInterface_RRS(string iniName,ref pCharacter,ref enemyCh,string newCurNo
 				break;
 
 				case "corpse":
-					curEnemyName = XI_ConvertString("Dead") + " " + XI_ConvertString("s"+"captain");
+					switch (LanguageGetLanguage())
+					{
+						case "Spanish":
+							curEnemyName = XI_ConvertString("captain") + " " + strlower(XI_ConvertString("Dead"));
+						break;
+						curEnemyName = XI_ConvertString("Dead") + " " + strlower(XI_ConvertString("captain"));
+					}
 					SetNewPicture("ENEMYPICT", "interfaces\portraits\128\face_skull.tga");
 					//CreateString(true,"EnemyName",XI_ConvertString("Dead") + " " + XI_ConvertString("captain"),FONT_NORMAL,COLOR_NORMAL,478,170,SCRIPT_ALIGN_CENTER,1.0);
 				break;
@@ -634,7 +640,7 @@ void WasChangeData()
 	GameInterface.strings.MyCrew            = MakeInt(xi_refCharacter.ship.Crew.Quantity); // MM
 	GameInterface.strings.MyCannons         = GetLocalShipAttrib(arship, &shipRef, "CurCanQty"); //NK can qty 05-04-18 shipRef.CannonsQuantity;
 	//GameInterface.strings.Mincrewus         = XI_ConvertString("Min Crew") + ": " + GetMinCrewQuantity(&xi_refCharacter); // PRS3
-	GameInterface.strings.Mincrewus         = "Min/Max Crew: "+GetMinCrewQuantity(&xi_refCharacter)+" / "+GetMaxCrewQuantity(&xi_refCharacter); // MM
+	GameInterface.strings.Mincrewus         = TranslateString("","Min/Max Crew")+": "+GetMinCrewQuantity(&xi_refCharacter)+" / "+GetMaxCrewQuantity(&xi_refCharacter); // MM
 
 	shipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter)); // PS
 	makearef(arship, refEnemyCharacter.ship); // PRS3
@@ -652,7 +658,7 @@ void WasChangeData()
 	GameInterface.strings.EnemyCrew         = makeint(refEnemyCharacter.ship.Crew.Quantity); // MM
 	GameInterface.strings.EnemyCannons      = GetLocalShipAttrib(arship, &shipRef, "CurCanQty"); //NK can qty 05-04-18 shipRef.CannonsQuantity;
 	//GameInterface.strings.Mincrewthem       = XI_ConvertString("Min Crew") + ": " + GetMinCrewQuantity(&refEnemyCharacter); // PRS3
-	GameInterface.strings.Mincrewthem       = "Min/Max Crew: "+GetMinCrewQuantity(&refEnemyCharacter)+" / "+GetMaxCrewQuantity(&refEnemyCharacter); // MM
+	GameInterface.strings.Mincrewthem       = TranslateString("","Min/Max Crew")+": "+GetMinCrewQuantity(&refEnemyCharacter)+" / "+GetMaxCrewQuantity(&refEnemyCharacter); // MM
 }
 
 // added by MAXIMUS -->

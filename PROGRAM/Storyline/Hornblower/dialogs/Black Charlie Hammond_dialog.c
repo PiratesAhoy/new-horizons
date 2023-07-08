@@ -13,6 +13,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -28,21 +30,21 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\ARSI\ARSI001";
-			PlaySound("VOICE\ENGLISH\Hammond16.wav");
+			PlaySound(voice_path + "Hammond16.wav");
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";
 		break;
 
 		case "Hammond_exam_one":
-			PlaySound("VOICE\ENGLISH\Hammond01.wav");
+			PlaySound(voice_path + "Hammond01.wav");
 			dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3];
 			link.l1.go = "Examination_one2";
 		break;
 
 		case "Examination_one2":
-			PlaySound("VOICE\ENGLISH\Hammond02.wav");
+			PlaySound(voice_path + "Hammond02.wav");
 			dialog.text = DLG_TEXT[4];
 			link.l1.go = "Exit_Ham_Exam_one";
 		break;
@@ -54,7 +56,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Hammond_exam_two":
-			PlaySound("VOICE\ENGLISH\Hammond03.wav");
+			PlaySound(voice_path + "Hammond03.wav");
 			dialog.text = DLG_TEXT[5];
 //			link.l1 = DLG_TEXT[5] + GetMyFullName(PChar) + DLG_TEXT[6];
 			link.l1.go = "Exit_Ham_Exam_two";
@@ -67,7 +69,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Implying_what":
-			PlaySound("VOICE\ENGLISH\Hammond04.wav");
+			PlaySound(voice_path + "Hammond04.wav");
 			dialog.text = DLG_TEXT[22];
 			link.l1.go = "Exit_Implying_what";
 		break;
@@ -79,7 +81,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Offensive_remark":
-			PlaySound("VOICE\ENGLISH\Hammond05.wav");
+			PlaySound(voice_path + "Hammond05.wav");
 			dialog.text = DLG_TEXT[23];
 			link.l1.go = "Exit_Offensive_remark";
 		break;
@@ -91,7 +93,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "appology":
-			PlaySound("VOICE\ENGLISH\Hammond06.wav");
+			PlaySound(voice_path + "Hammond06.wav");
 			dialog.text = DLG_TEXT[24];
 			link.l1.go = "Exit_appology";
 		break;
@@ -103,7 +105,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "continue_further":
-			PlaySound("VOICE\ENGLISH\Hammond07.wav");
+			PlaySound(voice_path + "Hammond07.wav");
 			dialog.text = DLG_TEXT[25];
 			link.l1.go = "Exit_continue_further";
 		break;
@@ -115,7 +117,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "recompense":
-			PlaySound("VOICE\ENGLISH\Hammond08.wav");
+			PlaySound(voice_path + "Hammond08.wav");
 			dialog.text = DLG_TEXT[26];
 			link.l1.go = "Exit_recompense";
 		break;
@@ -127,7 +129,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "send_second":
-			PlaySound("VOICE\ENGLISH\Hammond09.wav");
+			PlaySound(voice_path + "Hammond09.wav");
 			dialog.text = DLG_TEXT[27];
 			link.l1.go = "Exit_send_second";
 		break;
@@ -183,7 +185,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "You're_decommissioned3":
-			PlaySound("VOICE\ENGLISH\Hammond10.wav");
+			PlaySound(voice_path + "Hammond10.wav");
 			dialog.text = DLG_TEXT[15];
 			link.l1 = DLG_TEXT[16];
 			link.l1.go = "Exit_You're_decommissioned";
@@ -196,14 +198,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "Hammond_and_Nephew":
-			PlaySound("VOICE\ENGLISH\Hammond11.wav");
+			PlaySound(voice_path + "Hammond11.wav");
 			dialog.text = DLG_TEXT[18];
 			link.l1 = DLG_TEXT[19];
 			link.l1.go = "Hammond_and_Nephew2";
 		break;
 
 		case "Hammond_and_Nephew2":
-			PlaySound("VOICE\ENGLISH\Hammond12.wav");
+			PlaySound(voice_path + "Hammond12.wav");
 			dialog.text = DLG_TEXT[20];
 			link.l1 = DLG_TEXT[21];
 			link.l1.go = "Exit_Hammond_and_Nephew";
@@ -239,7 +241,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Put_Down":
-			PlaySound("VOICE\ENGLISH\Hammond13.wav");
+			PlaySound(voice_path + "Hammond13.wav");
 			dialog.text = DLG_TEXT[28];
 			link.l1 = DLG_TEXT[29];
 			link.l1.go = "Exit_Put_Down";
@@ -252,7 +254,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "I_must_insist":
-			PlaySound("VOICE\ENGLISH\Hammond14.wav");
+			PlaySound(voice_path + "Hammond14.wav");
 			dialog.text = DLG_TEXT[30];
 			link.l1 = DLG_TEXT[21];
 			link.l1.go = "Exit_I_must_insist";
@@ -265,7 +267,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Include_Jack":
-			PlaySound("VOICE\ENGLISH\Hammond15.wav");
+			PlaySound(voice_path + "Hammond15.wav");
 			dialog.text = DLG_TEXT[31];
 			link.l1 = DLG_TEXT[32];
 			link.l1.go = "Exit_Include_Jack";
@@ -356,7 +358,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Stop_Sir":
-			PlaySound("VOICE\ENGLISH\Hammond17.wav");
+			PlaySound(voice_path + "Hammond17.wav");
 			dialog.text = DLG_TEXT[21];
 			link.l1 = DLG_TEXT[50];
 			link.l1.go = "Exit_Stop_Sir";

@@ -13,6 +13,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -96,7 +98,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "conversation3":
-			PlaySound("VOICE\ENGLISH\Hornblwr01.wav");
+			PlaySound(voice_path + "Hornblwr01.wav");
 			dialog.text = DLG_TEXT[9];
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "Exit_Pellew_Chimes_in";

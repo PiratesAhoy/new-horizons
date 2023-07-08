@@ -41,14 +41,14 @@ I bade farewell to my master, John Smith. I'm ready for the life of a sailor. Pe
 Davy Jones is dead. And I would be dead too, except that I have had my heart removed and have taken over Jones' duty - the duty which he abandoned, the duty of ferryman to the souls of the dead. If I fulfil the duty, will I avoid Jones' curse? Or am I, too, doomed never to set foot on land, and to become part of the ship and the sea?{Davy Jones está muerto. Y yo también lo estaría, si no fuera porque me han arrancado el corazón t he asumido el deber de Jones; el deber que él abandonó, el deber de llevar las almas de los muertos. Si cumplo con mi deber, ¿evitaré la maldición de Jones? ¿O yo también estoy condenado a no pisar nunca más tierra firme, y a convertirme en parte del barco y del mar?}
 A new beginning awaits us. The Prince of Darkness is not appeased with our previous failure, but he has granted us one last chance if we can perform a sacrifice to appease him. And then he shall reward us with power beyond measure!{Un nuevo comienzo nos espera. El Príncipe de las Tinieblas no está complacido por nuesro último fracaso, pero nos ha dado una última oportunidad de llevar a cabo un sacrifico para aplacar su ira. ¡Y entonces, él nos recompensará con un poder más allá de lo imaginable!}
 Just Good Business{Un buen negocio}
-With the 'Endeavour' at my grasp, the East India Trading Company reigns supreme and unhindered in these waters. Yet there is always more to find, more to take...for now, I should look for competent officers to run my vessel.{Con el 'Endeavour' bajo mi poder, la Compañía de las Indias Orientales domina estas aguas sin estorno. Pero siempre hay más que hacer, más beneficios que obtener... Por ahora, debería buscar oficiales competentes para menejar mi navío.}
+With the 'Endeavour' at my grasp, the East India Trading Company reigns supreme and unhindered in these waters. Yet there is always more to find, more to take...for now, I should look for competent officers to run my vessel.{Con el 'Endeavour' bajo mi poder, la Compañía de las Indias Orientales domina estas aguas sin estorbo. Pero siempre hay más que hacer, más beneficios que obtener... Por ahora, debería buscar oficiales competentes para menejar mi navío.}
 No Longer a Slave{Esclavo nunca más}
 When I was first brought aboard a white man's ship, I feared that the rest of my life would be as that of a chained beast. One of the crew treated me with kindness and respect and became my only friend. When the ship fell prey to the anger of the storm, that friend released me and together we escaped in the ship's boat. We have made it to an unknown shore. Now we begin a new journey as free men!{Cuando por primera vez me subieron a bordo de uno de los barcos de los hombres blancos, temía que fuera a pasar el resto de mi vida como una bestia encadenada. Uno de los marineros me trató con amabilidad y respeto y se convirtió en mi único amigo. Cuando el barco cayó víctima del furor de la tormenta, ese amigo me liberó y, juntos, escapamos en uno de los botes. Hemos llegado a una costa desconocida. ¡Ahora empieza nuestro viaje como hombres libres!}
 
 {=====| sulan_shipslog.c |=====}
 Several battles at sea{Varios combates navales}
 Encountered several enemy ships today{Hoy nos enfrentamos a varios barcos enemigos}
-On {En }
+On{El}
 around midnight{hacia medianoche}
 in the night, quite some time after midnight{por la noche, bien pasada la medianoche}
 in the early morning, before dawn,{de madrugada, antes del alba,}
@@ -66,4 +66,183 @@ in the night{por la noche}
 Unreadable page{Página ilegible}
 This page of the ship's log is drenched in rum. It's no longer readable. [ the code has an error :) ]{Esta página del cuaderno de bitácora está empapada de ron: el texto es ilegible. [ error de código :) ]}
 
-{=====| 27 log entrys |=====}
+{=====| Gov_MR.dialog.c |=====}
+Married{Me he casado con}
+Married #sspouse#{Me he casado con #sspouse#}
+On this wonderful day I married #sspouse#, #sname#, #srelation# of #sgovernor#, the governor of #stown#. I won #spronoun3# heart with my wit and charm, and last but not least with my swordmanship, as I had to defeat #spronoun3# jealous suitor, before #spronoun1# could agree to a marriage. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...{En este hermoso día, he contraído matrimonio con #sspouse#, #sname#, #srelation# de #sgovernor#, gobernador de #stown#. Me he ganado #spronoun3# corazón gracias a mi ingenio y encanto, y, por último, aunque no menos importante, gracias a mi destreza con la espada, pues tuve que derrotar en duelo a #spronoun3# pretendiente, a quien consumían los celos, antes de que #spronoun1# pudiera acceder a casarse conmigo. Los dos somos muy felices, y ahora me dispongo a terminar esta entrada, porque tengo deberes más placenteros que atender...}
+On this wonderful day I married #sspouse#, #sname#. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...{En este hermoso día, he contraído matrimonio con #sspouse#, #sname#. Los dos somos muy felices, y ahora me dispongo a terminar esta entrada, porque tengo deberes más importantes que atender...}
+my beautiful wife{mi bella esposa}
+my handsome husband{mi apuesto marido}
+my pet human{mi mascota humana}
+
+{=====| CharacterUtilite.c |=====}
+Promoted to #snationdesc# #srank#{Me han ascendido a #srank# #snationdesc#}
+My dedication and faithful service for #snationname# have earned me the rank of #srank#.{Mi dedicación y mi leal servicio a #snationname# me han hecho merecer el ascenso al rango de #srank#.}
+The #snationdesc# governor #sgovname# awarded me with the title and #snewland# acres of land.{El gobernador #snationdesc# #sgovname# me ha otorgado el título y #snewland# acres de tierra que lo acompañan.}
+
+Joined Service of #snationname#{Me he puesto al servico de #snationname#}
+I received a Letter of Marque from #snationname#. Now I am in their service, I can legally sink and capture ships, which means prize money and potential promotions for me in the future.{He recibido una patente de corso de #snationname#. Ahora que estoy a su servicio, puedo hunidr y apresar barcos legalmente, lo que significará oportunidades de botín y futuros ascensos.}
+
+Left Service of #snationname#{He abandonado el servicio de #snationname#}
+This marks the end of my service for #snationname#. But at least I am free now to pursue other goals.{Esto marca el final de mi servicio a #snationname#. Pero, al menos, ahora soy libre de perseguir otros objetivos.}
+My leaving was on rather bad terms and left me with decidedly less friends than I had.{Mi marcha no ha sido en los mejores términos y, sin duda, me ha dejado con menos amigos de los que tenía.}
+
+{=====| nations.c |=====}
+#snationnamei# turned Wary of me{#snationnamei# se ha vuelto suspicaz hacia mí}
+The #snationdesci# government turned wary of me because of my attack on their #snationdesc# allies.{El gobierno #snationdesci# ha aumentado sus supicacias hacia mí, debido a mi ataque contra los intereses de su aliado #snationdesc#.}
+
+Marked as a Pirate{Me han declarado pirata}
+The civilized nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. It may be possible to rectify this by declaring my loyalties as a Privateer. On the other hand, joining the Brethren of the Coast could be much more profitable.{Las naciones civilizadas del mundo me consideran culpable de piratería como consecuencia de mis acciones. Será mejor que tenga cuidado si no quiero acabar con una soga al cuello. Sería posible rectificar la situación declarando mi lealtad a una nación para obtener una patente de corso legal. Por otro lado, unirme a la Hermandad de la Costa podría ser mucho más rentable.}
+
+The civilized nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. Joining the Brethren of the Coast could be rather profitable. And they don't care what I do to prisoners!{Las naciones civilizadas del mundo me consideran culpable de piratería como consecuencia de mis acciones. Será mejor que tenga cuidado si no quiero acabar con una soga al cuello. Unirme a la Hermandad de la Costa podría ser muy rentable. ¡Y a ellos les da igual lo que haga con los prisioneros!}
+
+#snationnamei# and #snationnamej# make peace{#snationnamei# y #snationnamej# han firmado la paz}
+After some time of bloody warfare #snationnamei# and #snationnamej# have declared a ceasefire.{Después de un tiempo de sangrientos enfrentamientos, #snationnamei# y #snationnamej# han acordado un alto el fuego.}
+This is good news as it was a very hard time to keep friendly relations with two warfaring parties.{Son buenas noticias, ya que era complicado mantener relaciones amistosas con dos países en guerra.}
+\n \nAlthough good news in general, this is bad news for me. Attacking #snationdesc1# ships and towns will not raise my reputation with the #snationdesc2# anymore.{\n \nAunque puedan parecer buenas noticias en general, son malas noticias para mí. Atacar a barcos y ciudades bajo control #snationdesc1# ya no servirá para acrecentar mi reputación con el gobierno #snationdesc2#.}
+
+#snationnamei# and #snationnamej# have allied{#snationnamei# y #snationnamej# se han aliado}
+#snationnamei# and #snationnamej# have formed an alliance. Attacking ships or towns of either nation will also decrease the standing with the ally.{#snationnamei# y #snationnamej# han formado una alianza. Atacar a barcos o ciudades de cualquiera de las dos naciones también perjudicará mi reputación con el país aliado.}
+Very good news, indeed. Working for the #snationdesci# and the #snationdescj#, as I currently do, my deeds will raise my standing with both nations.{Muy buenas noticas para mí, desde luego. Trabajando a la vez para el gobierno #snationdesci# y el #snationdescj#, como estoy haciendo ahora, mis hazañas aumentarán mi reputación en ambas naciones.}
+Whoops! It seems I have bothered them a little too much. But their alliance won't stop me.{¡Vaya por Dios! Parece que he molestado a estos dos países un poco más de la cuenta. Pero su alianza no me detendrá.}
+\n \nThis makes working for the #snationdesc1# somewhat more difficult, as sinking #snationdesc2# ships is no longer an option.{\n \nEsto hará algo más difícil continuar trabajando para el gobierno #snationdesc1#, ya que hundir barcos con pabellón #snationdesc2# ya no es una opción.}
+
+#snationname1# is at war with #snationname2#{#snationname1# está en guerra con #snationname2#}
+#snationname1# has declared war on #snationname2#.{#snationname1# ha declarado la guerra a #snationname2#.}
+#snationdesc1# ships have attacked a small #snationdesc2# settlement, as I was told.{Un barco de guerra #snationdesc1# ha atacado un pequeño asentamiento #snationdesc2#, según me han contado.}
+#snationdesc1# troops have landed near #snationtown2#, as I was told.{Un destacamento #snationdesc1# ha desembarcado cerca de #snationtown2#, según me han contado.}
+
+\n \nIt was about time to show those #snationdesc2# landlubbers who's in charge in the Caribbean!{\n \n¡No quedará ni un #snationdesc2# en el Caribe! ¡Ya era hora de demostrar a esos marineros de agua dulce quién manda!}
+\n \nThose bloody cowards! The next #snationdesc1# ship we encounter will surely pay for this.{\n \n¡Esos malditos cobardes! El próximo barco #snationdesc1# que encontremos pagará por esto.}
+
+#snationname1# and #snationname2# broke their alliance{#snationname1# y #snationname2# han roto su alianza}
+#snationname1# and #snationname2# have broken their alliance, but are currently peaceful. Observers report military activity on both sides, but so far an open conflict has been avoided.{#snationnamei# y #snationnamej# han roto su alianza, pero por ahora siguen en paz. Los observadores han informado de actividad militar en ambos bandos, pero hasta el momento se ha evitado el conflicto directo.}
+#snationname1# and #snationname2# have broken their alliance and are now at war! It was reported that #snationname1# broke the alliance by{¡#snationname1# y #snationname2# han roto su alianza y ahora están en guerra! Se ha informado que #snationname1# rompió la alianza al}
+\n \nThose treacherous bastards! The #snationdesc1# will pay for this betrayal. I have ordered to open fire on sight of any #snationdesc1# ship.{\n \n¡Esos bastardos traicioneros! El gobierno #snationdesc1# y su pueblo pagarán por esta traición. He dado órdenes de abrir fuego contra cualquier barco #snationdesc1#.}
+
+'accidently' sinking the #snationdescv# military supply convoy.{hundir 'accidentalmente' un convoy #snationdescv# cargado con pertrechos militares.}
+treating the #snationdescv# ambassador in a 'disrespectful' manner, as was reported from Europe.{tratar al embajador #snationdescv# de forma 'irrespetuosa', según se ha informado desde Europa.}
+brutally burning down a small settlement of the #snationdescv#, leaving no one alive (I am curious how they got this report then?).{arrasar brutalmente y quemar un pequeño asentamiento #snationdescv#, sin dejar superviventes (entonces, ¿quién dio el informe?).}
+officially knighting a notorious freebooter, who plundered the #snationdescv# colonies in the previous war.{nombrar caballero a un notorio filibustero, que saqueó colonias en territorio #snationdescv# durante la última guerra.}
+inciting a slave revolt in a major #snationdescv# colony.{incitar a una revuelta de esclavos en un importante enclave colonial #snationdescv#.}
+sending a horde of French squirrels with blond wigs to pillage a Spanish monastery.\n \n This doesn't make any sense at all and does not really explain why #snationnamet# broke their alliance, but that's what they did.{enviar a una horda de ardillas francesas con pelucas rubias a saquear un monasterio español.\n \n Esto no tiene ningún sentido y no explica por qué #snationnamet# rompió la alianza, pero eso es lo que ha hecho.}
+
+{=====| AIShip.c |=====}
+Sunk a #sshiptype#{Hundimiento de #sshiptype#}
+, we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\nWe closed in on the ship and fired a broadside. In the following battle their captain tried to evade our cannonfire and almost escaped with a risky maneuver. The battle was ended by the #smyshipname# ramming their ship. The hull shattered and the #sshipname# sank like a stone within minutes.{, avistamos al #sshipname#, #sshiptype# bajo pabellón #snationdesc#, mientras nosotros navegábamos bajo pabellón #snationdescflag#.\nRecortamos distancia con el barco y disparamos una andanada. En el combate que siguió, el capitán enemigo intentó evitar el fuego de nuestros cañones y estuvo a punto de escapar con una arriesgada maniobra. El combate acabó cuando nuestro #smyshipname# embistió a su barco. Su casco quedó destrozado y el #sshipname# se hundió como una piedra en pocos minutos.}
+This was not considered to be a legal attack.{Este ataque no puede considerarse una acción legal.}
+\nAbout #sdeadcrew# sailors followed her to Davy Jones.{\nUnos #sdeadcrew# marineros siguieron a su barco al fondo del mar.}
+, we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\nWhen they were in reach of our cannons, we opened fire. Our cannons tore their sails to tatters and shattered their hull. After a ferocious battle, the #smyshipname# fired her cannons a last time at the #sshipname#. Its hull was already heavily damaged from a previous broadside and the ship sank like a stone.{, avistamos al #sshipname#, #sshiptype# bajo pabellón #snationdesc#, mientras nosotros navegábamos bajo pabellón #snationdescflag#.\nCuando estuvieron al alcance de nuestros cañones, abrimos fuego. Nuestros cañones redujeron sus velas a jirores y destrozaron su casco. Después de un feroz combate, nuestro #smyshipname# disparó sus cañones una última vez contra el #sshipname#. Su casco ya estaba gravemente dañado por una andanada anterior y el barco se hundió como una piedra.}
+\nAbout #sdeadcrew# sailors went down with her to Davy Jones.{\nUnos #sdeadcrew# marineros lo acompañaron al fondo del mar.}
+, we encountered the #sshipname#, a #sshiptype# flying #snationdesc# colours while under #snationdescflag# flag ourselves.\n{, avistamos al #sshipname#, #sshiptype# bajo pabellón #snationdesc#, mientras nosotros navegábamos bajo pabellón #snationdescflag#.\n}
+When we opened fire, they tried to escape, but we chased them and finally were in reach for boarding, when the cowards raised the white flag and surrendered the ship. We brought our ship alongside and boarded.{Cuando abrimos fuego, trataron de escapar, pero les dimos caza hasta que estuvimos a distancia de abordaje, momento en el que los muy cobardes izaron bandera blanca y rindieron el buque. Nos abarloamos a su costado y procedimos al abordaje.}
+Our cannons gave them a warm and hearty welcome when we closed for battle. Once they were in reach of our grappling hooks, we boarded the ship and I defeated the captain.{Nuestros cañones les dieron un caluroso saludo cuando nos enzarzamos en el combate. Cuando estuvieron al alcance de nuestros garfios, abordamos el barco, y yo derroté personalmente al capitán.}
+\nWe plundered her{\nSaqueamos el barco}
+, moved the #smoney# gold from their ship's chest to ours{, trasladamos #smoney# piezas de oro de sus cofres a los nuestros}
+and sent the #sshipname# down to Davy Jones.{y mandamos el #sshipname# al fondo del mar.}
+\nAbout #sdeadcrew# sailors accompanied her on her journey.{\nUnos #sdeadcrew# marineros lo acompañaron en su viaje.}
+\n \nThe #sshipname# was loaded with the following cargo:\n{\n \nEl #sshipname# llevaba a bordo la siguiente carga:\n}
+Captured a #sshiptype#{Apresamiento de #sshiptype#}
+When they were in reach of our cannons, we fired and a ferocious sea battle began. Finally we brought our ship alongside and boarded. After a bloody deckfight I defeated the enemy captain in a duel, thus capturing the ship.{Cuando estuvieron al alcance de mnuestros cañones, abrimos fuegos y nos enzarzamos en un feroz combate naval. Finalnebte, nos abarloamos a su costado y procedimos al abordaje. Después de una snagrienta lucha en cubierta, derroté al capitán enemigo en un duelo, apresando así su barco.}
+The #sshipname# was loaded with the following cargo:\n{El #sshipname# llevaba a bordo la siguiente carga:\n}
+Additionally we found #smoney# gold in the ship's chest.{Además, encontramos #smoney# piezas de oro en su cofre de caudales.}
+
+The sails were in nearly perfect condition. Sometimes not using cannons pays off.{Las velas están casi en perfectas condiciones. A veces, no usar los cañones tiene sus ventajas.}
+The sails were in a quite good condition for a ship captured in a seafight.{Las velas están en bastante buenas condiciones para un barco apresado en una batalla naval.}
+Compared to the amount of balls we shot at the ship the sails were in acceptable condition. Nevertheless, repairing the damage will cost quite some sailcloth.{Considerando la cantidad de balas que disparamos al barco, las velas están en aceptables condiciones. Sin embargo, habrá que usar algo de lona para reparar los daños.}
+The sails were badly damaged, but at least allowed the ship basic maneuvers.{Las velas están muy dañadas, pero al menos permiten al barco realizar maniobras básicas.}
+The sails were almost completely in tatters. We'll need quite a lot of sailcloth to repair that.{Las velas están casi completamente hechas jirones. Necesitaremos una buena cantidad de lona para repararlas.}
+Our cannons did their job. The sails and the rigging were in tatters, there was barely a squarefeet of sails left intact.{Nuestros cañones cumplieron su cometido. Las velas y el aparejo están hechos jirones, apenas queda un palmo de trapo intacto.}
+
+The hull was in very good order. It almost took no damage at all from the battle.{El casco está en muy buenas condiciones. Apenas sufrió daños durante el combate.}
+The hull was in good condition. Our balls did some damage but nothing serious.{El casco está en buenas condiciones. Nuestras balas causaron algunos daños, pero nada grave.}
+The hull had a few holes and the deck was quite a mess, but it seems the damage can be repaired.{El casco tiene algunos agujeros y la cubierta está hecha unos zorros, pero parece que el daño puede repararse.}
+The hull was leaking, the deck full of splinters and overall the ship was in a bad condition.{Entra agua en el casco, la cubierta está llena de astillas y, en general, el barco está en malas condiciones.}
+The ship has spung a large leak in the hull and water was pouring in, but we were able to close it. In summary the ship's hull was as full of holes as a Swiss cheese.{El barco tenía una gran vía de agua en el casco y el agua entraba a raudales, pero hemos conseguido taponarla. En resumen, el casco tiene más agujeros que un queso suizo.}
+The ship was about to sink when we captured her. We spotted three leaks in the hull and did some quick repairs. The ship is badly in need of a shipyard.{El barco estaba a punto de hundirse cuando lo apresamos. Hemos encontrado tres vías de agua en el casco y hemos hecho algunas reparaciones de emergencia. El barco necesita desesperadamente un astillero.}
+
+{=====| shipyard.c |=====}
+Visited{Escala en}
+Visited the local shipwright.{He visitado el astillero local.}
+The shipwright agreed to repair the '#sshipname#' for the amount of #scost# pieces of gold.{El carpintero de ribera convino conmigo en reparar el '#sshipname#' par la cantidad de #scost# piezas de oro.}
+Sold the '#sarcurship#', a #srship# for #ssellprice# pieces of gold.{He vendido el '#sarcurship#', #srship#, por #ssellprice# piezas de or.}
+Bought a new ship, the '#snewship#' for #sbprice# pieces of gold.{He comprado un nuevo barco, el '#snewship#', por #sbprice# piezas de oro.}
+Had the sails of the '#sarcurship#' repaired for #ssailcost# pieces of gold.{He mandado reparar las velas del '#sarcurship#' por #ssailcost# piezas de oro.}
+Had the hull of the '#sarcurship#' repaired for #shullcost# pieces of gold.{He mandado reparar el casco del '#sarcurship#' por #shullcost# piezas de oro.}
+Had the cannons of the '#sarcurship#' repaired for #sguncost# pieces of gold.{He hecho reparar los cañones del '#sarcurship#' por #sguncost# piezas de oro.}
+Installed new cannons on the '#sarcurship#' for #stopay# pieces of gold.{He instalado nuevos cañones en el '#sarcurship#' por #stopay# piezas de oro.}
+Upgraded the '#sarcurship#' with new #supgrade# for #scost# pieces of gold.{He modificado el '#sarcurship#' con #supgrade# por #scost# piezas de oro.}
+
+{=====| store.c |=====}
+Visited the local merchant, sold off our cargo and refilled our supplies. The trade earned me{He visitado al mercader local, he vendido nuestra mercancía y comprado provisiones. Con esta transacción, he ganado}
+pieces of gold.{piezas de oro.}
+Visited the local merchant to refill our supplies. I had to leave{He visitado al mercader local para reponer nuestras provisiones. He tenido que dejar}
+pieces of gold to the storekeeper.{piezas de oro en manos del tendero.}
+
+{=====| quests_common.c |=====}
+The #srequester# of #stown# needs help.{El #srequester# de #stown# necesita ayuda.}
+The governor ordered to build more ships but there aren't enough resources on the island to make them. Looks like they need help to get these goods.{El gobernador ha ordenado la construcción de nuevos barcos, pero en la isla no hay suficientes recursos para ello. Parece que necesitan ayuda para conseguir estos materiales.}
+The governor wants to increase the amount of troops on the island and they will all need new uniforms. They need help to get the resources required.{El gobernador quiere aumentar el número de tropas en la isla, y van a necesitar nuevos uniformes. Necesitan ayuda para conseguir los recursos necesarios.}
+The military ordered new weapons as it is time to amortize their current stock. The blacksmith needs help to acquire the resources to make them.{El ejército ha encargado nuevas armas, porque ya era hora de renovar sus existencias actuales. El herrero necesita recursos para fabricarlas.}
+The gunsmith has gotten lots of new orders lately. Everyone wants a new sword or a firearm and he doesn't have the means to make them all.{El armero ha recibido muchos encargos últimamente. Todo el mundo quiere una nueva espada o un arma de fuego, y él no tiene los medios para hacerlas todas.}
+There has been a serious outbreak of disease lately, and the Apothecary is running out of medicines to treat the sick. He needs help to get supplies.{Ha estallado uan epidemia recientemente y el boticario se está quedando sin medicamentos para tratar a los enfermos. Ncesita ayuda para reponer suministros.}
+
+{=====| Towntable.c |=====}
+Malaria strikes #stown#{La malaria golpea #stown#}
+An increasing number of people in #stown# are reported to have died from Malaria. The civilian losses were quite high, but the soldiers in the local garrison have suffered even more.{Se ha informado de que un número cada vez mayor de personas en #stown# parece estar muriendo de malaria. Las víctimas civiles son muy numerosas pero los soldados de la guarnición local la han sufrido todavía más.}
+
+Pirates plunder #stown#{Piratas han saqueado #stown#}
+A pirate assault on #stown# has been reported. Some pirates seem to have sneaked into town before their ships attacked the harbor in the middle of the night. Those in town took the garrison by surprise and kept the town gates open for their comrades. The whole attack didn't last much longer than two hours. The pirates escaped with a vast amount of gold, before the fort commander was able to gather his troops for defence. Several people died in the brutal attack, as they tried to defend their possesions on their own.{Se ha informado de un asalto pirata sobre #stown#. Al parecer algunos piratas entraron a escondidas en la ciudad antes de que sus barcos atacaran el puerto en mitad de la noche. Los infiltrados en la ciudad tomaron a la guarnición por sorpresa y mantuvieron las puertas abiertas para sus camaradas. Todo el ataque no duró más de dos horas. Los piratas escaparon con un gran botín en oro antes de que el comandante del fuerte pudiera reunir a sus tropas para la defensa. Varias personas murieron en el ataque, cuando intentaron defender sus posesiones.}
+
+Gold found near #stown#{Oro descubierto cerca de #stown#}
+Miners from #stown# have struck a rich vein of gold. A new gold mine has been opened and the governor has sent for more troops in order to better protect the town from possible attacks. The new riches attract all kind of people, so #stown# is expected to grow.{Mineros de #stown# han descubierto un rico filón de oro. Se ha abierto una nueva mina de oro y el gobernador ha solicitado más tropas para proteger la ciudad de posibles ataques. Las nuevas riquezas atraen a todo tipo de gente, por lo que se espera que la población de #stown# crezca.}
+
+Silver found near #stown#{Plata descubierta cerca de #stown#}
+Miners from #stown# have struck a rich vein of silver. A new silver mine has been opened and the governor has sent for more troops in order to better protect the town from possible attacks. The new riches attract all kind of people, so #stown# is expected to grow.{Mineros de #stown# han descubierto un rico filón de plata. Se ha abierto una nueva mina de plata y el gobernador ha solicitado más tropas para proteger la ciudad de posibles ataques. Las nuevas riquezas atraen a todo tipo de gente, por lo que se espera que la población de #stown# crezca.}
+
+Indians attack #stown#{Los indios han atacado #stown#}
+A major attack of indians on #stown# has been reported by travellers. The indians seem to have plundered and massacred the civilian population as well as the local garrison. Finally the cannons of the garrison drove them away, leaving the town completely desolate.{Los viajeros informan de un importante ataque indio contra #stown#. Al parecer, los indios han saqueado la ciudad, y han masacrado a la población civil, así como a la guarnición local. Finalmente, los cañones de la guarnición consiguieron hacer que se retiraran, dejando la ciudad desolada.}
+
+Slave revolt at #stown#{Revuelta de esclavos en #stown#}
+The governor of #stown# spread news that a slave revolt has been put down by the local garrison. All surviving marauders were hanged as a warning. Although the rebellion has been put down, the loss of quite a lot of slaves is expected to have a bad impact on the economy of #stown#.{El gobernador de #stown# ha hecho correr la noticia de que una revuelta de esclavos ha sido sofocada por la guarnición local. Todos los rebeldes supervivientes fueron ahorcados como advertencia. Aunque la rebelión ha sido sofocada, se espera que la pérdida de una buena cantidad de esclavos tenga un impacto en la enconomía de #stown#.}
+
+Serious fire in #stown#{Gran incendio en #stown#}
+A serious fire has laid waste to parts of #stown#. The fire erupted near the harbor, where a warehouse suddenly exploded into flames. There is rumor it was stocked with oil or gunpowder or even both. The fire quickly spread and could not be quenched until two days later. Quite a lot of people are reported to have died in the attempt to save their belongings from the flames.{Un gran incendio ha devastado parte de #stown#. El incendio se desató cerca del puerto, donde un almacén estalló en llamas repentinamente. Se rumorea que almacenaba aceite, pólvora o ambas cosas. El fuego se extendió rápidamente y no pudo ser extinguido hasta dos días después. Se cree que muchas personas han fallecido intentando salvar sus pertenencias de las llamas.}
+
+Hurricane strikes #stown#{Un huracán azota #stown#}
+#stown# has been struck by a serious hurricane. Wind and water destroyed many buildings in town, especially the poorer parts were hit badly. Several ships in the harbor sunk as a result of the hurricane. Diseases are expected to spread throughout town as usual after such disasters.{#stown# ha sufrido el azote de un fuerte huracán. El viento y el agua han destruido muchos edificios de la ciudad; las partes más pobres han recibido la peor parte. Varios barcos anclados en el puerto se han hundido a consecuencia del huracán. Se teme que se extiendan enfermedades por la ciudad, como suele ocurrir después de tales desastres.}
+
+New settlers at #stown#{Nuevos colonos en #stown#}
+A convoy of ships bringing new settlers from Europe has arrived at #stown#. The new settlers are badly needed to strengthen the economy of the town. It has been reported that the convoy also brought luxury goods and new inventions from Europe to the colonies, as well as a small battalion of soldiers.{Un convoy de barcos con nuevos colonos llegados desde Europa ha llegado a #stown#. Los nuevos colonos son muy necesarios para reforzar la economía de la ciudad. Se ha informado de que el convoy también ha traído a las colonias bienes de lujo y nuevos inventos de Europa, además de un pequeño contingente de soldados.}
+
+Expedition returns to #stown#{Expedición regresa a #stown#}
+An expedition into the jungle has returned to #stown#. The expedition was a great success, as the explorers found a gold vein not far away, which was exploited by a native tribe. The explorers captured the village and enslaved the surviving indians in order to establish a new mining camp. The expedition finally returned with a great amount of goods and gold, several hitherto unknown plants and a number of slaves.{Una expedición que partió a explorar la selva ha regresado a #stown#. La expedición ha sido un gran éxito, ya que los exploradores encontraron a no mucha distancia un filón de oro que era explotado por una tribu nativa. Los exploradores tomaron la aldea y esclavizaron a los indios supervivientes para establecer un nuevo campamento minero. La expedición ha regresado finalmente con una gran cantidad de oro, algunas plantas hasta ahora desconocidas y varios esclavos.}
+
+{=====| Dialog_func.c |=====}
+Ransacked #stown#{He saqueado #stown#}
+My men pillaged and plundered to their heart's content. Of course #snation# and their allies aren't happy about this, but it made for an extra #sbooty# gold in the ship's chest. Hopefully it was worth it.{Mis hombres se han entregado al robo y al pillaje hasta hartarse. Por supuesto, a #snation# y a sus aliados no les ha hecho ninguna gracia, pero nosotros hemos ganado #sbooty# piezas de oro que ahora descansan en el cofre del barco. Espero que haya merecido la pena..}
+Captured #stown# for #stonation#{He conquistado #stown# en nombre de #stonation#}
+The #snationdesc# and their allies will not be happy about this. But #stonation# and their friends most certainly will be!{El gobierno #snationdesc# y sus aliados no van a estar nada contentos. ¡Pero #stonation# y sus amigos seguro que sí!}
+Captured #stown# for myself{He conquistado #stown# en mi propio nombre}
+What used to belong to #snation# now belongs to me. The original owners of course won't be pleased and neither will their allies. But that is the price to pay for building my personal empire.{Lo que antes pertenecía a #snation# ahora me pertenece a mí. Por supuesto, a los propietarios originales no les va a hacer ninguna gracia, y tampoco a sus aliados, pero ese es el precio a pagar por construir mi imperio personal..}
+
+{=====| governor.c |=====}
+Prisoner Executions{Ejecuciones de prisioneros}
+The #snationdesc# government did not take kindly to my treatment of prisoners. I had better stop executing them if I want to remain in the service of #snation#.{El gobierno #snationdesc# no está satisfecho con la forma en que trato a los prisioneros. Será mejor que deje de ejecutarlos si quiero seguir estando al servicio de #snation#.}
+
+{=====| CCCFunctions.c |=====}
+Merchant Guild Member Killed{Mimebro del Gremio Mercante muerto}
+I do not remember the specifics, but a #snationdesc# merchant got killed in my presence. Was it one of my officers who did it? Myself? Or a complete accident? Either way, the Merchant Guild blamed me and I was lucky to escape with my life. This has had a notable effect on my relations and reputation.{No recuerdo los detalles, peroun mercader #snationdesc# acabó muerto en mi presencia. ¿Fue uno de mis oficiale squien lo hizo? ¿Fui yo? ¿O fue un accidente fortuito? En cualquier caso, el Gremio Mercante me culpa a mí y tuve suerte de salir con vida. Esto ha tendio un efecto notable en mis relaciones y reputación.}
+
+{=====| Itemtrade.c |=====}
+Traded off all the collected blades, pistols, gems and other junk to a local merchant. The trade earned me{He vendido las espadas, pistolas, piedras preciosas y otras baratijas que he ido recogiendo a un mercader local. Con esta transacción, he ganado}
+Found some interesting new items while browsing through the inventory of a local merchant. I had to pay{He encontrado algunos artículos interesantes mientras curioseaba el inventario de un mercader local. He tenido que pagar}
+
+{=====| Usurer_dialog.c |=====}
+I was desperate enough to borrow some money from the local loanshark. Now I have to return #sammount# plus interest to #sloanshark# by #sdeadline#.{Mi situación es tan desesperada que he pedido dinero prestado al usurero local. Ahora tendré que devolver #sammount# piezas de oro más intereses a #sloanshark# antes del #sdeadline#.}
+I deposited some money at the local loanshark. #sloanshark# promised a good interest for my{He depositado algo de dinero en la oficina del prestamista local. #sloanshark# me ha prometido unos jugosos intereses por mis}
+
+{=====| Ardent: both_reaction.c |=====}
+Captured!{¡Me han capturado!}
+Damnation! That was one smuggling run too many. The patrol ships were too much for ours to take on and the wind wouldn't let us escape to sea.{¡Maldición! Tarde o temprano, tenía que acabarse mi suerte en una de estas expediciones de contrabaando. Los barcos de la patrulla guardacostas eran demasiado fuertes para enfrentarnos a ellos y el viento contrario no nos permitió escapar a mar abierto.}
+Damnation! That ship wasn't an easy merchant after all, but a fighting ship filled with soldiers. That will teach me to look at a ship's flag before attacking, though as we're being boarded, I may not have time to make use of the lesson.{¡Maldición! Resulta que ese barco no era un indefenso mercante lleno de riquezas, sino un buque de guerra lleno de soldados. Eso me enseñará a fijarme mejor en la bandera de un barco antes de atacar. Aunque, teniendo en cuenta que nos están abordando, puede que no tenga tiempo de aprovechar la lección.}

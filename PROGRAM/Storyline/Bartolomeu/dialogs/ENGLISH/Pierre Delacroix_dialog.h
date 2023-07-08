@@ -1,4 +1,4 @@
-string DLG_TEXT[12] = {
+string DLG_TEXT[24] = {
 "HA-HA-HA!! Don't waste your time with him. That kid likes to bother people. I don't know you do I, is it your first visit to our fair town?",
 "Yes. Not only to this town, but also to the Caribbean. Let me introduce myself, I'm Bartolomeu and you?",
 "I'm Pierre Delacroix, farmer. I live outside town near #sPort au Prince#. Today, I came here to sell some vegetables. And you, what do you do?", 
@@ -11,4 +11,16 @@ string DLG_TEXT[12] = {
 "What luck! Where is this camp?",
 "Go to the jungle and keep walking straight through and you'll find it. But be careful, he sells smuggled goods so it's a risky job.",
 "Yes, but I should earn more where the risk is greater. Thanks for the advice, I'm on my way, right now. See you!",
+"Never mind about that. I want to skip right away to part two of this story; the one with my expedition in Cuba.",
+"Never mind about that. I want to skip right away to part three of this story; the one with my first work for the Portuguese Governor of #sisland_Conceicao#.",
+"Never mind about that. I want to skip right away to part four of this story; the one with the Anaconda's Capture.",
+"Never mind about that. I want to skip right away to part five of this story; the one with the Spanish battleship's attack.",
+"Never mind about that. I want to skip right away to part six of this story; the one I must save my crew.",
+"Never mind about that. I want to skip right away to part seven of this story; the one I recover my beloved 'Santiago'.",
+"Never mind about that. I want to skip right away to part eight of this story; the one I must find the statuette.",
+"Never mind about that. I want to skip right away to part nine of this story; the one with the Silver Train.",
+"Never mind about that. I want to skip right away to part ten of this story; the one I see Johan Elting.",
+"Never mind about that. I want to skip right away to part eleven of this story; the one with the battle of Aguadilla.",
+"Never mind about that. I want to skip right away to part twelve of this story; the one with the Aztec treasure.",
+"Never mind about that. I want to skip right away to part thirteen of this story; the one I must attack Cartagena.",
 };

@@ -1,2 +1,2 @@
-title=Life as a Privateer
-text.t1=We have arrived at #sTortuga# as there are hardly any other friendly ports to be found in the Caribbean. While the pirates are willing to accept my presence here, it is my task to make life as difficult as possible for all my country's enemies. And perhaps I can even capture some colonies for them too! The emissary at the governor's mansion will be my point of contact.
+title=Жизнь Капера
+text.t1=Мы прибыли в город #sTortuga#, поскольку в Карибском море вряд ли можно найти другие дружественные порты. В то время как пираты готовы смириться с моим присутствием здесь, моя задача - максимально усложнить жизнь всем врагам моей страны. И, возможно, я даже смогу захватить для них несколько колоний! Лазутчик в губернаторской резиденции будет моим контактным лицом.

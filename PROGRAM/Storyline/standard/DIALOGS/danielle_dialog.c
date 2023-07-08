@@ -349,7 +349,7 @@ void ProcessDialogEvent()
 		case "resque_danielle_6":
 			// DeathDaisy -->
 			if(PChar.sex == "woman"){
-				Preprocessor_Add("gender", "Women like you"); 
+				Preprocessor_Add("gender", XI_ConvertString("Women like you")); 
 			}
 			else{
 				Preprocessor_Add("gender", FirstLetterUp(XI_ConvertString("Men")));
@@ -561,8 +561,7 @@ void ProcessDialogEvent()
 			Preprocessor_AddQuestData("Danielle", GetMyName(NPChar));
 			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(NPChar)));
 			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(NPChar)));
-			if (NPChar.sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
-			else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
+			Preprocessor_AddQuestData("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 			SetQuestHeader("again_find_rheims");
 			AddQuestRecord("again_find_rheims", "1");
 			Preprocessor_Remove("pronoun3");
@@ -1533,8 +1532,7 @@ void ProcessDialogEvent()
 
 		case "Danielle_immortal":
 			Preprocessor_AddQuestData("Danielle", GetMyName(NPChar));
-			if (NPChar.sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
-			else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
+			Preprocessor_AddQuestData("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 			AddQuestRecord("After_Final", 2);
 			CloseQuestHeader("After_Final");
 			Preprocessor_Remove("pronoun3");
@@ -1547,8 +1545,7 @@ void ProcessDialogEvent()
 		case "Danielle_mortal":
 			LAi_SetImmortal(characterFromID("Danielle"), false);
 			Preprocessor_AddQuestData("Danielle", GetMyName(NPChar));
-			if (NPChar.sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
-			else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
+			Preprocessor_AddQuestData("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 			AddQuestRecord("After_Final", 4);
 			CloseQuestHeader("After_Final");
 			Preprocessor_Remove("pronoun3");

@@ -500,7 +500,7 @@ void LAi_group_UpdateAlarm()
 				if (!CheckAttribute(mchr, "clothes." + mchr.receivemodel))
 				{
 					GiveModel2Player(mchr.receivemodel, false);					// if you have just defeated a group of soldiers and reinforcements,
-					LogIt("You take a uniform from one of the dead soldiers");	// get a free uniform as set by SoldierReinforcements in CCCFunctions.c
+					LogIt(TranslateString("","You take a uniform from one of the dead soldiers"));	// get a free uniform as set by SoldierReinforcements in CCCFunctions.c
 				}
 				DeleteAttribute(mchr, "receivemodel");
 			}

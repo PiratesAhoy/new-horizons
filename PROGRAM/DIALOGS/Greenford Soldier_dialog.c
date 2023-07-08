@@ -169,15 +169,14 @@ void ProcessDialogEvent()
 
 		case "return_idol_from_greenford_soldier_10":
 			dialog.snd = "Voice\GRSO\GRSO012";
+			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(CharacterFromID("Danielle"))));
 			if (Characters[GetCharacterIndex("Danielle")].sex == "woman")
 			{
 				dialog.text = DLG_TEXT[39];
-				Preprocessor_Add("pronoun3", XI_ConvertString("her"));
 			}
 			else
 			{
 				dialog.text = DLG_TEXT[87];
-				Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 			}
 			link.l1 = DLG_TEXT[40];
 			link.l1.go = "return_idol_from_greenford_soldier_11";

@@ -237,7 +237,7 @@ int ApplyTun (int _idx, string _improvement, int _time)
 	}
 	if (_time > 0) {
 		WaitDate("", 0, 0, _time, 0, 0);
-		Log_SetStringToLog("You get your ship " + _time + " days later.");
+		Log_SetStringToLog(TranslateString("", "You get your ship") +" "+ _time +" "+ TranslateString("", "days later."));
 	}
 	return 0;
 }
@@ -306,7 +306,7 @@ int UnApplyTun (int _idx, string _improvement, bool berth) // PW added boolean f
 
 	if (time > 0) {
 		WaitDate("", 0, 0, time, 0, 0);
-		Log_SetStringToLog("You get your ship " + time + " days later.");
+		Log_SetStringToLog(TranslateString("", "You get your ship") +" "+ time +" "+ TranslateString("", "days later."));
 	}
 	if (_improvement == "rhull" ||  _improvement == "flushed") cost = 0;// PW make sure you don't get paid when removed on berthing
 	if (cost > 0) Characters[GetMainCharacterIndex()].Money = sti(Characters[GetMainCharacterIndex()].Money) + cost; // PW Money to pchar not companion

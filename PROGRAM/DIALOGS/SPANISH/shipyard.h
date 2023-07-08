@@ -1,7 +1,7 @@
 string DLG_TEXT[19] = {
 "He oído rumores de que necesitas ayuda para conseguir algunos recursos, ¿es cierto?",
 "Sí, la verdad es que necesito algunos suministros. El tendero dice que no recibirá nuevas existencias en bastante tiempo. ¿Podrías traerme ",
-"Te pagaré ",
+"? Te pagaré ",
 " monedas de oro. Por favor, consíguelo antes de ",
 "No hay #sgender# mejor que yo para este trabajo. Tendrás esos suministros en poco tiempo.",
 "Lo siento, no puedo ayudarte todavía.",

@@ -187,11 +187,11 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitQuestBlade(n, "bladetop",                        "top2", "JRH13", 10,   "", "",      0,  0, 	  "", 0,   1);    //alchemy
 
   n = InitQuestBlade(n, "bladebottle_CE0",           "bottle_CE0", "JRH13",  1,   "", "",      0,  0, 	  "", 0,   1);    //empty
-  n = InitQuestBlade(n, "bladebottle_CW1",           "bottle_CW1", "JRH13",  2,   "", "",      0,  0, 	  "", 0,   1);    //½ water
-  n = InitQuestBlade(n, "bladebottle_CT1_sulf",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ H2SO4
-  n = InitQuestBlade(n, "bladebottle_CT1_nitr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ HNO3
-  n = InitQuestBlade(n, "bladebottle_CT1_hydr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ HCl
-  n = InitQuestBlade(n, "bladebottle_CT1_hydrnitr",  "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ HNO3+HCl
+  n = InitQuestBlade(n, "bladebottle_CW1",           "bottle_CW1", "JRH13",  2,   "", "",      0,  0, 	  "", 0,   1);    //� water
+  n = InitQuestBlade(n, "bladebottle_CT1_sulf",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //� H2SO4
+  n = InitQuestBlade(n, "bladebottle_CT1_nitr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //� HNO3
+  n = InitQuestBlade(n, "bladebottle_CT1_hydr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //� HCl
+  n = InitQuestBlade(n, "bladebottle_CT1_hydrnitr",  "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //� HNO3+HCl
 
   n = InitQuestBlade(n, "bladebottle_CT2_sulf_w",    "bottle_CT2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //H2SO4 + water
   n = InitQuestBlade(n, "bladebottle_CT2_sulf_c",    "bottle_CT2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //H2SO4 + chilesalp
@@ -4834,6 +4834,9 @@ int InitQuestItem(  ref ItemIndex, string id, string txtname, string model,
 	case "engineer_letter1":		qstitm.groupID		= EXAMINE_ITEM_TYPE; 			break;
 	case "engineer_letter2":		qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
 	case "engineer_letter3":		qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
+
+	case "full_map":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // BTP: Devlin Opera
+	case "full_map_scaled":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // BTP: Devlin Opera
   }
   if ( setshown == 1 ) qstitm.shown = shownval;
 

@@ -13,6 +13,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -65,7 +67,7 @@ void ProcessDialogEvent()
 
 		case "Fire_ship_sighted":
 			AddDialogExitQuest("Get_to_port_fire_ship");
-			PlaySound("VOICE\ENGLISH\GeneralAlarm.wav");
+			PlaySound(voice_path + "GeneralAlarm.wav");
 			dialog.text = DLG_TEXT[9];
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "Exit";

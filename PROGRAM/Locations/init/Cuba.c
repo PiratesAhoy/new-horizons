@@ -3333,7 +3333,7 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l1.go = "Havana_fakefort4";
 	Locations[n].reload.l1.emerge = "reloadc5";
 	Locations[n].reload.l1.autoreload = "0";
-	locations[n].id.label = "Spanish Prison";
+	locations[n].reload.l1.label = "Spanish Prison";
 
 	LAi_LocationFightDisable(&Locations[n], true);
 

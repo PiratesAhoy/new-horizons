@@ -137,7 +137,7 @@ void ProcessDialogEvent()
 			if(getSmugglingState(SmugglingIsland) == 2) PatrolState = DLG_TEXT[79];
 			if(getSmugglingState(SmugglingIsland) == 3) PatrolState = DLG_TEXT[80];
 			if(getSmugglingState(SmugglingIsland) == 4) PatrolState = DLG_TEXT[81];
-			d.Text = DLG_TEXT[19] + locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name + DLG_TEXT[22]+PatrolState;
+			d.Text = DLG_TEXT[19] + TranslateString("",locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name) + DLG_TEXT[22]+PatrolState;
 			Link.l1 = DLG_TEXT[23];
 			Link.l1.go = "Smuggling_exit";
 			Link.l2 = DLG_TEXT[48];

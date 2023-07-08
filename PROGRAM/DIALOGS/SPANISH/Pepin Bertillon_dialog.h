@@ -1,13 +1,13 @@
 string DLG_TEXT[10] = {
-"Que puedo hacer por ti? Tal vez te gustaria comprar algo! Tengo una gran variedad de bienes ... y me especializo en articulos que no puedes adquirir oficialmente, si me entiendes...",
-"No, gracias. Solo queria hacerte una pregunta. Son usted, por casualidad, ",
+"¿Qué puedo hacer por ti? ¿Te gustaría comprar algo? Tengo una gran variedad de productos... y me especializo en artículos que no puedes adquirir por medios oficiales, si entiendes a qué me refiero...",
+"No, gracias. Solo quería hacerte una pregunta. ¿Por casualidad eres ",
 "Pepin Bertillon",
 "Pepin Bertillon",
 "?",
-"Soy yo, a tu Servicio! Seguro que no quieres comprar nada?",
-"Al rec, voy a tomar algo. Tu vida, eso es. No vinculadas, y lo hare estrategia.",
-"Ja! !Que insolencia! Me gusta eso! Pero tengo una contraoferta para ti ... olvida esta nocion de quitarme la vida, y no te disparare donde estas. !Te garantizo que no encontraras un mejor trato en ninguna parte!",
-"Muy inteligente. Pero las palabras no salvaran tu pellejo. En garde!",
-"Bueno, tengo que admitir que su oferta parece atractiva-especialmente ahora que he tenido una mejor mirada en sus amigos bastante bien armados....",
+"¡El mismo, a tu servicio! ¿Seguro que no quieres comprar nada?",
+"No, aunque podría decirse que vengo a llevarme algo: ¡tu vida! No te resistas y haré que sea rápido.",
+"¡Ja! ¡Qué insolencia! ¡Me gusta! Pero tengo una contraoferta para ti... olvida esa idea de quitarme la vida, y no te dispararé aquí y ahora. ¡Te garantizo que no encontrarás un trato mejor en ninguna parte!",
+"Muy listo. Pero las palabras no salvarán tu pellejo. ¡En guardia!",
+"Bueno, tengo que admitir que tu oferta parece atractiva; especialmente ahora que he echado uun vistazo a tus amigos y las armas que llevan encima...",
 
 };

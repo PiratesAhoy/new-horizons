@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = {
-"Alto, #ssir#! Adonde crees que vas?",
-"El capitan y yo hemos decidido dar un paseo por el camino.",
-"A esta hora? Eso parece bastante extrano.",
-"Si no me crees, puedes preguntarle tu mismo.",
+"Alto, #ssir#! ¿Adónde crees que vas?",
+"El capitán y yo hemos decidido dar un paseo por el camino.",
+"¿A estas horas? Eso parece bastante extraño.",
+"Si no me crees, puedes preguntarle tú mismo.",
 
 };

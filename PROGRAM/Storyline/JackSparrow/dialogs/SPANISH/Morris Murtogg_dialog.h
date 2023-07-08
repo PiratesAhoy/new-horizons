@@ -6,7 +6,7 @@ string DLG_TEXT[43] = {
 "Porque el propio gobernador lo dijo. Hay una gran tarea pendiente en el Fuerte y en la Residencia y él no quiere interrupciones 'navegando' entre ambos.",
 "Es un buen objetivo para asegurarse, pero me da que con todas estas naves aquí, no hay muchas posibilidades de interrupción. De hecho, con un barco como el Dauntless en el puerto, hace que el Interceptor amarrado aquí sea innecesario.",
 "El Dauntless es el poder en estas aguas, es cierto, pero no hay ninguna nave que pueda igualar al Interceptor en cuanto a velocidad.",
-"He oído hablar de uno, que se supone que es muy rápido, casi imposible de atrapar... el #scursed_ship#.",
+"He oído hablar de uno, que se supone que es muy rápido, casi imposible de atrapar... el #scursedship#.",
 "¿Cómo te llamas?",
 "Smith, o Smithy, si quieres.",
 "Sí, y nada de mentiras.",

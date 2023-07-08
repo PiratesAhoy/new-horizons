@@ -106,7 +106,7 @@ void QuestComplete(string sQuestName)
 			// MAXIMUS 05.09.2018 <==
 			GiveModel2Player("47YoungJack",true);
 			GiveModel2Player("depp",false);			// PB: For those players who REALLY can't wait
-			GiveShip2Character(pchar,"Cutter2","Spreading Freedom",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"Cutter2",TranslateString("","Spreading Freedom"),-1,ENGLAND,true,true);
 			SetCharacterShipLocation(Pchar, "Cayman_port");
 			SetCurrentTime(14.00, 0);
 			pchar.jack = "Early_days";
@@ -783,7 +783,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Arrested_this_time":
-			GiveShip2Character(pchar,"Tartane50","Flying Fish",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"Tartane50",TranslateString("","Flying Fish"),-1,ENGLAND,true,true);
 			SetCharacterShipLocation(Pchar, "Greenford_port");
 			ChangeCharacterAddress(characterFromID("Eng_soldier_39"), "none", "");
 			ChangeCharacterAddressGroup(CharacterFromID("Eng_soldier_38"),"greenford_prison", "officers", "reload1_2");
@@ -1644,7 +1644,7 @@ void QuestComplete(string sQuestName)
 			SetShipRemovable(pchar, true);
 			if (!HasThisShip("Black Pearl"))
 			{
-				GiveShip2Character(pchar,"WickedWench","Wicked Wench",-1,ENGLAND,true,true);
+				GiveShip2Character(pchar,"WickedWench",TranslateString("","Wicked Wench"),-1,ENGLAND,true,true);
 				PChar.quest.wench_given_by = "Beckett";
 				SetCharacterShipLocation(Pchar, "Redmond_Port");
 			}
@@ -2210,6 +2210,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetOfficerType(characterFromID("Mr. Gibbs"));
 			RemoveCharacterCompanion(pchar, characterFromID("Peter Willemoes"));
 
+			Locations[FindLocation("Muelle_Tavern")].vcskip = true;
 			Pchar.quest.Looking_for_CCC.win_condition.l1 = "location";
 			PChar.quest.Looking_for_CCC.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Looking_for_CCC.win_condition.l1.location = "Muelle_Tavern";
@@ -2222,6 +2223,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Couch Captain Charles"), "Muelle_ANIMISTS", "goto", "goto28");
 			Island_SetReloadEnableLocal("IslaMuelle", "reload_2", true); // PB: Needs to be accessible
 			LAi_SetSitType(characterfromID("Barbossa"));
+			DeleteAttribute(&Locations[FindLocation("Muelle_Tavern")],"vcskip");
 
 			Pchar.quest.Found_CCC.win_condition.l1 = "location";
 			PChar.quest.Found_CCC.win_condition.l1.character = Pchar.id;
@@ -2350,7 +2352,7 @@ void QuestComplete(string sQuestName)
 			Pchar.Quest.Meet_Nathan_Kell.over = "yes";
 			Pchar.Quest.Oxbay_way_to_Beckett_Capture.over = "yes";
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"HMS_Bounty","Lindesfarne",ENGLAND,-1,true,true);
+			GiveShip2Character(pchar,"HMS_Bounty",TranslateString("","Lindesfarne"),ENGLAND,-1,true,true);
 
 			ChangeCharacterAddressGroup(characterFromID("Cutler Beckett"), "Greenford_port", "goto", "goto21");
 			ChangeCharacterAddressGroup(characterFromID("Eng_soldier_38"), "Greenford_port", "goto", "goto19");
@@ -2374,7 +2376,7 @@ void QuestComplete(string sQuestName)
 			Pchar.Quest.Meet_Nathan_Kell.over = "yes";
 			Pchar.Quest.Lazy_way_to_Beckett_Capture.over = "yes";
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"HMS_Bounty","Lindesfarne",ENGLAND,-1,true,true);
+			GiveShip2Character(pchar,"HMS_Bounty",TranslateString("","Lindesfarne"),ENGLAND,-1,true,true);
 
 			ChangeCharacterAddressGroup(characterFromID("Cutler Beckett"), "Oxbay_port", "goto", "goto3");
 			ChangeCharacterAddressGroup(characterFromID("Eng_soldier_39"), "Oxbay_port", "officers", "reload2_1");
@@ -2591,7 +2593,7 @@ void QuestComplete(string sQuestName)
 			//Locations[FindLocation("Conceicao_townhall")].reload.l1.disable = 0;
 			Locations[FindLocation("Mings_townhall")].reload.l1.disable = 0;
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"Sloop2","Slick Rigging",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"Sloop2",TranslateString("","Slick Rigging"),-1,ENGLAND,true,true);
 			SetCharacterShipLocation(Pchar, "Oxbay_Port");
 
 			setCharacterShipLocation(characterFromID("Captain Philippe"), "Oxbay_port");
@@ -2615,7 +2617,7 @@ void QuestComplete(string sQuestName)
 			//Locations[FindLocation("Conceicao_townhall")].reload.l1.disable = 0;
 			Locations[FindLocation("Mings_townhall")].reload.l1.disable = 0;
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"Sloop2","Slick Rigging",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"Sloop2",TranslateString("","Slick Rigging"),-1,ENGLAND,true,true);
 			SetCharacterShipLocation(Pchar, "Oxbay_Port");
 
 			SetCompanionIndex(Pchar, -1, GetCharacterIndex("Konrad Kulczycki"));
@@ -3216,7 +3218,7 @@ void QuestComplete(string sQuestName)
 		case "Straight_to_Beckett_Capture":
 			CloseQuestHeader("The Brotherhood");
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"HMS_Bounty","Lindesfarne",ENGLAND,-1,true,true);
+			GiveShip2Character(pchar,"HMS_Bounty",TranslateString("","Lindesfarne"),ENGLAND,-1,true,true);
 			Pchar.Quest.Oxbay_to_Beckett_Capture.over = "yes";
 			Pchar.Quest.Brotherhood_lighthouse_and_Annamaria.over = "yes";
 			Locations[FindLocation("Greenford_port")].vcskip = true;
@@ -3237,7 +3239,7 @@ void QuestComplete(string sQuestName)
 			Pchar.Quest.Straight_to_Beckett_Capture.over = "yes";
 			Pchar.Quest.Brotherhood_lighthouse_and_Annamaria.over = "yes";
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"HMS_Bounty","Lindesfarne",ENGLAND,-1,true,true);
+			GiveShip2Character(pchar,"HMS_Bounty",TranslateString("","Lindesfarne"),ENGLAND,-1,true,true);
 			Locations[FindLocation("Oxbay_port")].vcskip = true;
 			StorePassengers(PChar.id);
 			DisableFastTravel(true);
@@ -3309,7 +3311,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Get_off_Guadeloupe_2":
-			GiveShip2Character(pchar,"FR_Boussole","Cutlass",-1,FRANCE,true,true);
+			GiveShip2Character(pchar,"FR_Boussole",TranslateString("","Cutlass"),-1,FRANCE,true,true);
 			SetCharacterShipLocation(Pchar, "Guadeloupe_Port");
 			EquipCharacterByItem(pchar, "bladeX4");
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("Cap'n Drow"));
@@ -4408,7 +4410,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "sunk_wench":
-			GiveShip2Character(pchar,"HMS_Bounty","Lindesfarne",ENGLAND,-1,true,true);
+			GiveShip2Character(pchar,"HMS_Bounty",TranslateString("","Lindesfarne"),ENGLAND,-1,true,true);
 			HoistFlag(PERSONAL_NATION);
 			PChar.Flags.Personal = 3; // PB: EITC Flag
 			PChar.Flags.Personal.texture = 3;
@@ -5158,7 +5160,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "get_a_ride_with_smugglers":
-			GiveShip2Character(pchar,"Barque4_47","Free at Last",-1,PIRATE,true,true);
+			GiveShip2Character(pchar,"Barque4_47",TranslateString("","Free at Last"),-1,PIRATE,true,true);
 			PlaceFleetNearShore("Deserted_Island_shore_02");
 			EquipCharacterByItem(pchar, "bladeX4");
 			ChangeCharacterAddress(characterFromID("Barbossa"), "None", "");
@@ -5390,7 +5392,7 @@ void QuestComplete(string sQuestName)
 
 		case "Tortuga_Meet_Annamaria_for_ship":
 			AddDataToCurrent(10,0,0, false);	// GR: It's supposed to be 10 years later, so make it 10 years later
-			logit("Ten years later...");
+			logit(TranslateString("","Ten years later..."));
 			Characters[GetCharacterIndex("Storyteller")].dialog.currentnode = "Tavern_Story11";
 			LAi_ActorDialog(characterFromID("Storyteller"), pchar, "", 0.0, 0.0);
 		break;
@@ -5463,9 +5465,9 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(CharacterFromId("James Norrington"), "bladeNorr");   // Give Norrington his ceremonial smallsword...
 			EquipCharacterByItem(CharacterFromId("James Norrington"), "bladeNorr");
 			SetModelfromID(CharacterFromId("James Norrington"), "Conorrington");    // ... and his Commodore outfit to go with the 'Dauntless'
-			GiveShip2Character(characterFromID("James Norrington"),"HMS_Dauntless","Dauntless",-1,ENGLAND,true,true);
-			GiveShip2Character(characterFromID("Port Guard"),"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
-			GiveShip2Character(pchar,"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
+			GiveShip2Character(characterFromID("James Norrington"),"HMS_Dauntless",TranslateString("","Dauntless1"),-1,ENGLAND,true,true);
+			GiveShip2Character(characterFromID("Port Guard"),"HMS_Interceptor",TranslateString("","Interceptor"),-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"HMS_Interceptor",TranslateString("","Interceptor"),-1,ENGLAND,true,true);
 			SetCrewQuantity(pchar, 2);
 			AddCharacterGoods(pchar, GOOD_BALLS, 500);
 			AddCharacterGoods(pchar, GOOD_GUNPOWDER, 2000);
@@ -5507,7 +5509,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Jack's_arrival_at_Redmond2":
-			PostVideoAndQuest("LegendJackSparrow\jack_entrance", 25, "You_need_to_pay_mooring");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("LegendJackSparrow\RUSSIAN\jack_entrance", 25, "You_need_to_pay_mooring");
+			else PostVideoAndQuest("LegendJackSparrow\jack_entrance", 25, "You_need_to_pay_mooring");
 			bMainMenuLaunchAfterVideo = true;
 		break;
 
@@ -5695,7 +5698,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.You_cant_park_That_Here.over = "yes";
 			pchar.quest.Turks_and_the_French = "powers_of_persuation";
 			LAi_SetPlayerType(pchar);
-			GiveShip2Character(pchar,"HMS_Surprise","Surprise",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"HMS_Surprise",TranslateString("","Surprise"),-1,ENGLAND,true,true);
 			PChar.location.from_sea = "Redmond_Port";				// GR: If your last visit to Jamaica was at a beach, game thinks you're still there
 			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "PChar");	// GR: Move to port which is where your new ship is supposed to be
 			AddPassenger(Pchar, characterFromID("James Norrington"), 0);
@@ -5757,7 +5760,7 @@ void QuestComplete(string sQuestName)
 			}
 			else {AddPartyExp(pchar, 2000);}
 			locations[FindLocation("Turks_port")].reload.l2.disable = false;
-			GiveShip2Character(pchar,"Tartane50","Everyone Wins",-1,PIRATE,true,true);
+			GiveShip2Character(pchar,"Tartane50",TranslateString("","Everyone Wins"),-1,PIRATE,true,true);
 			ChangeCharacterAddress(characterfromID("James Norrington"),"none", "");
 
 			pchar.quest.Bootstrap_on_Turks.win_condition.l1 = "locator";
@@ -5794,7 +5797,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(pchar, characterFromID("Oswald Chappel"));
 			Characters[GetCharacterIndex("Oswald Chappel")].dialog.currentnode = "First time";
 			Lai_ActorDialog(characterFromID("Oswald Chappel"), pchar, "", 3.0, 0);
-			GiveShip2Character(pchar,"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"HMS_Interceptor",TranslateString("","Interceptor"),-1,ENGLAND,true,true);
 			SetCrewQuantity(pchar, 3);
 			SetCharacterShipLocation(Pchar, "Turks_port");
 		break;
@@ -5907,7 +5910,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "go_swimming_for_Elizabeth":
-			PostVideoAndQuest("LegendJackSparrow\elizabeth_falls", 25, "After_Elizabeth_Sea_rescue");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("LegendJackSparrow\RUSSIAN\elizabeth_falls", 25, "After_Elizabeth_Sea_rescue");
+			else PostVideoAndQuest("LegendJackSparrow\elizabeth_falls", 25, "After_Elizabeth_Sea_rescue");
 			bMainMenuLaunchAfterVideo = true;
 		break;
 
@@ -6662,7 +6666,8 @@ void QuestComplete(string sQuestName)
 			RemoveCharacterCompanion(pchar, characterFromID("Mr. Gibbs"));
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Mr. Gibbs"));
 
-			PostVideoAndQuest("LegendJackSparrow\barbossa_speach", 25, "parlerwill");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("LegendJackSparrow\RUSSIAN\barbossa_speach", 25, "parlerwill");
+			else PostVideoAndQuest("LegendJackSparrow\barbossa_speach", 25, "parlerwill");
 			bMainMenuLaunchAfterVideo = true;
 		break;
 
@@ -6721,7 +6726,7 @@ void QuestComplete(string sQuestName)
 		break;
 // -->SJG
 		case "insertforchase":
-			GiveShip2Character(CharacterFromID("Mr. Gibbs"),"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
+			GiveShip2Character(CharacterFromID("Mr. Gibbs"),"HMS_Interceptor",TranslateString("","Interceptor"),-1,ENGLAND,true,true);
 			characters[GetCharacterIndex("Mr. Gibbs")].quest.old_group = GetAttribute(CharacterFromID("Mr. Gibbs"),"chr_ai.group");
 			LAi_group_MoveCharacter(CharacterFromID("Mr. Gibbs"), "QC_SOLDIERS");
 			DoQuestReloadToLocation("IslaDemuerte_shore_01", "goto", "citizen07", "insertforchase2");
@@ -6741,7 +6746,7 @@ void QuestComplete(string sQuestName)
 			// GR: Moved here from "Barbossa_dialog.c", case "Begin_3D" so that you don't become Barbossa mid-dialog
 			PChar.quest.your_rep = GetCharacterReputation(PChar);
 			PChar.reputation = GetCharacterReputation(CharacterFromID("Barbossa"));
-			GiveShip2Character(pchar, SHIP_CURSED, PreprocessText("#scursed_ship#"),-1,PIRATE,true,true);
+			GiveShip2Character(pchar, SHIP_CURSED, TranslateString(PreprocessText("#scursed_ship#"), ""),-1,PIRATE,true,true);
 			AddCharacterGoods(pchar, GOOD_GUNPOWDER, 5000);
 			// PB: Become Barbossa -->
 			PChar.name = "Hector";
@@ -7374,7 +7379,8 @@ void QuestComplete(string sQuestName)
 		case "Sail_DMC_Jack":
 			//StorePassengers("Blaze");
 			ResetSound();
-			PostVideoAndQuest("LegendJackSparrow\jack_exit_DMC", 1, "DMC_prestart");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("LegendJackSparrow\RUSSIAN\jack_exit_DMC", 1, "DMC_prestart");
+			else PostVideoAndQuest("LegendJackSparrow\jack_exit_DMC", 1, "DMC_prestart");
 			bMainMenuLaunchAfterVideo = true;
 		break;
 

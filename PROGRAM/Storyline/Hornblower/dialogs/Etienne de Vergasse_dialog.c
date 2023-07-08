@@ -13,6 +13,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -34,7 +36,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "First_words_at_dinner":
-			PlaySound("VOICE\ENGLISH\Etienne01.wav");
+			PlaySound(voice_path + "Etienne01.wav");
 			dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3];
 			link.l1.go = "Exit_First_words_at_dinner";
@@ -99,7 +101,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "words_after_dinner":
-			PlaySound("VOICE\ENGLISH\Etienne02.wav");
+			PlaySound(voice_path + "Etienne02.wav");
 			dialog.text = DLG_TEXT[9];
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "words_after_dinner2";

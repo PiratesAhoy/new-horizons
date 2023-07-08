@@ -139,9 +139,10 @@ Beatrice{Beatrice}
 Devlin{Devlin}
 Caribbean Tales{Historias del Caribe}
 Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?{A Beatrice Devlin le gusta explorar las recién descubiertas Indias Occidentales. Eres una mujer libre en un mundo libre. ¿Pero tienes lo que hay que tener para crear una auténtica Era de los Piratas?}
-Quicksilver{Quicksilver}
+Discovery{Discovery}
 
 Bonnie{Bonnie}
+Quicksilver{Quicksilver}
 
 Desmond Ray{Desmond Ray}
 Beltrop{Beltrop}
@@ -178,7 +179,7 @@ Cois{Cois}
 Jean{Jean}
 Lafitte{Lafitte}
 The Buccaneer{El bucanero}
-A French smuggler friendly to the United States arrives in port. But will you abandon your profitable ventures to expand the might of the Americas in the Caribbean? Or perhaps join forces with one of the other nations? And how long will you be able to resist the lure of piracy?{Un contrabandista francés amigo de los Estados Unidos acaba de llegar a puerto. ¿Abandonarás tus provechosos negocios para acrecentar el poder de los americanos en el Caribe? ¿O quizás unirás tus fuerzas a una de las otras naciones? ¿Y por cuánto tiempo podrás resistir la tentación de la piratería?}
+A French smuggler friendly to the United States arrives in port. But will you abandon your profitable ventures to expand the might of the Americas in the Caribbean? Or perhaps join forces with one of the other nations? And how long will you be able to resist the lure of piracy?{Un contrabandista francés amigo de los Estados Unidos acaba de llegar a puerto. ¿Abandonarás tus provechosos negocios para acrecentar el poder de los norteamericanos en el Caribe? ¿O quizás unirás tus fuerzas a una de las otras naciones? ¿Y por cuánto tiempo podrás resistir la tentación de la piratería?}
 Goelette la Diligente{Goelette la Diligente}
 
 James T.{James T.}
@@ -189,7 +190,7 @@ Eduardo{Eduardo}
 Villanueva{Villanueva}
 Sargento{Sargento}
 Lord of the Adriatic{Señor del Adriático}
-Relive the piratical adventures of Capitán Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Revive las piráticas evnturas del capitán Villanueva, temido corsario del mar Adriático. Si eso significa servir a España un como corsario legítimo, o volverte contra cualquiera que se interponga en tu cmaino, es una decisión que depende de ti.}
+Relive the piratical adventures of Capitán Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Revive las piráticas aventuras del capitán Villanueva, temido corsario del mar Adriático. Si eso significa servir a España un como corsario legítimo, o volverte contra cualquiera que se interponga en tu cmaino, es una decisión que depende de ti.}
 
 Sao{Sao}
 Feng{Feng}
@@ -341,9 +342,9 @@ Jamaica Merchant{Jamaica Merchant}
 Black{Black}
 Caesar{Caesar}
 Longboat{Longboat}
-From Slave to Pirate{De escalvo a pirata}
-You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?{You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?}
-the Beggar{the Beggar}
+From Slave to Pirate{De esclavo a pirata}
+You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?{Fuiste arrebatado por la fuerza de tu hogar y encadenado en la bodega de un barco negrero. Pero no todos los hombres blancos que hay a bordo son enemigos. Con un poco de ayuda de un aliado inesperado y una tormenta, consigues escapar de tu cautiverio. ¿Qué harás ahora?}
+the Beggar{el Mendigo}
 
 Rackham{Rackham}
 
@@ -365,7 +366,7 @@ Kieron{Kieron}
 
 Swan{Swan}
 
-A Fine Gentleman{Un perfecto caballero}
+A Fine Gentleman{Un caballero respetable}
 You intend to see to it that any man who sails under a pirate flag or wears a pirate brand gets what he deserves. But while you may be an ambitious young lieutenant in His Majesty's Navy, you do have your heart in the right place.{Tienes la intención de hacer que cualquier hombre que navegue bajo una bandera pirata o lleve una marca de pirata obtenga lo que se merece. Pero, aunque seas un joven y ambicioso teniente de la Armada de Su Majestad, tu corazón esta en el lugar correcto.}
 
 Michiel{Michiel}

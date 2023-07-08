@@ -474,10 +474,10 @@ string LogsToggleDescription()
 {
 	switch(LogsToggle)
 	{
-		case LOG_QUIET:		return "Quiet";		break;
-		case LOG_LACONIC:	return "Laconic";	break;
-		case LOG_NORMAL:	return "Normal";	break;
-		case LOG_VERBOSE:	return "Verbose";	break;
+		case LOG_QUIET:		return TranslateString("","Quiet");		break;
+		case LOG_LACONIC:	return TranslateString("","Laconic");	break;
+		case LOG_NORMAL:	return TranslateString("","Normal");	break;
+		case LOG_VERBOSE:	return TranslateString("","Verbose");	break;
 	}
 }
 
@@ -876,7 +876,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 
 						case "Jack Aubrey":
@@ -920,7 +920,7 @@ void GivePromotionReward(int iNation)
 							RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 						}
 						else
-							LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+							LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 					}
 				break;
 				case 8: // Rear Admiral
@@ -936,7 +936,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 						case "Horatio Nelson":
 							// Nothing on purpose
@@ -960,7 +960,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 
 						//default:
@@ -1012,7 +1012,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 
 						case "Theodore Groves":
@@ -1037,7 +1037,7 @@ void GivePromotionReward(int iNation)
 									RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 								}
 								else
-									LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+									LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 							break;
 
 							case PERIOD_THE_SPANISH_MAIN:
@@ -1124,7 +1124,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 			}
 		break;
@@ -1339,7 +1339,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 				case 8: // Commandeur
 					switch(GetCurrentPeriod())
@@ -1410,7 +1410,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 				case 10: // Vice-Admiraal
 					if (GetCompanionIndex(pchar,1) == -1 || GetCompanionIndex(pchar,2) == -1 || GetCompanionIndex(pchar,3) == -1) // GR
@@ -1451,7 +1451,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 			}
 		break;
@@ -1667,7 +1667,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 				case 8: // Vice-Amiral
 					switch (GetMySimpleOldName(PChar))
@@ -1773,7 +1773,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 			}
 		break;
@@ -1991,7 +1991,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 
 				case 8: // Contra Almirante
@@ -2108,7 +2108,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 			}
 		break;
@@ -2328,7 +2328,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 
 				case 8: // Comodoro
@@ -2372,7 +2372,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
@@ -2396,7 +2396,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 
 						case PERIOD_NAPOLEONIC:
@@ -2408,7 +2408,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 					}
 				break;
@@ -2450,7 +2450,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 			}
 		break;
@@ -2677,7 +2677,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 
 				case 8: // Rear Admiral
@@ -2777,7 +2777,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 			}
 		break;
@@ -2993,7 +2993,7 @@ void GivePromotionReward(int iNation)
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 					}
 					else
-						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+						LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 				break;
 
 				case 8: // Infamous Pirate
@@ -3037,7 +3037,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
@@ -3061,7 +3061,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 
 						case PERIOD_NAPOLEONIC:
@@ -3073,7 +3073,7 @@ void GivePromotionReward(int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						break;
 					}
 				break;
@@ -3244,7 +3244,7 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
 							else
-								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
+								LogIt(TranslateString("","You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship."));
 						}
 					break;
 					case "James Norrington":
@@ -4127,10 +4127,10 @@ void KrakenAttack(aref rCharacter, int iSwimQuantity)
 		PostEvent("CreateKrakenTentacle", delay, "i", rCharacter);
 		delay = delay + rand(1000);
 	}
-	if(IsMainCharacter(rCharacter)) LogIt("Captain, we're being attacked by the Kraken!");
+	if(IsMainCharacter(rCharacter)) LogIt(TranslateString("","Captain, we're being attacked by the Kraken!"));
 	else
 	{
-		LogIt("Captain, the " + rCharacter.ship.name + " is under attack by the Kraken!");
+		LogIt(TranslateString("","Captain, the")+" "+ rCharacter.ship.name +" "+ TranslateString("","is under attack by the Kraken!"));
 		pchar.KrakenAttack = true;
 	}
 	PostEvent("KrakenAttackFinished", delay, "i", rCharacter);
@@ -4141,7 +4141,7 @@ void FinishKrakenAttack()
 {
 	ref pchar = GetMainCharacter();
 	aref rCharacter = GetEventData();
-	LogIt("Captain, the Kraken has finished its attack on the " + rCharacter.ship.name + "!");
+	LogIt(TranslateString("","Captain, the Kraken has finished its attack on the") +" "+ rCharacter.ship.name + "!");
 	if(CheckAttribute(pchar, "KrakenAttack"))	PostEvent("EnableKraken", 5*60*1000);
 }
 
@@ -4150,7 +4150,7 @@ void KrakenEnabled()
 {
 	ref pchar = GetMainCharacter();
 	DeleteAttribute(pchar, "KrakenAttack");
-	if(KrakenAttackEnabled()) LogIt("Captain, the Kraken is ready for another attack!"); // Just in case you swap ships
+	if(KrakenAttackEnabled()) LogIt(TranslateString("","Captain, the Kraken is ready for another attack!")); // Just in case you swap ships
 }
 
 #event_handler("CreateKrakenTentacle", "KrakenTentacle");
@@ -4497,8 +4497,8 @@ void FinishedSpeedBurst()
 void SpeedBurstAvailable()
 {
 	ref pchar = GetMainCharacter();
-	if (GetAttribute(pchar, "ship.speedburst") == "PearlSweeps")	LogIt("Captain, the crew is ready for another go at the oars!");
-	if (GetAttribute(pchar, "ship.speedburst") == "QARSword")		LogIt("Captain, the Sword of Triton has recharged itself!");
+	if (GetAttribute(pchar, "ship.speedburst") == "PearlSweeps")	LogIt(TranslateString("","Captain, the crew is ready for another go at the oars!"));
+	if (GetAttribute(pchar, "ship.speedburst") == "QARSword")		LogIt(TranslateString("","Captain, the Sword of Triton has recharged itself!"));
 	DeleteAttribute (pchar, "ship.speedburst");
 }
 
@@ -4783,33 +4783,33 @@ void UpdateShipPower()
 	{
 		switch(abs(sti(GetAttribute(rCharacter,"Ship.Power"))))
 		{
-			case  100:	sshippower = "Engines: Full";
+			case  100:	sshippower = TranslateString("","Engines: Full");
 				IShipPower.Log.color = COLOR_GREEN;
 				if(sti(GetAttribute(rCharacter,"Ship.Power")) < 0)
 					IShipPower.Log.color = COLOR_RED;
 			break;
-			case   75:	sshippower = "Engines: Half";
+			case   75:	sshippower = TranslateString("","Engines: Half");
 				IShipPower.Log.color = COLOR_GREEN_LIGHT;
 				if(sti(GetAttribute(rCharacter,"Ship.Power")) < 0)
 					IShipPower.Log.color = COLOR_RED_LIGHT;
 			break;
-			case   50:	sshippower = "Engines: Slow";
+			case   50:	sshippower = TranslateString("","Engines: Slow");
 				IShipPower.Log.color = COLOR_YELLOW;
 			break;
-			case   25:	sshippower = "Engines: Dead Slow";
+			case   25:	sshippower = TranslateString("","Engines: Dead Slow");
 				IShipPower.Log.color = COLOR_YELLOW_LIGHT;
 			break;
-			case    0:	sshippower = "Engines: ALL STOP";
+			case    0:	sshippower = TranslateString("","Engines: ALL STOP");
 				IShipPower.Log.color = COLOR_NORMAL;
 			break;
 		}
 		if(sti(GetAttribute(rCharacter,"Ship.Power")) > 0)
-			sshippower = sshippower + " Ahead";
+			sshippower = sshippower +" "+ TranslateString("","Ahead");
 		if(sti(GetAttribute(rCharacter,"Ship.Power")) < 0)
-			sshippower = sshippower + " Astern";
+			sshippower = sshippower +" "+ TranslateString("","Astern");
 		if(GetCargoGoods(rCharacter, GOOD_PLANKS) < 1)
 		{
-			sshippower = "Engines: NO FUEL";
+			sshippower = TranslateString("","Engines: NO FUEL");
 			IShipPower.Log.color = COLOR_BLUE;
 		}
 	}
@@ -4838,9 +4838,12 @@ void UpdateShipRoll()
 		float RollAngle = makeint(-Radian2Degree(stf(GetAttribute(rCharacter, "ship.ang.z"))));
 		if(RollAngle < -180) RollAngle = RollAngle + 360;
 
-		if(RollAngle > 0 )	sshiproll = "Roll angle is " + abs(makeint(RollAngle)) + " degrees to starboard";
-		else				sshiproll = "Roll angle is " + abs(makeint(RollAngle)) + " degrees to port";
-		if(RollAngle == 0)	sshiproll = "Roll angle is " + abs(makeint(RollAngle)) + " degrees";
+		if(RollAngle > 0 )	sshiproll = TranslateString("","ROLL_Roll angle is")+" " + abs(makeint(RollAngle)) + " "+TranslateString("","ROLL_degrees to starboard");
+		else			sshiproll = TranslateString("","ROLL_Roll angle is")+" " + abs(makeint(RollAngle)) + " "+TranslateString("","ROLL_degrees to port");
+		if(RollAngle == 0)	sshiproll = TranslateString("","ROLL_Roll angle is")+" " + abs(makeint(RollAngle)) + " "+TranslateString("","ROLL_degrees");
+
+		string sSpace = " ";
+		if (LanguageGetLanguage() == "Russian") sSpace = "";
 
 		switch(sti(GetAttribute(rCharacter, "Capsize.Warning")))
 		{
@@ -4853,7 +4856,7 @@ void UpdateShipRoll()
 				if(abs(RollAngle) >  ROLL_ANGLE_CAPSIZE) IShipRoll.Log.color = COLOR_RED;
 				if(GetSeaTime() > 10 && abs(RollAngle) > ROLL_ANGLE_WARNING)
 				{
-					LogIt("Captain, we have to put our bow to the waves to decrease the rolling movement of the ship");
+					LogIt(TranslateString("","Captain, we have to put our bow to the waves to decrease the rolling movement of the ship"));
 
 					rCharacter.Capsize.Warning  = ROLL_ANGLE_MORALE;
 					rCharacter.Capsize.Time = GetSeaTime();
@@ -4869,7 +4872,7 @@ void UpdateShipRoll()
 				if(GetSeaTime() - sti(rCharacter.Capsize.Time) > 10 && abs(RollAngle) > ROLL_ANGLE_MORALE)
 				{
 					RollDamageValue = sti(rCharacter.Ship.Crew.Morale) - 10;
-					LogIt("Captain, the morale of the crew decreased from " + XI_ConvertString(GetMoraleName(rCharacter.Ship.Crew.Morale)) + " to " + XI_ConvertString(GetMoraleName(RollDamageValue)) + " because the ship's rolling is making them seasick");
+					LogIt(TranslateString("","Captain, the morale of the crew decreased from") + " " + XI_ConvertString(GetMoraleName(rCharacter.Ship.Crew.Morale)) + sSpace + TranslateString("","ROLL_to") + " " + XI_ConvertString(GetMoraleName(RollDamageValue)) + sSpace + TranslateString("","because the ship's rolling is making them seasick"));
 					rCharacter.Ship.Crew.Morale = RollDamageValue; // Decrease morale one level
 					if (sti(rCharacter.Ship.Crew.morale)<MORALE_MIN) rCharacter.Ship.Crew.morale=MORALE_MIN;
 
@@ -4897,13 +4900,13 @@ void UpdateShipRoll()
 					if(GetCargoGoods(rCharacter, i) > 0)
 					{
 						RollDamageValue = 1 + makeint(0.1*GetCargoGoods(rCharacter, i));
-						LogIt("Captain, the cargo has started shifting due to the rolling and " + RollDamageValue + " " + Goods[i].Name + " went overboard");
+						LogIt(TranslateString("","Captain, the cargo has started shifting due to the rolling and") + " " + RollDamageValue + " " + XI_ConvertString(Goods[i].Name) + sSpace + TranslateString("","went overboard"));
 						RemoveCharacterGoods(rCharacter, i, RollDamageValue);
 					}
 					else // The cargo hold is empty
 					{
 						RollDamageValue = makeint(0.1*GetCrewQuantity(rCharacter));
-						LogIt("*" + RollDamageValue + " crewmembers are heard yelling from inside the empty cargo hold*");
+						LogIt("*" + RollDamageValue + " " + TranslateString("","crewmembers are heard yelling from inside the empty cargo hold") + "*");
 						RemoveCharacterCrew(rCharacter, RollDamageValue); // 10% crew damage
 					}
 					PlaySound("objects\abordage\abordage_loosing.wav"); // Armada: crew shout out
@@ -4925,7 +4928,7 @@ void UpdateShipRoll()
 							PlaySound("objects\abordage\abordage_loosing.wav"); // Armada: crew shout out
 							PlaySound("objects\shipcharge\ship_explosion.wav")
 							CreateParticleSystemX("gunfire",    fX+4-rand(8), fY+4-rand(8), fZ+4-rand(8), 6.0, 4.0, 0.0, 0); // Armada: not yet working
-							LogIt("Captain, shifting cargo did " + RollDamageValue + " damage to the hull");
+							LogIt(TranslateString("","Captain, shifting cargo did")+" " + RollDamageValue + " "+TranslateString("","damage to the hull"));
 							Ship_ApplyHullHitpoints(rCharacter, RollDamageValue, KILL_BY_TOUCH, -1); // 10% hull damage
 						break;
 
@@ -4957,7 +4960,7 @@ void UpdateShipRoll()
 								break;
 							}
 							AISeaGoods.ModelsPath = "SwimGoods";   //reset path to the salvagemodels
-							LogIt("Captain, that last violent roll washed " + RollDamageValue + " crewmembers overboard");
+							LogIt(TranslateString("","Captain, that last violent roll washed")+" " + RollDamageValue + " "+TranslateString("","crewmembers overboard"));
 							RemoveCharacterCrew(rCharacter, RollDamageValue); // 10% crew damage
 						break;
 					}
@@ -4971,8 +4974,8 @@ void UpdateShipRoll()
 				if(abs(RollAngle) >  ROLL_ANGLE_CAPSIZE) IShipRoll.Log.color = COLOR_RED;
 				if(GetSeaTime() - sti(rCharacter.Capsize.Time) > 10 && abs(RollAngle) > ROLL_ANGLE_CAPSIZE)
 				{
-					if(RollAngle > 0)	LogIt("Captain, we're capsizing to starboard... ABANDON SHIP!");
-					else				LogIt("Captain, we're capsizing to port... ABANDON SHIP!");
+					if(RollAngle > 0)	LogIt(TranslateString("","Captain, we're capsizing to starboard... ABANDON SHIP!"));
+					else				LogIt(TranslateString("","Captain, we're capsizing to port... ABANDON SHIP!"));
 					CapsizeShip(rCharacter);
 				}
 			break;

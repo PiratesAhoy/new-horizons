@@ -8,36 +8,53 @@ Devlin{Девлин}
 {=====| quests_reaction.c |=====}
 
 {=====| QuebradasCostillas.c |=====}
-Skull{Skull}
+Skull{Череп}
+
+{=====| Cuba.c |=====}
+Subteniente{Субтеньенте}
+Chorizo{Чоризо}
+Rocoso{Рокосо}
+Don Evaristo{Дон Эваристо}
+Dragan{Драган}
+van Mourik{Ван Моурик}
+Kevin{Кевин}
+Poor1{Бедняк}
+Grunk{Гранк}
+Flobb{Флобб}
 
 {=====| Story.c |=====}
-Mystery{Странный}
-Messenger{Посланник}
-Emmanuel{Эммануил}
+Mystery{Таинственный}
+Messenger{Посыльный}
+Brin Mistress{Госпожа Брин}
+Emmanuel{Эммануэль}
 Bonnie{Бонни}
-Short Jack{Short Jack}
-Gold{Gold}
-Couch Captain{Couch Captain}
-Charles{Charles}
-Sir Christopher{Sir Christopher}
-Mings{Mings}
-Nathan{Nathan}
-Kell{Kell}
-Petros{Petros}
-Thomas the{Thomas the}
-Terror{Terror}
-John Paul{John Paul}
-Jones{Jones}
+Blaze{Блейз}
+Short Jack{Коротышка Джек}
+Gold{Голд}
+Couch Captain{Капитан Коуч}
+Charles{Чарльз}
+Sir Christopher{Сэр Кристофер}
+Mings{Мингс}
+Nathan{Натан}
+Kell{Келл}
+Petros{Петрос}
+Robert{Роберт}
+Cook{Кук}
+Thomas the{Томас}
+Terror{Террор}
+John Paul{Джон Пол}
+Jones{Джонс}
 Captain{Капитан}
-Maximus{Maximus}
-High Sea{High Sea}
-Lass{Lass}
-Catalina{Catalina}
-the Pirate{the Pirate}
-Morgan{Morgan}
-Bartholomew{Bartholomew}
-Roberts{Roberts}
-Merciless{Merciless}
-Mark{Mark}
+Maximus{Максимус}
+High Sea{Хай Си}
+Lass{Девушка}
+Catalina{Каталина}
+the Pirate{Пират}
+Morgan{Морган}
+Bartholomew{Бартоломью}
+Roberts{Робертс}
+Merciless{Беспощадный}
+Mark{Марк}
+Sharp{Шарп}
 
 {=====| 18 characters |=====}

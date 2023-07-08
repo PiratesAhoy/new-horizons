@@ -832,7 +832,9 @@ void InitTownNationalities()
 			}
 			for(i=0; i<CHARACTERS_QUANTITY; i++)
 			{
+				if (Characters[i].id == "Richard Sharpe") continue;	// Sgt. Sharpe has a "Soldier_Eng" model but his own photographic interface pictures
 				if (HasSubStr(Characters[i].model, "Soldier_Eng")) Characters[i].faceid = 99;
+				if (Characters[i].model == "Offic_eng_18" || Characters[i].model == "brtoffic18") Characters[i].faceid = 99;
 			}
 // GR: <-- set correct flags on soldier interface icons
 		break;

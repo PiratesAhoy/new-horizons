@@ -1,3055 +1,3427 @@
-Potion parameters{Medical Remedy}
-health value{Health}
-weapon blade parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, piercing #dpiercing#%, block #dblock#%.}
-weapon gun parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, reload time #dchargespeed#sec, accuracy #daccuracy#%.}
-weapon armor parameters{Armor: Coverage #dcoverage#%, Chance to stop / Percent of damage taken if not stopped, for: Sword #dbladestop#% / #dbladefrac#%, Gun #dgunstop#% / #dgunfrac#%.}
+Potion parameters{Лечебное Средство}
+health value{Здоровья}
+weapon blade parameters{Хлодное оружие: Урон (мин/макс) - #ddmg_min#/#ddmg_max#; Пробой брони - #dpiercing#%; Блок - #dblock#%.}
+weapon gun parameters{Огнестрельное оружие: Урон (мин/макс) - #ddmg_min#/#ddmg_max#; Перезарядка - #dchargespeed# сек.; Точность - #daccuracy#%.}
+weapon armor parameters{Кираса: Защита - #dcoverage#%; (Шанс отразить удар / Процент поражения, если пропущен удар) : Холодн. оруж. - #dbladestop#% / #dbladefrac#%; Огнестр. оруж. - #dgunstop#% / #dgunfrac#%.}
 
 //--------------- AMMO START --------------------------------------------------------------------------------------
 
 
-itmname_ammobag2 {Ammunition Bag}
+itmname_ammobag2 {Сумка для Боеприпасов}
 itmdescr_ammobag2
 {
-You may keep 18 gunpowder AND 18 pistolbullets, 18 pistolgrapes or 9 musketbullets. Powderflask or Ammmunition Pouch are NOT needed but a pistol belt must be equipped! Reloading is 10% faster.
+Вы можете хранить порох на 18 зарядов, 18 пистолетных пуль и 18 зарядов дроби или 9 мушкетных пуль. Пороховница или патронташ для боеприпасов НЕ требуются, но пистолетный ремень должен быть обязательно! Перезарядка происходит на 10% быстрее.
 }
 
-itmname_bladepowderhornP	{Powder Horn}
+itmname_bladepowderhornP	{Рожок для Пороха}
 itmdescr_bladepowderhornP
 {
-Holds the finer priming powder.  Each cannon shot uses as much primer as a fully loaded musket uses common powder.
+Содержит более мелкий грунтовочный порошок. На каждый пушечный выстрел расходуется столько капсюля, сколько на полностью заряженный мушкет расходуется обычного пороха.
 }
 
-itmname_bladepowderhornA	{Powder Horn}
+itmname_bladepowderhornA	{Рожок для Пороха}
 itmdescr_bladepowderhornA
 {
-Holds the finer priming powder.  Each cannon shot uses as much primer as a fully loaded musket uses common powder.
+Содержит более мелкий грунтовочный порошок. На каждый пушечный выстрел расходуется столько капсюля, сколько на полностью заряженный мушкет расходуется обычного пороха.
+}
+
+itmname_incense			{Благовония}
+itmdescr_incense
+{
+Ладан - это ароматическая камедная смола. При сжигании в виде благовоний он создает сильный и красивый аромат и обеспечивает очень сильную защиту от всякого зла.
+}
+
+itmname_nails 			{Гвозди}
+itmdescr_nails
+{
+Обычные столярные гвозди.
 }
 
 //--------------- AMMO END --------------------------------------------------------------------------------------
 //--------------- KEYS START --------------------------------------------------------------------------------------
 
-itmname_key1		{Chest Key}
+itmname_key1		{Ключ от Сундука}
 itmdescr_key1
 {
-A common key to a chest.
+Обычный ключ от сундука.
 }
 
-itmname_key2		{Chest Key}
+itmname_key2		{Ключ от Сундука}
 itmdescr_key2
 {
-A common key to a chest.
+Обычный ключ от сундука.
 }
 
-itmname_key3		{Large Key}
+itmname_key3		{Большой Ключ}
 itmdescr_key3
 {
-A robust key to a heavy lock.
+Прочный ключ для тяжелого замка.
 }
 
-itmname_key4		{Ordinary Key}
+itmname_key4		{Обыкновенный Ключ}
 itmdescr_key4
 {
-A thin key to a standard lock.
+Тонкий ключ для стандартного замка.
 }
 
-itmname_key5		{Key}
+itmname_key5		{Ключ}
 itmdescr_key5
 {
-A small key to a door, but to which one?
+Маленький ключ от двери, но от какой?
 }
 
-itmname_key6		{Key}
+itmname_key6		{Ключ}
 itmdescr_key6
 {
-Another small door key, very great help! 
+Ещё один маленький дверной ключ, думаю он мне поможет!
 }
 
-itmname_key7		{Key}
+itmname_key7		{Ключ}
 itmdescr_key7
 {
-This small door key was found in the distillery. 
+Этот маленький дверной ключ был найден на винокурне.
 }
 
-itmname_key8		{Padlock with Key}
+itmname_key8		{Навесной Замок с Ключом}
 itmdescr_key8
 {
-A rusty padlock with key.
+Ржавый висячий замок с ключом.
 }
 
-itmname_key9		{Key Collection}
+itmname_key9		{Коллекция Ключей}
 itmdescr_key9
 {
-A small collection of chest keys.
+Небольшая коллекция ключей от сундука.
 }
 
-itmname_key10		{Small Key}
+itmname_key10		{Маленький Ключ}
 itmdescr_key10
 {
-A small key to a chest.
+Маленький ключ от сундука.
 }
 
-itmname_key11		{Small Key}
+itmname_key11		{Маленький Ключ}
 itmdescr_key11
 {
-A small key found in the back of the Medicine Chest - a key to the Surgey Kit!
+Маленький ключ, найденный в задней части аптечки — ключ к хирургическому набору!
 }
 
-itmname_key12		{Mine Key}
+itmname_key12		{Ключ от Шахты}
 itmdescr_key12
 {
-A casket with a Key marked with number 2 to the mine.
+Шкатулка с ключом, отмеченным цифрой 2, от шахты.
 }
 
-itmname_key13		{Mine Key}
+itmname_key13		{Ключ от Шахты}
 itmdescr_key13
 {
-A casket with a Key marked with number 3 to the mine.
+Шкатулка с ключом, отмеченным цифрой 3, от шахты.
 }
 
-itmname_key14		{Mine Key}
+itmname_key14		{Ключ от Шахты}
 itmdescr_key14
 {
-A casket with a Key to the mine. The number is missing.
+Шкатулка с Ключом от шахты. Номер отсутствует.
 }
 
-itmname_key15		{Key Collection}
+itmname_key15		{Коллекция Ключей}
 itmdescr_key15
 {
-A collection of keys to the food and drink storage room.
+Коллекция ключей от кладовой с едой и напитками.
 }
 
-itmname_key16		{Chest Key}
+itmname_key16		{Ключ от Сундука}
 itmdescr_key16
 {
-A big black key to a chest lock.
+Большой чёрный ключ от сундука.
 }
 
-itmname_key17		{Gold Key}
+itmname_key17		{Золотой Ключ}
 itmdescr_key17
 {
-A small gold key hanging to a tarry string.
+Маленький золотой ключ, висящий на смоляной нитке.
 }
 
-itmname_key18		{Key}
+itmname_key18		{Ключ}
 itmdescr_key18
 {
-Yes! There was a black door key under the scroll.
+Да! Под свитком был чёрный ключ от двери.
 }
 
-itmname_key19		{Key}
+itmname_key19		{Ключ}
 itmdescr_key19
 {
-A chestkey with a small flag.
+Ключ от сундука с маленьким флажком.
 }
 
-itmname_bladekeysimple		{Key}
+itmname_bladekeysimple		{Ключ}
 itmdescr_bladekeysimple
 {
-Yes! I got a black door key with the map.
+Да! У меня есть чёрный ключ от двери с картой.
 }
 
-itmname_key33		{Key}
+itmname_key30		{Ключ}
+itmdescr_key30
+{
+Большой Ключ с пометкой "Пещера". 
+}
+
+itmname_key33		{Ключ}
 itmdescr_key33
 {
-A key with a skull.
+Ключ с черепом.
 }
 
-itmname_key34		{Key}
+itmname_key34		{Ключ}
 itmdescr_key34
 {
-A key with the Maltese cross.
+Ключ с мальтийским крестом.
 }
 
-itmname_key35		{Key}
+itmname_key35		{Ключ}
 itmdescr_key35
 {
-A key with a town symbol.
+Ключ с символом города.
 }
 
-itmname_key36		{Key}
+itmname_key36		{Ключ}
 itmdescr_key36
 {
-An old copper key with the Sun symbol.
+Старый медный ключ с символом солнца.
 }
 
-itmname_key37		{Key}
+itmname_key37		{Ключ}
 itmdescr_key37
 {
-This is the Boat Key!
+Это ключ от лодки!
+}
+
+itmname_key38		{Ключи от Тюрьмы}
+itmdescr_key38
+{
+Три ключа и свисток.
+}
+
+itmname_key39		{Ключ}
+itmdescr_key39
+{
+Ключ, который плавает.
 }
 
 //--------------- KEYS END -----------------------------------------------------------------------------------------
 //--------------- BOOKS START --------------------------------------------------------------------------------------
 
-itmname_book21		{Statute Book}
+itmname_book21		{Свод Законов}
 itmdescr_book21
 {
-Abstract of the British West Indian statutes. The cover is worn but has it ever been opened?
+Краткое изложение законов Британской Вест-Индии. Обложка потёрта, но открывали ли её когда-нибудь?
 }
 
-itmname_book22		{The Spanish Armada}
+itmname_book22		{Испанская Армада}
 itmdescr_book22
 {
-The defeat of the Armada - an eye witness' story. Martin Frobisher, Commander of the frigate Triumph. 
+Разгром Армады - рассказ очевидца. Мартин Фробишер, командир фрегата 'Триумф'. 
 }
 
-itmname_book23		{The Royal Ship Wasa}
+itmname_book23		{Королевский Корабль 'Ваза'}
 itmdescr_book23
 {
-The secret behind the disaster. Original reckonings of Henrik Hybertsson now published. 
+Секрет катастрофы. Выпущены оригинальные расчеты Хенрика Хибертссона.
 }
 
-itmname_book24		{Notorious Pirates}
+itmname_book24		{Самые Известные Пираты}
 itmdescr_book24
 {
-A General History of the Robberies and Murders of the Most Notorious Pirates. Two volumes loaded with historical and contemporary pirate captains and their crew. By Captain Charles Johnson.  
+Всеобщая история грабежей и убийств самых известных пиратов. Два тома наполнены историческими и современными пиратскими капитанами и их командой. Автор: Капитан Чарльз Джонсон.
 }
 
-itmname_book25		{A New Voyage Round the World}
+itmname_book25		{Новое Кругосветное Путешествие}
 itmdescr_book25
 {
-Published 1697 by William Dampier. All you could ever wish to know about the Miscito coast for example. The picture on the front cover is missing.
+Опубликовано в 1697 году Уильямом Дампиром. Например, все, что вы когда-либо хотели знать о побережье Мискито. Картинка на обложке отсутствует.
 }
 
-itmname_book26		{The Human Skeleton}
+itmname_book26		{Скелет Человека}
 itmdescr_book26
 {
-A manual to all the 206 bones of a human being. Pictures.
+Руководство по всем 206 костям человека. Картинки.
 }
 
-itmname_book27		{Chymist}
+itmname_book27		{Химия}
 itmdescr_book27
 {
-A german work of chemistry published in Leipzig 1729. Looks like it is about minerals and vegetables? 
+Немецкий труд по химии, опубликованный в Лейпциге в 1729 году. Похоже, речь идет о минералах и овощах?
 }
 
-itmname_book28		{Lolita}
+itmname_book28		{Лолита}
 itmdescr_book28
 {
-An interesting book in a somewhat delicate topic. Provided with childrenproof lock.
+Интересная книга на несколько деликатную тему. Оснащена замочком, защищающим от детей.
 }
 
-itmname_book29		{Les Fleurs du Mal}
+itmname_book29		{Цветы Зла}
 itmdescr_book29
 {
-Poems of the famous poet Charles Baudelaire. French edition.
+Стихи знаменитого поэта Шарля Бодлера. Французское издание.
 }
 
-itmname_book30		{Books of Poetry}
+itmname_book30		{Книга Стихов}
 itmdescr_book30
 {
-A rich collection of poetry from all around the world. This is really hot stuff.
+Богатая коллекция поэзии со всего мира. Это действительно интересная вещь.
 }
 
-itmname_book31		{A New Voyage Round the World}
+itmname_book31		{Новое Кругосветное Путешествие}
 itmdescr_book31
 {
-The Dampier book is now repaired.
+Книга Дампира теперь восстановлена.
 }
 
-itmname_book33		{Geografien}
+itmname_book33		{География}
 itmdescr_book33
 {
-An old and very basic schoolbook, in any of those nordic languages perhaps?
+Старый и очень простой школьный учебник, возможно, на каком-нибудь из этих скандинавских языков?
 }
 
-itmname_book34		{Collection of Books}
+itmname_book34		{Коллекция Книг}
 itmdescr_book34
 {
-Contains: The Spanish silverfleets, Sugar and Rum trade in the Caribbean, Nassau an economic overview.
+Содержит: Испанский Серебряный Флот, Торговля Сахаром и Ромом в Карибском Море, Экономический Обзор Нассау.
 }
 
-itmname_book35		{Mercurius}
+itmname_book35		{Меркурий}
 itmdescr_book35
 {
-Healing and curing with the dangerous but magnificient liquid metal.
+Исцеление и лечение опасным, но великолепным жидким металлом.
 }
 
-itmname_book36		{The Gold-Bug}
+itmname_book36		{Золотой Жук}
 itmdescr_book36
 {
-A fascinating longer short-story about the buried treasure of Captain Kidd. Author Edgar Allan Poe.
+Увлекательный длинный рассказ о сокровищах, спрятанных капитаном Киддом. Автор: Эдгар Аллан По.
 }
 
-itmname_book41		{Art of Artillery}
+itmname_book41		{Искусство Стрельбы}
 itmdescr_book41
 {
-1) Sponge your piece.
-2) Put in your powder.
-3) Put in your wad.
-4) Put in your shot.
-5) Thrust home your shot with the rammer.
-6) Put the primer in the vent.
-7) Fire!
+1)Протрите губкой изделие.
+2)Засыпьте порох.
+3)Положите свою пулю.
+4)Сделайте свой выстрел.
+5)Добейте цель своим выстрелом из досылателя.
+6)Поместите запал в отверстие.
+7)Огонь!
 }
 
-itmname_book42		{Document}
+itmname_book42		{Документ}
 itmdescr_book42
 {
-A very long scroll ......
+Очень длинный свиток ......
 }
 
-itmname_book43		{Document}
+itmname_book43		{Документ}
 itmdescr_book43
 {
-...... with three groups of ......
+...... с тремя группами из ......
 }
 
-itmname_book44		{Document}
+itmname_book44		{Документ}
 itmdescr_book44
 {
-...... strange symbols.
+...... странными символами.
 }
 
-itmname_book45		{Two old Notebooks}
+itmname_book45		{Две Старые Записные Книжки}
 itmdescr_book45
 {
-Among the handwritten notes:
-"Never pour water into concentraded acids - it's the other way around!!!"
+Среди рукописных записей:
+"Никогда не лейте воду в концентрированные кислоты - все должно быть наоборот!!!".
 }
 
-itmname_book46		{Scroll}
+itmname_book46		{Свиток}
 itmdescr_book46
 {
-More (cabbalistic?) symbols or what.
+Ещё какие-то (каббалистические?) символы или что-то в этом роде.
 }
 
-itmname_book47		{Parchment}
+itmname_book47		{Пергамент}
 itmdescr_book47
 {
-A badly worn piece of parchment - with the obligatory cipher.
+Сильно потертый кусок пергамента - с непременным шифром.
 }
 
-itmname_book48		{Alchymia}
+itmname_book48		{Алхимия}
 itmdescr_book48
 {
-The discovery of Acidium Vitrioli is credited to the 8th century alchemist Jabir ibn Hayyan.
-It is one of the most important base ingredients, as many other acids may be produced from it.
+Открытие купоросной кислоты приписывается алхимику VIII века Джабиру ибн Хайяну.
+Это один из самых важных базовых ингредиентов, поскольку на его основе можно получить многие другие кислоты.
  
-Diluted it is used as a solvent for dissolving most metals with notable exceptions of gold, silver and platinum.
+В разбавленном виде он используется в качестве растворителя для растворения большинства металлов, за исключением золота, серебра и платины.
 }
 
-itmname_book49		{Book}
+itmname_book49		{Книга}
 itmdescr_book49
 {
-An open heavy book .....
+Открытая тяжелая книга .....
 }
 
-itmname_book50		{Book}
+itmname_book50		{Книга}
 itmdescr_book50
 {
-..... and the mystic characters are there. (A foreign alphabet maybe?)
+..... и мистические символы. (Может быть, иностранный алфавит?)
 }
 
-itmname_book51		{The Alchemy of Aqua Vitae}
+itmname_book51		{Алхимия Живой Воды}
 itmdescr_book51
 {
-From Champagne to Cognac in a minute, by Renault Noir. A small sample is included.
+От шампанского до коньяка за минуту, от Рено Нуар. В комплект входит небольшой образец.
 }
 
-itmname_bible		{Selkirk's Bible}
+itmname_bible		{Библия Селкирка}
 itmdescr_bible
 {
-The Holy Bible, the one Alexander Selkirk studied for years on that godforgotten island.
+Библия, которую Александр Селкирк годами изучал на забытом богом острове.
 }
 
-itmname_bible_shot	{Selkirk's Bible}
+itmname_bible_shot	{Библия Селкирка}
 itmdescr_bible_shot
 {
-Selkirk's Bible has saved my life!
+Библия Селкирка спасла мне жизнь!
 }
 
-itmname_book63		{Manual of Medicine}
+itmname_book63		{Руководство по Медицине}
 itmdescr_book63
 {
-An easy to grasp book in the popular scientific style. Many pictures.
+Легкая для восприятия книга в научно-популярном стиле. Много картинок.
 }
 
-itmname_book64		{L’Ordre de Malte}
+itmname_book64		{Мальтийский Орден}
 itmdescr_book64
 {
-A french edition, author Annet de Clermont-Gessant.
+Французское издание, автор Анне де Клермон-Жессан.
 }
 
-itmname_book65		{Sacred Writ}
+itmname_book65		{Священное Писание}
 itmdescr_book65
 {
-The Holy Bible complete with a small crucifix as a bookmarker.
+Библия в комплекте с маленьким крестиком, используемым в качестве закладки.
 }
 
-itmname_book66		{Pile of Sheets}
+itmname_book66		{Стопка Листов}
 itmdescr_book66
 {
-The accounts for the Maltese Order in Charlestown.
+Счета Мальтийского Ордена в Чарлстауне.
 }
 
-itmname_book67		{Document}
+itmname_book67		{Документ}
 itmdescr_book67
 {
-Not sure what it is. Looks important though.
+Не уверен, для чего он. Хотя выглядит важным.
 }
 
-itmname_book68		{Scroll}
+itmname_book68		{Свиток}
 itmdescr_book68
 {
-It's all in latin. Could be anything from medicine to excorcism.
+Всё на латыни. Это может быть что угодно, от медицины до экзорцизма.
 }
 
-itmname_book69A		{Logbook}
+itmname_book69A		{Судовой Журнал}
 itmdescr_book69A
 {
-Edw. Thatch his Logbook 
-    1717 - 
+Судовой журнал Эдварда Тэтча
+    1717 г. - 
 }
 
-itmname_book69B		{Logbook}
+itmname_book69B		{Судовой Журнал}
 itmdescr_book69B
 {
-Such a Day, Rum all out.
-Our Company somewhat sober.
-A damn'd Confusion amongst us!
-Rogues a plotting, great talk of Separation.
-So I look'd sharp for a Prize.
-Such a day took one, with a great deal of Liquor on board, 
-so kept the Company hot, damn'd hot, then all Things went well again.
+Ещё один день, ром на исходе.
+Наша компания немного протрезвела.
+Чёртова неразбериха среди нас!
+Заговорщики строят козни и громко говорят о изгнании.
+Сегодня я искал где срубить куш.
+В этот день на борту было много алкоголя,
+так что я поддерживал компанию в горячем, чертовски горячем состоянии, после чего все дела снова пошли на лад.
 }
 
-itmname_book69C		{Logbook}
+itmname_book69C		{Судовой Журнал}
 itmdescr_book69C
 {
-Four of the french crew from La Concorde signed on:
-Thomas Martin, sailor
-Nicolas Bernard, sailor
-Julien Dubois, sailor
-Louis Arot, cabin boy
+Четверо из французской команды корабля 'Конкорд' подписали контракт:
+Томас Мартин, моряк
+Николя Бернар, моряк
+Жюльен Дюбуа, моряк
+Луис Арот, юнга
 
-I also kept the pilot, four surgeons, two carpenters, two sailors and the cook. 
+Я также оставил себе штурмана, четырех хирургов, двух плотников, двух матросов и повара.  
 }
 
-itmname_tailors_book	{Order-book}
+itmname_tailors_book	{Книга Заказов}
 itmdescr_tailors_book
 {
-Anna Balck, tailor.
+Анна Балк, портниха.
 }
 
-itmname_book70_start	{Burned Book}
+itmname_book70_start	{Сожженная Книга}
 itmdescr_book70_start
 {
-This Book with a mysterious sign has been damaged by fire.  
+Эта Книга с таинственным знаком пострадала от пожара.
 }
 
-itmname_book70		{Alchemy Book}
+itmname_book70		{Книга по Алхимии}
 itmdescr_book70
 {
-Only the first part is legible.  
+Только первая часть является разборчивой. 
 }
 
-itmname_book70_0	{Alchemy Book}
+itmname_book70_0	{Книга по Алхимии}
 itmdescr_book70_0
 {
-A symbolic picture of a skeleton.
+Символическое изображение скелета.
 }
 
-itmname_book70_1	{Alchemy Book}
+itmname_book70_1	{Книга по Алхимии}
 itmdescr_book70_1
 {
-Tabula Smaragdina or The Emerald Tablet, by Hermes Trismegistus. A compact and cryptic piece of the Hermetica reputed to contain the secret of the prima materia and its transmutation.
+Табула Смарагдина, или Изумрудная скрижаль, Гермеса Трисмегиста. Компактная и загадочная часть Герметики, в которой, как считается, содержится секрет первоматерии и её трансмутации.
 }
 
-itmname_book70_2	{Alchemy Book}
+itmname_book70_2	{Книга по Алхимии}
 itmdescr_book70_2
 {
-
+Я помню некоторые символы. Это 2 соляные и 1 серная кислота. Давайте проверим настенные диаграммы на наличие этих треугольников.
 }
 
-itmname_book70_3	{Alchemy Book}
+itmname_book70_3	{Книга по Алхимии}
 itmdescr_book70_3
 {
-
+Здесь такая же жара.
 }
 
-itmname_book70_4	{Alchemy Book}
+itmname_book70_4	{Книга по Алхимии}
 itmdescr_book70_4
 {
-
+Это означает Смесь 4, а одинокий треугольник — Вода.
 }
 
-itmname_book70_5	{Alchemy Book}
+itmname_book70_5	{Книга по Алхимии}
 itmdescr_book70_5
 {
-
+Мне это знакомо! Это серная кислота и селитра. И смесь должна быть дистиллированной.
 }
 
-itmname_book70_6	{Alchemy Book}
+itmname_book70_6	{Книга по Алхимии}
 itmdescr_book70_6
 {
-
+Это будет две деревяшки.
 }
 
-itmname_book70_7	{Alchemy Book}
+itmname_book70_7	{Книга по Алхимии}
 itmdescr_book70_7
 {
-
+Одна деревяшка.
 }
 
-itmname_book70_8	{Alchemy Book}
+itmname_book70_8	{Книга по Алхимии}
 itmdescr_book70_8
 {
-
+Вода и ещё три ингредиента. В дистилляции я уверен.
 }
 
-itmname_book70_9	{Alchemy Book}
+itmname_book70_9	{Книга по Алхимии}
 itmdescr_book70_9
 {
-
+Смесь 8 и ...?
 }
 
-itmname_book70_10	{Alchemy Book}
+itmname_book70_10	{Книга по Алхимии}
 itmdescr_book70_10
 {
-It's all damaged by fire here.
+Здесь всё повреждено огнем.
 }
 
-itmname_book70_11	{Alchemy Book}
+itmname_book70_11	{Книга по Алхимии}
 itmdescr_book70_11
 {
-Too bad!
+Очень плохо!
 }
 
-itmname_book71_9_start	{Damaged Book}
+itmname_book71_9_start	{Поврежденная Книга}
 itmdescr_book71_9_start
 {
-Many pages have been ripped out. I see one of those symbols there. Could it be..? 
+Многие страницы были вырваны. Я вижу там один из этих символов. Это может быть...? 
 }
 
-itmname_book71_9	{Alchemy Book}
+itmname_book71_9	{Книга по Алхимии}
 itmdescr_book71_9
 {
-Only the last part is left.
+Осталась только последняя часть.
 }
 
-itmname_book71_10	{Alchemy Book}
+itmname_book71_10	{Книга по Алхимии}
 itmdescr_book71_10
 {
-
+Я уже делал это однажды! Измельчите известняки нагрейте на среднем огне в тигле.
 }
 
-itmname_book71_11	{Alchemy Book}
+itmname_book71_11	{Книга по Алхимии}
 itmdescr_book71_11
 {
-
+Смесь 6, сера, оксид кальция и ...? Низкая температура. Скоро я буду всё знать!
 }
 
-itmname_book71_12	{Alchemy Book}
+itmname_book71_12	{Книга по Алхимии}
 itmdescr_book71_12
 {
-
+Смесь 10 и серная кислота.
 }
 
-itmname_book71_13	{Alchemy Book}
+itmname_book71_13	{Книга по Алхимии}
 itmdescr_book71_13
 {
-
+Что-то нужно измельчить.
 }
 
-itmname_book71_14	{Alchemy Book}
+itmname_book71_14	{Книга по Алхимии}
 itmdescr_book71_14
 {
 
 }
 
-itmname_book71_15	{Alchemy Book}
+itmname_book71_15	{Книга по Алхимии}
 itmdescr_book71_15
 {
-
+Ртуть и что-то ещё. Низкая температура.
 }
 
-itmname_book71_16	{Alchemy Book}
+itmname_book71_16	{Книга по Алхимии}
 itmdescr_book71_16
 {
-
+Это просто. Смешайте ртуть и азотную кислоту. Сильно нагреть.
 }
 
-itmname_book71_17	{Alchemy Book}
+itmname_book71_17	{Книга по Алхимии}
 itmdescr_book71_17
 {
-
+Смесь 12 должна быть отфильтрована.
 }
 
-itmname_book71_18	{Alchemy Book}
+itmname_book71_18	{Книга по Алхимии}
 itmdescr_book71_18
 {
-
+Смесь 10 и серная кислота.
 }
 
-itmname_book71_19	{Alchemy Book}
+itmname_book71_19	{Книга по Алхимии}
 itmdescr_book71_19
 {
-
+Что-то плюс Сернистый Ауретум.
 }
 
-itmname_book71_20	{Alchemy Book}
+itmname_book71_20	{Книга по Алхимии}
 itmdescr_book71_20
 {
 
 }
 
-itmname_book71_21	{Alchemy Book}
+itmname_book71_21	{Книга по Алхимии}
 itmdescr_book71_21
 {
 
 }
 
-itmname_book71_22	{Alchemy Book}
+itmname_book71_22	{Книга по Алхимии}
 itmdescr_book71_22
 {
-
+Один символ - свинец, а другой...
 }
 
-itmname_book71_23	{Alchemy Book}
+itmname_book71_23	{Книга по Алхимии}
 itmdescr_book71_23
 {
 
 }
 
-itmname_book72_package	{Package}
+itmname_book72_package	{Посылка}
 itmdescr_book72_package
 {
-Wrapped in sailcloth and addressed to 'Rogers'.
+Завернута в парусину и адресована 'Роджерсу'.
 }
 
-itmname_book72_closed	{A General History of the Pyrates}
+itmname_book72_closed	{Всеобщая История Пиратов}
 itmdescr_book72_closed
 {
-Of the Robberies and Murders of the most Notorious Pyrates.
-Ans also their Policies, Discipline and Government,
-from their first rise and settlement in the Island of Providence 
-in 1717, to the present year 1724. By Captain Charles Johnson. 
+О грабежах и убийствах самых отъявленных пиратов.
+А также их политика, дисциплина и правительство,
+от их первого появления и поселения на острове Провиденс
+в 1717 году до нынешнего 1724 года. Капитан Чарльз Джонсон.
 
-A note is attached to the book.
+К книге прилагается записка.
 }
 
-itmname_book72_openL	{A General History of the Pyrates}
+itmname_book72_openL	{Всеобщая История Пиратов}
 itmdescr_book72_openL
 {
-Is that the one I think it is?
+Это та, о которой я думаю?
 }
 
-itmname_book72_openR	{A General History of the Pyrates}
+itmname_book72_openR	{Всеобщая История Пиратов}
 itmdescr_book72_openR
 {
-Chapter I. Of Captain Avery.		        VIII. Of Captain England. 
-        II. The Rise of Pyrates.		     IX. Of Captain Davis. 
-         III. Of Capyain Martel.	       X. Of Captain Roberts.
-       IV. Of Captain Bonnet.		      XI. Of Captain Worley.
-	        V. Of Captain Thatch.		       XII. Of Captain Lowther.
-   VI. Of Captain Vane.		        XIII. Of Captain Low.
-      VII. Of Captain Rackham.		   XIV. Of Captain Evans.
+Глава I. О капитане Эйвери.		        VIII. О капитане Англии. 
+        II. Возвышение пиратов.		     IX. О капитане Дэвисе. 
+         III. О капитане Мартеле.	       X. О капитане Робертсе.
+       IV. О капитане Боннете.		      XI. О капитане Уорли.
+	        V. О капитане Тэтче.		       XII. О капитане Лоутере.
+   VI. О капитане Вейне.		        XIII. О капитане Лоу.
+      VII. О капитане Рэкхеме.		   XIV. О капитане Эвансе.
 }
 
-itmname_book72_edenL	{A General History of the Pyrates}
+itmname_book72_edenL	{Всеобщая История Пиратов}
 itmdescr_book72_edenL
 {
-75      Of Black-Beard.
-Here's the first bookmark.
+75     Чёрная Борода.
+А вот и первая закладка.
 }
 
-itmname_book72_edenR	{A General History of the Pyrates}
+itmname_book72_edenR	{Всеобщая История Пиратов}
 itmdescr_book72_edenR
 {
-Of Black-Beard.      76	  
+Чёрная Борода.      76	  
 }
 
-itmname_book72_caesarL	{A General History of the Pyrates}
+itmname_book72_caesarL	{Всеобщая История Пиратов}
 itmdescr_book72_caesarL
 {
-85      Of Black-Beard.
-Another page of interest.
+85      Чёрная Борода.
+Ещё одна интересная страница.
 }
 
-itmname_book72_caesarR	{A General History of the Pyrates}
+itmname_book72_caesarR	{Всеобщая История Пиратов}
 itmdescr_book72_caesarR
 {
-Of Black-Beard.      86	
+Чёрная Борода.      86	
 }
 
-itmname_book72_handsL	{A General History of the Pyrates}
+itmname_book72_handsL	{Всеобщая История Пиратов}
 itmdescr_book72_handsL
 {
-87      Of Black-Beard.
-More red ink here.
+87      Чёрная Борода.
+Здесь ещё больше красных чернил.
 }
 
-itmname_book72_handsR	{A General History of the Pyrates}
+itmname_book72_handsR	{Всеобщая История Пиратов}
 itmdescr_book72_handsR
 {
-Of Black-Beard.      88	
+Чёрная Борода.      88	
 }
 
-itmname_book72_richardsL	{A General History of the Pyrates}
+itmname_book72_richardsL	{Всеобщая История Пиратов}
 itmdescr_book72_richardsL
 {
-145      Of Capt. Charles Vane.
-This would be the forth and last one.
+145      Капитан Чарльз Вейн.
+Это будет четвертая и последняя.
 }
 
-itmname_book72_richardsR	{A General History of the Pyrates}
+itmname_book72_richardsR	{Всеобщая История Пиратов}
 itmdescr_book72_richardsR
 {
-Of Capt. Charles Vane.      146
+Капитан Чарльз Вейн.      146
 }
 
+itmname_book73_closed		{Либер Абачи}
+itmdescr_book73_closed
+{
+Очень старая итальянская книга Леонардо Пизано Фибоначчи. В комплект входят линейка и мини-компас. Что это?
+}
+
+itmname_book73_open		{Либер Абачи}
+itmdescr_book73_open
+{
+1 1 2 3 5 8 и т.д. Да, конечно, это числа Фибоначчи. Но почему некоторые из них синие, а некоторые красные?
+}
 
 //--------------- BOOKS END --------------------------------------------------------------------------------------
 //--------------- DOCUMENTS START --------------------------------------------------------------------------------
 
-itmname_picture1	{Picture}
+itmname_picture1	{Изображение}
 itmdescr_picture1
 {
-A map of a fortified city: Caletum. Calais?
+Карта укрепленного города: Калетум. Кале?
 }
 
-itmname_picture2	{Picture}
+itmname_picture2	{Изображение}
 itmdescr_picture2
 {
-An map of Iceland by Arne Saknussem.
+Карта Исландии, составленная Арне Сакнуссемом.
 }
 
-itmname_picture3	{Picture}
+itmname_picture3	{Изображение}
 itmdescr_picture3
 {
-A part of the American east coast.
+Часть восточного побережья Америки.
 }
 
-itmname_picture4	{Picture}
+itmname_picture4	{Изображение}
 itmdescr_picture4
 {
-Blackbeard's last fight. From a painting by Howard Pyle.
+Последний бой Чёрной Бороды. С картины Говарда Пайла.
 }
 
-itmname_picture5	{Picture}
+itmname_picture5	{Изображение}
 itmdescr_picture5
 {
-This is an inventory of the estate.
+Это опись имущества.
 }
 
-itmname_picture6	{Picture}
+itmname_picture6	{Изображение}
 itmdescr_picture6
 {
-A list of supplies for a ship.
+Список припасов для корабля.
 }
 
-itmname_picture7	{Picture}
+itmname_picture7	{Изображение}
 itmdescr_picture7
 {
-A portrait of William Dampier. (much younger)
+Портрет Уильяма Дампира. (здесь он гораздо моложе)
 }
 
-itmname_picture8	{Picture}
+itmname_picture8	{Изображение}
 itmdescr_picture8
 {
-A copy of a painting by Frans Hals.
+Копия картины Франса Хальса.
 }
 
-itmname_picture9	{Picture}
+itmname_picture8_A		{Painting}
+itmdescr_picture8_A
+{
+Картина, которую я вырезал. Подпись ФХ 1634 г.
+}
+
+itmname_picture9	{Изображение}
 itmdescr_picture9
 {
-A skeleton atlas.
+Атлас скелетов.
 }
 
-itmname_picture10	{Picture}
+itmname_picture10	{Изображение}
 itmdescr_picture10
 {
-An incomprehensible Alchemy picture. 
+Непонятная картина "Алхимия". 
 }
 
-itmname_picture11	{Picture}
+itmname_picture11	{Изображение}
 itmdescr_picture11
 {
-Alchemy again or physics?
+Снова алхимия или физика?
 }
 
-itmname_picture13	{Picture}
+itmname_picture13	{Изображение}
 itmdescr_picture13
 {
-A romantic seascape painting.
+Романтическая картина с морским пейзажем.
 }
 
-itmname_picture14	{Picture}
+itmname_picture14	{Изображение}
 itmdescr_picture14
 {
-Tycho Brahe´s Uranienborg on the island Ven.
+Тихо Браге - Ураниборг на острове Вен.
 }
 
-itmname_picture15	{Picture}
+itmname_picture15	{Изображение}
 itmdescr_picture15
 {
-A young Woodes Rogers showing some papers to his father.
+Молодой Вудс Роджерс показывает какие-то бумаги своему отцу.
 }
 
-itmname_note1		{Note}
+itmname_note1		{Заметка}
 itmdescr_note1
 {
-Even though you are young and have strong eyes, the handwriting is too small to be read.
+Несмотря на то, что вы молоды и у вас сильные глаза, почерк слишком мелкий, чтобы его можно было прочитать.
 }
 
-itmname_note2		{Note}
+itmname_note2		{Заметка}
 itmdescr_note2
 {
-Do I need glasses after all? The note says: 
-Planter's Finest Rum. A short briefing through the procedure.
-1) Fill up the distillery with water and molasses (only the finest quality).
-2) Be sure to get a very strong heat for the distilling process to start.
-3) Lower the temperature after a while and there you are - RUM!
-4) But beware distilling might be dangerous - explosions have occured.
+Нужны ли мне очки в конце концов? В записке написано: 
+Лучший ром Плантера. Краткий инструктаж по производству.
+1)Заполните винокурню водой и патокой (только самого высокого качества).
+2)Убедитесь в том, что для начала процесса дистилляции используется очень сильный нагрев.
+3)Через некоторое время понизте температуру и вот - РОМ!
+4)Но учтите, что дистилляция может быть опасной - случались взрывы.
 }
 
-itmname_note3			{Astronomiae Instauratae Mechanica}
+itmname_note3			{Астрономические Инструменты Механики}
 itmdescr_note3
 {
-A heavy book about astronomical instruments by Tycho Brahe 1598. More interesting is perhaps this note: "The key to the catacombs is in the fourth cell".  
+Тяжелая книга об астрономических инструментах Тихо Браге 1598 года. Более интересна, пожалуй, вот эта заметка: "Ключ от катакомб находится в четвертой камере".  
 }
 
-itmname_amnesty_doc		{A 'Woodes-Rogers'}
+itmname_amnesty_doc		{'Вудс-Роджерс'}
 itmdescr_amnesty_doc
 {
-This document issued by Governor Rogers proclaims that the owner (ME!) has been given a pardon.  
+Этот документ, выданный губернатором Роджерсом, провозглашает, что владелец (Я!) был помилован.  
 }
 
-itmname_excel_document		{Document}
+itmname_excel_document		{Документ}
 itmdescr_excel_document
 {
-What use can you have of squared piece of parchment?
-See for yourself in the folder RESOURCE\INI\TEXTS\ENGLISH\Storyline\WoodesRogers\QUESTBOOK. //JRH 
+Какое применение может найти квадратный кусок пергамента?
+Смотрите сами в папке RESOURCE\INI\TEXTS\RUSSIAN\Storyline\WoodesRogers\QUESTBOOK. //JRH 
 }
 
-itmname_pistolmap1		{Map}
+itmname_pistolmap1		{Карта}
 itmdescr_pistolmap1
 {
-An ancient map showing ....
+Древняя карта, показывающая ....
 }
 
-itmname_doc60A			{Letter}
+itmname_doc60A			{Письмо}
 itmdescr_doc60A
 {
-to
-Captain Edward Thache
+для
+Капитана Эдварда Тича
 }
 
-itmname_doc60B			{Letter}
+itmname_doc60B			{Письмо}
 itmdescr_doc60B
 {
-November 17, 1718
-My ffriend
+Ноябрь 17, 1718
+Мой друг
 
-If this finds you yet in harbour I would have you make the best of 
-your way up as soon as possible your affairs will let you. I have 
-something more to to say to you than at present I can write; the 
-bearer will tell you then end of our Indian Warr, and Ganet can tell 
-you in part what I have to say to you, so referr you in some measure 
-to him.
+Если это письмо застанет вас ещё в гавани, я бы хотел, чтобы вы сделали всё возможное. 
+И как можно скорее поднялись наверх, если позволят дела. Мне нужно 
+сказать вам нечто большее, чем я могу сейчас написать; 
+предъявитель расскажет вам, чем закончилась наша война с индейцами, и Джанет может частично рассказать
+вам то, что я должен вам сказать, поэтому в какой-то мере
+отсылаю вас к нему.
 ...
 }
 
-itmname_doc60C			{Letter}
+itmname_doc60C			{Письмо}
 itmdescr_doc60C
 {
 ...
-I really think these three men are heartily sorry at their difference 
-with you and will be very willing to ask your pardon; if I may 
-advise, be ffriends again, its better than falling out among your 
-selves.
+Я действительно думаю, что эти 3 человека искренне сожалеют о своих разногласиях 
+с вами и будут очень рады попросить у вас прощения; если я могу 
+посоветовать, снова станьте друзьями, это лучше, чем ссориться между
+собой.
 
-I expect the Governor this night or tomorrow, who I believe would 
-be likewise glad to see you before you goe, I have not time to add 
-save my hearty respects to you, and am your real ffriend.
+Я ожидаю губернатора сегодня вечером или завтра, который, как я полагаю
+также был бы рад видеть вас до вашего отъезда, у меня нет времени, чтобы
+выразить вам свое сердечное почтение, и я ваш настоящий друг.
 
-And Servant
-T. Knight
+И слуга.
+Т. Найт
 }
 
-itmname_doc60D			{Backside of Letter}
+itmname_doc60D			{Обратная Сторона Письма}
 itmdescr_doc60D
 {
-P.I.R.A.T.E.
-That's written with another pen and another hand.
+П.И.Р.А.Т.
+Это написано другим пером и другой рукой.
 }
 
-itmname_tailors_note		{Note}
+itmname_tailors_note		{Заметка}
 itmdescr_tailors_note
 {
-To the Red House deliver:
-3 pairs of dark blue trousers
-4 striped sweaters, preferably red/black
+Доставить в Красный дом:
+3 пары темно-синих брюк
+4 полосатых свитера, предпочтительно красный/черный
 
-To find a safe way through the jungle:
-Never right - right or left - left after each other.
+Найти безопасный путь через джунгли:
+Не направо - направо или налево - налево друг за другом.
 }
 
-itmname_auction_list_roll	{Document}
+itmname_auction_list_roll	{Документ}
 itmdescr_auction_list_roll
 {
-Let's hope it really is a useful list of items sold at the auction.
+Будем надеяться, что это действительно полезный список предметов, проданных на аукционе.
 }
 
-itmname_auction_list_open	{Auction List}
+itmname_auction_list_open	{Аукционный Лист}
 itmdescr_auction_list_open
 {
-Yes!
+Да!
 }
 
-itmname_newspaper1		{Rogers' Notes}
+itmname_newspaper1		{Заметки Роджерса}
 itmdescr_newspaper1
 {
-He has searched 'The Boston News-Letter' for information about Teach's crew.
+Он искал в 'Бостонской Бюллетени Новостей' информацию о команде Тича.
 }
 
-itmname_newspaper2		{Rogers' Notes}
+itmname_newspaper2		{Заметки Роджерса}
 itmdescr_newspaper2
 {
-He has searched 'The Virinia Gazette' for information about Teach's crew.
+Он искал в 'Вирджинской Бюллетени Новостей' информацию о команде Тича.
 }
 
-itmname_newspaper3		{Rogers' Notes}
+itmname_newspaper3		{Заметки Роджерса}
 itmdescr_newspaper3
 {
-He has searched several other newspapers for information about Teach's crew.
+Он просмотрел несколько других бюллетеней новостей в поисках информации о команде Тича.
+}
+
+itmname_doc61			{Письмо Губернатора}
+itmdescr_doc61
+{
+Документ от губернатора Стэплтона, разрешающий мне пройти через форт Антигуа и посетить тюрьму.
+}
+
+itmname_contract1		{Договор}
+itmdescr_contract1
+{
+Документ с двумя печатями, может быть, с именем и кровью?
+}
+
+itmname_contract2		{Договор}
+itmdescr_contract2
+{
+Снова кровь, но уже немного.
+}
+
+itmname_contract3		{Договора}
+itmdescr_contract3
+{
+На этот раз два листа бумаги. Кроме нескольких букв - кровь на обоих!
+}
+
+itmname_LOM_swe			{Капербриф}
+itmdescr_LOM_swe
+{
+Шведская каперская грамота - написана на немецком языке.
+}
+
+itmname_letter_cartagena	{Письмо}
+itmdescr_letter_cartagena
+{
+Капитан Пайл, пожалуйста, встретьте меня в новом монастыре. У меня есть важная информация. Даниель Дефо.
+}
+
+itmname_letter_turks		{Письмо}
+itmdescr_letter_turks
+{
+Капитан Пайл, пожалуйста, встретьте меня возле форта. У меня есть важная информация. Даниель Дефо.
 }
 
 //--------------- DOCUMENTS END --------------------------------------------------------------------------------------------------
 //--------------- ALL MEDICINE CHESTS START --------------------------------------------------------------------------------------
 
-itmname_pistolmdchest_F1	{Medicine Chest}
+itmname_pistolmdchest_F1	{Сундук для Медикаментов}
 itmdescr_pistolmdchest_F1
 {
-A fine piece of craftsmanship but unfortunately locked! 
+Прекрасный образец мастерства, но, к сожалению, заперт!
 }
 
-itmname_pistolmdchest_F1_C	{Medicine Chest}
+itmname_pistolmdchest_F1_C	{Сундук для Медикаментов}
 itmdescr_pistolmdchest_F1_C
 {
-A fine piece of craftsmanship but unfortunately locked! 
+Прекрасный образец мастерства, но, к сожалению, заперт!
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F2A	{Empty Medicine Chest}
+itmname_pistolmdchest_F2A	{Пустой Сундук для Медикаментов}
 itmdescr_pistolmdchest_F2A
 {
-Only one half of the chest is opened. Not much in here: One drawer is empty, two missing and one blocked! 
+Открыта только одна половина сундука. Здесь не так уж много: Один ящик пуст, два отсутствуют и один закрыт!
 }
 
-itmname_pistolmdchest_F2A_C	{Empty Medicine Chest}
+itmname_pistolmdchest_F2A_C	{Пустой Сундук для Медикаментов}
 itmdescr_pistolmdchest_F2A_C
 {
-Only one half of the chest is opened. Not much in here: One drawer is empty, two missing and one blocked! 
+Открыта только одна половина сундука. Здесь не так уж много: Один ящик пуст, два отсутствуют и один закрыт!
 }
 
-itmname_pistolmdchest_F2A_S	{Empty Medicine Chest}
+itmname_pistolmdchest_F2A_S	{Пустой Сундук для Медикаментов}
 itmdescr_pistolmdchest_F2A_S
 {
-Only one half of the chest is opened. Not much in here: One drawer is empty, two missing and one blocked! 
+Открыта только одна половина сундука. Здесь не так уж много: Один ящик пуст, два отсутствуют и один закрыт! 
 }
 
-itmname_pistolmdchest_F2A_CS	{Empty Medicine Chest}
+itmname_pistolmdchest_F2A_CS	{Пустой Сундук для Медикаментов}
 itmdescr_pistolmdchest_F2A_CS
 {
-Only one half of the chest is opened. Not much in here: One drawer is empty, two missing and one blocked! 
+Открыта только одна половина сундука. Здесь не так уж много: Один ящик пуст, два отсутствуют и один закрыт!
 }
 
 
-itmname_pistolmdchest_F2B	{Empty Medicine Chest}
+itmname_pistolmdchest_F2B	{Пустой Сундук для Медикаментов}
 itmdescr_pistolmdchest_F2B
 {
-What a locksmith he is mister Cook. He opened this fine chest by violence - and broke one door! 
+Ну и взломщик же этот мистер Кук! Он открыл этот прекрасный сундук с помощью удара по нему - и сломал одну дверцу!
 }
 
-itmname_pistolmdchest_F2B_C	{Empty Medicine Chest}
+itmname_pistolmdchest_F2B_C	{Пустой Сундук для Медикаментов}
 itmdescr_pistolmdchest_F2B_C
 {
-What a locksmith he is mister Cook. He opened this fine chest by violence - and broke one door! 
+Ну и взломщик же этот мистер Кук! Он открыл этот прекрасный сундук с помощью удара по нему - и сломал одну дверцу!
 }
 
-itmname_pistolmdchest_F2B_S	{Empty Medicine Chest}
+itmname_pistolmdchest_F2B_S	{Пустой Сундук для Медикаментов}
 itmdescr_pistolmdchest_F2B_S
 {
-What a locksmith he is mister Cook. He opened this fine chest by violence - and broke one door! 
+Ну и взломщик же этот мистер Кук! Он открыл этот прекрасный сундук с помощью удара по нему - и сломал одну дверцу!
 }
 
-itmname_pistolmdchest_F2B_CS	{Empty Medicine Chest}
+itmname_pistolmdchest_F2B_CS	{Пустой Сундук для Медикаментов}
 itmdescr_pistolmdchest_F2B_CS
 {
-What a locksmith he is mister Cook. He opened this fine chest by violence - and broke one door! 
+Ну и взломщик же этот мистер Кук! Он открыл этот прекрасный сундук с помощью удара по нему - и сломал одну дверцу!
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F3A	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3A	{Наполовину Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F3A
 {
-Two drawers are filled but I can't place the large drawer yet.  
+Два ящика заполнены, но я пока не могу разместить большой ящик.
 }
 
-itmname_pistolmdchest_F3A_C	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3A_C	{Наполовину Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F3A_C
 {
-Two drawers are filled but I can't place the large drawer yet.  
+Два ящика заполнены, но я пока не могу разместить большой ящик.
 }
 
-itmname_pistolmdchest_F3A_S	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3A_S	{Наполовину Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F3A_S
 {
-Two drawers are filled but I can't place the large drawer yet.  
+Два ящика заполнены, но я пока не могу разместить большой ящик.
 }
 
-itmname_pistolmdchest_F3A_CS	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3A_CS	{Наполовину Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F3A_CS
 {
-Two drawers are filled but I can't place the large drawer yet.  
+Два ящика заполнены, но я пока не могу разместить большой ящик.
 }
 
 
-itmname_pistolmdchest_F3B	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3B	{Наполовину Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F3B
 {
-Some bottles are now in their places but many still missing.  
+Некоторые бутылки теперь стоят на своих местах, но многие всё ещё отсутствуют.
 }
 
-itmname_pistolmdchest_F3B_C	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3B_C	{Наполовину Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F3B_C
 {
-Some bottles are now in their places but many still missing.  
+Некоторые бутылки теперь стоят на своих местах, но многие всё ещё отсутствуют.
 }
 
-itmname_pistolmdchest_F3B_S	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3B_S	{Наполовину Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F3B_S
 {
-Some bottles are now in their places but many still missing.  
+Некоторые бутылки теперь стоят на своих местах, но многие всё ещё отсутствуют.
 }
 
-itmname_pistolmdchest_F3B_CS	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3B_CS	{Наполовину Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F3B_CS
 {
-Some bottles are now in their places but many still missing.  
+Некоторые бутылки теперь стоят на своих местах, но многие всё ещё отсутствуют.
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F4A		{Open Medicine Chest}
+itmname_pistolmdchest_F4A		{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4A
 {
-Another marauder at work: He blow off the entire lock and damaged the door!  
+Ещё один мародер поработал: Он сорвал весь замок и повредил сундук!
 }
 
-itmname_pistolmdchest_F4A_C		{Open Medicine Chest}
+itmname_pistolmdchest_F4A_C		{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4A_C
 {
-Another marauder at work: He blow off the entire lock and damaged the door!  
+Ещё один мародер поработал: Он сорвал весь замок и повредил сундук! 
 }
 
-itmname_pistolmdchest_F4A_S		{Open Medicine Chest}
+itmname_pistolmdchest_F4A_S		{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4A_S
 {
-Another marauder at work: He blow off the entire lock and damaged the door!  
+Ещё один мародер поработал: Он сорвал весь замок и повредил сундук!
 }
 
-itmname_pistolmdchest_F4A_CS		{Open Medicine Chest}
+itmname_pistolmdchest_F4A_CS		{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4A_CS
 {
-Another marauder at work: He blow off the entire lock and damaged the door!  
+Ещё один мародер поработал: Он сорвал весь замок и повредил сундук! 
 }
 
 
-itmname_pistolmdchest_F4B		{Open Medicine Chest}
+itmname_pistolmdchest_F4B		{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4B
 {
-The large drawer is now in place, three new ones look empty though.  
+Большой ящик теперь на месте, три новых выглядят пустыми.
 }
 
-itmname_pistolmdchest_F4B_C		{Open Medicine Chest}
+itmname_pistolmdchest_F4B_C		{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4B_C
 {
-The large drawer is now in place, three new ones look empty though.  
+Большой ящик теперь на месте, три новых выглядят пустыми.
 }
 
-itmname_pistolmdchest_F4B_S		{Open Medicine Chest}
+itmname_pistolmdchest_F4B_S		{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4B_S
 {
-The large drawer is now in place, three new ones look empty though.  
+Большой ящик теперь на месте, три новых выглядят пустыми.
 }
 
-itmname_pistolmdchest_F4B_CS		{Open Medicine Chest}
+itmname_pistolmdchest_F4B_CS		{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4B_CS
 {
-The large drawer is now in place, three new ones look empty though.  
+Большой ящик теперь на месте, три новых выглядят пустыми.
 }
 
 
-itmname_pistolmdchest_F4C	{Open Medicine Chest}
+itmname_pistolmdchest_F4C	{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4C
 {
-Some bottles are now in their places but many still missing.  
+Некоторые бутылки теперь стоят на своих местах, но многие всё ещё отсутствуют. 
 }
 
-itmname_pistolmdchest_F4C_C	{Open Medicine Chest}
+itmname_pistolmdchest_F4C_C	{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4C_C
 {
-Some bottles are now in their places but many still missing.  
+Некоторые бутылки теперь стоят на своих местах, но многие всё ещё отсутствуют.
 }
 
-itmname_pistolmdchest_F4C_S	{Open Medicine Chest}
+itmname_pistolmdchest_F4C_S	{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4C_S
 {
-Some bottles are now in their places but many still missing.  
+Некоторые бутылки теперь стоят на своих местах, но многие всё ещё отсутствуют.
 }
 
-itmname_pistolmdchest_F4C_CS	{Open Medicine Chest}
+itmname_pistolmdchest_F4C_CS	{Открытый Сундук для Медикаментов}
 itmdescr_pistolmdchest_F4C_CS
 {
-Some bottles are now in their places but many still missing.  
+Некоторые бутылки теперь стоят на своих местах, но многие всё ещё отсутствуют.
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F5A		{Filled Medicine Chest}
+itmname_pistolmdchest_F5A		{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5A
 {
-All bottles found!  
+Все бутылки найдены!
 }
 
-itmname_pistolmdchest_F5A_C		{Filled Medicine Chest}
+itmname_pistolmdchest_F5A_C		{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5A_C
 {
-All bottles found!  
+Все бутылки найдены!
 }
 
-itmname_pistolmdchest_F5A_S		{Filled Medicine Chest}
+itmname_pistolmdchest_F5A_S		{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5A_S
 {
-All bottles found!  
+Все бутылки найдены!
 }
 
-itmname_pistolmdchest_F5A_CS		{Filled Medicine Chest}
+itmname_pistolmdchest_F5A_CS		{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5A_CS
 {
-All bottles found!  
+Все бутылки найдены!
 }
 
 
-itmname_pistolmdchest_F5B		{Filled Medicine Chest}
+itmname_pistolmdchest_F5B		{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5B
 {
-All drawers are filled and all bottles found!  
+Все ящики заполнены, все бутылки найдены!
 }
 
-itmname_pistolmdchest_F5B_C		{Filled Medicine Chest}
+itmname_pistolmdchest_F5B_C		{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5B_C
 {
-All drawers are filled and all bottles found!  
+Все ящики заполнены, все бутылки найдены! 
 }
 
-itmname_pistolmdchest_F5B_S		{Filled Medicine Chest}
+itmname_pistolmdchest_F5B_S		{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5B_S
 {
-All drawers are filled and all bottles found!  
+Все ящики заполнены, все бутылки найдены!
 }
 
-itmname_pistolmdchest_F5B_CS		{Filled Medicine Chest}
+itmname_pistolmdchest_F5B_CS		{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5B_CS
 {
-All drawers are filled and all bottles found!  
+Все ящики заполнены, все бутылки найдены!
 }
 
 
-itmname_pistolmdchest_F5C	{Filled Medicine Chest}
+itmname_pistolmdchest_F5C	{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5C
 {
-All bottles found!  
+Все бутылки найдены! 
 }
 
-itmname_pistolmdchest_F5C_C	{Filled Medicine Chest}
+itmname_pistolmdchest_F5C_C	{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5C_C
 {
-All bottles found!  
+Все бутылки найдены!
 }
 
-itmname_pistolmdchest_F5C_S	{Filled Medicine Chest}
+itmname_pistolmdchest_F5C_S	{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5C_S
 {
-All bottles found!  
+Все бутылки найдены!
 }
 
-itmname_pistolmdchest_F5C_CS	{Filled Medicine Chest}
+itmname_pistolmdchest_F5C_CS	{Заполненный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F5C_CS
 {
-All bottles found!  
+Все бутылки найдены!
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F6	{Repaired Medicine Chest}
+itmname_pistolmdchest_F6	{Отремонтированный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F6
 {
-I hope that carpenter is a better craftsman with masts and hull than he is with furniture!   
+Надеюсь, что плотник лучше разбирается в мачтах и корпусах, чем в мебели! 
 }
 
-itmname_pistolmdchest_F6_C	{Repaired Medicine Chest}
+itmname_pistolmdchest_F6_C	{Отремонтированный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F6_C
 {
-I hope that carpenter is a better craftsman with masts and hull than he is with furniture!   
+Надеюсь, что плотник лучше разбирается в мачтах и корпусах, чем в мебели! 
 }
 
-itmname_pistolmdchest_F6_S	{Repaired Medicine Chest}
+itmname_pistolmdchest_F6_S	{Отремонтированный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F6_S
 {
-I hope that carpenter is a better craftsman with masts and hull than he is with furniture!   
+Надеюсь, что плотник лучше разбирается в мачтах и корпусах, чем в мебели!
 }
 
-itmname_pistolmdchest_F6_CS	{Repaired Medicine Chest}
+itmname_pistolmdchest_F6_CS	{Отремонтированный Сундук для Медикаментов}
 itmdescr_pistolmdchest_F6_CS
 {
-I hope that carpenter is a better craftsman with masts and hull than he is with furniture!   
+Надеюсь, что плотник лучше разбирается в мачтах и корпусах, чем в мебели!
 }
 
 //..............................................................................................................
 
-itmname_mdchest_B2		{Medicine Chest}
+itmname_mdchest_B2		{Сундук для Медикаментов}
 itmdescr_mdchest_B2
 {
-There are places for bottles on the back too! 
+На задней стороне есть места для бутылок!
 }
 
-itmname_mdchest_B3		{Medicine Chest}
+itmname_mdchest_B3		{Сундук для Медикаментов}
 itmdescr_mdchest_B3
 {
-The backside is filled with bottles. 
+Задняя сторона заполнена бутылками. 
 }
 
-itmname_mdchest_B4		{A Key in the Medicine Chest}
+itmname_mdchest_B4		{Ключ в Сундуке для Медикаментов}
 itmdescr_mdchest_B4
 {
-They have hidden a key in a secret space on the back - and it was the key to the Surgery Kit! 
+Они спрятали ключ в потайном месте на задней стенке - и это был ключ к хирургическому набору! 
 }
 
 //--------------- ALL MEDICINE CHESTS END --------------------------------------------------------------------------------------
 //--------------- ALL MEDICINE ITEMS START -------------------------------------------------------------------------------------
 
-itmname_mdchest_rope	{Rope}
+itmname_mdchest_rope	{Верёвка}
 itmdescr_mdchest_rope
 {
-A strong rope with an iron loop. 
+Прочная вёревка с железной петлей. 
 }
 
-itmname_medicine_list	{Medicine list}
+itmname_medicine_list	{Список Лекарств}
 itmdescr_medicine_list
 {
-In exchange for six citizens we demand a medicine chest filled with all ordinary cures and drugs. No prisoners will be released without these special medicines: Acetum Saturninum, Antidote, Etherbottle, Confectio Damocritis, Tincture of Laudenum and most important anything to cure syphilis. Any other drugs or medical items are of interest! Charles Vane. 
+В обмен на 6 граждан мы требуем аптечку, наполненную всеми обычными медикаментами и лекарствами. Ни один заключенный не будет освобожден без этих специальных лекарств: Ацетум Сатурниум, Противоядие, Бутыль Эфира, Конфекцио Дамокритис, Настойка Ладана и самое важное - лекарство от сифилиса. Любые другие лекарства или медицинские предметы также представляют интерес! Чарльз Вейн.
 }
 
-itmname_medicine_leaves		{Medicine Leaves}
+itmname_medicine_leaves		{Лекарственные Листья}
 itmdescr_medicine_leaves
 {
-These leaves may protect you against evil spirits and inspire your imagination.   
+Эти листья могут защитить вас от злых духов и вдохновить ваше воображение. 
 }
 
-itmname_anti_scurvy_pills	{Lozenges}
+itmname_anti_scurvy_pills	{Лозенгес}
 itmdescr_anti_scurvy_pills
 {
-Problems with scurvy? Put a tablet in water and this drink will protect you from all seamens feared desease. New and secret patent.  
+Проблемы с цингой? Положите лозенгес в воду, и этот напиток защитит вас от всех болезней, которых боятся моряки. Новый и секретный патент.
 }
 
-itmname_filled_medium_drawer	{Drawer with various medicine bottles}
+itmname_filled_medium_drawer	{Ящик с Различными Бутылочками для Лекарств}
 itmdescr_filled_medium_drawer
 {
-Hmm, the doctor must have stolen this from the medicine chest earlier. 
+Хм, должно быть, доктор украл это из аптечки раньше.
 }
 
-itmname_mortar_ointment		{Mortar and Ointment}
+itmname_mortar_ointment		{Раствор и Мазь}
 itmdescr_mortar_ointment
 {
-A Mortar made of china and a homemade Ointment in a birch box. 
+Фарфоровая ступка и самодельная мазь в березовой коробочке.
 }
 
-itmname_cough_syrup		{Cough Syrup}
+itmname_cough_syrup		{Сироп от Кашля}
 itmdescr_cough_syrup
 {
-One bottle with Cough Syrup and another one with unknown content. 
+Одна бутылка с сиропом от кашля, другая - с неизвестным содержимым.
 }
 
-itmname_blood_letting		{Blood Letting Tool}
+itmname_blood_letting		{Инструмент для Кровопускания}
 itmdescr_blood_letting
 {
-This small brass item opens your veins very quick and painless. The mechanism has twelve sharp knives that cut instantly. 
+Этот маленький латунный предмет очень быстро и безболезненно вскрывает вены. Механизм имеет 12 острых ножей, которые режут мгновенно.
 }
 
-itmname_filled_large_drawer		{Drawer with many items}
+itmname_filled_large_drawer		{Ящик с Множеством Предметов}
 itmdescr_filled_large_drawer
 {
-The drawer is now filled with items I have collected earlier. 
+Ящик теперь заполнен предметами, которые я собрал ранее. 
 }
 
-itmname_empty_large_drawer		{Empty Drawer}
+itmname_empty_large_drawer		{Пустой ящик}
 itmdescr_empty_large_drawer
 {
 I guess the drawer belongs to the medicine chest. 
 }
 
-itmname_bag_of_herbs		{Bag of Herbs}
+itmname_bag_of_herbs		{Мешок с Травами}
 itmdescr_bag_of_herbs
 {
-A small bag for herbs and additional medicines.  
+Небольшая сумка для трав и дополнительных лекарств.
 }
 
-itmname_pistolmdcloth		{Rolls of Bandages}
+itmname_pistolmdcloth		{Рулоны Бинтов}
 itmdescr_pistolmdcloth
 {
-This a just some rolls of old cloth, but can be used as bandages - and there is enough for a minor campaign!
+Это просто несколько рулонов старой ткани, которые можно использовать как бинты - и их хватит на небольшую кампанию!
 }
 
-itmname_rolls_of_bandages	{Rolls of Bandages}
+itmname_rolls_of_bandages	{Рулоны Бинтов}
 itmdescr_rolls_of_bandages
 {
-This a just some rolls of old cloth, but can be used as bandages - and there is enough for a minor campaign!  
+Это просто несколько рулонов старой ткани, которые можно использовать как бинты - и их хватит на небольшую кампанию! 
 }
 
-itmname_pistolmdclothsack	{Rolls of Bandages}
+itmname_pistolmdclothsack	{Рулоны Бинтов}
 itmdescr_pistolmdclothsack
 {
-This a just some rolls of old cloth, but can be used as bandages - and there is enough for a minor campaign! A small bag for herbs and additional medicines too.  
+Это просто несколько рулонов старой ткани, которые можно использовать как бинты - и их хватит на небольшую кампанию! Также небольшой мешочек для трав и дополнительных лекарств.
 }
 
-itmname_pistolmdsack		{Bag of Herbs}
+itmname_pistolmdsack		{Мешок с Травами}
 itmdescr_pistolmdsack
 {
-A small bag for herbs and additional medicines.  
+Небольшой мешок для трав и дополнительных лекарств. 
 }
 
-itmname_prescriptions		{Prescriptions}
+itmname_prescriptions		{Рецепты}
 itmdescr_prescriptions
 {
-A bunch of old letters? No no no - this is a collection of prescriptions and medical advises.   
+Куча старых писем? Нет, нет, нет - это коллекция рецептов и медицинских советов.  
 }
 
-itmname_bladeprescriptions	{Prescriptions}
+itmname_bladeprescriptions	{Рецепты}
 itmdescr_bladeprescriptions
 {
-A bunch of old letters? No no no - this is a collection of prescriptions and medical advises.   
+Куча старых писем? Нет, нет, нет - это коллекция рецептов и медицинских советов.
 }
 
-itmname_empty_bottles		{Empty Bottles}
+itmname_empty_bottles		{Пустые Бутылки}
 itmdescr_empty_bottles
 {
-Two empty bottles nothing more nothing less.  
+Две пустые бутылки, ничего больше, ничего меньше.
 }
 
-itmname_mercury_bottles		{Mercury Bottles}
+itmname_mercury_bottles		{Бутылки с Ртутью}
 itmdescr_mercury_bottles
 {
-Most physicians treat syphilis with mercury, either orally, in vapor baths, or topically. The use of mercury is based on the ancient theory of humors and health.  
+Большинство врачей лечат сифилис ртутью - перорально, в паровых ваннах или по месту. Использование ртути основано на древней теории о юмора и здоровья.
 }
 
-//----------------- ALL MEDICINE ITEMS END -----------------------------------------------------------------------------------
+itmname_myrrh			{Мирра}
+itmdescr_myrrh
+{
+Мирра - это ароматная специя, получаемая из сока дерева, произрастающего на Ближнем Востоке. Она может использоваться как благовоние, а также как лекарство для специальных целей.
+}
+
+/------------------ ALL MEDICINE ITEMS END -----------------------------------------------------------------------------------
+//--------------- OTHER MEDICINE ITEMS START ---------------------------------------------------------------------------------
+
+itmname_calabash		{Сосуд с Противоядием}
+itmdescr_calabash
+{
+Эта неизвестная жидкость излечивает от яда.
+}
+
+itmname_herbs			{Мешок с Травами}
+itmdescr_herbs
+{
+Смесь трав, которые лечят легкие раны.
+}
+
+itmname_tape			{Аптечка Первой Помощи}
+itmdescr_tape
+{
+Два бинта, бутылка с неизвестным содержимым и пластырная лента первой помощи.
+}
+
+//--------------- OTHER MEDICINE ITEMS END -----------------------------------------------------------------------------------
 //----------------- ALL SURGERY KIT START ------------------------------------------------------------------------------------
 
-itmname_bladesurgery		{A First Aid Kit ...}
+itmname_bladesurgery		{Аптечка Первой Помощи ...}
 itmdescr_bladesurgery
 {
-... or what? Anyway there is no key.  
+... или что-то в этом роде? В любом случае, ключа нет. 
 }
 
-itmname_bladesurgery2		{Surgery Kit}
+itmname_bladesurgery2		{Хирургический Набор}
 itmdescr_bladesurgery2
 {
-The key from the chest opened a complete doctors surgery kit. Well it's almost complete - a big saw is missing.  
+Ключ в сундуке открывает полный хирургический набор доктора. Почти полный - не хватает большой пилы.
 }
 
-itmname_bladesurgery3		{Surgery Kit}
+itmname_bladesurgery3		{Хирургический Набор}
 itmdescr_bladesurgery3
 {
-Now with the saw it's complete!  
+Теперь с пилой всё в сборе!
 }
 
-itmname_bladesurgcan		{A First Aid Kit ...}
+itmname_bladesurgcan		{Аптечка Первой Помощи ...}
 itmdescr_bladesurgcan
 {
-... or what? Anyway there is no key.  
+... или что-то в этом роде? В любом случае, ключа нет. 
 }
 
-itmname_bladesurgcan2		{Surgery Kit}
+itmname_bladesurgcan2		{Хирургический Набор}
 itmdescr_bladesurgcan2
 {
-The key from the chest opened a complete doctors surgery kit. Well it's almost complete - a big saw is missing.   
+Ключ в сундуке открывает полный хирургический набор доктора. Почти полный - не хватает большой пилы.
 }
 
-itmname_bladesurgcan3		{Surgery Kit}
+itmname_bladesurgcan3		{Хирургический Набор}
 itmdescr_bladesurgcan3
 {
-Now with the saw it's complete!  
+Теперь с пилой всё в сборе!
 }
 
-itmname_bladesurgery_r		{A First Aid Kit ...}
+itmname_bladesurgery_r		{Аптечка Первой Помощи ...}
 itmdescr_bladesurgery_r
 {
-... or what? Anyway there is no key.  
+... или что-то в этом роде? В любом случае, ключа нет.
 }
 
-itmname_bladesurgery2_r		{Surgery Kit}
+itmname_bladesurgery2_r		{Хирургический Набор}
 itmdescr_bladesurgery2_r
 {
-The key from the chest opened a complete doctors surgery kit. Well it's almost complete - a big saw is missing.    
+Ключ в сундуке открывает полный хирургический набор доктора. Почти полный - не хватает большой пилы.
 }
 
-itmname_bladesurgery3_r		{Surgery Kit}
+itmname_bladesurgery3_r		{Хирургический Набор}
 itmdescr_bladesurgery3_r
 {
-Now with the saw it's complete!  
+Теперь с пилой всё в сборе!
 }
 
-itmname_bladesurgcan_r		{A First Aid Kit ...}
+itmname_bladesurgcan_r		{Аптечка Первой Помощи ...}
 itmdescr_bladesurgcan_r
 {
-... or what? Anyway there is no key.  
+... или что-то в этом роде? В любом случае, ключа нет.
 }
 
-itmname_bladesurgcan2_r		{Surgery Kit}
+itmname_bladesurgcan2_r		{Хирургический Набор}
 itmdescr_bladesurgcan2_r
 {
-The key from the chest opened a complete doctors surgery kit. Well it's almost complete - a big saw is missing.    
+Ключ в сундуке открывает полный хирургический набор доктора. Почти полный - не хватает большой пилы.   
 }
 
-itmname_bladesurgcan3_r		{Surgery Kit}
+itmname_bladesurgcan3_r		{Хирургический Набор}
 itmdescr_bladesurgcan3_r
 {
-Now with the saw it's complete!  
+Теперь с пилой всё в сборе!
 }
 
-itmname_surgery_saw		{Saw}
+itmname_surgery_saw		{Пила}
 itmdescr_surgery_saw
 {
-A carpenter's robust tool, or maybe a marine doctors?. 
+Надежный инструмент плотника или, может быть, морского врача!? 
 }
 
 //----------------- ALL SURGERY KIT END -------------------------------------------------------------------------------------
 //------------------- FOOD ITEMS START --------------------------------------------------------------------------------------
 
-itmname_pistolfoodchest		{Food Chest}
+itmname_pistolfoodchest		{Сундук с Едой}
 itmdescr_pistolfoodchest
 {
-An empty medium size chest.
+Пустой сундук среднего размера.
 }
 
-itmname_pistolfoodchest2	{Food Chest}
+itmname_pistolfoodchest2	{Сундук с Едой}
 itmdescr_pistolfoodchest2
 {
-An empty medium size chest.
+Пустой сундук среднего размера.
 }
 
-itmname_bladefish		{Big Fish}
+itmname_bladefish		{Большая Рыба}
 itmdescr_bladefish
 {
-A big but also very delicious fish - if it hadn't been stored away in this cellar for days in the Caribbean heat.
+Большая, но очень вкусная рыба - если бы она не пролежала в этом погребе несколько дней под карибской жарой.
 }
 
-itmname_meat			{Boucan}
+itmname_meat			{Букан}
 itmdescr_meat
 {
-A speciality from Tortuga. Meat smoked by hunters, also known as buccaneers. Some smell though?  
+Фирменное блюдо с Тортуги. Мясо, копченое охотниками, также известными как пираты. Имеет какой-то запах...
 }
 
-itmname_2winebottles		{Two Wine Bottles}
+itmname_2winebottles		{Две Бутылки Вина}
 itmdescr_2winebottles
 {
-French wine of highest quality, but a little warm.
+Французское вино высшего качества, но немного под градусом.
 }
 
-itmname_bread			{Ships Biscuits}
+itmname_bread			{Сушенный Хлеб}
 itmdescr_bread
 {
-Bread baked for long journeys at sea meant to stay fresh. It didn't! Something's moving inside.  
+Хлеб, выпекаемый для длительных морских путешествий, должен был оставаться свежим. Но что-то пошло не так! Внутри что-то шевелится.
 }
 
-itmname_ale			{Ale}
+itmname_ale			{Эль}
 itmdescr_ale
 {
-A strong brew - all the way from England? Be careful, this beer can really knock you out.  
+Крепкое пиво - и всё это из Англии? Будьте осторожны, это пиво действительно может выбить вас из колеи.
 }
 
 //------------------- FOOD ITEMS END ----------------------------------------------------------------------------------------
 //-------------------- COINS START ------------------------------------------------------------------------------------------
 
-itmname_coin1			{Coin}
+itmname_coin1			{Монета}
 itmdescr_coin1
 {
-A swedish 2 mark silver coin.
+Шведская серебряная монета номиналом 2 марки.
 }
 
-itmname_coin2			{Coin}
+itmname_coin2			{Монета}
 itmdescr_coin2
 {
-A swedish 1 öre copper coin. From the bottom of the sea?
+Шведская медная монета номиналом 1 эре. Со дна моря?
 }
 
-itmname_coin3			{Coin}
+itmname_coin3			{Монета}
 itmdescr_coin3
 {
-A spanish gold doubloon.
+Испанский золотой дублон.
 }
 
-itmname_coin4			{Coins}
+itmname_coin4			{Монета}
 itmdescr_coin4
 {
-Two spanish pieces-of-eight or eight reales.
+Две испанские монеты по восемь штук или восемь реалов.
 }
 
-itmname_coin4_bad		{Coins}
+itmname_coin4_bad		{Монета}
 itmdescr_coin4_bad
 {
-The pieces-of-eight vary too much in weight to be of any use!
+Восьмерки сильно различаются по весу и могут быть полезны!
 }
 
-itmname_coin5			{Coin}
+itmname_coin5			{Монета}
 itmdescr_coin5
 {
-A british 2 guinea gold coin with the portrait of queen Anne.
+Британская золотая монета номиналом 2 гинеи с портретом королевы Анны.
 }
 
-itmname_coin6			{Coin}
+itmname_coin6			{Монета}
 itmdescr_coin6
 {
-A british 3 pence small silver coin.
+Маленькая серебряная монета Великобритании номиналом 3 пенса.
 }
 
-itmname_coin7			{Coin}
+itmname_coin7			{Монета}
 itmdescr_coin7
 {
-A chinese brass coin.
+Китайская медная монета.
 }
 
-itmname_coin8			{Coin}
+itmname_coin8			{Монета}
 itmdescr_coin8
 {
-A chinese copper coin.
+Китайская медная монета.
 }
 
-itmname_coin9			{Coin}
+itmname_coin9			{Монета}
 itmdescr_coin9
 {
-An arabic gold sequin.
+Арабская золотая монета (Динар).
 }
 
-itmname_coin10			{Coin}
+itmname_coin10			{Монета}
 itmdescr_coin10
 {
-An arabic silver coin.
+Арабская серебряная монета (Дирхам).
 }
 
-itmname_coin11			{Coin}
+itmname_coin11			{Монета}
 itmdescr_coin11
 {
-A very small and worn arabic silver coin.
+Очень маленькая и потертая арабская серебряная монета.
 }
 
-itmname_coin12			{Coin}
+itmname_coin12			{Монета}
 itmdescr_coin12
 {
-A fine french Louis d'or.
+Прекрасный французский Луи д'Ор.
 }
 
-itmname_coin13			{Coin}
+itmname_coin13			{Монета}
 itmdescr_coin13
 {
-A dutch gulden.
+Голландский гульден.
 }
 
-itmname_coin14			{Coin}
+itmname_coin14			{Монета}
 itmdescr_coin14
 {
-A dutch 50 stuivers silver coin of unusual form.
+Голландская серебряная монета в 50 стюверов необычной формы.
 }
 
-itmname_coin15			{Coin}
+itmname_coin15			{Монета}
 itmdescr_coin15
 {
-A dutch rijkdaalder silver coin.
+Серебряная монета Голландский рейксдальдер.
 }
 
-itmname_coin16			{Coin}
+itmname_coin16			{Монета}
 itmdescr_coin16
 {
-A large portuguese gold moydore.
+Большой португальский золотой мойдор.
 }
 
-itmname_BB_coin			{Amulet}
+itmname_BB_coin			{Амулет}
 itmdescr_BB_coin
 {
-A chinese Gold Coin. Guess it has been carried around the neck, as an Amulet.
-For what? Good Luck? Maybe it didn't help...
+Китайская золотая монета. Думаю, её носили на шее, как амулет.
+Для чего? На удачу? Вряд ли она помогла...
 }
 
 //-------------------- COINS END --------------------------------------------------------------------------------------------
 //----------------- CHURCH ITEMS START --------------------------------------------------------------------------------------
 
-itmname_bladechurchsilver	{Sack}
+itmname_bladechurchsilver	{Мешок}
 itmdescr_bladechurchsilver
 {
-An ordinary sack. Use it to carry the church treasures away...
+Обычный мешок. Используйте его, чтобы унести церковные сокровища...
 }
 
-itmname_jewelcross		{Jewel Cross}
+itmname_jewelcross		{Ювелирный Крестик}
 itmdescr_jewelcross
 {
-A silver cross ornated with seven sapphires, one dark blue spinel, one amethyst, one citrine, and one brown zircon.
+Серебряный крестик, украшенный семью сапфирами, одной темно-синей шпинелью, одним аметистом, одним цитрином и одним коричневым цирконом.
 }
 
-itmname_fake_reliquary		{Reliquary}
+itmname_fake_reliquary		{Реликвия}
 itmdescr_fake_reliquary
 {
-In this shrine rests the physical remains of a since long forgotten saint.
+В этом святилище покоятся физические останки давно забытого святого.
 }
 
-itmname_fake_chalice		{Chalice}
+itmname_fake_chalice		{Чаша}
 itmdescr_fake_chalice
 {
-A goblet of pure gold used to hold sacramental wine. 
+Чаша из чистого золота, используемая для хранения священного вина.
 }
 
-itmname_fake_censer		{Censer}
+itmname_fake_censer		{Кадило}
 itmdescr_fake_censer
 {
-This intricately carved gold vessel is used for burning incense.
+Этот искусно вырезанный золотой сосуд используется для возжигания благовоний.
 }
 
-itmname_fake_candelabre		{Candelabre}
+itmname_fake_candelabre		{Канделябр}
 itmdescr_fake_candelabre
 {
-A heavy eight-branched silver candelabre. 
+Тяжелый восьмистворчатый серебряный канделябр. 
 }
 
-itmname_bladelockpick		{Lockpick}
+itmname_bladelockpick		{Отмычка}
 itmdescr_bladelockpick
 {
-Two small irons that could be used as lockpick tools.
+Две маленькие железки, которые могут быть использованы в качестве инструментов для взлома замков.
 }
 
-itmname_bladehandle		{Handle}
+itmname_bladehandle		{Ручка}
 itmdescr_bladehandle
 {
-A simple handle to a door or a closet.
+Простая ручка для двери или шкафа.
 }
 
-itmname_bladeladder		{Ladder}
+itmname_bladeladder		{Лестница}
 itmdescr_bladeladder
 {
-A long ladder. Why was it hidden it here?
+Длинная лестница. Почему она была спрятана здесь?
 }
 
-itmname_bladeoilbottle		{Bottle of Oil}
+itmname_bladeoilbottle		{Бутылка Масла}
 itmdescr_bladeoilbottle
 {
-A bottle filled with the finest olive oil.
+Бутылка, наполненная лучшим оливковым маслом.
 }
 
-itmname_bladekeygrand		{Key}
+itmname_bladekeygrand		{Ключ}
 itmdescr_bladekeygrand
 {
-Another key.
+Другой ключ.
 }
 
-itmname_red_animist		{Monk Habit}
+itmname_red_animist		{Монашеская Ряса}
 itmdescr_red_animist
 {
-One of the choir members red clothes together with a long rope.
+Один из участников хора связал красную одежду длинной пряжей.
 }
 
-itmname_many_red_animists	{Many Monk Habits}
+itmname_many_red_animists	{Множество Монашеских Ряс}
 itmdescr_many_red_animists
 {
-The rest of the choir's red outfits.
+Остальные красные наряды хора.
 }
 
-itmname_pack_of_red_cloth	{Rolls of Red Cloth}
+itmname_pack_of_red_cloth	{Рулоны Красной Ткани}
 itmdescr_pack_of_red_cloth
 {
-The monk robes packed into rolls.
+Монашеские рясы упакованы в рулоны.
 }
 
 itmname_pistolcenser		{Censer}
 itmdescr_pistolcenser
 {
-This intricately carved gold vessel is used for burning incense. Protects against zombies.
+Этот искусно вырезанный золотой сосуд используется для возжигания благовоний. Защищает от зомби.
 }
 
-itmname_book62		    	{Cessa Decipere}
+itmname_book62		    	{Перестань Обманывать}
 itmdescr_book62
 {
-Exorcizamus te, omnis immundus spiritus omnis satanica potestas... Huh?
+Мы изгоним вас, всякий нечистый дух, всякую сатанинскую силу... Да?
 }
 
-itmname_altar_bread		{Altar Bread}
+itmname_altar_bread		{Алтарный Хлеб}
 itmdescr_altar_bread
 {
-Poor bastards - only these dry biscuits to eat.
+Бедняги - только этот сухой хлеб и едят.
 }
 
-itmname_wax_candles		{Wax Candles}
+itmname_wax_candles		{Восковые Свечи}
 itmdescr_wax_candles
 {
-Expensive beeswax candles for church ceremonies. 
+Дорогие свечи из пчелиного воска для церковных церемоний.
 }
 
-itmname_silvercross		{Silver Cross}
+itmname_silvercross		{Серебряный Крестик}
 itmdescr_silvercross
 {
-A simple cross and chain in silver. 
+Простой крестик и цепочка из серебра. 
 }
 
-itmname_treasure7		{Relic}
+itmname_treasure7		{Реликвия}
 itmdescr_treasure7
 {
-The supposed finger and ring of the 1100th century female Pope. 
+Предполагаемый палец и кольцо женщины-папы Римского 12 века 1100 года.
 }
 
-itmname_icon			{Icon}
+itmname_icon			{Икона}
 itmdescr_icon
 {
-An icon of Pope Joan. 
+Икона с изображением Папы Римского Иоанна.
 }
 
-itmname_rosary			{Rosary}
+itmname_rosary			{Розарий}
 itmdescr_rosary
 {
-The Abbess' rosary. 
+Розарий настоятельницы.
 }
 
-itmname_crypt_sketch		{Sketch}
+itmname_crypt_sketch		{Эскиз}
 itmdescr_crypt_sketch
 {
-The sketch shows a path I think. 
+На эскизе изображен путь, о котором я думаю.
 }
 
 //----------------- CHURCH ITEMS END --------------------------------------------------------------------------------------
 //-------------- FINAL CHEST ITEMS START ----------------------------------------------------------------------------------
 
-itmname_red_uniform		{Red Costume}
+itmname_red_uniform		{Красный Костюм}
 itmdescr_red_uniform
 {
-A suit of very good clothes, carefully brushed and folded.
+Костюм очень хорошей одежды, тщательно вычищенный и сложенный.
 }
 
-itmname_sealed_map		{Sealed Paper}
+itmname_sealed_map		{Запечатанная Бумага}
 itmdescr_sealed_map
 {
-The paper has been sealed in several places with a thimble by way of seal; the very thimble I found in the Governor's pocket.
-I'll try to use the folding knife when carefully openening the seals.
+Бумага была запечатана в нескольких местах наперстком в качестве печати; этот самый наперсток я нашел в кармане губернатора.
+Я постараюсь использовать складной нож при осторожном вскрытии пломб.
 }
 
-itmname_mapBB1			{Map Piece}
+itmname_mapBB1			{Карта Хорнигольда}
 itmdescr_mapBB1
 {
-A map of some islands with latitude and longitude, but it's only a piece of a larger Caribbean Map. 
+Похоже на Испаньолу.
 }
 
-itmname_package			{Oilcloth Packet}
+itmname_package			{Свёрток в Клеёнке}
 itmdescr_package
 {
-Under an old boat-cloak, whitened with sea-salt on many a harbour-bar, a bundle tied up in oilcloth and looking like papers.
+Под старым лодочным плащом, выбеленным морской солью на многих пристанях, лежал свёрток, завернутый в клеёнку и похожий на бумаги.
 }
 
-itmname_temp_purse		{Purse}
+itmname_temp_purse		{Кошелёк}
 itmdescr_temp_purse
 {
-A canvas bag, that give forth at a touch, the jingle of gold.
+Холщовый кошелёк, который при ударе издает звон золотых монет.
 }
 
-itmname_temp_coins		{Coins}
+itmname_temp_coins		{Монеты}
 itmdescr_temp_coins
 {
-A few small coins.
+Несколько мелких монет.
 }
 
-itmname_folding_knife		{Folding Knife}
+itmname_folding_knife		{Складной Нож}
 itmdescr_folding_knife
 {
-A gully with a crooked handle. The blade is very thin and sharpe.
+Овраг с кривой рукояткой. Лезвие очень тонкое и острое.
 }
 
-itmname_pistoltinderbox		{Tinderbox}
+itmname_pistoltinderbox		{Трутница}
 itmdescr_pistoltinderbox
 {
-A tinderbox looking like a small pistol.
+Трутница, похожая на маленький пистолет.
 }
 
-itmname_tobacco			{Tobacco}
+itmname_tobacco			{Табак}
 itmdescr_tobacco
 {
-Pieces of pigtail tobacco.
+Кусочки косичного табака.
 }
 
-itmname_sewing_kit		{Sewing Kit}
+itmname_sewing_kit		{Набор для Вязания}
 itmdescr_sewing_kit
 {
-A thimble, some thread and big needles.
+Наперсток, немного пряжи и большие спицы.
 }
 
-itmname_notebook		{Notebook}
+itmname_notebook		{Блокнот}
 itmdescr_notebook
 {
-The book is divided in six 'chapters'. Not much text in each though...
+Книга разделена на 6 "глав". Хотя текста в каждой из них не так уж много...
 }
 
-itmname_drawing_kit		{Pair of Compasses}
+itmname_drawing_kit		{Пара Компасов}
 itmdescr_drawing_kit
 {
-A pair of compasses mounted with brass.
+Пара компасов с латунной оправой.
 }
 
-itmname_tin_jug			{Tin Canikin}
+itmname_tin_jug			{Оловянный Кувшин}
 itmdescr_tin_jug
 {
-A small tin jug.
+Небольшой жестяной кувшин.
 }
 
-itmname_silver_bar		{Silver Bar}
+itmname_silver_bar		{Серебряный Слиток}
 itmdescr_silver_bar
 {
-A heavy piece of bar silver.
+Тяжелый кусок серебра в виде слитка.
 }
 
-itmname_foreign_items		{Item Collection}
+itmname_foreign_items		{Коллекция Предметов}
 itmdescr_foreign_items
 {
-Some trinkets of little value and mostly of foreign make.
+Несколько малоценных безделушек, в основном иностранного производства.
 }
 
-itmname_strange_shells		{Strange Shells}
+itmname_strange_shells		{Странные Ракушки}
 itmdescr_strange_shells
 {
-Five or six curious West Indian shells. I wonder since why he should have carried about these shells with him in his wandering, guilty and hunted life.
+Пять или шесть любопытных вест-индских раковин. С тех пор я удивляюсь, зачем ему понадобилось таскать с собой эти ракушки в своей скитальческой, виновной и охотничьей жизни.
 }
 
 //-------------- FINAL CHEST ITEMS END ----------------------------------------------------------------------------------
+//-------------- TREASURE MAPS START -----------------------------------------------------------------------------------
+
+itmname_mapBB2A			{Карта Цезаря}
+itmdescr_mapBB2A
+{
+Я должен избавиться от пороха.
+}
+
+itmname_mapBB2B			{Карта Цезаря}
+itmdescr_mapBB2B
+{
+Так-то лучше. 
+}
+
+itmname_mapBB3			{Карта Идена}
+itmdescr_mapBB3
+{
+Не хватает части. Какой это остров?
+}
+
+itmname_mapBB3T			{Карта Идена}
+itmdescr_mapBB3T
+{
+Это Тёркс!  
+}
+
+itmname_mapBB4A			{Карта Ричардса}
+itmdescr_mapBB4A
+{
+Осталась лишь половина карты.  
+}
+
+itmname_mapBB4A_back		{Эскиз}
+itmdescr_mapBB4A_back
+{
+На обратной стороне набросок, показывающий путь?
+}
+
+itmname_mapBB4B			{Карта Ричардса}
+itmdescr_mapBB4B
+{
+А вот вторая половина.
+}
+
+itmname_mapBB4C			{Карта Ричардса}
+itmdescr_mapBB4C
+{
+Она была разорвана на части и очень неуклюже восстановлена.
+}
+
+itmname_mapBB5A			{Карта Хэндса}
+itmdescr_mapBB5A
+{
+Это кровь?
+}
+
+itmname_mapBB5B			{Карта Хэндса}
+itmdescr_mapBB5B
+{
+Там ещё осталось немного крови.
+}
+
+itmname_mapBB6			{Карта Дефо}
+itmdescr_mapBB6
+{
+Очень пострадала от огня. Какой это остров?
+}
+
+itmname_mapBB6T			{Карта Дефо}
+itmdescr_mapBB6T
+{
+Это Кюрасао!  
+}
+
+itmname_mapWR1			{Карта Архипелага}
+itmdescr_mapWR1
+{
+С добавленными синими буквами.
+}
+
+itmname_mapWR2			{Карта Архипелага}
+itmdescr_mapWR2
+{
+С добавленными синими буквами и отмеченными красными портами.  
+}
+
+itmname_mapWR3			{Карта Архипелага}
+itmdescr_mapWR3
+{
+Возможно, порты должны быть как-то связаны.
+}
+
+itmname_mapWR4			{Карта Архипелага}
+itmdescr_mapWR4
+{
+Давай попробуем ещё раз.
+}
+
+itmname_mapWR5			{Карта Архипелага}
+itmdescr_mapWR5
+{
+Ещё раз.  
+}
+
+//---------------- TREASURE MAPS END --------------------------------------------------------------------------------------
 //-------------- WOOD TOWER ITEMS START -----------------------------------------------------------------------------------
 
-itmname_bladeladder2		{Ladder}
+itmname_bladeladder2		{Лестница}
 itmdescr_bladeladder2
 {
-The storm has moved this long ladder into the water.
+Шторм переместил эту длинную лестницу в воду.
 }
 
-itmname_bladeboathook_1		{Boathook}
+itmname_bladeboathook_1		{Лодочный Крюк}
 itmdescr_bladeboathook_1
 {
-It's very long and equipped with a hook, that's all.
+Он очень длинный и оснащен крючком, вот и всё.
 }
 
-itmname_bladeboathook_2		{Boathook}
+itmname_bladeboathook_2		{Лодочный Крюк}
 itmdescr_bladeboathook_2
 {
-It's very long and equipped with a hook, that's all.
+Он очень длинный и оснащен крючком, вот и всё.
 }
 
-itmname_blademegaphone		{Megaphone}
+itmname_blademegaphone		{Рупор}
 itmdescr_blademegaphone
 {
-An officers item made of finest brass.
+Офицерский предмет из тончайшей латуни.
 }
 
-itmname_bladewhistle		{Bosun's Pipe}
+itmname_bladewhistle		{Боцманская Труба}
 itmdescr_bladewhistle
 {
-Give the signals: 'Call mates', 'Carry on', 'The side' and 'Away boat'.
+Подавайте сигналы: "Зовите помощников", "Продолжайте", "На борт" и "Удаляющаяся лодка".
 }
 
-itmname_blademusket		{Musket}
+itmname_blademusket		{Мушкет}
 itmdescr_blademusket
 {
-Looks familiar.
+Выглядит знакомо.
 }
 
-itmname_bladespyglass5		{Spyglass}
+itmname_bladespyglass5		{Подзорная Труба}
 itmdescr_bladespyglass5
 {
 Useful from top of the tower
 }
 
-itmname_bladeflag_pir		{Rackham's Pirate Flag}
+itmname_bladeflag_pir		{Пиратский Флаг Рэкхема}
 itmdescr_bladeflag_pir
 {
-The black banner in the Charles Vane's style: A skull and two sabres. Later used by Jack Rackham.
+Чёрное знамя в стиле Чарльза Вейна: череп и две сабли. Позже был использован Джеком Рэкхемом.
 }
 
 //-------------- WOOD TOWER ITEMS END -------------------------------------------------------------------------------------
 //---------------- FLAGCHEST START ----------------------------------------------------------------------------------------
 
-itmname_flagchest_closed	{Flag Chest}
+itmname_flagchest_closed	{Сундук с Флагом}
 itmdescr_flagchest_closed
 {
-A closed box with the inscription La Concorde.
+Закрытая коробка с надписью 'Конкорд'.
 }
 
-itmname_flagchest_openA		{Flag Chest}
+itmname_flagchest_openA		{Сундук с Флагом}
 itmdescr_flagchest_openA
 {
-A large collection of Flags from many countries. Also two Black Flags.
+Большая коллекция флагов многих стран. Также два Черных флага.
 }
 
-itmname_flagchest_empty		{Empty Flag Chest}
+itmname_flagchest_empty		{Пустой Cундук с Флагом}
 itmdescr_flagchest_empty
 {
 
 }
 
-itmname_flagchest_openB		{Flag Chest}
+itmname_flagchest_openB		{Cундук с Флагом}
 itmdescr_flagchest_openB
 {
-A large collection of Flags from many countries. Also two Black Flags.
+Большая коллекция флагов многих стран. Также два Черных флага.
 }
 
 
-itmname_bladeflag_pir2		{Teach's Pirate Flag}
+itmname_bladeflag_pir2		{Пиратский Флаг Тича}
 itmdescr_bladeflag_pir2
 {
-The black flag of Edward Teach. AKA Blackbeard.
+Черный флаг Эдварда Тича. Он же Чёрная Борода.
 }
 
-itmname_bladeflag_HOL		{Dutch Flag}
+itmname_bladeflag_HOL		{Голландский Флаг}
 itmdescr_bladeflag_HOL
 {
 
 }
 
-itmname_bladeflag_ENG		{English Flag}
+itmname_bladeflag_ENG		{Английский Флаг}
 itmdescr_bladeflag_ENG
 {
 
 }
 
-itmname_bladeflag_FRA		{French Flag}
+itmname_bladeflag_FRA		{Французский Флаг}
 itmdescr_bladeflag_FRA
 {
 
 }
 
-itmname_bladeflag_POR		{Portuguese Flag}
+itmname_bladeflag_POR		{Португальский Флаг}
 itmdescr_bladeflag_POR
 {
 
 }
 
-itmname_bladeflag_SPA		{Spanish Flag}
+itmname_bladeflag_SPA		{Испанский Флаг}
 itmdescr_bladeflag_SPA
 {
 
 }
 
-itmname_bladeflag_PRE		{Prussian Flag}
+itmname_bladeflag_PRE		{Прусский Флаг}
 itmdescr_bladeflag_PRE
 {
 
 }
 
-itmname_bladeflag_IRE		{Irish Flag}
+itmname_bladeflag_IRE		{Ирландский Флаг}
 itmdescr_bladeflag_IRE
 {
 
 }
 
-itmname_bladeflag_SWE		{Swedish Flag}
+itmname_bladeflag_SWE		{Шведский Флаг}
 itmdescr_bladeflag_SWE
 {
 
 }
 
-itmname_bladeflag_HOL2		{Dutch Flag}
+itmname_bladeflag_HOL2		{Голландский Флаг}
 itmdescr_bladeflag_HOL2
 {
-"Staten General" from the Netherlands.
+"Генеральные Штаты" из Нидерландов.
 }
 
-itmname_bladeflag_AME		{American Flag}
+itmname_bladeflag_AME		{Американский Флаг}
 itmdescr_bladeflag_AME
 {
-The American First Navy Jack.
+Флаг первого американского флота.
 }
 
-itmname_bladeflag_SPA2		{Unknown Flag}
+itmname_bladeflag_SPA2		{Неизвестный Флаг}
 itmdescr_bladeflag_SPA2
 {
-It looks vaguely Spanish.
+Он отдаленно напоминает испанский флаг.
 }
 
 //---------------- FLAGCHEST END ------------------------------------------------------------------------------------------
 //--------------- BLADE WEAPONS START -------------------------------------------------------------------------------------
 
-itmname_bladeA2			{Blade}
+itmname_bladeA2			{Клинок}
 itmdescr_bladeA2
 {
-A rapier.
+Рапира.
 }
 
-itmname_bladeA4			{Blade}
-itmdescr_bladeA4
-{
-A rapier.
-}
-
-itmname_bladeA11		{Blade}
-itmdescr_bladeA11
-{
-A rapier.
-}
-
-itmname_bladeA17		{Blade}
-itmdescr_bladeA17
-{
-A saber.
-}
-
-itmname_bladeA5			{Blade}
+itmname_bladeA5			{Клинок}
 itmdescr_bladeA5
 {
-A saber.
+Сабля.
 }
 
-itmname_bladepclub203		{Pistol Club}
+itmname_bladeA11		{Клинок}
+itmdescr_bladeA11
+{
+Рапира.
+}
+
+itmname_bladeA17		{Клинок}
+itmdescr_bladeA17
+{
+Сабля.
+}
+
+itmname_bladeA4			{Клинок}
+itmdescr_bladeA4
+{
+Рапира.
+}
+
+itmname_bladepclub203		{Пистолетная Дубина}
 itmdescr_bladepclub203
 {
-A heavy pistol can be used as a club. Makes more damage than your fists.
+Тяжелый пистолет можно использовать как дубину. Наносит больше урона, чем ваши кулаки.
 }
 
-itmname_fake_pclub		{Pistol Club}
+itmname_fake_pclub		{Пистолетная Дубина}
 itmdescr_fake_pclub
 {
-A heavy pistol can be used as a club. Makes more damage than your fists.
+Тяжелый пистолет можно использовать как дубину. Наносит больше урона, чем ваши кулаки.
 }
 
-itmname_bladeplank		{Plank}
+itmname_bladeplank		{Доска}
 itmdescr_bladeplank
 {
-Maybe you can defend yourself with this plank. 
+Может быть, ты сможешь защититься с помощью этой доски.
 }
 
-itmname_bladeboom		{Boom}
+itmname_bladeboom		{Кусок Дерева}
 itmdescr_bladeboom
 {
-Just a piece of wood, hardly any dangerous weapon. 
+Просто кусок дерева, вряд ли это опасное оружие.
 }
 
-itmname_bladeanchor		{Anchor}
+itmname_bladeanchor		{Якорь}
 itmdescr_bladeanchor
 {
-A small but heavy anchor, it may cause some really bad damage. 
+Небольшой, но тяжелый якорь может нанести действительно серьезные повреждения.
 }
 
-itmname_bladeanchor_big		{Big Anchor}
+itmname_bladeanchor_big		{Большой Якорь}
 itmdescr_bladeanchor_big
 {
-A very heavy anchor. I'll try to block the suspension bridge with it. 
+Очень тяжелый якорь. Попробую заблокировать им подвесной мост.
 }
 
-itmname_fake_anchor		{Anchor}
+itmname_fake_anchor		{Якорь}
 itmdescr_fake_anchor
 {
-A small but heavy anchor, it may cause some really bad damage. 
+Небольшой, но тяжелый якорь может нанести действительно серьезные повреждения.
 }
 
-itmname_bladebroom		{Broom}
+itmname_bladebroom		{Метла}
 itmdescr_bladebroom
 {
-Now I can tidy up the place. 
+Теперь я могу прибраться здесь.
 }
 
-itmname_bladespade		{Spade}
+itmname_bladespade		{Лопата}
 itmdescr_bladespade
 {
-Yes, I can dig up the anchor on the shore now.
+Да, теперь я могу выкопать якорь на берегу.
 }
 
-itmname_bladeBB			{Blade}
+itmname_bladeBB			{Клинок}
 itmdescr_bladeBB
 {
-A Heavy Cutlass with a 'E' carved into the hilt.
+Тяжелая сабля с вырезанной на рукоятке буквой 'E'.
+}
+
+itmname_machete		 	{Мачете}
+itmdescr_machete
+{
+Используется для резки сахарного тростника.
+}
+
+itmname_BBDagger		{Кинжал}
+itmdescr_BBDagger
+{
+Выглядит скорее дорого, чем опасно. Достаточно резкий, чтобы вырезать картину из рамы.
+}
+
+itmname_snakewand		{Жезл Аарона}
+itmdescr_snakewand
+{
+Деревянная палка в форме змеи. Считается, что она обладает большой силой против всякого зла. 
+}
+
+itmname_bladepainting		{Изображение}
+itmdescr_bladepainting
+{
+Картина, которую я вырезал. Подпись ФХ 1634 г.
+}
+
+itmname_bladep205 		{Pistol}
+itmdescr_bladep205
+{
+Исключительно хорошо сделанная дуэльная пистолетная винтовка. Стреляет так же хорошо, как и выглядит. На цевье вырезано 'Ричардс'.
 }
 
 //--------------- BLADE WEAPONS END --------------------------------------------------------------------------------------
 //------------- PISTOL WEAPONS START -------------------------------------------------------------------------------------
 
-itmname_pistol201 	{Pistol}
+itmname_pistol201 	{Пистолет}
 itmdescr_pistol201
 {
-An expensive long pistol with the name 'Johnson'. Looks unused.
+Дорогой длинный пистолет под названием 'Джонсон'. Выглядит неиспользованным.
 }
 
-itmname_pistol202 	{Pistol}
+itmname_pistol202 	{Пистолет}
 itmdescr_pistol202
 {
-A small short-barrelled pistol black of smoke. 'CSAR' with childish letters.
+Маленький короткоствольный пистолет, черный от дыма. Нанесено на корпус 'ЦЕЗАРЬ' детскими буквами.
 }
 
-itmname_pistol203 	{Pistol}
+itmname_pistol203 	{Пистолет}
 itmdescr_pistol203
 {
-A heavy gun that seems to have been used as a club. 'Benj Hrngld' written on the barrel.
+Тяжелое ружье, которое, похоже, использовалось как дубинка. На стволе написано 'Бендж Хрнглд'.
 }
 
-itmname_pistol204 	{Pistol}
+itmname_pistol204 	{Пистолет}
 itmdescr_pistol204
 {
-A double-barrelled pistol with rich ornamnents. One lock is stuck though. 'Eden N. Carolina' engraved on the lock.
+Двуствольный пистолет с богатыми украшениями. Однако один замок застрял. На замке выгравировано 'Иден, Н. Каролина'.
 }
 
-itmname_pistol205 	{Pistol}
+itmname_pistol205 	{Пистолет}
 itmdescr_pistol205
 {
-An exceptionally well-crafted duelling pistol. It shoots as good as it looks. 'Richards' carved on the stock.
+Исключительно хорошо изготовленный дуэльный пистолет. Он стреляет так же хорошо, как и выглядит. На стволе вырезано 'Ричардс'.
 }
 
-itmname_pistol206 	{Pistol}
+itmname_pistol206 	{Пистолет}
 itmdescr_pistol206
 {
-Is it a pistol or a cannon? Sounds good too. 'Basilica Hands' with a very fine handwriting.
+Это пистолет или орудие? Звучит хорошо. На стволе вырезано очень мелким почерком 'Базилика Хэндс'.
 }
 
-itmname_pistolbelt 	{Blackbeard´s Pistol Belt}
+itmname_pistolbelt 	{Пояс с Пистолетом Чёрной Бороды}
 itmdescr_pistolbelt
 {
-You can carry six pistols with this belt used by Teach.
+С помощью этого пояса, используемого Тичем, можно носить 6 пистолетов.
 }
 
-itmname_pistol20 	{Blackbeard´s Set of Six Pistols}
+itmname_pistol20 	{Набор Чёрной Бороды из 6 Пистолетов}
 itmdescr_pistol20
 {
-Your crew believes that this small arsenal really belonged to Teach, maybe it's true. Only for a 'Master Gunfighter'.
+Ваша команда считает, что этот небольшой арсенал действительно принадлежал ему. Возможно, это правда... Нужен навык 'Мастер Стрельбы'.
 }
 
-itmname_pistol0		{Pocket Pistol}
+itmname_pistol0		{Карманный Пистолет}
 itmdescr_pistol0
 {
-One of two very small pistols for discreet use.
+Один из двух очень маленьких пистолетов для скрытого использования.
 }
 
-itmname_bladep0		{Pocket Pistol}
+itmname_bladep0		{Карманный Пистолет}
 itmdescr_bladep0
 {
-One of two very small pistols for discreet use.
+Один из двух очень маленьких пистолетов для скрытого использования.
 }
 
-itmname_pistolthrow5		{Throwing Pistols}
+itmname_pistolthrow5		{Метательные Пистолеты}
 itmdescr_pistolthrow5
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Когда у вас закончатся патроны, вы можете бросить пистолеты на врагов.
 }
 
-itmname_pistolthrow4		{Throwing Pistols}
+itmname_pistolthrow4		{Метательные Пистолеты}
 itmdescr_pistolthrow4
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Когда у вас закончатся патроны, вы можете бросить пистолеты на врагов.
 }
 
-itmname_pistolthrow3		{Throwing Pistols}
+itmname_pistolthrow3		{Метательные Пистолеты}
 itmdescr_pistolthrow3
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Когда у вас закончатся патроны, вы можете бросить пистолеты на врагов.
 }
 
-itmname_pistolthrow2		{Throwing Pistols}
+itmname_pistolthrow2		{Метательные Пистолеты}
 itmdescr_pistolthrow2
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Когда у вас закончатся патроны, вы можете бросить пистолеты на врагов.
 }
 
-itmname_pistolthrow1		{Throwing Pistols}
+itmname_pistolthrow1		{Метательные Пистолеты}
 itmdescr_pistolthrow1
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Когда у вас закончатся патроны, вы можете бросить пистолеты на врагов.
 }
 
-itmname_pistolbladeBB		{Blade}
+itmname_pistolbladeBB		{Клинок}
 itmdescr_pistolbladeBB
 {
-Another Heavy Cutlass with a 'T' carved into the hilt. Yes, I have read he used two blades.
+Ещё один тяжелый кортик с вырезанной на рукояти буквой 'T'. Да, я читал, что он использовал два клинка.
+}
+
+itmname_pistolwhip		{Кнут}
+itmdescr_pistolwhip
+{
+Однохвостый кнут из плетеной кожи, предназначенный как орудие для работы со скотом. Используйте его, чтобы разоружить врагов.
+}
+
+itmname_pistolcannon		{Ручное Орудие}
+itmdescr_pistolcannon
+{
+Зарядите его 6 порохами и 6 картечными выстрелами, и карабин сможет уничтожить целую группу врагов. Но следите за отдачей!
+}
+
+itmname_pistolcannon1		{Ручное Орудие}
+itmdescr_pistolcannon1
+{
+У вас должен быть пояс для ношения этого маленького, но тяжелого орудия.
+}
+
+itmname_pistolcenserD		{Кадило}
+itmdescr_pistolcenserD
+{
+Этот искусно вырезанный золотой сосуд используется для возжигания благовоний. Защищает от всего Злого.
+}
+
+itmname_pistolbook71		{Поврежденная Книга}
+itmdescr_pistolbook71
+{
+Многие страницы были вырваны. Я вижу там один из этих символов. Это может быть...? 
 }
 
 //--------------- PISTOL WEAPONS END -------------------------------------------------------------------------------------
 //------------------- TOOLS START ----------------------------------------------------------------------------------------
 
-itmname_bladeaxe4		{Axe}
+itmname_bladeaxe4		{Топор}
 itmdescr_bladeaxe4
 {
-This creepy big axe looks very much like an executioner's axe. 
+Этот жуткий большой топор очень похож на топор палача.
 }
 
-itmname_bladeaxe5		{Small Axe}
+itmname_bladeaxe5		{Маленький Топор}
 itmdescr_bladeaxe5
 {
-A small hand axe, nothing special with it. 
+Маленький ручной топорик, ничего особенного в нём нет.
 }
 
-itmname_bladepickaxe1		{Tool}
+itmname_bladepickaxe1		{Инструмент}
 itmdescr_bladepickaxe1
 {
-A long gardening tool(?) or maybe something used in the mines. 
+Длинный садовый инструмент (?) или, может быть, что-то, используемое в шахтах.
 }
 
-itmname_bladeirontool		{Tool}
+itmname_bladeirontool		{Инструмент}
 itmdescr_bladeirontool
 {
-Could be used as a crowbar. 
+Можно использовать как лом.
 }
 
-itmname_bladehammer		{Hammer}
+itmname_bladehammer		{Молоток}
 itmdescr_bladehammer
 {
-A short but very heavy hammer. 
+Короткий, но очень тяжелый молоток.
 }
 
-itmname_pistolhammer		{Hammer}
+itmname_pistolhammer		{Молоток}
 itmdescr_pistolhammer
 {
-A short but very heavy hammer.
+Короткий, но очень тяжелый молоток.
 }
 
-itmname_bladepickaxe2		{Pickaxe}
+itmname_bladepickaxe2		{Кирка}
 itmdescr_bladepickaxe2
 {
-A long sharp tool used in the mining business. 
+Длинный острый инструмент, используемый в горнодобывающем деле.
 }
 
-itmname_bladesaw		{Saw}
+itmname_bladesaw		{Пила}
 itmdescr_bladesaw
 {
-A carpenter's robust tool. 
+Надежный инструмент плотника.
 }
 
-itmname_tool1			{Carpenter Tools}
+itmname_tool1			{Плотницкие Инструменты}
 itmdescr_tool1
 {
-Two planes and a pair of compasses.
+Две плоскости и пара компасов.
 }
 
-itmname_tool2			{Carpenter Tools}
+itmname_tool2			{Плотницкие Инструменты}
 itmdescr_tool2
 {
-A pair of Carpenter axes.
+Пара плотницких топоров.
 }
 
-itmname_tool3			{Carpenter Tools}
+itmname_tool3			{Плотницкие Инструменты}
 itmdescr_tool3
 {
-A hammer and three chisels.
+Молоток и три зубила.
 }
 
-itmname_tool4			{Carpenter Tools}
+itmname_tool4			{Плотницкие Инструменты}
 itmdescr_tool4
 {
-A drill and some other things.
+Дрель и некоторые другие предметы.
 }
 
-itmname_tool5			{Carpenter Tools}
+itmname_tool5			{Плотницкие Инструменты}
 itmdescr_tool5
 {
-Two saws of different size.
+Две пилы разного размера.
 }
 
-itmname_tool6			{Carpenter Tools}
+itmname_tool6			{Плотницкие Инструменты}
 itmdescr_tool6
 {
-A heavy tool that could be used as a lever and more.
+Тяжелый инструмент, который можно было бы использовать как рычаг и не только.
 }
 
-itmname_pistoltoolchest1	{Empty Carpenters Chest}
+itmname_pistoltoolchest1	{Пустой Плотницкий Сундук}
 itmdescr_pistoltoolchest1
 {
-Collect all the Carpenter Tools. Maybe you find something useful.
+Соберите все плотницкие инструменты. Может быть, вы найдете что-нибудь полезное.
 }
 
-itmname_pistoltoolchest2	{Filled Carpenters Chest}
+itmname_pistoltoolchest2	{Заполненный Плотницкий Сундук}
 itmdescr_pistoltoolchest2
 {
-The chest is fully equipped with Carpenter Tools.
+Сундук полностью укомплектован плотницкими инструментами.
 }
 
-itmname_pistolspade		{Spade}
+itmname_pistolspade		{Лопатка}
 itmdescr_pistolspade
 {
-A gardener's tool or what? 
+Инструмент садовника что-ли?
 }
 
-itmname_paper_clip		{Wire}
+itmname_paper_clip		{Проволока}
 itmdescr_paper_clip
 {
-Not sure what this little piece of wire is. Maybe I can make something out of it?
+Не знаю, что это за маленький кусочек проволоки. Может быть, я смогу сделать из него что-нибудь?
 }
 
-itmname_paper_clip2		{Hook}
+itmname_paper_clip2		{Крючок}
 itmdescr_paper_clip2
 {
-I have bent it to a Hook. Now let's use it!
+Я согнул проволоку в крючок. Теперь давайте использовать его!
+}
+
+itmname_toolbox_filled		{Ящик для Инструментов}
+itmdescr_toolbox_filled
+{
+Он тяжелый - давайте посмотрим, что внутри!
+}
+
+itmname_toolbox_empty		{Пустой Ящик для Инструментов}
+itmdescr_toolbox_empty
+{
+
+}
+
+itmname_pitchfork		{Вилы}
+itmdescr_pitchfork
+{
+Слишком неуклюжие в качестве оружия, но в любом случае могут быть полезны.
 }
 
 //------------------- TOOLS END -------------------------------------------------------------------------------------------
 //----------------- ALCHEMY ITEMS START -----------------------------------------------------------------------------------
 
-itmname_bladecauldron		{Cauldron}
+itmname_bladecauldron		{Котелок}
 itmdescr_bladecauldron
 {
-A heavy cast iron Cauldron.
+Тяжелый чугунный котелок.
 }
 
-itmname_bladecauldron_w		{Cauldron}
+itmname_bladecauldron_w		{Котелок}
 itmdescr_bladecauldron_w
 {
-The Cauldron is filled with Water.
+Котелок наполнен водой.
 }
 
-itmname_bladetop		{Top}
+itmname_bladetop		{Вершина}
 itmdescr_bladetop
 {
-A dirty glass item. Should be placed on top of the Retort.
+Грязный стеклянный предмет. Должен быть размещен на вершине.
 }
 
-itmname_pistolretort		{Retort}
+itmname_pistolretort		{Перегонка}
 itmdescr_pistolretort
 {
-It's here the distillation takes place.
+Именно здесь происходит дистилляция.
 }
 
-itmname_pistolglass_tube	{Glass Tube}
+itmname_pistolglass_tube	{Стеклянная Трубка}
 itmdescr_pistolglass_tube
 {
-For connecting the Top with a Reciever.
+Для соединения верхней части с трубкой.
 }
 
-itmname_pistolsalt		{Salt}
+itmname_pistolsalt		{Соль}
 itmdescr_pistolsalt
 {
-A jar full of ordinary salt.
+Банка, полная обычной соли.
 }
 
-itmname_pistolnitre		{Nitre}
+itmname_pistolnitre		{Селитра}
 itmdescr_pistolnitre
 {
-A leather sack with stinking saltpeter.
+Кожаный мешок с вонючей селитрой.
 }
 
-itmname_pistolcopperas		{Copperas}
+itmname_pistolcopperas		{Купорос}
 itmdescr_pistolcopperas
 {
-A wooden box with green vitriol.
+Деревянная шкатулка с зеленым купоросом.
 }
 
 //Q2
 
-itmname_pistolfunnel		{Funnel}
+itmname_pistolfunnel		{Воронка}
 itmdescr_pistolfunnel
 {
-A glass funnel.
+Стеклянная воронка.
 }
 
-itmname_pistolcloth		{Filter}
+itmname_pistolcloth		{Фильтр}
 itmdescr_pistolcloth
 {
-A clean piece of linen cloth.
+Чистый кусок льняной ткани.
 }
 
-itmname_pistolbucket_dung	{Horse Dung}
+itmname_pistolbucket_dung	{Лошадиный Навоз}
 itmdescr_pistolbucket_dung
 {
-Even though the bucket has a lid it stinks like hell.
+Несмотря на то, что у ведра есть крышка, воняет оно адски.
 }
 
-itmname_pistolstonebasket_R	{Mercury Sulfide}
+itmname_pistolstonebasket_R	{Сульфид Ртути}
 itmdescr_pistolstonebasket_R
 {
-A chemical compound composed of the chemical elements mercury and sulphur.
+Химическое соединение, состоящее из химических элементов ртути и серы.
 }
 
-itmname_pistolstonebasket_G	{Limestone}
+itmname_pistolstonebasket_G	{Известняк}
 itmdescr_pistolstonebasket_G
 {
-A sedimentary rock composed largely of calcium carbonate.
+Осадочная порода, состоящая в основном из карбоната кальция.
 }
 
-itmname_pistolstonebasket_M	{Antimony}
+itmname_pistolstonebasket_M	{Сурьма}
 itmdescr_pistolstonebasket_M
 {
-A lustrous gray metalloid.
+Блестящий серый металлоид.
 }
 
-itmname_pistolstonebasket_B	{Black Antimony}
+itmname_pistolstonebasket_B	{Чёрная Сурьма}
 itmdescr_pistolstonebasket_B
 {
-A common sulfide of antimony.
+Обычный сульфид сурьмы.
 }
 
-itmname_pistolsulphur_WR	{Sulphur}
+itmname_pistolsulphur_WR	{Сера}
 itmdescr_pistolsulphur_WR
 {
-Elemental sulphur is a bright yellow crystalline solid at room temperature.
+Элементарная сера представляет собой ярко-желтое кристаллическое твердое вещество при комнатной температуре.
 }
 
-itmname_pistolcharcoal_WR	{Coal}
+itmname_pistolcharcoal_WR	{Уголь}
 itmdescr_pistolcharcoal_WR
 {
-Charcoal is usually produced by slow pyrolysis, the heating of wood in the absence of oxygen.
+Древесный уголь обычно получают путем медленного пиролиза, нагревания древесины в отсутствие кислорода.
 }
 
-itmname_pistolretort3		{Wax, fat}
+itmname_pistolretort3		{Воск, жир}
 itmdescr_pistolretort3
 {
-Beeswax and butter. Very greasy.
+Пчелиный воск и сливочное масло. Очень жирное.
 }
 
-itmname_pistolcalciumsack	{Calcium Carbonate}
+itmname_pistolcalciumsack	{Карбонат Кальция}
 itmdescr_pistolcalciumsack
 {
-Produced from limestone and water.
+Производится из известкового камня и воды.
 }
 
 //----------------- ALCHEMY ITEMS END -------------------------------------------------------------------------------------
 //----------------- ALCHEMY BOTTLES START ---------------------------------------------------------------------------------
 
-itmname_bladebottle_CE0		{Small Empty Bottle}
+itmname_bladebottle_CE0		{Маленькая Пустая Бутылка}
 itmdescr_bladebottle_CE0
 {
  
 }
 
-itmname_bladebottle_CW1		{Water}
+itmname_bladebottle_CW1		{Вода}
 itmdescr_bladebottle_CW1
 {
-A bottle half filled with water.
+Бутылка, наполовину наполненная водой.
 }
 
-itmname_bladebottle_CT1_sulf	{Sulfuric Acid}
+itmname_bladebottle_CT1_sulf	{Серная Кислота}
 itmdescr_bladebottle_CT1_sulf
 {
-Known as Oil of Vitriol to the alchemists. A base ingredient - several other acids can be produced from this liquid. Be careful when mixing with water!
+Известен алхимикам как купоросное масло. Базовый ингредиент - из этой жидкости можно получить несколько других кислот. Будьте осторожны при смешивании с водой!
 }
 
-itmname_bladebottle_CT1_nitr	{Nitric Acid}
+itmname_bladebottle_CT1_nitr	{Азотная Кислота}
 itmdescr_bladebottle_CT1_nitr
 {
-Be careful when mixing with water!
+Будьте осторожны при смешивании с водой!
 }
 
-itmname_bladebottle_CT1_hydr	{Hydrochloric Acid}
+itmname_bladebottle_CT1_hydr	{Соляная Кислота}
 itmdescr_bladebottle_CT1_hydr
 {
-Be careful when mixing with water!
+Будьте осторожны при смешивании с водой!
 }
 
-itmname_bladebottle_CT1_hydrnitr	{Mixture}
+itmname_bladebottle_CT1_hydrnitr	{Смесь}
 itmdescr_bladebottle_CT1_hydrnitr
 {
-1 part each of Hydrochloric and Nitric Acid.
+По 1 части соляной и азотной кислот.
 }
 
 
-itmname_bladebottle_CT2_sulf_w	{Diluted Sulfuric Acid}
+itmname_bladebottle_CT2_sulf_w	{Разбавленная Серная Кислота}
 itmdescr_bladebottle_CT2_sulf_w
 {
-Sulfuric Acid diluted with water. Dissolves many metals.
+Серную кислоту разбавляют водой. Растворяет многие металлы.
 }
 
-itmname_bladebottle_CT2_sulf_c	{Mixture}
+itmname_bladebottle_CT2_sulf_c	{Смесь}
 itmdescr_bladebottle_CT2_sulf_c
 {
-Sulfuric Acid mixed with nitre.
+Серная кислота, смешанная с селитрой.
 }
 
-itmname_bladebottle_CT2_nitr_w	{Aqua Fortis}
+itmname_bladebottle_CT2_nitr_w	{Азотная Кислота}
 itmdescr_bladebottle_CT2_nitr_w
 {
-It was used in alchemy as a solvent for dissolving silver and most other metals with notable exceptions of gold and platinum.
+Она используется в алхимии в качестве растворителя для растворения серебра и большинства других металлов, за заметным исключением золота и платины.
 }
 
-itmname_bladebottle_CT2_hydr	{Hydrochloric Acid}
+itmname_bladebottle_CT2_hydr	{Соляная Кислота}
 itmdescr_bladebottle_CT2_hydr
 {
-Be careful when mixing with water!
+Будьте осторожны при смешивании с водой!
 }
 
-itmname_bladebottle_CT2_hydrnitr	{Mixture}
+itmname_bladebottle_CT2_hydrnitr	{Смесь}
 itmdescr_bladebottle_CT2_hydrnitr
 {
-1 part each of Hydrochloric Acid and Nitric Acid.
+По 1 части соляной и азотной кислот.
 }
 
-itmname_bladebottle_CG2		{Mixture}
+itmname_bladebottle_CG2		{Смесь}
 itmdescr_bladebottle_CG2
 {
-Copperas mixed with water.
+Медь, смешанная с водой.
 }
 
-itmname_bladebottle_CA2		{Aqua Regis}
+itmname_bladebottle_CA2		{Царская Водка}
 itmdescr_bladebottle_CA2
 {
-It was so named because it can dissolve the so-called "royal metals," or noble metals, gold and platinum.
+Она была названа так потому, что способна растворять так называемые "царские металлы", или благородные металлы, золото и платину.
 }
 
-itmname_bladebottle_CP2		{Champagne}
+itmname_bladebottle_CP2		{Шампанское}
 itmdescr_bladebottle_CP2
 {
-Imported from France or maybe Russia?
+Привезен из Франции или, может быть, из России?
 }
 
-itmname_bladebottle_CB1		{Alcohol}
+itmname_bladebottle_CB1		{Алкоголь}
 itmdescr_bladebottle_CB1
 {
-Almost pure alcohol that has to be diluted with water before drinking it.
+Почти чистый спирт, который перед употреблением нужно разбавить водой.
 }
 
-itmname_bladebottle_CB2		{Cognac?}
+itmname_bladebottle_CB2		{Коньяк?}
 itmdescr_bladebottle_CB2
 {
-If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
+Если выдержать его 10 лет или около того, его можно было бы назвать коньяком. Сейчас у него очень сильный и ... непривычный вкус. 
 }
 
-itmname_Cognac			{Cognac?}
+itmname_Cognac			{Коньяк?}
 itmdescr_Cognac
 {
-If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
+Если выдержать его 10 лет или около того, его можно было бы назвать коньяком. Сейчас у него очень сильный и ... непривычный вкус.  
 }
 
-itmname_bladebottle_CR2		{Communion Wine}
+itmname_bladebottle_CR2		{Вино для Причастия}
 itmdescr_bladebottle_CR2
 {
-Looks like ordinary Red Wine to me.
+Для меня выглядит как обычное красное вино.
 }
 
-itmname_potionwine2		{Communion Wine}
+itmname_potionwine2		{Вино для Причастия}
 itmdescr_potionwine2
 {
-Looks like ordinary Red Wine to me.
+Для меня выглядит как обычное красное вино.
 }
 
-//Q2 pär
+//Q2
 
-itmname_bladebottle_BE0		{Big Empty Bottle}
+itmname_bladebottle_BE0		{Большая Пустая Бутылка}
 itmdescr_bladebottle_BE0
 {
  
 }
 
-itmname_bladebottle_BTc_hydr	{Mixture 1}
+itmname_bladebottle_BTc_hydr	{Смесь 1}
 itmdescr_bladebottle_BTc_hydr
 {
-Salt and Sulfuric Acid.
+Соль и Серная Кислота.
 }
 
-itmname_bladebottle_CV1_ss	{Mixture 2}
+itmname_bladebottle_CV1_ss	{Смесь 2}
 itmdescr_bladebottle_CV1_ss
 {
-Sodium Sulfate.
+Сульфат Натрия.
 }
 
-itmname_bladebottle_BG2		{Mixture 3}
+itmname_bladebottle_BG2		{Смесь 3}
 itmdescr_bladebottle_BG2
 {
-Sodium Sulfate, Calcium Carbonate and Coal.
+Сульфат Натрия, Карбонат Кальция и Уголь.
 }
 
-itmname_bladebottle_CV2		{Mixture 4}
+itmname_bladebottle_CV2		{Смесь 4}
 itmdescr_bladebottle_CV2
 {
-Sodium Carbonate and Calcium Sulfide.
+Карбонат Натрия и Сульфат Кальция.
 }
 
-itmname_bladebottle_BTc_mix3	{Mixture 5}
+itmname_bladebottle_BTc_mix3	{Смесь 5}
 itmdescr_bladebottle_BTc_mix3
 {
-Sodium Carbonate, Calcium Sulfide and water.
+Карбонат Натрия, Сульфат Кальция и Вода.
 }
 
-itmname_bladebottle_CV1_sc	{Mixture 6}
+itmname_bladebottle_CV1_sc	{Смесь 6}
 itmdescr_bladebottle_CV1_sc
 {
-Sodium Carbonate.
+Карбонат натрия.
 }
 
-itmname_bladebottle_CG1		{Grinded Limestone}
+itmname_bladebottle_CG1		{Измельченный Известняк}
 itmdescr_bladebottle_CG1
 {
-
+Используется с целью снижения вредной для большинства растений кислотности почвы и обогащения её кальцием.
 }
 
-itmname_bladebottle_BY2_mix7	{Mixture 7}
+itmname_bladebottle_BY2_mix7	{Смесь 7}
 itmdescr_bladebottle_BY2_mix7
 {
-Sulphur, Sal Ammoniac, Calcium Oxide and water.
+Сера, Нашатырный Спирт, Оксид Кальция и Вода.
 }
 
-itmname_bladebottle_BY1_mix7	{Mixture 7}
+itmname_bladebottle_BY1_mix7	{Смесь 7}
 itmdescr_bladebottle_BY1_mix7
 {
-Sulphur, Sal Ammoniac, Calcium Oxide and water.
+Сера, Нашатырный Спирт, Оксид Кальция и Вода.
 }
 
-itmname_bladebottle_CV1_cao	{Calcium Oxide}
+itmname_bladebottle_CV1_cao	{Оксид Кальция}
 itmdescr_bladebottle_CV1_cao
 {
 
 }
 
-itmname_bladebottle_CV1_NH4Cl	{Sal Ammoniac}
+itmname_bladebottle_CV1_NH4Cl	{Нашатырный Спирт}
 itmdescr_bladebottle_CV1_NH4Cl
 {
-Ammonium Chloride.
+Хлорид аммония.
 }
 
-itmname_bladebottle_GY2		{Mixture 8}
+itmname_bladebottle_GY2		{Смесь 8}
 itmdescr_bladebottle_GY2
 {
-A mixture of H2S and NH3 gases.
+Смесь газов H2S (Сероводорода) и NH3 (Аммиака).
 }
 
-itmname_bladebottle_BS2_LH	{Liquor Hepatis}
+itmname_bladebottle_BS2_LH	{Ликёр}
 itmdescr_bladebottle_BS2_LH
 {
 
 }
 
-itmname_bladebottle_BS1_LH	{Liquor Hepatis}
+itmname_bladebottle_BS1_LH	{Ликёр}
 itmdescr_bladebottle_BS1_LH
 {
 
 }
 
-itmname_bladebottle_BY2_mix9	{Mixture 9}
+itmname_bladebottle_BY2_mix9	{Смесь 9}
 itmdescr_bladebottle_BY2_mix9
 {
-Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.
+Сера, Карбонат Натрия, Оксид Кальция и Сурьма.
 }
 
-itmname_bladebottle_CB1_mix9	{Mixture 10}
+itmname_bladebottle_CB1_mix9	{Смесь 10}
 itmdescr_bladebottle_CB1_mix9
 {
-Dried Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
+Сухая Сера, Карбонат Натрия, Оксид Кальция и Сурьма.
 }
 
-itmname_bladebottle_CB2_mix9	{Mixture 10}
+itmname_bladebottle_CB2_mix9	{Смесь 10}
 itmdescr_bladebottle_CB2_mix9
 {
-Dried Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
+Сухая Сера, Карбонат Натрия, Оксид Кальция и Сурьма.
 }
 
-itmname_bladebottle_CC2_bps	{Black Pulvis Solaris}
+itmname_bladebottle_CC2_bps	{Смесь Металлической Сурьмы}
 itmdescr_bladebottle_CC2_bps
 {
 
 }
 
-itmname_bladebottle_CC1		{Grinded Black Antimony}
+itmname_bladebottle_CC1		{Измельченная Чёрная Сурьма}
 itmdescr_bladebottle_CC1
 {
 
 }
 
-itmname_bladebottle_BP1_ps	{Pulvis Solaris}
+itmname_bladebottle_BP1_ps	{Солнечная Пыль}
 itmdescr_bladebottle_BP1_ps
 {
-Which means Powder of the Sun.
+Что означает "Солнечная Пыль".
 }
 
-itmname_bladebottle_BP2_ps	{Pulvis Solaris}
+itmname_bladebottle_BP2_ps	{Солнечная Пыль}
 itmdescr_bladebottle_BP2_ps
 {
-Which means Powder of the Sun.
+Что означает "Солнечная Пыль".
 }
 
-itmname_bladebottle_CQ1		{Mercury}
+itmname_bladebottle_CQ1		{Ртуть}
 itmdescr_bladebottle_CQ1
 {
 
 }
 
-itmname_bladebottle_CT2_mix11	{Mixture 11}
+itmname_bladebottle_CT2_mix11	{Смесь 11}
 itmdescr_bladebottle_CT2_mix11
 {
-Mercury and Nitric Acid.
+Ртуть и азотная кислота.
 }
 
-itmname_bladebottle_CA2_mix11	{Mixture 12}
+itmname_bladebottle_CA2_mix11	{Смесь 12}
 itmdescr_bladebottle_CA2_mix11
 {
-Mercury Oxide and more.
+Оксид ртути и многое другое.
 }
 
-itmname_bladebottle_CR1		{Mercury Oxide}
+itmname_bladebottle_CR1		{Оксид Ртути}
 itmdescr_bladebottle_CR1
 {
 
 }
 
-itmname_bladebottle_CR2_rps	{Red Pulvis Solaris}
+itmname_bladebottle_CR2_rps	{Солнечная Красная Пыль}
 itmdescr_bladebottle_CR2_rps
 {
 
 }
 
-itmname_bladebottle_BAU		{Philospher's Stone}
+itmname_bladebottle_BAU		{Философский Камень}
 itmdescr_bladebottle_BAU
 {
-Is it really?
+Это действительно так?
 }
 
 //----------------- ALCHEMY BOTTLES END -----------------------------------------------------------------------------------
 //------------------- HAT ITEMS START -------------------------------------------------------------------------------------
 
-itmname_BB_hatA1		{Hat}
+itmname_BB_hatA1		{Треуголка}
 itmdescr_BB_hatA1
 {
-A large Tricorn with a bad smell of burned fuses. 
+Большая Треуголка с неприятным запахом сгоревших фитилей.
 }
 
-itmname_BB_hatB			{Hat}
+itmname_BB_hatB			{Треуголка}
 itmdescr_BB_hatB
 {
-Not much too see here... or is it? 
+Здесь не на что особо смотреть... или нет?
 }
 
-itmname_BB_hatC			{Hat}
+itmname_BB_hatC			{Треуголка}
 itmdescr_BB_hatC
 {
-Ha! He had a Key hidden inside.
+Ха! Внутри у неё был спрятан ключ.
 }
 
-itmname_BB_hatA2		{Hat}
+itmname_BB_hatA2		{Треуголка}
 itmdescr_BB_hatA2
 {
-A large Tricorn with a bad smell of burned fuses.
-I just have to try it on anyway.
+Большая треуголка с неприятным запахом сгоревших фитилей.
+Я просто должен примерить её в любом случае.
 }
 
-itmname_BB_key			{Key}
+itmname_BB_key			{Ключ}
 itmdescr_BB_key
 {
-Teach's Key. Must be important when hidden so carefully.
+Ключ Тича. Должен быть важным, если его так тщательно прячут.
 }
 
 //------------------- HAT ITEMS END ---------------------------------------------------------------------------------------
 //------------------OUTFIT ITEMS START ------------------------------------------------------------------------------------
 
-itmname_bandages_trousersX	{Bandages and Trousers}
+itmname_bandages_trousersX	{Бинты и Брюки}
 itmdescr_bandages_trousersX
 {
-Bandages - just what I need! It looks like there's something in the Trousers pocket. 
+Бинты - как раз то, что мне нужно! Похоже, что в кармане брюк что-то есть.
 }
 
-itmname_bandages_trousersQ	{Bandages and Trousers}
+itmname_bandages_trousersQ	{Бинты и Брюки}
 itmdescr_bandages_trousersQ
 {
-First I have to dress the wound then I'll try the badly worn trousers.
+Сначала я должен перевязать рану, а потом примерить сильно поношенные брюки.
 }
 
 itmname_shirt_shoes		{Shirt and Shoes}
 itmdescr_shirt_shoes
 {
-The Shoes look good but he Shirt..!
+Обувь выглядит хорошо, но рубашка...!
 }
 
-itmname_socks_sewing		{Sewing Kit and a Pair of Socks}
+itmname_socks_sewing		{Набор для Вязания и Пара Носков}
 itmdescr_socks_sewing
 {
-Maybe I can repair my old shirt now. I like the Blue Socks.
+Может быть, теперь я смогу обновить свою старую рубашку. Мне нравятся синие носки.
 }
 
-itmname_waistcoat		{Waistcoat}
+itmname_waistcoat		{Жилет}
 itmdescr_waistcoat
 {
-The Waistcoat reminds me of the one I used to wear before I was robbed.
+Жилет напоминает мне тот, который я носил до того, как меня ограбили.
 }
 
-itmname_sash			{Sash}
+itmname_sash			{Пояс}
 itmdescr_sash
 {
-Yes yes yes. A Red Sash for a Pirate Captain!
+Да, да, да. Красный пояс для капитана пиратов!
+}
+
+itmname_blue_uniform		{Офицерская Форма}
+itmdescr_blue_uniform
+{
+Синий китель для офицера в стиле Вудса Роджерса. Принимает ли он своих собственных офицеров?
+}
+
+itmname_Pell_outfit		{Конфискованная Одежда}
+itmdescr_Pell_outfit
+{
+Полное снаряжение боцмана, включая пару ботинок.
+}
+
+itmname_long_johns		{Кальсоны}
+itmdescr_long_johns
+{
+Мои старые кальсоны с заплаткой.
+}
+
+itmname_long_johns_map		{Скрытая Карта}
+itmdescr_long_johns_map
+{
+Я спрятал карту за нашивкой.
+}
+
+itmname_bandana			{Бандана}
+itmdescr_bandana
+{
+Моя обычная оранжевая бандана.
+}
+
+itmname_bandana_key		{Скрытый Ключ}
+itmdescr_bandana_key
+{
+Я спрятал ключ в своей бандане.
 }
 
 
 //------------------OUTFIT ITEMS END---------------------------------------------------------------------------------------
+//----------------- TREASURE ITEMS START -------------------------------------------------------------------------------------
+
+itmname_gold_bars		{Золотые Слитки}
+itmname_silver_bars		{Серебряные Слитки}
+itmname_gold_coins		{Золотые Монеты}
+itmname_valuable_weapons	{Ценное Оружие}
+itmname_pistolcenserE		{Пустое Кадило}
+itmdescr_pistolcenserE
+{
+Этот искусно вырезанный золотой сосуд может стоить больших денег.
+}
+
+itmname_gold_chalice		{Чаша}
+itmdescr_gold_chalice
+{
+Чаша из чистого золота, используемая для священного вина.
+}
+
+itmname_moon_symbol		{Символ Луны}
+itmdescr_moon_symbol
+{
+Золотое ожерелье с могущественным символом Луны. Обеспечивает защиту владельцу.
+}
+
+itmname_incas_idol		{Золотой Идол}
+itmdescr_incas_idol
+{
+Золотой идол Хурукацелитипочтли, бога смерти инков.
+}
+
+itmname_incas_collection	{Коллекция Сокровищ Инков}
+itmdescr_incas_collection
+{
+Коллекция сокровищ инков.
+}
+
+//----------------- TREASURE ITEMS END ------------------------------------------------------------------------------------
 //----------------- OTHER ITEMS START -------------------------------------------------------------------------------------
 
-itmname_tankard			{Tankard}
+itmname_tankard			{Кружка}
 itmdescr_tankard
 {
-A large tin tankard - maybe worth some money? 
+Большая жестяная кружка - может быть, она стоит немного денег?
 }
 
-itmname_plate			{Plate}
+itmname_plate			{Тарелка}
 itmdescr_plate
 {
-Blue china imported by the East India Company. 
+Голубой фарфор, импортированный Ост-Индской компанией.
 }
 
-itmname_copper_cauldron		{Cauldron}
+itmname_copper_cauldron		{Котелок}
 itmdescr_copper_cauldron
 {
-A heavy copper cauldron. 
+Тяжелый медный котелок.
 }
 
-itmname_fish			{Fish}
+itmname_fish			{Рыба}
 itmdescr_fish
 {
-It may be good for your brain to eat fish, but your crew has no higher thoughts of a fishmonger Captain.
+Возможно, для вашего мозга полезно есть рыбу, но у вашей команды нет более высоких помыслов, чем у капитана-рыболова.
 }
 
-itmname_cannonballs		{Cannonballs}
+itmname_cannonballs		{Пушечные Ядра}
 itmdescr_cannonballs
 {
-A set of Cannonballs, heavier than you thought?
+Набор пушечных ядер, тяжелее чем вы думали?
 }
 
-itmname_glasses			{Glasses}
+itmname_glasses			{Очки}
 itmdescr_glasses
 {
-A pair of worn but fine glasses. Hope Selkirk may have use for them. 
+Пара потертых, но прекрасных очков. Надеюсь, они пригодятся Селкирку.
 }
 
-itmname_chain			{Chain and handcuffs}
+itmname_chain			{Цепь и Кандалы}
 itmdescr_chain
 {
-A prison startkit maybe. I try to get rid of these to anyone in the Gunroom...
+Может быть, тюремный стартовый комплект. Я постараюсь избавиться от него в Оружейной комнате...
 }
 
-itmname_corkscrews		{Corkscrews}
+itmname_corkscrews		{Штопоры}
 itmdescr_corkscrews
 {
-A set of corkscrews for different size of bottles. Could be useful for some other purpose? 
+Набор штопоров для бутылок разного размера. Может быть полезно для какой-то другой цели?
 }
 
-itmname_emptysack		{Empty Sack}
+itmname_emptysack		{Пустой Мешок}
 itmdescr_emptysack
 {
-An old sack used to transport sugar canes.
+Старый мешок, используемый для сахарного тростника.
 }
 
-itmname_glue			{Glue}
+itmname_glue			{Клей}
 itmdescr_glue
 {
-Ordinary glue for papers.
+Обычный клей для бумаги.
 }
 
-itmname_blue_uniform		{Officers Uniform}
-itmdescr_blue_uniform
-{
-A blue jacket for an officer in the Woodes Rogers style. Does he take his own officers into custody? 
-}
-
-itmname_elevator_ropes		{Long Ropes}
+itmname_elevator_ropes		{Длинные Веревки}
 itmdescr_elevator_ropes
 {
-Four long ropes from bottom of the sea. 
+Четыре длинные веревки со дна моря.
 }
 
-itmname_raft_ropes		{Long Rope}
+itmname_raft_ropes		{Длинная Веревка}
 itmdescr_raft_ropes
 {
-A very long and strong rope. 
+Очень длинная и прочная веревка. 
 }
 
-itmname_bladelever		{Lever}
+itmname_bladelever		{Рычаг}
 itmdescr_bladelever
 {
-I know where these levers should be placed. 
+Я знаю, где должны быть расположены эти рычаги.
 }
 
-itmname_bladelever3		{Lever}
+itmname_bladelever3		{Рычаг}
 itmdescr_bladelever3
 {
-I know where this lever should be placed. 
+Я знаю, где должен быть расположен этот рычаг.
 }
 
-itmname_bladewood	{Wood}
+itmname_bladewood	{Древесина}
 itmdescr_bladewood
 {
-Some dry wood from the rainforest.
+Немного сухой древесины из тропического леса.
 }
 
-itmname_bladebarrel	{Rum Barrel}
+itmname_bladewood2		{Древесина}
+itmdescr_bladewood2
+{
+Немного сухой древесины из тропического леса.
+}
+
+itmname_bladebarrel	{Бочонок Рома}
 itmdescr_bladebarrel
 {
-A small barrel filled with the finest rum in the entire Caribbean, distilled by an expert (hrm).
+Небольшая бочка, наполненная лучшим ромом на Карибах, дистиллированным экспертом (хе-хе).
 }
 
-itmname_bladebarrel2	{Empty Barrel}
+itmname_bladebarrel2	{Пустой Бочонок}
 itmdescr_bladebarrel2
 {
-A small barrel to keep rum in.
+Небольшая бочка для хранения рома.
 }
 
-itmname_bladebarrel3	{Empty Barrel}
+itmname_bladebarrel3	{Пустой Бочонок}
 itmdescr_bladebarrel3
 {
-A large wine barrel.
+Большая винная бочка.
 }
 
-itmname_bladebarrel_gpS		{Gunpowder Barrel}
+itmname_bladebarrel_gpS		{Бочка с Порохом}
 itmdescr_bladebarrel_gpS
 {
-Standard Gunpowder.
+Стандартный порох.
 }
 
-itmname_pistolbarrel_gpS	{Gunpowder Barrel}
+itmname_pistolbarrel_gpS	{Бочка с Порохом}
 itmdescr_pistolbarrel_gpS
 {
-Standard Gunpowder.
+Стандартный порох.
 }
 
-itmname_bladebucket	{Water Bucket}
+itmname_bladebucket	{Ведро Воды}
 itmdescr_bladebucket
 {
-A bucket filled with cold water. 
+Ведро, наполненное холодной водой.
 }
 
-itmname_pistolbucket	{Water Bucket}
+itmname_pistolbucket	{Ведро Воды}
 itmdescr_pistolbucket
 {
-Could be used as coolant. 
+Может использоваться в качестве охлаждающей жидкости.
 }
 
-itmname_pistoltar	{Tar Bucket}
+itmname_pistoltar	{Ведро Смолы}
 itmdescr_pistoltar
 {
-A very heavy bucket with tar used for caulking the hull. 
+Очень тяжелое ведро со смолой, используемое для уплотнения корпуса.
 }
 
-itmname_bladebottlew4	{Molasses Bottle}
+itmname_bladebottlew4	{Бутылка Патоки}
 itmdescr_bladebottlew4
 {
-Don't spoil the liquid by using the bottle as a weapon. 
+Не испортите жидкость, используя бутылку в качестве оружия.
 }
 
-itmname_pistolbottlew4	{Molasses Bottle}
+itmname_pistolbottlew4	{Бутылка Патоки}
 itmdescr_pistolbottlew4
 {
-In this climate fermentation starts very quick. Distill it and there you have it - RUM!
+В этом климате брожение начинается очень быстро. Перегоните эту жидкость, и у вас появится - РОМ!
 }
 
-itmname_bladebottlew5	{Wine Bottle}
+itmname_bladebottlew5	{Бутылка Вина}
 itmdescr_bladebottlew5
 {
-A wine of unknown quality... 
+Вино неизвестного качества...
 }
 
-itmname_pistolbottlew5	{Wine Bottle}
+itmname_pistolbottlew5	{Бутылка Вина}
 itmdescr_pistolbottlew5
 {
 ...but it's only the weight that matters.
 }
 
-itmname_bladesack	{Sack with Books}
+itmname_bladesack	{Мешок с Книгами}
 itmdescr_bladesack
 {
-A collection of (poetry) books. Do I really need this?
+Сборник (поэтических) книг. Мне это действительно нужно?
 }
 
-itmname_bladeskull1	{Skull}
+itmname_bladeskull1	{Череп}
 itmdescr_bladeskull1
 {
-What use can you have of this macabre item?. 
+Какая польза от этого жуткого предмета?
 }
 
-itmname_bladeviolin		{Violin}
+itmname_bladeviolin		{Скрипка}
 itmdescr_bladeviolin
 {
-An excellent work from Cremona in Italy by the legendary Antonius Stratocastrius.  
+Превосходная работа легендарного Антонио Страдивари из Кремоны в Италии.
 }
 
-itmname_bladedefense		{Safety Device}
+itmname_bladedefense		{Защитное Приспособление}
 itmdescr_bladedefense
 {
-This plank sure looks bullet-proof.
+Эта доска выглядит пуленепробиваемой.
 }
 
-itmname_bladepinion_small	{Small Pinion}
+itmname_bladepinion_small	{Малая Шестерёнка}
 itmdescr_bladepinion_small
 {
-A small pinion to some mechanism - where?
+Маленькая шестерёнка к какому-то механизму - к какому?
 }
 
-itmname_bladepinion_large	{Large Pinion}
+itmname_bladepinion_large	{Большая Шестерёнка}
 itmdescr_bladepinion_large
 {
-A large pinion to some mechanism - where?
+Большая шестерёнка к какому-то механизму - к какому?
 }
 
-itmname_pistolwheel		{Wheel}
+itmname_pistolwheel		{Колесо}
 itmdescr_pistolwheel
 {
-A large brass item - a steering wheel maybe?
+Большой латунный предмет - может быть, рулевое колесо?
 }
 
-itmname_bladecompasses		{Pair of Compasses}
+itmname_bladecompasses		{Пара Компасов}
 itmdescr_bladecompasses
 {
-A Pair of Compasses is indispensible for every navigator.
+Пара компасов незаменима для каждого мореплавателя.
 }
 
-itmname_pistolmine		{Mine}
+itmname_pistolmine		{Мина}
 itmdescr_pistolmine
 {
-Warning: don't try this dangerous bomb without a proper Safety Device.
+Внимание: не пытайтесь использовать эту опасную бомбу без соответствующего "Защитного Приспособления".
 }
 
-itmname_bladeplank2		{Plank}
+itmname_bladeplank2		{Доска}
 itmdescr_bladeplank2
 {
-A heavy plank. 
+Тяжёлая доска. 
 }
 
-itmname_pistolplank2		{Plank}
+itmname_pistolplank2		{Доска}
 itmdescr_pistolplank2
 {
-A heavy plank. 
+Тяжёлая доска.
 }
 
-itmname_pistolhand		{My left hand}
+itmname_pistolhand		{Моя Левая Рука}
 itmdescr_pistolhand
 {
-After years of exploring the Caribbean I finally realized I could use my left hand to pick up things. 
+После многих лет изучения Карибского моря я наконец понял, что могу использовать левую руку, чтобы собирать вещи.
 }
 
-itmname_pistollog		{Log}
+itmname_pistollog		{Бревно}
 itmdescr_pistollog
 {
-A burned log from the palisade, very heavy. 
+Обгоревшее бревно из частокола, очень тяжелое. 
 }
 
-itmname_corkscrew		{Corkscrew}
+itmname_corkscrew		{Штопор}
 itmdescr_corkscrew
 {
-An ordinary Corkscrew.
+Обычный штопор.
 }
 
-itmname_bladekeyring		{Key Collection}
+itmname_bladekeyring		{Коллекция Ключей}
 itmdescr_bladekeyring
 {
-Nine keys on a ring. 
+Девять ключей на кольце.
 }
 
-itmname_Malta_icon		{Icon}
-itmname_Malta_outfit		{Outfit}
-itmname_Malta_poison		{Medicines?}
-itmname_Malta_syringe		{Syringe, bandages}
-itmname_Malta_medkit		{Small Apothecary}
-itmname_Malta_statue		{Bust}
-itmname_Malta_box		{Shrine}
-itmname_Malta_relic		{Relic}
-itmname_Malta_cross		{Crucifix}
-itmname_Malta_censer		{Censer}
+itmname_Malta_icon		{Икона}
+itmname_Malta_outfit		{Экипировка}
+itmname_Malta_poison		{Медикаменты?}
+itmname_Malta_syringe		{Шприц, бинты}
+itmname_Malta_medkit		{Маленькая Аптечка}
+itmname_Malta_statue		{Бюст}
+itmname_Malta_box		{Святилище}
+itmname_Malta_relic		{Реликвия}
+itmname_Malta_cross		{Крест}
+itmname_Malta_censer		{Кадило}
 
 itmname_switch_button		{?}
 itmdescr_switch_button
 {
-What is this? A button on a rectagular tile with some colored strings.
+Что это? Кнопка на прямоугольной плитке с цветными нитями.
 }
 
-itmname_blade_gp_dry		{Pile of Gunpowder}
+itmname_blade_gp_dry		{Кучка пороха}
 itmdescr_blade_gp_dry
 {
-The Gunpowder has become wet and then dried into a huge lump. How am I supposed to split it up?
+Порох намок, а затем высох, превратившись в огромный комок. Как я должен разделить его?
 }
 
 //--------------- OTHER ITEMS END --------------------------------------------------------------------------------------

@@ -1,10 +1,10 @@
-title=Johnson
+title=Джонсон
 text.t1= ???
-text.t2=Johnson is not a crewmember.
-text.t3=
-text.t4=
-text.t5=
-text.t6=
+text.t2=Джонсон не является членом команды.
+text.t3='Капитан' Чарльз Джонсон - это псевдоним Даниэля Дефо.
+text.t4=Последняя карта у меня!
+text.t5=Буквами 'A', 'N' и 'a' обозначен порт Буллен-Бэй. Но на каком это острове?
+text.t6=Это остров Кюрасао!
 text.t7=
 text.t8=
 text.t9=

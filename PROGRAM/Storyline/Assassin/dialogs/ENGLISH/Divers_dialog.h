@@ -1,4 +1,4 @@
-string DLG_TEXT[57] = {
+string DLG_TEXT[62] = {
 ".....",
 ".....",
 "That's done Captain! The ale has been loaded.",
@@ -55,5 +55,10 @@ string DLG_TEXT[57] = {
 "Morgan, Bartolomeu and the traitor Elting... What a beautiful row of bastards!",
 "I note I and my comrades are enough famous to be recognized at first sight. However, seeing the words you use to define us, it seems you know how to receive visitors. That must be the well-known Spanish hospitality.",
 "You are certainly here to steal the Aztec treasure but I won't let you leave my fort alive, small excrement of mosquito.",
-"It's a shame to stain a suit so fine with blood, but this is what you want. En garde!",   
+"It's a shame to stain a suit so fine with blood, but this is what you want. En garde!",
+"Never mind about that. I want to skip right away to part four of this story; the one with the kidnapping.",
+"Pah... I'll go ahead to part five of this story straight away. Guns of Navarone, here I come!",
+"Let something BUUUURN!!!",
+"I want my former future ship back. Savvy?",
+"Let's do some sightseeing. I want to visit El Morro.",
 };

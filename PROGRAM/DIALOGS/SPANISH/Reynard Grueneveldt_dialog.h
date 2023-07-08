@@ -64,7 +64,7 @@ string DLG_TEXT[179] = {
 " barcos franceses, ",
 " barcos piratas, un total de ",
 " barcos.",
-"Gracias.",,
+"Gracias.",
 "Espero que haya quejas de mi servicio, Excelencia.",
 "¡Claro que no, capitán! De hecho, es un placer para mi otorgarte una comisión en la Armada de Su Alteza Real. Como oficial se te recompensará por cada barco que hundas al servicio de Holanda.",
 "Su Excelencia me honra, y trataré de estar a la altura de la confianza que Su Alteza Real ha puesto en mi.",

@@ -41,7 +41,7 @@ void ProcessDialogEvent()
 			{
 				if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")))
 				{
-					Dialog.text =  DLG_TEXT[25] + GetRankName(PChar, sti(GetAttribute(NPChar, "nation"))) + DLG_TEXT[26];
+					Dialog.text =  DLG_TEXT[25] + XI_ConvertString(GetRankName(PChar, sti(GetAttribute(NPChar, "nation")))) + DLG_TEXT[26];
 					link.l1 = DLG_TEXT[27];
 					link.l1.go = "exit";
 					link.l2 = DLG_TEXT[2] + GetMyFullName(PChar) + DLG_TEXT[3];

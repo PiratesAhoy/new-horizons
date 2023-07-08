@@ -310,7 +310,14 @@ string FindDestinationName(string sdest)
 			if(CheckAttribute(&locations[di],"id") && HasSubStr(locations[di].id,"port"))
 			{
 				sdest = locations[di].id;
-				if(FindLocation(sdest)!=-1) sDestin = FindTownName(PChar.quest.generate_convoy_quest.destination) + " " + TranslateString("", "SeaPort");
+				if(FindLocation(sdest)!=-1)
+				{
+					switch(LanguageGetLanguage())
+					{
+						case "SPANISH": sDestin = "puerto de "+ FindTownName(PChar.quest.generate_convoy_quest.destination); break;
+						sDestin = FindTownName(PChar.quest.generate_convoy_quest.destination) + " " + TranslateString("", "SeaPort");
+					}
+				}
 				break;
 			}
 		}
@@ -543,27 +550,31 @@ void AnnounceFetchQuestEvent(String IslandID, string cargoid) //will be moved la
 		tisland.cargos.(cargoid).expireMonth = GetAddingDataMonth(0, expiremonths, expiredays);
 		tisland.cargos.(cargoid).expireYear = GetAddingDataYear(0, expiremonths, expiredays);
 		string logTitle, logEntry;
-		logTitle = "The "+tisland.cargos.(cargoid).requester+" of "+FindTownName(tisland.cargos.(cargoid).town)+" needs help.";
+		Preprocessor_Add("requester", XI_ConvertString(tisland.cargos.(cargoid).requester));
+		Preprocessor_Add("town", FindTownName(tisland.cargos.(cargoid).town));
+		logTitle = PreprocessText(GetTranslatedLog("The #srequester# of #stown# needs help."));
+		Preprocessor_Delete("town");
+		Preprocessor_Delete("requester");
 		switch(tisland.cargos.(cargoid).requester)
 		{
 			case "dockyard":
-				logEntry = "The governor ordered to build more ships but there aren't enough resources on the island to make them. Looks like they need help to get these goods.";
+				logEntry = GetTranslatedLog("The governor ordered to build more ships but there aren't enough resources on the island to make them. Looks like they need help to get these goods.");
 			break;
 			case "tailor":
-				logEntry = "The governor wants to increase the amount of troops on the island and they will all need new uniforms. They need help to get the resources required.";
+				logEntry = GetTranslatedLog("The governor wants to increase the amount of troops on the island and they will all need new uniforms. They need help to get the resources required.");
 			break;
 			case "blacksmith":
-				logEntry = "The military ordered new weapons as it is time to amortize their current stock. The blacksmith needs help to acquire the resources to make them.";
+				logEntry = GetTranslatedLog("The military ordered new weapons as it is time to amortize their current stock. The blacksmith needs help to acquire the resources to make them.");
 			break;
 			
 			case "gunsmith":
-				logEntry = "The gunsmith has gotten lots of new orders lately. Everyone wants a new sword or a firearm and he doesn't have the means to make them all.";
+				logEntry = GetTranslatedLog("The gunsmith has gotten lots of new orders lately. Everyone wants a new sword or a firearm and he doesn't have the means to make them all.");
 			break;
 			
 			// TALISMAN -->
 			// added to fill blank page in Ship's Log
 			case "apothecary":
-				logEntry = "There has been a serious outbreak of disease lately, and the Apothecary is running out of medicines to treat the sick. He needs help to get supplies.";
+				logEntry = GetTranslatedLog("There has been a serious outbreak of disease lately, and the Apothecary is running out of medicines to treat the sick. He needs help to get supplies.");
 			break;
 			// TALISMAN <--
 		}
@@ -1077,7 +1088,7 @@ void CommonQuestComplete(string sQuestName)
 			Pchar.quest.Contraband.tavern = pchar.location; //Added so we know where to spawn the officer when he returns.
 			//Levis add smuggling questbook
 			Preprocessor_AddQuestData("island",Islands[GetCharacterCurrentIsland(Pchar)].name);
-			Preprocessor_AddQuestData("location",locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name);
+			Preprocessor_AddQuestData("location",TranslateString("",locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name));
 			//DeleteQuestHeader("smuggle&number=0"); //we dont have to delete anymore now
 			questbookname = "smuggle&number="+Pchar.amount_smuggleruns; //Set a questname
 			SetQuestHeader(questbookname);
@@ -1116,7 +1127,7 @@ void CommonQuestComplete(string sQuestName)
 
 		case "Send Officer to scout":
 			//Levis add smuggling questbook
-			Preprocessor_AddQuestData("location",locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name);
+			Preprocessor_AddQuestData("location",TranslateString("",locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name));
 			questbookname = "smuggle&number="+Pchar.amount_smuggleruns; //Set a questname
 			AddQuestRecord(questbookname, 11);
 			Preprocessor_Remove("location");
@@ -1232,7 +1243,7 @@ void CommonQuestComplete(string sQuestName)
 
 		case "Made Deal with Smuggler":
 			PlaceSmugglersOnShore(Pchar.quest.contraband.CurrentPlace);
-			Preprocessor_AddQuestData("location",locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name);
+			Preprocessor_AddQuestData("location",TranslateString("",locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name));
 			questbookname = "smuggle&number="+Pchar.amount_smuggleruns;
 			AddQuestRecord(questbookname, 10);
 			Preprocessor_Remove("location");
@@ -1736,7 +1747,7 @@ void CommonQuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Enc_Char1")].nodisarm = 1; // PB: Disable disarming
 			LAi_SetImmortal(CharacterFromID("Enc_Char1"), true);
 
-			//При первом подходе или истечении времени сработает квест
+			//ѕри первом подходе или истечении времени сработает квест
 			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
 			LAi_ActorFollow(CharacterFromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "", 240);
 			LAi_ActorFollow(CharacterFromID("Enc_Char3"), CharacterFromID("Enc_Char1"), "", 240);
@@ -1862,7 +1873,7 @@ void CommonQuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("Enc_Char3"));
 			LAi_SetActorType(CharacterFromID("Enc_Char4"));
 
-			//При первом подходе или истечении времени сработает квест
+			//ѕри первом подходе или истечении времени сработает квест
 			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
 			LAi_ActorFollow(CharacterFromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "", 240);
 			LAi_ActorFollow(CharacterFromID("Enc_Char3"), CharacterFromID("Enc_Char1"), "", 240);
@@ -2064,7 +2075,7 @@ void CommonQuestComplete(string sQuestName)
 			}
 			else
 			{
-				Log_SetStringToLog(QUEST_MESSAGE12);
+				Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE12"));
 				DeleteAttribute(Pchar, "quest.FreeRandomOfficerIdx");
 				DeleteAttribute(Pchar, "quest.FreeRandomOfficerID");
 			}
@@ -2295,7 +2306,7 @@ Cost for level 50 is 55,374,000
 			if (pchar.quest.generate_trade_quest_progress == "begin")
 			{
 				pchar.quest.generate_trade_quest_progress = "failed";
-				Log_SetStringToLog(QUEST_MESSAGE2);
+				Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE2"));
 				AddQuestRecord("trade", 2);
 			}
 		break;

@@ -24,7 +24,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";

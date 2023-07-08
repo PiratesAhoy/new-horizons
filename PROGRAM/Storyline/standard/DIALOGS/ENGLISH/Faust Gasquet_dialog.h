@@ -24,7 +24,7 @@ string DLG_TEXT[56] = {
 "I'm sorry, ",
 ". but I'll wait until you bring the money, the church really needs it to help the poor.",
 "It's a deal.",
-"Yes, #ssir#, ",
+"Yes, ",
 ". It's my third year of sailing on her.",
 "And you're waiting for an escort ship to arrive?",
 "Where is your ship headed?",

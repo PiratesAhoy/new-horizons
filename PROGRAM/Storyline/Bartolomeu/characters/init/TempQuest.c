@@ -1641,7 +1641,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.greeting = "Gr_Evaristo Filho";
 	AddGameCharacter(n, ch);
 
-// François L'Ollonais
+// FranÃ§ois L'Ollonais
 	ch.old.name = "Francois";
 	ch.old.lastname = "L'Ollonais";
 	ch.name = TranslateString("", "Francois");

@@ -28,7 +28,7 @@ string DLG_TEXT[65] = {
 "Ese barco sólo puede traer problemas.",
 "¿Pero qué interés tienes en él, si me permites la pregunta?",
 "El cargamento es lo único que me importa. ¿Está aún intacto?",
-"Perdí mi propio barco y a toda la tripulación durante la tormenta. No estaría ahora aquí hablando contigo si no hubiera estado a bordo de la bricbarca apresada.\nDe hecho, apenas logré escapar de una corbeta francesa, y no lo habría conseguido de no haberme metido en aguas poco profundas. \n Y luego esa muchacha loca que mató a mi contramaestre aparece por aquí, buscando uno de esos malditos ídolos.",
+"Perdí mi propio barco y a toda la tripulación durante la tormenta. No estaría ahora aquí hablando contigo si no hubiera estado a bordo de la bricbarca apresada\n De hecho, apenas logré escapar de una corbeta francesa, y no lo habría conseguido de no haberme metido en aguas poco profundas\n Y luego esa muchacha loca que mató a mi contramaestre aparece por aquí, buscando uno de esos malditos ídolos.",
 "¿Tengo aspecto de tabernero? ¿Entonces por qué me cuentas tus problemas? Sólo me interesa el cargamento.",
 "¡Presta atención, #sgender#! No estoy hablando de forma figurada cuando digo que esos ídolos están malditos. Hace tan sólo unas horas, el barco en el que iban ha sido hundido.",
 "¿Hundido? Entonces estoy perdiendo el tiempo aquí. Adiós.",
@@ -49,7 +49,7 @@ string DLG_TEXT[65] = {
 "Pídeles ayuda, ¡y no volverás a respirar!",
 "¡Bien! Estos ídolos no me han traído más que sufrimiento. ¡Llévatelos y lárgate!",
 "Una sabia decisión. Es lo mejor para los dos, te lo aseguro.",
-"Matarme no te hará ningún bien. Los ídolos están en mi barco, fuertemente custodiados. Dudo que incluso tú pudieras hacerte con ellos."
+"Matarme no te hará ningún bien. Los ídolos están en mi barco, fuertemente custodiados. Dudo que incluso tú pudieras hacerte con ellos.",
 "Muchas gracias por decirme dónde encontrarlos. Y ahora, mucho me temo que eres un cabo suelto que hace falta cortar por lo sano.",
 "Será mejor que me vaya ya.",
 "¡Es un farol!",

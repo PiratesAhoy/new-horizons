@@ -234,7 +234,7 @@ void ProcessDialogEvent()
 				//    
 				if (GetNationRelation2MainCharacter(GetTownNation(GetTownIDFromLocID(NPChar.location))) == RELATION_ENEMY) // KK
 				{
-					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
+					Preprocessor_Add("nation_desc", XI_ConvertString(GetNationDescByType(sti(NPChar.nation))));
 					dialog.snd = "Voice\ALMI\ALMI009";
 					dialog.text = DLG_TEXT[28];
 					link.l1 = DLG_TEXT[29];

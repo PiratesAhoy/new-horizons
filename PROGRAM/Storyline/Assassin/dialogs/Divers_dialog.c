@@ -43,15 +43,15 @@ void ProcessDialogEvent()
 		// PB -->
 			if(ENABLE_CHEATMODE)
 			{
-				link.l2 = "Never mind about that. I want to skip right away to part four of this story; the one with the kidnapping.";
+				link.l2 = DLG_TEXT[57];
 				link.l2.go = "ass_part4";
-				link.l3 = "Pah... I'll go ahead to part five of this story straight away. Guns of Navarone, here I come!";
+				link.l3 = DLG_TEXT[58];
 				link.l3.go = "ass_part5";
-				link.l4 = "Let something BUUUURN!!!";
+				link.l4 = DLG_TEXT[59];
 				link.l4.go = "ass_fire";
-				link.l5 = "I want my former future ship back. Savvy?";
+				link.l5 = DLG_TEXT[60];
 				link.l5.go = "back_diablo";
-				link.l6 = "Let's do some sightseeing. I want to visit El Morro.";
+				link.l6 = DLG_TEXT[61];
 				link.l6.go = "El_Morro";						
 			}
 		break;

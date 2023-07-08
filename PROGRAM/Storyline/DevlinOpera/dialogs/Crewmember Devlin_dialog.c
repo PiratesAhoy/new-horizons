@@ -101,5 +101,18 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("Santiago_split");
 		break;
+
+		case "Siblings_gone":
+			dialog.text = DLG_TEXT[14];
+			link.l1 = DLG_TEXT[15];
+			link.l1.go = "Siblings_gone2";
+		break;
+
+		case "Siblings_gone2":
+			dialog.text = DLG_TEXT[16];
+			link.l1 = DLG_TEXT[17];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Find_BB_in_SD");
+		break;
 	}
 }

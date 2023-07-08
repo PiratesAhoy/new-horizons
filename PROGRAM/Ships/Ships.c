@@ -9,15 +9,17 @@ string	sRndShpSpName[2], sRndShpEnName[2], sRndShpFrName[2], sRndShpPiName[2], s
 
 void ShipsInit()
 {
+	string sShipNameFile = "ships\ships_name.c";
+	if (LanguageGetLanguage() == "RUSSIAN") sShipNameFile = "ships\ships_name_ru.c";
 	if (LoadSegment("ships\ships_init.c"))
 	{
 		InitShips();
 		UnloadSegment("ships\ships_init.c");
 	}
-	if (LoadSegment("ships\ships_name.c"))
+	if (LoadSegment(sShipNameFile))
 	{
 		InitRandomShipsNames();
-		UnloadSegment("ships\ships_name.c");
+		UnloadSegment(sShipNameFile);
 	}
 }
 

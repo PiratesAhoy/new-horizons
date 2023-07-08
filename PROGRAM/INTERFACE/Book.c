@@ -8,7 +8,7 @@ void InitInterface_BB(string iniName, ref book)
 	{
 		UnlockPerkCharacter(GetMainCharacter() ,book.UnlockedPerk);
 		lngFileID = LanguageOpenFile("AbilityDescribe.txt");
-		CreateString(true, "TIME", "You unlocked the perk: " + LanguageConvertString(lngFileID,book.UnlockedPerk), FONT_NORMAL, COLOR_NORMAL, 320, 482, SCRIPT_ALIGN_CENTER, 0.7);
+		CreateString(true, "TIME", TranslateString("","You unlocked the perk:") +" "+ LanguageConvertString(lngFileID,book.UnlockedPerk), FONT_NORMAL, COLOR_NORMAL, 320, 482, SCRIPT_ALIGN_CENTER, 0.7);
 		LanguageCloseFile(lngFileID);
 		DeleteAttribute(book,"UnlockedPerk");
 	}

@@ -950,10 +950,19 @@ void SetNoneData()
 
 // KK -->
 		SetNodeUsing("NATION", true); // PB
-		if (tempnation >= 0 && tempnation < NATIONS_QUANTITY) {
+		if (tempnation >= 0 && tempnation < NATIONS_QUANTITY)
+		{
 			SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(tempnation) + ".tga");
-			SetFormatedText("NATIONALDESIGN", XI_ConvertString("2"+Nations[tempnation].desc) + " " + XI_ConvertString("design"));
-		} else {
+			switch (LanguageGetLanguage())
+			{
+				case "Spanish":
+					SetFormatedText("NATIONALDESIGN", XI_ConvertString("design") + " " + strlower(XI_ConvertString("2"+Nations[tempnation].desc)));
+				break;
+				SetFormatedText("NATIONALDESIGN", XI_ConvertString("2"+Nations[tempnation].desc) + " " + XI_ConvertString("design"));
+			}
+		}
+		else
+		{
 			if(tempnation == PERSONAL_NATION)
 			{
 				SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(tempnation) + ".tga");

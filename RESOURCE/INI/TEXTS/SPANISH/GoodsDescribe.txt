@@ -12,7 +12,7 @@ Cartuchos de pequeñas balas de hierro disparadas por los cañones para barrer l
 }
 
 
-Knippels {Palanquetas}
+Knippels {Balas encadenadas}
 Knippels_descr
 {
 Dos bolas o medias bolas de hierro fundido conectadas por una gruesa cadena o una barra. Se usan para destruir las velas y los mástiles de los barcos enemigos. Daño: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, Tripulación-#f.2DamageCrew#

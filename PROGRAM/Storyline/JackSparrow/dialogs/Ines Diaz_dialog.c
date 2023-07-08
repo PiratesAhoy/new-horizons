@@ -778,9 +778,35 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[183];
 			link.l1 = DLG_TEXT[184];
 			link.l1.go = "Exit_Discussion";
+			if(stf(environment.time)>=22.0 || stf(environment.time)<6.0)
+			{
+				link.l2 = DLG_TEXT[199];
+				link.l2.go = "InesDiscuss4_night";
+			}
+		break;
+
+		case "InesDiscuss4_night":
+			dialog.text = DLG_TEXT[200];
+			link.l1 = DLG_TEXT[189];
+			link.l1.go = "Exit_Discussion_Night";
+			link.l2 = DLG_TEXT[201];
+			if (IsBrothelEnabled() && sti(PChar.money)>=50) link.l2 = link.l2 + DLG_TEXT[202];
+			else link.l2 = link.l2 + DLG_TEXT[203];
+			link.l2.go = "Exit_Discussion";
 		break;
 
 		case "Exit_Discussion":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			AddDialogExitQuest("On_my_own_to_Skull");
+		break;
+
+		case "Exit_Discussion_Night":
+			if (stf(environment.time) >= 22.0 || stf(environment.time) < 6.0)
+			{
+				TavernWaitDate("wait_day");
+			}
+			SetNextWeather("Blue Sky");
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			AddDialogExitQuest("On_my_own_to_Skull");
@@ -793,6 +819,10 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_Susan_sleep":
+			if (stf(environment.time) >= 22.0 || stf(environment.time) < 6.0)
+			{
+				TavernWaitDate("wait_day");
+			}
 			SetNextWeather("Blue Sky");
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;

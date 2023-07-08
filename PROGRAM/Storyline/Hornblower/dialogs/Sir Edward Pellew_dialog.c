@@ -14,6 +14,9 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	ref lcn = &Locations[FindLocation(PChar.location)];
 
+	string voice_path = "VOICE\ENGLISH\";
+	if (CheckDirectory("RESOURCE\Sounds\VOICE\"+LanguageGetLanguage()+"\","*") > 0) voice_path = "VOICE\" + LanguageGetLanguage() + "\";
+
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
@@ -26,7 +29,7 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 
-			PlaySound("VOICE\ENGLISH\Pellew01.wav");
+			PlaySound(voice_path + "Pellew01.wav");
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";
@@ -39,7 +42,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "First_orders2":
-			PlaySound("VOICE\ENGLISH\Pellew01.wav");
+			PlaySound(voice_path + "Pellew01.wav");
 			dialog.text = DLG_TEXT[4] + pchar.lastname + DLG_TEXT[43];
 			link.l1 = DLG_TEXT[5] + GetMySimpleName(PChar) + DLG_TEXT[44];
 			link.l1.go = "First_orders3";
@@ -52,7 +55,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "got_to_Charlestown":
-			PlaySound("VOICE\ENGLISH\Pellew01.wav");
+			PlaySound(voice_path + "Pellew01.wav");
 			dialog.text = DLG_TEXT[8] + pchar.lastname + DLG_TEXT[46];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "ExitCharlestown1";
@@ -65,7 +68,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "message of war":
-			PlaySound("VOICE\ENGLISH\Pellew01.wav");
+			PlaySound(voice_path + "Pellew01.wav");
 			dialog.text = DLG_TEXT[9] + pchar.lastname;
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "message of war2";
@@ -103,7 +106,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Go_to_the_Naval_Academy":
-			PlaySound("VOICE\ENGLISH\Pellew01.wav");
+			PlaySound(voice_path + "Pellew01.wav");
 			dialog.text = DLG_TEXT[10] + Pchar.lastname + ".";
 			link.l1 = DLG_TEXT[11];
 			link.l1.go = "and now Oxbay2";
@@ -490,7 +493,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "outside_the_gates":
-			PlaySound("VOICE\ENGLISH\Pellew04.wav");
+			PlaySound(voice_path + "Pellew04.wav");
 			dialog.text = DLG_TEXT[151] + Pchar.lastname + DLG_TEXT[167];
 			link.l1 = DLG_TEXT[133];
 			link.l1.go = "outside_the_gates2";
@@ -539,35 +542,35 @@ void ProcessDialogEvent()
 		break;
 
 		case "Acts_of_heroism":
-			PlaySound("VOICE\ENGLISH\Pellew05.wav");
+			PlaySound(voice_path + "Pellew05.wav");
 			dialog.text = DLG_TEXT[175];
 			link.l1 = DLG_TEXT[176];
 			link.l1.go = "Acts_of_heroism2";
 		break;
 
 		case "Acts_of_heroism2":
-			PlaySound("VOICE\ENGLISH\Pellew06.wav");
+			PlaySound(voice_path + "Pellew06.wav");
 			dialog.text = DLG_TEXT[177];
 			link.l1 = DLG_TEXT[178];
 			link.l1.go = "Acts_of_heroism3";
 		break;
 
 		case "Acts_of_heroism3":
-			PlaySound("VOICE\ENGLISH\Pellew07.wav");
+			PlaySound(voice_path + "Pellew07.wav");
 			dialog.text = DLG_TEXT[179];
 			link.l1 = DLG_TEXT[180];
 			link.l1.go = "Acts_of_heroism4";
 		break;
 
 		case "Acts_of_heroism4":
-			PlaySound("VOICE\ENGLISH\Pellew08.wav");
+			PlaySound(voice_path + "Pellew08.wav");
 			dialog.text = DLG_TEXT[181];
 			link.l1 = DLG_TEXT[182];
 			link.l1.go = "Acts_of_heroism5";
 		break;
 
 		case "Acts_of_heroism5":
-			PlaySound("VOICE\ENGLISH\Pellew09.wav");
+			PlaySound(voice_path + "Pellew09.wav");
 			dialog.text = DLG_TEXT[183];
 			link.l1.go = "Exit_Acts_of_heroism";
 		break;
@@ -591,7 +594,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Here_are_the_documents":
-			PlaySound("VOICE\ENGLISH\Pellew03.wav");
+			PlaySound(voice_path + "Pellew03.wav");
 			dialog.text = DLG_TEXT[56];
 			link.l1 = DLG_TEXT[57];
 			link.l1.go = "Here_are_the_documents2";
@@ -796,7 +799,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Plan_for_crack_troops3":
-			PlaySound("VOICE\ENGLISH\Pellew02.wav");
+			PlaySound(voice_path + "Pellew02.wav");
 			dialog.text = DLG_TEXT[164] + Pchar.lastname + DLG_TEXT[165];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit_Plan_for_crack_troops";
@@ -939,21 +942,21 @@ void ProcessDialogEvent()
 		break;
 
 		case "Card_Night":
-			PlaySound("VOICE\ENGLISH\Pellew10.wav");
+			PlaySound(voice_path + "Pellew10.wav");
 			dialog.text = DLG_TEXT[208];
 			link.l1 = DLG_TEXT[209];
 			link.l1.go = "Card_Night2";
 		break;
 
 		case "Card_Night2":
-			PlaySound("VOICE\ENGLISH\Pellew11.wav");
+			PlaySound(voice_path + "Pellew11.wav");
 			dialog.text = DLG_TEXT[210];
 			link.l1 = DLG_TEXT[211];
 			link.l1.go = "Card_Night3";
 		break;
 
 		case "Card_Night3":
-			PlaySound("VOICE\ENGLISH\Pellew12.wav");
+			PlaySound(voice_path + "Pellew12.wav");
 			dialog.text = DLG_TEXT[212];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "Exit_Card_Night";
@@ -966,7 +969,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "With_whom_would_you_serve":
-			PlaySound("VOICE\ENGLISH\Pellew13.wav");
+			PlaySound(voice_path + "Pellew13.wav");
 			dialog.text = DLG_TEXT[213];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "Exit_With_whom_would_you_serve";
@@ -979,7 +982,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Lets_play_cards":
-			PlaySound("VOICE\ENGLISH\Pellew14.wav");
+			PlaySound(voice_path + "Pellew14.wav");
 			dialog.text = DLG_TEXT[214];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "Exit_Lets_play_cards";
@@ -992,7 +995,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Card_Payout":
-			PlaySound("VOICE\ENGLISH\Pellew15.wav");
+			PlaySound(voice_path + "Pellew15.wav");
 			dialog.text = DLG_TEXT[215];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "Exit_Card_Payout";
@@ -1005,21 +1008,21 @@ void ProcessDialogEvent()
 		break;
 
 		case "Hows_your_head":
-			PlaySound("VOICE\ENGLISH\Pellew16.wav");
+			PlaySound(voice_path + "Pellew16.wav");
 			dialog.text = DLG_TEXT[216];
 			link.l1 = DLG_TEXT[217];
 			link.l1.go = "Hows_your_head2";
 		break;
 
 		case "Hows_your_head2":
-			PlaySound("VOICE\ENGLISH\Pellew17.wav");
+			PlaySound(voice_path + "Pellew17.wav");
 			dialog.text = DLG_TEXT[218];
 			link.l1 = DLG_TEXT[219];
 			link.l1.go = "Hows_your_head3";
 		break;
 
 		case "Hows_your_head3":
-			PlaySound("VOICE\ENGLISH\Pellew18.wav");
+			PlaySound(voice_path + "Pellew18.wav");
 			dialog.text = DLG_TEXT[220];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "Hows_your_head4";
@@ -1077,7 +1080,7 @@ void ProcessDialogEvent()
 
 		case "Hows_your_head9":
 			AddDialogExitQuest("Orders_and_Ship3");
-			PlaySound("VOICE\ENGLISH\Pellew19.wav");
+			PlaySound(voice_path + "Pellew19.wav");
 			dialog.text = DLG_TEXT[231];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "Exit";
@@ -1187,21 +1190,21 @@ void ProcessDialogEvent()
 
 		case "Indeed_continue4":
 			AddDialogExitQuest("Hammond_gets_gritty");
-			PlaySound("VOICE\ENGLISH\Hornblwr03.wav");
+			PlaySound(voice_path + "Hornblwr03.wav");
 			dialog.text = DLG_TEXT[30];
 			link.l1 = DLG_TEXT[241];
 			link.l1.go = "Exit";
 		break;
 
 		case "Hammond_Hornblower_Plan":
-			PlaySound("VOICE\ENGLISH\Pellew20.wav");
+			PlaySound(voice_path + "Pellew20.wav");
 			dialog.text = DLG_TEXT[242];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "Hammond_Hornblower_Plan2";
 		break;
 
 		case "Hammond_Hornblower_Plan2":
-			PlaySound("VOICE\ENGLISH\Hornblwr04.wav");
+			PlaySound(voice_path + "Hornblwr04.wav");
 			dialog.text = DLG_TEXT[30];
 			link.l1 = DLG_TEXT[243];
 			link.l1.go = "Hammond_Hornblower_Plan3";
@@ -1209,7 +1212,7 @@ void ProcessDialogEvent()
 
 		case "Hammond_Hornblower_Plan3":
 			AddDialogExitQuest("Jack_goes_too");
-			PlaySound("VOICE\ENGLISH\Pellew21.wav");
+			PlaySound(voice_path + "Pellew21.wav");
 			dialog.text = DLG_TEXT[244];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "Exit";
@@ -1223,7 +1226,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Spies_somewhere":
-			PlaySound("VOICE\ENGLISH\Hornblwr05.wav");
+			PlaySound(voice_path + "Hornblwr05.wav");
 			dialog.text = DLG_TEXT[247];
 			link.l1 = DLG_TEXT[248];
 			link.l1.go = "Spies_somewhere2";
@@ -1231,21 +1234,21 @@ void ProcessDialogEvent()
 
 		case "Spies_somewhere2":
 			AddDialogExitQuest("Maria_in_Jail");
-			PlaySound("VOICE\ENGLISH\Pellew22.wav");
+			PlaySound(voice_path + "Pellew22.wav");
 			dialog.text = DLG_TEXT[249];
 			link.l1 = DLG_TEXT[250];
 			link.l1.go = "Exit";
 		break;
 
 		case "Can_we_Help_Hornblower":
-			PlaySound("VOICE\ENGLISH\Pellew23.wav");
+			PlaySound(voice_path + "Pellew23.wav");
 			dialog.text = DLG_TEXT[30];
 			link.l1 = DLG_TEXT[251];
 			link.l1.go = "Can_we_Help_Hornblower2";
 		break;
 
 		case "Can_we_Help_Hornblower2":
-			PlaySound("VOICE\ENGLISH\Pellew24.wav");
+			PlaySound(voice_path + "Pellew24.wav");
 			dialog.text = DLG_TEXT[252];
 			link.l1 = DLG_TEXT[253];
 			link.l1.go = "Can_we_Help_Hornblower3";
@@ -1253,42 +1256,42 @@ void ProcessDialogEvent()
 
 		case "Can_we_Help_Hornblower3":
 			AddDialogExitQuest("Crew_Wolfe_Prison");
-			PlaySound("VOICE\ENGLISH\Pellew25.wav");
+			PlaySound(voice_path + "Pellew25.wav");
 			dialog.text = DLG_TEXT[254];
 			link.l1 = DLG_TEXT[255];
 			link.l1.go = "Exit";
 		break;
 
 		case "In_Your_Report":
-			PlaySound("VOICE\ENGLISH\Pellew26.wav");
+			PlaySound(voice_path + "Pellew26.wav");
 			dialog.text = DLG_TEXT[256];
 			link.l1 = DLG_TEXT[178];
 			link.l1.go = "In_Your_Report2";
 		break;
 
 		case "In_Your_Report2":
-			PlaySound("VOICE\ENGLISH\Pellew27.wav");
+			PlaySound(voice_path + "Pellew27.wav");
 			dialog.text = DLG_TEXT[257];
 			link.l1 = DLG_TEXT[258];
 			link.l1.go = "In_Your_Report3";
 		break;
 
 		case "In_Your_Report3":
-			PlaySound("VOICE\ENGLISH\Pellew28.wav");
+			PlaySound(voice_path + "Pellew28.wav");
 			dialog.text = DLG_TEXT[259];
 			link.l1 = DLG_TEXT[260];
 			link.l1.go = "In_Your_Report4";
 		break;
 
 		case "In_Your_Report4":
-			PlaySound("VOICE\ENGLISH\Pellew29.wav");
+			PlaySound(voice_path + "Pellew29.wav");
 			dialog.text = DLG_TEXT[261];
 			link.l1 = DLG_TEXT[262];
 			link.l1.go = "In_Your_Report5";
 		break;
 
 		case "In_Your_Report5":
-			PlaySound("VOICE\ENGLISH\Pellew30.wav");
+			PlaySound(voice_path + "Pellew30.wav");
 			dialog.text = DLG_TEXT[263];
 			link.l1 = DLG_TEXT[264];
 			link.l1.go = "In_Your_Report6";
@@ -1296,14 +1299,14 @@ void ProcessDialogEvent()
 
 		case "In_Your_Report6":
 			AddDialogExitQuest("Propose_to_Maria");
-			PlaySound("VOICE\ENGLISH\Pellew31.wav");
+			PlaySound(voice_path + "Pellew31.wav");
 			dialog.text = DLG_TEXT[265];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "Exit";
 		break;
 
 		case "Give_atropos":
-			PlaySound("VOICE\ENGLISH\Pellew04.wav");
+			PlaySound(voice_path + "Pellew04.wav");
 			dialog.text = DLG_TEXT[266];
 			link.l1 = DLG_TEXT[206];
 			link.l1.go = "Congrats_in_order";

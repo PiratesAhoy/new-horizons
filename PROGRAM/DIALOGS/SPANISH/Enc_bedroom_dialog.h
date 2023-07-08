@@ -5,7 +5,7 @@ string DLG_TEXT[21] = {
 "¡Mi señora, ninguna joya puede ser tan bella como tu hermoso rosotro! Tus ojos brillan más que el diamante más brillante, y por solo una sonrisa tuya, renunciaría con mucho gusto incluso a las joyas de la corona. Quédate con tus gemas y con un buen recuerdo de mí. Hasta otra.",
 "Será mejor que corras mientras puedas. Oigo a mi marido llegar a casa... ¡con sus guardaespaldas!",
 "¿GUARDAESPALDAS? Me encantaría charlar un poco más, pero tengo asuntos urgentes en otra parte. ¡Adiós, guapa!",
-"¡Aaaaah! ¿Por qué siempre me pasa esto a mí? Primero una banda de ladrones irrumpió aquí y me robó las joyas, ¿y ahora tú también? Incluso me robaron mi #sgem# favorito! Déjame en paz, ¿quieres?",
+"¡Aaaaah! ¿Por qué siempre me pasa esto a mí? Primero una banda de ladrones irrumpió aquí y me robó las joyas, ¿y ahora tú también? Incluso me robaron mi #sgem#, la más preciada de mis alhajas! Déjame en paz, ¿quieres?",
 "¡Oh, no deberías estar sola, querida! Creo que te haré compañía por un tiempo, ¡je, je!...",
 "Creo que me crucé con la banda que te robó. Uno de ellos ha decidido abandonar la vida criminal y me ha dado esto. ¿Será tuyo?",
 "¡Mi señora, ninguna joya puede ser tan bella como tu hermoso rosotro! Tus ojos brillan más que el diamante más brillante, y por solo una sonrisa tuya, renunciaría con mucho gusto incluso a las joyas de la corona. Quédate con tus gemas y con un buen recuerdo de mí. Hasta otra.",

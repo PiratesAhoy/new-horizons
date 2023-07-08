@@ -733,8 +733,8 @@ void InitNations()
 	rNation.Titles.4 = "Tweede Luitenant";
 	rNation.Titles.5 = "Eerste Luitenant";
 	rNation.Titles.6 = "Kapitein-Luitenant";
-	rNation.Titles.7 = "Ridder";
-	rNation.Titles.8 = "Erfridder";
+	rNation.Titles.7 = "Jonkheer";
+	rNation.Titles.8 = "Ridder";
 	rNation.Titles.9 = "Baron";
 	rNation.Titles.10 = "Burggraaf";
 	rNation.Titles.11 = "Graaf";
@@ -1076,7 +1076,7 @@ void InitNations()
 			rNation.Ranks.8 = "Schoutbynacht";
 			rNation.Ranks.9 = "Konteramiral";
 			rNation.Ranks.10 = "Viceamiral";
-			rNation.Ranks.11 = "Amiral";
+			rNation.Ranks.11 = "Amiral_S";	// "_S" suffix to distinguish from French "Amiral", corrected in "common.ini"
 			rNation.Ranks.12 = "Riksamiral";
 			rNation.Titles.Quantity = 12;
 			rNation.Titles.1 = "Underlöjtnant";
@@ -1085,11 +1085,11 @@ void InitNations()
 			rNation.Titles.4 = "Kapten";
 			rNation.Titles.5 = "Örlogskapten";
 			rNation.Titles.6 = "Kommendörkapten";
-			rNation.Titles.7 = "Riddare";
-			rNation.Titles.8 = "Friherre";
-			rNation.Titles.9 = "Greve";
+			rNation.Titles.7 = "Godsägare";
+			rNation.Titles.8 = "Riddare";
+			rNation.Titles.9 = "Friherre";
 			rNation.Titles.10 = "Borgmästare";
-			rNation.Titles.11 = "Landshövding";
+			rNation.Titles.11 = "Greve";
 			rNation.Titles.12 = "Riksråd";
 			// JRH <--
 		}

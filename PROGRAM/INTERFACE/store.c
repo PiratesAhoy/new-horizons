@@ -499,11 +499,11 @@ void ProcessCancelExit()
 	// Sulan -->
 	if(nPlayerMoney > nPlayerMoneyStart)
 	{
-		WriteNewLogEntry("Visited "+FindTownName(sTownName),"Visited the local merchant, sold off our cargo and refilled our supplies. The trade earned me "+(nPlayerMoney-nPlayermoneyStart)+" pieces of gold.","Ship",true);    
+		WriteNewLogEntry(GetTranslatedLog("Visited")+" "+FindTownName(sTownName),GetTranslatedLog("Visited the local merchant, sold off our cargo and refilled our supplies. The trade earned me")+" "+(nPlayerMoney-nPlayermoneyStart)+" "+GetTranslatedLog("pieces of gold."),"Ship",true);    
 	}
 	if(nPlayerMoney < nPlayerMoneyStart)
 	{
-		WriteNewLogEntry("Visited "+FindTownName(sTownName),"Visited the local merchant to refill our supplies. I had to leave "+(nPlayerMoneyStart-nPlayermoney)+" pieces of gold to the storekeeper.","Ship",true);
+		WriteNewLogEntry(GetTranslatedLog("Visited")+" "+FindTownName(sTownName),GetTranslatedLog("Visited the local merchant to refill our supplies. I had to leave")+" "+(nPlayerMoneyStart-nPlayermoney)+" "+GetTranslatedLog("pieces of gold to the storekeeper."),"Ship",true);
 	}
 	// Sulan <--
 
@@ -1155,7 +1155,7 @@ void CargoTransferTimelapse()
 	}
 
 	AddTimeToCurrent(0, timeToAdd );
-	LogIt("Time: " + GetStringTime(GetTime()));		// LDH 15Oct06 added time display
+	LogIt(TranslateString("","Time:") +" "+ GetStringTime(GetTime()));		// LDH 15Oct06 added time display
 	LanguageCloseFile(tmpLangFileID);
 }
 // TIH <--

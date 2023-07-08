@@ -1,3 +1,30 @@
 Ardent{Ardent}
 Fortune{Fortune}
 Time to put the 'gold' and 'piracy' into the Golden Age of Piracy! Kidnap, burglary and outright piracy - Charles Ardent does it all! (Though there are those that say Ardent was actually a woman, Helen.){¡Es hora de poner un poco de oro y de piratería en la Edad de Oro de la Piratería! Secuestro, robo y flagrantes actos piráticos... ¡Charles Ardent hace de todo! (Aunque no faltan quienes dicen que Ardent era en realidad una mujer, Helen).}
+
+Esme{Esme}
+Hasta{Hasta}
+Neptuno{Neptuno}
+Sabina{Sabina}
+Siroco{Siroco}
+Tonina{Tonina}
+Jacqueline{Jacqueline}
+Phaeton{Phaeton}
+Assurance{Assurance}
+Cygnet{Cygnet}
+Sirius{Sirius}
+Joli{Joli}
+Bolontaire{Bolontaire}
+Salamine{Salamine}
+Conquérante{Conquérante}
+Dauphin Royal{Dauphin Royal}
+Victorieuse{Victorieuse}
+Résistance{Résistance}
+Reprisal{Reprisal}
+Impétueuse{Impétueuse}
+Tarantula{Tarantula}
+San Lorenzo{San Lorenzo}
+Entreprenant{Entreprenant}
+Mayordomo{Mayordomo}
+Hasta{Hasta}
+Neptuno{Neptuno}

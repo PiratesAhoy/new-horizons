@@ -1,4 +1,4 @@
-string DLG_TEXT[57] = {
+string DLG_TEXT[49] = {
 "Как вам прошлый бой, капитан? Не знаю как вы, а я такого не припомню!",
 "Да уж! Славная была резня! То ли ещё придётся тебе увидеть. Уж такая у нас жизнь.",
 "Если хочешь подраться ещё, мне нужно несколько человек. Я собираюсь сойти на берег.",
@@ -46,14 +46,6 @@ string DLG_TEXT[57] = {
 ". Нам нужно подождать?",
 "Нет. Вперед!",
 "Да, ждем 1 час.",
-"Да, ждем 8 часов.",
-"Yes, let's wait until a specific time.",
-"Very well, until when should we wait? [hhmm]",
-"You want us to wait until ",
-", #ssir#?",
-"Yes, that's right.",
-"No, I changed my mind. Let's go now!",
-"I don't understand. Until when should we wait?",
-"Let me say it again.",
-"Never mind. Let's go now!"
+"Да, ждем 3 часа.",
+"Да, ждем 8 часов."
 };

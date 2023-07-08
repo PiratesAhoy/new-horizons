@@ -214,7 +214,7 @@ void WasChangeData()
 	GameInterface.strings.MyCrew            = MakeInt(refMyCharacter.ship.Crew.Quantity); // MM
 	GameInterface.strings.MyCannons         = GetLocalShipAttrib(arship, &shipRef, "CurCanQty"); //NK can qty 05-04-18 shipRef.CannonsQuantity;
 	//GameInterface.strings.Mincrewus         = XI_ConvertString("Min Crew") + ": " + GetMinCrewQuantity(&refMyCharacter); // PRS3
-	GameInterface.strings.Mincrewus         = "Min/Max Crew: "+GetMinCrewQuantity(&refMyCharacter)+" / "+GetMaxCrewQuantity(&refMyCharacter); // MM
+	GameInterface.strings.Mincrewus         = TranslateString("","Min/Max Crew")+": "+GetMinCrewQuantity(&refMyCharacter)+" / "+GetMaxCrewQuantity(&refMyCharacter); // MM
 
 	shipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter)); // PS
 	makearef(arship, refEnemyCharacter.ship); // PRS3
@@ -231,7 +231,7 @@ void WasChangeData()
 	GameInterface.strings.EnemyCrew         = makeint(refEnemyCharacter.ship.Crew.Quantity); // MM
 	GameInterface.strings.EnemyCannons      = GetLocalShipAttrib(arship, &shipRef, "CurCanQty"); //NK can qty 05-04-18 shipRef.CannonsQuantity;
 	//GameInterface.strings.Mincrewthem       = XI_ConvertString("Min Crew") + ": " + GetMinCrewQuantity(&refEnemyCharacter); // PRS3
-	GameInterface.strings.Mincrewthem       = "Min/Max Crew: "+GetMinCrewQuantity(&refEnemyCharacter)+" / "+GetMaxCrewQuantity(&refEnemyCharacter); // MM
+	GameInterface.strings.Mincrewthem       = TranslateString("","Min/Max Crew")+": "+GetMinCrewQuantity(&refEnemyCharacter)+" / "+GetMaxCrewQuantity(&refEnemyCharacter); // MM
 }
 
 void ProcessCancelExit()

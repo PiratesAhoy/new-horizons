@@ -95,7 +95,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "James Norrington_dialog.c";
 //	ch.greeting = "Gr_James Norrington";
-	ch.Ship.Name = "Interceptor";	//SJG
+	ch.Ship.Name = TranslateString("","Interceptor");	//SJG
 	ch.Ship.Type = "HMS_Interceptor";		//Kazeite
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 2;
@@ -139,7 +139,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Lieutenant Bligh_dialog.c";
 //	ch.greeting = "Gr_Oxbay Citizen";
-	ch.Ship.Name = "Bounty";	//SJG
+	ch.Ship.Name = TranslateString("","Bounty1");	//SJG
 	ch.Ship.Type = "HMS_Bounty";	//ZarethPL
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 2;
@@ -251,7 +251,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Sir Christopher Mings_dialog.c";
 	// PB -->
-	ch.Ship.Name = "China Vase";
+	ch.Ship.Name = TranslateString("","China Vase");
 	ch.Ship.Type = "Frigate2";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade21"); //"blade26+1");
@@ -489,7 +489,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Cutler Beckett_dialog.c";
 //	ch.greeting = "Gr_Cutler Beckett";
-	ch.Ship.Name = "Lindesfarne";	// PB
+	ch.Ship.Name = TranslateString("","Lindesfarne");	// PB
 	ch.Ship.Type = "HMS_Bounty";	// PB
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 2;
@@ -1112,7 +1112,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Volcano";
+	ch.Ship.Name = TranslateString("","Volcano");
 	ch.Ship.Type = "Battleship1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;
@@ -1175,7 +1175,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.Ship.Stopped = true;	
 	ch.Dialog.Filename = "falaise de fleur soldier_dialog.c";
 	ch.nation = PIRATE;
-	ch.Ship.Name = "Volcano II";
+	ch.Ship.Name = TranslateString("","Volcano II");
 	ch.Ship.Type = 	"Frigate2";
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
 	ch.rank 	= 1;
@@ -1250,7 +1250,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Pieter Boelen_dialog.c";
 	// PB -->
-	ch.Ship.Name = "Amsterdam";
+	ch.Ship.Name = TranslateString("","Amsterdam");
 	ch.Ship.Type = "NL_Amsterdam";
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 0;
@@ -1415,7 +1415,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = "0";
 	ch.perks.list.LongRangeShoot = true;
-	ch.Ship.Name = "Vertigo";
+	ch.Ship.Name = TranslateString("","Vertigo");
 	ch.Ship.Type = "PiratHannah"; // PRS3
 	ch.FaceId = 30;
 	ch.HPBonus = 100;
@@ -1503,7 +1503,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Konrad Kulczycki_dialog.c";
 	// PB -->
-	ch.Ship.Name = "Phantom";
+	ch.Ship.Name = TranslateString("","Phantom");
 	ch.Ship.Type = "FastGalleon2";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade26+1");
@@ -1564,7 +1564,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Petros_dialog.c";
 	// PB -->
-	ch.Ship.Name = "The Rock";
+	ch.Ship.Name = TranslateString("","The Rock");
 	ch.Ship.Type = "SP_Galeon50";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade26+1");
@@ -1626,7 +1626,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Maykin Blundas.c";
 	// PB -->
-	ch.Ship.Name = "Whisper";
+	ch.Ship.Name = TranslateString("","Whisper");
 	ch.Ship.Type = "Brig2";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade4");
@@ -1686,7 +1686,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Cap'n Drow_dialog.c";
 	// PB -->
-	ch.Ship.Name = "Vengeance";
+	ch.Ship.Name = TranslateString("","Vengeance");
 	ch.Ship.Type = "Corvette47";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade4"); //(ch, "blade26+1");
@@ -1742,7 +1742,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.sex = "man";
 	ch.loyality = 15;
 //	ch.sound_type = "pirate";
-	ch.Ship.Name = "Wapen van Bergen op Zoom";
+	ch.Ship.Name = TranslateString("","Wapen van Bergen op Zoom");
 	ch.Ship.Type = "NL_Frigate47";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade4");
@@ -1789,7 +1789,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.Dialog.Filename = "Nathan Kell_dialog.c";
 	ch.nation = PIRATE;
 	// PB -->
-	ch.Ship.Name = "The Coder";
+	ch.Ship.Name = TranslateString("","The Coder");
 	ch.Ship.Type = "PiratFrigateSup";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade4"); //(ch, "blade26+1");
@@ -1851,7 +1851,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Jack Rackham_dialog.c";
 	// PB -->
-	ch.Ship.Name = "Curlew";
+	ch.Ship.Name = TranslateString("","Curlew");
 	ch.Ship.Type = "HMS_Sophie";
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 0;
@@ -1915,7 +1915,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Peter Willemoes_dialog.c";
 	// PB -->
-	ch.Ship.Name = "Horn";
+	ch.Ship.Name = TranslateString("","Horn");
 	ch.Ship.Type = "Sloop1";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade4"); //(ch, "blade26+1");
@@ -1994,7 +1994,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Defence = "10";
 	ch.skill.Commerce = "5";
 	ch.skill.Sneak = "10";
-	ch.Ship.Name = "Interceptor"; // Kazeite
+	ch.Ship.Name = TranslateString("","Interceptor"); // Kazeite
 	ch.Ship.Type = "HMS_Interceptor"; // Kazeite
 	ch.Ship.Stopped = false; // SJG
 	ch.Flags.Pirate = 2;
@@ -2041,7 +2041,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Captain Damski_dialog.c";
 	// PB -->
-	ch.Ship.Name = "Slick Rigging";
+	ch.Ship.Name = TranslateString("","Slick Rigging");
 	ch.Ship.Type = "Sloop2";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade4"); //(ch, "blade26+1");
@@ -2102,7 +2102,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Captain Maximus_dialog.c";
-	ch.Ship.Name = "The Big Buccaneer";
+	ch.Ship.Name = TranslateString("","The Big Buccaneer");
 	ch.Ship.Type = "Cutter1";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade4");
@@ -2160,7 +2160,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Captain Philippe_dialog.c";
-	ch.Ship.Name = "Compass Rose";
+	ch.Ship.Name = TranslateString("","Compass Rose");
 	ch.Ship.Type = "Sloop1";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade4");
@@ -2218,7 +2218,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Couch Captain Charles_dialog.c";
 	// PB -->
-	ch.Ship.Name = "The Comfy Sofa";
+	ch.Ship.Name = TranslateString("","The Comfy Sofa");
 	ch.Ship.Type = "HMS_Sophie";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade4"); //(ch, "blade26+1");
@@ -3142,7 +3142,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location	= "";
 	ch.location.group = "";
 	ch.location.locator = "";
-	ch.Ship.Name = "Sargento";
+	ch.Ship.Name = TranslateString("","Sargento");
 	ch.Ship.Type = "SP_Neptunus";
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 20; // PB: Eduardo Villanueva Pirate Flag
@@ -3190,7 +3190,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location	= "none";
 	ch.location.group = "";
 	ch.location.locator = "";
-	ch.Ship.Name = "La Licorne";
+	ch.Ship.Name = TranslateString("","La Licorne");
 	ch.Ship.Type = "FR_Licorne";
 	ch.Ship.Stopped = true; 
 	ch.Dialog.Filename = "Francois de Hadoque_dialog.c";
@@ -3421,7 +3421,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.Dialog.Filename = "Sao Feng_dialog.c";
 	ch.Dialog.Filename.GroupDialog = "governor.c";
 	ch.greeting = "Gr_Sao Feng";
-	ch.Ship.Name = "Empress";
+	ch.Ship.Name = TranslateString("","Empress");
 	ch.Ship.Type = "Empress";
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 4; // JRH&GR: Sao Feng's Pirate Pennant
@@ -3618,7 +3618,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Mergildo Hurtado_dialog.c";
-	ch.Ship.Name = "Montanez";
+	ch.Ship.Name = TranslateString("","Montanez");
 	ch.Ship.Type = "Barque1"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.nosurrender = 2; // PB
@@ -3705,7 +3705,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";//locator8
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -3757,7 +3757,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.old.Dialog.Filename = ch.Dialog.Filename; // KK
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "666"; // KK
+	ch.Ship.Name = TranslateString("","666"); // KK
 	ch.Ship.Type = "Brig2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -3849,7 +3849,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";//locator8
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -3901,7 +3901,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.old.Dialog.Filename = ch.Dialog.Filename; // KK
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "666"; // KK
+	ch.Ship.Name = TranslateString("","666"); // KK
 	ch.Ship.Type = "Brig2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -3954,7 +3954,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";//locator8
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -4006,7 +4006,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.old.Dialog.Filename = ch.Dialog.Filename; // KK
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "666"; // KK
+	ch.Ship.Name = TranslateString("","666"); // KK
 	ch.Ship.Type = "Brig2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -4098,7 +4098,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";//locator8
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -4150,7 +4150,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.old.Dialog.Filename = ch.Dialog.Filename; // KK
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "666"; // KK
+	ch.Ship.Name = TranslateString("","666"); // KK
 	ch.Ship.Type = "Brig2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -4242,7 +4242,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";//locator8
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -4292,7 +4292,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Crimson Blood";
+	ch.Ship.Name = TranslateString("","Crimson Blood");
 	ch.Ship.Type = "CrimsonBlood"; // Cylon13
 	ch.Ship.Stopped = true;
 	ch.Ship.EmblemedSails.normalTex = "sail_Petros_black_red.tga"; // PB
@@ -5048,7 +5048,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	//--> CTM
-	ch.Ship.Name = "Van Diemen";
+	ch.Ship.Name = TranslateString("","Van Diemen");
 	ch.Ship.Type = "RN_RevengeW";
 	ch.Ship.Stopped = true;
 	//<-- CTM

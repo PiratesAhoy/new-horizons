@@ -9,17 +9,17 @@ void ProcessDialogEvent()
 
 	gov_kid_pronoun = XI_ConvertString(GetMyPronounSubj(characterFromID(PChar.quest.romance)));
 	gov_kid_pronoun2 = XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.romance)));
+	gov_kid_pronoun3 = XI_ConvertString(GetMyPronounPossessive(characterFromID(PChar.quest.romance)));
 	merch_kid_pronoun = XI_ConvertString(GetMyPronounSubj(characterFromID(PChar.quest.villain)));
 	merch_kid_pronoun2 = XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.villain)));
+	merch_kid_pronoun3 = XI_ConvertString(GetMyPronounPossessive(characterFromID(PChar.quest.villain)));
 	if (PChar.sex == "man")
 	{
 		your_gov_kid = DLG_TEXT[446];
 		your_gov_kid2 = DLG_TEXT[450];
 		my_gov_kid = DLG_TEXT[448];
 		my_gov_kid2 = DLG_TEXT[452];
-		gov_kid_pronoun3 = XI_ConvertString("her");
 		merch_kid = XI_ConvertString("son");
-		merch_kid_pronoun3 = XI_ConvertString("his");
 	}
 	else
 	{
@@ -27,9 +27,7 @@ void ProcessDialogEvent()
 		your_gov_kid2 = DLG_TEXT[451];
 		my_gov_kid = DLG_TEXT[449];
 		my_gov_kid2 = DLG_TEXT[453];
-		gov_kid_pronoun3 = XI_ConvertString("his");
 		merch_kid = XI_ConvertString("daughter");
-		merch_kid_pronoun3 = XI_ConvertString("her");
 	}
 
 	if(CheckAttribute(characterFromID(PChar.quest.romance), "married") && characters[getCharacterIndex(PChar.quest.romance)].married == MR_MARRIED && characters[getCharacterIndex(PChar.quest.romance)].married.id == PChar.id)
@@ -1578,8 +1576,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_not_chosen_escort":
-			if(OFFICER_MAX <= 4) logit("Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.");
-			else logit("Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.");
+			if(OFFICER_MAX <= 4) logit(TranslateString("","Hint: To make an officer available as an escort, assign that officer to one of the shore party slots."));
+			else logit(TranslateString("","Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots."));
 			PChar.quest.marriage_status = "need_escort";
 			AddDialogExitQuest("marriage_governor_waits");
 			DialogExit();

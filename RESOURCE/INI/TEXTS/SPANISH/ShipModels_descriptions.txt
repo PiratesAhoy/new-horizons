@@ -1014,7 +1014,7 @@ Casco pintado de azul y amarillo, al estilo francés.
 16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
 RN_Neptunus_Descr{Un barco corsario de construcción holandesa
 de principios del siglo XVIII.
-Casco amarillo ocn decoraciones rojas y azules.
+Casco amarillo con decoraciones rojas y azules.
 16 cañones, buenas cualidades marineras sobre todo a favor del viento.}
 PO_Neptunus_Descr{Un barco corsario de construcción holandesa
 de principios del siglo XVIII.
