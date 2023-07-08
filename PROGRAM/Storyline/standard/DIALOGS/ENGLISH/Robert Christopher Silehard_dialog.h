@@ -58,7 +58,7 @@ string DLG_TEXT[436] = {
 ".",
 "Tell me something? Why does this sound ominous, sir?",
 "An excellent decision, Captain ",
-". I am glad we have found a resolution that suits us both. Now, to your task. It seems to me that instead of pressing you into the service of the army, it would be better if you\nacted alone.",
+". I am glad we have found a resolution that suits us both. Now, to your task. It seems to me that instead of pressing you into the service of the army, it would be better if you acted alone.",
 "What do you mean, sir?",
 "I'll ignore your insolence for now, Captain. But keep in mind to whom you speak, and there are guards just outside the door. Now let me continue...",
 " In that case, I'd prefer to captain my ship myself! Let me sail her for you, sir!",
