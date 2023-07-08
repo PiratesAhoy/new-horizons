@@ -37,7 +37,7 @@ bool CanSave()
 		aref arScrShoter;
 		if(FindEntity(&arScrShoter,"scrshoter")) bEnableSave = false;
 
-		if(bSeaActive && !bMapEnter) { bEnableSave = false; restrictSave = "save_while sailing"; }
+		if(bSeaActive && !bMapEnter && iRealismMode > 0) { bEnableSave = false; restrictSave = "save_while sailing"; }
 		if(LAi_IsBoardingProcess()) { bEnableSave = false; restrictSave = "save_while boarding"; }
 		if(bAbordageStarted && !ownDeckStarted()) { bEnableSave = false; restrictSave = "save_while sailing or boarding"; }
 		if(bMutinyDeckStarted) { bEnableSave = false; restrictSave = "save_while sailing or boarding"; }
