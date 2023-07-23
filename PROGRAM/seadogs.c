@@ -54,6 +54,7 @@
 #include "smuggling.c";	//Everything related to smuggling moved to here -Levis
 #include "Characters\Leveling.c"; //Everything related to leveling move to this -Levis
 #include "compatibility.c";
+#include "module_loader/module_loader.c"
 
 extern void UpdateWorldMap();
 extern void InitGoods();
@@ -320,9 +321,14 @@ void Main()
 //	LocationTestProcess();
 //	return;
 
+	ReloadProgressStart();
+
+	LoadModules();
+	ReloadProgressUpdate();
+
 	// PB: Log Build Version to File -->
 	trace("----------------------------------------");
-	trace("Build " + BUILDVERSION);
+	trace("Build " + Modules.core.version);
 	trace("Savegame Compatibility: " + IS_SGV);
 	trace("----------------------------------------");
 	trace("");
@@ -335,7 +341,6 @@ void Main()
 	onesec = RDTSC_E(iRDTSC_main);*/
 	// NK <--
 
-	ReloadProgressStart();
 	ControlsInit(GetTargetPlatform(),true);
 	nTeleportLocation = 1;
 	sTeleportLocName = "Oxbay_port";

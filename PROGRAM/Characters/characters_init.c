@@ -689,7 +689,7 @@ void CreateCharacters()
 	ch.married = false;
 	// RM <--
 	ch.profile = GetCurrentProfile(GetStoryline(FindCurrentStoryline())); // PB: To be used in case this is lost
-	ch.buildversion = BUILDVERSION; // 04-11-01 add build version, 05-03-25 set 12.2, 13; set back to 12.2 on 05-07-15
+	ch.buildversion = Modules.core.version; // 04-11-01 add build version, 05-03-25 set 12.2, 13; set back to 12.2 on 05-07-15
 	ch.knbcannons = USE_REAL_CANNONS; // NK to handle KNB cannon switching 05-04-10
 
 	ReloadProgressUpdate();
