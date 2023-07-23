@@ -1,3 +1,5 @@
+#include "module_loader/storyline_loader.c"
+
 native void LoadConfig(ref target, string path);
 native void ListFiles(ref target, string root);
 #libriary "config"
@@ -40,6 +42,8 @@ void RegisterModule(string folder) {
 	module.name = name;
 	module.version = version;
 	module.root = folder;
+
+	LoadStorylineConfigs(folder);
 }
 
 string GetModuleVersion(aref version_array) {

@@ -1,0 +1,44 @@
+[[storyline]]
+id = "new_horizons"
+dir = "standard"
+
+title = "Tales of a Sea Hawk"
+description = "As a new face in the Caribbean, you are determined to make a name for yourself through fair means or foul. You can try to convince yourself that you fight for riches and glory alone, but you came here for another reason. Will you manage to regain the affection of Danielle and win her heart back again? Or will you simply become another tortured soul; lost amongst these wild and dangerous islands, forced to seek fame and fortune as scant, cold comfort? (Or perhaps you'd prefer to play as Danielle...)"
+
+[storyline.start]
+location = "Tutorial_Deck"
+port = "Oxbay_port"
+model = "blaze"
+first_name = "Nathaniel"
+last_name = "Hawk"
+# nation = "england"
+# player_type = "rebel"
+pirate_flag = 15
+personal_flag = 14
+ship = "LuggerVML"
+ship_name = "Sea Horse"
+
+editable = [
+    "location",
+    "port",
+    "model",
+    "first_name",
+    "last_name",
+    "ship",
+    "ship_name",
+    "nation",
+    "personal_flag",
+    "pirate_flag",
+]
+
+[storyline.start.date]
+hour = 10
+min = 24
+sec = 42
+day = 16
+month = 4
+year = 1750
+
+[storyline.variables]
+ISLA_DE_MUERTE = 1
+START_MIN_LEVEL = 1

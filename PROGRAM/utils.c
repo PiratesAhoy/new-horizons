@@ -2089,35 +2089,6 @@ string PreprocessText(string text)
 
 object Storylines;
 
-extern void RegisterStoryline(int i);
-
-void InitStorylines()
-{
-	aref flist = GetFiles("PROGRAM\Storyline", "*.c");
-	int num = GetAttributesNum(flist);
-
-	ref sl; makeref(sl, Storylines);
-	DeleteAttribute(sl, "");
-	sl.list = "";
-
-	string sfile;
-	string send;
-	int n = 0;
-	for (int i = 0; i < num; i++) {
-		sfile = GetAttributeValue(GetAttributeN(flist, i));
-		// PB: Disable certain storylines -->
-		send  = strcut(sfile, strlen(sfile) - 6, strlen(sfile) - 3);
-		if (send == "_off")		continue;
-		// PB: Disable certain storylines <--
-
-		if (LoadSegment("Storyline\\" + sfile)) {
-			RegisterStoryline(n); // PB: was i
-			UnloadSegment("Storyline\\" + sfile);
-			n++;
-		}
-	}
-}
-
 void DeleteStoryline(int idx)
 {
 	if (idx < 0 || idx > GetStorylinesQuantity() - 1) return;
@@ -2322,25 +2293,26 @@ void CheckStorylines()
 
 void RefreshStorylines()
 {
-	object t_sl;
-	ref tsl; makeref(tsl, t_sl);
-	ref storyline; makeref(storyline, Storylines);
-	aref sl; makearef(sl, storyline.list);
-	CopyAttributes(tsl, sl);
-	DeleteAttribute(sl, "");
-	int num = GetAttributesNum(tsl);
-	for (int i = 0; i < num; i++)
-	{
-		aref arsl = GetAttributeN(tsl, i);
-		string sfile = "Storyline\" + arsl.dir;
-		sfile = strcut(sfile, 0, strlen(sfile) - 2) + ".c";
-
-		if (LoadSegment(sfile))
-		{
-			RegisterStoryline(i);
-			UnloadSegment(sfile);
-		}
-	}
+	// TODO: Reload storyline configs
+//	object t_sl;
+//	ref tsl; makeref(tsl, t_sl);
+//	ref storyline; makeref(storyline, Storylines);
+//	aref sl; makearef(sl, storyline.list);
+//	CopyAttributes(tsl, sl);
+//	DeleteAttribute(sl, "");
+//	int num = GetAttributesNum(tsl);
+//	for (int i = 0; i < num; i++)
+//	{
+//		aref arsl = GetAttributeN(tsl, i);
+//		string sfile = "Storyline\" + arsl.dir;
+//		sfile = strcut(sfile, 0, strlen(sfile) - 2) + ".c";
+//
+//		if (LoadSegment(sfile))
+//		{
+//			RegisterStoryline(i);
+//			UnloadSegment(sfile);
+//		}
+//	}
 }
 
 void AddStorylineVar(int n, string name, string value)

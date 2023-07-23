@@ -360,9 +360,6 @@ void Main()
 		}
 	}
 
-	InitStoryLines();
-	trace("Gauging: Storylines");
-
 	InitProfiles();
 	trace("Gauging: Profiles");
 

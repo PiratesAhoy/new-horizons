@@ -1,0 +1,46 @@
+[[storyline]]
+id = "free_play"
+dir = "FreePlay"
+
+title = "Free Play"
+description = "Choose from several pre-defined characters or freely customize your own. Various background professions are available, some featuring different starting scenarios. An open-ended and dynamic game world awaits in six unique time periods! You can even choose the United States by setting the starting date after 1770."
+
+[storyline.start]
+location = "Tutorial_Deck"
+port = "QC_port"
+model = "47_JRMMSub"
+first_name = "Julian"
+last_name = "McAllister"
+nation = "england"
+player_type = "rebel"
+pirate_flag = 5
+personal_flag = 30
+ship = "BrigRoyal"
+ship_name = "Defiance"
+
+editable = [
+    "location",
+    "port",
+    "model",
+    "first_name",
+    "last_name",
+    "nation",
+    "player_type",
+    "ship",
+    "ship_name",
+    "nation",
+    "personal_flag",
+    "pirate_flag",
+]
+
+[storyline.start.date]
+hour = 13
+min = 20
+sec = 33
+day = 14
+month = 5
+year = 1682
+
+[storyline.variables]
+CHANGING_RELATIONS = 1
+ISLA_DE_MUERTE = 0
