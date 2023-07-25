@@ -1,25 +1,42 @@
 #define DEFAULT_STORYLINE "new_horizons"
 
-void LoadStorylineConfigs(string root) {
+string i18n(string str) {
+	return str;
+}
+
+
+void LoadStoryLines() {
+	DeleteAttribute(&Storylines, "");
+	Storylines.list = "";
+	Storylines.default = 0;
+
 	object StorylineConfig;
+
+	aref modules_attr;
+	makearef(modules_attr, Modules);
+	for (int i = 0; i < GetAttributesNum(modules_attr); i++) {
+		aref module = GetAttributeN(modules_attr, i);
+		if (module.enabled) {
+			Trace("Loading storylines for module '" + module.name + "'");
+			LoadStorylineConfigs(&StorylineConfig, module.root);
+		}
+	}
+
+	aref storyline_config_attr;
+	makearef(storyline_config_attr, StorylineConfig.storyline);
+	for (int j = 0; j < GetAttributesNum(storyline_config_attr); j++) {
+		aref storyline = GetAttributeN(storyline_config_attr, j);
+		LoadStoryline(storyline, j);
+	}
+}
+
+void LoadStorylineConfigs(ref config, string root) {
 	string folder = root + "/config/storyline/";
 	aref config_list = GetFiles(folder, "*.toml");
 	Trace("Found " + GetAttributesNum(config_list) + " storylines");
 	for (int i = 0; i < GetAttributesNum(config_list); i++) {
 		string config_path = GetAttributeN(config_list, i);
-		LoadConfig(&StorylineConfig, folder + config_path);
-	}
-
-	DeleteAttribute(&Storylines, "");
-	Storylines.list = "";
-	Storylines.default = 0;
-
-	aref storyline_config;
-	makearef(storyline_config, StorylineConfig.storyline);
-	for (int j = 0; j < GetAttributesNum(storyline_config); j++) {
-		aref storyline = GetAttributeN(storyline_config, j);
-		Trace("Found storyline '" + storyline.title + "'");
-		LoadStoryline(storyline, j);
+		LoadConfig(&config, folder + config_path);
 	}
 }
 
@@ -54,8 +71,8 @@ void LoadStoryline(aref config, int n) {
 	sl.start.date.month = config.start.date.month;
 	sl.start.date.year = config.start.date.year;
 
-	sl.title = config.title;
-	sl.description = config.description;
+	sl.title = i18n("storyline:" + config.id + ":title");
+	sl.description = i18n("storyline:" + config.id + ":description");
 
 	aref config_variables;
 	makearef(config_variables, config.variables)
@@ -63,4 +80,6 @@ void LoadStoryline(aref config, int n) {
 		string variable_name = GetAttributeName(GetAttributeN(config_variables, j));
 		AddStorylineVar(n, variable_name, config_variables.(variable_name));
 	}
+
+	Trace("Registered storyline '" + config.id + "'");
 }

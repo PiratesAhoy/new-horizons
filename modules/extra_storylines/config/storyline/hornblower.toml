@@ -1,0 +1,29 @@
+[[storyline]]
+id = "hornblower"
+dir = "Hornblower"
+
+[storyline.start]
+location = "Antigua_port"
+port = "Antigua_port"
+model = "brtmdsH_18"
+first_name = "Horatio"
+last_name = "Hornblower"
+nation = "england"
+player_type = "naval_officer"
+pirate_flag = 23
+personal_flag = 25
+ship = "HMS_Bellona"
+ship_name = "Justinian"
+
+[storyline.start.date]
+hour = 10
+min = 24
+sec = 42
+day = 18
+month = 6
+year = 1798
+
+[storyline.variables]
+ISLA_DE_MUERTE = 0
+LOCKED_CANNONS = 1
+START_MIN_LEVEL = 1

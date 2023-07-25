@@ -1,0 +1,10 @@
+name = "extra-storylines"
+enabled = false
+version = [15, 0, 0, "alpha", 11]
+description = "Extra storylines that still need to be tested before general inclusion."
+authors = [
+    "PiratesAhoy!",
+]
+dependencies = [
+    "core",
+]

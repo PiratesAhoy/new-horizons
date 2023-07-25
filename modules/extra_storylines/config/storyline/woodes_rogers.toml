@@ -1,0 +1,34 @@
+[[storyline]]
+id = "woodes_rogers"
+dir = "WoodesRogers"
+
+[storyline.start]
+location = "Redmond_Town_01"
+port = "Redmond_Port"
+model = "Howard_Pyle"
+first_name = "Howard"
+last_name = "Pyle"
+nation = "pirate"
+player_type = "corsair"
+pirate_flag = 18
+personal_flag = 31
+
+[storyline.start.date]
+hour = 20
+min = 24
+sec = 42
+day = 26
+month = 12
+year = 1724
+
+[storyline.variables]
+ISLA_DE_MUERTE = -1
+WR_PUZZLES = 1
+DISABLE_CHEATMODE = 1
+RESET_HP = 1
+NO_CREW_OR_OFFICERS = 1
+DISABLE_TIPS = 1
+GUNFIGHTER_PERK = 1
+START_MIN_LEVEL = 1
+DYNAMIC_INTERFACES = 1
+ENABLE_BROTHEL = 1

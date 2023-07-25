@@ -1,0 +1,30 @@
+[[storyline]]
+id = "assassin"
+dir = "Assassin"
+
+[storyline.start]
+location = "Douwesen_port"
+port = "Douwesen_port"
+model = "Johan_Elting"
+first_name = "Johan"
+last_name = "Elting"
+nation = "holland"
+player_type = "military"
+pirate_flag = 2
+personal_flag = 9
+ship = "Barque4_47"
+ship_name = "Neptunis"
+
+[storyline.start.date]
+hour = 11
+min = 43
+sec = 12
+day = 8
+month = 10
+year = 1662
+
+[storyline.variables]
+ISLA_DE_MUERTE = 1
+ASSN_PUZZLES = 1
+START_MIN_LEVEL = 1
+ENABLE_BROTHEL = 1

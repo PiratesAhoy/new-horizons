@@ -2,9 +2,6 @@
 id = "free_play"
 dir = "FreePlay"
 
-title = "Free Play"
-description = "Choose from several pre-defined characters or freely customize your own. Various background professions are available, some featuring different starting scenarios. An open-ended and dynamic game world awaits in six unique time periods! You can even choose the United States by setting the starting date after 1770."
-
 [storyline.start]
 location = "Tutorial_Deck"
 port = "QC_port"

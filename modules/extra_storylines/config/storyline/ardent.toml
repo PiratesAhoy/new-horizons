@@ -1,0 +1,28 @@
+[[storyline]]
+id = "ardent"
+dir = "Ardent"
+
+[storyline.start]
+location = "Tutorial_Deck"
+port = "Cuba_port"
+model = "Ardent"
+first_name = "Charles"
+last_name = "Ardent"
+nation = "pirate"
+player_type = "corsair"
+pirate_flag = 1
+personal_flag = 15
+ship = "Cutter1"
+ship_name = "Fortune"
+
+[storyline.start.date]
+hour = 10
+min = 21
+sec = 32
+day = 31
+month = 7
+year = 1691
+
+[storyline.variables]
+ISLA_DE_MUERTE = 0
+START_MIN_LEVEL = 1

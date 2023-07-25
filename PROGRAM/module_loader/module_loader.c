@@ -25,12 +25,16 @@ void LoadModules() {
 			module_count++;
 		}
 	}
+
+	LoadStoryLines();
+
 	Trace("Loaded " + module_count + " modules");
 }
 
 void RegisterModule(string folder) {
 	object ModuleConfig;
 	LoadConfig(&ModuleConfig, folder + "/module.toml");
+
 	string name = ModuleConfig.name;
 	aref version_array;
 	makearef(version_array, ModuleConfig.version);
@@ -42,8 +46,7 @@ void RegisterModule(string folder) {
 	module.name = name;
 	module.version = version;
 	module.root = folder;
-
-	LoadStorylineConfigs(folder);
+	module.enabled = !CheckAttribute(ModuleConfig, "enabled") ||  sti(ModuleConfig.enabled) != 0;
 }
 
 string GetModuleVersion(aref version_array) {
