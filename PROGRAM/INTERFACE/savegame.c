@@ -32,10 +32,10 @@ bool CanSave()
 
 		if(dialogRun || dialogSelf) bEnableSave = false;
 		if(!CheckAttribute(&InterfaceStates, "Buttons.Save.enable") || InterfaceStates.Buttons.Save.enable!= 1) bEnableSave = false;
-		if(InterfaceStates.Launched!=0) bEnableSave = false;
+//		if(InterfaceStates.Launched!=0) bEnableSave = false;
 
-		aref arScrShoter;
-		if(FindEntity(&arScrShoter,"scrshoter")) bEnableSave = false;
+//		aref arScrShoter;
+//		if(FindEntity(&arScrShoter,"scrshoter")) bEnableSave = false;
 
 		if(bSeaActive && !bMapEnter && iRealismMode > 0) { bEnableSave = false; restrictSave = "save_while sailing"; }
 		if(LAi_IsBoardingProcess()) { bEnableSave = false; restrictSave = "save_while boarding"; }
