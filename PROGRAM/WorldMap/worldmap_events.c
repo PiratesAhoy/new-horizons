@@ -1,5 +1,4 @@
-
-
+#include "simulation/rations.c"
 
 bool wdmDisableRelease = true;
 
@@ -199,4 +198,25 @@ bool wdmIsSkipEnable()
 		}
 	}
 	return wdmSkipReturnBool;
+}
+
+#event_handler("WorldMap_GetMoral", "wdmGetMorale");
+float wdmGetMorale()
+{
+	ref pchar = GetMainCharacter();
+	return stf(pchar.Ship.Crew.Morale);
+}
+
+#event_handler("WorldMap_GetFood", "wdmGetFood");
+float wdmGetFood()
+{
+	ref pchar = GetMainCharacter();
+	return CalculateFoodRations(pchar);
+}
+
+#event_handler("WorldMap_GetRum", "wdmGetRum");
+float wdmGetRum()
+{
+	ref pchar = GetMainCharacter();
+	return CalculateRumRations(pchar);
 }

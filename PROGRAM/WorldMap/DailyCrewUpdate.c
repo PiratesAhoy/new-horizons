@@ -248,8 +248,6 @@ void DailyCrewUpdate()
 			{
 				if (foodQ <= 0)
 					Log_SetStringToLog(TranslateString("","Captain, we're out of food!"));
-				else
-					Log_SetStringToLog(TranslateString("","Food Qty") + ": " + makeint(foodQ) + ", " + TranslateString("","good for") + " " + food_daysleft + " " + XI_ConvertString("days."));
 			}
 			if(foodQ <= 0)
 			{
@@ -370,8 +368,7 @@ void DailyCrewUpdate()
 			
 			if(LogsToggle > LOG_QUIET)
 			{				
-			    if(rumQ <= 0) Log_SetStringToLog(TranslateString("","Captain, we're out of rum!"));
-				else Log_SetStringToLog(TranslateString("","Rum Qty") + ": " + makeint(rumQ) + ", " + TranslateString("","good for") + " " + rum_daysleft + " " + XI_ConvertString("days."));
+				if(rumQ <= 0) Log_SetStringToLog(TranslateString("","Captain, we're out of rum!"));
 			}
 
 			if(rumQ <= 0)
