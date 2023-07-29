@@ -314,6 +314,12 @@ void wdmMarkDeleteEncounters()
 		{
 			continue;
 		}
+
+		if (wdmNoClearEncountersTable == false) {
+			enc.needDelete = "Worldmap reload";
+			continue;
+		}
+
 		bool deleteMe = false;
 		if(CheckAttribute(enc, "year") != 0)
 		{
