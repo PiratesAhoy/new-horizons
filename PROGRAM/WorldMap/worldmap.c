@@ -63,6 +63,7 @@
 //=========================================================================================
 
 extern void wdmInitWorldMap();
+extern void wdmReinit();
 
 #event_handler("WorldMap_EncounterCreate", "wdmEvent_EncounterCreate");
 #event_handler("WorldMap_PlayerInStorm", "wdmEvent_PlayerInStorm");
