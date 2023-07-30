@@ -705,10 +705,6 @@ void FillShipsList(ref NPChar)
 					CopyAttributes(swapShipN,swapShipC);
 					CopyAttributes(swapShipC,swapShipT);
 
-					idxholder			= sti(GetAttributeValue(tmparefN));
-					syShipList.(slotN) 	= sti(GetAttributeValue(tmparefC));
-					syShipList.(slotC) 	= idxholder;
-
 					holder 			= SortClass[y+1];
 					SortClass[y+1] 	= SortClass[y];
 					SortClass[y] 	= holder;
@@ -744,10 +740,6 @@ void FillShipsList(ref NPChar)
 					CopyAttributes(swapShipT,swapShipN);
 					CopyAttributes(swapShipN,swapShipC);
 					CopyAttributes(swapShipC,swapShipT);
-
-					idxholder			= sti(GetAttributeValue(tmparefN));
-					syShipList.(slotN) 	= sti(GetAttributeValue(tmparefC));
-					syShipList.(slotC) 	= idxholder;
 
 					holder 			= SortClass[y+1];
 					SortClass[y+1] 	= SortClass[y];
