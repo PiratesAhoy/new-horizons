@@ -313,9 +313,8 @@ void ExternControlsInit(bool bFirst)
 	CI_CreateAndSetControls( "BattleInterfaceControls", "BICommandsCancel", CI_GetKeyCode(CTL_CMD_INTERFACE_CANCEL), 0, true );
 	CI_CreateAndSetControls( "BattleInterfaceControls", "BICommandsLeft", CI_GetKeyCode(CTL_CMD_INTERFACE_LEFT), 0, true );
 	CI_CreateAndSetControls( "BattleInterfaceControls", "BICommandsRight", CI_GetKeyCode(CTL_CMD_INTERFACE_RIGHT), 0, true );
-
-
-
+	CI_CreateAndSetControls( "BattleInterfaceControls", "BICommandsUp", CI_GetKeyCode(CTL_CMD_INTERFACE_UP), 0, true );
+	CI_CreateAndSetControls( "BattleInterfaceControls", "BICommandsDown", CI_GetKeyCode(CTL_CMD_INTERFACE_DOWN), 0, true );
 
 // -------------------------------------------------------------------------------------------------------------------
 // Dialog (not changable ingame)

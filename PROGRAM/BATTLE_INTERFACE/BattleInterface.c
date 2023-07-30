@@ -1491,7 +1491,7 @@ void BI_SetPossibleCommands()
 		return;
 	}
 
-	// для главного персонажа
+	// for the main character
 	if(mainIdx==chIdx)
 	{
 		BattleInterface.Commands.Moor.enable				= bCanEnterToLand;
@@ -1531,10 +1531,10 @@ void BI_SetPossibleCommands()
 
 		BattleInterface.Commands.EnterShip.enable		= bMapEnter; // KK
 		BattleInterface.Commands.Speed.enable			= true;
-		BattleInterface.Commands.CCommand.enable		= GetCompanionQuantity(mainCh)>1;
+		BattleInterface.Commands.CCommand.enable		= false;
 		BattleInterface.Commands.Ability.enable			= true;
 	}
-	// для спутников
+	// for satellites
 	else
 	{
 		BattleInterface.Commands.Moor.enable				= false;
@@ -1543,13 +1543,14 @@ void BI_SetPossibleCommands()
 		BattleInterface.Commands.Board.enable				= false;
 		BattleInterface.Commands.SailAway.enable			= true;
 		BattleInterface.Commands.HeaveToDrift.enable		= true;
-		BattleInterface.Commands.Charge.enable				= false;
+		BattleInterface.Commands.Charge.enable				= CheckAttribute(chIdx,"Ship.Cannons.Charge.Type") && GetCaracterShipCannonsType(chIdx) != CANNON_TYPE_NONECANNON;
 		BattleInterface.Commands.LandTroops.enable			= false;
 		BattleInterface.Commands.AttackTown.enable			= false; // KK
 		BattleInterface.Commands.LandFort.enable			= false; // KK
 		BattleInterface.Commands.Attack.enable				= bAttack;
 		BattleInterface.Commands.Defend.enable				= bDefend;
 		BattleInterface.Commands.Transfer.enable			= false; // KK
+		BattleInterface.Commands.HoistFlag.enable			= false; // KK
 		BattleInterface.Commands.KrakenAttack.enable		= false; // PB: Kraken Attack
 		BattleInterface.Commands.SubmergeDutchman.enable	= false; // PB: Flying Dutchman
 		BattleInterface.Commands.PearlSweeps.enable			= false; // PB: Black Pearl
