@@ -569,7 +569,7 @@ void CreateCharacters()
 	}
 	else
 	{
-		ch.skill.freeskill = 0;
+		ch.skill.freeskill = 2;
 	}
 	ch.perks.freepoints = sti(ch.rank); // NK
 	SetCharSkillImportance(ch,1); //Levis make sure all skill importances are set right
