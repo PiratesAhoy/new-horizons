@@ -1,8 +1,8 @@
-[[storyline]]
+[storyline.gold_bug]
 id = "gold_bug"
 dir = "GoldBug"
 
-[storyline.start]
+[storyline.gold_bug.start]
 location = "Charleston_Port"
 port = "Charleston_Port"
 model = "William Legrand"
@@ -15,7 +15,7 @@ personal_flag = 23
 ship = "obj_goldbug"
 ship_name = "Alaus Oculatus"
 
-[storyline.start.date]
+[storyline.gold_bug.start.date]
 hour = 10
 min = 24
 sec = 42
@@ -23,7 +23,7 @@ day = 15
 month = 10
 year = 1830
 
-[storyline.variables]
+[storyline.gold_bug.variables]
 ISLA_DE_MUERTE = -1
 BUG_PUZZLES = 1
 DISABLE_CHEATMODE = 1

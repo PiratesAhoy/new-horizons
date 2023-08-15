@@ -1,6 +1,7 @@
 #include "module_loader/storyline_loader.c"
 
 native void LoadConfig(ref target, string path);
+native string FindConfig(string path);
 native void ListFiles(ref target, string root);
 #libriary "config"
 
@@ -19,7 +20,7 @@ void LoadModules() {
 	int module_count = 0;
 	for (int i = 0; i < GetAttributesNum(module_list); i++) {
 		string module_directory = GetAttributeN(module_list, i);
-		if (FindFile(module_directory, "*.toml", "module.toml") != "")
+		if (FindConfig(module_directory + "/module") != "")
 		{
 			RegisterModule(module_directory);
 			module_count++;
@@ -33,7 +34,7 @@ void LoadModules() {
 
 void RegisterModule(string folder) {
 	object ModuleConfig;
-	LoadConfig(&ModuleConfig, folder + "/module.toml");
+	LoadConfig(&ModuleConfig, folder + "/module");
 
 	string name = ModuleConfig.name;
 	aref version_array;

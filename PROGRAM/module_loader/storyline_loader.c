@@ -26,7 +26,8 @@ void LoadStoryLines() {
 	makearef(storyline_config_attr, StorylineConfig.storyline);
 	for (int j = 0; j < GetAttributesNum(storyline_config_attr); j++) {
 		aref storyline = GetAttributeN(storyline_config_attr, j);
-		LoadStoryline(storyline, j);
+		string storyline_id = GetAttributeName(storyline);
+		LoadStoryline(storyline, storyline_id, j);
 	}
 }
 
@@ -40,17 +41,17 @@ void LoadStorylineConfigs(ref config, string root) {
 	}
 }
 
-void LoadStoryline(aref config, int n) {
+void LoadStoryline(aref config, string id, int n) {
 	ref storyline; makeref(storyline, Storylines);
 	string sn = "sl" + (n + 1);
 	aref sl; makearef(sl, storyline.list.(sn));
 
-	if (config.id == DEFAULT_STORYLINE) {
+	if (id == DEFAULT_STORYLINE) {
 		Storylines.default = n;
 	}
 
 	sl.index = n;
-	sl.id = config.id;
+	sl.id = id
 	sl.dir = config.dir;
 	sl.start.location = config.start.location;
 	sl.start.port = config.start.port;
@@ -71,8 +72,8 @@ void LoadStoryline(aref config, int n) {
 	sl.start.date.month = config.start.date.month;
 	sl.start.date.year = config.start.date.year;
 
-	sl.title = i18n("storyline:" + config.id + ":title");
-	sl.description = i18n("storyline:" + config.id + ":description");
+	sl.title = i18n("storyline:" + id + ":title");
+	sl.description = i18n("storyline:" + id + ":description");
 
 	aref config_variables;
 	makearef(config_variables, config.variables)
@@ -81,5 +82,5 @@ void LoadStoryline(aref config, int n) {
 		AddStorylineVar(n, variable_name, config_variables.(variable_name));
 	}
 
-	Trace("Registered storyline '" + config.id + "'");
+	Trace("Registered storyline '" + id + "'");
 }

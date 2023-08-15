@@ -1,8 +1,7 @@
-[[storyline]]
-id = "free_play"
+[storyline.free_play]
 dir = "FreePlay"
 
-[storyline.start]
+[storyline.free_play.start]
 location = "Tutorial_Deck"
 port = "QC_port"
 model = "47_JRMMSub"
@@ -30,7 +29,7 @@ editable = [
     "pirate_flag",
 ]
 
-[storyline.start.date]
+[storyline.free_play.start.date]
 hour = 13
 min = 20
 sec = 33
@@ -38,6 +37,6 @@ day = 14
 month = 5
 year = 1682
 
-[storyline.variables]
+[storyline.free_play.variables]
 CHANGING_RELATIONS = 1
 ISLA_DE_MUERTE = 0

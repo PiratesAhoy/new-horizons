@@ -1,8 +1,8 @@
-[[storyline]]
+[storyline.bartolomeu]
 id = "bartolomeu"
 dir = "Bartolomeu"
 
-[storyline.start]
+[storyline.bartolomeu.start]
 location = "PoPrince_Port"
 port = "PoPrince_Port"
 model = "GypsyCaptn_2"
@@ -13,7 +13,7 @@ player_type = "social_climber"
 pirate_flag = 4
 personal_flag = 8
 
-[storyline.start.date]
+[storyline.bartolomeu.start.date]
 hour = 9
 min = 17
 sec = 42
@@ -21,7 +21,7 @@ day = 22
 month = 7
 year = 1660
 
-[storyline.variables]
+[storyline.bartolomeu.variables]
 ISLA_DE_MUERTE = -1
 BART_PUZZLES = 1
 START_MIN_LEVEL = 1

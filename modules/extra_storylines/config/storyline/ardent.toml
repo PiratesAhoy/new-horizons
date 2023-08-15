@@ -1,8 +1,8 @@
-[[storyline]]
+[storyline.ardent]
 id = "ardent"
 dir = "Ardent"
 
-[storyline.start]
+[storyline.ardent.start]
 location = "Tutorial_Deck"
 port = "Cuba_port"
 model = "Ardent"
@@ -15,7 +15,7 @@ personal_flag = 15
 ship = "Cutter1"
 ship_name = "Fortune"
 
-[storyline.start.date]
+[storyline.ardent.start.date]
 hour = 10
 min = 21
 sec = 32
@@ -23,6 +23,6 @@ day = 31
 month = 7
 year = 1691
 
-[storyline.variables]
+[storyline.ardent.variables]
 ISLA_DE_MUERTE = 0
 START_MIN_LEVEL = 1

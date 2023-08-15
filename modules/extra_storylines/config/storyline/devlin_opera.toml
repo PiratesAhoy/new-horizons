@@ -1,8 +1,8 @@
-[[storyline]]
+[storyline.devlin_opera]
 id = "devlin_opera"
 dir = "DevlinOpera"
 
-[storyline.start]
+[storyline.devlin_opera.start]
 location = "Redmond_port"
 port = "Redmond_port"
 model = "Beatrice"
@@ -15,7 +15,7 @@ personal_flag = 37
 ship = "FastGalleon1"
 ship_name = "Discovery"
 
-[storyline.start.date]
+[storyline.devlin_opera.start.date]
 hour = 10
 min = 0
 sec = 42
@@ -23,6 +23,6 @@ day = 1
 month = 4
 year = 1576
 
-[storyline.variables]
+[storyline.devlin_opera.variables]
 CHANGING_RELATIONS = 1
 ISLA_DE_MUERTE = -1

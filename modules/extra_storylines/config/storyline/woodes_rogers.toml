@@ -1,8 +1,8 @@
-[[storyline]]
+[storyline.woodes_rogers]
 id = "woodes_rogers"
 dir = "WoodesRogers"
 
-[storyline.start]
+[storyline.woodes_rogers.start]
 location = "Redmond_Town_01"
 port = "Redmond_Port"
 model = "Howard_Pyle"
@@ -13,7 +13,7 @@ player_type = "corsair"
 pirate_flag = 18
 personal_flag = 31
 
-[storyline.start.date]
+[storyline.woodes_rogers.start.date]
 hour = 20
 min = 24
 sec = 42
@@ -21,7 +21,7 @@ day = 26
 month = 12
 year = 1724
 
-[storyline.variables]
+[storyline.woodes_rogers.variables]
 ISLA_DE_MUERTE = -1
 WR_PUZZLES = 1
 DISABLE_CHEATMODE = 1

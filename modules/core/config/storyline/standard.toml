@@ -1,8 +1,7 @@
-[[storyline]]
-id = "new_horizons"
+[storyline.new_horizons]
 dir = "standard"
 
-[storyline.start]
+[storyline.new_horizons.start]
 location = "Tutorial_Deck"
 port = "Oxbay_port"
 model = "blaze"
@@ -28,7 +27,7 @@ editable = [
     "pirate_flag",
 ]
 
-[storyline.start.date]
+[storyline.new_horizons.start.date]
 hour = 10
 min = 24
 sec = 42
@@ -36,6 +35,6 @@ day = 16
 month = 4
 year = 1750
 
-[storyline.variables]
+[storyline.new_horizons.variables]
 ISLA_DE_MUERTE = 1
 START_MIN_LEVEL = 1
