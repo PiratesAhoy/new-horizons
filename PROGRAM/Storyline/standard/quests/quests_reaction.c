@@ -3534,7 +3534,7 @@ void QuestComplete(string sQuestName)
 
 		case "post_use_artefact":
 			PostEvent("DoInfoShower",100,"s","");
-			CreateEntity(&artifact, "artifact");
+//			CreateEntity(&artifact, "artifact");
 			LayerAddObject(SEA_REALIZE, &artifact, -1);
 
 // KK -->
