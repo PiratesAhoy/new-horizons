@@ -53,13 +53,22 @@ void LoadStoryline(aref config, string id, int n) {
 	sl.start.model = config.start.model;
 	sl.start.name = config.start.first_name;
 	sl.start.lastname = config.start.last_name;
-	// TODO: Nation
-	// TODO: Player type
-	// TODO: Difficulty
+	sl.start.nation = GetNationByString(config.start.nation);
+	sl.start.playerType = GetPlayerTypeByString(config.start.player_type);
+	if (CheckAttribute(config, "start.difficulty") ) {
+		sl.start.difficulty = GetDifficultyByString(config.start.difficulty);
+	}
+	else {
+		sl.start.difficulty = DIFFICULTY_LANDLUBBER;
+	}
 	sl.start.Flags.Pirate = config.start.pirate_flag;
 	sl.start.Flags.Personal = config.start.personal_flag;
-	sl.start.ship = config.start.ship;
-	sl.start.shipname = config.start.ship_name;
+	if (CheckAttribute(config, "start.ship") ) {
+		sl.start.ship = config.start.ship;
+	}
+	if (CheckAttribute(config, "start.ship_name") ) {
+		sl.start.shipName = config.start.ship_name;
+	}
 	sl.start.date.hour = config.start.date.hour;
 	sl.start.date.min = config.start.date.min;
 	sl.start.date.sec = config.start.date.sec;

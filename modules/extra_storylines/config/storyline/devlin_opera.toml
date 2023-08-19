@@ -10,6 +10,7 @@ first_name = "Beatrice"
 last_name = "Devlin"
 nation = "personal"
 player_type = "explorer"
+difficulty = "mariner"
 pirate_flag = 6
 personal_flag = 37
 ship = "FastGalleon1"

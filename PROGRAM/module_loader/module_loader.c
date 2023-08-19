@@ -1,5 +1,6 @@
 #include "module_loader/localization.c"
 #include "module_loader/storyline_loader.c"
+#include "module_loader/compatibility.c"
 
 native void LoadConfig(ref target, string path);
 native string FindConfig(string path);

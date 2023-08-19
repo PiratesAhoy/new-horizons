@@ -10,6 +10,7 @@ first_name = "Howard"
 last_name = "Pyle"
 nation = "pirate"
 player_type = "corsair"
+difficulty = "mariner"
 pirate_flag = 18
 personal_flag = 31
 

@@ -9,6 +9,7 @@ first_name = "Julian"
 last_name = "McAllister"
 nation = "england"
 player_type = "rebel"
+difficulty = "seadog"
 pirate_flag = 5
 personal_flag = 30
 ship = "BrigRoyal"

@@ -10,6 +10,7 @@ first_name = "Horatio"
 last_name = "Hornblower"
 nation = "england"
 player_type = "naval_officer"
+difficulty = "mariner"
 pirate_flag = 23
 personal_flag = 25
 ship = "HMS_Bellona"

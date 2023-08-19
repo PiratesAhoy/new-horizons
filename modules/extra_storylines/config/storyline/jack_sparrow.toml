@@ -10,6 +10,7 @@ first_name = "Jack"
 last_name = "Sparrow"
 nation = "pirate"
 player_type = "adventurer"
+difficulty = "mariner"
 pirate_flag = 6
 personal_flag = 21
 ship = "BlackPearl"

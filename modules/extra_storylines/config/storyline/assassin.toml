@@ -10,6 +10,7 @@ first_name = "Johan"
 last_name = "Elting"
 nation = "holland"
 player_type = "military"
+difficulty = "seadog"
 pirate_flag = 2
 personal_flag = 9
 ship = "Barque4_47"

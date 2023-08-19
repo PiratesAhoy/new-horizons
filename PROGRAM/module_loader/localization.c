@@ -31,8 +31,6 @@ void LoadTranslations() {
 			LoadModuleTranslations(&TranslationData, module.root);
 		}
 	}
-
-	DumpAttributes(Localization);
 }
 
 void LoadModuleTranslations(ref data, string root) {

@@ -10,6 +10,7 @@ first_name = "Charles"
 last_name = "Ardent"
 nation = "pirate"
 player_type = "corsair"
+difficulty = "seadog"
 pirate_flag = 1
 personal_flag = 15
 ship = "Cutter1"

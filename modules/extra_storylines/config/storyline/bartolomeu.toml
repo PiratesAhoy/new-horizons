@@ -10,6 +10,7 @@ first_name = "Bartolomeu"
 last_name = "o Portugues"
 nation = "portugal"
 player_type = "social_climber"
+difficulty = "seadog"
 pirate_flag = 4
 personal_flag = 8
 
