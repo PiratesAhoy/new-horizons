@@ -1,10 +1,5 @@
 #define DEFAULT_STORYLINE "new_horizons"
 
-string i18n(string str) {
-	return str;
-}
-
-
 void LoadStoryLines() {
 	DeleteAttribute(&Storylines, "");
 	Storylines.list = "";

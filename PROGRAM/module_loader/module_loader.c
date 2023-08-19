@@ -1,3 +1,4 @@
+#include "module_loader/localization.c"
 #include "module_loader/storyline_loader.c"
 
 native void LoadConfig(ref target, string path);
@@ -19,7 +20,7 @@ void LoadModules() {
 	int directory_count = GetAttributesNum(module_list);
 	int module_count = 0;
 	for (int i = 0; i < GetAttributesNum(module_list); i++) {
-		string module_directory = GetAttributeN(module_list, i);
+		string module_directory = "modules/" + GetAttributeN(module_list, i);
 		if (FindConfig(module_directory + "/module") != "")
 		{
 			RegisterModule(module_directory);
@@ -27,6 +28,7 @@ void LoadModules() {
 		}
 	}
 
+	LoadTranslations();
 	LoadStoryLines();
 
 	Trace("Loaded " + module_count + " modules");
