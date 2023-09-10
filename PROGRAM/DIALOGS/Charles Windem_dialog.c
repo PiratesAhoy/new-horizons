@@ -535,8 +535,8 @@ void ProcessDialogEvent()
 
 		case "empty_bottles":
 			PlaySound("AMBIENT\SHOP\noise4.wav");
-			PlaySound("INTERFACE\button2.wav");
-			PlaySound("INTERFACE\button2.wav");
+			PlaySound("INTERFACE\button2.flac");
+			PlaySound("INTERFACE\button2.flac");
 			GiveItem2Character(Pchar, "Empty_bottles");
 
 			d.Text = DLG_TEXT[110];

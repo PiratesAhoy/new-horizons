@@ -426,7 +426,7 @@ bool KB_RemoveCharacter()
 // KK -->
 	int len = strlen(KeyboardStringLeft);
 	if(len < 1 || KeyboardStringLeft == "") return false; // just in case...
-	PlaySound("interface\button1.wav");
+	PlaySound("interface\button1.flac");
 	if (len > 2) {
 		KeyboardStringLeft = strcut(KeyboardStringLeft, 0, len-2);
 	} else {
@@ -449,7 +449,7 @@ bool KB_DeleteCharacter()
 {
 	int len = strlen(KeyboardStringRight);
 	if(len < 1 || KeyboardStringRight == "") return false; // just in case...
-	PlaySound("interface\button1.wav");
+	PlaySound("interface\button1.flac");
 	if (len > 2) {
 		KeyboardStringRight = strcut(KeyboardStringRight, 1, len-1);
 	} else {

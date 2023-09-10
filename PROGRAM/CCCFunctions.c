@@ -455,7 +455,7 @@ void GiveItemsBack(ref chr)
 	{
 
 	logit(chr.lastname + "'s " + skillnm + "skill is now " + chr.skill.(skillnm) + " lp: "  + chr.skill.(skillnm).lp);
-	PlaySound("INTERFACE\button3.wav");	
+	PlaySound("INTERFACE\button3.flac");
 	}
 */
 //}

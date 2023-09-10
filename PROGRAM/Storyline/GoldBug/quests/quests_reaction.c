@@ -1,4 +1,4 @@
-
+﻿
 GetTime(){ return stf(Environment.time); }
 
 void QuestComplete(string sQuestName)
@@ -3722,7 +3722,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"empty_bottle"))
 			{
 				AddQuestRecord("Jupiters_Moultrie_mission","6");
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 
 				TakeItemFromCharacter(Pchar, "empty_bottle");
 				GiveItem2Character(Pchar, "bladebottle_CE0");
@@ -3876,7 +3876,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "cognac_sold":
-			PlaySound("INTERFACE\button2.wav");
+			PlaySound("INTERFACE\button2.flac");
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(Pchar, "bladebottle_CB2");
 			Pchar.quest.Jupiter_cognac_sold = "yes";
@@ -4647,7 +4647,7 @@ void QuestComplete(string sQuestName)
 				GiveItem2Character(Pchar, "bladespyglass6");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterbyItem(Pchar, "bladespyglass6");
-				PlaySound("INTERFACE\button1.wav");
+				PlaySound("INTERFACE\button1.flac");
 			}
 			else LAi_QuestDelay("fort_tower_spyglass", 0.5);
 		break;
@@ -12675,7 +12675,7 @@ void QuestComplete(string sQuestName)
 				}
 				else
 				{
-					PlaySound("INTERFACE\button1.wav");
+					PlaySound("INTERFACE\button1.flac");
 					RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 					EquipCharacterByItem(Pchar, "bladelever");
 				} 
@@ -13495,7 +13495,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_SetPlayerType(Pchar);
 			LAi_SetStayType(characterFromID("Jupiter"));
-			PlaySound("INTERFACE\button1.wav");
+			PlaySound("INTERFACE\button1.flac");
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 			EquipCharacterbyItem(Pchar, "bladeX4");
 			TakeItemFromCharacter(Pchar, "bladelever" );
@@ -14586,7 +14586,7 @@ void QuestComplete(string sQuestName)
 			|| CheckCharacterItem(Pchar,"pistolgrenade"))
 			{
 				if(CheckCharacterItem(Pchar,"map")) PlaySound("INTERFACE\paper.wav");
-				if(CheckCharacterItem(Pchar,"glasses")) {PlaySound("INTERFACE\button3.wav"); PlaySound("INTERFACE\button3.wav");}
+				if(CheckCharacterItem(Pchar,"glasses")) {PlaySound("INTERFACE\button3.flac"); PlaySound("INTERFACE\button3.flac");}
 				if(CheckCharacterItem(Pchar,"pistolgrenade")) PlaySound("INTERFACE\pinion_place.wav");
  
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"No, I don't bother to take anything."));
@@ -18057,8 +18057,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "corporal_ammo2":
-			PlaySound("INTERFACE\button3.wav");
-			PlaySound("INTERFACE\button1.wav");
+			PlaySound("INTERFACE\button3.flac");
+			PlaySound("INTERFACE\button1.flac");
 
 			LAi_QuestDelay("corporal_ammo3", 1.0);
 		break;
@@ -19231,7 +19231,7 @@ void QuestComplete(string sQuestName)
 		case "return_church_box14":	
 			if(CheckCharacterItem(Pchar,"flyswatter"))
 			{
-				if(CheckCharacterItem(Pchar,"flyswatter")) PlaySound("INTERFACE\button3.wav");
+				if(CheckCharacterItem(Pchar,"flyswatter")) PlaySound("INTERFACE\button3.flac");
 				
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"No, I don't bother to take anything."));
 				TakenItems(Pchar, "flyswatter", -1);
@@ -19761,7 +19761,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToCharacter(Pchar, characterFromID("Jupiter"));
 
-			PlaySound("INTERFACE\button3.wav");
+			PlaySound("INTERFACE\button3.flac");
 			TakeItemFromCharacter(Pchar, "goldbug" );
 
 			LAi_QuestDelay("Jup_prepare_to_climb_again1", 1.0);		

@@ -6344,7 +6344,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: black
 					if(CheckAttribute(chr, "quest.medium_bottle") && chr.quest.medium_bottle == "MC2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.medium_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l2 = "";
@@ -6359,7 +6359,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: grey
 					if(CheckAttribute(chr, "quest.medium_bottle") && chr.quest.medium_bottle == "MG2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.medium_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l2 = "";
@@ -6374,7 +6374,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: white
 					if(CheckAttribute(chr, "quest.medium_bottle") && chr.quest.medium_bottle == "MN2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.medium_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l2 = "";
@@ -6389,7 +6389,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: yellow
 					if(CheckAttribute(chr, "quest.medium_bottle") && chr.quest.medium_bottle == "MS2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.medium_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l2 = "";
@@ -6404,7 +6404,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: light yellow
 					if(CheckAttribute(chr, "quest.medium_bottle") && chr.quest.medium_bottle == "MY2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.medium_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l2 = "";
@@ -6419,7 +6419,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: dark green
 					if(CheckAttribute(chr, "quest.medium_bottle") && chr.quest.medium_bottle == "MZ2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.medium_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l2 = "";
@@ -6771,7 +6771,7 @@ void OpenBoxProcedure_BUG()
 						{
 							//PICK UP BOTTLE
 
-							PlaySound("INTERFACE\button2.wav");
+							PlaySound("INTERFACE\button2.flac");
 							chr.quest.large_bottle = "none";
 
 							Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -6866,7 +6866,7 @@ void OpenBoxProcedure_BUG()
 						{
 							//PICK UP BOTTLE
 
-							PlaySound("INTERFACE\button2.wav");
+							PlaySound("INTERFACE\button2.flac");
 							chr.quest.large_bottle = "none";
 
 							Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -6944,7 +6944,7 @@ void OpenBoxProcedure_BUG()
 						{
 							//PICK UP BOTTLE
 
-							PlaySound("INTERFACE\button2.wav");
+							PlaySound("INTERFACE\button2.flac");
 							chr.quest.large_bottle = "none";
 
 							Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -7038,7 +7038,7 @@ void OpenBoxProcedure_BUG()
 						{
 							//PICK UP BOTTLE
 
-							PlaySound("INTERFACE\button2.wav");
+							PlaySound("INTERFACE\button2.flac");
 							chr.quest.large_bottle = "none";
 
 							Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -7133,7 +7133,7 @@ void OpenBoxProcedure_BUG()
 						{
 							//PICK UP BOTTLE
 
-							PlaySound("INTERFACE\button2.wav");
+							PlaySound("INTERFACE\button2.flac");
 							chr.quest.large_bottle = "none";
 
 							Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -7211,7 +7211,7 @@ void OpenBoxProcedure_BUG()
 						{
 							//PICK UP BOTTLE
 
-							PlaySound("INTERFACE\button2.wav");
+							PlaySound("INTERFACE\button2.flac");
 							chr.quest.large_bottle = "none";
 
 							Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -7286,7 +7286,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: black
 					if(CheckAttribute(chr, "quest.large_bottle") && chr.quest.large_bottle == "LC2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.large_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -7301,7 +7301,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: grey
 					if(CheckAttribute(chr, "quest.large_bottle") && chr.quest.large_bottle == "LG2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.large_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -7316,7 +7316,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: white
 					if(CheckAttribute(chr, "quest.large_bottle") && chr.quest.large_bottle == "LN2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.large_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -7331,7 +7331,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: yellow
 					if(CheckAttribute(chr, "quest.large_bottle") && chr.quest.large_bottle == "LS2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.large_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -7346,7 +7346,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: light yellow
 					if(CheckAttribute(chr, "quest.large_bottle") && chr.quest.large_bottle == "LY2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.large_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -7361,7 +7361,7 @@ void OpenBoxProcedure_BUG()
 					//FULL BOTTLE: dark green
 					if(CheckAttribute(chr, "quest.large_bottle") && chr.quest.large_bottle == "LZ2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.large_bottle = "none";
 
 						Locations[FindLocation("GB_chinese_gunpowder")].models.always.l3 = "";
@@ -11825,7 +11825,7 @@ void OpenBoxProcedure_BUG()
 		//PICK UP LEVER FROM GROUND
 
 			case "box35":
-				PlaySound("INTERFACE\button1.wav");
+				PlaySound("INTERFACE\button1.flac");
 				GiveItem2Character(chr, "bladelever");
 				RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(chr, "bladelever");

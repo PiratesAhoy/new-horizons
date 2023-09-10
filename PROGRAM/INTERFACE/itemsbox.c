@@ -2434,7 +2434,7 @@ void TakeItems(bool bMoreThanOneItem)
 					if(ps >= 2)
 					{
 						Logit(TranslateString("","Two Salt Jars are enough!"));
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 					}
 					else
 					{
@@ -2476,7 +2476,7 @@ void TakeItems(bool bMoreThanOneItem)
 				if(coal >= 2)
 				{
 					Logit(TranslateString("","Two Coal Jars are enough!"));
-					PlaySound("INTERFACE\button2.wav");
+					PlaySound("INTERFACE\button2.flac");
 				}
 				else
 				{
@@ -2550,7 +2550,7 @@ void TakeItems(bool bMoreThanOneItem)
 				if(wax >= 2)
 				{
 					Logit(TranslateString("","Two Wax Jars are enough!"));
-					PlaySound("INTERFACE\button2.wav");
+					PlaySound("INTERFACE\button2.flac");
 				}
 				else
 				{

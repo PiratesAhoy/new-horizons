@@ -58,8 +58,8 @@ void ProcessDialogEvent()
 				    				|| CheckCharacterItem(Pchar,"pistolmdchest_F2B_S") || CheckCharacterItem(Pchar,"pistolmdchest_F2B_CS"))
 							{
 								PlaySound("AMBIENT\SHOP\noise4.wav");
-								PlaySound("INTERFACE\button2.wav");
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
+								PlaySound("INTERFACE\button2.flac");
 								GiveItem2Character(Pchar, "Mercury_bottles");
 								TakeItemFromCharacter(Pchar, "empty_bottles");
 								GiveItem2Character(Pchar, "filled_medium_drawer");

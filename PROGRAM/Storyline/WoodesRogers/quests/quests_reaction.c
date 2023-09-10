@@ -26018,7 +26018,7 @@ void QuestComplete(string sQuestName)
 		case "switch_to_potion_cognac":
 			//from itemlogic
 			Logit(LanguageConvertString(tmpLangFileID,"I put away the Cognac now - Maybe I'll need it further on."));
-			PlaySound("INTERFACE\button2.wav");
+			PlaySound("INTERFACE\button2.flac");
 
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(Pchar, "bladebottle_CB2");
@@ -26520,7 +26520,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "sloop8_B":
-			PlaySound("INTERFACE\button2.wav");
+			PlaySound("INTERFACE\button2.flac");
 			PlaySound("PEOPLE\clothes1.wav");
 
 			if(CheckCharacterItem(Pchar,"book72_package"))
@@ -27423,7 +27423,7 @@ void QuestComplete(string sQuestName)
 			//from itemlogic box
 			if(CheckCharacterItem(Pchar,"pistolretort"))
 			{
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "pistolretort");
 				return;
@@ -27435,7 +27435,7 @@ void QuestComplete(string sQuestName)
 			//from itemlogic box
 			if(CheckCharacterItem(Pchar,"bladetop"))
 			{
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "bladetop");
 				return;
@@ -27447,7 +27447,7 @@ void QuestComplete(string sQuestName)
 			//from itemlogic box
 			if(CheckCharacterItem(Pchar,"pistolglass_tube"))
 			{
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "pistolglass_tube");
 				return;
@@ -27459,7 +27459,7 @@ void QuestComplete(string sQuestName)
 			//from itemlogic box
 			if(CheckCharacterItem(Pchar,"bladebottle_CE0"))
 			{
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "bladebottle_CE0");
 				return;
@@ -27471,7 +27471,7 @@ void QuestComplete(string sQuestName)
 			//from itemlogic box
 			if(CheckCharacterItem(Pchar,"bladebottle_BE0"))
 			{
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "bladebottle_BE0");
 				return;
@@ -27483,7 +27483,7 @@ void QuestComplete(string sQuestName)
 			//from itemlogic box
 			if(CheckCharacterItem(Pchar,"bladebottle_CP2"))
 			{
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "bladebottle_CP2");
 				return;
@@ -27543,7 +27543,7 @@ void QuestComplete(string sQuestName)
 				weaponID7 = GetCharacterEquipByGroup(Pchar,BLADE_ITEM_TYPE);
 				if(weaponID7 == "") EquipCharacterByItem(Pchar, "bladeX4");
 				
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "pistolretort3");
 				return;
@@ -27588,7 +27588,7 @@ void QuestComplete(string sQuestName)
 				weaponID7 = GetCharacterEquipByGroup(Pchar,BLADE_ITEM_TYPE);
 				if(weaponID7 == "") EquipCharacterByItem(Pchar, "bladeX4");
 
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "pistolcharcoal_WR");
 				return;
@@ -28715,7 +28715,7 @@ void QuestComplete(string sQuestName)
 
 			if(nitre == 14 && sulf_acid == 1)
 			{
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "bladebottle_CT1_sulf");
 				PlaySound("PEOPLE\grass_noise.wav");
@@ -31079,7 +31079,7 @@ void QuestComplete(string sQuestName)
 		case "H2SO4_check":
 			if(CheckCharacterItem(Pchar,"bladebottle_CT1_sulf"))
 			{
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "bladebottle_CT1_sulf");
 			}
@@ -31595,8 +31595,8 @@ void QuestComplete(string sQuestName)
 			{
 				Pchar.quest.cap_inner_gp_box = "locked";
 
-				PlaySound("INTERFACE\button3.wav");
-				PlaySound("INTERFACE\button3.wav");
+				PlaySound("INTERFACE\button3.flac");
+				PlaySound("INTERFACE\button3.flac");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "bladecompasses");
 				TakeItemFromCharacter(Pchar, "bladepowderhornP");
@@ -32476,7 +32476,7 @@ void QuestComplete(string sQuestName)
 			RemoveCharacterEquip(Pchar, POUCH_ITEM_TYPE);
 			EquipCharacterbyItem(Pchar, "ammobag2");
 			SetModel(PChar, "Pira4M_HTUS_a", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
-			PlaySound("INTERFACE\button1.wav");
+			PlaySound("INTERFACE\button1.flac");
 
 			RemoveCharacterEquip(Pchar, FLASK_ITEM_TYPE);
 			TakeItemFromCharacter(Pchar, "ammopouch");
@@ -35085,7 +35085,7 @@ void QuestComplete(string sQuestName)
 
 		case "church_fill_winebottle2":
 			Logit(LanguageConvertString(tmpLangFileID,"I put away the Wine now - Maybe I'll need it further on."));
-			PlaySound("INTERFACE\button2.wav");
+			PlaySound("INTERFACE\button2.flac");
 
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(Pchar, "bladebottle_CR2");
@@ -38321,7 +38321,7 @@ void QuestComplete(string sQuestName)
 				GiveItem2Character(Pchar, "bladespyglass5");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterbyItem(Pchar, "bladespyglass5");
-				PlaySound("INTERFACE\button1.wav");
+				PlaySound("INTERFACE\button1.flac");
 			}
 			else LAi_QuestDelay("wood_tower_spyglass", 0.5);
 		break;
@@ -38585,7 +38585,7 @@ void QuestComplete(string sQuestName)
 		case "hoist_spanish_flag1":
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 			EquipCharacterByItem(Pchar, "bladespyglass5");
-			PlaySound("INTERFACE\button2.wav");
+			PlaySound("INTERFACE\button2.flac");
 
 			LAi_QuestDelay("hoist_spanish_flag2", 1.0);
 		break;
@@ -43179,7 +43179,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "corvette_pchar_get_dressed10":
-			PlaySound("INTERFACE\button1.wav");
+			PlaySound("INTERFACE\button1.flac");
 
 			LAi_SetPlayerType(Pchar);
 			LAi_SetOfficerType(characterFromID("Selkirk"));
@@ -46564,7 +46564,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "package3":
-			PlaySound("INTERFACE\button1.wav");
+			PlaySound("INTERFACE\button1.flac");
 
 			LAi_QuestDelay("package3A", 1.0);
 		break;
@@ -46901,7 +46901,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "grandma_booty_folding_knife1":
-			PlaySound("INTERFACE\button1.wav");
+			PlaySound("INTERFACE\button1.flac");
 
 			if(CheckAttribute(Pchar,"quest.grandma_booty") && Pchar.quest.grandma_booty == 1)
 			{
@@ -46912,7 +46912,7 @@ void QuestComplete(string sQuestName)
 
 		case "grandma_booty_compass1":
 			//from Grandma dialog
-			PlaySound("INTERFACE\button1.wav");
+			PlaySound("INTERFACE\button1.flac");
 
 			if(CheckAttribute(Pchar,"quest.grandma_booty") && Pchar.quest.grandma_booty == 1)
 			{
@@ -49327,72 +49327,72 @@ void QuestComplete(string sQuestName)
 					{
 						case "Pira4M_HTUS":
 							SetModel(Pchar, "Pira4M_HTUS_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "Pira4M_TUS":
 							SetModel(Pchar, "Pira4M_TUS_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "PriestRedM":
 							SetModel(Pchar, "PriestRedM_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "ShkiperM_U":
 							SetModel(Pchar, "ShkiperM_U_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "ShkiperM_UH":
 							SetModel(Pchar, "ShkiperM_UH_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "Howard_Pyle":
 							SetModel(Pchar, "Howard_Pyle_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "Howard_Pyle_hat":
 							SetModel(Pchar, "Howard_Pyle_hat_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 					//..........................................................................................................
 						case "Pira4M_HTUS_b":
 							SetModel(Pchar, "Pira4M_HTUS_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("INTERFACE\button1.wav");
+							PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "Pira4M_TUS_b":
 							SetModel(Pchar, "Pira4M_TUS_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("INTERFACE\button1.wav");
+							PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "PriestRedM_b":
 							SetModel(Pchar, "PriestRedM_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("INTERFACE\button1.wav");
+							PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "ShkiperM_U_b":
 							SetModel(Pchar, "ShkiperM_U_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("INTERFACE\button1.wav");
+							PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "ShkiperM_UH_b":
 							SetModel(Pchar, "ShkiperM_UH_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("INTERFACE\button1.wav");
+							PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "Howard_Pyle_b":
 							SetModel(Pchar, "Howard_Pyle_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("INTERFACE\button1.wav");
+							PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "Howard_Pyle_hat_b":
 							SetModel(Pchar, "Howard_Pyle_hat_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("INTERFACE\button1.wav");
+							PlaySound("INTERFACE\button1.flac");
 						break;
 					}
 				}
@@ -49444,37 +49444,37 @@ void QuestComplete(string sQuestName)
 							//..........................................................................................................
 							case "Pira4M_HTUS_a":
 								SetModel(Pchar, "Pira4M_HTUS_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-								PlaySound("INTERFACE\button1.wav");
+								PlaySound("INTERFACE\button1.flac");
 							break;
 
 							case "Pira4M_TUS_a":
 								SetModel(Pchar, "Pira4M_TUS_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-								PlaySound("INTERFACE\button1.wav");
+								PlaySound("INTERFACE\button1.flac");
 							break;
 
 							case "PriestRedM_a":
 								SetModel(Pchar, "PriestRedM_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-								PlaySound("INTERFACE\button1.wav");
+								PlaySound("INTERFACE\button1.flac");
 							break;
 
 							case "ShkiperM_U_a":
 								SetModel(Pchar, "ShkiperM_U_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-								PlaySound("INTERFACE\button1.wav");
+								PlaySound("INTERFACE\button1.flac");
 							break;
 
 							case "ShkiperM_UH_a":
 								SetModel(Pchar, "ShkiperM_UH_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-								PlaySound("INTERFACE\button1.wav");
+								PlaySound("INTERFACE\button1.flac");
 							break;
 
 							case "Howard_Pyle_a":
 								SetModel(Pchar, "Howard_Pyle_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-								PlaySound("INTERFACE\button1.wav");
+								PlaySound("INTERFACE\button1.flac");
 							break;
 
 							case "Howard_Pyle_hat_a":
 								SetModel(Pchar, "Howard_Pyle_hat_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-								PlaySound("INTERFACE\button1.wav");
+								PlaySound("INTERFACE\button1.flac");
 							break;
 						}
 					}
@@ -49523,37 +49523,37 @@ void QuestComplete(string sQuestName)
 					//..........................................................................................................
 						case "Pira4M_HTUS_a":
 							SetModel(Pchar, "Pira4M_HTUS", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "Pira4M_TUS_a":
 							SetModel(Pchar, "Pira4M_TUS", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "PriestRedM_a":
 							SetModel(Pchar, "PriestRedM", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "ShkiperM_U_a":
 							SetModel(Pchar, "ShkiperM_U", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "ShkiperM_UH_a":
 							SetModel(Pchar, "ShkiperM_UH", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "Howard_Pyle_a":
 							SetModel(Pchar, "Howard_Pyle", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 
 						case "Howard_Pyle_hat_a":
 							SetModel(Pchar, "Howard_Pyle_hat", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 						break;
 					}
 				}
@@ -63502,7 +63502,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"rosary"))
 			{
 				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
-				PlaySound("INTERFACE\button3.wav");
+				PlaySound("INTERFACE\button3.flac");
 
 				LAi_QuestDelay("count_abbess_items", 0.5);
 			}
@@ -81620,7 +81620,7 @@ void QuestComplete(string sQuestName)
 				weaponID7 = GetCharacterEquipByGroup(Pchar,BLADE_ITEM_TYPE);
 				if(weaponID7 == "") EquipCharacterByItem(Pchar, "bladeX4");
 
-				PlaySound("INTERFACE\button2.wav");
+				PlaySound("INTERFACE\button2.flac");
 				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "pistolfunnel");
 				return;
@@ -81631,7 +81631,7 @@ void QuestComplete(string sQuestName)
 		//---------------------------------------------------------------------------------------------------------------------
 		
 		case "extra_bottle_sound":
-			PlaySound("INTERFACE\button2.wav");
+			PlaySound("INTERFACE\button2.flac");
 		break;
 
 		//--------------------------------------------------------------------------------------------------------------

@@ -9607,7 +9607,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "Elting_prison_knife_done":
-			PlaySound("INTERFACE\button3.wav");
+			PlaySound("INTERFACE\button3.flac");
 
 			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);

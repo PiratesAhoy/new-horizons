@@ -4951,8 +4951,8 @@ void OpenBoxProcedure_WR()
 						switch(Locations[FindLocation(chr.location)].models.always.locators)
 						{
 								case "church3_l_OFF_open":
-									PlaySound("INTERFACE\button1.wav");
-									PlaySound("INTERFACE\button1.wav");
+									PlaySound("INTERFACE\button1.flac");
+									PlaySound("INTERFACE\button1.flac");
 
 									LAi_QuestDelay("pchar_hah", 0.75);
 								break;
@@ -4960,15 +4960,15 @@ void OpenBoxProcedure_WR()
 								case "church3_l_ON_open":
 									Locations[FindLocation(chr.location)].models.always.locators = "church3_l_ON_closed";
 									Locations[FindLocation("Kristiania_cathedral")].reload.l2.disable = 1;
-									PlaySound("INTERFACE\button1.wav");
-									PlaySound("INTERFACE\button1.wav");
+									PlaySound("INTERFACE\button1.flac");
+									PlaySound("INTERFACE\button1.flac");
 
 									LAi_QuestDelay("KR_church_close_door", 0.75);
 								break;
 
 								case "church3_l_OFF_closed":
-									PlaySound("INTERFACE\button1.wav");
-									PlaySound("INTERFACE\button1.wav");
+									PlaySound("INTERFACE\button1.flac");
+									PlaySound("INTERFACE\button1.flac");
 
 									LAi_QuestDelay("pchar_hah", 0.75);
 								break;
@@ -4976,8 +4976,8 @@ void OpenBoxProcedure_WR()
 								case "church3_l_ON_closed":
 									Locations[FindLocation(chr.location)].models.always.locators = "church3_l_ON_open";
 									Locations[FindLocation("Kristiania_cathedral")].reload.l2.disable = 0;
-									PlaySound("INTERFACE\button1.wav");
-									PlaySound("INTERFACE\button1.wav");
+									PlaySound("INTERFACE\button1.flac");
+									PlaySound("INTERFACE\button1.flac");
 
 									LAi_QuestDelay("KR_church_open_door", 0.75);
 								break;
@@ -10953,7 +10953,7 @@ void OpenBoxProcedure_WR()
 						{
 							if(CheckAttribute(chr, "quest.apparatus_liquid") && chr.quest.apparatus_liquid == "G2")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								chr.quest.apparatus_level = "glass_tube";
 								chr.quest.apparatus_liquid = "none";
 
@@ -10966,7 +10966,7 @@ void OpenBoxProcedure_WR()
 							}
 							if(CheckAttribute(chr, "quest.apparatus_liquid") && chr.quest.apparatus_liquid == "T2_sulf_c")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								chr.quest.apparatus_level = "glass_tube";
 								chr.quest.apparatus_liquid = "none";
 				//pär postman
@@ -10979,7 +10979,7 @@ void OpenBoxProcedure_WR()
 							}
 							if(CheckAttribute(chr, "quest.apparatus_liquid") && chr.quest.apparatus_liquid == "P2")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								chr.quest.apparatus_level = "glass_tube";
 								chr.quest.apparatus_liquid = "none";
 
@@ -11002,7 +11002,7 @@ void OpenBoxProcedure_WR()
 							}
 							if(CheckAttribute(chr, "quest.apparatus_liquid") && chr.quest.apparatus_liquid == "Y2")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								chr.quest.apparatus_level = "glass_tube";
 								chr.quest.apparatus_liquid = "none";
 
@@ -11902,7 +11902,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: cognac
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MB2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -11935,7 +11935,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: H2SO4 + water
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MT2_sulf_w")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -11951,7 +11951,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: H2SO4 + nitre
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MT2_sulf_c")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -11965,7 +11965,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: HNO3 + water (Aqua Fortis)
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MT2_nitr_w")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -11981,7 +11981,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: HCl
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MT2_hydr")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -11995,7 +11995,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: HCl + HNO3
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MT2_hydrnitr")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -12009,7 +12009,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: Aqua Regis
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MA2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -12025,7 +12025,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: copperas + water
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MG2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -12039,7 +12039,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: Black Pulvis Solaris
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MC2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -12055,7 +12055,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MT2_mix11")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -12069,7 +12069,7 @@ void OpenBoxProcedure_WR()
 					//FULL BOTTLE: Red Pulvis Solaris
 					if(CheckAttribute(chr, "quest.mixtable_bottle") && chr.quest.mixtable_bottle == "MR2")
 					{
-						PlaySound("INTERFACE\button2.wav");
+						PlaySound("INTERFACE\button2.flac");
 						chr.quest.mixtable_bottle = "none";
 
 						Locations[FindLocation("wr_farm_alchemy")].models.always.l5 = "";
@@ -12459,7 +12459,7 @@ void OpenBoxProcedure_WR()
 
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix == "1")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								Locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "";
 								RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 								GiveItem2Character(chr,"bladebottle_BTc_hydr");
@@ -12471,7 +12471,7 @@ void OpenBoxProcedure_WR()
 							//also used after mix2 + oven + water
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix == "3")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								Locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "";
 								RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 								GiveItem2Character(chr,"bladebottle_BTc_mix3");
@@ -12592,7 +12592,7 @@ void OpenBoxProcedure_WR()
 
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix == "2")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								Locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "";
 								RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 								GiveItem2Character(chr,"bladebottle_BG2");
@@ -13096,7 +13096,7 @@ void OpenBoxProcedure_WR()
 
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix == "7")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								Locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "";
 								RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 								GiveItem2Character(chr,"bladebottle_BY2_mix7");
@@ -13111,7 +13111,7 @@ void OpenBoxProcedure_WR()
 
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix == "8")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								Locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "";
 								RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 								GiveItem2Character(chr,"bladebottle_BS2_LH");
@@ -13324,7 +13324,7 @@ void OpenBoxProcedure_WR()
 
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix == "9")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								Locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "";
 								RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 								GiveItem2Character(chr,"bladebottle_BY2_mix9");
@@ -13381,7 +13381,7 @@ void OpenBoxProcedure_WR()
 					
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix == "13")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								Locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "";
 								RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 								GiveItem2Character(chr,"bladebottle_BP2_ps");
@@ -13467,7 +13467,7 @@ void OpenBoxProcedure_WR()
 							//FULL BOTTLE: Philospher's Stone
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix == "15")
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								Locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "";
 								RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 								GiveItem2Character(chr,"bladebottle_BAU");
@@ -13809,7 +13809,7 @@ void OpenBoxProcedure_WR()
 						if(IsEquipCharacterByItem(chr, "bladebottle_CE0"))
 						{
 							Locations[FindLocation(chr.location)].models.always.l14 ="bottle_GE0";
-							PlaySound("INTERFACE\button2.wav");
+							PlaySound("INTERFACE\button2.flac");
 							PlaySound("PEOPLE\step_stone.wav");
 							RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 							TakeItemFromCharacter(chr, "bladebottle_CE0");
@@ -13826,7 +13826,7 @@ void OpenBoxProcedure_WR()
 
 					case "bottle_GC1":
 						Locations[FindLocation(chr.location)].models.always.l14 ="";
-						PlaySound("INTERFACE\button2.wav");	
+						PlaySound("INTERFACE\button2.flac");
 						RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 						GiveItem2Character(chr,"bladebottle_CC1");
 						EquipCharacterByItem(chr, "bladebottle_CC1");	
@@ -13836,7 +13836,7 @@ void OpenBoxProcedure_WR()
 
 					case "bottle_GG1":
 						Locations[FindLocation(chr.location)].models.always.l14 ="";	
-						PlaySound("INTERFACE\button2.wav");	
+						PlaySound("INTERFACE\button2.flac");
 						RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 						GiveItem2Character(chr,"bladebottle_CG1");
 						EquipCharacterByItem(chr, "bladebottle_CG1");
@@ -14227,7 +14227,7 @@ void OpenBoxProcedure_WR()
 
 							if(IsEquipCharacterByItem(chr, "pistolfunnel"))
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								PlaySound("PEOPLE\step_stairway2.wav");
 								RemoveCharacterEquip(chr, GUN_ITEM_TYPE);
 								TakeItemFromCharacter(chr, "pistolfunnel");
@@ -14243,7 +14243,7 @@ void OpenBoxProcedure_WR()
 
 								if(gunID == "" && CheckCharacterItem(chr,"pistolfunnel"))
 								{
-									PlaySound("INTERFACE\button2.wav");
+									PlaySound("INTERFACE\button2.flac");
 									EquipCharacterByItem(chr, "pistolfunnel");
 								}
 
@@ -14300,7 +14300,7 @@ void OpenBoxProcedure_WR()
 
 										if(gunID == "" && CheckCharacterItem(chr,"pistolfunnel"))
 										{
-											PlaySound("INTERFACE\button2.wav");
+											PlaySound("INTERFACE\button2.flac");
 											EquipCharacterByItem(chr, "pistolfunnel");
 										}
 									}
@@ -14308,7 +14308,7 @@ void OpenBoxProcedure_WR()
 									{
 										if(gunID == "" && CheckCharacterItem(chr,"pistolfunnel"))
 										{
-											PlaySound("INTERFACE\button2.wav");
+											PlaySound("INTERFACE\button2.flac");
 											EquipCharacterByItem(chr, "bladeX4");
 											EquipCharacterByItem(chr, "pistolfunnel");
 										}
@@ -14905,7 +14905,7 @@ void OpenBoxProcedure_WR()
 
 							if(IsEquipCharacterByItem(chr, "pistolfunnel"))
 							{
-								PlaySound("INTERFACE\button2.wav");
+								PlaySound("INTERFACE\button2.flac");
 								PlaySound("PEOPLE\step_stairway2.wav");
 								RemoveCharacterEquip(chr, GUN_ITEM_TYPE);
 								TakeItemFromCharacter(chr, "pistolfunnel");
@@ -14921,7 +14921,7 @@ void OpenBoxProcedure_WR()
 
 								if(gunID == "" && CheckCharacterItem(chr,"pistolfunnel"))
 								{
-									PlaySound("INTERFACE\button2.wav");
+									PlaySound("INTERFACE\button2.flac");
 									EquipCharacterByItem(chr, "pistolfunnel");
 								}
 
@@ -14978,7 +14978,7 @@ void OpenBoxProcedure_WR()
 
 										if(gunID == "" && CheckCharacterItem(chr,"pistolfunnel"))
 										{
-											PlaySound("INTERFACE\button2.wav");
+											PlaySound("INTERFACE\button2.flac");
 											EquipCharacterByItem(chr, "pistolfunnel");
 										}
 									}
@@ -14986,7 +14986,7 @@ void OpenBoxProcedure_WR()
 									{
 										if(gunID == "" && CheckCharacterItem(chr,"pistolfunnel"))
 										{
-											PlaySound("INTERFACE\button2.wav");
+											PlaySound("INTERFACE\button2.flac");
 											EquipCharacterByItem(chr, "bladeX4");
 											EquipCharacterByItem(chr, "pistolfunnel");
 										}
@@ -16791,7 +16791,7 @@ void OpenBoxProcedure_WR()
 					if(LAi_IsFightMode(chr))
 					{
 						//second 'open box'
-						PlaySound("INTERFACE\button3.wav");
+						PlaySound("INTERFACE\button3.flac");
 						RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 						TakeItemFromCharacter(chr, "bladeanchor");
 						GiveItem2Character(chr, "bladeX4");

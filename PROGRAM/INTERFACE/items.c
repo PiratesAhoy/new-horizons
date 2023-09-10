@@ -569,7 +569,7 @@ if(comName=="activate" || comName=="click")
 					if(CheckAttribute(Pchar,"model") && Pchar.model == "William Legrand3")
 					{
 						SetModel(Pchar, "William Legrand", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-						PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+						PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 					}
 				}
 				else
@@ -578,7 +578,7 @@ if(comName=="activate" || comName=="click")
 					if(CheckAttribute(Pchar,"model") && Pchar.model == "William Legrand")
 					{
 						SetModel(Pchar, "William Legrand3", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
-						PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+						PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.flac");
 					}
 				}
 			}
@@ -2198,7 +2198,7 @@ void I_ExamineItem()
 
 	if(itmName == "book55A")
 	{
-		PlaySound("INTERFACE\button3.wav");
+		PlaySound("INTERFACE\button3.flac");
 		PlaySound("INTERFACE\paper.wav");
 		TakeItemFromCharacter(Pchar, "book55A");
 		GiveItem2Character(Pchar, "book55B");
@@ -2259,7 +2259,7 @@ void I_ExamineItem()
 
 	if(itmName == "knitting")
 	{
-		PlaySound("INTERFACE\button3.wav");
+		PlaySound("INTERFACE\button3.flac");
 		TakeItemFromCharacter(Pchar, "knitting");
 		GiveItem2Character(Pchar, "yarn");
 		GiveItem2Character(Pchar, "needles");
@@ -2453,7 +2453,7 @@ void I_ExamineItem()
 
 	if(itmName == "p_case_1C")
 	{
-		PlaySound("INTERFACE\button1.wav");
+		PlaySound("INTERFACE\button1.flac");
 		TakeItemFromCharacter(Pchar, "p_case_1C");
 		GiveItem2Character(Pchar, "p_case_0");
 		GiveItem2Character(Pchar, "caps_box_C");

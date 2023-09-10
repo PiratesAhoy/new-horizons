@@ -66,8 +66,8 @@ void ProcessDialogEvent()
 
 				if(CheckAttribute(Pchar,"quest.bar_status") && Pchar.quest.bar_status == "bought_wine")
 				{
-					PlaySound("INTERFACE\button2.wav");
-					PlaySound("INTERFACE\button2.wav");
+					PlaySound("INTERFACE\button2.flac");
+					PlaySound("INTERFACE\button2.flac");
 				}
 				if(CheckAttribute(Pchar,"quest.bar_status") && Pchar.quest.bar_status == "drank_beer")
 				{
