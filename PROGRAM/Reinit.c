@@ -180,6 +180,13 @@ void Reinit(bool start, bool show)
 			UnloadSegment("nations\nations_init.c");
 			if(show) Log_SetStringToLog(TranslateString("","Nations..."));
 		}
+
+		if(LoadSegment("worldmap\worldmap_init.c"))
+		{
+			wdmReinit();
+			if(show) Log_SetStringToLog(TranslateString("", "Worldmap")+"...");
+			UnloadSegment("worldmap\worldmap_init.c");
+		}
 	}
 	if (LoadSegment("Encounters\Encounters_init.c"))
 	{
@@ -585,7 +592,7 @@ void Reinit(bool start, bool show)
 
 	FindBlankCharSlot(); // to set CHARACTERS_QUANTITY correctly, just to be sure.
 	FindBlankLocSlot(); // to set nLocationsNum correctly, just to be sure.
-	
+
 	/* hoboseadog section:
 	ref chr;
 	chr = CharacterFromID("Enc_Officer_0");

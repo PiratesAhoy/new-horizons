@@ -7,19 +7,7 @@ void wdmInitWorldMap()
 	//Init world map object
 	DeleteAttribute(&worldMap, ""); // KK
 
-	//Debug info
-	worldMap.debug = "false";
-	worldMap.evwin = "false";
-	worldMap.noenc = "false";
-
-	//Start date
-	worldMap.date.hour = CharHour;
-	worldMap.date.min = CharMinute;
-	worldMap.date.sec = CharSecond;
-	worldMap.date.day = CharDay;
-	worldMap.date.month = CharMonth;
-	worldMap.date.year = CharYear;
-	worldMap.date.hourPerSec = 1.5;
+	wdmReinit();
 
 	//=========================================================================
 	//Labels
@@ -833,6 +821,32 @@ void wdmInitWorldMap()
 	worldMap.islands.IslaDeMuerte.position.z = 425.603;
 	worldMap.islands.IslaDeMuerte.position.rx = 375.139;
 	worldMap.islands.IslaDeMuerte.position.rz = 418.814;
+}
+
+void wdmReinit() {
+	//Debug info
+	worldMap.debug = "false";
+	worldMap.evwin = "false";
+	worldMap.noenc = "false";
+
+	//Start date
+	worldMap.date.hour = CharHour;
+	worldMap.date.min = CharMinute;
+	worldMap.date.sec = CharSecond;
+	worldMap.date.day = CharDay;
+	worldMap.date.month = CharMonth;
+	worldMap.date.year = CharYear;
+	worldMap.date.hourPerSec = 1.5;
+
+	worldMap.foodText.scale = 1.0;
+	worldMap.foodText.font = "normal";
+	worldMap.foodText.pos.x = stf(showWindow.right) - 104.0;
+	worldMap.foodText.pos.y = stf(showWindow.top) + 278.0;
+
+	worldMap.rumText.scale = 1.0;
+	worldMap.rumText.font = "normal";
+	worldMap.rumText.pos.x = stf(showWindow.right) - 56.0;
+	worldMap.rumText.pos.y = stf(showWindow.top) + 278.0;
 }
 
 void InitializationLabels()

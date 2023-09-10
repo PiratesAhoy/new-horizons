@@ -63,6 +63,7 @@
 //=========================================================================================
 
 extern void wdmInitWorldMap();
+extern void wdmReinit();
 
 #event_handler("WorldMap_EncounterCreate", "wdmEvent_EncounterCreate");
 #event_handler("WorldMap_PlayerInStorm", "wdmEvent_PlayerInStorm");
@@ -313,6 +314,12 @@ void wdmMarkDeleteEncounters()
 		{
 			continue;
 		}
+
+		if (wdmNoClearEncountersTable == false) {
+			enc.needDelete = "Worldmap reload";
+			continue;
+		}
+
 		bool deleteMe = false;
 		if(CheckAttribute(enc, "year") != 0)
 		{

@@ -678,6 +678,7 @@ void InitIslands()
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
 		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		AddIsland(q, rIsland, locator);
 
@@ -1674,6 +1675,7 @@ void InitIslands()
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
 		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		AddIsland(q, rIsland, locator);
 
@@ -1791,6 +1793,7 @@ void InitIslands()
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
 		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		AddIsland(q, rIsland, locator);
 
@@ -1819,6 +1822,7 @@ void InitIslands()
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
 		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		AddIsland(q, rIsland, locator);
 

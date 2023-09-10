@@ -17,7 +17,7 @@ with open("PROGRAM/globals.c", "r") as globals_file:
     if script_version.group(1) != version:
         raise Exception("Version number in globals.c does not match latest tag " + version + " != " + script_version.group(1))
 
-files = subprocess.run(['git', '--no-pager', 'diff', '--name-only', '--diff-filter=d', "15.0.0-alpha.10.."],
+files = subprocess.run(['git', '--no-pager', 'diff', '--name-only', '--diff-filter=d', "15.0.0-alpha.11.."],
                        stdout=subprocess.PIPE).stdout.decode("utf-8").replace('"', '').split("\n")
 
 def add_directory(z, path, target = None):
