@@ -2293,26 +2293,7 @@ void CheckStorylines()
 
 void RefreshStorylines()
 {
-	// TODO: Reload storyline configs
-//	object t_sl;
-//	ref tsl; makeref(tsl, t_sl);
-//	ref storyline; makeref(storyline, Storylines);
-//	aref sl; makearef(sl, storyline.list);
-//	CopyAttributes(tsl, sl);
-//	DeleteAttribute(sl, "");
-//	int num = GetAttributesNum(tsl);
-//	for (int i = 0; i < num; i++)
-//	{
-//		aref arsl = GetAttributeN(tsl, i);
-//		string sfile = "Storyline\" + arsl.dir;
-//		sfile = strcut(sfile, 0, strlen(sfile) - 2) + ".c";
-//
-//		if (LoadSegment(sfile))
-//		{
-//			RegisterStoryline(i);
-//			UnloadSegment(sfile);
-//		}
-//	}
+	LoadStoryLines();
 }
 
 void AddStorylineVar(int n, string name, string value)
