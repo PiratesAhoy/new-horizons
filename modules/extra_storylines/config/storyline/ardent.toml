@@ -16,6 +16,9 @@ personal_flag = 15
 ship = "Cutter1"
 ship_name = "Fortune"
 
+[storyline.new_horizons.start.editable]
+difficulty = true
+
 [storyline.ardent.start.date]
 hour = 10
 min = 21

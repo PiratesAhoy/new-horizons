@@ -16,6 +16,9 @@ personal_flag = 9
 ship = "Barque4_47"
 ship_name = "Neptunis"
 
+[storyline.new_horizons.start.editable]
+difficulty = true
+
 [storyline.assassin.start.date]
 hour = 11
 min = 43

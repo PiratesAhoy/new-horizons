@@ -36,6 +36,15 @@ void LoadStorylineConfigs(ref config, string root) {
 	}
 }
 
+bool IsStoryLineConfigLocked(aref config, string property) {
+	if (CheckAttribute(config, "start.editable")) {
+		if (CheckAttribute(config, "start.editable." + property)) {
+			return sti(config.start.editable.(property)) != 1;
+		}
+	}
+	return true;
+}
+
 void LoadStoryline(aref config, string id, int n) {
 	ref storyline; makeref(storyline, Storylines);
 	string sn = "sl" + (n + 1);
@@ -49,32 +58,45 @@ void LoadStoryline(aref config, string id, int n) {
 	sl.id = id
 	sl.dir = config.dir;
 	sl.start.location = config.start.location;
+	sl.start.location.lock = IsStoryLineConfigLocked(config, "location");
 	sl.start.port = config.start.port;
+	sl.start.port.lock = IsStoryLineConfigLocked(config, "port");
 	sl.start.model = config.start.model;
+	sl.start.model.lock = IsStoryLineConfigLocked(config, "model");
 	sl.start.name = config.start.first_name;
+	sl.start.name.lock = IsStoryLineConfigLocked(config, "first_name");
 	sl.start.lastname = config.start.last_name;
+	sl.start.lastname.lock = IsStoryLineConfigLocked(config, "last_name");
 	sl.start.nation = GetNationByString(config.start.nation);
+	sl.start.nation.lock = IsStoryLineConfigLocked(config, "nation");
 	sl.start.playerType = GetPlayerTypeByString(config.start.player_type);
+	sl.start.playerType.lock = IsStoryLineConfigLocked(config, "player_type");
 	if (CheckAttribute(config, "start.difficulty") ) {
 		sl.start.difficulty = GetDifficultyByString(config.start.difficulty);
 	}
 	else {
 		sl.start.difficulty = DIFFICULTY_LANDLUBBER;
 	}
+	sl.start.difficulty.lock = IsStoryLineConfigLocked(config, "difficulty");
 	sl.start.Flags.Pirate = config.start.pirate_flag;
+	sl.start.Flags.Pirate.lock = IsStoryLineConfigLocked(config, "pirate_flag");
 	sl.start.Flags.Personal = config.start.personal_flag;
+	sl.start.Flags.Personal.lock = IsStoryLineConfigLocked(config, "personal_flag");
 	if (CheckAttribute(config, "start.ship") ) {
 		sl.start.ship = config.start.ship;
 	}
+	sl.start.ship.lock = IsStoryLineConfigLocked(config, "ship");
 	if (CheckAttribute(config, "start.ship_name") ) {
 		sl.start.shipName = config.start.ship_name;
 	}
+	sl.start.shipName.lock = IsStoryLineConfigLocked(config, "ship_name");
 	sl.start.date.hour = config.start.date.hour;
 	sl.start.date.min = config.start.date.min;
 	sl.start.date.sec = config.start.date.sec;
 	sl.start.date.day = config.start.date.day;
 	sl.start.date.month = config.start.date.month;
 	sl.start.date.year = config.start.date.year;
+	sl.start.date.lock = IsStoryLineConfigLocked(config, "date");
 
 	sl.title = i18n("storyline:" + id + ":title");
 	sl.description = i18n("storyline:" + id + ":description");

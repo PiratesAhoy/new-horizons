@@ -16,6 +16,9 @@ personal_flag = 21
 ship = "BlackPearl"
 ship_name = "Black Pearl"
 
+[storyline.new_horizons.start.editable]
+difficulty = true
+
 [storyline.jack_sparrow.start.date]
 hour = 20
 min = 24

@@ -15,20 +15,20 @@ personal_flag = 30
 ship = "BrigRoyal"
 ship_name = "Defiance"
 
-editable = [
-    "location",
-    "port",
-    "model",
-    "first_name",
-    "last_name",
-    "nation",
-    "player_type",
-    "ship",
-    "ship_name",
-    "nation",
-    "personal_flag",
-    "pirate_flag",
-]
+[storyline.free_play.start.editable]
+location = true
+port = true
+model = true
+first_name = true
+last_name = true
+nation = true
+player_type = true
+personal_flag = true
+pirate_flag = true
+ship = true
+ship_name = true
+difficulty = true
+date = true
 
 [storyline.free_play.start.date]
 hour = 13

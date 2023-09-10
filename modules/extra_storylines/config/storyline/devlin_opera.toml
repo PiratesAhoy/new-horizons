@@ -16,6 +16,9 @@ personal_flag = 37
 ship = "FastGalleon1"
 ship_name = "Discovery"
 
+[storyline.new_horizons.start.editable]
+difficulty = true
+
 [storyline.devlin_opera.start.date]
 hour = 10
 min = 0

@@ -14,18 +14,17 @@ personal_flag = 14
 ship = "LuggerVML"
 ship_name = "Sea Horse"
 
-editable = [
-    "location",
-    "port",
-    "model",
-    "first_name",
-    "last_name",
-    "ship",
-    "ship_name",
-    "nation",
-    "personal_flag",
-    "pirate_flag",
-]
+[storyline.new_horizons.start.editable]
+model = true
+first_name = true
+last_name = true
+nation = true
+player_type = true
+personal_flag = true
+pirate_flag = true
+ship = true
+ship_name = true
+difficulty = true
 
 [storyline.new_horizons.start.date]
 hour = 10
