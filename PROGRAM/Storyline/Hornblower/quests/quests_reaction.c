@@ -10756,7 +10756,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Orders_and_Ship3":
-			LAi_Fade("Set_up_the_quest1", "Set_up_the_quest2");
+			QuestComplete("Set_up_the_quest1");
 		break;
 
 		case "Set_up_the_quest1":
@@ -10781,7 +10781,7 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Sneak", 50);
 			}
 			else {AddPartyExp(pchar, 2000);}
-			DoQuestReloadToLocation("Greenford_port", "reload", "reload1", "_");
+			DoQuestReloadToLocation("Greenford_port", "reload", "reload1", "Set_up_the_quest2");
 		break;
 
 		case "Set_up_the_quest2":
