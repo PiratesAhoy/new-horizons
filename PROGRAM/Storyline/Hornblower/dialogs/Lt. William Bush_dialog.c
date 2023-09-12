@@ -491,7 +491,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_Mrs Mason's_to Pack":
-			AddDialogExitQuest("Goodbye_to_Maria2");
+			AddDialogExitQuest("Maria_in_tears");
 			NextDiag.CurrentNode = "First time";
 			DialogExit();
 		break;

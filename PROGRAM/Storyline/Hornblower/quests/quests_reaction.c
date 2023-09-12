@@ -10894,19 +10894,13 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Lt. William Bush"), pchar, "", 10.0, 10.0);
 		break;
 
-		case "Goodbye_to_Maria2":
-			LAi_Fade("Maria_in_tears", "Maria_in_tears2");
-		break;
-
 		case "Maria_in_tears":
 			ChangeCharacterAddressGroup(characterFromID("Lt. William Bush"), "Mrs. Mason's House", "reload", "reload2");
 			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "Going_to_sleep_onboard";
 			
 			Locations[FindLocation("Mrs. Mason's House")].vcskip = true;
 			DoQuestReloadToLocation("Mrs. Mason's House", "goto", "goto5", "Maria_in_tears3");
-		break;
 
-		case "Maria_in_tears2":
 			ChangeCharacterAddressGroup(characterFromID("Lt. William Bush"), "Mrs. Mason's House", "reload", "reload2");
 			LAi_SetOfficerType(characterFromID("Lt. William Bush"));
 		break;
