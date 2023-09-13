@@ -82,11 +82,11 @@ FunctionEnd
 Section "Visual Studio Runtime" SEC08
   SetOutPath "$INSTDIR"
   ${If} ${RunningX64}
-    File "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.32.31326\vc_redist.x64.exe"
+    File "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.36.32532\vc_redist.x64.exe"
     ExecWait "$INSTDIR\vc_redist.x64.exe /install /quiet /norestart"
     Delete "$INSTDIR\vc_redist.x64.exe"
   ${Else}
-    File "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.32.31326\vc_redist.x86.exe"
+    File "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.36.32532\vc_redist.x86.exe"
     ExecWait "$INSTDIR\vc_redist.x86.exe /install /quiet /norestart"
     Delete "$INSTDIR\vc_redist.x86.exe"
   ${EndIf}
@@ -97,16 +97,16 @@ Section "!Main Files" SEC01
   SetOutPath "$INSTDIR"
 
   ;${If} ${RunningX64}
-    File /r "..\..\storm-engine\cmake-build-release\bin\*.exe"
-    File /r "..\..\storm-engine\cmake-build-release\bin\*.dll"
-    File /r "..\..\storm-engine\cmake-build-release\bin\*.pdb"
+    File /r "engine\*.exe"
+    File /r "engine\*.dll"
+    File /r "engine\*.pdb"
   ;${Else}
-  ;  File /r "..\..\storm-engine\cmake-build-release\bin\*.exe"
-  ;  File /r "..\..\storm-engine\cmake-build-release\bin\*.dll"
+  ;  File /r "engine\*.exe"
+  ;  File /r "engine\*.dll"
   ;${EndIf}
 
-  File /r "..\..\storm-engine\cmake-build-release\bin\*.h"
-  File /r "..\..\storm-engine\cmake-build-release\bin\*.fx"
+  File /r "engine\*.h"
+  File /r "engine\*.fx"
 
   SetOutPath "$INSTDIR\PROGRAM"
   File /r "..\PROGRAM\*.*"
@@ -126,6 +126,7 @@ Section "!Main Files" SEC01
 
   File /r "..\RESOURCE\*.ogg"
   File /r "..\RESOURCE\*.wav"
+  File /r "..\RESOURCE\*.flac"
   File /r "..\RESOURCE\*.wmv"
 
   File /r "..\RESOURCE\*.gm"
