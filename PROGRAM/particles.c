@@ -72,6 +72,12 @@ bool CreateParticleEntity()
 int CreateParticleSystemX(string name,float x,float y,float z,
 		float ax,float ay,float az,int lifetime)
 {
+	switch(name) {
+		case "fireball":
+			name = "ShipFire1";
+			break;
+	}
+
 	int pid;
 	if (!CreateParticleEntity()) return false;
 	pid = SendMessage(&Particles,"lsffffffl",PS_CREATEX,name,x,y,z,ax,ay,az,lifetime);
