@@ -186,11 +186,7 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "talk_about_ruby":
-			LAi_Fade("talk_about_ruby1", "talk_about_ruby2");
-		break;
-
-		case "talk_about_ruby1":
-			DoQuestReloadToLocation("Falaise_De_Fleur_tavern", "sit", "sit4", "_");
+			DoQuestReloadToLocation("Falaise_De_Fleur_tavern", "sit", "sit4", "talk_about_ruby2");
 			ChangeCharacterAddressGroup(CharacterFromID("Gordon Carpenter"), "Falaise_De_Fleur_tavern", "sit", "sit8");
 			LAi_SetActorType(PChar);
 			LAi_ActorSetSitMode(PChar);
