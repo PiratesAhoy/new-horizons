@@ -593,7 +593,9 @@ string FindReloadTextureName(string fname, string folder) {
 
 void SetReloadImage(ref fader, string image) {
 	SendMessage(fader, "ls", FADER_PICTURE0, FindReloadPicture("background"));
-	SendMessage(fader, "ls", FADER_PICTURE, FindReloadPicture(image));
+	string found_image = FindReloadPicture(image);
+	Trace("Using image '" + found_image + "' for loading screen for '" + image + "'");
+	SendMessage(fader, "ls", FADER_PICTURE, found_image);
 }
 
 // <-- KK
