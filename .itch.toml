@@ -2,6 +2,10 @@
 name = "play"
 path = "engine.exe"
 
+[[actions]]
+name = "configure"
+path = "engine.ini"
+
 [[prereqs]]
 name = "vcredist-2019-x64"
 
