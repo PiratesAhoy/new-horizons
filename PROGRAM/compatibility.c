@@ -56,7 +56,7 @@ int getMappedShipIcon(int picture, int textureIndex) {
 		case 14: // ships_32 (2, 0)
 			row = picture / 4;
 			column = picture % 4;
-			picture = 2 + (column * 2) + (4 + row) * 16;
+			picture = 2 + (column * 2) + (0 + row) * 16;
 			break;
 		case 15: // ships_48 (2, 8)
 			row = picture / 4;

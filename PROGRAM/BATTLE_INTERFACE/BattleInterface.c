@@ -1952,9 +1952,9 @@ ref BI_GetData()
 				}
 			}
 // KK -->
-			BI_intNRetValue[0] = calcTextureIndex(5, 4);
-			BI_intNRetValue[1] = calcSelectedTextureIndex(5, 4);
-			BI_intNRetValue[2] = 2;
+			BI_intNRetValue[0] = 0;
+			BI_intNRetValue[1] = 1;
+			BI_intNRetValue[2] = 16;
 			st = GetCharacterShipType(chRef);
 			if (st >= 0 && st < SHIP_TYPES_QUANTITY) {
 				if (iRealismMode == 0 || enable) {
