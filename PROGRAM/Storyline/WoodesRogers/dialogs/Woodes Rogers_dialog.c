@@ -258,6 +258,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "piece_of_land":
+			Locations[FindLocation("Redmond_Town_01")].models.always.locators = "Red01_l_JRH2";//window F3 visible & open
+			Locations[FindLocation("wr_residence")].reload.l3.disable = 0;//window now open
+			Locations[FindLocation("wr_library")].reload.l1.disable = 1;//library to storeroom closed
+			Locations[FindLocation("Tavern_storeroom")].reload.l3.disable = 1;//storeroom to library closed
+			locations[FindLocation("wr_library")].type = "Rogers_repair_residence";
+			locations[FindLocation("Tavern_storeroom")].type = "repair_house";
+			Locations[FindLocation("Tavern_storeroom")].models.always.locators = "store04_locators_JRH3";//with planks
+
 			PlaySound("VOICE\ENGLISH\gr_WR_offer3.wav");
 			dialog.text = DLG_TEXT[44];							
 			link.l1 = DLG_TEXT[45];

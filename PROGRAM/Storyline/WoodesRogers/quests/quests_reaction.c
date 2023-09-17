@@ -7428,17 +7428,11 @@ void QuestComplete(string sQuestName)
 			pchar.quest.library_open4.win_condition.l2.locator_group = "goto";
 			pchar.quest.library_open4.win_condition.l2.locator = "goto4";
 			pchar.quest.library_open4.win_condition = "library_open4";
+
+			Characters[GetCharacterIndex("Woodes Rogers")].dialog.CurrentNode  = "piece_of_land";
 		break;
 
 		case "library_open4":
-			Locations[FindLocation("Redmond_Town_01")].models.always.locators = "Red01_l_JRH2";//window F3 visible & open
-			Locations[FindLocation("wr_residence")].reload.l3.disable = 0;//window now open
-			Locations[FindLocation("wr_library")].reload.l1.disable = 1;//library to storeroom closed
-			Locations[FindLocation("Tavern_storeroom")].reload.l3.disable = 1;//storeroom to library closed
-			locations[FindLocation("wr_library")].type = "Rogers_repair_residence";
-			locations[FindLocation("Tavern_storeroom")].type = "repair_house";
-			Locations[FindLocation("Tavern_storeroom")].models.always.locators = "store04_locators_JRH3";//with planks
-
 			LAi_SetActorType(characterFromID("Woodes Rogers"));
 			LAi_ActorDialog(characterFromID("Woodes Rogers"), pchar, "", 0.0, 0.0);
 			LAi_ActorWaitDialog(Pchar, characterFromID("Woodes Rogers"));
