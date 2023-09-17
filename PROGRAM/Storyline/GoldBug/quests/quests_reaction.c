@@ -20028,7 +20028,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "cancel_sound":
-			PlaySound("INTERFACE\cancel.wav");	
+			PlaySound("INTERFACE\cancel.flac");
 		break;
 
 		case "Jup_lowers_rope3":

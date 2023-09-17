@@ -27492,7 +27492,7 @@ void QuestComplete(string sQuestName)
 				weaponID7 = GetCharacterEquipByGroup(Pchar,BLADE_ITEM_TYPE);
 				if(weaponID7 == "") EquipCharacterByItem(Pchar, "bladeX4");
 				
-				PlaySound("INTERFACE\cancel.wav");
+				PlaySound("INTERFACE\cancel.flac");
 				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "pistolbucket_dung");
 				return;
@@ -28912,7 +28912,7 @@ void QuestComplete(string sQuestName)
 		case "powderhorn_check":
 			if(CheckCharacterItem(Pchar,"bladepowderhornP"))
 			{
-				PlaySound("INTERFACE\cancel.wav");
+				PlaySound("INTERFACE\cancel.flac");
 				SetModel(PChar, "Pira4M_HTUS_ph", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
@@ -43128,7 +43128,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "corvette_pchar_get_dressed4":
-			PlaySound("INTERFACE\cancel.wav");
+			PlaySound("INTERFACE\cancel.flac");
 			SetModel(PChar, "Pira4M_HT", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 
 			LAi_QuestDelay("corvette_pchar_get_dressed5", 2.0);
@@ -48698,7 +48698,7 @@ void QuestComplete(string sQuestName)
 
 		case "drawing_room_map33":
 			//from Caroline dialog
-			PlaySound("INTERFACE\cancel.wav");
+			PlaySound("INTERFACE\cancel.flac");
 			SetModel(Pchar, "ShkiperM_UH_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
 
 			LAi_SetStayType(characterFromID("Wench3"));
@@ -70210,7 +70210,7 @@ void QuestComplete(string sQuestName)
 		case "bladelever3_check":
 			if(CheckCharacterItem(Pchar,"bladelever3"))
 			{
-				PlaySound("INTERFACE\cancel.wav");
+				PlaySound("INTERFACE\cancel.flac");
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "bladelever3");
 
@@ -81581,7 +81581,7 @@ void QuestComplete(string sQuestName)
 				weaponID7 = GetCharacterEquipByGroup(Pchar,BLADE_ITEM_TYPE);
 				if(weaponID7 == "") EquipCharacterByItem(Pchar, "bladeX4");
 
-				PlaySound("INTERFACE\cancel.wav");
+				PlaySound("INTERFACE\cancel.flac");
 				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "pistolsalt");
 				return;

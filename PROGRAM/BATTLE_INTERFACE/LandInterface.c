@@ -17,7 +17,7 @@ void procBattleCommandSound()
 	string comName = GetEventData();
 	if(comName=="deactivate")
 	{
-		PlaySound("interface\cancel.wav"); // KK
+		PlaySound("INTERFACE\cancel.flac"); // KK
 	}
 	if(comName=="activate")
 	{

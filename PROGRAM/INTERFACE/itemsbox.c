@@ -1700,7 +1700,7 @@ void ChangeItemsSlot()
 	if(itm1=="coin1" || itm1=="coin2" || itm1=="coin3"|| itm1=="coin4" || itm1=="coin5" || itm1=="coin6" || itm1=="coin7"|| itm1=="coin8"
 	|| itm1=="coin9" || itm1=="coin10" || itm1=="coin12" || itm1=="coin13" || itm1=="coin14"|| itm1=="coin15")
 	{
-		PlaySound("INTERFACE\cancel.wav");
+		PlaySound("INTERFACE\cancel.flac");
 
 		//count how many coins there are in the collection box now!
 		mchref.quest.collect_coins = sti(mchref.quest.collect_coins) + 1;
@@ -2119,7 +2119,7 @@ void GiveItems(bool bMoreThanOneItem)
 			if(itm1=="coin1" || itm1=="coin2" || itm1=="coin3"|| itm1=="coin4" || itm1=="coin5" || itm1=="coin6" || itm1=="coin7"|| itm1=="coin8"
 			|| itm1=="coin9" || itm1=="coin10" || itm1=="coin12" || itm1=="coin13" || itm1=="coin14"|| itm1=="coin15")
 			{
-					PlaySound("INTERFACE\cancel.wav");
+					PlaySound("INTERFACE\cancel.flac");
 
 					//count how many coins there are in the collection box now!
 					mchref.quest.collect_coins = sti(mchref.quest.collect_coins) + 1;

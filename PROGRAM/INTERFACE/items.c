@@ -397,7 +397,7 @@ if(comName=="activate" || comName=="click")
 
 			if(itmName == "med_bag1_out")
 			{
-				PlaySound("INTERFACE\cancel.wav");
+				PlaySound("INTERFACE\cancel.flac");
 
 				if(CheckAttribute(Pchar,"quest.med_bag1_out") && Pchar.quest.med_bag1_out == "equipped")	
 				{
@@ -422,7 +422,7 @@ if(comName=="activate" || comName=="click")
 				if(CheckCharacterItem(Pchar,"D_feather") && CheckCharacterItem(Pchar,"D_scissors") && CheckCharacterItem(Pchar,"D_compasses")
 				&& CheckCharacterItem(Pchar,"D_scalpel") && CheckCharacterItem(Pchar,"D_magnifying") && CheckCharacterItem(Pchar,"D_tweezers"))
 				{
-					PlaySound("INTERFACE\cancel.wav");
+					PlaySound("INTERFACE\cancel.flac");
 					TakeItemFromCharacter(Pchar, "D_feather");
 					TakeItemFromCharacter(Pchar, "D_scissors");
 					TakeItemFromCharacter(Pchar, "D_compasses");
@@ -768,7 +768,7 @@ if(comName=="activate" || comName=="click")
 				else
 				{	
 					//EQUIP
-					PlaySound("INTERFACE\cancel.wav");
+					PlaySound("INTERFACE\cancel.flac");
 					Pchar.filled_pipe = "equipped";
 
 					if(IsEquipCharacterByItem(Pchar, "skull_ring")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
@@ -1349,8 +1349,8 @@ if(comName=="activate" || comName=="click")
 					switch(Pchar.Portugize_phase)
 					{
 						case "2":
-							PlaySound("INTERFACE\cancel.wav");
-							PlaySound("INTERFACE\cancel.wav");
+							PlaySound("INTERFACE\cancel.flac");
+							PlaySound("INTERFACE\cancel.flac");
 							TakeItemFromCharacter(Pchar, "port_rest");
 							TakeItemFromCharacter(Pchar, "port_2");
 							GiveItem2Character(Pchar, "port_3");

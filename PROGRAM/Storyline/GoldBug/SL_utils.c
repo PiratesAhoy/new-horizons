@@ -8617,7 +8617,7 @@ void OpenBoxProcedure_BUG()
 			case "box6":
 			        //pick up wood_short_floor
 				
-				PlaySound("INTERFACE\cancel.wav");
+				PlaySound("INTERFACE\cancel.flac");
 				GiveItem2Character(chr, "bladewood_short");				
 				RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(chr, "bladewood_short");	
@@ -8631,7 +8631,7 @@ void OpenBoxProcedure_BUG()
 				Locations[FindLocation("GB_chinese_charcoal")].locators_radius.box.box7 = 0.0001;
 				SetLocatorRadius(locations[FindLocation(chr.location)], "box", "box7", 0.0001);
 
-				PlaySound("INTERFACE\cancel.wav");
+				PlaySound("INTERFACE\cancel.flac");
 				GiveItem2Character(chr, "bladewood4");				
 				RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(chr, "bladewood4");	
@@ -10724,7 +10724,7 @@ void OpenBoxProcedure_BUG()
 				{
 					if(CheckCharacterItem(chr,"cork")) 
 					{	
-						PlaySound("INTERFACE\cancel.wav");
+						PlaySound("INTERFACE\cancel.flac");
 						Locations[FindLocation("Maroon_Cavern")].models.always.l7 = "bottleA_cork";
 
 						LAi_QuestDelay("close_barrelA", 1.0);
@@ -10762,7 +10762,7 @@ void OpenBoxProcedure_BUG()
 				{
 					if(CheckCharacterItem(chr,"cork")) 
 					{	
-						PlaySound("INTERFACE\cancel.wav");
+						PlaySound("INTERFACE\cancel.flac");
 						Locations[FindLocation("Maroon_Cavern")].models.always.l7 = "bottleC_cork";
 
 						LAi_QuestDelay("close_barrelC", 1.0);
@@ -10800,7 +10800,7 @@ void OpenBoxProcedure_BUG()
 				{
 					if(CheckCharacterItem(chr,"cork")) 
 					{	
-						PlaySound("INTERFACE\cancel.wav");
+						PlaySound("INTERFACE\cancel.flac");
 						Locations[FindLocation("Maroon_Cavern")].models.always.l7 = "bottleB_cork";
 
 						LAi_QuestDelay("close_barrelB", 1.0);

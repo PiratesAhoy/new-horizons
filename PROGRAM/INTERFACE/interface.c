@@ -1423,7 +1423,7 @@ void IDoSoundEvent()
 	int comCode = GetEventData();
 	if (comCode == ACTION_DEACTIVATE) // KK
 	{
-		PlaySound("interface\cancel.wav");
+		PlaySound("INTERFACE\cancel.flac");
 	}
 	else
 	{

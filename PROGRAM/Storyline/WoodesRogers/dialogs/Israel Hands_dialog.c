@@ -212,7 +212,7 @@ void ProcessDialogEvent()
 			SetModel(PChar, "Howard_Pyle_hat_b", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 			GiveItem2Character(Pchar, "bb_hatA2");
 			EquipCharacterByItem(Pchar, "bb_hatA2");
-			PlaySound("INTERFACE\cancel.wav");	
+			PlaySound("INTERFACE\cancel.flac");
 				
 			Dialog.text = DLG_TEXT[43];
 			link.l1 = DLG_TEXT[44];

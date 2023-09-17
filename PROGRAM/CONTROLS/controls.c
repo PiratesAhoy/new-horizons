@@ -340,7 +340,7 @@ bool KB_SetKeyboardMode(bool onoff)
 	{
 		if(!onoff && bKeyboardEnabled)
 		{
-			PlaySound("interface\cancel.wav");
+			PlaySound("INTERFACE\cancel.flac");
 			bKeyboardEnabled = false;
 			bKeyboardShift = false;
 			bKeyboardControl = false;
