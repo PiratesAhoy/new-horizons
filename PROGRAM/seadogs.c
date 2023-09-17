@@ -367,7 +367,7 @@ void Main()
 	SetEventHandler("Control Activation","proc_break_video",0);
 	SetEventHandler(EVENT_END_VIDEO,"Main_LogoVideo",0);
 	InterfaceStates.videoIdx = 0;
-	Event(EVENT_END_VIDEO);
+	PostEvent(EVENT_END_VIDEO, 1);
 	ReloadProgressEnd();
 }
 
@@ -378,14 +378,13 @@ void Main_LogoVideo()
 	trace("Main_LogoVideo() " + i);
 	switch(i)
 	{
-
-	case 0:
-		{
-			InterfaceStates.videoIdx = 1;
-			StartPostVideo("PiratesAhoyLogo",1);
-			return;
-		}
-	break;
+//	case 0:
+//		{
+//			InterfaceStates.videoIdx = 1;
+//			StartPostVideo("PiratesAhoyLogo",1);
+//			return;
+//		}
+//	break;
 
 //	case 1:
 //		{
