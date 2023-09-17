@@ -4,6 +4,8 @@ void InitInterface(string iniName)
 {
 	GameInterface.title = "# ";
 
+	CreateBackEnvironment();
+
 	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 
 	SetSelectable("B_NEWGAME",sti(InterfaceStates.Buttons.New.enable));
@@ -364,3 +366,23 @@ bool CheckForSaveGames()
 	return false;
 }
 // <-- KK
+
+object InterfaceBackScene;
+void CreateBackEnvironment()
+{
+	LayerFreeze(EXECUTE,false);
+	LayerFreeze(REALIZE,false);
+
+	CreateSea(EXECUTE,REALIZE);
+	CreateWeather(EXECUTE,REALIZE);
+	CreateShipEnvironment();
+	Sea.MaxSeaHeight = 1.0;
+	Sea.isDone = "";
+
+	CreateEntity(&InterfaceBackScene,"InterfaceBackScene");
+	LayerAddObject(EXECUTE, &InterfaceBackScene, -1);
+	LayerAddObject(REALIZE, &InterfaceBackScene, 1000);
+
+	SendMessage(&InterfaceBackScene, "ls", 0, "Islands\Redmond\Redmond"); // set model
+	SendMessage(&InterfaceBackScene, "ls", 1, "camera_1"); // set camera
+}
