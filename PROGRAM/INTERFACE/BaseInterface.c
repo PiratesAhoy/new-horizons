@@ -32,7 +32,7 @@ void InitBaseInterfaces_main()
 	InterfaceStates.Buttons.Load.enable = false;
 	InterfaceStates.Buttons.Save.enable = false;
 	InterfaceStates.Buttons.Options.enable = true;
-	InterfaceStates.Buttons.Credits.enable = true;
+	InterfaceStates.Buttons.Credits.enable = false;
 	InterfaceStates.Buttons.Quit.enable = true;
 	InterfaceStates.Buttons.Controls.enable = true;
 
