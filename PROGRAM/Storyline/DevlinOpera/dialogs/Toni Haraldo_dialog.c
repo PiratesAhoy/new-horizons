@@ -234,7 +234,7 @@ void ProcessDialogEvent()
 		case "Beatrice7":
 			dialog.text = DLG_TEXT[46];
 			link.l1 = DLG_TEXT[47];
-			link.l1.go = "Beatrice7";
+			link.l1.go = "exit";
 			AddDialogExitQuest("Scavenger_hunt_1");
 		break;
 
