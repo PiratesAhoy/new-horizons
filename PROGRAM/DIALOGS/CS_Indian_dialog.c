@@ -189,7 +189,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "pay_difference":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, sti(PChar.quest.colombian_silver.money_required) * -1);
 			PChar.quest.colombian_silver.status = "paid_difference";
 			dialog.text = DLG_TEXT[39];

@@ -244,7 +244,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_negotations_outside_cave7":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -100000);
 			if(PChar.quest.imperial_escort.cave_result == "negotiation_good2") dialog.text = DLG_TEXT[81];
 			else dialog.text = DLG_TEXT[82];

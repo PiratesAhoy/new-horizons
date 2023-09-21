@@ -40,7 +40,7 @@ void ProcessDialogEvent()
 			{
 				link.l1 = DLG_TEXT[72];
 				link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1000);				
             AddDialogExitQuest("wait_for_agilo");					
 			}
@@ -59,7 +59,7 @@ void ProcessDialogEvent()
 			{
 				link.l1 = DLG_TEXT[59];
 				link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);				
             AddDialogExitQuest("fleet_emilio");					
 			}
@@ -78,7 +78,7 @@ void ProcessDialogEvent()
 			{
 			link.l1 = DLG_TEXT[69];
 			link.l1.go = "exit";				
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);			
             AddDialogExitQuest("barto_tavern_again");	    			
 			}
@@ -247,7 +247,7 @@ void ProcessDialogEvent()
 			{
 			link.l1 = DLG_TEXT[45];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1000);			
             AddDialogExitQuest("wait_for_agilo");				
 			}
@@ -310,7 +310,7 @@ void ProcessDialogEvent()
 			{
 			link.l1 = DLG_TEXT[59];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);			
             AddDialogExitQuest("fleet_emilio");	            				
 			}
@@ -358,7 +358,7 @@ void ProcessDialogEvent()
 			{
 			link.l1 = DLG_TEXT[69];
 			link.l1.go = "exit";				
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);			
             AddDialogExitQuest("barto_tavern_again");	            				
 			}

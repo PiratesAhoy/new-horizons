@@ -110,7 +110,7 @@ void ProcessDialogEvent()
 			/*WriteNewLogEntry(("Helping the gunsmith of "+ctown.name), ("The gunsmith of "+ctown.name+" asked me to get "+NPChar.fetch_quest.amount+" "+ Goods[sti(NPChar.fetch_quest.good)].name +" from somewhere and deliver it back to him to get "+NPChar.fetch_quest.money+" gold coins. But I have to deliver it before "+NPChar.fetch_quest.expire+" or i will receive nothing."), "Personal", true);
 			Logit("Ships Log Updated");
 			AddMsgToCharacter(PChar,MSGICON_LOGBOOK);
-			PlaySound("INTERFACE\notebook.wav");*/
+			PlaySound("INTERFACE\notebook.flac");*/
 			//Questbook
 			Preprocessor_AddQuestData("town",ctown.name);
 			Preprocessor_AddQuestData("type","gunsmith");

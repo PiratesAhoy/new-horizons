@@ -1638,7 +1638,7 @@ string Sound_GetName(string name)
 	if (!CheckAttribute(Sounds_Alias, name)) {
 		aliasName = aliasName+"."+name;
 		traceandlog("WARNING: sound "+name+" ("+aliasName+") not exist, or not properly added into alias");
-		return "INTERFACE\notebook.wav";
+		return "INTERFACE\notebook.flac";
 	}
 	makearef(SoundsRef, Sounds_Alias.(name));
 
@@ -1648,7 +1648,7 @@ string Sound_GetName(string name)
 	{
 		aliasName = aliasName+"."+name+".f"+lnode+".name";
 		traceandlog("WARNING: sound "+name+" ("+aliasName+") not exist, or not properly added into alias");
-		return "INTERFACE\notebook.wav";
+		return "INTERFACE\notebook.flac";
 	}
 	// MAXIMUS: FOR TESTING <--
 	return SoundsRef.(lnode).name;

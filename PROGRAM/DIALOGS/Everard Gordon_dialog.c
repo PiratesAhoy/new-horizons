@@ -129,7 +129,7 @@ void ProcessDialogEvent()
 		case "room_24_wait":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			WaitDate("",0,0,0,24,1);
@@ -175,7 +175,7 @@ void ProcessDialogEvent()
 		case "room_night_wait":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_night");
@@ -190,7 +190,7 @@ void ProcessDialogEvent()
 		case "room_day_wait":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_day");
@@ -498,7 +498,7 @@ void ProcessDialogEvent()
 			AddQuestRecord("Story_1stTaskReceived",2);
 			if(makeint(Pchar.money) >= (10*(10 - CalcCharacterSkill(PChar,SKILL_COMMERCE)))) // NK
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -(10*(10 - CalcCharacterSkill(PChar,SKILL_COMMERCE)))); // NK
 				dialog.snd = "Voice\EVGO\EVGO031";	
 				d.Text = DLG_TEXT[122] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, true) + DLG_TEXT[123];
@@ -545,7 +545,7 @@ void ProcessDialogEvent()
 		break;
 			
 		case "wait_for_morning_accord":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar,-10);
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;

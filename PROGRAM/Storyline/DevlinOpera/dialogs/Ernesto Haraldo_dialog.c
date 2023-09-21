@@ -81,7 +81,7 @@ void ProcessDialogEvent()
 			Dialog.Text = DLG_TEXT[13];
 			Link.l1 = DLG_TEXT[14];
 			Link.l1.go = "wineglass3";
-                        PlaySound("INTERFACE\drink.wav");
+                        PlaySound("INTERFACE\drink.flac");
 		break;
 
 		case "wineglass3":

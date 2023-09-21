@@ -191,7 +191,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[38];
 			link.l1 = DLG_TEXT[39];
 			link.l1.go = "good_exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -2000);
 			if(AUTO_SKILL_SYSTEM)
 			{

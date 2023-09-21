@@ -142,7 +142,7 @@ void ProcessDialogEvent()
 		case "eda_node3":
 			dialog.text = DLG_TEXT[37] + GetMyName(Pchar) + DLG_TEXT[38];
 			TakeItemFromCharacter(Pchar,"Letter_Reward");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 5000);
 			link.l1 = DLG_TEXT[39];
 			link.l1.go = "eda_node4";	
@@ -204,7 +204,7 @@ void ProcessDialogEvent()
 
 		case "eda_node12":
 			dialog.text = DLG_TEXT[63];
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 6924);
 			link.l1 = DLG_TEXT[64];
 			link.l1.go = "eda_node13";	
@@ -286,7 +286,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[86] + GetMyName(Pchar) + DLG_TEXT[87];
 			link.l1 = DLG_TEXT[88];
 			link.l1.go = "report_node4";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 5000);	
 		break;	
 		

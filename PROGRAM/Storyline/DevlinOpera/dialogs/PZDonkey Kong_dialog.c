@@ -59,7 +59,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "solved":
-			PlaySound("INTERFACE\drink.wav");
+			PlaySound("INTERFACE\drink.flac");
 			dialog.text = DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "exit";

@@ -457,7 +457,7 @@ void ProcessDialogEvent()
 			int OfficerPrice = CalcEncOfficerPrice(NPChar);
 			if(ourMoney >= OfficerPrice || ProfessionalNavyNation() != UNKNOWN_NATION)		// LDH 16Apr09
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				// LDH 16Apr09
 				AddMoneyToCharacter(Pchar, -OfficerPrice);
   				AddMoneyToCharacter(NPChar, OfficerPrice);// TIH give money to officer (this is moved to wealth in later step) Oct31'06
@@ -1178,7 +1178,7 @@ void ProcessDialogEvent()
 				// take buildingresources
 				RemoveCharacterGoods(pchar, GOOD_PLANKS, planks-1 );
 				RemoveCharacterGoods(pchar, GOOD_BRICKS, bricks - 1); // KK
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -money);
 				ourCrew = sti(ourCrew) -crew;// MAXIMUS 08.10.2006
 				Pchar.Ship.crew.quantity = ourCrew; // ccc Dec06 using Maximus ourCrew variable fixes some slight calc errors. So used properly it makes sense.
@@ -1501,7 +1501,7 @@ void ProcessDialogEvent()
 			OfficerPrice = CalcEncOfficerPrice(NPChar);
 			if(ourMoney >= OfficerPrice) 
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -OfficerPrice);
   				AddMoneyToCharacter(NPChar, OfficerPrice);
 			

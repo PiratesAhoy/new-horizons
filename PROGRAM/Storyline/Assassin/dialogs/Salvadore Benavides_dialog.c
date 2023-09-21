@@ -159,7 +159,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[31];
 			link.l1.go = "exit";
                        LAi_QuestDelay("viagem_timer1", 0.0);
-                        PlayStereoSound("INTERFACE\took_item.wav");
+                        PlayStereoSound("INTERFACE\took_item.flac");
             			AddMoneyToCharacter(pchar, 2000);					   
                        AddDialogExitQuest("voirdamski");		                       
 		break;
@@ -207,7 +207,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[42];
 			link.l1 = DLG_TEXT[43];
 			link.l1.go = "exit";
-                       PlayStereoSound("INTERFACE\took_item.wav");
+                       PlayStereoSound("INTERFACE\took_item.flac");
 			           AddMoneyToCharacter(pchar, 5000);			
                        AddDialogExitQuest("spyoxbay");	                       
 		break;
@@ -226,7 +226,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[46];
 			link.l1 = DLG_TEXT[47];			
 			link.l1.go = "begin_24";
-                       PlayStereoSound("INTERFACE\took_item.wav");
+                       PlayStereoSound("INTERFACE\took_item.flac");
 			           AddMoneyToCharacter(pchar, 5000);			
                break;
 
@@ -271,7 +271,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[59];
 			link.l1 = DLG_TEXT[60];			
 			link.l1.go = "begin_30";
-                       PlayStereoSound("INTERFACE\took_item.wav");
+                       PlayStereoSound("INTERFACE\took_item.flac");
 			           AddMoneyToCharacter(pchar, 5000);
                        Pchar.quest.viagem_timer1.over = "yes";			
 		break;
@@ -346,7 +346,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[79];
 			link.l1 = DLG_TEXT[80];
 			link.l1.go = "begin_40";
-                       PlayStereoSound("INTERFACE\took_item.wav");
+                       PlayStereoSound("INTERFACE\took_item.flac");
 			           AddMoneyToCharacter(pchar, 15000);                                      
 		break;
 
@@ -412,7 +412,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[97];
 			link.l1 = DLG_TEXT[98];
 			link.l1.go = "begin_49";
-                       PlayStereoSound("INTERFACE\took_item.wav");
+                       PlayStereoSound("INTERFACE\took_item.flac");
 			           AddMoneyToCharacter(pchar, 15000);					   
                break;
 
@@ -515,7 +515,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[123];
 			link.l1 = DLG_TEXT[0];
 			link.l1.go = "exit";
-                        PlayStereoSound("INTERFACE\took_item.wav");
+                        PlayStereoSound("INTERFACE\took_item.flac");
             			AddMoneyToCharacter(pchar, 20000);				
                       AddDialogExitQuest("Governador_forte"); 				
         		break;
@@ -611,7 +611,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[147];
 			link.l1 = DLG_TEXT[148];
 			link.l1.go = "begin_76";
-                        PlayStereoSound("INTERFACE\took_item.wav");
+                        PlayStereoSound("INTERFACE\took_item.flac");
             			AddMoneyToCharacter(pchar, 25000);				
         		break;
 
@@ -679,7 +679,7 @@ void ProcessDialogEvent()
 				dialog.text = DLG_TEXT[165];
 				link.l1 = DLG_TEXT[166];
 				link.l1.go = "begin_85";
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
             			AddMoneyToCharacter(pchar, 30000);
             		}
             		else
@@ -927,7 +927,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[220];
 			link.l1 = DLG_TEXT[29];
 			link.l1.go = "exit";
-                    PlayStereoSound("INTERFACE\took_item.wav");
+                    PlayStereoSound("INTERFACE\took_item.flac");
             		AddMoneyToCharacter(pchar, 30000);			
                       AddDialogExitQuest("join_butcher");				
 		break;
@@ -1015,7 +1015,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[242];
 			link.l1 = DLG_TEXT[243];
 			link.l1.go = "begin_129";
-                    PlayStereoSound("INTERFACE\took_item.wav");
+                    PlayStereoSound("INTERFACE\took_item.flac");
             		AddMoneyToCharacter(pchar, 80000);				
 		break;
 

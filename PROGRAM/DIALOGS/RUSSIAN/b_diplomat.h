@@ -97,7 +97,7 @@ void ProcessDialogEvent()
 		break;
 
 	case "exit_reput":
-		PlayStereoSound("INTERFACE\took_item.wav");
+		PlayStereoSound("INTERFACE\took_item.flac");
 		AddMoneyToCharacter(pchar, -sti(npchar.bribe));
 		ChangeCharacterReputation(pchar, 3);
 		if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Leadership", sti(npchar.bribe)/10/2 ); AddPartyExpChar(PChar, "Sneak", sti(npchar.bribe)/10/2 ); }
@@ -137,7 +137,7 @@ void ProcessDialogEvent()
 		SetRelationsAsNation(Npchar.nation); // ccc Dec 06
 		ReceiveLetterOfMarque(Npchar.nation);
 
-		PlayStereoSound("INTERFACE\took_item.wav");
+		PlayStereoSound("INTERFACE\took_item.flac");
 		AddMoneyToCharacter(pchar, sti(npchar.bribe));
 		ChangeCharacterReputation(pchar, -6);
 		if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Leadership", sti(npchar.bribe)/10/2 ); AddPartyExpChar(PChar, "Sneak", sti(npchar.bribe)/10/2 ); }

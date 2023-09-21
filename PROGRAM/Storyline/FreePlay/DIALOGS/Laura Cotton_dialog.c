@@ -122,7 +122,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[26];
 			if (makeint(pchar.money) >= 200)
 			{
-            PlayStereoSound("INTERFACE\took_item.wav");
+            PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -200);				
 				link.l1 = DLG_TEXT[27];
 				link.l1.go = "begin_13";

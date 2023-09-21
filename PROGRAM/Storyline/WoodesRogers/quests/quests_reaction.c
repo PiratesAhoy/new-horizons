@@ -199,7 +199,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "quest_item":
-			PlaySound("INTERFACE\important_item.wav");	
+			PlaySound("INTERFACE\important_item.flac");
 			Logit(TranslateString("","An item has been removed from your inventory"));
 		break;
 
@@ -5257,14 +5257,14 @@ void QuestComplete(string sQuestName)
 		break;
 	//..................................................................................................
 		case "shya_delayed_ping":
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 		break;
 
 		case "shya_take_key1":
 			//only for took item sound
 			if(CheckCharacterItem(Pchar,"key1"))
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 			}
 			else
 			{
@@ -5401,7 +5401,7 @@ void QuestComplete(string sQuestName)
 			//only for took item sound
 			if(CheckCharacterItem(Pchar,"key2"))
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 			}
 			else
 			{
@@ -5433,7 +5433,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"key4"))
 			{
 				Pchar.quest.shya_key4 = "taken";
-				//PlaySound("INTERFACE\took_item.wav");
+				//PlaySound("INTERFACE\took_item.flac");
 
 				LAi_QuestDelay("shya_take_key4_box5A", 1.5);
 			}
@@ -5444,7 +5444,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "shya_take_key4_box5A":
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 		break;
 
 		case "shya_take_tar_box5":
@@ -5504,7 +5504,7 @@ void QuestComplete(string sQuestName)
 				if(!CheckAttribute(Pchar,"quest.shya_key4") || Pchar.quest.shya_key4 != "taken")
 				{
 					GiveItem2Character(Pchar, "key4");
-					PlaySound("INTERFACE\took_item.wav");
+					PlaySound("INTERFACE\took_item.flac");
 				}
 
 				Pchar.quest.shya_posAB = "lower_chest";
@@ -6231,7 +6231,7 @@ void QuestComplete(string sQuestName)
 		case "shipyard_15A":
 			LAi_SetPlayerType(Pchar);
 			GiveItem2Character(Pchar, "key3");
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"I found a big key in one of his pockets!"));
 
 			LAi_QuestDelay("shipyard_16", 1.0);
@@ -7205,7 +7205,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(characterFromID("wr_voy"));
 			Pchar.quest.med_Dover = "neutral";
 			LAi_SetStayType(Pchar);
-			PlaySound("INTERFACE\drink.wav");
+			PlaySound("INTERFACE\drink.flac");
 
 			Pchar.quest.disable_rebirth = true;
 			Pchar.chr_ai.poison =  10;
@@ -7554,7 +7554,7 @@ void QuestComplete(string sQuestName)
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box4", 0.0001);
 			Locations[FindLocation("wr_residence")].locators_radius.box.box4 = 0.0001;	//to clock
 
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "goto", "goto8");
 
@@ -8434,7 +8434,7 @@ void QuestComplete(string sQuestName)
 				if(IsEquipCharacterByItem(Pchar, "bladepickaxe1")) RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 				EquipCharacterByItem(Pchar, "blade4-2");
 
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				Locations[FindLocation("Redmond_Town_01")].reload.l23.disable = 1;//gate to terrace
 
 				Locations[FindLocation("Redmond_UsurerHouse")].locators_radius.box.box1 = 1.0;
@@ -8753,7 +8753,7 @@ void QuestComplete(string sQuestName)
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload6", 0.5);//reset to normal size
 			LAi_SetPlayerType(Pchar);
 			GiveItem2Character(Pchar, "key9");
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 
 			LAi_QuestDelay("Dave_Edna_hint_Selkirk", 1.0);
 		break;
@@ -8877,7 +8877,7 @@ void QuestComplete(string sQuestName)
 		case "key8":
 			if(CheckCharacterItem(Pchar,"key8"))
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 			}
 			else
 			{
@@ -10630,7 +10630,7 @@ void QuestComplete(string sQuestName)
 		case "book24_pickup_check":
 			if(CheckCharacterItem(Pchar,"book24") )
 			{
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 			}
 			else LAi_QuestDelay("book24_pickup_check", 0.5);
 		break;
@@ -11610,7 +11610,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"book26") )
 			{
 				Log_SetStringToLog(XI_ConvertString("You take item"));
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 			}
 			else LAi_QuestDelay("book26_pickup_check", 0.5);
 		break;
@@ -11739,7 +11739,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"book27") )
 			{
 				Log_SetStringToLog(XI_ConvertString("You take item"));
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 			}
 			else LAi_QuestDelay("book27_pickup_check", 0.5);
 		break;
@@ -12120,7 +12120,7 @@ void QuestComplete(string sQuestName)
 		case "book27_finished":
 			//from book27_check
 			Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"A small Key is attached to the inside of the cover of the Chemistry book!"));
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			GiveItem2Character(Pchar, "key10");
 			ChangeCharacterAddressGroup(characterFromID("wr_voy"), "wr_study", "goto", "goto6");//at woodes rogers sofa
 
@@ -18441,7 +18441,7 @@ void QuestComplete(string sQuestName)
 		case "equip_chest_rope":
 			if(CheckCharacterItem(Pchar,"mdchest_rope"))
 			{
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 				Log_SetStringToLog(XI_ConvertString("You take item"));
 				SetModel(PChar, "Pira4M_HTU_r", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 
@@ -18464,7 +18464,7 @@ void QuestComplete(string sQuestName)
 		case "equip_med_chest":
 			if(CheckCharacterItem(Pchar,"mdchest"))
 			{
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 				TakeItemFromCharacter(Pchar, "mdchest");	//fake chest
 
 				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
@@ -18882,7 +18882,7 @@ void QuestComplete(string sQuestName)
 
 		case "pickup_mdchest_place_nothing1":
 			Locations[FindLocation("wr_food_supply")].image = "wr_food_supply";
-			PlaySound("INTERFACE\important_item.wav");
+			PlaySound("INTERFACE\important_item.flac");
 			Log_SetStringToLog(XI_ConvertString("You take item"));
 
 			switch(Pchar.quest.med_chest)
@@ -19857,7 +19857,7 @@ void QuestComplete(string sQuestName)
 		case "equip_bag_of_herbs":
 			if(CheckCharacterItem(Pchar,"bag_of_herbs"))
 			{
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 				Log_SetStringToLog(XI_ConvertString("You take item"));
 				Pchar.quest.med_bag_of_herbs = "yes";
 				TakeItemFromCharacter(Pchar, "bag_of_herbs");
@@ -20532,7 +20532,7 @@ void QuestComplete(string sQuestName)
 			AddQuestRecord("Medicine_chest", "6");
 
 			Log_SetStringToLog(XI_ConvertString("You take item"));
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			PlaySound("VOICE\ENGLISH\Eng_m_b_081.wav");
 			LAi_SetStayType(CharacterFromID("wr_oman1X"));
 
@@ -24569,7 +24569,7 @@ void QuestComplete(string sQuestName)
 					if(CheckAttribute(Pchar,"quest.sugar") && Pchar.quest.sugar == "yes")
 					{
 						Logit(LanguageConvertString(tmpLangFileID,"You have received Cotton, Chocolate and Sugar goods."));
-						PlaySound("INTERFACE\Important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 
 						LAi_QuestDelay("Important_item_sound", 0.5);
 						LAi_QuestDelay("Important_item_sound", 1.0);
@@ -24577,7 +24577,7 @@ void QuestComplete(string sQuestName)
 					else
 					{
 						Logit(LanguageConvertString(tmpLangFileID,"You have received Cotton and Chocolate goods."));
-						PlaySound("INTERFACE\Important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 
 						LAi_QuestDelay("Important_item_sound", 0.5);
 					}
@@ -24587,14 +24587,14 @@ void QuestComplete(string sQuestName)
 					if(CheckAttribute(Pchar,"quest.sugar") && Pchar.quest.sugar == "yes")
 					{
 						Logit(LanguageConvertString(tmpLangFileID,"You have received Cotton and Sugar goods."));
-						PlaySound("INTERFACE\Important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 
 						LAi_QuestDelay("Important_item_sound", 0.5);
 					}
 					else
 					{
 						Logit(LanguageConvertString(tmpLangFileID,"You have received Cotton goods."));
-						PlaySound("INTERFACE\Important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 					}
 				}
 			}
@@ -24605,14 +24605,14 @@ void QuestComplete(string sQuestName)
 					if(CheckAttribute(Pchar,"quest.sugar") && Pchar.quest.sugar == "yes")
 					{
 						Logit(LanguageConvertString(tmpLangFileID,"You have received Chocolate and Sugar goods."));
-						PlaySound("INTERFACE\Important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 
 						LAi_QuestDelay("Important_item_sound", 0.5);
 					}
 					else
 					{
 						Logit(LanguageConvertString(tmpLangFileID,"You have received Chocolate goods."));
-						PlaySound("INTERFACE\Important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 					}
 				}
 				else
@@ -24620,7 +24620,7 @@ void QuestComplete(string sQuestName)
 					if(CheckAttribute(Pchar,"quest.sugar") && Pchar.quest.sugar == "yes")
 					{
 						Logit(LanguageConvertString(tmpLangFileID,"You have received Sugar goods."));
-						PlaySound("INTERFACE\Important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 					}
 				}
 			}
@@ -24684,7 +24684,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Important_item_sound":
-			PlaySound("INTERFACE\Important_item.wav");
+			PlaySound("INTERFACE\important_item.flac");
 		break;
 	//.................................................................................................
 		case "turn_to_brass_wheel":
@@ -31786,7 +31786,7 @@ void QuestComplete(string sQuestName)
 		case "dummy_belt_check":
 			if(CheckCharacterItem(Pchar,"dummy_belt"))
 			{
-				PlaySound("INTERFACE\Important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 				TakeItemFromCharacter(Pchar, "dummy_belt");
 				GiveItem2Character(Pchar, "pistolbelt");
 
@@ -36732,7 +36732,7 @@ void QuestComplete(string sQuestName)
 					LAi_SetStayType(CharacterFromID("pir_cap1"));	//while changing outfit
 					SetModel(characterFromID("pir_cap1"), "pir_cap1_redC", "man", "man", 1.8, false);
 					Pchar.quest.Vane_cross = "yes";
-					PlaySound("INTERFACE\took_item.wav");
+					PlaySound("INTERFACE\took_item.flac");
 					PlaySound("VOICE\ENGLISH\pir_capR3.wav");
 
 					LAi_QuestDelay("pchar_churchsilver_check", 1.0);
@@ -37291,7 +37291,7 @@ void QuestComplete(string sQuestName)
 
 		case "coin_too_small1":
 			LAi_SetPlayerType(Pchar);
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			GiveItem2Character(Pchar, "coin11");
 		break;
 	//................................................................................................
@@ -38456,7 +38456,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"key19"))
 			{
 				Locations[FindLocation(Pchar.location)].models.always.locators = "Shore04_l_JRH3";//reset to normal mode
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 			}
 			else LAi_QuestDelay("pick_up_key19", 0.5);
 		break;
@@ -58784,7 +58784,7 @@ void QuestComplete(string sQuestName)
 
 		case "got_all_books_done":
 			DeleteQuestHeader("Malta_items");
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			GiveItem2Character(Pchar, "key34");
 			Characters[GetCharacterIndex("Maltese_red1")].dialog.CurrentNode  = "neutral_clerk";
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box21", 1.0);
@@ -63292,7 +63292,7 @@ void QuestComplete(string sQuestName)
 		case "key33_check":
 			if(CheckCharacterItem(Pchar,"key33"))
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box2", 1.0);
 				SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload2", 0.0001);
 
@@ -63485,7 +63485,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"silvercross"))
 			{
 				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 
 				LAi_QuestDelay("count_abbess_items", 0.5);
 			}
@@ -66297,7 +66297,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "use_paper_clip":
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			GiveItem2Character(Pchar, "BB_coin");
 			TakeItemFromCharacter(pchar, "paper_clip2");
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box6", 0.0001);
@@ -67250,7 +67250,7 @@ void QuestComplete(string sQuestName)
 		
 			if(CheckCharacterItem(Pchar,"book73_closed"))
 			{
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 				PlaySound("INTERFACE\paper.wav");
 			}
 			else LAi_QuestDelay("book73_check", 0.5);//loop check
@@ -67285,7 +67285,7 @@ void QuestComplete(string sQuestName)
 
 			if(CheckCharacterItem(Pchar,"censer_item"))
 			{
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 				TakeItemFromCharacter(pchar, "censer_item");
 				if(CheckCharacterItem(Pchar,"incense"))
 				{
@@ -69583,7 +69583,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "place_coin_BB_spyglass2":
-			PlaySound("INTERFACE\took_item.wav");	
+			PlaySound("INTERFACE\took_item.flac");
 
 			LAi_QuestDelay("move_to_BB_hatch1", 1.0);
 		break;
@@ -76319,7 +76319,7 @@ void QuestComplete(string sQuestName)
 		case "key39_check":
 			if(CheckCharacterItem(Pchar,"key39"))
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				Pchar.capmd_position = "inner";
 
 				LAi_QuestDelay("corv_capmd_2_check", 0.1);

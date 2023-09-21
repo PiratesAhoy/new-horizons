@@ -189,7 +189,7 @@ void ProcessDialogEvent()
 			if (makeint(PChar.money) >= (makeint(Npchar.rank)*5000))
 			{
 				loot_part = makeint(Pchar.money) / 2;
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar,-loot_part);
 				AddMoneyToCharacter(npchar,loot_part);
 				dialog.Text = loot_part + DLG_TEXT[50] + loot_part + DLG_TEXT[51] + DLG_TEXT[32];

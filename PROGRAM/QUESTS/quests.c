@@ -198,13 +198,13 @@ void AddQuestRecord(string idQuest, int recordno)
 			questRef.Text = tmpStr;
 			Log_SetStringToLog(XI_ConvertString("Logbook Update"));
 			AddMsgToCharacter(mc,MSGICON_LOGBOOK);
-			PlaySound("INTERFACE\notebook.wav");
+			PlaySound("INTERFACE\notebook.flac");
 		}
 	} else {
 		mc.QuestInfo.(idQuest).Text=idText;
 		Log_SetStringToLog(XI_ConvertString("Logbook Update"));
 		AddMsgToCharacter(mc,MSGICON_LOGBOOK);
-		PlaySound("INTERFACE\notebook.wav");
+		PlaySound("INTERFACE\notebook.flac");
 	}
 
 // KK -->

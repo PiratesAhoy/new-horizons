@@ -1779,7 +1779,7 @@ void QuestComplete(string sQuestName)
 
 		case "hired_guide":
 			PChar.quest.mayan_temple = "got_guide";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);
 			pchar.quest.with_guide_to_cape_francos.win_condition.l1 = "location";
 			PChar.quest.with_guide_to_cape_francos.win_condition.l1.location = "Santo_Domingo_port";
@@ -2620,7 +2620,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "kidnap_deal_done":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, sti(PChar.quest.ardent_kidnap.ransom));
 			Preprocessor_AddQuestData("name", GetMySimpleName(romance));
 			AddQuestRecord("Kidnap", 11);
@@ -8667,7 +8667,7 @@ void QuestComplete(string sQuestName)
 
 		case "guadeloupe_prison_out_of_cells":
 			logit(TranslateString("","You found all your weapons."));
-			PlayStereoSound("interface\important_item.wav");
+			PlayStereoSound("interface\important_item.flac");
 			RemoveCharacterEquip(PChar, GUN_ITEM_TYPE);
 			RemoveCharacterEquip(PChar, BLADE_ITEM_TYPE);
 			RestoreTempRemovedItems(PChar);
@@ -9108,7 +9108,7 @@ void QuestComplete(string sQuestName)
 
 		case "hunt_get_equipment":
 			RestoreTempRemovedItems(PChar);
-			PlayStereoSound("interface\important_item.wav");
+			PlayStereoSound("interface\important_item.flac");
 			logit(TranslateString("","You found your equipment. Equip some of it!"));
 			EndQuestMovie();
 			DisableFastTravel(true);
@@ -12803,7 +12803,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Cuba_Port")].locators_radius.goto.cityzen_4 = 1.0;
 			LAi_SetOfficerType(romance);
 			SetCharacterRemovable(romance, true);
-			PlayStereoSound("INTERFACE\important_item.wav");
+			PlayStereoSound("INTERFACE\important_item.flac");
 			GiveItem2Character(PChar, "pistolgas");
 			Preprocessor_AddQuestData("romance", GetMyFullName(romance));
 			AddQuestRecord("Imperial Escort", 32);
@@ -14411,7 +14411,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_spy_reward":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 50000);
 			ChangeRMRelation(PChar, SPAIN, 5.0);
 			if(AUTO_SKILL_SYSTEM)

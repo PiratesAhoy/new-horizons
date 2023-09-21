@@ -213,7 +213,7 @@ void ProcessDialogEvent()
 		break;		
 		
 		case "The_First_Reckoning":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			dialog.text = DLG_TEXT[56];
 			link.l1 = DLG_TEXT[57];
 			// PB: Actual profit required -->
@@ -260,7 +260,7 @@ void ProcessDialogEvent()
 		case "Reckoning_best_result3":
 			AddMoneyToCharacter(pchar, +5000);
 			GiveItem2Character(Pchar,"EITC_Passport");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			dialog.text = DLG_TEXT[98];
 			link.l1 = DLG_TEXT[58];
 			link.l1.go = "Reckoning_best_result4";

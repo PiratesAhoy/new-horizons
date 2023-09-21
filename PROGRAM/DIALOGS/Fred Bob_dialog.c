@@ -586,7 +586,7 @@ void ProcessDialogEvent()
 
 		case "thanks":
 			GiveItem2Character(Pchar,"Letter_Reward");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);
 			AddMoneyToCharacter(NPChar, 500);
 			d.Text = DLG_TEXT[172];
@@ -1442,7 +1442,7 @@ void ProcessDialogEvent()
 			DialogExit();
 			npchar.quest.help = "hired";
 			SetOfficersIndex(Pchar, 2, GetCharacterIndex("Fred Bob"));
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -2500);
 			AddMoneyToCharacter(characterFromID("Fred Bob"), 2500);
 		break;

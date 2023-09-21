@@ -98,7 +98,7 @@ void ProcessDialogEvent()
 
 			if (CheckAttribute(PChar, "quest.threat_governor_sent_me"))
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneytoCharacter(PChar, 5000);
 				Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 				dialog.text = DLG_TEXT[7] + DLG_TEXT[8] + DLG_TEXT[11];	// Leads to mission which will lead to finale
@@ -106,7 +106,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneytoCharacter(PChar, 5000);
 				Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 				dialog.text = DLG_TEXT[19] + rank + DLG_TEXT[20] + DLG_TEXT[8] + DLG_TEXT[11];
@@ -395,7 +395,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_half_pay":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 25000);
 			dialog.text = DLG_TEXT[125] + XI_ConvertString(GetRankName(PChar, sti(NPChar.nation))) + DLG_TEXT[126];
 			link.l1 = DLG_TEXT[127] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[128];
@@ -474,7 +474,7 @@ void ProcessDialogEvent()
 			{
 				if (sti(PChar.money) >= 18500)
 				{
-					PlayStereoSound("INTERFACE\took_item.wav");
+					PlayStereoSound("INTERFACE\took_item.flac");
 					AddMoneytoCharacter(PChar, -18500);
 				}
 				if (PChar.quest.imperial_escort.galleon == "None" || sti(PChar.quest.imperial_escort.keep_galleon) == true)

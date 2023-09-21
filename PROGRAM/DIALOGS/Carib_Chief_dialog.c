@@ -242,7 +242,7 @@ void ProcessDialogEvent()
 			Preprocessor_Remove("researcher");
 			Preprocessor_Remove("chief");
 			GiveItem2Character(PChar, "tomahawk_chief");
-			PlayStereoSound("INTERFACE\important_item.wav");
+			PlayStereoSound("INTERFACE\important_item.flac");
 			dialog.text = DLG_TEXT[55];
 			link.l1 = DLG_TEXT[56];
 			link.l1.go = "exit";

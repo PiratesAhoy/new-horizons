@@ -151,7 +151,7 @@ bool KB_SetKeyboardMode(bool onoff)
 {
 	if(onoff && !bKeyboardEnabled)
 	{
-		PlaySound("interface\notebook.wav");
+		PlaySound("interface\notebook.flac");
 		// Screwface
 		int idx = sti(GlobalSettings.Storyline);
 		CurrentStoryline = idx;
@@ -371,7 +371,7 @@ void KB_AddCharacter(string c)
 			}
 		}
 	}
-	PlaySound("interface\Ok.wav");
+	PlaySound("interface\ok.flac");
 	sTmp = GetInterfaceLanguageName(GetKeyboardLayout());
 	if(CheckAttribute(GameInterface,"tempLang")) sTmp = GameInterface.tempLang;
 	switch (sTmp) {

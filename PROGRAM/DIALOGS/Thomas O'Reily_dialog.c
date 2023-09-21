@@ -368,7 +368,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("thomas_contraband_exit");
 			npchar.quest.contraband = "begin";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, sti(NPChar.money.quest)/2);
 			NPChar.money.quest = sti(NPChar.money.quest)/2;
 			SetRumourState("Smuggle_TOR_start", false); // NK
@@ -431,7 +431,7 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 15);
 			}
 			else { AddPartyExp(pchar, 1500); }
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, sti(NPChar.money.quest));
 			npchar.quest.contraband = "done";
 			Preprocessor_AddQuestData("Thomas", GetMyName(NPChar));
@@ -593,7 +593,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "first_job_complete_1":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, sti(NPChar.money.quest));
 			NPChar.quest.first_job = "done";
 			d.Text = DLG_TEXT[150] + NPChar.money.quest + DLG_TEXT[151];
@@ -679,7 +679,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[178];
 			link.l1 = DLG_TEXT[179];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -3000);
 			Characters[GetcharacterIndex("Milon Blacque")].quest.son = "money_done";
 			Preprocessor_AddQuestData("O'Reily", GetMyLastName(NPChar));

@@ -151,7 +151,7 @@ void ProcessDialogEvent()
 			link.l1.go = "Exit";
 
 			GiveItem2Character(pchar, "Sparrow_Ring");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			pchar.Alantic_PL = "Drow";
 
 			AddQuestRecord("Slaver", 10);

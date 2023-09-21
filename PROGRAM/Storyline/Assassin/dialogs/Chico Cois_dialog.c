@@ -118,7 +118,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[20];
 			link.l1 = DLG_TEXT[21];
 			link.l1.go = "exit";
-                       PlayStereoSound("INTERFACE\took_item.wav");			
+                       PlayStereoSound("INTERFACE\took_item.flac");
                         AddDialogExitQuest("capitaoingles");					   
                break;
                
@@ -127,7 +127,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[22];
 			link.l1 = DLG_TEXT[23];
 			link.l1.go = "begin_12";
-                       PlayStereoSound("INTERFACE\took_item.wav");
+                       PlayStereoSound("INTERFACE\took_item.flac");
             		   GiveItem2Character(Pchar, "pistolstink"); 					   
 		break;
 

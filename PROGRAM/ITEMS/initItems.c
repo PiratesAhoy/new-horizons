@@ -4980,7 +4980,7 @@ int InitPotion(
   potionitm.rare      = rare;
 
 //JRH -->
-  potionitm.potion.sound = "INTERFACE\drink.wav";
+  potionitm.potion.sound = "INTERFACE\drink.flac";
   switch(id)
   {
 	case "medical1":   potionitm.potion.sound = "PEOPLE\clothes2.wav";  break; 	

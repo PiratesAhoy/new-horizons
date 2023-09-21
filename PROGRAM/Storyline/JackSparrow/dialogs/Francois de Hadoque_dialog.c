@@ -190,7 +190,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[42];
 			link.l1.go = "exit";
 			AddMoneyToCharacter(pchar, 60000);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddDialogExitQuest("Francois_to_Turks2");
 		break;
 		

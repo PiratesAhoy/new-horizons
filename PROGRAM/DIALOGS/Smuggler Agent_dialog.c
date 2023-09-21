@@ -347,7 +347,7 @@ void ProcessDialogEvent()
 
 		//Added by Levis for liking
 		case "Pay":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -1 * sti(pchar.quest.smuggling_guild.pay_redeem));
 			Dialog.snd = "voice\SMAG\SMAG005";
 			d.Text = DLG_TEXT[30];
@@ -510,7 +510,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_Agent_quest_fare_paid":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -1 * sti(PChar.quest.agentquest.smuggler_fare));
 			PChar.quest.agentquest.smuggler_fare = 0;
 			AddDialogExitQuest("AgentQuest_Met_Smuggler_Agent");

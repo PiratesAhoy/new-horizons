@@ -195,7 +195,7 @@ void ProcessDialogEvent()
 			}
 			LAi_SetOfficerType(NPChar);
 			//ChangeCharacterAddress(npchar, "none", "none");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(pchar, -1500);
 			npchar.quest.to_hire = "hired";
 			DialogExit();

@@ -136,7 +136,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "truth":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 200);
 			dialog.text = DLG_TEXT[24] + GetMySimpleName(characterFromID("Grigorio Formoselle")) + DLG_TEXT[25] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[26] + GetMyName(characterFromID("Grigorio Formoselle")) + DLG_TEXT[27];
 			link.l1 = DLG_TEXT[28];
@@ -162,7 +162,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "second_letter_delivered2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 2000);
 			TakeItemFromCharacter(Pchar, "SignetRing");
 			dialog.text = DLG_TEXT[33]+ GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[34] + gov_kid_pronoun3 + DLG_TEXT[35];

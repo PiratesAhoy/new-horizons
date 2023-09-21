@@ -172,7 +172,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_buy":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter  ( pchar, -1000000);
 			GiveItem2Character   ( pchar, "Trident_Neptune");
 			TakeItemFromCharacter(npchar, "cursedcoin");
@@ -182,7 +182,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_buy2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter  ( pchar, -1000000);
 			GiveItem2Character   ( pchar, "Trident_Neptune");
 			TakeItemFromCharacter(npchar, "cursedcoin");

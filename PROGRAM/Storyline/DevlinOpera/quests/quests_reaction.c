@@ -408,7 +408,7 @@ void QuestComplete(string sQuestName)
 		case "vase_key":
 			LAi_SetPlayerType(PChar);
 			GiveItem2Character(PChar, "key_haraldo");
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 
 			pchar.quest.Dont_leave.win_condition.l1 = "locator";
 			pchar.quest.Dont_leave.win_condition.l1.location = "Wedding_Ballroom";
@@ -989,7 +989,7 @@ void QuestComplete(string sQuestName)
 
 		case "Frenchman_note":
 			GiveItem2Character(PChar, "jauri_note");
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 
 			ChangeCharacterAddressGroup(CharacterFromID("Martin Jauri"), "Falaise_de_Fleur_store", "goto", "goto5");
 			ChangeCharacterAddressGroup(CharacterFromID("Guzman"), "none", "", "");
@@ -1418,7 +1418,7 @@ void QuestComplete(string sQuestName)
 
 		case "Juan_found_bucket":
 			GiveItem2Character(PChar, "juan_bucket_emp");
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 
 			Pchar.quest.Juan_found_bucket.over = "yes";
 

@@ -1427,7 +1427,7 @@ void IDoSoundEvent()
 	}
 	else
 	{
-		PlaySound("interface\ok.wav");
+		PlaySound("interface\ok.flac");
 	}
 }
 

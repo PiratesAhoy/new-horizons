@@ -114,7 +114,7 @@ void ProcessDialogEvent()
 
 		case "Amnestyc":
 			dialog.text = DLG_TEXT[55] + GetMyFullName(PChar) + ".";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, sti(pchar.nations.(sNation).Amnesty));
 			DeleteAttribute(pchar,("nations."+sNation+".Amnesty"));
 			RMAmnesty(&Pchar, iNation);
@@ -433,7 +433,7 @@ void ProcessDialogEvent()
 			dialog.text = stemp;
 			if(sti(PChar.money) >= smugglemoney)
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, -1 * smugglemoney);
 				link.l1 = DLG_TEXT[132];
 				if (CheckAttribute(PChar, "quest.governor_smuggling.recover_cargo"))
@@ -548,7 +548,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "smuggling_return_money2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -1 * sti(PChar.quest.governor_smuggling.recover_money.amount));
 			DeleteAttribute(PChar, "quest.governor_smuggling.recover_money");	// Wipe the attributes which say you owe the governor some money
 			PChar.quest.governor_smuggling_time_up_money.over = "yes";		// Cancel the timer which penalises you for not returning money
@@ -616,7 +616,7 @@ void ProcessDialogEvent()
 				smuggling_reward = DLG_TEXT[141] + final_reward + DLG_TEXT[142];
 			}
 			stemp = stemp + smuggling_reward;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, final_reward);
 			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			dialog.text = stemp;
@@ -662,7 +662,7 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 15);
 			}
 			else { AddPartyExp(pchar, 1500); }
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(pchar.quest.generate_kill_quest.money));
 			AddDialogExitQuest("kill_pirate_refused_2");
 			ChangeCharacterReputation(pchar, 1);
@@ -714,7 +714,7 @@ void ProcessDialogEvent()
 			ResetForts(iNation);
 			if (sti(NPChar.resetCost) > 0)
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -sti(NPChar.resetCost));
 			}
 			DialogExit();
@@ -915,7 +915,7 @@ void ProcessDialogEvent()
 			{
 				dialog.text = dialog.text + DLG_TEXT[177] + GetNationNameByType(sti(NPChar.nation)) + DLG_TEXT[178] + GetNationNameByType(sti(PChar.quest.agentquest.enemy_nation)) + DLG_TEXT[179] + GetNationNameByType(sti(PChar.quest.agentquest.enemy_nation)) + DLG_TEXT[180];
 			}
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 20000);
 			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Sneak", 10000);
 			else AddPartyExpChar(PChar, "", 10000);
@@ -946,7 +946,7 @@ void ProcessDialogEvent()
 			if (sti(PChar.quest.agentquest.smuggler_fare) >= 20000) agent_extra_reward += sti(PChar.quest.agentquest.smuggler_fare) - 20000;
 			else agent_extra_reward += sti(PChar.quest.agentquest.smuggler_fare) / 3;
 			dialog.text = DLG_TEXT[185] + 20000 + DLG_TEXT[186] + agent_extra_reward + DLG_TEXT[187];
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, agent_extra_reward);
 			link.l1 = DLG_TEXT[188];
 			AddDialogExitQuest("Agentquest_return_ships_and_officers");

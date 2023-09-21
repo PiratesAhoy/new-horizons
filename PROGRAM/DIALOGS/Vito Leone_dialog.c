@@ -44,7 +44,7 @@ void ProcessDialogEvent()
 
 			if(PChar.quest.Hitman == "hit_mateus")
 			{
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 10000);
 			Dialog.snd = "voice\VILE\VILE003";
 			dialog.text = DLG_TEXT[9];

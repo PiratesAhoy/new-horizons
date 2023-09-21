@@ -135,7 +135,7 @@ void ProcessDialogEvent()
 		dialog.text = DLG_TEXT[87] + GetMyLastName(PChar) + DLG_TEXT[88];
 		link.l1 = DLG_TEXT[89];
 		link.l1.go = "ardent_hunt_villain_wanted";
-		PlayStereoSound("INTERFACE\took_item.wav");
+		PlayStereoSound("INTERFACE\took_item.flac");
 		AddMoneyToCharacter(pchar, 20000);
 		if (PChar.quest.alignment == "good") ChangeCharacterReputation(PChar, 5);
 		else ChangeCharacterReputation(PChar, 3);

@@ -106,7 +106,7 @@ void ProcessDialogEvent()
 
 		case "donation paid_500":
 			Dialog.snd = "voice\PADO\PADO043";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			dialog.Text = DLG_TEXT[14];
@@ -119,7 +119,7 @@ void ProcessDialogEvent()
 		
 		case "donation paid_2500":
 			Dialog.snd = "voice\PADO\PADO043";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			dialog.Text = DLG_TEXT[17];
@@ -132,7 +132,7 @@ void ProcessDialogEvent()
 		
 		case "donation paid_5000":
 			Dialog.snd = "voice\PADO\PADO043";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			dialog.Text = DLG_TEXT[20];

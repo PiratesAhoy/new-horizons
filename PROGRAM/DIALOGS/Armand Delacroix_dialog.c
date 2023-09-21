@@ -296,7 +296,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[68] + GetMyName(Pchar) + DLG_TEXT[69];
 			Link.l1 = DLG_TEXT[70];
 			Link.l1.go = "exit_farewell";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 10000);
 		break;
 		

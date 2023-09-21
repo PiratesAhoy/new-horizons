@@ -158,7 +158,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "drink":
-			PlaySound("INTERFACE\drink.wav");
+			PlaySound("INTERFACE\drink.flac");
 		break;
 
 		case "Poe_very_nice":
@@ -3321,7 +3321,7 @@ void QuestComplete(string sQuestName)
 		case "key20_check":
 			if(CheckCharacterItem(Pchar,"key20"))
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 
 				SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload3", 0.001);
 				Locations[FindLocation("Legrands_house")].locators_radius.reload.reload3 = 0.001;
@@ -4707,7 +4707,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "key7_given":
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			TakenItems(Pchar, "key7", 1);
 			Locations[FindLocation("Fort_Moultrie")].locators_radius.box.box38 = 1.0;
 			Locations[FindLocation("Fort_Moultrie")].locators_radius.reload.reload5 = 0.0001;
@@ -5561,7 +5561,7 @@ void QuestComplete(string sQuestName)
 			TakenItems(Pchar, "detective_kit1", 1);
 			TakenItems(characterFromID("Auguste Dupin"), "detective_kit1", -1);
 			Logit(TranslateString("","You take item"));
-			PlayStereoSound("interface\important_item.wav");
+			PlayStereoSound("interface\important_item.flac");
 
 			LAi_QuestDelay("dupin_gives_kit2", 2.0);
 		break;
@@ -5775,7 +5775,7 @@ void QuestComplete(string sQuestName)
 				if(CheckCharacterItem(Pchar,"D_feather"))
 				{
 					Logit(TranslateString("","You take item"));
-					PlayStereoSound("interface\important_item.wav");
+					PlayStereoSound("interface\important_item.flac");
 					Pchar.quest.Dupin_toolbox = sti(Pchar.quest.Dupin_toolbox) + 1;
 					Pchar.quest.D_feather = "picked_up";
 				
@@ -5795,7 +5795,7 @@ void QuestComplete(string sQuestName)
 				if(CheckCharacterItem(Pchar,"D_scissors"))
 				{
 					Logit(TranslateString("","You take item"));
-					PlayStereoSound("interface\important_item.wav");
+					PlayStereoSound("interface\important_item.flac");
 					Pchar.quest.Dupin_toolbox = sti(Pchar.quest.Dupin_toolbox) + 1;
 					Pchar.quest.D_scissors = "picked_up";
 				
@@ -5815,7 +5815,7 @@ void QuestComplete(string sQuestName)
 				if(CheckCharacterItem(Pchar,"D_compasses"))
 				{
 					Logit(TranslateString("","You take item"));
-					PlayStereoSound("interface\important_item.wav");
+					PlayStereoSound("interface\important_item.flac");
 					Pchar.quest.Dupin_toolbox = sti(Pchar.quest.Dupin_toolbox) + 1;
 					Pchar.quest.D_compasses = "picked_up";
 				
@@ -5835,7 +5835,7 @@ void QuestComplete(string sQuestName)
 				if(CheckCharacterItem(Pchar,"D_scalpel"))
 				{
 					Logit(TranslateString("","You take item"));
-					PlayStereoSound("interface\important_item.wav");
+					PlayStereoSound("interface\important_item.flac");
 					Pchar.quest.Dupin_toolbox = sti(Pchar.quest.Dupin_toolbox) + 1;
 					Pchar.quest.D_scalpel = "picked_up";
 				
@@ -5855,7 +5855,7 @@ void QuestComplete(string sQuestName)
 				if(CheckCharacterItem(Pchar,"D_magnifying"))
 				{
 					Logit(TranslateString("","You take item"));
-					PlayStereoSound("interface\important_item.wav");
+					PlayStereoSound("interface\important_item.flac");
 					Pchar.quest.Dupin_toolbox = sti(Pchar.quest.Dupin_toolbox) + 1;
 					Pchar.quest.D_magnifying = "picked_up";
 				
@@ -5875,7 +5875,7 @@ void QuestComplete(string sQuestName)
 				if(CheckCharacterItem(Pchar,"D_tweezers"))
 				{
 					Logit(TranslateString("","You take item"));
-					PlayStereoSound("interface\important_item.wav");
+					PlayStereoSound("interface\important_item.flac");
 					Pchar.quest.Dupin_toolbox = sti(Pchar.quest.Dupin_toolbox) + 1;
 					Pchar.quest.D_tweezers = "picked_up";
 				
@@ -9451,7 +9451,7 @@ void QuestComplete(string sQuestName)
 		case "key27_done":
 			//from chinese dialog
 
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			GiveItem2Character(Pchar, "key27");
 			Characters[GetCharacterIndex("the_chinese")].dialog.CurrentNode  = "First time";
 			LAi_SetCitizenType(characterFromID("the_chinese"));
@@ -9625,7 +9625,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"key24"))
 			{
 				Pchar.quest.key24 = "picked_up";
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				return;
 			}
 			else
@@ -9637,7 +9637,7 @@ void QuestComplete(string sQuestName)
 		case "pick_up_key25":
 			if(CheckCharacterItem(Pchar,"key25"))
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				return;
 			}
 			else
@@ -9649,7 +9649,7 @@ void QuestComplete(string sQuestName)
 		case "pick_up_key26":
 			if(CheckCharacterItem(Pchar,"key26"))
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				return;
 			}
 			else
@@ -14556,7 +14556,7 @@ void QuestComplete(string sQuestName)
 
 		case "about_flag_done":	
 			PlaySound("VOICE\ENGLISH\G_you_could.wav");
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			TakenItems(Pchar, "key7", 1);
 			AddQuestRecord("Navigation_items","13");
 			Locations[FindLocation("Fort_Moultrie")].locators_radius.box.box38 = 1.0;
@@ -15742,7 +15742,7 @@ void QuestComplete(string sQuestName)
 		case "key30_pickup_check":
 			if(CheckCharacterItem(Pchar,"key30"))
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				Pchar.quest.searching_for_key30 = "no";
 
 				LAi_QuestDelay("key30_pickup_check1", 0.5);
@@ -16782,7 +16782,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation(Pchar.location)].type = "silent_seashore";
 			PostEvent("LoadSceneSound", 0);
 	
-			PlaySound("INTERFACE\important_item.wav");
+			PlaySound("INTERFACE\important_item.flac");
 			GiveItem2Character(Pchar, "bladespade");
 			EquipCharacterbyItem(Pchar, "bladespade");
 			TakeItemFromCharacter(characterFromID("white_trash1"), "MinersSpade");
@@ -17858,7 +17858,7 @@ void QuestComplete(string sQuestName)
 
 		case "visit3_F_done":
 			GiveItem2Character(Pchar, "key31");
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			AddQuestRecord("Weapons","5");
 			ChangeCharacterAddressGroup(characterFromID("Lieutenant G"), "Fort_Moultrie_barracks", "sit", "sit13");
 			LAi_SetSitType(characterFromID("Lieutenant G"));
@@ -19250,7 +19250,7 @@ void QuestComplete(string sQuestName)
 					PlaySound("PEOPLE\step_echo.wav");
 					PlaySound("PEOPLE\key_box.wav");
 				}
-				if(CheckCharacterItem(Pchar,"jewelcross")) PlaySound("INTERFACE\took_item.wav");
+				if(CheckCharacterItem(Pchar,"jewelcross")) PlaySound("INTERFACE\took_item.flac");
  
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"No, I don't bother to take anything."));
 				TakenItems(Pchar, "shrine", -1); TakenItems(Pchar, "jewelcross", -1);
@@ -19392,7 +19392,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "brothel_key":
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			GiveItem2Character(Pchar, "key28");
 			AddMoneyToCharacter(Pchar,-10000);	//just in case
 

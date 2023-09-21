@@ -168,7 +168,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[39] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[40];
 			link.l1 = DLG_TEXT[41];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar,6000);
 			Pchar.quest.ReturnMoney = "0";//деньги вернулись!!!
 			AddQuestRecord("Story_Find_Rheims", 116);
@@ -192,7 +192,7 @@ void ProcessDialogEvent()
 		break;  // <-- Cat 
 
 		case "exitandpay":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar,-3000);
 			Pchar.quest.ReturnMoney = "1";//сохраним, для откупа...
 			DialogExit();
@@ -324,7 +324,7 @@ void ProcessDialogEvent()
 		case "room_24_wait":
 			DialogExit();
 			Diag.CurrentNode =  Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			WaitDate("",0,0,0,24,1);
@@ -370,7 +370,7 @@ void ProcessDialogEvent()
 		case "room_night_wait":
 			DialogExit();
 			Diag.CurrentNode =  Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_night");
@@ -385,7 +385,7 @@ void ProcessDialogEvent()
 		case "room_day_wait":
 			DialogExit();
 			Diag.CurrentNode =  Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_day");

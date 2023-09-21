@@ -250,7 +250,7 @@ void ProcessDialogEvent()
 
 		case "gov_29":
 			ChangeCharacterAddressGroup(characterFromID("Jean Lafitte"), "Eleuthera_Port", "goto", "goto25");		
-            PlayStereoSound("INTERFACE\took_item.wav");
+            PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 25000);
 			ChangeRMRelation(pchar, AMERICA, 20.0);				
 			dialog.snd = "Voice\REGR\REGR008";

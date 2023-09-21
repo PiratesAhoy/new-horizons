@@ -239,7 +239,7 @@ void ProcessDialogEvent()
 
 		break;
 		}
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -100);
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
@@ -475,7 +475,7 @@ void ProcessDialogEvent()
 				Link.l1 = DLG_TEXT[60];
 				Link.l1.go = "exit";
 				int prot = rand(650)+300;
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, prot);
 				ChangeCharacterReputation(pchar, -2);
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"Your victim produces") + " " + prot + " " + XI_ConvertString("gold."));

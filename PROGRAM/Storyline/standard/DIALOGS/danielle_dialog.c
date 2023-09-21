@@ -1466,12 +1466,12 @@ void ProcessDialogEvent()
 			Link.l1.go = "Danielle_departs4";
 			if (checkquestattribute("Silehard_defeat", "prison"))
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -200000);
 			}
 			if (checkquestattribute("Silehard_defeat", "dead"))
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -100000);
 			}
 		break;	

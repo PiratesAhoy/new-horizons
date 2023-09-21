@@ -155,7 +155,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1000);
 			characters[GetCharacterIndex("pater Jourdain")].quest.prihod = "2";
 		break;

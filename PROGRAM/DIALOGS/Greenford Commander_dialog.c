@@ -256,7 +256,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "money_good":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5000);
 			dialog.snd = "Voice\GRCO\GRCO011";
 			dialog.text = DLG_TEXT[32];

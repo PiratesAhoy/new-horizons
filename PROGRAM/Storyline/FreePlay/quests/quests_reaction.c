@@ -954,7 +954,7 @@ void QuestComplete(string sQuestName)
 			DisableFastTravel(true);
 			DisableMenuLaunch(true);		
             LAi_SetCitizenType(characterFromID("Fernando Suarez"));		
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			GiveItem2Character(Pchar, "bladeBP");
 
 			Pchar.quest.fight_acre.win_condition.l1 = "location";			
@@ -993,7 +993,7 @@ void QuestComplete(string sQuestName)
 			DisableFastTravel(true);
 			DisableMenuLaunch(true);		
             LAi_SetCitizenType(characterFromID("Fernando Suarez"));		
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			GiveItem2Character(Pchar, "bladeBP");
 
 			Pchar.quest.fight_acreB.win_condition.l1 = "location";			
@@ -1118,7 +1118,7 @@ void QuestComplete(string sQuestName)
             break;
 
 		case "search_rifle":
-			PlayStereoSound("INTERFACE\took_item.wav");		
+			PlayStereoSound("INTERFACE\took_item.flac");
 			LAi_SetPlayerType(Pchar);		
 			pchar.quest.bart_chestB.win_condition.l1 = "locator";
 			pchar.quest.bart_chestB.win_condition.l1.location = "Bartolomeu_Mansion";
@@ -1128,7 +1128,7 @@ void QuestComplete(string sQuestName)
             break;
 
    		case "found_rifle":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			GiveItem2Character(pchar, "LongRifle_BT");			
 			AddQuestRecord("Family_Story", 15);
 

@@ -241,7 +241,7 @@ void TradeQuestDone()
 	}
 	else { AddPartyExp(PChar, (makeint(PChar.quest.generate_trade_quest_progress.iTradeExp))); }
 	AddMoneyToCharacter(PChar, makeint(PChar.quest.generate_trade_quest_progress.iMoney));
-	PlayStereoSound("INTERFACE\took_item.wav");
+	PlayStereoSound("INTERFACE\took_item.flac");
 	PChar.quest.generate_trade_quest_progress = "";
 	PChar.quest.generate_trade_quest.over = "yes";
 	RemoveCharacterGoods(PChar, makeint(PChar.quest.generate_trade_quest_progress.iTradeGoods), makeint(PChar.quest.generate_trade_quest_progress.iQuantityGoods));
@@ -260,7 +260,7 @@ void KillPirateQuestDone()
 		AddPartyExpChar(pchar, "Sneak", KillQuestExperience/100);
 	}
 	else { AddPartyExp(pchar, KillQuestExperience); }
-	PlayStereoSound("INTERFACE\took_item.wav");
+	PlayStereoSound("INTERFACE\took_item.flac");
 	AddMoneyToCharacter(pchar, makeint(pchar.quest.generate_kill_quest.money));
 	AddDialogExitQuest("kill_pirate_refused_2");
 	ChangeCharacterReputation(pchar, 1);

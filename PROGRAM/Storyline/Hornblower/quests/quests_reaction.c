@@ -13155,7 +13155,7 @@ void QuestComplete(string sQuestName)
 			characters[GetCharacterIndex("Greenford Prison Commendant")].Dialog.Filename = "Greenford Commander_dialog.c";
 			Characters[GetCharacterIndex("Greenford Prison Commendant")].dialog.CurrentNode = "First time";
 			AddMoneyToCharacter(Pchar, -60);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			Characters[GetCharacterIndex("Mrs. Mason")].dialog.CurrentNode = "Come_to_gloat";
 
 			pchar.quest.Mason_in_jail_speak.win_condition.l1 = "locator";
@@ -16452,7 +16452,7 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(characterFromID("Donatien Thibaud"), false);
 			RemoveCharacterEquip(characterFromID("Donatien Thibaud"), BLADE_ITEM_TYPE);
 			GiveItem2Character(PChar, "blade51");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			LogIt("Donatien Thibaud has surrendered his sword to you.");
 			LAi_SetActorType(characterFromID("Richard Sharpe"));
 			Characters[GetCharacterIndex("Richard Sharpe")].Dialog.CurrentNode = "meant_to_ask_you";

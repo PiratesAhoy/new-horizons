@@ -111,7 +111,7 @@ void PlayerLostMoney(ref NPChar, int lostSum)
 	if(sti(PChar.money)==0) return;
 	if(sti(PChar.money)<lostSum) lostSum = sti(PChar.money);
 	PChar.money = makeint(sti(PChar.money)-lostSum);
-	PlayStereoSound("INTERFACE\took_item.wav");
+	PlayStereoSound("INTERFACE\took_item.flac");
 	if(IsMainCharacter(NPChar)) return;
 	if(!CheckAttribute(NPChar,"money")) NPChar.money = 0;
 	NPChar.money = makeint(sti(NPChar.money)+lostSum);
@@ -2362,7 +2362,7 @@ void TIH_PrisonerTakenProcess(ref RefChar, bool bPurgeCrud)
 
 		if(!CheckAttribute(RefChar, "honourable_surrender"))	// GR: Only take prisoner's money if you did not offer honourable surrender terms
 		{
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar,sti(Prisoner.money));
 			Log_SetStringToLog(TranslateString("","CaptainMoney1")+" "+MakeMoneyShow(sti(Prisoner.money),"",MONEY_DELIVER)+" "+TranslateString("","CaptainMoney2"));
 		}
@@ -2550,7 +2550,7 @@ void Riley_Restock_Ammo(int chridx, int gunpowder, int pistol_bullets, int grape
 		Log_SetStringToLog(GetMyShipNameShow(&characters[cn]) + " " + XI_ConvertString("weapons locker") + ": " + gpratio + " " + XI_ConvertString("wgunpowder") + ", "  + pbratio + " " + XI_ConvertString("wpistol bullets") + ", " + gsratio + " " + XI_ConvertString("wgrapeshot loads") + ", " +  mbratio + " " + XI_ConvertString("wmusket bullets purchased for") + " " + tpratio + " " + XI_ConvertString("wgold") + ".");
 	}
 // <-- KK
-	PlayStereoSound("interface\took_item.wav");
+	PlayStereoSound("interface\took_item.flac");
 }
 
 void Riley_Officer_Restock_Ammo(int officer_price)
@@ -2942,7 +2942,7 @@ string GetShipDescribe(string charId, bool nation, bool nguns, bool shipname, bo
 void GotSlut(string wait)
 {
 	ref pchar = GetMainCharacter();
-	PlayStereoSound("INTERFACE\took_item.wav");
+	PlayStereoSound("INTERFACE\took_item.flac");
 	AddMoneyToCharacter(pchar, -50);
 	string roomName = pchar.location;
 	aref cLoctr; makearef(cLoctr,locations[FindLocation(pchar.location)].reload);

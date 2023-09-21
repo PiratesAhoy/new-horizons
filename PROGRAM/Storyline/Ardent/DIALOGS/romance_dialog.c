@@ -2038,7 +2038,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[469];
 			if(sti(PChar.money) >= 200)
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, -200);
 				link.l1 = DLG_TEXT[470] + GetMyName(NPChar) + DLG_TEXT[471] + DLG_TEXT[472];
 				link.l1.go = "imperial_escort_enough_money";

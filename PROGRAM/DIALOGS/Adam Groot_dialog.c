@@ -394,7 +394,7 @@ void ProcessDialogEvent()
 
 		case "cancel_groot":	// GR: in case someone gets too annoyed by "I am Groot"
 			TakeItemFromCharacter(PChar, "potionrum");
-			PlayStereoSound("INTERFACE\drink.wav");
+			PlayStereoSound("INTERFACE\drink.flac");
 			d.Text = DLG_TEXT[175];
 			Link.l1 = DLG_TEXT[176];
 			Link.l1.go = "exit";

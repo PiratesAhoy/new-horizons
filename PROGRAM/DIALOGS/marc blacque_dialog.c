@@ -196,7 +196,7 @@ void ProcessDialogEvent()
 			Dialog.Text = DLG_TEXT[45];
 			Link.l1 = DLG_TEXT[46];
 			Link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 500);
 			Characters[GetCharacterIndex("Milon Blacque")].quest.son = "2";
 			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
@@ -335,7 +335,7 @@ void ProcessDialogEvent()
 // NK -->
 		case "exit3":
 			Characters[GetCharacterIndex("Milon Blacque")].quest.son = "done";
-		    	PlayStereoSound("INTERFACE\took_item.wav");
+		    	PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);
 			CloseQuestHeader("Blacques");
 			DialogExit();

@@ -79,7 +79,7 @@ void ProcessDialogEvent()
 			TakeNItems(PChar, "opium", 1);
 			AddDialogExitQuest("Opium_set_first_ambush");
 			AddMoneyToCharacter(PChar, -1*sti(NPChar.opiumprice)*1);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			dialog.text = DLG_TEXT[16];
 			Link.l1 = DLG_TEXT[17]
 			Link.l1.go = "Exit";
@@ -89,7 +89,7 @@ void ProcessDialogEvent()
 			TakeNItems(PChar, "opium", 12);
 			AddDialogExitQuest("Opium_set_first_ambush");
 			AddMoneyToCharacter(PChar, -1*sti(NPChar.opiumprice)*12);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			dialog.text = DLG_TEXT[16];
 			Link.l1 = DLG_TEXT[17]
 			Link.l1.go = "Exit";
@@ -99,7 +99,7 @@ void ProcessDialogEvent()
 			TakeNItems(PChar, "opium", 72);
 			AddDialogExitQuest("Opium_set_first_ambush");
 			AddMoneyToCharacter(PChar, -1*sti(NPChar.opiumprice)*72);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			dialog.text = DLG_TEXT[16];
 			Link.l1 = DLG_TEXT[17]
 			Link.l1.go = "Exit";

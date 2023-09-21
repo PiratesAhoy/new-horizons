@@ -6710,7 +6710,7 @@ void SupplyAmmo(bool bOverride)
 			if(bGotAmmo)
 			{
 				LogIt(TranslateString("","Your shore party has been resupplied with Ammunition!"));
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 			}
 		}
 	}

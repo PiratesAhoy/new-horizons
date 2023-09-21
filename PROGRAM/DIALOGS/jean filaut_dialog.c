@@ -144,7 +144,7 @@ void ProcessDialogEvent()
 			PreProcessor_Add("cash", cash);
 			dialog.text = DLG_TEXT[29];
 			link.l1 = DLG_TEXT[30];
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, cash);
 			link.l1.go = "exit";
 		break;

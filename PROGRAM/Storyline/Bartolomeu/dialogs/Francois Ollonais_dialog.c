@@ -348,7 +348,7 @@ void ProcessDialogEvent()
 			        link.l1 = DLG_TEXT[68];
 			        link.l1.go = "begin_35";
 			TakeItemFromCharacter(pchar, "darien_idol");
-                        PlayStereoSound("INTERFACE\took_item.wav");
+                        PlayStereoSound("INTERFACE\took_item.flac");
 
                         break;
 

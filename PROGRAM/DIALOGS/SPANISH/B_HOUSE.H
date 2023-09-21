@@ -249,7 +249,7 @@ void ProcessDialogEvent()
 
 				// take buildingresources
 				RemoveCharacterGoods(pchar, GOOD_PLANKS, planks-1 );
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -money);
 				Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -crew;
 
@@ -336,7 +336,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "taxhalf":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, sti(npchar.tax)/2 );
 			ChangeCharacterReputation(Pchar, 1);  // reward: reputation. Change figure to your liking
 			Dialog.text = "That's most generous of you, Sir. I'll tell everybody what a kind and caring landlord you are, you can be sure of that!";
@@ -345,7 +345,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "taxfull":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, sti(npchar.tax));
 			ChangeCharacterReputation(Pchar, -2);  // punishment: reputationdrop. Change figure to your liking
 			Dialog.text =  RandSwear() + LinkRandPhrase("Well, here, take your darned money. But don't complain if you are soon without tenants cause we've starved...", "Then I have no choice but to borrow the money for you from a loanshark. Means that I'll probably end up with a broken arm... in the BEST case...", "Allright, you leech, here, take this money which I had saved for my sick mother.") ;
@@ -354,7 +354,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "taxrevolt":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, sti(npchar.tax));
 			ChangeCharacterReputation(Pchar, -2);  // punishment: reputationdrop. Change figure to your liking
 			Ambush("outlaws", 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");

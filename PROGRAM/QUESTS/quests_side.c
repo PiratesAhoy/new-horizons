@@ -2577,7 +2577,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "ghost2_disappears":
 			if(CheckAttribute(Pchar,"hotel_surgery") && Pchar.hotel_surgery == "on") 
-			{PlaySound("INTERFACE\small_door_locked.wav");}
+			{PlaySound("INTERFACE\small_door_locked.flac");}
 
 			if(CheckAttribute(Pchar,"hotel_bandages") && Pchar.hotel_bandages == "on") 
 			{PlaySound("PEOPLE\clothes1.wav");}			
@@ -2624,7 +2624,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "ghost3_disappears":
 			if(CheckAttribute(Pchar,"hotel_crucifix") && Pchar.hotel_crucifix == "on") 
-			{PlaySound("INTERFACE\took_item.wav");}
+			{PlaySound("INTERFACE\took_item.flac");}
 
 			if(CheckAttribute(Pchar,"hotel_bible") && Pchar.hotel_bible == "on") 
 			{PlaySound("INTERFACE\book_close.wav");}		
@@ -11047,7 +11047,7 @@ void SideQuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Jack Greenfield"), "", "sit", "sit10");
 // NK -->
 			pchar.quest.Attwood1.leave = 1;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -2000);
 			LAi_QuestDelay("stand_up", 1.0);
 			LAi_QuestDelay("convoy", 2.0);
@@ -11958,7 +11958,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "Kapitein_with_soldier_to_room":
 			string kapitein_location = PChar.location;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -150);
 			PChar.quest.kapitein = "start";
 			DoQuestReloadToLocation(kapitein_location + "_upstairs", "goto", "goto2", "Kapitein_with_soldier_to_room2");
@@ -12154,7 +12154,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "kapitein_get_money2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 35574);		// About 10 times the number of Marks that the real Captain of Köpenick got.
 			PChar.quest.kapitein = "got_money";
 			LAi_SetActorType(characterFromID("Dou_soldier_1"));
@@ -14542,7 +14542,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "crysskull_carib_warrior_surrenders_skull2":
-			PlayStereoSound("INTERFACE\important_item.wav");
+			PlayStereoSound("INTERFACE\important_item.flac");
 			TakeItemFromCharacter(characterFromID("Carib_Warrior"), "cryskull");
 			GiveItem2Character(characterFromID("Archaeologist_captain"), "cryskull");
 			PChar.quest.crysskull_you_stole_skull.over = "yes";
@@ -14770,7 +14770,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "crysskull_get_skull":
 			GiveItem2Character(PChar, "cryskull");
-			PlayStereoSound("INTERFACE\important_item.wav");
+			PlayStereoSound("INTERFACE\important_item.flac");
 			if (PChar.quest.crysskull.ultimatum == "hostage")
 			{
 				Preprocessor_AddQuestData("hostage", GetMyFullName(GetCharacter(sti(PChar.quest.crysskull.hostage))));
@@ -14861,7 +14861,7 @@ void SideQuestComplete(string sQuestName)
 				AddPartyExpChar(PChar, SKILL_SNEAK, 500);
 			}
 			else { AddPartyExp(PChar, 5000); }
-			PlayStereoSound("INTERFACE\important_item.wav");
+			PlayStereoSound("INTERFACE\important_item.flac");
 			TakeItemFromCharacter(PChar, "cryskull");
 			PChar.quest.crys_skull_status = "traded";
 			ChangeCharacterReputation(PChar, 3);
@@ -14878,7 +14878,7 @@ void SideQuestComplete(string sQuestName)
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\drink.wav");
+				PlayStereoSound("INTERFACE\drink.flac");
 				PChar.quest.crysskull_poison_player.over = "yes";
 			}
 			EndQuestMovie();
@@ -15004,7 +15004,7 @@ void SideQuestComplete(string sQuestName)
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\drink.wav");
+				PlayStereoSound("INTERFACE\drink.flac");
 				PChar.quest.crysskull_poison_player.over = "yes";
 				AddQuestRecord("crystal_skull", 17);
 			}
@@ -15180,7 +15180,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "colombian_silver_join_soldier":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -2);
 			LAi_Fade("colombian_silver_join_soldier2", "colombian_silver_talk_soldier");
 		break;
@@ -15217,7 +15217,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "colombian_silver_join_officer":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -2);
 			LAi_Fade("colombian_silver_join_officer2", "colombian_silver_talk_officer");
 		break;

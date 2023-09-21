@@ -108,7 +108,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[20];
 			link.l1.go = "ardent_hunt_deal_done";
 			PChar.quest.hunt_admiral_owes = 0;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 3500);
 		break;
 
@@ -125,7 +125,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[18];
 			link.l1 = DLG_TEXT[20];
 			link.l1.go = "ardent_hunt_deal_done";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 2500);
 		break;
 
@@ -168,7 +168,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[27] + GetMyRespectfullyName(PChar) + DLG_TEXT[28];
 			link.l1 = DLG_TEXT[29];
 			link.l1.go = "ardent_hunt_battle_report";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, makeint(PChar.quest.hunt_admiral_owes));
 			PChar.quest.hunt_admiral_owes = 0;
 			DeleteQuestAttribute("hunt_admiral_ready_to_pay");
@@ -263,7 +263,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, 10000);
 				dialog.text = DLG_TEXT[41] + DLG_TEXT[42];
 			}
@@ -314,7 +314,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_hunt_document_advance_payment":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 5000);
 			PChar.quest.hunt_document_paid = "true";
 			dialog.text = DLG_TEXT[51];
@@ -338,7 +338,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, 10000);
 				dialog.text = DLG_TEXT[53] + DLG_TEXT[42];
 			}
@@ -358,7 +358,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, 10000);
 				dialog.text = DLG_TEXT[54] + DLG_TEXT[42];
 			}

@@ -175,7 +175,7 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("Mendes_go_away_from_falaise_de_fleur_store");
 
 			npchar.money.quest = makeint(npchar.money.quest)/2;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -192,7 +192,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[59] + GetCharacterFullName(DLG_TEXT[60]) + DLG_TEXT[61];
 			link.l1 = pcharrepphrase(DLG_TEXT[62], DLG_TEXT[63]);
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			if(AUTO_SKILL_SYSTEM)
 			{

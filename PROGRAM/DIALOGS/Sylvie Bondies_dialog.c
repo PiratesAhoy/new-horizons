@@ -91,7 +91,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			ChangeCharacterReputation(pchar, -1);
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "almost_done_ransom";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 2000);
 			RemovePassenger(pchar, Characters[GetCharacterIndex("Sabine Matton")]);
 //			ChangeCharacterAddress(characterFromID("Sabine Matton"), "house_of_sylvie_bondies", "locator4")  //TALISMAN Changed - locator does not exist
@@ -114,7 +114,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			ChangeCharacterReputation(pchar, -1);
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "captured_by_blaze_again";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 2000);
 			TakeItemFromCharacter(Pchar, "Correspondence1");// PW remove Arnaud letter
 			NextDiag.TempNode = "Last time";
@@ -246,7 +246,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[90];
 			link.l1 = DLG_TEXT[91];
 			link.l1.go = "goddaughter_1";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 800);
 		break;
 

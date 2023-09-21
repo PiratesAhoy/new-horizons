@@ -84,7 +84,7 @@ void ProcessDialogEvent()
 
 		case "FindRheims_4":
 			Dialog.snd = "voice\WIBL\WIBL006";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar,-10);
 			dialog.text = DLG_TEXT[14];
 			link.l1 = DLG_TEXT[15];

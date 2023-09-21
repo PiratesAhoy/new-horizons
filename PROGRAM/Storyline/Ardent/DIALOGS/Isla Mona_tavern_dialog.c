@@ -98,7 +98,7 @@ void ProcessDialogEvent()
 		case "room_24_wait":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			WaitDate("",0,0,0,24,1);
@@ -144,7 +144,7 @@ void ProcessDialogEvent()
 		case "room_night_wait":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_night");
@@ -159,7 +159,7 @@ void ProcessDialogEvent()
 		case "room_day_wait":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_day");

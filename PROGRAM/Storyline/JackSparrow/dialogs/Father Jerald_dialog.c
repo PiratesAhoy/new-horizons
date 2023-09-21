@@ -172,7 +172,7 @@ void ProcessDialogEvent()
 			link.l1.go = "letters_2_9";
 			link.l2 = DLG_TEXT[43];
 			link.l2.go = "letters_2_8";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 2000);
 			pchar.help_church = "blackmail";
 		break;
@@ -280,7 +280,7 @@ void ProcessDialogEvent()
 
 		case "donation paid_500":
 			dialog.snd = "Voice\FATB\FATB046";
-		    	PlayStereoSound("INTERFACE\took_item.wav");
+		    	PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			dialog.text = DLG_TEXT[66];
@@ -299,7 +299,7 @@ void ProcessDialogEvent()
 		
 		case "donation paid_2500":
 			dialog.snd = "Voice\FATB\FATB046";
-		    	PlayStereoSound("INTERFACE\took_item.wav");
+		    	PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[69];
@@ -317,7 +317,7 @@ void ProcessDialogEvent()
 		
 		case "donation paid_5000":
 			dialog.snd = "Voice\FATB\FATB046";
-		    	PlayStereoSound("INTERFACE\took_item.wav");
+		    	PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[72];

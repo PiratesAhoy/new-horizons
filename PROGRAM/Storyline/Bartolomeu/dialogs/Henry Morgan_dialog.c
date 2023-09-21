@@ -176,7 +176,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[38];
 			link.l1 = DLG_TEXT[39];
 			link.l1.go = "exit";
-                       PlayStereoSound("INTERFACE\took_item.wav");
+                       PlayStereoSound("INTERFACE\took_item.flac");
                        AddDialogExitQuest("leaveturner");
 
 		break;
@@ -548,7 +548,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[133];
 			link.l1 = DLG_TEXT[134];
 			link.l1.go = "begin_69";
-                       PlayStereoSound("INTERFACE\took_item.wav");
+                       PlayStereoSound("INTERFACE\took_item.flac");
 			           AddMoneyToCharacter(pchar, 150000);						
 		break;
 

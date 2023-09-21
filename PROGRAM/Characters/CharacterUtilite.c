@@ -3479,7 +3479,7 @@ bool TakeNItems(ref _refCharacter,string itemName, int n)
 					|| itemName == "pistolbelt")
 				{
 					if(n>0)	{Log_SetStringToLog(XI_ConvertString("You take item"));
-					PlayStereoSound("interface\important_item.wav");}
+					PlayStereoSound("interface\important_item.flac");}
 				}
 				//<-- JRH
 				else
@@ -3497,7 +3497,7 @@ bool TakeNItems(ref _refCharacter,string itemName, int n)
 						else Log_SetStringToLog(XI_ConvertString("You take item"));
 					}
 					if(n<0)	{Log_SetStringToLog(XI_ConvertString("You give item"));}
-					PlayStereoSound("interface\important_item.wav");
+					PlayStereoSound("interface\important_item.flac");
 				}
 			}
 			if( n>0 && IsOfficer(_refCharacter) || IsCompanion(_refCharacter) ) {

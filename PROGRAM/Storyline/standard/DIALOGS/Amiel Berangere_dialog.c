@@ -157,7 +157,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Node_9":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -3000);
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -240,7 +240,7 @@ void ProcessDialogEvent()
 
 		case "Node_work_3":
 			dialog.snd = "Voice\AMBE\AMBE019";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -10000);
 			d.Text = DLG_TEXT[59] + GetMyName(Pchar) + DLG_TEXT[60];
 			Link.l1 = DLG_TEXT[61];

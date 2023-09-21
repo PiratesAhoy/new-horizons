@@ -174,7 +174,7 @@ void ProcessDialogEvent()
 
 		case "smugglers_7_2":
 			Dialog.text = DLG_TEXT[41];
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 1500);
 			ChangeCharacterReputation(pchar, 1);
 			if(AUTO_SKILL_SYSTEM)
@@ -193,7 +193,7 @@ void ProcessDialogEvent()
 
 		case "smugglers_7_3":
 			Dialog.text = DLG_TEXT[43];
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 500); // NK, thanks to Taghmon
 			ChangeCharacterReputation(pchar, 1);
 			if(AUTO_SKILL_SYSTEM)
@@ -212,7 +212,7 @@ void ProcessDialogEvent()
 
 		case "smugglers_7":
 			Dialog.text = DLG_TEXT[45];
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			ChangeCharacterReputation(pchar, 1);
 			if(AUTO_SKILL_SYSTEM)
@@ -260,7 +260,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit3";
 			characters[GetCharacterIndex("Andre Juliao")].location= "0";
 			characters[GetCharacterIndex("Raoul Calmes")].location= "0";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			ChangeCharacterReputation(pchar, 1);
 			if(AUTO_SKILL_SYSTEM)

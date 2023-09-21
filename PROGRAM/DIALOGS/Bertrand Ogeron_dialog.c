@@ -151,7 +151,7 @@ void ProcessDialogEvent()
 		case "Agreed":
 			Dialog.snd = "voice\REDI\REDI016";
 			RMAmnesty(PChar, sti(Pchar.quest.relations.nation));
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, makeint(Pchar.quest.Relations.sum)); // RM
 			DeleteAttribute(Pchar, "quest.Relations");
 			d.Text = DLG_TEXT[49];

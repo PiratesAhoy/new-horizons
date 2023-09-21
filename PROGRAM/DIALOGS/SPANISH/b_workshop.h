@@ -315,7 +315,7 @@ void ProcessDialogEvent()
 
 				// take buildingresources
 				RemoveCharacterGoods(pchar, GOOD_PLANKS, planks-1 );
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -money);
 				Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -crew;
 				
@@ -447,7 +447,7 @@ void ProcessDialogEvent()
       lcn.building.(nr).taxMonth = GetDataMonth();
       lcn.building.(nr).taxDay = GetDataDay();
 			tax = taxdays * 10;	// Reward rentmoney, you can change the figure before the ';' to your liking
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, tax);
 			ChangeCharacterReputation(Pchar, -2);  // punishment: reputationdrop. Change figure to your liking
 			Dialog.text =  RandSwear() + LinkRandPhrase("Well, here, take your darned money. But don't complain if you are soon without craftsmen cause we've starved...", "Then I have no choice but to borrow the money for you from a loanshark. Means that I'll probably end up with a broken arm... in the BEST case...", "Allright, you leech, here, take this money which I had saved for my sick mother.") ;
@@ -461,7 +461,7 @@ void ProcessDialogEvent()
 			lcn.building.(nr).taxMonth = GetDataMonth();
 			lcn.building.(nr).taxDay = GetDataDay();
 			tax = taxdays * 10;	// Reward rentmoney, you can change the figure before the ';' to your liking
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, tax);
 			ChangeCharacterReputation(Pchar, -2);  // punishment: reputationdrop. Change figure to your liking
 			Ambush("Lower_Citizens", 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");

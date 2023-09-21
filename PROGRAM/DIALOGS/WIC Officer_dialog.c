@@ -79,7 +79,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[15];
 			link.l1 = DLG_TEXT[16];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -1000000);
 			switch(sti(NPChar.nation))
 			{

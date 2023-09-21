@@ -361,7 +361,7 @@ void ProcessDialogEvent()
 				Link.l1 = DLG_TEXT[56];
 				Link.l1.go = "exit";
 				sum = Npchar.money;
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, sti(sum));
 				AddMoneyToCharacter(Npchar, -sti(sum));
 				float points = stf(sum/4000);

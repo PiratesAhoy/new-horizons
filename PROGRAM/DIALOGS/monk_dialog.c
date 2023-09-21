@@ -469,7 +469,7 @@ void ProcessDialogEvent()
 			Dialog.Text = DLG_TEXT[85];
 			Link.l1 = DLG_TEXT[86];
 			Link.l1.go = "Beckett found second time4";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, +5000);
 		break;
 
@@ -491,7 +491,7 @@ void ProcessDialogEvent()
 		break;
 
 	   case "exit_pay":
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 	        AddMoneyToCharacter(PChar, -100);
 	        AddMoneyToCharacter(NPChar, 100);
 			NextDiag.CurrentNode = NextDiag.TempNode;

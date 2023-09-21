@@ -69,7 +69,7 @@ void ProcessDialogEvent()
 			 	}
 				else { AddPartyExp(pchar, (1+sti(pchar.skill.fencing)) * 100); }
 				int sum = sti(pchar.skill.fencing) * 1000;
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 			 	AddMoneyToCharacter(Pchar, sum);
 				LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], false);
 				Ambush("outlaws", 1+sti(PChar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "reload1");

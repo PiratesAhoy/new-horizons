@@ -35,7 +35,7 @@ void ProcessDialogEvent()
 
 			if(PChar.quest.Hitman == "hit_ambroz")
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, 3000);
 				Dialog.snd = "voice\MASA\MASA002";
 				dialog.text = DLG_TEXT[2];
@@ -47,7 +47,7 @@ void ProcessDialogEvent()
 
 			if(PChar.quest.Hitman == "hit_geffrey")
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, 4500);
 				Dialog.snd = "voice\MASA\MASA003";
 				dialog.text = DLG_TEXT[5];
@@ -59,7 +59,7 @@ void ProcessDialogEvent()
 
 			if(PChar.quest.Hitman == "hit_pepin")
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, 7000);
 				Dialog.snd = "voice\MASA\MASA004";
 				dialog.text = DLG_TEXT[10]+ Characters[GetCharacterIndex(DLG_TEXT[11])].lastname +DLG_TEXT[12];
@@ -71,7 +71,7 @@ void ProcessDialogEvent()
 
 			if(PChar.quest.Hitman == "hit_amerigo")
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, 10000);
 				Dialog.snd = "voice\MASA\MASA005";
 				dialog.text = DLG_TEXT[15]+ Characters[GetCharacterIndex(DLG_TEXT[16])].name +DLG_TEXT[17];

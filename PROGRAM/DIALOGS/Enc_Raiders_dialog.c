@@ -31,7 +31,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "exit_Robbed":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -(makeint(makeint(Pchar.money)/20)*10));
 			AddDialogExitQuest("LandEnc_RaidersRobbed");
 
@@ -281,7 +281,7 @@ void ProcessDialogEvent()
 
 		case "planks":
 			AddCharacterGoods(pchar, GOOD_PLANKS, makeint(20 + rand(20)) );
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1500);
 			Diag.TempNode = "planks";
 			d.Text = DLG_TEXT[53];

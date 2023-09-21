@@ -82,7 +82,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[14] + GetMyLastName(NPChar) + ".";
 			if (CheckCharacterItem(PChar, "cryskull"))
 			{
-				PlayStereoSound("INTERFACE\important_item.wav");
+				PlayStereoSound("INTERFACE\important_item.flac");
 				TakeItemFromCharacter(PChar, "cryskull");
 				GiveItem2Character(characterFromID("Archaeologist_captain"), "cryskull");
 			}

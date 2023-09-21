@@ -110,7 +110,7 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 28);
 			}
 			else { AddPartyExp(pchar, 2800); }
-			PlayStereoSound("INTERFACE\took_item.wav"); // PB: Play sound
+			PlayStereoSound("INTERFACE\took_item.flac"); // PB: Play sound
 			AddMoneyToCharacter(pchar, 15000); // PB: Add reward
 		break;
 
@@ -179,7 +179,7 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 45);
 			}
 			else { AddPartyExp(pchar, 4500); }
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 850);
 		break;
 

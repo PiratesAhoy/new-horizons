@@ -21,11 +21,11 @@ void procBattleCommandSound()
 	}
 	if(comName=="activate")
 	{
-		PlaySound("interface\ok.wav");
+		PlaySound("interface\ok.flac");
 	}
 	if(comName=="right" || comName=="left")
 	{
-		PlaySound("interface\ok.wav");
+		PlaySound("interface\ok.flac");
 	}
 }
 

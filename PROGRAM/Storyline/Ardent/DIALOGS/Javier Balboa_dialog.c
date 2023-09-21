@@ -511,7 +511,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "hand_it_over":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			x = makeint(PChar.quest.marriage.money) * -1;
 			AddMoneytoCharacter(PChar, x);
 			LeaveService(PChar, PIRATE, false);	// You give up being a pirate
@@ -1054,7 +1054,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneytoCharacter(PChar, 5000);
 				dialog.text = DLG_TEXT[295] + name + DLG_TEXT[297] + DLG_TEXT[298];
 			}
@@ -1378,7 +1378,7 @@ void ProcessDialogEvent()
 				if (CheckAttribute(PChar, "quest.spain_betrayal")) link.l1.go = "exit";
 				else link.l1.go = "finale_after_santiago_promotion_or_lom";
 			}
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 100000);
 			if (reward == "") reward = DLG_TEXT[408];
 			else reward = reward + DLG_TEXT[407];
@@ -1622,7 +1622,7 @@ void ProcessDialogEvent()
 			Preprocessor_AddQuestData("governor", GetMyLastName(CharacterFromID("Javier Balboa")));
 			AddQuestRecord("Battle Royale", 16);
 			Preprocessor_Remove("governor");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 100000);
 			AddDialogExitQuest("finale_end_story");
 			DialogExit();

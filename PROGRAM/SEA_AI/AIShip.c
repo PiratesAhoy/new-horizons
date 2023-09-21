@@ -1348,7 +1348,7 @@ void Ship_Surrender(int chridx)
 		// DeathDaisy <--
 		if (oldrel == RELATION_ENEMY) {
 			TraceAndLog(TranslateString("", PCharTitle + ", the") + " " + GetMyShipNameShow(chr) + " " + TranslateString("","has struck her colors!")); // KK
-			PlaySound("interface\notebook.wav");
+			PlaySound("interface\notebook.flac");
 			PlaySound("objects\abordage\abordage_wining.wav");
 		} else {
 			TraceAndLog(TranslateString("", PCharTitle + ", the") + " " + GetMyShipNameShow(chr) + " " + TranslateString("","has struck her colors to the enemy!")); // KK
@@ -2237,7 +2237,7 @@ void Ship_ActivateFirePlace()
 		if (FIREDAMAGE > 1) {
 			AddPerkToActiveList("FireOnShip"); // KK
 			Log_SetStringToLog(TranslateString("","Fire! Execute firedrill procedure!")); // infomessage MAR18 // KK
-			PlaySound("interface\notebook.wav"); // soundeffect MAR18
+			PlaySound("interface\notebook.flac"); // soundeffect MAR18
 		}
 	}
 	// ccc firedrill end
@@ -2601,7 +2601,7 @@ void Ship_ApplyHullHitpoints(ref rOurCharacter, float fHP, int iKillStatus, int 
 					z = stf(rOurCharacter.ship.pos.z);
 				}
 				if(IsMainCharacter(rOurCharacter)) { // KK
-					PlaySound("interface\notebook.wav"); // like CCC's firedrill
+					PlaySound("interface\notebook.flac"); // like CCC's firedrill
 					logit(TranslateString("","We lost a cannon! From the") + " " + TranslateString("",GetQuadText(quad)) + " " + XI_ConvertString("arc") + "!" + stringret(fix," " + TranslateString("","We think we can fix it, captain."), ""));
 				}
 				else
@@ -3425,7 +3425,7 @@ void Ship_HullHitEvent()
 				if (sti(rOurCharacter.nation) != PIRATE && !CheckAttribute(rBallCharacter, "false_flag_note") && !CheckAttribute(rOurCharacter, "skipRM"))
 				{
 					LogIt(TranslateString("", "Captain, we are under a flag friendly to the ship we're attacking. We may be branded a pirate if we don't hoist our true colours!"));
-					PlaySound("INTERFACE\notebook.wav");
+					PlaySound("INTERFACE\notebook.flac");
 					rBallCharacter.false_flag_note = true;
 				}
 			}
@@ -3530,7 +3530,7 @@ void Ship_FireDamage()
 				rOurCharacter.explosion = true;
 				if (iRealismMode == 0 || Ship_GetDistance2D(GetMainCharacter(), rOurCharacter) < GetVisibilityRange(1)) { // KK: Explosion can be seen from LONG range
 					Log_SetStringToLog(TranslateString("","Fire has reached the") + " " + GetMyShipNameShow(rOurCharacter) + TranslateString("","'s powder magazine!")); // KK
-					PlaySound("interface\notebook.wav"); // sound so you notice
+					PlaySound("interface\notebook.flac"); // sound so you notice
 				}
 				if (CANNONPOWDER_MOD) {// TIH --> mod toggle 7-7-06
 					// added by MAXIMUS [gunpowder mod] -->

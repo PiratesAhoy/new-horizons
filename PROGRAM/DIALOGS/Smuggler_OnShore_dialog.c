@@ -35,7 +35,7 @@ void ProcessDialogEvent()
 		case "Finish_exit":
 			AddPartyExpChar(pchar, SKILL_COMMERCE, 50*makeint(PChar.rank));
 			AddPartyExpChar(pchar, SKILL_SNEAK, 10*makeint(PChar.rank));
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, sti(PChar.quest.Contraband.sum));
 			PChar.quest.smuggling_guild.last_deal = sti(PChar.quest.Contraband.sum);
 
@@ -150,7 +150,7 @@ void ProcessDialogEvent()
 			AddCharacterGoods(pchar, GOOD_SAILCLOTH, makeint(5 + rand(30)) );
 			AddCharacterGoods(pchar, GOOD_RUM, makeint(5 + rand(30)) );
 			AddCharacterGoods(pchar, GOOD_WHEAT, makeint(5 + rand(30)) );
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -1000 );
 
 			Diag.CurrentNode = Diag.TempNode;

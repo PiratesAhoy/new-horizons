@@ -670,7 +670,7 @@ void ProcessDialogEvent()
 			GiveItem2Character(Pchar, "jewelry15");
 			GiveItem2Character(Pchar, "jewelry14");
 			//GiveItem2Character(Pchar, "jewelry16");
-			PlaySound("INTERFACE\important_item.wav");
+			PlaySound("INTERFACE\important_item.flac");
 			dialog.text = DLG_TEXT[140];
 			link.l1 = DLG_TEXT[141];
 			link.l1.go = "medicine2";

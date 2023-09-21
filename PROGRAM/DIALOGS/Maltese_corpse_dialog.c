@@ -65,7 +65,7 @@ void ProcessDialogEvent()
 			if(AUTO_SKILL_SYSTEM) { AddCharacterExpChar(pchar, "Sneak", 5000); }
 			else { AddCharacterExp(pchar, 5000); }
 			PlayStereoSound("interface\ship_dead1.wav");
-			PlayStereoSound("interface\took_item.wav");
+			PlayStereoSound("interface\took_item.flac");
 
 			dialog.text = DLG_TEXT[0];
 			Link.l1 = DLG_TEXT[1];
@@ -188,7 +188,7 @@ void ProcessDialogEvent()
 				GiveItem2Character(pchar, "potion"+ makeint(1 + rand(3)) );
 				GiveItem2Character(pchar, "jewelry9");
 			}
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, sti(npchar.money));
 			GiveItem2Character(pchar, "blade8" );
 			if(AUTO_SKILL_SYSTEM) { AddCharacterExpChar(pchar, "Sneak", 200); }
@@ -249,7 +249,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "exitrun":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Npchar, 1000 + rand(5000));
 			AddMoneyToCharacter(Npchar, sti(pchar.money));
 			pchar.money = 0;

@@ -291,7 +291,7 @@ void ProcessDialogEvent()
 			GiveItem2Character(Pchar,"Map_Doc_3");
 			// <--- TALISMAN
 			
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			//pchar.davy = "helped";
 
 			Dialog.CurrentNode = "First time";
@@ -341,7 +341,7 @@ void ProcessDialogEvent()
 			GiveItem2Character(Pchar,"Map_Doc_3");
 			// <--- TALISMAN
 			
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 
 			SetQuestHeader("Davy Jones");
 			AddQuestRecord("Davy Jones",1);

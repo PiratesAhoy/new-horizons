@@ -153,7 +153,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "info_pay1":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -1);
 			AddMoneyToCharacter(NPChar, 1);
 			dialog.text = GetMyFullName(CharacterFromID("Eugene Martin")) + DLG_TEXT[36];
@@ -164,7 +164,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "info_pay100":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -100);
 			AddMoneyToCharacter(NPChar, 100);
 			dialog.text = DLG_TEXT[37];

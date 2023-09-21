@@ -155,7 +155,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_reward":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 5000);
 			dialog.text = DLG_TEXT[43];
 			link.l1 = DLG_TEXT[44];

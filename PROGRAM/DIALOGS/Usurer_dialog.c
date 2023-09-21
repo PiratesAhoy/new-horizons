@@ -26,7 +26,7 @@ void ProcessDialogEvent()
 		case "LoanGranted_exit":
 			Diag.CurrentNode = Diag.TempNode;
 
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, makeint(Pchar.Quest.Loans.(NPC_Area).Sum));
 			// Pagliarini -->
 			Pchar.Quest.Loans.(NPC_Area).TotalSum = makeint(Pchar.Quest.Loans.(NPC_Area).TotalSum) + makeint(Pchar.Quest.Loans.(NPC_Area).Sum);
@@ -136,7 +136,7 @@ void ProcessDialogEvent()
 			Diag.CurrentNode = Diag.TempNode;			
 			
 		//	DepositSum = -DepositSum;
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -(makeint(Pchar.Quest.Deposits.(NPC_Area).Sum)));
 			NPChar_Investment = makeint(sti(Pchar.Quest.Deposits.(NPC_Area).Sum) * NPC_INVEST_RATE);
 			SetTownGold(NPC_Area, GetTownGold(NPC_Area) + NPChar_Investment); // GR: Some of deposit invested into town gold
@@ -464,7 +464,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "loan_return":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			addMoneyToCharacter(Pchar, -(makeint(Pchar.Quest.Loans.(NPC_Area).Result)));
 			DeleteAttribute(PChar, "quest.loans." + (NPC_Area)); 
 			pchar.loan = "false";			//REMOVE THIS WHEN WORK PROP
@@ -627,7 +627,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Deposit_return_1":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			addMoneyToCharacter(Pchar, makeint(Pchar.Quest.Deposits.(NPC_Area).Result));
 			DeleteAttribute(PChar,"quest.deposits." + (NPC_Area));
 			Dialog.snd = "voice\USDI\USDI035";

@@ -1691,28 +1691,28 @@ void OpenBoxProcedure()
 				switch(Rand(25))
 				{
 					case 1:
-						PlaySound("INTERFACE\took_item.wav");
+						PlaySound("INTERFACE\took_item.flac");
 						Logit(TranslateString("","Among THIS handful of earth you find a piece of mineral"));
 						Logit(TranslateString("","You must dig DEEPER !"));
 						GiveItem2Character(chr, "mineral"+ makeint(1 + rand(2)) );
 					break;
 
 					case 2:
-						PlaySound("INTERFACE\took_item.wav");
+						PlaySound("INTERFACE\took_item.flac");
 						Logit(TranslateString("","On THIS shovelload blinks a jewel.."));
 						Logit(TranslateString("","You must dig DEEPER !"));
 						GiveItem2Character(chr, "jewelry"+ makeint(1 + rand(13)) );
 					break;
 
 					case 3:
-						PlaySound("INTERFACE\took_item.wav");
+						PlaySound("INTERFACE\took_item.flac");
 						Logit(TranslateString("","The sword of a buried abbot"));
 						Logit(TranslateString("","You must dig DEEPER !"));
 						GiveItem2Character(chr, "blade25");
 					break;
 
 					case 4:
-						PlaySound("INTERFACE\took_item.wav");
+						PlaySound("INTERFACE\took_item.flac");
 						Logit(TranslateString("","An artefact from the temple that once stood here"));
 						Logit(TranslateString("","You must dig DEEPER !"));
 						GiveItem2Character(chr, "indian"+ makeint(1 + rand(9)) );

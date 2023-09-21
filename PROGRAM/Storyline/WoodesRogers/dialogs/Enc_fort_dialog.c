@@ -272,7 +272,7 @@ void ProcessDialogEvent()
 			Link.l1.go = "exit";
 
 			LAi_group_SetRelation( LAI_GROUP_GUARDS, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, sti(npchar.money));
 			AddMoneyToCharacter(Npchar, - sti(npchar.money));
 

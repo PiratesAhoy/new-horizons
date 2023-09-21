@@ -348,7 +348,7 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[96];
 			Link.l1.go = "exit";
 			ChangeCharacterReputation(pchar, 1);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -393,7 +393,7 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[107];
 			Link.l1.go = "exit";
 			ChangeCharacterReputation(pchar, 1);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			NPChar.money.quest = "0";
 			if(AUTO_SKILL_SYSTEM)
