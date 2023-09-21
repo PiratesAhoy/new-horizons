@@ -41,10 +41,10 @@ add_file("engine/mimalloc-redirect.dll")
 
 add_file("../.itch.toml")
 add_file("resources/engine.ini")
-add_file("resources/build14_beta4_final", "RESOURCE/build14_beta4_final")
+add_file("resources/build14_beta4_final", "resource/build14_beta4_final")
 
-add_pattern("*.h", directory="engine/resource", target="RESOURCE")
-add_pattern("*.fx", directory="engine/resource", target="RESOURCE")
+add_pattern("*.h", directory="engine/resource", target="resource")
+add_pattern("*.fx", directory="engine/resource", target="resource")
 
 add_pattern("*.c", directory="../PROGRAM", target="PROGRAM")
 add_pattern("*.h", directory="../PROGRAM", target="PROGRAM")
@@ -52,30 +52,30 @@ add_pattern("*.h", directory="../PROGRAM", target="PROGRAM")
 add_directory("../Documentation", target="Documentation")
 
 # Resources
-add_pattern("*.ini", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.txt", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.ani", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.an", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.zap", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.grs", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.ptc", directory="../RESOURCE", target="RESOURCE")
+add_pattern("*.ini", directory="../RESOURCE", target="resource")
+add_pattern("*.txt", directory="../RESOURCE", target="resource")
+add_pattern("*.ani", directory="../RESOURCE", target="resource")
+add_pattern("*.an", directory="../RESOURCE", target="resource")
+add_pattern("*.zap", directory="../RESOURCE", target="resource")
+add_pattern("*.grs", directory="../RESOURCE", target="resource")
+add_pattern("*.ptc", directory="../RESOURCE", target="resource")
 
 # Audio and video
-add_pattern("*.ogg", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.wav", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.flac", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.wmv", directory="../RESOURCE", target="RESOURCE")
+add_pattern("*.ogg", directory="../RESOURCE", target="resource")
+add_pattern("*.wav", directory="../RESOURCE", target="resource")
+add_pattern("*.flac", directory="../RESOURCE", target="resource")
+add_pattern("*.wmv", directory="../RESOURCE", target="resource")
 
 # Models
-add_pattern("*.gm", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.col", directory="../RESOURCE", target="RESOURCE")
+add_pattern("*.gm", directory="../RESOURCE", target="resource")
+add_pattern("*.col", directory="../RESOURCE", target="resource")
 
 # Particles
-add_pattern("*.xps", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.xml", directory="../RESOURCE", target="RESOURCE")
+add_pattern("*.xps", directory="../RESOURCE", target="resource")
+add_pattern("*.xml", directory="../RESOURCE", target="resource")
 
 # Textures
-add_pattern("*.tx", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.tga", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.jpg", directory="../RESOURCE", target="RESOURCE")
-add_pattern("*.png", directory="../RESOURCE", target="RESOURCE")
+add_pattern("*.tx", directory="../RESOURCE", target="resource")
+add_pattern("*.tga", directory="../RESOURCE", target="resource")
+add_pattern("*.jpg", directory="../RESOURCE", target="resource")
+add_pattern("*.png", directory="../RESOURCE", target="resource")
