@@ -916,7 +916,7 @@ void LaunchMine(ref rCharacter)
 		AISeaGoods.Add = "";
 
 		// launch effects
-		PlayStereoSound("objects\shipcharge\ball_splash1.wav");
+		PlayStereoSound("objects\shipcharge\ball_splash1.flac");
 		Logit(TranslateString("","Mine launched"));
 		CreateParticleSystemX("ball_splash", x, 1.0, z, 0.0, 3.0, 0.0, 2);
 	} else {

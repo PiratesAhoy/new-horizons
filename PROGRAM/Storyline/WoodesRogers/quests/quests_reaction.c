@@ -1248,21 +1248,21 @@ void QuestComplete(string sQuestName)
 	//.................................................................................................................
 		case "wrong_use_MinersSpade_on_mud":
 			//from itemlogic box8 Swamp_island2
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", 36.0, 0.5, 5.2, 0.0, 0.0, 0.0, 0);
 
 			LAi_QuestDelay("wrong_use_MinersSpade_on_mud0", 1.0);
 		break;
 
 		case "wrong_use_MinersSpade_on_mud0":
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", 36.0, 0.5, 5.2, 0.0, 0.0, 0.0, 0);
 
 			LAi_QuestDelay("wrong_use_MinersSpade_on_mud1", 1.0);
 		break;
 
 		case "wrong_use_MinersSpade_on_mud1":
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", 36.0, 0.5, 5.2, 0.0, 0.0, 0.0, 0);
 
 			LAi_QuestDelay("wrong_use_MinersSpade_on_mud2", 1.0);
@@ -1402,7 +1402,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("ball_splash", -7.6, 0.0, -11.1, 0.0, 0.0, 0.0, 0);
 			CreateParticleSystemX("ball_splash", -10.3, 0.0, -11.3, 0.0, 0.0, 0.0, 0);
 			PlaySound("PEOPLE\jump_water.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 		break;
 
 		case "push_raft":
@@ -16907,7 +16907,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "blue_cavern_slide3":
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			LAi_SetPlayerType(Pchar);
 
 			LAi_QuestDelay("pirate_captains", 0.1);//also direct from "pistol5_end3" (works from [8])
@@ -30107,7 +30107,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "guncrew_turn6":
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			ChangeCharacterAddressGroup(CharacterFromID("wr_wll3"), "none", "", "");
 			ChangeCharacterAddressGroup(CharacterFromID("wr_sail7"), "wr_ships", "reload", "reload3");
 
@@ -30115,7 +30115,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "guncrew_turn7":
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			ChangeCharacterAddressGroup(CharacterFromID("wr_sail7"), "none", "", "");
 			Pchar.quest.corvette_guards = "gone";
 		break;
@@ -30696,7 +30696,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("ball_splash", 66.0, 2.0, -4.1, 0.0, 0.0, 0.0, 0);
 			CreateParticleSystemX("ball_splash", 66.0, 3.0, -4.1, 0.0, 0.0, 0.0, 0);
 
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 
 			LAi_SetPlayerType(Pchar);
 		break;
@@ -30708,9 +30708,9 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("ball_splash", 33.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0);
 			CreateParticleSystemX("ball_splash", 33.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0);
 
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 
 			LAi_SetPlayerType(Pchar);
 		break;
@@ -30739,7 +30739,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("ball_splash", -66.8, 2.0, -4.1, 0.0, 0.0, 0.0, 0);
 			CreateParticleSystemX("ball_splash", -66.8, 3.0, -4.1, 0.0, 0.0, 0.0, 0);
 
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			LAi_SetPlayerType(Pchar);
 
 			LAi_QuestDelay("guncrew_W_extra_blacksmoke", 1.5);
@@ -30770,9 +30770,9 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("ball_splash", -33.8, 2.0, -8.2, 0.0, 0.0, 0.0, 0);
 			CreateParticleSystemX("ball_splash", -33.8, 3.0, -8.2, 0.0, 0.0, 0.0, 0);
 
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 
 			LAi_SetPlayerType(Pchar);
 
@@ -30914,7 +30914,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "guncrew_S1_long1":
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 
 			LAi_SetPlayerType(Pchar);
 			Pchar.quest.cannon_enable_move = "yes";
@@ -30947,9 +30947,9 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.cannon_enable_move = "yes";
 			Pchar.quest.deck_bell = "broken";
 
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 		break;
 	//----------------------------------------------------------------------------------------
 		case "Long_runs_away":
@@ -31653,7 +31653,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "ship_wc2":
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			PlaySound("PEOPLE\jump.wav");
 			LAi_SetActorType(Pchar);
 			LAi_ActorSetLayMode(Pchar);
@@ -40981,7 +40981,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port10B":
 			LAi_SetPlayerType(characterFromID("pir_cap18"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap18"), "wr_port", "goto", "swim_L2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 
 			CreateParticleSystemX("ball_splash", -8.4, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
@@ -41002,7 +41002,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port11B":
 			LAi_SetPlayerType(characterFromID("pir_cap3"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap3"), "wr_port", "goto", "swim_L2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			CreateParticleSystemX("ball_splash", -8.4, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41022,7 +41022,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port12B":
 			LAi_SetPlayerType(characterFromID("pir_cap16"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap16"), "wr_port", "goto", "swim_L2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			CreateParticleSystemX("ball_splash", -8.4, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41042,7 +41042,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port13B":
 			LAi_SetPlayerType(characterFromID("pir_cap23"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap23"), "wr_port", "goto", "swim_L2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", -8.4, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41062,7 +41062,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port14B":
 			LAi_SetPlayerType(characterFromID("pir_cap4"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap4"), "wr_port", "goto", "swim_L2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", -8.4, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41082,7 +41082,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port15B":
 			LAi_SetPlayerType(characterFromID("pir_cap9"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap9"), "wr_port", "goto", "swim_L2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			CreateParticleSystemX("ball_splash", -8.4, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41102,7 +41102,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port16B":
 			LAi_SetPlayerType(characterFromID("pir_cap26"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap26"), "wr_port", "goto", "swim_L2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", -8.4, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41122,7 +41122,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port17B":
 			LAi_SetPlayerType(characterFromID("pir_cap30"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap30"), "wr_port", "goto", "swim_L2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			CreateParticleSystemX("ball_splash", -8.4, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 
 			LAi_QuestDelay("Vane_at_port20", 5.0);
@@ -41206,7 +41206,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port24B":
 			LAi_SetPlayerType(characterFromID("pir_cap1"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap1"), "wr_port", "goto", "swim_R2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", -2.8, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41226,7 +41226,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port25B":
 			LAi_SetPlayerType(characterFromID("pir_cap7"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap7"), "wr_port", "goto", "swim_R2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			CreateParticleSystemX("ball_splash", -2.8, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41246,7 +41246,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port26B":
 			LAi_SetPlayerType(characterFromID("pir_cap8"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap8"), "wr_port", "goto", "swim_R2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			CreateParticleSystemX("ball_splash", -2.8, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41266,7 +41266,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port27B":
 			LAi_SetPlayerType(characterFromID("Selkirk"));
 			ChangeCharacterAddressGroup(characterFromID("Selkirk"), "wr_port", "goto", "swim_R2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", -2.8, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41294,8 +41294,8 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port28B":
 			LAi_SetPlayerType(characterFromID("pir_cap5"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap5"), "wr_port", "goto", "swim_R2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", -2.8, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 		break;
 	//-------------------------------------------------------------------------------------------------------------
@@ -41313,8 +41313,8 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port29":
 			LAi_SetPlayerType(characterFromID("Friday"));
 			ChangeCharacterAddressGroup(characterFromID("Friday"), "wr_port", "goto", "swim_R2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			CreateParticleSystemX("ball_splash", -2.8, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 
 			LAi_QuestDelay("Vane_at_port30", 1.0);
@@ -41323,7 +41323,7 @@ void QuestComplete(string sQuestName)
 		case "Vane_at_port30":
 			LAi_SetPlayerType(characterFromID("pir_cap14"));
 			ChangeCharacterAddressGroup(characterFromID("pir_cap14"), "wr_port", "goto", "swim_R2");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", -2.8, -1.0, 17.1, 0.0, 0.0, 0.0, 0);
 
 			LAi_QuestDelay("Vane_at_corvette", 6.0);
@@ -56873,7 +56873,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Turks_splash1":
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", 41.2, -4.0, 18.4, 0.0, 0.0, 0.0, 0);
 			if(IsEquipCharacterByItem(Pchar, "longrifle_W")) {RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);}
 			TakeItemFromCharacter(pchar, "longrifle_W");
@@ -56979,13 +56979,13 @@ void QuestComplete(string sQuestName)
 		case "Turks_steplockM_3":
 			if(Locations[FindLocation(Pchar.location)].models.always.l10 == "watergate")
 			{
-				PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+				PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 				PlaySound("INTERFACE\rum_wheel.wav");
 				PlaySound("INTERFACE\rum_wheel.wav");		
 			}
 			else 
 			{
-				PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+				PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 				PlaySound("INTERFACE\shelf_close.wav");
 			}
 
@@ -57210,8 +57210,8 @@ void QuestComplete(string sQuestName)
 	//-------------------------------------------------------------------------------------
 		case "fall_to_sewer":
 			LAi_SetSitType(Pchar);
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			CreateParticleSystemX("ball_splash", 22.7, 0.0, -13.5, 0.0, 0.0, 0.0, 0);
 			CreateParticleSystemX("ball_splash", 22.7, 0.0, -13.5, 0.0, 0.0, 0.0, 0);
 
@@ -60225,7 +60225,7 @@ void QuestComplete(string sQuestName)
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(Pchar, "bladesaw");
 			EquipCharacterByItem(Pchar, "bladeX4");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 		break;
 		
 		case "Took_returns":
@@ -72493,7 +72493,7 @@ void QuestComplete(string sQuestName)
 			{
 			    if(Pchar.careen_corvette == "round1")
 			    {
-				PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+				PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 				CreateParticleSystemX("ball_splash", 219.0, 0.0, 420.0, 0.0, 0.0, 0.0, 0);
 				CreateParticleSystemX("ball_splash", 219.0, 1.0, 420.0, 0.0, 0.0, 0.0, 0);
 				CreateParticleSystemX("ball_splash", 219.0, 2.0, 420.0, 0.0, 0.0, 0.0, 0);
@@ -72504,7 +72504,7 @@ void QuestComplete(string sQuestName)
 
 			    if(Pchar.careen_corvette == "round3" || Pchar.careen_corvette == "round5")
 			    {
-				PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+				PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 				CreateParticleSystemX("ball_splash", 219.0, 0.0, 150.0, 0.0, 0.0, 0.0, 0);
 				CreateParticleSystemX("ball_splash", 219.0, 1.0, 150.0, 0.0, 0.0, 0.0, 0);
 				CreateParticleSystemX("ball_splash", 219.0, 2.0, 150.0, 0.0, 0.0, 0.0, 0);
@@ -73748,7 +73748,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(characterFromID("Mutineer_32"));
 		
 			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 			CreateParticleSystemX("ball_splash", 94.3, 0.0, 14.0, 0.0, 0.0, 0.0, 0);
 			CreateParticleSystemX("ball_splash", 94.0, 0.0, 14.0, 0.0, 0.0, 0.0, 0);
 			CreateParticleSystemX("ball_splash", 94.6, 0.0, 14.0, 0.0, 0.0, 0.0, 0);		

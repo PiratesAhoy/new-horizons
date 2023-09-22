@@ -11971,7 +11971,7 @@ void OpenBoxProcedure_BUG()
 					if(chr.treasure_tour == "boat") 
 					{
 						PlaySound("OBJECTS\DUEL\man_attack1.wav");
-						PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+						PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 						LAi_SetActorType(chr);
 						LAi_ActorAnimation(chr, "jump", "pchar_playertype", 1.8);
 
@@ -13767,7 +13767,7 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 
 				if(CheckAttribute(attack, "quest.nitre_position") && attack.quest.nitre_position == "planks")
 				{
-					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 					RemoveCharacterEquip(attack, GUN_ITEM_TYPE);
 					TakeItemFromCharacter(attack, "pistolbucket_nitre");
 					GiveItem2Character(attack, "pistolbucket_empty");	
@@ -13785,7 +13785,7 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 				if(CheckAttribute(attack, "quest.sulfur_position") && attack.quest.sulfur_position == "ladder")
 				{
 					attack.quest.sulfur_water = "filled";
-					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 					RemoveCharacterEquip(attack, GUN_ITEM_TYPE);
 					TakeItemFromCharacter(attack, "pistolbucket_water");
 					GiveItem2Character(attack, "pistolbucket_empty");	

@@ -2830,7 +2830,7 @@ void OpenBoxProcedure_WR()
 			case "box4":
 				if(CheckAttribute(chr, "wreck_shore_mast") && chr.wreck_shore_mast == "way_down")
 				{
-					PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+					PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 					ChangeCharacterAddressGroup(chr, "Turks_wreck_shore", "quest", "splash");
 					chr.wreck_shore_mast = "way_up";
 				}
@@ -7188,7 +7188,7 @@ void OpenBoxProcedure_WR()
 				if(CheckAttribute(chr, "careen_tower") && chr.careen_tower == "down")
 				{
 					chr.careen_tower = "up";
-					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 					CreateParticleSystemX("ball_splash", 93.5, 1.0, 27.5, 0.0, 0.0, 0.0, 0);
 					CreateParticleSystemX("ball_splash", 93.5, 0.0, 27.5, 0.0, 0.0, 0.0, 0);
 					ChangeCharacterAddressGroup(chr, "BB_careen_shore", "goto", "tower_down");

@@ -3511,7 +3511,7 @@ void QuestComplete(string sQuestName)
 
 		case "return_from_boathouse":
 			CreateParticleSystemX("ball_splash", 17.1, -0.3, 0.6, 0.0, 0.0, 0.0, 0);
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			ChangeCharacterAddressGroup(Pchar, "Legrands_boathouse", "goto", "box1");
 			LAi_SetSitType(pchar);
 			Pchar.quest.boathouse = "return";
@@ -21329,7 +21329,7 @@ void QuestComplete(string sQuestName)
 
 		case "Poe_to_boat0":
 			LAi_QuestDelay("Poe_ooh", 0.1);
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			LAi_SetActorType(characterFromID("Edgar Allan Poe"));
 			LAi_ActorAnimation(characterFromID("Edgar Allan Poe"), "jump", "Poe_to_boat1", 0.5);
 		break;
@@ -21664,7 +21664,7 @@ void QuestComplete(string sQuestName)
 	//--------------------------------------------------------------------------------------------
 		case "maroons_attack6":	
 			CreateParticleSystemX("ball_splash", 15.7, 0.0, 0.2, 0.0, 0.0, 0.0, 0);
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			ChangeCharacterAddressGroup(characterFromID("maroon_girl"), "Legrands_boathouse", "goto", "box1");
 			
 			LAi_QuestDelay("maroons_attack6_A", 0.5);
@@ -21678,7 +21678,7 @@ void QuestComplete(string sQuestName)
 	//--------------------------------------------------------------------------------------------
 		case "maroons_attack7":	
 			CreateParticleSystemX("ball_splash", 15.4, -0.4, 1.7, 0.0, 0.0, 0.0, 0);
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			ChangeCharacterAddressGroup(characterFromID("hunter_bandit"), "Legrands_boathouse", "officers", "box5_2");
 			
 			LAi_QuestDelay("maroons_attack7_A", 0.5);
@@ -21692,7 +21692,7 @@ void QuestComplete(string sQuestName)
 	//--------------------------------------------------------------------------------------------
 		case "maroons_attack8":	
 			CreateParticleSystemX("ball_splash", 17.0, -0.1, 0.0, 0.0, 0.0, 0.0, 0);
-			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 			ChangeCharacterAddressGroup(characterFromID("deserter_us2"), "Legrands_boathouse", "officers", "box5_1");
 			
 			LAi_QuestDelay("maroons_attack8_A", 0.5);
