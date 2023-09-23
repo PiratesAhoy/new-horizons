@@ -34480,6 +34480,7 @@ void QuestComplete(string sQuestName)
 	//......................................................................................................
 		case "wr_wine_cellar_water_out":
 			//from itemlogic
+			sQuestNameAfterReload = "_";
 			DoQuestReloadToLocation("wr_wine_cellar", "goto", "goto3", "wr_wine_cellar_water_out1");
 		break;
 
