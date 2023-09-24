@@ -98,7 +98,9 @@ void wdmCreateMap(float dx, float dz, float ay)
 	// if (bNewInterface)
 	// 	CreateEntity(&worldMap, "wrldmap2");
 	// else
+	if (!IsEntity(&worldMap)) {
 		CreateEntity(&worldMap,"worldmap");
+	}
 // <-- KK
 	worldMap.isLoaded = "true";
 	//Set player ship position
@@ -387,4 +389,8 @@ void wdmInit()
 		DeleteClass(&worldMap);
 	}
 }
-// <-- KK
+
+void DestroyWorldmap() {
+	DeleteClass(&worldMap);
+	worldMap.isLoaded = "false";
+}

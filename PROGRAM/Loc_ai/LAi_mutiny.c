@@ -611,8 +611,7 @@ void MutinyDeck_WorldmapReloadStartFade()
 	DelEventHandler("FaderEvent_StartFade", "MutinyDeck_WorldmapReloadStartFade");
 	//Delete entity
 	worldMap.playerShipUpdate = "";
-	DeleteClass(&worldMap);
-	worldMap.isLoaded = "false";
+	DestroyWorldmap();
 }
 
 void MutinyDeck_WorldmapReloadEndFade()
