@@ -234,7 +234,7 @@ void ProcessDialogEvent()
 		case "attack1":
 			Dialog.text = "The plantation slaves are rising. And they have already captured some weapons! They have been brutalized so much by years of cruel opression that they'll spare no white man.. or woman!  Oh, if we had only more of those bastions, stockades, mines and cannon...";
 			link.l1 = RandSwear() + "These landlubbers are all paralysed with fear! Spoiled from landlife. Seems like I'll have to do the fighting without them.";
-			link.l1.go = "exit_atack1";
+			link.l1.go = "exit_attack1";
 		break;
 
 		case "attack2":
