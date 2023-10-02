@@ -127,24 +127,7 @@ void StartDialogMain()
 
 	DelEventHandler("frame", "StartDialogMain");
 
-// KK -->
-	CreateEntity(&Dialog, "LegacyDialog");
-	if (bNewInterface)
-	{
-		Dialog.texture = "dialog/Dialg2.tga";
-	}
-	else
-	{
-		if (DIALOGCOLOUR == 1)
-		{
-			Dialog.texture = "dialog/Dialg1.tga";
-		}
-		else 
-		{
-			Dialog.texture = "dialog/dialog.tga";
-		}
-	}
-// KK <--
+	CreateDialog();
 
 	Log_SetActiveAction("Nothing");//MAXIMUS
 	LogsVisible(false); // KK
@@ -262,24 +245,9 @@ void SelfDialog(ref Character)
 	//Запускаем диалог
 	Dialog.CurrentNode = CharacterRef.Dialog.CurrentNode;
 	//Trace("SelfDialog: dialog path for self character <" + Character.id + "> = " + FullDialogPath);
-// KK -->
-	CreateEntity(&Dialog, "LegacyDialog");
-	if (bNewInterface)
-	{
-		Dialog.texture = "dialog/Dialg2.tga";
-	}
-	else
-	{
-		if (DIALOGCOLOUR == 1)
-		{
-			Dialog.texture = "dialog/Dialg1.tga";
-		}
-		else 
-		{
-			Dialog.texture = "dialog/dialog.tga";
-		}
-	}
-// <-- KK
+
+	CreateDialog();
+
 	Log_SetActiveAction("Nothing");//MAXIMUS
 	LogsVisible(false); // KK
 	Dialog.headModel = CharacterRef.headModel; // KK
@@ -865,3 +833,25 @@ void DialogCorpseExit(ref char)
 	if(DIALOG_CAMERA>0.0) locCameraFollow();//MAXIMUS
 }
 //MAXIMUS <--
+
+void CreateDialog()
+{
+	CreateEntity(&Dialog, "LegacyDialog");
+	if (bNewInterface)
+	{
+		Dialog.texture = "dialog/Dialg2.tga";
+	}
+	else
+	{
+		if (DIALOGCOLOUR == 1)
+		{
+			Dialog.texture = "dialog/Dialg1.tga";
+		}
+		else
+		{
+			Dialog.texture = "dialog/dialog.tga";
+		}
+	}
+
+	Dialog.tickSound = "dialog_tick";
+}
