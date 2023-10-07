@@ -1,0 +1,60 @@
+# AngelCode Bitmap Font Generator configuration file
+fileVersion=1
+
+# font settings
+fontName=Forum
+fontFile=
+charSet=0
+fontSize=30
+aa=2
+scaleH=100
+useSmoothing=1
+isBold=0
+isItalic=0
+useUnicode=1
+disableBoxChars=1
+outputInvalidCharGlyph=0
+dontIncludeKerningPairs=0
+useHinting=1
+renderFromOutline=0
+useClearType=1
+autoFitNumPages=0
+autoFitFontSizeMin=0
+autoFitFontSizeMax=0
+
+# character alignment
+paddingDown=1
+paddingUp=1
+paddingRight=1
+paddingLeft=1
+spacingHoriz=1
+spacingVert=1
+useFixedHeight=0
+forceZero=1
+widthPaddingFactor=0.00
+
+# output file
+outWidth=1024
+outHeight=512
+outBitDepth=32
+fontDescFormat=2
+fourChnlPacked=0
+textureFormat=png
+textureCompression=0
+alphaChnl=1
+redChnl=0
+greenChnl=0
+blueChnl=0
+invA=0
+invR=0
+invG=0
+invB=0
+
+# outline
+outlineThickness=1
+
+# selected chars
+chars=32-126,160-169,171-177,180,182-184,187,191-305,308-382,402,500-501,508-511,536-539,1025-1119,1122
+chars=1123,1138-1139,1168-1189,1194-1211,1216,1219-1220,1223-1224,1232-1247,1250-1269,1272-1273
+
+# imported icon images

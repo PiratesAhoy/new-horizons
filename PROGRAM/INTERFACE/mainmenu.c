@@ -22,8 +22,9 @@ void InitInterface(string iniName)
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"BACKPICTURE",3, "interfaces\mainback");
 
 	string currentversion = "Build " + BUILDVERSION;
-	CreateString(true,"Version","Beyond New Horizons - " + currentversion,FONT_QUESTBOOK,COLOR_GREEN_LIGHT,-20,430,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Info","https://"+PA_INET,FONT_QUESTBOOK,COLOR_BLUE_LIGHT,-20,470,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true, "Title", "Beyond New Horizons", "pieces_of_eight", COLOR_WHITE, 300, 50, SCRIPT_ALIGN_CENTER, 1.0);
+	CreateString(true,"Version", currentversion, "version", COLOR_GREEN_LIGHT,-20,450,SCRIPT_ALIGN_LEFT,1.0);
+	CreateString(true,"Info","https://"+PA_INET, "version", COLOR_BLUE_LIGHT,-20,470,SCRIPT_ALIGN_LEFT,1.0);
 
 	SetEventHandler("InterfaceBreak","ProcessBreakExit",0)
 	SetEventHandler("exitCancel","ProcessCancelExit",0);
