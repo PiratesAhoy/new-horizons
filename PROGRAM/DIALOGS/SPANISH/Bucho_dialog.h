@@ -1,6 +1,6 @@
 string DLG_TEXT[3] = {
-"Bucho",
-"!aplastarte! !Aplastarte para que te vayas! Dano en once lugares! Yeah! Hmm...!Maldicion! !Me he quedado sin 666!",
-"Un gorila parlante. Ahora lo he visto todo!",
+"¡Bucho",
+" aplastarte! ¡Aplastarte hasta hacerte papilla! ¡Hacerte daño en once sitios! ¡Sí! Hum... ¡Porras! ¡Me he quedado sin metáforas apropiadas!",
+"Un gorila parlante. ¡Ahora sí que lo he visto todo!",
 
 };

@@ -40,7 +40,7 @@ void InitQuestItems()
 	n = InitQuestItem(n,"key37",		"key37",		"",	"JRH37",6,	0,0,	"","",	"","",	"","",""); //not used yet
 	n = InitQuestItem(n,"key39",		"key39",	"keymiddle",	"JRH38",7,	0,0,	"","",	"","",	"","",""); //careen corvette convicts
 
-	n = InitQuestItem(n,"dummy_belt",	"",		"dummy_belt",	    "", "",	0,0,	"","",	"","",	"","",""); //BlackbeardÂ´s Belt (empty) on dummy
+	n = InitQuestItem(n,"dummy_belt",	"",		"dummy_belt",	    "", "",	0,0,	"","",	"","",	"","",""); //Blackbeard´s Belt (empty) on dummy
 
 	n = InitQuestItem(n,"book21",		"book21",		"",	"JRH5",	1,	0,0,	"","",	"","",	"","",""); //law
 	n = InitQuestItem(n,"book22",		"book22",		"",	"JRH5",	2,	0,0,	"","",	"","",	"","",""); //sea battles

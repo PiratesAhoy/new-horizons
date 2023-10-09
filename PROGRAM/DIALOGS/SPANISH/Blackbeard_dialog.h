@@ -1,5 +1,5 @@
 string DLG_TEXT[2] = {
-"Si no llego a la Fuente en el tiempo... ni tu tampoco.",
-"!Sin cuartel!",
+"Si yo no llego a la Fuente a tiempo... tú tampoco lo harás.",
+"¡Sin cuartel!",
 
 };

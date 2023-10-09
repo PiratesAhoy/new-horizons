@@ -1,0 +1,8 @@
+title=La ruta hacia El Dorado
+text.t1=Hay tres lugares marcados en el mapa, cada uno con el nombre de una persona. Creo que el primero que voy a probar es el nombre 'Marcel Jauri', que apunta a la ciudad de #sSanto Domingo#, #sisland_Hispaniola#.
+text.t2=Lorena Lopez me ha dicho cómo encontrar la taberna de Marcel Jauri cerca de #sSanto Domingo#: debo cruzar las puertas de la ciudad y seguir el camino. Cuando llegue a la torre, debo seguir recto. En el siguiente cruce, cerca del acantilado, a la izquierda.
+text.t3=Marcel Jauri me ha contado una historia muy interesante y me ha dado un mapa... ¡Pero está lleno de más marcas, parece que cubren todo el Caribe!
+text.t4=¡Blaze y Bonnie ya se han vuelto a #sSanto Domingo#! ¡Típico!
+text.t5=Lorena parece una buena persona que ha tenido mala suerte. Quizás debería volver a visitarla más tarde.
+text.t6=La escala de este mapa es muy reducida. Si no queremos tener que registrar cada playa y cala de #sisland_Cayman#, vamos a necesitar un mapa más detallado de la zona.
+text.t7=He encontrado un mapa más detallado de las #sisland_Cayman#, y mirándolo con atención, parece que la marca con el nombre 'Killian O'Byrne' apunta a una cala kkamada Roca del Edén. ¡Creo que hemos encontrado nuestro próximo destino!

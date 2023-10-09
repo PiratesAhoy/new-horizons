@@ -4655,7 +4655,7 @@ void InitShips()
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
 	refShip.MaxCrew			= 100;
-	refShip.MinCrew			= 12;
+	refShip.MinCrew			= 25;
 	refShip.Price			= 36000;
 	refShip.HP			= 1800;
 	refShip.SP			= 200;
@@ -18552,7 +18552,7 @@ void InitShips()
 // on this day and date Sunday Dec 20 2009, 1450h
 
 //-------------------------------------------------------------------------
-//      Cursed Flying Dutchman - By ZarethPL
+//      Cursed Flying Dutchman - imported from TEHO by The Nameless Pirate
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 215> (WBT4)
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
@@ -18560,7 +18560,7 @@ void InitShips()
 	refShip.Name			= "CursedDutchman";
 	refShip.SName			= "CursedDutchman";
 	refShip.unique			= true;
-	refShip.id				= "CursedDutchman";
+	refShip.id			= "CursedDutchman";
 	refShip.Nation			= PIRATE;
 	refShip.walk			= "";
 	refShip.Class			= 4;
@@ -18576,8 +18576,8 @@ void InitShips()
 	refShip.MaxCrew			= 420;
 	refShip.MinCrew			= 40;
 	refShip.Price			= 300000;
-	refShip.HP				= 100000;
-	refShip.SP				= 999999;
+	refShip.HP			= 100000;
+	refShip.SP			= 999999;
 
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 // KK -->
@@ -18594,13 +18594,13 @@ void InitShips()
 	refShip.DeckTexturesDir			= "FlyingDutchman";
 // <-- KK
 
-	refShip.CanEncounter		= false;
+	refShip.CanEncounter			= false;
 	refShip.CanBuy				= false;
-//	refShip.Model = "Dutchman"; // KK
+	refShip.Model = "Dutchman"; // KK
 	refShip.Type.Trade 			= false;
 	refShip.Type.War 			= true;
 
-	refShip.WaterLine			= 0.2;
+	refShip.WaterLine		= 0.2;
 	refShip.SpeedDependWeight	= 0.4;
 	refShip.SubSeaDependWeight	= 1.15;
 
@@ -18635,32 +18635,32 @@ void InitShips()
 // on this day and date Jan 3 10, 1250h
 
 //-------------------------------------------------------------------------
-//      Flying Dutchman - Retextured version of ZarethPL's CursedDutchman by Armada
+//      Flying Dutchman - Retextured version of The Nameless Pirate's CursedDutchman by QARownsBP
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 216> (WBT4)
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
 	refShip.Name			= "FlyingDutchman";
-	refShip.Walk		 	= "FlyingDutchman";
 	refShip.SName			= "FlyingDutchman";
 	refShip.unique			= true;
-	refShip.id				= "FlyingDutchman";
+	refShip.id			= "FlyingDutchman";
 	refShip.Nation			= PIRATE;
+	refShip.walk			= "";
 	refShip.Class			= 4;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS32;
 	refShip.MaxCaliber		= 32;
-	refShip.Weight			= Tonnes2CWT(2500);
+	refShip.Weight			= Tonnes2CWT(2200);
 	refShip.Capacity		= 4000;
-	refShip.CannonsQuantity		= 58;
-	// NK cannon qtys 05-04-18 -->
+	refShip.CannonsQuantity		= 56;
 	refShip.Cannons.Borts.cannonf.qty = 6;
-	refShip.Cannons.Borts.cannonb.qty = 0;
-	// NK <--
+	refShip.Cannons.Borts.cannonb.qty = 4;
+	refShip.Cannons.Borts.cannonl.qty = 23;
+	refShip.Cannons.Borts.cannonr.qty = 23;
 	refShip.MaxCrew			= 420;
 	refShip.MinCrew			= 40;
 	refShip.Price			= 300000;
-	refShip.HP				= 100000;
-	refShip.SP				= 999999;
+	refShip.HP			= 100000;
+	refShip.SP			= 999999;
 // KK -->
 	refShip.EmblemedSails.normalTex = "sail_dutchman1.tga";
 	refShip.EmblemedSails.nationFileName = "sail_dutchman1.tga";
@@ -18675,13 +18675,13 @@ void InitShips()
 	refShip.Cabin				= "Cabin2";
 // <-- KK
 
-	refShip.CanEncounter		= false;
+	refShip.CanEncounter			= false;
 	refShip.CanBuy				= false;
 	refShip.Model = "Dutchman"; // KK
 	refShip.Type.Trade 			= false;
 	refShip.Type.War 			= true;
 
-	refShip.WaterLine			= 0.2;
+	refShip.WaterLine		= 0.2;
 	refShip.SpeedDependWeight	= 0.4;
 	refShip.SubSeaDependWeight	= 1.15;
 
@@ -18689,7 +18689,6 @@ void InitShips()
 	refShip.GeraldSails.rey_a3	= 1;
 	refShip.GeraldSails.rey_b2	= 1;
 	refShip.GeraldSails.rey_b3	= 1;
-	refShip.GeraldSails.rey_b4	= 1;
 
 	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA){
 		refShip.SpeedRate		= 15.0;
@@ -20145,11 +20144,11 @@ void InitShips()
 	refShip.CannonsQuantity = 22;
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 2;
-	refShip.MaxCrew		 = 120;
-	refShip.MinCrew		 = 24;
-	refShip.Price		   = 138000;
-	refShip.HP			  = 2000;
-	refShip.SP			  = 200;
+	refShip.MaxCrew			= 160;	// was 120
+	refShip.MinCrew			= 40;	// was 24
+	refShip.Price			= 138000;
+	refShip.HP			= 2000;
+	refShip.SP			= 200;
 
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 10;
@@ -20233,11 +20232,11 @@ void InitShips()
 	refShip.CannonsQuantity = 22;
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 2;
-	refShip.MaxCrew		 = 120;
-	refShip.MinCrew		 = 24;
-	refShip.Price		   = 138000;
-	refShip.HP			  = 2000;
-	refShip.SP			  = 200;
+	refShip.MaxCrew			= 160;	// was 120
+	refShip.MinCrew			= 40;	// was 24
+	refShip.Price			= 138000;
+	refShip.HP			= 2000;
+	refShip.SP			= 200;
 
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 10;
@@ -20321,11 +20320,11 @@ void InitShips()
 	refShip.CannonsQuantity = 22;
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 2;
-	refShip.MaxCrew		 = 120;
-	refShip.MinCrew		 = 24;
-	refShip.Price		   = 138000;
-	refShip.HP			  = 2000;
-	refShip.SP			  = 200;
+	refShip.MaxCrew			= 160;	// was 120
+	refShip.MinCrew			= 40;	// was 24
+	refShip.Price			= 138000;
+	refShip.HP			= 2000;
+	refShip.SP			= 200;
 
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 10;
@@ -25370,13 +25369,13 @@ void InitShips()
 	makeref(refShip,ShipsTypes[n]);
 	n++;
 	refShip.Name         			= "RN_Volage";
-	refShip.All						= "Corvette1";
+	refShip.All				= "Corvette1";
 	refShip.SName           		= "Volage";
-	refShip.Walk					= "Volage";
+	refShip.Walk				= "Volage";
 	refShip.id            			= refShip.Name;
 	refShip.Class				= 5;
-	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS32;
-	refShip.MaxCaliber			= 12;
+	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS24;	// was CANNON_TYPE_CARRONADE_LBS32
+	refShip.MaxCaliber			= 9;				// was 12
 	refShip.Weight				= Tonnes2CWT(800);
 	refShip.Capacity			= 1800;
 	refShip.CannonsQuantity			= 24;
@@ -25458,13 +25457,13 @@ void InitShips()
 	makeref(refShip,ShipsTypes[n]);
 	n++;
 	refShip.Name         			= "FR_Volage";
-	refShip.All						= "Corvette1";
+	refShip.All				= "Corvette1";
 	refShip.SName           		= "Volage";
-	refShip.Walk					= "Volage";
+	refShip.Walk				= "Volage";
 	refShip.id            			= refShip.Name;
 	refShip.Class				= 5;
-	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS32;
-	refShip.MaxCaliber			= 12;
+	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS24;	// was CANNON_TYPE_CARRONADE_LBS32
+	refShip.MaxCaliber			= 9;				// was 12
 	refShip.Weight				= Tonnes2CWT(800);
 	refShip.Capacity			= 1800;
 	refShip.CannonsQuantity			= 24;
@@ -25546,13 +25545,13 @@ void InitShips()
 	makeref(refShip,ShipsTypes[n]);
 	n++;
 	refShip.Name         			= "SP_Volage";
-	refShip.All						= "Corvette1";
+	refShip.All				= "Corvette1";
 	refShip.SName           		= "Volage";
-	refShip.Walk					= "Volage";
+	refShip.Walk				= "Volage";
 	refShip.id            			= refShip.Name;
 	refShip.Class				= 5;
-	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS32;
-	refShip.MaxCaliber			= 12;
+	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS24;	// was CANNON_TYPE_CARRONADE_LBS32
+	refShip.MaxCaliber			= 9;				// was 12
 	refShip.Weight				= Tonnes2CWT(800);
 	refShip.Capacity			= 1800;
 	refShip.CannonsQuantity			= 24;
@@ -25633,13 +25632,13 @@ void InitShips()
 	makeref(refShip,ShipsTypes[n]);
 	n++;
 	refShip.Name         			= "PO_Volage";
-	refShip.All						= "Corvette1";
+	refShip.All				= "Corvette1";
 	refShip.SName           		= "Volage";
-	refShip.Walk					= "Volage";
+	refShip.Walk				= "Volage";
 	refShip.id            			= refShip.Name;
 	refShip.Class				= 5;
-	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS32;
-	refShip.MaxCaliber			= 12;
+	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS24;	// was CANNON_TYPE_CARRONADE_LBS32
+	refShip.MaxCaliber			= 9;				// was 12
 	refShip.Weight				= Tonnes2CWT(800);
 	refShip.Capacity			= 1800;
 	refShip.CannonsQuantity			= 24;
@@ -25721,13 +25720,13 @@ void InitShips()
 	makeref(refShip,ShipsTypes[n]);
 	n++;
 	refShip.Name         			= "US_Volage";
-	refShip.All						= "Corvette1";
+	refShip.All				= "Corvette1";
 	refShip.SName           		= "Volage";
-	refShip.Walk					= "Volage";
+	refShip.Walk				= "Volage";
 	refShip.id            			= refShip.Name;
 	refShip.Class				= 5;
-	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS32;
-	refShip.MaxCaliber			= 12;
+	refShip.Cannon				= CANNON_TYPE_CARRONADE_LBS24;	// was CANNON_TYPE_CARRONADE_LBS32
+	refShip.MaxCaliber			= 9;				// was 12
 	refShip.Weight				= Tonnes2CWT(800);
 	refShip.Capacity			= 1800;
 	refShip.CannonsQuantity			= 24;

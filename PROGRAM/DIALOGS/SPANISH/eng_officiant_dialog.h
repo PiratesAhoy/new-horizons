@@ -58,7 +58,7 @@ string DLG_TEXT[77] = {
 "¿Cómo sabes que presentó una denuncia?",
 "Bueno, me lo dijo cuando le llevé estas cartas.",
 "Muy bien. Gracias por tu tiempo. Te dejaré volver al trabajo.",
-"¡Oye, Raymond! ¿Está todo cancelado? ¡¿Tengo que devolver el dinero?!",
+"¡Oye, Raymond! ¿Está todo cancelado? ¡¿Tengo que devolverte el dinero?!",
 "...",
 "No puedo ayudarte, lo siento, ",
 ". Tengo que vigilar el mostrador mientras ",

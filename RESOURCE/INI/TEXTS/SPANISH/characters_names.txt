@@ -816,6 +816,8 @@ Goyle{Goyle}
 Stone{Stone}
 Luna{Luna}
 Grange{Grange}
+Vivienne{Vivienne}
+Stewart{Stewart}
 
 {=====| Redmond.c |=====}
 Henry{Henry}
@@ -1354,3 +1356,7 @@ Anamaria{Anamaria}
 Scared Monk{Monje asustado}
 Cursed Skeleton{Esqueleto maldito}
 Monk{Monje}
+Akellani native{Nativo akellani}
+A rabid monkey{Un mono rabioso}
+Joshamee{Joshamee}
+Gibbs{Gibbs}

@@ -26,7 +26,7 @@ string DLG_TEXT[34] = {
 "Mi barco necesita reparaciones. O tal vez me compre uno nuevo si el precio es el adecuado.",
 "Estoy sintiendo la necesidad de un poco más de potencia de fuego. Tal vez puedas ayudarme.",
 "Estoy bien, gracias.",
-"Me niego a tratar con una persona con tu reputación y relaciones. Márchate ahora mismo, ",
+"No me gusta tu reputación ni las compañías que frecuentas. Me niego a tratar contigo. Márchate ahora mismo, ",
 ", antes de que llame a los guardias.",
 "Muy bien.",
 "Bien, mi muelle junto al fuerte está disponible para ti. Si te parece bien, le diré al capataz del muelle que remolque tu barco hasta allí. Solo entonces podré analizar los daños y decirte cuánto tiempo y dinero costará repararlo. ",

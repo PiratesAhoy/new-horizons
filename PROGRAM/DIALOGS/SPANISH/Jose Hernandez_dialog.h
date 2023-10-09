@@ -2,7 +2,7 @@ string DLG_TEXT[16] = {
 "Hola.",
 "Adiós.",
 ", soy ",
-", Almirante al Servicio de El Supremo.",
+", almirante al servicio de El Supremo.",
 "¿El Supremo? Eso quiere decir 'el Todopoderoso'.",
 "El Supremo era antes conocido como ",
 "Ejem. ¿Y dónde está ahora ",

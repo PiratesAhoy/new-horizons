@@ -6,7 +6,7 @@ string DLG_TEXT[18] = {
 "¡¿Qué?! Pero ese asesino me dijo que me llevabas a #sPhilipsburg#.",
 "No parece que te guste Davy Jones.",
 "¿Estás bromeando? Nunca lo amaré.",
-"Fácil de adivinar.. De hecho, trabajo para tu padre y estoy aquí para rescatarte", 
+"No era difícil de adivinar... De hecho, trabajo para tu padre y estoy aquí para rescatarte.", 
 "¡QUE DIOS TE LO PAGUE!",
 "En este caso, será tu padre quien me pague. Pero no debemos perder tiempo, tenemos que llegar a #sisland_Cayman# lo mas rápido posible. No creo que tu 'amante' vaya a renunciar a ti tan fácilmente.",
 "Por fin, te has despertado.",
@@ -14,7 +14,7 @@ string DLG_TEXT[18] = {
 "¿No recuerdas?",
 "Oooh, Sí, Davy Jones me disparó.",
 "Sí, pero la bala, por suerte, solo te rozó la cabeza y te desmayaste.",
-"Entiendo... ¿y Davy Jones?",
+"Entiendo... ¿Y Davy Jones?",
 "Se fue rápidamente de la isla. Y poco después, la guarnición del fuerte llegó al puerto y te encontró inconsciente. Ahora que parece que te has restablecido, deberías ir al Ayuntamiento y hablar con mi padre. Tiene tu recompensa esperándote.",
 "¡Son buenas noticias!",
 

@@ -55,7 +55,7 @@ string DLG_TEXT[62] = {
 "Muy bien, ese vino será una agradable compañía para la noche.",
 "Tomaré ese ron, entonces.",
 "¡Demasiado caro!",
-"¿Ha habido un convoy inglés aquí últimamente?",
+"¿Ha llegado un convoy inglés aquí últimamente?",
 "Si, hace unos días. Algunos de los oficiales estuvieron aquí y, por su aspecto, ya habían estado bebiendo en la otra taberna. Tomaron unas copas más y se fueron al hotel.",
 "¡Gracias! Veré si alguien en el hotel los recuerda.",
 "He oído el rumor de que el tren de la plata está de camino hacia aquí. ¿Sabes algo acerca de eso?",

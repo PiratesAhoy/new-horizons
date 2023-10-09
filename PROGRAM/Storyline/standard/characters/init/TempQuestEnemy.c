@@ -37,7 +37,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000000";
-	ch.Ship.Name = "Volcano";
+	ch.Ship.Name = TranslateString("","Volcano");
 	ch.Ship.Type = "Battleship1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;

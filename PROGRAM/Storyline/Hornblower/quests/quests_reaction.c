@@ -591,7 +591,7 @@ void QuestComplete(string sQuestName)
 			}
 			else {AddPartyExp(pchar, 2000);}
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"HMS_Indefatigable","Indefatigable",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"HMS_Indefatigable",TranslateString("","Indefatigable"),-1,ENGLAND,true,true);
 			pchar.quest.My_First_ship = "meet the captain";
 			SetCharacterRemovable(characterFromID("Jack Simpson"), true);
 			SetCharacterRemovable(characterFromID("Archie Kennedy"), true);
@@ -949,7 +949,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Greenford_port")].reload.l3.disable = 1;
 
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"Tartane50","Happy Times", -1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"Tartane50",TranslateString("","Happy Times"), -1,ENGLAND,true,true);
 			SetCrewQuantity(pchar, 3);
 			AddCharacterGoods(pchar, GOOD_RUM, 2);
 			AddCharacterGoods(pchar, GOOD_WHEAT, 4);
@@ -1041,8 +1041,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Rally_the_crew":
-			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("Hornblower\RUSSIAN\Declaration of War",100, "");
-			else PostVideoAndQuest("Hornblower\Declaration of War",100, "");
+			switch(LanguageGetLanguage())
+			{
+				case "RUSSIAN": PostVideoAndQuest("Hornblower\RUSSIAN\Declaration of War",100, ""); break;
+				case "SPANISH": PostVideoAndQuest("Hornblower\SPANISH\Declaration of War",100, ""); break;
+				PostVideoAndQuest("Hornblower\Declaration of War",100, "");
+			}
 		break;
 
 		case "French_Battle_Setup":
@@ -1281,7 +1285,7 @@ void QuestComplete(string sQuestName)
 			SetRank(pchar, ENGLAND, 2); // PB: 3rd Lieutenant
 			GiveModel2Player("brtH3rdLt_18", true);
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"Tartane50","Jolly Boat",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"Tartane50",TranslateString("","Jolly Boat"),-1,ENGLAND,true,true);
 			SetCrewQuantity(pchar, 3);
 			AddCharacterGoods(pchar, GOOD_RUM, 2);
 			AddCharacterGoods(pchar, GOOD_WHEAT, 4);
@@ -1472,7 +1476,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Big Bryan"));
 			LAi_ActorGoToLocator(characterFromID("Big Bryan"), "goto", "guard", "", 0.0);
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"FR_Sloop","Le Rève",-1,FRANCE,true,true);
+			GiveShip2Character(pchar,"FR_Sloop",TranslateString("","Le Rève"),-1,FRANCE,true,true);
 			SetCrewQuantity(pchar, 150);
 			AddCharacterGoods(pchar, GOOD_BALLS, 500);
 			AddCharacterGoods(pchar, GOOD_GRAPES, 300);
@@ -1646,8 +1650,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Now_take_the_ship3":
-			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("Hornblower\RUSSIAN\Capture Le Reve", 100, "Back_to_the_Indy");
-			else PostVideoAndQuest("Hornblower\Capture Le Reve", 100, "Back_to_the_Indy");
+			switch(LanguageGetLanguage())
+			{
+				case "RUSSIAN": PostVideoAndQuest("Hornblower\RUSSIAN\Capture Le Reve", 100, "Back_to_the_Indy"); break;
+				case "SPANISH": PostVideoAndQuest("Hornblower\SPANISH\Capture Le Reve", 100, "Back_to_the_Indy"); break;
+				PostVideoAndQuest("Hornblower\Capture Le Reve", 100, "Back_to_the_Indy");
+			}
 			bMainMenuLaunchAfterVideo = true;
 		break;
 
@@ -2629,8 +2637,13 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Get_to_port_fire_ship":
+			DisableFastTravel(true);
+			Locations[FindLocation("REDMOND_PORT")].reload.l2.disable = 1;
+			Locations[FindLocation("REDMOND_PORT")].reload.l3.disable = 1;
+			Locations[FindLocation("REDMOND_PORT")].reload.l4.disable = 1;
+			Locations[FindLocation("REDMOND_PORT")].reload.l5.disable = 1;
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"RN_Corvette","Fire Ship", -1, ENGLAND,true,true);
+			GiveShip2Character(pchar,"RN_Corvette",TranslateString("","Fire Ship"), -1, ENGLAND,true,true);
 			LAi_ActorRunToLocator(characterFromID("Black Charlie Hammond"), "reload", "reload1", "Get_to_port_fire_ship2",2);
 			LAi_ActorRunToLocator(characterFromID("Dreadnought Foster"), "reload", "reload1", "",2);
 			LAi_ActorRunToLocator(characterFromID("Lt. Chadd"), "reload", "reload1", "",2);
@@ -3025,7 +3038,7 @@ void QuestComplete(string sQuestName)
 			LAi_Fade("", "");
 			SetCurrentTime(6, 0);
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"FR_Sloop","Le Rève",-1,FRANCE,true,true);
+			GiveShip2Character(pchar,"FR_Sloop",TranslateString("","Le Rève"),-1,FRANCE,true,true);
 			SetCrewQuantity(pchar, 150);
 			AddCharacterGoods(pchar, GOOD_BALLS, 500);
 			AddCharacterGoods(pchar, GOOD_GRAPES, 300);
@@ -3282,6 +3295,11 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "initial_set_up_for_capture":
+			DisableFastTravel(false);
+			Locations[FindLocation("REDMOND_PORT")].reload.l2.disable = 0;
+			Locations[FindLocation("REDMOND_PORT")].reload.l3.disable = 0;
+			Locations[FindLocation("REDMOND_PORT")].reload.l4.disable = 0;
+			Locations[FindLocation("REDMOND_PORT")].reload.l5.disable = 0;
 			characters[GetCharacterIndex("Midshipman Hunter")].Dialog.Filename = "Midshipman Hunter_dialog.c";
 			LAi_SetActorType(characterFromID("Midshipman Hunter"));
 			LAi_ActorDialogNow(characterFromID("Midshipman Hunter"),PChar,"",1.0);
@@ -3300,8 +3318,12 @@ void QuestComplete(string sQuestName)
 		case "Le_Reve_Capture_at_sea2":
 			CI_CreateAndSetControls( "WorldMapControls", "WMapCancel", -1, 0, true );// TIH worldmap cancel screwup prevention Sep3'06
 			StorePassengers("Blaze");
-			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("Hornblower\RUSSIAN\Le Reve Capture",100, "Go_to_Beach_for_Prison");
-			else PostVideoAndQuest("Hornblower\Le Reve Capture",100, "Go_to_Beach_for_Prison");
+			switch(LanguageGetLanguage())
+			{
+				case "RUSSIAN": PostVideoAndQuest("Hornblower\RUSSIAN\Le Reve Capture",100, "Go_to_Beach_for_Prison"); break;
+				case "SPANISH": PostVideoAndQuest("Hornblower\SPANISH\Le Reve Capture",100, "Go_to_Beach_for_Prison"); break;
+				PostVideoAndQuest("Hornblower\Le Reve Capture",100, "Go_to_Beach_for_Prison");
+			}
 			bMainMenuLaunchAfterVideo = true;
 			SetNextWeather("Blue Sky");
 		break;
@@ -4150,7 +4172,7 @@ void QuestComplete(string sQuestName)
 
 		case "On_the_wreck_beach":
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"Tartane50","Rescue",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"Tartane50",TranslateString("","Rescue"),-1,ENGLAND,true,true);
 			setCharacterShipLocation(Pchar, "Cuba_Shore_04");
 
 			ChangeCharacterAddressGroup(characterFromID("Don Masseredo"), "Prison_Shore", "goto", "goto16");
@@ -4248,8 +4270,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "rescue_boat_to_sea2":
-			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("Hornblower\RUSSIAN\SHIPWRECK_0001", 100, "Again_Back_to_the_Indy");
-			else PostVideoAndQuest("Hornblower\SHIPWRECK_0001", 100, "Again_Back_to_the_Indy");
+			switch(LanguageGetLanguage())
+			{
+				case "RUSSIAN": PostVideoAndQuest("Hornblower\RUSSIAN\SHIPWRECK_0001", 100, "Again_Back_to_the_Indy"); break;
+				case "SPANISH": PostVideoAndQuest("Hornblower\SPANISH\SHIPWRECK_0001", 100, "Again_Back_to_the_Indy"); break;
+				PostVideoAndQuest("Hornblower\SHIPWRECK_0001", 100, "Again_Back_to_the_Indy");
+			}
 			bMainMenuLaunchAfterVideo = true;
 		break;
 
@@ -4285,7 +4311,7 @@ void QuestComplete(string sQuestName)
 			SetCurrentTime(10.00, 0);
 			SetNextWeather("Blue Sky");
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"HMS_Indefatigable","Indefatigable",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"HMS_Indefatigable",TranslateString("","Indefatigable"),-1,ENGLAND,true,true);
 			setCharacterShipLocation(Pchar, "Cuba_Shore_04");
 			LAi_SetActorType(characterFromID("Arthur Wellesley"));
 
@@ -4589,7 +4615,7 @@ void QuestComplete(string sQuestName)
 		case "FREE_back_to_the_Indy":
 			AddQuestRecord("The Duchess and the Devil", 8);
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"HMS_Indefatigable","Indefatigable",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"HMS_Indefatigable",TranslateString("","Indefatigable"),-1,ENGLAND,true,true);
 			setCharacterShipLocation(Pchar, "Cuba_Shore_04");
 
 			LAi_SetActorType(characterFromID("Styles"));
@@ -4739,7 +4765,7 @@ void QuestComplete(string sQuestName)
 
 		case "Redmond_Sharpe_Chumley":
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"SchoonerWar","Magicienne",-1,FRANCE,true,true);
+			GiveShip2Character(pchar,"SchoonerWar",TranslateString("","Magicienne"),-1,FRANCE,true,true);
 			DeleteAttribute(PChar, "isnotcaptain");
 			SetCrewQuantity(pchar, 150);
 			AddCharacterGoods(pchar, GOOD_BALLS, 500);
@@ -5843,7 +5869,7 @@ void QuestComplete(string sQuestName)
 			LAi_type_actor_Reset(characterFromID("Captain James Sawyer"));
 			LAi_SetActorType(characterFromID("Captain James Sawyer"));
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"RN_Superbe","Renown",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"RN_Superbe",TranslateString("","Renown"),-1,ENGLAND,true,true);
 			setCharacterShipLocation(Pchar, "Greenford_port");
 
 			ChangeCharacterAddressGroup(characterFromID("Henry Wellard"), "Greenford_town", "reload", "reload21");
@@ -7694,7 +7720,7 @@ void QuestComplete(string sQuestName)
 
 		case "the_burial_party":
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"RN_Superbe","Renown",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"RN_Superbe",TranslateString("","Renown"),-1,ENGLAND,true,true);
 			SetCharacterRemovable(characterFromID("Richard Sharpe"), true);
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Richard Sharpe"));
 			RemoveCharacterCompanion(Pchar, characterFromID("Richard Sharpe"));
@@ -7857,7 +7883,7 @@ void QuestComplete(string sQuestName)
 
 		case "A_new_Quest_Line":
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"HMS_Sophie","Retribution",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"HMS_Sophie",TranslateString("","Retribution"),-1,ENGLAND,true,true);
 			DeleteAttribute(PChar, "isnotcaptain");
 			setCharacterShipLocation(Pchar, "Redmond_port");
 			pchar.quest.Players_Rank = "Commander";
@@ -10076,7 +10102,7 @@ void QuestComplete(string sQuestName)
 
 		case "Deliver_the_documents":
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"Tartane50","Happy Times", -1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"Tartane50",TranslateString("","Happy Times"), -1,ENGLAND,true,true);
 			SetCrewQuantity(pchar, 3);
 			AddCharacterGoods(pchar, GOOD_RUM, 2);
 			AddCharacterGoods(pchar, GOOD_WHEAT, 4);
@@ -10772,7 +10798,7 @@ void QuestComplete(string sQuestName)
 			DeleteAttribute(PChar, "isnotcaptain");								// GR: Return to normal play
 			pchar.quest.story_path = "neutral";
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"RN_Volage","Hotspur",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"RN_Volage",TranslateString("","Hotspur"),-1,ENGLAND,true,true);
 			setCharacterShipLocation(Pchar, "Greenford_port");
 			GiveModel2Player("brtHComdr_18", true);
 			if(AUTO_SKILL_SYSTEM)
@@ -11067,6 +11093,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Captain Murray"));
 			ChangeCharacterAddressGroup(characterFromID("Captain Murray"), "Outskirts_House", "goto", "goto2");
 			ChangeCharacterAddressGroup(characterFromID("Major Dunnitt"), "Outskirts_House", "goto", "goto1");
+			LAi_SetGuardianTypeNoGroup(characterFromID("Major Dunnitt"));
 			Characters[GetCharacterIndex("Captain Murray")].dialog.CurrentNode = "First time";
 			Characters[GetCharacterIndex("Major Dunnitt")].dialog.CurrentNode = "Transfer Sharpe";
 		break;
@@ -11370,7 +11397,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Rifleman Tongue"), "None", "");
 			ChangeCharacterAddress(characterFromID("Rifleman Mansfield"), "None", "");
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"FR_Sloop","Le Rève",-1,FRANCE,true,true); // Teresa's ship
+			GiveShip2Character(pchar,"FR_Sloop",TranslateString("","Le Rève"),-1,FRANCE,true,true); // Teresa's ship
 			SetCrewQuantity(pchar, 100);
 			AddCharacterGoods(pchar, GOOD_RUM, 40);
 			AddCharacterGoods(pchar, GOOD_WHEAT, 40);
@@ -12937,7 +12964,7 @@ void QuestComplete(string sQuestName)
 
 		case "Hogan_Quest_Done":
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"RN_Volage","Hotspur",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"RN_Volage",TranslateString("","Hotspur"),-1,ENGLAND,true,true);
 			setCharacterShipLocation(Pchar, "Guadeloupe_shore_01");
 
 			ChangeCharacterAddressGroup(characterFromID("Lt. William Bush"), "Guadeloupe_shore_01", "goto", "locator10");
@@ -13768,8 +13795,8 @@ void QuestComplete(string sQuestName)
 
 		case "Hammond_the_wimp":
 			SetModelfromArray(PChar, GetModelIndex("Wellard_18"));
-			PChar.name = "Jack";
-			PChar.lastname = "Hammond";
+			PChar.name = TranslateString("","Jack");
+			PChar.lastname = TranslateString("","Hammond");
 			
 			ChangeCharacterAddressGroup(characterFromID("Matthews"), "Guadeloupe_shore_01", "goto", "seaman2"); //"citizen04");
 			Characters[GetCharacterIndex("Matthews")].dialog.CurrentNode = "Were's_Captain_Hornblower";
@@ -13826,8 +13853,8 @@ void QuestComplete(string sQuestName)
 
 		case "Hammond_the_wimp_threeXXX":
 			SetModelfromArray(PChar, GetModelIndex("BushLtn_18"));
-			PChar.name = "Lt. William";
-			PChar.lastname = "Bush";
+			PChar.name = TranslateString("","Lt. William");
+			PChar.lastname = TranslateString("","Bush");
 
 			ChangeCharacterAddressGroup(characterFromID("Jack Hammond"), "Quest_ShipDeck1", "goto", "goto4");
 			ChangeCharacterAddressGroup(characterFromID("Matthews"), "Quest_ShipDeck1", "goto", "goto6");
@@ -13875,13 +13902,13 @@ void QuestComplete(string sQuestName)
 
 		case "Hornblower_taken":
 			SetModelfromArray(PChar, GetModelIndex("brtHComdr_18"));
-			PChar.name = "Horatio";
-			PChar.lastname = "Hornblower";
+			PChar.name = TranslateString("","Horatio");
+			PChar.lastname = TranslateString("","Hornblower");
 
 //			GiveModel2Player("brtHComdr_18", true);
 			pchar.quest.story_path = "neutral";
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"RN_Volage","Hotspur",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"RN_Volage",TranslateString("","Hotspur"),-1,ENGLAND,true,true);
 			setCharacterShipLocation(Pchar, "Greenford_port");
 
 			Characters[GetCharacterIndex("Styles")].dialog.CurrentNode = "Almost there";
@@ -14029,8 +14056,8 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Soldier6X"), "None", "");
 			ChangeCharacterAddress(characterFromID("Soldier7X"), "None", "");
 			SetModelfromArray(PChar, GetModelIndex("BushLtn_18"));
-			PChar.name = "Lt. William";
-			PChar.lastname = "Bush";
+			PChar.name = TranslateString("","Lt. William");
+			PChar.lastname = TranslateString("","Bush");
 
 			LAi_SetActorType(characterFromID("Sir Edward Pellew"));
 			DoQuestReloadToLocation("Cabin2SJG", "reload", "reload1", "Bush_sees_Pellew2");
@@ -14055,8 +14082,8 @@ void QuestComplete(string sQuestName)
 
 		case "Crew_Wolfe_Prison":
 			SetModelfromArray(PChar, GetModelIndex("brtHComdr_18"));
-			PChar.name = "Horatio";
-			PChar.lastname = "Hornblower";
+			PChar.name = TranslateString("","Horatio");
+			PChar.lastname = TranslateString("","Hornblower");
 			Locations[FindLocation("PaP_Guardhouse")].reload.l1.disable = 1;
 			Locations[FindLocation("PaP_Guardhouse")].reload.l2.disable = 1;
 			LAi_ActorSetSitMode(characterFromID("Able Seaman Wilks"));
@@ -14173,8 +14200,8 @@ void QuestComplete(string sQuestName)
 
 		case "Soldiers_Wolfe_BeachYYY":
 			SetModelfromArray(PChar, GetModelIndex("WolfFrench"));
-			PChar.name = "Thomas";
-			PChar.lastname = "Wolfe";
+			PChar.name = TranslateString("","Thomas");
+			PChar.lastname = TranslateString("","Wolfe");
 		break;
 
 		case "Soldiers_Wolfe_BeachZZZ":
@@ -14410,7 +14437,7 @@ void QuestComplete(string sQuestName)
 
 		case "Interupt_for_Hotspur":
 			SetModelfromArray(PChar, GetModelIndex("MatthewsHB"));
-			PChar.name = "Matthews";
+			PChar.name = TranslateString("","Matthews");
 			PChar.lastname = "";
 
 			ChangeCharacterAddressGroup(characterFromID("Lt. William Bush"), "Quest_ShipDeck1", "reload", "boatl");
@@ -14486,8 +14513,8 @@ void QuestComplete(string sQuestName)
 
 		case "Hornblower_and_picklock2":
 			SetModelfromArray(PChar, GetModelIndex("brtHComdr_18"));
-			PChar.name = "Horatio";
-			PChar.lastname = "Hornblower";
+			PChar.name = TranslateString("","Horatio");
+			PChar.lastname = TranslateString("","Hornblower");
 			Locations[FindLocation("PaP_Guardhouse")].reload.l1.disable = 1;
 			Locations[FindLocation("PaP_Guardhouse")].reload.l2.disable = 1;
 			LAi_ActorSetSitMode(characterFromID("Able Seaman Wilks"));
@@ -14707,8 +14734,8 @@ void QuestComplete(string sQuestName)
 
 		case "Hotspur_underfire3":
 			SetModelfromArray(PChar, GetModelIndex("EcclestonH"));
-			PChar.name = "Lt.";
-			PChar.lastname = "Chadd";
+			PChar.name = TranslateString("","Lt.");
+			PChar.lastname = TranslateString("","Chadd");
 
 			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire_HB.wav");
 			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "Bring_her_inshore";
@@ -14801,8 +14828,8 @@ void QuestComplete(string sQuestName)
 		
 		case "Battery_Plan_Two":
 			SetModelfromArray(PChar, GetModelIndex("brtHComdr_18"));
-			PChar.name = "Horatio";
-			PChar.lastname = "Hornblower";
+			PChar.name = TranslateString("","Horatio");
+			PChar.lastname = TranslateString("","Hornblower");
 
 			DoQuestReloadToLocation("PaP_Arsenal", "goto", "goto5", "Battery_Plan_Three");
 		break;
@@ -15169,8 +15196,8 @@ void QuestComplete(string sQuestName)
 
 		case "Check_that_signal":
 			SetModelfromArray(PChar, GetModelIndex("BushLtn_18"));
-			PChar.name = "Lt. William";
-			PChar.lastname = "Bush";
+			PChar.name = TranslateString("","Lt. William");
+			PChar.lastname = TranslateString("","Bush");
 
 			Characters[GetCharacterIndex("Jack Hammond")].dialog.CurrentNode = "Withdraw_Signal_from_flagship";
 			DoQuestReloadToLocation("Quest_ShipDeck1", "goto", "goto4", "Check_that_signal2");
@@ -15200,8 +15227,8 @@ void QuestComplete(string sQuestName)
 		case "Back_to_Fort_Bomb":
 //Grey Roger: return you to Horatio Hornblower
 			SetModelfromArray(PChar, GetModelIndex("brtHComdr_18"));
-			PChar.name = "Horatio";
-			Pchar.lastname = "Hornblower";
+			PChar.name = TranslateString("","Horatio");
+			Pchar.lastname = TranslateString("","Hornblower");
 			ChangeCharacterAddressGroup(characterFromID("Styles"), "Fake_Guadeloupe_fort", "goto", "goto7");
 			ChangeCharacterAddressGroup(characterFromID("Able Seaman Tompkins"), "Fake_Guadeloupe_fort", "reload", "reload2");
 			ChangeCharacterAddressGroup(characterFromID("Able Seaman Stanley"), "Fake_Guadeloupe_fort", "reload", "reload2");
@@ -15305,7 +15332,7 @@ void QuestComplete(string sQuestName)
 		case "AND_onto_The_BEACH":
 			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"RN_Volage","Hotspur",-1,ENGLAND,true,true);
+			GiveShip2Character(pchar,"RN_Volage",TranslateString("","Hotspur"),-1,ENGLAND,true,true);
 			setCharacterShipLocation(Pchar, "Guadeloupe_shore_01");
 			Locations[FindLocation("Guadeloupe_Jungle_03")].vcskip = false;
 			Locations[FindLocation("Guadeloupe_Jungle_02")].vcskip = false;
@@ -15829,8 +15856,8 @@ void QuestComplete(string sQuestName)
 		case "assigned_to_atropos5":
 			ReceiveLetterOfMarque(ENGLAND);							// PB: Enable regular governor dialogs
 //			DeleteAttribute(PChar, "isnotcaptain");						// PB: Return to normal play
-			AddStorylineVar(FindCurrentStoryline(), "CHANGING_RELATIONS", "1");		// PB: Enable changing nation relations
-			GiveShip2Character(pchar, "HMS_Greyhound", "Atropos", -1, ENGLAND, true, true); // 6th Rate Frigate
+//			AddStorylineVar(FindCurrentStoryline(), "CHANGING_RELATIONS", "1");		// PB: Enable changing nation relations
+			GiveShip2Character(pchar, "HMS_Greyhound", TranslateString("","Atropos"), -1, ENGLAND, true, true); // 6th Rate Frigate
 			AddQuestRecord("Old Friends - New Enemies", 19);
 			LAi_QuestDelay("End_of_story", 0.1);
 		break;
@@ -15847,7 +15874,7 @@ void QuestComplete(string sQuestName)
 
 		case "wolfes_ship":
 			pchar.quest.know_about_Wolfe = "None";
-			GiveShip2Character(characterFromID("Teresa Moreno"),"FR_Sloop","Le Rève",-1,FRANCE,true,true);
+			GiveShip2Character(characterFromID("Teresa Moreno"),"FR_Sloop",TranslateString("","Le Rève"),-1,FRANCE,true,true);
 			setCharacterShipLocation(characterFromID("Teresa Moreno"), "Charlestown_port");
 			ChangeCharacterAddressGroup(characterFromID("Teresa Moreno"), "Mystery_House", "goto", "goto5");
 			LAi_SetGuardianType(characterFromID("Teresa Moreno"));
@@ -15859,7 +15886,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetImmortal(characterFromID("Thomas Wolfe"), false);
 			characters[GetCharacterIndex("Thomas Wolfe")].nation = FRANCE
 			SetRMRelation(characterFromID("Thomas Wolfe"), ENGLAND, REL_WAR);
-			GiveShip2Character(characterFromID("Thomas Wolfe"), "FR_Sloop", "Loup-Garou", -1, FRANCE, true, true);
+			GiveShip2Character(characterFromID("Thomas Wolfe"), "FR_Sloop", TranslateString("","Loup-Garou"), -1, FRANCE, true, true);
 
 			Group_CreateGroup("wolfes_Ship"); 
 			Group_AddCharacter("wolfes_Ship", "Thomas Wolfe");
@@ -15886,7 +15913,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.imprison_wolfe.win_condition.l1 = "location";
 			PChar.quest.imprison_wolfe.win_condition.l1.character = Pchar.id;
 			Pchar.quest.imprison_wolfe.win_condition.l1.location = "Greenford_port";
-			Pchar.quest.imprison_wolfe.win_condition = "bush_locks_up_wolfe"
+			Pchar.quest.imprison_wolfe.win_condition = "bush_locks_up_wolfe";
 		break;
 
 		case "bush_locks_up_wolfe":

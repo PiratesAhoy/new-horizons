@@ -1,10 +1,10 @@
 title=El Navegante
-text.t1=Por supuesto que Blaze perdió su parte del mapa en una partida de naipes... contra el piloto del navío español del tresoro 'Villa de Malaga', al que vio por última vez en #sGreenford#, en #sisland_Oxbay#. Será mejor empezar allí nuestra búsqueda.
+text.t1=Por supuesto que Blaze perdió su parte del mapa en una partida de naipes... contra el piloto del navío español del tresoro 'Villa de Málaga', al que vio por última vez en #sGreenford#, en #sisland_Oxbay#. Será mejor empezar allí nuestra búsqueda.
 text.t2=¡No hay suerte! ¡El 'Villa de Malaga' ya ha zarpado de #sGreenford#!
 text.t3=Un hombre entró en la taberna... ¡Creo que lo conozco! En cualquier caso, me ha informado de que el 'Villa de Malaga' está en #sSantiago#, siendo reparado.
 text.t4=Hemos llegado a #sisland_Cuba#; nahora deberíamos dirigirnos al puerto de #sSantiago# por la ruta más directa posible. Pero será mejor que intente evitar cualquier problema con las tropas españolas.
 text.t5=¡El piloto debe de estar en la taberna!
-text.t6=Tengo que encontrar y traer d evuelta a cinco marineros del 'Villa de Malaga'. ¡No parece muy difícil!
+text.t6=Tengo que encontrar y traer de vuelta a cinco marineros del 'Villa de Málaga'. ¡No parece muy difícil!
 text.t7=Estoy buscando a Juan, el borracho; a Jorge, el temeroso de Dios; a Ricardo, el aventurero; a Pedro, el seductor, y al carpintero del barco, Paolo.
 text.t8=¡Tengo que darle un remojón al borracho de Juan para despertarlo! Tal vez pueda encontrar un cubo en algún puesto del mercado por aquí cerca. Y el mar está lleno de agua...
 text.t9=¡Juan ha regresaso a su barco!

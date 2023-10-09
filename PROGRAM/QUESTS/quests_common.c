@@ -449,10 +449,10 @@ string GenerateFetchCargo(ref ctown) //temp function until economy overhaul
 					options[option]="tailor"; option++;
 					break;
 				case "blacksmith":
-					if (ENABLE_WEAPONSMOD) options[option]="blacksmith"; option++; // PB: NOT if the relevant mod is OFF!
+					if (ENABLE_WEAPONSMOD) {options[option]="blacksmith"; option++;} // PB: NOT if the relevant mod is OFF!
 					break;
 				case "gunsmith":
-					if (ENABLE_WEAPONSMOD) options[option]="gunsmith"; option++; // PB: NOT if the relevant mod is OFF!
+					if (ENABLE_WEAPONSMOD) {options[option]="gunsmith"; option++;} // PB: NOT if the relevant mod is OFF!
 					break;
 				case "apothecary":
 					options[option]="apothecary"; option++;
@@ -4861,8 +4861,8 @@ Cost for level 50 is 55,374,000
 				sld.greeting = "Gr_Mr. Gibbs";
 				sld.money = rand(100);
 				sld.id = "Mr. Gibbs";
-				sld.name = "Joshamee";
-				sld.lastname = "Gibbs";
+				sld.name = TranslateString("","Joshamee");
+				sld.lastname = TranslateString("","Gibbs");
 				sld.reputation = REPUTATION_GOOD;
 				sld.nation = PIRATE;
 				sld.sex = "man";

@@ -174,7 +174,7 @@ Installed new cannons on the '#sarcurship#' for #stopay# pieces of gold.{Install
 Upgraded the '#sarcurship#' with new #supgrade# for #scost# pieces of gold.{Upgraded the '#sarcurship#' with new #supgrade# for #scost# pieces of gold.}
 
 {=====| store.c |=====}
-Visited the local merchant, sold off our cargo and refilled our supplies. The trade earned me"{Visited the local merchant, sold off our cargo and refilled our supplies. The trade earned me}
+Visited the local merchant, sold off our cargo and refilled our supplies. The trade earned me{Visited the local merchant, sold off our cargo and refilled our supplies. The trade earned me}
 pieces of gold.{pieces of gold.}
 Visited the local merchant to refill our supplies. I had to leave{Visited the local merchant to refill our supplies. I had to leave}
 pieces of gold to the storekeeper.{pieces of gold to the storekeeper.}

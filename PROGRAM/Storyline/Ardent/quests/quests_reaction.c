@@ -560,9 +560,11 @@ void QuestComplete(string sQuestName)
 			if (isofficer(characterFromID("Two Dogs")))
 			{
 				LAi_SetActorType(characterFromID("Two Dogs"));
-				characters[GetCharacterIndex("Two Dogs")].name = TranslateString("","Two Dogs");
-				characters[GetCharacterIndex("Two Dogs")].lastname = TranslateString("","Fighting");
-				characters[GetCharacterIndex("Two Dogs")].Dialog.Filename = "Two Dogs_dialog.c";
+			//	Characters[GetCharacterIndex("Two Dogs")].name = TranslateString("","Two Dogs");
+			//	Characters[GetCharacterIndex("Two Dogs")].lastname = TranslateString("","Fighting");
+				Characters[GetCharacterIndex("Two Dogs")].name = "";
+				Characters[GetCharacterIndex("Two Dogs")].lastname = TranslateString("Two Dogs","Fighting");
+				Characters[GetCharacterIndex("Two Dogs")].Dialog.Filename = "Two Dogs_dialog.c";
 				Characters[GetCharacterIndex("Two Dogs")].dialog.CurrentNode = "introduction";
 				LAi_ActorDialogNow(characterFromID("Two Dogs"),PChar,"",2.0); // Dialog exits to "new_deal_with_Two_Dogs" or "get_lost_Two_Dogs"
 			}
@@ -1754,7 +1756,8 @@ void QuestComplete(string sQuestName)
 			else
 			{
 				AddQuestRecord("Take Two Dogs Home", 6);
-				characters[GetCharacterIndex("Two Dogs")].lastname = TranslateString("","not-Fighting");
+			//	Characters[GetCharacterIndex("Two Dogs")].lastname = TranslateString("","not-Fighting");
+				Characters[GetCharacterIndex("Two Dogs")].lastname = TranslateString("Two Dogs","not-Fighting");
 			}
 			CloseQuestHeader("Take Two Dogs Home");
 			LAi_SetActorType(characterFromID("Two Dogs"));
@@ -3142,10 +3145,12 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterfromID("Santiago_soldier_05"), "Santiago_town_01", "goto", "goto47");
 			ChangeCharacterAddressGroup(romance, "Santiago_town_01", "goto", "goto20");
 			Characters[GetCharacterIndex("Santiago_soldier_05")].dialog.CurrentNode = "did_you_get_ring";
-			LAi_ActorDialog(CharacterFromID("Santiago_soldier_05"),PChar,"out_of_store_ring2",25.0,25.0);
+			LAi_SetActorType(CharacterFromID("Santiago_soldier_05"));
+		//	LAi_ActorDialog(CharacterFromID("Santiago_soldier_05"),PChar,"out_of_store_ring2",25.0,25.0);	// If the monkey is following you, this may not work
+			LAi_ActorDialog(CharacterFromID("Santiago_soldier_05"),PChar,"",25.0,25.0);			// Moving the trigger inside the dialog seems more reliable
 		break;
 
-		case "out_of_store_ring2":
+		case "out_of_store_ring2":	// Triggered by dialog with "Santiago_soldier_05"
 			LAi_SetActorType(CharacterFromID("Santiago_soldier_05"));
 			LAi_ActorFollowEverywhere(CharacterFromID("Santiago_soldier_05"), "", 5.0);
 			LAi_SetActorType(romance);
@@ -7486,7 +7491,7 @@ void QuestComplete(string sQuestName)
 				GiveItem2Character(sld, "tomahawk");
 				EquipCharacterByItem(sld, "pistolbow");
 				sld.id = "Indian" + n;
-				sld.name = "Indian";
+				sld.name = TranslateString("","Indian");
 				sld.lastname = n;
 			}
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
@@ -9922,7 +9927,7 @@ void QuestComplete(string sQuestName)
 			}
 			if (PChar.location.from_sea == "Santiago_port")
 			{
-				Preprocessor_AddQuestData("governor", "Governor " + GetMyLastName(CharacterFromID("Javier Balboa")));
+				Preprocessor_AddQuestData("governor", XI_ConvertString("Governor") + " " + GetMyLastName(CharacterFromID("Javier Balboa")));
 				AddQuestRecord("Battle Royale", 25);
 				Preprocessor_Remove("governor");
 				DoQuestReloadToLocation("Santiago_port", "reload", "reload2_back", "finale_return_to_Santiago");
@@ -10521,6 +10526,8 @@ void QuestComplete(string sQuestName)
 			PChar.quest.invasion_status = "warship_defeated";
 			PChar.quest.finale_evacuate_santiago = "not_needed";
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "finale_after_santiago_reward";
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "First time";
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.TempNode = "First time";
 /*			if(CheckAttribute(PChar, "quest.finale_galleons_leave")) PChar.quest.finale_galleons_leave.over = "yes";
 			if(iscompanion(CharacterFromID("Spanish_Captain1")))
 			{
@@ -11516,7 +11523,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_bad_stuff_in_jail":
-			if(IsOfficer(romance) || IsCompanion(romance))
+			if(IsOfficer(romance) || IsCompanion(romance) || IsPassenger(romance))
 			{
 				PChar.quest.rescuer = PChar.quest.romance;
 				SetCharacterRemovable(romance, false);
@@ -12857,6 +12864,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(PChar, false);
 			if (PChar.quest.old_gun != "") EquipCharacterByItem(PChar,PChar.quest.old_gun);
 			DeleteQuestAttribute("old_gun");
+			PChar.quest.etherbomb_thrown = "true";
 			if(IsOfficer(romance) && romance.location == PChar.location)
 			{
 				LAi_SetActorType(PChar);
@@ -13059,7 +13067,8 @@ void QuestComplete(string sQuestName)
 			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
 			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
-			AddQuestRecord("Imperial Escort", 28);
+			if (CheckQuestAttribute("etherbomb_thrown", "true")) AddQuestRecord("Imperial Escort", 28);
+			else AddQuestRecord("Imperial Escort", 41);
 			Preprocessor_Remove("envoy");
 			Preprocessor_Remove("governor");
 			Preprocessor_Remove("evilgov");
@@ -13350,7 +13359,8 @@ void QuestComplete(string sQuestName)
 		case "imperial_escort_agent_to_tortuga":	// Triggered by dialog with Jaime Lezcano if it leads to promise to take him to Tortuga
 			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
 			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
-			AddQuestRecord("Imperial Escort", 25);
+			if (CheckQuestAttribute("etherbomb_thrown", "true")) AddQuestRecord("Imperial Escort", 25);
+			else AddQuestRecord("Imperial Escort", 36);
 			Preprocessor_Remove("envoy");
 			Preprocessor_Remove("agent");
 			AddPassenger(PChar, CharacterFromID("Jaime Lezcano"), 0);
@@ -13398,6 +13408,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_after_rescue":
+			if (CheckQuestAttribute("etherbomb_thrown", "true")) DeleteQuestAttribute("etherbomb_thrown");
 			Locations[FindLocation("Cuba_port")].vcskip = true;
 			Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload4 = 3.0;
 			PChar.quest.imperial_escort_reset_cave.win_condition.l1 = "location";
@@ -13822,7 +13833,6 @@ void QuestComplete(string sQuestName)
 
 		case "imperial_escort_farewell_envoy":
 			NPChar = CharacterFromID("Imperial_envoy");
-			RemovePassenger(PChar, NPChar);
 			LAi_SetActorType(NPChar);
 			NPChar.Dialog.CurrentNode = "farewell";
 			LAi_ActorDialogNow(NPChar, PChar,"imperial_escort_admiral_restores_ships",1.0);
@@ -13830,6 +13840,7 @@ void QuestComplete(string sQuestName)
 
 		case "imperial_escort_admiral_restores_ships":
 			NPChar = CharacterFromID("Imperial_envoy");
+			RemovePassenger(PChar, NPChar);
 			LAi_SetActorType(NPChar);
           		LAi_ActorGoToLocation(NPChar, "reload", "reload1", "none", "", "", "", 60.0);
 			SetCharacterShipLocation(CharacterFromID("Imperial_Captain"), "None");

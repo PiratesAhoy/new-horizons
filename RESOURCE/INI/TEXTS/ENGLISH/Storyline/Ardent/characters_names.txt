@@ -12,7 +12,9 @@ O'Brien{O'Brien}
 de la Vega{de la Vega}
 Two Dogs{Two Dogs}
 Fighting{Fighting}
+Two Dogs Fighting{Two Dogs Fighting}
 not-Fighting{not-Fighting}
+Two Dogs not-Fighting{Two Dogs not-Fighting}
 Carlos{Carlos}
 Ardenta{Ardenta}
 Indian{Indian}

@@ -68,13 +68,13 @@ void ProcessDialogEvent()
 			Dialog.snd = "voice\PADI\PADI001";
 
 	
-			Dialog.text =  "A REAL jungle: dense undergrowth, weird weeds and ferns breaking through the ground everywhere.";
+			Dialog.text =  "Una verdadera selva: densa vegetación, hierbas extrañas y helechos creciendo por todas partes.";
 
-			link.l1 = "I could do with some timber, and after clearing this would be good building ground. Boatswain! Assemble a woodcutting party! I expect you to clear this ground by tomorrow. Put the planks into our hold. And post some pickets, there might be savages roaming the jungle..";
+			link.l1 = "Me vendría bien algo de madera y después de despejarlo, este terreno sería un buen solar de construcción. ¡Contramaestre! ¡Reúne un grupo de leñadores! Espero que hayáis despejado este terreno para mañana. Almacenad las tablas en nuestra bodega. Y poned centinelas, puede que haya salvajes rondando por la selva.";
 			if(rand(100)>50) {Link.l1.go = "Akellani";}
 			else{Link.l1.go = "dismantle";}
 
-			Link.l4 = "Just the place for an ambush.. I'd better get out of here...";
+			Link.l4 = "Un lugar perfecto para una emboscada... Será mejor salir de aquí...";
 			if(rand(100)>70) {Link.l4.go = "Akellani";}
 			else{Link.l4.go = "exit";}
 		break;

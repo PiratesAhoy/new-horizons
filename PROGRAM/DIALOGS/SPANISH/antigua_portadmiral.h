@@ -1,7 +1,7 @@
 string DLG_TEXT[124] = {
 "Desearía, #ssir#, que bajaras la voz a un tono más discreto. Una... ejem... invitada está descansando en la habitación de al lado. Extenuada por... ejem... sus compromisos sociales. En fin, ¿qué es lo que quieres, #ssir#?",
 "Oh, lamento mucho molestar a la... ejem... invitada de Su Señoría. Será mejor que me vaya..., discretamente, por supuesto.",
-"Soy ",
+"Mi nombre es ",
 ", y querría saber si Su Señoría tiene alguna tarea para mí y para mi barco.",
 "... Un momento... ¡Se te conoce por tus acciones contra la Corona! ¡¡GUARDIAS!! ¡¡ESPÍA!!",
 "Oh, qué aburrido. Más corsarios que se creen que el Caribe está lleno de jugosas presas esperando para ser tomadas. #ssir#, tengo a mi disposición toda la escuadra de las Islas de Sotavento, y todos los capitanes estarían más que encantados de salir de crucero en busca de presas enemigas. ¿De verdad crees que te daría cualquier misión provechosa a ti en vez de a uno de mis amig... ejem... leales seguidores?",
@@ -108,7 +108,7 @@ string DLG_TEXT[124] = {
 "Creo que el gobernador Shaw se preocupa demasiado.",
 "No saques conclusiones precipitadas. Parece que hay algo más en este asunto que la hija desaparecida de un gobernador. En las costas de #sisland_Hispaniola#, el capitán de la 'Lightning' encontró los restos del convoy. Había sido sorprendido por una violenta tormenta; durante la tempestad, apareció un barco pirata y hundió todo el convoy.",
 "Unos pocos restos en la orilla no son suficientes para hacer una suposición tan descabellada. ¿Un único barco pirata hundiendo todo un convoy? Suena más que improbable.",
-"Esta historia fue corroborada por tres supervivientes de la tripulación, a los que les aterrorizaba sobrenanera solo hablar de este barco pirata cuando fueron interrogados por el capitán de la fragata.",
+"Esta historia fue corroborada por tres supervivientes de la tripulación, a los que les aterrorizaba tan solo hablar de este barco pirata cuando fueron interrogados por el capitán de la fragata.",
 "Eso suena un poco más preocupante. ¿Qué hizo entonces el capitán de la fragata?",
 "Decidió salir inmediatamente en persecución de este barco pirata. Yo estaba en contra de la idea. Mi opinión era que debería quedarse aquí un par de días más y preparar una flota. Pero no pude convencerlo y zarpó rumbo a #sPhilipsburg# sin perder ni un minuto.",
 "#sPhilipsburg#, ¿eh? Me dirigiré allí también a ver qué es lo que puedo averiguar. Gracias por la ayuda.",

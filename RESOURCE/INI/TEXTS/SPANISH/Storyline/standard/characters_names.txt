@@ -98,6 +98,7 @@ Violate{Violate}
 Gyles{Gyles}
 Dubois{Dubois}
 citizen{residente}
+citizen_F{residente}
 Soldier{Soldado}
 Ragetti{Ragetti}
 Pintel{Pintel}

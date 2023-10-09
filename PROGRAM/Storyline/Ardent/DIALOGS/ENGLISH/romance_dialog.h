@@ -305,7 +305,7 @@ string DLG_TEXT[551] = {
 "Have I done something wrong? I had hoped to continue sailing with you.",
 "No, you have done nothing wrong. But your father left me in no doubt that if anything unpleasant happened to you, something unpleasant would happen to me. Now you are home and safe, I would be foolish to risk that again.",
 "Very well, then I wish you well on your further voyages. Goodbye, ",
-"Very well, then I shall play the part of a dutiful wife and remain here to await tales of your further adventures. Goodbye, ",
+"Very well, then I shall play the part of a dutiful #sspouse# and remain here to await tales of your further adventures. Goodbye, ",
 "Goodbye, ",
 "! I thought I recognised your foul stench above the odours of this place. Have you come to gloat at my further misfortune?",
 "What are you talking about? I was told there was something valuable in here. Instead I find you. Perhaps this wasn't a wasted effort at that. Would there be a reward for releasing you and taking you home?",

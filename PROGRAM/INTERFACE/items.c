@@ -1608,7 +1608,7 @@ if(comName=="activate" || comName=="click")
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "MSC_CONFIRM_NO_BUTTON");
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 2, "MSC_CONFIRM_YES_BUTTON");
 			SetFormatedText("MSC_TEXTWINDOW", TranslateString("", "TossItemInterface"));
-			SetFormatedText("MSC_TEXTWINDOW", "Are you sure you want to toss this item?");
+			//SetFormatedText("MSC_TEXTWINDOW", TranslateString("", "Are you sure you want to toss this item?"));
 		}
 	break;
 // <-- Levis
@@ -3952,6 +3952,9 @@ void UpdateItemData()
 			case "Russian":
 				GameInterface.strings.ItemName = GameInterface.strings.ItemName + " " + Quality;
 			break;
+			case "Spanish":
+				GameInterface.strings.ItemName = GameInterface.strings.ItemName + " " + Quality;
+			break;
 			GameInterface.strings.ItemName = Quality + " " + GameInterface.strings.ItemName;//default for English
 		}
 		// MAXIMUS 31.05.2019: corrected for russian spelling <==
@@ -4373,6 +4376,9 @@ void FillSelectedScroll(string itemsID)
 						switch(LanguageGetLanguage())
 						{
 							case "Russian":
+								name = name + " " + TranslateString("", "q"+arItem.QualityName);
+							break;
+							case "Spanish":
 								name = name + " " + TranslateString("", "q"+arItem.QualityName);
 							break;
 							name = TranslateString("", "q"+arItem.QualityName) + " " + name; // PB: Correct quality name //default for English

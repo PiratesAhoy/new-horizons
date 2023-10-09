@@ -39,6 +39,8 @@ Pintel{Пинтел}
 Ian{Иан}
 Mercer{Мерсер}
 Bligh{Блай}
+Uncle{Uncle}
+Gules{Gules}
 
 {=====| quests_reaction.c |=====}
 Bartolomeu{Бартоломью}

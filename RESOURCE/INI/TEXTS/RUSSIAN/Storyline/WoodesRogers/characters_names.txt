@@ -16,7 +16,7 @@ Teach{Тич}
 {=====| QuebradasCostillas.c |=====}
 Celestine{Целестина}
 Maupassant{Мопассан}
-Natalia{Наталиа}
+Natalia{Наталия}
 Decoteau{Декото}
 Serena{Серена}
 Tisserand{Тиссеранд}
@@ -41,6 +41,7 @@ Constable{Констебль}
 Mills{Миллс}
 Young{Юнга}
 Mutineer{Бунтовщик}
+Mutineer_F{Бунтовщица}
 Thug{Громила}
 Leading{Главный}
 Coastbrother{Буканьер}
@@ -49,7 +50,7 @@ John{Джон}
 Connely{Коннели}
 Cook{Кук}
 William{Уильям}
-Dampier{Дампье}
+Dampier{Дампир}
 Steven{Стивен}
 Courtney{Кортни}
 Charles{Чарльз}
@@ -59,9 +60,11 @@ Dover{Довер}
 Robert{Роберт}
 Fry{Фрай}
 Stretton{Стреттон}
-Rogers'{Роджерс}
-Crew{Команда}
-Former Crew{Бывшая Команда}
+Rogers'{Роджерса}
+Crew{Офицер}
+Rogers' Crew{Офицер Роджерса}
+Former Crew{Бывший Офицер}
+Rogers' Former Crew{Бывший Офицер Роджерса}
 Vane{Вэйн}
 Bellamy{Беллэми}
 Paul{Пол}
@@ -78,6 +81,7 @@ Phineas{Финеас}
 Bunce{Бёнс}
 Gow{Гау}
 Charles Vane's{Чарльз Вейн}
+Charles Vane's Crew{Офицер Чарльза Вейна}
 Walter{Уолтер}
 Kennedy{Кеннеди}
 England{Ингленд}
@@ -86,7 +90,7 @@ Roberts{Робертс}
 George{Джордж}
 Lowther{Лаутер}
 Calico Jack{Калико Джек}
-Rackham{Рэкхем}
+Rackham{Рэкхэм}
 Edmund{Эдмунд}
 Condent{Конде}
 Christopher{Кристофер}
@@ -115,14 +119,15 @@ Dave{Дейв}
 Edna{Эдна}
 Alexander{Александр}
 Selkirk{Селкирк}
-Friday{Пятница}
-Powdermonkey{"Пороховая Обезьянка"}
+Friday{Фрайдей}
+Powdermonkey{Пороховая Обезьянка}
 Daniel{Даниель}
 De Foe{Дефо}
 Citizen{Горожанин}
 Claire{Клэр}
 Voyant{Провидица}
 Minerva{Минерва}
+Buccaneer{Пират}
 Mather-Wren{Матэ-Врэн}
 Silehard{Сайлхард}
 Sarah{Сара}

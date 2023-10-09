@@ -131,7 +131,7 @@ Burrieza{Бурриеза}
 Port Guard{Портовый Стражник}
 Silas{Сайлес}
 Simpkins{Симпкинс}
-Tipman{Типмен}
+Tipman{Типман}
 William{Уильям}
 Wanderman{Вандермэн}
 Arthur{Артур}

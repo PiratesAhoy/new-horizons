@@ -43,6 +43,7 @@ Caroline{Каролина}
 Le Rиve{Мечта}
 
 Atropos{Неотвратимая}
+Lydia{Лидия}
 
 Don Julian{Дон Жулиан}
 Alvarado{Альварадо}
@@ -552,6 +553,11 @@ Stranton{Стрэнтон}
 Phantom{Фантом}
 Cursed Vengeance{Проклятая Месть}
 Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Отправляйтесь в приключение с сокровищами и предательством, кровопролитием и местью. Время, когда пират одерживал верх, завоевывал девушку, сокровища и побеждал своих врагов. То, что вы думаете о жизни пирата, будет поставлено под сомнение, ведь они живут, любят и умирают так, как может жить только пират! По роману Брента Джексона.}
+
+Purpure{Purpure}
+Squire of the Sea{Squire of the Sea}
+Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.{Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.}
+Carnation{Carnation}
 
 Francis{Фрэнсис}
 Drake{Дрейк}

@@ -285,6 +285,19 @@ void StartStoryLine()
 						SetOfficersIndex(PChar, 1, GetCharacterIndex("RalphFawn"));
 					}
 				break;
+				case "Purpure":
+					if (HasSubstr(PChar.model, "Purpure"))
+					{
+						ch = CharacterFromID("Malcolm Hatcher");
+						ch.Dialog.Filename = "Robert Fletcher_dialog.c";
+						SetModelFromID(ch, "man8");
+						ch.name = TranslateString("","Uncle");
+						ch.lastname = TranslateString("","Gules");
+						ch.keepmodel = true;
+						if (GetDataYear() == 1830) SetCurrentDate(GetDataDay(), GetDataMonth(), 1840);
+						PChar.quest.remove_hatcher = true;
+					}
+				break;
 			}
 		break;
 

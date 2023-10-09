@@ -1,4 +1,4 @@
-string DLG_TEXT[313] = {
+string DLG_TEXT[318] = {
 "Мы прибыли в порт пиратского поселка на Невисе. Сейчас мы под флагом Веселого Роджера, поэтому проблем с местными не будет. Офицеры и часть вашей команды решили пробиваться в Чарлстаун через джунгли. Полагаю, что они не хотят быть выслеженными англичанами как предатели. Увы у вас такой возможности нет. Я не могу в полной мере отблагодарить вас за то, что вы сделали для моей команды и для меня.",
 "Капитан Чамперс был свиньей и что он хотел с вами сделать было чудовищно.",
 "Предательская собака. Вы всё видели. Что я могу сделать для вас, Капитан?",
@@ -312,4 +312,9 @@ string DLG_TEXT[313] = {
 "Хорошо. Давайте бросим здесь якорь и будем готовиться к нашему следующему путешествию.",
 "Теперь, когда мы убрали с дороги остальных членов команды, давайте вернемся на лодку. Нам нужно будет выбросить наше оружие за борт перед отплытием, оно только утяжелит лодку.",
 "Ещё раз спасибо тебе за то, что освободил меня. Что касается оружия, мы сможем найти что-нибудь после того, как доберемся до берега.",
+"Purpure, we've finally arrived in the New World. It's a land of opportunity and I look forward to hearing from you again. Sadly, I can no longer accompany you after this. I'm getting on in years.",
+"I'll miss you terribly, uncle! Take care of yourself when you get back to England.",
+"Dear uncle, is something the matter?",
+"Yes, Purpure. The wind is becoming stronger and I fear a storm is on the way.",
+"I think I'll be alright, uncle. Don't worry about me. I can turn over a new leaf away from my father, at least.",
 };

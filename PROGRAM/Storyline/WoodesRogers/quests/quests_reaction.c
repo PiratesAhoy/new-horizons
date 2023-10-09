@@ -2019,7 +2019,7 @@ void QuestComplete(string sQuestName)
 
 			SetNextWind("E",30);
 			SetServedNation(ENGLAND);
-			GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+			GiveShip2Character(pchar,"SloopBermuda",TranslateString("","Marquis"),-1,PIRATE,true,true);
 			SetCharacterShipLocation(Pchar, "Redmond_port");
 
 			Locations[FindLocation("Tutorial_Deck")].WeaponsLocker.items.blade1 = 1;
@@ -7324,7 +7324,7 @@ void QuestComplete(string sQuestName)
 				Characters[GetCharacterIndex("wr_voy")].dialog.CurrentNode  = "hint_green_door";
 
 				Locations[FindLocation("Tavern_storeroom")].reload.l4.disable = 0;//to Windem room
-				locations[FindLocation("Charles_Windem_room")].id.label = "Charles Windem's room";
+				locations[FindLocation("Charles_Windem_room")].id.label = TranslateString("","Charles Windem's room");
 				Locations[FindLocation("Tavern_storeroom")].reload.l3.disable = 1;//to library
 
 				Locations[FindLocation("wr_library")].locators_radius.reload.reload2 = 1.0;
@@ -7585,7 +7585,7 @@ void QuestComplete(string sQuestName)
 			Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"Woodes Rogers' kitchen"));
 			PlaySound("INTERFACE\closed_locked_door.wav");
 			TakeItemFromCharacter(Pchar, "key5");
-			locations[FindLocation("wr_kitchen")].id.label = "Woodes Rogers' kitchen";
+			locations[FindLocation("wr_kitchen")].id.label = TranslateString("","Woodes Rogers' kitchen");
 			Locations[FindLocation("Redmond_tavern")].reload.l2.disable = 1;//to tavern_upstairs
 			Locations[FindLocation("JRH_tavern_upstairs")].reload.l2.disable = 1;//to wr bed
 
@@ -7658,7 +7658,7 @@ void QuestComplete(string sQuestName)
 
 			Locations[FindLocation("Redmond_Town_01")].reload.l16.go = "WR_kitchen";
 			Locations[FindLocation("Redmond_Town_01")].reload.l16.emerge = "reload1";
-			Locations[FindLocation("Redmond_Town_01")].reload.l16.label = "Woodes Rogers' kitchen.";
+			Locations[FindLocation("Redmond_Town_01")].reload.l16.label = TranslateString("","Woodes Rogers' kitchen.");
 			Locations[FindLocation("Redmond_Town_01")].reload.l16.disable = 0;
 		break;
 
@@ -7705,7 +7705,7 @@ void QuestComplete(string sQuestName)
 				EquipCharacterByItem(Pchar, "pistol202");
 				Locations[FindLocation("wr_residence")].reload.l7.disable = 0;//open to armory
 				ChangeCharacterAddressGroup(CharacterFromID("wr_voy"), "none", "", "");//doc
-				locations[FindLocation("wr_armory")].id.label = "Woodes Rogers' armory";
+				locations[FindLocation("wr_armory")].id.label = TranslateString("","Woodes Rogers' armory");
 
 				LAi_QuestDelay("pistol2", 0.1);
 			}
@@ -8374,7 +8374,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_UsurerHouse")].locators_radius.randitem.randitem3 = 1.1;
 			Locations[FindLocation("Redmond_UsurerHouse")].locators_radius.box.box2 = 0.0001;
 			Locations[FindLocation("Redmond_UsurerHouse")].locators_radius.reload.reload4 = 0.0001;
-			locations[FindLocation("Loanshark_cellar")].id.label = "Loanshark cellar";
+			locations[FindLocation("Loanshark_cellar")].id.label = TranslateString("","Loanshark cellar");
 
 			LAi_QuestDelay("stick_on_floorhatch1", 0.1);
 		break;
@@ -8489,7 +8489,7 @@ void QuestComplete(string sQuestName)
 				Locations[FindLocation("Redmond_tavern")].reload.l1.disable = 1;//to town
 				Locations[FindLocation("Redmond_town_01")].reload.l31.disable = 1;//to tavern from balcony
 				Locations[FindLocation("Redmond_tavern")].reload.l3.disable = 1;//to balcony
-				locations[FindLocation("Redmond_tavern")].id.label = "CLOSED BECAUSE OF ILLNESS - Charles Windem innkeeper";
+				locations[FindLocation("Redmond_tavern")].id.label = TranslateString("","CLOSED BECAUSE OF ILLNESS - Charles Windem innkeeper");
 
 				Locations[FindLocation("Redmond_tavern")].reload.l2.disable = 0;//to room upstairs
 				Locations[FindLocation("JRH_tavern_upstairs")].reload.l2.disable = 0;//to wr bed
@@ -8510,7 +8510,7 @@ void QuestComplete(string sQuestName)
 
 				ChangeCharacterAddressGroup(CharacterFromID("Dave Edna"), "wr_shop", "sit", "sit1");
 
-				locations[FindLocation("storeroom_attic")].id.label = "Storeroom attic";
+				locations[FindLocation("storeroom_attic")].id.label = TranslateString("","Storeroom attic");
 
 				LAi_QuestDelay("pistol3_start", 0.1);
 			}
@@ -8867,7 +8867,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(Pchar);
 
 			Pchar.quest.wr_quest2 = "shut_up_Caroline";
-			locations[FindLocation("ck_bedroom")].id.label = "Caroline K's bedroom";
+			locations[FindLocation("ck_bedroom")].id.label = TranslateString("","Caroline K's bedroom");
 			Locations[FindLocation("wr_kitchen")].reload.l5.disable = 0;//kitchen to Car bed
 
 			LAi_QuestDelay("key8", 0.1);
@@ -8991,14 +8991,14 @@ void QuestComplete(string sQuestName)
 			PlaySound("VOICE\ENGLISH\gr_WR_friend2.wav");
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l1.disable = 1;//to town
 			Locations[FindLocation("Redmond_Town_01")].reload.l10.disable = 1;//to LS
-			locations[FindLocation("Redmond_UsurerHouse")].id.label = "TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager";
+			locations[FindLocation("Redmond_UsurerHouse")].id.label = TranslateString("","TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager");
 			ChangeCharacterAddressGroup(CharacterFromID("Redmond Usurer"), "none", "", "");
 			ChangeCharacterAddressGroup(CharacterFromID("Dave Edna"), "none", "", "");
 
 			Locations[FindLocation("Tavern_storeroom")].reload.l4.disable = 0;//to Windem room
 			Locations[FindLocation("Charles_Windem_room")].reload.l2.disable = 0;//to attic
-			locations[FindLocation("storeroom_attic")].id.label = "Storeroom attic";
-			locations[FindLocation("storeroom_attic")].id.label = "Storeroom attic";
+			locations[FindLocation("storeroom_attic")].id.label = TranslateString("","Storeroom attic");
+			locations[FindLocation("storeroom_attic")].id.label = TranslateString("","Storeroom attic");
 
 			locations[FindLocation("Redmond_tavern")].type = "house";
 			Locations[FindLocation("Redmond_tavern")].models.always.locators = "LT_l_JRH3";//without characters
@@ -9217,14 +9217,14 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_library")].reload.l6.go = "Redmond_UsurerHouse";
 			Locations[FindLocation("wr_library")].reload.l6.emerge = "reload5";
 			Locations[FindLocation("wr_library")].reload.l6.autoreload = "0";
-			Locations[FindLocation("wr_library")].reload.l6.label = "Loanshark's Office.";
+			Locations[FindLocation("wr_library")].reload.l6.label = TranslateString("","Loanshark's Office.");
 			Locations[FindLocation("wr_library")].reload.l6.disable = 0;
 
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.name = "reload5";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
+			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = TranslateString("","Woodes Rogers' library");
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.disable = 0;
 
 			pchar.quest.padlock_shop.win_condition.l1 = "location";
@@ -9563,7 +9563,7 @@ void QuestComplete(string sQuestName)
 		case "shop_walkers11":
 			PlaySound("PEOPLE\run_wood.wav");
 			ChangeCharacterAddressGroup(Pchar, "wr_shop", "box", "box4");
-			locations[FindLocation("Shop_stairs")].id.label = "Rogers' Paintings Furniture & Weapons";
+			locations[FindLocation("Shop_stairs")].id.label = TranslateString("","Rogers' Paintings Furniture & Weapons");
 			LAi_QuestDelay("shop_walkers12", 1.0);
 		break;
 
@@ -9808,11 +9808,11 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Selkirk"), "wr_library", "goto", "goto6");
 			LAi_SetStayType(CharacterFromID("Selkirk"));
 			Pchar.quest.wr_gunroom = "locked";
-			locations[FindLocation("wr_gunroom")].id.label = "Officers only!";
+			locations[FindLocation("wr_gunroom")].id.label = TranslateString("","Officers only!");
 			Locations[FindLocation("wr_library")].reload.l6.disable = 1;//closed to loanshark
 			Locations[FindLocation("wr_library")].reload.l3.disable = 1;//closed to attic
 			Locations[FindLocation("wr_residence")].locators_radius.reload.reload4 = 0.0001;//to clock
-			locations[FindLocation("Shop_stairs")].id.label = "Rogers' Paintings Furniture & Weapons";
+			locations[FindLocation("Shop_stairs")].id.label = TranslateString("","Rogers' Paintings Furniture & Weapons");
 
 			Pchar.quest.wr_defoe = "start";
 			Pchar.quest.rum_water = "empty";	//start = empty
@@ -10247,8 +10247,8 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_library")].reload.l2.disable = 1;//locked to residence
 			ChangeCharacterAddressGroup(CharacterFromID("wr_voy"), "none", "", "");
 			Locations[FindLocation("wr_residence")].models.always.locators = "Res01_l_JRH1";
-			locations[FindLocation("Redmond_UsurerHouse")].id.label = "Loanshark's Office";
-			locations[FindLocation("Tavern_storeroom")].id.label = "Tavern storeroom";
+			locations[FindLocation("Redmond_UsurerHouse")].id.label = TranslateString("","Loanshark's Office");
+			locations[FindLocation("Tavern_storeroom")].id.label = TranslateString("","Tavern storeroom");
 			LAi_QuestDelay("librarian", 2.0);
 		break;
 
@@ -11639,7 +11639,7 @@ void QuestComplete(string sQuestName)
 			Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"A note falls out of the Medicine book!"));
 			PlaySound("AMBIENT\SHOP\paper.wav");
 			GiveItem2Character(Pchar, "note1");
-			locations[FindLocation("wr_study")].id.label = "Woodes Rogers' study";
+			locations[FindLocation("wr_study")].id.label = TranslateString("","Woodes Rogers' study");
 
 			LAi_QuestDelay("book26_finished2", 2.0);
 		break;
@@ -12909,7 +12909,7 @@ void QuestComplete(string sQuestName)
 		break;
 //...................................................................................................................
 		case "reputation_mother":
-			locations[FindLocation("wr_mother_stairs")].id.label = "Grandma's stairs";
+			locations[FindLocation("wr_mother_stairs")].id.label = TranslateString("","Grandma's stairs");
 			LAi_QuestDelay("office_ladder", 0.1);
 			LAi_SetActorType(CharacterFromID("grandma"));
 			LAi_ActorGoToLocator(characterFromID("grandma"), "goto", "goto7", "reputation_mother1", 3.0);
@@ -12938,7 +12938,7 @@ void QuestComplete(string sQuestName)
 
 		case "reputation_up":
 			//from grandma rogers dialog
-			locations[FindLocation("wr_shop_office")].id.label = "Shop office";
+			locations[FindLocation("wr_shop_office")].id.label = TranslateString("","Shop office");
 
 			ChangeCharacterReputation(pchar, 40);//5p per level. this should give 'Hero'
 			PlaySound("VOICE\ENGLISH\blaze_hah.wav");
@@ -13191,7 +13191,7 @@ void QuestComplete(string sQuestName)
 			bDisableFastReload = 0;
 			locations[FindLocation("Loanshark_cellar")].id.label = "";
 			Locations[FindLocation("Redmond_Town_01")].models.always.locators = "Red01_l_JRH4";	//bridge visible
-			locations[FindLocation("Redmond_tavern")].id.label = "Redmond tavern";
+			locations[FindLocation("Redmond_tavern")].id.label = TranslateString("","#stown_name# tavern");
 			Locations[FindLocation("Tavern_storeroom")].reload.l2.disable = 0;//open to tavern
 			ChangeCharacterAddressGroup(CharacterFromID("Charles Windem"), "none", "", "");//temp gone
 
@@ -13200,10 +13200,10 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_kitchen")].reload.l3.disable = 0;//open to food cellar
 			Locations[FindLocation("wr_kitchen")].reload.l4.disable = 1;//closed to bootyroom
 			Locations[FindLocation("Shop_stairs")].reload.l4.disable = 1;//closed to shop
-			locations[FindLocation("Shop_stairs")].id.label = "Rogers' Paintings Furniture & Weapons";
+			locations[FindLocation("Shop_stairs")].id.label = TranslateString("","Rogers' Paintings Furniture & Weapons");
 			ChangeCharacterAddressGroup(CharacterFromID("Woodes Rogers"), "wr_kitchen", "goto", "goto6");
 			LAi_SetStayType(CharacterFromID("Woodes Rogers"));
-			locations[FindLocation("wr_food_supply")].id.label = "Woodes Rogers' food cellar";
+			locations[FindLocation("wr_food_supply")].id.label = TranslateString("","Woodes Rogers' food cellar");
 			Pchar.quest.gas_level = "0";			//start value
 			Pchar.quest.very_foggy_mine = "no";		//start value
 			Pchar.quest.key14_check = "not_started";	//start value
@@ -13237,7 +13237,7 @@ void QuestComplete(string sQuestName)
 			AddQuestRecord("Woodes_Rogers_reward_6", "1");
 			DeleteQuestHeader("Woodes_Rogers_reward_5");
 
-			locations[FindLocation("wr_crew")].id.label = "Crew's quarter";
+			locations[FindLocation("wr_crew")].id.label = TranslateString("","Crew's quarter");
 			PlaySound("VOICE\ENGLISH\gr_WR_friend2.wav");
 			LAi_SetActorType(CharacterFromID("Woodes Rogers"));
 			LAi_ActorGoToLocator(characterFromID("Woodes Rogers"), "goto", "goto9", "mission6_given1", 7.0);//was goto9 hmm?
@@ -13303,7 +13303,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("wr_boc1"), "Redmond_Town_04", "goto", "goto_48");
 			ChangeCharacterAddressGroup(CharacterFromID("wr_kor"), "Redmond_Town_04", "goto", "goto_49");
 			Locations[FindLocation("wr_kitchen")].reload.l2.disable = 1;//to wr_bed
-			locations[FindLocation("wr_mine")].id.label = "Redmond old mine";//off from start
+			locations[FindLocation("wr_mine")].id.label = TranslateString("","Redmond old mine");//off from start
 			Locations[FindLocation("Redmond_Town_04")].reload.l19.disable = 0;//open from town to crew
 			Locations[FindLocation("Redmond_Town_01")].reload.l26.disable = 1;//town to tavern storeroom
 
@@ -13481,7 +13481,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorTurnToLocator(Pchar, "box", "box10");
 			PlaySound("INTERFACE\key_unlock.wav");
 			Pchar.quest.mine_enabled = "yes";
-			locations[FindLocation("wr_mine")].id.label = "Port Royal old mine";
+			locations[FindLocation("wr_mine")].id.label = TranslateString("","Port Royal old mine");
 
 			LAi_QuestDelay("mine_open2", 1.0);
 		break;
@@ -14091,7 +14091,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_UsurerHouse")].locators_radius.reload.locator1 = 1.0;
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l2.disable = 0;
 
-			locations[FindLocation("wr_shop")].id.label = "Rogers' Paintings Furniture & Weapons";
+			locations[FindLocation("wr_shop")].id.label = TranslateString("","Rogers' Paintings Furniture & Weapons");
 			Locations[FindLocation("Redmond_UsurerHouse")].image = "";
 			DoQuestReloadToLocation("wr_shop", "reload", "reload6", "after_unlock_shop");
 		break;
@@ -14131,12 +14131,12 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
 			Locations[FindLocation("Redmond_Town_01")].reload.l26.emerge = "reload1";
 			Locations[FindLocation("Redmond_Town_01")].reload.l26.autoreload = "0";
-			Locations[FindLocation("Redmond_Town_01")].reload.l26.label = "Tavern storeroom.";
+			Locations[FindLocation("Redmond_Town_01")].reload.l26.label = TranslateString("","Tavern storeroom");
 
 			Pchar.quest.wr_elevator = "up";
 			Locations[FindLocation("wr_shop")].models.always.locators = "residence05_locators_JRH_Lup";
 			Locations[FindLocation("Redmond_Town_01")].reload.l23.disable = 1;//reload6 to terrace
-			locations[FindLocation("Redmond_UsurerHouse")].id.label = "TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager";
+			locations[FindLocation("Redmond_UsurerHouse")].id.label = TranslateString("","TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager");
 
 			ChangeCharacterAddressGroup(CharacterFromID("grandma"), "wr_mother", "goto", "goto2");
 			LAi_SetStayType(CharacterFromID("grandma"));
@@ -17485,7 +17485,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(Pchar);
 			Locations[FindLocation("wr_church_attic_stairs")].reload.l2.disable = 1;	//to attic
 			Locations[FindLocation("wr_church_inside")].reload.l8.disable = 0;		//chapel stairs
-			locations[FindLocation("wr_chapel_stairs")].id.label = "Chapel stairs";
+			locations[FindLocation("wr_chapel_stairs")].id.label = TranslateString("","Chapel stairs");
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap19"), "wr_church_inside", "goto", "goto11");//crew
 
 			LAi_QuestDelay("chapel_prisoners", 1.5);
@@ -17625,10 +17625,10 @@ void QuestComplete(string sQuestName)
 
 			Locations[FindLocation("wr_mine")].reload.l2.go = "Loanshark_cellar";
 			Locations[FindLocation("wr_mine")].reload.l2.emerge = "reload1";
-			Locations[FindLocation("wr_mine")].reload.l2.label = "Loanshark cellar.";
+			Locations[FindLocation("wr_mine")].reload.l2.label = TranslateString("","Loanshark cellar.");
 			Locations[FindLocation("wr_mine")].reload.l2.disable = 0;
 			Locations[FindLocation("Loanshark_cellar")].reload.l1.disable = 0;
-			locations[FindLocation("Loanshark_cellar")].id.label = "Loanshark cellar";
+			locations[FindLocation("Loanshark_cellar")].id.label = TranslateString("","Loanshark cellar");
 			Locations[FindLocation("Redmond_UsurerHouse")].models.always.locators = "ss_l_JRH3";
 			LAi_SetPlayerType(Pchar);
 			SetCurrentTime(9.00, 0);
@@ -17652,7 +17652,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_Town_01")].reload.l13.disable = 1;	//to governor (kidnapped)
 			Locations[FindLocation("Redmond_Town_01")].reload.l16.go = "WR_kitchen";
 			Locations[FindLocation("Redmond_Town_01")].reload.l16.emerge = "reload1";
-			Locations[FindLocation("Redmond_Town_01")].reload.l16.label = "Woodes Rogers' kitchen.";
+			Locations[FindLocation("Redmond_Town_01")].reload.l16.label = TranslateString("","Woodes Rogers' kitchen.");
 			Locations[FindLocation("Redmond_Town_01")].reload.l16.disable = 0;	//to kitchen
 			Locations[FindLocation("Redmond_Town_01")].reload.l23.disable = 1;	//to terrace
 			Locations[FindLocation("Redmond_Town_01")].reload.l26.disable = 0;	//to tavern storeroom
@@ -23545,13 +23545,13 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_Town_exit_2")].reload.l1.disable = 0;	//to town
 			Locations[FindLocation("Redmond_Town_exit_2")].reload.l5.disable = 1;	//to well
 
-			locations[FindLocation("wr_crypt")].id.label = "Port Royal catacombs";
-			locations[FindLocation("WR_kitchen")].id.label = "Woodes Rogers' kitchen";
-			locations[FindLocation("Tavern_storeroom")].id.label = "Tavern storeroom";
-			locations[FindLocation("Shop_stairs")].id.label = "Rogers' Paintings Furniture & Weapons";
-			locations[FindLocation("wr_crew")].id.label = "Crew's quarter";
-			locations[FindLocation("wr_library")].id.label = "Woodes Rogers' library";
-			locations[FindLocation("Loanshark_cellar")].id.label = "Loanshark cellar";
+			locations[FindLocation("wr_crypt")].id.label = TranslateString("","Port Royal catacombs");
+			locations[FindLocation("WR_kitchen")].id.label = TranslateString("","Woodes Rogers' kitchen");
+			locations[FindLocation("Tavern_storeroom")].id.label = TranslateString("","Tavern storeroom");
+			locations[FindLocation("Shop_stairs")].id.label = TranslateString("","Rogers' Paintings Furniture & Weapons");
+			locations[FindLocation("wr_crew")].id.label = TranslateString("","Crew's quarter");
+			locations[FindLocation("wr_library")].id.label = TranslateString("","Woodes Rogers' library");
+			locations[FindLocation("Loanshark_cellar")].id.label = TranslateString("","Loanshark cellar");
 
 			Locations[FindLocation("Redmond_shipyard")].locators_radius.officers.reload2_1 = 2.0;
 
@@ -26653,10 +26653,10 @@ void QuestComplete(string sQuestName)
 
 				Locations[FindLocation("wr_farm_alchemy2")].reload.l2.disable = 0;
 				Locations[FindLocation("wr_farm_alchemy2")].reload.l3.disable = 0;
-				locations[FindLocation("wr_farm_booty2")].id.label = "Rogers' secret storeroom";
+				locations[FindLocation("wr_farm_booty2")].id.label = TranslateString("","Rogers' secret storeroom");
 
-				locations[FindLocation("wr_farm_servant")].id.label = "Minervas room";
-				locations[FindLocation("wr_farm_corridor")].id.label = "Rogers' passage";
+				locations[FindLocation("wr_farm_servant")].id.label = TranslateString("","Minervas room");
+				locations[FindLocation("wr_farm_corridor")].id.label = TranslateString("","Rogers' passage");
 
 				Locations[FindLocation("wr_farm_alchemy")].locators_radius.box.box7 = 0.5;	//mixtable big bottle
 				locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "bottle_LE0";	//should be on here
@@ -33936,16 +33936,16 @@ void QuestComplete(string sQuestName)
 
 			PlaySound("INTERFACE\closed_locked_door.wav");
 
-			locations[FindLocation("wr_mine")].id.label = "Port Royal old mine";
-			locations[FindLocation("wr_kitchen")].id.label = "Woodes Rogers' kitchen";
-			locations[FindLocation("wr_crew")].id.label = "Crew's quarter";
-			locations[FindLocation("ck_bedroom")].id.label = "Caroline K's bedroom";
-			locations[FindLocation("wr_friday")].id.label = "Friday's room";
-			locations[FindLocation("church_wine_cellar")].id.label = "Church wine cellar";
+			locations[FindLocation("wr_mine")].id.label = TranslateString("","Port Royal old mine");
+			locations[FindLocation("wr_kitchen")].id.label = TranslateString("","Woodes Rogers' kitchen");
+			locations[FindLocation("wr_crew")].id.label = TranslateString("","Crew's quarter");
+			locations[FindLocation("ck_bedroom")].id.label = TranslateString("","Caroline K's bedroom");
+			locations[FindLocation("wr_friday")].id.label = TranslateString("","Friday's room");
+			locations[FindLocation("church_wine_cellar")].id.label = TranslateString("","Church wine cellar");
 
-			locations[FindLocation("wr_kitchen")].id.label = "Woodes Rogers' kitchen";
-			locations[FindLocation("wr_mine")].id.label = "Redmond old mine";
-			locations[FindLocation("wr_kitchen")].id.label = "Woodes Rogers' kitchen";
+			locations[FindLocation("wr_kitchen")].id.label = TranslateString("","Woodes Rogers' kitchen");
+			locations[FindLocation("wr_mine")].id.label = TranslateString("","Redmond old mine");
+			locations[FindLocation("wr_kitchen")].id.label = TranslateString("","Woodes Rogers' kitchen");
 
 			Locations[FindLocation("Loanshark_cellar")].environment.weather = "true";
 			//SetNextWeather("Medium Foggy Mine");
@@ -34171,7 +34171,7 @@ void QuestComplete(string sQuestName)
 		case "friday_room17":
 			PlaySound("INTERFACE\closed_door.wav");
 			ChangeCharacterAddressGroup(CharacterFromID("Selkirk"), "wr_booty", "goto", "goto14");
-			locations[FindLocation("wr_wine_cellar")].id.label = "Roger's wine cellar";
+			locations[FindLocation("wr_wine_cellar")].id.label = TranslateString("","Roger's wine cellar");
 			Locations[FindLocation("wr_food_supply")].reload.l5.disable = 0;		//finally open
 			LAi_SetPlayerType(Pchar);
 
@@ -34627,7 +34627,7 @@ void QuestComplete(string sQuestName)
 		case "steplock_churchcellar1":
 			PlaySound("INTERFACE\step_open.wav");
 			Locations[FindLocation("church_wine_cellar")].reload.l1.disable = 0;
-			//locations[FindLocation("church_choir")].id.label = "Port Royal Church Choir";
+			//locations[FindLocation("church_choir")].id.label = TranslateString("","Port Royal Church Choir");
 			Locations[FindLocation("church_choir")].reload.l4.disable = 0;
 
 			LAi_QuestDelay("steplock_churchcellar2", 35.0);
@@ -34708,7 +34708,7 @@ void QuestComplete(string sQuestName)
 				GiveItem2Character(characterFromID("wr_boc5"), "bladeanchor");
 				EquipCharacterbyItem(characterFromID("wr_boc5"), "bladeanchor");
 
-				locations[FindLocation("church_choir")].id.label = "Port Royal Church Choir";
+				locations[FindLocation("church_choir")].id.label = TranslateString("","Port Royal Church Choir");
 			}
 
 			LAi_QuestDelay("church_wine_cellar_water_out3", 1.0);
@@ -34771,7 +34771,7 @@ void QuestComplete(string sQuestName)
 
 		case "switch_weather_wine_cellars1":
 			Locations[FindLocation("wr_wine_cellar")].image = "wr_wine_cellar";
-			locations[FindLocation("wr_wine_cellar")].id.label = "Roger's wine cellar";
+			locations[FindLocation("wr_wine_cellar")].id.label = TranslateString("","Roger's wine cellar");
 
 			if(locations[FindLocation("church_wine_cellar")].environment.sea == "true")
 			{
@@ -34798,7 +34798,7 @@ void QuestComplete(string sQuestName)
 		case "switch_weather_wine_cellars3":
 			//SetNextWeather("Medium Foggy Mine");
 			Locations[FindLocation("church_wine_cellar")].image = "church_wine_cellar";
-			locations[FindLocation("church_wine_cellar")].id.label = "Church wine cellar";
+			locations[FindLocation("church_wine_cellar")].id.label = TranslateString("","Church wine cellar");
 
 			pchar.quest.switch_weather_wine_cellars.win_condition.l1 = "location";
 			pchar.quest.switch_weather_wine_cellars.win_condition.l1.location = "wr_wine_cellar";
@@ -34993,14 +34993,14 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("fake_father_Bernard"), "Redmond_church", "goto", "goto11");
 			LAi_SetPriestType(CharacterFromID("fake_father_Bernard"));
 
-			locations[FindLocation("church_wine_cellar")].id.label = "Church wine cellar";
-			locations[FindLocation("church_choir")].id.label = "Port Royal Church Choir";
+			locations[FindLocation("church_wine_cellar")].id.label = TranslateString("","Church wine cellar");
+			locations[FindLocation("church_choir")].id.label = TranslateString("","Port Royal Church Choir");
 			Locations[FindLocation("church_choir")].reload.l4.disable = 1;			//to wine cellar
 
 			Locations[FindLocation("Redmond_church")].reload.l1.disable = 1;		//to town
 			Locations[FindLocation("Redmond_church")].reload.l3.disable = 1;		//to crypt
 			Locations[FindLocation("Redmond_church")].models.always.locators = "Church_l_JRH";
-			locations[FindLocation("wr_crypt")].id.label = "Port Royal catacombs";
+			locations[FindLocation("wr_crypt")].id.label = TranslateString("","Port Royal catacombs");
 			Locations[FindLocation("wr_crypt")].models.always.locators = "d01_l_JRH2";	//mummies
 
 			Locations[FindLocation("wr_animists")].models.always.locators = "scave_l_JRH_ON5";
@@ -35008,12 +35008,12 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_animists")].filespath.textures = "locations\inside\ANIMISTS_Cave\mandala5";
 
 			Locations[FindLocation("wr_animists")].reload.l1.disable = 0;		//to crypt open????
-			locations[FindLocation("wr_crypt")].id.label = "Port Royal catacombs";
+			locations[FindLocation("wr_crypt")].id.label = TranslateString("","Port Royal catacombs");
 			Locations[FindLocation("wr_animists")].reload.l2.disable = 1;		//to animists_stairs
 
-			locations[FindLocation("wr_animists_stairs")].id.label = "Temple stairs";
-			locations[FindLocation("wr_chapel_stairs")].id.label = "Chapel stairs";
-			locations[FindLocation("wr_sacristy")].id.label = "Sacristy";
+			locations[FindLocation("wr_animists_stairs")].id.label = TranslateString("","Temple stairs");
+			locations[FindLocation("wr_chapel_stairs")].id.label = TranslateString("","Chapel stairs");
+			locations[FindLocation("wr_sacristy")].id.label = TranslateString("","Sacristy");
 
 			ChangeCharacterAddressGroup(CharacterFromID("prisoner_Silehard"), "none", "", "");
 			ChangeCharacterAddressGroup(CharacterFromID("prisoner_Laurence_Wellman"), "none", "", "");
@@ -35932,12 +35932,12 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_animists")].reload.l1.disable = 1;		//to crypt open
 			Locations[FindLocation("wr_animists")].reload.l2.disable = 0;		//to animists_stairs
 
-			locations[FindLocation("wr_animists_stairs")].id.label = "Temple stairs";
-			locations[FindLocation("wr_chapel_stairs")].id.label = "Chapel stairs";
-			locations[FindLocation("wr_sacristy")].id.label = "Sacristy";
+			locations[FindLocation("wr_animists_stairs")].id.label = TranslateString("","Temple stairs");
+			locations[FindLocation("wr_chapel_stairs")].id.label = TranslateString("","Chapel stairs");
+			locations[FindLocation("wr_sacristy")].id.label = TranslateString("","Sacristy");
 
-			locations[FindLocation("church_wine_cellar")].id.label = "Church wine cellar";
-			locations[FindLocation("church_choir")].id.label = "Port Royal Church Choir";
+			locations[FindLocation("church_wine_cellar")].id.label = TranslateString("","Church wine cellar");
+			locations[FindLocation("church_choir")].id.label = TranslateString("","Port Royal Church Choir");
 			Locations[FindLocation("church_choir")].reload.l4.disable = 1;			//to wine cellar
 
 			Locations[FindLocation("Redmond_church")].reload.l1.disable = 1;		//to town
@@ -36809,7 +36809,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "sacristy_scales_other_coin":
-			Logit(LanguageConvertString(tmpLangFileID,"Allright, I can weigh all the coins - and then what?"));
+			Logit(LanguageConvertString(tmpLangFileID,"Alright, I can weigh all the coins - and then what?"));
 			PlaySound("VOICE\ENGLISH\blaze_puh.wav");
 		break;
 	//................................................................................................
@@ -39589,13 +39589,13 @@ void QuestComplete(string sQuestName)
 			//Locations[FindLocation("wr_mine")].reload.l2.disable = 1;		//to LS cellar
 			Locations[FindLocation("wr_mine")].reload.l3.disable = 1;		//to guard room
 			Locations[FindLocation("wr_mine")].reload.l6.disable = 0;		//arrive tunnel
-			locations[FindLocation("wr_mine")].id.label = "Port Royal old mine";
+			locations[FindLocation("wr_mine")].id.label = TranslateString("","Port Royal old mine");
 
 			ChangeCharacterAddressGroup(CharacterFromID("wr_boc5"), "none", "", "");//bsw away from food supply, if not earlier
 			Locations[FindLocation("wr_food_supply")].reload.l4.disable = 0;	//'fence'
-			locations[FindLocation("wr_food_supply")].id.label = "Woodes Rogers' food cellar";
+			locations[FindLocation("wr_food_supply")].id.label = TranslateString("","Woodes Rogers' food cellar");
 
-			locations[FindLocation("wr_wine_cellar")].id.label = "Roger's wine cellar";
+			locations[FindLocation("wr_wine_cellar")].id.label = TranslateString("","Roger's wine cellar");
 
 			Locations[FindLocation("wr_kitchen")].reload.l2.disable = 1;			//to wr bedroom
 			Locations[FindLocation("wr_kitchen")].reload.l3.disable = 0;			//to food_supply
@@ -39604,10 +39604,10 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("wr_prt7"), "none", "", "");	//in kitchen
 			ChangeCharacterAddressGroup(CharacterFromID("wr_cor1_3"), "none", "", "");	//in kitchen
 			Pchar.quest.wr_kitchendoor = "stuck";
-			locations[FindLocation("wr_kitchen")].id.label = "Woodes Rogers' kitchen";
+			locations[FindLocation("wr_kitchen")].id.label = TranslateString("","Woodes Rogers' kitchen");
 
 			Locations[FindLocation("wr_crew")].reload.l5.disable = 1;			//to town
-			locations[FindLocation("wr_crew")].id.label = "Crew's quarter";
+			locations[FindLocation("wr_crew")].id.label = TranslateString("","Crew's quarter");
 			locations[FindLocation("wr_crew")].type = "Rogers_cellar";				//empty tavern
 			ChangeCharacterAddressGroup(CharacterFromID("wr_raoul"), "none", "", "");
 			ChangeCharacterAddressGroup(CharacterFromID("wr_omat1"), "none", "", "");
@@ -39639,9 +39639,9 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_booty")].reload.l3.disable = 0;
 
 			Locations[FindLocation("wr_friday")].reload.l2.disable = 0;			//window to facade
-			locations[FindLocation("wr_friday")].id.label = "Friday's room";
+			locations[FindLocation("wr_friday")].id.label = TranslateString("","Friday's room");
 
-			locations[FindLocation("ck_bedroom")].id.label = "Caroline K's bedroom";
+			locations[FindLocation("ck_bedroom")].id.label = TranslateString("","Caroline K's bedroom");
 
 			Locations[FindLocation("Redmond_UsurerHouse")].models.always.locators = "SS_l_JRH3";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l1.disable = 1;		//to town
@@ -39650,9 +39650,9 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Redmond_UsurerHouse")].type = "Rogers_neutral";			//to avoid people there at night
 
 			Locations[FindLocation("Loanshark_cellar")].reload.l1.disable = 0;		//to mine
-			locations[FindLocation("Loanshark_cellar")].id.label = "Loanshark cellar";
+			locations[FindLocation("Loanshark_cellar")].id.label = TranslateString("","Loanshark cellar");
 
-			locations[FindLocation("wr_library")].id.label = "Woodes Rogers' library";
+			locations[FindLocation("wr_library")].id.label = TranslateString("","Woodes Rogers' library");
 
 			Locations[FindLocation("Redmond_Town_01")].models.always.locators = "Red01_l_JRH7";	//was 6
 			Locations[FindLocation("Redmond_Town_01")].reload.l16.disable = 1;		//kitchen
@@ -39670,8 +39670,8 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_tavern")].reload.l3.disable = 0;		//balcony
 			Locations[FindLocation("Redmond_tavern")].reload.l6.disable = 1;		//tavern storeroom
 
-			locations[FindLocation("Tavern_storeroom")].id.label = "Tavern storeroom";
-			locations[FindLocation("Shop_stairs")].id.label = "Rogers' Paintings Furniture & Weapons";
+			locations[FindLocation("Tavern_storeroom")].id.label = TranslateString("","Tavern storeroom");
+			locations[FindLocation("Shop_stairs")].id.label = TranslateString("","Rogers' Paintings Furniture & Weapons");
 
 			LAi_SetActorType(CharacterFromID("pir_cap10"));
 			LAi_ActorRunToLocator(characterFromID("pir_cap10"), "reload", "reload2", "Vane_ladder35", 3.0);
@@ -41356,7 +41356,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_ships")].locators_radius.box.box6 = 0.0001;		//cannon down - box not visible from start
 			Locations[FindLocation("wr_ships")].locators_radius.box.box7 = 0.7;		//cannon high up
 
-			Locations[FindLocation("wr_corv_smallcabin_R")].id.label = "Cabin";
+			Locations[FindLocation("wr_corv_smallcabin_R")].id.label = TranslateString("","Cabin");
 			Locations[FindLocation("wr_corv_deck1")].models.always.locators = "deck1_l_JRH_fight";
 			Locations[FindLocation("wr_corv_deck1")].reload.l5.disable = 1;			//to weather deck
 			Locations[FindLocation("wr_corv_deck1")].reload.l4.disable = 1;			//small cab L
@@ -43394,7 +43394,8 @@ void QuestComplete(string sQuestName)
 
 		case "galleon_search9":
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload1");
-			PlaySound("OBJECTS\SHIPCHARGE\_Abandon1.wav");
+			if(LanguageGetLanguage() == "RUSSIAN") PlaySound("RUSSIAN\OBJECTS\SHIPCHARGE\_Abandon1.wav");
+			else PlaySound("OBJECTS\SHIPCHARGE\_Abandon1.wav");
 
 			LAi_QuestDelay("galleon_search10", 1.0);
 		break;
@@ -43505,7 +43506,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_gall_hold_first")].reload.l1.disable = 0;
 			Locations[FindLocation("wr_gall_hold_first")].locators_radius.reload.reload3 = 0.0001;	//stairs to irontool
 			Locations[FindLocation("wr_gall_hold_first")].models.always.l2 = "plank1";		//deck
-			Locations[FindLocation("wr_gall_hold_second")].id.label = "Cargo Hold";
+			Locations[FindLocation("wr_gall_hold_second")].id.label = TranslateString("","Cargo Hold");
 			Locations[FindLocation("wr_gall_hold_second")].reload.l2.disable = 0;			//start up to inner
 			Locations[FindLocation("wr_gall_hold_second")].locators_radius.reload.reload3 = 1.0;
 			Locations[FindLocation("wr_gall_hold_second")].reload.l2.go = "wr_gall_cap_inner";
@@ -43518,7 +43519,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_gall_deck2_stern")].reload.l4.go = "wr_gall_cap_outer";
 			Locations[FindLocation("wr_gall_deck2_stern")].reload.l4.emerge = "goto4";
 
-			Locations[FindLocation("wr_gall_cap_outer")].id.label = "Captain's deck";
+			Locations[FindLocation("wr_gall_cap_outer")].id.label = TranslateString("","Captain's deck");
 			ChangeCharacterAddressGroup(characterFromID("wr_pir9"), "none", "", "");
 
 			Locations[FindLocation("wr_gall_captain")].locators_radius.box.box1 = 0.0001;
@@ -45796,10 +45797,10 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_study")].locators_radius.box.box11 = 0.5;
 			Locations[FindLocation("wr_study")].locators_radius.goto.wr_dead = 2.0;
 
-			locations[FindLocation("Tavern_storeroom")].id.label = "Tavern storeroom";
-			locations[FindLocation("wr_study")].id.label = "Woodes Rogers' study";
-			locations[FindLocation("wr_gunroom")].id.label = "Gunroom";
-			locations[FindLocation("storeroom_attic")].id.label = "Storeroom attic";
+			locations[FindLocation("Tavern_storeroom")].id.label = TranslateString("","Tavern storeroom");
+			locations[FindLocation("wr_study")].id.label = TranslateString("","Woodes Rogers' study");
+			locations[FindLocation("wr_gunroom")].id.label = TranslateString("","Gunroom");
+			locations[FindLocation("storeroom_attic")].id.label = TranslateString("","Storeroom attic");
 
 			LAi_QuestDelay("goodbye_Vane_Pchar17", 1.0);
 
@@ -45900,7 +45901,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(characterFromID("Defoe"), "pistol201");
 			EquipCharacterbyItem(characterFromID("Defoe"), "pistol201");
 
-			locations[FindLocation("wr_library")].id.label = "Woodes Rogers' library";
+			locations[FindLocation("wr_library")].id.label = TranslateString("","Woodes Rogers' library");
 
 			locations[FindLocation(Pchar.location)].box7.items.bladelever = 4;
 			locations[FindLocation(Pchar.location)].box7.items."bladeA5" = 1;
@@ -46477,7 +46478,7 @@ void QuestComplete(string sQuestName)
 					if(CheckCharacterItem(Pchar,"mapBB1"))
 					{
 						Locations[FindLocation("wr_library")].reload.l4.disable = 0;
-						locations[FindLocation("ck_drawing_room")].id.label = "Caroline K's drawing room";
+						locations[FindLocation("ck_drawing_room")].id.label = TranslateString("","Caroline K's drawing room");
 						AddQuestRecord("Secrets", "8");
 						CloseQuestHeader("Secrets");			
 
@@ -46532,7 +46533,7 @@ void QuestComplete(string sQuestName)
 				if(CheckAttribute(Pchar,"quest.study_notebook") && Pchar.quest.study_notebook == "yes")
 				{
 					Locations[FindLocation("wr_library")].reload.l4.disable = 0;
-					locations[FindLocation("ck_drawing_room")].id.label = "Caroline K's drawing room";
+					locations[FindLocation("ck_drawing_room")].id.label = TranslateString("","Caroline K's drawing room");
 					AddQuestRecord("Secrets", "8");
 					CloseQuestHeader("Secrets");
 				}
@@ -46651,7 +46652,7 @@ void QuestComplete(string sQuestName)
 				if(CheckAttribute(Pchar,"quest.red_uniform") && Pchar.quest.red_uniform == "yes")
 				{
 					Locations[FindLocation("wr_library")].reload.l4.disable = 0;
-					locations[FindLocation("ck_drawing_room")].id.label = "Caroline K's drawing room";
+					locations[FindLocation("ck_drawing_room")].id.label = TranslateString("","Caroline K's drawing room");
 					AddQuestRecord("Secrets", "8");
 					CloseQuestHeader("Secrets");
 				}
@@ -46700,7 +46701,7 @@ void QuestComplete(string sQuestName)
 				if(CheckAttribute(Pchar,"quest.red_uniform") && Pchar.quest.red_uniform == "yes")
 				{
 					Locations[FindLocation("wr_library")].reload.l4.disable = 0;
-					locations[FindLocation("ck_drawing_room")].id.label = "Caroline K's drawing room";
+					locations[FindLocation("ck_drawing_room")].id.label = TranslateString("","Caroline K's drawing room");
 					AddQuestRecord("Secrets", "8");
 					CloseQuestHeader("Secrets");
 				}
@@ -48858,7 +48859,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("wr_man3"), "none", "", "");	//terrace guard
 			ChangeCharacterAddressGroup(characterFromID("wr_pir7"), "none", "", "");	//terrace guard
 
-			locations[FindLocation("wr_crew")].id.label = "Crew's quarter";
+			locations[FindLocation("wr_crew")].id.label = TranslateString("","Crew's quarter");
 
 			Locations[FindLocation("Redmond_UsurerHouse")].models.always.locators = "SS_l_JRH3";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l1.disable = 0;		//to town
@@ -48868,10 +48869,10 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l7.disable = 1;		//to town behind counter
 			locations[FindLocation("Redmond_UsurerHouse")].type = "house";			//reset
 
-			locations[FindLocation("Loanshark_cellar")].id.label = "Loanshark cellar";
-			locations[FindLocation("wr_library")].id.label = "Woodes Rogers' library";
+			locations[FindLocation("Loanshark_cellar")].id.label = TranslateString("","Loanshark cellar");
+			locations[FindLocation("wr_library")].id.label = TranslateString("","Woodes Rogers' library");
 
-			locations[FindLocation("Shop_stairs")].id.label = "Rogers' Paintings Furniture & Weapons";
+			locations[FindLocation("Shop_stairs")].id.label = TranslateString("","Rogers' Paintings Furniture & Weapons");
 
 		LAi_LocationFightDisable(&Locations[FindLocation("Redmond_Town_01")], true);		//so officers don't get lost
 		LAi_LocationFightDisable(&Locations[FindLocation("Redmond_Town_04")], true);
@@ -48883,7 +48884,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_Town_01")].reload.l20.disable = 1;		//LS back door
 		//	Locations[FindLocation("Redmond_Town_01")].reload.l9.close_for_night = 1;	//shipyard
 			Locations[FindLocation("Redmond_shipyard")].reload.l2.disable = 0;		//shipyard stairs
-			locations[FindLocation("shipyard_stairs")].id.label = "Shipyard stairs";
+			locations[FindLocation("shipyard_stairs")].id.label = TranslateString("","Shipyard stairs");
 			Locations[FindLocation("Shipyard_shore")].reload.l1.disable = 1;		//to docks
 			Locations[FindLocation("Shipyard_shore")].reload.l2.disable = 1;		//to docks
 		
@@ -48892,8 +48893,8 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_tavern")].reload.l4.disable = 1;		//counter: officer problems
 			Locations[FindLocation("Redmond_tavern")].reload.l6.disable = 1;		//tavern storeroom
 
-			locations[FindLocation("Tavern_storeroom")].id.label = "Tavern storeroom";
-			locations[FindLocation("wr_kitchen")].id.label = "Woodes Rogers' kitchen";
+			locations[FindLocation("Tavern_storeroom")].id.label = TranslateString("","Tavern storeroom");
+			locations[FindLocation("wr_kitchen")].id.label = TranslateString("","Woodes Rogers' kitchen");
 
 			Locations[FindLocation("Redmond_Town_01")].reload.l13.disable = 0;	//to governor's residence
 			Locations[FindLocation("Redmond_Port")].reload.l6.disable = 0;		//to harbour office
@@ -48902,8 +48903,8 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Redmond_church")].reload.l1.disable = 0;
 			locations[FindLocation("Redmond_church")].reload.l2.disable = 1;
 			locations[FindLocation("Redmond_church")].reload.l3.disable = 1;
-			locations[FindLocation("church_choir")].id.label = "Port Royal Church Choir";
-			locations[FindLocation("wr_crypt")].id.label = "Port Royal catacombs";
+			locations[FindLocation("church_choir")].id.label = TranslateString("","Port Royal Church Choir");
+			locations[FindLocation("wr_crypt")].id.label = TranslateString("","Port Royal catacombs");
 
 			Locations[FindLocation("Redmond_town_exit_2")].models.always.locators = "Redexit2_l_JRH";
 			locations[FindLocation("Redmond_town_exit_2")].reload.l5.disable = 1;		//to well
@@ -57749,7 +57750,7 @@ void QuestComplete(string sQuestName)
 		break;
 	//------------------------------------------------------------------------------------
 		case "Hands_shot_scene2":
-			logit("PILOT");
+			logit(TranslateString("","PILOT"));
 			PlaySound("VOICE\ENGLISH\windem_drunk.wav");
 
 			LAi_QuestDelay("Hands_shot_scene2_A", 2.0);
@@ -57762,14 +57763,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene3":
-			logit("EDWARD TEACH");
+			logit(TranslateString("","EDWARD TEACH"));
 			PlaySound("VOICE\ENGLISH\gr_Teach7.wav");
 
 			LAi_QuestDelay("Hands_shot_scene4", 4.0);
 		break;
 
 		case "Hands_shot_scene4":
-			logit("MERCHANT");
+			logit(TranslateString("","WR_MERCHANT"));
 			PlaySound("VOICE\ENGLISH\Poe_ok.wav");
 			PlaySound("VOICE\ENGLISH\Poe_ok.wav");
 
@@ -57784,7 +57785,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene5":
-			logit("ISRAEL HANDS");
+			logit(TranslateString("","ISRAEL HANDS"));
 			PlaySound("VOICE\ENGLISH\Odel_otherwise.wav");
 
 			LAi_QuestDelay("Hands_shot_scene5_A", 1.5);
@@ -57798,7 +57799,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene6":
-			logit("STEDE BONNET");
+			logit(TranslateString("","STEDE BONNET"));
 			PlaySound("VOICE\ENGLISH\Dave_Edna_4.wav");
 
 			LAi_QuestDelay("Hands_shot_scene6_A", 2.0);
@@ -57812,49 +57813,49 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene7":
-			logit("EDWARD TEACH");
+			logit(TranslateString("","EDWARD TEACH"));
 			PlaySound("VOICE\ENGLISH\gr_Teach4.wav");
 
 			LAi_QuestDelay("Hands_shot_scene8", 4.0);
 		break;
 
 		case "Hands_shot_scene8":
-			logit("MERCHANT");
+			logit(TranslateString("","WR_MERCHANT"));
 			PlaySound("VOICE\ENGLISH\Poe_and.wav");
 
 			LAi_QuestDelay("Hands_shot_scene9", 2.5);
 		break;
 
 		case "Hands_shot_scene9":
-			logit("EDWARD TEACH");
+			logit(TranslateString("","EDWARD TEACH"));
 			PlaySound("VOICE\ENGLISH\gr_Teach12.wav");
 
 			LAi_QuestDelay("Hands_shot_scene10", 3.5);
 		break;
 
 		case "Hands_shot_scene10":
-			logit("STEDE BONNET");
+			logit(TranslateString("","STEDE BONNET"));
 			PlaySound("VOICE\ENGLISH\Dave_Edna_2.wav");
 
 			LAi_QuestDelay("Hands_shot_scene11", 5.0);
 		break;
 
 		case "Hands_shot_scene11":
-			logit("ISRAEL HANDS");
+			logit(TranslateString("","ISRAEL HANDS"));
 			PlaySound("VOICE\ENGLISH\gr_Hands1.wav");
 
 			LAi_QuestDelay("Hands_shot_scene12", 2.0);
 		break;
 
 		case "Hands_shot_scene12":
-			logit("PILOT");
+			logit(TranslateString("","PILOT"));
 			PlaySound("VOICE\ENGLISH\Maynard_big_swindel.wav");
 
 			LAi_QuestDelay("Hands_shot_scene13", 4.5);		
 		break;
 
 		case "Hands_shot_scene13":
-			logit("EDWARD TEACH");
+			logit(TranslateString("","EDWARD TEACH"));
 			PlaySound("VOICE\ENGLISH\pir_capR3.wav");
 
 			LAi_QuestDelay("Hands_shot_scene14", 3.0);
@@ -57875,12 +57876,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene15_A":
-			logit("ISRAEL HANDS");
+			logit(TranslateString("","ISRAEL HANDS"));
 			LAi_QuestDelay("pchar_ohoh", 0.001);
 		break;
 
 		case "Hands_shot_scene16":
-			logit("MERCHANT");
+			logit(TranslateString("","WR_MERCHANT"));
 			PlaySound("VOICE\ENGLISH\Poe_smoke.wav");
 			PlaySound("PEOPLE\creak2.wav");
 			LAi_SetActorType(characterFromID("QAR_guest_merchant"));
@@ -57900,28 +57901,28 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene19":
-			logit("PILOT");
+			logit(TranslateString("","PILOT"));
 			PlaySound("VOICE\ENGLISH\Maynard_steady_there.wav");
 
 			LAi_QuestDelay("Hands_shot_scene20", 3.0);		
 		break;
 
 		case "Hands_shot_scene20":
-			logit("EDWARD TEACH");
+			logit(TranslateString("","EDWARD TEACH"));
 			PlaySound("VOICE\ENGLISH\pir_capR5.wav");
 
 			LAi_QuestDelay("Hands_shot_scene21", 5.5);
 		break;
 	
 		case "Hands_shot_scene21":
-			logit("STEDE BONNET");
+			logit(TranslateString("","STEDE BONNET"));
 			PlaySound("VOICE\ENGLISH\Dave_Edna_3.wav");
 
 			LAi_QuestDelay("Hands_shot_scene22", 2.5);
 		break;
 
 		case "Hands_shot_scene22":
-			logit("EDWARD TEACH");
+			logit(TranslateString("","EDWARD TEACH"));
 			PlaySound("VOICE\ENGLISH\pir_capR4.wav");
 
 			LAi_QuestDelay("Hands_shot_scene23", 5.0);
@@ -57956,14 +57957,14 @@ void QuestComplete(string sQuestName)
 	//______________________________________LIGHTS OUT_____________________________________________________
 
 		case "Hands_shot_scene26":
-			logit("STEDE BONNET");
+			logit(TranslateString("","STEDE BONNET"));
 			PlaySound("VOICE\ENGLISH\Dave_Edna_5.wav");
 
 			LAi_QuestDelay("Hands_shot_scene27", 4.0);
 		break;
 
 		case "Hands_shot_scene27":
-			logit("PILOT");
+			logit(TranslateString("","PILOT"));
 			PlaySound("PEOPLE\creak2.wav");
 			PlaySound("VOICE\ENGLISH\blaze_drunk2.wav");
 			LAi_SetActorType(characterFromID("QAR_guest_pilot"));
@@ -57990,14 +57991,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene29":
-			logit("ISRAEL HANDS");
+			logit(TranslateString("","ISRAEL HANDS"));
 			PlaySound("VOICE\ENGLISH\blaze_hah.wav");
 
 			LAi_QuestDelay("Hands_shot_scene30", 2.5);
 		break;
 
 		case "Hands_shot_scene30":
-			logit("EDWARD TEACH");
+			logit(TranslateString("","EDWARD TEACH"));
 			PlaySound("VOICE\ENGLISH\pir_capR2.wav");
 
 			LAi_QuestDelay("Hands_shot_scene31", 3.5);
@@ -58041,7 +58042,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene34":
-			logit("ISRAEL HANDS");
+			logit(TranslateString("","ISRAEL HANDS"));
 			PlaySound("OBJECTS\VOICES\DEAD\male\dead6.wav");
 
 			LAi_QuestDelay("Hands_shot_scene35", 2.5);
@@ -58061,7 +58062,7 @@ void QuestComplete(string sQuestName)
 		break;
 	
 		case "Hands_shot_scene37":
-			logit("ISRAEL HANDS");
+			logit(TranslateString("","ISRAEL HANDS"));
 			PlaySound("VOICE\ENGLISH\Odel_yourself_again.wav");
 
 			LAi_QuestDelay("Hands_shot_scene38", 3.5);
@@ -58168,7 +58169,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene47_C":
-			logit("A small clock that's something.");
+			logit(TranslateString("","A small clock that's something."));
 			PlaySound("VOICE\ENGLISH\Dave_Edna_6.wav");
 			
 			LAi_QuestDelay("Hands_shot_scene48_A", 3.0);
@@ -58187,7 +58188,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene48_C":
-			logit("A purse with a lot of coins - that's better!");
+			logit(TranslateString("","A purse with a lot of coins - that's better!"));
 			PlaySound("VOICE\ENGLISH\G_good_work.wav");
 			
 			LAi_QuestDelay("Hands_shot_scene49_A", 1.5);
@@ -58209,7 +58210,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene49_C":
-			logit("I found his map!!!");
+			logit(TranslateString("","I found his map!!!"));
 
 			LAi_QuestDelay("Hands_shot_scene50", 1.5);
 		break;
@@ -58222,7 +58223,7 @@ void QuestComplete(string sQuestName)
 
 		case "Hands_shot_scene51":
 			PlaySound("VOICE\ENGLISH\blaze_help.wav");
-			logit("STEDE BONNET");
+			logit(TranslateString("","STEDE BONNET"));
 			LAi_SetActorType(characterFromID("Bonnet"));
 			LAi_ActorTurnToLocator(characterFromID("Bonnet"), "reload", "reload1_back");
 			
@@ -58243,21 +58244,21 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene53_A":
-			logit("SURGEON MAJOR");
+			logit(TranslateString("","SURGEON MAJOR"));
 			PlaySound("VOICE\ENGLISH\Fre_m_c_011.wav");
 
 			LAi_QuestDelay("Hands_shot_scene53_B", 3.0);
 		break;
 
 		case "Hands_shot_scene53_B":
-			logit("STEDE BONNET");
+			logit(TranslateString("","STEDE BONNET"));
 			PlaySound("VOICE\ENGLISH\G_tell_you_what.wav");
 
 			LAi_QuestDelay("Hands_shot_scene54_A", 2.0);
 		break;
 
 		case "Hands_shot_scene54_A":
-			logit("SECOND SURGEON");
+			logit(TranslateString("","SECOND SURGEON"));
 			PlaySound("VOICE\ENGLISH\Fre_m_a_001.wav");
 			LAi_ActorTurnToLocator(characterFromID("Bonnet"), "goto", "S2");
 
@@ -58265,14 +58266,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene54_B":
-			logit("STEDE BONNET");
+			logit(TranslateString("","STEDE BONNET"));
 			PlaySound("VOICE\ENGLISH\G_have_to_try.wav");
 
 			LAi_QuestDelay("Hands_shot_scene55_A", 2.5);
 		break;
 
 		case "Hands_shot_scene55_A":
-			logit("GUNSMITH OR THIRD SURGEON");
+			logit(TranslateString("","GUNSMITH OR THIRD SURGEON"));
 			PlaySound("VOICE\ENGLISH\Fre_m_b_020.wav");
 			LAi_ActorTurnToLocator(characterFromID("Bonnet"), "goto", "S3");
 
@@ -58280,14 +58281,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene55_B":
-			logit("STEDE BONNET");
+			logit(TranslateString("","STEDE BONNET"));
 			PlaySound("VOICE\ENGLISH\G_you_could.wav");
 
 			LAi_QuestDelay("Hands_shot_scene56_A", 2.5);
 		break;
 
 		case "Hands_shot_scene56_A":
-			logit("SURGEON'S AIDE");
+			logit(TranslateString("","SURGEON'S AIDE"));
 			PlaySound("VOICE\ENGLISH\Dupin_help.wav");
 			LAi_ActorTurnToLocator(characterFromID("Bonnet"), "goto", "S4");
 
@@ -58295,7 +58296,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hands_shot_scene56_B":
-			logit("STEDE BONNET");
+			logit(TranslateString("","STEDE BONNET"));
 			PlaySound("VOICE\ENGLISH\Herrick2.wav");
 
 			LAi_QuestDelay("Hands_shot_scene_over", 3.5);	//was 2.5
@@ -58529,42 +58530,42 @@ void QuestComplete(string sQuestName)
 				switch (Pchar.malta_items)
 				{
 					case "1":
-						Logit("I have got 1 Malta Document.");
+						Logit(TranslateString("","I have got 1 Malta Document."));
 						ChangeCharacterAddressGroup(characterFromID("Maltese_soldier7"), "bb_maltains", "goto", "goto2");
 
 						LAi_QuestDelay("pchar_sigh", 1.0);
 					break;
 
 					case "2":
-						Logit("I have got 2 Malta Documents.");
+						Logit(TranslateString("","I have got 2 Malta Documents."));
 						ChangeCharacterAddressGroup(characterFromID("Maltese_red2"), "bb_maltains", "goto", "goto5");
 
 						LAi_QuestDelay("pchar_puh", 1.0);
 					break;
 
 					case "3":
-						Logit("I have got 3 Malta Documents.");
+						Logit(TranslateString("","I have got 3 Malta Documents."));
 						ChangeCharacterAddressGroup(characterFromID("Maltese_green"), "bb_maltains", "goto", "goto12");
 
 						LAi_QuestDelay("pchar_hah", 1.0);
 					break;
 
 					case "4":
-						Logit("I have got 4 Malta Documents.");
+						Logit(TranslateString("","I have got 4 Malta Documents."));
 						ChangeCharacterAddressGroup(characterFromID("Maltese_black"), "bb_maltains", "goto", "goto8");
 
 						LAi_QuestDelay("pchar_mhm", 1.0);
 					break;
 
 					case "5":
-						Logit("I have got 5 Malta Documents.");
+						Logit(TranslateString("","I have got 5 Malta Documents."));
 						ChangeCharacterAddressGroup(characterFromID("Maltese_knight"), "bb_maltains", "goto", "goto16");
 
 						LAi_QuestDelay("pchar_lets_go", 1.0);
 					break;
 
 					case "6":
-						Logit("I have got all 6 Malta Documents!");
+						Logit(TranslateString("","I have got all 6 Malta Documents!"));
 						AddQuestRecord("Malta_items","2");
 						CloseQuestHeader("Malta_items");
 
@@ -61184,7 +61185,7 @@ void QuestComplete(string sQuestName)
 		Locations[FindLocation("wr_church_inside")].locators_radius.box.box4 = 1.0;
 			Locations[FindLocation("wr_church_outside")].locators_radius.box.box1 = 0.5;
 
-			locations[FindLocation("wr_chapel_stairs")].id.label = "Chapel stairs";
+			locations[FindLocation("wr_chapel_stairs")].id.label = TranslateString("","Chapel stairs");
 
 			ChangeCharacterAddressGroup(characterFromID("pir_cap1"), "wr_church_outside", "goto", "taylor");
 			ChangeCharacterAddressGroup(characterFromID("pir_cap18"), "wr_church_outside", "goto", "rackham");
@@ -61230,7 +61231,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_church_inside")].reload.l1.emerge = "richards";
 			Locations[FindLocation("wr_church_outside")].locators_radius.box.box1 = 0.5;
 
-			locations[FindLocation("wr_chapel_stairs")].id.label = "Chapel stairs";
+			locations[FindLocation("wr_chapel_stairs")].id.label = TranslateString("","Chapel stairs");
 
 			ChangeCharacterAddressGroup(characterFromID("pir_cap1"), "wr_church_outside", "goto", "taylor");
 			ChangeCharacterAddressGroup(characterFromID("pir_cap18"), "wr_church_outside", "goto", "rackham");
@@ -62010,7 +62011,7 @@ void QuestComplete(string sQuestName)
 		case "no_rain_in_tower":
 			ChangeCharacterAddressGroup(characterFromID("Bertrand Ogeron"), "none", "", "");
 			Locations[FindLocation("Tortuga_townhall")].reload.l3.disable = 0;	//tower passage	
-			locations[FindLocation("Tortuga_tower_passage")].id.label = "Tower passage";
+			locations[FindLocation("Tortuga_tower_passage")].id.label = TranslateString("","Tower passage");
 
 			pchar.quest.no_rain_in_tower.win_condition.l1 = "location";
 			pchar.quest.no_rain_in_tower.win_condition.l1.location = "Tortuga_tower_passage";
@@ -69371,7 +69372,7 @@ void QuestComplete(string sQuestName)
 	//.................................................................................................
 		case "pchar_protection_off":
 			pchar.protection = "off";
-			logit("OFF");
+			logit(TranslateString("","OFF"));
 			//PlaySound("OBJECTS\duel\shield.wav");
 		break;
 
@@ -70011,19 +70012,19 @@ void QuestComplete(string sQuestName)
 			}
 			else
 			{
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir") LogIt("R");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir2") LogIt("T");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HOL") LogIt("D");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "ENG") LogIt("E");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "FRA") LogIt("F");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "POR") LogIt("P");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SPA") LogIt("S");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "PRE") LogIt("P");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "IRE") LogIt("I");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SWE") LogIt("S");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HO2") LogIt("D");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "AME") LogIt("A");
-				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SP2") LogIt("U");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir") LogIt(TranslateString("","R"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir2") LogIt(TranslateString("","T"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HOL") LogIt(TranslateString("","D"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "ENG") LogIt(TranslateString("","E"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "FRA") LogIt(TranslateString("","F"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "POR") LogIt(TranslateString("","P"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SPA") LogIt(TranslateString("","S"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "PRE") LogIt(TranslateString("","P"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "IRE") LogIt(TranslateString("","I"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SWE") LogIt(TranslateString("","S"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HO2") LogIt(TranslateString("","D"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "AME") LogIt(TranslateString("","A"));
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SP2") LogIt(TranslateString("","U"));
 
 				LAi_QuestDelay("Pchar_sigh", 2.0);
 				LAi_QuestDelay("BB_isl2_box4_off", 2.0);
@@ -70552,7 +70553,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("IslaMona_port")].reload.l2.go = "BB_upper_cave";
 			Locations[FindLocation("IslaMona_port")].reload.l2.emerge = "pole";
 
-			locations[FindLocation("BB_upper_cave")].id.label = "Ship.";
+			locations[FindLocation("BB_upper_cave")].id.label = TranslateString("","Ship.");
 			Pchar.treasure_removed = "yes";
 			Pchar.C_dialog = "on";
 
@@ -70620,7 +70621,7 @@ void QuestComplete(string sQuestName)
 
 			Locations[FindLocation("IslaMona_port")].reload.l2.go = "IslaMona";		//reset
 			Locations[FindLocation("IslaMona_port")].reload.l2.emerge = "Reload1";		//reset
-			locations[FindLocation("BB_upper_cave")].id.label = "Grot";			//reset
+			locations[FindLocation("BB_upper_cave")].id.label = TranslateString("","Grot");	//reset
 
 			LAi_QuestDelay("with_treasure_to_sea1", 1.0);
 		break;
@@ -81283,7 +81284,7 @@ void QuestComplete(string sQuestName)
 		//here are all start conditions for alchemy 2 part (from shipyard shore ambush)
 		case "start_alchemy2":
 
-			GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+			GiveShip2Character(pchar,"SloopBermuda",TranslateString("","Marquis"),-1,PIRATE,true,true);
 			Locations[FindLocation("Redmond_shore_03")].models.always.locators = "shore10_l_JRH1";
 		//	Locations[FindLocation("Redmond_shore_03")].locators_radius.reload.reload1 = 0.001;
 			Locations[FindLocation("wr_farm_booty")].models.always.locators = "sklad_locators_JRH2";
@@ -81300,8 +81301,8 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("wr_farm_alchemy")].models.always.l10 = "retort_E0";
 			locations[FindLocation("wr_farm_alchemy")].models.always.l11 = "top3";
 			locations[FindLocation("wr_farm_alchemy")].models.always.l12 = "glass_tube3";
-			locations[FindLocation("wr_farm_servant")].id.label = "Minervas room";
-			locations[FindLocation("wr_farm_corridor")].id.label = "Rogers' passage";
+			locations[FindLocation("wr_farm_servant")].id.label = TranslateString("","Minervas room");
+			locations[FindLocation("wr_farm_corridor")].id.label = TranslateString("","Rogers' passage");
 
 			Locations[FindLocation("wr_farm_kitchen")].items.randitem1 = "key8";		//invisible model
 			Locations[FindLocation("wr_farm_bedroom")].items.randitem7 = "key8";
@@ -81441,14 +81442,14 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_farm_alchemy")].reload.l2.disable = 0;
 
 			if(CheckAttribute(locations[FindLocation("wr_farm_alchemy2")], "id.label") 
-			&& locations[FindLocation("wr_farm_alchemy2")].id.label == "Rogers' secret laboratory")
+			&& locations[FindLocation("wr_farm_alchemy2")].id.label == TranslateString("","Rogers' secret laboratory"));
 			{ 
 				TakeItemFromCharacter(Pchar, "key36"); 
 
 				LAi_QuestDelay("Minerva_Q2", 3.0);
 			}
 
-			locations[FindLocation("wr_farm_alchemy2")].id.label = "Rogers' secret laboratory";
+			locations[FindLocation("wr_farm_alchemy2")].id.label = TranslateString("","Rogers' secret laboratory");
 
 			if(pchar.location == "wr_farm_alchemy") 
 			{
@@ -81465,14 +81466,14 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_farm_servant")].reload.l2.disable = 0;
 			
 			if(CheckAttribute(locations[FindLocation("wr_farm_alchemy2")], "id.label") 
-			&& locations[FindLocation("wr_farm_alchemy2")].id.label == "Rogers' secret laboratory")
+			&& locations[FindLocation("wr_farm_alchemy2")].id.label == TranslateString("","Rogers' secret laboratory"))
 			{ 
 				TakeItemFromCharacter(Pchar, "key36"); 
 
 				LAi_QuestDelay("Minerva_Q2", 3.0);
 			}
 
-			locations[FindLocation("wr_farm_alchemy2")].id.label = "Rogers' secret laboratory";
+			locations[FindLocation("wr_farm_alchemy2")].id.label = TranslateString("","Rogers' secret laboratory");
 
 			if(pchar.location == "wr_farm_servant") 
 			{

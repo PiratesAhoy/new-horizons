@@ -3000,6 +3000,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Mine_soldier_05"), "ENGLAND_SOLDIERS");
 			LAi_group_MoveCharacter(characterFromID("Mine_soldier_06"), "ENGLAND_SOLDIERS");
 			SetTownFortCommander("Greenford", characterFromID("Greenford Commander"));
+			SetTownName("Greenford", "Bridgetown");	// In case the player renamed the town while it was Personal
 			CaptureTownForNation("Greenford", ENGLAND);
 			ChangeCharacterAddressGroup(characterFromID("Greenford Commander"), "Oxbay", "reload", "reload_fort1");
 
@@ -3616,13 +3617,13 @@ void QuestComplete(string sQuestName)
 //			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "Clement_home";
 
 			// KK: Swap cursed Pearl with normal Pearl -->
-			if (GetCharacterShipID(PChar) == SHIP_CURSED) GiveShip2Character(pchar, "BlackPearl", "Black Pearl", -1, PIRATE, true, true);
+			if (GetCharacterShipID(PChar) == SHIP_CURSED) GiveShip2Character(pchar, "BlackPearl", TranslateString("","Black Pearl"), -1, PIRATE, true, true);
 			iPassenger = GetCompanionIndex(PChar, 1);
-			if (iPassenger > 0 && GetCharacterShipID(&Characters[iPassenger]) == SHIP_CURSED) GiveShip2Character(&Characters[iPassenger], "BlackPearl", "Black Pearl", -1, PIRATE, true, true);
+			if (iPassenger > 0 && GetCharacterShipID(&Characters[iPassenger]) == SHIP_CURSED) GiveShip2Character(&Characters[iPassenger], "BlackPearl", TranslateString("","Black Pearl"), -1, PIRATE, true, true);
 			iPassenger = GetCompanionIndex(PChar, 2);
-			if (iPassenger > 0 && GetCharacterShipID(&Characters[iPassenger]) == SHIP_CURSED) GiveShip2Character(&Characters[iPassenger], "BlackPearl", "Black Pearl", -1, PIRATE, true, true);
+			if (iPassenger > 0 && GetCharacterShipID(&Characters[iPassenger]) == SHIP_CURSED) GiveShip2Character(&Characters[iPassenger], "BlackPearl", TranslateString("","Black Pearl"), -1, PIRATE, true, true);
 			iPassenger = GetCompanionIndex(PChar, 3);
-			if (iPassenger > 0 && GetCharacterShipID(&Characters[iPassenger]) == SHIP_CURSED) GiveShip2Character(&Characters[iPassenger], "BlackPearl", "Black Pearl", -1, PIRATE, true, true);
+			if (iPassenger > 0 && GetCharacterShipID(&Characters[iPassenger]) == SHIP_CURSED) GiveShip2Character(&Characters[iPassenger], "BlackPearl", TranslateString("","Black Pearl"), -1, PIRATE, true, true);
 			// KK: Swap cursed Pearl with normal Pearl <--
 
 			Reinit_KhaelRoa();							// Enable Khael Roa as personal base
@@ -5078,8 +5079,11 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "kill_ferro_cerezo_complete":
-			pchar.quest.main_line = "compramat_bul_bul";
-			AddQuestrecord("search_danielle", 8);
+			if (pchar.quest.main_line != "compramat_done")
+			{
+				pchar.quest.main_line = "compramat_bul_bul";
+				AddQuestrecord("search_danielle", 8);
+			}
 		break;
 
 		case "abording_ferro_cerezo_complete":
@@ -5969,7 +5973,8 @@ void QuestComplete(string sQuestName)
 
 		case "wait_for_night_in_shore":
 			SetCurrentTime(23, 0);
-			LAi_Fade("", "to_secret_oxbay_shore_complete2");
+		//	LAi_Fade("", "to_secret_oxbay_shore_complete2");
+			DoQuestReloadToLocation("Redmond_shore_01", "reload", "reload1", "to_secret_oxbay_shore_complete2");
 		break;
 
 		case "exit_after_speak_with_rheims":
@@ -6958,6 +6963,7 @@ void QuestComplete(string sQuestName)
 
 			pchar.quest.kill_ferro_cerezo.win_condition.l1 = "NPC_Death";
 			pchar.quest.kill_ferro_cerezo.win_condition.l1.character = "ferro cerezo";
+			pchar.quest.kill_ferro_cerezo.win_condition.l2 = "SeaEnter";
 			pchar.quest.kill_ferro_cerezo.win_condition = "kill_ferro_cerezo_complete";
 
 			pchar.quest.abording_ferro_cerezo.win_condition.l1 = "Character_Capture";

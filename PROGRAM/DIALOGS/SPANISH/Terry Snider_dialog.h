@@ -115,7 +115,7 @@ string DLG_TEXT[153] = {
 "Sí. Mi hermano se metió en negocios con ellos después de hacer algunos favores al sacerdote de #sRedmond#.",
 "Ya veo. ¿Hay algo más que puedas decirme de ellos?",
 "¿Por qué preguntas por ellos, #smistah#? De esos no puede salir nada bueno.",
-"Han desparecido algunos niños, y todos los indicios parecen apuntar en su dirección.",
+"Han desaparecido algunos niños, y todos los indicios parecen apuntar en su dirección.",
 "Esos demonios son malos, malos, malos, camarada. ¿De verdad vas a ir tras ellos?",
 "Hay dinero en juego.",
 "Mataron a mi hermano, #smistah#. Los odio más que a nada, pero no iría en su busca ni por todo el oro del Caribe. Pero si tú quieres dejarte matar por oro, camarada, entonces ve a hablar con el #sFatherBernard# en #sRedmond#. Tampoco es un buen hombre, pero puede que sepa dónde están esos demonios.",

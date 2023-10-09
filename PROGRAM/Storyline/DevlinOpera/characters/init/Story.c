@@ -221,6 +221,45 @@ void CreateStoryCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
+	ch.old.name = "Beatrice";
+	ch.old.lastname = "Devlin";
+	ch.name = TranslateString("","Beatrice");
+	ch.lastname = TranslateString("","Devlin");
+	ch.id		= "Fake Bea";
+	ch.model = "Beatrice";
+	ch.model.animation = "Beatrice";
+	ch.sex = "woman";
+	ch.sound_type = "female_citizen";
+	GiveItem2Character(ch, "blade47");
+	ch.equip.blade = "blade47";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Fake Bea_dialog.c";
+	ch.greeting = "";
+	ch.rank 	= 20;
+	ch.reputation = "60";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "4";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "5";
+	ch.skill.Sneak = "4";
+	ch.money = "1000";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.quest.officertype = OFFIC_TYPE_CIVILIAN;
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+//========================================== PIRATES IN TURKS
+
 	ch.old.name = "Short Jack";
 	ch.old.lastname = "Gold";
 	ch.name = TranslateString("", "Short Jack");

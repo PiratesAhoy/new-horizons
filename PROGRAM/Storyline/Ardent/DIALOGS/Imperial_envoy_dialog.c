@@ -194,7 +194,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "santiago_guard":
-			Preprocessor_Add("person", PChar.sex);
+			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 			dialog.text = DLG_TEXT[58] + GetMyFullName(NPChar) + DLG_TEXT[59];
 			link.l1 = "";
 			link.l1.go = "exit";

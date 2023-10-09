@@ -1,5 +1,5 @@
 string DLG_TEXT[4] = {
-"Si, si, lo se, me parezco a Vincent Bethune, lo acto todo el tiempo porque es mi hermano gemelo. !Asi que habla con la mano!",
-"En serio? No habia notado un parecido.",
+"Sí, sí, lo sé, me parezco a Vincent Bethune. Me lo dicen todo el tiempo porque es mi hermano gemelo. ¡Así que díselo a la mano!",
+"¿En serio? No había notado el parecido.",
 
 };

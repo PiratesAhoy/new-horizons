@@ -26,18 +26,18 @@ Salgada{Сальгада}
 Captain{Капитан}
 Damski{Дамски}
 Chico{Чико}
-Cois{Коис}
+Cois{Койс}
 Dominico{Доминико}
 Cuellar{Куэльяр}
-Harold{Хэролд}
+Harold{Гарольд}
 Flesher{Флешер}
-Pelagius{Пелагий}
+Pelagius{Пелагиус}
 Lizarraga{Лизаррага}
 Gabriel{Габриэль}
 Brugera{Бругера}
 Tello{Телло}
 Basadre{Басадре}
-Aurelien{Аврельен}
+Aurelien{Орельен}
 Bergerat{Бержерат}
 Ambroz{Амброз}
 Bricenos{Бриценос}
@@ -47,7 +47,7 @@ Desiree'{Дезире'}
 Muerte{Муэрте}
 Thug{Громила}
 Vassal{Вассал}
-Bethune{Битюн}
+Bethune{Бетьюн}
 Daryl{Дэрил}
 Larry{Ларри}
 Thomas the{Томас}
@@ -65,9 +65,9 @@ Vito{Вито}
 Amerigo{Америго}
 Vieira{Виейра}
 Nicholas{Николас}
-Butcher{Батчер}
-Roche{Роше}
-Brasiliano{Бразилиано}
+Butcher{Бучер}
+Roche{Рок}
+Brasiliano{Бразилец}
 Renouart{Ренуарт}
 Baumont{Баумонт}
 Lady{Леди}
@@ -78,8 +78,8 @@ Paul{Пол}
 Brink{Бринк}
 Sampson{Сэмпсон}
 Burrell{Баррел}
-Cesario{Чезарио}
-de Rosas{де Розас}
+Cesario{Цезарио}
+de Rosas{Де Росас}
 Hans{Ханс}
 Delorme{Делорм}
 Rabel{Рабэл}
@@ -97,17 +97,17 @@ Soares{Соарес}
 Henry{Генри}
 Morgan{Морган}
 Berend{Беренд}
-de Voor{де Вур}
+de Voor{Де Вур}
 Leonardo{Леонардо}
 Corrales{Корралес}
 Andrew{Эндрю}
 Parson{Парсон}
 William{Уильям}
 Cotter{Коттер}
-Roxanne{Роксанна}
-Lalliere{Лаллиера}
+Roxanne{Роксана}
+Lalliere{Лаллир}
 Guibert{Гиберт}
-Daudet{Додэ}
+Daudet{Даудет}
 Diablo{Дьябло}
 Villalobos{Вильялобос}
 Pirate{Пират}

@@ -1,25 +1,25 @@
 string DLG_TEXT[22] = {
-"Dime, ?que estas haciendo en mi nave?!",
-"Estoy aqui por negocios.",
-"Estoy aqui en nombre del gobernador.",
-"?Que? ?Esta no es mi nave?! Lo siento, !me equivoque!",
-"?Que, ese perro que se cree un noble?",
-"Si, ese es el perro, quiero decir. Me ha ordenado que registre tu nave, ya que eres sospechoso de un secuestro.",
-"?Registrar mi nave?! !Te hare transportar la quilla, y podras buscar percebes en el casco al salir del puerto!",
-"Puedes intentarlo. Pero creo que es justo decirle que los artilleros del fuerte tienen ordenes de no dejar que su barco salga del puerto.",
-"Creo que no, ",
+"Dime, ¡¿qué haces en mi barco?!"
+"Estoy aquí por negocios."
+"Estoy aquí en nombre del gobernador."
+"¿Qué? ¿Este no es mi barco? Perdón, ¡me he equivocado!"
+"¿Ese perro que se cree noble?"
+"Sí, me refiero a ese perro. Me ordenó registrar tu barco, ya que eres sospechoso de un secuestro."
+"¿Registrar mi barco? ¡Te haré pasar por la quilla y puedes buscar percebes en el casco mientras salimos del puerto!"
+"Puedes intentarlo. Pero creo que es justo decirte que las baterías del fuerte tienen órdenes de no dejar que tu barco salga del puerto."
+"¡No lo creo, ",
 "Corentin Lucay",
-"! La chica es mia! Y nadie va a decirme que hacer!",
-"...",
-"!Te matare!",
-"...",
-"?Que negocio es ese? ?Quiere que escolte su nave a algun lugar?",
-"No. Estoy investigando el destino de cierta chica...",
-"?Que? ?Ese perro te envio para robarle la espalda a su mujerzuela?!",
-"Eso es aproximadamente el tamano de la misma.",
-"Te hare una oferta amistosa, marinero de agua dulce, ya que parece que no sabes con quien estas tratando. Deja tu dinero, armas y ropa aqui en mi nave, y te dejare salir de una pieza.",
-"Es una propuesta intrigante, pero mi blade y yo tenemos una contraoferta. En garde!",
-"!Eres tu otra vez! ?No habras venido aqui para que te maten de nuevo?",
-"Para nada. Esta vez seras tu quien vaya a Turquia las aguas negras de Styx.",
+"¡La chica es mía! ¡Y nadie me dirá qué hacer!"
+"..."
+"¡Te mataré!"
+"..."
+"¿Qué clase de negocios? ¿Quieres que escolte tu barco a algún lugar?"
+"No. Estoy investigando el paradero de cierta jovencita..."
+"¿Qué? ¿Ese perro te ha enviado a robarme a la ramera que yo le robé?"
+"Así es, más o menos."
+"Te haré una oferta amistosa, ya que te veo muy verde y parece que no sabes con quién estás tratando. Si dejas aquí en mi barco tu dinero, armas y ropa, te permitiré irte con todos tus mimebros intactos."
+"Es una proposición intrigante, pero mi espada y yo tenemos una contraoferta. ¡En guardia!"
+"¡Eres tú otra vez! ¿Has venido aquí a que te maten otra vez?"
+"No, en absoluto. Esta vez serás tú quien visite las aguas negras del Estigia.",
 
 };

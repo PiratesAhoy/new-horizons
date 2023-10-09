@@ -161,8 +161,8 @@ string DLG_TEXT[166] = {
 "¡Detened esto! ¡Detened esta locura de inmediato, o me veré obligado a llamar a los guardias!",
 "De acuerdo, de acuerdo. ¡Ya me voy!",
 "¿Sabes si un convoy inglés ha estado aquí recientemente?",
-"Sí, hace una semana. Fue un buen día para los negocios. Traían un cargamento de seda del otro lado del Atlántico y llevababn una eternidad sin ver ninguna comida o bebida decente.",
+"Sí, hace una semana. Fue un buen día para los negocios. Traían un cargamento de seda del otro lado del Atlántico y llevaban una eternidad sin probar ninguna comida o bebida decente.",
 "¿Alguna idea de hacia dónde se dirigen?",
 "Sí, uno de los oficiales estaba lo suficientemente borracho como para dejar escapar que estaba impaciente por cargar las bodegas de plata y poner rumbo a #sCartagena#, ya que esa ciudad tiene un hotel y dos tabernas. ¡Casi me hace sentir inadecuado con este pequeño establecimiento mío! ¿Alguno de los capitanes es amigo tuyo?",
-"Claro; como se suele decir, quien tiene un amigo tiene un tesoro, ¿no? ¡Gracias!",
+"Sí, claro; como se suele decir, quien tiene un amigo tiene un tesoro, ¿no? ¡Gracias!",
 };

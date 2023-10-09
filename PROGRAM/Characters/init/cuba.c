@@ -2158,9 +2158,9 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
    
 	ch.old.name = "Patricia";
-	ch.old.lastname = "Santбngel";
+	ch.old.lastname = "Santángel";
 	ch.name    = TranslateString("","Patricia");
-	ch.lastname    = TranslateString("","Santбngel");
+	ch.lastname    = TranslateString("","Santángel");
 	ch.id        = "Patricia Santangel";
 	ch.model    = "towngirl7_2";
 	ch.sex = "woman";
@@ -2297,7 +2297,7 @@ if (ENABLE_WEAPONSMOD)
 	// Levis: Storyteller
 	ch.old.name = "Mahala";
 	ch.old.lastname = "";
-	ch.name    = "Mahala";
+	ch.name    = TranslateString("","Mahala");
 	ch.lastname    = "";
 	ch.id        = "Mahala";
 	ch.model    = "gipsygirl";

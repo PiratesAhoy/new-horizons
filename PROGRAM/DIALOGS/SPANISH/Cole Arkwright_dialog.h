@@ -119,7 +119,7 @@ string DLG_TEXT[127] = {
 "En #sTortuga#. Está intentando reclutar más hombres para la misión. Tendrás que zarpar rumbo a #sTortuga# en las próximas horas y unirte a él para plenear la operación. Toma esta carta para que sepa que trabajas para mí y que serás su socio en esta misión.",
 "Eso haré. Gracias, gobernador.",
 "¡Ja! Capitán. ¡Aquí estás! ¿Qué tal la misión?",
-"Está hehco, gobernador. El navío ha sido hundido.",
+"Está hecho, gobernador. El navío ha sido hundido.",
 "¡Maravillosas noticias! Esto disuadirá a los ingleses de atacar #sEleuthera#.",
 "Sin duda, gobernador. El 'HMS Endeavour' era el único navío disponible para tal operación.",
 "En cualquier caso, no te preocupes; no he olvidado tu recompensa. Toma estas 25000 monedas de oro. Enseguida pagaré también al capitán Lafitte.",

@@ -63,7 +63,7 @@ void ProcessDialogEvent()
 	int tax = 0;
 
 	string adress;
-	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " Commander, Sir, ";}else{adress = "";}
+	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " mi comandante,";}else{adress = "";}
 
 	switch(Dialog.CurrentNode)
 	{
@@ -82,72 +82,72 @@ void ProcessDialogEvent()
 			{
 				ChangeCharacterReputation(Pchar, -2);  // punishment: reputationloss. Will be offset if accept the fight
 				PlayStereoSound("voice\Eng_m_a_070.wav");	
-				Dialog.text = adress + LinkRandPhrase(" hostile forces sighted. Form up for defence.", " enemy movements in our sector! Beat to quarters!", "Suspicious movements at our perimeter, man battlestations!");
+				Dialog.text = adress + LinkRandPhrase(", fuerzas hostiles avistadas. Preparad la defensa.", ", ¡movimientos enemigos en nustro sector! ¡Zafarrancho de combate!", "¡Movimientos sospechosos en el perímetro, todos a sus puestos!");
 
-				link.l1 = "A detailed report, Marine, NOW.";
+				link.l1 = "Un informe detallado, soldado. Ahora.";
 				if(rand(100)>50) {Link.l1.go = "attack1";}
 				else{Link.l1.go = "attack2";}
 
-				link.l9 = "Leave me alone with that, that's YOUR job! After all that's what I hired you for: as cannonfodd.. er.. cannonfeeder. I have no time anyway: must hurry back to my safe white house, don my bomberjacket and deliver some toughsounding quips to the electorate..";
+				link.l9 = "¡Déjame en paz con esas tonterías, ese es tu trabajo! Para eso os he contratado como carne de cañ... cañoneros expertos. De todas formas no tengo tiempo: tengo que irme.";
 				link.l9.go = "exit";
 			}
 			else
 			{
 				PlayStereoSound("objects\duel\reload2.wav");
 	      		PlayStereoSound("voice\ENGLISH\Eng_m_c_044.wav");
-				Dialog.text =  "Report " + buildingstr + " manned and ready for battle ," + adress + " all quiet in this sector.";
+				Dialog.text =  "Informo de que la fortificación está guarnecida y lista para el combate," + adress + " todo está tranquilo en este sector.";
 
 				if(NPChar.chr_ai.group==LAI_GROUP_PLAYER)
 				{
-					link.l1 = "We withdraw from this position. Dismantle this " + buildingstr + ", load the planks into our hold and report to the Sergeant of my Marines for shipduties.";
+					link.l1 = "Nos retiramos de esta posición. Desmantelad la fortificación, cargad las tablas en la bodega y presentaos al contramaestre para que os asigne vuestros deberes a bordo.";
 					link.l1.go = "dismantle";
 
 					if(sti(pchar.money)>5000 && !CheckCharacterItem(NPChar,"cannon") )
 					{
-					link.l21 = "This fortification would look much more formidable with a cannon. Not to mention the increase in firepower. Here, Marine, take these 5000 gold and obtain a gun for your position.";
+					link.l21 = "Esta fortificación tendría un aspecto mucho más formidable con un cañón. Por no mencionar el aumento en potencia de fuego. Soldado, toma estas 5000 piezas de oro y procura un cañón para esta posición.";
 					link.l21.go = "cannon";
 					}
 
 					if(CheckCharacterItem(PChar,"pistolgrenade") && !CheckCharacterItem(NPChar,"pistolgrenade") )
 					{
-					link.l22 = "Marine, I have a special task for you: Here, take this grenade, and if the enemy should break trough and storm this position...";
+					link.l22 = "Soldado, tengo una misión especial para ti. Toma esta granada, y si el enemigo nos supera y asalta esta posición...";
 					link.l22.go = "grenade";
 					}
 				}
 				else
 				{
-					link.l1 = "Just passing by... ";
+					link.l1 = "Solo pasaba pora quí... ";
 					link.l1.go = "exit";
 				}
 
-				Link.l4 = "Very good, Marine, carry on.";
+				Link.l4 = "Muy bien, soldado. Continúa.";
 				Link.l4.go = "exit";
 
-				link.l6 = "Soldier, isn't this fortification too low and too weak to stop an assault?";
+				link.l6 = "Soldado, ¿no es esta fortificación demasiado baja y débil para detener un asalto?";
 				link.l6.go = "odd";
 
-				link.l5 = "Hey, why do stand here so motionless? " + LinkRandPhrase("Have you swallowed a broomstick...", "Come on, relax a little... AT EASE!", "I expect a bit more activity from my marines, ya hear me?");
+				link.l5 = "Eh, ¿qué haces ahí sin moverte? " + LinkRandPhrase("¿Te has tragado un palo de escoba?...", "Vamos, relájate un poco... ¡DESCANSE, SOLDADO!", "Espero un poco más de actividad por parte de mis infantes de marina, ¿me oyes?");
 				link.l5.go = "motion";
 
-				link.l9 = "Hey, you there in front of the keyboard! This is a building that YOU created, so how about creating your own dialog as well? Just use Notepad to open the file program\dialogs\ " + NPchar.dialog.filename + " and overwrite this text with your own. Then follow the instructions in the comments.";
+				link.l9 = "¡Eh, tú, enfrente del teclado! Este es un edificio creado POR TI, así que, ¿por qué no creas tu propio diálogo para acompañarlo? Solo tienes que usar Bloc de Notas para abrir el archivo PROGRAM\DIALOGS\SPANISH\" + NPchar.dialog.filename + " y sobreescribir este texto con el tuyo. Luego sigue las instrucciones en los comentarios.";
 				link.l9.go = "your_dialog"; //this is the case that runs if you choose the dialogoption l9. It is right below.
 			}
 		break;
                 
 		case "your_dialog":
-			Dialog.text = "Overwrite this with the dialogtext of the NPC." ;
+			Dialog.text = "Escribe aquí el texto de diálogo del NPC." ;
 
-			link.l1 = "Text of the player dialogoption link.l1 which ends the dialog ";
+			link.l1 = "Texto de diálogo del jugador: opción link.l1, que cierra el diálogo ";
 			link.l1.go = "exit";	// link l1 exits the dialog
 
-			link.l2 = "Text of the player dialogoption link.l2 which leads to another exchange ";
+			link.l2 = "Texto de diálogo del jugador: opción link.l2, que conduce a otro intercambio ";
 			link.l2.go = "your_dialog2";	// l2 leads to the case your_dialog2
 		break;	// end of case "your_dialog"
                 
 		case "your_dialog2":
-			Dialog.text = "Overwrite this with the dialogtext of the NPC." ;
+			Dialog.text = "Escribe aquí el texto de diálogo del NPC." ;
 
-			link.l1 = "Text of the player dialogoption link.l1 which ends the dialog";
+			link.l1 = "Texto de diálogo del jugador: opción link.l1, que cierra el diálogo";
 			link.l1.go = "exit";	// link l1 exits the dialog
 
 			// Here are some codelines that give you money, items, goods or experience. To activate them delete the comment slashes '//' in front of the code. You can change the amounts to your liking.
@@ -171,8 +171,8 @@ void ProcessDialogEvent()
 
 // give grenade to building for selfdefense                
 		case "grenade":
-			Dialog.text = "...I'll blast them to kingdom come. I know my duty, Commander!" ;
-			link.l1 = "That's the spirit, Marine! With your sense of duty you'll soon become corporal. (..if you live that long..)";
+			Dialog.text = "..., los volaré en pedazos. ¡Conozco mi deber, mi comandante!" ;
+			link.l1 = "¡Así se habla, soldado! Con tu sentido del deber, pronto llegarás a cabo (... si vives lo sifciente).";
 			link.l1.go = "exit";
 			TakeItemFromCharacter(pchar, "pistolgrenade" );
 			GiveItem2Character(NPchar, "pistolgrenade");
@@ -183,22 +183,22 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(Pchar, -5000);
 			Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -3;
 			lcn.building.(nr).interior = "cannon";
-			Dialog.text = "Yes, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", I know the mastersergeant of the local magazine quite well. For 5000 Gold he'd sell his whole ordinance. Just give me a few hours." ;
-			link.l1 = "That's the spirit, Marine! With your understanding of logistics you'll soon become corporal. (..if you live that long..)";
+			Dialog.text = "Sí, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + ", conozco bastante bien al sargento mayor del arsenal local. Por 5000 piezas de oro, vendería toda su artillería. Solo necesitaré unas pocas horas." ;
+			link.l1 = "¡Así se habla, soldado! Con tu buen entendimiento de la logística, pronto llegarás a cabo (.. si vive lo suficiente).";
 			link.l1.go = "exit";
 		break;
 
 
 // random attacks
 		case "attack1":
-			Dialog.text = "Savage Akellani cannibals approaching, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! Oh, if we had only more of those bastions, stockades, mines and cannon...";
-			link.l1 = RandSwear() + " Attention, soldier! Hold this position whatever happens. Keep up firing, don't let the enemy draw you into close combat. I will take care of the bladework...";
+			Dialog.text = "¡Se acercan los salvajes caníbales akellani, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + "! Oh, si tan solo tuviéramos más bastiones, empalizadas, minas y cañones...";
+			link.l1 = RandSwear() + " ¡Atención, soldado! Mantén esta posición pase lo que pase. No dejes de dispararg y no dejes que el enemigo te arrastre a un combate cuerpo a cuerpo. Yo me ocuparé de eso...";
 			link.l1.go = "exit_attack1";
 		break;
 
 		case "attack2":
-			Dialog.text = "Francisco Pizarro the Younger and his horde of maurading conquistadores approaching, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! Lusting for blood, plunder and rape... Oh, if we had only more of those bastions, stockades, mines and cannon...";
-			link.l1 = RandSwear() + " Attention, soldier! Hold this position whatever happens. Keep up firing, don't let the enemy draw you into close combat. I will take care of the bladework...";
+			Dialog.text = "¡Francisco Pizarro el Joven y su horda de conquistadores merodeadores se acercan, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + "! Ávidos de sangre, botín y bajos instintos... Oh, si tan solo tuviéramos más bastiones, empalizadas, minas y cañones...";
+			link.l1 = RandSwear() + " ¡Atención, soldado! Mantén esta posición pase lo que pase. No dejes de dispararg y no dejes que el enemigo te arrastre a un combate cuerpo a cuerpo. Yo me ocuparé de eso...";
 			link.l1.go = "exit_attack2";
 		break;
 
@@ -244,23 +244,23 @@ void ProcessDialogEvent()
 		case "odd":
 			if(buildingstr == "bastion")
 			{
-				Dialog.text = "Too low? Sounds like you have the same oldfashioned views on military architecture like those Russian stonemasons who build all those medievil townwalls and skyscraper forts around here. But the invention of gunpowder has made high crenellated walls obsolete. The low profile of this bastion offers siege artillery less of a target. Never mind that enemy infantry may be able to scale low embrasures, as long as our artillery continues to fire they won't live long." ;
+				Dialog.text = "¿Demasiado baja? Parece que tienes las mismas ideas anticuadas en cuanto a arquitectura militar que esos canteros rusos que construyeron todos esos ayuntamientos y fuertes medievales por el archipiélago. Pero la invención de la pólvora ha dejado obsoletos los muros altos y almenados. El perfil bajo de este bastión ofrece a la artillería de sitio un objetivo más difícil. No importa que la infantería enemiga pueda escalar los parapetos bajos; mientras nuestra artillería siga disparando, no vivirán para llegar hasta la base del muro." ;
 			} else {
-				Dialog.text = "Umm, well, all decent wood goes into the shipyards, so we had to build this stockade from brittle trunks and driftwood. True, there are gaps wide enough that an enemy can squeeze trough. But as long as our artillery continues to fire they won't live long afterwards.";
+				Dialog.text = "Bueno, toda la madera buena se destina a los astilleros, así que hemos tenido que construir esta empalizada con troncos quebradizos y madera de deriva. Es verdad, hay huecos lo bastante grandes para que un enemigo pueda colarse. Pero mientras nuestra artillería siga disparando, no vivirán mucho tiempo.";
 			}
-			link.l2 = "So artillery is the key to everything? How can I deploy my cannons in the best way?";
+			link.l2 = "¿Así que la artillería es la clave de todo? ¿Cómo puedo depslegar los cañones de la forma más efectiva?";
 			link.l2.go = "odd2";
 		break;
 
 		case "odd2":
-			Dialog.text = "Group several fortifications with cannon together so that they can support each other, but not so close that they all come under attack at the same time. In the front line a strong bastion that takes the brunt of the attack, and behind that cheaper stockades which can fire at the attackers occupied with the bastion. But be careful that none of your men gets into the line of fire. At long range our shells kill everyone near the target. Keep out of the fight completely or stay close to the guns where our aim is better." ;
-			link.l1 = "Ummm, I'm not sure if I can afford that... But thanks for the lecture on 17th century fortifications.";
+			Dialog.text = "Concentra varias fortificaciones con cañones para que puedan apoyarse unas a otras, pero no tan cerca como para que todas puedan ser atacadas a la vez. En primera línea, un robusto bastión que pueda soportar el grueso del ataque, y detrás empalizadas más baratas desde las que disparar a los atacantes mientras están ocupados con el bastión. Pero asegúrate de que ninguno de tus hombres se mete en la línea de fuego. A largas distancias, nuestras granadas volarán por los aires a cualquiera que esté cerca del objetivo. No te involucres directamente en el combate o quédate cerca de los cañones, donde su puntería es mejor." ;
+			link.l1 = "Hum, no sé si puedo permitirme todo eso... Pero gracias por la lección en fortificaciones del siglo XVII.";
 			link.l1.go = "exit";
 		break;
 
 		case "motion":
-			Dialog.text = LinkRandPhrase(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", we always stand to attention in a superior's presence. That's the drill, and the drill is everything.", "I have my eye on a suspicious target, and I don't want too loose it. 'Keep your aim, never flinch, never blink' our drillseargeant used to say.", "First rule of camouflage: movement attracts attention. So never move if you don't have to.");
-			link.l1 = "Allright, I understand... Carry on.";
+			Dialog.text = LinkRandPhrase(XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + ", siempre nos ponemos firmes en presencia de un superior. Esa es nuestra instrucción y la instrucción lo es todo.", "Le tengo el ojo echado a un objetivo sospechoso y no quiero perderlo. 'Apunta bien, no te muevas, no parpadees', solía decir nuestro sargento instructor.", "La primera regla del camuflaje: el movimiento atrae la atención. Así que nunca te muevas si no tienes que hacerlo.");
+			link.l1 = "Está bien, entiendo... Continúa.";
 			link.l1.go = "exit";
 		break;
 

@@ -434,9 +434,8 @@ ref LAi_CreateFantomCharacterExOt(bool isfriend, string officertype, int rank, b
 
 ref FindFreePhantomCharacterSlot()
 {
-	int i;
 	// We are looking for a free place for the character
-	for(i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
+	for(int i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
 	{
 		if(CheckAttribute(&Characters[LOC_FANTOM_CHARACTERS + i], "id") == false) break;
 		if(Characters[LOC_FANTOM_CHARACTERS + i].id == "") break;
@@ -456,7 +455,7 @@ ref FindFreePhantomCharacterSlot()
 }
 
 // Create a phantom character
-ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string attr1, string attr2, string attr3, int rank     , bool hasblade, 
+ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string attr1, string attr2, string attr3, int rank     , bool hasblade,
 								  float hasgun , string model, string group      , string locator)
 {
 	ref chr = FindFreePhantomCharacterSlot();

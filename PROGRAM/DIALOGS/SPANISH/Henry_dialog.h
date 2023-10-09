@@ -93,7 +93,7 @@ string DLG_TEXT[195] = {
 "Lo siento de verdad, ",
 ", pero no sé que podría saber un pobre hombre como yo  que pudiera serte de utilidad. Sería mejor que preguntaras a los soldados locales.",
 "Es posible. Pero te estoy preguntando a ti.",
-"Supongo que tienes razón. Es imposible que tú tengas la inforamción que busco.",
+"Supongo que tienes razón. Es imposible que tú tengas la información que busco.",
 "¡Ay!, ",
 ", parece que ni siquiera tienes dinero para caridad.",
 "(Volver)"
@@ -109,7 +109,7 @@ string DLG_TEXT[195] = {
 "Te escucho.",
 "¿Conoces la ciudad?",
 "¿Qué sabes del gobernador de #sRedmond#?",
-"Supongo que tienes razón. Es imposible que tú tengas la inforamción que busco.",
+"Supongo que tienes razón. Es imposible que tú tengas la información que busco.",
 "Oh, sí, nada como un poco de ron después de una larga singladura. Sigue recto por la calle desde aquí. Cuando llegues a la plaza frente a la residencia del gobernador, verás la taberna a la izquierda.",
 "Lo tengo. Gracias.",
 "¿Dónde está el astillero?",

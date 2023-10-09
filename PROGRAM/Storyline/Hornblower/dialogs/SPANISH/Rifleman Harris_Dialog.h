@@ -1,9 +1,9 @@
 string DLG_TEXT[46] = { 
-"Harris de Wheatley en Oxfordshire. Sé leer, señor. 33rd Regimiento de infantería.",
+"Harris, de Wheatley, en Oxfordshire. Sé leer, señor. 33º Regimiento de Infantería.",
 "Continúe.",
-"Harris de Wheatley en Oxfordshire. Sé leer, señor. Fusileros 95th.",
+"Harris, de Wheatley, en Oxfordshire. Sé leer, señor. 95º de Fusileros.",
 "Continúe.",
-"Señor. Es el Capitán Murray, él... ha fallecido, señor.",
+"Señor, es el Capitán Murray... Ha fallecido, señor.",
 "...",
 ".",
 "?",

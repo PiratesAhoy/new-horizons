@@ -3,7 +3,7 @@ string DLG_TEXT[63] = {
 ".....",
 "#shello#, #scaptain#. ¡Casi habíamos pensado que te habrías atravesado con tu propia espada!",
 "Como puedes ver, todavía estoy con vida. Y si queremos seguir así, debemos salir de esta isla tan pronto como sea posible. Acabo de escapar de la cárcel y he matado a un par de soldados. ¡Quieren mi cabeza en una bandeja!",
-"Sí, la tripulacion ya se había enterado de que estabas en prisión. Después de que te encerraran, vinieron a confiscar el barco. Y ahora está en el puerto de #sHavana# bajo la vigilancia d elos cañones de la fortaleza.",
+"Sí, la tripulación ya se había enterado de que estabas en prisión. Después de que te encerraran, vinieron a confiscar el barco. Y ahora está en el puerto de #sHavana# bajo la vigilancia de los cañones del fuerte.",
 "¡#smygod#! ¿Y ahora qué?",
 "Hay un barco contrabandista inglés amclado en la Bahía de San Antonio. Con un poco de suerte, la mayoría de su tripulación estará emborrachándose en las tabernas.",
 "¡No hay tiempo que perder! Vamos.",

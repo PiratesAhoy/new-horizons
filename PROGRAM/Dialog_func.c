@@ -3015,8 +3015,8 @@ void GotSkill(string topic)
 	WaitDate("", 0,0,0,5,0);
 	RecalculateJumpTable();
 	PlaySound("AMBIENT\SHOP\sigh2.wav");
-	Log_SetStringToLog(TranslateString("","For five hours are you being lectured on") + " " + XI_ConvertString(topic));
-	Log_SetStringToLog(TranslateString("","This has improved your") + " " + XI_ConvertString(topic) + " " + TranslateString("","skill"));
+	Log_SetStringToLog(TranslateString("","For five hours are you being lectured on") + " " + XI_ConvertString(topic)) + ".";
+	Log_SetStringToLog(TranslateString("","This has improved your") + " " + XI_ConvertString(topic) + " " + TranslateString("","skill."));
 	//LanguageCloseFile(tmpLangFileID);
 }
 // <-- CCC

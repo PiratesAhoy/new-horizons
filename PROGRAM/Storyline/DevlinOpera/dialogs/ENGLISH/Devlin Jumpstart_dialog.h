@@ -4,5 +4,5 @@ string DLG_TEXT[6] = {
 "Take me to #sisland_Falaise de Fleur# for the rum chapter!",
 "I only have one part of the map, let me get the second one!",
 "I feel like waiting some tables!",
-"How about the french corsairs?",
+"How about the French corsairs?",
 }

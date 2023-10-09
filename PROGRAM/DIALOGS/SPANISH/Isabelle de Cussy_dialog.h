@@ -1,6 +1,6 @@
 string DLG_TEXT[91] = { 
 "Me han dicho que has insistido mucho para pedir una audiencia. Mi nombre es ",
-". Ahora, por favor, dime el propósito de tu visita., ",
+". Ahora, por favor, dime el propósito de tu visita, ",
 ".",
 "Mi nombre es ",
 ".",
@@ -9,7 +9,7 @@ string DLG_TEXT[91] = {
 "Lo siento, pero hay cosas que tengo que hacer.",
 "Entonces, ¿por qué me distraes de mis importantes asuntos de estado?",
 "Me gustaría hablar con Su Excelencia acerca de un pequeño asunto de negocios.",
-"Solo estoy aquí para presentar mis respetos. Nada más.",
+"Solo estoy aquí para presentar mis respetos. Nada más, ",
 "En ese caso, por favor, sal de mi estudio y déjame volver a asuntos más importantes.",
 "Sí, por supuesto. Siento haber molestado a Su Excelencia.",
 "Estoy escuchando, ",

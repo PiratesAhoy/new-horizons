@@ -214,7 +214,7 @@ int GetPirateFlag(ref chr, int ntex)
 	{
 		ref cmdr = Group_GetGroupCommander(GetGroupIDFromCharacter(chr));
 		if (!CheckAttribute(cmdr, "Flags.Pirate") || !CheckAttribute(cmdr, "Flags.Pirate.texture")) {
-			ntex = rand(PIRATEFLAGS_TEXTURES_QUANTITY - 2); //PW: -2 to disable last row in random encounters
+			ntex = rand(PIRATEFLAGS_TEXTURES_QUANTITY - 3); //PW: -3 to disable last 2 rows in random encounters
 			cmdr.Flags.Pirate.texture = ntex;
 			cmdr.Flags.Pirate = rand(FLAGS_PICTURES_QUANTITY_PER_TEXTURE - 2); // PB: -2 to disable last column in random encounters
 		}

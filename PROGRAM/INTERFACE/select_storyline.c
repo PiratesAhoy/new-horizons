@@ -795,7 +795,7 @@ void ChangeStoryline(bool bRight)
 	
 	//Levis custom start date -->
 	GameInterface.strings.StartYear = CharYear;
-	GameInterface.strings.StartMonth = TranslateString("",GetMonthName(CharMonth));
+	GameInterface.strings.StartMonth = FirstLetterUp(TranslateString("",GetMonthName(CharMonth)));
 	GameInterface.strings.StartDay = CharDay;
 	GameInterface.strings.StartPeriod = TranslateString("", GetPeriodName(curPeriod));
 	bool canchangedate = true;
@@ -981,7 +981,7 @@ void RefreshScreen()
 					iNationsQuantity = CheckNationsQuantity(curPeriod);
 
 					GameInterface.strings.StartYear = CharYear;
-					GameInterface.strings.StartMonth = TranslateString("", GetMonthName(CharMonth)); //MAXIMUS 17.05.2019: needed for localization
+					GameInterface.strings.StartMonth = FirstLetterUp(TranslateString("", GetMonthName(CharMonth))); //MAXIMUS 17.05.2019: needed for localization
 					GameInterface.strings.StartDay = CharDay;
 					GameInterface.strings.StartPeriod = TranslateString("", GetPeriodName(curPeriod)); //MAXIMUS 17.05.2019: needed for localization
 				}
@@ -1282,7 +1282,7 @@ void GiveHimName(ref char)
 		if (CheckAttribute(char, "middlename")) {
 			CharMiddleName = char.middlename;
 			CharOldMiddleName = CharMiddleName;
-			tmpName = tmpName + " " + CharOldMiddleName;
+			if (CharOldMiddleName != "") tmpName = tmpName + " " + CharOldMiddleName;
 		} else {
 			CharMiddleName = "";
 			CharOldMiddleName = "";
@@ -1290,7 +1290,7 @@ void GiveHimName(ref char)
 		if (CheckAttribute(char, "lastname")) {
 			CharLastName = char.lastname;
 			CharOldLastName = CharLastName;
-			tmpName = tmpName + " " + CharOldLastName;
+			if (CharOldLastName != "") tmpName = tmpName + " " + CharOldLastName;
 		}
 
 		CharFirstName = GetTranslatedStoryLine(slno, CharFirstName);
@@ -1396,7 +1396,7 @@ void ChangeStartDate(int year, int month, int day)
 	//CharSecond = sti(arstart.date.sec);
 	curPeriod = GetPeriodFromYear(CharYear);
 	GameInterface.strings.StartYear = CharYear;
-	GameInterface.strings.StartMonth = TranslateString("",GetMonthName(CharMonth));
+	GameInterface.strings.StartMonth = FirstLetterUp(TranslateString("",GetMonthName(CharMonth)));
 	GameInterface.strings.StartDay = CharDay;
 	curPeriod = GetPeriodFromYear(CharYear);
 	SetCurrentPeriod(curPeriod);

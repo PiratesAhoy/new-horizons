@@ -17,7 +17,7 @@ Joli{Привлекательный}
 Bolontaire{Болонтарный}
 Salamine{Саламин}
 Conquйrante{Завоеватель}
-Dauphin Royal{Королевский Дофин}
+Dauphin Royal{Королевский Дельфин}
 Victorieuse{Победоносный}
 Rйsistance{Сопротивление}
 Reprisal{Расправа}

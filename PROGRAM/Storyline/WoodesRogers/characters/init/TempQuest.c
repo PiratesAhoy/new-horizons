@@ -3486,8 +3486,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 9 crew, 			port attack 3/6 
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_raoul";
 	ch.model = "wr_raol";
 	ch.sex = "man";
@@ -3528,8 +3530,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 10 crew, 			port attack 1/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_omat1";
 	ch.model = "wr_omat1";
 	ch.sex = "man";
@@ -3570,8 +3574,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 11 crew, 			port attack 5/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_prt7";
 	ch.model = "wr_prt7";
 	ch.sex = "man";
@@ -3612,8 +3618,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 12 crew, 			port attack 4/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_rabbl";
 	ch.model = "wr_rabbl";
 	ch.sex = "man";
@@ -3654,8 +3662,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 13 crew, 			port attack 6/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_blcor";
 	ch.model = "wr_blcor";
 	ch.sex = "man";
@@ -3696,8 +3706,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 14 crew, 			port attack 2/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_sail4";
 	ch.model = "wr_sail4";
 	ch.sex = "man";
@@ -3738,8 +3750,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 15 crew, 			shipyard attack 1/8
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_sail7";
 	ch.model = "wr_sail7";
 	ch.sex = "man";
@@ -3776,8 +3790,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 16 crew, 			shipyard attack 2/8
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_snav";
 	ch.model = "wr_snav";
 	ch.sex = "man";
@@ -3814,8 +3830,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 17 crew,			wine attack left 2/4
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_oman1";
 	ch.model = "wr_oman1";
 	ch.sex = "man";
@@ -3856,8 +3874,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 18 crew, 			shop attack 1/10
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_boc1";
 	ch.model = "wr_boc1";
 	ch.sex = "man";
@@ -3894,8 +3914,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 19 crew, 			shipyard attack 5/8
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_boc4";
 	ch.model = "wr_boc4";
 	ch.sex = "man";
@@ -3932,8 +3954,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 20 crew, 			shipyard attack 6/8
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_cha";
 	ch.model = "wr_cha";
 	ch.sex = "man";
@@ -3970,8 +3994,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 21 crew, 			shipyard attack 7/8
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_cor1";
 	ch.model = "wr_cor1";
 	ch.sex = "man";
@@ -4008,8 +4034,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 22 crew, shop goods3, 	shipyard attack 8/8
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_cor3";
 	ch.model = "wr_cor3";
 	ch.sex = "man";
@@ -4043,8 +4071,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 23 crew,			shop attack 8/10
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_fat2";
 	ch.model = "wr_fat2";
 	ch.sex = "man";
@@ -4081,8 +4111,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 24 crew, shop goods5, 	shop attack 4/10
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_fralut";
 	ch.model = "wr_fralut";
 	ch.sex = "man";
@@ -4119,8 +4151,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 25 crew, shop goods1, 	shipyard attack 3/8
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_fsh";
 	ch.model = "wr_fsh";
 	ch.sex = "man";
@@ -4154,8 +4188,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 26 crew, 			shop attack 3/10
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_hubspa";
 	ch.model = "wr_hubspa";
 	ch.sex = "man";
@@ -4192,8 +4228,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 27 crew, 			shipyard attack 4/8
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_kor";
 	ch.model = "wr_kor";
 	ch.sex = "man";
@@ -4230,8 +4268,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 28 crew, shop goods4, 	shop attack 5/10
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_mong";
 	ch.model = "wr_mong";
 	ch.sex = "man";
@@ -4269,8 +4309,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 29 crew, 			shop attack 9/10
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_nap";
 	ch.model = "wr_nap";
 	ch.sex = "man";
@@ -4307,8 +4349,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 30 crew, 			shop attack 7/9
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_grey";
 	ch.model = "wr_grey";
 	ch.sex = "man";
@@ -4345,8 +4389,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 31 crew, 			shop attack 2/10
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_pir2";
 	ch.model = "wr_pir2";
 	ch.sex = "man";
@@ -4383,8 +4429,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 32 crew, shop goods6, 	shop attack 10/10
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_pir4";
 	ch.model = "wr_pir4";
 	ch.sex = "man";
@@ -4421,8 +4469,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 33 crew, shop goods2,	wine attack left 1/4
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_fatj";
 	ch.model = "wr_fatj";
 	ch.sex = "man";
@@ -4462,8 +4512,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 34 crew,
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("","Rogers'");
-	ch.lastname = TranslateString("","Crew");			
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";		
 	ch.id		= "wr_pir7";
 	ch.model = "wr_pir7";
 	ch.sex = "man";
@@ -4505,8 +4557,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 35 crew,			wine attack left 3/4
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_wll3";
 	ch.model = "wr_wll3";
 	ch.sex = "man";
@@ -4547,8 +4601,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 36 crew,			
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_sol6f77";
 	ch.model = "wr_sol6f77";
 	ch.sex = "man";
@@ -4591,8 +4647,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 37 crew,			
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_solhol";
 	ch.model = "wr_solhol";
 	ch.sex = "man";
@@ -4634,8 +4692,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 38 crew,			wine attack right 2/4
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_boc3";
 	ch.model = "wr_boc3";
 	ch.sex = "man";
@@ -4676,8 +4736,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 39 crew,			wine attack right 3/4
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_bry1";
 	ch.model = "wr_bry1";
 	ch.sex = "man";
@@ -4718,8 +4780,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 40 crew,			wine attack right 4/4
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_chv1";
 	ch.model = "wr_chv1";
 	ch.sex = "man";
@@ -4760,8 +4824,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 41 crew,			wine attack left 4/4
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_cor1_1";
 	ch.model = "wr_cor1_1";
 	ch.sex = "man";
@@ -4802,8 +4868,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 42 crew,			wine attack right 1/4
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_cor1_3";
 	ch.model = "wr_cor1_3";
 	ch.sex = "man";
@@ -4844,8 +4912,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 43 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_fsh1";
 	ch.model = "wr_fsh1";
 	ch.sex = "man";
@@ -4886,8 +4956,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 44 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_fwn";
 	ch.model = "wr_fwn";
 	ch.sex = "man";
@@ -4931,8 +5003,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 45 crew				cap md attack 1/2
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_kor1";
 	ch.model = "wr_kor1";
 	ch.sex = "man";
@@ -4974,8 +5048,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 46 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_man2";
 	ch.model = "wr_man2";
 	ch.sex = "man";
@@ -5014,8 +5090,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 47 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_man3";
 	ch.model = "wr_man3";
 	ch.sex = "man";
@@ -5056,8 +5134,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 48 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_oman2";
 	ch.model = "wr_oman2";
 	ch.sex = "man";
@@ -5098,8 +5178,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 49 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_pir5";
 	ch.model = "wr_pir5";
 	ch.sex = "man";
@@ -5140,8 +5222,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 50 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_sail1";
 	ch.model = "wr_sail1";
 	ch.sex = "man";
@@ -5182,8 +5266,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 51 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_hubport";
 	ch.model = "wr_hubport";
 	ch.sex = "man";
@@ -5224,8 +5310,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 52 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_kill";
 	ch.model = "wr_kill";
 	ch.sex = "man";
@@ -5266,8 +5354,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 53 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_18_1";
 	ch.model = "wr_18_1";
 	ch.sex = "man";
@@ -5308,8 +5398,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 54 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_hubspa5";
 	ch.model = "wr_hubspa5";
 	ch.sex = "man";
@@ -5351,8 +5443,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 55 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_solspa4";
 	ch.model = "wr_solspa4";
 	ch.sex = "man";
@@ -5393,8 +5487,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 56 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_vito";
 	ch.model = "wr_vito";
 	ch.sex = "man";
@@ -5435,8 +5531,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 57 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_9SNat";
 	ch.model = "wr_9SNat";
 	ch.sex = "man";
@@ -5477,8 +5575,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 58 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_evl2";
 	ch.model = "wr_evl2";
 	ch.sex = "man";
@@ -5519,8 +5619,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 59 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_blm";
 	ch.model = "wr_blm";
 	ch.sex = "man";
@@ -5562,8 +5664,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 60 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_Ron";
 	ch.model = "wr_ron";
 	ch.sex = "man";
@@ -5604,8 +5708,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 61 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_ltnorr";
 	ch.model = "wr_ltnorr";
 	ch.sex = "man";
@@ -5646,8 +5752,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 62 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_man4";
 	ch.model = "wr_man4";
 	ch.sex = "man";
@@ -5688,8 +5796,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 63 crew				cap md attack 2/2
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_man5_1";
 	ch.model = "wr_man5_1";
 	ch.sex = "man";
@@ -5731,8 +5841,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 64 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_pir9";
 	ch.model = "wr_pir9";
 	ch.sex = "man";
@@ -5773,8 +5885,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 65 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_will";
 	ch.model = "wr_will";
 	ch.sex = "man";
@@ -5815,8 +5929,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 66 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_bucc1";
 	ch.model = "wr_bucc1";
 	ch.sex = "man";
@@ -5857,8 +5973,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr 67 crew
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
+	ch.lastname = "";
 	ch.id		= "wr_boc16";
 	ch.model = "wr_boc16";
 	ch.sex = "man";
@@ -5899,8 +6017,10 @@ void CreateTempQuestCharacters(ref n)
 				//wr skel 1
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Former Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Former Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Former Crew");
+	ch.name = TranslateString("Rogers'", "Former Crew");
+	ch.lastname = "";
 	ch.id		= "wr_dead1";
 	ch.model = "wr_dead1";
 	ch.sex = "man";
@@ -7288,8 +7408,10 @@ void CreateTempQuestCharacters(ref n)
 				//pirate captain 12 (???)
 	ch.old.name = "Charles Vane's";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Charles Vane's");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Charles Vane's");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Charles Vane's", "Crew");
+	ch.lastname = "";
 	ch.id		= "pir_cap12";
 	ch.model = "pir_cap12";
 	ch.sex = "man";
@@ -7335,8 +7457,10 @@ void CreateTempQuestCharacters(ref n)
 				//pirate captain 13 (will_2_???)
 	ch.old.name = "Charles Vane's";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Charles Vane's");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Charles Vane's");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Charles Vane's", "Crew");
+	ch.lastname = "";
 	ch.id		= "pir_cap13";
 	ch.model = "pir_cap13";
 	ch.sex = "man";
@@ -7619,8 +7743,10 @@ void CreateTempQuestCharacters(ref n)
 				//pirate captain 19 (???)
 	ch.old.name = "Charles Vane's";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Charles Vane's");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Charles Vane's");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Charles Vane's", "Crew");
+	ch.lastname = "";
 	ch.id		= "pir_cap19";
 	ch.model = "pir_cap19";
 	ch.sex = "man";
@@ -7908,8 +8034,10 @@ void CreateTempQuestCharacters(ref n)
 				//pirate captain 25 (will_2_???) a copy
 	ch.old.name = "Charles Vane's";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Charles Vane's");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Charles Vane's");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Charles Vane's", "Crew");
+	ch.lastname = "";
 	ch.id		= "pir_cap25";
 	ch.model = "pir_cap13";
 	ch.sex = "man";
@@ -12009,8 +12137,9 @@ void CreateTempQuestCharacters(ref n)
 				//Storyteller
 	ch.old.name = "Blackbeard's";
 	ch.old.lastname = "head";
-	ch.name = TranslateString("","Blackbeard's");
-	ch.lastname = TranslateString("","head");
+//	ch.name = TranslateString("","Blackbeard's");
+//	ch.lastname = TranslateString("","head");
+	ch.name = TranslateString("Blackbeard's", "head");
 //	ch.name = TranslateString("", "Edward");
 //	ch.lastname = TranslateString("", "Teach");
 	ch.id		= "Teach_head";
@@ -12054,8 +12183,9 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Swedish";
 	ch.old.lastname = "Guy";
-	ch.name = TranslateString("", "Swedish");
-	ch.lastname = TranslateString("", "Guy");
+//	ch.name = TranslateString("", "Swedish");
+//	ch.lastname = TranslateString("", "Guy");
+	ch.name = TranslateString("Swedish", "Guy");
 	ch.id		= "Swedish Guy";
 	ch.model = "Hammond_18";
 	ch.sex = "man";
@@ -25563,8 +25693,9 @@ ch.old.name = "";
 		//wr 18 copy crew, 			Eden office attack 1/2
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_boc1_copy";			//was wr_boc1
 	ch.model = "wr_boc1";					//was wr_boc1_copy
 	ch.sex = "man";
@@ -25595,8 +25726,9 @@ ch.old.name = "";
 			//wr 38 copy crew,			Eden office attack 2/2
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_boc3_copy";
 	ch.model = "wr_boc3";
 	ch.sex = "man";
@@ -25629,8 +25761,9 @@ ch.old.name = "";
 			//wr 19 copy crew, 			Turks roof 1/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_boc4_copy";
 	ch.model = "wr_boc4";
 	ch.sex = "man";
@@ -25663,8 +25796,9 @@ ch.old.name = "";
 				//wr 53 copy crew			Turks roof 2/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_18_1_copy";
 	ch.model = "wr_18_1";
 	ch.sex = "man";
@@ -25697,8 +25831,9 @@ ch.old.name = "";
 			//wr 13 copy crew, 				Turks roof 3/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_blcor_copy";
 	ch.model = "wr_blcor";
 	ch.sex = "man";
@@ -25731,8 +25866,9 @@ ch.old.name = "";
 				//wr 27 copy crew, 			Turks roof 4/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_kor_copy";
 	ch.model = "wr_kor";
 	ch.sex = "man";
@@ -25765,8 +25901,9 @@ ch.old.name = "";
 				//wr 59 copy crew			Turks roof 5/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_blm_copy";
 	ch.model = "wr_blm";
 	ch.sex = "man";
@@ -25799,8 +25936,9 @@ ch.old.name = "";
 			//wr 57 copy crew				Turks roof 6/6
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_9SNat_copy";
 	ch.model = "wr_9SNat";
 	ch.sex = "man";
@@ -25832,8 +25970,9 @@ ch.old.name = "";
 
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_man5_1_copy";
 	ch.model = "wr_man5_1";
 	ch.sex = "man";
@@ -25874,8 +26013,9 @@ ch.old.name = "";
 
 	ch.old.name = "Rogers'";
 	ch.old.lastname = "Crew";
-	ch.name = TranslateString("", "Rogers'");
-	ch.lastname = TranslateString("", "Crew");
+//	ch.name = TranslateString("", "Rogers'");
+//	ch.lastname = TranslateString("", "Crew");
+	ch.name = TranslateString("Rogers'", "Crew");
 	ch.id		= "wr_fsh1_copy";
 	ch.model = "wr_fsh1";
 	ch.sex = "man";

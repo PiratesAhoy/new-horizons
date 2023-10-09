@@ -43,6 +43,7 @@ Caroline{Caroline}
 Le Rève{Le Rève}
 
 Atropos{Atropos}
+Lydia{Lydia}
 
 Don Julian{Don Julian}
 Alvarado{Alvarado}
@@ -53,6 +54,13 @@ Petra{Petra}
 Borinqueña{Borinqueña}
 
 Becka{Becka}
+
+Aveline{Aveline}
+de Grandpré{de Grandpré}
+Hatching a Plot{Urdiendo un plan}
+As an official member of the Assassin Brotherhood, you sought to liberate the slave community from the Templar Order influence. After more than 10 years of dedication, you succeeded in eradicating the Templar Order of Louisiana. Recently, you received a letter asking for help from the Caribbean Brotherhood of Assassins.{Como miembro de la Hermandad de Asesinos, te propusiste liberar a las comunidades de esclavos de la influencia de la Orden del Temple. Tras más de 10 años de dedicación, lograste erradicar a la Orden del Temple de Luisiana. Hace poco, has recibido un mensaje, una petición de ayuda de la Hermandad de Asesinos del Caribe.}
+Liberté{Liberté}
+
 La Aguja - The Needle{La Aguja}
 The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.{Eres la hija de un rico terrateniente que una vez fue guerrillero; tu familia ha sido asesinada por los franceses y quieres venganza. Te has convertido en la líder de una partida guerrillera, y a veces colaboras con un oficial británico llamado Richard Sharpe. Incluso tienes un barco, que antes era francés, y que ha pasado por varias manos antes de llegar a las tuyas.}
 
@@ -109,6 +117,7 @@ Dark{Oscuro}
 Teacher{Maestro}
 Satanists{Satánicos}
 After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...{Después de escapar a la destrucción de tu guarida en Italia por parte de la Orden de Malta, has huido al Caribe, jurando venganza en el nombre del Príncipe de las Tinieblas...}
+
 Anna{Anna}
 De Leiva{De Leiva}
 
@@ -190,7 +199,7 @@ Eduardo{Eduardo}
 Villanueva{Villanueva}
 Sargento{Sargento}
 Lord of the Adriatic{Señor del Adriático}
-Relive the piratical adventures of Capitán Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Revive las piráticas aventuras del capitán Villanueva, temido corsario del mar Adriático. Si eso significa servir a España un como corsario legítimo, o volverte contra cualquiera que se interponga en tu cmaino, es una decisión que depende de ti.}
+Relive the piratical adventures of Capitán Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Revive las piráticas aventuras del capitán Villanueva, temido corsario del mar Adriático. Si eso significa servir a España un como corsario legítimo, o volverte contra cualquiera que se interponga en tu camino, es una decisión que depende de ti.}
 
 Sao{Sao}
 Feng{Feng}
@@ -344,8 +353,9 @@ Caesar{Caesar}
 Longboat{Longboat}
 From Slave to Pirate{De esclavo a pirata}
 You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?{Fuiste arrebatado por la fuerza de tu hogar y encadenado en la bodega de un barco negrero. Pero no todos los hombres blancos que hay a bordo son enemigos. Con un poco de ayuda de un aliado inesperado y una tormenta, consigues escapar de tu cautiverio. ¿Qué harás ahora?}
-the Beggar{el Mendigo}
 
+the Beggar{el Mendigo}	
+				  
 Rackham{Rackham}
 
 Jeremy{Jeremy}
@@ -449,9 +459,6 @@ The Might of Spain{El poder de España}
 Ever since the Spanish set foot in the New World, others have tried and succeeded in taking more land away from them. But as recently promoted lieutenant in His Most Catholic Majesty's navy, you intend to see that Spain reclaims its rightful place in the world!{Desde el momento en que los españoles pusieron el pie en el Nuevo Mundo, otros han intentado, y a veces conseguido, arrebatarles estas tierras. Pero como un teniente recién ascendido en la Real Armada de su Católica Majestad, tienes la intención de ayudar a que España recupere su legítimo lugar en el mundo.}
 San Jeronimo{San Jeronimo}
 
-Sri{Sri}
-Sumbhajee{Sumbhajee}
-
 Tia{Tia}
 Dalma{Dalma}
 
@@ -482,6 +489,7 @@ Will{Will}
 Turner{Turner}
 
 Bootstrap Bill{Bill el Botas}
+
 Ricardo{Ricardo}
 Orellana{Orellana}
 The Devil's Ship{El barco del Diablo}
@@ -550,7 +558,12 @@ Drake{Drake}
 Stranton{Stranton}
 Phantom{Phantom}
 Cursed Vengeance{Venganza maldita}
-Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Vive una aventura de tesoros y traición, sangre y venganza. En un tiempo en que los piratas tenían el mundo en sus manos y siempre se llevaban a la chica, squeaban el tesoro y conquistaban a sus enemigos. Esta vida desafiará tus preconcepciones acerca de los piratas. ¡Vive, ama y muere como solo un pirata puede hacerlo! Basado en la novela de Brent Jackson.}		
+Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Vive una aventura de tesoros y traición, sangre y venganza. En un tiempo en que los piratas tenían el mundo en sus manos y siempre se llevaban a la chica, squeaban el tesoro y conquistaban a sus enemigos. Esta vida desafiará tus preconcepciones acerca de los piratas. ¡Vive, ama y muere como solo un pirata puede hacerlo! Basado en la novela de Brent Jackson.}
+
+Purpure{Purpure}
+Squire of the Sea{La Hidalga de los Mares}
+Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.{Había una vez una niña despreciada por su familia. Su querido tío la envió al mar. Pero el mar se la llevó consigo a otro mundo.}
+Carnation{Carnation}
 
 Francis{Francis}
 Drake{Drake}

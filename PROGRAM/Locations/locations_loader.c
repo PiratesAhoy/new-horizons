@@ -842,7 +842,10 @@ bool LocLoadModel(aref loc, string sat, string addition)
 	if(res == 0) return 0;
 	//Устанавливаем флаги
 	object mdl;
-	SendMessage(loc, "le", MSG_LOCATION_GET_MODEL, &mdl);
+	if(SendMessage(loc, "le", MSG_LOCATION_GET_MODEL, &mdl) != 0)
+	{
+//		SetTownFlag(loc, &mdl); // KK
+	}
 	// Проверяем на пену
 	attr = sat + ".foam";
 	if(CheckAttribute(loc, attr) != 0)

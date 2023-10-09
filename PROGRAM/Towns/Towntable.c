@@ -115,7 +115,7 @@ string FindTownName(string townid)
 	if (CheckAttribute(rtown, "name"))
 	{
 		// PB: For Renamed Personal Towns -->
-		if(GetTownNation(townid) == PERSONAL_NATION)
+		if(GetTownNation(townid) == PERSONAL_NATION && XI_ConvertString(rtown.name)=="")
 			return rtown.name;
 		else
 			return XI_ConvertString(rtown.name);

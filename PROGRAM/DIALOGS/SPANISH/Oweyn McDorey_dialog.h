@@ -72,7 +72,7 @@ string DLG_TEXT[93] = {
 "¿Dónde puedo encontrar a ese hombre?",
 "¡Vive en #sisland_Falaise de Fleur#, cerca del puerto! Es con él con quien debes hablar. ¡Sabe mucho mas de ese cofre que yo!",
 "¡Si no fuera #sgender# de honor, te haría pagar por ponerme en tal peligro!",
-"Me niego a tratar con una persona con tu reputación y relaciones. Márchate ahora mismo, ",
+"No me gusta tu reputación ni las compañías que frecuentas. Me niego a tratar contigo. Márchate ahora mismo, ",
 ", antes de que llame a los guardias.",
 "Muy bien.",
 "Bien, mi muelle junto al fuerte está disponible para ti. Si te parece bien, le diré al capataz del muelle que remolque tu barco hasta allí. Solo entonces podré analizar los daños y decirte cuánto tiempo y dinero costará repararlo. ",

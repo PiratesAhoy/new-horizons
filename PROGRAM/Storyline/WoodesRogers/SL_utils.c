@@ -6469,7 +6469,7 @@ void OpenBoxProcedure_WR()
 				//GOLD COINS
 				LaunchItemsBox(&ar);
 
-				Logit(TranslateString("","No, the Gold Coins are too heavy - the crew will take them to the ship.."));
+				Logit(TranslateString("","No, the Gold Coins are too heavy - the crew will take them to the ship."));
 			break;
 
 			case "box8":

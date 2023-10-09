@@ -335,6 +335,7 @@ An elegant and revealing gown with Steel Cuirass.{An elegant and revealing gown 
 An elegant and revealing gown with Battle Cuirass.{An elegant and revealing gown with Battle Cuirass.}
 An elegant and revealing gown with Gold Cuirass.{An elegant and revealing gown with Gold Cuirass.}
 I want to look like Roxanne Lalliere.{I want to look like Roxanne Lalliere.}
+I want to look like Aveline de Grandpré.{I want to look like Aveline de Grandpré.}
 Catalina like simple and practical sturdy leather but without the cuirass.{Catalina like simple and practical sturdy leather but without the cuirass.}
 I want something simple and practical, sturdy leather and steel like Catalina was known to wear.{I want something simple and practical, sturdy leather and steel like Catalina was known to wear.}
 Simple and practical sturdy leather with Steel Cuirass.{Simple and practical sturdy leather with Steel Cuirass.}
@@ -681,3 +682,4 @@ An adventurer from the Italic peninsula, in search of glory in the Caribbean.{An
 The son of a French nobleman, who became a well known captain after coming to the Caribbean in quite hasty circumstances.{The son of a French nobleman, who became a well known captain after coming to the Caribbean in quite hasty circumstances.}
 A Spanish Admiral bearing with pride the scars of many battles.{A Spanish Admiral bearing with pride the scars of many battles.}
 A big African warrior with a face full of tattoos.{A big African warrior with a face full of tattoos.}
+Purple is the theme of this outfit, with various shades on the shirt, vest and skirt.{Purple is the theme of this outfit, with various shades on the shirt, vest and skirt.}

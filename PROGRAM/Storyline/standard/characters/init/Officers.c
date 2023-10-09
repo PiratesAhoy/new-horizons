@@ -50,7 +50,7 @@ void CreateOfficersCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = "0";
 	ch.perks.list.LongRangeShoot = true;
-	ch.Ship.Name = "Vertigo";
+	ch.Ship.Name = TranslateString("","Vertigo");
 	ch.Ship.Type = "Schooner2"; // PRS3
 	ch.Flags.Pirate = 0;
 	ch.Flags.Pirate.texture = 3;
@@ -136,7 +136,7 @@ void CreateOfficersCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = "0";
 	ch.quest.meeting = "0";
-	ch.Ship.Name = "Astra";
+	ch.Ship.Name = TranslateString("","Astra");
 	ch.Ship.Type = "Tartane1"; // PS - SHIP_TARTANE;
 	ch.Ship.Stopped = true;
 	ch.Ship.Cannons.Type = CANNON_TYPE_NONECANNON;

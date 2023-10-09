@@ -1575,7 +1575,7 @@ void OpiumEffects(ref User)
 	if(effect <=10)
 	{
 		//decrease max health
-		float Bonus = -5 + sti(User.rank)/5;
+		float Bonus = -5 - sti(User.rank)/5;
 		if(CheckAttribute(User, "HPBonus")) Bonus = Bonus + stf(User.HPBonus);
 		User.HPBonus = Bonus;
 		Logit(TranslateString("","Opium lose health"));

@@ -1,9 +1,9 @@
 string DLG_TEXT[6] = {
-"Quien eres y como has entrado aqui?",
+"¿Quién eres y cómo has entrado aquí?",
 "Eso no es asunto tuyo, cerdo.",
-"Deponed las armas y entreguense.",
+"Depón las armas y ríndete.",
 "Nunca.",
-"Entonces preparate para tu fin.",
-"Prefiero que conozcas al tuyo.",
+"Entonces, prepárate para tu fin.",
+"Preferiría que fuera el tuyo.",
 
 };

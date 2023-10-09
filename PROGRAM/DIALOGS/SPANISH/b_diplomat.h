@@ -35,7 +35,7 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 	
-	string natname = GetNationNameByType(sti(npchar.nation));
+	string natname = XI_ConvertString(GetNationNameByType(sti(npchar.nation)));
 
 	switch(natname)
 	{
@@ -73,18 +73,18 @@ void ProcessDialogEvent()
 		Dialog.ani = "dialog_stay2";
 		Dialog.cam = "1";
 		NextDiag.TempNode = "first time";
-		dialog.text = "Ah, my dearest "+ GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + PChar.lastname +  "! Finally do I meet in person the hero whom I have heard of so often! Only the most favourable tales, of course. Word of your heroic deeds reached the highest circles at the court of " + natname + ", which were so impressed by your character that even " + GetNationRoyalByType(sti(npchar.nation)) + " expressed His desire to overcome the.. err.. little misunderstandings that have.. err.. cast a shadow on the relationship between " + natname + " and you. So let's forget the past and sail into a bright common future. If you are willing to fight for our proud -and generous- nation we'll grant you an amnesty and a Royal Letter of Marquee. And in consideration of your leadership and fighting SKILLS we even offer you a sum of " + npchar.bribe + " Gold!";
+		dialog.text = "¡Ah, "+ XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false)) + " " + PChar.lastname +  "! ¡Por fin conozco en persona a tan insigne adalid de quien tanto he oído hablar! Solo cosas buenas, claro. Las noticias de tus heroicas hazañas han llegado a las más altas esferas de la corte de " + natname + ", donde han quedado tan impresionados por tu persona que incluso " + GetNationRoyalByType(sti(npchar.nation)) + " expresó su deseo de superar los... eh... pequeños malentendidos que han... ejem... ensombrecido la relación entre " + natname + " y tú. Así que olvidemos el pasado y naveguemos juntos hacia un brillante futuro. Si te prestas a luchar por nuestra orgullosa -y generosa- nación, te concederemos una amnistía y una real patente de corso. ¡Y en consideración por tu liderazgo y DESTREZA, te ofrecemos una suma de " + npchar.bribe + " piezas de oro!";
 
 		if(sti(pchar.money)>sti(npchar.bribe))
 		{
-			link.l1 = "What? You think you can buy me? Who do you think I am? I don't need your dirty bribemoney, I scorn such petty sums. Here, take " + npchar.bribe + " Goldpieces from ME, take them to your Majesty and tell him to shove them up his royal arse. I am sure you'll find a diplomatic way to do that, eh? And now get out of my eyes!";
+			link.l1 = "¿Qué? ¿Crees que puedes comprarme? ¿Quién te crees que soy? No necesito tu sucio dinero, desprecio esas mezquinas sumas. Ten, toma estas " + npchar.bribe + " piezas de oro que te ofrezco yo, llévaselas a Tu Mahjestad y dile que se las meta por su real culo. Sin duda, encontrarás una forma diplomática de hacerlo, ¿eh? Y ahora, ¡fuera de mi vista!";
 			link.l1.go = "exit_reput";
 		}
 
-		link.l2 = "What? You think you can buy me? Who do you think I am? A traitor? A gun for hire? Well, you have come to the right " + XI_ConvertString(PChar.sex) + " then. Thanks a lot for the money, and kind regards to " + GetNationRoyalByType(sti(npchar.nation)) + ". Tell him I'll sink some ships especially for him. Goodbye.";
+		link.l2 = "¿Qué? ¿Crees que puedes comprarme? ¿Quién te crees que soy? ¿Un mercenario? Bueno, pues estás de suerte, porque soy esa clase de " + XI_ConvertString(PChar.sex) + ". Muchas gracias por el dinero y mis saludos cordiales a " + GetNationRoyalByType(sti(npchar.nation)) + ". Dile que hundiré algunos barcos especialmente dedicados a él. Adiós.";
 		link.l2.go = "exit_change";
 
-		link.l3 = "Umm, I'm afraid that my current employ.. err.. my beloved mothercountry, I mean, won't be pleased if I switch sides. And I can't afford to have " + GetNationNameByType(GetServedNation()) + " as enemy. And I have to think of my reputation as well. So no deal today, sorry. ";
+		link.l3 = "Hum, me temo que a mi actual pagador... esto... a mi amada patria, quiero decir, no le gustará que cambie de bando. Y no puedo permitirme tener a " + XI_ConvertString(GetNationNameByType(GetServedNation())) + " como enemiga. Y también tengo que pensar en mi reputación. Así que no hay trato, lo siento. ";
 		link.l3.go = "exit";
 		break;
 

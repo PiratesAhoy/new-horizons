@@ -101,7 +101,7 @@ void ProcessDialogEvent()
 		}
 		else
 		{
-			Preprocessor_Add("pronoun", GetMyPronounObj(PChar));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounObj(PChar)));
 			dialog.text = DLG_TEXT[78] + GetMyLastName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[79] + DLG_TEXT[82];
 			link.l1 = DLG_TEXT[83];
 			AddDialogExitQuest("treachery_arrest");
@@ -145,7 +145,7 @@ void ProcessDialogEvent()
 	break;
 
 	case "ardent_hunt_villain_wanted":
-		Preprocessor_Add("pronoun", GetMyPronounObj(characterFromID(PChar.quest.villain)));
+		Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.villain))));
 		dialog.text = DLG_TEXT[90] + GetMySimpleName(characterFromID(PChar.quest.villain)) + DLG_TEXT[91];
 		link.l1 = DLG_TEXT[92];
 		AddDialogExitQuest("hunt_setup_Gilbert");

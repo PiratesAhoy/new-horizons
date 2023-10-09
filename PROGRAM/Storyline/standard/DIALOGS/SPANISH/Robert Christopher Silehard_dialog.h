@@ -428,7 +428,7 @@ string DLG_TEXT[436] = {
 "? Ve y tráeme mi ",
 "Lo siento, señor. Ya me iba.",
 "Por cierto, ",
-" me ha informado de que te hiciste con algunos barcos más de cmaino aquí. Tendrás que deshacerte de algunos de ellos antes de que tus barcos originales te puedan ser devueltos.",
+" me ha informado de que te hiciste con algunos barcos más de camino aquí. Tendrás que deshacerte de algunos de ellos antes de que tus barcos originales te puedan ser devueltos.",
 "Muy bien, iré al astillero ahora mismo.",
 "¿Y bien, ",
 "? ¿Te has deshecho de tus barcos sobrantes?",

@@ -50,7 +50,7 @@
 #event_handler("FaderEvent_EndFade","ProcBreakInterface");
 #event_handler("FaderEvent_EndFadeIn","ProcBreakInterface");
 
-// #event_handler("Fader_GetTipsPath","procGetTipsPath");
+#event_handler("Fader_GetTipsPath","procGetTipsPath");
 
 #event_handler("evntOptionsBreak","procOptionsBreak");
 
@@ -2196,13 +2196,11 @@ void procOptionsBreak()
 	g_bOptionsBreak = true;
 }
 
-/*
 string g_sTipsPath;
 ref procGetTipsPath()
 {
 	string sLngID = LanguageGetLanguage();
-	if(sLngID != "SPANISH")    g_sTipsPath = "tips";
+	if(sLngID == "ENGLISH")    g_sTipsPath = "tips";
 	else g_sTipsPath = "tips\" + sLngID;
 	return &g_sTipsPath;
 }
-*/

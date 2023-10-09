@@ -30,10 +30,10 @@ Jan{Ян}
 Thijs{Тайс}
 Arawak{Аравак}
 Indian{Индеец}
-IndianF{Индианка}
+IndianF{Индеанка}
 Chief{Вождь}
 Arawak Indian{Аравакский Индеец}
-Arawak IndianF{Аравакская Индианка}
+Arawak IndianF{Аравакская Индеанка}
 Arawak Chief{Вождь Араваков}
 
 {=====| cayman.c |=====}
@@ -189,7 +189,7 @@ Regalo{Ригало}
 Uargo{Уарго}
 
 {=====| cuba.c |=====}
-Felipe{Фелип}
+Felipe{Филипп}
 Cisneros{Циснерос}
 Horacio{Горацио}
 de la Vega{Де Ла Вега}
@@ -338,7 +338,7 @@ Mattheus{Маттеус}
 Doull{Долл}
 Eduard{Эдуард}
 Gerrits{Гэрритс}
-Johan{Йохан}
+Johan{Йоган}
 Van Pelt{Ван Пелт}
 Raes{Раэс}
 Stevense{Стивенс}
@@ -757,7 +757,7 @@ Bratcher{Братчер}
 Ronald{Рональд}
 Blacklock{Блэклок}
 Miner{Шахтер}
-Mines Commander{Управляющий Рудниками}
+Mines Commander{Управляющий Шахтой}
 Jerald{Джеральд}
 Gilbert{Гилберт}
 Ballester{Бэллестэр}
@@ -796,7 +796,7 @@ Marrow{Марроу}
 Newson{Ньюсон}
 Celestine{Целестина}
 Maupassant{Мопассан}
-Natalia{Наталиа}
+Natalia{Наталия}
 Decoteau{Декото}
 Serena{Серена}
 Tisserand{Тиссеран}
@@ -816,6 +816,8 @@ Goyle{Гойл}
 Stone{Стоун}
 Luna{Луна}
 Grange{Грейндж}
+Vivienne{Вивьен}
+Stewart{Стюарт}
 
 {=====| Redmond.c |=====}
 Henry{Генри}
@@ -1051,7 +1053,7 @@ Kicking{Клюющийся}
 Raven{Ворон}
 Lewis{Льюис}
 Vickers{Викерс}
-Carpenter1{Карпентер}
+Carpenter1{Плотник}
 
 {=====| StoreOwners.c |=====}
 Agent-Victualler{Интендант}
@@ -1268,8 +1270,8 @@ Valderrama{Вальдеррама}
 Christine{Кристина}
 Hoppe{Хоппе}
 Admiral{Адмирал}
-Coastbrother{Береговой брат}
-Leading{Начальник}
+Coastbrother{Берегового Братства}
+Leading{Лидер}
 
 {=====| Usurers.c |=====}
 Robyn{Робин}
@@ -1354,3 +1356,5 @@ Anamaria{Аннамария}
 Scared Monk{Испуганный Монах}
 Cursed Skeleton{Проклятый Скелет}
 Monk{Монах}
+Akellani native{Уроженец Акеллани}
+A rabid monkey{Бешеная обезьяна}

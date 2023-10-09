@@ -20,7 +20,7 @@ string DLG_TEXT[35] = {
 "Bonjour, Monsieur",
 "Capitaine",
 "Al ataque",
-"Hola, Senor",
+"Hola, señor",
 "Capitán",
 "Al ataque",
 "Hola, Senhor",

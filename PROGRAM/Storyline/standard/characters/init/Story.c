@@ -80,7 +80,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "10";
 	ch.skill.Sneak = "10";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Vengeance";
+	ch.Ship.Name = TranslateString("","Vengeance");
 //	ch.Ship.Type = "Battleship3"; // PRS3 // KK
 	ch.Ship.Type = "Battleship4"; // GR - the AoP battleship is back!
 	ch.Ship.Stopped = true;
@@ -142,7 +142,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 2; // TIH: wont give up easily
-	ch.Ship.Name = "Belette";
+	ch.Ship.Name = TranslateString("","Belette");
 	ch.Ship.Type = "HMS_Centurion"; // Armada
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
@@ -204,7 +204,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "Clйopвtre";
+	ch.Ship.Name = TranslateString("","Clйopвtre");
 	ch.Ship.Type = "FR_Frigate"; // Armada
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;
@@ -267,7 +267,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "Sйmillante";
+	ch.Ship.Name = TranslateString("","Sйmillante");
 	ch.Ship.Type = "RN_Corvette"; // Armada
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS16;
@@ -331,7 +331,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "Fleuron";
+	ch.Ship.Name = TranslateString("","Fleuron");
 	ch.Ship.Type = "FR_Fleuron"; // GR: was "FR_SoleilRoyal" // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
@@ -393,7 +393,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "Arsinoe";
+	ch.Ship.Name = TranslateString("","Arsinoe");
 	ch.Ship.Type = "FR_Boussole"; // GR: was "FR_WarGalleon // Thomas the Terror
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;
@@ -456,7 +456,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "l'Entreprise";
+	ch.Ship.Name = TranslateString("","l'Entreprise");
 	ch.Ship.Type = "RN_RaaFrigate"; // GR: was "FR_Derfflinger"
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS16;
@@ -509,7 +509,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Alouette";
+	ch.Ship.Name = TranslateString("","Alouette");
 	ch.Ship.Type = "Schooner1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -562,7 +562,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Friponne";
+	ch.Ship.Name = TranslateString("","Friponne");
 	ch.Ship.Type = "Lugger1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -662,7 +662,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Defence = "1";
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
-	ch.ship.name = "Aurora";
+	ch.ship.name = TranslateString("","Aurora");
 	ch.money = "10";
 	LAi_SetSitType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -781,7 +781,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.quest.guard_protection = true; // PB
-	ch.Ship.Name = "Oiseau";
+	ch.Ship.Name = TranslateString("","Oiseau");
 	ch.Ship.Type = "Barque1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -867,7 +867,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Albion";
+	ch.Ship.Name = TranslateString("","Albion");
 	ch.Ship.Type = "BrigRoyal"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -1635,7 +1635,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	ch.Ship.Name = "La Boussole"; // Seb
+	ch.Ship.Name = TranslateString("","La Boussole"); // Seb
 	ch.Ship.Type = "FR_Boussole"; // Seb
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -1733,7 +1733,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	ch.Ship.Name = "Amorale";
+	ch.Ship.Name = TranslateString("","Amorale");
 	ch.Ship.Type = "Pinnace2"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -2014,7 +2014,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Desperate";
+	ch.Ship.Name = TranslateString("","Desperate");
 	ch.Ship.Type = "RN_Battleship"; // Thomas the Terror
 	ch.Ship.Stopped = true;
 	ch.nosurrender = 1;
@@ -2062,7 +2062,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Monarch";
+	ch.Ship.Name = TranslateString("","Monarch");
 //	ch.Ship.Type = "RN_Essex"; // Thomas the Terror
 	ch.Ship.Type = "RN_Battleship"; // GR: "RN_Essex" belongs to "Napoleonic" period, so "Monarch" is another basic battleship
 	ch.Ship.Stopped = true;
@@ -2110,7 +2110,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Black Prince";
+	ch.Ship.Name = TranslateString("","Black Prince");
 	ch.Ship.Type = "RN_Corvette"; // Thomas the Terror
 	ch.skipRM = true; // PB: Skip Relations Mod
 	ch.Ship.Stopped = true;
@@ -2157,7 +2157,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Meleager";
+	ch.Ship.Name = TranslateString("","Meleager");
 //	ch.Ship.Type = "RN_Essex"; // Thomas the Terror
 	ch.Ship.Type = "Frigate1"; // "RN_Essex" belongs to "Napoleonic" period, so use a "Kreyser" class instead
 	ch.Ship.Stopped = true;
@@ -2204,7 +2204,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Tremendous";
+	ch.Ship.Name = TranslateString("","Tremendous");
 //	ch.Ship.Type = "RN_Brig"; // Thomas the Terror
 	ch.Ship.Type = "BrigSW1"; // GR: all the other pirates now have piratey ships so give this guy the scary pirate brig
 	ch.Ship.Stopped = true;
@@ -2249,7 +2249,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Bato";
+	ch.Ship.Name = TranslateString("","Bato");
 //	ch.Ship.Type = "FastGalleon2"; // KK
 	ch.Ship.Type = "CrimsonBlood"; // GR - "FastGalleon2" should not exist in this time period, use pirate version of corvette instead
 	ch.Ship.Stopped = true;
@@ -2284,7 +2284,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.group = "goto";
 	ch.location.locator = "goto6";
 	ch.Dialog.Filename = "Ferro Cerezo_dialog.c";
-	ch.Ship.Name = "Demetra";
+	ch.Ship.Name = TranslateString("","Demetra");
 	ch.Ship.Type = "Pinnace2"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
@@ -2398,7 +2398,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Defence = "1";
 	ch.skill.Commerce = "10";
 	ch.skill.Sneak = "0";
-	ch.Ship.Name = "Sovereign of the Seas";
+	ch.Ship.Name = TranslateString("","Sovereign of the Seas");
 	ch.Ship.Type = "Manowar1";
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod

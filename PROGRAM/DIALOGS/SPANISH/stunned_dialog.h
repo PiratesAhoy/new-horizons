@@ -1,11 +1,11 @@
 string DLG_TEXT[22] = {
 "Oh, lo siento, no quería interrumpir tu sueño. Hum, tal vez preferiría prolongarlo...",
 "*GEMIDO*...",
-"¿Qué...? ¿Dónde...? ¿Quién eres? No puedo levantarme... ¿qué  ha pasado?...",
+"¿Qué...? ¿Dónde...? ¿Quién eres? No puedo levantarme... ¿Qué ha pasado?...",
 "Ay... ¡mi cabeza! No puedo moverme, veo borroso...",
 "¡Pobre hombre! ¿Qué te ha pasado? ¿Algún accidente? Oh, ¿te has desmayado otra vez? Así que no te importará si me llevo tus pertenencias y tu oro, ¿eh? ... Gracias, y que duermas bien. ",
 "Vaya, vaya... Menuda borrachera llevas encima, ¿eh? ¡Qué vergüenza! Será mejor que ponga tus armas bajo custodia antes de que te hagas daño en pleno delirio. Y también pondré a buen recaudo tu oro, para que no te los gastes en más ron... Chist, lo hago por tu propio bien. Seguro que me lo agradecrás cuando depsiertes...",
-"No te muevas, te has dado un golpe muy fuerte y tienes que quedarte inmóvil hasta que te hayas recuperado un poco. Espera, te ayudaré  aestar más confortable, te pondré el abrigo debajo de la cabeza... Dlejame que te quite el cinturón para que puedas repsirar mejor... (Y de paso, te aligeraré de tus pertenencias y tu dinero, ¡je, je!) ",
+"No te muevas, te has dado un golpe muy fuerte y tienes que quedarte inmóvil hasta que te hayas recuperado un poco. Espera, te ayudaré  a estar más confortable, te pondré el abrigo debajo de la cabeza... Déjame que te quite el cinturón para que puedas repsirar mejor... (Y de paso, te aligeraré de tus pertenencias y tu dinero, ¡je, je!) ",
 "¡Rápido, toma esta poción y levántate! ... Ahí estás. Vi al canalla que te hizo esto. Es un escándalo que se permita a esa escoria vagar por esta isla.Se fue por ahí, trataré de atraparlo, nos vemos. ",
 "¡Vaya, vaya, tienes una pinta realmente terrible! Toma, bebe esta poción y pronto volverás a encontrarte bien.",
 "Oh, lo siento mucho por este..., eh..., desafortunado malentendido. No quería hacerte daño. ¿Seriías tan amable de aceptar mis más humildes disculpas, y esta poción como compensación y consuelo?... Gracias por tu comprensión, y que pases un buen día. ",

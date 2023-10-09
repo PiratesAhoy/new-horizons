@@ -1,9 +1,9 @@
 string DLG_TEXT[6] = {
-"Puedes reunirte con nosotros en la Busqueda de woodes Rogers. !No interrumpas la ceremonia!",
-"Lo tengo.",
-"!No vamos a advertirte otra vez!", 
+"Puedes conocernos en la historia de woodes Rogers. ¡No interrumpas la ceremonia!",
+"Entendido.",
+"¡No vamos a advertírtelo otra vez!", 
 "!",
-"!Matalo!!",
+"¡A muerte!",
 "Oh, Oh.",
 
 };

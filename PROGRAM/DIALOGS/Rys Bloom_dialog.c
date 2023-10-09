@@ -50,7 +50,7 @@ void ProcessDialogEvent()
 		case "Node_2":
 			Diag.TempNode = "Second Time";
 			Dialog.snd = "voice\RYBL\RYBL002";
-			d.Text = "The '" + GetMyShipNameShow(PChar) + DLG_TEXT[5] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[7];
+			d.Text = DLG_TEXT[5] + GetMyShipNameShow(PChar) + DLG_TEXT[6] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[7];
 			Link.l1 = DLG_TEXT[8];
 			Link.l1.go = "node_3";
 			Link.l2 = DLG_TEXT[9];
@@ -223,7 +223,7 @@ void ProcessDialogEvent()
 			Dialog.snd2 = "voice\RYBL\RYBL022";
 			Dialog.snd3 = "voice\RYBL\RYBL023";
 			Diag.TempNode = "Agreed_help";
-			d.Text = RandPhrase(DLG_TEXT[72] + GetMyName(Pchar) + DLG_TEXT[73] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[74], DLG_TEXT[75] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + GetMyName(PChar) + DLG_TEXT[76], DLG_TEXT[77] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[78], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3) + DLG_TEXT[79];
+			d.Text = RandPhrase(DLG_TEXT[72] + GetMyName(Pchar) + DLG_TEXT[73] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[74], DLG_TEXT[75] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) +" "+ GetMyName(PChar) + DLG_TEXT[76], DLG_TEXT[77] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[78], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3) + DLG_TEXT[79];
 			Link.l1 = DLG_TEXT[80];
 			Link.l1.go = "Node_17";
 			Link.l2 = DLG_TEXT[81];

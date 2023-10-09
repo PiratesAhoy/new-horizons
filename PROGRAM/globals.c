@@ -225,7 +225,7 @@ bool	bCaptureShip = false;
 // added by MAXIMUS <--
 
 // KK -->
-#define PIRATEFLAGS_TEXTURES_QUANTITY       5 // JRH: 6 are supported, but not yet used
+#define PIRATEFLAGS_TEXTURES_QUANTITY       6 // Previously commented as able to support 6. Could it support 7 like PERSONALFLAGS_TEXTURES_QUANTITY?
 #define PERSONALFLAGS_TEXTURES_QUANTITY     7 //
 #define FLAGS_PICTURES_QUANTITY_PER_TEXTURE 7
 #define FLAGS_NULL_PICTURE_TEXTURE_INDEX    -1

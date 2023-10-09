@@ -15,7 +15,7 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 
 	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
-	Preprocessor_Add("English", GetNationDescByType(GetTownNation("Greenford")));
+	Preprocessor_Add("English", XI_ConvertString(GetNationDescByType(GetTownNation("Greenford"))));
 	
 	switch(Dialog.CurrentNode)
 	{

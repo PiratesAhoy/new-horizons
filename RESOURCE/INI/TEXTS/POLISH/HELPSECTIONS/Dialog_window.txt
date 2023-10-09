@@ -4,9 +4,9 @@ Dialogue window
 }
 Dialog_window_info
 {
-    Okno dialogowe pojawia si× po naci›ni×ciu przycisku „Akcja”, pozostając przed jaką› postacią. Lub postacie mogą same go inicjowaŢ, je›li chcą rozmawiaŢ z postacią gracza.
-    W lewym górnym rogu okna dialogowego widzisz twarz postaci, z którą rozmawiasz. A do prawego gracza možna zobaczyŢ imi× tej postaci.
-    W dolnej cz×›ci ekranu znajduje si× okno tekstowe. Tutaj gracz widzi, co postaŢ mu mówi, a takže widzi list× zwrotów, które može przekazaŢ postaci. Słowa postaci są złote, a odpowiedzi gracza niebieskie. Aktualnie wybrana odpowiedź gracza jest wyróžniona jasnym niebieskim kolorem (rys.2).
-    Czasami nie cały tekst lub odpowiedzi mogą pasowaŢ do okna tekstowego. W tym przypadku gracz widzi zielone strzałki w gór× iw dół w prawej cz×›ci okna tekstowego (rys.3). A je›li są jakie› linie tekstowe ponižej strzałki w dół, zostaną one pod›wietlone na zielono. To samo co strzałka w gór× - zostanie pod›wietlona, ??je›li tekst jest powyžej.
-    Wybór odpowiedzi gracza može byŢ dokonany za pomocą przycisków wyboru dialogów, a aktywacja wybranej odpowiedzi može byŢ wykonana za pomocą klawisza „dialog” akcji.
+    Okno dialogowe pojawia si× po naci›ni×ciu przycisku „Akcja”, pozostaj¹c przed jak¹› postaci¹. Lub postacie mog¹ same go inicjowaÞ, je›li chc¹ rozmawiaÞ z postaci¹ gracza.
+    W lewym górnym rogu okna dialogowego widzisz twarz postaci, z któr¹ rozmawiasz. A do prawego gracza možna zobaczyÞ imi× tej postaci.
+    W dolnej cz×›ci ekranu znajduje si× okno tekstowe. Tutaj gracz widzi, co postaÞ mu mówi, a takže widzi list× zwrotów, które može przekazaÞ postaci. S³owa postaci s¹ z³ote, a odpowiedzi gracza niebieskie. Aktualnie wybrana odpowiedŸ gracza jest wyróžniona jasnym niebieskim kolorem (rys.2).
+    Czasami nie ca³y tekst lub odpowiedzi mog¹ pasowaÞ do okna tekstowego. W tym przypadku gracz widzi zielone strza³ki w gór× iw dó³ w prawej cz×›ci okna tekstowego (rys.3). A je›li s¹ jakie› linie tekstowe ponižej strza³ki w dó³, zostan¹ one pod›wietlone na zielono. To samo co strza³ka w gór× - zostanie pod›wietlona, ??je›li tekst jest powyžej.
+    Wybór odpowiedzi gracza može byÞ dokonany za pomoc¹ przycisków wyboru dialogów, a aktywacja wybranej odpowiedzi može byÞ wykonana za pomoc¹ klawisza „dialog” akcji.
 }

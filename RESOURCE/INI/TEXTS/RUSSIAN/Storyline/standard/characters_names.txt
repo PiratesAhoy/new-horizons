@@ -98,6 +98,7 @@ Violate{Виолате}
 Gyles{Жиль}
 Dubois{Дюбуа}
 citizen{Горожанин}
+citizen_F{Горожанка}
 Soldier{Солдат}
 Ragetti{Раджетти}
 Pintel{Пинтел}

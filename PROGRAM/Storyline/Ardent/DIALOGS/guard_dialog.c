@@ -188,6 +188,7 @@ void ProcessDialogEvent()
 		case "did_you_get_ring":
 			dialog.text = DLG_TEXT[39];
 			link.l1 = DLG_TEXT[40];
+			AddDialogExitQuest("out_of_store_ring2");
 			link.l1.go = "Exit";
 		break;
 

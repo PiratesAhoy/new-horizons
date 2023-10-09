@@ -315,7 +315,7 @@ void ProcessDialogEvent()
 
 				// возьмите строительные ресурсы
 				RemoveCharacterGoods(pchar, GOOD_PLANKS, planks-1 );
-				PlayStereoSound("INTERFACE\took_item.flac");
+				PlayStereoSound("INTERFACE\took_item.wav");
 				AddMoneyToCharacter(Pchar, -money);
 				Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -crew;
 				
@@ -447,7 +447,7 @@ void ProcessDialogEvent()
       lcn.building.(nr).taxMonth = GetDataMonth();
       lcn.building.(nr).taxDay = GetDataDay();
 			tax = taxdays * 10;	// Вознаграждая арендную плату деньгами, вы можете изменить цифру перед ";" по своему вкусу
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneytoCharacter(Pchar, tax);
 			ChangeCharacterReputation(Pchar, -2);  // наказание: падение репутации. Измените по своему вкусу
 			Dialog.text =  RandSwear() + LinkRandPhrase("Ну, вот, возьми свои чертовы деньги. Но не жалуйтесь, если скоро останетесь без ремесленников, потому что мы голодали...", "Тогда у меня нет другого выбора, кроме как занять деньги для тебя у ростовщика. Это означает, что я, вероятно, закончу со сломанной рукой... в ЛУЧШЕМ случае...", "Ладно, ты, пиявка, вот, возьми эти деньги, которые я скопил для своей больной матери.") ;
@@ -461,7 +461,7 @@ void ProcessDialogEvent()
 			lcn.building.(nr).taxMonth = GetDataMonth();
 			lcn.building.(nr).taxDay = GetDataDay();
 			tax = taxdays * 10;	// Вознаграждая арендную плату деньгами, вы можете изменить цифру перед ";" по своему вкусу
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneytoCharacter(Pchar, tax);
 			ChangeCharacterReputation(Pchar, -2);  // наказание: падение репутации. Измените по своему вкусу
 			Ambush("Lower_Citizens", 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");

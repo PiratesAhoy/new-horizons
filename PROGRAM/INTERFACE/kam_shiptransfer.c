@@ -162,7 +162,7 @@ void RemoveCaptain1()
 		CreateImage("SelectedCaptain1","EMPTYFACE","emptyface",140,250,240,350);
 // <-- KK
 	CreateImage("SelectedCaptain1Ship","BLANK_SHIP","Not used",30,250,130,350);
-	SetFormatedText ("SEL1DETAILS","(no captain selected)");
+	SetFormatedText ("SEL1DETAILS","(" + XI_ConvertString("no captain selected") + ")");
 	SetSelectable("SELECTBTN1", true); // KK
 	SetSelectable("I_TRANSFER",false);
 }
@@ -230,7 +230,7 @@ void RemoveCaptain2()
 		CreateImage("SelectedCaptain2","EMPTYFACE","emptyface",510,250,610,350);
 // <-- KK
 	CreateImage("SelectedCaptain2Ship","BLANK_SHIP","Not used",400,250,500,350);
-	SetFormatedText ("SEL2DETAILS","(no captain selected)");
+	SetFormatedText ("SEL2DETAILS","(" + XI_ConvertString("no captain selected") + ")");
 	SetSelectable("SELECTBTN2", true); // KK
 	SetSelectable("I_TRANSFER",false);
 }

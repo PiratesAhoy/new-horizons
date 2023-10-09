@@ -76,7 +76,7 @@ string DLG_TEXT[87] = {
 "Oh yes?",
 "See? Not such a bad guy after all!",
 "Oh. How much did you win?",
-"20'000 Spanish gold coins! That should be enough to resupply the ship before our next voyage. But to be fair, when it comes to cards these two don't know the difference between the front and the back. Ha Ha!",
+"20,000 Spanish gold coins! That should be enough to resupply the ship before our next voyage. But to be fair, when it comes to cards these two don't know the difference between the front and the back. Ha Ha!",
 "Very well. You win this time, Blaze. But lose the idiots, we have things to discuss. I'll invite you and our dressed to kill baby sister for a drink.", // 78
 "'Captain E'... Do you think that was our father himself?",
 "It looks that way to me. It's a strange story, and it shows how little we actually know of him and of what happened after he went away.",
@@ -85,5 +85,5 @@ string DLG_TEXT[87] = {
 "Well, it's part of the reason I came here as well...",
 "Blaze! You surprise me! I always thought you went to sea for easy money and fast women!", // 84
 "Girls! Typical! This is obviously man's business. Why don't you two enjoy some girl time with coffee and pie while I go into the jungle and find the hermit. No problem for me!",
-"Oh, I see, you're very brave and very helpful, Blaze. Alright, since you know it all and can do it all, we leave everything to you. We're so relieved to know ourselves savely in your manly hands. Come on, Bonnie.",
+"Oh, I see, you're very brave and very helpful, Blaze. Alright, since you know it all and can do it all, we leave everything to you. We're so relieved to know ourselves safely in your manly hands. Come on, Bonnie.",
 }

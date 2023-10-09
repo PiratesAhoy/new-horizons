@@ -36,7 +36,7 @@ Sailor{Моряк}
 Claude{Клод}
 Frollo{Фролло}
 Landlady{Хозяйка}
-Natalia{Наталиа}
+Natalia{Наталия}
 Decoteau{Декото}
 Serena{Серена}
 Tisserand{Тиссеранд}

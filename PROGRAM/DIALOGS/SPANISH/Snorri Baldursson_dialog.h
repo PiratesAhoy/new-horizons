@@ -1,5 +1,5 @@
 string DLG_TEXT[2] = {
-"Que?! Los mataste?! Pagaras por esto!!!",
-"Relajate, pronto te uniras a tus amigos!",
+"¡¿Qué?! ¡¿Los has matado?! ¡¡¡Pagarás por esto!!!",
+"Tranquilízate, ¡pronto te unirás a tus amigos!",
 
 };

@@ -1,6 +1,6 @@
 TEXT	{
 To jest wersja #dversion# harmonogramu patrolowania dla #sIsland#.
-Ze względu na ilo›ĺ kontrabandy przeznaczonej do sprzedažy na tej wyspie, postanowiono umie›ciĺ straž przybrzežną na #sState#.
-Oznacza to, že będzie to harmonogram:
+Ze wzglêdu na ilo›å kontrabandy przeznaczonej do sprzedažy na tej wyspie, postanowiono umie›ciå straž przybrzežn¹ na #sState#.
+Oznacza to, že bêdzie to harmonogram:
 #sSchedule#
 }

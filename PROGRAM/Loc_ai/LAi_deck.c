@@ -1444,9 +1444,9 @@ void PlaceOfficersToDeck(string deckType)
 			logined = 1;
 // KK -->
 			if (iShipCaptain == GetMainCharacterIndex()) {
-				for (i = 1; i < GetPassengersQuantity(mchr); i++)
+				for (i = 1; i <= GetPassengersQuantity(mchr); i++)
 				{
-					PsgAttrName = "id"+(i+1);
+					PsgAttrName = "id"+i;
 					_curCharIdx = sti(pRef.(PsgAttrName));
 					tmpChr = GetCharacter(_curCharIdx);
 					if(!CheckAttribute(tmpChr,"prisoned") && CheckAttribute(tmpChr,"quest.officertype"))

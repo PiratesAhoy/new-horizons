@@ -64,7 +64,7 @@ string DLG_TEXT[76] = {
 "Me gustaría quedarme con este producto, si no te importa.",
 "Muy bien.",
 "Continuemos, ¿de acuerdo?",
-"¡Te has quedado ocn todo! ¿Te parezco un idiota al que puedes engañar?",
+"¡Te has quedado con todo! ¿Te parezco un idiota al que puedes engañar?",
 "¿Cómo te libraste de esos guardias? ¡Fue demasiado fácil! Nos traicionarás, ¿verdad? ¡En guardia!",
 "No... No... ¡ESPERA!",
 "Por orden del gobernador, estáis todos arrestados. ¡Tirad las armas y subid al bote!",

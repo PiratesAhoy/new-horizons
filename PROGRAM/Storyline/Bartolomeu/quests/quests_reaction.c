@@ -3173,6 +3173,7 @@ void QuestComplete(string sQuestName)
 			Group_SetTaskAttack("Nathaniel Hawk", PLAYER_GROUP, true);
 			Group_LockTask("Nathaniel Hawk");
 			Group_SetAddress("Nathaniel Hawk", Characters[GetMainCharacterIndex()].location, "", "");
+			Characters[GetCharacterIndex("Nathaniel Hawk")].nosurrender = 2;
 
 			UpdateRelations();
 

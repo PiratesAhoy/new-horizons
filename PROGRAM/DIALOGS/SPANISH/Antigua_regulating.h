@@ -18,7 +18,7 @@ string DLG_TEXT[201] = {
 "Aun así, lo cierto es que no hay marineros decentes disponibles, pero puede que haya una forma de resolver tu problema, y de paso resolver un problema mío también: acaba de llegar un cargamento de convictos de Europa, y en vez de distribuirlos por la flota, donde lo único que harán será propagar enfermedades y promover motines, podría librarme de toda la horda mandándola a tu barco.",
 "Hum... Necesito hombres. Mándamelos, No tardaré en convertirlos en marineros como Dios manda.",
 "Su señoría el almirante del puerto está en su despacho en el piso de arriba. Pero ten cuidado y no te equivoques de puerta, o te meterás en el fuerte lleno de casacas rojas de gatillo fácil, o en el dormitorio de la última amante del almirante. Semejantes intrusiones podrían resultar fatales para ti.",
-"Oh, gracias por la advertencia. Anque esos estúpidos casacas rojas no me dan miedo. Sin embargo, la amante de un almirante... Adiós.",
+"Oh, gracias por la advertencia. Aunque esos estúpidos casacas rojas no me dan miedo. Sin embargo, la amante de un almirante... Adiós.",
 "Lo niego rotundamente, ¿me has oído, #ssir#? Porque eso habría sido un procedimiento irregular. ¡Nunca nos hemos visto antes! ¿LO ENTIENDES? (GUIÑO)",
 "¡Oh, no, conmigo eso no funciona! Sólo estás fingiendo que no nos hemos conocido antes para así poder sacarme otro soborno...",
 "Ah, sí, ya entiendo (GUIÑO). Debo haberte confundido con otro oficial, no es de extrañar..., esos uniformes me parecen todos iguales. Que tenga un buen día, señor.",

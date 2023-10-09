@@ -9,7 +9,7 @@ string DLG_TEXT[114] = {
 "Lo siento, pero hay cosas que tengo que hacer.",
 "Entonces, ¿por qué me distraes de mis importantes asuntos de estado?",
 "Me gustaría hablar con Su Excelencia acerca de un pequeño asunto de negocios.",
-"Solo estoy aquí para presentar mis respetos. Nada más.",
+"Solo estoy aquí para presentar mis respetos. Nada más, ",
 "En ese caso, por favor, sal de mi estudio y déjame volver a asuntos más importantes.",
 "Sí, por supuesto. Siento haber molestado a Su Excelencia.",
 "Estoy escuchando, ",

@@ -25,7 +25,7 @@ void ProcessDialogEvent()
 		case "fetch quest":
 			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false)); // DeathDaisy
-			d.Text = DLG_TEXT[1] + NPChar.fetch_quest.amount + " " + Goods[sti(NPChar.fetch_quest.good)].name + DLG_TEXT[2] + NPChar.fetch_quest.money + DLG_TEXT[3]  + NPChar.fetch_quest.expire;
+			d.Text = DLG_TEXT[1] + NPChar.fetch_quest.amount + " " + XI_ConvertString(Goods[sti(NPChar.fetch_quest.good)].name)+ DLG_TEXT[2] + NPChar.fetch_quest.money + DLG_TEXT[3]  + NPChar.fetch_quest.expire;
 			Link.l1 = DLG_TEXT[4];
 			Link.l1.go = "agree fetch";
 			Link.l2 = DLG_TEXT[5];
@@ -114,9 +114,9 @@ void ProcessDialogEvent()
 			PlaySound("INTERFACE\notebook.flac");*/
 			//Questbook
 			Preprocessor_AddQuestData("town",ctown.name);
-			Preprocessor_AddQuestData("type","blacksmith");
+			Preprocessor_AddQuestData("type",XI_ConvertString("blacksmith"));
 			Preprocessor_AddQuestData("amount",sti(NPChar.fetch_quest.amount));
-			Preprocessor_AddQuestData("good",Goods[sti(NPChar.fetch_quest.good)].name);
+			Preprocessor_AddQuestData("good",XI_ConvertString(Goods[sti(NPChar.fetch_quest.good)].name));
 			Preprocessor_AddQuestData("money",sti(NPChar.fetch_quest.money));
 			Preprocessor_AddQuestData("pronoun2",XI_ConvertString(GetMyPronounObj(NPChar)));
 			Preprocessor_AddQuestData("date",NPChar.fetch_quest.expire);

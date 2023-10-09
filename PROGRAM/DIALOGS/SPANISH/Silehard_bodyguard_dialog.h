@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = {
-"Sea amable con el Senor conc, de lo rec no puedo garantizar que le dejare vivir.",
-"Lo tengo.",
-"El Gobernador esta descansando ahora mismo y me ha ordenado que no dejen a nadie en su habitacion.",
-"Lo siento. No queremos molestarlo. Volveremos mas tarde.",
+"Sé cortés con el señor gobernador, de lo contrario no puedo garantizar que te deje vivir.",
+"Entendido.",
+"El gobernador está descansando ahora mismo y me ha ordenado que no deje a nadie entrar en su habitación.",
+"Lo siento. No queremos molestarlo. Volveremos más tarde.",
 
 };

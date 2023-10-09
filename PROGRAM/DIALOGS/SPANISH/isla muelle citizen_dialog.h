@@ -16,7 +16,7 @@ string DLG_TEXT[145] = {
 ". ¿Qué te trae a nuestra colonia?",
 "Ah, capitán ",
 ". ",
-", eres tu otra vez. ¿Cómo ha ido la navegación? Una travesía plácida, espero.",
+", eres tú otra vez. ¿Cómo ha ido la navegación? Una travesía plácida, espero.",
 "Hola, ",
 ", ¿puedo ayudarte?",
 "¿Cuales son los últimos rumores?",

@@ -1190,6 +1190,7 @@ string GetBearingFromShip16(float ay)
 	if (ay == -99.0) return "";		// LDH keep directing from displaying - 04Mar09
 
 	float dir = Radian2Degree(ay);
+	string result;
 
 	while (dir < 0.0) dir += 360.0;
 	while (dir > 360) dir -= 360.0;
@@ -1199,21 +1200,22 @@ string GetBearingFromShip16(float ay)
 
 	switch (index)
 	{
-	case  0: return "dead ahead"; break;
-	case  1: return "fine on the starboard bow"; break;
-	case  2: return "on the starboard bow";	break;
-	case  3: return "broad on the starboard bow"; break;
-	case  4: return "on the starboard beam"; break;
-	case  5: return "broad on the starboard quarter"; break;
-	case  6: return "on the starboard quarter"; break;
-	case  7: return "fine on the starboard quarter"; break;
-	case  8: return "astern"; break;
-	case  9: return "fine on the port quarter"; break;
-	case 10: return "on the port quarter"; break;
-	case 11: return "broad on the port quarter"; break;
-	case 12: return "on the port beam"; break;
-	case 13: return "broad on the port bow"; break;
-	case 14: return "on the port bow"; break;
-	case 15: return "fine on the port bow"; break;
+		case  0: result =  "dead ahead"; break;
+		case  1: result =  "fine on the starboard bow"; break;
+		case  2: result =  "on the starboard bow";	break;
+		case  3: result =  "broad on the starboard bow"; break;
+		case  4: result =  "on the starboard beam"; break;
+		case  5: result =  "broad on the starboard quarter"; break;
+		case  6: result =  "on the starboard quarter"; break;
+		case  7: result =  "fine on the starboard quarter"; break;
+		case  8: result =  "astern"; break;
+		case  9: result =  "fine on the port quarter"; break;
+		case 10: result =  "on the port quarter"; break;
+		case 11: result =  "broad on the port quarter"; break;
+		case 12: result =  "on the port beam"; break;
+		case 13: result =  "broad on the port bow"; break;
+		case 14: result =  "on the port bow"; break;
+		case 15: result =  "fine on the port bow"; break;
 	}
+	return TranslateString("",result);
 }

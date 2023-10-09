@@ -13997,6 +13997,10 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.Hornblower_reset_Greenford_HQ.win_condition.l1 = "Location";
 			PChar.quest.Hornblower_reset_Greenford_HQ.win_condition.l1.location = "Oxbay";
 			PChar.quest.Hornblower_reset_Greenford_HQ.win_condition = "Hornblower_reset_Greenford_HQ";
+			if (FindCurrentStoryline() == FindStoryline("Hornblower"))
+			{
+				AddStorylineVar(FindCurrentStoryline(), "CHANGING_RELATIONS", "1");	// PB: Enable changing nation relations
+			}
 		break;
 
 		case "Hornblower_reset_Greenford_HQ":

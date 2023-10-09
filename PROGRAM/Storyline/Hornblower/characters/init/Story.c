@@ -17,7 +17,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Captain Keene_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Justinian";
+	ch.Ship.Name = TranslateString("","Justinian");
 	ch.Ship.Type = "HMS_Bellona";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 20;
@@ -61,7 +61,7 @@ void CreateStoryCharacters(ref n)
 	//JRH ammo mod <--
 	ch.Dialog.Filename = "Sir Edward Pellew_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Indefatigable";
+	ch.Ship.Name = TranslateString("","Indefatigable");
 	ch.Ship.Type = "HMS_Indefatigable";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 20;
@@ -101,7 +101,7 @@ void CreateStoryCharacters(ref n)
 	ch.equip.blade = "blade4";
 	ch.Dialog.Filename = "Dreadnought Foster_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Dreadnought";
+	ch.Ship.Name = TranslateString("","Dreadnought");
 	ch.Ship.Type = "RN_SuperiorWarship";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 20;
@@ -141,7 +141,7 @@ void CreateStoryCharacters(ref n)
 	ch.Dialog.Filename = "Black Charlie Hammond_dialog.c";
 	ch.greeting = "Gr_Black Charlie Hammond";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Phantom";
+	ch.Ship.Name = TranslateString("","Phantom");
 	ch.Ship.Type = "RN_FirstRate";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 20;
@@ -214,7 +214,7 @@ void CreateStoryCharacters(ref n)
 	ch.equip.blade = "blade4";
 	ch.Dialog.Filename = "Captain Harvey_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Hound";
+	ch.Ship.Name = TranslateString("","Hound");
 	ch.Ship.Type = "RN_Corvette";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 20;
@@ -769,7 +769,7 @@ void CreateStoryCharacters(ref n)
 	ch.equip.blade = "blade4";
 	ch.Dialog.Filename = "Captain James Sawyer_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Renown";
+	ch.Ship.Name = TranslateString("","Renown");
 	ch.Ship.Type = "RN_Superbe";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 30;
@@ -815,7 +815,7 @@ void CreateStoryCharacters(ref n)
 	//JRH ammo mod <--
 	ch.Dialog.Filename = "Lt. Percy Buckland_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Lydia";
+	ch.Ship.Name = TranslateString("","Lydia");
 	ch.Ship.Type = "RN_Essex";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 20;
@@ -904,7 +904,7 @@ void CreateStoryCharacters(ref n)
 	//JRH ammo mod <--
 	ch.Dialog.Filename = "Lt. William Bush_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Mulberry";
+	ch.Ship.Name = TranslateString("","Mulberry");
 	ch.Ship.Type = "RN_BattleFrigate";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 20;
@@ -950,7 +950,7 @@ void CreateStoryCharacters(ref n)
 	//JRH ammo mod <--
 	ch.Dialog.Filename = "Lt. Uriah Quelp_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Resource";
+	ch.Ship.Name = TranslateString("","Resource");
 	ch.Ship.Type = "HMS_Speedy";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 20;

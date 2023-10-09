@@ -42,7 +42,7 @@ void ProcessDialogEvent()
 	aref buildingref;
 	Items_FindItem(buildingstr,&buildingref);
 
-	string interiorstr = "simple furniture";
+	string interiorstr = "mobiliario sencillo";
 	if(CheckAttribute(Npchar,"equip.gun"))
 	{
 	interiorstr = NPChar.equip.gun;
@@ -63,11 +63,11 @@ void ProcessDialogEvent()
 	int tax = 0;
 
 	string adress, sound1, sound2;
-	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " Boss ";}else{adress = " " + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " ";}
+	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = "patrón";}else{adress = + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false));}
 	
 	// determine production based on interiortype
 	tax = taxdays * 1;	// Reward, output of goods, you can change the figure before the ';' to your liking
-	string prodstr = " trying to turn this shabby little shack into a proper workshop. But without the proper equipment I'll never be able to manufacture something of worth or use."
+	string prodstr = " intentando convertir esta pequeña choza en un verdadero taller. Pero sin el equipo adecuado, nunca podré fabricar nada de utilidad o valor."
 	int prodgood = -1;
 	string prodname = "nothing";
 	sound1 = "ambient\shipyard\hammer.wav";
@@ -76,35 +76,39 @@ void ProcessDialogEvent()
 	switch(interiorstr)
 	{
 		case "foundry":
+		interiorstr = "fundición";
 		sound1 = "ambient\sea\squeak3.wav";
 		sound2 = "objects\shipcharge\ship_onfire.wav";
 		prodgood = GOOD_BALLS;
 		tax = tax * 100;  // reward: change figure to change production of BALLS ONLY
-		prodname = "cannonballs";
-		prodstr = " casting cannonballs. Rather hot work, and dangerous as well with that blastfurnace being cobbled together from scrap parts.";
+		prodname = "balas de cañón";
+		prodstr = " fundiendo balas de cañón. Es un trabajo caluroso, y peligroso también, con este alto horno hecho a base de chatarra.";
 		break;
 
 		case "dock":
+		interiorstr = "muelle de carena";
 		sound1 = "ambient\shipyard\hammer.wav";
 		sound2 = "ambient\sea\sails2.wav";
 		prodgood = GOOD_SAILCLOTH;
 		tax = tax*3;  // reward: change figure to change production of SAILCLOTH ONLY
-		prodname = " bales of sparesails";
-		prodstr = " stitching sails and careening fishing boats.";
+		prodname = " fardos de lona para velas de repuesto";
+		prodstr = " cosiendo velas y carenando botes de pesca.";
 		break;
 
 		case "mine":
+		interiorstr = "mina";
 		sound1 = "nature\windmill.wav";
-		prodname = " tons of worthless sand";
-		prodstr = " digging for precious stones and minerals. Very frustrating work sometimes, you can never predict what you'll find. IF we find something at all. Often we dig for weeks without success. And that mineshaft winding tower always causes trouble: the derrick is made of brittle driftwood which often cracks, and as you can see the winding rope has been ripped off.. AGAIN! That we can produce something of value now and then under such miserable working conditions is a miracle. ";
+		prodname = " toneladas de arena sin valor";
+		prodstr = " excavando en busca de piedras preciosas y minerales. Un trabajo muy frustrante a veces, nunca puedes predecir lo que vas a encontrar. Si es que encontramos algo. A menudo, cavamos durante semanas sin éxito. Y el castillete del pozo minero siempre causa problemas: la grúa está hecha con madera de deriva, que es quebradiza y se agrieta a menudo, y como puedes ver, el cable se ha roto... ¡otra vez! Que podamos producir algo de valor en estas condiciones de trabajo es un milagro. ";
 		break;
 
 		case "distillery":
+		interiorstr = "destilería";
 		sound1 = "ambient\tavern\tinkle1.wav";
 		prodgood = GOOD_RUM;
 		tax = tax*2;  // reward: change figure to change production of RUM ONLY
-		prodname = "casks of rum";
-		prodstr = " distilling rum. The finest and strongest in the whole Caribbean, burns like fire.. in the throat as well as in a lantern. And sometimes the whole distillery burns down as well cause the spirit's leaking out of the scrapyard tubes into the fire.. ";
+		prodname = "barriles de ron";
+		prodstr = " destilando ron. El mejor y más fuerte de todo el Caribe, quema como fuego, lo mismo en la garganta que en un farol. Y a veces la destilería entera se quema también porque el alcohol se filtra por los tubos improvisados y gotea sobre el fuego... ";
 		break;
 
 	}
@@ -126,8 +130,8 @@ void ProcessDialogEvent()
 
 		  if(bDisableFastReload || objLandInterface.data.riskAlarm==1)
 		  {
-			  Dialog.text = "Looks like You are busy? Finish your business first.";
-			  link.l1 = "Certainly, I'll come soon.";
+			  Dialog.text = "Parece que tienes cosas que hacer. Termina tus asuntos pendientes.";
+			  link.l1 = "Por supuesto, volveré pronto.";
 			  link.l1.go = "exit";
 		  }
 		  else
@@ -136,49 +140,49 @@ void ProcessDialogEvent()
 			{
 				ChangeCharacterReputation(Pchar, -2);  // punishment: reputationloss. Will be offset if accept the fight
 				PlayStereoSound("voice\ENGLISH\Eng_m_a_070.wav");	
-				Dialog.text =  LinkRandPhrase("Thanks to God that you came along! You can defend us against those brutes..", "Ahh, heaven sent you at a most crucial moment: we are about to come under attack. HELP US!", "Well met, I say, we desperately need a fighting " + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + " like you to ward off that raid...");
-				link.l1 = "Hey, calm down! My, my, you are already stiff from fear... Now tell me what's going on here.";
+				Dialog.text =  LinkRandPhrase("¡Gracias a Dios que has venido! Puedes defendernos de estos brutos...", "Ah, tu llegada es un regalo del cielo en un momento crucial: están a punto de atacarnos. ¡AYÚDANOS!", "Qué alegría verte, necesitamos desesperadamente a alguien como tú, la clase de " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)) + " capaz de luchar para protegernos del ataque...");
+				link.l1 = "¡Eh, cálmate! Vaya, pero si estás temblando de miedo... Ahora, dime lo que está pasando.";
 				if(rand(100)>70) {Link.l1.go = "attack1";}
 				else{Link.l1.go = "attack2";}
 
-				link.l9 = "Now, now, don't raise such a fuss because of some labour unrest. Use your tools to defend yourself, will you? I am busy managing the administration of this operation, and that task leaves me no time for union brawls!";
+				link.l9 = "Vamos, vamos, no pongas el grito en el cielo por una pequeña disputa laboral. Usa tus herramientas para defenderte, ¿quieres? ¡Yo tengo que supervisar la administración de este negocio y esa tarea no me deja tiempo para peleas sindicales!";
 				link.l9.go = "exit";
 			}
 			else
 			{
-				Dialog.text =  "What? Oh, you.. Sorry, " + adress + ", I don't have much time for you. I am very busy" + prodstr;
+				Dialog.text =  "¿Qué? Oh, tú... Lo siento, " + adress + ", no tengo mucho tiempo para ti. Estamos muy ocupados" + prodstr;
 
 				if(NPChar.chr_ai.group==LAI_GROUP_PLAYER) // if you are the landlord
 				{
 					if(interiorstr == "dock")
 					{
-						link.l14 = "Can you repair my ship?";
+						link.l14 = "¿Puedes reparar mi barco?";
 						link.l14.go = "repairfree";
 					}
 					if(taxdays>0 && interiorstr == "mine")
 					{
-						link.l14 = "How is the mining? Found anything of value lately?";
+						link.l14 = "¿Cómo va la mina? ¿Habéis encontrado algo de valor últimamente?";
 						link.l14.go = "taxmine";
 					}
 
 					if(taxdays>0 && prodname != "nothing" && interiorstr != "mine")
 					{
-						link.l5 = "Great to see that you are busily producing goods... for me. After all that's why I build this " + interiorstr + " for. So what have you achieved in the " + taxdays + " days since my last call?";
+						link.l5 = "Me alegra ver que estáis produciendo mercancías... para mí. Después de todo, para eso construí esta maravilla de " + interiorstr + ". ¿Qué habéis logrado en los " + taxdays + " días que han pasado desde mi última inspección?";
 						if(rand(100)*sti(pchar.reputation)/50 > 20)   // chance for a refusal of payments, decrease last figure for fewer refusals
 						{Link.l5.go = "tax";}
 						else{Link.l5.go = "taxevasion";}
 					}
 
-					link.l6 = "Hmm, I wonder if this " + buildingstr + " can be improved.";
+					link.l6 = "Hum, me pregunto si este taller puede mejorarse más.";
 					link.l6.go = "interior";
 
 					if(CheckCharacterItem(PChar,"pistolgrenade") && !CheckCharacterItem(NPChar,"pistolgrenade") )
 					{
-						link.l7 = "Listen, a lot of scoundrels scourge these islands, raiders that enjoy plunder, torture and rape. Maybe they come here, and in that case you need some last resort. Here, take this grenade...";
+						link.l7 = "Escucha: hay mucho canalla suelto que acecha por estas islas, saqueadores que disfrutan robando, torturando y violando. Quizás vengan aquí, y en ese caso, necesitarás algo que puedas usar como último recurso. Ten, toma esta granada...";
 						link.l7.go = "grenade";
 					}
 
-					link.l8 = "I have no use for this construction anymore. Dismantle it, load the planks into our hold and report to the boatswain for shipduties.";
+					link.l8 = "Este edificio ya no tiene ninguna utilidad para mí. Desmanteladlo, cargad las tablas en la bodega y presentaos al contramaestre para que os asigne vuestros deberes a bordo.";
 					link.l8.go = "dismantle";
 
 				}
@@ -186,42 +190,42 @@ void ProcessDialogEvent()
 				{
 					if(lcn.id == "Oxbay_port")
 					{
-						link.l114 = "What the hell happened to this beautiful location? Who spoiled the view by squeezing all these odd buildings into the port?";
+						link.l114 = "¿Qué demonios le ha pasado a este hermoso lugar? ¿Quién ha arruinado las vistas amontonando todos estos edificios tan raros en el puerto?";
 						link.l114.go = "explain";
 					}
-					link.l9 = "Just passing by... ";
+					link.l9 = "Solo pasaba por aquí... ";
 					link.l9.go = "exit";
 				}
 
-				Link.l10 = "Then I won't keep you from your work any longer. Goodbye.";
+				Link.l10 = "Entonces, no te distraeré más de tu trabajo. Adiós.";
 				Link.l10.go = "exit";
 
-				link.l11 = "Hey, why do stand here so motionless? " + LinkRandPhrase("Have you swallowed a broomstick...", "Come on, relax a little...", "I expect a bit more activity from the inhabitants of my settlement, ya hear me?");
+				link.l11 = "Eh, ¿qué haces ahí sin moverte? " + LinkRandPhrase("¿Te has tragado un palo de escoba?...", "Vamos, relájate un poco...", "Espero un poco más de actividad en los habitantes de mi asentamiento, ¿me oyes?");
 				link.l11.go = "motion";
 
-				link.l12 = "Umm, excuse me, I don't want to be petty, but this 'building' looks a bit odd to me...";
+				link.l12 = "Hum, perdona, no quiero ser tiquismiquis, pero este 'edificio' me parece un poco raro...";
 				link.l12.go = "odd";
 
-				link.l13 = "Hey, you there in front of the keyboard! This is a building that YOU created, so how about creating your own dialog as well? Just use Notepad to open the file program\dialogs\ " + NPchar.dialog.filename + " and overwrite this text with your own. Then follow the instructions in the comments.";
-				link.l13.go = "your_dialog"; //this is the case that runs if you choose the dialogoption l13. It is right below.
+				link.l13 = "¡Eh, tú, enfrente del teclado! Este es un edificio creado POR TI, así que, ¿por qué no creas tu propio diálogo para acompañarlo? Solo tienes que usar Bloc de Notas para abrir el archivo PROGRAM\DIALOGS\SPANISH\" + NPchar.dialog.filename + " y sobreescribir este texto con el tuyo. Luego sigue las instrucciones en los comentarios.";
+				link.l13.go = "your_dialog"; //este es el caso que se ejecuta si eliges la opción de diálogo l13. Está justo debajo.
 			}
 		  }
 		break;
                 
 		case "your_dialog":
-			Dialog.text = "Overwrite this with the dialogtext of the NPC." ;
+			Dialog.text = "Escribe aquí el texto de diálogo del NPC." ;
 
-			link.l1 = "Text of the player dialogoption link.l1 which ends the dialog ";
+			link.l1 = "Texto de diálogo del jugador: opción link.l1, que cierra el diálogo ";
 			link.l1.go = "exit";	// link l1 exits the dialog
 
-			link.l2 = "Text of the player dialogoption link.l2 which leads to another exchange ";
+			link.l2 = "Texto de diálogo del jugador: opción link.l2, que conduce a otro intercambio ";
 			link.l2.go = "your_dialog2";	// l2 leads to the case your_dialog2
 		break;	// end of case "your_dialog"
                 
 		case "your_dialog2":
-			Dialog.text = "Overwrite this with the dialogtext of the NPC." ;
+			Dialog.text = "Escribe aquí el texto de diálogo del NPC." ;
 
-			link.l1 = "Text of the player dialogoption link.l1 which ends the dialog";
+			link.l1 = "Texto de diálogo del jugador: opción link.l1, que cierra el diálogo";
 			link.l1.go = "exit";	// link l1 exits the dialog
 
 			// Here are some codelines that give you money, items, goods or experience. To activate them delete the comment slashes '//' in front of the code. You can change the amounts to your liking.
@@ -245,8 +249,8 @@ void ProcessDialogEvent()
 
 // give grenade to building for selfdefense                
 		case "grenade":
-			Dialog.text = "...and if any scum dares to enter my.. err.. your estate, Squire, I'll blast them to kingdom come." ;
-			link.l1 = "That's the spirit! Great to have such loyal subjects. But be careful who you blow up..";
+			Dialog.text = "... y si esa escoria se atreve a entrar en mi... tu propiedad, patrón, lo volaré por los aires." ;
+			link.l1 = "¡Esa es la actitud! Me alegra tener súbditos tan leales. Pero ten cuidado con a quién vuelas por los aires...";
 			link.l1.go = "exit";
 			TakeItemFromCharacter(pchar, "pistolgrenade" );
 			GiveItem2Character(NPchar, "pistolgrenade");
@@ -254,44 +258,44 @@ void ProcessDialogEvent()
 
 // add interior
 		case "interior":
-			Dialog.text = "Oh, yes, we could replace the "+interiorstr+" we currently have in here if you want to give this " + buildingstr + " a new function. You just have to give us some of your "+ GetSquadronGoods(pchar,GOOD_PLANKS) +" plankunits, "+ pchar.money +" gold and "+ Pchar.Ship.crew.quantity +" sailors. What are you thinking of?";
-			Link.l1 = "Umm, I don'think I should invest even more here.";
+			Dialog.text = "Oh, sí, podríamos reeemplazar esta hermosura de "+interiorstr+" que tenemos aquí, si quieres darle a este taller una nueva función. Solo necesitaré una parte de tus "+ GetSquadronGoods(pchar,GOOD_PLANKS) +" tablas, "+ pchar.money +" piezas de oro y "+ Pchar.Ship.crew.quantity +" marineros. ¿En qué estás pensando?";
+			Link.l1 = "Hum, no creo que deba invertir todavía más dinero aquí.";
 			Link.l1.go = "exit";
-			Link.l2 = "A mineshaft winding tower (turns a workshop into a jewelmine; 10 planks, 4000 G, 5Crw)";
+			Link.l2 = "Un pozo minero con castillete (transforma un taller en una mina de joyas; 10 tablas, 4000 oro, 5 tripulantes)";
 			Link.l2.go = "mine";
-			Link.l21 = "A cannonball foundry (turns a workshop into a foundry; 10 planks, 4000 G, 5Crw)";
+			Link.l21 = "Una fundición de balas de cañón (transforma un taller en fundición; 10 tablas, 4000 oro, 5 tripulantes)";
 			Link.l21.go = "foundry";
-			Link.l22 = "A rum distillery (turns a workshop into a distillery; 10 planks, 4000 G, 5Crw)";
+			Link.l22 = "Una destilería de ron (transforma un taller en destilería; 10 tablas, 4000 oro, 5 tripulantes)";
 			Link.l22.go = "distillery";
-			Link.l23 = "A careenage (turns a workshop into shipyard; 10 planks, 4000 G, 5Crw)";
+			Link.l23 = "Un muelle de carena (transforma un taller en un astillero; 10 tablas, 4000 oro, 5 tripulantes)";
 			Link.l23.go = "dock";
 		break;
 
 		case "mine":
-			npchar.interior = "mine";
-			Dialog.text = "A " + npchar.interior + " ?";
-			Link.l2 = "Right. My clerk will assign the necessary resources to you, and I expect that you finish the work till my next visit. See ya!";
+			npchar.interior = "mina";
+			Dialog.text = "¿Has dicho " + npchar.interior + "?";
+			Link.l2 = "Correcto. Mi secretario te asignará los recursos necesarios, y espero que el trabajo esté terminado para mi próxima visita. ¡Hasta entonces!";
 			Link.l2.go = "erect";
 		break;
 
 		case "foundry":
-			npchar.interior = "foundry";
-			Dialog.text = "A " + npchar.interior + " ?";
-			Link.l2 = "Right. My clerk will assign the necessary resources to you, and I expect that you finish the work till my next visit. See ya!";
+			npchar.interior = "fundición";
+			Dialog.text = "¿Has dicho " + npchar.interior + "?";
+			Link.l2 = "Correcto. Mi secretario te asignará los recursos necesarios, y espero que el trabajo esté terminado para mi próxima visita. ¡Hasta entonces!";
 			Link.l2.go = "erect";
 		break;
 
 		case "distillery":
-			npchar.interior = "distillery";
-			Dialog.text = "A " + npchar.interior + " ?";
-			Link.l2 = "Right. My clerk will assign the necessary resources to you, and I expect that you finish the work till my next visit. See ya!";
+			npchar.interior = "destilería";
+			Dialog.text = "¿Has dicho " + npchar.interior + "?";
+			Link.l2 = "Correcto. Mi secretario te asignará los recursos necesarios, y espero que el trabajo esté terminado para mi próxima visita. ¡Hasta entonces!";
 			Link.l2.go = "erect";
 		break;
 
 		case "dock":
-			npchar.interior = "dock";
-			Dialog.text = "A " + npchar.interior + " ?";
-			Link.l2 = "Right. My clerk will assign the necessary resources to you, and I expect that you finish the work till my next visit. See ya!";
+			npchar.interior = "muelle de carena";
+			Dialog.text = "¿Has dicho " + npchar.interior + "?";
+			Link.l2 = "Correcto. Mi secretario te asignará los recursos necesarios, y espero que el trabajo esté terminado para mi próxima visita. ¡Hasta entonces!";
 			Link.l2.go = "erect";
 		break;
 
@@ -304,8 +308,8 @@ void ProcessDialogEvent()
 
 			if(money > sti(pchar.money) || crew > sti(Pchar.Ship.crew.quantity) || planks > GetSquadronGoods(pchar,GOOD_PLANKS) )
 			{
-				Dialog.text = "Umm, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", a " + npchar.interior + " requires " + planks + " planks, " + money + " Gold and "+crew+" men. But, as I said, we have only "+ GetSquadronGoods(pchar,GOOD_PLANKS) +" plankunits, "+pchar.money+" G and "+Pchar.Ship.crew.quantity+" hands...";
-				Link.l3 = "Oops.. a small..err.. Well, so you'll have to live on in this place as it is..";
+				Dialog.text = "Hum, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + ", tu proyecto de " + npchar.interior + " requiere " + planks + " tablas, " + money + " piezas de oro y "+crew+" hombres. Pero, como te decía, solo tenemos "+ GetSquadronGoods(pchar,GOOD_PLANKS) +" tablas, "+pchar.money+" piezas de oro y "+Pchar.Ship.crew.quantity+" hombres...";
+				Link.l3 = "Ups... un pequeño error de cálculo. Bueno, pues este sitio tendrá que seguir como hasta ahora...";
 				Link.l3.go = "exit";
 			}
 			else
@@ -315,7 +319,7 @@ void ProcessDialogEvent()
 
 				// take buildingresources
 				RemoveCharacterGoods(pchar, GOOD_PLANKS, planks-1 );
-				PlayStereoSound("INTERFACE\took_item.flac");
+				PlayStereoSound("INTERFACE\took_item.wav");
 				AddMoneyToCharacter(Pchar, -money);
 				Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -crew;
 				
@@ -327,14 +331,14 @@ void ProcessDialogEvent()
 
 // random attacks
 		case "attack1":
-			Dialog.text = "Too late! Here they come... the savage Akellani cannibals! Oh, if we had only more of those bastions, stockades, mines and cannon...";
-			link.l1 = RandSwear() + "These landlubbers are all paralysed with fear! Spoiled from landlife. Seems like I'll have to do the fighting without them.";
+			Dialog.text = "¡Demasiado tarde! Aquí vienen... ¡Los salvajes caníbales akellani! Oh, si tan solo tuviéramos bastiones, empalizadas, minas y cañones...";
+			link.l1 = RandSwear() + "¡Estos marineros de agua dulce están paralizados de miedo! La vida en tierra los ha ablandado. Parece que tendré que luchar sin su ayuda.";
 			link.l1.go = "exit_attack1";
 		break;
 
 		case "attack2":
-			Dialog.text = "The apprentices are rioting. Some hotheaded preacher put the stupid notion in their head that you exploit them...";
-			link.l1 = RandSwear() + "What? Haven't I given them the chance to live in comfortable dry toolshacks instead of a damp and fetid shiphold? There is no gratitude on earth anymore! Well, I'll beat some gratitude out of them...";
+			Dialog.text = "Es una revuelta de aprendices. Algún alborotador les ha metido en la cabeza la idea de que los estás explotando...";
+			link.l1 = RandSwear() + "¿Qué? ¿Acaso no les he dado la oportunidad de vivir en cómodos cobertizos en vez de en la húmeda y fétida bodega de un barco? ¡Ya no hay gratitud en el mundo! Está bien, les haré entender lo que es la gratitud a palos...";
 			link.l1.go = "exit_attack2";
 		break;
 
@@ -369,8 +373,8 @@ void ProcessDialogEvent()
 
 				if(rand(100)<15) // punishment, chance for no jewels, decrease last figure for more success
 				{	
-					Dialog.text =  "I hate to say it " + adress + " we found nothing of value, even though we sifted tons of sand and clay. Sorry for that, but this is a rather unpredictable business.";
-					link.l1 = RandSwear() + "This mining is more game of chance than business. I hope that you'll have more success til my next visit.";
+					Dialog.text =  "Odio tener que decirte esto," + adress + ", pero no hemos encontrado nada de valor, aunque hemos removido toneladas de arena y arcilla. Lo siento, pero este negocio es muy impredecible.";
+					link.l1 = RandSwear() + "Esto de la minería tiene más de juego de azar que de negocio. Espero que hayáis tenido más éxito cuando haga mi próxima visita.";
 					link.l1.go = "exit";
 				}
 				else
@@ -378,8 +382,8 @@ void ProcessDialogEvent()
 					if(rand(100)>50) {GiveItem2Character(PChar, "jewelry"+ makeint(1 + rand(3)) );}
 					else{GiveItem2Character(PChar, "mineral"+ makeint(1 + rand(2)) );}
 
-					Dialog.text =  "Oh, we had some luck this time and found a few gems. Here they are, you'd better put them into your purse right away.";
-					link.l1 = "Hey, great, thanks a lot. Keep up the digging, and much luck";
+					Dialog.text =  "Oh, esta vez hemos tenido lago de suerte y hemos encontrado algunas piedras preciosas. Aquí las tienes, será mejor que las pongas a buen recaudo.";
+					link.l1 = "Oh, estupendo, muchas gracias. Continuad con el trabajo y buena suerte.";
 					link.l1.go = "exit";
 				}
 		break;
@@ -388,14 +392,14 @@ void ProcessDialogEvent()
 			npchar.tax = tax * 1;	// Reward goods, you can change the figure before the ';' to your liking
 			npchar.tax = makeint( sti(npchar.tax) * sti(pchar.reputation)/50 );	// Reputationinfluence on tax, delete line to disable that 
 
-			Dialog.text = "Well, since your last 'call' we managed to stockpile " + tax + " " + prodname + ". I already contacted a prospective buyer, and the profits from this sale could be reinvested in this business." ;
-			link.l1 = LinkRandPhrase("Reinvestment? I want a return on my capital! Shareholder value it is! ","What do you need money for? After all I provide you with all you need: protection, materials, work.. ","I'll take that.. err.. take care of that. I bet you would get cheated by your buyer anyway, so it is in your best interest if I arrange the sale for you.") +" Send the whole stuff to my ship.";
+			Dialog.text = "Bueno, desde tú última 'inspección' hemos conseguido acunular " + tax + " " + prodname + ". Ya he contactado con un posible comprador, y los beneficios de esta venta podrán reinvertirse en el negocio." ;
+			link.l1 = LinkRandPhrase("¿Reinvertir? ¡Quiero una rentabilidad por mi capital! ¡Valor para el accionista! ","¿Para qué necesitáis dinero? Después de todo, yo os proporciono todo lo que necesitáis: protección, materiales, trabajo... ","Yo me embolsaré es... quiero decir, yo me encargaré de eso. Apuesto a que ese comprador te estafaría, así que es mejor que yo me encargue personalmente de la venta.") +" Envíalo todo a mi barco.";
 			link.l1.go = "taxfull";
-			link.l2 = LinkRandPhrase("Well done. I'll leave half of the goods to you. Use them wisely to increase your fortune. (And mine as well..)","So you worked hard, eh? As a reward for that I'll leave you half of the goods for your own account.(In the hope that you'll work even harder..)","Listen, I'll leave you half of this so that you can improve your living and working conditions. I want my estate to be a decent and happy place. (And an effective and profitable one..)");
+			link.l2 = LinkRandPhrase("Buen trabajo. Te dejaré la mitad de la producción a ti. Úsala sabiamente para acrecentar tu fortuna (y la mia también).","Entonces, has trabajado duro, ¿eh? Como recompensa por tus desvelos, te dejaré la mitad de la producción para ti (con la esperanza de que eso te anime a trabajar aún más duro).","Escucha, te dejaré la mitad de este dinero para que puedas mejorar tus condiciones de vida y trabajo. Quiero que mi propiedad sea un lugar feliz y decente (y eficiente y rentable).");
 			link.l2.go = "taxhalf";
-			link.l4 = "That much? Umm, I must check if there is enough space in my ship for that. Would be a bit frustrating if the fruits of all your hard labor had to be dumped on the beach for lack of storage, eh?";
+			link.l4 = "¿Tanto? Hum, tendré que comprobar si queda suficiente espacio en la bodega para todo eso. Sería un poco frustrante si los frutos de todo este trabajo tuvieran que acabar abandonados en la playa por falta de capacidad de almacenaje, ¿eh?";
 			link.l4.go = "exit";
-			link.l3 = "Why " + npchar.tax + "? How does this add up? Can you enlighten me, please.";
+			link.l3 = "¿Por qué " + npchar.tax + "? ¿Cómo salen estas cuentas? ¿Puedes explicármelo, por favcor?";
 			link.l3.go = "economy";
 		break;
 
@@ -404,11 +408,11 @@ void ProcessDialogEvent()
 			npchar.tax = tax * 1;	// Reward taxmoney, you can change the figure before the ';' to your liking
 			npchar.tax = makeint( sti(npchar.tax) * sti(pchar.reputation)/50 );	// Reputationinfluence on tax, delete line to disable that 
 
-			Dialog.text = RandSwear() + LinkRandPhrase("Oh, beggin your pardon, Mylord, but times have been hard for us lately: the yellow fever struck us one after the other and we were unable to work...", "I'm awfully sorry, Squire, but there is not a single coin left in my pocket: just the other night some thief stole all I had stored for you. You really should do more for the security of your estate...", "I hate to say it, Your Lordship, but the equipment you provided for us is just a heap of scrap. We were so busy fixing it that we couldn't manufacture anything.") ;
-			link.l1 = LinkRandPhrase("Well, if things are really that hard for you I won't make them even harder: I'll let you off the hook, but only for this time. Cause I can't afford to show weakness too often, I can keep my crew only under control if they respect me as a tough guy.", "Allright, I'll accept your explanation this time. But the next time I don't want to hear any excuses again... After all the profits from this operation are supposed to support my ship, and the crew will not be pleased if they have to forfeit their bonus.", "Hmm, there is no point in killing the cow you want to milk, is there? I let you off the hook this time, but I expect that you resume production as soon as things run better for you. Though my crew will grumble that I'm too soft on you landlubbers.");
+			Dialog.text = RandSwear() + LinkRandPhrase("Oh, mis disculpas, Excelencia, pero hemos pasado por tiempos duros últimamente: la fiebre amarilla nos he debilitado y no hemos podido trabajar...", "Lo siento mucho, Señoría, pero no me queda ni una moneda en el bolsillo: justo la otra noche, un ladrón robó todo lo que tenía almacenado para ti. Deberías hacer algo más por la seguridad de tus propiedades...", "Odio tener que decírtelo, Excelencia, pero el equipamiento que nos has proporcionado es un montón de chatarra. Hemos estado tan ocupados reparándolo que no hemos podido producir nada.") ;
+			link.l1 = LinkRandPhrase("Bueno, si las cosas están tan difíciles para vosotros, no voy a complicároslas más: os libraréis por esta vez, pero solo esta vez. Porque no puedo permitirme mostrar debilidad demasiado a menudo, solo puedo mantener a mi tripulaciñon bajo control si me muestro inflexible.", "Está bien, aceptaré tu explicación esta vez. Pero, para la próxima, no quiero oír más excusas... Después de todo, se supone que los beneficios de esta operación son para financiar mi barco, y a la tripulación no le hará gracia tener que renunciar a sus dividendos.", "Hum, no tiene sentido matar a la vaca que quieres ordeñar, ¿verdad? No tomaré medidas esta vez, pero espero que reanudes la producción en cuanto se apsoible. Aunque mi tripulación se quejará de que soy demasiado indulgente con vosotros.");
 			link.l1.go = "moraledrop";
 
-			link.l2 = LinkRandPhrase("Belay that whining, I have heard those empty excuses too often to believe them any longer. You'll pay a penalty of breach of contract if you can't deliver the goods you are supposed to produce.", "Well, according to our contract you have to pay compensation if you can't deliver...  Come on, this won't kill you... I only demand what's due to me, nothing more, but also nothing less.", "Shut up, you wailing embezzler! You probably sold the stuff on your own account, eh? Not with me, I'll confiscate your money. It's MINE anyway.");
+			link.l2 = LinkRandPhrase("Ya basta de lloriqueos, he oído esas excusas vacías demasiadas veces como para darles más crédito. Tendrás que pagar una penalización por incumplimiento de contrato si no puedes entregar las mercancías que debes producir.", "Bueno, según nuestro contrato, tienes que pagar una compensación si no haces la entrega... Vamos, esto no te matará... Solo reclamo lo que me corresponde, nada más, pero tampoco nada menos.", "¡Calla, llorica malversador! Probablemente has vendido la producción por tu propia cuenta, ¿eh? Conmigo eso no funcionará, confiscaré tu dinero. Es mío, de todas formas.");
 			switch(Rand(5))   // chance for taxevader backing down, increase figure for less revolts and suicides
 			{
 			case 1: link.l2.go = "taxsuicide"; break;
@@ -424,8 +428,8 @@ void ProcessDialogEvent()
       lcn.building.(nr).taxDay = GetDataDay();
 			AddCharacterGoods(pchar, prodgood, sti(npchar.tax)/2);
 			ChangeCharacterReputation(Pchar, 1);  // reward: reputation. Change figure to your liking
-			Dialog.text = "That's most generous of you, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ". I'll tell everybody what a kind and caring employer you are, you can be sure of that!";
-			link.l1 = "Oh, don't bother, I'm not so keen on my reputation. By the way, I grant you leave tonight. Why don't you go downtown, mingle with the townfolk, chat a lot... Have fun!";
+			Dialog.text = "Es muy generoso por tu parte, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + ". ¡Le diré a todo el mundo que eres un patrón amable y que se preocupa por sus trabajadores, te lo aseguro!";
+			link.l1 = "Oh, no te molestes, no me importa tanto mi reputación. Por cierto, te concedo la noche libre. ¿Por qué no vas a la ciudad, confraternizas con los vecinos, hablas con ellos...? ¡Diviértete!";
 			link.l1.go = "exit";
 		break;
 
@@ -436,8 +440,8 @@ void ProcessDialogEvent()
       lcn.building.(nr).taxDay = GetDataDay();
 			AddCharacterGoods(pchar, prodgood, sti(npchar.tax));
 			ChangeCharacterReputation(Pchar, -2);  // punishment: reputationdrop. Change figure to your liking
-			Dialog.text =  RandSwear() + LinkRandPhrase("Allright, you own this shop, so if you wan't to ruin it... But don't complain if you are soon without craftsmen cause we've starved...", "A bit shortsighted to squeeze a business dry just to increase the short term profit, if you ask me. But I assume you DON'T ask me, eh? Well, you shall have your shareholder value, even if you choke from it..", "You want to skim off the whole result of all our hard labor? Well, YOU tell that my.. err.. your workmen. And don't be surprised if some goods will fall into the sea on the way to your ship..") ;
-			link.l1 = "Hmm, I wonder if it was a good idea to tarnish my reputation and stifle my craftmen's spirit of enterprise by taking it all. ";
+			Dialog.text =  RandSwear() + LinkRandPhrase("Está bien, es tu taller, así que si quieres arruinarlo... Pero no te quejes si te encuentras pronto sin trabajadores porque se han muerto de hambre...", "Es poco acertado exprimir un negocio solo para incrementar el beneficio a corto plazo, si quieres mi opinión. Pero supongo que no me la has pedido, ¿eh? Bueno, obtendrás tu rentabilidad, así te atragante scon ella...", "¿Quieres esquilmar todo el resultado de nuestro duro trabajo? Bueno, pues díselo a mis... tus trabajadores. Y no te sorprendas si algunas de las mercancías se caen accidentalmente al mar en el camino a tu barco.") ;
+			link.l1 = "Hum, me pregunto si ha sido buena idea manchar mi buena reputación y arruinar la moral de mis artesanos llevándome todo el fruto de su trabajo. ";
 			link.l1.go = "exit";
 		break;
 
@@ -447,11 +451,11 @@ void ProcessDialogEvent()
       lcn.building.(nr).taxMonth = GetDataMonth();
       lcn.building.(nr).taxDay = GetDataDay();
 			tax = taxdays * 10;	// Reward rentmoney, you can change the figure before the ';' to your liking
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneytoCharacter(Pchar, tax);
 			ChangeCharacterReputation(Pchar, -2);  // punishment: reputationdrop. Change figure to your liking
-			Dialog.text =  RandSwear() + LinkRandPhrase("Well, here, take your darned money. But don't complain if you are soon without craftsmen cause we've starved...", "Then I have no choice but to borrow the money for you from a loanshark. Means that I'll probably end up with a broken arm... in the BEST case...", "Allright, you leech, here, take this money which I had saved for my sick mother.") ;
-			link.l1 = "Hmm, I wonder if it was a good idea to tarnish my reputation by insisting on these " + tax + " Gold ";
+			Dialog.text =  RandSwear() + LinkRandPhrase("Está bien, toma tu maldito dinero. Pero no te quejes si te encuentras pronto sin trabajadores porque se han muerto de hambre...", "Entonces, no tendré otra opción que pedir prestado el dinero que t edebo aun usurero. Lo que significa que probablemente acabaré con un brazo roto..., en el mejor de los casos...", "Está bien, sanguijuela, toma. Toma este dinero que había ahorrado para ayudar a mi madre enferma.") ;
+			link.l1 = "Hum, me pregunto si ha sido buena idea manchar mi buena reputación isistiendo en el cobro de estas " + tax + " piezas de oro. ";
 			link.l1.go = "exit";
 		break;
 
@@ -461,12 +465,12 @@ void ProcessDialogEvent()
 			lcn.building.(nr).taxMonth = GetDataMonth();
 			lcn.building.(nr).taxDay = GetDataDay();
 			tax = taxdays * 10;	// Reward rentmoney, you can change the figure before the ';' to your liking
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneytoCharacter(Pchar, tax);
 			ChangeCharacterReputation(Pchar, -2);  // punishment: reputationdrop. Change figure to your liking
 			Ambush("Lower_Citizens", 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
-			Dialog.text = RandSwear() + "Well, here, take my money. I have no choice but to pay. But you don't do yourself a favour with your harshness, it will surely provoke a riot once the word spreads among your workers!";
-			link.l1 =  RandSwear() + "Labor unrest on MY estate? I'll take care of that, believe me!";
+			Dialog.text = RandSwear() + "Está bien, toma mi dinero. No tengo otra alternativa que pagar. Pero esta dureza que muestra no te hará ningún favor. ¡Acabarás con una revuelta entre manos cuando se corra la voz entre los trabajadores!";
+			link.l1 =  RandSwear() + "¿Protestas laborales en MI propiedad? ¡Me encargaré de ello, créeme!";
 			link.l1.go = "exit";
 		break;
 
@@ -475,8 +479,8 @@ void ProcessDialogEvent()
 			lcn.building.(nr).taxyear = GetDataYear();
 			lcn.building.(nr).taxMonth = GetDataMonth();
 			lcn.building.(nr).taxDay = GetDataDay();
-			Dialog.text =  RandSwear() + LinkRandPhrase("Well, if you take my possessions from me I'll take your's from you as well! With one of YOUR grenades! Ironic, isn't it? My life is nothing but a bad farce...","You are my ruin! What am I supposed to live on? I'll starve! ... NO! I won't! I'll rather die fast, with a bang and not with a whimper! Where is my powderkeg?","You destroyed my life, you vampire! All that's left to me is this keg'o'rum... Beautiful strong rum, burns in your throat like hellfire... Hellfire, that's where you belong... YA HEAR ME, BLOODSUCKER? HELLFIRE YOU SHALL GET! Hehe, this spirit burns not only in the throat...");
-			link.l1 = LinkRandPhrase("Oh, come on, now you REALLY overdramatise..","Hey, what are you up to? Careful, you may cause a fatal accident..","Allright, kill yourself if you like. Loosers like you can easily be replaced..");
+			Dialog.text =  RandSwear() + LinkRandPhrase("¡Si tú me arrebatas mis posesiones, yo te arrebataré las tuyas! ¡Con una de tus propias granadas! Irónico, ¿verdad? Mi vida no es más que una farsa...","¡Eres mi ruina! ¿Cómo voy a seguir viviendo? ¡Moriré de hambre!... ¡NO! ¡No lo haré! ¡Prefiero morir rápido, arder como una estrella y no consumirme como una vela! ¿Dónde está mi barril de pólvora?","¡Has destruido mi vida, chupasangre! Lo único que me queda es este barril de ron... Delicioso ron, del fuerte, del que quema la garganta como los fuegos del infienro... Los fuegos del infierno, eso es lo que te espera... ¿ME OYES, CHUPASANGRE? ¡YO TE ENSEÑARÉ LOS FUEGOS DEL INFIERNO! Este alcohol no solo quema en la garganta...");
+			link.l1 = LinkRandPhrase("Oh, vamos, no seas tan dramático...","¡Eh!, ¿qué estás tramando? Cuidado, podrías causar un accidente...","Está bien, mátate si te apetece. Los perdedores como tú son fáciles de reemplazar...");
 			link.l1.go = "taxsuicide2";
 		break;
 
@@ -491,18 +495,18 @@ void ProcessDialogEvent()
 		case "repairfree":
 		  if(taxdays>0)  
 		  {
-  			Dialog.text = "Oh, yes, I'd be happy to help my employer, and of course it won't cost you anything. If your hands lend a hand we'll need only two days. Although.. well, we have only a small dock here, suitable for fishing boats and coastal vessels only. We can beach your ship and do some careening, caulking and replanking. But SHOULD some major part like keel or frame timbers be damaged we can do nothing about it. In some rare cases we may even increase the damage by disturbing the structure. " ;
-  			link.l1 = "So it's a game of chance if I let you fuss with my hull, eh? Most of the time I get a decent repair for free, but sometimes I'll be worse of than before? Harumph.. I have to take that risk, I just don't have the time to sail to another yard. Go ahead, do your best, while I'll pray that your best is good enough.. ";
+  			Dialog.text = "Oh, sí, será un placer ayudar a nuestro patrón y, por supuesto, no te ocstará nada. Si tus marineros nos echan una mano, solo tardaremos dos días. Aunque... Bueno, aquí solo tenemos un muelle pequeño, apropiado solo para barcas de pesca y embarcaciones costeras. Podemos varar tu barco en la playa, carenarlo, calafatearlo y cambiar la tablazón dañada. Pero si hay algún daño grave en la quilla o las cuadernas, no podremos hacer nada al respecto. En algunos casos, incluso podríamos provocar más daño y perjudicar la estructura. " ;
+  			link.l1 = "Así que dejaros toquetear el casco de mi barco es como un juego de azar, ¿eh? Lo más probable es que obtenga una reparación decente gratis, pero puede pasar que acabe peor de lo que empezó, ¿es así? Ejem... Tengo que arriesgarme, no tengo tiempo para acudir a otro astillero. Adelante, haced lo que podáis, rezaré para que sea suficiente... ";
   			link.l1.go = "repairfreeall";
-  			link.l2 = "But mending my rigging doesn't require any special equipment, does it? So fix that only, if you please, and leave the hull alone. ";
+  			link.l2 = "Pero arreglar el aparejo no necesita ningún equipo especial, ¿verdad? Pues encargáos solo de eso, por favor, y dejad el casco como está. ";
   			link.l2.go = "repairfreerig";
-  			link.l3 = "Umm.. maybe I'd better take my ship to a PROPER shipwright. ";
+  			link.l3 = "Hum... Quizás lo mejor sea llevar mi barco a un astillero de verdad. ";
   			link.l3.go = "exit";
 			}
 			else
 		  {
-  			Dialog.text = "Hmm.. I could.. if you hadn't just stripped us of all our materials and resources.. " ;
-  			link.l1 = "Oh.. yes.. Well, I'll come back another day then. ";
+  			Dialog.text = "Hum... Podría..., si no acabaras de despojarnos de todos nuestros materiales y recursos... " ;
+  			link.l1 = "Oh... Ya... Bueno, volveré otro día. ";
   			link.l1.go = "exit";
 			}
 		break;
@@ -530,8 +534,8 @@ void ProcessDialogEvent()
   			lcn.building.(nr).taxMonth = GetDataMonth();
   			lcn.building.(nr).taxDay = GetDataDay();
 		    
-			Dialog.text = RandSwear() + LinkRandPhrase("Bad news, Mylord: several futtocks are rotten to the core. Probably the builders of this vessel used green wood for them. The plague on their thievish heads.", "I'm awfully sorry, Squire, ", "I hate to say it, Your Lordship, but you have cheated with this vessel: it's full of thieves' bolts. The bolts that hold the planks to the frame timbers are not made of expensive copper but of cheap coppercovered iron. So they are mostly corroded by now and in the next storm your planks will just pop off. Well, we just don't have so many copperbolts here, so") + " I'm afraid we don't have the resources to repair your ship here.";
-  			link.l2 = RandSwear() + "I'd better take my ship to a PROPER shipwright. ";
+			Dialog.text = RandSwear() + LinkRandPhrase("Malas noticias, Excelencia: varias ligazones están totalmente podridas. Probablemente, los constructores de este bajel usaron madera verde para hacerlas. ¡Así se pudran ellos por su tacañería!", "Lo lamento muchísimo, Señoría, ", "Odio tener que decírtelo, Excelencia, pero te estafaron con este barco: está lleno de pernos falsos. Los pernos que sujetan las tablas del costado a las cuadernas no son de cobre, sino de hierro recubierto de cobre, que sale mucho más barato. Están casi completamente consumidos por la corrosión y es posible que en la próxima tormenta las tablas se desprendan. El caso es que nosotros no tenemos muchos pernos de cobre aquí, así que") + " me temo que no contamos con los recursos para reparar tu barco.";
+  			link.l2 = RandSwear() + "Será mejor llevar mi barco a un astillero de verdad. ";
   			link.l2.go = "exit";
 			}
 			else
@@ -554,7 +558,7 @@ void ProcessDialogEvent()
     		pchar.ship.sp = GetCharacterShipSP(pchar);
     		DeleteAttribute(pchar,"ship.sails");
     		DeleteAttribute(pchar,"ship.masts");
-     		Logit("Two days later most damage has been repaired.");
+     		Logit("Dos días después, la mayor parte del daño ha sido reparado.");
 			}
 		break;
 
@@ -575,7 +579,7 @@ void ProcessDialogEvent()
   			pchar.ship.sp = GetCharacterShipSP(pchar);
   			DeleteAttribute(pchar,"ship.sails");
   			DeleteAttribute(pchar,"ship.masts");
-  			Logit("Two days later your sails and rig are almost as new.");
+  			Logit("Dos días después, tus velas y tus jarcias estan casi como nuevas.");
 		break;
 
 
@@ -597,61 +601,61 @@ void ProcessDialogEvent()
 
 // info about modding                
 		case "odd":
-			Dialog.text = "Ah, you're telling me... I have to work with this 'odd' equipment all day long! All cobbled together from junkparts and driftwood. You can't go into that toolshack without smashing your forehead into some loose timbers. But the worst thing is that the walls are so cracked that people can walk right through them. How am I supposed to work if every oaf tramples right through my workplace? It's all the fault of the wretched architect who designed this, Couchcaptain Charles. That code nerd actually knows nothing about housemodels, he only stole some designs from Inez Diaz and placed them at the most impossible sites." ;
-			link.l1 = "Hey, belay that wailing! Isn't an odd workshop better than none at all? Would you prefer to be unemployed? I for my part will enjoy the sights and features of my new buildings instead of wasting my time with nitpicking.";
+			Dialog.text = "Ah, lo que me quieres decir es que... ¡tengo que trabajar todo el día con este equipo improvisado! Todo precariamente montado a base de chatarra y madera de deriva. No puedes ni entrar en ese cobertizo sin golpearte en la cabeza con algún madero suelto. Pero lo peor es que las paredes están tan agrietadas que la gente puede colarse por ellas. ¿Cómo se supone que voy a trabajar si cualquier zoquete puede atravesar mi puesto de trabajo? Todo es culpa del desgraciado arquitecto que diseñó esto, Couchcaptain Charles. Ese empollón picacódigo no tiene ni la menor idea sobre modelos de edificios, solo ha robado diseños de Inez Diaz y los ha plantado en los lugares más imposibles." ;
+			link.l1 = "¡Eh, deja de quejarte! ¿No es mejor tener un taller improvisado que no tener nada en absoluto? ¿Preferirías estar en el paro? Por mi parte, yo pienso disfrutar de las vistas y de las capacodades de mis nuevos edificios en vez de perder el tiempo con comentarios quisiquillosos.";
 			link.l1.go = "exit";
-			link.l2 = "Instead of complaining about others you should get your own ass moving and tackle the problem yourself. What's the exact cause of this? I know something about modelling, maybe I can help?";
+			link.l2 = "En vez de quejarte sobre lo que hacen otros, deberías mover el culo y resolver el problema tú mismo. ¿Cuál es la causa exacta de este problema? Sé algunas cosas sobre modelos 3D, ¿quizás pueda ayudar?";
 			link.l2.go = "odd2";
-			link.l3 = "Never mind the looks, what I don't like is the economic part: the amount of goods and profits. And the frequency of attacks and events, the punishments..";
+			link.l3 = "¿Qué importa el aspecto que tenga? Lo que no me gusta es el aspecto económico: la cantidad de productos y beneficios. Y la frecuencia de ataques y eventos, las penalizaciones...";
 			link.l3.go = "tweaking";
 		break;
 
 
 		case "odd2":
-			Dialog.text = "Any help would be most appreciated. Some of these buildingmodels could certainly do with a remodeling. The main problem is that these buildingmodels are not part of the locationmodel but items attached to stationary characters, like me. Therefore the walkpatch of the locationmodel -which prevents characters from walking through walls- doesn't cover these new buildings. What we need is a walkpatch around the buildingitems. Or around the characters to which the buildingitems are attached. If you know a solution for this post it at the PotC modding forum at "+PA_INET;
-			link.l1 = "Ummm, I'll think about that...";
+			Dialog.text = "Cualquier tipo de ayuda será muy apreciada. A algunos de estos modelos de edificios les vendría bien una remodelación. El prinicpal problema es que estos modelos de edificios no son parte del modelo del mapa, sino objetos ligados a personajes inmóviles, como yo. Por lo tanto, el 'walkpatch' del modelo del mapa -lo que impide a los personajes caminar a través de las paredes- dno cubres estos nuevos edificios. Lo que neceistamos es un 'walkpatch' alrededor de los objetos que componen el edificio. O alrededor del personaje al que el edificio está ligado. Si conoces una solución a este problema, ponte en contacto con el foro de la comunidad de creadores de mods de PotC en "+PA_INET;
+			link.l1 = "Hum, lo pensaré...";
 			link.l1.go = "exit";
 		break;
 
 		case "tweaking":
-			Dialog.text = "No need to gripe about that. You can tweak that yourself just by editing a textfile. For example here is how you can half my payments to you (hehe): Open the file 'program\dialogs\ " + NPchar.dialog.filename + " ' with a texteditor like notepad. Use the search function to search for the catchword 'reward'. This will lead you to a line similar to this: ' tax = taxdays * 1;	// Reward ...  '. Replace the '1' with '0.5' to half my payments. (Don't expect me to tell you how to RAISE them ;) ). Likewise you can tweak other things by searching for the catchwords 'chance' for eventchances, or 'punishment' for e.g. reputationlosses. The comment behind the '//' doubleslashes will tell you what the code before does. To disable the influence of reputation on revenue find the two lines with the comment '// reputationinfluence..' and delete them. If you need more info post at the PotC modding forum at "+PA_INET;
-			link.l1 = "Hey, thanks for the hints. Sounds like modding is not that difficult, eh? Just requires some patience and dedication. But if I am able to manage playing this game I should also be able to tweak it a bit.";
+			Dialog.text = "Eso tiene fácil arreglo. Puedes hacer esa clase de cambios a tu gusto editando un archivo de texto. Por ejemplo, aquí puedes reducir los pagos que recibes por este negocio: abre el archivo 'Pirates of the Caribbean\PROGRAM\DIALOGS\SPANISH\ " + NPchar.dialog.filename + " ' con un editor d etexto como Bloc de Notas. Usa la función de búsqueda y busca la palabra clave 'reward'. Esto te llevará a una línea similar a esta: ' tax = taxdays * 1;	// Reward ...  '. Reemplaza el '1' por '0.5' para reducir lo que te pago a la mitad (no esperarás que te diga cómo aumentarlo ;) ). Del mismo modo, puedes modificar otras cosas buscando las palabras clave 'chance' para la proababilidad de activar eventos, o 'punishment' para cosas como la pérdida de reputación. Los comentarios que hay detrás de las '//' barras dobles te explicarán qué es lo que hace el código que tienen delante. Para desactivar la infleucnai de la reputación sobre los beneficios, busca las líneas con el comentario '// reputationinfluence..' y bórralas. Si necesitas más información, ponte en contacto con el foro de la comunidad de creadores de mods de PotC en "+PA_INET;
+			link.l1 = "Gracias por las indicaciones. Parece que moddear no es tan difícil, ¿eh? Solo requiere un poco de paciencia y dedicación. Pero si me manejo jugando a este juego, también debería ser capaz de modificarlo un poco.";
 			link.l1.go = "exit";
 		break;
 
 		case "economy":
-			Dialog.text = "Allright, here is a little lesson on the socioeconomics of your estate: Every day your workers and tenants work on your estate, save their earnings or stockpile goods. How much they save and store depends very much on your behaviour: content people work more efficient, confident people save and store for the future and if you treat your people decently and show that you can protect them they more willing to yield money or goods to you. Otherwise they go slack, embezzle what should be yours or even revolt. A good measure is your reputiation: the higher your reputation the higher your revenue. And vice versa: the better your behaviour on your estate the higher your reputation. So you must learn to balance your immediate need for money and goods with the long term prosperity of your estate. Be strict when you must and generous when you can." ;
-			link.l1 = "And you call that socioeconomics? Sounds more like voodoo economics to me. Or couch economics rather. What do you need savings for? After all I provide you with all you need: protection, housing, food, work.. So it's only fair that all your gold wanders in my.. err.. the communal coffers. That's what I call socioeconomics, learned that from a really clever guy called Marx!";
+			Dialog.text = "Está bien, aquí va una pequeña lección sobre la socioeconomía de tu propiedad: cada día, tus trabajadores y arrendatarios trbaajan en tu propiedad, ahorran sus ganancias o acumulan productos. Cuánto ahorran y cuánto acunulan depende en gran medida de tu comportamiento: los trbajadores contentos son más eficientes, los trabajadores que se sienten seguros ahorran para el futuro, y si tratas a tus trabajadores con decencia y los proteges, estarán más dispuestos a entregarte dinero o productos. En caso contrario, se vuelven vagos, malversan tu dinero o incluso se rebelan. Tu reputación es importante: cuanto mejor se atu reputación, mayores serán tus beneficios, y viceversa. Cuanto mejor sea tu comportamiento en tus propiedades, mejor será tu reputación. Así que debes aprender a buscar un equilibrio entre tus necesidades inmediatas de dinero y mercancías y la prosperidad de tu negocio a largo plazo. Un buen patrón es estricto cuando debe y generoso cuando puede." ;
+			link.l1 = "¿A eso lo llamas socioeconomía? A mí me suena a vudú. ¿Para qué necesitáis ahorros? Después de todo, yo os proporciono todo lo que podéis necesitar: protección, alojamiento, comida, trabajo... Así que lo correcto sería que todo vuestro oro acabe en mis cofr... en los cofres comunales. ¡Eso es lo que yo llamo socioeconomía, lo aprendí de un tipo muy listo llamado Marx!";
 			link.l1.go = "taxfull";
-			link.l2 = "I see.. Listen, I'll leave you half of your savings so that you can improve your living and working conditions. I want my estate to be a decent and happy place. (And an effective and profitable one..)";
+			link.l2 = "Ya veo... Escucha, os dejaré la mitad de vuestros ahorros para que podáis mejorar vuestras condiciones d evida y trabajo. Quiero que mi propiedad sea un lugar decente y feliz (y eficiente y rentable).";
 			link.l2.go = "taxhalf";
-			link.l3 = "I don't like this. I'd sacrifice this taxpayment for information on how to tweak this mod to my liking. All these events and influences just don't suit my playstyle.";
+			link.l3 = "Todo esto no me gusta. Sacrificaría este pago a cambio de información sobre cómo editar el mod a mi gusto. Todos estos eventos e influencias mutuas no casan con mi forma de jugar.";
 			link.l3.go = "tweaking";
 		break;
 
 		case "motion":
-			Dialog.text = LinkRandPhrase("Aww, I am so awed by your presence that I don't dare to move.", "Man, I've been working all day long, all my bones are aching, and I won't let you keep me from having a well earned rest.", "Would you believe it, I have to support the whole building. It will collapse if I move as much as my little finger...");
-			link.l1 = "Psaw, allright, I understand... Goodbye.";
+			Dialog.text = LinkRandPhrase("Oh, me abruma tanto tu presencia que no puedo moverme.", "He estado trabajando todo el día, me duelen los huesos y no dejaré que me impidas tomarme un bien merecido descanso.", "¿Me creerías si te dijera que tengo que soportar todo el peso del edificio? Se vendría abajo si hago el más mínimo movimiento...");
+			link.l1 = "Está bien, lo comprendo... Adiós.";
 			link.l1.go = "exit";
 		break;
 
 		case "explain":
-			Dialog.text = "The biggest real estate tycoon in town, Donald Dump, has recently made a fortune with his developement projects in the suburbs of #sOxbay# and #sGreenford#. And to promote his reputation he spent some of his profits on additional fortifications for this port, including a resplendent new renaissance gatehouse and a clocktower called 'Dump Tower'. True, much of this modern architecture looks a bit out of place here, but the cannon work well. If you want to see them in action you just have to attack me.. ";
-			link.l1 = "I hate ostentatious real estate tycoons! Especially if they spoil the landscape with those always-the-same-looking prefab suburbs.";
+			Dialog.text = "El mayor magnate inmobiliario de la ciudad, Donald Dump, ha hecho una fortuna con estos proyectos de desarrollo urbanístico en los suburbios de #sOxbay# y #sGreenford#. Y para promover su reputación, ha gastado parte de sus beneficios en fortificaciones adicionales para el puerto, incluyendo una flamante puerta de estilo renacentista y una torre del reloj a la que ha llamado 'Torre Dump'. Es cierto, que esta arquitectura moderna puede parecer un poco fuera de lugar, pero los cañones funcionan bien. Si quieres verlos en acción, no tienes más que atacarme... ";
+			link.l1 = "¡Odio a los magantes inmobiliarios ególatras! Sobre todo si arruinan el paisaje con esos suburbios prefabricados que son todos iguales.";
 			link.l1.go = "explain2";
 		break;
 
 		case "explain2":
-			Dialog.text = "Oh, you should have a fresh look at the rebuilt suburbs now. Quite a change from the usual locations. And instead of griping about the real estate boom you could join it, develop your own settlements and cash in the various profits from rents, taxes and the goods that your farms and workshops produce. Yes, now you can erect your very own buildings, whereever you want. All you need is an officer, planks and money. Read all about it in the Building Kit readmefile in the Buildinfo folder!";
-			link.l1 = "Hmm.. or I could built my private pirate hideout.. or my naval base.. or my own fortress, eh? QUITE a change from the usual!! Well, I'm afraid I have to go. Need to find some building ground..";
+			Dialog.text = "Oh, deberías echarle un vistazo a los suburbios recién reconstruidos. Ofrecen un cambio considerable respecto a los lugares de siempre. Y en vez de quejarte de un boom inmobiliario del que tú también podrías beneficiarte, lánzate a desarrollar tus propios asentamientos y recibir los beneficios en forma de rentas, impuestos y los bienes que tus granjas y talleres produzcan. Sí, ahora puedes erigir tus propios edificios donde quieras. Solo necesitas un oficial, tablas y dinero.";
+			link.l1 = "Hum... O podría construir mi propia guarida pirata... o mi propia base naval... o mi propia fortaleza, ¿eh? ¡Eso sí que es un cambio! Bueno, me temo que tengo que irme. Tengo que encontrar un buen solar donde construir...";
 			link.l1.go = "exit";
-			link.l2 = "Swell, but are those modern prefab buildings really sound? There are often earthquakes on these islands. Speaking of quakes, do you feel this faint rumbling under our our feet? Getting stronger and stronger..";
+			link.l2 = "Todo eso está muy bien, pero, ¿esos edificios prefabricados son relamente lo bastante robustos? En estas latitudes abundan los terremotos. Hablando de terremotos, ¿no sientes la tierra temblando bajo tus pies?";
 			link.l2.go = "explain3";
 		break;
 
 		case "explain3":  // PB: Buildings will disappear after leaving Oxbay, done in quests_common.c
-			Dialog.text = RandSwear() + " That's really an earthquake!! But don't worry. Those new buildings are sound enough. They won't collapse. *To himself:* They won't collapse. *Starts mumbling to himself*";
-			link.l1 = "Somehow you don't seem very confident about those buildings being strong enough. I wouldn't be surprised if they were ruins next time I come here!";
+			Dialog.text = RandSwear() + " ¡Es un terremoto de verdad! Pero no te preocupes. Estos nuevos edificios son perfectamente resistentes. No se vendrán abajo. *Para sus adentros:* No se vendrán abajo. *empieza a murmurar para sus adentros*";
+			link.l1 = "De repente, no pareces tener mucha fe en la fortaleza de estos edificios. ¡No me sorprendería que se hayan convertido en un montón de ruinas la próxima vez que venga por aquí!";
 			link.l1.go = "Exit";
 			pchar.quest.oxbay_port_earthquake.win_condition.l1 = "MapEnter";
 			pchar.quest.oxbay_port_earthquake.win_condition = "oxbay_port_earthquake"; // PB: Add building removal option to ALL storylines

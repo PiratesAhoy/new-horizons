@@ -29,7 +29,7 @@ string DLG_TEXT[72] = {
 "¿Qué quieres hacer, Armand? ¿Navegar o estar con tu dama?",
 "Ambos, #ssmarmy#. Ambos. Mi 'Voodoo Queen' tiene una cámara en la que mi amada podría vivir como una reina, y podríamos navegar lejos, a otro archipiélago, otras islas. Un barco más pequeño no podría garantizar la comodidad de mi hermosa madicaoiselle en semejante viaje.",
 "¿La dama se marea?",
-"¡Alors, sí! ¡Estaba tan enferma en aquel asquerosos galeón español cuando la rescaté...! Mi 'Voodoo Queen' puede ser grande, pero es estable y agaunta la mar agitada con facilidad. Cunado nos alejemos de este archipiélago, quiero que ella esté segura y cómoda.",
+"¡Alors, sí! ¡Estaba tan enferma en aquel asquerosos galeón español cuando la rescaté...! Mi 'Voodoo Queen' puede ser grande, pero es estable y agaunta la mar agitada con facilidad. Cuando nos alejemos de este archipiélago, quiero que ella esté segura y cómoda.",
 "Ya veo. Bueno, Armand, yo probablemente debería volver a mi barco. Doña Estrella espera mis noticias de que sigues con vida.",
 "¡Espera!...¡Capitaine! ¡Tienes un barco!",
 "Delacroix, a riesgo de que me des una paliza: ¡estás MUY borracho!",

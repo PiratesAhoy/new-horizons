@@ -1208,9 +1208,12 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
-			SetQuestHeader("Capture_greenford");
-			AddQuestRecord("Capture_greenford", 2);
-			Preprocessor_Remove("Danielle");
+			if(!CheckAttribute(PChar,"QuestInfo.Capture_greenford"))
+			{
+				SetQuestHeader("Capture_greenford");
+				AddQuestRecord("Capture_greenford", 2);
+				Preprocessor_Remove("Danielle");
+			}
 
 			AddDialogExitQuest("Story_GreenfordAssaultStarted");
 		break;

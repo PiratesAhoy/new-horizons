@@ -1,7 +1,7 @@
 string DLG_TEXT[46] = { 
-"Señor Baker. 33rd Regimiento de Infantería de Marina.",
+"Baker, señor. 33º Regimiento de Infantería.",
 "Continúe.",
-"Señor Baker. Fusileros 95th.",
+"Baker, señor. 95º de Fusileros.",
 "Continúe.",
 ".",
 ".",

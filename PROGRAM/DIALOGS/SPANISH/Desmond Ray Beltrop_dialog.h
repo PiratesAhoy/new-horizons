@@ -8,7 +8,7 @@ string DLG_TEXT[29] = {
 "¿Qué te hace pensar que estoy aquí por orden del gobernador?",
 "Perdona, ¿me tomas por el tonto del pueblo? En el momento en que supe que alguien me estaba buscando, hice averiguaciones\n Mírame a los ojos, ¿puedes negar que has estado trabajando para él durante los últimos meses?",
 "Bueno, digamos que tienes razón, y el gobernador me ha mandado aquí. ¿Qué importa eso? ¿Te negarías a hablar con un representante del gobernador?",
-"Mira, ya he tenido suficiente de este juego del gato y el ratón. ¿Vas a hablar conmigo o prefieres elegir cual de tus piernas quieres conservar?",
+"Mira, ya he tenido suficiente de este juego del gato y el ratón. ¿Vas a hablar conmigo o prefieres elegir cuál de tus piernas quieres conservar?",
 "Capitán, me pregunto si sabes con quién estás hablando. Créeme cuando te digo que si no quisiera hablar contigo, no estarías aquí.",
 "Oh, no hay necesidad de violencia física, #sdiminutive#. Hablaré contigo porque tengo curiosidad: ¿qué quiere ese viejo zorro del gobernador?",
 "Está bien. Necesito saber dónde puedo encontrar a un caballero con el nombre de ",

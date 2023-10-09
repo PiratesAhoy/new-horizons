@@ -43,6 +43,7 @@ Caroline{Caroline}
 Le Rève{Le Rève}
 
 Atropos{Atropos}
+Lydia{Lydia}
 
 Don Julian{Don Julian}
 Alvarado{Alvarado}
@@ -53,6 +54,13 @@ Petra{Petra}
 Borinqueña{Borinqueña}
 
 Becka{Becka}
+
+Aveline{Aveline}
+de Grandpré{de Grandpré}
+Hatching a Plot{Hatching a Plot}
+As an official member of the Assassin Brotherhood, you sought to liberate the slave community from the Templar Order influence. After more than 10 years of dedication, you succeeded in eradicating the Templar Order of Louisiana. Recently, you received a letter asking for help from the Caribbean Brotherhood of Assassins.{As an official member of the Assassin Brotherhood, you sought to liberate the slave community from the Templar Order influence. After more than 10 years of dedication, you succeeded in eradicating the Templar Order of Louisiana. Recently, you received a letter asking for help from the Caribbean Brotherhood of Assassins.}
+Liberté{Liberté}
+
 La Aguja - The Needle{La Aguja - The Needle}
 The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.{The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.}
 
@@ -551,6 +559,11 @@ Stranton{Stranton}
 Phantom{Phantom}
 Cursed Vengeance{Cursed Vengeance}
 Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.}
+
+Purpure{Purpure}
+Squire of the Sea{Squire of the Sea}
+Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.{Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.}
+Carnation{Carnation}
 
 Francis{Francis}
 Drake{Drake}

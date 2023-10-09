@@ -129,7 +129,7 @@ string DLG_TEXT[137] = {
 "¿Has oído algo sobre cierta persona, #sperson#, en concreto #sromance#, que llegó a la ciudad en manos de una banda armada?",
 "¡No! De hecho, #sromance# se casó recientemente con #svillain#.",
 "¡Casados!",
-"Sí. A mí me encargaron proveer la comida y la bebida para la recepción. Eso sí, en mi trabajo he aprendido a distinguir una sonrisa genuina de una forzada, y si #suromance# estaba feliz con el enlace, me comeré el sombrero de alguien.",
+"Sí. A mí me encargaron proveer la comida y la bebida para la recepción. Eso sí, en mi trabajo he aprendido a distinguir una sonrisa genuina de una forzada, y si #sromance# estaba feliz con el enlace, me comeré el sombrero de alguien.",
 "Si, eso probablemente explicaría por qué llegó aquí a la fuerza.",
 "¿Ha estado ocurriendo algo interesante en #sRedmond# últimamente?",
 "Bueno, está el matrimonio de #sromance# con #svillain#. La boda en sí tuvo lugar en #sSantiago#, pero también hubo una fiesta aquí.",

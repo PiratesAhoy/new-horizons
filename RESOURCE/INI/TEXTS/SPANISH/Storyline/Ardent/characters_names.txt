@@ -12,7 +12,9 @@ O'Brien{O'Brien}
 de la Vega{de la Vega}
 Two Dogs{Dos Perros}
 Fighting{Que Pelean}
+Two Dogs Fighting{Dos Perros Que Pelean}
 not-Fighting{Que No Pelean}
+Two Dogs not-Fighting{Dos Perros Que No Pelean}
 Carlos{Carlos}
 Ardenta{Ardenta}
 Indian{Indio}
@@ -52,7 +54,7 @@ Inquisitor{Inquisidor}
 Monkey{Mono}
 Crescent Moon{Luna Creciente}
 Rain Cloud{Nube De Lluvia}
-Golden Flower{Flor Dirada}
+Golden Flower{Flor Dorada}
 Nervous Elk{Ciervo Nervioso}
 Ringboned Wolf{Lobo Huesudo}
 Strong Deer{Corzo Fuerte}
@@ -83,7 +85,7 @@ Escudero{Escudero}
 Elizabeth{Elizabeth}
 Constantino{Constantino}
 de Malaspina{de Malaspina}
-Maria{Maria}
+Maria{María}
 Antonia{Antonia}
 of Austria{de Austria}
 

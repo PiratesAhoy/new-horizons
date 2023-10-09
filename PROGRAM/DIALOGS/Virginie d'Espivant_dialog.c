@@ -279,6 +279,7 @@ void ProcessDialogEvent()
 			AddPassenger(pchar, npchar, 1);
 			OfficersReaction("bad");
 			pchar.quest.gambling_with_girl = "prisoned";
+			NPChar.quest.no_escape = true;	// GR: make sure she can't jump overboard and leave the quest uncompletable
 			DeleteAttribute(pchar,"quest.gambling_with_girl.guard");
 		break;
 	}

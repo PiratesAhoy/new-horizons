@@ -46,5 +46,5 @@ string DLG_TEXT[48] = {
 ", antes de que llamr a los guardias.",
 "Muy bien.",
 "Sí, estoy esperando #squantity# quintales de #scargo#. ¿Los tienes?",
-"Hum... Parece que una parte ha desparecido por el camino. No te preocupes, ¡reemplazaré lo que se ha perdido y te lo traeré!",
+"Hum... Parece que una parte ha desaparecido por el camino. No te preocupes, ¡reemplazaré lo que se ha perdido y te lo traeré!",
 };

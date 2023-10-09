@@ -1,27 +1,27 @@
 TEXT	{
-Teoria : Wszystkie cyfry są równe do zera.
-Dowód: Przepuszczajmy, że a = b. Wtedy
+Teoria : Wszystkie cyfry s¹ równe do zera.
+Dowód: Przepuszczajmy, ¿e a = b. Wtedy
 a = b
 a^2 = ab
 a^2 - b^2 = ab - b^2
 (a + b)(a - b) = b(a - b)
 a + b = b
 a = 0
-Pozatem, Je›li a + b = b, i a = b, Wtedy b + b = b, i 2b = b, co oznacza že 2 = 1 i twój dwó-masztowy bryg jest w rzeczywisto›ci jedno-masztową tartaną.
+Pozatem, Je›li a + b = b, i a = b, Wtedy b + b = b, i 2b = b, co oznacza že 2 = 1 i twój dwó-masztowy bryg jest w rzeczywisto›ci jedno-masztow¹ tartan¹.
 -------------------------
-Jack Sparrow i jego dwóch poruczników zostają na noc w tawernie w Tortudze , Gdzie oni dokładają się po 10 sztuk złota każdy - 5 za normalne stawki tawerny i 5 za nocne towarzystwo w tawernianą dziwką. Nadal działa taniej niż chodzenie do burdelu, więc Jack bierze 10 sztuk złota od každego porucznika, kolejne 10 sztuk złota z jego własnej kieszeni, nastepnie oddaje 30 sztuk złota w cało›ci. O poranku tawerniana dziwka powiedziała že ona zapomniała  powiedzieĺ že jest specjalna oferta dla czworga, za wszystko tylko 25 sztuk złota, i daje 5 sztuk złota zpowrotem do Jacka. Jack chowa 1 sztukę złota do swojej kieszeni, daj× 1 sztuk× złota dla swoich poruczników, następnie daje kolejne 2 zpowrotem dla dziwki. Teraz są dwa problemy z tą historią. Pierwszy mówi że Jack Sparrow, miał w swoich rękach 5 sztuk złota, które nie roztanie się z nimi ponownie. Kolejny to że každy człowiek zapłacił teraz całkowicie 9 sztuk złota, którzy razem z Jackiem , oddał pieniądze zpowrotem do dziwki co czuni zapłacone 29 sztuk złota. Gdzie podziała się brakująca sztuka złota?
+Jack Sparrow i jego dwóch poruczników zostaj¹ na noc w tawernie w Tortudze , Gdzie oni dok³adaj¹ siê po 10 sztuk z³ota ka¿dy - 5 za normalne stawki tawerny i 5 za nocne towarzystwo w tawernian¹ dziwk¹. Nadal dzia³a taniej ni¿ chodzenie do burdelu, wiêc Jack bierze 10 sztuk z³ota od každego porucznika, kolejne 10 sztuk z³ota z jego w³asnej kieszeni, nastepnie oddaje 30 sztuk z³ota w ca³o›ci. O poranku tawerniana dziwka powiedzia³a že ona zapomnia³a  powiedzieå že jest specjalna oferta dla czworga, za wszystko tylko 25 sztuk z³ota, i daje 5 sztuk z³ota zpowrotem do Jacka. Jack chowa 1 sztukê z³ota do swojej kieszeni, daj× 1 sztuk× z³ota dla swoich poruczników, nastêpnie daje kolejne 2 zpowrotem dla dziwki. Teraz s¹ dwa problemy z t¹ histori¹. Pierwszy mówi ¿e Jack Sparrow, mia³ w swoich rêkach 5 sztuk z³ota, które nie roztanie siê z nimi ponownie. Kolejny to ¿e každy cz³owiek zap³aci³ teraz ca³kowicie 9 sztuk z³ota, którzy razem z Jackiem , odda³ pieni¹dze zpowrotem do dziwki co czuni zap³acone 29 sztuk z³ota. Gdzie podzia³a siê brakuj¹ca sztuka z³ota?
 -------------------------
 Czarnobrody: "Pomy›l liczb› od 1 do 10 ale nie mów jaka to jest."
 Pirat 1: "Mam juž."
 Czarnobrody: "Twój numer to 4."
-Pirat 1: "Nie, to była 6."
-Czarnobrody: "Zła odpowiedź." <BANG> "Pomy›l liczb› od 1 do 10 ale nie mów jaka to jest.."
+Pirat 1: "Nie, to by³a 6."
+Czarnobrody: "Z³a odpowiedŸ." <BANG> "Pomy›l liczb› od 1 do 10 ale nie mów jaka to jest.."
 Pirat 2: "Mam juž."
 Czarnobrody: "Twój numer to 7."
-Pirat 2: "Ja my›lałem o 3, ale nagle pomy›lałem o 7."
+Pirat 2: "Ja my›la³em o 3, ale nagle pomy›la³em o 7."
 -------------------------
-Teoria: Wszystkie liczby są równe.
-Dowód: Wybierz bezwzgl×dną a i b, i wtedy t = a + b. Więc
+Teoria: Wszystkie liczby s¹ równe.
+Dowód: Wybierz bezwzgl×dn¹ a i b, i wtedy t = a + b. Wiêc
 a + b = t
 (a + b)(a - b) = t(a - b)
 a^2 - b^2 = ta - tb
@@ -30,5 +30,5 @@ a^2 - ta + (t^2)/4 = b^2 - tb + (t^2)/4
 (a - t/2)^2 = (b - t/2)^2
 a - t/2 = b - t/2
 a = b
-Więc wszystkie liczby są takie same, i matematyka jest bezužyteczna, co oznacza, že to czas žeby odłožyĺ tą ksiąžkž i wróciĺ za stery zanim uderzysz w tą skał× przed tobą.
+Wiêc wszystkie liczby s¹ takie same, i matematyka jest bezužyteczna, co oznacza, že to czas žeby od³ožyå t¹ ksi¹žkž i wróciå za stery zanim uderzysz w t¹ ska³× przed tob¹.
 }

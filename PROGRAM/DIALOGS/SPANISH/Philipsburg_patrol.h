@@ -17,12 +17,12 @@ string DLG_TEXT[25] = {
 "Hum..., esto... Ya veo. Perdón por haberte molestado, #ssir#,  pero debemos estar muy atentos. La ciudad está bajo sitio, y la mayoría de los soldados están defendiendo las murallas. Así que la ley y el orden brillan por su ausencia, espías y saqueadores campan a sus anchas... Casi todos los roban una tienda o una taberna...",
 "Bueno, ahora que nos hemos conocido podrías hablarme un poco sobre esta isla.",
 "Seguro que puedes decirme dónde conseguir provisiones para mi barco.",
-"Con mucho gusto, #ssir#. #sisland_saint Martin# se divide en una parte holandesa alrededor de #sPhilipsburg# y una parte francesa alrededor de #sMarigot#, y hay una constante lucha entre las dos\n Así que si intentas entrar o salir de cualquiera de las dos ciudades, probablemente te verás en medio d euna atalla, y los sitiadores atacan a cualquiera que trate de cruzar las líneas. Para lograrlo, tendrás que sortear a sus centinelas y posiciones artilleras\n Aunque... también debe haber algún pasaje secreto que desemboca aquí, porque a veces grupos de asalto franceses aparecen de repente en medio de la ciudad.",
-"¿Grupos de asalto? Hum... eso explicaría por qué esos tipos de allí llevan uniforme francés...",
-"¡¿Qué?! ¿Dónde?",
+"Con mucho gusto, #ssir#. #sisland_saint Martin# se divide en una parte holandesa alrededor de #sPhilipsburg# y una parte francesa alrededor de #sMarigot#, y hay una constante lucha entre las dos\n Así que si intentas entrar o salir de cualquiera de las dos ciudades, probablemente te verás en medio de una batalla, y los sitiadores atacan a cualquiera que trate de cruzar las líneas. Para lograrlo, tendrás que sortear a sus centinelas y posiciones artilleras\n Aunque... también debe haber algún pasaje secreto que desemboca aquí, porque a veces grupos de asalto franceses aparecen de repente en medio de la ciudad.",
+"¿Grupos de asalto? Hum... Eso explicaría por qué esos tipos de allí llevan uniforme francés...",
+"¡¿Qué?! ¿Dónde? ",
 "¡ALARMA! ¡LOS GABACHOS ESTÁN EN LA CIUDAD!",
 "Unirme o no unirme a la lucha...",
-"Claro; la tienda, la taberna y el astillero están todos cerca del puerto. Aparte del barrio del puerto, la ciudad tiene solo algunas minas de sal y las refinerías de sal en el valle que conduce al fuerte\n Y cuidado, hay mucha escoria y muchos matones d emedio pelo que tratan de aprovechar la situacion de esta ciudad asediada.",
+"Claro; la tienda, la taberna y el astillero están todos cerca del puerto. Aparte del barrio del puerto, la ciudad tiene solo algunas minas de sal y las refinerías de sal en el valle que conduce al fuerte\n Y cuidado, hay mucha escoria y muchos matones de medio pelo que tratan de aprovechar la situacion de esta ciudad asediada.",
 "Gracias por la advertencia, ¿y me puedes decir algo sobre esta isla en general?",
 
 };

@@ -12,7 +12,9 @@ O'Brien{О'Брайен}
 de la Vega{Де Ла Вега}
 Two Dogs{Два Пса}
 Fighting{Дерущихся}
-not-Fighting{не-Дерущихся}
+Two Dogs Fighting{Два Дерущихся Пса}
+not-Fighting{Не Дерущихся}
+Two Dogs not-Fighting{Два Не Дерущихся Пса}
 Carlos{Карлос}
 Ardenta{Ардота}
 Indian{Индеец}
@@ -98,14 +100,14 @@ Eldo{Елдо}
 Fiz{Фиц}
 Javier{Хавьер}
 Mendieta{Мендита}
-Felipe{Фелипе}
-Becerra{Вецерра}
+Felipe{Филипп}
+Becerra{Бецерра}
 Basilio{Базилио}
 Carretero{Карретеро}
 Esteban{Эстебан}
 Rovapera{Ровапера}
 Mauricio{Маурисио}
-Juradu{Жюраду}
+Juradu{Жураду}
 Malbert{Малберт}
 Sangier{Сонжи}
 Randolph{Рэндольф}
