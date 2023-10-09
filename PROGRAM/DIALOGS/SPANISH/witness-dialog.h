@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = {
-"Estaba sentado en la taberna cuando sucedió.",
+"Estaba sentado en la taberna cuando sucediÃ³.",
 "Dime lo que sabes.",
-"No mucho antes de que llegaras a la taberna, un hombre salió de la sala. Puedo recordar su cara, y no era de por aquí, eso seguro.",
+"No mucho antes de que llegaras a la taberna, un hombre saliÃ³ de la sala. Puedo recordar su cara, y no era de por aquÃ­, eso seguro.",
 "Gracias.",
 
 };

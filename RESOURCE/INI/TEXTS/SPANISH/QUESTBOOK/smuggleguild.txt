@@ -1,4 +1,4 @@
-title=Misión secundaria: La vida del contrabandista.
-text.t1=Parece que las historias son ciertas: ¡hay contrbandistas por todas partes en el Caribe!
+title=MisiÃ³n secundaria: La vida del contrabandista.
+text.t1=Parece que las historias son ciertas: Â¡hay contrbandistas por todas partes en el Caribe!
 text.t2=He conocido a un contrabandista en una taberna. Me ha dado un libro que habla sobre el contrabando.
-text.t3 =Debo andarme con cuidado. Parece que los contrabandistas mantienen un estrecho contacto entre sí. Si traiciono a uno, afectará a mis relaciones con todos ellos.
+text.t3 =Debo andarme con cuidado. Parece que los contrabandistas mantienen un estrecho contacto entre sÃ­. Si traiciono a uno, afectarÃ¡ a mis relaciones con todos ellos.

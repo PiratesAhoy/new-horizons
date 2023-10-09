@@ -1,8 +1,8 @@
 string DLG_TEXT[5] = {
-"¿Qué has venidoa hacer aquí?",
+"Â¿QuÃ© has venidoa hacer aquÃ­?",
 "Estoy buscando a Clauss Florens.",
-"Lo siento, pero aquí no hay ningún Clauss Florens. Y ahora, lárgate o te arrepentirás.",
-"Sé que está aquí. Si es necesario, entraré por la fuerza.",
+"Lo siento, pero aquÃ­ no hay ningÃºn Clauss Florens. Y ahora, lÃ¡rgate o te arrepentirÃ¡s.",
+"SÃ© que estÃ¡ aquÃ­. Si es necesario, entrarÃ© por la fuerza.",
 "De acuerdo, de acuerdo. Ya me voy.",
 
 };

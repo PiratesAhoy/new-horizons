@@ -1,10 +1,10 @@
 title=Johnson
 text.t1= ???
-text.t2=Johnson  no es miembro de la tripulación.
-text.t3='Capitán' Charles Johnson es un pseudónimo de for Daniel Defoe.
-text.t4=¡Tengo el último mapa!
-text.t5=Las letras 'A', 'N' y un puerto marcado, 'Bahía Bullen'. ¿Pero en qué isla está eso?
-text.t6=¡Es en la isla de Curacao!
+text.t2=Johnson  no es miembro de la tripulaciÃ³n.
+text.t3='CapitÃ¡n' Charles Johnson es un pseudÃ³nimo de for Daniel Defoe.
+text.t4=Â¡Tengo el Ãºltimo mapa!
+text.t5=Las letras 'A', 'N' y un puerto marcado, 'BahÃ­a Bullen'. Â¿Pero en quÃ© isla estÃ¡ eso?
+text.t6=Â¡Es en la isla de Curacao!
 text.t7=
 text.t8=
 text.t9=

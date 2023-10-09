@@ -778,9 +778,13 @@ void ProcessDialogEvent()
 			PChar.executions = 0;		// Reset counter so you aren't punished again unless you've been executing more prisoners
 			SetRMRelation(PChar, iNation, RequiredNextRankDirect(GetRank(PChar, iNation)));	// Reset relation points to base level for current rank
 			PlaySound("INTERFACE\notebook_01.wav");
-			sLogTitle = "Prisoner Executions";
-			sLogEntry = "The " + GetNationDescByType(iNation) + " government did not take kindly to my treatment of prisoners. I had better stop executing them if I want to remain in the service of " + GetNationNameByType(iNation) + ".";
-			WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+			Preprocessor_Add("nationdesc", XI_ConvertString(GetNationDescByType(iNation)));
+			Preprocessor_Add("nation", XI_ConvertString(GetNationNameByType(iNation)));
+			sLogTitle = GetTranslatedLog("Prisoner Executions");
+			sLogEntry = GetTranslatedLog("The #snationdesc# government did not take kindly to my treatment of prisoners. I had better stop executing them if I want to remain in the service of #snation#.");
+			WriteNewLogEntry(PreprocessText(sLogTitle),PreprocessText(sLogEntry), "Personal", true);
+			Preprocessor_Delete("nationdesc");
+			Preprocessor_Delete("nation");
 			dialog.text = DLG_TEXT[118];
 			if (GetLetterOfMarqueQuantity() > 1) dialog.text = DLG_TEXT[118] + DLG_TEXT[119];
 			link.l1 = DLG_TEXT[120];

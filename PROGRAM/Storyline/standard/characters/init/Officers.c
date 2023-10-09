@@ -5,7 +5,7 @@ void CreateOfficersCharacters(ref n)
 
 	makeref(ch, chobj);
 
-	//Danielle Даниэль
+	//Danielle Р”Р°РЅРёСЌР»СЊ
 	ch.old.name = "Danielle";
 	ch.old.lastname = "Greene";
 	ch.name = TranslateString("","Danielle");
@@ -50,7 +50,7 @@ void CreateOfficersCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = "0";
 	ch.perks.list.LongRangeShoot = true;
-	ch.Ship.Name = "Vertigo";
+	ch.Ship.Name = TranslateString("","Vertigo");
 	ch.Ship.Type = "Schooner2"; // PRS3
 	ch.Flags.Pirate = 0;
 	ch.Flags.Pirate.texture = 3;
@@ -64,7 +64,7 @@ void CreateOfficersCharacters(ref n)
 	ch.isOfficer = true;
 	AddGameCharacter(n, ch);
 
-	// Ralph Fawn  боцман девушки.
+	// Ralph Fawn  Р±РѕС†РјР°РЅ РґРµРІСѓС€РєРё.
 	ch.old.name = "Ralph";
 	ch.old.lastname = "Fawn";
 	ch.name = TranslateString("","Ralph");
@@ -104,7 +104,7 @@ void CreateOfficersCharacters(ref n)
 	ch.isOfficer = true;
 	AddGameCharacter(n, ch);
 
-	// Researcher Изобретатель
+	// Researcher РР·РѕР±СЂРµС‚Р°С‚РµР»СЊ
 	ch.old.name = "Clement";
 	ch.old.middlename = "Barnabas";
 	ch.old.lastname = "Aurentius";
@@ -136,7 +136,7 @@ void CreateOfficersCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = "0";
 	ch.quest.meeting = "0";
-	ch.Ship.Name = "Astra";
+	ch.Ship.Name = TranslateString("","Astra");
 	ch.Ship.Type = "Tartane1"; // PS - SHIP_TARTANE;
 	ch.Ship.Stopped = true;
 	ch.Ship.Cannons.Type = CANNON_TYPE_NONECANNON;
@@ -195,7 +195,7 @@ void CreateOfficersCharacters(ref n)
 	ch.isOfficer = true;
 	AddGameCharacter(n, ch);
 
-	// Gervasio Serrao - в таверне пиратского острова
+	// Gervasio Serrao - РІ С‚Р°РІРµСЂРЅРµ РїРёСЂР°С‚СЃРєРѕРіРѕ РѕСЃС‚СЂРѕРІР°
 	ch.old.name = "Gervasio";
 	ch.old.lastname = "Serrao";
 	ch.name = TranslateString("","Gervasio");

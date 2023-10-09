@@ -2397,7 +2397,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	// -------------------------------------------------
 	Locations[n].id = "Mines_commander_house";
-	locations[n].label = "House начальника рудников";
+	locations[n].label = "House РЅР°С‡Р°Р»СЊРЅРёРєР° СЂСѓРґРЅРёРєРѕРІ";
 	Locations[n].filespath.models = "locations\inside\smallhome";
 	Locations[n].image = "Inside_Smallhome.tga";
 

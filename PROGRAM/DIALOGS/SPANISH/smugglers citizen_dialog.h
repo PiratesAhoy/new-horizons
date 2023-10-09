@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = { 
 "No tengo tiempo para hablar contigo. Tengo mucho que hacer ahora mismo.",
-"¿Mucho que hacer? Pero si estás paseándote por las calles.",
-"¿Y qué? Es asunto mío. Así que vete.",
-"Como tú digas.",
+"Â¿Mucho que hacer? Pero si estÃ¡s paseÃ¡ndote por las calles.",
+"Â¿Y quÃ©? Es asunto mÃ­o. AsÃ­ que vete.",
+"Como tÃº digas.",
 
 };

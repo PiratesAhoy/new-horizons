@@ -218,7 +218,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	AddGameCharacter(n, ch);
 
-	// Raoul Calmes (контрабандист в доме) озвучка готова.
+	// Raoul Calmes (РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚ РІ РґРѕРјРµ) РѕР·РІСѓС‡РєР° РіРѕС‚РѕРІР°.
 	ch.old.name = "Raoul";
 	ch.old.lastname = "Calmes";
 	ch.name = TranslateString("","Raoul");
@@ -258,7 +258,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.greeting = "Gr_Raoul Calmes";
 	AddGameCharacter(n, ch);
 
-	//Lucien Bescanceny (вор, спит в своем доме) озвучка готова
+	//Lucien Bescanceny (РІРѕСЂ, СЃРїРёС‚ РІ СЃРІРѕРµРј РґРѕРјРµ) РѕР·РІСѓС‡РєР° РіРѕС‚РѕРІР°
 	ch.old.name = "Lucien";
 	ch.old.lastname = "Bescanceny";
 	ch.name = TranslateString("","Lucien");
@@ -400,7 +400,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	AddGameCharacter(n, ch);
 	
-			// pater Jourdain (церковь)
+			// pater Jourdain (С†РµСЂРєРѕРІСЊ)
 	ch.old.name = "Pater";
 	ch.old.lastname = "Jourdain";
 	ch.name = TranslateString("","Pater");
@@ -477,7 +477,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.greeting = "Gr_joseph claude le moigne";
 	AddGameCharacter(n, ch);
 
-			// Hardouin Aufort (офицер) озвучка готова
+			// Hardouin Aufort (РѕС„РёС†РµСЂ) РѕР·РІСѓС‡РєР° РіРѕС‚РѕРІР°
 	ch.old.name = "Hardouin";
 	ch.old.lastname = "Aufort";
 	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
@@ -547,7 +547,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetImmortal(ch, true);
 	AddGameCharacter(n, ch);
 
-			// Turpin Cabanel (начальник порта) озвучка готова
+			// Turpin Cabanel (РЅР°С‡Р°Р»СЊРЅРёРє РїРѕСЂС‚Р°) РѕР·РІСѓС‡РєР° РіРѕС‚РѕРІР°
 	ch.old.name = "Turpin";
 	ch.old.lastname = "Cabanel";
 	ch.name = TranslateString("","Turpin");
@@ -1583,7 +1583,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
 	AddGameCharacter(n, ch);
 
-			// Elzire Ayarai (девушка, сидит в своем доме)
+			// Elzire Ayarai (РґРµРІСѓС€РєР°, СЃРёРґРёС‚ РІ СЃРІРѕРµРј РґРѕРјРµ)
 	ch.old.name = "Elzire";
 	ch.old.lastname = "Ayarai";
 	ch.name = TranslateString("","Elzire");

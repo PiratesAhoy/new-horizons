@@ -187,7 +187,7 @@ Lighter and faster than your basic rapier. A lot of work went into this design.
 itmname_blade14	{Spanish Nobility Longsword}
 itmdescr_blade14
 {
-A beautiful blade, of the type presented to those who are given Spanish titles of nobility. Legend claims that this kind of sword once was used by Cortés and his officers.
+A beautiful blade, of the type presented to those who are given Spanish titles of nobility. Legend claims that this kind of sword once was used by CortÃ©s and his officers.
 }
 
 itmname_blade15	{Iberian Longsword}
@@ -444,7 +444,7 @@ A particually ornate, gold Dirk, that would make a ideal gift for someone... in 
 itmname_blade40	{Polish Hussar's Szabla}
 itmdescr_blade40
 {
-Mêlée weapon widely used by the heavy Cavalry of the Polish Hussars. The long, thin, single-edged curved blade is ideal for skewering your opponant while on horse-back. This is the weapon that influenced the later adoption of Sabres into Western European Armies.
+MÃªlÃ©e weapon widely used by the heavy Cavalry of the Polish Hussars. The long, thin, single-edged curved blade is ideal for skewering your opponant while on horse-back. This is the weapon that influenced the later adoption of Sabres into Western European Armies.
 }
 
 itmname_blade43	{US Cavalry Sabre}
@@ -518,7 +518,7 @@ Ornate Dress Sword from the Royal Courts of Paris. Maybe you can impress your op
 itmname_bladeFD	{Francis Drake's Sword}
 itmdescr_bladeFD
 {
-I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by François Moulin. It's at least a century old and is ornately engraved. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its history.
+I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by FranÃ§ois Moulin. It's at least a century old and is ornately engraved. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its history.
 }
 
 
@@ -528,10 +528,10 @@ itmdescr_bladeFD2
 This sword was presented to Francis Drake for services to the English Crown.
 }
 
-itmname_bladeSC	{Sword of Cortés}
+itmname_bladeSC	{Sword of CortÃ©s}
 itmdescr_bladeSC
 {
-I took this ancient saber from Amérigo Vieira. It is a mystical, cursed weapon used by Hernán Cortés during his conquest of the Aztec empire. The Sword's power is derived in combination with a sacred scabbard, made from the innards of Aztec sacrifices. The blade inscription reads "Hernán Cortés 1520 A.D.".
+I took this ancient saber from AmÃ©rigo Vieira. It is a mystical, cursed weapon used by HernÃ¡n CortÃ©s during his conquest of the Aztec empire. The Sword's power is derived in combination with a sacred scabbard, made from the innards of Aztec sacrifices. The blade inscription reads "HernÃ¡n CortÃ©s 1520 A.D.".
 }
 
 // KevAtl SLiB Special Weapon blades <--
@@ -1854,7 +1854,7 @@ Not suitable for children or people with a nervous disposition.
 itmname_book7 {Morgan's Almanac}
 itmdescr_book7
 {
-Book 3 in a series of 3 showing the practical and personal side of Morgan. Phases of the Moon, Tide Times, Current Speed and direction. Appendix contains Letters from his Mum, Letters to his Mum and Letters of the Alphabet. Bonus Pull-Out: Letters from Pirates he knew, Pirates he didn’t know and Pirates who didn’t want to know him (mostly now deceased).
+Book 3 in a series of 3 showing the practical and personal side of Morgan. Phases of the Moon, Tide Times, Current Speed and direction. Appendix contains Letters from his Mum, Letters to his Mum and Letters of the Alphabet. Bonus Pull-Out: Letters from Pirates he knew, Pirates he didnâ€™t know and Pirates who didnâ€™t want to know him (mostly now deceased).
 }
 
 itmname_book8 {Pirating With Petros}

@@ -15,7 +15,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
+		// -----------------------------------Æ’Ã‹â€¡ÃŽÃ“â€ž Ã”Ã‚ï£¿â€šËšÃˆ - Ã”Ã‚ï£¿â€šâ€¡Ë‡ â€šÃ’Ãšï£¿Ã‚Ëœâ€¡
 
 		case "Exit":
 			Diag.CurrentNode = Diag.TempNode;
@@ -49,7 +49,7 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "Sit_Right_Dialog_2";
 			Dialog.cam = "1";
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ001";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿001";
 			
 			d.Text = DLG_TEXT[0];
 			Link.l1 = DLG_TEXT[1];
@@ -57,7 +57,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "First time_1":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ002";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿002";
 			d.Text = DLG_TEXT[2];
 			Link.l1 = DLG_TEXT[3];
 			Link.l1.go = "exit";	
@@ -72,7 +72,7 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "Sit_Right_Dialog_1";
 			Dialog.cam = "1";
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ003";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿003";
 			
 			d.Text = DLG_TEXT[4];
 			Link.l1 = DLG_TEXT[5] + GetMyFullName(PChar) + DLG_TEXT[6];
@@ -80,28 +80,28 @@ void ProcessDialogEvent()
 		break;
 
 		case "Node_2":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ004";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿004";
 			d.Text = RandSwear() + DLG_TEXT[7];
 			Link.l1 = DLG_TEXT[8];
 			Link.l1.go = "Node_3";
 		break;
 
 		case "Node_3":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ005";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿005";
 			d.Text = DLG_TEXT[9];
 			Link.l1 = DLG_TEXT[10];
 			Link.l1.go = "Node_4";
 		break;
 
 		case "Node_4":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ006";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿006";
 			d.Text = DLG_TEXT[11];
 			Link.l1 = DLG_TEXT[12];
 			Link.l1.go = "Node_5";
 		break;
 
 		case "Node_5":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ007";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿007";
 			Diag.TempNode = "SitAndDrink";
 			d.Text = DLG_TEXT[13]; 
 			Link.l1 = DLG_TEXT[14];
@@ -117,42 +117,42 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "Sit_Look_Around";
 			Dialog.cam = "1";
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ008";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿008";
 			d.Text = DLG_TEXT[15];
 			Link.l1 = DLG_TEXT[16];
 			Link.l1.go = "Node_7";
 		break;
 
 		case "Node_7":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ009";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿009";
 			d.Text = DLG_TEXT[17] + NPChar.ship.name + DLG_TEXT[18] ;
 			Link.l1 = DLG_TEXT[19];
 			Link.l1.go = "node_8";
 		break;
 	
 		case "Node_8":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ010";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿010";
 			d.Text = DLG_TEXT[20];
 			Link.l1 = DLG_TEXT[21];
 			Link.l1.go = "Node_9";
 		break;
 	
 		case "Node_9":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ011";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿011";
 			d.Text = DLG_TEXT[22];
 			Link.l1 = DLG_TEXT[23];
 			Link.l1.go = "Node_10";
 		break;
 
 		case "Node_10":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ012";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿012";
 			d.Text = DLG_TEXT[24];
 			Link.l1 = DLG_TEXT[25];
 			Link.l1.go = "Node_11";
 		break;
 
 		case "Node_11":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ013";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿013";
 			d.Text = DLG_TEXT[26];
 			Link.l1 = DLG_TEXT[27];
 			Link.l1.go = "Node_12";
@@ -160,7 +160,7 @@ void ProcessDialogEvent()
 
 		case "Node_12":
 			Diag.TempNode = "Second_talk";
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ014";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿014";
 			d.Text = DLG_TEXT[28];
 			Link.l1 = DLG_TEXT[29];
 			Link.l1.go = "exit";
@@ -169,7 +169,7 @@ void ProcessDialogEvent()
 
 		case "Talk_to_Soldiers":
 			Diag.TempNode = "Final_talk";
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ015";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿015";
 			d.Text = DLG_TEXT[30];
 			Link.l1 = DLG_TEXT[31];
 			Link.l1.go = "exit";
@@ -184,7 +184,7 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ016";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿016";
 			Dialog.tempNode = "What_are_you_waiting_for";
 
 			d.Text = DLG_TEXT[32];
@@ -202,7 +202,7 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ017";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿017";
 
 			d.Text = DLG_TEXT[34];
 			Link.l1 = DLG_TEXT[35];
@@ -210,35 +210,35 @@ void ProcessDialogEvent()
 		break;
 
 		case "Final_talk_1":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ018";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿018";
 			d.Text = DLG_TEXT[36];
 			Link.l1 = DLG_TEXT[37];
 			Link.l1.go = "Final_talk_2";
 		break;
 
 		case "Final_talk_2":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ019";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿019";
 			d.Text = DLG_TEXT[38];
 			Link.l1 = DLG_TEXT[39];
 			Link.l1.go = "Final_talk_3";
 		break;
 
 		case "Final_talk_3":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ020";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿020";
 			d.Text = DLG_TEXT[40];
 			Link.l1 = DLG_TEXT[41];
 			Link.l1.go = "Final_talk_4";
 		break;
 
 		case "Final_talk_4":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ021";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿021";
 			d.Text = DLG_TEXT[42];
 			Link.l1 = DLG_TEXT[43];
 			Link.l1.go = "Final_talk_5";
 		break;
 
 		case "Final_talk_5":
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ022";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿022";
 			d.Text = DLG_TEXT[44];
 			Link.l1 = DLG_TEXT[45];
 			Link.l1.go = "Final_talk_6";
@@ -247,7 +247,7 @@ void ProcessDialogEvent()
 		case "Final_talk_6":
 			AddQuestRecord("Story_1stTaskReceived", 4);
 			Pchar.quest.Story_1stTaskComplete = "1";
-			Dialog.snd = "voice\VIÌÀ\VIÌÀ023";
+			Dialog.snd = "voice\VIÃƒÂ¿\VIÃƒÂ¿023";
 			d.Text = DLG_TEXT[46];
 			Link.l1 = DLG_TEXT[47];
 			Link.l1.go = "Massoni_spared";

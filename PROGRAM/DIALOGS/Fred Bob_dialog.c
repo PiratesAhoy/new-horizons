@@ -45,7 +45,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -997,7 +997,7 @@ void ProcessDialogEvent()
 			if (!CheckAttribute(PChar,"Ship.Crew.Morale"))	{ PChar.Ship.Crew.Morale = 45;	}
 			if (!CheckAttribute(PChar,"Ship.Crew.Quantity")) { PChar.Ship.Crew.Quantity = GetMinCrewQuantity(&PChar); } // PRS3
 
-			// уберем все товары
+			// СѓР±РµСЂРµРј РІСЃРµ С‚РѕРІР°СЂС‹
 			for(int g=0; g<GOODS_QUANTITY; g++)
 			{
 				if(!CheckAttribute(Goods[g],"name")) continue; // NK
@@ -1014,7 +1014,7 @@ void ProcessDialogEvent()
 			}
 			PChar.Ship.Cargo.Load = 0;
 			
-			// установим все товары
+			// СѓСЃС‚Р°РЅРѕРІРёРј РІСЃРµ С‚РѕРІР°СЂС‹
 			for(g=0; g<GOODS_QUANTITY; g++)
 			{
 				SetCharacterGoods(PChar, g, gq[g]);

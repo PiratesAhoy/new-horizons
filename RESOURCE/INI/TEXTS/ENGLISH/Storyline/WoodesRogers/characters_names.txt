@@ -41,6 +41,7 @@ Constable{Constable}
 Mills{Mills}
 Young{Young}
 Mutineer{Mutineer}
+Mutineer_F{Mutineer}
 Thug{Thug}
 Leading{Leading}
 Coastbrother{Coastbrother}
@@ -61,7 +62,9 @@ Fry{Fry}
 Stretton{Stretton}
 Rogers'{Rogers'}
 Crew{Crew}
+Rogers' Crew{Rogers' Crew}
 Former Crew{Former Crew}
+Rogers' Former Crew{Rogers' Former Crew}
 Vane{Vane}
 Bellamy{Bellamy}
 Paul{Paul}
@@ -78,6 +81,7 @@ Phineas{Phineas}
 Bunce{Bunce}
 Gow{Gow}
 Charles Vane's{Charles Vane's}
+Charles Vane's Crew{Charles Vane's Crew}
 Walter{Walter}
 Kennedy{Kennedy}
 England{England}
@@ -191,7 +195,7 @@ Ireland{Ireland}
 Sergej{Sergej}
 Prokofiev{Prokofiev}
 Barbecue{Barbecue}
-Père{Père}
+PÃ¨re{PÃ¨re}
 Labat{Labat}
 Laurens{Laurens}
 de Graaf{de Graaf}
@@ -209,8 +213,10 @@ Blowhorn{Blowhorn}
 Mummy{Mummy}
 Blackbeard's{Blackbeard's}
 head{head}
+Blackbeard's head{Blackbeard's head}
 Swedish{Swedish}
 Guy{Guy}
+Swedish Guy{Swedish Guy}
 Konrad{Konrad}
 Ljungberg{Ljungberg}
 Abraham{Abraham}
@@ -225,7 +231,7 @@ Hall{Hall}
 Knut{Knut}
 Ellingsen{Ellingsen}
 Anton{Anton}
-Bäcklin{Bäcklin}
+BÃ¤cklin{BÃ¤cklin}
 Felix{Felix}
 Nilsson{Nilsson}
 Westlund{Westlund}
@@ -241,7 +247,7 @@ Berglund{Berglund}
 Garcia{Garcia}
 Emilio{Emilio}
 Soares{Soares}
-Sèrgio Gomes{Sèrgio Gomes}
+SÃ¨rgio Gomes{SÃ¨rgio Gomes}
 Sergio{Sergio}
 Cloise{Cloise}
 Sundin{Sundin}
@@ -250,14 +256,14 @@ Larsson{Larsson}
 Ossian{Ossian}
 Rodriguez{Rodriguez}
 Felipe{Felipe}
-Kriström{Kriström}
+KristrÃ¶m{KristrÃ¶m}
 Nathalie{Nathalie}
 Sebastian{Sebastian}
 Bylund{Bylund}
 Johan{Johan}
-Löfqvist{Löfqvist}
+LÃ¶fqvist{LÃ¶fqvist}
 Pehr{Pehr}
-Ståhlfot{Ståhlfot}
+StÃ¥hlfot{StÃ¥hlfot}
 Sister{Sister}
 Jean{Jean}
 Dubou{Dubou}
@@ -292,9 +298,9 @@ Arot{Arot}
 Anna H{Anna H}
 Trafvenfeldt{Trafvenfeldt}
 Angelica{Angelica}
-Lindström{Lindström}
+LindstrÃ¶m{LindstrÃ¶m}
 Wilma S{Wilma S}
-Forsström{Forsström}
+ForsstrÃ¶m{ForsstrÃ¶m}
 Madelaine{Madelaine}
 Hansson{Hansson}
 Linn{Linn}
@@ -302,16 +308,16 @@ Brorsson{Brorsson}
 Ebba{Ebba}
 Modin{Modin}
 Thomina{Thomina}
-Sundström{Sundström}
+SundstrÃ¶m{SundstrÃ¶m}
 Elin{Elin}
 Asp{Asp}
 Martin{Martin}
 Schmidt{Schmidt}
 Tobias{Tobias}
-Hällgren{Hällgren}
+HÃ¤llgren{HÃ¤llgren}
 Axel{Axel}
 Joel{Joel}
-Björk{Björk}
+BjÃ¶rk{BjÃ¶rk}
 Hildingsson{Hildingsson}
 Erik{Erik}
 Ejvind{Ejvind}
@@ -330,15 +336,15 @@ Svalberg{Svalberg}
 Iman{Iman}
 Razuli{Razuli}
 Jakob{Jakob}
-André{André}
+AndrÃ©{AndrÃ©}
 Jensen{Jensen}
 Albin{Albin}
-Högman{Högman}
+HÃ¶gman{HÃ¶gman}
 Lukas{Lukas}
-Hammarström{Hammarström}
+HammarstrÃ¶m{HammarstrÃ¶m}
 Mar la{Mar la}
 Kie{Kie}
-Löfgren{Löfgren}
+LÃ¶fgren{LÃ¶fgren}
 Simon{Simon}
 Grandell{Grandell}
 Cardinal Gabr{Cardinal Gabr}

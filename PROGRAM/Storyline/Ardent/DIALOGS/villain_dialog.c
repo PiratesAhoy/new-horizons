@@ -16,19 +16,19 @@ void ProcessDialogEvent()
 	{
 		if (CheckAttribute(NPChar, "married"))
 		{
-			villain_title_France = "Madame";
-			villain_title_England = "Mrs.";
+			villain_title_France = XI_ConvertString("Madame");
+			villain_title_England = XI_ConvertString("Mrs.");
 		}
 		else
 		{
-			villain_title_France = "Mademoiselle";
-			villain_title_England = "Miss";
+			villain_title_France = XI_ConvertString("Mademoiselle");
+			villain_title_England = XI_ConvertString("Miss");
 		}
 	}
 	else
 	{
-		villain_title_France = "Monsieur";
-		villain_title_England = "Mr.";
+		villain_title_France = XI_ConvertString("Monsieur");
+		villain_title_England = XI_ConvertString("Mr.");
 	}
 
 	ref PChar;
@@ -50,7 +50,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -245,7 +245,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "hunt_guadeloupe_encounter1_2":
-			dialog.text = DLG_TEXT[58] + GetMyPronounObj(PChar) + "!";
+			dialog.text = DLG_TEXT[58] + XI_ConvertString(GetMyPronounObj(PChar)) + "!";
 			link.l1 = DLG_TEXT[59];
 			AddDialogExitQuest("hunt_guadeloupe_arrest1");
 			link.l1.go = "exit";

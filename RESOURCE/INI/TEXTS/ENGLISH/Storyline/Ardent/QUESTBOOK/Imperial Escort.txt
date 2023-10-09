@@ -50,4 +50,4 @@ text.t48=#sevilgov# is dead. I should report this to #sadmiral#.
 text.t49=With #sevilgov# dead and discredited, #sgovernor# can be restored as governor of #sSantiago#.
 text.t50=#sgovernor# has written to #sadmiral# recommending me for some sort of mission. I should go to the admiralty in #sHavana# to find out more.
 text.t51=#senvoy# will rest for a day, then visit the governor of #sSanto Domingo#. We should be ready to sail on #sday#.
-text.t52=It's time to go to the port. Don't want to keep Capit·n #scaptain# waiting, do we?
+text.t52=It's time to go to the port. Don't want to keep Capit√°n #scaptain# waiting, do we?

@@ -1,3 +1,3 @@
 title=Un misterioso mensajero y una carta
-text.t1=Cuando desembarqué en el puerto, un desconocido me dio un carta que había recibido del capitán de puerto, pero la letra era la de mi padre. Tengo que ir a ver a este capitán de puerto. 
-text.t2=He encontrado a mi tíoe, al que no veía desde que era una niña. Me dijo que tengo una hermana gemela, y que mi padre me ha enviado un mapa del tesoro.
+text.t1=Cuando desembarquÃ© en el puerto, un desconocido me dio un carta que habÃ­a recibido del capitÃ¡n de puerto, pero la letra era la de mi padre. Tengo que ir a ver a este capitÃ¡n de puerto. 
+text.t2=He encontrado a mi tÃ­oe, al que no veÃ­a desde que era una niÃ±a. Me dijo que tengo una hermana gemela, y que mi padre me ha enviado un mapa del tesoro.

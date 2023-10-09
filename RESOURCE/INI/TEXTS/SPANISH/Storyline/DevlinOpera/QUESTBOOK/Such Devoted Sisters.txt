@@ -1,5 +1,5 @@
-title=Unas hermonas muy devotas
+title=Unas hermanas muy devotas
 text.t1=He encontrado a mi hermana Bonnie. Es como mirarme en un espejo, de tanto que nos parecemos. 
-text.t2=Ahora, debemos ir a la isla de #sisland_Turks# y encontrar al pirata Short Jack Gold..., ¡y preguntarle si quiere ir a nadar!
-text.t3=Hemos llegado a la isla de #sisland_Turks#. Ahora debemos encontrar a Short Jack Gold. Lo primero será preguntar en la taberna.
+text.t2=Ahora, debemos ir a la isla de #sisland_Turks# y encontrar al pirata Short Jack Gold..., Â¡y preguntarle si quiere ir a nadar!
+text.t3=Hemos llegado a la isla de #sisland_Turks#. Ahora debemos encontrar a Short Jack Gold. Lo primero serÃ¡ preguntar en la taberna.
 text.t4=Zarpamos rumbo a #sisland_Quebradas Costillas# para encontrar a nuestro hermano Blaze.

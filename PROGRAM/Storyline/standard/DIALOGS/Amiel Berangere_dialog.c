@@ -15,15 +15,15 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 
 	
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();
-			//--------Запись в журнал
+			//--------Р—Р°РїРёСЃСЊ РІ Р¶СѓСЂРЅР°Р»
 			AddQuestRecord("Story_1stTaskReceived", 8);
-			//--------Получение предмета			//--------Постановка Вирджила Буна в первый порт Фале де Флер
+			//--------РџРѕР»СѓС‡РµРЅРёРµ РїСЂРµРґРјРµС‚Р°			//--------РџРѕСЃС‚Р°РЅРѕРІРєР° Р’РёСЂРґР¶РёР»Р° Р‘СѓРЅР° РІ РїРµСЂРІС‹Р№ РїРѕСЂС‚ Р¤Р°Р»Рµ РґРµ Р¤Р»РµСЂ
 			ChangeCharacterAddressGroup(characterFromID("Virgile Boon"), "Falaise_de_Fleur_port_01", "goto", "goto1");
 			SetCharacterShipLocation(characterFromID("Virgile Boon"),"Falaise_de_Fleur_port_01");
 		break;

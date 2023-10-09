@@ -1,4 +1,4 @@
-string DLG_TEXT[64] = {
+string DLG_TEXT[70] = {
 "If I were you, captain ",
 ", I'd return immediately to my ship and sail far away from these shores!",
 "And why should I do that?",
@@ -59,8 +59,14 @@ string DLG_TEXT[64] = {
 "Yes, I'm the captain of a good ship! You can see her in the port and I serve the crown of this colony.",
 "Your governor will see your body hanged on my mast from the shore! I'll await you on the sea, captain! Farewell!",
 "Sorry for disturbing you, captain!",
-"I'm a corsair of the king and I accept your challenge mister! You'll regret what you said.",
+"I'm a corsair of the king and I accept your challenge, #smister#! You'll regret what you said.",
 "Ha! I'll sink you with pleasure!",
 "But I'm only a single merchant who just wants to drink in peace! Why do you want to kill me? Help! Help! Is there somebody to help me?",
 "Shut up, coward!",
+"Not so fast, #sladlass#! ",
+"You're supposedly #snation#, as am I.",
+"You're supposedly friendly to #snation#, so we're not at war.",
+" I know my own loyalty. So does the governor. If you attack me, you risk being branded a pirate.",
+"You make a good point, captain. Let us continue to be allies and fight against our common enemies. Farewell and good hunting!",
+"I don't care! My challenge still stands! Fight me at sea or forever be known as a coward!",
 }

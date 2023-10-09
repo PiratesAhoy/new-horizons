@@ -28,7 +28,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
+		// -----------------------------------Ð”Ð¸Ð°Ð»Ð¾Ð³ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ - Ð¿ÐµÑ€Ð²Ð°Ñ Ð²ÑÑ‚Ñ€ÐµÑ‡Ð°
 
 // ccc Stormy Start: added "doublecross" and "buy" options >
 

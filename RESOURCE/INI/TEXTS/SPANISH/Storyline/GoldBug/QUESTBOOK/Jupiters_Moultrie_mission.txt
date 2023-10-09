@@ -1,12 +1,12 @@
-title=La misión de Júpiter en Moultrie
+title=La misiÃ³n de JÃºpiter en Moultrie
 text.t1=
 text.t2=Comprar algunos papeles en la aldea de Fort Moultrie.
 text.t3=Racuperar el escarabajo de oro de manos del teniente G en el fuerte.
 text.t4=Tengo el escarabajo de oro.
 text.t5=Tengo los papeles.
-text.t6=¡Ahora sólo tengo que llenar la botella con coñac del barril que hay en el restaurante!
-text.t7=Estoy seguro de que hay una botella vacía en el restaurante, por alguna parte.
-text.t8=Sí, el hotle está dispuesto a intercambiar papel por ropa de cama.
+text.t6=Â¡Ahora sÃ³lo tengo que llenar la botella con coÃ±ac del barril que hay en el restaurante!
+text.t7=Estoy seguro de que hay una botella vacÃ­a en el restaurante, por alguna parte.
+text.t8=SÃ­, el hotle estÃ¡ dispuesto a intercambiar papel por ropa de cama.
 text.t9=La tienda acepta licor, no comida.
 text.t10=Han visto al teniente G de camino al restaurante.
-text.t11=El teniente G está en el piso de abajo del restaurante.
+text.t11=El teniente G estÃ¡ en el piso de abajo del restaurante.

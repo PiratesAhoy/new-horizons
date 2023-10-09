@@ -1,273 +1,273 @@
 // MAXIMUS 15.08.2019: file contains all historical royal names, governors, towns and islands names. 
 
 {=====| FreePlay |=====}
-Henry VII{Генрих VII}
-Henry VIII{Генрих VIII}
-Edward VI{Эдуард VI}
-Mary I{Мария I}
-Elizabeth I{Елизавета I}
-Fernando II{Фернандо II}
-Juana I{Хуана I}
-Carlos I{Карлос I}
-Felipe II{Филипп II}
-Felipe III{Филипп III}
-Manuel I{Мануэл I}
-JoЭo III{Жуан III}
-SebastiЭo{Себастьян}
-Henrique{Энрике}
-Antуnio{Антонио}
-Felipe I{Филипп I}
-Louis XII{Людовик XII}
-Franзois{Франсуа}
-Henri II{Генрих II}
-Franзois II{Франсуа II}
-Charles IX{Карл IX}
-Henri III{Генрих III}
-Henri IV{Генрих IV}
-James I{Яков I}
-Charles I{Карл I}
-Oliver Cromwell{Оливер Кромвель}
-Richard Cromwell{Ричард Кромвель}
-Charles II{Карл II}
-Felipe IV{Филипп IV}
-Carlos II{Карлос II}
-JoЭo IV{Жуан IV}
-Alfonso VI{Альфонсо VI}
-Louis XIII le Juste{Людовик XIII Справедливый}
-Louis XIV le Grande{Людовик XIV Великий}
-James II{Яков II}
-William II and Mary II{Вильгельм II и Мария II}
-William II{Вильгельм II}
-Anne of Stuart{Анна Стюарт}
-Anne of Great Britain{Анна Королева Великобритании}
-George I{Георг I}
-George II{Георг II}
-Felipe V{Филипп V}
-Pedro II{Педру II}
-JoЭo V{Жуан V}
-Louis XV le Bien Aimй{Людовик XV Возлюбленный}
-Fernando VI{Фердинанд VI}
-Carlos III{Карл III}
-George III{Георг III}
-Josй I{Жозе I}
-Carlos IV{Карл IV}
-Maria I & Pedro III{Мария I и Педру III}
-Maria I{Мария I}
-Louis XVI{Людовик XVI}
-George IV{Георг IV}
-Fernando VII{Фердинанд VII}
-JoЭo VI{Жуан VI}
-Maria II{Мария II}
-Napolйon Bonaparte{Наполеон Бонапарт}
-Louis XVIII{Людовик XVIII}
-Charles X{Карл X}
-John Adams{Джон Адамс}
-Thomas Jefferson{Томас Джефферсон}
-James Madison{Джеймс Мэдисон}
-James Monroe{Джеймс Монро}
-John Quincy Adams{Джон Куинси Адамс}
-Karl IX{Карл IX}
-Gustav II Adolf{Густав II Адольф}
-Kristina{Кристина}
-Karl X Gustav{Карл X Густав}
-Karl XI{Карл XI}
-Karl XII{Карл XII}
-Ulrika Eleonora{Ульрика Элеонора}
-Fredrik I{Фредрик I}
-Adolf Fredrik{Адольф Фредрик}
+Henry VII{Р“РµРЅСЂРёС… VII}
+Henry VIII{Р“РµРЅСЂРёС… VIII}
+Edward VI{Р­РґСѓР°СЂРґ VI}
+Mary I{РњР°СЂРёСЏ I}
+Elizabeth I{Р•Р»РёР·Р°РІРµС‚Р° I}
+Fernando II{Р¤РµСЂРЅР°РЅРґРѕ II}
+Juana I{РҐСѓР°РЅР° I}
+Carlos I{РљР°СЂР»РѕСЃ I}
+Felipe II{Р¤РёР»РёРїРї II}
+Felipe III{Р¤РёР»РёРїРї III}
+Manuel I{РњР°РЅСѓСЌР» I}
+JoР­o III{Р–СѓР°РЅ III}
+SebastiР­o{РЎРµР±Р°СЃС‚СЊСЏРЅ}
+Henrique{Р­РЅСЂРёРєРµ}
+AntСѓnio{РђРЅС‚РѕРЅРёРѕ}
+Felipe I{Р¤РёР»РёРїРї I}
+Louis XII{Р›СЋРґРѕРІРёРє XII}
+FranР·ois{Р¤СЂР°РЅСЃСѓР°}
+Henri II{Р“РµРЅСЂРёС… II}
+FranР·ois II{Р¤СЂР°РЅСЃСѓР° II}
+Charles IX{РљР°СЂР» IX}
+Henri III{Р“РµРЅСЂРёС… III}
+Henri IV{Р“РµРЅСЂРёС… IV}
+James I{РЇРєРѕРІ I}
+Charles I{РљР°СЂР» I}
+Oliver Cromwell{РћР»РёРІРµСЂ РљСЂРѕРјРІРµР»СЊ}
+Richard Cromwell{Р РёС‡Р°СЂРґ РљСЂРѕРјРІРµР»СЊ}
+Charles II{РљР°СЂР» II}
+Felipe IV{Р¤РёР»РёРїРї IV}
+Carlos II{РљР°СЂР»РѕСЃ II}
+JoР­o IV{Р–СѓР°РЅ IV}
+Alfonso VI{РђР»СЊС„РѕРЅСЃРѕ VI}
+Louis XIII le Juste{Р›СЋРґРѕРІРёРє XIII РЎРїСЂР°РІРµРґР»РёРІС‹Р№}
+Louis XIV le Grande{Р›СЋРґРѕРІРёРє XIV Р’РµР»РёРєРёР№}
+James II{РЇРєРѕРІ II}
+William II and Mary II{Р’РёР»СЊРіРµР»СЊРј II Рё РњР°СЂРёСЏ II}
+William II{Р’РёР»СЊРіРµР»СЊРј II}
+Anne of Stuart{РђРЅРЅР° РЎС‚СЋР°СЂС‚}
+Anne of Great Britain{РђРЅРЅР° РљРѕСЂРѕР»РµРІР° Р’РµР»РёРєРѕР±СЂРёС‚Р°РЅРёРё}
+George I{Р“РµРѕСЂРі I}
+George II{Р“РµРѕСЂРі II}
+Felipe V{Р¤РёР»РёРїРї V}
+Pedro II{РџРµРґСЂСѓ II}
+JoР­o V{Р–СѓР°РЅ V}
+Louis XV le Bien AimР№{Р›СЋРґРѕРІРёРє XV Р’РѕР·Р»СЋР±Р»РµРЅРЅС‹Р№}
+Fernando VI{Р¤РµСЂРґРёРЅР°РЅРґ VI}
+Carlos III{РљР°СЂР» III}
+George III{Р“РµРѕСЂРі III}
+JosР№ I{Р–РѕР·Рµ I}
+Carlos IV{РљР°СЂР» IV}
+Maria I & Pedro III{РњР°СЂРёСЏ I Рё РџРµРґСЂСѓ III}
+Maria I{РњР°СЂРёСЏ I}
+Louis XVI{Р›СЋРґРѕРІРёРє XVI}
+George IV{Р“РµРѕСЂРі IV}
+Fernando VII{Р¤РµСЂРґРёРЅР°РЅРґ VII}
+JoР­o VI{Р–СѓР°РЅ VI}
+Maria II{РњР°СЂРёСЏ II}
+NapolР№on Bonaparte{РќР°РїРѕР»РµРѕРЅ Р‘РѕРЅР°РїР°СЂС‚}
+Louis XVIII{Р›СЋРґРѕРІРёРє XVIII}
+Charles X{РљР°СЂР» X}
+John Adams{Р”Р¶РѕРЅ РђРґР°РјСЃ}
+Thomas Jefferson{РўРѕРјР°СЃ Р”Р¶РµС„С„РµСЂСЃРѕРЅ}
+James Madison{Р”Р¶РµР№РјСЃ РњСЌРґРёСЃРѕРЅ}
+James Monroe{Р”Р¶РµР№РјСЃ РњРѕРЅСЂРѕ}
+John Quincy Adams{Р”Р¶РѕРЅ РљСѓРёРЅСЃРё РђРґР°РјСЃ}
+Karl IX{РљР°СЂР» IX}
+Gustav II Adolf{Р“СѓСЃС‚Р°РІ II РђРґРѕР»СЊС„}
+Kristina{РљСЂРёСЃС‚РёРЅР°}
+Karl X Gustav{РљР°СЂР» X Р“СѓСЃС‚Р°РІ}
+Karl XI{РљР°СЂР» XI}
+Karl XII{РљР°СЂР» XII}
+Ulrika Eleonora{РЈР»СЊСЂРёРєР° Р­Р»РµРѕРЅРѕСЂР°}
+Fredrik I{Р¤СЂРµРґСЂРёРє I}
+Adolf Fredrik{РђРґРѕР»СЊС„ Р¤СЂРµРґСЂРёРє}
 
 {=====| 82 names |=====}
 
 {=====| Periods.c |=====}
 
 {=====| Royal |=====}
-Franзois Ier{Франциск I}
-Pedro Menйndez de Avilйs{Педро Менендес де Авилес}
-James I Stuart{Яков I Стюарт}
-Abraham Blauvelt{Абрахам Блаувельт}
-Isaac Rochussen{Исаак Рохуссен}
-Louis XV le Bien-Aimй{Людовик XV Возлюбленный}
-Fernando V{Фердинанд V}
-Peter Alston{Питер Олстон}
-Pedro III and Maria I{Педру III и Мария I}
-George Washington{Джордж Вашингтон}
-Joseph-Napolйon Bonaparte{Жозеф-Наполеон Бонапарт}
-Henri Caesar{Анри Цезарь}
+FranР·ois Ier{Р¤СЂР°РЅС†РёСЃРє I}
+Pedro MenР№ndez de AvilР№s{РџРµРґСЂРѕ РњРµРЅРµРЅРґРµСЃ РґРµ РђРІРёР»РµСЃ}
+James I Stuart{РЇРєРѕРІ I РЎС‚СЋР°СЂС‚}
+Abraham Blauvelt{РђР±СЂР°С…Р°Рј Р‘Р»Р°СѓРІРµР»СЊС‚}
+Isaac Rochussen{РСЃР°Р°Рє Р РѕС…СѓСЃСЃРµРЅ}
+Louis XV le Bien-AimР№{Р›СЋРґРѕРІРёРє XV Р’РѕР·Р»СЋР±Р»РµРЅРЅС‹Р№}
+Fernando V{Р¤РµСЂРґРёРЅР°РЅРґ V}
+Peter Alston{РџРёС‚РµСЂ РћР»СЃС‚РѕРЅ}
+Pedro III and Maria I{РџРµРґСЂСѓ III Рё РњР°СЂРёСЏ I}
+George Washington{Р”Р¶РѕСЂРґР¶ Р’Р°С€РёРЅРіС‚РѕРЅ}
+Joseph-NapolР№on Bonaparte{Р–РѕР·РµС„-РќР°РїРѕР»РµРѕРЅ Р‘РѕРЅР°РїР°СЂС‚}
+Henri Caesar{РђРЅСЂРё Р¦РµР·Р°СЂСЊ}
 
 {=====| 35 names |=====}
 
 {=====| Islands |=====}
-Santiago{Сантьяго}
-Los Barbados{Лос-Барбадос}
-Camahogne{Камахон}
-Isla do Palo Brasil{Исла-ду-Пало Бразилия}
-Nuestra Senora de las Nieves{Богоматерь Снегов}
-Las Tortugas{Лас-Тортугас}
-Isla Juana{Исла-Хуана}
-Santa Maria de Guadalupe de Extremadura{Санта-Мария-де-Гуадалупе Испания}
-Isla de San Martin{Исла-де-Сан-Мартин}
-San Salvador{Сан-Сальвадор}
-Kingdom of Granada{Королевство Гранада}
-Concepcion{Консепсьон}
-La Grenade{Ла-Гренада}
-New Granada{Новая Гранада}
+Santiago{РЎР°РЅС‚СЊСЏРіРѕ}
+Los Barbados{Р›РѕСЃ-Р‘Р°СЂР±Р°РґРѕСЃ}
+Camahogne{РљР°РјР°С…РѕРЅ}
+Isla do Palo Brasil{РСЃР»Р°-РґСѓ-РџР°Р»Рѕ Р‘СЂР°Р·РёР»РёСЏ}
+Nuestra Senora de las Nieves{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РЎРЅРµРіРѕРІ}
+Las Tortugas{Р›Р°СЃ-РўРѕСЂС‚СѓРіР°СЃ}
+Isla Juana{РСЃР»Р°-РҐСѓР°РЅР°}
+Santa Maria de Guadalupe de Extremadura{РЎР°РЅС‚Р°-РњР°СЂРёСЏ-РґРµ-Р“СѓР°РґР°Р»СѓРїРµ РСЃРїР°РЅРёСЏ}
+Isla de San Martin{РСЃР»Р°-РґРµ-РЎР°РЅ-РњР°СЂС‚РёРЅ}
+San Salvador{РЎР°РЅ-РЎР°Р»СЊРІР°РґРѕСЂ}
+Kingdom of Granada{РљРѕСЂРѕР»РµРІСЃС‚РІРѕ Р“СЂР°РЅР°РґР°}
+Concepcion{РљРѕРЅСЃРµРїСЃСЊРѕРЅ}
+La Grenade{Р›Р°-Р“СЂРµРЅР°РґР°}
+New Granada{РќРѕРІР°СЏ Р“СЂР°РЅР°РґР°}
 
 {=====| 24 Islands |=====}
 
 {=====| Towns |=====}
-Palo Brasil{Пало Бразилия}
-Sao Luis{Сан-Луис}
-Santa Ines{Санта-Инес}
-Villa de la Vega{Вилья-де-ла-Вега}
-Pueblo Carlos{Пуэбло Карлос}
-Santa Maria del Puerto{Санта-Мария-дель-Пуэрто}
-Cumana{Кумана}
-San Cristobal de la Habana{Сан-Кристобаль-де-ла-Хабана}
-Santiago de Cuba{Сантьяго-де-Куба}
-Puerto la Cruz{Пуэрто-ла-Крус}
-San Elena{Сан-Елена}
-Hopital{Хопитал}
-Governor's Harbour{Губернаторская Гавань}
-Santo Domingo{Санто-Доминго}
-Saint George{Сент-Джордж}
-Kingston{Кингстон}
-Saint Domingue{Сан-Доминго}
+Palo Brasil{РџР°Р»Рѕ Р‘СЂР°Р·РёР»РёСЏ}
+Sao Luis{РЎР°РЅ-Р›СѓРёСЃ}
+Santa Ines{РЎР°РЅС‚Р°-РРЅРµСЃ}
+Villa de la Vega{Р’РёР»СЊСЏ-РґРµ-Р»Р°-Р’РµРіР°}
+Pueblo Carlos{РџСѓСЌР±Р»Рѕ РљР°СЂР»РѕСЃ}
+Santa Maria del Puerto{РЎР°РЅС‚Р°-РњР°СЂРёСЏ-РґРµР»СЊ-РџСѓСЌСЂС‚Рѕ}
+Cumana{РљСѓРјР°РЅР°}
+San Cristobal de la Habana{РЎР°РЅ-РљСЂРёСЃС‚РѕР±Р°Р»СЊ-РґРµ-Р»Р°-РҐР°Р±Р°РЅР°}
+Santiago de Cuba{РЎР°РЅС‚СЊСЏРіРѕ-РґРµ-РљСѓР±Р°}
+Puerto la Cruz{РџСѓСЌСЂС‚Рѕ-Р»Р°-РљСЂСѓСЃ}
+San Elena{РЎР°РЅ-Р•Р»РµРЅР°}
+Hopital{РҐРѕРїРёС‚Р°Р»}
+Governor's Harbour{Р“СѓР±РµСЂРЅР°С‚РѕСЂСЃРєР°СЏ Р“Р°РІР°РЅСЊ}
+Santo Domingo{РЎР°РЅС‚Рѕ-Р”РѕРјРёРЅРіРѕ}
+Saint George{РЎРµРЅС‚-Р”Р¶РѕСЂРґР¶}
+Kingston{РљРёРЅРіСЃС‚РѕРЅ}
+Saint Domingue{РЎР°РЅ-Р”РѕРјРёРЅРіРѕ}
 
 {=====| 23 towns |=====}
 
 {=====| Towns governors |=====}
-Juan{Хуан}
-Ponce{Понсе}
-de Leуn{де Леон}
-Gonzalo{Гонзало}
-de Guzmбn{де Гузман}
-de Бvila{де Авила}
-Antonio{Антонио}
-de Chбves{де Чавес}
-de Esquivel{де Эскивель}
-Pйrez{Перес}
-de Angulo{де Ангуло}
-Nicolбs{Николас}
-de Ovando{де Овандо}
-Diego{Диего}
-de Mazariegos{де Масарьегос}
-Columbus{Колумб}
-Francisco{Франсиско}
-Garcнa{Гарсиа}
-Osorio{Озорио}
-Hernando{Эрнандо}
-de Soto{де Сото}
-Pedro{Педро}
-Menйndez{Менендес}
-de Avilйs{де Авилес}
-Gabriel{Габриэль}
-Montalvo{Монтальво}
-Carreсo{Карреко}
-Gaspar{Гаспар}
-de Torres{де Торрес}
-de Venegas{де Венегас}
-Rangel{Ранхель}
-Terril{Террил}
-Sancho{Санчо}
-Ochoa{Очоа}
-de Castro{де Кастро}
-Sir George{Сэр Джордж}
-Ayscue{Айскью}
-Anthony{Энтони}
-Hilton{Хилтон}
-de Salamanca{де Саламанка}
-de Montanos{де Монтанос}
-Blбzquez{Бласкес}
-Xelder{Элдер}
-Vadйs{Вадис}
-Ruнz{Руис}
-de Pereda{де Переда}
-Josй{Хосе}
-Fernandez{Эрнандес}
-Cуrdoba{Кордоба}
-Francis{Фрэнсис}
-Willoughby{Уиллоуби}
-Medina{Медина}
-Joseph{Жозеф}
-de Bouloc{де Булок}
-Sir Henry{Сэр Генри}
-Morgan{Морган}
-Sir William{Сэр Уильям}
-Stapleton{Стэплтон}
-de Tejeda{де Техеда}
-Ignacio{Игнасио}
-Caro{Каро}
-Vicente{Висенте}
-de Raja{де Раджа}
-Dionisio{Дионисио}
-Martнnez{Мартинес}
-de la Vega{де ла Вега}
-Jan{Ян}
-Simonszoon{Симонсун}
-de Buck{де Бак}
-Chevalier{Шевалье}
-de Rionville{де Рионвилль}
-Sir John{Сэр Джон}
-Witham{Уитам}
-Sir Richard{Сэр Ричард}
-Dutton{Даттон}
-Colomo{Коломо}
-de Lujбn{де Лухан}
-Claude{Клод}
-Le Moigne II{Ле Мойн II}
-Moore{Мур}
-Michael{Майкл}
-Smith{Смит}
-de Prado Mayera Portocarrero{де Прадо Майра Портокарреро}
-y Luna{и Люна}
-Antonio Cagigal{Антонио Кахигаль}
-d'Erchigny{д'Эрчиньи}
-de Clieu{де Кльё}
-de Wever{де Вевер}
-Louis{Луи}
-Guillaume{Гийом}
-Durepaire{Дюрипер}
-Sir Thomas{Сэр Томас}
-Robinson{Робинсон}
-Henry{Генри}
-Grenville{Гренвилл}
-Ulysses{Улисс}
-FitzMaurice{Фитц Морис}
-Miguel{Мигель}
-de Musesas{де Мусас}
-Samuel{Сэмюэль}
-Mitchell{Митчелл}
-Dalling{Доллинг}
-Richardson{Ричардсон}
-Herbert{Герберт}
-Daniel{Даниэль}
-Sicilian{Сицилиан}
-Joaquнn{Хоакин}
-y Moreno{Морено}
-Manuel{Мануэль}
-de Ezpeleta{де Эспелета}
-Domingo{Доминго}
-Cabello{Кабельо}
-y Robles{и Роблес}
-Franзois{Франсуа}
-de Dion{де Дион}
-James{Джеймс}
-Cunninghame{Каннингэм}
-Louis Thomas{Луи Тома}
-Villaret{Вилларе}
-de Joyeuse{де Жуайёз}
-Torralbo{Торральбо}
-Nugent{Нуджент}
-Daniell{Дэниэл}
-Marie{Мари}
-Ferrand{Ферран}
-de Apodaca{де Аподака}
-Cienfuegos{Сьенфуэгос}
-Victor{Виктор}
-Collot{Колло}
-William{Уильям}
-Bishop{Бишоп}
-Humberstone{Хамберстон}
-Mackenzie{Маккензи}
+Juan{РҐСѓР°РЅ}
+Ponce{РџРѕРЅСЃРµ}
+de LeСѓn{РґРµ Р›РµРѕРЅ}
+Gonzalo{Р“РѕРЅР·Р°Р»Рѕ}
+de GuzmР±n{РґРµ Р“СѓР·РјР°РЅ}
+de Р‘vila{РґРµ РђРІРёР»Р°}
+Antonio{РђРЅС‚РѕРЅРёРѕ}
+de ChР±ves{РґРµ Р§Р°РІРµСЃ}
+de Esquivel{РґРµ Р­СЃРєРёРІРµР»СЊ}
+PР№rez{РџРµСЂРµСЃ}
+de Angulo{РґРµ РђРЅРіСѓР»Рѕ}
+NicolР±s{РќРёРєРѕР»Р°СЃ}
+de Ovando{РґРµ РћРІР°РЅРґРѕ}
+Diego{Р”РёРµРіРѕ}
+de Mazariegos{РґРµ РњР°СЃР°СЂСЊРµРіРѕСЃ}
+Columbus{РљРѕР»СѓРјР±}
+Francisco{Р¤СЂР°РЅСЃРёСЃРєРѕ}
+GarcРЅa{Р“Р°СЂСЃРёР°}
+Osorio{РћР·РѕСЂРёРѕ}
+Hernando{Р­СЂРЅР°РЅРґРѕ}
+de Soto{РґРµ РЎРѕС‚Рѕ}
+Pedro{РџРµРґСЂРѕ}
+MenР№ndez{РњРµРЅРµРЅРґРµСЃ}
+de AvilР№s{РґРµ РђРІРёР»РµСЃ}
+Gabriel{Р“Р°Р±СЂРёСЌР»СЊ}
+Montalvo{РњРѕРЅС‚Р°Р»СЊРІРѕ}
+CarreСЃo{РљР°СЂСЂРµРєРѕ}
+Gaspar{Р“Р°СЃРїР°СЂ}
+de Torres{РґРµ РўРѕСЂСЂРµСЃ}
+de Venegas{РґРµ Р’РµРЅРµРіР°СЃ}
+Rangel{Р Р°РЅС…РµР»СЊ}
+Terril{РўРµСЂСЂРёР»}
+Sancho{РЎР°РЅС‡Рѕ}
+Ochoa{РћС‡РѕР°}
+de Castro{РґРµ РљР°СЃС‚СЂРѕ}
+Sir George{РЎСЌСЂ Р”Р¶РѕСЂРґР¶}
+Ayscue{РђР№СЃРєСЊСЋ}
+Anthony{Р­РЅС‚РѕРЅРё}
+Hilton{РҐРёР»С‚РѕРЅ}
+de Salamanca{РґРµ РЎР°Р»Р°РјР°РЅРєР°}
+de Montanos{РґРµ РњРѕРЅС‚Р°РЅРѕСЃ}
+BlР±zquez{Р‘Р»Р°СЃРєРµСЃ}
+Xelder{Р­Р»РґРµСЂ}
+ValdР№s{Р’Р°Р»РґРёСЃ}
+RuРЅz{Р СѓРёСЃ}
+de Pereda{РґРµ РџРµСЂРµРґР°}
+JosР№{РҐРѕСЃРµ}
+Fernandez{Р­СЂРЅР°РЅРґРµСЃ}
+CСѓrdoba{РљРѕСЂРґРѕР±Р°}
+Francis{Р¤СЂСЌРЅСЃРёСЃ}
+Willoughby{РЈРёР»Р»РѕСѓР±Рё}
+Medina{РњРµРґРёРЅР°}
+Joseph{Р–РѕР·РµС„}
+de Bouloc{РґРµ Р‘СѓР»РѕРє}
+Sir Henry{РЎСЌСЂ Р“РµРЅСЂРё}
+Morgan{РњРѕСЂРіР°РЅ}
+Sir William{РЎСЌСЂ РЈРёР»СЊСЏРј}
+Stapleton{РЎС‚СЌРїР»С‚РѕРЅ}
+de Tejeda{РґРµ РўРµС…РµРґР°}
+Ignacio{РРіРЅР°СЃРёРѕ}
+Caro{РљР°СЂРѕ}
+Vicente{Р’РёСЃРµРЅС‚Рµ}
+de Raja{РґРµ Р Р°РґР¶Р°}
+Dionisio{Р”РёРѕРЅРёСЃРёРѕ}
+MartРЅnez{РњР°СЂС‚РёРЅРµСЃ}
+de la Vega{РґРµ Р»Р° Р’РµРіР°}
+Jan{РЇРЅ}
+Simonszoon{РЎРёРјРѕРЅСЃСѓРЅ}
+de Buck{РґРµ Р‘Р°Рє}
+Chevalier{РЁРµРІР°Р»СЊРµ}
+de Rionville{РґРµ Р РёРѕРЅРІРёР»Р»СЊ}
+Sir John{РЎСЌСЂ Р”Р¶РѕРЅ}
+Witham{РЈРёС‚Р°Рј}
+Sir Richard{РЎСЌСЂ Р РёС‡Р°СЂРґ}
+Dutton{Р”Р°С‚С‚РѕРЅ}
+Colomo{РљРѕР»РѕРјРѕ}
+de LujР±n{РґРµ Р›СѓС…Р°РЅ}
+Claude{РљР»РѕРґ}
+Le Moigne II{Р›Рµ РњРѕР№РЅ II}
+Moore{РњСѓСЂ}
+Michael{РњР°Р№РєР»}
+Smith{РЎРјРёС‚}
+de Prado Mayera Portocarrero{РґРµ РџСЂР°РґРѕ РњР°Р№СЂР° РџРѕСЂС‚РѕРєР°СЂСЂРµСЂРѕ}
+y Luna{Рё Р›СЋРЅР°}
+Antonio Cagigal{РђРЅС‚РѕРЅРёРѕ РљР°С…РёРіР°Р»СЊ}
+d'Erchigny{Рґ'Р­СЂС‡РёРЅСЊРё}
+de Clieu{РґРµ РљР»СЊС‘}
+de Wever{РґРµ Р’РµРІРµСЂ}
+Louis{Р›СѓРё}
+Guillaume{Р“РёР№РѕРј}
+Durepaire{Р”СЋСЂРёРїРµСЂ}
+Sir Thomas{РЎСЌСЂ РўРѕРјР°СЃ}
+Robinson{Р РѕР±РёРЅСЃРѕРЅ}
+Henry{Р“РµРЅСЂРё}
+Grenville{Р“СЂРµРЅРІРёР»Р»}
+Ulysses{РЈР»РёСЃСЃ}
+FitzMaurice{Р¤РёС‚С† РњРѕСЂРёСЃ}
+Miguel{РњРёРіРµР»СЊ}
+de Musesas{РґРµ РњСѓСЃР°СЃ}
+Samuel{РЎСЌРјСЋСЌР»СЊ}
+Mitchell{РњРёС‚С‡РµР»Р»}
+Dalling{Р”РѕР»Р»РёРЅРі}
+Richardson{Р РёС‡Р°СЂРґСЃРѕРЅ}
+Herbert{Р“РµСЂР±РµСЂС‚}
+Daniel{Р”Р°РЅРёСЌР»СЊ}
+Sicilian{РЎРёС†РёР»РёР°РЅ}
+JoaquРЅn{РҐРѕР°РєРёРЅ}
+y Moreno{РњРѕСЂРµРЅРѕ}
+Manuel{РњР°РЅСѓСЌР»СЊ}
+de Ezpeleta{РґРµ Р­СЃРїРµР»РµС‚Р°}
+Domingo{Р”РѕРјРёРЅРіРѕ}
+Cabello{РљР°Р±РµР»СЊРѕ}
+y Robles{Рё Р РѕР±Р»РµСЃ}
+FranР·ois{Р¤СЂР°РЅСЃСѓР°}
+de Dion{РґРµ Р”РёРѕРЅ}
+James{Р”Р¶РµР№РјСЃ}
+Cunninghame{РљР°РЅРЅРёРЅРіСЌРј}
+Louis Thomas{Р›СѓРё РўРѕРјР°}
+Villaret{Р’РёР»Р»Р°СЂРµ}
+de Joyeuse{РґРµ Р–СѓР°Р№С‘Р·}
+Torralbo{РўРѕСЂСЂР°Р»СЊР±Рѕ}
+Nugent{РќСѓРґР¶РµРЅС‚}
+Daniell{Р”СЌРЅРёСЌР»}
+Marie{РњР°СЂРё}
+Ferrand{Р¤РµСЂСЂР°РЅ}
+de Apodaca{РґРµ РђРїРѕРґР°РєР°}
+Cienfuegos{РЎСЊРµРЅС„СѓСЌРіРѕСЃ}
+Victor{Р’РёРєС‚РѕСЂ}
+Collot{РљРѕР»Р»Рѕ}
+William{РЈРёР»СЊСЏРј}
+Bishop{Р‘РёС€РѕРї}
+Humberstone{РҐР°РјР±РµСЂСЃС‚РѕРЅ}
+Mackenzie{РњР°РєРєРµРЅР·Рё}
 
 {=====| 83 governors |=====}

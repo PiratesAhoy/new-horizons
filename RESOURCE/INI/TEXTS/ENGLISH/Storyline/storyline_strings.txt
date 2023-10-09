@@ -5,7 +5,7 @@ Hilda{Hilda}
 Sparre{Sparre}
 The Road Back to Greatness{The Road Back to Greatness}
 You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.{You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.}
-KrÂkan{KrÂkan}
+Kr√•kan{Kr√•kan}
 
 Ciri{Ciri}
 Riannon{Riannon}
@@ -40,9 +40,10 @@ Horatio{Horatio}
 Hornblower{Hornblower}
 Caroline{Caroline}
 
-Le RËve{Le RËve}
+Le R√®ve{Le R√®ve}
 
 Atropos{Atropos}
+Lydia{Lydia}
 
 Don Julian{Don Julian}
 Alvarado{Alvarado}
@@ -50,9 +51,16 @@ Alvarado{Alvarado}
 Aine{Aine}
 
 Petra{Petra}
-BorinqueÒa{BorinqueÒa}
+Borinque√±a{Borinque√±a}
 
 Becka{Becka}
+
+Aveline{Aveline}
+de Grandpr√©{de Grandpr√©}
+Hatching a Plot{Hatching a Plot}
+As an official member of the Assassin Brotherhood, you sought to liberate the slave community from the Templar Order influence. After more than 10 years of dedication, you succeeded in eradicating the Templar Order of Louisiana. Recently, you received a letter asking for help from the Caribbean Brotherhood of Assassins.{As an official member of the Assassin Brotherhood, you sought to liberate the slave community from the Templar Order influence. After more than 10 years of dedication, you succeeded in eradicating the Templar Order of Louisiana. Recently, you received a letter asking for help from the Caribbean Brotherhood of Assassins.}
+Libert√©{Libert√©}
+
 La Aguja - The Needle{La Aguja - The Needle}
 The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.{The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.}
 
@@ -126,7 +134,7 @@ Surprise{Surprise}
 
 Hector{Hector}
 Barbossa{Barbossa}
-The Curse of CortÈs{The Curse of CortÈs}
+The Curse of Cort√©s{The Curse of Cort√©s}
 Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...{Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...}
 Black Pearl{Black Pearl}
 
@@ -191,7 +199,7 @@ Eduardo{Eduardo}
 Villanueva{Villanueva}
 Sargento{Sargento}
 Lord of the Adriatic{Lord of the Adriatic}
-Relive the piratical adventures of Capit·n Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Relive the piratical adventures of Capit·n Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.}
+Relive the piratical adventures of Capit√°n Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Relive the piratical adventures of Capit√°n Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.}
 
 Sao{Sao}
 Feng{Feng}
@@ -262,7 +270,7 @@ Helen{Helen}
 Lucia{Lucia}
 de la Vega{de la Vega}
 Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?}
-IntrÈpido{IntrÈpido}
+Intr√©pido{Intr√©pido}
 
 Edmundo{Edmundo}
 Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?}
@@ -271,7 +279,7 @@ Piers{Piers}
 Downing{Downing}
 Entreprenant{Entreprenant}
 
-FranÁois-Louis{FranÁois-Louis}
+Fran√ßois-Louis{Fran√ßois-Louis}
 Rousselet{Rousselet}
 Le Saint Louis{Le Saint Louis}
 
@@ -332,7 +340,7 @@ o Portugues{o Portugues}
 
 Santiago{Santiago}
 
-FranÁois{FranÁois}
+Fran√ßois{Fran√ßois}
 de Hadoque{de Hadoque}
 La Licorne{La Licorne}
 
@@ -373,7 +381,7 @@ You intend to see to it that any man who sails under a pirate flag or wears a pi
 
 Michiel{Michiel}
 de Ruyter{de Ruyter}
-BestevaÍr{BestevaÍr}
+Besteva√™r{Besteva√™r}
 Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!{Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!}
 Neptunus{Neptunus}
 
@@ -424,8 +432,8 @@ Demologos{Demologos}
 Roche{Roche}
 Brasiliano{Brasiliano}
 
-JosÈ{JosÈ}
-JoaquÌm{JoaquÌm}
+Jos√©{Jos√©}
+Joaqu√≠m{Joaqu√≠m}
 Almeida{Almeida}
 Rustic Sea Wolf{Rustic Sea Wolf}
 I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character){I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character)}
@@ -551,6 +559,11 @@ Stranton{Stranton}
 Phantom{Phantom}
 Cursed Vengeance{Cursed Vengeance}
 Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.}
+
+Purpure{Purpure}
+Squire of the Sea{Squire of the Sea}
+Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.{Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.}
+Carnation{Carnation}
 
 Francis{Francis}
 Drake{Drake}

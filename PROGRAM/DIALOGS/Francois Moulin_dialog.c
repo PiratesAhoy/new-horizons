@@ -1,4 +1,4 @@
-//#include "DIALOGS\Franзois Moulin_dialog.h"
+//#include "DIALOGS\FranР·ois Moulin_dialog.h"
 
 void ProcessDialogEvent()
 {
@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 
 			Dialog.defAni = "dialog_stay1";

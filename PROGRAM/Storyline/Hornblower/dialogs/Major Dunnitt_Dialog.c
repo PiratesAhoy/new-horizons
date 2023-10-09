@@ -15,7 +15,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -68,7 +68,7 @@ void ProcessDialogEvent()
 
 		case "Continue Chatter Mishipman":
 			dialog.text = DLG_TEXT[0];
-			link.l1 = DLG_TEXT[1] + GetMyName(PChar) + Pchar.lastname + " sir.";
+			link.l1 = DLG_TEXT[1] + GetMySimpleName(PChar) + ", " + GetAddressForm(ADDR_POLITE, ENGLAND, false) + ".";
 			link.l1.go = "Continue Chatter Mishipman2";
 		break;
 
@@ -79,8 +79,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "Walk_away":
-			LAi_SetCitizenType(characterFromID("Major Dunnitt"));
-			link.l1.go = "exit";
+			LAi_SetCitizenTypeNoGroup(characterFromID("Major Dunnitt"));
+			Diag.CurrentNode = Diag.TempNode;
+			DialogExit();
 		break;
 
 		case "Sharpe Chat":

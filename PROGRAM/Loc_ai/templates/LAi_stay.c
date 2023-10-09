@@ -14,126 +14,126 @@ bool LAi_tmpl_stay_InitTemplate(aref chr)
 	return true;
 }
 
-//Процессирование шаблона персонажа
+//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_stay_CharacterUpdate(aref chr, float dltTime)
 {
 }
 
-//Персонаж выполнил команду  go to point
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  go to point
 void LAi_tmpl_stay_EndGoToPoint(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж провалил команду  go to point
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  go to point
 void LAi_tmpl_stay_FailureGoToPoint(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
 
-//Персонаж выполнил команду  run to point
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  run to point
 void LAi_tmpl_stay_EndRunToPoint(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж провалил команду  run to point
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  run to point
 void LAi_tmpl_stay_FailureRunToPoint(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж не может добраться до точки назначения
+//РџРµСЂСЃРѕРЅР°Р¶ РЅРµ РјРѕР¶РµС‚ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ С‚РѕС‡РєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ
 void LAi_tmpl_stay_BusyPos(aref chr, float x, float y, float z)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж начал перемещение за другим
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
 void LAi_tmpl_stay_FollowGo(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж начал дошёл до другого персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_stay_FollowStay(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж провалил команду  follow character
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  follow character
 void LAi_tmpl_stay_FailureFollow(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
 
-//Персонаж начал перемещение за другим
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
 void LAi_tmpl_stay_FightGo(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж начал дошёл до другого персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_stay_FightStay(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж провалил команду  Fight
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  Fight
 void LAi_tmpl_stay_FailureFight(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Можно ли стрелять
+//РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРµР»СЏС‚СЊ
 bool LAi_tmpl_stay_IsFire(aref chr)
 {	
 	return false;
 }
 
-//Можно ли использовать оружие
+//РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЂСѓР¶РёРµ
 bool LAi_tmpl_stay_IsFight(aref chr)
 {
 	return false;
 }
 
 
-//Персонаж выполнил команду  escape
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  escape
 void LAi_tmpl_stay_EndEscape(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж скользит вдоль патча
+//РџРµСЂСЃРѕРЅР°Р¶ СЃРєРѕР»СЊР·РёС‚ РІРґРѕР»СЊ РїР°С‚С‡Р°
 void LAi_tmpl_stay_EscapeSlide(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
-//Персонаж провалил команду  escape
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  escape
 void LAi_tmpl_stay_FailureEscape(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
 
-//Персонаж толкается с другими персонажами
+//РџРµСЂСЃРѕРЅР°Р¶ С‚РѕР»РєР°РµС‚СЃСЏ СЃ РґСЂСѓРіРёРјРё РїРµСЂСЃРѕРЅР°Р¶Р°РјРё
 void LAi_tmpl_stay_ColThreshold(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
 
-//Персонаж закончил проигрывать анимацию
+//РџРµСЂСЃРѕРЅР°Р¶ Р·Р°РєРѕРЅС‡РёР» РїСЂРѕРёРіСЂС‹РІР°С‚СЊ Р°РЅРёРјР°С†РёСЋ
 void LAi_tmpl_stay_EndAction(aref chr)
 {
 	SetCharacterTask_Stay(chr);
 }
 
 
-//Персонажа просят освободить место
+//РџРµСЂСЃРѕРЅР°Р¶Р° РїСЂРѕСЃСЏС‚ РѕСЃРІРѕР±РѕРґРёС‚СЊ РјРµСЃС‚Рѕ
 void LAi_tmpl_stay_FreePos(aref chr, aref who)
 {
 	SetCharacterTask_Stay(chr);

@@ -10,7 +10,7 @@ Adventurer_Descr_i{}
 
 Agent_Descr_a{}
 Agent_Descr_b{Part of the secret service of}
-Agent_Descr_c{one of Europe’s major powers,}
+Agent_Descr_c{one of Europeâ€™s major powers,}
 Agent_Descr_d{you are tasked to infiltrate}
 Agent_Descr_e{an enemy stronghold.}
 Agent_Descr_f{However, you may have}
@@ -92,7 +92,7 @@ Merchant_Descr_a{}
 Merchant_Descr_b{You are the new captain}
 Merchant_Descr_c{of a merchant vessel,}
 Merchant_Descr_d{having bought out the}
-Merchant_Descr_e{interest of the ship’s}
+Merchant_Descr_e{interest of the shipâ€™s}
 Merchant_Descr_f{former captain who has}
 Merchant_Descr_g{retired to life on land.}
 Merchant_Descr_h{}
@@ -109,7 +109,7 @@ Naval Officer_Descr_h{}
 Naval Officer_Descr_i{}
 
 Physician_Descr_a{}
-Physician_Descr_b{A former ship’s surgeon,}
+Physician_Descr_b{A former shipâ€™s surgeon,}
 Physician_Descr_c{you have adapted to life}
 Physician_Descr_d{at sea and now command a}
 Physician_Descr_e{vessel of your very own.}
@@ -119,10 +119,10 @@ Physician_Descr_h{}
 Physician_Descr_i{}
 
 Quartermaster_Descr_a{}
-Quartermaster_Descr_b{A ship’s paymaster,}
+Quartermaster_Descr_b{A shipâ€™s paymaster,}
 Quartermaster_Descr_c{you stepped-in to act}
 Quartermaster_Descr_d{as captain when the}
-Quartermaster_Descr_e{ship’s commanding officer}
+Quartermaster_Descr_e{shipâ€™s commanding officer}
 Quartermaster_Descr_f{and first mate were lost}
 Quartermaster_Descr_g{on a prior journey.}
 Quartermaster_Descr_h{}

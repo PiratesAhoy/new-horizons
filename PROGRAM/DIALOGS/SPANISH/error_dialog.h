@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = { 
-"No hay dialogo.nombre de archivo asignado para mi",
-"No puedo cargar el archivo de dialogo [ ",
+"No hay dialog.filename asignado para mí",
+"No puedo cargar el archivo de diálogo [ ",
 "] asignado para mi",
-"Salida",
+"Salir",
 
 };

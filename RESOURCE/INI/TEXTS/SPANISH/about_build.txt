@@ -2,32 +2,32 @@ About_Build
 {
 Pirates of the Caribbean: New Horizons
 
-Al ser esta una gran modificaciÛn sobre el juego origial de 2003, hay muchas cosas que saber sobre el juego y muchas cosas que pueden no resultar aparentes a simple vista.
+Al ser esta una gran modificaci√≥n sobre el juego origial de 2003, hay muchas cosas que saber sobre el juego y muchas cosas que pueden no resultar aparentes a simple vista.
 
-Por esta razÛn, hemos reunido estas Pistas y Trucos para todos los jugadores. Probablemente aquÌ se mencionan algunas cosas que no sabÌas y que pueden ayudarte a mejorar tu experiencia de juego.
+Por esta raz√≥n, hemos reunido estas Pistas y Trucos para todos los jugadores. Probablemente aqu√≠ se mencionan algunas cosas que no sab√≠as y que pueden ayudarte a mejorar tu experiencia de juego.
 
-°DiviÈrtete con el juego!
+¬°Divi√©rtete con el juego!
 
 }
 
-B_1{IntroducciÛn}
-About_Build_1_d{INTRODUCCI”N}
+B_1{Introducci√≥n}
+About_Build_1_d{INTRODUCCI√ìN}
 About_Build_1
 {
 
-Creada para el juego original de Akella de 2003 "Pirates of the Caribbean" (comercializado en espaÒol como "Piratas del Caribe"), esta compilaciÛn de mods ha estado en desarrollo desde la publicaciÛn del Build 13 a principios de 2007. Hemos recorrido un largo camino desde entonces, aÒadiendo mucho contenido nuevo y nuevas mec·nicas de juego, algunas de las cuales incluso los desarrolladores del juego original creÌan que eran imposibles de implementar.
+Creada para el juego original de Akella de 2003 "Pirates of the Caribbean" (comercializado en espa√±ol como "Piratas del Caribe"), esta compilaci√≥n de mods ha estado en desarrollo desde la publicaci√≥n del Build 13 a principios de 2007. Hemos recorrido un largo camino desde entonces, a√±adiendo mucho contenido nuevo y nuevas mec√°nicas de juego, algunas de las cuales incluso los desarrolladores del juego original cre√≠an que eran imposibles de implementar.
 
-La intenciÛn es proporcionar una experiencia de juego pirata lo m·s completa posible, m·s realista pero tambiÈn m·s divertida. Entre las nuevas caracterÌsticas se incluyen nuevas historias o campaÒas jugables, detalles histÛricos, la posibilidad de jugar en modo libre, con m·s variedad y posibilidades de personalizaciÛn que nunca. Por no mencionar que los gr·ficos tambiÈn han sido mejorados, sobre todo con nuevos modelos y texturas, pero tambiÈn en el aspecto del mar, y en todo lo que hemos podido.
+La intenci√≥n es proporcionar una experiencia de juego pirata lo m√°s completa posible, m√°s realista pero tambi√©n m√°s divertida. Entre las nuevas caracter√≠sticas se incluyen nuevas historias o campa√±as jugables, detalles hist√≥ricos, la posibilidad de jugar en modo libre, con m√°s variedad y posibilidades de personalizaci√≥n que nunca. Por no mencionar que los gr√°ficos tambi√©n han sido mejorados, sobre todo con nuevos modelos y texturas, pero tambi√©n en el aspecto del mar, y en todo lo que hemos podido.
 }
 
-B_2{ResoluciÛn}
-About_Build_2_d{RESOLUCI”N y OTRAS OPCIONES AVANZADAS}
+B_2{Resoluci√≥n}
+About_Build_2_d{RESOLUCI√ìN y OTRAS OPCIONES AVANZADAS}
 About_Build_2
 {
 
-Edita manualmente engine.ini en la carpeta principal del juego con el Bloc de notas. Cambia los n˙meros en las lineas screen_x y screen_y para adecuarse a la resoluciÛn de tu escritorio.
+Edita manualmente engine.ini en la carpeta principal del juego con el Bloc de notas. Cambia los n√∫meros en las lineas screen_x y screen_y para adecuarse a la resoluci√≥n de tu escritorio.
 
-Se recomienda poner la opciÛn fullscreen a 0. Esto har· que el juego se ejecute en modo ventana y te permitir· usar Alt+Tab para minimizar y maximizar.
+Se recomienda poner la opci√≥n fullscreen a 0. Esto har√° que el juego se ejecute en modo ventana y te permitir√° usar Alt+Tab para minimizar y maximizar.
 
 Si no quieres ver las "Pistas" durante las pantallas de carga, pon numoftips a 0.
 }
@@ -39,64 +39,64 @@ About_Build_3
 
 - Si te pierdes en una ciudad, algunos ciudadanos pueden darte indicaciones.
 
-- Practicar tu destreza de esgrima es la clave para sobrevivir. Al prinicpio intenta acertar algunos golpes y si tu salud disminuye mucho, °sal corriendo! La destreza aumenta con cada golpe.
+- Practicar tu destreza de esgrima es la clave para sobrevivir. Al prinicpio intenta acertar algunos golpes y si tu salud disminuye mucho, ¬°sal corriendo! La destreza aumenta con cada golpe.
 
-- Los objetos que proporcionan bonificaciones a las destrezas, lo har·n tambiÈn si los pones en el cofre del barco, en tu c·mara del capit·n. AsÌ no tienes que llevarlos encima todo el tiempo.
+- Los objetos que proporcionan bonificaciones a las destrezas, lo har√°n tambi√©n si los pones en el cofre del barco, en tu c√°mara del capit√°n. As√≠ no tienes que llevarlos encima todo el tiempo.
 
-- Esquivar es muy ˙til cuando est·s luchando contra varios enemigos.
+- Esquivar es muy √∫til cuando est√°s luchando contra varios enemigos.
 
-- Los rollos de vendas y otras medicinas pueden comprarse a mercaderes callejeros o en la tienda. °Te salvar·n la vida!
+- Los rollos de vendas y otras medicinas pueden comprarse a mercaderes callejeros o en la tienda. ¬°Te salvar√°n la vida!
 
-- No olvides que puedes llevar contigo a miembros de tu tripulaciÛn cuando vas a tierra firme. Esto es especialmente ˙til al principio de una partida, porque no tendr·s oficiales. Habla con tus marineros en cubierta para que te acompaÒen.
+- No olvides que puedes llevar contigo a miembros de tu tripulaci√≥n cuando vas a tierra firme. Esto es especialmente √∫til al principio de una partida, porque no tendr√°s oficiales. Habla con tus marineros en cubierta para que te acompa√±en.
 
-- Vigila siempre tus reservas de municiÛn y pÛlvora para las pistolas.
+- Vigila siempre tus reservas de munici√≥n y p√≥lvora para las pistolas.
 
-- Con algunas armas grandes, puedes entrar en el "modo escopeta" pulsando [TAB] cuando tu espada estÈ desenvainada. Para disparar pulsa [Q]
+- Con algunas armas grandes, puedes entrar en el "modo escopeta" pulsando [TAB] cuando tu espada est√© desenvainada. Para disparar pulsa [Q]
 
-- Aseg˙rate de mirar el inventario despuÈs de un combate. Puede que uno de tus enemigos haya dejado un arma mejor que la tuya. TambiÈn puedes pulsar [F] para equipar r·pidamente la mejor arma que tengas (tambiÈn funciona durante el combate).
+- Aseg√∫rate de mirar el inventario despu√©s de un combate. Puede que uno de tus enemigos haya dejado un arma mejor que la tuya. Tambi√©n puedes pulsar [F] para equipar r√°pidamente la mejor arma que tengas (tambi√©n funciona durante el combate).
 
 }
 
 B_4{Mar}
-About_Build_4_d{NAVEGACI”N y BATALLAS NAVALES}
+About_Build_4_d{NAVEGACI√ìN y BATALLAS NAVALES}
 About_Build_4
 {
 
-- Los oficiales enrolados contribuyen con sus destrezas aunque no estÈn en tu grupo de oficiales "activos". Ten en cuenta que solo contribuyen con las destrezas que corresponden a su especialidad. En la interfaz de Pasajeros, puedes reasignar oficiales, ver sus destrezas efectivas, etc. El efecto total de jugador + oficiales se muestra como las destrezas del jugador en la interfaz de Pasajeros.
+- Los oficiales enrolados contribuyen con sus destrezas aunque no est√©n en tu grupo de oficiales "activos". Ten en cuenta que solo contribuyen con las destrezas que corresponden a su especialidad. En la interfaz de Pasajeros, puedes reasignar oficiales, ver sus destrezas efectivas, etc. El efecto total de jugador + oficiales se muestra como las destrezas del jugador en la interfaz de Pasajeros.
 
-- Comprueba siempre si tu barco necesita reparaciones. TambiÈn puedes mejorar tu barco en el astillero, para hacerlo m·s resistente, m·s maniobrable o mas r·pido.
+- Comprueba siempre si tu barco necesita reparaciones. Tambi√©n puedes mejorar tu barco en el astillero, para hacerlo m√°s resistente, m√°s maniobrable o mas r√°pido.
 
-- Un barco necesita suficiente tripulaciÛn para poder navegar y combatir con efectividad.
+- Un barco necesita suficiente tripulaci√≥n para poder navegar y combatir con efectividad.
 
-- Enrola a un artillero lo antes posible para mejorar tu eficacia en las batallas navales. TambiÈn te equipar· con nueva municiÛn para tus armas de mano si entras en la cubierta de tu barco; si no, tendr·s que reabastecerte personalmente en la santab·rbara, en la bodega.
+- Enrola a un artillero lo antes posible para mejorar tu eficacia en las batallas navales. Tambi√©n te equipar√° con nueva munici√≥n para tus armas de mano si entras en la cubierta de tu barco; si no, tendr√°s que reabastecerte personalmente en la santab√°rbara, en la bodega.
 
-- Enrolar a un cirujano con una buena destreza de defensa y llevar medicamentos a bordo disminuir· las bajas despuÈs de una batalla. Los tripulantes heridos se muestran en [sanos] / [heridos] en F2>Barco.
+- Enrolar a un cirujano con una buena destreza de defensa y llevar medicamentos a bordo disminuir√° las bajas despu√©s de una batalla. Los tripulantes heridos se muestran en [sanos] / [heridos] en F2>Barco.
 
-- No olvides que tu tripulaciÛn necesita comida y ron para sobrevivir. Puedes cambiar las raciones si la situaciÛn se pone crÌtica. TambiÈn necesitas balas de caÒÛn y pÛlvora para poder cargar tus caÒones.
+- No olvides que tu tripulaci√≥n necesita comida y ron para sobrevivir. Puedes cambiar las raciones si la situaci√≥n se pone cr√≠tica. Tambi√©n necesitas balas de ca√±√≥n y p√≥lvora para poder cargar tus ca√±ones.
 
-- Las raciones dobles de ron aumentar·n la moral de tu tripulaciÛn, pero puede que provoquen una pelea de borrachos.
+- Las raciones dobles de ron aumentar√°n la moral de tu tripulaci√≥n, pero puede que provoquen una pelea de borrachos.
 
-- La forma en que tu barco y el barco enemigo est·n posiconados en el mapa de navegaciÛn es la misma que en mar abierto. AsÌ que aseg˙rate de poner tu barco en una buena posiciÛn en el mapa antes de entrar en combate. Una buena posiciÛn inicial puede ser una gran ventaja.
+- La forma en que tu barco y el barco enemigo est√°n posiconados en el mapa de navegaci√≥n es la misma que en mar abierto. As√≠ que aseg√∫rate de poner tu barco en una buena posici√≥n en el mapa antes de entrar en combate. Una buena posici√≥n inicial puede ser una gran ventaja.
 
 - Puedes cambiar la apariencia de tus velas en F2>Barco>Velas.
 
-- Si la suerte en una batalla se pone en tu contra, carga los caÒones con balas encadenadas e intenta derribar los m·stiles del enemigo. AsÌ te ser· mucho m·s f·cil escapar.
+- Si la suerte en una batalla se pone en tu contra, carga los ca√±ones con balas encadenadas e intenta derribar los m√°stiles del enemigo. As√≠ te ser√° mucho m√°s f√°cil escapar.
 
-- Abordar ser· mucho m·s f·cil si tienes una tripulaciÛn con buena moral. Adem·s, es muy efectivo cargar los caÒones con metralla y disparar un par de andanadas antes de abordar.
+- Abordar ser√° mucho m√°s f√°cil si tienes una tripulaci√≥n con buena moral. Adem√°s, es muy efectivo cargar los ca√±ones con metralla y disparar un par de andanadas antes de abordar.
 
-- La brigada de abordaje usa armas, armaduras y pociones que deposites en el armero, en tu c·mara del capit·n. Si no pones ning˙n arma en el armero, usar·n alfanjes.
+- La brigada de abordaje usa armas, armaduras y pociones que deposites en el armero, en tu c√°mara del capit√°n. Si no pones ning√∫n arma en el armero, usar√°n alfanjes.
 
-- A medida que avanza el juego tu tripulaciÛn se generar· con mejores destrezas y habilidades y entonces podr·n usar armas de fuego que requieran la habilidad Pistolero. Pero no al principio de la partida.
+- A medida que avanza el juego tu tripulaci√≥n se generar√° con mejores destrezas y habilidades y entonces podr√°n usar armas de fuego que requieran la habilidad Pistolero. Pero no al principio de la partida.
 
 - Cuando intentes abordar, vigila tu velocidad. Puede ser un error mortal pasar de largo y exponer tu popa al costado de un barco enemigo.
 
-- Durante el abordaje, tu tripulaciÛn puede usar armas, armaduras y medicinas almacenadas en tu armero. Esto puede significar la diferencia entre victoria y derrota.
+- Durante el abordaje, tu tripulaci√≥n puede usar armas, armaduras y medicinas almacenadas en tu armero. Esto puede significar la diferencia entre victoria y derrota.
 
-- En los modos Realista y Iron Man necesitas una br˙jula, un cronÛmetro y un sextante para poder ver tu posiciÛn en el mapa del archipiÈlago (tecla por defecto [M]). Adem·s, en cualquier modo, estos objetos mejoran tu destreza de navegaciÛn.
+- En los modos Realista y Iron Man necesitas una br√∫jula, un cron√≥metro y un sextante para poder ver tu posici√≥n en el mapa del archipi√©lago (tecla por defecto [M]). Adem√°s, en cualquier modo, estos objetos mejoran tu destreza de navegaci√≥n.
 
 - Para ejecutar un zafarrancho de incendio, necesitas la habilidad "Defensa naval basica". La tecla por defecto es [C].
 
-- Puedes ondear la bandera de otra naciÛn a travÈs de F2>Relaciones. Si es una bandera falsa, puede que te reconozcan. La posibilidad de que esto ocurra aumenta a medida que crece tu fama o a medida que te acercas mucho a los barcos enemigos a los que pretendes engaÒar. Si ondeas tu bandera personal, tus relaciones en el mar ser·n las mismas que las reales.
+- Puedes ondear la bandera de otra naci√≥n a trav√©s de F2>Relaciones. Si es una bandera falsa, puede que te reconozcan. La posibilidad de que esto ocurra aumenta a medida que crece tu fama o a medida que te acercas mucho a los barcos enemigos a los que pretendes enga√±ar. Si ondeas tu bandera personal, tus relaciones en el mar ser√°n las mismas que las reales.
 
 - Los motores de vapor necesitan tablas para funcionar.
 
@@ -111,27 +111,27 @@ About_Build_5
 
 - Puedes personalizar tu juego en las opciones de juego adicionales.
 
-- TambiÈn puedes entrar en InternalSettings.h en [Carpeta del juego]\PROGRAM, que pudes abrir con WordPad, Bloc de Notas, etc.
-°°ADVERTENCIA!! Puedes cargarte algo si no sabes lo que haces. Si editas este archivo, por favor, sigue las instrucciones que se dan al final de cada lÌnea. Si no hay ninguna descripciÛn, dÈjalo como est·.
+- Tambi√©n puedes entrar en InternalSettings.h en [Carpeta del juego]\PROGRAM, que pudes abrir con WordPad, Bloc de Notas, etc.
+¬°¬°ADVERTENCIA!! Puedes cargarte algo si no sabes lo que haces. Si editas este archivo, por favor, sigue las instrucciones que se dan al final de cada l√≠nea. Si no hay ninguna descripci√≥n, d√©jalo como est√°.
 
-- Al final de este archivo, puedes activar/desactivar el paso lateral ([A] y [D]). No hemos podido hacer que funcione el control de colisiones, asÌ que puede que atravieses el terreno sÛlido si lo usas. OpciÛn por defecto: desactivado.
+- Al final de este archivo, puedes activar/desactivar el paso lateral ([A] y [D]). No hemos podido hacer que funcione el control de colisiones, as√≠ que puede que atravieses el terreno s√≥lido si lo usas. Opci√≥n por defecto: desactivado.
 
 - Puedes cambiar la apariencia de tus velas en F2>Barco>Velas.
 
-- øPor quÈ hay dos n˙meros para las destrezas en la hoja de personaje?
-El primero es la destreza "b·sica" del personaje; el segundo es la destreza despuÈs de aplicar las bonificaciones y penalizaciones aÒadidas por objetos y/o clase de barco.
+- ¬øPor qu√© hay dos n√∫meros para las destrezas en la hoja de personaje?
+El primero es la destreza "b√°sica" del personaje; el segundo es la destreza despu√©s de aplicar las bonificaciones y penalizaciones a√±adidas por objetos y/o clase de barco.
 
-- Si los nombres y posiciones de las islas te confunden, consulta el mapa del archipiÈlago en F2>Inventario>Mapas o [M]. TambiÈn puedes comprar mapas de las distintas islas a los mercaderes, que te dar·n el nombre y la posiciÛn de las ciudades y los fondeaderos de la costa.
+- Si los nombres y posiciones de las islas te confunden, consulta el mapa del archipi√©lago en F2>Inventario>Mapas o [M]. Tambi√©n puedes comprar mapas de las distintas islas a los mercaderes, que te dar√°n el nombre y la posici√≥n de las ciudades y los fondeaderos de la costa.
 
-- Mi reputaciÛn es horrible. øCÛmo puedo cambiar lo que la gente piensa de mÌ?
-En primer lugar, es posible que no sepas quÈ es lo que lo ha causado. Tu reputacion baja cuando:
-> No pagas un prÈstamo del prestamista a tiempo.
-> No llevas un cargamento de mercancÌas a tiempo.
+- Mi reputaci√≥n es horrible. ¬øC√≥mo puedo cambiar lo que la gente piensa de m√≠?
+En primer lugar, es posible que no sepas qu√© es lo que lo ha causado. Tu reputacion baja cuando:
+> No pagas un pr√©stamo del prestamista a tiempo.
+> No llevas un cargamento de mercanc√≠as a tiempo.
 > Atacas o matas a civiles o marcaderes.
 > Tu brigada de desembarco y/o oficiales hieren o matan a civiles. Ten en cuenta que esto puede ocurrir incluso a distancia si tus oficiales usan armas de fuego.
 > Abres fuego contra un barco neutral o aliado.
 > Tomas la decision "malvada" en una determianda situacion.
-Para arreglar la situaciÛn, haz lo obvio: buenas obras. Hablar con la gente y ayudarla, rescatar n·ufragos, terminar misiones que te den una bonificaciÛn de reputaciÛn, etc.
+Para arreglar la situaci√≥n, haz lo obvio: buenas obras. Hablar con la gente y ayudarla, rescatar n√°ufragos, terminar misiones que te den una bonificaci√≥n de reputaci√≥n, etc.
 }
 
 B_6{Secretos}
@@ -139,19 +139,19 @@ About_Build_6_d{CONTENIDO SECRETO}
 About_Build_6
 {
 
-- El capit·n Hendrick Vanderdecken vende barcos muy especiales, y malditos. Vive en una isla que no puede encontrarse, salvo por aquÈllos que ya saben dÛnde est·. Puedes llegar allÌ consiguiendo un famoso objeto de cierto famoso personaje en cierto famoso lugar de las pelÌculas de Piratas del Caribe.
+- El capit√°n Hendrick Vanderdecken vende barcos muy especiales, y malditos. Vive en una isla que no puede encontrarse, salvo por aqu√©llos que ya saben d√≥nde est√°. Puedes llegar all√≠ consiguiendo un famoso objeto de cierto famoso personaje en cierto famoso lugar de las pel√≠culas de Piratas del Caribe.
 
-- Un duro pistolero ha decidido escnderse lejos del mundo en una cabaÒa en algun lugar de la jungla. Pero el rumor dice que tiene alg˙n tipo de arma "m·gica".
+- Un duro pistolero ha decidido escnderse lejos del mundo en una caba√±a en algun lugar de la jungla. Pero el rumor dice que tiene alg√∫n tipo de arma "m√°gica".
 
 - Hay un escondite secreto que puedes usar para pasar desapercibido en una cueva de una isla deshabitada.
 
-- El boticario en Bridgetown ofrece opciones interesantes, con efectos como mejorar tu salud m·xima. Hazle una visita para saber quÈ necesita.
+- El boticario en Bridgetown ofrece opciones interesantes, con efectos como mejorar tu salud m√°xima. Hazle una visita para saber qu√© necesita.
 
-- En el Caribe hay unas monedas extraÒas procedentes de una conocida pelÌcula. Se dice que quien encuentre una y la lleve consigo, atraer· sobre sÌ una terrible maldiciÛn (y sobre su tripulaciÛn si hay monedas en el armero).
+- En el Caribe hay unas monedas extra√±as procedentes de una conocida pel√≠cula. Se dice que quien encuentre una y la lleve consigo, atraer√° sobre s√≠ una terrible maldici√≥n (y sobre su tripulaci√≥n si hay monedas en el armero).
 
 - El fumadero de opio de Jamaica ofrece tatuajes que mejoran las destrezas.
 
-- En las Èpocas de las Revoluciones y NapoleÛnica, puedes dejar minas en el mar para destruir a tus enemgios.
+- En las √©pocas de las Revoluciones y Napole√≥nica, puedes dejar minas en el mar para destruir a tus enemgios.
 }
 
 B_7{Problemas}
@@ -159,13 +159,13 @@ About_Build_7_d{PROBLEMAS CONOCIDOS y SOLUCIONES}
 About_Build_7
 {
 
-- Guarda la partida a menudo. (Guardado r·pido, F5). El juego es en general muy estable, pero recuerda que esto es un MOD hecho por gente aficionada.
+- Guarda la partida a menudo. (Guardado r√°pido, F5). El juego es en general muy estable, pero recuerda que esto es un MOD hecho por gente aficionada.
 
 - NO PUEDO CONTINUAR HACIA LA SIGUIENTE CUBIERTA DE ABORDAJE
-Pulsa [F12] para forzar al juego a recargar. Entonces deberÌa ser posible continuar.
+Pulsa [F12] para forzar al juego a recargar. Entonces deber√≠a ser posible continuar.
 
 - NO PUEDO MOVERME
-Probablemente el cÛdigo del juego te haya establecido como Actor Type. Pulsa [F12] para volver a Player Type.
+Probablemente el c√≥digo del juego te haya establecido como Actor Type. Pulsa [F12] para volver a Player Type.
 
 }
 
@@ -174,7 +174,7 @@ About_Build_8_d{TRUCOS}
 About_Build_8
 {
 
-Para usar el modo de trucos, cambia la lÌnea ENABLE_CHEATMODE de 0 a 1 al final del archivo PROGRAM\InternalSettings.h . Esto habilita los siguientes comandos de teclas:
+Para usar el modo de trucos, cambia la l√≠nea ENABLE_CHEATMODE de 0 a 1 al final del archivo PROGRAM\InternalSettings.h . Esto habilita los siguientes comandos de teclas:
 
 Numpad 0 = Persoanje:	Modo Dios
 Numpad 1 = Rotar personajes a la izquierda
@@ -183,31 +183,31 @@ Numpad 3 = Rotar personajes a la derecha
 Numpad 4 = Personaje:	Subir de nivel
 Numpad 5 = Personaje:	Falsa Subida de nivel
 Numpad 6 = Jugador:		+ 100000 oro y + 10000 riqueza
-Numpad 7 = Personaje:	Cambiar reputaciÛn (aumentar/disminuir reputaciÛn)
-Numpad 8 = Desactivar las tormentas y los barcos persiguiÈndote en el mapa de navegaciÛn
+Numpad 7 = Personaje:	Cambiar reputaci√≥n (aumentar/disminuir reputaci√≥n)
+Numpad 8 = Desactivar las tormentas y los barcos persigui√©ndote en el mapa de navegaci√≥n
 Numpad 9 = Provocar ataque enemigo (no necesita modo de trucos)
 TAB = Modo escopeta: si tienes una escopeta, mosquete o la pistola de Jack Sparrow equipada durante un combate
 
-Esto tambiÈn activa los "ayudantes de historia" que te permiten saltarte las distintas partes de las historias:
-- Woodes Rogers: Cabeza de Barbabnegra en la escena incial en la c·mara
+Esto tambi√©n activa los "ayudantes de historia" que te permiten saltarte las distintas partes de las historias:
+- Woodes Rogers: Cabeza de Barbabnegra en la escena incial en la c√°mara
 - Asesino: Marinero que se te acerca en el muelle
 - Bartolomeu: Pierre Delacroix que se te acerca cuando entras en la ciudad
 - Jack Sparrow: Borracho sentado en la taberna de Tortuga
-- Hornblower: C.S. Forester que est· de pie junto a una casa al principio de la historia
+- Hornblower: C.S. Forester que est√° de pie junto a una casa al principio de la historia
 }
 
 B_9{Soporte}
-About_Build_9_d{SOPORTE Y RESOLUCI”N DE PROBLEMAS}
+About_Build_9_d{SOPORTE Y RESOLUCI√ìN DE PROBLEMAS}
 About_Build_9
 {
 
-Usa el compile.log, system.log y si lo hay, el error.log que podr·s encontrar en la carpeta principal del juego para proporcionar m·s detalles cuando pidas ayuda. Indica tambiÈn tu tarjeta gr·fica (GFX), ruta de instalaciÛn y versiÛn del mod.
+Usa el compile.log, system.log y si lo hay, el error.log que podr√°s encontrar en la carpeta principal del juego para proporcionar m√°s detalles cuando pidas ayuda. Indica tambi√©n tu tarjeta gr√°fica (GFX), ruta de instalaci√≥n y versi√≥n del mod.
 
-Para averiguar cu·l es tu tarjeta gr·fica, pulsa el botÛn de Windows+R, escribe "dxdiag" y pulsa "aceptar". AsÌ ejecutar·s la herramienta de diagnÛstico de DirectX, que proporciona muchos detalles relevantes.
+Para averiguar cu√°l es tu tarjeta gr√°fica, pulsa el bot√≥n de Windows+R, escribe "dxdiag" y pulsa "aceptar". As√≠ ejecutar√°s la herramienta de diagn√≥stico de DirectX, que proporciona muchos detalles relevantes.
 
 }
 
-B_10{InformaciÛn adicional (en inglÈs}
+B_10{Informaci√≥n adicional (en ingl√©s}
 About_Build_10_1
 {
 PiratesAhoy! (Web y Foros):
@@ -220,5 +220,5 @@ Perfil en Mod DataBase:
 
 About_Build_10_3
 {
-GuÌas de misiones:
+Gu√≠as de misiones:
 }

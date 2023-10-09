@@ -1,27 +1,27 @@
 TEXT	{
-Teoria : Wszystkie cyfry s¹ równe do zera.
-Dowód: Przepuszczajmy, ¿e a = b. Wtedy
+Teoria : Wszystkie cyfry sÂ¹ rÃ³wne do zera.
+DowÃ³d: Przepuszczajmy, Â¿e a = b. Wtedy
 a = b
 a^2 = ab
 a^2 - b^2 = ab - b^2
 (a + b)(a - b) = b(a - b)
 a + b = b
 a = 0
-Pozatem, Je›li a + b = b, i a = b, Wtedy b + b = b, i 2b = b, co oznacza e 2 = 1 i twój dwó-masztowy bryg jest w rzeczywisto›ci jedno-masztow¹ tartan¹.
+Pozatem, Jeâ€ºli a + b = b, i a = b, Wtedy b + b = b, i 2b = b, co oznacza Å¾e 2 = 1 i twÃ³j dwÃ³-masztowy bryg jest w rzeczywistoâ€ºci jedno-masztowÂ¹ tartanÂ¹.
 -------------------------
-Jack Sparrow i jego dwóch poruczników zostaj¹ na noc w tawernie w Tortudze , Gdzie oni dok³adaj¹ siê po 10 sztuk z³ota ka¿dy - 5 za normalne stawki tawerny i 5 za nocne towarzystwo w tawernian¹ dziwk¹. Nadal dzia³a taniej ni¿ chodzenie do burdelu, wiêc Jack bierze 10 sztuk z³ota od kadego porucznika, kolejne 10 sztuk z³ota z jego w³asnej kieszeni, nastepnie oddaje 30 sztuk z³ota w ca³o›ci. O poranku tawerniana dziwka powiedzia³a e ona zapomnia³a  powiedzieå e jest specjalna oferta dla czworga, za wszystko tylko 25 sztuk z³ota, i daje 5 sztuk z³ota zpowrotem do Jacka. Jack chowa 1 sztukê z³ota do swojej kieszeni, daj× 1 sztuk× z³ota dla swoich poruczników, nastêpnie daje kolejne 2 zpowrotem dla dziwki. Teraz s¹ dwa problemy z t¹ histori¹. Pierwszy mówi ¿e Jack Sparrow, mia³ w swoich rêkach 5 sztuk z³ota, które nie roztanie siê z nimi ponownie. Kolejny to ¿e kady cz³owiek zap³aci³ teraz ca³kowicie 9 sztuk z³ota, którzy razem z Jackiem , odda³ pieni¹dze zpowrotem do dziwki co czuni zap³acone 29 sztuk z³ota. Gdzie podzia³a siê brakuj¹ca sztuka z³ota?
+Jack Sparrow i jego dwÃ³ch porucznikÃ³w zostajÂ¹ na noc w tawernie w Tortudze , Gdzie oni dokÂ³adajÂ¹ siÃª po 10 sztuk zÂ³ota kaÂ¿dy - 5 za normalne stawki tawerny i 5 za nocne towarzystwo w tawernianÂ¹ dziwkÂ¹. Nadal dziaÂ³a taniej niÂ¿ chodzenie do burdelu, wiÃªc Jack bierze 10 sztuk zÂ³ota od kaÅ¾dego porucznika, kolejne 10 sztuk zÂ³ota z jego wÂ³asnej kieszeni, nastepnie oddaje 30 sztuk zÂ³ota w caÂ³oâ€ºci. O poranku tawerniana dziwka powiedziaÂ³a Å¾e ona zapomniaÂ³a  powiedzieÃ¥ Å¾e jest specjalna oferta dla czworga, za wszystko tylko 25 sztuk zÂ³ota, i daje 5 sztuk zÂ³ota zpowrotem do Jacka. Jack chowa 1 sztukÃª zÂ³ota do swojej kieszeni, dajÃ— 1 sztukÃ— zÂ³ota dla swoich porucznikÃ³w, nastÃªpnie daje kolejne 2 zpowrotem dla dziwki. Teraz sÂ¹ dwa problemy z tÂ¹ historiÂ¹. Pierwszy mÃ³wi Â¿e Jack Sparrow, miaÂ³ w swoich rÃªkach 5 sztuk zÂ³ota, ktÃ³re nie roztanie siÃª z nimi ponownie. Kolejny to Â¿e kaÅ¾dy czÂ³owiek zapÂ³aciÂ³ teraz caÂ³kowicie 9 sztuk zÂ³ota, ktÃ³rzy razem z Jackiem , oddaÂ³ pieniÂ¹dze zpowrotem do dziwki co czuni zapÂ³acone 29 sztuk zÂ³ota. Gdzie podziaÂ³a siÃª brakujÂ¹ca sztuka zÂ³ota?
 -------------------------
-Czarnobrody: "Pomy›l liczb› od 1 do 10 ale nie mów jaka to jest."
-Pirat 1: "Mam ju."
-Czarnobrody: "Twój numer to 4."
-Pirat 1: "Nie, to by³a 6."
-Czarnobrody: "Z³a odpowiedŸ." <BANG> "Pomy›l liczb› od 1 do 10 ale nie mów jaka to jest.."
-Pirat 2: "Mam ju."
-Czarnobrody: "Twój numer to 7."
-Pirat 2: "Ja my›la³em o 3, ale nagle pomy›la³em o 7."
+Czarnobrody: "Pomyâ€ºl liczbâ€º od 1 do 10 ale nie mÃ³w jaka to jest."
+Pirat 1: "Mam juÅ¾."
+Czarnobrody: "TwÃ³j numer to 4."
+Pirat 1: "Nie, to byÂ³a 6."
+Czarnobrody: "ZÂ³a odpowiedÅ¸." <BANG> "Pomyâ€ºl liczbâ€º od 1 do 10 ale nie mÃ³w jaka to jest.."
+Pirat 2: "Mam juÅ¾."
+Czarnobrody: "TwÃ³j numer to 7."
+Pirat 2: "Ja myâ€ºlaÂ³em o 3, ale nagle pomyâ€ºlaÂ³em o 7."
 -------------------------
-Teoria: Wszystkie liczby s¹ równe.
-Dowód: Wybierz bezwzgl×dn¹ a i b, i wtedy t = a + b. Wiêc
+Teoria: Wszystkie liczby sÂ¹ rÃ³wne.
+DowÃ³d: Wybierz bezwzglÃ—dnÂ¹ a i b, i wtedy t = a + b. WiÃªc
 a + b = t
 (a + b)(a - b) = t(a - b)
 a^2 - b^2 = ta - tb
@@ -30,5 +30,5 @@ a^2 - ta + (t^2)/4 = b^2 - tb + (t^2)/4
 (a - t/2)^2 = (b - t/2)^2
 a - t/2 = b - t/2
 a = b
-Wiêc wszystkie liczby s¹ takie same, i matematyka jest bezuyteczna, co oznacza, e to czas eby od³oyå t¹ ksi¹k i wróciå za stery zanim uderzysz w t¹ ska³× przed tob¹.
+WiÃªc wszystkie liczby sÂ¹ takie same, i matematyka jest bezuÅ¾yteczna, co oznacza, Å¾e to czas Å¾eby odÂ³oÅ¾yÃ¥ tÂ¹ ksiÂ¹Å¾kÅ¾ i wrÃ³ciÃ¥ za stery zanim uderzysz w tÂ¹ skaÂ³Ã— przed tobÂ¹.
 }

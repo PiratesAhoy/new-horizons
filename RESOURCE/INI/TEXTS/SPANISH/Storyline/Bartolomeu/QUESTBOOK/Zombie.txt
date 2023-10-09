@@ -1,3 +1,3 @@
 title=La pesadilla
-text.t1=¡No puedo creerlo! Me he encontrado a Charles Baxter cerca de #sisland_Conceicao# y me he enfrentado a él. Navegaba a bordo de una extraña carabela. Creo que lo he matado... otra vez... Pero, ¿lo he matado realmente? 
+text.t1=Â¡No puedo creerlo! Me he encontrado a Charles Baxter cerca de #sisland_Conceicao# y me he enfrentado a Ã©l. Navegaba a bordo de una extraÃ±a carabela. Creo que lo he matado... otra vez... Pero, Â¿lo he matado realmente? 
 

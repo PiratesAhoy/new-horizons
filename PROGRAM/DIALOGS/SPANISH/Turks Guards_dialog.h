@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = { 
-"Si provocas un alboroto en esta ciudad, !te cortare la garganta!",
-"No te preocupes, no habra fightings si nadie me hace!",
-"Y manten tus manos lejos de tu espada cuando me hables, ",
-"Despedida.",
+"Si provocas un altercado en esta ciudad, !te degollaré!",
+"¡No te preocupes, no habrá pelea si nadie me provoca!",
+"Y mantén las manos lejos de tu espada cuando me hables, ",
+"Adiós.",
 
 };

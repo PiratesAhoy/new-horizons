@@ -14,7 +14,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Ж’РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°в‚¬ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "Gov_dialog_1";
 			Dialog.defCam = "1";
@@ -88,7 +88,7 @@ void ProcessDialogEvent()
 				Preprocessor_AddQuestData("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
 				if (CheckQuestAttribute("gambling_with_girl", "to_hovernor_2") && GetNationRelation2MainCharacter(iNation) == RELATION_ENEMY)
 				{
-					//прощают
+					//РїСЂРѕС‰Р°СЋС‚
 					dialog.text = DLG_TEXT[27];
 					link.l1 = DLG_TEXT[28];
 					link.l1.go = "forgive";
@@ -99,7 +99,7 @@ void ProcessDialogEvent()
 				{
 					if (GetNationRelation2MainCharacter(iNation) == RELATION_ENEMY)
 					{
-						//позволяют уйти
+						//РїРѕР·РІРѕР»в‚¬СЋС‚ СѓР№С‚Рё
 						dialog.text = DLG_TEXT[29];
 						link.l1 = DLG_TEXT[30] + GetCharacterFullName(DLG_TEXT[31]) + DLG_TEXT[32];
 						link.l1.go = "ransom";
@@ -108,7 +108,7 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						//обычный разговор
+						//РѕР±С‹С‡РЅС‹Р№ СЂР°Р·РіРѕРІРѕСЂ
 						dialog.text = DLG_TEXT[33];
 						link.l1 = DLG_TEXT[34] + GetCharacterFullName(DLG_TEXT[35]) + DLG_TEXT[36];
 						link.l1.go = "virginie";

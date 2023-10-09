@@ -1,9 +1,9 @@
-string DLG_TEXT[313] = {
+string DLG_TEXT[318] = {
 "We've made port at the pirate settlement on #sisland_Quebradas Costillas#. I had my personal Roger hoisted so no one will give us trouble. The officers and a piece of your crew have elected to make their way through the jungle for #sCharlestown#. I guess they don't want to be hunted down by the English as traitors. Alas you don't have that option. I cannot thank you enough for what you did for my crew and me.",
 "Captain Champers was a pig of a man and what he intended for you was monstrous. I didn't see a choice.",
 "Treacherous dogs. I suppose I saw that coming. What can I do for you, Captain?",
 "Sorry Captain Fletcher, no time for chit chat. I need to be away before the Navy shows up. I know a storm is raging but I'll face that risk, and set sail right away. Goodbye and good luck!",
-"I'm done with this life but my men need a home. They are good sailors, fiercely loyal, and owe you their lives. You would do well to take them on. You should look them over and assign them duties fitting their skills. I suggest Mr. Sullivan as first mate but of course the choice is up to you. (Open your ‘Passangers' window to view your new officers)",
+"I'm done with this life but my men need a home. They are good sailors, fiercely loyal, and owe you their lives. You would do well to take them on. You should look them over and assign them duties fitting their skills. I suggest Mr. Sullivan as first mate but of course the choice is up to you. (Open your â€˜Passangers' window to view your new officers)",
 "Yes, I talked to Sullivan. He seems like a competent sailor and a good bloke. I'm sure your people all know what they're doing.",
 "The authorities will be after you with a powerful will for what you've done. They'll be looking for your head whether they need to take it on land or sea.",
 "True. I'll have to be on the lookout for assassins as well as the Navy.",
@@ -301,7 +301,7 @@ string DLG_TEXT[313] = {
 "In due time, we will need to tend to our duty to the souls of the dead. But first we need to gain experience with the ship. She is not as she was when she was cursed.",
 "Cap'n, we've found this secluded bay which we can set up as our base o' operations.",
 "Perfect. Now, anchor the ship. I'd like to get a survey of it.",
-"Capitán, now that we have arrived in the Caribbean, the crew are wondering about your intentions. Are we to continue to serve Spain?",
+"CapitÃ¡n, now that we have arrived in the Caribbean, the crew are wondering about your intentions. Are we to continue to serve Spain?",
 "We shall keep our options open. We shall not give up our service to Spain. But we have not antagonised the pirates here and will not do so.",
 "No, I have finished with Spain. We are pirates now. Hoist the black flag!",
 "What sort of question is that? We have been loyal to Spain and will remain loyal! Now, get out!",
@@ -312,4 +312,9 @@ string DLG_TEXT[313] = {
 "Good. Let's anchor here and prepare for our next voyage.",
 "Now that we've got the rest of the crew out of the way, let's get to the boat. We'll need to throw our weapons overboard before we leave, they'll only make the boat heavier.",
 "Thank you again for freeing me. As for weapons, we can find something after we reach shore.",
+"Purpure, we've finally arrived in the New World. It's a land of opportunity and I look forward to hearing from you again. Sadly, I can no longer accompany you after this. I'm getting on in years.",
+"I'll miss you terribly, uncle! Take care of yourself when you get back to England.",
+"Dear uncle, is something the matter?",
+"Yes, Purpure. The wind is becoming stronger and I fear a storm is on the way.",
+"I think I'll be alright, uncle. Don't worry about me. I can turn over a new leaf away from my father, at least.",
 }

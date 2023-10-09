@@ -1,4 +1,4 @@
 title=Side Quest - Cargo for Thomas O'Reily
-text.t1=Well, only a paltry sum gold to deliver a cargo of #samount# of #scargo# to the French town of #sFalaise de Fleur# on #sisland_Falaise de Fleur# and one Arnaud Matton. Thomas was stingy, but I’m taking this order because I get the feeling there may be more to come in the future if I do...
+text.t1=Well, only a paltry sum gold to deliver a cargo of #samount# of #scargo# to the French town of #sFalaise de Fleur# on #sisland_Falaise de Fleur# and one Arnaud Matton. Thomas was stingy, but Iâ€™m taking this order because I get the feeling there may be more to come in the future if I do...
 text.t2=Arnaud had been sure that Thomas had double-crossed him, what with all the hostility between France and England. Well, now for me to go back and collect my reward from Thomas, then to see what lies in the future!
-text.t3=Well, that was easy enough! Thomas was happy his goods got to #sFalaise de Fleur#, but I’m going to have to talk to him about another job later. I think there may be something interesting up Thomas’ sleeve!
+text.t3=Well, that was easy enough! Thomas was happy his goods got to #sFalaise de Fleur#, but Iâ€™m going to have to talk to him about another job later. I think there may be something interesting up Thomasâ€™ sleeve!

@@ -1,3 +1,3 @@
-title=Samouczek - Sprzeda ³adunku w lokalnym sklepie
-text.t1=Powinienem znaleŸŞ kupca by sprzedaæ mu towary (#sgoods#) z mojej ³adowni. W ten sposób zdob×d× fundusze na naprawy i uzupe³nienie za³ogi.
+title=Samouczek - SprzedaÅ¾ Â³adunku w lokalnym sklepie
+text.t1=Powinienem znaleÅ¸Ã kupca by sprzedaÃ¦ mu towary (#sgoods#) z mojej Â³adowni. W ten sposÃ³b zdobÃ—dÃ— fundusze na naprawy i uzupeÂ³nienie zaÂ³ogi.
 text.t2=Wykonane!

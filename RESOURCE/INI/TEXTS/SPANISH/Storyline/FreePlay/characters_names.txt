@@ -17,7 +17,7 @@ Richelieu{Richelieu}
 Mazarin{Mazarin}
 Teague{Teague}
 Sparrow{Sparrow}
-Fran�ois{Fran�ois}
+François{François}
 de Hadoque{de Hadoque}
 Koleniko{Koleniko}
 Ragetti{Ragetti}
@@ -39,6 +39,8 @@ Pintel{Pintel}
 Ian{Ian}
 Mercer{Mercer}
 Bligh{Bligh}
+Uncle{Tío}
+Gules{Gules}
 
 {=====| quests_reaction.c |=====}
 Bartolomeu{Bartolomeu}
@@ -51,6 +53,7 @@ Weatherby{Weatherby}
 Swann{Swann}
 Christopher{Christopher}
 Silehard{Silehard}
+
 {=====| Officers.c |=====}
 William{William}
 Sullivan{Sullivan}
@@ -67,7 +70,7 @@ O'Bannon{O'Bannon}
 Angus{Angus}
 Calhoun{Calhoun}
 Bush{Bush}
-Dark Captain{Capit�n oscuro}
+Dark Captain{Capitán oscuro}
 Dark Cannoneer{Artillero oscuro}
 
 {=====| TempQuest.c |=====}
@@ -78,9 +81,9 @@ Padilla{Padilla}
 Celestino{Celestino}
 Villalobos{Villalobos}
 Crewmember{Tripulante}
-Spanish{Espa�ol}
+Spanish{Español}
 Commander{comandante}
-Spanish Commander{Comandante espa�ol}
+Spanish Commander{Comandante español}
 Padre{Padre}
 Gerardo{Gerardo}
 Soldier{Soldado}
@@ -102,9 +105,9 @@ Arnaldo{Arnaldo}
 Chaparro{Chaparro}
 
 {=====| TempQuestEnemy.c |=====}
-Prison{Prisi�n}
+Prison{Prisión}
 Guard{Guardia}
-Prison Guard{Guardia de la prisi�n}
+Prison Guard{Guardia de la prisión}
 Arnold{Arnold}
 McGill{McGill}
 Smuggler{Contrabandista}

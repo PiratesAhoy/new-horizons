@@ -100,7 +100,7 @@ void ProcessDialogEvent()
 					else
 					{
 						Dialog.Text = DLG_TEXT[7];
-						Link.l1 = DLG_TEXT[8] + GetNationDescByType(sti(NPChar.nation)) + DLG_TEXT[9];
+						Link.l1 = DLG_TEXT[8] + XI_ConvertString(GetNationDescByType(sti(NPChar.nation))) + DLG_TEXT[9];
 						if(TAVERNBRAWL_FROMDIALOG)	Link.l1.go = "exit_brawl"; //MT: If the possibility of tavernbrawls is turned on in internalsettings:
 						else						Link.l1.go = "exit";
 						switch(makeint(Npchar.nation))
@@ -130,8 +130,8 @@ void ProcessDialogEvent()
 							case PORTUGAL: if(Npchar.sex=="man"){PlaySound("VOICE\" + LanguageGetLanguage() + "\Por_m_a_053.wav");}break;
 							case AMERICA : if(Npchar.sex=="man"){PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_a_070.wav");}break;
 						}
-						Dialog.Text = DLG_TEXT[12] + GetNationDescByType(sti(NPChar.nation)) + DLG_TEXT[13] + GetNationDescByType(sti(PChar.nation)) + DLG_TEXT[14];
-						Link.l1 = DLG_TEXT[15] + GetNationDescByType(sti(NPChar.nation)) + DLG_TEXT[16];
+						Dialog.Text = DLG_TEXT[12] + XI_ConvertString(GetNationDescByType(sti(NPChar.nation))) + DLG_TEXT[13] + XI_ConvertString(GetNationDescByType(sti(PChar.nation))) + DLG_TEXT[14];
+						Link.l1 = DLG_TEXT[15] + XI_ConvertString(GetNationDescByType(sti(NPChar.nation))) + DLG_TEXT[16];
 						if(TAVERNBRAWL_FROMDIALOG) //MT: If the possibility of tavernbrawls is turned on in internalsettings:
 						{
 							if (makeint(NPchar.nation)==PIRATE)	Link.l1.go = "exit_brawl";

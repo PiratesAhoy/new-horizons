@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -188,6 +188,7 @@ void ProcessDialogEvent()
 		case "did_you_get_ring":
 			dialog.text = DLG_TEXT[39];
 			link.l1 = DLG_TEXT[40];
+			AddDialogExitQuest("out_of_store_ring2");
 			link.l1.go = "Exit";
 		break;
 
@@ -659,7 +660,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_after_santiago_townhall":
-			dialog.text = DLG_TEXT[178] + GetMyFullName(CharacterFromID("Emiliano de Guzmбn")) + DLG_TEXT[179];
+			dialog.text = DLG_TEXT[178] + GetMyFullName(CharacterFromID("Emiliano de GuzmР±n")) + DLG_TEXT[179];
 			link.l1 = DLG_TEXT[180] + GetMyFullName(CharacterFromID("Jusepe Guimaraes")) + DLG_TEXT[181];
 			link.l1.go = "exit";
 		break;

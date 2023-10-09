@@ -25,7 +25,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -210,7 +210,7 @@ void ProcessDialogEvent()
 		case "exit_from_cam":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-			//выводим игрока из камеры
+			//РІС‹РІРѕРґРёРј РёРіСЂРѕРєР° РёР· РєР°РјРµСЂС‹
 			pchar.gun = "gun";
 			pchar.blade = "saber";
 			npchar.quest.to_hire = "wait_for_hire";
@@ -274,7 +274,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "setup2":
-//			Log_SetStringToLog("Сделать историю с девкой (может быть)");
+//			Log_SetStringToLog("РЎРґРµР»Р°С‚СЊ РёСЃС‚РѕСЂРёСЋ СЃ РґРµРІРєРѕР№ (РјРѕР¶РµС‚ Р±С‹С‚СЊ)");
 			LAi_QuestDelay("redmond_Attwood", 4.0);
 		break;
 		

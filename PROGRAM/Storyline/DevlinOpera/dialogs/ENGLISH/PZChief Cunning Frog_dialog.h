@@ -5,6 +5,6 @@ string DLG_TEXT[8] = {
 "Wine.",
 "Rum.",
 "I have not decided yet.",
-"(WINE) That's right! My names ending with the letter 'G' is a funny coincidence. Because no one who drinks wine has a name starting with the letter 'G'!",
+"(WINE) That's right! But remember: The person who shares a table with two beer-drinkers doesn't drink wine!",
 "...",
 }

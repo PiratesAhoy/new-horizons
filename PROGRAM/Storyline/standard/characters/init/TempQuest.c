@@ -5,7 +5,7 @@ void CreateTempQuestCharacters(ref n)
 
 	makeref(ch, chobj);
 
-				// Wilfred Bythesea - так, старый знакомы Блэйза, появляющийся эпизодически
+				// Wilfred Bythesea - С‚Р°Рє, СЃС‚Р°СЂС‹Р№ Р·РЅР°РєРѕРјС‹ Р…Р»СЌР№Р·Р°, РїРѕв‚¬РІР»в‚¬СЋС‰РёР№СЃв‚¬ СЌРїРёР·РѕРґРёС‡РµСЃРєРё
 	ch.old.name = "Wilfred";
 	ch.old.lastname = "Bythesea";
 	ch.name = TranslateString("","Wilfred");
@@ -63,7 +63,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "quest_ship_7";
 	ch.Dialog.Filename = "falaise de fleur soldier_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Athena"; // KK
+	ch.Ship.Name = TranslateString("","Athena"); // KK
 	ch.Ship.Type = "HMS_Unicorn"; // PRS3 // KK
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -474,7 +474,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.group = "ships";
 	ch.location.locator = "locator5";//locator8
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Sirena";
+	ch.Ship.Name = TranslateString("","Sirena");
 	ch.Ship.Type = "Barque1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
@@ -516,7 +516,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.group = "quest_ships";
 	ch.location.locator = "quest_ship9";
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Sirena";
+	ch.Ship.Name = TranslateString("","Sirena");
 	ch.Ship.Type = "Barque1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
@@ -543,7 +543,7 @@ void CreateTempQuestCharacters(ref n)
 				// greenford citizen 01
 	ch.old.name = "citizen";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","citizen");
+	ch.name = TranslateString("","citizen_F");
 	ch.lastname = "";
 	ch.id		= "greenford_citizen_01";
 	ch.model = "TownGirl5";

@@ -1,6 +1,6 @@
 title=Fuegos artificales
-text.t1=El restaurante chino vende fuegos artificales, según Júpiter.
-text.t2=Pólvora de combustión lenta para fuegos artificales: 4 partes de salitre, 2 partes de carbón vegetal y 2 partes de azufre.
-text.t3=Tengo que fabricar pólvora de combustión lenta, que es la que se usa en los fuegos artificiales.
-text.t4=Los chinos han abierto tres talleres, en los que se puede encontrar más materia prima.
-text.t5=Si sigo al chino a su laboratorio, me hará algunos fuegos artificiales.
+text.t1=El restaurante chino vende fuegos artificales, segÃºn JÃºpiter.
+text.t2=PÃ³lvora de combustiÃ³n lenta para fuegos artificales: 4 partes de salitre, 2 partes de carbÃ³n vegetal y 2 partes de azufre.
+text.t3=Tengo que fabricar pÃ³lvora de combustiÃ³n lenta, que es la que se usa en los fuegos artificiales.
+text.t4=Los chinos han abierto tres talleres, en los que se puede encontrar mÃ¡s materia prima.
+text.t5=Si sigo al chino a su laboratorio, me harÃ¡ algunos fuegos artificiales.

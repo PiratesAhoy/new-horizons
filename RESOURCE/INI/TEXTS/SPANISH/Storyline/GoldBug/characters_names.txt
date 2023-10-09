@@ -8,7 +8,7 @@ Legrand{Legrand}
 {=====| quests_reaction.c |=====}
 Edgar Allan{Edgar Allan}
 Poe{Poe}
-Jupiter{Júpiter}
+Jupiter{JÃºpiter}
 
 {=====| TempQuest.c |=====}
 C. Auguste{C. Auguste}
@@ -49,9 +49,9 @@ von Fersen{von Fersen}
 Doctor{Doctor}
 KP{KP}
 Street Merchant{Mercader callejero}
-Shipyard{Dueño}
+Shipyard{DueÃ±o}
 Owner{del astillero}
-Harbour{Capitán}
+Harbour{CapitÃ¡n}
 Master{del puerto}
 Bank{Empleado}
 Clerk{del banco}
@@ -63,8 +63,8 @@ The Chinese{El chino}
 Man{chino}
 Black Magic Woman{Hechicera negra}
 Plantation{Guardia}
-Guard{de la plantación}
-Captain William{Capitán William}
+Guard{de la plantaciÃ³n}
+Captain William{CapitÃ¡n William}
 Kidd{Kidd}
 Howard{Howard}
 Pyle{Pyle}
@@ -116,9 +116,9 @@ Emilio{Emilio}
 Soares{Soares}
 Johan{Johan}
 Elting{Elting}
-Maroon{Cimarrón}
+Maroon{CimarrÃ³n}
 Deserter{Desertor}
-Thug{Matón}
+Thug{MatÃ³n}
 Bandit{Bandido}
 Priest{Sacerdote}
 Zombie{Zombi}

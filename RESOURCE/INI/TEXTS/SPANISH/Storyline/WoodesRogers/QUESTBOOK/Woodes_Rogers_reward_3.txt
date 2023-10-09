@@ -1,9 +1,9 @@
 title=La tercera recompensa de Woodes Rogers
-text.t1=Tengo que atravesarIla oficina del prestamista para encontrar la tercera (sí) pistola.
-text.t2=Tengo una llave, ¿pero adónde lleva?
-text.t3=Adivina lo que he encontrado. Pero esta pistola perteneció al famoso cazador de piratas Hornigold. ¿Tal vez valga algún dinero?
-text.t4=El gobernador parece insinuar que he pasado algo por alto. Tengo que volver a examinar el sótano.
-text.t5=Dave me h ahablado de Selkirk. Creo que he oído hablar de él, ¿qué está haciendo aquí? Se le puede encontrar en la cámara del botín de Rogers.
-text.t6=Caroline ha vuelto, según el amigo de Selkirk. Buscaré su habitación.
-text.t7=Debería haber un viejo candado con su llave en el dormitorio de Caroline.
-text.t8=También tengo que buscar una forma de abrir la puerta del dormitorio de Rogers.
+text.t1=Tengo que atravesarIla oficina del prestamista para encontrar la tercera (sÃ­) pistola.
+text.t2=Tengo una llave, Â¿pero adÃ³nde lleva?
+text.t3=Adivina lo que he encontrado. Pero esta pistola perteneciÃ³ al famoso cazador de piratas Hornigold. Â¿Tal vez valga algÃºn dinero?
+text.t4=El gobernador parece insinuar que he pasado algo por alto. Tengo que volver a examinar el sÃ³tano.
+text.t5=Dave me h ahablado de Selkirk. Creo que he oÃ­do hablar de Ã©l, Â¿quÃ© estÃ¡ haciendo aquÃ­? Se le puede encontrar en la cÃ¡mara del botÃ­n de Rogers.
+text.t6=Caroline ha vuelto, segÃºn el amigo de Selkirk. BuscarÃ© su habitaciÃ³n.
+text.t7=DeberÃ­a haber un viejo candado con su llave en el dormitorio de Caroline.
+text.t8=TambiÃ©n tengo que buscar una forma de abrir la puerta del dormitorio de Rogers.

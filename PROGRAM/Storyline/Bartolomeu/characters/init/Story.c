@@ -1301,6 +1301,7 @@ void CreateStoryCharacters(ref n)
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 100.0, 100.0);
+	ch.questchar = true;	// GR: Prevent his name from changing after the duel
 	AddGameCharacter(n, ch);
 
 // Captain Dierman

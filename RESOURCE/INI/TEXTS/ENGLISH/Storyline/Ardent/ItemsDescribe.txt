@@ -17,7 +17,7 @@ itmdescr_SecurityLetter
 This document orders the commandant to provide security troops for a payroll ship which will depart from #sHavana#.
 }
 
-itmname_TainoRug	{Taíno Rug}
+itmname_TainoRug	{TaÃ­no Rug}
 itmdescr_TainoRug
 {
 A woven rug, possibly very old, possibly of Taino origin.

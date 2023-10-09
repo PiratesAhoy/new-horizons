@@ -1,4 +1,4 @@
-﻿
+
 GetTime(){ return stf(Environment.time); }
 
 void QuestComplete(string sQuestName)
@@ -18235,8 +18235,8 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Lieutenant G"), "Fort_Moultrie_barracks", "sit", "sit13");
 			LAi_SetSitType(characterFromID("Lieutenant G"));
 
-			Pchar.name = "Edgar Allan";
-			Pchar.lastname = "Poe";
+			Pchar.name = TranslateString("","Edgar Allan");
+			Pchar.lastname =TranslateString("","Poe");
 			Pchar.rank 	= 2;
 			Pchar.reputation = "50";
 			Pchar.experience = "0";
@@ -19509,8 +19509,8 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Legrand_copy"), "none", "", "");
 			ChangeCharacterAddressGroup(Pchar, "Bessop_plantation", "goto", "goto100");
 			SetModel(Pchar, "William Legrand2", pchar.model.animation, pchar.sex, stf(pchar.model.height), true);
-			Pchar.name = "William";
-			Pchar.lastname ="Legrand";
+			Pchar.name = TranslateString("","William");
+			Pchar.lastname =TranslateString("","Legrand");
 
 			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
@@ -23057,7 +23057,7 @@ void QuestComplete(string sQuestName)
 			SetModel(PChar, "Jupiter", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "none", "", "");	//just to be sure
 
-			Pchar.name = "Jupiter";
+			Pchar.name = TranslateString("","Jupiter");
 			Pchar.lastname = "";
 			Pchar.rank 	= 2;
 			Pchar.reputation = "50";
@@ -23229,8 +23229,8 @@ void QuestComplete(string sQuestName)
 			RemovePassenger(pchar, characterFromID("Legrand_copy"));
 			ChangeCharacterAddressGroup(characterFromID("Legrand_copy"), "none", "", "");	//just to be sure
 
-			Pchar.name = "William";
-			Pchar.lastname = "Legrand";
+			Pchar.name = TranslateString("","William");
+			Pchar.lastname =TranslateString("","Legrand");
 			Pchar.rank = 3;	
 			Pchar.skill.Leadership = "5";
 			Pchar.skill.Fencing = "2";		

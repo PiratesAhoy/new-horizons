@@ -1,9 +1,9 @@
 string DLG_TEXT[6] = {
-"En las próximas dos horas, más bien. ¡El enemigo ya está sobre nosotros!",
-"¿Estás seguro?",
-"¡Dos galeones españoles se acercan a la isla mientras hablamos!",
-"¡Maldición! Han llegado antes de lo esperado. Tal vez con la desaparición del oficial español, el gobernador haya sospechado y haya acelerado la partida. ¿Dónde estan los barcos ahora?",
-"Están a un par de millas de la costa. Uno se acerca al puerto, el otro parece dirigirse hacia el faro.",
-"Muy bien, entonces. Será mejor que dejemos de hablar y nos vayamos.",
+"En las prÃ³ximas dos horas, mÃ¡s bien. Â¡El enemigo ya estÃ¡ sobre nosotros!",
+"Â¿EstÃ¡s seguro?",
+"Â¡Dos galeones espaÃ±oles se acercan a la isla mientras hablamos!",
+"Â¡MaldiciÃ³n! Han llegado antes de lo esperado. Tal vez con la desapariciÃ³n del oficial espaÃ±ol, el gobernador haya sospechado y haya acelerado la partida. Â¿DÃ³nde estan los barcos ahora?",
+"EstÃ¡n a un par de millas de la costa. Uno se acerca al puerto, el otro parece dirigirse hacia el faro.",
+"Muy bien, entonces. SerÃ¡ mejor que dejemos de hablar y nos vayamos.",
 
 };

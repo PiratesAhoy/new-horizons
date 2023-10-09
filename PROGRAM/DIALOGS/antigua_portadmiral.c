@@ -67,7 +67,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				if(IsInServiceOf(ENGLAND))
+				if(IsInServiceOf(sti(NPChar.nation)))
 				{
 					Dialog.text = DLG_TEXT[5];
 					link.l2 = DLG_TEXT[21];
@@ -75,8 +75,9 @@ void ProcessDialogEvent()
 				}
 				else
 				{
-					Preprocessor_Add("nation_desc", GetNationDescByType(Npchar.nation));
-					Dialog.text = DLG_TEXT[23];
+					Preprocessor_Add("nation_desc", XI_ConvertString(GetNationDescByType(sti(NPChar.nation))));
+					if(LanguageGetLanguage()=="English" && sti(NPChar.nation)==ENGLAND && GetCurrentPeriod()<=PERIOD_THE_SPANISH_MAIN) Dialog.text = DLG_TEXT[32];
+					else Dialog.text = DLG_TEXT[23];
 					link.l2 = DLG_TEXT[24];
 					link.l2.go = "exit";
 				}

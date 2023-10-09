@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- Диалог первый - первая встреча
+		// ----------------------------------- Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
@@ -603,7 +603,7 @@ void ProcessDialogEvent()
 			
 			AddDialogExitQuest("ck_bedroom3");
 		break;
-//pдr CK steplock hint
+//pРґr CK steplock hint
 		case "ck_bedroom4":
 			PlaySound("VOICE\ENGLISH\gr_wench3_couldnt.wav");
 			dialog.text = DLG_TEXT[202];

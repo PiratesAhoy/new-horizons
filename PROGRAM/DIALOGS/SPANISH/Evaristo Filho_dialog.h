@@ -1,11 +1,11 @@
 string DLG_TEXT[8] = {
-"¡Fuera! ",
+"Â¡Fuera! ",
 "Desmond Ray Beltrop",
-" ha dado órdenes estrictas de mantener a todo el mundo fuera de aquí.",
+" ha dado Ã³rdenes estrictas de mantener a todo el mundo fuera de aquÃ­.",
 "...",
-"¡Eres la tercera persona que intenta entrar en esta casa! ¿Qué es lo que buscas?",
-"Espera un minuto. ¿Qué estás diciendo?",
-"Que eres un cadáver, camarada.",
-"Eso está por ver.",
+"Â¡Eres la tercera persona que intenta entrar en esta casa! Â¿QuÃ© es lo que buscas?",
+"Espera un minuto. Â¿QuÃ© estÃ¡s diciendo?",
+"Que eres un cadÃ¡ver, camarada.",
+"Eso estÃ¡ por ver.",
 
 };

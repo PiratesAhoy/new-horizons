@@ -1,5 +1,5 @@
 string DLG_TEXT[2] = {        
-"Jesteœ aresztowany. Twój towarzysz, podaj¹cy siê za francuskiego ¿o³nierza, równie¿. Mój dowódca z pewnoœci¹ bêdzie mia³ do was kilka pytañ.",
+"JesteÅ“ aresztowany. TwÃ³j towarzysz, podajÂ¹cy siÃª za francuskiego Â¿oÂ³nierza, rÃ³wnieÂ¿. MÃ³j dowÃ³dca z pewnoÅ“ciÂ¹ bÃªdzie miaÂ³ do was kilka pytaÃ±.",
 "Jasna cholera!",
 
 };

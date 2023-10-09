@@ -141,14 +141,16 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].reload.l12.go = "";//House
 	Locations[n].reload.l12.emerge = "reload1";
-	Locations[n].reload.l12.label = "House.";
+//	Locations[n].reload.l12.label = "House."; // Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l12.label = "";
 	Locations[n].reload.l12.disable = 1;
 	Locations[n].reload.l12.name = "houseS3";
 	Locations[n].reload.l12.autoreload = "0";
 
 	Locations[n].reload.l13.go = "";//House
 	Locations[n].reload.l13.emerge = "reload1";
-	Locations[n].reload.l13.label = "House.";
+//	Locations[n].reload.l13.label = "House."; // Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l13.label = "";
 	Locations[n].reload.l13.disable = 1;
 	Locations[n].reload.l13.name = "houseH1";
 	Locations[n].reload.l13.autoreload = "0";
@@ -632,14 +634,14 @@ void LocationInitguadeloupe(ref n)
 		Locations[n].reload.l2.go = "Guadeloupe_shore_02";
 		Locations[n].reload.l2.emerge = "reload2";
 		Locations[n].reload.l2.autoreload = "1";
-		Locations[n].reload.l2.label = "Bahía Grande.";
+		Locations[n].reload.l2.label = "BahÃ­a Grande.";
 		Locations[n].locators_radius.reload.reload2 = 3.0;
 
 		Locations[n].reload.l5.name = "reload2_back";
 		Locations[n].reload.l5.go = "Guadeloupe_shore_02";
 		Locations[n].reload.l5.emerge = "reload2";
 		Locations[n].reload.l5.autoreload = "1";
-		Locations[n].reload.l5.label = "Bahía Grande.";
+		Locations[n].reload.l5.label = "BahÃ­a Grande.";
 		Locations[n].locators_radius.reload.Reload3_back = 2.0;
 	}
 	else
@@ -1576,9 +1578,9 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].filespath.models = "locations\Outside\Shore_5";
 
 	Locations[n].id = "Guadeloupe_shore_02";
-	locations[n].id.label = "Bahía Grande"; // KK
+	locations[n].id.label = "BahÃ­a Grande"; // KK
 	Locations[n].image = "Outside_Shore_5.tga";
-	Locations[n].name = "Bahía Grande";
+	Locations[n].name = "BahÃ­a Grande";
 	locations[n].worldmap = "GuadShore 2";
 
 	//Sound

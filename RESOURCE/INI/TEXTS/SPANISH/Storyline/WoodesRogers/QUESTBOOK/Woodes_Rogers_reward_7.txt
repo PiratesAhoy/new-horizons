@@ -1,8 +1,8 @@
-title=La última recompensa de Woodes Rogers
-text.t1=Queda una última recompensa, ¿y NO es una pistola? Para empezarm tengo que buscar la granja de Rogers. Allí hay una muchacha llamada Minerva que me servirá de guía.
-text.t2=El maniquí lleva una bandolera de pistolas, ¿pero cómo llego hasta ella?
-text.t3=Ahora estoy más cerca de la bandolera, pero la perta está cerrada. 
-text.t4=¡He encontrado la legendaria bandoelra para pistolas de Barbanegra! Supongo que la tripulación de Rogers quiere hacerse con ella. No sabía que esos tipos duros eran tan sentimentales.
-text.t5=¡La bandolera está completa!
+title=La Ãºltima recompensa de Woodes Rogers
+text.t1=Queda una Ãºltima recompensa, Â¿y NO es una pistola? Para empezarm tengo que buscar la granja de Rogers. AllÃ­ hay una muchacha llamada Minerva que me servirÃ¡ de guÃ­a.
+text.t2=El maniquÃ­ lleva una bandolera de pistolas, Â¿pero cÃ³mo llego hasta ella?
+text.t3=Ahora estoy mÃ¡s cerca de la bandolera, pero la perta estÃ¡ cerrada. 
+text.t4=Â¡He encontrado la legendaria bandoelra para pistolas de Barbanegra! Supongo que la tripulaciÃ³n de Rogers quiere hacerse con ella. No sabÃ­a que esos tipos duros eran tan sentimentales.
+text.t5=Â¡La bandolera estÃ¡ completa!
 text.t6=Objetos de la mano derecha = F3 + F3; objetos de la mano izquierda = F3 + disparar pistola.
 text.t7=Supongo que los compases son F3 + F3 y el mapa es F3 + disparar pistola.

@@ -1579,6 +1579,9 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].monsters = "1";
 	locations[n].id.label = "#stown_name# Sewer";
 
+	//Town sack
+	Locations[n].townsack = "Philipsburg";
+
 	//Sound
 	locations[n].type = "Dungeon";
 	//Models

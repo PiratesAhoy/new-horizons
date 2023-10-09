@@ -114,7 +114,7 @@ design with decorated green and yellow hull.}
 
 Sloop1_Descr{Common for both merchants and navy.
 This blue painted ship sails good against the wind.}
-FR_Sloop_Descr{'Le Rêve' sails well against the wind.
+FR_Sloop_Descr{'Le RÃªve' sails well against the wind.
 Agile vessel of the French Navy.}
 Sloop2_Descr{Adaptable vessel in pale red,
 sails good against the wind.}
@@ -204,15 +204,15 @@ Decorated Dutch trader with some green paint.}
 SP_Pinnace50_Descr{Trader with decent speed but not too agile.
 This decorated Spanish vessel is painted red.}
 
-HMS_Indefatigable_Descr{'HMS Indefatigable', a razéed Ardent-class warship
+HMS_Indefatigable_Descr{'HMS Indefatigable', a razÃ©ed Ardent-class warship
 built to the design of Sir Thomas Slade.}
-RN_Indefatigable_Descr{A razéed warship bearing a British
+RN_Indefatigable_Descr{A razÃ©ed warship bearing a British
 cream and black paint scheme.}
-GEN_Indefatigable_Descr{A razéed warship bearing a generic
+GEN_Indefatigable_Descr{A razÃ©ed warship bearing a generic
 yellow and black paint scheme.}
-FR_Indefatigable_Descr{A razéed warship bearing a French
+FR_Indefatigable_Descr{A razÃ©ed warship bearing a French
 red and black paint scheme.}
-SP_Indefatigable_Descr{A razéed warship bearing a Spanish
+SP_Indefatigable_Descr{A razÃ©ed warship bearing a Spanish
 dark red and black paint scheme.}
 NL_PinnaceofWar47_Descr{Capacious naval vessel.
 This Dutch ship is painted green, brown and white.}
@@ -382,7 +382,7 @@ capacity. Varnished hull with dark blue decoration.}
 NL_Batavia_Descr{Performance comes second for the 'Batavia'.
 Armed trader in Dutch colours.}
 
-NL_SevenProvincien_Descr{Dutch vessel 'Seven Provinciën', built
+NL_SevenProvincien_Descr{Dutch vessel 'Seven ProvinciÃ«n', built
 to the design of Salomon Jansz van den Tempel.}
 
 NL_Lineship_Descr{For a ship-of-the-line, performance comes second.
@@ -497,7 +497,7 @@ a bright red and black paint scheme.}
 SP_FirstRate_Descr{A mighty first rate ship-of-the-line bearing
 a dark red and black paint scheme.}
 
-FR_Superbe_Descr{A third rate ship of the famous Téméraire class, the 
+FR_Superbe_Descr{A third rate ship of the famous TÃ©mÃ©raire class, the 
 most numerous class of capital ship ever built, 
 bearing a red and black paint scheme.}
 RN_Superbe_Descr{A formidable third rate ship-of-the-line, 
@@ -537,8 +537,8 @@ and the first of her kind to be built in France.}
 Couronne_pirate_Descr{A large former French Navy galleon,
 now taken over by pirates.}
 
-SP_ApostolFelipe_Descr{'Apóstol Felipe', one of the six galleons
-built by Martín de Arana for King Felipe IV.}
+SP_ApostolFelipe_Descr{'ApÃ³stol Felipe', one of the six galleons
+built by MartÃ­n de Arana for King Felipe IV.}
 
 US_Hannah_Descr{A small American schooner hired into service
 by General George Washington.}

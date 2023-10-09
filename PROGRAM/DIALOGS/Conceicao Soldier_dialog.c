@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
+		// -----------------------------------Ð”Ð¸Ð°Ð»Ð¾Ð³ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ - Ð¿ÐµÑ€Ð²Ð°Ñ Ð²ÑÑ‚Ñ€ÐµÑ‡Ð°
 		
 		case "exit":
 			EndQuestMovie();TrackQuestMovie("end","Conceicao Soldier_dialog.c -> exit");

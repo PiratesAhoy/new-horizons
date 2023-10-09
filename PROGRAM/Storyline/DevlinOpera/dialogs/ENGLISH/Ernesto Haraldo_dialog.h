@@ -1,5 +1,5 @@
 string DLG_TEXT[27] = {
-"Wait - May I know who you are and what you do in my bedroom, Señorita?",
+"Wait - May I know who you are and what you do in my bedroom, SeÃ±orita?",
 "Wait - May I you know what YOU are doing here? Aren't you the groom?",
 "Well, yes...",
 "Then why are you in here, all alone? Why are you not with your guests?",
@@ -8,7 +8,7 @@ string DLG_TEXT[27] = {
 "It is... You're beautiful.",
 "Thank you! But you're changing the subject...",
 "Please. Let's just forget about it. Have a glass of wine with me while you're here, alright?",
-"Look Señor, I don't really know you. Heck, I don't even really know how I've ended up here. But perhaps I can help you. Why don't you just give it a try?",
+"Look SeÃ±or, I don't really know you. Heck, I don't even really know how I've ended up here. But perhaps I can help you. Why don't you just give it a try?",
 "A glass of wine? Well, I can't say no to that!",
 "...and so I arrested them both at the spot and said 'You messed with the wrong Spaniard, perros sarnosos!'",
 "Sounds exciting! Can I get a refill?",

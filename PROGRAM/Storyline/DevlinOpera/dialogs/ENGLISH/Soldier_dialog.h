@@ -22,7 +22,7 @@ string DLG_TEXT[31] = {
 "This heat.... I'd give anything to return back to the Europe, to the civilization...",
 "Yes, it doesn't look like this weather suits you.", // 21
 "I'm going to pretend I didn't hear that, otherwise I might feel offended.",
-"Oh, I'm sorry, Señora. My mind was elsewhere. It was by no means my intention to offend you.",
+"Oh, I'm sorry, Se√±ora. My mind was elsewhere. It was by no means my intention to offend you.",
 "It's alright, soldier. Just don't make the same mistake when my sister comes by.",
 "Well, I have two sisters. But getting closer to either of them would damage your health.",
 "Was that a threat, sailor?",

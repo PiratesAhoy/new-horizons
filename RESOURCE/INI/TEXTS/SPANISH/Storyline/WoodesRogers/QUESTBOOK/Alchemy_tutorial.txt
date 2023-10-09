@@ -1,7 +1,7 @@
 title=Alquimia: tutorial
-text.t1=¡Así que el champagne puede transformarse en cognac! Primero debo comprobar que el aparato está listo.
+text.t1=Â¡AsÃ­ que el champagne puede transformarse en cognac! Primero debo comprobar que el aparato estÃ¡ listo.
 text.t2=Hay un cuadro en el dormitorio de Rogers.
 text.t3=Tengo que mezclar este alcohol puro con agua antes de poder beberlo.
-text.t4=¡Hecho! Ahora ya sé como destilar y mezclar líquidos en la mesa.
-text.t5=El líquido que quiero destilar debería echarse en la retorta.
-text.t6=Tengo que tener cuidado con el oxígeno. Dos pisadas sobre esa tabla son suficientes.
+text.t4=Â¡Hecho! Ahora ya sÃ© como destilar y mezclar lÃ­quidos en la mesa.
+text.t5=El lÃ­quido que quiero destilar deberÃ­a echarse en la retorta.
+text.t6=Tengo que tener cuidado con el oxÃ­geno. Dos pisadas sobre esa tabla son suficientes.

@@ -178,7 +178,7 @@ void CreateDouwesenCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-		// Reynard Grueneveldt -- ГУБЕРНАТОР
+		// Reynard Grueneveldt
 	ch.old.name = "Reynard";
 	ch.old.lastname = "Grueneveldt";
 	ch.name = TranslateString("","Reynard");
@@ -220,7 +220,7 @@ void CreateDouwesenCharacters(ref n)
 
 //Location: Douwesen Pier (an entrance to the town from the pier)
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -258,7 +258,7 @@ void CreateDouwesenCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -651,7 +651,7 @@ if (ENABLE_WEAPONSMOD)
 
 // Douwesen_town
 
-	//Soldier на выходе из города в порт
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РіРѕСЂРѕРґР° РІ РїРѕСЂС‚
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -689,7 +689,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из города в порт  -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РіРѕСЂРѕРґР° РІ РїРѕСЂС‚  -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -991,7 +991,7 @@ if (ENABLE_WEAPONSMOD)
 	LAi_group_MoveCharacter(ch, "DOUWESEN_CITIZENS");
 	AddGameCharacter(n, ch);
 
-	//Soldier возле резиденции
+	//Soldier РІРѕР·Р»Рµ СЂРµР·РёРґРµРЅС†РёРё
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1029,7 +1029,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier возле резиденции  -- еще один
+	//Soldier РІРѕР·Р»Рµ СЂРµР·РёРґРµРЅС†РёРё  -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1067,7 +1067,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из города в джунгли
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РіРѕСЂРѕРґР° РІ РґР¶СѓРЅРіР»Рё
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1105,7 +1105,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из города в джунгли  -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РіРѕСЂРѕРґР° РІ РґР¶СѓРЅРіР»Рё  -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1527,7 +1527,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_douwesen pirate";
 	AddGameCharacter(n, ch);
 
-		// Alistair Garcilaso -- глава пиратов на Дувезене
+		// Alistair Garcilaso -- РіР»Р°РІР° РїРёСЂР°С‚РѕРІ РЅР° Ж’СѓРІРµР·РµРЅРµ
 	ch.old.name = "Alistair";
 	ch.old.lastname = "Garcilaso";
 	ch.name = TranslateString("","Alistair");

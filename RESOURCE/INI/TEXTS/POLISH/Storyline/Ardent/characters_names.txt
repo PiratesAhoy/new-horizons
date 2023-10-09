@@ -34,11 +34,11 @@ Ralph{Ralph}
 Partridge{Partridge}
 Coper{Coper}
 Blumberger{Blumberger}
-Amtónio{Amtónio}
+AmtÃ³nio{AmtÃ³nio}
 Guajira{Guajira}
 Ayol{Ayol}
 Bacha{Bacha}
-Lucía{Lucía}
+LucÃ­a{LucÃ­a}
 Edmundo{Edmundo}
 Valerie{Valerie}
 Downing{Downing}
@@ -101,7 +101,7 @@ Guard{Guard}
 2{2}
 3{3}
 Atanagildo{Atanagildo}
-Galíndez{Galíndez}
+GalÃ­ndez{GalÃ­ndez}
 Eldo{Eldo}
 Fiz{Fiz}
 Javier{Javier}
@@ -134,9 +134,9 @@ Bruyant{Bruyant}
 Moncoutie{Moncoutie}
 Philip{Philip}
 de Malvoisin{de Malvoisin}
-François-Louis{François-Louis}
+FranÃ§ois-Louis{FranÃ§ois-Louis}
 Rousselet{Rousselet}
-de Châteaurenault{de Châteaurenault}
+de ChÃ¢teaurenault{de ChÃ¢teaurenault}
 4{4}
 Guibert{Guibert}
 Mollaret{Mollaret}
@@ -151,9 +151,9 @@ Bonnefroy{Bonnefroy}
 Jaime{Jaime}
 Lezcano{Lezcano}
 Pelayo{Pelayo}
-Núñez{Núñez}
+NÃºÃ±ez{NÃºÃ±ez}
 Emiliano{Emiliano}
-de Guzmán{de Guzmán}
+de GuzmÃ¡n{de GuzmÃ¡n}
 Gilles{Gilles}
 Clouzot{Clouzot}
 

@@ -1,21 +1,21 @@
 sea_minimap
 {
-  Minimapa de navegación.
+  Minimapa de navegaciÃ³n.
 
 }
 ship_commands
 {
-  Menú de comandos de control del barco del jugador y de los acompañantes.
+  MenÃº de comandos de control del barco del jugador y de los acompaÃ±antes.
 
 }
 fast_commands
 {
-  Icono del comando de "Acción rápida".
+  Icono del comando de "AcciÃ³n rÃ¡pida".
 
 }
 sea_aim
 {
-  Este círculo indica dónde dispararán los cañones de tu barco.
+  Este cÃ­rculo indica dÃ³nde dispararÃ¡n los caÃ±ones de tu barco.
 
 }
 alarm_indicator
@@ -25,7 +25,7 @@ alarm_indicator
 }
 land_commands
 {
-  Muestra la condición del grupo del jugador y comandos que pueden darse a sus oficiales.
+  Muestra la condiciÃ³n del grupo del jugador y comandos que pueden darse a sus oficiales.
 
 }
 WorldMap_Date_Clock
@@ -35,10 +35,10 @@ WorldMap_Date_Clock
 }
 WorldMap_Compas
 {
-  Brújula en el mapa.
+  BrÃºjula en el mapa.
 
 }
 Dialog_window
 {
-  Ventana de diálogo.
+  Ventana de diÃ¡logo.
 }

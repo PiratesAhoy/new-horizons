@@ -146,12 +146,12 @@ void ProcessCheat()
 					mc.scrollchars = sti(mc.scrollchars) - 1;
 					if(sti(mc.scrollchars) < 0) mc.scrollchars = OFFICER_MAX + COMPANION_MAX - 2;
 				}
-				LogIt("Selected character is " + Cheat_ScrollCharacterName(mc.scrollchars));
+				LogIt(TranslateString("","Selected character is") + " " + Cheat_ScrollCharacterName(mc.scrollchars));
 			break;
 
 			case "ScrollCharactersMain":
 				mc.scrollchars = 0
-				LogIt("Selected character is " + Cheat_ScrollCharacterName(mc.scrollchars));
+				LogIt(TranslateString("","Selected character is") + " " + Cheat_ScrollCharacterName(mc.scrollchars));
 			break;
 
 			case "ScrollCharactersRight":
@@ -168,7 +168,7 @@ void ProcessCheat()
 					mc.scrollchars = sti(mc.scrollchars) + 1;
 					if(sti(mc.scrollchars) > OFFICER_MAX + COMPANION_MAX - 2) mc.scrollchars = 0;
 				}
-				LogIt("Selected character is " + Cheat_ScrollCharacterName(mc.scrollchars));
+				LogIt(TranslateString("","Selected character is") + " " + Cheat_ScrollCharacterName(mc.scrollchars));
 			break;
 
 			case "God":
@@ -209,8 +209,8 @@ void ProcessCheat()
 			case "Gold":
 				mc.money = sti(mc.money) + 100000;
 				mc.wealth = sti(mc.wealth) + 10000;
-				Log_SetStringToLog("+ 100000 " + XI_ConvertString("Gold") + " for " + Cheat_ScrollCharacterName(0));
-				Log_SetStringToLog("+ 10000 " + XI_ConvertString("Wealth") + " for " + Cheat_ScrollCharacterName(0));
+				Log_SetStringToLog("+ 100000 " + XI_ConvertString("Gold") + " " + XI_Convertstring("for") + " " + Cheat_ScrollCharacterName(0));
+				Log_SetStringToLog("+ 10000 " + XI_ConvertString("Wealth") + " " + XI_Convertstring("for") + " " + Cheat_ScrollCharacterName(0));
 			break;
 
 			case "Reputation":

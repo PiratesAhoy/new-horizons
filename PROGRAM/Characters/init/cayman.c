@@ -443,7 +443,7 @@ void CreateCaymanCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из города в порт
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РіРѕСЂРѕРґР° РІ РїРѕСЂС‚
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -481,7 +481,7 @@ void CreateCaymanCharacters(ref n)
 	ch.greeting = "Gr_Greenford Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из города в порт  -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РіРѕСЂРѕРґР° РІ РїРѕСЂС‚  -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -519,7 +519,7 @@ void CreateCaymanCharacters(ref n)
 	ch.greeting = "Gr_Greenford Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier возле резиденции
+	//Soldier РІРѕР·Р»Рµ СЂРµР·РёРґРµРЅС†РёРё
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -557,7 +557,7 @@ void CreateCaymanCharacters(ref n)
 	ch.greeting = "Gr_Greenford Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier возле резиденции  -- еще один
+	//Soldier РІРѕР·Р»Рµ СЂРµР·РёРґРµРЅС†РёРё  -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -595,7 +595,7 @@ void CreateCaymanCharacters(ref n)
 	ch.greeting = "Gr_Greenford Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из города в джунгли
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РіРѕСЂРѕРґР° РІ РґР¶СѓРЅРіР»Рё
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -633,7 +633,7 @@ void CreateCaymanCharacters(ref n)
 	ch.greeting = "Gr_Greenford Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из города в джунгли  -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РіРѕСЂРѕРґР° РІ РґР¶СѓРЅРіР»Рё  -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";

@@ -145,9 +145,9 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 // Havana prison commandant
 	ch.old.name = "Atanagildo";
-	ch.old.lastname = "GalÌndez";
+	ch.old.lastname = "Gal√≠ndez";
 	ch.name 	= TranslateString("", "Atanagildo");
-	ch.lastname 	= TranslateString("", "GalÌndez");
+	ch.lastname 	= TranslateString("", "Gal√≠ndez");
 	ch.id		= "Havana Prison Commandant";
 	ch.model	= "offic_spa_17";
 	ch.sex = "man";
@@ -1206,7 +1206,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = TranslateString("","ConquÈrante");
+	ch.Ship.Name = TranslateString("","Conqu√©rante");
 	ch.Ship.Type = "FR_Fleuron";
 	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 65;
@@ -1216,12 +1216,12 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.professionalnavy = FRANCE;
 	AddGameCharacter(n, ch);
 
-	ch.old.name = "FranÁois-Louis";
+	ch.old.name = "Fran√ßois-Louis";
 	ch.old.middlename = "Rousselet";
-	ch.old.lastname = "de Ch‚teaurenault";
-	ch.name = TranslateString("", "FranÁois-Louis");
+	ch.old.lastname = "de Ch√¢teaurenault";
+	ch.name = TranslateString("", "Fran√ßois-Louis");
 	ch.middlename = TranslateString("", "Rousselet");
-	ch.lastname = TranslateString("", "de Ch‚teaurenault");
+	ch.lastname = TranslateString("", "de Ch√¢teaurenault");
 	ch.id		= "French_Amiral";
 	SetRankTitle(ch, TranslateString("", "Chevalier"));
 	ch.nation	= FRANCE;
@@ -1633,7 +1633,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = TranslateString("","RÈsistance");
+	ch.Ship.Name = TranslateString("","R√©sistance");
 	ch.Ship.Type = "FR_Frigate";
 //	ch.Ship.Stopped = true;
 	LAi_SetHP(ch, 300.0, 300.0);
@@ -1757,7 +1757,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.Ship.Name = TranslateString("","ImpÈtueuse");
+	ch.Ship.Name = TranslateString("","Imp√©tueuse");
 	ch.Ship.Type = "RN_RaaFrigate";
 //	ch.Ship.Stopped = true;
 	ch.Ship.crew.morale = 65;
@@ -1831,9 +1831,9 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 // Spanish agent's lieutenant
 	ch.old.name = "Pelayo";
-	ch.old.lastname = "N˙Òez";
+	ch.old.lastname = "N√∫√±ez";
 	ch.name = TranslateString("", "Pelayo");
-	ch.lastname = TranslateString("", "N˙Òez");
+	ch.lastname = TranslateString("", "N√∫√±ez");
 	ch.id		= "Pelayo Nunez";
 	ch.model	= "Pirat9";
 	ch.sound_type = "male_citizen";
@@ -1895,10 +1895,10 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 // Rival governor
 	ch.old.name = "Emiliano";
-	ch.old.lastname = "de Guzm·n";
+	ch.old.lastname = "de Guzm√°n";
 	ch.name = TranslateString("", "Emiliano");
-	ch.lastname = TranslateString("", "de Guzm·n");
-	ch.id		= "Emiliano de Guzm·n";
+	ch.lastname = TranslateString("", "de Guzm√°n");
+	ch.id		= "Emiliano de Guzm√°n";
 	ch.model	= "hub_por2";
 	ch.sex = "man";
 	ch.nation	= SPAIN;
@@ -1922,7 +1922,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.location	= "";
 	ch.location.group = "";
 	ch.location.locator = "";
-	ch.Dialog.Filename = "Emiliano de Guzm·n_dialog.c";
+	ch.Dialog.Filename = "Emiliano de Guzm√°n_dialog.c";
 	ch.rank 	= 35;
 	ch.reputation = "None";
 	ch.experience = "0";

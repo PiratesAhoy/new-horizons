@@ -8,7 +8,7 @@ int LAi_numloginedcharacters = 0;
 bool LAi_CharacterLogin(aref chr, string locID)
 {
 	string func;
-	//Проверим адрес логина
+	//РџСЂРѕРІРµСЂРёРј Р°РґСЂРµСЃ Р»РѕРіРёРЅР°
 	if(CheckAttribute(chr, "location") == false)
 	{
 		Trace("Character <" + chr.id + "> have not field [location]");
@@ -24,28 +24,28 @@ bool LAi_CharacterLogin(aref chr, string locID)
 		{
 			if(CheckAttribute(chr, "location.etime") != false)
 			{
-				//Проверям время логина
+				//РџСЂРѕРІРµСЂСЏРј РІСЂРµРјСЏ Р»РѕРіРёРЅР°
 				if(LAi_login_CheckTime(stf(chr.location.stime), stf(chr.location.etime))) isLogin = true;
 			}else isLogin = true;
 		}else isLogin = true;
 	}
-	//Проверяем возможность нахождения в церкви
+	//РџСЂРѕРІРµСЂСЏРµРј РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РЅР°С…РѕР¶РґРµРЅРёСЏ РІ С†РµСЂРєРІРё
 	if(CheckAttribute(chr, "location.church") != false)
 	{
 		if(chr.location.church == locID)
 		{
-			//Проверям время нахождения в церкви
+			//РџСЂРѕРІРµСЂСЏРј РІСЂРµРјСЏ РЅР°С…РѕР¶РґРµРЅРёСЏ РІ С†РµСЂРєРІРё
 			if(CheckAttribute(chr, "location.church.stime") != false)
 			{
 				if(CheckAttribute(chr, "location.church.etime") != false)
 				{
-					//Проверям время нахождения в церкви
+					//РџСЂРѕРІРµСЂСЏРј РІСЂРµРјСЏ РЅР°С…РѕР¶РґРµРЅРёСЏ РІ С†РµСЂРєРІРё
 					if(LAi_login_CheckTime(stf(chr.location.church.stime), stf(chr.location.church.etime))) isLogin = true;
 				}
 			}
 		}
 	}
-	//Залогинем последователей
+	//Р—Р°Р»РѕРіРёРЅРµРј РїРѕСЃР»РµРґРѕРІР°С‚РµР»РµР№
 	if(!LAi_IsBoarding)
 	{
 		// 04-12-05 this is making things worse if(CheckAttribute(chr,"alwaysload")) { if(sti(chr.alwaysload)) { isLogin = true; always = true; } } // NK 04-11-10 add alwaysload override
@@ -62,7 +62,7 @@ bool LAi_CharacterLogin(aref chr, string locID)
 			}
 		}
 	}
-	//Проверим на захваченность локации
+	//РџСЂРѕРІРµСЂРёРј РЅР° Р·Р°С…РІР°С‡РµРЅРЅРѕСЃС‚СЊ Р»РѕРєР°С†РёРё
 	if(LAi_IsCapturedLocation)
 	{
 		if(GetMainCharacterIndex() != sti(chr.index)) // 04-12-05 this is making things worse && !always) // NK 04-11-10 allow override
@@ -75,13 +75,13 @@ bool LAi_CharacterLogin(aref chr, string locID)
 		}
 	}
 	if(!isLogin) return false;
-	//Если персонажей больше максимального числа, незагружаем больше
+	//Р•СЃР»Рё РїРµСЂСЃРѕРЅР°Р¶РµР№ Р±РѕР»СЊС€Рµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ С‡РёСЃР»Р°, РЅРµР·Р°РіСЂСѓР¶Р°РµРј Р±РѕР»СЊС€Рµ
 	if(LAi_numloginedcharacters >= MAX_LOGINED_CHARACTERS_IN_LOCATION)
 	{
 		Trace("LAi_CharacterLogin -> many logined characters in location (>" + MAX_LOGINED_CHARACTERS_IN_LOCATION + ")");
 		return false;
 	}
-	//Устанавливаем необходимые поля, если надо
+	//РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РЅРµРѕР±С…РѕРґРёРјС‹Рµ РїРѕР»СЏ, РµСЃР»Рё РЅР°РґРѕ
 	if(CheckAttribute(chr, "chr_ai.type") == false)
 	{
 		chr.chr_ai.type = LAI_DEFAULT_TYPE;
@@ -114,7 +114,7 @@ bool LAi_CharacterLogin(aref chr, string locID)
 	{
 		chr.chr_ai.charge = LAI_DEFAULT_CHARGE;
 	}
-	//Проверяем хитпойнты
+	//РџСЂРѕРІРµСЂСЏРµРј С…РёС‚РїРѕР№РЅС‚С‹
 	float hp = stf(chr.chr_ai.hp);
 	float hpmax = stf(chr.chr_ai.hp_max);
 	if(hpmax < 1) hpmax = 1;
@@ -130,7 +130,7 @@ bool LAi_CharacterLogin(aref chr, string locID)
 			{
 				if(sti(chr.location.norebirth) != 0) return false;
 			}
-			//Надо возраждать персонажа
+			//РќР°РґРѕ РІРѕР·СЂР°Р¶РґР°С‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°
 			chr.chr_ai.hp = hpmax;
 			hp = hpmax;
 			SetRandomNameToCharacter(chr);
@@ -150,12 +150,12 @@ bool LAi_CharacterLogin(aref chr, string locID)
 		}
 	}
 	if(hp < 1) return false;
-	//Проверяем персонажа
+	//РџСЂРѕРІРµСЂСЏРµРј РїРµСЂСЃРѕРЅР°Р¶Р°
 	if(LAi_CheckCharacter(chr, "LAi_CharacterLogin") == false) return false;
-	//Выставляем скилл для сражения
+	//Р’С‹СЃС‚Р°РІР»СЏРµРј СЃРєРёР»Р» РґР»СЏ СЃСЂР°Р¶РµРЅРёСЏ
 	//LAi_AdjustFencingSkill(chr); //Levis: Not needed anymore
 	RestoreCharacter(chr);//MAXIMUS: returns stored attributes
-	//Логиним персонажа
+	//Р›РѕРіРёРЅРёРј РїРµСЂСЃРѕРЅР°Р¶Р°
 	func = chr.chr_ai.type;
 	bool res = true;
 	if(func != "")
@@ -171,24 +171,24 @@ bool LAi_CharacterLogin(aref chr, string locID)
 
 void LAi_CharacterPostLogin(ref location)
 {
-	//Расставляем последователей
+	//Р Р°СЃСЃС‚Р°РІР»СЏРµРј РїРѕСЃР»РµРґРѕРІР°С‚РµР»РµР№
 	for(int i = 0; i < LAi_numloginedcharacters; i++)
 	{
 		if(bDeckStarted || bCrewStarted) break;//MAXIMUS: login was enabled in LAi_Init.c, but not needs here
 		int idx = LAi_loginedcharacters[i];
 		if(idx >= 0)
 		{
-			//Просматриваем последователей
+			//РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РїРѕСЃР»РµРґРѕРІР°С‚РµР»РµР№
 			ref chr = &Characters[idx];
 			if(CheckAttribute(chr, "location.follower") != false)
 			{
-				//Получим координаты игрока
+				//РџРѕР»СѓС‡РёРј РєРѕРѕСЂРґРёРЅР°С‚С‹ РёРіСЂРѕРєР°
 				float x, y, z;
 				if(GetCharacterPos(GetMainCharacter(), &x, &y, &z) == false)
 				{
 					x = 0.0; y = 0.0; z = 0.0;
 				}
-				//Ищем свободный ближайший локатор
+				//РС‰РµРј СЃРІРѕР±РѕРґРЅС‹Р№ Р±Р»РёР¶Р°Р№С€РёР№ Р»РѕРєР°С‚РѕСЂ
 				string locator = LAi_FindNearestFreeLocator("goto", x, y, z);
 				if(locator != "")
 				{
@@ -202,10 +202,10 @@ void LAi_CharacterPostLogin(ref location)
 	}
 	if(!actLoadFlag)
 	{
-		//Расставляем квестовых энкоунтеров
+		//Р Р°СЃСЃС‚Р°РІР»СЏРµРј РєРІРµСЃС‚РѕРІС‹С… СЌРЅРєРѕСѓРЅС‚РµСЂРѕРІ
 		if(!LAi_CreateEncounters(location))
 		{
-			//Расставляем монстров
+			//Р Р°СЃСЃС‚Р°РІР»СЏРµРј РјРѕРЅСЃС‚СЂРѕРІ
 			LAi_CreateMonsters(location);
 		}
 	}
@@ -282,9 +282,9 @@ bool LAi_login_CheckTime(float start, float end)
 void LAi_PostLoginInit(aref chr)
 {
 	if(!IsEntity(chr)) return;
-	//Добавляем в группу
+	//Р”РѕР±Р°РІР»СЏРµРј РІ РіСЂСѓРїРїСѓ
 	LAi_group_MoveCharacter(chr, chr.chr_ai.group);
-	//Инициализируем шаблон
+	//РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј С€Р°Р±Р»РѕРЅ
 	string func = chr.chr_ai.tmpl;
 	if(func != "")
 	{
@@ -295,7 +295,7 @@ void LAi_PostLoginInit(aref chr)
 			chr.chr_ai.tmpl = LAI_DEFAULT_TEMPLATE;
 		}
 	}
-	//Инициализируем тип
+	//РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј С‚РёРї
 	func = chr.chr_ai.type;
 	if(func != "")
 	{

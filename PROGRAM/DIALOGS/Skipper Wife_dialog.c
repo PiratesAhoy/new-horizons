@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -57,8 +57,8 @@ void ProcessDialogEvent()
 
 		case "foryou":
 			dialog.snd = "Voice\CLLA\CLLA004";
-			Preprocessor_Add("bastard", GetMyAddressForm(NPChar, PChar, ADDR_HOSTILE, false, false)); // DeathDaisy
-			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
+			Preprocessor_Add("bastard", XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_HOSTILE, false, false))); // DeathDaisy
+			Preprocessor_Add("gender", XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false))); // DeathDaisy
 			dialog.text = DLG_TEXT[9];
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "exit";
@@ -86,7 +86,7 @@ void ProcessDialogEvent()
 		case "nothing":
 			AddMoneyToCharacter(PChar, -500);
 			dialog.snd = "Voice\CLLA\CLLA005";
-			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+			Preprocessor_Add("sir", XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false))); // DeathDaisy
 			dialog.text = DLG_TEXT[17];
 			link.l1 = DLG_TEXT[16];
 			link.l1.go = "exit";

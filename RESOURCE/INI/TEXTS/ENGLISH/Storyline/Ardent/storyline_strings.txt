@@ -16,12 +16,12 @@ Sirius{Sirius}
 Joli{Joli}
 Bolontaire{Bolontaire}
 Salamine{Salamine}
-Conquérante{Conquérante}
+ConquÃ©rante{ConquÃ©rante}
 Dauphin Royal{Dauphin Royal}
 Victorieuse{Victorieuse}
-Résistance{Résistance}
+RÃ©sistance{RÃ©sistance}
 Reprisal{Reprisal}
-Impétueuse{Impétueuse}
+ImpÃ©tueuse{ImpÃ©tueuse}
 Tarantula{Tarantula}
 San Lorenzo{San Lorenzo}
 Entreprenant{Entreprenant}

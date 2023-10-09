@@ -226,10 +226,10 @@ int CreateCommonQuestCharacters(int in)
 	SetRankTitle(ch, TranslateString("", "Chevalier"));
 	AddGameCharacter(n, ch);
 
-	ch.old.name = "Bjцrn";
-	ch.old.lastname = "Roos af Hjelmsдter";
-	ch.name = TranslateString("","Bjцrn");
-	ch.lastname = TranslateString("","Roos af Hjelmsдter");
+	ch.old.name = "BjС†rn";
+	ch.old.lastname = "Roos af HjelmsРґter";
+	ch.name = TranslateString("","BjС†rn");
+	ch.lastname = TranslateString("","Roos af HjelmsРґter");
 	ch.id		= "Swedish Emissary";
 	ch.model	= "Huber_Hol1_17";
 	ch.sex = "man";
@@ -321,9 +321,9 @@ int CreateCommonQuestCharacters(int in)
 	LAi_SetLoginTime(ch, 6.0, 18.0);
 	AddGameCharacter(n, ch);
 
-	ch.old.name = "Luнs";
+	ch.old.name = "LuРЅs";
 	ch.old.lastname = "Buchinho";
-	ch.name	= TranslateString("", "Luнs");
+	ch.name	= TranslateString("", "LuРЅs");
 	ch.lastname	= TranslateString("", "Buchinho");
 	ch.id = "Portuguese Tailor";
 	ch.model = "shkiper";
@@ -567,7 +567,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 // <-- KK
-				// контрабандист 1
+				// РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚ 1
 	ch.old.name = "Smuggler";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Smuggler");
@@ -606,7 +606,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// контрабандист 2
+				// РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚ 2
 	ch.old.name = "Smuggler";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Smuggler");
@@ -645,7 +645,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// контрабандист 3
+				// РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚ 3
 	ch.old.name = "Smuggler";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Smuggler");
@@ -723,7 +723,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//первый капитан береговой стражи
+			//РїРµСЂРІС‹Р№ РєР°РїРёС‚Р°РЅ Р±РµСЂРµРіРѕРІРѕР№ СЃС‚СЂР°Р¶Рё
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -750,7 +750,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//второй капитан береговой стражи
+			//РІС‚РѕСЂРѕР№ РєР°РїРёС‚Р°РЅ Р±РµСЂРµРіРѕРІРѕР№ СЃС‚СЂР°Р¶Рё
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -777,7 +777,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//третий капитан береговой стражи
+			//С‚СЂРµС‚РёР№ РєР°РїРёС‚Р°РЅ Р±РµСЂРµРіРѕРІРѕР№ СЃС‚СЂР°Р¶Рё
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1305,7 +1305,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.greeting = "Gr_Anacleto";
 	AddGameCharacter(n, ch);
 
-			//первый капитан-мститель за поруганнцю честь ростовщика
+			//РїРµСЂРІС‹Р№ РєР°РїРёС‚Р°РЅ-РјСЃС‚РёС‚РµР»СЊ Р·Р° РїРѕСЂСѓРіР°РЅРЅС†СЋ С‡РµСЃС‚СЊ СЂРѕСЃС‚РѕРІС‰РёРєР°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1330,7 +1330,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//второй капитан-мститель за поруганнцю честь ростовщика
+			//РІС‚РѕСЂРѕР№ РєР°РїРёС‚Р°РЅ-РјСЃС‚РёС‚РµР»СЊ Р·Р° РїРѕСЂСѓРіР°РЅРЅС†СЋ С‡РµСЃС‚СЊ СЂРѕСЃС‚РѕРІС‰РёРєР°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1355,7 +1355,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//третий капитан-мститель за поруганнцю честь ростовщика
+			//С‚СЂРµС‚РёР№ РєР°РїРёС‚Р°РЅ-РјСЃС‚РёС‚РµР»СЊ Р·Р° РїРѕСЂСѓРіР°РЅРЅС†СЋ С‡РµСЃС‚СЊ СЂРѕСЃС‚РѕРІС‰РёРєР°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";

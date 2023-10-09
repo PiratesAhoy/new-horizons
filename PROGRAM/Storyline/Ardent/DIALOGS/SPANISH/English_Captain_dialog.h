@@ -1,0 +1,17 @@
+string DLG_TEXT[15] = {
+"¿Qué estás haciendo en mi barco? ¡Lárgate, o te usaré como cebo para pescar tiburones!",
+"Está bien, no pierdas los estribos. Ya me voy.",
+"¿Qué significa esto?",
+"Estamos buscando a ",
+", a quien creemos que retienes ilegalmente en este barco.",
+"¡Absurdo! No tenemos prisioneros en este barco. ¿Cuál es tu nombre? Te denuciaré al próximo gobernador español que vea.",
+"Soy Carlos Ardenta. Denuncia lo que quieras, pero, como puedes ver por mi compañero, tenemos el respaldo del gobernador de #sWillemstad#.",
+"Entonces, te denunciaré ante él también. ¡Esto es un ultraje!",
+"Eres libre de denunciar lo que quieras a quien quieras, suponiendo que sigas siendo libre cuando terminemos con esto. Si es cierto que no tienes a ",
+", nos disculparemos y nos marcharemos. Pero si intentas dejar el puerto antes de que hayamos termiando, el fuerte tiene órdenes de hundir tu barco.",
+"No sé cómo has metido a esta persona en mi barco. Pero sabes tan bien como yo que #spronoun# no estaba aquí antes de que tú subieras a bordo.",
+"Eso no es lo que le diremos al gobernador. ¿Y a quién va a creer, a la hija de otro gobernador como él o a un capitán inglés cualquiera?",
+"Eso no es lo que le diremos al gobernador. ¿Y a quién va a creer, al hijo de otro gobernador como él o a un capitán inglés cualquiera?",
+"Entoces, ¿qué es lo que quieres?",
+"Eso lo sabrás a su debido tiempo. Si te comportas, saldrás de esta de una pieza. Si no, en muchos pedazos. Y ahora, si me disculpas, tengo que informar del exitoso rescate de ",
+}

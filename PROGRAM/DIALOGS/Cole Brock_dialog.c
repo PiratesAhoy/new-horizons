@@ -22,7 +22,7 @@ void ProcessDialogEvent() //Mosh D33
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "Exit":
 			DialogExit();
 		break;
@@ -96,8 +96,8 @@ void ProcessDialogEvent() //Mosh D33
 		break;
 
 		/*case "Node_1":
-			dialog.text = "Сейчас я с ним разберусь!!!";
-			link.l1 = "Быстрее пожалуйста!!";
+			dialog.text = "РЎРµР№С‡Р°СЃ СЏ СЃ РЅРёРј СЂР°Р·Р±РµСЂСѓСЃСЊ!!!";
+			link.l1 = "Р‘С‹СЃС‚СЂРµРµ РїРѕР¶Р°Р»СѓР№СЃС‚Р°!!";
 			link.l1.go = "Exit";
 			Pchar.quest.RheimsBook = "12";//For Mosh D34
 			AddDialogExitQuest("DamielleWarderSwindle");

@@ -5,7 +5,7 @@ Alarm indicator
 
 alarm_indicator_info
 {
-    WskaŸnik alarmu znajduje si× w prawym górnym rogu ekranu i mona go zobaczyŞ tylko na l¹dzie. Pokazuje, jak gracz jest traktowany w tym mie›cie. Zwykle jest niebieski, ale wraz ze wzrostem wrogo›ci, cz×›Ş z nich stanie si× czerwona (od lewej do prawej). Gdy po³owa wskaŸnika jest czerwona, zaczyna pulsowaŞ. Oznacza to, e kady o³nierz, który zobaczy gracza, zaatakuje ci×, a inni ludzie uciekn¹ przed graczem lub powiadomi¹ o nim o³nierzy, a nawet atakuj¹.
-    WskaŸnik alarmu ro›nie po kadej wrogiej akcji, jak¹ wykonujesz na o³nierzach lub obywatelach. Równie staje si× ca³kowicie czerwony, gdy kto› zauway ci× po uruchomieniu alarmu i je›li wi×kszo›Ş wskaŸnika nadal jest czerwona.
-    Alarm uspokaja si× z czasem, ale tylko wtedy, gdy nikt nie widzi gracza lub jego oficerów, dopóki wskaŸnik nie b×dzie co najmniej w po³owie niebieski.
+    WskaÅ¸nik alarmu znajduje siÃ— w prawym gÃ³rnym rogu ekranu i moÅ¾na go zobaczyÃ tylko na lÂ¹dzie. Pokazuje, jak gracz jest traktowany w tym mieâ€ºcie. Zwykle jest niebieski, ale wraz ze wzrostem wrogoâ€ºci, czÃ—â€ºÃ z nich stanie siÃ— czerwona (od lewej do prawej). Gdy poÂ³owa wskaÅ¸nika jest czerwona, zaczyna pulsowaÃ. Oznacza to, Å¾e kaÅ¾dy Å¾oÂ³nierz, ktÃ³ry zobaczy gracza, zaatakuje ciÃ—, a inni ludzie ucieknÂ¹ przed graczem lub powiadomiÂ¹ o nim Å¾oÂ³nierzy, a nawet atakujÂ¹.
+    WskaÅ¸nik alarmu roâ€ºnie po kaÅ¾dej wrogiej akcji, jakÂ¹ wykonujesz na Å¾oÂ³nierzach lub obywatelach. RÃ³wnieÅ¾ staje siÃ— caÂ³kowicie czerwony, gdy ktoâ€º zauwaÅ¾y ciÃ— po uruchomieniu alarmu i jeâ€ºli wiÃ—kszoâ€ºÃ wskaÅ¸nika nadal jest czerwona.
+    Alarm uspokaja siÃ— z czasem, ale tylko wtedy, gdy nikt nie widzi gracza lub jego oficerÃ³w, dopÃ³ki wskaÅ¸nik nie bÃ—dzie co najmniej w poÂ³owie niebieski.
 }

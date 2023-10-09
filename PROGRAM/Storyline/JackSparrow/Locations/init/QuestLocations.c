@@ -1061,7 +1061,7 @@ void LocationInitQuestLocations(ref n)
 
 	//  -------------------------------------------------
 	Locations[n].id = "Hit_house2";
-	Locations[n].id.label = "House of AmÈrigo Vieira";		//spell-checked by KAM
+	Locations[n].id.label = "House of Am√©rigo Vieira";		//spell-checked by KAM
 	Locations[n].filespath.models = "Locations\Inside\Doubleflour_house";
 	Locations[n].image = "Inside_Doubleflour_House_Hitman.tga";
 
@@ -1451,7 +1451,7 @@ void LocationInitQuestLocations(ref n)
 
 	//  -------------------------------------------------
 	Locations[n].id = "Hit_house2";
-	Locations[n].id.label = "House of AmÈrigo Vieira";		//spell-checked by KAM
+	Locations[n].id.label = "House of Am√©rigo Vieira";		//spell-checked by KAM
 	Locations[n].filespath.models = "Locations\Inside\Doubleflour_house";
 	Locations[n].image = "Inside_Doubleflour_House_Hitman.tga";
 
@@ -2405,7 +2405,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].models.always.l3 = "grid_MD";
 	Locations[n].models.always.l4 = "grid_FC";
-	Locations[n].models.always.l5 = "SantaFlorentinaShipInside4_reflect";	//minor change here (sarg s‰nkt)
+	Locations[n].models.always.l5 = "SantaFlorentinaShipInside4_reflect";	//minor change here (sarg s√§nkt)
   	
 	//Day
 	Locations[n].models.day.charactersPatch = "jrh_patch";
@@ -2484,7 +2484,7 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].models.always.l3 = "grid_MD";
 	Locations[n].models.always.l4 = "grid_FC";
-	Locations[n].models.always.l5 = "SantaFlorentinaShipInside4_reflect";	//minor change here (sarg s‰nkt)
+	Locations[n].models.always.l5 = "SantaFlorentinaShipInside4_reflect";	//minor change here (sarg s√§nkt)
   	
 	//Day
 	Locations[n].models.day.charactersPatch = "jrh_patch";

@@ -1,8 +1,8 @@
 string DLG_TEXT[46] = { 
-"Me alegro de no estar en su lugar. Usted será colgado mañana.",
-"¡Gracias por recordármelo!",
-"Mañana le colgarán. ¡Mejor entrégueme sus cosas antes de dejar que el verdugo se las lleve!",
-"¡Encantador! .",
+"Me alegro de no estar en su lugar. Usted serÃ¡ colgado maÃ±ana.",
+"Â¡Gracias por recordÃ¡rmelo!",
+"MaÃ±ana le colgarÃ¡n. Â¡Mejor entrÃ©gueme sus cosas antes de dejar que se las quede el verdugo!",
+"Â¡Encantador!",
 ".",
 ".",
 ".",

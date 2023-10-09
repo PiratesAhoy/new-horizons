@@ -24,7 +24,7 @@ string DLG_TEXT[30] = {
 "You should have run while you had the chance!",
 "Please tell no-one about this. To rest of world I am still Two Dogs Fighting, yes?",
 "Don't worry! Your secret is safe with me.",
-"You are hero to Taíno. Me honoured to join you and fight beside you again.",
+"You are hero to TaÃ­no. Me honoured to join you and fight beside you again.",
 "You are a brave and skilled warrior, and I'd be glad to have you back.",
 "Sorry, but I have enough companions now.",
 "All your bass are belong to us.",

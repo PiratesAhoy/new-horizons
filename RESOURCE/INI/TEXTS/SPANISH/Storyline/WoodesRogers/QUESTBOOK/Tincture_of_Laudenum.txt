@@ -1,6 +1,6 @@
-title=Tintura de láudano
+title=Tintura de lÃ¡udano
 text.t1=Tengo que encontrar esta medicina.
-text.t2=Conseguiré esta medicina a cambio de ... ¡un violín!
-text.t3=Sí, un violín. Espero que el boticario esté contento con él.
-text.t4=¡Hecho!
-text.t5=El señor Pope, el contramaestre, está en el puerto para reunirse con el boticario de Greenford.
+text.t2=ConseguirÃ© esta medicina a cambio de ... Â¡un violÃ­n!
+text.t3=SÃ­, un violÃ­n. Espero que el boticario estÃ© contento con Ã©l.
+text.t4=Â¡Hecho!
+text.t5=El seÃ±or Pope, el contramaestre, estÃ¡ en el puerto para reunirse con el boticario de Greenford.

@@ -1,122 +1,124 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| FreePlay.c |=====}
-Julian{Джулиан}
-McAllister{МакАлистер}
+Julian{Р”Р¶СѓР»РёР°РЅ}
+McAllister{РњР°РєРђР»РёСЃС‚РµСЂ}
 
 {=====| StartStoryline.c |=====}
-Robert{Роберт}
-Fletcher{Флэтчер}
-Edward{Эдвард}
-Pellew{Пеллью}
-Elbaron{Эльбарон}
-Caron{Карон}
-Taras{Тарас}
-Bulba{Бульба}
-Cardinal{Кардинал}
-Richelieu{Ришелье}
-Mazarin{Мазарини}
-Teague{Тиг}
-Sparrow{Воробей}
-Franзois{Франсуа}
-de Hadoque{Де Хадоке}
-Koleniko{Коленико}
-Ragetti{Раджетти}
-Mother{Мать}
-Bootstrap Bill{Прихлоп Билл}
-Mateo{Матео}
-Black Caesar{Чёрный Цезарь}
-Raoul{Рауль}
-Dupont{Дюпон}
-Askay{Аскай}
-Pusasn{Пусасн}
-Lian{Лиан}
-Park{Парк}
-Tai{Тай}
-Huang{Хуанг}
-Twigg{Твигг}
-Bo'sun{Боцман}
-Pintel{Пинтел}
-Ian{Иан}
-Mercer{Мерсер}
-Bligh{Блай}
+Robert{Р РѕР±РµСЂС‚}
+Fletcher{Р¤Р»СЌС‚С‡РµСЂ}
+Edward{Р­РґРІР°СЂРґ}
+Pellew{РџРµР»Р»СЊСЋ}
+Elbaron{Р­Р»СЊР±Р°СЂРѕРЅ}
+Caron{РљР°СЂРѕРЅ}
+Taras{РўР°СЂР°СЃ}
+Bulba{Р‘СѓР»СЊР±Р°}
+Cardinal{РљР°СЂРґРёРЅР°Р»}
+Richelieu{Р РёС€РµР»СЊРµ}
+Mazarin{РњР°Р·Р°СЂРёРЅРё}
+Teague{РўРёРі}
+Sparrow{Р’РѕСЂРѕР±РµР№}
+FranР·ois{Р¤СЂР°РЅСЃСѓР°}
+de Hadoque{Р”Рµ РҐР°РґРѕРєРµ}
+Koleniko{РљРѕР»РµРЅРёРєРѕ}
+Ragetti{Р Р°РґР¶РµС‚С‚Рё}
+Mother{РњР°С‚СЊ}
+Bootstrap Bill{РџСЂРёС…Р»РѕРї Р‘РёР»Р»}
+Mateo{РњР°С‚РµРѕ}
+Black Caesar{Р§С‘СЂРЅС‹Р№ Р¦РµР·Р°СЂСЊ}
+Raoul{Р Р°СѓР»СЊ}
+Dupont{Р”СЋРїРѕРЅ}
+Askay{РђСЃРєР°Р№}
+Pusasn{РџСѓСЃР°СЃРЅ}
+Lian{Р›РёР°РЅ}
+Park{РџР°СЂРє}
+Tai{РўР°Р№}
+Huang{РҐСѓР°РЅРі}
+Twigg{РўРІРёРіРі}
+Bo'sun{Р‘РѕС†РјР°РЅ}
+Pintel{РџРёРЅС‚РµР»}
+Ian{РР°РЅ}
+Mercer{РњРµСЂСЃРµСЂ}
+Bligh{Р‘Р»Р°Р№}
+Uncle{Uncle}
+Gules{Gules}
 
 {=====| quests_reaction.c |=====}
-Bartolomeu{Бартоломью}
-Portugues{Португалец}
-Guillaume{Гилм}
-Auger{Уга}
+Bartolomeu{Р‘Р°СЂС‚РѕР»РѕРјСЊСЋ}
+Portugues{РџРѕСЂС‚СѓРіР°Р»РµС†}
+Guillaume{Р“РёР»Рј}
+Auger{РЈРіР°}
 
 {=====| both_reaction.c |=====}
-Weatherby{Уэзерби}
-Swann{Суонн}
-Christopher{Кристофер}
-Silehard{Сайлхард}
+Weatherby{РЈСЌР·РµСЂР±Рё}
+Swann{РЎСѓРѕРЅРЅ}
+Christopher{РљСЂРёСЃС‚РѕС„РµСЂ}
+Silehard{РЎР°Р№Р»С…Р°СЂРґ}
 
 {=====| Officers.c |=====}
-William{Уильям}
-Sullivan{Салливан}
-David{Дэвид}
-O'Hara{О'Хара}
-Brian{Брайан}
-Darcy{Дарси}
-Killian{Киллиан}
-Kildare{Килдар}
-Emily{Эмили}
-Butler{Батлер}
-Uriah{Урия}
-O'Bannon{О'Беннон}
-Angus{Ангус}
-Calhoun{Кэлхаун}
-Bush{Буш}
-Dark Captain{Тёмный Капитан}
-Dark Cannoneer{Тёмный Канонир}
+William{РЈРёР»СЊСЏРј}
+Sullivan{РЎР°Р»Р»РёРІР°РЅ}
+David{Р”СЌРІРёРґ}
+O'Hara{Рћ'РҐР°СЂР°}
+Brian{Р‘СЂР°Р№Р°РЅ}
+Darcy{Р”Р°СЂСЃРё}
+Killian{РљРёР»Р»РёР°РЅ}
+Kildare{РљРёР»РґР°СЂ}
+Emily{Р­РјРёР»Рё}
+Butler{Р‘Р°С‚Р»РµСЂ}
+Uriah{РЈСЂРёСЏ}
+O'Bannon{Рћ'Р‘РµРЅРЅРѕРЅ}
+Angus{РђРЅРіСѓСЃ}
+Calhoun{РљСЌР»С…Р°СѓРЅ}
+Bush{Р‘СѓС€}
+Dark Captain{РўС‘РјРЅС‹Р№ РљР°РїРёС‚Р°РЅ}
+Dark Cannoneer{РўС‘РјРЅС‹Р№ РљР°РЅРѕРЅРёСЂ}
 
 {=====| TempQuest.c |=====}
-Bart{Барт}
-Renault{Рено}
-Enrique{Энрике}
-Padilla{Падилья}
-Celestino{Целестино}
-Villalobos{Виллалобос}
-Crewmember{Член команды}
-Spanish{Испанский}
-Commander{Командующий}
-Spanish Commander{Испанский Командир}
-Padre{Падре}
-Gerardo{Жерардо}
-Soldier{Солдат}
-Barbara{Барбара}
-Wellesley{Уэлсли}
-Matthews{Мэтьюс}
-Styles{Стайлс}
-Perrin{Перрин}
-Oldroyd{Олдройд}
-Marsh{Марш}
-Keene{Кин}
-Fernando{Фернандо}
-Suarez{Суарез}
-Elvira{Эльвира}
-Carranza{Карранса}
-Alonso{Алонсо}
-Madero{Мадеро}
-Arnaldo{Арнальдо}
-Chaparro{Чапарро}
+Bart{Р‘Р°СЂС‚}
+Renault{Р РµРЅРѕ}
+Enrique{Р­РЅСЂРёРєРµ}
+Padilla{РџР°РґРёР»СЊСЏ}
+Celestino{Р¦РµР»РµСЃС‚РёРЅРѕ}
+Villalobos{Р’РёР»Р»Р°Р»РѕР±РѕСЃ}
+Crewmember{Р§Р»РµРЅ РєРѕРјР°РЅРґС‹}
+Spanish{РСЃРїР°РЅСЃРєРёР№}
+Commander{РљРѕРјР°РЅРґСѓСЋС‰РёР№}
+Spanish Commander{РСЃРїР°РЅСЃРєРёР№ РљРѕРјР°РЅРґРёСЂ}
+Padre{РџР°РґСЂРµ}
+Gerardo{Р–РµСЂР°СЂРґРѕ}
+Soldier{РЎРѕР»РґР°С‚}
+Barbara{Р‘Р°СЂР±Р°СЂР°}
+Wellesley{РЈСЌР»СЃР»Рё}
+Matthews{РњСЌС‚СЊСЋСЃ}
+Styles{РЎС‚Р°Р№Р»СЃ}
+Perrin{РџРµСЂСЂРёРЅ}
+Oldroyd{РћР»РґСЂРѕР№Рґ}
+Marsh{РњР°СЂС€}
+Keene{РљРёРЅ}
+Fernando{Р¤РµСЂРЅР°РЅРґРѕ}
+Suarez{РЎСѓР°СЂРµР·}
+Elvira{Р­Р»СЊРІРёСЂР°}
+Carranza{РљР°СЂСЂР°РЅСЃР°}
+Alonso{РђР»РѕРЅСЃРѕ}
+Madero{РњР°РґРµСЂРѕ}
+Arnaldo{РђСЂРЅР°Р»СЊРґРѕ}
+Chaparro{Р§Р°РїР°СЂСЂРѕ}
 
 {=====| TempQuestEnemy.c |=====}
-Prison{Арестант}
-Guard{Стражник}
-Prison Guard{Тюремный Стражник}
-Arnold{Арнольд}
-McGill{МакГилл}
-Smuggler{Контрабандист}
-Acre{Акр}
-Jourdain{Журден}
-Anjou{Анжу}
-Edam{Эдам}
-De Cow{Де Коу}
-Abel{Абель}
-Barco{Барко}
-Renouart{Ренуар}
-Larrouse{Лярус}
+Prison{РђСЂРµСЃС‚Р°РЅС‚}
+Guard{РЎС‚СЂР°Р¶РЅРёРє}
+Prison Guard{РўСЋСЂРµРјРЅС‹Р№ РЎС‚СЂР°Р¶РЅРёРє}
+Arnold{РђСЂРЅРѕР»СЊРґ}
+McGill{РњР°РєР“РёР»Р»}
+Smuggler{РљРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚}
+Acre{РђРєСЂ}
+Jourdain{Р–СѓСЂРґРµРЅ}
+Anjou{РђРЅР¶Сѓ}
+Edam{Р­РґР°Рј}
+De Cow{Р”Рµ РљРѕСѓ}
+Abel{РђР±РµР»СЊ}
+Barco{Р‘Р°СЂРєРѕ}
+Renouart{Р РµРЅСѓР°СЂ}
+Larrouse{Р›СЏСЂСѓСЃ}
 
 {=====| 63 characters |=====}

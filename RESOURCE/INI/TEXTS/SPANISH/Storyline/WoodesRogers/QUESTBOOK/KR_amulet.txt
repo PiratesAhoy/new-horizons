@@ -1,11 +1,11 @@
 title=Amuleto - La iglesia
 text.t1=Hay una capilla en el centro de Kristiania. 
-text.t2=Hay una catedral en Nueva Suecia, la parte española de la ciudad.
+text.t2=Hay una catedral en Nueva Suecia, la parte espaÃ±ola de la ciudad.
 text.t3=Se ha vendido un amuleto a la iglesia.
-text.t4=El sacerdote de la capilla no ha comprado nad aen la subasta. ¿Entonces...?
-text.t5=Hay algo escondido en la caja de colectas. ¿El amuleto? Necesito un gancho pequeño para alcanzarlo.
+text.t4=El sacerdote de la capilla no ha comprado nad aen la subasta. Â¿Entonces...?
+text.t5=Hay algo escondido en la caja de colectas. Â¿El amuleto? Necesito un gancho pequeÃ±o para alcanzarlo.
 text.t6=Hay una salida cerrada con llave desde la cabina del confesionario.
-text.t7=El sacerdote tiene una habitación en una taberna cercana. 
+text.t7=El sacerdote tiene una habitaciÃ³n en una taberna cercana. 
 text.t8=He hecho un gancho. Ahora, vamos a usarlo.
 text.t9=Tengo el amuleto. Espero que me traiga suerte.
 text.t10=

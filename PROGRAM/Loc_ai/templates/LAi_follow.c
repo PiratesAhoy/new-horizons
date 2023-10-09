@@ -3,12 +3,12 @@
 #define LAI_TMPL_FOLLOW		"follow"
 
 /*
-	Возможные состояния:
-		"wait"		ждёт цели
-		"go"		идёт к цели
-		"stay"		стоит у цели
-		"pause"		ждёт возможности пройти к цели
-		"falure"	дальше шаблон работать не может
+	Р’РѕР·РјРѕР¶РЅС‹Рµ СЃРѕСЃС‚РѕСЏРЅРёСЏ:
+		"wait"		Р¶РґС‘С‚ С†РµР»Рё
+		"go"		РёРґС‘С‚ Рє С†РµР»Рё
+		"stay"		СЃС‚РѕРёС‚ Сѓ С†РµР»Рё
+		"pause"		Р¶РґС‘С‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РїСЂРѕР№С‚Рё Рє С†РµР»Рё
+		"falure"	РґР°Р»СЊС€Рµ С€Р°Р±Р»РѕРЅ СЂР°Р±РѕС‚Р°С‚СЊ РЅРµ РјРѕР¶РµС‚
 */
 
 
@@ -65,7 +65,7 @@ bool LAi_tmpl_follow_InitTemplate(aref chr)
 	return true;
 }
 
-//Процессирование шаблона персонажа
+//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_follow_CharacterUpdate(aref chr, float dltTime)
 {
 	aref tmpl;
@@ -112,130 +112,130 @@ void LAi_tmpl_follow_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Персонаж выполнил команду  go to point
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  go to point
 void LAi_tmpl_follow_EndGoToPoint(aref chr)
 {
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
-//Персонаж провалил команду  go to point
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  go to point
 void LAi_tmpl_follow_FailureGoToPoint(aref chr)
 {
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
-//Персонаж выполнил команду  run to point
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  run to point
 void LAi_tmpl_follow_EndRunToPoint(aref chr)
 {	
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
-//Персонаж провалил команду  run to point
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  run to point
 void LAi_tmpl_follow_FailureRunToPoint(aref chr)
 {	
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
-//Персонаж не может добраться до точки назначения
+//РџРµСЂСЃРѕРЅР°Р¶ РЅРµ РјРѕР¶РµС‚ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ С‚РѕС‡РєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ
 void LAi_tmpl_follow_BusyPos(aref chr, float x, float y, float z)
 {
 	LAi_tmpl_follow_Stop(chr, 1.0 + rand(3));
 }
 
-//Персонаж начал перемещение за другим
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
 void LAi_tmpl_follow_FollowGo(aref chr)
 {
 	chr.chr_ai.tmpl.state = "go";
 }
 
-//Персонаж начал дошёл до другого персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_follow_FollowStay(aref chr)
 {	
 	chr.chr_ai.tmpl.state = "stay";
 	LAi_tmpl_follow_Complite(chr);
 }
 
-//Персонаж провалил команду  follow character
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  follow character
 void LAi_tmpl_follow_FailureFollow(aref chr)
 {	
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
 
-//Персонаж начал перемещение за другим
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
 void LAi_tmpl_follow_FightGo(aref chr)
 {
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
-//Персонаж начал дошёл до другого персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_follow_FightStay(aref chr)
 {
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
-//Персонаж провалил команду  Fight
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  Fight
 void LAi_tmpl_follow_FailureFight(aref chr)
 {
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
-//Можно ли стрелять
+//РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРµР»СЏС‚СЊ
 bool LAi_tmpl_follow_IsFire(aref chr)
 {	
 	return false;
 }
 
-//Можно ли использовать оружие
+//РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЂСѓР¶РёРµ
 bool LAi_tmpl_follow_IsFight(aref chr)
 {
 	return false;
 }
 
-//Персонаж выполнил команду  escape
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  escape
 void LAi_tmpl_follow_EndEscape(aref chr)
 {
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
-//Персонаж скользит вдоль патча
+//РџРµСЂСЃРѕРЅР°Р¶ СЃРєРѕР»СЊР·РёС‚ РІРґРѕР»СЊ РїР°С‚С‡Р°
 void LAi_tmpl_follow_EscapeSlide(aref chr)
 {
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
-//Персонаж провалил команду  escape
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  escape
 void LAi_tmpl_follow_FailureEscape(aref chr)
 {
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
 
-//Персонаж толкается с другими персонажами
+//РџРµСЂСЃРѕРЅР°Р¶ С‚РѕР»РєР°РµС‚СЃСЏ СЃ РґСЂСѓРіРёРјРё РїРµСЂСЃРѕРЅР°Р¶Р°РјРё
 void LAi_tmpl_follow_ColThreshold(aref chr)
 {
 	LAi_tmpl_follow_Stop(chr, 1.0 + rand(3));
 }
 
-//Персонаж закончил проигрывать анимацию
+//РџРµСЂСЃРѕРЅР°Р¶ Р·Р°РєРѕРЅС‡РёР» РїСЂРѕРёРіСЂС‹РІР°С‚СЊ Р°РЅРёРјР°С†РёСЋ
 void LAi_tmpl_follow_EndAction(aref chr)
 {
 	LAi_tmpl_follow_updatetemplate(chr);
 }
 
 
-//Персонажа просят освободить место
+//РџРµСЂСЃРѕРЅР°Р¶Р° РїСЂРѕСЃСЏС‚ РѕСЃРІРѕР±РѕРґРёС‚СЊ РјРµСЃС‚Рѕ
 void LAi_tmpl_follow_FreePos(aref chr, aref who)
 {
 	LAi_tmpl_follow_Go(chr);
 }
 
 //------------------------------------------------------------------------------------------
-//Внутреннии функции
+//Р’РЅСѓС‚СЂРµРЅРЅРёРё С„СѓРЅРєС†РёРё
 //------------------------------------------------------------------------------------------
 
 
-//Установить за кем следовать
+//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Р·Р° РєРµРј СЃР»РµРґРѕРІР°С‚СЊ
 bool LAi_tmpl_follow_SetFollow(aref chr, aref follow, float timeout)
 {
 	chr.chr_ai.tmpl.follow = follow.index;

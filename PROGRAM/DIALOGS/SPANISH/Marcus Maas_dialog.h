@@ -50,7 +50,7 @@ string DLG_TEXT[60] = {
 "Lo sé. Tu gobernador me lo dijo.",
 "¡Espera un segundo! Un pescador vio un barco que se hundía frente a la costa durante la tormenta. Tal vez fuera el 'Lightning'.",
 "Supongo que esa es la única pista que tengo. ¿Dónde podría conocer a este hombre?", 
-"El tendero es amigo suyo. Tal vez puedas encontrarlo allí. Les gusta ponerse  acharlar en la tienda.",
+"El tendero es amigo suyo. Tal vez puedas encontrarlo allí. Les gusta ponerse a charlar en la tienda.",
 "Muchas gracias. Iré a hacer una visita a la tienda, en ese caso.",
 "¿Puedes ayudarme con algo? Busco la fragata francesa 'la Foudre'. Se suponía que pasaría por aquí.",
 "¡Espera un segundo! Un pescador vio un barco que se hundía frente a la costa durante la tormenta. Tal vez fuera 'La Foudre'.",

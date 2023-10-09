@@ -148,26 +148,26 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l7.go = "Redmond_HouseInsideR5(01)";
 	Locations[n].reload.l7.emerge = "reload1";
 	Locations[n].reload.l7.autoreload = "0";
-	Locations[n].reload.l7.label = "ƒÓÏ.";
+	Locations[n].reload.l7.label = "√Ñ√Æ√¨.";
 	Locations[n].reload.l7.close_for_night = 1;
 
 	Locations[n].reload.l8.name = "door_7";
 	Locations[n].reload.l8.go = "Redmond_HouseInsideR7(01)";
 	Locations[n].reload.l8.emerge = "reload1";
 	Locations[n].reload.l8.autoreload = "0";
-	Locations[n].reload.l8.label = "ƒÓÏ.";
+	Locations[n].reload.l8.label = "√Ñ√Æ√¨.";
 
 	Locations[n].reload.l9.name = "door_3";
 	Locations[n].reload.l9.go = "Redmond_HouseInsideR3(01)";
 	Locations[n].reload.l9.emerge = "reload1";
 	Locations[n].reload.l9.autoreload = "0";
-	Locations[n].reload.l9.label = "ƒÓÏ.";
+	Locations[n].reload.l9.label = "√Ñ√Æ√¨.";
 
 	Locations[n].reload.l10.name = "door_1";
 	Locations[n].reload.l10.go = "Redmond_HouseInsideR1(01)";
 	Locations[n].reload.l10.emerge = "reload1";
 	Locations[n].reload.l10.autoreload = "0";
-	Locations[n].reload.l10.label = "ƒÓÏ.";*/
+	Locations[n].reload.l10.label = "√Ñ√Æ√¨.";*/
 
 	// RobC/Alan_Smithee Blacksmiths -->
 	if (ENABLE_WEAPONSMOD)
@@ -227,7 +227,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l18.go = "WR_residence";
 	Locations[n].reload.l18.emerge = "reload3";
 	Locations[n].reload.l18.autoreload = "0";
-	Locations[n].reload.l18.label = "Woodes Rogers' residence.";
+//	Locations[n].reload.l18.label = "Woodes Rogers' residence.";	//Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l18.label = "";
 
 	Locations[n].locators_radius.reload.reload5_in = 0.1;		//not used
 	Locations[n].locators_radius.reload.reload5_out = 0.1;		//not used
@@ -265,7 +266,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l27.go = "Shop_stairs";
 	Locations[n].reload.l27.emerge = "goto1";
 	Locations[n].reload.l27.autoreload = "0";
-	Locations[n].reload.l27.label = "Rogers' Paintings Furniture & Weapons";
+//	Locations[n].reload.l27.label = "Rogers' Paintings Furniture & Weapons";	// Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l27.label = "";
 	Locations[n].reload.l27.disable = 1;
 	Locations[n].reload.l27.close_for_night = 1;
 
@@ -619,7 +621,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l19.go = "wr_crew";
 	Locations[n].reload.l19.emerge = "reload5";
 	Locations[n].reload.l19.autoreload = "0";
-	Locations[n].reload.l19.label = "Crew's quarter.";
+//	Locations[n].reload.l19.label = "Crew's quarter.";		//Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l19.label = ""; 
 	Locations[n].locators_radius.reload.reload19 = 0.5;
 	Locations[n].reload.l19.disable = 1;
 
@@ -635,7 +638,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l12.go = "Redmond_town_04";
 	Locations[n].reload.l12.emerge = "reload10";
 	Locations[n].reload.l12.autoreload = "0";
-	Locations[n].reload.l12.label = "Caroline's drawing room.";
+//	Locations[n].reload.l12.label = "Caroline's drawing room.";	//Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l12.label = "";
 	Locations[n].locators_radius.reload.reload2 = 0.5;
 	Locations[n].reload.l12.disable = 1;			//locked to ck_drawing_room in wr quest 1
 
@@ -643,7 +647,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l20.go = "ck_drawing_room";
 	Locations[n].reload.l20.emerge = "reload2";
 	Locations[n].reload.l20.autoreload = "0";
-	Locations[n].reload.l20.label = "Caroline's drawing room.";
+//	Locations[n].reload.l20.label = "Caroline's drawing room.";	//Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l12.label = "";
 	Locations[n].locators_radius.reload.reload10 = 0.5;
 
 	//garden to wr residence
@@ -651,7 +656,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l18.go = "wr_residence";
 	Locations[n].reload.l18.emerge = "reload1";
 	Locations[n].reload.l18.autoreload = "0";
-	Locations[n].reload.l18.label = "Woodes Rogers' residence.";
+//	Locations[n].reload.l18.label = "Woodes Rogers' residence.";	//Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l18.label = "";
 	Locations[n].locators_radius.reload.reload7 = 0.2;
 
 	Locations[n].locators_radius.randitem.randitem3 = 0.1;
@@ -690,7 +696,7 @@ void LocationInitRedmond(ref n)
 
 	//Day
 	Locations[n].models.day.charactersPatch = "RedPort_pd";
-	Locations[n].models.day.rinok = "RedPort_e01"; //˚ÌÓÍ
+	Locations[n].models.day.rinok = "RedPort_e01"; //√∞√ª√≠√Æ√™
 	Locations[n].models.day.fonar = "RedPort_fd";
 	Locations[n].models.day.jumppatch = "RedPort_j";
 	//Night
@@ -892,7 +898,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l2.go = "Redmond_shore_02";
 	Locations[n].reload.l2.emerge = "reload2";
 	Locations[n].reload.l2.autoreload = "1";
-	Locations[n].reload.l2.label = "¡ÛıÚ‡.";
+	Locations[n].reload.l2.label = "√Å√≥√µ√≤√†.";
 	Locations[n].locators_radius.reload.reload2 = 3.0;*/
 
 	Locations[n].reload.l2.name = "Reload1";
@@ -1339,7 +1345,7 @@ void LocationInitRedmond(ref n)
 	//Locations[n].reload.l3.go = "wr_library";
 	//Locations[n].reload.l3.emerge = "reload6";
 	//Locations[n].reload.l3.autoreload = "0";
-	//Locations[n].reload.l3.label = "Woodes Rogers¥ library.";
+	//Locations[n].reload.l3.label = "Woodes Rogers¬¥ library.";
 
     //temp case when locked
     	Locations[n].reload.l3.name = "reload5";

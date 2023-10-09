@@ -55,8 +55,8 @@ Tobias{Tobias}
 Ewan{Ewan}
 Glover{Glover}
 Wilfred{Wilfred}
-English Soldier{Soldado inglÈs}
-French Soldier{Soldado francÈs}
+English Soldier{Soldado ingl√©s}
+French Soldier{Soldado franc√©s}
 Rabel{Rabel}
 Yverneau{Yverneau}
 Anacleto{Anacleto}
@@ -98,16 +98,17 @@ Violate{Violate}
 Gyles{Gyles}
 Dubois{Dubois}
 citizen{residente}
+citizen_F{residente}
 Soldier{Soldado}
 Ragetti{Ragetti}
 Pintel{Pintel}
 
 {=====| TempQuestEnemy.c |=====}
-Captain{Capit·n}
+Captain{Capit√°n}
 Kalen{Kalen}
 Mottram{Mottram}
 French Patrol{Patrulla francesa}
-French{FrancÈs}
+French{Franc√©s}
 Sapper{Zapador}
 Simon{Simon}
 Buck{Buck}

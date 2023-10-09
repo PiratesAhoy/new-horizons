@@ -1,15 +1,15 @@
 string DLG_TEXT[12] = {
-"Nie mam o czym z panem dyskutowaæ.",
+"Nie mam o czym z panem dyskutowaÃ¦.",
 "...",
 "Kim pan jest i po co przychodzi?",
-"Interesuje mnie pewna legenda. Podobno pan coœ o niej wie.",
-"To chyba pan wêszy³ w sprawie informacji o skarbie.",
-"Dawaj mi te tabliczki, ³otrze!",
+"Interesuje mnie pewna legenda. Podobno pan coÅ“ o niej wie.",
+"To chyba pan wÃªszyÂ³ w sprawie informacji o skarbie.",
+"Dawaj mi te tabliczki, Â³otrze!",
 "Bardzo pan tego potrzebuje?",
 "Tak.",
-"Ma pan na myœli tekst z tych pradawnych kamiennych tabliczek?",
-"Cieszê siê, ¿e pan mnie rozumie. A jeœli jeszcze da mi pan te tabliczki, ujdzie pan z ¿yciem. Tym razem...",
-"Czekaj! Niech pan weŸmie te cholerne tabliczki... Tylko proszê trzymaæ swoj¹ szablê z daleka ode mnie!",
+"Ma pan na myÅ“li tekst z tych pradawnych kamiennych tabliczek?",
+"CieszÃª siÃª, Â¿e pan mnie rozumie. A jeÅ“li jeszcze da mi pan te tabliczki, ujdzie pan z Â¿yciem. Tym razem...",
+"Czekaj! Niech pan weÅ¸mie te cholerne tabliczki... Tylko proszÃª trzymaÃ¦ swojÂ¹ szablÃª z daleka ode mnie!",
 "Pewnie.",
 
 };

@@ -1,9 +1,9 @@
 string DLG_TEXT[8] = {
-"Me han dicho que te conozca un amigo en comun. Tengo algunas armas que podrian interesarle.",
-"Ah bueno! Mi empleador solo tiene 200 monedas para usted ahora. Pero tambien tiene este alquitran. Esto le permitira poner flechas en llamas antes de disparar a ellos y causar mas dano en sus oponentes. ?Si te doy 5 de eso tambien seria un trato?",
-"Eso suena como un trato para mi.",
-"Creo que me carteles con los arcos. Deberian valer mas.",
-"Para mal... Espero que cambies de opinion.",
-"Adios.",
-"Genial! Mi empleador estara muy contento con esto."
+"Un amigo común me dijo que contactara contigo. Tengo algunas armas que podrían interesarle.",
+"¡Ah, bien! Sin embargo, mi patrón, el Coleccionista, solo tiene 500 piezas de oro disponibles para gastos ahora mismo. Pero puedo añadir este botella de Confectio Democritis, una sustancia bastante rara. ¿Tenemos un trato?",
+"Trato hecho.",
+"Creo que me quedaré con los arcos. Deberían valer más.",
+"Una lástima... Espero que cambies de opinión.",
+"Adiós.",
+"¡Genial! Mi patrón estará muy contento."
 };

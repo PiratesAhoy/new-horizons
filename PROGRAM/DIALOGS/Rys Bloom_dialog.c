@@ -27,7 +27,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -50,7 +50,7 @@ void ProcessDialogEvent()
 		case "Node_2":
 			Diag.TempNode = "Second Time";
 			Dialog.snd = "voice\RYBL\RYBL002";
-			d.Text = "The '" + GetMyShipNameShow(PChar) + DLG_TEXT[5] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[7];
+			d.Text = DLG_TEXT[5] + GetMyShipNameShow(PChar) + DLG_TEXT[6] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[7];
 			Link.l1 = DLG_TEXT[8];
 			Link.l1.go = "node_3";
 			Link.l2 = DLG_TEXT[9];
@@ -141,7 +141,7 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[40];
 			Link.l1.go = "Exit";
 		break;
-//--------------------------Диалог 2: Игрок познакомился с Рисом, но отказался ему помочь.
+//--------------------------Р”РёР°Р»РѕРі 2: РРіСЂРѕРє РїРѕР·РЅР°РєРѕРјРёР»СЃСЏ СЃ Р РёСЃРѕРј, РЅРѕ РѕС‚РєР°Р·Р°Р»СЃСЏ РµРјСѓ РїРѕРјРѕС‡СЊ.
 
 
 		case "Second time":
@@ -216,14 +216,14 @@ void ProcessDialogEvent()
 		break;
 
 
-//-------------------------Диалог 3 - Игрок поговорил с Блюмом, и согласился ему помочь.
+//-------------------------Р”РёР°Р»РѕРі 3 - РРіСЂРѕРє РїРѕРіРѕРІРѕСЂРёР» СЃ Р‘Р»СЋРјРѕРј, Рё СЃРѕРіР»Р°СЃРёР»СЃСЏ РµРјСѓ РїРѕРјРѕС‡СЊ.
 
 		case "Agreed_Help":
 			Dialog.snd1 = "voice\RYBL\RYBL021";
 			Dialog.snd2 = "voice\RYBL\RYBL022";
 			Dialog.snd3 = "voice\RYBL\RYBL023";
 			Diag.TempNode = "Agreed_help";
-			d.Text = RandPhrase(DLG_TEXT[72] + GetMyName(Pchar) + DLG_TEXT[73] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[74], DLG_TEXT[75] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + GetMyName(PChar) + DLG_TEXT[76], DLG_TEXT[77] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[78], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3) + DLG_TEXT[79];
+			d.Text = RandPhrase(DLG_TEXT[72] + GetMyName(Pchar) + DLG_TEXT[73] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[74], DLG_TEXT[75] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) +" "+ GetMyName(PChar) + DLG_TEXT[76], DLG_TEXT[77] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[78], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3) + DLG_TEXT[79];
 			Link.l1 = DLG_TEXT[80];
 			Link.l1.go = "Node_17";
 			Link.l2 = DLG_TEXT[81];
@@ -355,7 +355,7 @@ void ProcessDialogEvent()
 			Link.l2.go = "exit";
 		break;
 
-//-------------------------------Диалог 4 - если игроку не удалось уломать начальника порта. 
+//-------------------------------Р”РёР°Р»РѕРі 4 - РµСЃР»Рё РёРіСЂРѕРєСѓ РЅРµ СѓРґР°Р»РѕСЃСЊ СѓР»РѕРјР°С‚СЊ РЅР°С‡Р°Р»СЊРЅРёРєР° РїРѕСЂС‚Р°. 
 
 		case "Help_Failed":
 			Dialog.snd1 = "voice\RYBL\RYBL037";
@@ -386,7 +386,7 @@ void ProcessDialogEvent()
 			}
 		break;
 
-//-------------------------------Диалог 4 - игроку удалось уговорить начальника порта . 
+//-------------------------------Р”РёР°Р»РѕРі 4 - РёРіСЂРѕРєСѓ СѓРґР°Р»РѕСЃСЊ СѓРіРѕРІРѕСЂРёС‚СЊ РЅР°С‡Р°Р»СЊРЅРёРєР° РїРѕСЂС‚Р° . 
 
 		case "Help_succesful":
 			Dialog.snd = "voice\RYBL\RYBL042";
@@ -456,7 +456,7 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("rys_becomes_officer");
 		break;
 
-//-------------------------------Диалог 5 - обычный диалог. 
+//-------------------------------Р”РёР°Р»РѕРі 5 - РѕР±С‹С‡РЅС‹Р№ РґРёР°Р»РѕРі. 
 
 
 		case "common":

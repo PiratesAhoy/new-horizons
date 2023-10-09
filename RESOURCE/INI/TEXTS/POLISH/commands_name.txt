@@ -3,44 +3,44 @@ sea_Cancel {Anuluj}
 sea_Moor {Przybij}
 sea_Port {Port}
 sea_Fort {Fort}
-sea_Shore {Wybrzeže}
-sea_SailTo {P³yð do}
+sea_Shore {WybrzeÅ¾e}
+sea_SailTo {PÂ³yÃ° do}
 sea_Board {Aborduj}
-sea_LandTroops {Wojska L¹dowe}
+sea_LandTroops {Wojska LÂ¹dowe}
 sea_Map {Mapa}
 sea_Attack {Atakuj}
-sea_Defend {Obroð}
-sea_SailAway {Odp³yð}
-sea_HeaveToDrift {Zatrzymaj si×}
+sea_Defend {ObroÃ°}
+sea_SailAway {OdpÂ³yÃ°}
+sea_HeaveToDrift {Zatrzymaj siÃ—}
 sea_Transfer {Wymiana}
-sea_Charge {Prze³adowywanie}
-sea_Speed {žagl×}
+sea_Charge {PrzeÂ³adowywanie}
+sea_Speed {Å¾aglÃ—}
 sea_CCommand {Wydaj Rozkaz}
-sea_Ability {Užyj Umiej×tno›ci}
+sea_Ability {UÅ¾yj UmiejÃ—tnoâ€ºci}
 sea_ImmediateDeath {Zniszcz!}
-sea_HoistFlag {Zawie› Flag×}
+sea_HoistFlag {Zawieâ€º FlagÃ—}
 sea_EnterCabin {Kabina Kapitana}
-sea_EnterDeck {Pok³ad Statku}
-sea_EnterShip {Pok³ad #sshipname#}
-sea_EnterSeadogs {Pokoje Za³ogi}
-sea_EnterShipDeck {Pok³ad Statku}
-sea_EnterMainCannonsDeck {Pok³ad G³ównych Dzia³}
-sea_EnterUpperCannonsDeck {Górny Pok³ad Dzia³}
-sea_EnterLowerCannonsDeck {Dolny Pok³ad Dzia³}
-sea_EnterHold {£adownia}
-sea_EnterHold1 {Pierwsza £adownia}
-sea_EnterHold2 {Druga £adowia}
-sea_LowerSails {Nižsze žagle}
-sea_BattleSails {žagle Bitewne}
-sea_FullSails {Pe³ne žagle}
+sea_EnterDeck {PokÂ³ad Statku}
+sea_EnterShip {PokÂ³ad #sshipname#}
+sea_EnterSeadogs {Pokoje ZaÂ³ogi}
+sea_EnterShipDeck {PokÂ³ad Statku}
+sea_EnterMainCannonsDeck {PokÂ³ad GÂ³Ã³wnych DziaÂ³}
+sea_EnterUpperCannonsDeck {GÃ³rny PokÂ³ad DziaÂ³}
+sea_EnterLowerCannonsDeck {Dolny PokÂ³ad DziaÂ³}
+sea_EnterHold {Â£adownia}
+sea_EnterHold1 {Pierwsza Â£adownia}
+sea_EnterHold2 {Druga Â£adowia}
+sea_LowerSails {NiÅ¾sze Å¾agle}
+sea_BattleSails {Å¾agle Bitewne}
+sea_FullSails {PeÂ³ne Å¾agle}
 sea_FCoHS_Hail {Holuj Statek}
-sea_FCoHS_Contact {OdwiedŸ Statek}
-sea_KrakenAttack {Przywo³anie Krakena}
+sea_FCoHS_Contact {OdwiedÅ¸ Statek}
+sea_KrakenAttack {PrzywoÂ³anie Krakena}
 sea_SubmergeDutchman {Zanurzenie/Wynurzenie}
-sea_PearlSweeps {Wyci¹gni×cie Wiose³}
-sea_QARSword {Rozerwanie Pr×dko›ci}
+sea_PearlSweeps {WyciÂ¹gniÃ—cie WioseÂ³}
+sea_QARSword {Rozerwanie PrÃ—dkoâ€ºci}
 sea_TritonAttack {Atak Przedmiotami}
-sea_NeptuneTrident {Trójz¹b Neptuna}
+sea_NeptuneTrident {TrÃ³jzÂ¹b Neptuna}
 
 sea_EnglishFlag {Anglia}
 sea_SpainFlag {Hiszpania}
@@ -48,68 +48,68 @@ sea_PortugalFlag {Portugalia}
 sea_FranceFlag {Francja}
 sea_HollandFlag {Holandia}
 sea_Flags {Flagi}
-sea_Explosion {Wybuchni×cie!}
+sea_Explosion {WybuchniÃ—cie!}
 
-land_ItemsDead {Obrabuj Zw³oki}
-land_FastReload {Szybka Podróž}
+land_ItemsDead {Obrabuj ZwÂ³oki}
+land_FastReload {Szybka PodrÃ³Å¾}
 land_ItemsUse {Uzyj Przedmiotu}
 land_DialogStart {Rozmawiaj}
 land_ItemsChange {Wymiana}
-land_TakeItem {WeŸ Przedmiot}
+land_TakeItem {WeÅ¸ Przedmiot}
 land_PlaceItem {Postaw Przedmiot}
-land_OutDoor {Otwórz}
-land_UseBox {Otwórz}
+land_OutDoor {OtwÃ³rz}
+land_UseBox {OtwÃ³rz}
 land_ActivateRush {Furia}
 land_ExitDeck {Morze}
 land_Look {Patrz}
-land_Back {Ty³}
-land_EnterDeck {Pok³ad Statku}
-land_EnterShip {#sshipname# Pok³ad}
+land_Back {TyÂ³}
+land_EnterDeck {PokÂ³ad Statku}
+land_EnterShip {#sshipname# PokÂ³ad}
 land_EnterCabin {Kabina Kapitana}
-land_EnterSeadogs {Pokoje Za³ogi}
-land_EnterShipDeck {Pok³ad Statku}
-land_EnterMainCannonsDeck {Pok³ad G³ównych Dzia³}
-land_EnterUpperCannonsDeck {Gorny Pok³ad Dzia³}
-land_EnterLowerCannonsDeck {Dolny Pok³ad Dzia³}
-land_EnterHold {£adowia}
-land_EnterHold1 {Pierwsza £adowia}
-land_EnterHold2 {Druga £adownia}
-land_UseCorpse {Obrabuj Zw³oki}
-land_UseBarrel {Patrz w Beczk×}
+land_EnterSeadogs {Pokoje ZaÂ³ogi}
+land_EnterShipDeck {PokÂ³ad Statku}
+land_EnterMainCannonsDeck {PokÂ³ad GÂ³Ã³wnych DziaÂ³}
+land_EnterUpperCannonsDeck {Gorny PokÂ³ad DziaÂ³}
+land_EnterLowerCannonsDeck {Dolny PokÂ³ad DziaÂ³}
+land_EnterHold {Â£adowia}
+land_EnterHold1 {Pierwsza Â£adowia}
+land_EnterHold2 {Druga Â£adownia}
+land_UseCorpse {Obrabuj ZwÂ³oki}
+land_UseBarrel {Patrz w BeczkÃ—}
 land_UseStorage {Magazyn Prochu strzelniczego}
-land_GoToTeachHead {G³owa Czarnobrodego}
+land_GoToTeachHead {GÂ³owa Czarnobrodego}
 
 go_store {Sklep}
 go_shipyard {Stocznia}
 go_tavern {Tawerna}
 go_residence {Ratusz}
 go_port {Port}
-go_shore {Wybrzeže}
+go_shore {WybrzeÅ¾e}
 go_loanshark {Lichwiarz}
 go_brothel {Burdel}
-go_church {Ko›ció³}
-go_prison {Wi×zienie}
+go_church {Koâ€ºciÃ³Â³}
+go_prison {WiÃ—zienie}
 go_fort {Fort}
 go_tailorshop {Krawiec}
 go_blacksmith {Kowal}
-go_shipdeck {Pok³ad Statku}
+go_shipdeck {PokÂ³ad Statku}
 go_cabin {Kabina Kapitana}
-go_seadogs {Pokoje Za³ogi}
-go_maincannonsdeck {G³owny Pok³ad Dzia³}
-go_uppercannonsdeck {Górny Pok³ad Dzia³}
-go_lowercannonsdeck {Dolny Pok³ad Dzia³}
-go_hold {£adownia}
-go_hold1 {Pierwsza £adowia}
-go_hold2 {Druga £adowia}
+go_seadogs {Pokoje ZaÂ³ogi}
+go_maincannonsdeck {GÂ³owny PokÂ³ad DziaÂ³}
+go_uppercannonsdeck {GÃ³rny PokÂ³ad DziaÂ³}
+go_lowercannonsdeck {Dolny PokÂ³ad DziaÂ³}
+go_hold {Â£adownia}
+go_hold1 {Pierwsza Â£adowia}
+go_hold2 {Druga Â£adowia}
 go_apothecary {Aptekarz}
 go_gunsmith {Rusznikarz}
 go_gunblacksmith {Pistolet i Kowal}
 go_opium {Melina Opiumu}
 go_library {Biblioteka}
-go_maltese {Opactwo Maltaðczyków}
-go_indianstore {Indiaðski Sklep}
+go_maltese {Opactwo MaltaÃ°czykÃ³w}
+go_indianstore {IndiaÃ°ski Sklep}
 go_tavern2 {Druga Tawerna}
 go_eitc {Kompania Wschodnio Indyjska}
 go_dwic {Holenderska Kompania Zachodnio Indyjska}
 go_academy {Akademia Marynarki Wojennej}
-go_HQ {G³ówna Siedziba Marynarki Wojennej}
+go_HQ {GÂ³Ã³wna Siedziba Marynarki Wojennej}

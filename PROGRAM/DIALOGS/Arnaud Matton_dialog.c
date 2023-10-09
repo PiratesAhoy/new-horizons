@@ -31,7 +31,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -62,7 +62,7 @@ void ProcessDialogEvent()
 						link.l3.go = "quests";
 					}
 				}
-				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "ransom" && pchar.location == "Falaise_De_Fleur_shore") // разговор на пляже
+				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "ransom" && pchar.location == "Falaise_De_Fleur_shore") // СЂР°Р·РіРѕРІРѕСЂ РЅР° РїР»СЏР¶Рµ
 				{
 					dialog.snd = "Voice\ARMA\ARMA005";
 					dialog.text = DLG_TEXT[11] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[12])]) + DLG_TEXT[13];
@@ -242,7 +242,7 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\ARMA\ARMA008";
 			Dialog.text = DLG_TEXT[26];
 			//////////////////////////////
-			// Выдача квестов
+			// Р’С‹РґР°С‡Р° РєРІРµСЃС‚РѕРІ
 			//////////////////////////////
 			// Talisman:	update code to new version & lower player reputation requirement to activate low rep dialog options
 			//				since low rep male players still help Arnaud with Baldewyn, so Arnaud should trust them with Sabine
@@ -288,10 +288,10 @@ void ProcessDialogEvent()
 			}
 
 			//////////////////////////////
-			// ПРИЕМ КВЕСТОВ
+			// РџР РР•Рњ РљР’Р•РЎРўРћР’
 			//////////////////////////////
 			//////////////////////////////
-			// Квест балдуина Кофье
+			// РљРІРµСЃС‚ Р±Р°Р»РґСѓРёРЅР° РљРѕС„СЊРµ
 			//////////////////////////////
 			if (characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire ==  "not_money" && iTest < QUEST_COUNTER)
 			{
@@ -330,7 +330,7 @@ void ProcessDialogEvent()
 				iTest = iTest + 1;
 			}
 			//////////////////////////////
-			// Конец квеста балдуина Кофье
+			// РљРѕРЅРµС† РєРІРµСЃС‚Р° Р±Р°Р»РґСѓРёРЅР° РљРѕС„СЊРµ
 			//////////////////////////////
 			if (npchar.quest.to_redmond_1 ==  "cargo_done" && iTest < QUEST_COUNTER)
 			{
@@ -351,7 +351,7 @@ void ProcessDialogEvent()
 				iTest = iTest + 1;
 			}
 			//////////////////////////////
-			// Квест про дочку Арно Маттона
+			// РљРІРµСЃС‚ РїСЂРѕ РґРѕС‡РєСѓ РђСЂРЅРѕ РњР°С‚С‚РѕРЅР°
 			//////////////////////////////
 			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire ==  "almost_done" && iTest < QUEST_COUNTER)
 			{
@@ -377,7 +377,7 @@ void ProcessDialogEvent()
 				Link.l5.go = "ransom";
 			}
 			//////////////////////////////
-			// Конец квеста про дочку Арно маттона
+			// РљРѕРЅРµС† РєРІРµСЃС‚Р° РїСЂРѕ РґРѕС‡РєСѓ РђСЂРЅРѕ РјР°С‚С‚РѕРЅР°
 			//////////////////////////////
 			Link.l99 = DLG_TEXT[69];
 			Link.l99.go = "exit";
@@ -451,7 +451,7 @@ void ProcessDialogEvent()
 			characters[GetCharacterIndex("Sabine Matton")].Dialog.CurrentNode = "Hired"; //PW
 			AddDialogExitQuest("Sabines_new_outfit");	// GR: Sabine gets shipboard clothes
 			///////////////////////////////////////////////////////////////////////////
-			// Арно уходит, а за нами начинается охотиться 1 фрегат и 2 наемных убийцы, плюс Франция становится враждебной.
+			// РђСЂРЅРѕ СѓС…РѕРґРёС‚, Р° Р·Р° РЅР°РјРё РЅР°С‡РёРЅР°РµС‚СЃСЏ РѕС…РѕС‚РёС‚СЊСЃСЏ 1 С„СЂРµРіР°С‚ Рё 2 РЅР°РµРјРЅС‹С… СѓР±РёР№С†С‹, РїР»СЋСЃ Р¤СЂР°РЅС†РёСЏ СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РІСЂР°Р¶РґРµР±РЅРѕР№.
 			///////////////////////////////////////////////////////////////////////////
 		break;
 
@@ -478,7 +478,7 @@ void ProcessDialogEvent()
 			RemovePassenger(pchar, Characters[GetCharacterIndex("Sabine Matton")]);
 
 			//fading();
-			ChangeCharacterAddress(&characters[GetCharacterIndex("Sabine Matton")], "Falaise_de_Fleur_shore","citizen07"); //появление девушки. // TALISMAN CHANGED - LOCATION WRONG
+			ChangeCharacterAddress(&characters[GetCharacterIndex("Sabine Matton")], "Falaise_de_Fleur_shore","citizen07"); //РїРѕСЏРІР»РµРЅРёРµ РґРµРІСѓС€РєРё. // TALISMAN CHANGED - LOCATION WRONG
 			npchar.location	= "Falaise_de_Fleur_store";
 			npchar.location.locator = "goto1"; // PB: was wrong locator
 			characters[GetCharacterIndex("Sabine Matton")].location = "none";
@@ -517,7 +517,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[104];
 			link.l1.go = "exit";
 			///////////////////////////////////////////////////////////////////////
-			// Появление девушки, перезагрузка локейшена. Франция враждебна. Драка.
+			// РџРѕСЏРІР»РµРЅРёРµ РґРµРІСѓС€РєРё, РїРµСЂРµР·Р°РіСЂСѓР·РєР° Р»РѕРєРµР№С€РµРЅР°. Р¤СЂР°РЅС†РёСЏ РІСЂР°Р¶РґРµР±РЅР°. Р”СЂР°РєР°.
 			///////////////////////////////////////////////////////////////////////
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "enemy_forever";
 			ChangeCharacterReputation(pchar, -1);
@@ -840,7 +840,7 @@ void ProcessDialogEvent()
 			if(npchar.quest.trade_date != lastspeak_date)
 			{
 				npchar.quest.trade_date = lastspeak_date;
-				//проверка враждебности нам страны торговца
+				//РїСЂРѕРІРµСЂРєР° РІСЂР°Р¶РґРµР±РЅРѕСЃС‚Рё РЅР°Рј СЃС‚СЂР°РЅС‹ С‚РѕСЂРіРѕРІС†Р°
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
 					Preprocessor_Add("nation_desc", XI_ConvertString(GetNationDescByType(sti(NPChar.nation))));
@@ -861,11 +861,11 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						//проверяем импорт/экспорт
+						//РїСЂРѕРІРµСЂСЏРµРј РёРјРїРѕСЂС‚/СЌРєСЃРїРѕСЂС‚
 						float fprice, tprice;
 						// NK redo this to take price into account 05-05-12 -->
 						int iTradeGoods = GenerateGoodForTrade(sti(NPChar.nation), iTradeNation, &fprice, &tprice); // TIH nation fix Aug30'06 // KK
-						string sNation = GenerateTradeQuest(pchar, iTradeNation, iTradeGoods, fprice, tprice, true);// MAXIMUS: all was moved into MAXIMUS_Functions.c - returns translated string						//проверяем свободное место (при этом должно вмещаться по меньшей мере 100 единиц выбранного груза
+						string sNation = GenerateTradeQuest(pchar, iTradeNation, iTradeGoods, fprice, tprice, true);// MAXIMUS: all was moved into MAXIMUS_Functions.c - returns translated string						//РїСЂРѕРІРµСЂСЏРµРј СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ (РїСЂРё СЌС‚РѕРј РґРѕР»Р¶РЅРѕ РІРјРµС‰Р°С‚СЊСЃСЏ РїРѕ РјРµРЅСЊС€РµР№ РјРµСЂРµ 100 РµРґРёРЅРёС† РІС‹Р±СЂР°РЅРЅРѕРіРѕ РіСЂСѓР·Р°
 						if (GetSquadronFreeSpace(pchar, iTradeGoods) < 100 || sNation=="")
 						{
 							dialog.snd = "Voice\ARMA\ARMA047";

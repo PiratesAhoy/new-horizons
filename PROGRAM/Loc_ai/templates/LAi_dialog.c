@@ -3,9 +3,9 @@
 #define LAI_TMPL_DIALOG		"dialog"
 
 /*
-	Возможные состояния:
-		"wait"		ждёт начала диалога
-		"dialog"	разговаривает
+	Р’РѕР·РјРѕР¶РЅС‹Рµ СЃРѕСЃС‚РѕСЏРЅРёСЏ:
+		"wait"		Р¶РґС‘С‚ РЅР°С‡Р°Р»Р° РґРёР°Р»РѕРіР°
+		"dialog"	СЂР°Р·РіРѕРІР°СЂРёРІР°РµС‚
 */
 
 
@@ -20,7 +20,7 @@ bool LAi_tmpl_SetDialog(aref chr, aref by, float dlgTime)
 	return true;
 }
 
-//Если мы пасивны, запускаем шаблон без времени завершения
+//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
 bool LAi_tmpl_SetActivatedDialog(aref chr, aref by)
 {
 	if(!LAi_tmpl_dialog_InitTemplate(chr)) return false;
@@ -37,16 +37,16 @@ void LAi_tmpl_dialog_NoAni(aref chr)
 	chr.chr_ai.tmpl.noani = "1";
 }
 
-//Остановить диалог между NPC
+//РћСЃС‚Р°РЅРѕРІРёС‚СЊ РґРёР°Р»РѕРі РјРµР¶РґСѓ NPC
 bool LAi_tmpl_dialog_StopNPC(aref chr)
 {
 	if(chr.chr_ai.tmpl.state == "dialog")
 	{
-		//Если один из беседующих игрок, то не прекращаем диалог
+		//Р•СЃР»Рё РѕРґРёРЅ РёР· Р±РµСЃРµРґСѓСЋС‰РёС… РёРіСЂРѕРє, С‚Рѕ РЅРµ РїСЂРµРєСЂР°С‰Р°РµРј РґРёР°Р»РѕРі
 		int idx = sti(chr.chr_ai.tmpl.dialog);
 		if(GetMainCharacterIndex() == sti(chr.index)) return false;
 		if(GetMainCharacterIndex() == idx) return false;
-		//Операнивно всё сворачиваем
+		//РћРїРµСЂР°РЅРёРІРЅРѕ РІСЃС‘ СЃРІРѕСЂР°С‡РёРІР°РµРј
 		CharacterPlayAction(chr, "");
 		CharacterPlayAction(&Characters[idx], "");
 		LAi_Character_EndDialog(chr, &Characters[idx]);
@@ -105,7 +105,7 @@ bool LAi_tmpl_dialog_InitTemplate(aref chr)
 	return true;
 }
 
-//Возможно ли завенсти диалог
+//Р’РѕР·РјРѕР¶РЅРѕ Р»Рё Р·Р°РІРµРЅСЃС‚Рё РґРёР°Р»РѕРі
 bool LAi_tmpl_dialog_IsActive(aref chr)
 {
 	if(chr.chr_ai.tmpl.state == "wait") return false;
@@ -113,22 +113,22 @@ bool LAi_tmpl_dialog_IsActive(aref chr)
 }
 
 
-//Процессирование шаблона персонажа
+//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_dialog_CharacterUpdate(aref chr, float dltTime)
 {
 	float time;
 	aref tmpl;
 	makearef(tmpl, chr.chr_ai.tmpl);
-	//Всегда стоим
+	//Р’СЃРµРіРґР° СЃС‚РѕРёРј
 	SetCharacterTask_Stay(chr);
-	//Если в диалоге, направляемся на персонажа
+	//Р•СЃР»Рё РІ РґРёР°Р»РѕРіРµ, РЅР°РїСЂР°РІР»СЏРµРјСЃСЏ РЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
 	if(tmpl.state == "dialog")
 	{
-		//Проверяем время ведения диолога
+		//РџСЂРѕРІРµСЂСЏРµРј РІСЂРµРјСЏ РІРµРґРµРЅРёСЏ РґРёРѕР»РѕРіР°
 		float dlgtime = stf(tmpl.dlgtime);
 		if(dlgtime >= 0)
 		{
-			//Мы ведём диалог
+			//РњС‹ РІРµРґС‘Рј РґРёР°Р»РѕРі
 			time = stf(tmpl.time) + dltTime;
 			tmpl.time = time;
 			if(time > dlgtime)
@@ -149,7 +149,7 @@ void LAi_tmpl_dialog_CharacterUpdate(aref chr, float dltTime)
 			}
 		}
 	}
-	//Выкидываем всякие жесты и фразочки
+	//Р’С‹РєРёРґС‹РІР°РµРј РІСЃСЏРєРёРµ Р¶РµСЃС‚С‹ Рё С„СЂР°Р·РѕС‡РєРё
 	time = stf(chr.chr_ai.tmpl.phrasetime) - dltTime;
 	if(time < 0.0)
 	{
@@ -192,110 +192,110 @@ void LAi_tmpl_dialog_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Персонаж выполнил команду  go to point
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  go to point
 void LAi_tmpl_dialog_EndGoToPoint(aref chr)
 {
 }
 
-//Персонаж провалил команду  go to point
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  go to point
 void LAi_tmpl_dialog_FailureGoToPoint(aref chr)
 {
 }
 
-//Персонаж выполнил команду  run to point
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  run to point
 void LAi_tmpl_dialog_EndRunToPoint(aref chr)
 {	
 }
 
-//Персонаж провалил команду  run to point
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  run to point
 void LAi_tmpl_dialog_FailureRunToPoint(aref chr)
 {	
 }
 
-//Персонаж не может добраться до точки назначения
+//РџРµСЂСЃРѕРЅР°Р¶ РЅРµ РјРѕР¶РµС‚ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ С‚РѕС‡РєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ
 void LAi_tmpl_dialog_BusyPos(aref chr, float x, float y, float z)
 {
 }
 
-//Персонаж начал перемещение за другим
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
 void LAi_tmpl_dialog_FollowGo(aref chr)
 {
 }
 
-//Персонаж начал дошёл до другого персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_dialog_FollowStay(aref chr)
 {	
 }
 
-//Персонаж провалил команду  dialog character
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  dialog character
 void LAi_tmpl_dialog_FailureFollow(aref chr)
 {	
 }
 
 
-//Персонаж начал перемещение за другим
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
 void LAi_tmpl_dialog_FightGo(aref chr)
 {
 }
 
-//Персонаж начал дошёл до другого персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_dialog_FightStay(aref chr)
 {
 }
 
-//Персонаж провалил команду  Fight
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  Fight
 void LAi_tmpl_dialog_FailureFight(aref chr)
 {
 }
 
-//Можно ли стрелять
+//РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРµР»СЏС‚СЊ
 bool LAi_tmpl_dialog_IsFire(aref chr)
 {	
 	return false;
 }
 
-//Можно ли использовать оружие
+//РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЂСѓР¶РёРµ
 bool LAi_tmpl_dialog_IsFight(aref chr)
 {
 	return false;
 }
 
 
-//Персонаж выполнил команду  escape
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  escape
 void LAi_tmpl_dialog_EndEscape(aref chr)
 {
 }
 
-//Персонаж скользит вдоль патча
+//РџРµСЂСЃРѕРЅР°Р¶ СЃРєРѕР»СЊР·РёС‚ РІРґРѕР»СЊ РїР°С‚С‡Р°
 void LAi_tmpl_dialog_EscapeSlide(aref chr)
 {
 }
 
-//Персонаж провалил команду  escape
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  escape
 void LAi_tmpl_dialog_FailureEscape(aref chr)
 {
 }
 
 
-//Персонаж толкается с другими персонажами
+//РџРµСЂСЃРѕРЅР°Р¶ С‚РѕР»РєР°РµС‚СЃСЏ СЃ РґСЂСѓРіРёРјРё РїРµСЂСЃРѕРЅР°Р¶Р°РјРё
 void LAi_tmpl_dialog_ColThreshold(aref chr)
 {
 }
 
-//Персонаж закончил проигрывать анимацию
+//РџРµСЂСЃРѕРЅР°Р¶ Р·Р°РєРѕРЅС‡РёР» РїСЂРѕРёРіСЂС‹РІР°С‚СЊ Р°РЅРёРјР°С†РёСЋ
 void LAi_tmpl_dialog_EndAction(aref chr)
 {
 	CharacterPlayAction(chr, "");
 }
 
 
-//Персонажа просят освободить место
+//РџРµСЂСЃРѕРЅР°Р¶Р° РїСЂРѕСЃСЏС‚ РѕСЃРІРѕР±РѕРґРёС‚СЊ РјРµСЃС‚Рѕ
 void LAi_tmpl_dialog_FreePos(aref chr, aref who)
 {
 }
 
 //------------------------------------------------------------------------------------------
-//Внутреннии функции
+//Р’РЅСѓС‚СЂРµРЅРЅРёРё С„СѓРЅРєС†РёРё
 //------------------------------------------------------------------------------------------
 
 void LAi_tmpl_dialog_updatetemplate(aref chr)
@@ -311,30 +311,30 @@ void LAi_tmpl_dialog_updatetemplate(aref chr)
 
 void LAi_tmpl_dialog_StartDialog(aref chr, aref by, float dlgTime)
 {
-	//Заполняем поля
+	//Р—Р°РїРѕР»РЅСЏРµРј РїРѕР»СЏ
 	chr.chr_ai.tmpl.dialog = by.index;
 	chr.chr_ai.tmpl.state = "wait";
 	chr.chr_ai.tmpl.dtime = "0";
 	chr.chr_ai.tmpl.dlgtime = dlgTime;
-	//Запускаем диалог
+	//Р—Р°РїСѓСЃРєР°РµРј РґРёР°Р»РѕРі
 	int idx = sti(chr.chr_ai.tmpl.dialog);
 	int my = sti(chr.index);
 	if(idx == my)
 	{
-		//Не говорим сами с собой
+		//РќРµ РіРѕРІРѕСЂРёРј СЃР°РјРё СЃ СЃРѕР±РѕР№
 		Trace("Template dialog: can't start dialog with myself!");
 		chr.chr_ai.tmpl.dlgtime = "0";
 	}
 	if(!IsEntity(&Characters[idx]))
 	{
-		//Не говорим с несущиствующим персонажем
+		//РќРµ РіРѕРІРѕСЂРёРј СЃ РЅРµСЃСѓС‰РёСЃС‚РІСѓСЋС‰РёРј РїРµСЂСЃРѕРЅР°Р¶РµРј
 		Trace("Template dialog: can't start dialog with unloaded character!");
 		chr.chr_ai.tmpl.dlgtime = "0";
 	}	
 	int mainChr = GetMainCharacterIndex();
 	if(mainChr == idx)
 	{
-		//Диалог с главным персонажем
+		//Р”РёР°Р»РѕРі СЃ РіР»Р°РІРЅС‹Рј РїРµСЂСЃРѕРЅР°Р¶РµРј
 		chr.chr_ai.tmpl.dlgtime = "-1";
 		if(!DialogMain(&Characters[my]))
 		{
@@ -344,7 +344,7 @@ void LAi_tmpl_dialog_StartDialog(aref chr, aref by, float dlgTime)
 	}else{
 		if(mainChr == my)
 		{
-			//Диалог с главным персонажем
+			//Р”РёР°Р»РѕРі СЃ РіР»Р°РІРЅС‹Рј РїРµСЂСЃРѕРЅР°Р¶РµРј
 			chr.chr_ai.tmpl.dlgtime = "-1";
 			if(!DialogMain(&Characters[idx]))
 			{
@@ -352,7 +352,7 @@ void LAi_tmpl_dialog_StartDialog(aref chr, aref by, float dlgTime)
 				chr.chr_ai.tmpl.dlgtime = "0";
 			}			
 		}else{
-			//Диалог между NPC
+			//Р”РёР°Р»РѕРі РјРµР¶РґСѓ NPC
 			if(dlgTime < 0) dlgTime = 0;
 			LAi_Character_StartDialog(&Characters[my], &Characters[idx]);
 			LAi_Character_StartDialog(&Characters[idx], &Characters[my]);

@@ -1,8 +1,8 @@
 string CITY_TEXT[7] = {
-"Parece que algún gentil caballero ayudó al astillero con algún tipo de trabajo. ¿No sería bonito si todos ayudaran a nuestra isla tanto como lo hizo ese hombre?",
-"Me he fijado en que el sastre estaba muy ocupado haciendo nuevos uniformes. Supongo que consiguió que alguien le proporcionara los materiales que necesitaba. ¿No sería maravilloso si todo el mundo fuera tan amable?",
-"Las fraguas del herrero están encendidas noche y día. No sé lo que está pasando, pero parece que el herrero no tiene escasez de suministros. Alguien debe de habérselos conseguido. ¿No sería maravilloso que todos se ayudaran mutuamente?",
+"Parece que algÃºn gentil caballero ayudÃ³ al astillero con algÃºn tipo de trabajo. Â¿No serÃ­a bonito si todos ayudaran a nuestra isla tanto como lo hizo ese hombre?",
+"Me he fijado en que el sastre estaba muy ocupado haciendo nuevos uniformes. Supongo que consiguiÃ³ que alguien le proporcionara los materiales que necesitaba. Â¿No serÃ­a maravilloso si todo el mundo fuera tan amable?",
+"Las fraguas del herrero estÃ¡n encendidas noche y dÃ­a. No sÃ© lo que estÃ¡ pasando, pero parece que el herrero no tiene escasez de suministros. Alguien debe de habÃ©rselos conseguido. Â¿No serÃ­a maravilloso que todos se ayudaran mutuamente?",
 "RESERVED FOR SHADDY JOB",
 "RESERVED FOR HIGH STATUS JOB",
-"Si, lo sería ... Adiós."
+"Si, lo serÃ­a ... AdiÃ³s."
 };

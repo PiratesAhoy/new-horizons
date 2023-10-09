@@ -1,15 +1,15 @@
 string DLG_TEXT[12] = { 
-"¡Capitán! ¡Tierra en el horizonte!",
-"¡Velas en el horizonte, capitán!",
-"¡¡¡Todos a la cubierta superior!!!",
-" ¡Preparáos para desembarcar!",
-" ¡Preparáos para luchar!",
+"Â¡CapitÃ¡n! Â¡Tierra en el horizonte!",
+"Â¡Velas en el horizonte, capitÃ¡n!",
+"Â¡Â¡Â¡Todos a la cubierta superior!!!",
+" Â¡PreparÃ¡os para desembarcar!",
+" Â¡PreparÃ¡os para luchar!",
 "No importa. Pasaremos de largo.",
 " Esta es una isla ",
 " barcos.",
 " barcos.",
-" flota pequeña",
-" ¡Arriad las velas!",
-" ¡Esperad a mi señal!",
+" flota pequeÃ±a",
+" Â¡Arriad las velas!",
+" Â¡Esperad a mi seÃ±al!",
 
 };

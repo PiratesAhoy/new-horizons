@@ -123,7 +123,7 @@ void SetShowGroup(int grNum)
 	makearef(arGroupRoot,objControlsState.keygroups);
 	arGroup = GetAttributeN(arGroupRoot,nGrReal);
 
-	// Установим название группы клавиш
+	// РЈСЃС‚Р°РЅРѕРІРёРј РЅР°Р·РІР°РЅРёРµ РіСЂСѓРїРїС‹ РєР»Р°РІРёС€
 	int showWidth = 480;
 	string tmpStr = LanguageConvertString(lngFile,GetAttributeName(arGroup));
 	int strWidth = GetStringWidth(tmpStr, FONT_NORMAL, 1.0);
@@ -133,7 +133,7 @@ void SetShowGroup(int grNum)
 		CreateString(true,"KeyGroupName",tmpStr,FONT_NORMAL,COLOR_NORMAL,320,62,SCRIPT_ALIGN_CENTER,1.0);
 	}
 
-	// Прописать контроли в список
+	// РџСЂРѕРїРёСЃР°С‚СЊ РєРѕРЅС‚СЂРѕР»Рё РІ СЃРїРёСЃРѕРє
 	DeleteAttribute(&objArrayControls,"");
 	int i, idx, tmpcolor;
 	aref arControl;
@@ -217,7 +217,7 @@ void procFTActivate()
 {
 	string nodName = GetEventData();
 	if(nodName!="CONTROLSWINDOW") return;
-	curCntrlIdx = GetEventData(); // номер текста
+	curCntrlIdx = GetEventData(); // РЅРѕРјРµСЂ С‚РµРєСЃС‚Р°
 
 	if( !IsEnableRemapping(curCntrlIdx) ) return;
 
@@ -244,8 +244,8 @@ void procFTUpdate()
 {
 	string nodName = GetEventData();
 	if(nodName!="CONTROLSWINDOW") return;
-	int grNum = GetEventData(); // первая группа в изменениях
-	int strNum = GetEventData(); // первая строка в изменениях
+	int grNum = GetEventData(); // РїРµСЂРІР°СЏ РіСЂСѓРїРїР° РІ РёР·РјРµРЅРµРЅРёСЏС…
+	int strNum = GetEventData(); // РїРµСЂРІР°СЏ СЃС‚СЂРѕРєР° РІ РёР·РјРµРЅРµРЅРёСЏС…
 
 	object objPos,obj;
 	DeleteAttribute(&objPos,"");

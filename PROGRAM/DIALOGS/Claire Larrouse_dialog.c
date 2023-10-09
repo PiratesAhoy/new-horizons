@@ -15,11 +15,11 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 
 	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
-	Preprocessor_Add("English", GetNationDescByType(GetTownNation("Greenford")));
+	Preprocessor_Add("English", XI_ConvertString(GetNationDescByType(GetTownNation("Greenford"))));
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";

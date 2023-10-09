@@ -1,6 +1,6 @@
 title=Alquimia: ensamblar el aparato
-text.t1=El esquema es:  caldera - retorta - tapa - tubo de cristal - receptáculo, en ese orden.
-text.t2=¡La caldera debe estar llena de agua!
-text.t3=Todo lo que necesito está en el cuarto del botín o en la cocina.
-text.t4=Yengo que ensamblar el aparato de destilación, supongo que debería colocar5lo en ese gran horno.
+text.t1=El esquema es:  caldera - retorta - tapa - tubo de cristal - receptÃ¡culo, en ese orden.
+text.t2=Â¡La caldera debe estar llena de agua!
+text.t3=Todo lo que necesito estÃ¡ en el cuarto del botÃ­n o en la cocina.
+text.t4=Yengo que ensamblar el aparato de destilaciÃ³n, supongo que deberÃ­a colocar5lo en ese gran horno.
 text.t5=

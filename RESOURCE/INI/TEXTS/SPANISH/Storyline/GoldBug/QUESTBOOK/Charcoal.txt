@@ -1,11 +1,11 @@
-title=Carbón vegetal
-text.t1=he fabricado carbón vegetal.
+title=CarbÃ³n vegetal
+text.t1=he fabricado carbÃ³n vegetal.
 text.t2=
-text.t3=Necesito un badil para recoger el carbón vegetal de la chimenea.
-text.t4=Va a llevar bastante tiempo. Mientras tanto, haré alguna otra cosa.
+text.t3=Necesito un badil para recoger el carbÃ³n vegetal de la chimenea.
+text.t4=Va a llevar bastante tiempo. Mientras tanto, harÃ© alguna otra cosa.
 text.t5=1. Serrar los troncos.
-text.t6=2. Cortar la leña.
+text.t6=2. Cortar la leÃ±a.
 text.t7=3. Ponerla en la chimenea.
 text.t8=4. Prenderle fuego.
-text.t9=5. Cuando haya ardido hasta convertirse en carbón, recogerlo de la chimenea.
+text.t9=5. Cuando haya ardido hasta convertirse en carbÃ³n, recogerlo de la chimenea.
 

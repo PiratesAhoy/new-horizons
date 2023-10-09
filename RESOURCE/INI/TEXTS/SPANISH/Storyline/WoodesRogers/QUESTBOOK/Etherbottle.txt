@@ -1,4 +1,4 @@
-title=Botella de éter
+title=Botella de Ã©ter
 text.t1=Tengo que encontrar esta medicina.
 text.t2=Puede encontrarse en el fumadero de opio.
-text.t3=¡Hecho!
+text.t3=Â¡Hecho!

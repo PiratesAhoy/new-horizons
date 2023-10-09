@@ -5,7 +5,7 @@ void CreateIslaMuelleCharacters(ref n)
 
 	makeref(ch, chobj);
 
-			// Sylvie Bondies  француженка на исла муэле.
+			// Sylvie Bondies  С„СЂР°РЅС†СѓР¶РµРЅРєР° РЅР° РёСЃР»Р° РјСѓСЌР»Рµ.
 	ch.nation = FRANCE;
 	ch.old.name = "Sylvie";
 	ch.old.lastname = "Bondies";
@@ -208,7 +208,7 @@ void CreateIslaMuelleCharacters(ref n)
 	ch.greeting = "Gr_Estrella";
 	AddGameCharacter(n, ch);
 	
-	//ПОРТ
+	//РџРћР Рў
 
 			// Soldier.
 	ch.nation = SPAIN;
@@ -508,7 +508,7 @@ void CreateIslaMuelleCharacters(ref n)
 	AddGameCharacter(n, ch);
 	
 	//church
-			// Padre Domingues  церковник главный.
+			// Padre Domingues  С†РµСЂРєРѕРІРЅРёРє РіР»Р°РІРЅС‹Р№.
 	ch.nation = SPAIN;
 	ch.old.name = "Padre";
 	ch.old.lastname = "Domingues";
@@ -581,7 +581,7 @@ void CreateIslaMuelleCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//residence
-			// Christofor Manuel De Alencar  губернатор.
+			// Christofor Manuel De Alencar  РіСѓР±РµСЂРЅР°С‚РѕСЂ.
 	ch.nation = SPAIN;
 	ch.old.name = "Christofor";
 	ch.old.middlename = "Manuel";

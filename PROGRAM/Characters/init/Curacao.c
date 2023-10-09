@@ -273,7 +273,7 @@ void CreateCuracaoCharacters(ref n)
 // Willemstad soldiers' IDs  are "Wil_soldier_1", etc
 
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -311,7 +311,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -349,7 +349,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -387,7 +387,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -425,7 +425,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -463,7 +463,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -501,7 +501,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -539,7 +539,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -577,7 +577,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -615,7 +615,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -653,7 +653,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -691,7 +691,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -729,7 +729,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -767,7 +767,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -806,7 +806,7 @@ void CreateCuracaoCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -844,7 +844,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -882,7 +882,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier на выходе из порта
+			//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р°
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -920,7 +920,7 @@ void CreateCuracaoCharacters(ref n)
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на выходе из порта -- еще один
+	//Soldier РЅР° РІС‹С…РѕРґРµ РёР· РїРѕСЂС‚Р° -- РµС‰Рµ РѕРґРёРЅ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";

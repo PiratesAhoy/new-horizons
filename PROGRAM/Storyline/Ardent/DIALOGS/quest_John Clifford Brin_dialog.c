@@ -15,7 +15,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -65,7 +65,7 @@ void ProcessDialogEvent()
 		case "finale_evacuate_where_is_ship":
 			TakeItemFromCharacter(PChar, "BattleOrders");
 			dialog.text = DLG_TEXT[6];
-			link.l1 = DLG_TEXT[7] + GetCharacterShipLocationName(PChar) + ".";
+			link.l1 = DLG_TEXT[7] + TranslateString("",GetCharacterShipLocationName(PChar)) + ".";
 			link.l1.go = "finale_evacuate_get_family";
 		break;
 
@@ -97,7 +97,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_new_deal":
-			Preprocessor_Add("person", PChar.sex);
+			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 			dialog.text = DLG_TEXT[17];
 			link.l1 = DLG_TEXT[18];
 			link.l1.go = "finale_new_deal_accepted";
@@ -363,7 +363,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_dont_believe_you":
-			Preprocessor_Add("person", PChar.sex);
+			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 			Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 			if (HaveLetterOfMarque(ENGLAND)) dialog.text = DLG_TEXT[71] + DLG_TEXT[73] + DLG_TEXT[74];
 			else dialog.text = DLG_TEXT[71] + DLG_TEXT[72] + DLG_TEXT[74];

@@ -6,10 +6,10 @@ void sea_aim_InitHelp()
 	string sectName = GetEventData();
 	if(sectName!="sea_aim") return;
 
-	// Заполним экран содержимым
-		// каринки
+	// Р—Р°РїРѕР»РЅРёРј СЌРєСЂР°РЅ СЃРѕРґРµСЂР¶РёРјС‹Рј
+		// РєР°СЂРёРЅРєРё
 	SetNewPicture("HELPPICTURE","interfaces\helppictures\sea_aim.tga");
-		// строки
+		// СЃС‚СЂРѕРєРё
 	int strFileID = LanguageOpenFile("helpsections\sea_aim.txt");
 	SetFormatedText("TEXTWINDOW",LanguageConvertString(strFileID,"sea_aim_info"));
 	GameInterface.strings.HelpName = LanguageConvertString(strFileID,"sea_aim_title");
@@ -21,7 +21,7 @@ void sea_aim_ResetHelp()
 	string sectName = GetEventData();
 	if(sectName!="sea_aim") return;
 
-	// Удалим с эрана все
+	// РЈРґР°Р»РёРј СЃ СЌСЂР°РЅР° РІСЃРµ
 	SetNewPicture("HELPPICTURE","");
 	SetFormatedText("TEXTWINDOW","");
 }

@@ -1,13 +1,13 @@
-CtrlPress{Pulsa 'Ctrl' para aÒadir }
-AltPress{'Alt' para aÒadir}
-ShiftPress{'Shift' para aÒadir}
+CtrlPress{Pulsa 'Ctrl' para a√±adir }
+AltPress{'Alt' para a√±adir}
+ShiftPress{'Shift' para a√±adir}
 
-SettingsDefault{°ADVERTENCIA!}
+SettingsDefault{¬°ADVERTENCIA!}
 SettingsDefaultinfo{
 
-Todas las opciones del mod volver·n a los valores por defecto.
-Perder·s todas tus preferencias personales.
-øContinuar?}
+Todas las opciones del mod volver√°n a los valores por defecto.
+Perder√°s todas tus preferencias personales.
+¬øContinuar?}
 
 profile_name{Nombre de perfil de juego}
 settingprofile_name1
@@ -16,40 +16,40 @@ Default game-profile name
 }
 settingprofile_name2
 {
-#Todas las partidas guardadas se almacenar·n con este nombre de perfil y solo podr·n cargarse desde este nombre de perfil.
+#Todas las partidas guardadas se almacenar√°n con este nombre de perfil y solo podr√°n cargarse desde este nombre de perfil.
 }
 
-REALISMMODE_0{- Modo de navegaciÛn simple, la direcciÛn del viento tiene poco efecto.
-- Los catalejos y el radar en panatalla ofrecen toda la informaciÛn.
-- Tanto la navegaciÛn en el mapa como DirectSail est·n disponibles.
-- 'Navegar hacia' y viaje r·pido estan disponibles libremente.
+REALISMMODE_0{- Modo de navegaci√≥n simple, la direcci√≥n del viento tiene poco efecto.
+- Los catalejos y el radar en panatalla ofrecen toda la informaci√≥n.
+- Tanto la navegaci√≥n en el mapa como DirectSail est√°n disponibles.
+- 'Navegar hacia' y viaje r√°pido estan disponibles libremente.
 - Puedes comandar cualquier barco y tu pistola se autorrecarga durante el combate.}
 
-REALISMMODE_1{- El viento y la inercia afectan mucho a la navegaciÛn.
-- La informaciÛn que recibes en el mar depende de los objetos que tengas equipados.
-- Tanto la navegaciÛn en el mapa como DirectSail est·n disponibles.
-- Viaje r·pido limitado solo a localizaciones ya descubiertas.
-- Los barcos m·s grandes est·n limitados seg˙n nivel de personaje, y no hay autorrecarga de pistolas durante el combate.}
+REALISMMODE_1{- El viento y la inercia afectan mucho a la navegaci√≥n.
+- La informaci√≥n que recibes en el mar depende de los objetos que tengas equipados.
+- Tanto la navegaci√≥n en el mapa como DirectSail est√°n disponibles.
+- Viaje r√°pido limitado solo a localizaciones ya descubiertas.
+- Los barcos m√°s grandes est√°n limitados seg√∫n nivel de personaje, y no hay autorrecarga de pistolas durante el combate.}
 
-REALISMMODE_2{- NavegaciÛn en el mapa totalmente desactivada.
-- TamaÒo del Caribe aumentado para hacer los viajes m·s realistas.
-- No se prooporciona informaciÛn en el mar que no sea realista.
+REALISMMODE_2{- Navegaci√≥n en el mapa totalmente desactivada.
+- Tama√±o del Caribe aumentado para hacer los viajes m√°s realistas.
+- No se prooporciona informaci√≥n en el mar que no sea realista.
 - 'Navegar hacia' totalmente desactivado.
 - Los objetos solo proprcionan mejoras de destrezas realistas.}
 
-AniOn{AnimaciÛn y texto extra}
+AniOn{Animaci√≥n y texto extra}
 
-AniOff{No AnimaciÛn ni texto}
+AniOff{No Animaci√≥n ni texto}
 
 general_game{-- OPCIONES GENERALES DE JUEGO --}
 settinggeneral_game1
 {
-# Estas son opciones que puedes modificar seg˙n tus preferencias personales, pero no est·n en general relacionadas con el realismo o la dificultad.
+# Estas son opciones que puedes modificar seg√∫n tus preferencias personales, pero no est√°n en general relacionadas con el realismo o la dificultad.
 }
-graphical{-- OPCIONES GR¡FICAS --}
+graphical{-- OPCIONES GR√ÅFICAS --}
 settinggraphical1
 {
-# Estas opciones cambian cÛmo se ve el juego, pero no influyen en las mecanicas de juego.
+# Estas opciones cambian c√≥mo se ve el juego, pero no influyen en las mecanicas de juego.
 }
 difficulty{-- OPCIONES DE DIFICULTAD --}
 settingdifficulty1
@@ -69,11 +69,11 @@ settingrealism_interface1
 realism_sea{-- OPCIONES DE REALISMO: MAR --}
 settingrealism_sea1
 {
-# Estas opciones de realismo se relacionan con la navegaciÛn en el mar, incluyendo tanto batallas navales como navegaciÛn en el mapa.
+# Estas opciones de realismo se relacionan con la navegaci√≥n en el mar, incluyendo tanto batallas navales como navegaci√≥n en el mapa.
 }
 
 
-auto_skill_system{ObtenciÛn de experiencia}
+auto_skill_system{Obtenci√≥n de experiencia}
 settingauto_skill_system1
 {
 Distribuir manualmente los puntos de destreza recibidos (PotC original).
@@ -90,7 +90,7 @@ NOTA: No se aplica a las habilidades.
 deathrate{Probabilidad de supervivencia}
 settingdeathrate1
 {
-Probabilidades de que el juego termine despuÈs de un naufragio o una derrota en combate. Si sobrevives, no tendr·s nada, convirtiendo tu aventura en un nuevo desafÌo.
+Probabilidades de que el juego termine despu√©s de un naufragio o una derrota en combate. Si sobrevives, no tendr√°s nada, convirtiendo tu aventura en un nuevo desaf√≠o.
 1 indica supervivencia segura, 130 indica muerte segura.
 }
 enable_weaponsmod{Calidades de las armas}
@@ -114,29 +114,29 @@ No (PotC original).
 }
 settingsweden_allowed2
 {
-Suecia aparece cono una naciÛn m·s en el juego.
+Suecia aparece cono una naci√≥n m√°s en el juego.
 }
 settingsweden_allowed3
 {
-# Permite la apariciÛn de Suecia como una naciÛn m·s en el juego durante las Èpocas 'El Imperio EspaÒol', 'Edad de Oro de la PiraterÌa' y 'Potencias coloniales'. 
+# Permite la aparici√≥n de Suecia como una naci√≥n m√°s en el juego durante las √©pocas 'El Imperio Espa√±ol', 'Edad de Oro de la Pirater√≠a' y 'Potencias coloniales'. 
 }
 RELATION_IGNORE_FRIENDLY{Los fuertes te ignoran si no eres hostil}
 settingRELATION_IGNORE_FRIENDLY1
 {
-Desactivado - Los fuertes y barcos te recordar·n incluso si no eres hostil.
+Desactivado - Los fuertes y barcos te recordar√°n incluso si no eres hostil.
 }
 settingRELATION_IGNORE_FRIENDLY2
 {
-Activado - Los fuertes y barcos solo te recordar·n si eres hostil.
+Activado - Los fuertes y barcos solo te recordar√°n si eres hostil.
 }
 settingRELATION_IGNORE_FRIENDLY3
 {
-# Salvo que actives esto, los fuertes te recordar·n incluso si no eres hostil. Si su naciÛn entra en guerra con la naciÛn que tienen asociada con su recuerdo de ti, te atacar·n.
+# Salvo que actives esto, los fuertes te recordar√°n incluso si no eres hostil. Si su naci√≥n entra en guerra con la naci√≥n que tienen asociada con su recuerdo de ti, te atacar√°n.
 }
-wdmap_ship_show_mode{Nivel de informaciÛn de los barcos en el mapa}
+wdmap_ship_show_mode{Nivel de informaci√≥n de los barcos en el mapa}
 settingwdmap_ship_show_mode1
 {
-Todos los barcos muestran un modelo de barco propio de su naciÛn (PotC original).
+Todos los barcos muestran un modelo de barco propio de su naci√≥n (PotC original).
 }
 settingwdmap_ship_show_mode2
 {
@@ -152,31 +152,31 @@ No se muestran los barcos en el mapa.
 }
 settingwdmap_ship_show_mode5
 {
-#   Inglaterra: BergantÌn       Francia: Fragata
-  Holanda: Filibote       EspaÒa: GaleÛn
+#   Inglaterra: Bergant√≠n       Francia: Fragata
+  Holanda: Filibote       Espa√±a: Gale√≥n
 Portugal: Carabela       Pirata: Goleta
 }
-national_paint_schemes{DiseÒos de pintura nacionales}
+national_paint_schemes{Dise√±os de pintura nacionales}
 settingnational_paint_schemes1
 {
 La pintura de casi todos los barcos es aleatoria (PotC original).
 }
 settingnational_paint_schemes2
 {
-Los diseÒos de pintura de los barcos dependen de su nacionalidad.
+Los dise√±os de pintura de los barcos dependen de su nacionalidad.
 }
 settingnational_paint_schemes3
 {
-#DiseÒos de colores distintivos para los barcos de las distitnas naciones pueden ayudar a reconocerlos desde lejos.
+#Dise√±os de colores distintivos para los barcos de las distitnas naciones pueden ayudar a reconocerlos desde lejos.
 }
-sailho_infolevel{Nivel de informaciÛn de 'Vela a la vista'}
+sailho_infolevel{Nivel de informaci√≥n de 'Vela a la vista'}
 settingsailho_infolevel1
 {
-El informe solo dice 'vela extraÒa en el horizonte'.
+El informe solo dice 'vela extra√±a en el horizonte'.
 }
 settingsailho_infolevel2
 {
-Se informa del tipo de barco pero nada m·s.
+Se informa del tipo de barco pero nada m√°s.
 }
 settingsailho_infolevel3
 {
@@ -184,57 +184,57 @@ Se informa de la nacionalidad y el tipo de barco.
 }
 settingsailho_infolevel4
 {
-#Esta opciÛn te permite aÒadir un elemento de sorpresa a tus encuentros.
+#Esta opci√≥n te permite a√±adir un elemento de sorpresa a tus encuentros.
 }
-visit_deck{Fondeo y peticiÛn de rescate}
+visit_deck{Fondeo y petici√≥n de rescate}
 settingvisit_deck1
 {
-Desembarcas directamente. Decide quÈ hacer con los cautivos en el men˙ de Pasajeros.
+Desembarcas directamente. Decide qu√© hacer con los cautivos en el men√∫ de Pasajeros.
 }
 settingvisit_deck2
 {
-Pasas primero por cubierta. Decide quÈ hacer con los cautivos hablando con ellos en la bodega.
+Pasas primero por cubierta. Decide qu√© hacer con los cautivos hablando con ellos en la bodega.
 }
 settingvisit_deck3
 {
 #Pasar por cubierta cuando viajas entre el mar y el puerto/costa.
 
-NOTA: Puedes omitir esto en cualquier momento usando el men˙ [Enter] y eligiendo 'Mar' o 'Puerto'.
+NOTA: Puedes omitir esto en cualquier momento usando el men√∫ [Enter] y eligiendo 'Mar' o 'Puerto'.
 }
-use_real_cannons{CaÒones realistas}
+use_real_cannons{Ca√±ones realistas}
 settinguse_real_cannons1
 {
-PotC original: los caÒones disparan en un ·ngulo abierto, con amplio recorrido izq-der.
+PotC original: los ca√±ones disparan en un √°ngulo abierto, con amplio recorrido izq-der.
 }
 settinguse_real_cannons2
 {
-M·s realista, fuego directo; menos recorrido izq-der.
+M√°s realista, fuego directo; menos recorrido izq-der.
 }
-extra_hit_check{ComprobaciÛn extra de impacto}
+extra_hit_check{Comprobaci√≥n extra de impacto}
 settingextra_hit_check1
 {
-No, los impactos accidentales no causar·n hostilidad.
+No, los impactos accidentales no causar√°n hostilidad.
 }
 settingextra_hit_check2
 {
-SÌ, cuando un barco recibe un impacto, se reduce tu relaciÛn con su naciÛn.
+S√≠, cuando un barco recibe un impacto, se reduce tu relaci√≥n con su naci√≥n.
 }
 settingextra_hit_check3
 {
-#Permite que las balas perdidas que acierten a barcos aliados causen hostilidad. 'CaÒones realistas' debe estar activado para que esta opcion tenga efecto.
+#Permite que las balas perdidas que acierten a barcos aliados causen hostilidad. 'Ca√±ones realistas' debe estar activado para que esta opcion tenga efecto.
 }
-cannonpowder_mod{PÛlvora para los caÒones}
+cannonpowder_mod{P√≥lvora para los ca√±ones}
 settingcannonpowder_mod1
 {
-No se requiere pÛlvora para los caÒones del barco (PotC original).
+No se requiere p√≥lvora para los ca√±ones del barco (PotC original).
 }
 settingcannonpowder_mod2
 {
-Debes tener pÛlvora en la BODEGA de tu barco para poder cargar los caÒones.
+Debes tener p√≥lvora en la BODEGA de tu barco para poder cargar los ca√±ones.
 }
 settingcannonpowder_mod3
 {
-#No confundir con el OBJETO PERSONAL 'pÛlvora', que se usa para las PISTOLAS y otras armas de fuego personales.
+#No confundir con el OBJETO PERSONAL 'p√≥lvora', que se usa para las PISTOLAS y otras armas de fuego personales.
 }
 food_on{Raciones de comida}
 settingfood_on1
@@ -243,11 +243,11 @@ Desactivado (PotC original).
 }
 settingfood_on2
 {
-La tripulaciÛn requiere comida y ron para mantenerse viva y feliz.
+La tripulaci√≥n requiere comida y ron para mantenerse viva y feliz.
 }
 settingfood_on3
 {
-#Las raciones de comida a la mitad reducen la moral. Las raciones dobles de ron aumentan la moral. Hasta que la triuplaciÛn se emborracha, claro.
+#Las raciones de comida a la mitad reducen la moral. Las raciones dobles de ron aumentan la moral. Hasta que la triuplaci√≥n se emborracha, claro.
 }
 sy_rpg_style{Disponibilidad de barcos en el astillero}
 settingsy_rpg_style1
@@ -256,24 +256,24 @@ Todos los tipos de barco pueden estar a la venta (PotC original).
 }
 settingsy_rpg_style2
 {
-Los astilleros no vender·n barcos que estÈn muy por encima del nivel del jugador.
+Los astilleros no vender√°n barcos que est√©n muy por encima del nivel del jugador.
 }
 settingsy_rpg_style3
 {
-#Si se activa, el precio de venta depende de cÛmo obtuviste el barco. Un barco apresado no se vende por tanto oro como uno previamente comprado.
+#Si se activa, el precio de venta depende de c√≥mo obtuviste el barco. Un barco apresado no se vende por tanto oro como uno previamente comprado.
 }
 realistic_ship_purchase{Compra realista de barcos}
 settingrealistic_ship_purchase1
 {
-Sin lÌmites adicionales a la hora de comprar barcos (PotC original).
+Sin l√≠mites adicionales a la hora de comprar barcos (PotC original).
 }
 settingrealistic_ship_purchase2
 {
-Ning˙n barco mayor que una fragata puede comprarse, estos barcos deben apresarse.
+Ning√∫n barco mayor que una fragata puede comprarse, estos barcos deben apresarse.
 }
 settingrealistic_ship_purchase3
 {
-# Si quieres comprar barcos grandes, necesitas tener buena relaciÛn con la naciÛn que los vende. En la mayorÌa de los casos, necesitar·s incluso cierto rango dentro de esa naciÛn. A mayor rango, mayores barcos.
+# Si quieres comprar barcos grandes, necesitas tener buena relaci√≥n con la naci√≥n que los vende. En la mayor√≠a de los casos, necesitar√°s incluso cierto rango dentro de esa naci√≥n. A mayor rango, mayores barcos.
 }
 it_rpg_style{Disponibilidad de objetos de los mercaderes}
 settingit_rpg_style1
@@ -282,28 +282,28 @@ Los jugadores pueden encontrar objetos muy buenos desde el principio del juego.
 }
 settingit_rpg_style2
 {
-Los mercaderes no vender·n objetos que sean demasiado buenos para el nivel del juegador.
+Los mercaderes no vender√°n objetos que sean demasiado buenos para el nivel del juegador.
 }
 settingit_rpg_style3
 {
 #Tener en cuenta el nivel del jugador para determinar los objetos disponibles a la venta.
 }
-persuasion_tags{Indicador de persuasiÛn}
+persuasion_tags{Indicador de persuasi√≥n}
 settingpersuasion_tags1
 {
-El indicador de persuasiÛn no aparece en los di·logos (PotC original)
+El indicador de persuasi√≥n no aparece en los di√°logos (PotC original)
 }
 settingpersuasion_tags2
 {
-Se muestra un [Indicador de persuasiÛn] en los dialogos en los que influyen las destrezas o el azar}
+Se muestra un [Indicador de persuasi√≥n] en los dialogos en los que influyen las destrezas o el azar}
 settingpersuasion_tags3
 {
-#Activa o desactiva un [Indicador de persuasiÛn] en los di·logos influidos por las destrezas del personaje o tiradas de dados aleatorias, indicando si la persuasiÛn es exitosa o no.
+#Activa o desactiva un [Indicador de persuasi√≥n] en los di√°logos influidos por las destrezas del personaje o tiradas de dados aleatorias, indicando si la persuasi√≥n es exitosa o no.
 }
 salary_multiplier{Multiplicador de salario}
 settingsalary_multiplier1
 {
-Multiplicador para el salario de la tripulaciÛn y los oficiales. 1 es el valor original de PotC. 4 o mas hace el juego mas interesante y desafiante.
+Multiplicador para el salario de la tripulaci√≥n y los oficiales. 1 es el valor original de PotC. 4 o mas hace el juego mas interesante y desafiante.
 }
 kb_tuneships{Modificar barcos}
 settingkb_tuneships1
@@ -314,65 +314,65 @@ settingkb_tuneships2
 {
 Se pueden mejorar los barcos en los astilleros.
 }
-enable_ammomod{MuniciÛn y pÛlvora}
+enable_ammomod{Munici√≥n y p√≥lvora}
 settingenable_ammomod1
 {
-No hace falta municiÛn para las armas de fuego personales (PotC original).
+No hace falta munici√≥n para las armas de fuego personales (PotC original).
 }
 settingenable_ammomod2
 {
-Necesitas tener pÛlvora y el tipo adecuado de balas en tu INVENTARIO PERSONAL para cargar las armas de fuego personales.
+Necesitas tener p√≥lvora y el tipo adecuado de balas en tu INVENTARIO PERSONAL para cargar las armas de fuego personales.
 }
 settingenable_ammomod3
 {
-# No confundir con la pÛlvora para los CA—ONES del barco, que se almacena en la bodega.
+# No confundir con la p√≥lvora para los CA√ëONES del barco, que se almacena en la bodega.
 }
-corpsemode{Saquear cad·veres}
+corpsemode{Saquear cad√°veres}
 settingcorpsemode1
 {
 Los cuerpos no permanecen, no se pueden saquear (PotC original).
 }
 settingcorpsemode2
 {
-Los cad·veres permanecen pero no pueden ser saqueados manualmente.
+Los cad√°veres permanecen pero no pueden ser saqueados manualmente.
 }
 settingcorpsemode3
 {
-Los cad·veres permanecen y sus objetos pueden ser saqueados.
+Los cad√°veres permanecen y sus objetos pueden ser saqueados.
 }
 settingcorpsemode4
 {
-Los cad·veres permanecen, sus objetos pueden ser saqueados y no obstruyen el camino.
+Los cad√°veres permanecen, sus objetos pueden ser saqueados y no obstruyen el camino.
 }
 settingcorpsemode5
 {
-#ADEVERTENCIA: Con la opciÛn 3, el cuerpo crear· un obst·culo infranqueable hasta ser saqueado.
+#ADEVERTENCIA: Con la opci√≥n 3, el cuerpo crear√° un obst√°culo infranqueable hasta ser saqueado.
 }
 autoloot_on{Autosaqueo}
 settingautoloot_on1
 {
-No hay saqueo autom·tico de los personajes muertos.
+No hay saqueo autom√°tico de los personajes muertos.
 }
 settingautoloot_on2
 {
-Espada/Arma de fuego/Dinero de los enemigos muertos se mueven autom·ticamente a tu inventario.
+Espada/Arma de fuego/Dinero de los enemigos muertos se mueven autom√°ticamente a tu inventario.
 }
 settingautoloot_on3
 {
-#Esto puede combinarse con la opciÛn de 'Saquear cad·veres', ya que cualquier objeto que no sea autosaqueado se quedar· en el cuerpo.
+#Esto puede combinarse con la opci√≥n de 'Saquear cad√°veres', ya que cualquier objeto que no sea autosaqueado se quedar√° en el cuerpo.
 }
-dialog_camera{C·mara de di·logo}
+dialog_camera{C√°mara de di√°logo}
 settingdialog_camera1
 {
-0.0: La c·mara queda centrada detr·s del personaje (PotC original).
+0.0: La c√°mara queda centrada detr√°s del personaje (PotC original).
 }
 settingdialog_camera2
 {
-0.1 a 1.0: La c·mara se mover· hacia el lado de los personajes.
+0.1 a 1.0: La c√°mara se mover√° hacia el lado de los personajes.
 }
 settingdialog_camera3
 {
-#NOTA: El valor m·ximo no es apropiado para todas las localizaciones.
+#NOTA: El valor m√°ximo no es apropiado para todas las localizaciones.
 }
 enable_brothel{Acceso al burdel}
 settingenable_brothel1
@@ -385,7 +385,7 @@ Localizacion accesible.
 }
 settingenable_brothel3
 {
-#Un poco explÌcito, pero solo de palabra.
+#Un poco expl√≠cito, pero solo de palabra.
 NOTA: Se requiere para ciertas historias.
 }
 enable_buildingset{BuildingSet}
@@ -405,42 +405,42 @@ NOTA: Puede que los edificios brillen por la noche y que puedas atravesar sus pa
 no_theft{Carterismo}
 settingno_theft1
 {
-Ahora puedes vaciar los bolsillos a la gente. Pero es arriesgado y otros ladrones tambiÈn pueden vaciar TU bolsillo. Cuanto m·s alto sea el valor, m·s seguro estar· tu bolsillo frente a los ladrones. Por encima de 30 nadie vaciar· TUS bolsillos, por encima de 60 tu tampoco puedes robar.
+Ahora puedes vaciar los bolsillos a la gente. Pero es arriesgado y otros ladrones tambi√©n pueden vaciar TU bolsillo. Cuanto m√°s alto sea el valor, m√°s seguro estar√° tu bolsillo frente a los ladrones. Por encima de 30 nadie vaciar√° TUS bolsillos, por encima de 60 tu tampoco puedes robar.
 }
 lock_open{Cerraduras de cofres}
 settinglock_open1
 {
-Necesitas cierta destreza para forzar la cerradura de un cofre. Y algunos pueden contener trampas. Por encima de 33 no recibes daÒo, por encima de 66 los cofres est·n siempre abiertos.
+Necesitas cierta destreza para forzar la cerradura de un cofre. Y algunos pueden contener trampas. Por encima de 33 no recibes da√±o, por encima de 66 los cofres est√°n siempre abiertos.
 }
-loc_camera{C·mara de puerta}
+loc_camera{C√°mara de puerta}
 settingloc_camera1
 {
-La c·mara permanece centrada detr·s del jugador.
+La c√°mara permanece centrada detr√°s del jugador.
 }
 settingloc_camera2
 {
-La c·mara gira para centrarse en el personaje de frente (PotC original).
+La c√°mara gira para centrarse en el personaje de frente (PotC original).
 }
 settingloc_camera3
 {
-#Comportamiento de la c·mara cunado el jugador se acerca a una puerta.
+#Comportamiento de la c√°mara cuando el jugador se acerca a una puerta.
 }
-onsea_compass{Apariencia de la br˙jula}
+onsea_compass{Apariencia de la br√∫jula}
 settingonsea_compass1
 {
 Simple rosa de los vientos azul (PotC original).
 }
 settingonsea_compass2
 {
-Br˙jula naranja transparente.
+Br√∫jula naranja transparente.
 }
 settingonsea_compass3
 {
-Br˙jula historica de latÛn.
+Br√∫jula historica de lat√≥n.
 }
 settingonsea_compass4
 {
-#CÛmo aparece la br˙jula en la interfaz de batalla naval.
+#C√≥mo aparece la br√∫jula en la interfaz de batalla naval.
 }
 default_sails{Velas nacionales}
 settingdefault_sails1
@@ -449,7 +449,7 @@ PotC original: Todos los barcos llevan velas blancas, con emblemas.
 }
 settingdefault_sails2
 {
-Recomendada: Todos los barcos llevan velas desgastadas, solo emblemas histÛricos.
+Recomendada: Todos los barcos llevan velas desgastadas, solo emblemas hist√≥ricos.
 }
 settingdefault_sails3
 {
@@ -457,7 +457,7 @@ Todos los barcos llevan velas desgastadas, con emblemas.
 }
 settingdefault_sails4
 {
-Todos los barcos llevan velas en blanco puro, solo emblemas histÛricos.
+Todos los barcos llevan velas en blanco puro, solo emblemas hist√≥ricos.
 }
 settingdefault_sails5
 {

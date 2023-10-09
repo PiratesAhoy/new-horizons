@@ -1,6 +1,6 @@
 title=Alquimia: abrir la cerradura de cobre
 text.t1=Tengo que encontrar algo que disuelva el cobre.
-text.t2=He diluido ácido sulfúrico, ¡y puede disolver el cobre!
+text.t2=He diluido Ã¡cido sulfÃºrico, Â¡y puede disolver el cobre!
 text.t3= 
 text.t4=
 text.t5=

@@ -1,4 +1,4 @@
-Список виртуальных клавиш взят из MSDN, значения шестнадцатиричные.
+РЎРїРёСЃРѕРє РІРёСЂС‚СѓР°Р»СЊРЅС‹С… РєР»Р°РІРёС€ РІР·СЏС‚ РёР· MSDN, Р·РЅР°С‡РµРЅРёСЏ С€РµСЃС‚РЅР°РґС†Р°С‚РёСЂРёС‡РЅС‹Рµ.
 List of virtual key codes from MSDN, values are hex.
 
 
@@ -258,7 +258,7 @@ Y key
 Z key
 
 VK_LWIN (5B)
-Left Windows key (Microsoft® Natural® keyboard) 
+Left Windows key (MicrosoftВ® NaturalВ® keyboard) 
 
 VK_RWIN (5C)
 Right Windows key (Natural keyboard)

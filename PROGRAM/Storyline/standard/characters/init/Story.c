@@ -4,7 +4,7 @@ void CreateStoryCharacters(ref n)
 	ref ch;
 	makeref(ch, chobj);
 
-	//Vincent Bethune - убийца, нанятый губернатором.
+	//Vincent Bethune - СѓР±РёР№С†Р°, РЅР°РЅСЏС‚С‹Р№ РіСѓР±РµСЂРЅР°С‚РѕСЂРѕРј.
 	ch.old.name = "Vincent";
 	ch.old.lastname = "Bethune";
 	ch.name = TranslateString("","Vincent");
@@ -49,7 +49,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-	//Командующий английской эскадрой в архипелаге.
+	//РљРѕРјР°РЅРґСѓСЋС‰РёР№ Р°РЅРіР»РёР№СЃРєРѕР№ СЌСЃРєР°РґСЂРѕР№ РІ Р°СЂС…РёРїРµР»Р°РіРµ.
 	ch.old.name = "Waulter";
 	ch.old.lastname = "Tomlison";
 	ch.name = TranslateString("","Waulter");
@@ -80,7 +80,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "10";
 	ch.skill.Sneak = "10";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Vengeance";
+	ch.Ship.Name = TranslateString("","Vengeance");
 //	ch.Ship.Type = "Battleship3"; // PRS3 // KK
 	ch.Ship.Type = "Battleship4"; // GR - the AoP battleship is back!
 	ch.Ship.Stopped = true;
@@ -101,7 +101,7 @@ void CreateStoryCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			//Капитаны Французских кораблей, захвативших Оксбэй (капитан батлшипа).
+			//РљР°РїРёС‚Р°РЅС‹ Р¤СЂР°РЅС†СѓР·СЃРєРёС… РєРѕСЂР°Р±Р»РµР№, Р·Р°С…РІР°С‚РёРІС€РёС… РћРєСЃР±СЌР№ (РєР°РїРёС‚Р°РЅ Р±Р°С‚Р»С€РёРїР°).
 	ch.old.name = "Remy";
 	ch.old.lastname = "Gatien";
 	ch.name = TranslateString("","Remy");
@@ -142,7 +142,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 2; // TIH: wont give up easily
-	ch.Ship.Name = "Belette";
+	ch.Ship.Name = TranslateString("","Belette");
 	ch.Ship.Type = "HMS_Centurion"; // Armada
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
@@ -163,7 +163,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Капитаны Французских кораблей, захвативших Оксбэй (Капитан фрегата).
+			//РљР°РїРёС‚Р°РЅС‹ Р¤СЂР°РЅС†СѓР·СЃРєРёС… РєРѕСЂР°Р±Р»РµР№, Р·Р°С…РІР°С‚РёРІС€РёС… РћРєСЃР±СЌР№ (РљР°РїРёС‚Р°РЅ С„СЂРµРіР°С‚Р°).
 	ch.old.name = "Yves";
 	ch.old.lastname = "Giner";
 	ch.name = TranslateString("","Yves");
@@ -204,7 +204,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "Clйopвtre";
+	ch.Ship.Name = TranslateString("","ClР№opРІtre");
 	ch.Ship.Type = "FR_Frigate"; // Armada
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;
@@ -226,7 +226,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Капитаны Французских кораблей, захвативших Оксбэй (капитан брига).
+			//РљР°РїРёС‚Р°РЅС‹ Р¤СЂР°РЅС†СѓР·СЃРєРёС… РєРѕСЂР°Р±Р»РµР№, Р·Р°С…РІР°С‚РёРІС€РёС… РћРєСЃР±СЌР№ (РєР°РїРёС‚Р°РЅ Р±СЂРёРіР°).
 	ch.old.name = "Begon";
 	ch.old.lastname = "Monchaty";
 	ch.name = TranslateString("","Begon");
@@ -267,7 +267,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "Sйmillante";
+	ch.Ship.Name = TranslateString("","SР№millante");
 	ch.Ship.Type = "RN_Corvette"; // Armada
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS16;
@@ -331,7 +331,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "Fleuron";
+	ch.Ship.Name = TranslateString("","Fleuron");
 	ch.Ship.Type = "FR_Fleuron"; // GR: was "FR_SoleilRoyal" // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
@@ -393,7 +393,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "Arsinoe";
+	ch.Ship.Name = TranslateString("","Arsinoe");
 	ch.Ship.Type = "FR_Boussole"; // GR: was "FR_WarGalleon // Thomas the Terror
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;
@@ -456,7 +456,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "l'Entreprise";
+	ch.Ship.Name = TranslateString("","l'Entreprise");
 	ch.Ship.Type = "RN_RaaFrigate"; // GR: was "FR_Derfflinger"
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS16;
@@ -479,7 +479,7 @@ void CreateStoryCharacters(ref n)
 	AddGameCharacter(n, ch);
 // <-- KK
 
-			//Капитаны Французских кораблей, захвативших Оксбэй (капитан шхуны).
+			//РљР°РїРёС‚Р°РЅС‹ Р¤СЂР°РЅС†СѓР·СЃРєРёС… РєРѕСЂР°Р±Р»РµР№, Р·Р°С…РІР°С‚РёРІС€РёС… РћРєСЃР±СЌР№ (РєР°РїРёС‚Р°РЅ С€С…СѓРЅС‹).
 	ch.old.name = "Abelard";
 	ch.old.lastname = "Tarnaud";
 	ch.name = TranslateString("","Abelard");
@@ -509,7 +509,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Alouette";
+	ch.Ship.Name = TranslateString("","Alouette");
 	ch.Ship.Type = "Schooner1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -532,7 +532,7 @@ void CreateStoryCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			//Капитаны Французских кораблей, захвативших Оксбэй (капитан шлюпа).
+			//РљР°РїРёС‚Р°РЅС‹ Р¤СЂР°РЅС†СѓР·СЃРєРёС… РєРѕСЂР°Р±Р»РµР№, Р·Р°С…РІР°С‚РёРІС€РёС… РћРєСЃР±СЌР№ (РєР°РїРёС‚Р°РЅ С€Р»СЋРїР°).
 	ch.old.name = "Wigayn";
 	ch.old.lastname = "Ratel";
 	ch.name = TranslateString("","Wigayn");
@@ -562,7 +562,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Friponne";
+	ch.Ship.Name = TranslateString("","Friponne");
 	ch.Ship.Type = "Lugger1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -584,7 +584,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				//Рауль Реймс
+				//Р Р°СѓР»СЊ Р РµР№РјСЃ
 	ch.old.name = "Raoul";
 	ch.old.lastname = "Rheims";
 	ch.name = TranslateString("","Raoul");
@@ -622,7 +622,7 @@ void CreateStoryCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-				//Валентин Массони - офицер, которого Блэйз спаивает для получения сведений о французской эскадре
+				//Р’Р°Р»РµРЅС‚РёРЅ РњР°СЃСЃРѕРЅРё - РѕС„РёС†РµСЂ, РєРѕС‚РѕСЂРѕРіРѕ Р‘Р»СЌР№Р· СЃРїР°РёРІР°РµС‚ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ СЃРІРµРґРµРЅРёР№ Рѕ С„СЂР°РЅС†СѓР·СЃРєРѕР№ СЌСЃРєР°РґСЂРµ
 	ch.old.name = "Valentin";
 	ch.old.lastname = "Massoni";
 	ch.name = TranslateString("","Valentin");
@@ -662,7 +662,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Defence = "1";
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
-	ch.ship.name = "Aurora";
+	ch.ship.name = TranslateString("","Aurora");
 	ch.money = "10";
 	LAi_SetSitType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -672,7 +672,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				//Эмиль Беранжере, капитан брига, который должен сопровождать барк "Ойсу" на Оксбэй
+				//Р­РјРёР»СЊ Р‘РµСЂР°РЅР¶РµСЂРµ, РєР°РїРёС‚Р°РЅ Р±СЂРёРіР°, РєРѕС‚РѕСЂС‹Р№ РґРѕР»Р¶РµРЅ СЃРѕРїСЂРѕРІРѕР¶РґР°С‚СЊ Р±Р°СЂРє "РћР№СЃСѓ" РЅР° РћРєСЃР±СЌР№
 	ch.old.name = "Amiel";
 	ch.old.lastname = "Berangere";
 	ch.name = TranslateString("","Amiel");
@@ -712,7 +712,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				//Фауст Гаске - матрос с барка "Ойсу". Ждет Блэйза в порту, чтобы начать с ним разговор.
+				//Р¤Р°СѓСЃС‚ Р“Р°СЃРєРµ - РјР°С‚СЂРѕСЃ СЃ Р±Р°СЂРєР° "РћР№СЃСѓ". Р–РґРµС‚ Р‘Р»СЌР№Р·Р° РІ РїРѕСЂС‚Сѓ, С‡С‚РѕР±С‹ РЅР°С‡Р°С‚СЊ СЃ РЅРёРј СЂР°Р·РіРѕРІРѕСЂ.
 	ch.old.name = "Faust";
 	ch.old.lastname = "Gasquet";
 	ch.name = TranslateString("","Faust");
@@ -747,7 +747,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//капитан барка Oiseau
+			//РєР°РїРёС‚Р°РЅ Р±Р°СЂРєР° Oiseau
 	ch.old.name = "Virgile";
 	ch.old.lastname = "Boon";
 	ch.name = TranslateString("","Virgile");
@@ -781,7 +781,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.quest.guard_protection = true; // PB
-	ch.Ship.Name = "Oiseau";
+	ch.Ship.Name = TranslateString("","Oiseau");
 	ch.Ship.Type = "Barque1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -799,7 +799,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			// Агент перевозимый Дэниель в захваченный Оксбэй
+			// РђРіРµРЅС‚ РїРµСЂРµРІРѕР·РёРјС‹Р№ Р”СЌРЅРёРµР»СЊ РІ Р·Р°С…РІР°С‡РµРЅРЅС‹Р№ РћРєСЃР±СЌР№
 	ch.old.name = "Tobias";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Tobias");
@@ -837,7 +837,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//капитан шлюпа Albion
+			//РєР°РїРёС‚Р°РЅ С€Р»СЋРїР° Albion
 	ch.old.name = "Ewan";
 	ch.old.lastname = "Glover";
 	ch.name = TranslateString("","Ewan");
@@ -867,7 +867,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Albion";
+	ch.Ship.Name = TranslateString("","Albion");
 	ch.Ship.Type = "BrigRoyal"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -879,7 +879,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//местный житель, который должен провести игрока к пещере на Оксбэе.
+			//РјРµСЃС‚РЅС‹Р№ Р¶РёС‚РµР»СЊ, РєРѕС‚РѕСЂС‹Р№ РґРѕР»Р¶РµРЅ РїСЂРѕРІРµСЃС‚Рё РёРіСЂРѕРєР° Рє РїРµС‰РµСЂРµ РЅР° РћРєСЃР±СЌРµ.
 	ch.old.name = "Wilfred";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Wilfred");
@@ -916,7 +916,7 @@ void CreateStoryCharacters(ref n)
 	LAi_NoRebirthEnable(ch);
 	AddGameCharacter(n, ch);
 
-			//Английские солдаты, высадившиеся на Оксбэе вместе с Блэйзом
+			//РђРЅРіР»РёР№СЃРєРёРµ СЃРѕР»РґР°С‚С‹, РІС‹СЃР°РґРёРІС€РёРµСЃСЏ РЅР° РћРєСЃР±СЌРµ РІРјРµСЃС‚Рµ СЃ Р‘Р»СЌР№Р·РѕРј
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -954,7 +954,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Английские солдаты, высадившиеся на Оксбэе вместе с Блэйзом
+			//РђРЅРіР»РёР№СЃРєРёРµ СЃРѕР»РґР°С‚С‹, РІС‹СЃР°РґРёРІС€РёРµСЃСЏ РЅР° РћРєСЃР±СЌРµ РІРјРµСЃС‚Рµ СЃ Р‘Р»СЌР№Р·РѕРј
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -992,7 +992,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Английские солдаты, высадившиеся на Оксбэе вместе с Блэйзом
+			//РђРЅРіР»РёР№СЃРєРёРµ СЃРѕР»РґР°С‚С‹, РІС‹СЃР°РґРёРІС€РёРµСЃСЏ РЅР° РћРєСЃР±СЌРµ РІРјРµСЃС‚Рµ СЃ Р‘Р»СЌР№Р·РѕРј
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -1030,7 +1030,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Английские солдаты, высадившиеся на Оксбэе вместе с Блэйзом
+			//РђРЅРіР»РёР№СЃРєРёРµ СЃРѕР»РґР°С‚С‹, РІС‹СЃР°РґРёРІС€РёРµСЃСЏ РЅР° РћРєСЃР±СЌРµ РІРјРµСЃС‚Рµ СЃ Р‘Р»СЌР№Р·РѕРј
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -1068,7 +1068,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Английские солдаты, высадившиеся на Оксбэе вместе с Блэйзом
+			//РђРЅРіР»РёР№СЃРєРёРµ СЃРѕР»РґР°С‚С‹, РІС‹СЃР°РґРёРІС€РёРµСЃСЏ РЅР° РћРєСЃР±СЌРµ РІРјРµСЃС‚Рµ СЃ Р‘Р»СЌР№Р·РѕРј
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -1106,7 +1106,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Английские солдаты, высадившиеся на Оксбэе вместе с Блэйзом
+			//РђРЅРіР»РёР№СЃРєРёРµ СЃРѕР»РґР°С‚С‹, РІС‹СЃР°РґРёРІС€РёРµСЃСЏ РЅР° РћРєСЃР±СЌРµ РІРјРµСЃС‚Рµ СЃ Р‘Р»СЌР№Р·РѕРј
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -1145,7 +1145,7 @@ void CreateStoryCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			//Французский патруль, нападающий на игрока на месте высадки
+			//Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РїР°С‚СЂСѓР»СЊ, РЅР°РїР°РґР°СЋС‰РёР№ РЅР° РёРіСЂРѕРєР° РЅР° РјРµСЃС‚Рµ РІС‹СЃР°РґРєРё
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1183,7 +1183,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Французский патруль, нападающий на игрока на месте высадки
+			//Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РїР°С‚СЂСѓР»СЊ, РЅР°РїР°РґР°СЋС‰РёР№ РЅР° РёРіСЂРѕРєР° РЅР° РјРµСЃС‚Рµ РІС‹СЃР°РґРєРё
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1221,7 +1221,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Французский патруль, нападающий на игрока на месте высадки
+			//Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РїР°С‚СЂСѓР»СЊ, РЅР°РїР°РґР°СЋС‰РёР№ РЅР° РёРіСЂРѕРєР° РЅР° РјРµСЃС‚Рµ РІС‹СЃР°РґРєРё
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1259,7 +1259,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Французский патруль, нападающий на игрока на месте высадки
+			//Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РїР°С‚СЂСѓР»СЊ, РЅР°РїР°РґР°СЋС‰РёР№ РЅР° РёРіСЂРѕРєР° РЅР° РјРµСЃС‚Рµ РІС‹СЃР°РґРєРё
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1297,7 +1297,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Французский патруль, нападающий на игрока на месте высадки
+			//Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РїР°С‚СЂСѓР»СЊ, РЅР°РїР°РґР°СЋС‰РёР№ РЅР° РёРіСЂРѕРєР° РЅР° РјРµСЃС‚Рµ РІС‹СЃР°РґРєРё
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1335,7 +1335,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Французский патруль, нападающий на игрока на месте высадки
+			//Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РїР°С‚СЂСѓР»СЊ, РЅР°РїР°РґР°СЋС‰РёР№ РЅР° РёРіСЂРѕРєР° РЅР° РјРµСЃС‚Рµ РІС‹СЃР°РґРєРё
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1374,7 +1374,7 @@ void CreateStoryCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			//Солдаты, пытающиеся арестовать игрока и шпиона
+			//РЎРѕР»РґР°С‚С‹, РїС‹С‚Р°СЋС‰РёРµСЃСЏ Р°СЂРµСЃС‚РѕРІР°С‚СЊ РёРіСЂРѕРєР° Рё С€РїРёРѕРЅР°
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1413,7 +1413,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Солдаты, пытающиеся арестовать игрока и шпиона
+			//РЎРѕР»РґР°С‚С‹, РїС‹С‚Р°СЋС‰РёРµСЃСЏ Р°СЂРµСЃС‚РѕРІР°С‚СЊ РёРіСЂРѕРєР° Рё С€РїРёРѕРЅР°
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1452,7 +1452,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Солдаты, пытающиеся арестовать игрока и шпиона
+			//РЎРѕР»РґР°С‚С‹, РїС‹С‚Р°СЋС‰РёРµСЃСЏ Р°СЂРµСЃС‚РѕРІР°С‚СЊ РёРіСЂРѕРєР° Рё С€РїРёРѕРЅР°
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1490,7 +1490,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Вторая группа солдат, зашедшая в верфь.
+			//Р’С‚РѕСЂР°СЏ РіСЂСѓРїРїР° СЃРѕР»РґР°С‚, Р·Р°С€РµРґС€Р°СЏ РІ РІРµСЂС„СЊ.
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1528,7 +1528,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Вторая группа солдат, зашедшая в верфь.
+			//Р’С‚РѕСЂР°СЏ РіСЂСѓРїРїР° СЃРѕР»РґР°С‚, Р·Р°С€РµРґС€Р°СЏ РІ РІРµСЂС„СЊ.
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1567,7 +1567,7 @@ void CreateStoryCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			//Вторая группа солдат, зашедшая в верфь.
+			//Р’С‚РѕСЂР°СЏ РіСЂСѓРїРїР° СЃРѕР»РґР°С‚, Р·Р°С€РµРґС€Р°СЏ РІ РІРµСЂС„СЊ.
 	ch.old.name = "French Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","French Soldier");
@@ -1605,7 +1605,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Французский офицер, готовый продать свой корабль.
+			//Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РѕС„РёС†РµСЂ, РіРѕС‚РѕРІС‹Р№ РїСЂРѕРґР°С‚СЊ СЃРІРѕР№ РєРѕСЂР°Р±Р»СЊ.
 	ch.old.name = "Rabel";
 	ch.old.lastname = "Yverneau";
 	ch.name = TranslateString("","Rabel");
@@ -1635,7 +1635,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	ch.Ship.Name = "La Boussole"; // Seb
+	ch.Ship.Name = TranslateString("","La Boussole"); // Seb
 	ch.Ship.Type = "FR_Boussole"; // Seb
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -1647,7 +1647,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//персонаж для временного хранения корабля.
+			//РїРµСЂСЃРѕРЅР°Р¶ РґР»СЏ РІСЂРµРјРµРЅРЅРѕРіРѕ С…СЂР°РЅРµРЅРёСЏ РєРѕСЂР°Р±Р»СЏ.
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1733,7 +1733,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	ch.Ship.Name = "Amorale";
+	ch.Ship.Name = TranslateString("","Amorale");
 	ch.Ship.Type = "Pinnace2"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS12;
@@ -1745,7 +1745,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Недруг того пирата, что отдал Блэйзу шебеку
+			//РќРµРґСЂСѓРі С‚РѕРіРѕ РїРёСЂР°С‚Р°, С‡С‚Рѕ РѕС‚РґР°Р» Р‘Р»СЌР№Р·Сѓ С€РµР±РµРєСѓ
 	ch.old.name = "Sidonio";
 	ch.old.lastname = "Ogarrio";
 	ch.name = TranslateString("","Sidonio");
@@ -1784,7 +1784,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Солдат, дежурящий на маяке после ареста изобретателя.
+			//РЎРѕР»РґР°С‚, РґРµР¶СѓСЂСЏС‰РёР№ РЅР° РјР°СЏРєРµ РїРѕСЃР»Рµ Р°СЂРµСЃС‚Р° РёР·РѕР±СЂРµС‚Р°С‚РµР»СЏ.
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -1824,7 +1824,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Солдат, дежурящий на маяке после ареста изобретателя.
+			//РЎРѕР»РґР°С‚, РґРµР¶СѓСЂСЏС‰РёР№ РЅР° РјР°СЏРєРµ РїРѕСЃР»Рµ Р°СЂРµСЃС‚Р° РёР·РѕР±СЂРµС‚Р°С‚РµР»СЏ.
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -1864,7 +1864,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Солдат, дежурящий на маяке после ареста изобретателя.
+			//РЎРѕР»РґР°С‚, РґРµР¶СѓСЂСЏС‰РёР№ РЅР° РјР°СЏРєРµ РїРѕСЃР»Рµ Р°СЂРµСЃС‚Р° РёР·РѕР±СЂРµС‚Р°С‚РµР»СЏ.
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -1903,7 +1903,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Солдат, дежурящий на маяке после ареста изобретателя.
+			//РЎРѕР»РґР°С‚, РґРµР¶СѓСЂСЏС‰РёР№ РЅР° РјР°СЏРєРµ РїРѕСЃР»Рµ Р°СЂРµСЃС‚Р° РёР·РѕР±СЂРµС‚Р°С‚РµР»СЏ.
 	ch.old.name = "English Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","English Soldier");
@@ -1942,7 +1942,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Солдат, дежурящий на маяке после ареста изобретателя.
+			//РЎРѕР»РґР°С‚, РґРµР¶СѓСЂСЏС‰РёР№ РЅР° РјР°СЏРєРµ РїРѕСЃР»Рµ Р°СЂРµСЃС‚Р° РёР·РѕР±СЂРµС‚Р°С‚РµР»СЏ.
 	ch.old.name = "Lieutenant";
 	ch.old.lastname = "Harris";
 	ch.name = TranslateString("","Lieutenant");
@@ -1984,7 +1984,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Капитаны Английской эскадры, штурмующей Гринфорд
+			//РљР°РїРёС‚Р°РЅС‹ РђРЅРіР»РёР№СЃРєРѕР№ СЌСЃРєР°РґСЂС‹, С€С‚СѓСЂРјСѓСЋС‰РµР№ Р“СЂРёРЅС„РѕСЂРґ
 	ch.old.name = "Malcolm";
 	ch.old.lastname = "Hart";
 	ch.name = TranslateString("","Malcolm");
@@ -2014,7 +2014,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Desperate";
+	ch.Ship.Name = TranslateString("","Desperate");
 	ch.Ship.Type = "RN_Battleship"; // Thomas the Terror
 	ch.Ship.Stopped = true;
 	ch.nosurrender = 1;
@@ -2032,7 +2032,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Капитаны Английской эскадры, штурмующей Гринфорд
+			//РљР°РїРёС‚Р°РЅС‹ РђРЅРіР»РёР№СЃРєРѕР№ СЌСЃРєР°РґСЂС‹, С€С‚СѓСЂРјСѓСЋС‰РµР№ Р“СЂРёРЅС„РѕСЂРґ
 	ch.old.name = "Henry";
 	ch.old.lastname = "Banfield";
 	ch.name = TranslateString("","Henry");
@@ -2062,7 +2062,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Monarch";
+	ch.Ship.Name = TranslateString("","Monarch");
 //	ch.Ship.Type = "RN_Essex"; // Thomas the Terror
 	ch.Ship.Type = "RN_Battleship"; // GR: "RN_Essex" belongs to "Napoleonic" period, so "Monarch" is another basic battleship
 	ch.Ship.Stopped = true;
@@ -2081,7 +2081,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Капитаны Английской эскадры, штурмующей Гринфорд
+			//РљР°РїРёС‚Р°РЅС‹ РђРЅРіР»РёР№СЃРєРѕР№ СЌСЃРєР°РґСЂС‹, С€С‚СѓСЂРјСѓСЋС‰РµР№ Р“СЂРёРЅС„РѕСЂРґ
 	ch.old.name = "Wauter";
 	ch.old.lastname = "Keech";
 	ch.name = TranslateString("","Wauter");
@@ -2110,7 +2110,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Black Prince";
+	ch.Ship.Name = TranslateString("","Black Prince");
 	ch.Ship.Type = "RN_Corvette"; // Thomas the Terror
 	ch.skipRM = true; // PB: Skip Relations Mod
 	ch.Ship.Stopped = true;
@@ -2128,7 +2128,7 @@ void CreateStoryCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 
-			//Капитаны Английской эскадры, штурмующей Гринфорд
+			//РљР°РїРёС‚Р°РЅС‹ РђРЅРіР»РёР№СЃРєРѕР№ СЌСЃРєР°РґСЂС‹, С€С‚СѓСЂРјСѓСЋС‰РµР№ Р“СЂРёРЅС„РѕСЂРґ
 	ch.old.name = "Lewellyn";
 	ch.old.lastname = "Belt";
 	ch.name = TranslateString("","Lewellyn");
@@ -2157,7 +2157,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Meleager";
+	ch.Ship.Name = TranslateString("","Meleager");
 //	ch.Ship.Type = "RN_Essex"; // Thomas the Terror
 	ch.Ship.Type = "Frigate1"; // "RN_Essex" belongs to "Napoleonic" period, so use a "Kreyser" class instead
 	ch.Ship.Stopped = true;
@@ -2175,7 +2175,7 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-			//Пираты, перехватывающие игрока у Каэль Роа.
+			//РџРёСЂР°С‚С‹, РїРµСЂРµС…РІР°С‚С‹РІР°СЋС‰РёРµ РёРіСЂРѕРєР° Сѓ РљР°СЌР»СЊ Р РѕР°.
 	ch.old.name = "Thomas";
 	ch.old.lastname = "Norton";
 	ch.name = TranslateString("","Thomas");
@@ -2204,7 +2204,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Tremendous";
+	ch.Ship.Name = TranslateString("","Tremendous");
 //	ch.Ship.Type = "RN_Brig"; // Thomas the Terror
 	ch.Ship.Type = "BrigSW1"; // GR: all the other pirates now have piratey ships so give this guy the scary pirate brig
 	ch.Ship.Stopped = true;
@@ -2220,7 +2220,7 @@ void CreateStoryCharacters(ref n)
 	LAi_NoRebirthEnable(ch);
 	AddGameCharacter(n, ch);
 
-			//Пираты, перехватывающие игрока у Каэль Роа.
+			//РџРёСЂР°С‚С‹, РїРµСЂРµС…РІР°С‚С‹РІР°СЋС‰РёРµ РёРіСЂРѕРєР° Сѓ РљР°СЌР»СЊ Р РѕР°.
 	ch.old.name = "Brian";
 	ch.old.lastname = "The Slayer";
 	ch.name = TranslateString("","Brian");
@@ -2249,7 +2249,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
-	ch.Ship.Name = "Bato";
+	ch.Ship.Name = TranslateString("","Bato");
 //	ch.Ship.Type = "FastGalleon2"; // KK
 	ch.Ship.Type = "CrimsonBlood"; // GR - "FastGalleon2" should not exist in this time period, use pirate version of corvette instead
 	ch.Ship.Stopped = true;
@@ -2284,7 +2284,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.group = "goto";
 	ch.location.locator = "goto6";
 	ch.Dialog.Filename = "Ferro Cerezo_dialog.c";
-	ch.Ship.Name = "Demetra";
+	ch.Ship.Name = TranslateString("","Demetra");
 	ch.Ship.Type = "Pinnace2"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
@@ -2398,7 +2398,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Defence = "1";
 	ch.skill.Commerce = "10";
 	ch.skill.Sneak = "0";
-	ch.Ship.Name = "Sovereign of the Seas";
+	ch.Ship.Name = TranslateString("","Sovereign of the Seas");
 	ch.Ship.Type = "Manowar1";
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod

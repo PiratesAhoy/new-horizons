@@ -1,13 +1,13 @@
 string DLG_TEXT[10] = {
-"#ssir#, ¿no te acuerdas de mí?",
+"#ssir#, Â¿no te acuerdas de mÃ­?",
 "Humm... Francamente, no.",
-"Soy un marinero del barco de Nigel Blythe. Él se amotinó y navegó hasta aquí en busca de su antigua tripulación. La idea de servir bajo su mando no me atraía, así que me he quedado en tierra.",
-"¡Qué suerte! ¿Nigel sigue aquí?",
+"Soy un marinero del barco de Nigel Blythe. Ã‰l se amotinÃ³ y navegÃ³ hasta aquÃ­ en busca de su antigua tripulaciÃ³n. La idea de servir bajo su mando no me atraÃ­a, asÃ­ que me he quedado en tierra.",
+"Â¡QuÃ© suerte! Â¿Nigel sigue aquÃ­?",
 "No, ya se ha ido. Hace unas cinco o seis horas.",
-"¡Maldición!",
-"Tal vez su antiguo contramaestre, Clauss, sabe adónde fue. No se llevaban bien, y ahora Claus está metido hasta el cuello en deudas y está trabajando para el dueño de la tienda.",
-"¡Grandes noticias! Ya conoces mi barco. Les diré que te apunten en el rol. Siempre me viene bien un buen marinero.",
-"¡Oh, gracias, gracias, #ssir#!",
+"Â¡MaldiciÃ³n!",
+"Tal vez su antiguo contramaestre, Clauss, sabe adÃ³nde fue. No se llevaban bien, y ahora Claus estÃ¡ metido hasta el cuello en deudas y estÃ¡ trabajando para el dueÃ±o de la tienda.",
+"Â¡Grandes noticias! Ya conoces mi barco. Les dirÃ© que te apunten en el rol. Siempre me viene bien un buen marinero.",
+"Â¡Oh, gracias, gracias, #ssir#!",
 "De nada.",
 
 };

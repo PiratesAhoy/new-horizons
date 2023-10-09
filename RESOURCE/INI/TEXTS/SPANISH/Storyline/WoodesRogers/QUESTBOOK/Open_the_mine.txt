@@ -1,6 +1,6 @@
 title=Abrir la mina
-text.t1=El señor Pope, el contramaestre, exige oro puro para abrir la mina.
-text.t2=Hay un cofre, ¿pero cómo llego hasta él?
-text.t3=¡Sí! Ahora está abierto, pero ya no puedo ver el cofre...
-text.t4=También me ha diocho que se puede encontrar ron en la despensa.
+text.t1=El seÃ±or Pope, el contramaestre, exige oro puro para abrir la mina.
+text.t2=Hay un cofre, Â¿pero cÃ³mo llego hasta Ã©l?
+text.t3=Â¡SÃ­! Ahora estÃ¡ abierto, pero ya no puedo ver el cofre...
+text.t4=TambiÃ©n me ha diocho que se puede encontrar ron en la despensa.
 text.t5=

@@ -1,7 +1,7 @@
 /*
-Тип: Бедняг
+РўРёРї: Р‘РµРґРЅСЏРі
 
-	Используемые шаблоны:
+	РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С€Р°Р±Р»РѕРЅС‹:
 		stay
 		dialog
 		ani
@@ -222,7 +222,7 @@ void LAi_type_stunned_Init(aref chr)
 	DeleteAttribute(chr, "chr_ai.type");
 	chr.chr_ai.type = LAI_TYPE_STUNNED;
 	LAi_tmpl_stay_InitTemplate(chr);
-	//Установим анимацию персонажу
+	//РЈСЃС‚Р°РЅРѕРІРёРј Р°РЅРёРјР°С†РёСЋ РїРµСЂСЃРѕРЅР°Р¶Сѓ
 	LAi_SetDefaultStayAnimation(chr);
 	BeginChangeCharacterActions(chr);
 
@@ -303,7 +303,7 @@ void LAi_CharacterBecameStunned()
 }
 //MAXIMUS: [for nice-showing this process only] <--
 
-//Процессирование типа персонажа
+//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С‚РёРїР° РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_type_stunned_CharacterUpdate(aref chr, float dltTime)
 {
 
@@ -390,67 +390,67 @@ void LAi_type_stunned_CharacterUpdate(aref chr, float dltTime)
 
 }
 
-//Загрузка персонажа в локацию
+//Р—Р°РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РІ Р»РѕРєР°С†РёСЋ
 bool LAi_type_stunned_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Выгрузка персонажа из локацию
+//Р’С‹РіСЂСѓР·РєР° РїРµСЂСЃРѕРЅР°Р¶Р° РёР· Р»РѕРєР°С†РёСЋ
 bool LAi_type_stunned_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Завершение работы темплейта
+//Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ С‚РµРјРїР»РµР№С‚Р°
 void LAi_type_stunned_TemplateComplite(aref chr, string tmpl)
 {
 }
 
-//Сообщить о желании завести диалог
+//РЎРѕРѕР±С‰РёС‚СЊ Рѕ Р¶РµР»Р°РЅРёРё Р·Р°РІРµСЃС‚Рё РґРёР°Р»РѕРі
 void LAi_type_stunned_NeedDialog(aref chr, aref by)
 {
 }
 
-//Запрос на диалог, если возвратить true то в этот момент можно начать диалог
+//Р—Р°РїСЂРѕСЃ РЅР° РґРёР°Р»РѕРі, РµСЃР»Рё РІРѕР·РІСЂР°С‚РёС‚СЊ true С‚Рѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
 bool LAi_type_stunned_CanDialog(aref chr, aref by)
 {
-	//Если уже говорим, то откажем
+	//Р•СЃР»Рё СѓР¶Рµ РіРѕРІРѕСЂРёРј, С‚Рѕ РѕС‚РєР°Р¶РµРј
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY) return true;
-	//Согласимся на диалог
+	//РЎРѕРіР»Р°СЃРёРјСЃСЏ РЅР° РґРёР°Р»РѕРі
 	 return true;	// ccc special weapon kit, changed from false, so that you can rob even enemies 
 }
 
-//Начать диалог
+//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
 void LAi_type_stunned_StartDialog(aref chr, aref by)
 {
-	//Если мы пасивны, запускаем шаблон без времени завершения
+	//Р•СЃР»Рё РјС‹ РїР°СЃРёРІРЅС‹, Р·Р°РїСѓСЃРєР°РµРј С€Р°Р±Р»РѕРЅ Р±РµР· РІСЂРµРјРµРЅРё Р·Р°РІРµСЂС€РµРЅРёСЏ
 	LAi_tmpl_SetActivatedDialog(chr, by);
 }
 
-//Закончить диалог
+//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
 void LAi_type_stunned_EndDialog(aref chr, aref by)
 {
 	LAi_tmpl_stay_InitTemplate(chr);
 }
 
-//Персонаж атаковал другого персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°Р» РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_type_stunned_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 }
 
-//Персонаж атоковал заблокировавшегося персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚РѕРєРѕРІР°Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РІС€РµРіРѕСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_type_stunned_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 }
 
-//Персонаж выстрелил
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹СЃС‚СЂРµР»РёР»
 void LAi_type_stunned_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 }
 
 
-//Персонаж атакован
+//РџРµСЂСЃРѕРЅР°Р¶ Р°С‚Р°РєРѕРІР°РЅ
 void LAi_type_stunned_Attacked(aref chr, aref by)
 {
 	// ccc building kit dec05, to stop npcs hacking at corpses

@@ -429,7 +429,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	//  -------------------------------------------------
 	Locations[n].id = "Hit_house2";
-	Locations[n].id.label = "House of Amérigo Vieira";		//spell-checked by KAM
+	Locations[n].id.label = "House of AmÃ©rigo Vieira";		//spell-checked by KAM
 	Locations[n].filespath.models = "Locations\Inside\Doubleflour_house";
 	Locations[n].image = "Inside_Doubleflour_House_Hitman.tga";
 
@@ -866,7 +866,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	//  -------------------------------------------------
 	Locations[n].id = "Cartagena_hotel_private";
-	locations[n].id.label = "Private";
+	locations[n].id.label = "Private room";
 //	Locations[n].image = "GB_hotel_room.tga";
 	Locations[n].image = "Inside_Doubleflour_House_Room.tga";
 

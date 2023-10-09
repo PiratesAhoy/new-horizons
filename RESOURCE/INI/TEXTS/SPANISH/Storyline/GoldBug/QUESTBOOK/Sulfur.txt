@@ -1,6 +1,6 @@
 title=Azufre
 text.t1=He fabricado azufre.
-text.t2=Destilar el azufre va a llevar un tiempo. Haré alguna otra cosa mientras tanto.
+text.t2=Destilar el azufre va a llevar un tiempo. HarÃ© alguna otra cosa mientras tanto.
 text.t3=
 text.t4=Necesito una caja para recoger el polvo de pirita.
 text.t5=1. Colocar piedras de pirita sobre las tablas.

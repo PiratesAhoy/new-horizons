@@ -2137,7 +2137,7 @@ void QuestComplete(string sQuestName)
 
 		case "Now_get_to_see_Petros_house":
 			Pchar.Quest.Captured_on_Guadeloupe.over = "yes";
-			ChangeCharacterAddress(characterFromID("François de Vigny"), "None", "");
+			ChangeCharacterAddress(characterFromID("FranÃ§ois de Vigny"), "None", "");
 			ChangeCharacterAddressGroup(characterFromID("Konrad Kulczycki"),"Guadeloupe_Plantation_inside", "goto", "goto5");
 			ChangeCharacterAddressGroup(characterFromID("Petros"),"Guadeloupe_Plantation_inside", "sit", "sit1");
 			LAi_SetSitType(characterfromID("Petros"));
@@ -3115,12 +3115,12 @@ void QuestComplete(string sQuestName)
 			// PB: Normal temporary characters -->
 
 			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, true, 1.0, "mummy", "goto", "citizen01");
-			sld.name = "Heumac";
+			sld.name = TranslateString("","Heumac");
 			sld.lastname = "";
 			LAi_group_MoveCharacter(sld, "MUERTA_ENEMIES");
 
 			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, true, 1.0, "mummy", "goto", "locator13");
-			sld.name = "Tezcacoatl";
+			sld.name = TranslateString("","Tezcacoatl");
 			sld.lastname = "";
 			LAi_group_MoveCharacter(sld, "MUERTA_ENEMIES");
 
@@ -5363,8 +5363,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Tortuga_Get_ready_for_Film3":
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			PChar.name = TranslateString("","Jack");
+			PChar.lastname = TranslateString("","Sparrow");
 			GiveModel2Player("Jack",true);
 			SetCurrentTime(14.00, 0);
 
@@ -6294,8 +6294,8 @@ void QuestComplete(string sQuestName)
 
 		case "Dauntless_Deck_NORR":
 			SetModelfromArray(PChar, GetModelIndex("Conorrington"));
-			PChar.name = "James";
-			PChar.lastname = "Norrington";
+			PChar.name = TranslateString("","James");
+			PChar.lastname = TranslateString("","Norrington");
 
 			pchar.sailaway = true;
 			SetCharacterShipLocation(characterFromID("Port Guard"), "none");
@@ -6749,8 +6749,8 @@ void QuestComplete(string sQuestName)
 			GiveShip2Character(pchar, SHIP_CURSED, TranslateString(PreprocessText("#scursed_ship#"), ""),-1,PIRATE,true,true);
 			AddCharacterGoods(pchar, GOOD_GUNPOWDER, 5000);
 			// PB: Become Barbossa -->
-			PChar.name = "Hector";
-			PChar.lastname = "Barbossa";
+			PChar.name = TranslateString("","Hector");
+			PChar.lastname = TranslateString("","Barbossa");
 			GiveModel2Player("Barbossa",true);
 			PChar.Flags.Pirate = 0; // PB: Jack Rackham Pirate Flag (used by Barbossa)
 			PChar.Flags.Pirate.texture = 0;
@@ -8814,7 +8814,7 @@ void QuestComplete(string sQuestName)
 //			AddQuestRecord("Contact", 13);
 			AddQuestRecord("Contact", 15);	// GR: Line 13 is about Marigot governor.  Line 15 is about Tia Dalma.
 			CloseQuestHeader("Contact");
-		//END OF Justine Le Moigne’s Disappearance
+		//END OF Justine Le Moigneâ€™s Disappearance
 		break;
 
 		case "reload_to_sea_after_davy":

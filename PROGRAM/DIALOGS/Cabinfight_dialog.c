@@ -152,7 +152,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
+		// -----------------------------------Ð”Ð¸Ð°Ð»Ð¾Ð³ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ - Ð¿ÐµÑ€Ð²Ð°Ñ Ð²ÑÑ‚Ñ€ÐµÑ‡Ð°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -797,7 +797,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 				if(stuff_idx >= 0) stuff_given = stuff_given + " " + XI_ConvertString("and") + " " + XI_ConvertString("a") + " " + TranslateString("",Items[stuff_idx].name);
 				else stuff_given = stuff_given + ", INVALID GUN '" + NPGun + "'";
 			}
-			traceandlog(TranslateString("","You got ") + stuff_given + ".");
+			traceandlog(TranslateString("","You got") + " " + stuff_given + ".");
 
 			switch(Rand(1))
 		    	{
@@ -945,7 +945,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			} // MAXIMUS 28.07.2006 [so, these sections were removed from Reinit.c] <--
 			bCrewCaptured = true;// sets a global
 			realCrew = GetCrewQuantity(PChar);
-			dialog.text = DLG_TEXT[96];
+			dialog.text = DLG_TEXT[97];
 			if(bAllowRelease) // TIH allow to release free Aug24'06
 			{
 				link.l1 = DLG_TEXT[71];

@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------|иалог первый - первая встреча
+		// -----------------------------------|РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "Gov_Dialog_1";
 			Dialog.ani = "Gov_Dialog_2";

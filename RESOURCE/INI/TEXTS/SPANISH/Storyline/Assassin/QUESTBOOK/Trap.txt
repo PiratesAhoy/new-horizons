@@ -1,16 +1,16 @@
 title=La trampa de Bartolomeu
-text.t1=He tenido que aceptar una nueva misiÛn, a pesar de que no tenÌa ninguna gana, despuÈs de lo que pasÛ en Oranjestad. Mi prÛximo objetivo es Bartolomeu o Portugues, el cÈlebre pirata luso. El capit·n Butcher ya le est· buscando. Tengo que verme con Èl en #sIsla Muelle#.
-text.t2=Una pista, por fin. El capit·n Butcher cree que sÛlo tenemos que encontrar a un amigo de Charles Baxter en el asentamiento pirata de #sisland_Quebradas Costillas# para que nos conduzca en direcciÛn a Bartolomeu.
-text.t3=El capit·n Butcher tenÌa razÛn. Hemos encontrado a un antiguo compaÒero de tripulaciÛn de Baxter en el asentamiento pirata. Me ha dicho que Bartolomeu ha estado trabajando para el gobernador de #sisland_Conceicao#. Con toda certeza, encontraremos m·s informaciÛn en #sConceicao#. EmpezarÈ mi b˙squeda allÌ hablando con el tabernero.
-text.t4=He capturado a uno de los oficiales de Bartolomeu, Emilio Soares. Sin embargo, no sÈ dÛnde est· Bartolomeu. VolverÈ a La Habana a pedirle consejo al vicealmirante Benavides.
-text.t5=El vicealmirante me ha proporcionado una informaciÛn esencial. Roxanne Lalliere, la mejor amiga de Bartolomeu, est· en una misiÛn en Alice Town. Sin embargo, antes de dirigirme allÌ, tengo que reunirme con el gobernador de Puerto la Cruz. Su ayuda podrÌa resultar ˙til.
-text.t6=El gobernador me ha sugerido que hable con William Cotter, un oficial inglÈs que trabaja para Èl. PodrÌa ayudarnos con el secuestro de Lalliere. DeberÌa poder encontrarlo patrullando las calles de Alice Town.
-text.t7=Por la noche, mientras estaba en el fuerte de Eleuthera, sorprendÌ a Bartolomeu tratando de liberar de la prisiÛn a Roxanne Lalliere. DespuÈs de tener una charla, aceptÈ su oferta de asociarnos, y los tres salimos discretamente del fuerte. Por desgracia, nos encontramos con Padilla y sus hombres en la jungla. Todos han muerto en combate. Ahora podemos dirigirnos a Alice Town.
-text.t8=PrÛxima escala, La Habana. Emilio est· encarcelado allÌ. Desembarcaremos en la BahÌa de San Antonio.
-text.t9=DespuÈs de rescatar a Emilio Soares, matÈ al vicealmirante Benavides cuando entraba en su residencia. Pongamos rumbo a #sRedmond# para decidir nuestro futuro.
+text.t1=He tenido que aceptar una nueva misi√≥n, a pesar de que no ten√≠a ninguna gana, despu√©s de lo que pas√≥ en Oranjestad. Mi pr√≥ximo objetivo es Bartolomeu o Portugues, el c√©lebre pirata luso. El capit√°n Butcher ya le est√° buscando. Tengo que verme con √©l en #sIsla Muelle#.
+text.t2=Una pista, por fin. El capit√°n Butcher cree que s√≥lo tenemos que encontrar a un amigo de Charles Baxter en el asentamiento pirata de #sisland_Quebradas Costillas# para que nos conduzca en direcci√≥n a Bartolomeu.
+text.t3=El capit√°n Butcher ten√≠a raz√≥n. Hemos encontrado a un antiguo compa√±ero de tripulaci√≥n de Baxter en el asentamiento pirata. Me ha dicho que Bartolomeu ha estado trabajando para el gobernador de #sisland_Conceicao#. Con toda certeza, encontraremos m√°s informaci√≥n en #sConceicao#. Empezar√© mi b√∫squeda all√≠ hablando con el tabernero.
+text.t4=He capturado a uno de los oficiales de Bartolomeu, Emilio Soares. Sin embargo, no s√© d√≥nde est√° Bartolomeu. Volver√© a La Habana a pedirle consejo al vicealmirante Benavides.
+text.t5=El vicealmirante me ha proporcionado una informaci√≥n esencial. Roxanne Lalliere, la mejor amiga de Bartolomeu, est√° en una misi√≥n en Alice Town. Sin embargo, antes de dirigirme all√≠, tengo que reunirme con el gobernador de Puerto la Cruz. Su ayuda podr√≠a resultar √∫til.
+text.t6=El gobernador me ha sugerido que hable con William Cotter, un oficial ingl√©s que trabaja para √©l. Podr√≠a ayudarnos con el secuestro de Lalliere. Deber√≠a poder encontrarlo patrullando las calles de Alice Town.
+text.t7=Por la noche, mientras estaba en el fuerte de Eleuthera, sorprend√≠ a Bartolomeu tratando de liberar de la prisi√≥n a Roxanne Lalliere. Despu√©s de tener una charla, acept√© su oferta de asociarnos, y los tres salimos discretamente del fuerte. Por desgracia, nos encontramos con Padilla y sus hombres en la jungla. Todos han muerto en combate. Ahora podemos dirigirnos a Alice Town.
+text.t8=Pr√≥xima escala, La Habana. Emilio est√° encarcelado all√≠. Desembarcaremos en la Bah√≠a de San Antonio.
+text.t9=Despu√©s de rescatar a Emilio Soares, mat√© al vicealmirante Benavides cuando entraba en su residencia. Pongamos rumbo a #sRedmond# para decidir nuestro futuro.
 text.t10=Roxanne ha regresado a #sFalaise de Fleur# mientras Bartolomeu ha zarpado en busca de nuevas aventuras. Por mi parte, he decidido empezar una nueva vida en #sisland_Douwesen#.
-text.t11=Por la noche, mientras estaba en el fuerte de Eleuthera, sorprendÌ a Bartolomeu tratando de liberar a Roxanne Lalliere de la prisiÛn. No logrÛ convencerme de abandonar mis servicios a los espaÒoles, y tuve que matarlo. Poco despuÈs llegÛ el capit·n Padilla, con Ûrdenes de regresar a La Habana lo antes posible.
-text.t12=°Por fin soy un hombre libre! Esta pesadilla ha terminado y puedo vivir mi vida como yo quiera.
+text.t11=Por la noche, mientras estaba en el fuerte de Eleuthera, sorprend√≠ a Bartolomeu tratando de liberar a Roxanne Lalliere de la prisi√≥n. No logr√≥ convencerme de abandonar mis servicios a los espa√±oles, y tuve que matarlo. Poco despu√©s lleg√≥ el capit√°n Padilla, con √≥rdenes de regresar a La Habana lo antes posible.
+text.t12=¬°Por fin soy un hombre libre! Esta pesadilla ha terminado y puedo vivir mi vida como yo quiera.
 
  
 

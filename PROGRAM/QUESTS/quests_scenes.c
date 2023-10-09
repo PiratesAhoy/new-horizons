@@ -1,6 +1,6 @@
 /*===================================================================**
-		Типы исполняемых команд и их параметры:
-	- "sass","gotopoint", <референс на персонажа>, <имя группы локаторов>, <имя локатора>
+		РўРёРїС‹ РёСЃРїРѕР»РЅСЏРµРјС‹С… РєРѕРјР°РЅРґ Рё РёС… РїР°СЂР°РјРµС‚СЂС‹:
+	- "sass","gotopoint", <СЂРµС„РµСЂРµРЅСЃ РЅР° РїРµСЂСЃРѕРЅР°Р¶Р°>, <РёРјСЏ РіСЂСѓРїРїС‹ Р»РѕРєР°С‚РѕСЂРѕРІ>, <РёРјСЏ Р»РѕРєР°С‚РѕСЂР°>
 **===================================================================*/
 
 #define SCENES_TIMEOUT		90.0
@@ -24,7 +24,7 @@ void procQuestSceneCommand()
 	aref	arTask;
 	switch(command_name)
 	{
-	// идти к локатору (задаем имя группы и имя локатора)
+	// РёРґС‚Рё Рє Р»РѕРєР°С‚РѕСЂСѓ (Р·Р°РґР°РµРј РёРјСЏ РіСЂСѓРїРїС‹ Рё РёРјСЏ Р»РѕРєР°С‚РѕСЂР°)
 	case "gotopoint": // "ssass"
 		s1 = GetEventData();
 		s2 = GetEventData();
@@ -34,13 +34,13 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// принять нормальную стойку в небоевом режиме (нет параметров)
+	// РїСЂРёРЅСЏС‚СЊ РЅРѕСЂРјР°Р»СЊРЅСѓСЋ СЃС‚РѕР№РєСѓ РІ РЅРµР±РѕРµРІРѕРј СЂРµР¶РёРјРµ (РЅРµС‚ РїР°СЂР°РјРµС‚СЂРѕРІ)
 	case "stay": // "ssa"
 		arTask = PushSceneTask(arCharacter,"Stay");
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// бежать к локатору (задаем имя группы и имя локатора)
+	// Р±РµР¶Р°С‚СЊ Рє Р»РѕРєР°С‚РѕСЂСѓ (Р·Р°РґР°РµРј РёРјСЏ РіСЂСѓРїРїС‹ Рё РёРјСЏ Р»РѕРєР°С‚РѕСЂР°)
 	case "runtopoint": // "ssass"
 		s1 = GetEventData();
 		s2 = GetEventData();
@@ -50,7 +50,7 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// подойти к персонажу (задаем идентификатор персонажа)
+	// РїРѕРґРѕР№С‚Рё Рє РїРµСЂСЃРѕРЅР°Р¶Сѓ (Р·Р°РґР°РµРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂСЃРѕРЅР°Р¶Р°)
 	case "followcharacter": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"Follow character");
@@ -59,7 +59,7 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// бить персонажа (задаем идентификатор персонажа)
+	// Р±РёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р° (Р·Р°РґР°РµРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂСЃРѕРЅР°Р¶Р°)
 	case "fight": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"Fight");
@@ -68,7 +68,7 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// спасаться от персонажа (задаем идентификатор персонажа)
+	// СЃРїР°СЃР°С‚СЊСЃСЏ РѕС‚ РїРµСЂСЃРѕРЅР°Р¶Р° (Р·Р°РґР°РµРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂСЃРѕРЅР°Р¶Р°)
 	case "escape": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"Escape");
@@ -77,13 +77,13 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// умереть (без параметров), но персонаж не умирает в действительности и остается в данной локации
+	// СѓРјРµСЂРµС‚СЊ (Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ), РЅРѕ РїРµСЂСЃРѕРЅР°Р¶ РЅРµ СѓРјРёСЂР°РµС‚ РІ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚Рё Рё РѕСЃС‚Р°РµС‚СЃСЏ РІ РґР°РЅРЅРѕР№ Р»РѕРєР°С†РёРё
 	case "dead": // "ssa"
 		arTask = PushSceneTask(arCharacter,"Dead");
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// повернуться к другому персонажу (задаем идентификатор персонажа)
+	// РїРѕРІРµСЂРЅСѓС‚СЊСЃСЏ Рє РґСЂСѓРіРѕРјСѓ РїРµСЂСЃРѕРЅР°Р¶Сѓ (Р·Р°РґР°РµРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂСЃРѕРЅР°Р¶Р°)
 	case "TurnByCharacter": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"TurnByCharacter");
@@ -92,7 +92,7 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// повернуться по локатору (задаем имена группы и локатора)
+	// РїРѕРІРµСЂРЅСѓС‚СЊСЃСЏ РїРѕ Р»РѕРєР°С‚РѕСЂСѓ (Р·Р°РґР°РµРј РёРјРµРЅР° РіСЂСѓРїРїС‹ Рё Р»РѕРєР°С‚РѕСЂР°)
 	case "TurnByLocator": // "ssass"
 		s1 = GetEventData();
 		s2 = GetEventData();
@@ -102,7 +102,7 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// поговорить с другим персонажем (задаем идентификатор персонажа)
+	// РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РґСЂСѓРіРёРј РїРµСЂСЃРѕРЅР°Р¶РµРј (Р·Р°РґР°РµРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂСЃРѕРЅР°Р¶Р°)
 	case "Dialog": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"Dialog");
@@ -111,13 +111,13 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// закончить квестовый ролик (без параметров), в смысле разблокировать управление и перегрузку
+	// Р·Р°РєРѕРЅС‡РёС‚СЊ РєРІРµСЃС‚РѕРІС‹Р№ СЂРѕР»РёРє (Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ), РІ СЃРјС‹СЃР»Рµ СЂР°Р·Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ СѓРїСЂР°РІР»РµРЅРёРµ Рё РїРµСЂРµРіСЂСѓР·РєСѓ
 	case "EndQuestMovie": // "ssa"
 		arTask = PushSceneTask(arCharacter,"EndQuestMovie");
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// проиграть анимацию для персонажа (задаем имя анимации)
+	// РїСЂРѕРёРіСЂР°С‚СЊ Р°РЅРёРјР°С†РёСЋ РґР»СЏ РїРµСЂСЃРѕРЅР°Р¶Р° (Р·Р°РґР°РµРј РёРјСЏ Р°РЅРёРјР°С†РёРё)
 	case "action": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"Action");
@@ -125,15 +125,15 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// проигрывать анимацию для персонажа в цикле (задаем имя типа анимации: "stay" - стоять,
-	// "fightStand" - стоять в режиме боя, "sit" - сидеть , либо имя анимации в остальных случаях )
+	// РїСЂРѕРёРіСЂС‹РІР°С‚СЊ Р°РЅРёРјР°С†РёСЋ РґР»СЏ РїРµСЂСЃРѕРЅР°Р¶Р° РІ С†РёРєР»Рµ (Р·Р°РґР°РµРј РёРјСЏ С‚РёРїР° Р°РЅРёРјР°С†РёРё: "stay" - СЃС‚РѕСЏС‚СЊ,
+	// "fightStand" - СЃС‚РѕСЏС‚СЊ РІ СЂРµР¶РёРјРµ Р±РѕСЏ, "sit" - СЃРёРґРµС‚СЊ , Р»РёР±Рѕ РёРјСЏ Р°РЅРёРјР°С†РёРё РІ РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС… )
 	case "loopAction": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"loopAction");
 		arTask.action = s1;
 		return;
 	break;
-	// Поместить в руку саблю (задаем флаг перереключения сабли: true - есть сабля, false - нет ее)
+	// РџРѕРјРµСЃС‚РёС‚СЊ РІ СЂСѓРєСѓ СЃР°Р±Р»СЋ (Р·Р°РґР°РµРј С„Р»Р°Рі РїРµСЂРµСЂРµРєР»СЋС‡РµРЅРёСЏ СЃР°Р±Р»Рё: true - РµСЃС‚СЊ СЃР°Р±Р»СЏ, false - РЅРµС‚ РµРµ)
 	case "BladeToHand": // "ssal"
 		b1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"BladeToHand");
@@ -141,7 +141,7 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// Исчезнуть и переместиться в другую локацию (задаем имя новой локации и локатора)
+	// РСЃС‡РµР·РЅСѓС‚СЊ Рё РїРµСЂРµРјРµСЃС‚РёС‚СЊСЃСЏ РІ РґСЂСѓРіСѓСЋ Р»РѕРєР°С†РёСЋ (Р·Р°РґР°РµРј РёРјСЏ РЅРѕРІРѕР№ Р»РѕРєР°С†РёРё Рё Р»РѕРєР°С‚РѕСЂР°)
 	case "Teleport": // "ssasss"
 		s1 = GetEventData();
 		s2 = GetEventData();
@@ -153,7 +153,7 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// перегрузиться в локацию (задаем имя локации, группу и имя локатора)
+	// РїРµСЂРµРіСЂСѓР·РёС‚СЊСЃСЏ РІ Р»РѕРєР°С†РёСЋ (Р·Р°РґР°РµРј РёРјСЏ Р»РѕРєР°С†РёРё, РіСЂСѓРїРїСѓ Рё РёРјСЏ Р»РѕРєР°С‚РѕСЂР°)
 	case "ReloadToLocation": // "ssasss"
 		s1 = GetEventData();
 		s2 = GetEventData();
@@ -165,42 +165,42 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// подождать пока пройдет заданное число секунд (задаем число секунд, использовать число типа float)
+	// РїРѕРґРѕР¶РґР°С‚СЊ РїРѕРєР° РїСЂРѕР№РґРµС‚ Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЃРµРєСѓРЅРґ (Р·Р°РґР°РµРј С‡РёСЃР»Рѕ СЃРµРєСѓРЅРґ, РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С‡РёСЃР»Рѕ С‚РёРїР° float)
 	case "TimeWait": // "ssaf"
 		f1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"TimeWait");
 		arTask.time = MakeInt(f1*1000.0);
 		return;
 	break;
-	// сделать фэйд экрана и добавить игровое время на заданное число минут (задаем число игровых минут, число типа int)
+	// СЃРґРµР»Р°С‚СЊ С„СЌР№Рґ СЌРєСЂР°РЅР° Рё РґРѕР±Р°РІРёС‚СЊ РёРіСЂРѕРІРѕРµ РІСЂРµРјСЏ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ РјРёРЅСѓС‚ (Р·Р°РґР°РµРј С‡РёСЃР»Рѕ РёРіСЂРѕРІС‹С… РјРёРЅСѓС‚, С‡РёСЃР»Рѕ С‚РёРїР° int)
 	case "TimeFade": // "ssal"
 		i1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"TimeFade");
 		arTask.time = i1;
 		return;
 	break;
-	// Установили групповую атаку (задаем имя группы за которую борется персонаж)
+	// РЈСЃС‚Р°РЅРѕРІРёР»Рё РіСЂСѓРїРїРѕРІСѓСЋ Р°С‚Р°РєСѓ (Р·Р°РґР°РµРј РёРјСЏ РіСЂСѓРїРїС‹ Р·Р° РєРѕС‚РѕСЂСѓСЋ Р±РѕСЂРµС‚СЃСЏ РїРµСЂСЃРѕРЅР°Р¶)
 	case "AttackGroup": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"AttackGroup");
 		arTask.group = s1;
 		return;
 	break;
-	// проиграть музыку (задаем имя музыкального файла)
+	// РїСЂРѕРёРіСЂР°С‚СЊ РјСѓР·С‹РєСѓ (Р·Р°РґР°РµРј РёРјСЏ РјСѓР·С‹РєР°Р»СЊРЅРѕРіРѕ С„Р°Р№Р»Р°)
 	case "PlayMusic": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"PlayMusic");
 		arTask.name = s1;
 		return;
 	break;
-	// проиграть звук (задаем имя файла озвучки)
+	// РїСЂРѕРёРіСЂР°С‚СЊ Р·РІСѓРє (Р·Р°РґР°РµРј РёРјСЏ С„Р°Р№Р»Р° РѕР·РІСѓС‡РєРё)
 	case "PlayMusic": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"PlaySound");
 		arTask.name = s1;
 		return;
 	break;
-	// включить исполнение последовательности задач для другого персонажа (задаем идентификатор персонажа)
+	// РІРєР»СЋС‡РёС‚СЊ РёСЃРїРѕР»РЅРµРЅРёРµ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё Р·Р°РґР°С‡ РґР»СЏ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° (Р·Р°РґР°РµРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂСЃРѕРЅР°Р¶Р°)
 	case "StartTaskForOtherChar": // "ssas"
 		s1 = GetEventData();
 		arTask = PushSceneTask(arCharacter,"StartTaskForOtherChar");
@@ -209,7 +209,7 @@ void procQuestSceneCommand()
 		if(QuestCheckName!="") arTask.QuestCheck = QuestCheckName;
 		return;
 	break;
-	// остановить исполнение потока задач для текущего персонажа
+	// РѕСЃС‚Р°РЅРѕРІРёС‚СЊ РёСЃРїРѕР»РЅРµРЅРёРµ РїРѕС‚РѕРєР° Р·Р°РґР°С‡ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 	case "StopTask": // "ssa"
 		if( GetLastTask(arCharacter,&arTask) )	arTask.StopTask = true;
 		return;
@@ -312,7 +312,7 @@ void StartSceneExecute(aref character)
 	int i;
 	scnref.Executing = "1";
 
-	// Персонаж становиться актером
+	// РџРµСЂСЃРѕРЅР°Р¶ СЃС‚Р°РЅРѕРІРёС‚СЊСЃСЏ Р°РєС‚РµСЂРѕРј
 	LAi_SetActorType(character);
 
 	switch(GetAttributeValue(scnref))
@@ -344,13 +344,13 @@ void StartSceneExecute(aref character)
 	break;
 
 	case "Escape":
-		trace("WARNING!!!  Escape не реализована!");
+		trace("WARNING!!!  Escape РЅРµ СЂРµР°Р»РёР·РѕРІР°РЅР°!");
 		PostEvent("qprocTaskEnd",1,"a",character); // !!!
 		return;
 	break;
 
 	case "Dead":
-		trace("WARNING!!!  Dead не реализована!");
+		trace("WARNING!!!  Dead РЅРµ СЂРµР°Р»РёР·РѕРІР°РЅР°!");
 		PostEvent("qprocTaskEnd",1,"a",character); // !!!
 		return;
 	break;
@@ -399,7 +399,7 @@ void StartSceneExecute(aref character)
 	break;
 
 	case "BladeToHand":
-		trace("WARNING!!! BladeToHand функция не реализована!!!"); // !!!
+		trace("WARNING!!! BladeToHand С„СѓРЅРєС†РёСЏ РЅРµ СЂРµР°Р»РёР·РѕРІР°РЅР°!!!"); // !!!
 		PostEvent("qprocTaskEnd",1,"a",character); // !!!
 		return;
 	break;
@@ -429,7 +429,7 @@ void StartSceneExecute(aref character)
 	break;
 
 	case "AttackGroup":
-		trace( "WARNING!!! AttackGroup не реализована" ); // !!!
+		trace( "WARNING!!! AttackGroup РЅРµ СЂРµР°Р»РёР·РѕРІР°РЅР°" ); // !!!
 		PostEvent("qprocTaskEnd",1,"a",character); // !!!
 		return;
 	break;

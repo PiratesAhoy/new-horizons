@@ -1,31 +1,31 @@
 string DLG_TEXT[28] = {
-"Bienvenido a bordo, capitán.",
+"Bienvenido a bordo, capitÃ¡n.",
 "!!!",
-"¿Adónde, capitán?",
-"Oh, estoy bien aquí, prefiero seguir con esta parte de la historia, gracias.",
-"1) A la CASA DE LEGRAND después de las playas.",
-"2) A la CASA DE LEGRAND, día 2.",	//5
-"3) A la ALDEA DE MOULTRIE (Júpiter).",
+"Â¿AdÃ³nde, capitÃ¡n?",
+"Oh, estoy bien aquÃ­, prefiero seguir con esta parte de la historia, gracias.",
+"1) A la CASA DE LEGRAND despuÃ©s de las playas.",
+"2) A la CASA DE LEGRAND, dÃ­a 2.",	//5
+"3) A la ALDEA DE MOULTRIE (JÃºpiter).",
 "4) A FORT MOULTRIE.",
 "5) A CHARLESTON.",
 "6) A CHINATOWN.",
 "7) Al RESTAURANTE CHINO.",	//10
-"8) A la PLANTACIÓN.",
+"8) A la PLANTACIÃ“N.",
 "9) A los CIMARRONES.",
 "10) Al HOSTAL DEL OBISPO, primera vez.",
-"11) Al FUERTE (Júpiter) + A PYM (Legrand).",
+"11) Al FUERTE (JÃºpiter) + A PYM (Legrand).",
 "12) Al HOSTAL DEL OBISPO, segunda vez.",	//15
-"13) A la CASA DE POE + BOTE & CHOZA (Júpiter).",
-"14) Al FUERTE (revólver).",
+"13) A la CASA DE POE + BOTE & CHOZA (JÃºpiter).",
+"14) Al FUERTE (revÃ³lver).",
 "15) A la IGLESIA (Poe).",
-"16) Al HOSTAL DEL OBISPO, última vez.",
+"16) Al HOSTAL DEL OBISPO, Ãºltima vez.",
 "",	//20
 "",
-"¿Seguro, capitán? El proceso puede dar un poco de miedo...",
-"¡No tengo miedo a nada!",
-"¿Puedo volver a ver las alternativas?",
-"Hum, creo que en vez de eso, jugaré la aventura desde el principio.",	//25
-"No diga que no le he advertido, capitán.",
-"Está bien, está bien. Ahora, ¡adelante!",
+"Â¿Seguro, capitÃ¡n? El proceso puede dar un poco de miedo...",
+"Â¡No tengo miedo a nada!",
+"Â¿Puedo volver a ver las alternativas?",
+"Hum, creo que en vez de eso, jugarÃ© la aventura desde el principio.",	//25
+"No diga que no le he advertido, capitÃ¡n.",
+"EstÃ¡ bien, estÃ¡ bien. Ahora, Â¡adelante!",
   
 };

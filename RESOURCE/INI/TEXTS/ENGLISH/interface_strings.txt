@@ -146,7 +146,7 @@ has been sunk by the{has been sunk by the}
 God gained{God gained}
 Total XP{Total XP}
 Hand of God{Hand of God}
-Victim poisoned !{Victim poisoned !}
+Victim poisoned!{Victim poisoned!}
 WHACK! You knocked out your opponent!{WHACK! You knocked out your opponent!}
 Opponent disarmed !{Opponent disarmed !}
 One of your officers was disarmed!{One of your officers was disarmed!}
@@ -192,6 +192,8 @@ Neutral{neutral}
 Wary{wary}
 Hostile{hostile}
 Letter of Marque{Letter of Marque}
+pardon{pardon}
+document{document}
 ALARM!  AN AMBUSH!!!{ALARM!  AN AMBUSH!!!}
 Gamlet{Only Hamlet spoke to the dead, and even he didn't expect them to talk back.}
 NoItems{There is nothing to take}
@@ -279,6 +281,7 @@ You can't save or load until{You can't save or load until}
 leaves.{leaves.}
 NewSave{New Save}
 God mode{God mode}
+Selected character is{Selected character is}
 Shotgun mode{Shotgun mode}
 Worldmap encounters{Worldmap encounters}
 Fake Level Up{Fake Level Up}
@@ -286,7 +289,6 @@ Error updating passenger, is passenger{Error updating passenger, is passenger}
 (no ships berthed at{(no ships berthed at}
 ){)}
 (empty slot){(empty slot)}
-New captain{New captain}
 (CHOOSE A CAPTAIN){(CHOOSE A CAPTAIN)}
 (no available captains){(no available captains)}
 Currently a passenger{Currently a passenger}
@@ -316,8 +318,8 @@ Redmond{Redmond}
 Isla Muelle{Isla Muelle}
 Oxbay{Oxbay}
 Greenford{Greenford}
-ConceiÁ„o{ConceiÁ„o}
-Conceicao{ConceiÁ„o}
+Concei√ß√£o{Concei√ß√£o}
+Conceicao{Concei√ß√£o}
 Douwesen{Douwesen}
 Quebradas Costillas{Quebradas Costillas}
 Khael Roa{Khael Roa}
@@ -325,7 +327,7 @@ Cayman{Cayman}
 Hispaniola{Hispaniola}
 Cuba{Cuba}
 Guadeloupe{Guadeloupe}
-Santa Maria de Guadalupe de Extremadura{Santa MarÌa de Guadalupe}
+Santa Maria de Guadalupe de Extremadura{Santa Mar√≠a de Guadalupe}
 Saint Martin{Saint Martin}
 Antigua{Antigua}
 Turks{Turks}
@@ -633,10 +635,9 @@ has less than Low morale. Beware of mutiny!{has less than Low morale. Beware of 
 wounded crewmembers:{wounded crewmembers:}
 healed and{healed and}
 died from gangrene.{died from gangrene.}
-
+died from gangrene on{died from gangrene on}
 Captain, we're out of crew!{Captain, we're out of crew!}
-Captain, we're out of food!{Captain, we're out of food!}
-Captain, we're out of rum!{Captain, we're out of rum!}
+
 Choosing outfit for{Choosing outfit for}
 The thief spreads the news{The thief spreads the news}
 that you receive stolen goods.{that you receive stolen goods.}
@@ -644,7 +645,7 @@ This meeting has really lightened you...{This meeting has really lightened you..
 This meeting has really enlightened you...{This meeting has really enlightened you...}
 For five hours are you being lectured on{For five hours are you being lectured on}
 This has improved your{This has improved your}
-skill{skill}
+skill.{skill.}
 New ship characters...{New ship characters...}
 
 There are not enough Grapeshots{There are not enough Grapeshots!}
@@ -688,7 +689,6 @@ INDEX OF FIRST CONTRABAND IS:{INDEX OF FIRST CONTRABAND IS:}
 THERE ARE SOME MORE CONTRABAND GOODS{THERE ARE SOME MORE CONTRABAND GOODS}
 ONLY ONE CONTRABAND GOOD IS AVAILABLE{ONLY ONE CONTRABAND GOOD IS AVAILABLE}
 Donation of personal wealth to crew{Donation of personal wealth to crew}
-You have hoisted a Pirate flag! Argh!{You have hoisted a Pirate flag! Argh!}
 You've dropped through a trapdoor into a cave...{You've dropped through a trapdoor into a cave...}
 Secret Hide{Secret Hide}
 You've dropped through a trapdoor into the crypt...{You've dropped through a trapdoor into the crypt...}
@@ -753,8 +753,11 @@ Brothel{Brothel}
 Tutorial Deck{Tutorial Deck}
 Tutorial_Deck{Tutorial Deck}
 Loanshark's Office{Loanshark's Office}
+#stown_name# Loanshark's Office{#stown_name# Loanshark's Office}
 Loanshark's backdoor{Loanshark's backdoor}
 Room in #stown_name# tavern{Room in #stown_name# tavern}
+Cellar in #stown_name# tavern{Cellar in #stown_name# tavern}
+Cellar in #stown_name# tavern.{Cellar in #stown_name# tavern.}
 #stown_name# tavern{#stown_name# tavern}
 #stown_name# store{#stown_name# store}
 #stown_name# shipyard{#stown_name# shipyard}
@@ -764,6 +767,7 @@ Room in #stown_name# tavern{Room in #stown_name# tavern}
 #stown_name# brothel{#stown_name# brothel}
 #stown_name# Brothel room{#stown_name# Brothel room}
 Exit from #stown_name#{Exit from #stown_name#}
+#stown_name# Exit{#stown_name# Exit}
 #stown_name# Outskirts{#stown_name# Outskirts}
 #stown_name# Dungeon{#stown_name# Dungeon}
 #stown_name#{#stown_name#}
@@ -807,7 +811,6 @@ Naval officers only!{Naval officers only!}
 Towncenter{Towncenter}
 Warehouse{Warehouse}
 Abbey of the Maltese order{Abbey of the Maltese order}
-Greenford{Greenford}
 Greenford port{Greenford port}
 Exit from Greenford{Exit from Greenford}
 Greenford shipyard{Greenford shipyard}
@@ -821,6 +824,7 @@ Room in Greenford tavern{Room in Greenford tavern}
 #sisland_name# cavern{#sisland_name# cavern}
 #stown_name# church{#stown_name# church}
 Sewer{Sewer}
+#stown_name# Sewer{#stown_name# Sewer}
 Abandoned mine{Abandoned mine}
 Town{Town}
 Dutch West India Company{Dutch West India Company}
@@ -830,9 +834,14 @@ French West India Company{French West India Company}
 #stown_name# Gambling House{#stown_name# Gambling House}
 Vice Admiral's residence{Vice Admiral's residence}
 Admiralty{Admiralty}
+Head's House{Head's House}
+To the Loanshark{To the Loanshark}
+Room in tavern{Room in tavern}
+Townhall{Townhall}
 
 Brothel.{Brothel}
 Loanshark's Office.{Loanshark's Office}
+#stown_name# Loanshark's Office.{#stown_name# Loanshark's Office.}
 Loanshark's backdoor.{Loanshark's backdoor}
 Room in #stown_name# tavern.{Room in #stown_name# tavern}
 #stown_name# tavern.{#stown_name# tavern}
@@ -933,7 +942,7 @@ Boarding deck.{Boarding deck}
 Fort inside.{Fort inside}
 Boarding town.{Boarding town}
 
-House of AmÈrigo Vieira{House of Amerigo Vieira}
+House of Am√©rigo Vieira{House of Amerigo Vieira}
 Smithy{Smithy}
 Sunny Haven{Sunny Haven}
 Hidden Cave{Hidden Cave}
@@ -946,7 +955,7 @@ Smugglers Tavern{Smugglers Tavern}
 House of Leader of smugglers{House of Leader of smugglers}
 Rheims house in #stown_name#{Rheims house in #stown_name#}
 
-House of AmÈrigo Vieira.{House of Amerigo Vieira}
+House of Am√©rigo Vieira.{House of Amerigo Vieira}
 Smithy.{Smithy}
 Sunny Haven.{Sunny Haven}
 Hidden Cave.{Hidden Cave}
@@ -976,9 +985,11 @@ Center.{Town Center}
 Octopus Bay.{Octopus Bay}
 House in #stown_name#.{House in #stown_name#}
 Old Bridge{Old Bridge}
+House of Luc Merin{House of Luc Merin}
 
 Trade Square{Trade Square}
 House of Mateus Santos{House of Mateus Santos}
+Study of Mateus Santos{Study of Mateus Santos}
 Damski's House{Damski's House}
 House of Sidonio Ogarrio{House of Sidonio Ogarrio}
 Sea Passage{Sea Passage}
@@ -1048,10 +1059,6 @@ Pirate Lair.{Pirate Lair}
 White Bay.{White Bay}
 White Bay{White Bay}
 
-White Bay.{White Bay}
-White Bay{White Bay}
-
-Exit from #stown_name#{Exit from #stown_name#}
 #sisland_name# Cavern{#sisland_name# Cavern}
 Pirate Fort{Pirate Fort}
 House of leader of #sisland_name# pirates{House of leader of #sisland_name# pirates}
@@ -1064,7 +1071,6 @@ The cavern{The cavern}
 Smuggler's Home{Smuggler's Home}
 #sisland_name# shore ship{#sisland_name# shore ship}
 
-Exit from #stown_name#.{Exit from #stown_name#}
 #stown_name# Cavern.{#stown_name# Cavern}
 Pirate Fort.{Pirate Fort}
 House of leader of #sisland_name# pirates.{House of leader of #sisland_name# pirates}
@@ -1114,8 +1120,16 @@ Baie Orient{Baie Orient}
 Cellar{Cellar}
 Muscetto Cove{Muscetto Cove}
 Mixteca Bay{Mixteca Bay}
+Mixteca Bay.{Mixteca Bay.}
 Darien Beach{Darien Beach}
+Darien Beach.{Darien Beach.}
 Bullen Bay{Bullen Bay}
+Bocht Van Hato.{Bocht Van Hato.}
+Aguadilla Bay.{Aguadilla Bay.}
+Vera Cruz port.{Vera Cruz port.}
+Vera Cruz. Plaza de Armas{Vera Cruz. Plaza de Armas}
+Vera Cruz Tavern{Vera Cruz Tavern}
+San Felipe Fort{San Felipe Fort}
 
 Tradepost.{Tradepost}
 Inn.{Inn}
@@ -1142,14 +1156,14 @@ Barracks{Barracks}
 Church{Church}
 Entrance to plantation{Entrance to plantation}
 Anse Casse-Bois{Anse Casse-Bois}
-BahÌa Grande{BahÌa Grande}
+Bah√≠a Grande{Bah√≠a Grande}
 Ensenada del Bosque Quebrado{Ensenada del Bosque Quebrado}
 
 Barracks.{Barracks}
 Church.{Church}
 Entrance to plantation.{Entrance to plantation}
 Anse Casse-Bois.{Anse Casse-Bois}
-BahÌa Grande.{BahÌa Grande}
+Bah√≠a Grande.{Bah√≠a Grande}
 Ensenada del Bosque Quebrado.{Ensenada del Bosque Quebrado}
 
 Storehouse{Storehouse}
@@ -1178,7 +1192,7 @@ Plantation{Plantation}
 Fire Ship deck{Fire Ship deck}
 HMS Hotspur{HMS Hotspur}
 French Battery{French Battery}
-Mystery_House{Mystery House}
+Mystery House{Mystery House}
 Back Room{Back Room}
 Beach Tunnel{Beach Tunnel}
 Pirate Entrance{Pirate Entrance}
@@ -1193,13 +1207,20 @@ Rebel Fort{Rebel Fort}
 Don Julian Alvarado's Quarters{Don Julian Alvarado's Quarters}
 Smuggler ship{Smuggler ship}
 
+Isla Mona Port{Isla Mona Port}
+Isla Mona Tavern{Isla Mona Tavern}
+head port house.{head port house.}
+Commander's House{Commander's House}
+Isla Mona warehouse{Isla Mona warehouse}
+Exit from port{Exit from port}
+Isla Mona Shore{Isla Mona Shore}
+
 To Fort{To Fort}
 Cayman Kai{Cayman Kai}
 #sisland_name# Grot entrance{#sisland_name# Grot entrance}
 Entrance to house{Entrance to house}
 Inside house{Inside house}
 #sisland_name# underground{#sisland_name# underground}
-Naval officers only!{Naval officers only!}
 
 To Fort.{To Fort}
 Cayman Kai.{Cayman Kai}
@@ -1207,7 +1228,6 @@ Cayman Kai.{Cayman Kai}
 Entrance to house.{Entrance to house}
 Inside house.{Inside house}
 #sisland_name# underground.{#sisland_name# underground}
-Naval officers only!{Naval officers only!}
 
 Rocky Cove{Rocky Cove}
 Sandy Beach{Sandy Beach}
@@ -1236,9 +1256,6 @@ Your wounds burn like fire!{Your wounds burn like fire!}
 about the town.{about the town.}
 Your victim produces{Your victim produces}
 Your conduct didn't improve your reputation{Your conduct didn't improve your reputation}
-Mustering those drunken tars takes till nightfall...{Mustering those drunken tars takes till nightfall...}
-
-Storehouse{Storehouse}
 
 You wait here 5 days{You wait here 5 days}
 You spend 1 day in the house{You spend 1 day in the house}
@@ -1294,7 +1311,6 @@ Transfer takes roughly an hour{Transfer takes roughly an hour}
 You get your blade back three days later.{You get your blade back three days later.}
 You get your blade back two days later.{You get your blade back two days later.}
 
-You have hoisted a Pirate flag! Argh!{You have hoisted a Pirate flag! Argh!}
 No Balls to Load{No Balls to Load}
 No Grapes to Load{No Grapes to Load}
 No Chains to Load{No Chains to Load}
@@ -1355,6 +1371,10 @@ Something is drifting there, DEAD AHEAD,{Something is drifting there, DEAD AHEAD
 Captain, a boat{Captain, a boat}
 Captain, a native raft{Captain, a native raft}
 Captain, a dismasted vessel{Captain, a dismasted vessel}
+Captain, something is drifting there{Captain, something is drifting there}
+Captain, a boat has been sighted{Captain, a boat has been sighted}
+Captain, a native raft has been sighted{Captain, a native raft has been sighted}
+Captain, a dismasted vessel has been sighted{Captain, a dismasted vessel has been sighted}
 You don't have enough gunpowder for a mine{You don't have enough gunpowder for a mine}
 A mine{A mine}
 Mine launched{Mine launched}
@@ -1367,7 +1387,7 @@ You find some burial objects on a voodoo priest's funeral raft{You find some bur
 This Indian funeral raft has already been plundered...{This Indian funeral raft has already been plundered...}
 You find some jewels on an abandoned packet boat{You find some jewels on an abandoned packet boat}
 You find some money on an abandoned packet boat{You find some money on an abandoned packet boat}
-You find some ordinance on an abandoned ammo tender{You find some ordinance on an abandoned ammo tender}
+You find some ordinance on an abandoned ammo tender{You find some ordnance on an abandoned ammo tender}
 Someone has already emptied this abandoned hulk...{Someone has already emptied this abandoned hulk...}
 Directsail mod active{Directsail mod active}
 Directsail mod deactivated{Directsail mod deactivated}
@@ -1406,7 +1426,6 @@ Pirate Gun- and Blacksmith{Pirate Gun- and Blacksmith}
 Apothecary{Apothecary}
 Eden Rock{Eden Rock}
 Sand Bluff{Sand Bluff}
-Study{Study}
 Undercroft{Undercroft}
 Yard{Yard}
 Outskirts{Outskirts}
@@ -1436,7 +1455,6 @@ Pirate Blacksmith.{Pirate Blacksmith}
 Apothecary.{Apothecary}
 Eden Rock.{Eden Rock}
 Sand Bluff.{Sand Bluff}
-Study.{Study}
 Undercroft.{Undercroft}
 Yard.{Yard}
 Outskirts.{Outskirts}
@@ -1528,6 +1546,7 @@ Store upstairs{Store upstairs}
 Woodes Rogers' bedroom{Woodes Rogers' bedroom}
 Caroline K's bedroom{Caroline K's bedroom}
 Woodes Rogers' kitchen{Woodes Rogers' kitchen}
+Woodes Rogers' kitchen.{Woodes Rogers' kitchen.}
 Woodes Rogers' food cellar{Woodes Rogers' food cellar}
 Tavern storeroom{Tavern storeroom}
 Charles Windem's room{Charles Windem's room}
@@ -1539,10 +1558,10 @@ Woodes Rogers' secret room{Woodes Rogers' secret room}
 Woodes Rogers' residence{Woodes Rogers' residence}
 Woodes Rogers' residence.{Woodes Rogers' residence}
 Loanshark cellar{Loanshark cellar}
+Loanshark cellar.{Loanshark cellar.}
 Woodes Rogers' booty room{Woodes Rogers' booty room}
 Fried Egg's Room{Fried Egg's Room}
 Shipyard stairs{Shipyard stairs}
-Shipyard shore{Shipyard shore}
 Redmond shore{Redmond shore}
 Woodes Rogers' port{Woodes Rogers' port}
 Woodes Rogers' armory{Woodes Rogers' armory}
@@ -1563,14 +1582,12 @@ Cave shore{Cave shore}
 Blue cavern{Blue cavern}
 Outside pirate church{Outside pirate church}
 Entrance to church attic{Entrance to church attic}
-Outside pirate church{Outside pirate church}
 Church attic{Church attic}
 Sacristy{Sacristy}
 Pirate church{Pirate church}
 Chapel stairs{Chapel stairs}
 Chapel{Chapel}
 Temple stairs{Temple stairs}
-Temple{Temple}
 Port Royal catacombs{Port Royal catacombs}
 Prison ships{Prison ships}
 Boat shore{Boat shore}
@@ -1583,13 +1600,20 @@ Church wine cellar{Church wine cellar}
 Port Royal Church Choir{Port Royal Church Choir}
 Port Royal Military Head Quarter{Port Royal Military Head Quarter}
 Grandma's stairs{Grandma's stairs}
+Gun deck{Gun deck}
+Redmond old mine{Redmond old mine}
+Friday's room{Friday's room}
+Port Royale Fort{Port Royale Fort}
 
 Rogers' kitchen{Rogers' kitchen}
 Rogers' bedroom{Rogers' bedroom}
 Rogers' passage{Rogers' passage}
-Minervas room{Minervas room}
+Minervas room{Minerva's room}
 Rogers' bootyroom{Rogers' bootyroom}
 Rogers' laboratory{Rogers' laboratory}
+Rogers' storeroom{Rogers' storeroom}
+Rogers' secret laboratory{Rogers' secret laboratory}
+Rogers' secret storeroom{Rogers' secret storeroom}
 Wood tower{Wood tower}
 
 You equipped a Powder Flask and an Ammunition Pouch.{You equipped a Powder Flask and an Ammunition Pouch.}
@@ -1605,7 +1629,6 @@ Now get the Carpenter's Chest!{Now get the Carpenter's Chest!}
 I found a big key in one of his pockets!{I found a big key in one of his pockets!}
 The Carpenter's Chest is now filled up!{The Carpenter's Chest is now filled up!}
 Hmm, the other lock is not opened yet{Hmm, the other lock is not opened yet}
-Woodes Rogers' kitchen{Woodes Rogers' kitchen}
 Erotica{Erotica}
 Geography and Meteorology{Geography and Meteorology}
 Mathematics, Physics and Chemistry{Mathematics, Physics and Chemistry}
@@ -1667,7 +1690,7 @@ The chest is blocked by a lot of goods.{The chest is blocked by a lot of goods.}
 Choose ONE picture.{Choose ONE picture.}
 Yes, this picture seems to be the right one!{Yes, this picture seems to be the right one!}
 Now I need some glue to repair the Book.{Now I need some glue to repair the Book.}
-No this is not the right picture.{No this is not the right picture.}
+No, this is not the right picture!{No, this is not the right picture!}
 Maybe I should cut him down.{Maybe I should cut him down.}
 That barrel could be useful but I can't remove it with my bare hands from the gibbet.{That barrel could be useful but I can't remove it with my bare hands from the gibbet.}
 Ok, there might be skeletons in here...{Ok, there might be skeletons in here...}
@@ -1773,8 +1796,8 @@ Roger's journals: A Cruising Voyage Round the World{Roger's journals: A Cruising
 The door is locked from the other side with the key still in the lock.{The door is locked from the other side with the key still in the lock.}
 I don't bother to carry these bottles any more!!!{I don't bother to carry these bottles any more!!!}
 I need a blade to open that box!{I need a blade to open that box!}
-No, the elevator is to heavy!{No, the elevator is to heavy!}
-No, the barrel is to heavy!{No, the barrel is to heavy!}
+No, the elevator is to heavy!{No, the elevator is too heavy!}
+No, the barrel is to heavy!{No, the barrel is too heavy!}
 I need something to make ONE pack of all these clothes!{I need something to make ONE pack of all these clothes!}
 I need something to put up all these things in!{I need something to put up all these things in!}
 Nothing but coins can be placed in the collection box!{Nothing but coins can be placed in the collection box!}
@@ -1811,7 +1834,9 @@ I have 2 officers left to hire.{I have 2 officers left to hire.}
 I have 1 officer left to hire.{I have 1 officer left to hire.}
 Hmm, with some more logs maybe I could build a raft here.{Hmm, with some more logs maybe I could build a raft here.}
 I still need more logs to build a raft.{I still need more logs to build a raft.}
+I'll use the rope to assemble the raft!{I'll use the rope to assemble the raft!}
 Enough with logs - how do I assemble the raft?{Enough with logs - how do I assemble the raft?}
+Hmm, let's arrange them in some order...{Hmm, let's arrange them in some order...}
 No, this rope is tied too hard!{No, this rope is tied too hard!}
 No, I can't move it!{No, I can't move it!}
 Hmm. That was maybe not a good idea!?{Hmm. That was maybe not a good idea!?}
@@ -1851,7 +1876,6 @@ Hmm, maybe I can make them go all the way down into the hold?{Hmm, maybe I can m
 Hmm, they go all the way down into the hold?{Hmm, they go all the way down into the hold?}
 Oh!! It's really hot and stuffy in here - think I have to open the window!{Oh!! It's really hot and stuffy in here - think I have to open the window!}
 And..?{And..?}
-This heavy cast iron door has a silver lock{This heavy cast iron door has a silver lock}
 There's something under the elevator!{There's something under the elevator!}
 How can two planks help me get the Tool from the elevator?{How can two planks help me get the Tool from the elevator?}
 Not exactly what I had in mind!{Not exactly what I had in mind!}
@@ -1884,11 +1908,14 @@ Legrands food cellar{Legrands food cellar}
 Legrands boathouse{Legrands boathouse}
 Fort Moultrie Village{Fort Moultrie Village}
 Fort Moultrie store{Fort Moultrie store}
-Room{Room}
 Staff only{Staff only}
 Summer cottage{Summer cottage}
 Fort Moultrie exit{Fort Moultrie exit}
 Fort Moultrie{Fort Moultrie}
+Fort Moultrie restaurant{Fort Moultrie restaurant}
+Fort Moultrie hotel{Fort Moultrie hotel}
+Fort Moultrie prison{Fort Moultrie prison}
+Fort Moultrie barracks{Fort Moultrie barracks}
 Lieutenant G:s house{Lieutenant G:s house}
 Lieutenant G:s office{Lieutenant G:s office}
 Lieutenant G:s bedroom{Lieutenant G:s bedroom}
@@ -1896,22 +1923,26 @@ Fort Moultrie shore{Fort Moultrie shore}
 Charleston{Charleston}
 Charleston port{Charleston port}
 Charleston port tavern{Charleston port tavern}
+The Red Death{The Red Death}
+The Maelstrom{The Maelstrom}
 Charleston town{Charleston town}
 Charleston shipyard{Charleston shipyard}
 Charleston townhall{Charleston townhall}
 Charleston store{Charleston store}
+Charleston Post & Bank{Charleston Post & Bank}
+Charleston tailor{Charleston tailor}
 Charleston blacksmith{Charleston blacksmith}
 Post Office{Post Office}
 Poe's house{Poe's house}
 Poe's bedroom{Poe's bedroom}
+Landlady private{Landlady private}
 Exit from Charleston{Exit from Charleston}
 Charleston swamp{Charleston swamp}
 Charleston passage{Charleston passage}
 Charleston shore{Charleston shore}
+Robert Cook and Maya{Robert Cook and Maya}
 Bishops Hostel{Bishops Hostel}
 Bessop Plantation{Bessop Plantation}
-
-
 
 It's too high, I can't climb the rocks.{It's too high, I can't climb the rocks.}
 Oxbay? Greenford? What are they talking about?{Oxbay? Greenford? What are they talking about?}
@@ -1940,6 +1971,11 @@ Jupiter look! It's a Gold-Bug!{Jupiter look! It's a Gold-Bug!}
 Ouch, the Gold-Bug gave me a sharp bite!{Ouch, the Gold-Bug gave me a sharp bite!}
 OPEN ONLY DURING TOURIST SEASON{OPEN ONLY DURING TOURIST SEASON}
 Hmm, it's only glowing...?{Hmm, it's only glowing...?}
+You need oxygen!{You need oxygen!}
+Get some wood first!{Get some wood first!}
+Not a bad idea, but light the gas!{Not a bad idea, but light the gas!}
+Turn on the gas first!{Turn on the gas first!}
+I saw no gun  at all in there. Did I miss it?{I saw no gun  at all in there. Did I miss it?}
 Only ashes left - I'll need new wood!{Only ashes left - I'll need new wood!}
 Two empty barrels.{Two empty barrels.}
 Some empty bottles.{Some empty bottles.}
@@ -1957,7 +1993,6 @@ No, I can never climb up the way I came down.{No, I can never climb up the way I
 No, I'm not going back. The metal door locked behind me.{No, I'm not going back. The metal door locked behind me.}
 William Kidd 1645 - 1701{William Kidd 1645 - 1701}
 C. Auguste Dupin has earned this certificate for...{C. Auguste Dupin has earned this certificate for...}
-Fort Moultrie{Fort Moultrie}
 Edgar Allan Poe{Edgar Allan Poe}
 Whaling{Whaling}
 Caves{Caves}
@@ -2062,7 +2097,7 @@ Maybe if I tie the Ladder to the rope and pull it up from the top.{Maybe if I ti
 Yes, now I can extend the rope with the Ladder.{Yes, now I can extend the rope with the Ladder.}
 And now the Ladder!{And now the Ladder!}
 No, that crate is too heavy.{No, that crate is too heavy.}
-No, it's to steep - I have to find another way up.{No, it's to steep - I have to find another way up.}
+No, it's to steep - I have to find another way up.{No, it's too steep - I have to find another way up.}
 Visitors to the Tavern - please use the door to the left.{Visitors to the Tavern - please use the door to the left.}
 STRIKE - Brothel closed.{STRIKE - Brothel closed.}
 Storeroom.{Storeroom.}
@@ -2082,7 +2117,11 @@ I have to find another way down.{I have to find another way down.}
 I need something to tie the Rope to.{I need something to tie the Rope to.}
 To Mr Poe's house now!{To Mr Poe's house now!}
 East tower{East tower}
+West tower{West tower}
+North tower{North tower}
 South tower{South tower}
+South tower under repair{South tower under repair}
+The upper part of the tower is destroyed{The upper part of the tower is destroyed}
 Hmm, what are they doing? Something's hanging down from that tree.{Hmm, what are they doing? Something's hanging down from that tree.}
 
 There are no Rockets left{There are no Rockets left}
@@ -2111,6 +2150,7 @@ We have to get the rest of the Treasure first.{We have to get the rest of the Tr
 No, I have already done that.{No, I have already done that.}
 Now when it's clean, maybe I should heat it up again?{Now when it's clean, maybe I should heat it up again?}
 No, I don't want to boil the Parchment!{No, I don't want to boil the Parchment!}
+Okay, the parchment is in place - now it's only to wait for Jupiter and more wood.{Okay, the parchment is in place - now it's only to wait for Jupiter and more wood.}
 No, let's go on instead.{No, let's go on instead.}
 No, it wasn't that easy!{No, it wasn't that easy!}
 Not the right time to leave.{Not the right time to leave.}
@@ -2134,14 +2174,19 @@ cloister inside{Cloister inside}
 New Cloister Garden{New Cloister Garden}
 Cloister yard{Cloister yard}
 cloister exit{Cloister exit}
+Cathedral{Cathedral}
 Infirmary{Infirmary}
 Lavatorium{Lavatorium}
-Sacristy{Sacristy}
 Graveyard{Graveyard}
 Crypt{Crypt}
 Cell{Cell}
 Library{Library}
 Fort Waxholm{Fort Waxholm}
+Adventure Galley{Adventure Galley}
+To the Harbour Master{To the Harbour Master}
+Charleston Harbour Master{Charleston Harbour Master}
+Detective Agency 1st floor{Detective Agency 1st floor}
+C. Auguste Dupin - Private Investigator{C. Auguste Dupin - Private Investigator}
 
 Something under that straw?{Something under that straw?}
 No, I'll only cut myself on those shards.{No, I'll only cut myself on those shards.}
@@ -2157,11 +2202,11 @@ Now let's fill the barrel up.{Now let's fill the barrel up.}
 I don't need to carry these newspapers around.{I don't need to carry these newspapers around.}
 Better study them or return them to the counter.{Better study them or return them to the counter.}
 I don't need more wood at the moment.{I don't need more wood at the moment.}
-No, I havn't processed the content yet.{No, I havn't processed the content yet.}
+No, I havn't processed the content yet.{No, I haven't processed the content yet.}
 I can grind stones here.{I can grind stones here.}
 I think I'll use the Big Bottle for Mixtures instead.{I think I'll use the Big Bottle for Mixtures instead.}
 I think I'll use the Small Bottle for Mixtures instead.{I think I'll use the Small Bottle for Mixtures instead.}
-I think that's the right mixture.{I think that's the right mixture.} 
+I think that's the right mixture.{I think that's the right mixture.}
 A Small Bottle will do here.{A Small Bottle will do here.}
 A clean piece of Cloth as a filter is needed here.{A clean piece of Cloth as a filter is needed here.}
 Two Salt Jars are enough!{Two Salt Jars are enough!}
@@ -2199,6 +2244,12 @@ Cartagena fort{Cartagena fort}
 Cartagena fort.{Cartagena fort.}
 Cartagena Hotel{Cartagena Hotel}
 Cartagena Hotel Pension{Cartagena Hotel Pension}
+Room 1{Room 1}
+Room 2{Room 2}
+Room 3{Room 3}
+Room 4{Room 4}
+Private room{Private room}
+Attic{Attic}
 Palace square{Palace square}
 Admiral's Office{Admiral's Office}
 Fort Tunnel{Fort Tunnel}
@@ -2246,11 +2297,54 @@ I need a long tool to remove the pole.{I need a long tool to remove the pole.}
 CALL MATES{CALL MATES}
 AWAY BOAT{AWAY BOAT}
 No, I have no more business there.{No, I have no more business there.}
+Insert coin.{Insert coin.}
+No, the cannon is stuck!{No, the cannon is stuck!}
+So he could read? Most about Alchemy!{So he could read? Most about Alchemy!}
+No, the Gold Bars are too heavy - the crew will take them to the ship.{No, the Gold Bars are too heavy - the crew will take them to the ship.}
+No, the Silver Bars are too heavy - the crew will take them to the ship.{No, the Silver Bars are too heavy - the crew will take them to the ship.}
+No, the Valuable Weapons are too heavy - the crew will take them to the ship.{No, the Valuable Weapons are too heavy - the crew will take them to the ship.}
+No, it's not the time for that.{No, it's not the time for that.}
+I'll use more this time. Five drops maybe.{I'll use more this time. Five drops maybe.}
+A small clock that's something.{A small clock that's something.}
+A purse with a lot of coins - that's better!{A purse with a lot of coins - that's better!}
+I found his map!!!{I found his map!!!}
+PILOT{PILOT}
+EDWARD TEACH{EDWARD TEACH}
+WR_MERCHANT{MERCHANT}
+ISRAEL HANDS{ISRAEL HANDS}
+STEDE BONNET{STEDE BONNET}
+SURGEON MAJOR{SURGEON MAJOR}
+SECOND SURGEON{SECOND SURGEON}
+GUNSMITH OR THIRD SURGEON{GUNSMITH OR THIRD SURGEON}
+SURGEON'S AIDE{SURGEON'S AIDE}
+I have got 1 Malta Document.{I have got 1 Malta Document.}
+I have got 2 Malta Documents.{I have got 2 Malta Documents.}
+I have got 3 Malta Documents.{I have got 3 Malta Documents.}
+I have got 4 Malta Documents.{I have got 4 Malta Documents.}
+I have got 5 Malta Documents.{I have got 5 Malta Documents.}
+I have got all 6 Malta Documents!{I have got all 6 Malta Documents!}
+The elevator is already up!{The elevator is already up!}
+The elevator is already down!{The elevator is already down!}
+No, the six Sacks with Gold Dust are too heavy - the crew will take them to the ship.{No, the six Sacks with Gold Dust are too heavy - the crew will take them to the ship.}
+No, the Idol is too heavy - the crew will take it to the ship.{No, the Idol is too heavy - the crew will take it to the ship.}
+R{R}
+T{T}
+D{D}
+E{E}
+F{F}
+P{P}
+S{S}
+I{I}
+A{A}
+U{U}
+Wonder what kind of import that is!{Wonder what kind of import that is!}
+Officers only!{Officers only!}
 
 Crewmember of{Crewmember of}
 's crewmember{'s crewmember}
+Bouncer{Bouncer}
 
-Taino Village{TaÌno Village}
+Taino Village{Ta√≠no Village}
 House of Gilbert Downing{House of Gilbert Downing}
 Old Inquisition prison{Old Inquisition prison}
 Archives{Archives}
@@ -2265,12 +2359,14 @@ crew died of maltreatment{crew died of maltreatment}
 HINT: You aren't well armed and your officers aren't armed at all. Take all the help you can get!{HINT: You aren't well armed and your officers aren't armed at all. Take all the help you can get!}
 crew died in the battle{crew died in the battle}
 I'm taking one of the soldier's uniforms. A disguise might be useful later.{I'm taking one of the soldier's uniforms. A disguise might be useful later.}
+HINT: The captain will be more willing to talk to someone who looks like a soldier.{HINT: The captain will be more willing to talk to someone who looks like a soldier.}
 You broke the window and grabbed the map. Now RUN!{You broke the window and grabbed the map. Now RUN!}
 That looks like the original crew returning. Better get aboard and get out of here!{That looks like the original crew returning. Better get aboard and get out of here!}
 Now to wait for the 'Siroco'...{Now to wait for the 'Siroco'...}
 Maybe there's something in that room with the wall markings...{Maybe there's something in that room with the wall markings...}
 You have been given a lockpick.{You have been given a lockpick.}
 Run! They're after you!{Run! They're after you!}
+Search party{Search party}
 Someone heard that window break!{Someone heard that window break!}
 Yedam Kinne should have finished with the pass by now.{Yedam Kinne should have finished with the pass by now.}
 Time to go to church!{Time to go to church!}
@@ -2287,8 +2383,10 @@ Hint: To make an officer available to command your ship, assign that officer to 
 Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.{Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
-Capit·n{Capit·n}
-Capit›o{Capit›o}
+Capit√°n{Capit√°n}
+Capit√ùo{Capit√ùo}
+Teniente{Teniente}
+Electress{Electress}
 
 That coward is trying to escape! Go after him!{That coward is trying to escape! Go after him!}
 Keep going, he can't run from you forever!{Keep going, he can't run from you forever!}

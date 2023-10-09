@@ -24,7 +24,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
+		// -----------------------------------Ã„Ã¨Ã Ã«Ã®Ã£ Ã¯Ã¥Ã°Ã¢Ã»Ã© - Ã¯Ã¥Ã°Ã¢Ã Ã¿ Ã¢Ã±Ã²Ã°Ã¥Ã·Ã 
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -74,9 +74,9 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[173] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[174];
 				link.l1.go = "imperial_escort_merge_fleet_again";
 			}
-			if (CheckAttribute(PChar, "quest.imperial_escort.arrest_guzman") && sti(PChar.quest.imperial_escort.arrest_guzman) == true && LAi_IsDead(CharacterFromID("Emiliano de Guzmán")))
+			if (CheckAttribute(PChar, "quest.imperial_escort.arrest_guzman") && sti(PChar.quest.imperial_escort.arrest_guzman) == true && LAi_IsDead(CharacterFromID("Emiliano de GuzmÃ¡n")))
 			{
-				link.l1 = XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[179] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[180];
+				link.l1 = XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[179] + GetMyFullName(CharacterFromID("Emiliano de GuzmÃ¡n")) + DLG_TEXT[180];
 				link.l1.go = "imperial_escort_arrest_guzman_complete";
 			}
 			if (Characters[GetCharacterIndex("Gilles Clouzot")].location == "Muelle_port" && !CheckAttribute(PChar, "quest.imperial_escort.spy_search"))
@@ -320,7 +320,7 @@ void ProcessDialogEvent()
 
 		case "imperial_escort_whodunnit":
 			dialog.text = DLG_TEXT[89];
-			link.l1 = DLG_TEXT[90] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[91] + GetMyFullName(CharacterFromID("Javier Balboa")) + DLG_TEXT[92] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[93];
+			link.l1 = DLG_TEXT[90] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[91] + GetMyFullName(CharacterFromID("Javier Balboa")) + DLG_TEXT[92] + GetMyFullName(CharacterFromID("Emiliano de GuzmÃ¡n")) + DLG_TEXT[93];
 			link.l1.go = "imperial_escort_replaced_governor";
 		break;
 
@@ -331,7 +331,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_why_believe":
-			dialog.text = DLG_TEXT[96] + GetMyName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[97];
+			dialog.text = DLG_TEXT[96] + GetMyName(CharacterFromID("Emiliano de GuzmÃ¡n")) + DLG_TEXT[97];
 			link.l1 = DLG_TEXT[98];
 			link.l1.go = "exit";
 		break;
@@ -347,16 +347,16 @@ void ProcessDialogEvent()
 			if (sti(PChar.quest.imperial_escort.original_companions_number) == 0) ships = DLG_TEXT[106];
 			else ships = DLG_TEXT[107];
 
-			dialog.text = DLG_TEXT[101] + DLG_TEXT[102] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[103] + GetMyFullName(CharacterFromID("Javier Balboa")) + DLG_TEXT[104] + GetMyFullName(PChar) + DLG_TEXT[105] + ships + DLG_TEXT[108];
-			if(LAi_IsDead(CharacterFromID("Emiliano de Guzmán")))
+			dialog.text = DLG_TEXT[101] + DLG_TEXT[102] + GetMyFullName(CharacterFromID("Emiliano de GuzmÃ¡n")) + DLG_TEXT[103] + GetMyFullName(CharacterFromID("Javier Balboa")) + DLG_TEXT[104] + GetMyFullName(PChar) + DLG_TEXT[105] + ships + DLG_TEXT[108];
+			if(LAi_IsDead(CharacterFromID("Emiliano de GuzmÃ¡n")))
 			{
-				link.l1 = DLG_TEXT[115] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[116];
+				link.l1 = DLG_TEXT[115] + GetMyFullName(CharacterFromID("Emiliano de GuzmÃ¡n")) + DLG_TEXT[116];
 				AddDialogExitQuest("imperial_escort_restore_santiago_governor");
 				link.l1.go = "exit";
 			}
 			else
 			{
-				link.l1 = XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[110] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[111];
+				link.l1 = XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[110] + GetMyFullName(CharacterFromID("Emiliano de GuzmÃ¡n")) + DLG_TEXT[111];
 				link.l1.go = "imperial_escort_arrest_guzman";
 			}
 		break;

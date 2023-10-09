@@ -411,7 +411,7 @@ if (ENABLE_WEAPONSMOD)
 	// SOLDIERS
 	///////////////////////////////////////////////////////////////////////////////////////////////
 
-			//Soldier Ì‡ ‚˚ıÓ‰Â ËÁ ÔÓÚ‡
+			//Soldier √≠√† √¢√ª√µ√Æ√§√• √®√ß √Ø√Æ√∞√≤√†
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -449,7 +449,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.greeting = "Gr_isla muelle soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier Ì‡ ‚˚ıÓ‰Â ËÁ ÔÓÚ‡ -- Â˘Â Ó‰ËÌ
+	//Soldier √≠√† √¢√ª√µ√Æ√§√• √®√ß √Ø√Æ√∞√≤√† -- √•√π√• √Æ√§√®√≠
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -2158,9 +2158,9 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
    
 	ch.old.name = "Patricia";
-	ch.old.lastname = "Sant·ngel";
+	ch.old.lastname = "Sant√°ngel";
 	ch.name    = TranslateString("","Patricia");
-	ch.lastname    = TranslateString("","Sant·ngel");
+	ch.lastname    = TranslateString("","Sant√°ngel");
 	ch.id        = "Patricia Santangel";
 	ch.model    = "towngirl7_2";
 	ch.sex = "woman";
@@ -2297,7 +2297,7 @@ if (ENABLE_WEAPONSMOD)
 	// Levis: Storyteller
 	ch.old.name = "Mahala";
 	ch.old.lastname = "";
-	ch.name    = "Mahala";
+	ch.name    = TranslateString("","Mahala");
 	ch.lastname    = "";
 	ch.id        = "Mahala";
 	ch.model    = "gipsygirl";
@@ -2331,9 +2331,9 @@ if (ENABLE_WEAPONSMOD)
 
 	// Santiago Tailor
 	ch.old.name = "Tancredo";
-	ch.old.lastname = "PellÛn";
+	ch.old.lastname = "Pell√≥n";
 	ch.name	= TranslateString("", "Tancredo");
-	ch.lastname	= TranslateString("", "PellÛn");
+	ch.lastname	= TranslateString("", "Pell√≥n");
 	ch.id = "Tancredo Pellon";
 	ch.model = "9R_Purs";
 	ch.sex = "man";

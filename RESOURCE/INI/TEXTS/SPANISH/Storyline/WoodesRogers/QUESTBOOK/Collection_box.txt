@@ -1,8 +1,8 @@
 title=Estuche de coleccionista
-text.t1=Tengo que colocar unas monedas (¿las correctas?) en el estuche de coleccionista. ¿Me ayudará hacer esto a encontrar la forma de salir de aquí?
+text.t1=Tengo que colocar unas monedas (Â¿las correctas?) en el estuche de coleccionista. Â¿Me ayudarÃ¡ hacer esto a encontrar la forma de salir de aquÃ­?
 text.t2=Todas las monedas son de naciones diferentes.
-text.t3=El número de monedas de oro es dos.
-text.t4=Sólo se pueden usar monedas redondas.
+text.t3=El nÃºmero de monedas de oro es dos.
+text.t4=SÃ³lo se pueden usar monedas redondas.
 text.t5=Hay una sola moneda de cobre.
-text.t6=Debería haber siete monedas en el estuche, ni más ni menos.
-text.t7=Una paloma mensajera me ha traído una carta. Veré de qué se trata.
+text.t6=DeberÃ­a haber siete monedas en el estuche, ni mÃ¡s ni menos.
+text.t7=Una paloma mensajera me ha traÃ­do una carta. VerÃ© de quÃ© se trata.

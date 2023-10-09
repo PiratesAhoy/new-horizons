@@ -19,7 +19,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 			case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -740,7 +740,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Story_Berangere_killed_7":
-		/*	//--------Проверка на попадание игрока в море
+		/*	//--------РџСЂРѕРІРµСЂРєР° РЅР° РїРѕРїР°РґР°РЅРёРµ РёРіСЂРѕРєР° РІ РјРѕСЂРµ
 			Pchar.quest.Story_Lebretton_betrayal.win_condition.l1 = "location";
 			Pchar.quest.Story_Lebretton_betrayal.win_condition.l1.character = PChar.id;
 			Pchar.quest.Story_Lebretton_betrayal.win_condition.l1.location = "falaise_de_fleur_01";

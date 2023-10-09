@@ -1,4 +1,4 @@
 title=Llevar a un prisionero ante el gobernador.
-text.t1=El gobernador me ha encomendado la misiÛn de traerle al recluso que se encuentra prisionero el la c·rcel de #sGreenford#, en #sisland_Oxbay#.
-text.t2=Cuando he dicho que querÌa ver al prisionero, el comandante me ha dicho que se habÌa escapado hacÌa algunas horas. Lo est·n buscando, pero de momento no hay noticias.
+text.t1=El gobernador me ha encomendado la misi√≥n de traerle al recluso que se encuentra prisionero el la c√°rcel de #sGreenford#, en #sisland_Oxbay#.
+text.t2=Cuando he dicho que quer√≠a ver al prisionero, el comandante me ha dicho que se hab√≠a escapado hac√≠a algunas horas. Lo est√°n buscando, pero de momento no hay noticias.
 text.t3=Cuando he llegado a #sRedmond#, en #sisland_Redmond#, le he dicho al gobernador que el prisionero se ha escapado. A Silehard no le ha entusiasmado nada la noticia.

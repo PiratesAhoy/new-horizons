@@ -17,7 +17,7 @@ string DLG_TEXT[30] = {
 "I need to be hired by the Admiral of Antigua. Have you got some hints before I meet him?",
 "He doesn't like to hire privateers, and he won't hire you at all unless you have a Letter of Marque from England. So, if you don't already have such a Letter, get one as soon as possible. Then you should insist if he refuses you at the beginning.",
 "Alright. Do you think I'll quickly have a mission for #sisland_Isla Mona#?",
-"Only an escort mission I think. The British garrison of #sisland_Isla Mona# must get fresh supplies each six months. Therefore, the Admiral sends a merchant ship with an escort.",
+"Only an escort mission I think. The English garrison of #sisland_Isla Mona# must get fresh supplies each six months. Therefore, the Admiral sends a merchant ship with an escort.",
 "When did he send the last merchant ship?",
 "Four months ago.",
 "So, I need to work for him for the next two months at least.",

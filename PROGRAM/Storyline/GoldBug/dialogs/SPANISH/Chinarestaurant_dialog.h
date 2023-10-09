@@ -1,60 +1,60 @@
 string DLG_TEXT[55] = { 
-"¿Qué pasa ahora? Soy un hombre muy ocupado.",
+"Â¿QuÃ© pasa ahora? Soy un hombre muy ocupado.",
 "Oh, nada de momento.",
-"Ah, caballeros, todavía no hemos abierto.",
-"No hemos venido a comer. Usted vende fuegos artificiales, ¿verdad?",
-"Normalmente, sí, pero todo se ha retrasado a causa de la malaria.",
-"Hum, ¿ni siquiera pólvora?",
+"Ah, caballeros, todavÃ­a no hemos abierto.",
+"No hemos venido a comer. Usted vende fuegos artificiales, Â¿verdad?",
+"Normalmente, sÃ­, pero todo se ha retrasado a causa de la malaria.",
+"Hum, Â¿ni siquiera pÃ³lvora?",
 "No, se me ha acabado todo. Pero tengo una idea...",
-"Muy bien, oigámosla.",
-"Tiene susted razón, señor. Mi personal todavía está enfermo y estoy esperando que aparezcan clientes en cualquier momento. 
-Esto es lo que les ofrezco: si me ayudan en el restaurante y mezclan la pólvora, les dejaré llevarse toda la que necesiten.",
-"Ya veo, pero Júpiter tiene razón; ¡el molino de pólvora es un sitio peligroso!",
-"No si sigue la fórmula cuidadosamente. He escrito una receta, no habrá problemas.",	//10
-"¿Tú qué dices, Júpiter?",
-"Vaya al molino de pólvora y familiarícese con el equipo.",
-"En ese caso, te veré luego, Júpiter.",
-"¿Dónde está el molino?",
-"Junto a la puerta que da a Charleston. Y sí, la puerta a veces se atasca. Solo tiene que empujarla fuerte.",
-"Ha tenido éxito con la pólvora, por lo que veo. Muy bien. Deme esos barriles.",
+"Muy bien, oigÃ¡mosla.",
+"Tiene susted razÃ³n, seÃ±or. Mi personal todavÃ­a estÃ¡ enfermo y estoy esperando que aparezcan clientes en cualquier momento. 
+Esto es lo que les ofrezco: si me ayudan en el restaurante y mezclan la pÃ³lvora, les dejarÃ© llevarse toda la que necesiten.",
+"Ya veo, pero JÃºpiter tiene razÃ³n; Â¡el molino de pÃ³lvora es un sitio peligroso!",
+"No si sigue la fÃ³rmula cuidadosamente. He escrito una receta, no habrÃ¡ problemas.",	//10
+"Â¿TÃº quÃ© dices, JÃºpiter?",
+"Vaya al molino de pÃ³lvora y familiarÃ­cese con el equipo.",
+"En ese caso, te verÃ© luego, JÃºpiter.",
+"Â¿DÃ³nde estÃ¡ el molino?",
+"Junto a la puerta que da a Charleston. Y sÃ­, la puerta a veces se atasca. Solo tiene que empujarla fuerte.",
+"Ha tenido Ã©xito con la pÃ³lvora, por lo que veo. Muy bien. Deme esos barriles.",
 "Claro.",
-"El caso es que necesito un poco más de pólvora. Tenga, tome la llave y siga trabajando igual de bien.",
+"El caso es que necesito un poco mÃ¡s de pÃ³lvora. Tenga, tome la llave y siga trabajando igual de bien.",
 "Muy bien... (suspiro)",
-"Veo en su cara que ha conseguido producir más pólvora. Muy bien.",		//20
-"Sí, aquí está. Ahora, en cuanto a la pólvora y los fuegos artificales que nos había prometido...",
-"Claro, tome algo de pólvora, y también le daré algo a su amigo. Los fuegos artificiales son un tema diferente, ¿sabe usted?",
-"No, no lo sé, así que cuéntemelo.",
-"Hace falta otro tipo de pólvora para hacer fuegos artificales, pólvora de combustión lenta.",
-"Ajá, y usted quiere que se la produzca también.",			//25
-"Creo que es una buena idea. Aquí está la receta, póngala en la carpeta roja.",
+"Veo en su cara que ha conseguido producir mÃ¡s pÃ³lvora. Muy bien.",		//20
+"SÃ­, aquÃ­ estÃ¡. Ahora, en cuanto a la pÃ³lvora y los fuegos artificales que nos habÃ­a prometido...",
+"Claro, tome algo de pÃ³lvora, y tambiÃ©n le darÃ© algo a su amigo. Los fuegos artificiales son un tema diferente, Â¿sabe usted?",
+"No, no lo sÃ©, asÃ­ que cuÃ©ntemelo.",
+"Hace falta otro tipo de pÃ³lvora para hacer fuegos artificales, pÃ³lvora de combustiÃ³n lenta.",
+"AjÃ¡, y usted quiere que se la produzca tambiÃ©n.",			//25
+"Creo que es una buena idea. AquÃ­ estÃ¡ la receta, pÃ³ngala en la carpeta roja.",
 "Pero no me quedan materias primas.",
 "No hay problema, he abierto los tres talleres.",
-"Oh, oh. Esto no va a ser fácil, me temo...",
-"Sí, pero primero tiene que encontrar la carpeta roja.",		//30
-"Está bien, volveré dentro y la buscaré.",
-"Aquí está la receta, póngala en la carpeta roja.",
-"¡Mire, todo es muy complicado en los talleres y necesito más herramientas para seguir adelante!",
-"Tal vez sí... ¿por qué no me ayuda a buscar por el restaurante cosas que los clientes hayan podido dejar atrás?",				//35
-"¡Lo ha conseguido! Deme esos barriles.",				//35
+"Oh, oh. Esto no va a ser fÃ¡cil, me temo...",
+"SÃ­, pero primero tiene que encontrar la carpeta roja.",		//30
+"EstÃ¡ bien, volverÃ© dentro y la buscarÃ©.",
+"AquÃ­ estÃ¡ la receta, pÃ³ngala en la carpeta roja.",
+"Â¡Mire, todo es muy complicado en los talleres y necesito mÃ¡s herramientas para seguir adelante!",
+"Tal vez sÃ­... Â¿por quÃ© no me ayuda a buscar por el restaurante cosas que los clientes hayan podido dejar atrÃ¡s?",				//35
+"Â¡Lo ha conseguido! Deme esos barriles.",				//35
 "Mu bien. Y ahora, en cuanto a los fuegos artificiales...",
-"Sígame a mi laboratorio y tendré algo listo en un minuto.",
-"Después de usted.",
-"No olvide añadir un poco de agua al barril grande antes de mezclar la pólvora.",
-"¿De dónde saco el agua?",					//40
+"SÃ­game a mi laboratorio y tendrÃ© algo listo en un minuto.",
+"DespuÃ©s de usted.",
+"No olvide aÃ±adir un poco de agua al barril grande antes de mezclar la pÃ³lvora.",
+"Â¿De dÃ³nde saco el agua?",					//40
 "Hay una rueda en la pared.",
-"Bien, lo tendré en cuenta.",
-"Ahí, está, Mr. Legrand. Por favor, siéntese mientras preparo algo para usted.",
+"Bien, lo tendrÃ© en cuenta.",
+"AhÃ­, estÃ¡, Mr. Legrand. Por favor, siÃ©ntese mientras preparo algo para usted.",
 "Ah, muy bien.",
-"... pero primero necesito la pólvora especial...",
-"... y sí, tengo un barril en ese cofre.",
-".... así que tengo que hacer nuevos cilindros para los cohetes... ",
-" ...con ese papel que hay ahí.",
+"... pero primero necesito la pÃ³lvora especial...",
+"... y sÃ­, tengo un barril en ese cofre.",
+".... asÃ­ que tengo que hacer nuevos cilindros para los cohetes... ",
+" ...con ese papel que hay ahÃ­.",
 "... puede llevar un poco de tiempo...",
-" ...pero no quedará decepcionado, Mr. Legrand.",
-"... Mr. Legrand, le he hecho una buena colección de fuegos artificiales. Están numerados del uno al dieciséis. ¡Enciéndalos en ese orden para conseguir el mejor efecto!",
-"¡Por fin! Esto... quiero decir, ¡muchas gracias!",
-"... así que puede dejar todos esos otros objetos aquí, por favor.",
-"Muy bien, adiós.",
+" ...pero no quedarÃ¡ decepcionado, Mr. Legrand.",
+"... Mr. Legrand, le he hecho una buena colecciÃ³n de fuegos artificiales. EstÃ¡n numerados del uno al diecisÃ©is. Â¡EnciÃ©ndalos en ese orden para conseguir el mejor efecto!",
+"Â¡Por fin! Esto... quiero decir, Â¡muchas gracias!",
+"... asÃ­ que puede dejar todos esos otros objetos aquÃ­, por favor.",
+"Muy bien, adiÃ³s.",
 
 
 };

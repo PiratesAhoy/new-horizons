@@ -950,7 +950,7 @@ void InitIslands()
 
 // KK -->
 		rIsland.reload.l3.label = "Bahia de San Antonio";
-		rIsland.reload.l3.name = "reload_2";
+		rIsland.reload.l3.name = "reload_5";
 		rIsland.reload.l3.go = "Cuba_shore_01";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
@@ -959,7 +959,7 @@ void InitIslands()
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l4.label = "Bahia de Moa";
-		rIsland.reload.l4.name = "reload_5";
+		rIsland.reload.l4.name = "reload_2";
 		rIsland.reload.l4.go = "Cuba_shore_02";
 		rIsland.reload.l4.emerge = "Reload2";
 		rIsland.reload.l4.radius = 200.0;

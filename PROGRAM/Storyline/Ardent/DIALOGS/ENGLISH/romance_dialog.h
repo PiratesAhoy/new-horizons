@@ -27,7 +27,7 @@ string DLG_TEXT[551] = {
 "You will be held as a prisoner aboard my ship while I arrange for a ransom. Pray that a suitable sum is forthcoming.",
 "WHAT?",
 "Sorry, my dear. You wouldn't have been as helpful if I'd told you the truth.",
-"Well, a pirate ship's hold isn't comfortable and I'll need a long bath when I get home. But I was treated well by Capitán Ardent and the crew.",
+"Well, a pirate ship's hold isn't comfortable and I'll need a long bath when I get home. But I was treated well by CapitÃ¡n Ardent and the crew.",
 "...",
 "Have you reached a decision about me yet?",
 "I'm inclined to release you. Is there anywhere you'd like to go?",
@@ -50,10 +50,10 @@ string DLG_TEXT[551] = {
 "My! This is a bit sudden! From what I've seen, you're certainly better than ",
 ", but that's not difficult. Please, let me have time to consider your proposal.",
 "By all means consider, but please don't take long!",
-"Hello, capitán! Thank you for getting me away. I'll miss my family, of course, but I'd have been eternally miserable married to ",
+"Hello, capitÃ¡n! Thank you for getting me away. I'll miss my family, of course, but I'd have been eternally miserable married to ",
 ". I was about to write a letter to my father explaining that I'm well, so he doesn't worry.",
 "That's a good idea. Add something personal, something I couldn't possibly know, so he'll know I didn't force you to write it. Then I'll see about getting it delivered.",
-"My letter is written, capitán. Please see it reaches my father. I really don't want him worrying about me.",
+"My letter is written, capitÃ¡n. Please see it reaches my father. I really don't want him worrying about me.",
 "I'll deliver it in person. Hopefully when he knows the truth he'll be less inclined to hunt me down.",
 "Well, this is it. I'll say goodbye to father for the last time, then I'll leave here forever.",
 "That might not be a good idea. If the guards attack, you might be hurt or killed in the crossfire. And there's no knowing what your father will do if he sees you - he might have me arrested and marry you off to ",
@@ -305,7 +305,7 @@ string DLG_TEXT[551] = {
 "Have I done something wrong? I had hoped to continue sailing with you.",
 "No, you have done nothing wrong. But your father left me in no doubt that if anything unpleasant happened to you, something unpleasant would happen to me. Now you are home and safe, I would be foolish to risk that again.",
 "Very well, then I wish you well on your further voyages. Goodbye, ",
-"Very well, then I shall play the part of a dutiful wife and remain here to await tales of your further adventures. Goodbye, ",
+"Very well, then I shall play the part of a dutiful #sspouse# and remain here to await tales of your further adventures. Goodbye, ",
 "Goodbye, ",
 "! I thought I recognised your foul stench above the odours of this place. Have you come to gloat at my further misfortune?",
 "What are you talking about? I was told there was something valuable in here. Instead I find you. Perhaps this wasn't a wasted effort at that. Would there be a reward for releasing you and taking you home?",
@@ -414,7 +414,7 @@ string DLG_TEXT[551] = {
 "And that was some fine thinking and quick talking on your part! But it looks as though he's remembered you after all - run for the town exit!",
 "I haven't finished my letter yet. It should be ready by tomorrow.",
 "Very well, take as long as you need.",
-"Well, capitán? Have you decided my fate yet?",
+"Well, capitÃ¡n? Have you decided my fate yet?",
 "No, but I know how to prevent you from escaping.",
 "How? Will you lock me in this cabin? Or put me in the hold, with a pair of heavy sailors sitting on the hatch?",
 "Neither. There's the door to the gangplank. If you want to return to your father and ",
@@ -547,7 +547,7 @@ string DLG_TEXT[551] = {
 "The brooch doesn't matter! It gives us an excuse to go to the port. And that puts us a lot nearer to my ship. Come on, let's go and see the guard.",
 "That dress looks very dull. I believe the trader in the port has a brooch which would make you look more suitable as a member of the governor's household. <To the soldier> We will now go to the port to buy the brooch.",
 "Do you still want me to buy a brooch for you?",
-"Capitán", // These are used to address you in case "First time".
+"CapitÃ¡n", // These are used to address you in case "First time".
 "my dear", // Renumber them there if more lines are added above here
 "my dear", // Alternative line for non-English translations when player character is female
 }

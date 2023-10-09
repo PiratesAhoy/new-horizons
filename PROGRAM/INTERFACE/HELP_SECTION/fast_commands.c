@@ -6,10 +6,10 @@ void fast_commands_InitHelp()
 	string sectName = GetEventData();
 	if(sectName!="fast_commands") return;
 
-	// Заполним экран содержимым
-		// каринки
+	// Р—Р°РїРѕР»РЅРёРј СЌРєСЂР°РЅ СЃРѕРґРµСЂР¶РёРјС‹Рј
+		// РєР°СЂРёРЅРєРё
 	SetNewPicture("HELPPICTURE","interfaces\helppictures\fast_commands.tga");
-		// строки
+		// СЃС‚СЂРѕРєРё
 	int strFileID = LanguageOpenFile("helpsections\fast_commands.txt");
 	SetFormatedText("TEXTWINDOW",LanguageConvertString(strFileID,"fast_commands_info"));
 	GameInterface.strings.HelpName = LanguageConvertString(strFileID,"fast_commands_title");
@@ -21,7 +21,7 @@ void fast_commands_ResetHelp()
 	string sectName = GetEventData();
 	if(sectName!="fast_commands") return;
 
-	// Удалим с эрана все
+	// РЈРґР°Р»РёРј СЃ СЌСЂР°РЅР° РІСЃРµ
 	SetNewPicture("HELPPICTURE","");
 	SetFormatedText("TEXTWINDOW","");
 }

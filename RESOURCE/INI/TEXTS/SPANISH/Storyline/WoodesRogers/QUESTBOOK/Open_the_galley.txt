@@ -1,9 +1,9 @@
 title=Abrir la cocina
-text.t1=La cocina en la proa del galeón está bloqueada, y mi trabajo es abrirla.
-text.t2=He encontrado la cocina, creo. Ahora sólo necesito una herramienta, algo como una pata de cabra, para retirar la tabla.
+text.t1=La cocina en la proa del galeÃ³n estÃ¡ bloqueada, y mi trabajo es abrirla.
+text.t2=He encontrado la cocina, creo. Ahora sÃ³lo necesito una herramienta, algo como una pata de cabra, para retirar la tabla.
 text.t3=Supongo que ahora debo buscar el lugar adecuado para usar estas cuerdas.
-text.t4=He colocado las cuerdas. Y llegan hasta el fondo de la bodega. ¿Cómo puedo usar esto?
-text.t5=He colocado las cuerdas. Creo que puedo hacerlas llegar hasta el fondo de la bodega. ¿Cómo puedo usar esto? 
+text.t4=He colocado las cuerdas. Y llegan hasta el fondo de la bodega. Â¿CÃ³mo puedo usar esto?
+text.t5=He colocado las cuerdas. Creo que puedo hacerlas llegar hasta el fondo de la bodega. Â¿CÃ³mo puedo usar esto? 
 text.t6=Hay una herramienta bajo el montacargas.
 text.t7=Ahora son las tablas lo que tengo que colocar de alguna manera ingeniosa.
 text.t8=Puedo alcanzar la herramienta desde...

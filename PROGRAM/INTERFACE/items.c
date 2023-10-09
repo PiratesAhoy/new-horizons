@@ -286,7 +286,7 @@ if(comName=="activate" || comName=="click")
 	case "EQUIP_BUTTON":
 		if(comName=="activate" || comName=="click")
 		{
-//pär här
+//pÃ¤r hÃ¤r
 		//JRH -->
 			ref PChar;
 			PChar = GetMainCharacter();
@@ -1608,7 +1608,7 @@ if(comName=="activate" || comName=="click")
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "MSC_CONFIRM_NO_BUTTON");
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 2, "MSC_CONFIRM_YES_BUTTON");
 			SetFormatedText("MSC_TEXTWINDOW", TranslateString("", "TossItemInterface"));
-			SetFormatedText("MSC_TEXTWINDOW", "Are you sure you want to toss this item?");
+			//SetFormatedText("MSC_TEXTWINDOW", TranslateString("", "Are you sure you want to toss this item?"));
 		}
 	break;
 // <-- Levis
@@ -3362,7 +3362,7 @@ void I_ExamineItem()
 			LAi_QuestDelay("secret_room_finished_check", 0.1);
 		}
 	}
-//pär BB1
+//pÃ¤r BB1
 	if(itmName == "sealed_map")
 	{
 		if(IsEquipCharacterByItem(Pchar, "folding_knife"))
@@ -3952,6 +3952,9 @@ void UpdateItemData()
 			case "Russian":
 				GameInterface.strings.ItemName = GameInterface.strings.ItemName + " " + Quality;
 			break;
+			case "Spanish":
+				GameInterface.strings.ItemName = GameInterface.strings.ItemName + " " + Quality;
+			break;
 			GameInterface.strings.ItemName = Quality + " " + GameInterface.strings.ItemName;//default for English
 		}
 		// MAXIMUS 31.05.2019: corrected for russian spelling <==
@@ -4161,7 +4164,7 @@ void IDoExit(int exitCode)
 	}*/
 	EndCancelInterface(true);
 // MAXIMUS interface MOD <--
-//pär här 2, moved up see pär här
+//pÃ¤r hÃ¤r 2, moved up see pÃ¤r hÃ¤r
 //	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 }
 
@@ -4373,6 +4376,9 @@ void FillSelectedScroll(string itemsID)
 						switch(LanguageGetLanguage())
 						{
 							case "Russian":
+								name = name + " " + TranslateString("", "q"+arItem.QualityName);
+							break;
+							case "Spanish":
 								name = name + " " + TranslateString("", "q"+arItem.QualityName);
 							break;
 							name = TranslateString("", "q"+arItem.QualityName) + " " + name; // PB: Correct quality name //default for English

@@ -1,9 +1,9 @@
 title=Venganza
-text.t1=Nos marchamos a través de la Caverna Azul. Tengo que enseñarles el camino a la mina.
-text.t2=El enemigo se ha movido a los barcos, pero la única forma de salir de la mina parece ser a través de una ventana en la habitación de Viernes ¡Me da un poco de miedo!
-text.t3=Tengo que elevar el montacargas para que el grupo de Vane pueda atacar. Selkirk ya está registrando la corbeta.
-text.t4=¡El galeón se está hundiendo!
-text.t5=He tomado una decisión; no voy a unirme a los piratas. En lugar de eso, voy a volver al estudio de Rogers.
+text.t1=Nos marchamos a travÃ©s de la Caverna Azul. Tengo que enseÃ±arles el camino a la mina.
+text.t2=El enemigo se ha movido a los barcos, pero la Ãºnica forma de salir de la mina parece ser a travÃ©s de una ventana en la habitaciÃ³n de Viernes Â¡Me da un poco de miedo!
+text.t3=Tengo que elevar el montacargas para que el grupo de Vane pueda atacar. Selkirk ya estÃ¡ registrando la corbeta.
+text.t4=Â¡El galeÃ³n se estÃ¡ hundiendo!
+text.t5=He tomado una decisiÃ³n; no voy a unirme a los piratas. En lugar de eso, voy a volver al estudio de Rogers.
 text.t6=
 text.t7=
 text.t8=

@@ -148,7 +148,7 @@ void InitBattleInterface()
 	SetEventHandler("evntCheckEnableShip","procCheckEnableShip",0);
 	SetEventHandler("evntGetSRollSpeed","procGetSRollSpeed",0);
 
-	procLoadIntoNew(); // Проинитим таблицу активных перков
+	procLoadIntoNew(); // РџСЂРѕРёРЅРёС‚РёРј С‚Р°Р±Р»РёС†Сѓ Р°РєС‚РёРІРЅС‹С… РїРµСЂРєРѕРІ
 	SetEventHandler("Control Activation","BI_ProcessControlPress",0);
 
 	RefreshFlags();
@@ -1069,11 +1069,11 @@ void BI_LaunchCommand()
 // <-- KK
 	case "BI_SailTo":
 		if(targetNum==-1)
-		{ // приплыть в локатор с именем locName
+		{ // РїСЂРёРїР»С‹С‚СЊ РІ Р»РѕРєР°С‚РѕСЂ СЃ РёРјРµРЅРµРј locName
 			SeaAI_SailToLocator(locName);
 		}
 		else
-		{ // догнать перса с индексом targetNum
+		{ // РґРѕРіРЅР°С‚СЊ РїРµСЂСЃР° СЃ РёРЅРґРµРєСЃРѕРј targetNum
 			SeaAI_SailToCharacter(targetNum);
 		}
 	break;
@@ -1097,7 +1097,7 @@ void BI_LaunchCommand()
 	break;
 	case "BI_ImmDeath":
 		if(targetNum==-1)
-		{ // смерть форта
+		{ // СЃРјРµСЂС‚СЊ С„РѕСЂС‚Р°
 			targetNum = Fort_FindCharacter(AISea.Island,"reload",locName);
 			if(targetNum>=0)
 			{
@@ -1440,7 +1440,7 @@ void BI_SetPossibleCommands()
 		return;
 	}
 
-	// для главного персонажа
+	// РґР»СЏ РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 	if(mainIdx==chIdx)
 	{
 		BattleInterface.Commands.Moor.enable				= bCanEnterToLand;
@@ -1483,7 +1483,7 @@ void BI_SetPossibleCommands()
 		BattleInterface.Commands.CCommand.enable		= GetCompanionQuantity(mainCh)>1;
 		BattleInterface.Commands.Ability.enable			= true;
 	}
-	// для спутников
+	// РґР»СЏ СЃРїСѓС‚РЅРёРєРѕРІ
 	else
 	{
 		BattleInterface.Commands.Moor.enable				= false;
@@ -1793,7 +1793,7 @@ ref BI_GetData()
 
 	switch (dataType)
 	{
-	// Получаем номер картинки корабля
+	// РџРѕР»СѓС‡Р°РµРј РЅРѕРјРµСЂ РєР°СЂС‚РёРЅРєРё РєРѕСЂР°Р±Р»СЏ
 		case BIDT_SHIPPICTURE:
 			enable = distance < GetCharVisibilityRange(GetMainCharacter(), 1); // PB: Ship type is visible inside LONG range
 			if (CheckAttribute(chRef, "unknownShip") == true && sti(chRef.unknownShip) == true) {
@@ -2176,19 +2176,19 @@ void SetParameterData()
 
 ref ProcessSailDamage()
 {
-	// от кого удар
+	// РѕС‚ РєРѕРіРѕ СѓРґР°СЂ
 	int shootIdx = GetEventData();
-	// перс
+	// РїРµСЂСЃ
 	int chrIdx = GetEventData();
 	string sMastName = GetEventData();
-	// координаты паруса
+	// РєРѕРѕСЂРґРёРЅР°С‚С‹ РїР°СЂСѓСЃР°
 	string reyName = GetEventData();
 	int groupNum = GetEventData();
-	// данные о дырках
+	// РґР°РЅРЅС‹Рµ Рѕ РґС‹СЂРєР°С…
 	int holeCount = GetEventData();
 	int holeData = GetEventData();
 	int maxHoleCount = GetEventData();
-	// мощность паруса
+	// РјРѕС‰РЅРѕСЃС‚СЊ РїР°СЂСѓСЃР°
 	float sailPower = GetEventData();
 
 // KK -->
@@ -2255,7 +2255,7 @@ void ProcessDayRepair()
 		chref = GetCharacter(cn);
 		RepairAllCannons(&chref); // NK can qty. For now repair all fixable guns. Later go back and set repair rates. 05-04-19
 
-		// расчет починки корпуса
+		// СЂР°СЃС‡РµС‚ РїРѕС‡РёРЅРєРё РєРѕСЂРїСѓСЃР°
 		if( GetHullPercent(chref)<100.0 )
 		{
 			repPercent = GetHullRPD(chref);
@@ -2267,7 +2267,7 @@ void ProcessDayRepair()
 			RemoveRepairGoods(true,chref,matQ);
 		}
 
-		// расчет починки парусов
+		// СЂР°СЃС‡РµС‚ РїРѕС‡РёРЅРєРё РїР°СЂСѓСЃРѕРІ
 		if( GetSailPercent(chref)<100.0 )
 		{
 			repPercent = GetSailRPD(chref);
@@ -2571,7 +2571,7 @@ void procSetUsingAbility()
 		return;
 	}
 
-	// для главного персонажа
+	// РґР»СЏ РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 	if (mainIdx == chIdx)
 	{
 		BattleInterface.AbilityIcons.Brander.enable			= false;
@@ -2848,7 +2848,7 @@ ref BI_GetLandData()
 	}*/
 	// NK <--
 
-	// Заглушка
+	// Р—Р°РіР»СѓС€РєР°
 	if( BI_intNRetValue[2]<0 || BI_intNRetValue[3]<0 )
 	{
 		BI_intNRetValue[2] = AddTextureToList( &BattleInterface, "battle_interface\LandTarget1.tga", 4, 2 ); // KK

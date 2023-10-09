@@ -5,7 +5,7 @@ Hilda{Hilda}
 Sparre{Sparre}
 The Road Back to Greatness{The Road Back to Greatness}
 You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.{You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.}
-Kråkan{Kråkan}
+KrÃ¥kan{KrÃ¥kan}
 
 Ciri{Ciri}
 Riannon{Riannon}
@@ -40,7 +40,7 @@ Horatio{Horatio}
 Hornblower{Hornblower}
 Caroline{Caroline}
 
-Le Rève{Le Rève}
+Le RÃ¨ve{Le RÃ¨ve}
 
 Atropos{Atropos}
 
@@ -50,7 +50,7 @@ Alvarado{Alvarado}
 Aine{Aine}
 
 Petra{Petra}
-Borinqueña{Borinqueña}
+BorinqueÃ±a{BorinqueÃ±a}
 
 Becka{Becka}
 La Aguja - The Needle{La Aguja - The Needle}
@@ -121,7 +121,7 @@ Surprise{Surprise}
 
 Hector{Hector}
 Barbossa{Barbossa}
-The Curse of Cortés{The Curse of Cortés}
+The Curse of CortÃ©s{The Curse of CortÃ©s}
 Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...{Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...}
 Black Pearl{Black Pearl}
 
@@ -228,7 +228,7 @@ Helen{Helen}
 Lucia{Lucia}
 de la Vega{de la Vega}
 Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?}
-Intrépido{Intrépido}
+IntrÃ©pido{IntrÃ©pido}
 
 Edmundo{Edmundo}
 Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?}
@@ -237,7 +237,7 @@ Piers{Piers}
 Downing{Downing}
 Entreprenant{Entreprenant}
 
-François-Louis{François-Louis}
+FranÃ§ois-Louis{FranÃ§ois-Louis}
 Rousselet{Rousselet}
 Le Saint Louis{Le Saint Louis}
 
@@ -298,7 +298,7 @@ o Portugues{o Portugues}
 
 Santiago{Santiago}
 
-François{François}
+FranÃ§ois{FranÃ§ois}
 de Hadoque{de Hadoque}
 La Licorne{La Licorne}
 
@@ -333,7 +333,7 @@ You intend to see to it that any man who sails under a pirate flag or wears a pi
 
 Michiel{Michiel}
 de Ruyter{de Ruyter}
-Bestevaêr{Bestevaêr}
+BestevaÃªr{BestevaÃªr}
 Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!{Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!}
 Neptunus{Neptunus}
 
@@ -390,8 +390,8 @@ Demologos{Demologos}
 Roche{Roche}
 Brasiliano{Brasiliano}
 
-José{José}
-Joaquím{Joaquím}
+JosÃ©{JosÃ©}
+JoaquÃ­m{JoaquÃ­m}
 Almeida{Almeida}
 Rustic Sea Wolf{Rustic Sea Wolf}
 I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character){I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character)}

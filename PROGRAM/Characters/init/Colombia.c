@@ -2172,13 +2172,13 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 */
 
-// Officer of Casa de Contratación
+// Officer of Casa de ContrataciÃ³n
 	ch.old.name = "Francisco";
 	ch.old.middlename = "Arturo";
-	ch.old.lastname = "de Cádiz";
+	ch.old.lastname = "de CÃ¡diz";
 	ch.name = TranslateString("","Francisco");
 	ch.middlename = TranslateString("","Arturo");
-	ch.lastname = TranslateString("","de Cádiz");
+	ch.lastname = TranslateString("","de CÃ¡diz");
 	ch.id		= "CdC Officer";
 	if (GetCurrentPeriod() <= PERIOD_THE_SPANISH_MAIN) ch.model = "hub_spa5";
 	else ch.model = "man6_1";

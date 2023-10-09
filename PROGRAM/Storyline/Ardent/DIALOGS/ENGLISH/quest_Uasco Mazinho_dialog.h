@@ -1,6 +1,6 @@
 string DLG_TEXT[25] = {
 "Good day, ",
-"Good day, Señor.",
+"Good day, SeÃ±or.",
 ". I am busy and can not talk to you right now.",
 "Yes, I can see you are busy. But I would like my cargo unloaded right now. If you'll do it, I'll give you 100 piastres.",
 "How much is that?",

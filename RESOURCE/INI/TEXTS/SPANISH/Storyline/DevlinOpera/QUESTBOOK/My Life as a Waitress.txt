@@ -1,0 +1,8 @@
+title=i vida como camarera
+text.t1=Tengo que ayudar a Marcel Jauri a atender las mesas, tomar pedidos y elegir las bebidas correctas. Los clientes solo dan pistas vagas de lo que quieren.
+text.t2=Solo debo elegir la bebida par alguien cuando esté segura de que es lo que quiere. Siempre puedo volver a preguntar a cualquier cliente, así que no hay presión.
+text.t3=No guessing is required. I can get there through logic and the process of elimination.
+text.t4=Only a hat is a hat. Wigs and hoods don't count as hats.
+text.t5=If in doubt where to start, I must remember that dead men don't drink.
+text.t6=I must go in alone. My friends will have to wait outside.
+text.t7=Before I start, SAVE!

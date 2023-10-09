@@ -22,10 +22,10 @@ Far Beach{Far Beach}
 Greenford Fort{Greenford Fort}
 Oxbay Fort{Oxbay Fort}
 Conceicao{Conceicao}
-Conceição Port{Conceição Port}
+ConceiÃ§Ã£o Port{ConceiÃ§Ã£o Port}
 Sunny Haven{Sunny Haven}
 Leviathan Rock{Leviathan Rock}
-Conceição Fort{Conceição Fort}
+ConceiÃ§Ã£o Fort{ConceiÃ§Ã£o Fort}
 Douwesen{Douwesen}
 Douwesen Port{Douwesen port}
 Palm Beach{Palm Beach}
@@ -64,7 +64,7 @@ Playa de Sierra Maestra{Playa de Sierra Maestra}
 Peninsula de Zapata{Peninsula de Zapata}
 Santiago Fort{Santiago Fort}
 Guadeloupe{Guadeloupe}
-Pointe à Pitre{Pointe à Pitre}
+Pointe Ã  Pitre{Pointe Ã  Pitre}
 Anse Casse-Bois{Anse Casse-Bois}
 Pointe a pitre Fort{Pointe a pitre Fort}
 SaintMartin{Saint Martin}

@@ -3173,6 +3173,7 @@ void QuestComplete(string sQuestName)
 			Group_SetTaskAttack("Nathaniel Hawk", PLAYER_GROUP, true);
 			Group_LockTask("Nathaniel Hawk");
 			Group_SetAddress("Nathaniel Hawk", Characters[GetMainCharacterIndex()].location, "", "");
+			Characters[GetCharacterIndex("Nathaniel Hawk")].nosurrender = 2;
 
 			UpdateRelations();
 
@@ -8936,7 +8937,7 @@ void QuestComplete(string sQuestName)
 			//JRH Cartagena -->
 			//-----------------------------------------------------------------------------------------------------------
 			//Cartagena church
-			//p‰r
+			//p√§r
 		case "pchar_playertype":
 			LAi_SetPlayerType(Pchar);
 			break;
@@ -9106,7 +9107,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Cartagena_church_cave")].locators_radius.box.box17 = 0.7;
 			Characters[GetCharacterIndex("Elting")].dialog.currentnode = "First time";
 			break;
-			//p‰r
+			//p√§r
 		case "cartagena_snoring_starts":
 			if(CheckAttribute(Pchar,"quest.priest_wakes_up") && Pchar.quest.priest_wakes_up == "yes") return;
 

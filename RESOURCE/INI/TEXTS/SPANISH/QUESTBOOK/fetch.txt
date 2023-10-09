@@ -1,5 +1,5 @@
-title=MisiÛn general: Ayudar al #stype# de #stown#.
-text.t1=El #stype# de #stown# me ha encargado conseguir #damount# unidades de #sgood# y llev·rselas a cambio de #dmoney# piezas de oro. Pero tengo que entregar el cargamento antes del #sdate# o no recibirÈ nada.
-text.t2=He entregado una parte de la cantidad requerida pero todavÌa debo entregar el resto.
+title=Misi√≥n general: Ayudar al #stype# de #stown#.
+text.t1=El #stype# de #stown# me ha encargado conseguir #damount# unidades de #sgood# y llev√°rselas a cambio de #dmoney# piezas de oro. Pero tengo que entregar el cargamento antes del #sdate# o no recibir√© nada.
+text.t2=He entregado una parte de la cantidad requerida pero todav√≠a debo entregar el resto.
 text.t3=He completado el encargo.
-text.t4=No he conseguido entregar las mercancÌas a tiempo.
+text.t4=No he conseguido entregar las mercanc√≠as a tiempo.

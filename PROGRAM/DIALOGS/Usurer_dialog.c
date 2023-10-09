@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 
 	
 		case "LoanGranted_exit":
@@ -52,7 +52,7 @@ void ProcessDialogEvent()
 			Preprocessor_AddQuestData("deadline", GetHumanDate(sti(Pchar.quest.(NPC_Area).win_condition.l1.date.year), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.month), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.day))); 
 			Preprocessor_AddQuestData("loanshark", GetMySimpleName(NPChar));
 
-			WriteNewLogEntry("Visited "+FindTownName(GetCurrentTownID()),"I was desperate enough to borrow some money from the local loanshark. Now I have to return "+iLoanAmount+" plus interest to "+GetMySimpleName(NPChar)+" by "+GetHumanDate(sti(Pchar.quest.(NPC_Area).win_condition.l1.date.year), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.month), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.day))+".","Ship",true);
+			WriteNewLogEntry(GetTranslatedLog("Visited")+" "+FindTownName(GetCurrentTownID()),PreProcessText(GetTranslatedLog("I was desperate enough to borrow some money from the local loanshark. Now I have to return #sammount# plus interest to #sloanshark# by #sdeadline#.")),"Ship",true);
 
 			switch (GetTownIDFromLocID(Npchar.location))
 			{
@@ -160,7 +160,10 @@ void ProcessDialogEvent()
 			Pchar.Quest.Deposits.(NPC_Area).StartYear = getDataYear();
 			Pchar.Quest.Deposits.(NPC_Area).StartTime = getTime();
 			DialogExit();
-			WriteNewLogEntry("Visited "+FindTownName(GetCurrentTownID()),"I deposited some money at the local loanshark. "+GetMySimpleName(NPChar)+" promised a good interest for my "+makeint(Pchar.Quest.Deposits.(NPC_Area).Sum)+" pieces of gold.","Ship",true);      
+			
+			Preprocessor_Add("loanshark", GetMySimpleName(NPChar));
+			WriteNewLogEntry(GetTranslatedLog("Visited")+" "+FindTownName(GetCurrentTownID()),PreProcessText(GetTranslatedLog("I deposited some money at the local loanshark. #sloanshark# promised a good interest for my"))+" "+makeint(Pchar.Quest.Deposits.(NPC_Area).Sum)+" "+GetTranslatedLog("pieces of gold."),"Ship",true);  
+			Preprocessor_Delete("loanshark");			
 		break;
 
 		case "exit":

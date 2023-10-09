@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;
@@ -279,6 +279,7 @@ void ProcessDialogEvent()
 			AddPassenger(pchar, npchar, 1);
 			OfficersReaction("bad");
 			pchar.quest.gambling_with_girl = "prisoned";
+			NPChar.quest.no_escape = true;	// GR: make sure she can't jump overboard and leave the quest uncompletable
 			DeleteAttribute(pchar,"quest.gambling_with_girl.guard");
 		break;
 	}

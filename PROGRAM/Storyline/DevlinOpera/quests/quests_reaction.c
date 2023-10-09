@@ -6,7 +6,7 @@ void QuestComplete(string sQuestName)
 	switch(sQuestName)
 	{
 		////////////////////////////////////////////////////////////////////////
-		//  Êâåñò ïðî ïðîêëÿòûå ìîíåòêè
+		//  ÃŠÃ¢Ã¥Ã±Ã² Ã¯Ã°Ã® Ã¯Ã°Ã®ÃªÃ«Ã¿Ã²Ã»Ã¥ Ã¬Ã®Ã­Ã¥Ã²ÃªÃ¨
 		////////////////////////////////////////////////////////////////////////
 	
 		case "Start":
@@ -21,7 +21,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Devlin_tavern_outside")].reload.l2.disable = true;
 
                         DeleteAttribute(PChar, "shiplog");
-                        WriteNewLogEntry(GetTranslatedLog("New captain's log"), GetTranslatedLog("My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, His Majesty’s representative was impressed by my tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world. This is where my father disappeared... And I think my rascal brother should also be somewhere in these waters."),"Personal",true);
+                        WriteNewLogEntry(GetTranslatedLog("New captain's log"), GetTranslatedLog("My mother always said I had the devilâ€™s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, His Majestyâ€™s representative was impressed by my tale and paid me the full expeditionâ€™s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world. This is where my father disappeared... And I think my rascal brother should also be somewhere in these waters."),"Personal",true);
 		break;
 
 		case "Start_1":
@@ -2414,6 +2414,11 @@ void QuestComplete(string sQuestName)
 			PChar.quest.Domingo_start.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Domingo_start.win_condition.l1.location = "Santo_Domingo_port";
 			Pchar.quest.Domingo_start.win_condition = "Domingo_start";
+
+			Pchar.quest.Domingo_start_town.win_condition.l1 = "location";
+			PChar.quest.Domingo_start_town.win_condition.l1.character = Pchar.id;
+			Pchar.quest.Domingo_start_town.win_condition.l1.location = "Santo_Domingo_town";
+			Pchar.quest.Domingo_start_town.win_condition = "Domingo_start";
 		break;
 
 		case "restore_flag_detection":
@@ -2425,6 +2430,7 @@ void QuestComplete(string sQuestName)
 
 		case "Domingo_start":
 			Pchar.quest.Domingo_start.over = "yes";
+			Pchar.quest.Domingo_start_town.over = "yes";
 			SetCurrentTime(08.00, 0);
 			SetNextWeather("Blue Sky"); 
 
@@ -2727,10 +2733,10 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Cayman_map.win_condition.l1.item = "mapCayman";
 			Pchar.quest.Cayman_map.win_condition = "Cayman_map";
 
-			Pchar.quest.Domingo_start.win_condition.l1 = "location";
-			PChar.quest.Domingo_start.win_condition.l1.character = Pchar.id;
-			Pchar.quest.Domingo_start.win_condition.l1.location = "Cayman_Shore_01";
-			Pchar.quest.Domingo_start.win_condition = "Cayman_start";
+			Pchar.quest.Cayman_start.win_condition.l1 = "location";
+			PChar.quest.Cayman_start.win_condition.l1.character = Pchar.id;
+			Pchar.quest.Cayman_start.win_condition.l1.location = "Cayman_Shore_01";
+			Pchar.quest.Cayman_start.win_condition = "Cayman_start";
 		break;
 
 		case "Cayman_map":
@@ -2743,7 +2749,8 @@ void QuestComplete(string sQuestName)
 
 
 		case "Cayman_start":
-			SetCurrentTime(09.00, 0);
+			Pchar.quest.Cayman_start.over = "yes";
+			SetCurrentTime(07.30, 0);
 		        SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));	// Force Bonnie and Blaze back to being officers
 		        SetOfficersIndex(Pchar, 2, getCharacterIndex("Blaze Devlin"));	// in case player hired new officers on the way here
 
@@ -2792,6 +2799,7 @@ void QuestComplete(string sQuestName)
                         Locations[FindLocation("Byrne_inside")].vcskip = true;
 
 			ChangeCharacterAddressGroup(characterFromID("Killian O'Byrne"), "Byrne_inside", "sit", "sit2");
+			Characters[GetCharacterIndex("Annie O'Byrne")].Dialog.CurrentNode = "startolino";
                 break;
 
 		case "welcome_Annie":
@@ -2838,6 +2846,649 @@ void QuestComplete(string sQuestName)
 		case "Back_from_Cayman_City":
 			AddQuestRecord("Hermit and the Frogs", 3);
 			pchar.quest.GOVERNOR = "angry";
+			Characters[GetCharacterIndex("Killian O'Byrne")].Dialog.CurrentNode = "Return_from_Shaw";
+		break;
+
+		case "Annie_tells_scouts":
+			ChangeCharacterAddressGroup(characterFromID("Annie O'Byrne"), "Byrne_inside", "reload", "reload1");
+                        PlaySound("PEOPLE\creak.wav");
+                        LAi_QuestDelay("Annie_tells_scouts2", 1.0);
+		break;
+
+		case "Annie_tells_scouts2":
+			Characters[GetCharacterIndex("Annie O'Byrne")].Dialog.CurrentNode = "Scouts_landed";
+			LAi_ActorDialog(characterFromID("Annie O'Byrne"), Pchar, "", 1.0, 0);
+		break;
+
+		case "Land_ruse_begins": // Annie stays behind
+			AddQuestRecord("Hermit and the Frogs", 4);
+			pchar.quest.KILLIAN = "running";
+			pchar.quest.ANNIE = "staysback";
+			ChangeCharacterAddressGroup(characterfromID("Fake Bea"),"Cayman_Shore_01", "goto", "citizen05");
+		break;
+
+		case "Land_ruse_begins_Annie": // Annie joins you
+			AddQuestRecord("Hermit and the Frogs", 4);
+			pchar.quest.KILLIAN = "running";
+			pchar.quest.ANNIE = "comeswith";
+			ChangeCharacterAddressGroup(characterfromID("Fake Bea"),"Cayman_Shore_01", "goto", "citizen05");
+
+			LAi_SetOfficerType(characterFromID("Annie O'Byrne"));
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Annie O'Byrne"))
+			LAi_SetImmortal(characterFromID("Annie O'Byrne"), true);
+		break;
+
+		case "Fake_Bea_removes":
+			AddQuestRecord("Hermit and the Frogs", 5);
+			DoQuestReloadToLocation("Cayman_Shore_01", "goto", "citizen05" ,"Fake_Bea_removes2");
+
+                        if (GetRMRelation(PChar, SPAIN) <= REL_WAR)
+                        {
+			SetCharacterShipLocation(Pchar, "none");
+                        }
+                        else
+                        {
+			SetCharacterShipLocation(Pchar, "Cayman_port");
+                        }
+
+			ChangeCharacterAddress(characterfromID("Fake Bea"),"none", "");
+                        SetCharacterShipLocation(characterFromID("Godefroi Bonamy"), "Devlin_Cayman_beach");
+		break;
+
+		case "Fake_Bea_removes2":
+			ChangeCharacterAddressGroup(characterfromID("Scout01"),"Devlin_Fort_Camp", "goto", "goto39");
+			ChangeCharacterAddressGroup(characterfromID("Scout02"),"Devlin_Fort_Camp", "goto", "goto42");
+			ChangeCharacterAddressGroup(characterfromID("Scout03"),"Devlin_Fort_Camp", "goto", "goto9");
+
+                        Locations[FindLocation("Devlin_Fort_Camp")].locators_radius.quest.quest1 = 3.0;
+
+                        pchar.quest.Scouts_defend.win_condition.l1 = "locator";
+                        pchar.quest.Scouts_defend.win_condition.l1.location = "Devlin_Fort_Camp";
+                        pchar.quest.Scouts_defend.win_condition.l1.locator_group = "quest";
+                        pchar.quest.Scouts_defend.win_condition.l1.locator = "quest1";
+                        pchar.quest.Scouts_defend.win_condition = "Scouts_defend";
+		break;
+
+		case "Scouts_defend":
+			LAi_group_MoveCharacter(CharacterFromID("Scout01"), "Bad_scouts");
+			LAi_group_MoveCharacter(CharacterFromID("Scout02"), "Bad_scouts");
+			LAi_group_MoveCharacter(CharacterFromID("Scout03"), "Bad_scouts");
+
+			LAi_group_FightGroups("Bad_scouts", LAI_GROUP_PLAYER, 1);
+
+			LAi_group_SetCheck("Bad_scouts", "Killed_Scouts");
+		break;
+
+		case "Killed_Scouts":
+                        if (CheckQuestAttribute("ANNIE", "staysback"))
+                        {
+			     LAi_SetFightMode(PChar, false);
+			     LAi_SetActorType(pchar)
+			     Pchar.dialog.CurrentNode = "Waiting_for_Kay";
+			     LAi_ActorSelfDialog(PChar, "");
+                        }
+
+                        if (CheckQuestAttribute("ANNIE", "comeswith"))
+                        {
+			     LAi_SetFightMode(PChar, false);
+			     LAi_SetFightMode(characterFromID("Annie O'Byrne"), false);
+			     LAi_SetActorType(characterFromID("Annie O'Byrne"));
+			     Characters[GetCharacterIndex("Annie O'Byrne")].Dialog.CurrentNode = "Scouts_ded_with_Annie";
+			     LAi_ActorDialog(characterFromID("Annie O'Byrne"), Pchar, "", 1.0, 0);
+                        }
+		break;
+
+		case "Kay_picks_up":
+			LAi_SetPlayerType(PChar);
+			LAi_Fade("Kay_picks_up2", "");
+
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Annie O'Byrne"));
+                        RemovePassenger(pchar, characterFromID("Annie O'Byrne"));
+			LAi_SetActorType(characterFromID("Annie O'Byrne"));
+			ChangeCharacterAddressGroup(characterFromID("Annie O'Byrne"), "Byrne_inside", "goto", "goto2");
+		break;
+
+		case "Kay_picks_up2":
+			ChangeCharacterAddress(pchar, "Devlin_Fort_Camp", "goto39");
+                        WaitDate("", 0, 0, 0, 1, 0);
+
+			ChangeCharacterAddressGroup(characterfromID("Mad Kay Hubecher"),"Devlin_Fort_Camp", "reload", "reload1");
+			ChangeCharacterAddressGroup(characterfromID("Kay01"),"Devlin_Fort_Camp", "reload", "reload1");
+			ChangeCharacterAddressGroup(characterfromID("Kay02"),"Devlin_Fort_Camp", "reload", "reload1");
+			ChangeCharacterAddressGroup(characterfromID("Kay03"),"Devlin_Fort_Camp", "reload", "reload1");
+
+			LAi_SetActorType(characterFromID("Mad Kay Hubecher"));
+			LAi_SetActorType(characterFromID("Kay01"));
+			LAi_SetActorType(characterFromID("Kay02"));
+			LAi_SetActorType(characterFromID("Kay03"));
+
+			Characters[GetCharacterIndex("Mad Kay Hubecher")].Dialog.CurrentNode = "Kays_first_phrase";
+
+			LAi_ActorDialog(characterFromID("Mad Kay Hubecher"), Pchar, "", 10.0, 0);
+                        Lai_ActorFollow(characterFromID("Kay01"), pchar, "", 10.0);
+                        Lai_ActorFollow(characterFromID("Kay02"), pchar, "", 10.0);
+                        Lai_ActorFollow(characterFromID("Kay03"), pchar, "", 10.0);
+		break;
+
+		case "Blaze_meets_Bonamy":
+			DoQuestReloadToLocation("Cabin4", "rld", "loc6", "Blaze_meets_Bonamy2");
+			ChangeCharacterAddressGroup(characterfromID("Godefroi Bonamy"),"Cabin4", "rld", "aloc2");
+			ChangeCharacterAddressGroup(characterfromID("Rocoso Balboa"),"none", "", "");             // in case he's still there
+			LAi_SetActorType(characterFromID("Godefroi Bonamy"));
+			LAi_SetPlayerType(pchar);
+		break;
+
+		case "Blaze_meets_Bonamy2":
+			     LAi_ActorDialog(characterFromID("Godefroi Bonamy"), Pchar, "", 2.0, 0);
+		break;
+
+		case "Unite_to_Beach":
+			DoQuestReloadToLocation("Devlin_Cayman_beach", "reload", "reload1", "Unite_to_Beach2");
+		break;
+
+		case "Unite_to_Beach2":
+			ChangeCharacterAddressGroup(characterfromID("Mad Kay Hubecher"),"Devlin_Fort_Camp", "goto", "goto39");
+			ChangeCharacterAddressGroup(characterfromID("Kay01"),"Devlin_Fort_Camp", "goto", "goto42");
+			ChangeCharacterAddressGroup(characterfromID("Kay02"),"Devlin_Fort_Camp", "goto", "goto9");
+			ChangeCharacterAddressGroup(characterfromID("Kay03"),"Devlin_Fort_Camp", "goto", "goto43");
+
+			LAi_SetStayType(characterFromID("Mad Kay Hubecher"));
+			LAi_SetStayType(characterFromID("Kay01"));
+			LAi_SetStayType(characterFromID("Kay02"));
+			LAi_SetStayType(characterFromID("Kay03"));
+
+			Characters[GetCharacterIndex("Mad Kay Hubecher")].Dialog.CurrentNode = "Ambush";
+
+			AddQuestRecord("Hermit and the Frogs", 6);
+		break;
+
+		case "MKH_ambush":
+			AddQuestRecord("Hermit and the Frogs", 7);
+			pchar.quest.MKH = "ambush";
+
+                        Locations[FindLocation("Devlin_Cayman_beach")].locators_radius.reload.boat = 9.0;
+
+                        pchar.quest.melde_Bonamy.win_condition.l1 = "locator";
+                        pchar.quest.melde_Bonamy.win_condition.l1.location = "Devlin_Cayman_beach";
+                        pchar.quest.melde_Bonamy.win_condition.l1.locator_group = "reload";
+                        pchar.quest.melde_Bonamy.win_condition.l1.locator = "boat";
+                        pchar.quest.melde_Bonamy.win_condition = "melde_Bonamy";
+		break;
+
+		case "melde_Bonamy":
+			DoQuestReloadToLocation("Family_deck", "goto", "goto7", "melde_Bonamy2");
+			Pchar.quest.melde_Bonamy.over = "yes";
+			ChangeCharacterAddressGroup(characterfromID("Godefroi Bonamy"),"Family_deck", "goto", "goto16");
+			LAi_SetActorType(characterFromID("Godefroi Bonamy"));
+			Characters[GetCharacterIndex("Godefroi Bonamy")].dialog.currentnode = "Le_Blaze_is_back";
+		break;
+
+		case "melde_Bonamy2":
+			LAi_ActorDialog(characterFromID("Godefroi Bonamy"), Pchar, "", 2.0, 0);
+		break;
+
+		case "To_le_Hold":
+			DoQuestReloadToLocation("Devlin_Hold1", "reload", "reload1", "To_le_Hold2");
+		break;
+
+		case "To_le_Hold2":
+			ChangeCharacterAddressGroup(characterfromID("Godefroi Bonamy"),"Devlin_Hold1", "rld", "loc1");
+			ChangeCharacterAddressGroup(characterfromID("Bonamy01"),"Devlin_Hold1", "rld", "prison1");
+			ChangeCharacterAddressGroup(characterfromID("Bonamy02"),"Devlin_Hold1", "rld", "prison7");
+
+			LAi_SetOfficerType(characterFromID("Godefroi Bonamy"));
+			LAi_SetOfficerType(characterFromID("Bonamy01"));
+			LAi_SetOfficerType(characterFromID("Bonamy02"));
+
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Godefroi Bonamy"))
+			SetOfficersIndex(Pchar, 2, getCharacterIndex("Bonamy01"))
+			SetOfficersIndex(Pchar, 3, getCharacterIndex("Bonamy02"))
+
+                        SetCharacterRemovable(CharacterFromID("Godefroi Bonamy"), false);
+                        SetCharacterRemovable(CharacterFromID("Bonamy01"), false);
+                        SetCharacterRemovable(CharacterFromID("Bonamy02"), false);
+
+			LAi_SetImmortal(characterFromID("Godefroi Bonamy"), true);
+
+			ChangeCharacterAddressGroup(characterfromID("Crazy Luc Helveur"),"Devlin_Hold1", "rld", "prison2");
+			ChangeCharacterAddressGroup(characterfromID("Luc01"),"Devlin_Hold1", "rld", "prison3");
+			ChangeCharacterAddressGroup(characterfromID("Luc02"),"Devlin_Hold1", "rld", "prison4");
+			ChangeCharacterAddressGroup(characterfromID("Luc03"),"Devlin_Hold1", "rld", "prison5");
+
+                        LAi_QuestDelay("To_le_Hold3", 0.5);
+		break;
+
+		case "To_le_Hold3":
+			LAi_SetActorType(characterFromID("Crazy Luc Helveur"));
+			LAi_ActorWaitDialog(pchar, characterFromID("Crazy Luc Helveur"));
+			Lai_ActorFollow(characterFromID("Crazy Luc Helveur"), pchar, "Bonamy_Luc", 0.0);
+		break;
+
+		case "Bonamy_Luc":
+			LAi_ActorDialog(characterFromID("Crazy Luc Helveur"), Pchar, "", 1.5, 0);
+		break;
+
+		case "Bonamy_Luc2":
+			LAi_SetActorType(characterFromID("Godefroi Bonamy"));
+			Characters[GetCharacterIndex("Godefroi Bonamy")].Dialog.CurrentNode = "Confronting_Luc";
+			LAi_ActorDialog(characterFromID("Godefroi Bonamy"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Bonamy_Luc3":
+			Characters[GetCharacterIndex("Crazy Luc Helveur")].Dialog.CurrentNode = "U_Joking";
+			LAi_ActorDialog(characterFromID("Crazy Luc Helveur"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Bonamy_Luc4":
+			Characters[GetCharacterIndex("Godefroi Bonamy")].Dialog.CurrentNode = "Confronting_Luc2";
+			LAi_ActorDialog(characterFromID("Godefroi Bonamy"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Bonamy_Luc5":
+			Characters[GetCharacterIndex("Crazy Luc Helveur")].Dialog.CurrentNode = "Self_Defence";
+			LAi_ActorDialog(characterFromID("Crazy Luc Helveur"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Bonamy_Luc6":
+			Characters[GetCharacterIndex("Godefroi Bonamy")].Dialog.CurrentNode = "Confronting_Luc3";
+			LAi_ActorDialog(characterFromID("Godefroi Bonamy"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Bonamy_vs_Luc":
+			LAi_SetOfficerType(characterFromID("Godefroi Bonamy"));
+			LAi_SetStayType(characterFromID("Crazy Luc Helveur"));
+
+			LAi_group_MoveCharacter(CharacterFromID("Crazy Luc Helveur"), "Bad_Luc");
+			LAi_group_MoveCharacter(CharacterFromID("Luc01"), "Bad_Luc");
+			LAi_group_MoveCharacter(CharacterFromID("Luc02"), "Bad_Luc");
+			LAi_group_MoveCharacter(CharacterFromID("Luc03"), "Bad_Luc");
+
+			LAi_group_FightGroups("Bad_Luc", LAI_GROUP_PLAYER, 1);
+			LAi_group_SetCheck("Bad_Luc", "Killed_Luc");
+		break;
+
+		case "Killed_Luc":
+			LAi_SetFightMode(PChar, false);
+			LAi_SetActorType(characterFromID("Godefroi Bonamy"));
+			Characters[GetCharacterIndex("Godefroi Bonamy")].Dialog.CurrentNode = "Triumph";
+			LAi_ActorDialog(characterFromID("Godefroi Bonamy"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Lead_Bonamy_ashore":
+			LAi_SetOfficerType(characterFromID("Godefroi Bonamy"));
+			DoQuestReloadToLocation("Devlin_Cayman_beach", "reload", "reload1", "Lead_Bonamy_ashore2");
+		break;
+
+		case "Lead_Bonamy_ashore2":
+			AddQuestRecord("Hermit and the Frogs", 8);
+			pchar.quest.BONAMY = "leadme";
+
+			Locations[FindLocation("Devlin_Cayman_02")].reload.l1.disable = true;
+			Locations[FindLocation("Devlin_Cayman_02")].reload.l2.disable = true;
+			Locations[FindLocation("Devlin_Cayman_03")].reload.l6.disable = true;
+			Locations[FindLocation("Devlin_Cayman_03")].reload.l7.disable = true;
+
+                        pchar.quest.Stop_town.win_condition.l1 = "locator";
+                        pchar.quest.Stop_town.win_condition.l1.location = "Devlin_Cayman_03";
+                        pchar.quest.Stop_town.win_condition.l1.locator_group = "reload";
+                        pchar.quest.Stop_town.win_condition.l1.locator = "reload3_back";
+                        pchar.quest.Stop_town.win_condition = "Stop_town";
+
+                        pchar.quest.Stop_house.win_condition.l1 = "locator";
+                        pchar.quest.Stop_house.win_condition.l1.location = "Devlin_Cayman_02";
+                        pchar.quest.Stop_house.win_condition.l1.locator_group = "reload";
+                        pchar.quest.Stop_house.win_condition.l1.locator = "reload3_back";
+                        pchar.quest.Stop_house.win_condition = "Stop_house";
+
+                        pchar.quest.Fort_ambush.win_condition.l1 = "locator";
+                        pchar.quest.Fort_ambush.win_condition.l1.location = "Devlin_Fort_Camp";
+                        pchar.quest.Fort_ambush.win_condition.l1.locator_group = "quest";
+                        pchar.quest.Fort_ambush.win_condition.l1.locator = "quest1";
+                        pchar.quest.Fort_ambush.win_condition = "Fort_ambush";
+		break;
+
+// -------- Precautions
+		case "Stop_town":
+			LAi_SetActorType(characterFromID("Godefroi Bonamy"));
+			Characters[GetCharacterIndex("Godefroi Bonamy")].Dialog.CurrentNode = "Stop_town";
+			LAi_ActorDialog(characterFromID("Godefroi Bonamy"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Stop_town2":
+			LAi_SetOfficerType(characterFromID("Godefroi Bonamy"));
+		break;
+
+		case "Stop_house":
+			LAi_SetActorType(pchar)
+			Pchar.dialog.CurrentNode = "Stop_house";
+			LAi_ActorSelfDialog(PChar, "");
+		break;
+
+		case "Stop_house2":
+			LAi_SetPlayerType(pchar)
+		break;
+
+// -------- Precautions over
+
+		case "Fort_ambush":
+			LAi_group_MoveCharacter(CharacterFromID("Mad Kay Hubecher"), "Bad_Kay");
+			LAi_group_MoveCharacter(CharacterFromID("Kay01"), "Bad_Kay");
+			LAi_group_MoveCharacter(CharacterFromID("Kay02"), "Bad_Kay");
+			LAi_group_MoveCharacter(CharacterFromID("Kay03"), "Bad_Kay");
+
+			LAi_group_FightGroups("Bad_Kay", LAI_GROUP_PLAYER, 1);
+
+			LAi_group_SetCheck("Bad_Kay", "Killed_Kay");
+		break;
+
+		case "Killed_Kay":
+			LAi_SetFightMode(PChar, false);
+			LAi_SetFightMode(characterFromID("Godefroi Bonamy"), false);
+			LAi_SetActorType(characterFromID("Godefroi Bonamy"));
+			Characters[GetCharacterIndex("Godefroi Bonamy")].Dialog.CurrentNode = "Y_he_attacked";
+			LAi_ActorWaitDialog(pchar, characterFromID("Godefroi Bonamy"));
+			Lai_ActorFollow(characterFromID("Godefroi Bonamy"), pchar, "Killed_Kay2", 0.0);
+		break;
+
+		case "Killed_Kay2":
+			LAi_ActorDialog(characterFromID("Godefroi Bonamy"), Pchar, "", 1.0, 0);
+		break;
+
+		case "Bonamys_Last_Duel":
+			LAi_SetStayType(characterFromID("Godefroi Bonamy"));
+			LAi_SetStayType(characterFromID("Bonamy01"));
+			LAi_SetStayType(characterFromID("Bonamy02"));
+
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Godefroi Bonamy"));
+			RemovePassenger(Pchar, characterFromID("Godefroi Bonamy"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Bonamy01"));
+			RemovePassenger(Pchar, characterFromID("Bonamy01"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Bonamy02"));
+			RemovePassenger(Pchar, characterFromID("Bonamy02"));
+
+			LAi_group_MoveCharacter(CharacterFromID("Godefroi Bonamy"), "Bad_Bonamy");
+			LAi_group_MoveCharacter(CharacterFromID("Bonamy01"), "Bad_Bonamy");
+			LAi_group_MoveCharacter(CharacterFromID("Bonamy02"), "Bad_Bonamy");
+
+			LAi_SetImmortal(characterFromID("Godefroi Bonamy"), false);
+
+			LAi_group_FightGroups("Bad_Bonamy", LAI_GROUP_PLAYER, 1);
+			LAi_group_SetCheck("Bad_Bonamy", "Killed_Bonamy");
+		break;
+
+		case "Killed_Bonamy":
+			LAi_SetFightMode(PChar, false);
+			LAi_SetActorType(pchar)
+			Pchar.dialog.CurrentNode = "Blaze_killed_Bonamy";
+			LAi_ActorSelfDialog(PChar, "");
+		break;
+
+		case "Camp_to_Hermit":
+			LAi_SetPlayerType(pchar)
+			Locations[FindLocation("Devlin_Cayman_02")].reload.l1.disable = false;
+			Locations[FindLocation("Devlin_Cayman_02")].reload.l2.disable = false;
+			Locations[FindLocation("Devlin_Cayman_03")].reload.l6.disable = false;
+			Locations[FindLocation("Devlin_Cayman_03")].reload.l7.disable = false;
+
+			Pchar.quest.Stop_town.over = "yes";
+			Pchar.quest.Stop_house.over = "yes";
+			Pchar.quest.Fort_ambush.over = "yes";
+
+			Characters[GetCharacterIndex("Killian O'Byrne")].Dialog.CurrentNode = "wrapup";
+			AddQuestRecord("Hermit and the Frogs", 9);
+                        SetCharacterShipLocation(characterFromID("Godefroi Bonamy"), "none");
+		break;
+
+		case "Wait_Annie_one_more":
+			Characters[GetCharacterIndex("Annie O'Byrne")].Dialog.CurrentNode = "Wants_Officer";
+			LAi_ActorDialog(characterFromID("Annie O'Byrne"), Pchar, "", 0.5, 0);
+		break;
+
+		case "KOB_confirms":
+			LAi_SetActorType(characterFromID("Killian O'Byrne"));
+			LAi_ActorSetSitMode(characterFromID("Killian O'Byrne"));
+			Characters[GetCharacterIndex("Killian O'Byrne")].Dialog.CurrentNode = "encourages_Annie";
+			LAi_ActorDialog(characterFromID("Killian O'Byrne"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Annie_decision":
+			Characters[GetCharacterIndex("Annie O'Byrne")].Dialog.CurrentNode = "Decision";
+			LAi_ActorDialog(characterFromID("Annie O'Byrne"), Pchar, "", 0.5, 0);
+		break;
+
+		case "Goodbye_Byrnes":
+			if (PChar.location.from_sea == "Cayman_port")
+			{
+			AddQuestRecord("Hermit and the Frogs", 10);
+			ChangeCharacterAddressGroup(characterfromID("Fake Bea"),"Cayman_Port", "goto", "goto5");
+			}
+			else
+			{	
+                        AddQuestRecord("Hermit and the Frogs", 11);
+			ChangeCharacterAddressGroup(characterfromID("Fake Bea"),"Cayman_Shore_01", "goto", "citizen05");
+			SetCharacterShipLocation(Pchar, "Cayman_Shore_01");
+			}
+
+			LAi_SetSitType(characterFromID("Killian O'Byrne"));
+			pchar.quest.KILLIAN = "over";
+			Characters[GetCharacterIndex("Fake Bea")].Dialog.CurrentNode = "wrapitup";
+		break;
+
+		case "Annie_hired":
+			pchar.quest.ANNIE = "hired";
+
+			LAi_SetOfficerType(characterFromID("Annie O'Byrne"));
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Annie O'Byrne"))
+			LAi_SetImmortal(characterFromID("Annie O'Byrne"), false);
+		break;
+
+		case "Annie_available":
+			pchar.quest.ANNIE = "available";
+			AddQuestRecord("The Road to El Dorado", 8);
+		break;
+
+                case "Cayman_finish":
+			if (PChar.location.from_sea == "Cayman_port")
+			{
+				DoQuestReloadToLocation("Cayman_port", "reload", "Falaise_de_fleur_location_01_05" ,"_");
+			}
+                        else
+			{
+				DoQuestReloadToLocation("Cayman_Shore_01", "reload", "reload1" ,"_");
+			}
+
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Fencing", 6000);
+				AddPartyExpChar(pchar, "Defence", 4000);
+			}
+			else { AddPartyExp(pchar, 10000); }
+
+			AddPassenger(Pchar, characterFromID("Bonnie Devlin"), 0);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));
+			LAi_SetImmortal(characterFromID("Bonnie Devlin"), true);
+			AddPassenger(Pchar, characterFromID("Blaze Devlin"), 0);
+			SetOfficersIndex(Pchar, 2, getCharacterIndex("Blaze Devlin"));
+			LAi_SetImmortal(characterFromID("Blaze Devlin"), true);
+
+			LAi_SetOfficerType(characterFromID("Bonnie Devlin"));
+			LAi_SetOfficerType(characterFromID("Blaze Devlin"));
+
+			GiveItem2Character(characterFromID("Blaze Devlin"), "blade25");
+			EquipCharacterByItem(characterFromID("Blaze Devlin"), "blade25");
+
+                        bQuestDisableSeaEnter = false
+			DisableFastTravel(false);
+			Characters[GetCharacterIndex("Edmund Christobel Shaw")].dialog.Filename = "Edmund Christobel Shaw_dialog.c";
+			ChangeCharacterAddress(characterfromID("Fake Bea"),"none", "");
+		break;
+
+//========================== CAYMAN SEA BATTLE (ROUTE 2)
+
+		case "Cayman_sea_battle_setup":
+                        AddQuestRecord("Hermit and the Frogs", 12);
+			pchar.quest.KILLIAN = "running";
+			ChangeCharacterAddressGroup(characterfromID("Fake Bea"),"Cayman_Shore_01", "goto", "citizen05");
+			Characters[GetCharacterIndex("Fake Bea")].Dialog.CurrentNode = "borrowship";
+		break;
+
+		case "Cayman_sea_battle_begins":
+			DoQuestReloadToLocation("Cayman_Shore_01", "goto", "citizen05" ,"Cayman_sea_battle_begins2");
+                        bQuestDisableSeaEnter = false
+			ChangeCharacterAddress(characterfromID("Fake Bea"),"none", "");
+		break;
+
+		case "Cayman_sea_battle_begins2":
+			Pchar.quest.Cayman_sea_battle_begins3.win_condition.l1 = "location";
+			Pchar.quest.Cayman_sea_battle_begins3.win_condition.l1.location = "Cayman";
+			Pchar.quest.Cayman_sea_battle_begins3.win_condition = "Cayman_sea_battle_begins3";
+		break;
+
+		case "Cayman_sea_battle_begins3":
+			Pchar.quest.Cayman_sea_battle_begins3.over = "yes";
+			bQuestDisableMapEnter = true;
+
+			Group_CreateGroup("Bonamy_ship");
+			Group_AddCharacter("Bonamy_ship", "Godefroi Bonamy");
+			Group_SetGroupCommander("Bonamy_ship", "Godefroi Bonamy");
+                        characters[GetCharacterIndex("Godefroi Bonamy")].Ship.Stopped = true;
+			Group_SetAddress("Bonamy_ship", "Cayman", "Quest_ships", "quest_ship_4");
+                        Group_SetTaskNone("Bonamy_ship");
+                        Group_LockTask("Bonamy_ship");
+			Sea_LoginGroupNow("Bonamy_ship");
+			characters[GetCharacterIndex("Godefroi Bonamy")].nosurrender = 1;
+			SetCharacterRelationBoth(GetCharacterIndex("Godefroi Bonamy"),GetMainCharacterIndex(),RELATION_ENEMY);
+                        characters[GetCharacterIndex("Godefroi Bonamy")].recognized = true;
+			Character_SetAbordageEnable(characterFromID("Godefroi Bonamy"), true);
+
+			pchar.quest.Cayman_sea_battle_won.win_condition.l1 = "NPC_Death";
+			pchar.quest.Cayman_sea_battle_won.win_condition.l1.character = "Godefroi Bonamy";
+			pchar.quest.Cayman_sea_battle_won.win_condition = "Cayman_sea_battle_won";
+
+                        pchar.quest.Cayman_sea_battle_won.win_condition.l2 = "SeaEnter";
+		break;
+
+		case "Cayman_sea_battle_won":
+			bQuestDisableMapEnter = false;
+			Island_SetReloadEnableGlobal("Cayman", true);
+                        AddQuestRecord("Hermit and the Frogs", 13);
+
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Leadership", 4000);
+				AddPartyExpChar(pchar, "Defence", 4000);
+			}
+			else { AddPartyExp(pchar, 8000); }
+
+			Pchar.quest.Bea_congrats.win_condition.l1 = "location";
+			PChar.quest.Bea_congrats.win_condition.l1.character = Pchar.id;
+			Pchar.quest.Bea_congrats.win_condition.l1.location = "Cayman_Shore_01";
+			Pchar.quest.Bea_congrats.win_condition = "Bea_congrats";
+		break;
+
+		case "Bea_congrats":
+			ChangeCharacterAddressGroup(characterFromID("Fake Bea"), "Cayman_Shore_01", "goto", "locator11");
+			LAi_SetActorType(characterFromID("Fake Bea"));
+			Characters[GetCharacterIndex("Fake Bea")].dialog.currentnode = "congrats";
+			LAi_ActorDialog(characterFromID("Fake Bea"), Pchar, "", 5.0, 0);
+		break;
+
+		case "Bea_congrats_over":
+			ChangeCharacterAddressGroup(characterFromID("Fake Bea"), "none", "", "");	//just to be sure
+			LAi_SetStayType(characterFromID("Fake Bea"));
+
+			DoQuestReloadToLocation("Cayman_Shore_01", "officers", "reload1_2" ,"KOB_kidnapped");
+			
+			SetQuestHeader("Hermit and the Frogs");
+			AddQuestRecord("Hermit and the Frogs", 14);
+                        bQuestDisableSeaEnter = true
+		break;
+
+		case "KOB_kidnapped":
+			Pchar.quest.KOB_kidnapped2.win_condition.l1 = "location";
+			PChar.quest.KOB_kidnapped2.win_condition.l1.character = Pchar.id;
+			Pchar.quest.KOB_kidnapped2.win_condition.l1.location = "Byrne_outside";
+			Pchar.quest.KOB_kidnapped2.win_condition = "KOB_kidnapped2";
+		break;
+
+		case "KOB_kidnapped2":
+			Locations[FindLocation("Byrne_outside")].reload.l1.disable = true;
+			Locations[FindLocation("Byrne_outside")].reload.l3.disable = true;
+
+			ChangeCharacterAddressGroup(characterfromID("Scout01"),"Byrne_outside", "goto", "character11");
+			ChangeCharacterAddressGroup(characterfromID("Scout02"),"Byrne_outside", "goto", "goto12");
+			ChangeCharacterAddressGroup(characterfromID("Scout03"),"Byrne_outside", "goto", "goto17");
+			ChangeCharacterAddressGroup(characterfromID("Annie O'Byrne"),"none", "", "");
+			ChangeCharacterAddressGroup(characterfromID("Killian O'Byrne"),"Byrne_outside", "goto", "character7");
+			LAi_SetPoorType(characterFromID("Killian O'Byrne"));
+
+			LAi_SetActorType(PChar);
+			Pchar.dialog.CurrentNode = "KOB_in_trouble";
+			LAi_ActorSelfDialog(PChar, "");
+		break;
+
+		case "KOB_kidnapped3":
+			LAi_SetActorType(characterFromID("Scout01"));
+			LAi_ActorWaitDialog(CharacterFromID("Scout01"), Pchar); 
+			LAi_SetActorType(PChar);	                       
+			LAi_ActorDialog(pchar, characterFromID("Scout01"), "", 10.0, 1.0);
+		break;
+
+		case "KOB_kidnapped4":
+			PauseAllSounds();
+			PlaySound("OBJECTS\DUEL\pistol_musket2.wav");
+			LAi_QuestDelay("KOB_kidnapped5", 1.0);
+		break;
+
+		case "KOB_kidnapped5":
+			PlaySound("OBJECTS\VOICES\DEAD\male\Death_NPC_01.wav");
+			LAi_KillCharacter(characterfromID("Scout01"));
+			LAi_QuestDelay("KOB_kidnapped6", 2.0);
+		break;
+
+		case "KOB_kidnapped6":
+			PlaySound("OBJECTS\VOICES\body_fallen2.wav");
+			LAi_QuestDelay("KOB_kidnapped_fight", 1.0);
+		break;
+
+		case "KOB_kidnapped_fight":
+			ResumeAllSounds();
+			LAi_SetPlayerType(pchar)
+
+			LAi_group_MoveCharacter(CharacterFromID("Scout02"), "Bad_scouts");
+			LAi_group_MoveCharacter(CharacterFromID("Scout03"), "Bad_scouts");
+			LAi_group_FightGroups("Bad_scouts", LAI_GROUP_PLAYER, 1);
+			LAi_group_SetCheck("Bad_scouts", "KOB_kidnapped_fight2");
+		break;
+
+		case "KOB_kidnapped_fight2":
+			LAi_SetActorType(pchar)
+			LAi_SetActorType(characterFromID("Killian O'Byrne"));
+			LAi_ActorAnimation(characterFromID("Killian O'Byrne"), "Ground_StandUp", "KOB_kidnapped_over", 2.0);
+
+			Locations[FindLocation("Byrne_outside")].reload.l1.disable = false;
+			Locations[FindLocation("Byrne_outside")].reload.l3.disable = false;
+
+			ChangeCharacterAddressGroup(characterfromID("Annie O'Byrne"),"Byrne_outside", "reload", "reload1");
+                        Lai_ActorFollow(characterFromID("Annie O'Byrne"), pchar, "", 10.0);
+		break;
+
+		case "KOB_kidnapped_over":
+			LAi_SetPlayerType(pchar)
+			Characters[GetCharacterIndex("Killian O'Byrne")].Dialog.CurrentNode = "Saved_me";
+			LAi_ActorDialog(characterFromID("Killian O'Byrne"), Pchar, "", 1.0, 0);
+		break;
+
+		case "Hermit_inside":
+			DoQuestReloadToLocation("Byrne_inside", "goto", "goto3" ,"Hermit_inside2");
+		break;
+
+		case "Hermit_inside2":
+			ChangeCharacterAddressGroup(characterFromID("Annie O'Byrne"), "Byrne_inside", "goto", "goto2");
+			ChangeCharacterAddressGroup(characterFromID("Killian O'Byrne"), "Byrne_inside", "sit", "sit2");
+			LAi_ActorSetSitMode(characterFromID("Killian O'Byrne"));
+			Characters[GetCharacterIndex("Killian O'Byrne")].Dialog.CurrentNode = "wrapup_inside";
+			LAi_ActorDialog(characterFromID("Killian O'Byrne"), Pchar, "", 0.5, 0);
 		break;
 
 

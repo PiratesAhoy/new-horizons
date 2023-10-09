@@ -1,5 +1,11 @@
-string DLG_TEXT[2] = {
-"...y muy malos huevos, Ahoy mate, a pesar de su aspecto exterior bastante sombrio, no me parece ser uno de los hombres de Santos, y por lo tanto, probablemente4 considerarte como un amigo. Parece que la Compania de las Indias orientales tiene una memoria muy larga, y Santos iba a entregarles mis visceras entranas negras. Eso es, el estaba planeando, hasta tu oportuna intervencion, amigo. Tienes mi agradecimiento, pero a menos que puedas encontrar una manera de salir de aqui va a ser una locura. Afortunadamente, parece que hay una buena cantidad de Ron a mano! Espera un minuto, hay algo tallado en la mesa aqui; si esta atascado en las celdas, entonces aparta la mirada, y sigue al pobre Yorick, para torre de este laberinto. ?Que piensas de eso? Dejame recoger mis efectos, y te ayudare a descifrarlos.",
-"Me pregunto si estas llaves pueden sacarnos de aqui...",
-
+string DLG_TEXT[9] = {
+"... y huevos podridos. Hola, camarada; a pesar de tu aspecto sombrío, no pareces uno de los hombres de Santos y, por lo tanto, seguramente deberíamos considerarnos como amigos. Parece que la Compañía de las Indias Orientales tiene una memoria muy larga y Santos iba a entregarles mi pobre pellejo. O eso es lo que planeaba, hasta tu oportuna intervención. Te doy las gracias, pero, a menos que puedas encontrar una manera de salir de aquí, no va a servir de nada. ¡Afortunadamente, parece que hay una buena cantidad de ron a mano! Espera un minuto, hay algo grabado en la mesa: 'Si te encuentras atrapado en las celdas, aparta la mirada, y sigue la del pobre Yorick, para escapar de este laberinto. ¿Qué te parece esto? Dame un momento para recoger mis efectos personales y te ayudaré a descifrarlo.",
+"Me pregunto si estas llaves pueden sacarnos de aquí...",
+"... Entonces, dime, ¿eres ",
+"un hombre honrado",
+"ana mujer honrada",
+"? ¿Vas a hacer alguna locura?",
+"Si no me equivoco, tú estás encerrado aquí conmigo. Y yo tengo tu barco.",
+"No, camarada, tú estás encerrado aquí conmigo y acabas de traerme mi barco.",
+"...",
 };

@@ -53,7 +53,7 @@ string DLG_TEXT[57] = {
 ". He attacked me and I had to kill him. Before he died, he confessed that he hid the statuettes in his house.",
 "Alright, I'll go and search his house. But if this is some sort of scam...",
 "Wait... Cris... Ummm, Crespo, yes of course! Are you the Captain of the Guard?",
-"Are you the Captain of the Guard, Señor? I need to know where a certain Guzman is stationed today. I'm acting on behalf of Señor Haraldo.",
+"Are you the Captain of the Guard, SeÃ±or? I need to know where a certain Guzman is stationed today. I'm acting on behalf of SeÃ±or Haraldo.",
 "Guzman? Let's see... Ah, today I gave him the shift at the towngate leading towards the jungle.",
-"Thank you, Señor!",
+"Thank you, SeÃ±or!",
 };

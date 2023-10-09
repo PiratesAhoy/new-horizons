@@ -64,6 +64,19 @@ void ProcessDialogEvent()
 					link.l1.go = "agent_start2";
 				break;
 
+				case PLAYER_TYPE_ADVENTURER:
+					switch (GetMySimpleOldName(PChar))
+					{
+						case "Purpure":
+							dialog.text = DLG_TEXT[313];
+							link.l1 = DLG_TEXT[314];
+							link.l1.go = "exit_Purpure_no_storm";
+							link.l2 = DLG_TEXT[315];
+							link.l2.go = "Purpure_storm";
+						break;
+					}
+				break;
+
 				case PLAYER_TYPE_SMUGGLER:
 					dialog.text = DLG_TEXT[253];
 					link.l1 = DLG_TEXT[254];
@@ -1631,6 +1644,19 @@ void ProcessDialogEvent()
 			addDialogExitQuest("stormystart");
 			DialogExit();
 			bChangeNation = true;
+		break;
+
+		case "Purpure_storm":
+			dialog.text = DLG_TEXT[316];
+			link.l1 = DLG_TEXT[317];
+			link.l1.go = "stormystart";
+		break;
+
+		case "exit_Purpure_no_storm":
+			bDisableFastReload = 0;
+			addDialogExitQuest("Tut_SkipTutorialOnShip");
+			NextDiag.Tempnode = "Questions";
+			DialogExit();
 		break;
 		
 		case "exit":

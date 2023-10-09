@@ -31,7 +31,7 @@ string DLG_TEXT[124] = {
 "An escort mission? Can you not find a more interesting - er, worthwhile - task for my ship, sir?",
 "What do you think you are, a freebooter? I have given you an order. You will obey it!",
 "Sorry, sir. I will, of course, obey your orders.",
-"DLG_TEXT[32]",
+"I am afraid that you can be of no possible service to me. If you truly wish to be of service then join the #snation_desc# navy, or at least obtain an #snation_desc# Letter of Marque.", // For English language, if nation is England and period is Early Explorers or Spanish Main, in which case nation_desc is "English" instead of "British"
 "DLG_TEXT[33]",
 "DLG_TEXT[34]",
 "DLG_TEXT[35]",

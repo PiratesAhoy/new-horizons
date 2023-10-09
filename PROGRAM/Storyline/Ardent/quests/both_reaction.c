@@ -38,11 +38,11 @@ void BothQuestComplete(string sQuestName)
 			{
 				SetRelationsAsNation(PERSONAL_NATION);
 				SetRMRelation(PChar, SPAIN, REL_WAR);
-				WriteNewLogEntry("Captured!", "Damnation! That was one smuggling run too many. The patrol ships were too much for ours to take on and the wind wouldn't let us escape to sea.","Personal",true);
+				WriteNewLogEntry(GetTranslatedLog("Captured!"), GetTranslatedLog("Damnation! That was one smuggling run too many. The patrol ships were too much for ours to take on and the wind wouldn't let us escape to sea."),"Personal",true);
 			}
 			else
 			{
-				WriteNewLogEntry("Captured!", "Damnation! That ship wasn't an easy merchant after all, but a fighting ship filled with soldiers. That will teach me to look at a ship's flag before attacking, though as we're being boarded, I may not have time to make use of the lesson.","Personal",true);
+				WriteNewLogEntry(GetTranslatedLog("Captured!"), GetTranslatedLog("Damnation! That ship wasn't an easy merchant after all, but a fighting ship filled with soldiers. That will teach me to look at a ship's flag before attacking, though as we're being boarded, I may not have time to make use of the lesson."),"Personal",true);
 			}
 
 			if (PChar.quest.alignment == "good")

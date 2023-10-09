@@ -1105,7 +1105,7 @@ void OpenBoxProcedure_BUG()
 							chr.quest.Legrands_fireplace = "extinct";
 							Locations[FindLocation(chr.location)].models.always.locators = "mediumhouse01_locators_GB0";
 							locations[FindLocation("Legrands_kitchen")].models.always.l2 = "wood5";
-			//pдr fire off
+			//pРґr fire off
 							if(CheckAttribute(chr, "quest.attic_box1") && chr.quest.attic_box1 == "blocked")
 							{
 								//no smoke
@@ -13577,7 +13577,7 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 	//ccc aref enemy = GetEventData();
 	//ccc float kDist = GetEventData();
 	//ccc int isFindedEnemy = GetEventData();
-	//Заряд персонажа
+	//Р—Р°СЂСЏРґ РїРµСЂСЃРѕРЅР°Р¶Р°
 	if(!CheckAttribute(attack, "chr_ai.charge")) attack.chr_ai.charge = "0";
 	float charge = stf(attack.chr_ai.charge) - 1.0;
 	if(charge <= 0.0)
@@ -13586,7 +13586,7 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 		attack.chr_ai.chargeprc = "1";
 	}
 	attack.chr_ai.charge = charge;
-	//Если промахнулись, то ничего не делаем
+	//Р•СЃР»Рё РїСЂРѕРјР°С…РЅСѓР»РёСЃСЊ, С‚Рѕ РЅРёС‡РµРіРѕ РЅРµ РґРµР»Р°РµРј
 
 //JRH moved up block from below
 	string weaponID = GetCharacterEquipByGroup(attack,GUN_ITEM_TYPE);	// defines weaponname
@@ -13601,7 +13601,7 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 
 	if(isFindedEnemy == 0)
 	{
-		//здесь можно поднимать тревогу в случае близкого выстрела
+		//Р·РґРµСЃСЊ РјРѕР¶РЅРѕ РїРѕРґРЅРёРјР°С‚СЊ С‚СЂРµРІРѕРіСѓ РІ СЃР»СѓС‡Р°Рµ Р±Р»РёР·РєРѕРіРѕ РІС‹СЃС‚СЂРµР»Р°
 
 		if(CheckAttribute(weapon, "id") && weapon.id == "pistoltinderbox")
 		{
@@ -13647,7 +13647,7 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 							locations[FindLocation(attack.location)].models.always.l2 = "wood3";
 							Locations[FindLocation("Legrands_kitchen")].image = "";
 							attack.quest.Legrands_fireplace = "glowing";
-		//pдr fire on	
+		//pРґr fire on	
 							if(CheckAttribute(attack, "quest.attic_box1") && attack.quest.attic_box1 == "blocked")
 							{
 								//smoke

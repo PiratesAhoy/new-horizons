@@ -1,15 +1,15 @@
 string DLG_TEXT[12] = {
-"¡El padre Domingues",
-" ha sido secuestrado por unos matones! Señor, guíame, ¿qué debo hacer, qué debo hacer...",
-"¡Señor, dame fuerzas! ¡Estoy empezando a hartarme de todo esto, maldita sea!",
-"Deja de blasfemar en la casa de nuestro Señor!",
-"Oh, perdóname, se me fue la lengua.",
-"¿En serio? ¿Y que pasará si digo algo más? Oh, por ejemplo: ¡diablos!... ¡Oh!... ¡¿Qué ha sido eso?!",
-"¡Un milagro! ¡Ha sido un milagro! ¡El Señor, por alguna razón, ha decidido recordarte su existencia! \n¡Oh, hoy rezaré veinte padrenuestros!... ¡No, treinta! ¡Y voy a encargar una misa adicional!",
-"Ajá. Haz lo que quieras, padre. Yo ya me voy, gracias.",
-"¡Espera, #saddr#! ¿Y el Padre Domingues?", // --> Cat
-"*SUSPIRO* Está bien, está bien. Veré qué puedo hacer.",
-"¡Espera, #saddr#! ¿Y el Padre Domingues?",
-"*SUSPIRO* Está bien, está bien. Veré qué puedo hacer.",, // <-- Cat
+"Â¡El padre Domingues",
+" ha sido secuestrado por unos matones! SeÃ±or, guÃ­ame, Â¿quÃ© debo hacer, quÃ© debo hacer...",
+"Â¡SeÃ±or, dame fuerzas! Â¡Estoy empezando a hartarme de todo esto, maldita sea!",
+"Deja de blasfemar en la casa de nuestro SeÃ±or!",
+"Oh, perdÃ³name, se me fue la lengua.",
+"Â¿En serio? Â¿Y que pasarÃ¡ si digo algo mÃ¡s? Oh, por ejemplo: Â¡diablos!... Â¡Oh!... Â¡Â¿QuÃ© ha sido eso?!",
+"Â¡Un milagro! Â¡Ha sido un milagro! Â¡El SeÃ±or, por alguna razÃ³n, ha decidido recordarte su existencia! \nÂ¡Oh, hoy rezarÃ© veinte padrenuestros!... Â¡No, treinta! Â¡Y voy a encargar una misa adicional!",
+"AjÃ¡. Haz lo que quieras, padre. Yo ya me voy, gracias.",
+"Â¡Espera, #saddr#! Â¿Y el Padre Domingues?", // --> Cat
+"*SUSPIRO* EstÃ¡ bien, estÃ¡ bien. VerÃ© quÃ© puedo hacer.",
+"Â¡Espera, #saddr#! Â¿Y el Padre Domingues?",
+"*SUSPIRO* EstÃ¡ bien, estÃ¡ bien. VerÃ© quÃ© puedo hacer.",, // <-- Cat
 
 };

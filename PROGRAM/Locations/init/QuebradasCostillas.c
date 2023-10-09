@@ -1119,14 +1119,16 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l17.go = "bb_Maltains";
 	locations[n].reload.l17.emerge = "reload1";
 	locations[n].reload.l17.autoreload = "0";
-	locations[n].reload.l17.label = "Order of Malta only in WoodesRogers quest";	
+//	locations[n].reload.l17.label = "Order of Malta only in WoodesRogers quest";	//Not translated despite being in "interface_strings.txt"
+	locations[n].reload.l17.label = "";	
 	locations[n].reload.l17.disable = 1;			//JRH WoodesRogers: close_for_day after info from Hands
 
 	locations[n].reload.l18.name = "reload18";
 	locations[n].reload.l18.go = "bb_Maltains";
 	locations[n].reload.l18.emerge = "reload3";
 	locations[n].reload.l18.autoreload = "0";
-	locations[n].reload.l18.label = "Order of Malta only in WoodesRogers quest";
+//	locations[n].reload.l18.label = "Order of Malta only in WoodesRogers quest";	//Not translated despite being in "interface_strings.txt"
+	locations[n].reload.l18.label = "";
 	locations[n].reload.l18.disable = 1;
 
 	Locations[n].island = "QuebradasCostillas"; // NK 04-08-29
@@ -1495,7 +1497,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].reload.l1.go = "bb_Maltains_office";
 	Locations[n].reload.l1.emerge = "locator2";
 	Locations[n].reload.l1.autoreload = "0";
-	Locations[n].reload.l1.label = "Secret room only in Woodes Rogers storyline";
+//	Locations[n].reload.l1.label = "Secret room only in Woodes Rogers storyline";	//Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l1.label = "";
 	Locations[n].reload.l1.disable = true;			//only in WoodesRogers
 
 	LAi_LocationFightDisable(&Locations[n], true);

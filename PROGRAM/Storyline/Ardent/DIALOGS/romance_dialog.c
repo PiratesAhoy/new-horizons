@@ -34,7 +34,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -1014,6 +1014,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "wedding_night":
+			Preprocessor_Add("name", GetMyFirstNames(PChar, false));
 			dialog.text = DLG_TEXT[111];
 			link.l1 = DLG_TEXT[112];
 			AddDialogExitQuest("get_lost_player");
@@ -1408,10 +1409,14 @@ void ProcessDialogEvent()
 
 		case "convoy_goodbye":
 			if(CheckAttribute(characterFromID(PChar.quest.romance), "married") && characters[getCharacterIndex(PChar.quest.romance)].married == MR_MARRIED && characters[getCharacterIndex(PChar.quest.romance)].married.id == PChar.id)
-				dialog.text = DLG_TEXT[306] + GetMyName(PChar) + ".";
+				{
+					if (NPChar.sex == "man") Preprocessor_Add("spouse", XI_ConvertString("husband"));
+					else Preprocessor_Add("spouse", XI_ConvertString("wife"));
+					dialog.text = DLG_TEXT[306] + GetMyName(PChar) + ".";
+				}
 			else
 				dialog.text = DLG_TEXT[305] + GetMyName(PChar) + ".";
-			link.l1 = DLG_TEXT[306] + GetMyName(characterFromID(PChar.quest.romance)) + ".";
+			link.l1 = DLG_TEXT[307] + GetMyName(characterFromID(PChar.quest.romance)) + ".";
 			link.l1.go = "exit";
 		break;
 
@@ -1649,7 +1654,7 @@ void ProcessDialogEvent()
 
 		case "hunt_join_villain":
 			Preprocessor_AddQuestData("pronoun", merch_kid_pronoun);
-			Preprocessor_Add("background", PChar.quest.background);
+			Preprocessor_Add("background", XI_ConvertString(PChar.quest.background));
 			dialog.text = DLG_TEXT[328] + GetMyName(characterFromID(PChar.quest.villain)) + DLG_TEXT[329];
 			link.l1 = DLG_TEXT[330] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[331];
 			link.l1.go = "hunt_join_villain2";

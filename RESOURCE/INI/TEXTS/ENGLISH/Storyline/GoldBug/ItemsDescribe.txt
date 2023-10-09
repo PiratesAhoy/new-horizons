@@ -1198,13 +1198,13 @@ itmdescr_doc6C
 itmname_goldbug			{Gold-Bug}
 itmdescr_goldbug
 {
-A scarabæus which I believe to be totally new.
+A scarabÃ¦us which I believe to be totally new.
 }
 
 itmname_wrinkled_paper		{Piece of Paper}
 itmdescr_wrinkled_paper
 {
-A piece of paper in which the scarabæus was wrapped.
+A piece of paper in which the scarabÃ¦us was wrapped.
 }
 
 itmname_bird_sketch		{Picture}
@@ -1278,9 +1278,9 @@ itmdescr_book56
 {
 "Le Tour du Monde en Quatre-Vingts Jours"
 "Voyage au Centre de la Terre"
-"Hector Servadac: Voyages et aventures à travers le monde solaire"
+"Hector Servadac: Voyages et aventures Ã  travers le monde solaire"
 "Michel Strogoff: Moscou-Irkutsk"
-"L'île mystérieuse"
+"L'Ã®le mystÃ©rieuse"
 }
 
 itmname_book57			{Famous Underground Caves}

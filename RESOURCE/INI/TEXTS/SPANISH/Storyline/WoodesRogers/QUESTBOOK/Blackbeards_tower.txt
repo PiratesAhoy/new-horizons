@@ -1,10 +1,10 @@
 title=La torre de Barbanegra
-text.t1=La salida de Kristiania está cerca de la únic acasa de ladrillo en el centro de la ciudad.
-text.t2=He encontrado la torre de Barbanegra, ¿pero dónde está la entrada?
-text.t3=He encontrado la torre de Barbanegra y la entrada es a través de la montaña.
-text.t4=He encontrado una entrada secreta en la montaña, pero hace falta una palanca.
-text.t5=El subastador debe saber quién compró los artículos que pudieron pertenecer al mismísimo Barbanegra.
-text.t6=Tengo todos los artículos que se vendieron en la subasta. Es hora de volver a la torre de Barbanegra.
+text.t1=La salida de Kristiania estÃ¡ cerca de la Ãºnic acasa de ladrillo en el centro de la ciudad.
+text.t2=He encontrado la torre de Barbanegra, Â¿pero dÃ³nde estÃ¡ la entrada?
+text.t3=He encontrado la torre de Barbanegra y la entrada es a travÃ©s de la montaÃ±a.
+text.t4=He encontrado una entrada secreta en la montaÃ±a, pero hace falta una palanca.
+text.t5=El subastador debe saber quiÃ©n comprÃ³ los artÃ­culos que pudieron pertenecer al mismÃ­simo Barbanegra.
+text.t6=Tengo todos los artÃ­culos que se vendieron en la subasta. Es hora de volver a la torre de Barbanegra.
 text.t7=
 text.t8=
 text.t9=

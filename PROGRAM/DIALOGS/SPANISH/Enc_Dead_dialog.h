@@ -1,13 +1,13 @@
 string DLG_TEXT[11] = {
-"*¡Ya has registrado este cuerpo!*",
+"*Â¡Ya has registrado este cuerpo!*",
 "*Dejarlo*",
-"*Un cadáver*",
-"¡Un cadáver!",
+"*Un cadÃ¡ver*",
+"Â¡Un cadÃ¡ver!",
 "*Un hombre muerto*",
-"¡Buscar!",
+"Â¡Buscar!",
 "Dejarlo.",
 "Has encontrado oro: ",
-"en monedas. Además, el muerto llevaba encima algo más: ",
+"en monedas. AdemÃ¡s, el muerto llevaba encima algo mÃ¡s: ",
 ".",
 "Dejarlo.",
 
