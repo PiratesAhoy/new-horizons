@@ -79,3 +79,6 @@ add_pattern("*.tx", directory="../RESOURCE", target="resource")
 add_pattern("*.tga", directory="../RESOURCE", target="resource")
 add_pattern("*.jpg", directory="../RESOURCE", target="resource")
 add_pattern("*.png", directory="../RESOURCE", target="resource")
+
+# Fonts
+add_pattern("*.fnt", directory="../RESOURCE", target="resource")
