@@ -53,6 +53,7 @@ add_directory("../Documentation", target="Documentation")
 
 # Resources
 add_pattern("*.ini", directory="../RESOURCE", target="resource")
+add_pattern("*.toml", directory="../RESOURCE", target="resource")
 add_pattern("*.txt", directory="../RESOURCE", target="resource")
 add_pattern("*.ani", directory="../RESOURCE", target="resource")
 add_pattern("*.an", directory="../RESOURCE", target="resource")
