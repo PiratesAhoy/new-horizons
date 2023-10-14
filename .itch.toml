@@ -3,7 +3,4 @@ name = "play"
 path = "engine.exe"
 
 [[prereqs]]
-name = "vcredist-2019-x64"
-
-[[prereqs]]
 name = "dx-june-2010"
