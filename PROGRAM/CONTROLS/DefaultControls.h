@@ -175,6 +175,9 @@ Please follow these rules when editing settings:
 #define CTL_FREE_CAM_FORWARD		"VK_LBUTTON"
 #define CTL_FREE_CAM_BACKWARD		"VK_RBUTTON"
 
+// Development tools
+#define CTL_DEV_LIGHTER_TOGGLE		"KEY_L"
+
 
 // ======================================
 // LIST OF ALLOWED KEYS

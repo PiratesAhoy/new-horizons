@@ -528,6 +528,9 @@ void ExternControlsInit(bool bFirst)
 	CI_CreateControlOnly("NK_Key_8");
 	CI_CreateControlOnly("NK_Key_9");*/
 	// NK <--
+
+	// Developer tools
+	CI_CreateAndSetControls( "", "LighterToggle", CI_GetKeyCode(CTL_DEV_LIGHTER_TOGGLE), 0, false);
 }
 
 void ExternInitKeyCodes()
