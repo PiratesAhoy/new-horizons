@@ -3690,10 +3690,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 		
 		case "Story_SitAndDrinkWithDelacroix3":
-			LAi_Fade("Story_SitAndDrinkWithDelacroix_4", "Story_DelacroixGiddy");
-		break;
-
-		case "Story_SitAndDrinkWithDelacroix_4":
+			LAi_Fade("", "");
 			LAi_SetActorType(characterFromID("Armand Delacroix"));
 			ChangeCharacterAddress(characterFromID("Armand Delacroix"), "QC_port", "goto19");
 			DoQuestReloadToLocation("QC_port", "goto", "goto18", "Story_DelacroixGiddy");
@@ -11284,14 +11281,11 @@ void SideQuestComplete(string sQuestName)
 	 	break;
 
 		case "convoy":
-			LAi_Fade("fight_with_convoy", "convoy_fight1");
-		break;
-
-		case "fight_with_convoy":
+			LAi_Fade("", "");
 			ChangeCharacterAddressGroup(CharacterFromID("Jack Greenfield"), "none", "sit", "sit10");
 			ChangeCharacterAddressGroup(CharacterFromID("Martin Warner"), "none", "sit", "sit5");
 
-			DoQuestReloadToLocation("redmond_port", "goto", "goto_2", "_");
+			DoQuestReloadToLocation("redmond_port", "goto", "goto_2", "convoy_fight1");
 		break;
 
 		case "convoy_fight1":
