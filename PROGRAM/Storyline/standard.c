@@ -4,7 +4,7 @@ void RegisterStoryline(int n)
 	storyline.default = n;
 	aref sl; makearef(sl, storyline.list);
 	string sn = "sl" + (n + 1);
-	sl.(sn).id = "NewHorizons";
+	sl.(sn).id = "new_horizons";
 	sl.(sn).index = n;
 	sl.(sn).dir = "standard\";
 

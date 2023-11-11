@@ -43,7 +43,7 @@ void ProcessDialogEvent()
 			// GR: if you haven't already triggered the Rheims House Easter egg, you're not playing "Tales of a Sea Hawk", and you don't have a cargo quest which could time out due to time travel,
 			// and none of the "Hard Labours of an Assassin" timers are active,
 			// allow Easter egg to trigger
-			if (!CheckAttribute(PChar, "quest.rheims_house.done") && FindCurrentStoryline() != FindStoryline("NewHorizons") && !CheckQuestAttribute("generate_trade_quest_progress", "begin")
+			if (!CheckAttribute(PChar, "quest.rheims_house.done") && FindCurrentStoryline() != FindStoryline("new_horizons") && !CheckQuestAttribute("generate_trade_quest_progress", "begin")
 			&& !CheckAttribute(PChar, "quest.Hit_timer1") && !CheckAttribute(PChar, "quest.Hit_timer2") && !CheckAttribute(PChar, "quest.Hit_timer3") && !CheckAttribute(PChar, "quest.Hit_timer4") && !CheckAttribute(PChar, "quest.Hit_timer5"))
 			{
 				if (GetDayTime() == DAY_TIME_NIGHT) link.l1 = DLG_TEXT[8];

@@ -1,0 +1,32 @@
+[storyline.devlin_opera]
+id = "devlin_opera"
+dir = "DevlinOpera"
+
+[storyline.devlin_opera.start]
+location = "Redmond_port"
+port = "Redmond_port"
+model = "Beatrice"
+first_name = "Beatrice"
+last_name = "Devlin"
+nation = "personal"
+player_type = "explorer"
+difficulty = "mariner"
+pirate_flag = 6
+personal_flag = 37
+ship = "FastGalleon1"
+ship_name = "Discovery"
+
+[storyline.new_horizons.start.editable]
+difficulty = true
+
+[storyline.devlin_opera.start.date]
+hour = 10
+min = 0
+sec = 42
+day = 1
+month = 4
+year = 1576
+
+[storyline.devlin_opera.variables]
+CHANGING_RELATIONS = 1
+ISLA_DE_MUERTE = -1

@@ -1,0 +1,39 @@
+[storyline.new_horizons]
+dir = "standard"
+
+[storyline.new_horizons.start]
+location = "Tutorial_Deck"
+port = "Oxbay_port"
+model = "blaze"
+first_name = "Nathaniel"
+last_name = "Hawk"
+nation = "england"
+player_type = "rebel"
+pirate_flag = 15
+personal_flag = 14
+ship = "LuggerVML"
+ship_name = "Sea Horse"
+
+[storyline.new_horizons.start.editable]
+model = true
+first_name = true
+last_name = true
+nation = true
+player_type = true
+personal_flag = true
+pirate_flag = true
+ship = true
+ship_name = true
+difficulty = true
+
+[storyline.new_horizons.start.date]
+hour = 10
+min = 24
+sec = 42
+day = 16
+month = 4
+year = 1750
+
+[storyline.new_horizons.variables]
+ISLA_DE_MUERTE = 1
+START_MIN_LEVEL = 1

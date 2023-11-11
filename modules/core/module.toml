@@ -1,0 +1,6 @@
+name = "core"
+version = [15, 0, 0, "alpha", 13]
+description = "New Horizons core module. Contains required files for the base game to run."
+authors = [
+    "PiratesAhoy!",
+]

@@ -799,7 +799,7 @@ void ChangeStoryline(bool bRight)
 	GameInterface.strings.StartDay = CharDay;
 	GameInterface.strings.StartPeriod = TranslateString("", GetPeriodName(curPeriod));
 	bool canchangedate = true;
-	if(CheckAttribute(arstart,"date.lock")) canchangedate = false;
+	if(CheckAttribute(arstart,"date.lock") && sti(arstart.date.lock) == true) canchangedate = false;
 	SetNodeUsing("YEAR", canchangedate);
 	SetNodeUsing("MONTH", canchangedate);
 	SetNodeUsing("DAY", canchangedate);
@@ -3441,7 +3441,7 @@ int GetFreeSkillPoints()
 void NavyLockShipSelection(bool LockShip, ref model)
 {
 	bool canchangedate = true;
-	if(CheckAttribute(arstart,"date.lock")) canchangedate = false;
+	if(CheckAttribute(arstart,"date.lock") && sti(arstart.date.lock) == true) canchangedate = false;
 
 	if (LockShip)
 	{

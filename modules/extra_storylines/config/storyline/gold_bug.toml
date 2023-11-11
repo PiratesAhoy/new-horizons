@@ -1,0 +1,36 @@
+[storyline.gold_bug]
+id = "gold_bug"
+dir = "GoldBug"
+
+[storyline.gold_bug.start]
+location = "Charleston_Port"
+port = "Charleston_Port"
+model = "William Legrand"
+first_name = "William"
+last_name = "Legrand"
+nation = "america"
+player_type = "land_owner"
+difficulty = "mariner"
+pirate_flag = 19
+personal_flag = 23
+ship = "obj_goldbug"
+ship_name = "Alaus Oculatus"
+
+[storyline.gold_bug.start.date]
+hour = 10
+min = 24
+sec = 42
+day = 15
+month = 10
+year = 1830
+
+[storyline.gold_bug.variables]
+ISLA_DE_MUERTE = -1
+BUG_PUZZLES = 1
+DISABLE_CHEATMODE = 1
+RESET_HP = 1
+NO_CREW_OR_OFFICERS = 1
+DISABLE_TIPS = 1
+GUNFIGHTER_PERK = 1
+START_MIN_LEVEL = 1
+DYNAMIC_INTERFACES = 1
