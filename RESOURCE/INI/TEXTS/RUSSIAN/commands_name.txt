@@ -1,117 +1,117 @@
 
-sea_Cancel {Отмена}
-sea_Moor {Бросить Якорь}
-sea_Port {Порт}
-sea_Fort {Форт}
-sea_Shore {Берег}
-sea_SailTo {Доплыть}
-sea_Board {Абордаж}
-sea_LandTroops {Десант}
-sea_Map {Карта}
-sea_Attack {Атака}
-sea_Defend {Защита}
-sea_SailAway {Уплыть}
-sea_HeaveToDrift {Лечь в Дрейф}
-sea_Transfer {Обмен}
-sea_Charge {Перезарядить}
-sea_Speed {Паруса}
-sea_CCommand {Приказать}
-sea_Ability {Использовать Способность}
-sea_ImmediateDeath {Уничтожить!}
-sea_HoistFlag {Поднять Флаг}
-sea_EnterCabin {Каюта Капитана}
-sea_EnterDeck {Палуба}
-sea_EnterShip {#sshipname# Палуба}
-sea_EnterSeadogs {Кают-компания}
-sea_EnterShipDeck {Палуба}
-sea_EnterMainCannonsDeck {Главная Орудийная Палуба}
-sea_EnterUpperCannonsDeck {Верхняя Орудийная Палуба}
-sea_EnterLowerCannonsDeck {Нижняя Орудийная Палуба}
-sea_EnterHold {Трюм}
-sea_EnterHold1 {1-й Грузовой отсек}
-sea_EnterHold2 {2-й Грузовой отсек}
-sea_LowerSails {Спустить паруса}
-sea_BattleSails {Боевое Положение}
-sea_FullSails {Полные Паруса}
-sea_FCoHS_Hail {Приветствовать Корабль}
-sea_FCoHS_Contact {Посетить Корабль}
-sea_KrakenAttack {Вызов Кракена}
-sea_SubmergeDutchman {Погрузиться/Всплыть}
-sea_PearlSweeps {Закончить}
-sea_QARSword {Сабля Тритона}
-sea_TritonAttack {Атака Такелажа}
-sea_NeptuneTrident {Трезубец Нептуна}
+sea_Cancel {РћС‚РјРµРЅР°}
+sea_Moor {Р‘СЂРѕСЃРёС‚СЊ РЇРєРѕСЂСЊ}
+sea_Port {РџРѕСЂС‚}
+sea_Fort {Р¤РѕСЂС‚}
+sea_Shore {Р‘РµСЂРµРі}
+sea_SailTo {Р”РѕРїР»С‹С‚СЊ}
+sea_Board {РђР±РѕСЂРґР°Р¶}
+sea_LandTroops {Р”РµСЃР°РЅС‚}
+sea_Map {РљР°СЂС‚Р°}
+sea_Attack {РђС‚Р°РєР°}
+sea_Defend {Р—Р°С‰РёС‚Р°}
+sea_SailAway {РЈРїР»С‹С‚СЊ}
+sea_HeaveToDrift {Р›РµС‡СЊ РІ Р”СЂРµР№С„}
+sea_Transfer {РћР±РјРµРЅ}
+sea_Charge {РџРµСЂРµР·Р°СЂСЏРґРёС‚СЊ}
+sea_Speed {РџР°СЂСѓСЃР°}
+sea_CCommand {РџСЂРёРєР°Р·Р°С‚СЊ}
+sea_Ability {РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РЎРїРѕСЃРѕР±РЅРѕСЃС‚СЊ}
+sea_ImmediateDeath {РЈРЅРёС‡С‚РѕР¶РёС‚СЊ!}
+sea_HoistFlag {РџРѕРґРЅСЏС‚СЊ Р¤Р»Р°Рі}
+sea_EnterCabin {РљР°СЋС‚Р° РљР°РїРёС‚Р°РЅР°}
+sea_EnterDeck {РџР°Р»СѓР±Р°}
+sea_EnterShip {#sshipname# РџР°Р»СѓР±Р°}
+sea_EnterSeadogs {РљР°СЋС‚-РєРѕРјРїР°РЅРёСЏ}
+sea_EnterShipDeck {РџР°Р»СѓР±Р°}
+sea_EnterMainCannonsDeck {Р“Р»Р°РІРЅР°СЏ РћСЂСѓРґРёР№РЅР°СЏ РџР°Р»СѓР±Р°}
+sea_EnterUpperCannonsDeck {Р’РµСЂС…РЅСЏСЏ РћСЂСѓРґРёР№РЅР°СЏ РџР°Р»СѓР±Р°}
+sea_EnterLowerCannonsDeck {РќРёР¶РЅСЏСЏ РћСЂСѓРґРёР№РЅР°СЏ РџР°Р»СѓР±Р°}
+sea_EnterHold {РўСЂСЋРј}
+sea_EnterHold1 {1-Р№ Р“СЂСѓР·РѕРІРѕР№ РѕС‚СЃРµРє}
+sea_EnterHold2 {2-Р№ Р“СЂСѓР·РѕРІРѕР№ РѕС‚СЃРµРє}
+sea_LowerSails {РЎРїСѓСЃС‚РёС‚СЊ РїР°СЂСѓСЃР°}
+sea_BattleSails {Р‘РѕРµРІРѕРµ РџРѕР»РѕР¶РµРЅРёРµ}
+sea_FullSails {РџРѕР»РЅС‹Рµ РџР°СЂСѓСЃР°}
+sea_FCoHS_Hail {РџСЂРёРІРµС‚СЃС‚РІРѕРІР°С‚СЊ РљРѕСЂР°Р±Р»СЊ}
+sea_FCoHS_Contact {РџРѕСЃРµС‚РёС‚СЊ РљРѕСЂР°Р±Р»СЊ}
+sea_KrakenAttack {Р’С‹Р·РѕРІ РљСЂР°РєРµРЅР°}
+sea_SubmergeDutchman {РџРѕРіСЂСѓР·РёС‚СЊСЃСЏ/Р’СЃРїР»С‹С‚СЊ}
+sea_PearlSweeps {Р—Р°РєРѕРЅС‡РёС‚СЊ}
+sea_QARSword {РЎР°Р±Р»СЏ РўСЂРёС‚РѕРЅР°}
+sea_TritonAttack {РђС‚Р°РєР° РўР°РєРµР»Р°Р¶Р°}
+sea_NeptuneTrident {РўСЂРµР·СѓР±РµС† РќРµРїС‚СѓРЅР°}
 
-sea_EnglishFlag {Англия}
-sea_SpainFlag {Испания}
-sea_PortugalFlag {Португалия}
-sea_FranceFlag {Франция}
-sea_HollandFlag {Голландия}
-sea_Flags {Флаги}
-sea_Explosion {Взорвать}
+sea_EnglishFlag {РђРЅРіР»РёСЏ}
+sea_SpainFlag {РСЃРїР°РЅРёСЏ}
+sea_PortugalFlag {РџРѕСЂС‚СѓРіР°Р»РёСЏ}
+sea_FranceFlag {Р¤СЂР°РЅС†РёСЏ}
+sea_HollandFlag {Р“РѕР»Р»Р°РЅРґРёСЏ}
+sea_Flags {Р¤Р»Р°РіРё}
+sea_Explosion {Р’Р·РѕСЂРІР°С‚СЊ}
 
-land_ItemsDead {Обыск трупа}
-land_FastReload {Переход}
-land_ItemsUse {Использовать}
-land_DialogStart {Говорить}
-land_ItemsChange {Обменяться}
-land_TakeItem {Взять}
-land_PlaceItem {Положить}
-land_OutDoor {Открыть}
-land_UseBox {Открыть}
-land_ActivateRush {Ярость}
-land_ExitDeck {Море}
-land_Look {Осмотреть}
-land_Back {Назад}
-land_EnterDeck {Палуба}
-land_EnterShip {#sshipname# Палуба}
-land_EnterCabin {Каюта капитана}
-land_EnterSeadogs {Каюта Команды}
-land_EnterShipDeck {Палуба}
-land_EnterMainCannonsDeck {Главная Орудийная Палуба}
-land_EnterUpperCannonsDeck {Верхняя Орудийная Палуба}
-land_EnterLowerCannonsDeck {Нижняя Орудийная Палуба}
-land_EnterHold {Трюм}
-land_EnterHold1 {1-й грузовой отсек}
-land_EnterHold2 {2-й грузовой отсек}
-land_UseCorpse {Осмотреть труп}
-land_UseBarrel {Осмотреть бочонок}
-land_UseStorage {Пороховой Погреб}
-land_GoToTeachHead {Голова Черной Бороды}
+land_ItemsDead {РћР±С‹СЃРє С‚СЂСѓРїР°}
+land_FastReload {РџРµСЂРµС…РѕРґ}
+land_ItemsUse {РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ}
+land_DialogStart {Р“РѕРІРѕСЂРёС‚СЊ}
+land_ItemsChange {РћР±РјРµРЅСЏС‚СЊСЃСЏ}
+land_TakeItem {Р’Р·СЏС‚СЊ}
+land_PlaceItem {РџРѕР»РѕР¶РёС‚СЊ}
+land_OutDoor {РћС‚РєСЂС‹С‚СЊ}
+land_UseBox {РћС‚РєСЂС‹С‚СЊ}
+land_ActivateRush {РЇСЂРѕСЃС‚СЊ}
+land_ExitDeck {РњРѕСЂРµ}
+land_Look {РћСЃРјРѕС‚СЂРµС‚СЊ}
+land_Back {РќР°Р·Р°Рґ}
+land_EnterDeck {РџР°Р»СѓР±Р°}
+land_EnterShip {#sshipname# РџР°Р»СѓР±Р°}
+land_EnterCabin {РљР°СЋС‚Р° РєР°РїРёС‚Р°РЅР°}
+land_EnterSeadogs {РљР°СЋС‚Р° РљРѕРјР°РЅРґС‹}
+land_EnterShipDeck {РџР°Р»СѓР±Р°}
+land_EnterMainCannonsDeck {Р“Р»Р°РІРЅР°СЏ РћСЂСѓРґРёР№РЅР°СЏ РџР°Р»СѓР±Р°}
+land_EnterUpperCannonsDeck {Р’РµСЂС…РЅСЏСЏ РћСЂСѓРґРёР№РЅР°СЏ РџР°Р»СѓР±Р°}
+land_EnterLowerCannonsDeck {РќРёР¶РЅСЏСЏ РћСЂСѓРґРёР№РЅР°СЏ РџР°Р»СѓР±Р°}
+land_EnterHold {РўСЂСЋРј}
+land_EnterHold1 {1-Р№ РіСЂСѓР·РѕРІРѕР№ РѕС‚СЃРµРє}
+land_EnterHold2 {2-Р№ РіСЂСѓР·РѕРІРѕР№ РѕС‚СЃРµРє}
+land_UseCorpse {РћСЃРјРѕС‚СЂРµС‚СЊ С‚СЂСѓРї}
+land_UseBarrel {РћСЃРјРѕС‚СЂРµС‚СЊ Р±РѕС‡РѕРЅРѕРє}
+land_UseStorage {РџРѕСЂРѕС…РѕРІРѕР№ РџРѕРіСЂРµР±}
+land_GoToTeachHead {Р“РѕР»РѕРІР° Р§РµСЂРЅРѕР№ Р‘РѕСЂРѕРґС‹}
 
-go_store {Магазин}
-go_shipyard {Верфь}
-go_tavern {Таверна}
-go_residence {Резиденция}
-go_port {Порт}
-go_shore {Берег}
-go_loanshark {Ростовщик}
-go_brothel {Бордель}
-go_church {Церковь}
-go_prison {Тюрьма}
-go_fort {Форт}
-go_tailorshop {Портной}
-go_blacksmith {Кузница}
-go_shipdeck {Палуба}
-go_cabin {Каюта Капитана}
-go_seadogs {Каюта Команды}
-go_maincannonsdeck {Главная Орудийная Палуба}
-go_uppercannonsdeck {Верхняя Орудийная Палуба}
-go_lowercannonsdeck {Нижняя Орудийная Палуба}
-go_hold {Трюм}
-go_hold1 {1-й грузовой отсек}
-go_hold2 {2-й грузовой отсек}
-go_apothecary {Аптека}
-go_gunsmith {Кузница}
-go_gunblacksmith {Оружейная и Кузница}
-go_opium {Курильня}
-go_library {Библиотека}
-go_maltese {Мальтийское Аббатство}
-go_indianstore {Магазин Индейца}
-go_tavern2 {Вторая Таверна}
-go_eitc {Ост-Индская Торговая Компания}
-go_dwic {Голландская Вест-Индская Компания}
-go_cdc {Каса-де-Контратасьон}
-go_fwic {Французская Вест-Индская компания}
-go_academy {Военно-Морская Академия}
-go_HQ {Военно-Морской Штаб}
+go_store {РњР°РіР°Р·РёРЅ}
+go_shipyard {Р’РµСЂС„СЊ}
+go_tavern {РўР°РІРµСЂРЅР°}
+go_residence {Р РµР·РёРґРµРЅС†РёСЏ}
+go_port {РџРѕСЂС‚}
+go_shore {Р‘РµСЂРµРі}
+go_loanshark {Р РѕСЃС‚РѕРІС‰РёРє}
+go_brothel {Р‘РѕСЂРґРµР»СЊ}
+go_church {Р¦РµСЂРєРѕРІСЊ}
+go_prison {РўСЋСЂСЊРјР°}
+go_fort {Р¤РѕСЂС‚}
+go_tailorshop {РџРѕСЂС‚РЅРѕР№}
+go_blacksmith {РљСѓР·РЅРёС†Р°}
+go_shipdeck {РџР°Р»СѓР±Р°}
+go_cabin {РљР°СЋС‚Р° РљР°РїРёС‚Р°РЅР°}
+go_seadogs {РљР°СЋС‚Р° РљРѕРјР°РЅРґС‹}
+go_maincannonsdeck {Р“Р»Р°РІРЅР°СЏ РћСЂСѓРґРёР№РЅР°СЏ РџР°Р»СѓР±Р°}
+go_uppercannonsdeck {Р’РµСЂС…РЅСЏСЏ РћСЂСѓРґРёР№РЅР°СЏ РџР°Р»СѓР±Р°}
+go_lowercannonsdeck {РќРёР¶РЅСЏСЏ РћСЂСѓРґРёР№РЅР°СЏ РџР°Р»СѓР±Р°}
+go_hold {РўСЂСЋРј}
+go_hold1 {1-Р№ РіСЂСѓР·РѕРІРѕР№ РѕС‚СЃРµРє}
+go_hold2 {2-Р№ РіСЂСѓР·РѕРІРѕР№ РѕС‚СЃРµРє}
+go_apothecary {РђРїС‚РµРєР°}
+go_gunsmith {РљСѓР·РЅРёС†Р°}
+go_gunblacksmith {РћСЂСѓР¶РµР№РЅР°СЏ Рё РљСѓР·РЅРёС†Р°}
+go_opium {РљСѓСЂРёР»СЊРЅСЏ}
+go_library {Р‘РёР±Р»РёРѕС‚РµРєР°}
+go_maltese {РњР°Р»СЊС‚РёР№СЃРєРѕРµ РђР±Р±Р°С‚СЃС‚РІРѕ}
+go_indianstore {РњР°РіР°Р·РёРЅ РРЅРґРµР№С†Р°}
+go_tavern2 {Р’С‚РѕСЂР°СЏ РўР°РІРµСЂРЅР°}
+go_eitc {РћСЃС‚-РРЅРґСЃРєР°СЏ РўРѕСЂРіРѕРІР°СЏ РљРѕРјРїР°РЅРёСЏ}
+go_dwic {Р“РѕР»Р»Р°РЅРґСЃРєР°СЏ Р’РµСЃС‚-РРЅРґСЃРєР°СЏ РљРѕРјРїР°РЅРёСЏ}
+go_cdc {РљР°СЃР°-РґРµ-РљРѕРЅС‚СЂР°С‚Р°СЃСЊРѕРЅ}
+go_fwic {Р¤СЂР°РЅС†СѓР·СЃРєР°СЏ Р’РµСЃС‚-РРЅРґСЃРєР°СЏ РєРѕРјРїР°РЅРёСЏ}
+go_academy {Р’РѕРµРЅРЅРѕ-РњРѕСЂСЃРєР°СЏ РђРєР°РґРµРјРёСЏ}
+go_HQ {Р’РѕРµРЅРЅРѕ-РњРѕСЂСЃРєРѕР№ РЁС‚Р°Р±}

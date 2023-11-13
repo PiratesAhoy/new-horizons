@@ -1,147 +1,147 @@
 // MAXIMUS 23.05.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| DevlinOpera.c |=====}
-Beatrice{Беатрис}
-Devlin{Девлин}
+Beatrice{Р‘РµР°С‚СЂРёСЃ}
+Devlin{Р”РµРІР»РёРЅ}
 
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
 
 {=====| QuebradasCostillas.c |=====}
-Skull{Череп}
-Sixto{Сиксто}
-Costa{Коста}
-Rico1{Рико}
+Skull{Р§РµСЂРµРї}
+Sixto{РЎРёРєСЃС‚Рѕ}
+Costa{РљРѕСЃС‚Р°}
+Rico1{Р РёРєРѕ}
 
 {=====| Cuba.c |=====}
-Subteniente{Субтеньенте}
-Chorizo{Чоризо}
-Rocoso{Рокозо}
-Don Evaristo{Дон Эваристо}
-Dragan{Драган}
-van Mourik{Ван Моурик}
-Kevin{Кевин}
-Poor1{Бедняк}
-Grunk{Гранк}
-Flobb{Флобб}
+Subteniente{РЎСѓР±С‚РµРЅСЊРµРЅС‚Рµ}
+Chorizo{Р§РѕСЂРёР·Рѕ}
+Rocoso{Р РѕРєРѕР·Рѕ}
+Don Evaristo{Р”РѕРЅ Р­РІР°СЂРёСЃС‚Рѕ}
+Dragan{Р”СЂР°РіР°РЅ}
+van Mourik{Р’Р°РЅ РњРѕСѓСЂРёРє}
+Kevin{РљРµРІРёРЅ}
+Poor1{Р‘РµРґРЅСЏРє}
+Grunk{Р“СЂР°РЅРє}
+Flobb{Р¤Р»РѕР±Р±}
 
 {=====| Story.c |=====}
-Mystery{Таинственный}
-Messenger{Посланник}
-Brin Mistress{Госпожа Брин}
-Emmanuel{Эммануэль}
-Bonnie{Бонни}
-Blaze{Блейз}
-Short Jack{Коротышка Джек}
-GoldDO{Голд}
-Couch Captain{Капитан Коуч}
-Charles{Чарльз}
-Sir Christopher{Сэр Кристофер}
-Mings{Мингс}
-Nathan{Нэйтан}
-Kell{Келл}
-Petros{Петрос}
-Robert{Роберт}
-Cook{Кук}
-Thomas the{Томас}
-Terror{Террор}
-John Paul{Джон Пол}
-Jones{Джонс}
-Captain{Капитан}
-Maximus{Максимус}
-High Sea{Хай Си}
-Lass{Девушка}
-Catalina{Каталина}
-the Pirate{Пират}
-Morgan{Морган}
-Bartholomew{Бартоломью}
-Roberts{Робертс}
-Merciless{Беспощадный}
-Mark{Марк}
-Sharp{Шарп}
+Mystery{РўР°РёРЅСЃС‚РІРµРЅРЅС‹Р№}
+Messenger{РџРѕСЃР»Р°РЅРЅРёРє}
+Brin Mistress{Р“РѕСЃРїРѕР¶Р° Р‘СЂРёРЅ}
+Emmanuel{Р­РјРјР°РЅСѓСЌР»СЊ}
+Bonnie{Р‘РѕРЅРЅРё}
+Blaze{Р‘Р»РµР№Р·}
+Short Jack{РљРѕСЂРѕС‚С‹С€РєР° Р”Р¶РµРє}
+GoldDO{Р“РѕР»Рґ}
+Couch Captain{РљР°РїРёС‚Р°РЅ РљРѕСѓС‡}
+Charles{Р§Р°СЂР»СЊР·}
+Sir Christopher{РЎСЌСЂ РљСЂРёСЃС‚РѕС„РµСЂ}
+Mings{РњРёРЅРіСЃ}
+Nathan{РќСЌР№С‚Р°РЅ}
+Kell{РљРµР»Р»}
+Petros{РџРµС‚СЂРѕСЃ}
+Robert{Р РѕР±РµСЂС‚}
+Cook{РљСѓРє}
+Thomas the{РўРѕРјР°СЃ}
+Terror{РўРµСЂСЂРѕСЂ}
+John Paul{Р”Р¶РѕРЅ РџРѕР»}
+Jones{Р”Р¶РѕРЅСЃ}
+Captain{РљР°РїРёС‚Р°РЅ}
+Maximus{РњР°РєСЃРёРјСѓСЃ}
+High Sea{РҐР°Р№ РЎРё}
+Lass{Р”РµРІСѓС€РєР°}
+Catalina{РљР°С‚Р°Р»РёРЅР°}
+the Pirate{РџРёСЂР°С‚}
+Morgan{РњРѕСЂРіР°РЅ}
+Bartholomew{Р‘Р°СЂС‚РѕР»РѕРјСЊСЋ}
+Roberts{Р РѕР±РµСЂС‚СЃ}
+Merciless{Р‘РµСЃРїРѕС‰Р°РґРЅС‹Р№}
+Mark{РњР°СЂРє}
+Sharp{РЁР°СЂРї}
 
 {=====| FalaiseDeFleur.c |=====}
-Toni{Тони}
-Haraldo{Харальдо}
-Isabel{Изабель}
-Marino{Марино}
-Grey{Грей}
-Pepe{Пепе}
-Grande{Гранде}
-Kofi{Кофи}
-Macchiato{Маккиато}
-Doma{Дома}
-Perignone{Периньоне}
-Puerta{Пуэрта}
-Velador{Веладор}
-Franz{Франц}
-Gynster{Гинстер}
-Ernesto{Эрнесто}
-Dirty{Грязный}
-Chico{Чико}
-Malo{Мало}
-Audience{Наблюдатель}
-Guzman{Гузман}
-Jauri{Джаури}
-Lil{Лил}
-Bonto{Бонто}
-Triton{Тритон}
-Barbos{Барбос}
-Silvia{Сильвия}
+Toni{РўРѕРЅРё}
+Haraldo{РҐР°СЂР°Р»СЊРґРѕ}
+Isabel{РР·Р°Р±РµР»СЊ}
+Marino{РњР°СЂРёРЅРѕ}
+Grey{Р“СЂРµР№}
+Pepe{РџРµРїРµ}
+Grande{Р“СЂР°РЅРґРµ}
+Kofi{РљРѕС„Рё}
+Macchiato{РњР°РєРєРёР°С‚Рѕ}
+Doma{Р”РѕРјР°}
+Perignone{РџРµСЂРёРЅСЊРѕРЅРµ}
+Puerta{РџСѓСЌСЂС‚Р°}
+Velador{Р’РµР»Р°РґРѕСЂ}
+Franz{Р¤СЂР°РЅС†}
+Gynster{Р“РёРЅСЃС‚РµСЂ}
+Ernesto{Р­СЂРЅРµСЃС‚Рѕ}
+Dirty{Р“СЂСЏР·РЅС‹Р№}
+Chico{Р§РёРєРѕ}
+Malo{РњР°Р»Рѕ}
+Audience{РќР°Р±Р»СЋРґР°С‚РµР»СЊ}
+Guzman{Р“СѓР·РјР°РЅ}
+Jauri{Р”Р¶Р°СѓСЂРё}
+Lil{Р›РёР»}
+Bonto{Р‘РѕРЅС‚Рѕ}
+Triton{РўСЂРёС‚РѕРЅ}
+Barbos{Р‘Р°СЂР±РѕСЃ}
+Silvia{РЎРёР»СЊРІРёСЏ}
 
 {=====| Cayman.c |=====}
-Killian{Киллиан}
-O'Byrne{О'Бирн}
-Annie{Энни}
-Scout{Разведчик}
-Mad Kay{Безумный Кай}
-Hubecher{Хубечер}
-Godefroi{Годфруа}
-Bonamy{Бонами}
-Crazy Luc{Сумасшедший Люк}
-Helveur{Хельвер}
+Killian{РљРёР»Р»РёР°РЅ}
+O'Byrne{Рћ'Р‘РёСЂРЅ}
+Annie{Р­РЅРЅРё}
+Scout{Р Р°Р·РІРµРґС‡РёРє}
+Mad Kay{Р‘РµР·СѓРјРЅС‹Р№ РљР°Р№}
+Hubecher{РҐСѓР±РµС‡РµСЂ}
+Godefroi{Р“РѕРґС„СЂСѓР°}
+Bonamy{Р‘РѕРЅР°РјРё}
+Crazy Luc{РЎСѓРјР°СЃС€РµРґС€РёР№ Р›СЋРє}
+Helveur{РҐРµР»СЊРІРµСЂ}
 
 {=====| Hispaniola.c |=====}
-Johnny{Джонни}
-Jackson{Джексон}
-Jackie{Джеки}
-Johnson{Джонсон}
-Cunning Frog{Хитрая Жаба}
-Private{Рядовой}
-Pyle{Пайл}
-Cheyenne{Шайенн}
-Borgen{Борген}
-Feck{Фек}
-Bionicle{Бионикл}
-Humana{Человеческий}
-Osseus{Скелет}
-Contessa{Графиня}
-Calzone{Кальцоне}
-Torsten{Торстен}
-Storenfried{Сторенфрид}
-Shirley{Ширли}
-Lieselotte{Лизелотта}
-Lt{Лт.}
-Bornhowler{Борнхоулер}
-Finstock{Финсток}
-Kurt{Курт}
-Krautwurm{Краутвурм}
-Georg{Георгий}
-Geheim{Гехейм}
-Mondo{Мондо}
-Margrit{Маргрит}
-Eugster{Югстер}
-Donkey{Донки}
-Kong{Конг}
-Ferdinand{Фердинанд}
-Marcel{Марсель}
-Guille{Гиль}
-Jungle Julia{Джулия из Джунглей}
-the Kid{Сопляк}
-Buffoon{Шут Гороховый}
-Lorena{Лорена}
-Lopez{Лопес}
-Compulsive{Навязчивый}
-Village Idiot{Деревенский Идиот}
+Johnny{Р”Р¶РѕРЅРЅРё}
+Jackson{Р”Р¶РµРєСЃРѕРЅ}
+Jackie{Р”Р¶РµРєРё}
+Johnson{Р”Р¶РѕРЅСЃРѕРЅ}
+Cunning Frog{РҐРёС‚СЂР°СЏ Р–Р°Р±Р°}
+Private{Р СЏРґРѕРІРѕР№}
+Pyle{РџР°Р№Р»}
+Cheyenne{РЁР°Р№РµРЅРЅ}
+Borgen{Р‘РѕСЂРіРµРЅ}
+Feck{Р¤РµРє}
+Bionicle{Р‘РёРѕРЅРёРєР»}
+Humana{Р§РµР»РѕРІРµС‡РµСЃРєРёР№}
+Osseus{РЎРєРµР»РµС‚}
+Contessa{Р“СЂР°С„РёРЅСЏ}
+Calzone{РљР°Р»СЊС†РѕРЅРµ}
+Torsten{РўРѕСЂСЃС‚РµРЅ}
+Storenfried{РЎС‚РѕСЂРµРЅС„СЂРёРґ}
+Shirley{РЁРёСЂР»Рё}
+Lieselotte{Р›РёР·РµР»РѕС‚С‚Р°}
+Lt{Р›С‚.}
+Bornhowler{Р‘РѕСЂРЅС…РѕСѓР»РµСЂ}
+Finstock{Р¤РёРЅСЃС‚РѕРє}
+Kurt{РљСѓСЂС‚}
+Krautwurm{РљСЂР°СѓС‚РІСѓСЂРј}
+Georg{Р“РµРѕСЂРіРёР№}
+Geheim{Р“РµС…РµР№Рј}
+Mondo{РњРѕРЅРґРѕ}
+Margrit{РњР°СЂРіСЂРёС‚}
+Eugster{Р®РіСЃС‚РµСЂ}
+Donkey{Р”РѕРЅРєРё}
+Kong{РљРѕРЅРі}
+Ferdinand{Р¤РµСЂРґРёРЅР°РЅРґ}
+Marcel{РњР°СЂСЃРµР»СЊ}
+Guille{Р“РёР»СЊ}
+Jungle Julia{Р”Р¶СѓР»РёСЏ РёР· Р”Р¶СѓРЅРіР»РµР№}
+the Kid{РЎРѕРїР»СЏРє}
+Buffoon{РЁСѓС‚ Р“РѕСЂРѕС…РѕРІС‹Р№}
+Lorena{Р›РѕСЂРµРЅР°}
+Lopez{Р›РѕРїРµСЃ}
+Compulsive{РќР°РІСЏР·С‡РёРІС‹Р№}
+Village Idiot{Р”РµСЂРµРІРµРЅСЃРєРёР№ РРґРёРѕС‚}
 
 {=====| 18 characters |=====}

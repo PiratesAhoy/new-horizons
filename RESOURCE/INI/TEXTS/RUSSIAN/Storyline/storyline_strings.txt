@@ -1,600 +1,600 @@
 // MAXIMUS 19.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| initModels.c |=====}
 
-Hilda{Хильда}
-Sparre{Спарре}
-The Road Back to Greatness{Возврат к Величию}
-You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.{Вы дворянка, потомок древнейшего рода Швеции, но правление Карла XI принесло Вам постоянно уменьшающееся влияние и тающие привилегии. Вступив в заговор с целью вернуть то, что было потеряно, Вы внезапно очутились в бегах, скрываясь от смертного приговора. Поскольку идти больше некуда, и целое государство охотится за Вами - Вы бежали в Новый Свет.}
-Krеkan{Давилка}
+Hilda{РҐРёР»СЊРґР°}
+Sparre{РЎРїР°СЂСЂРµ}
+The Road Back to Greatness{Р’РѕР·РІСЂР°С‚ Рє Р’РµР»РёС‡РёСЋ}
+You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.{Р’С‹ РґРІРѕСЂСЏРЅРєР°, РїРѕС‚РѕРјРѕРє РґСЂРµРІРЅРµР№С€РµРіРѕ СЂРѕРґР° РЁРІРµС†РёРё, РЅРѕ РїСЂР°РІР»РµРЅРёРµ РљР°СЂР»Р° XI РїСЂРёРЅРµСЃР»Рѕ Р’Р°Рј РїРѕСЃС‚РѕСЏРЅРЅРѕ СѓРјРµРЅСЊС€Р°СЋС‰РµРµСЃСЏ РІР»РёСЏРЅРёРµ Рё С‚Р°СЋС‰РёРµ РїСЂРёРІРёР»РµРіРёРё. Р’СЃС‚СѓРїРёРІ РІ Р·Р°РіРѕРІРѕСЂ СЃ С†РµР»СЊСЋ РІРµСЂРЅСѓС‚СЊ С‚Рѕ, С‡С‚Рѕ Р±С‹Р»Рѕ РїРѕС‚РµСЂСЏРЅРѕ, Р’С‹ РІРЅРµР·Р°РїРЅРѕ РѕС‡СѓС‚РёР»РёСЃСЊ РІ Р±РµРіР°С…, СЃРєСЂС‹РІР°СЏСЃСЊ РѕС‚ СЃРјРµСЂС‚РЅРѕРіРѕ РїСЂРёРіРѕРІРѕСЂР°. РџРѕСЃРєРѕР»СЊРєСѓ РёРґС‚Рё Р±РѕР»СЊС€Рµ РЅРµРєСѓРґР°, Рё С†РµР»РѕРµ РіРѕСЃСѓРґР°СЂСЃС‚РІРѕ РѕС…РѕС‚РёС‚СЃСЏ Р·Р° Р’Р°РјРё - Р’С‹ Р±РµР¶Р°Р»Рё РІ РќРѕРІС‹Р№ РЎРІРµС‚.}
+KrРµkan{Р”Р°РІРёР»РєР°}
 
-Ciri{Цири}
-Riannon{Рианнон}
-Little Horse{Конек}
+Ciri{Р¦РёСЂРё}
+Riannon{Р РёР°РЅРЅРѕРЅ}
+Little Horse{РљРѕРЅРµРє}
 
-Geralt{Геральт}
-of_Rivia{из Ривии}
-Travelling Worlds{Путешествие По Мирам}
-Take the role of Geralt of Rivia, a Witcher. A mutant, trained to kill monsters since childhood. Thrust into a different world and separated from your loved ones, you now search for your daughter in the Caribbean. Whether you find her or not, is a mystery...{Возьмите на себя роль Геральта из Ривии, Ведьмака. Мутант, с детства обученный убивать монстров. Попав в другой мир и оторвавшись от своих близких, вы теперь ищете свою дочь на Карибах. Найдете вы её или нет, остается загадкой...}
-Roach{Роуч}
+Geralt{Р“РµСЂР°Р»СЊС‚}
+of_Rivia{РёР· Р РёРІРёРё}
+Travelling Worlds{РџСѓС‚РµС€РµСЃС‚РІРёРµ РџРѕ РњРёСЂР°Рј}
+Take the role of Geralt of Rivia, a Witcher. A mutant, trained to kill monsters since childhood. Thrust into a different world and separated from your loved ones, you now search for your daughter in the Caribbean. Whether you find her or not, is a mystery...{Р’РѕР·СЊРјРёС‚Рµ РЅР° СЃРµР±СЏ СЂРѕР»СЊ Р“РµСЂР°Р»СЊС‚Р° РёР· Р РёРІРёРё, Р’РµРґСЊРјР°РєР°. РњСѓС‚Р°РЅС‚, СЃ РґРµС‚СЃС‚РІР° РѕР±СѓС‡РµРЅРЅС‹Р№ СѓР±РёРІР°С‚СЊ РјРѕРЅСЃС‚СЂРѕРІ. РџРѕРїР°РІ РІ РґСЂСѓРіРѕР№ РјРёСЂ Рё РѕС‚РѕСЂРІР°РІС€РёСЃСЊ РѕС‚ СЃРІРѕРёС… Р±Р»РёР·РєРёС…, РІС‹ С‚РµРїРµСЂСЊ РёС‰РµС‚Рµ СЃРІРѕСЋ РґРѕС‡СЊ РЅР° РљР°СЂРёР±Р°С…. РќР°Р№РґРµС‚Рµ РІС‹ РµС‘ РёР»Рё РЅРµС‚, РѕСЃС‚Р°РµС‚СЃСЏ Р·Р°РіР°РґРєРѕР№...}
+Roach{Р РѕСѓС‡}
 
-Morgen{Морган}
-le_Fay{Ле Фэй}
-Myrddin{Кречет}
+Morgen{РњРѕСЂРіР°РЅ}
+le_Fay{Р›Рµ Р¤СЌР№}
+Myrddin{РљСЂРµС‡РµС‚}
 
-Ronald{Рональд}
+Ronald{Р РѕРЅР°Р»СЊРґ}
 
-Ron{Рон}
+Ron{Р РѕРЅ}
 
-Jack{Джек}
-Sparrow{Воробей}
+Jack{Р”Р¶РµРє}
+Sparrow{Р’РѕСЂРѕР±РµР№}
 
-Nathaniel{Натаниэль}
-Hawk{Хаук}
+Nathaniel{РќР°С‚Р°РЅРёСЌР»СЊ}
+Hawk{РҐР°СѓРє}
 
-James{Джеймс}
-Norrington{Норрингтон}
+James{Р”Р¶РµР№РјСЃ}
+Norrington{РќРѕСЂСЂРёРЅРіС‚РѕРЅ}
 
-Wicked Wench{Распутная Девка}
+Wicked Wench{Р Р°СЃРїСѓС‚РЅР°СЏ Р”РµРІРєР°}
 
-Horatio{Горацио}
-Hornblower{Хорнблауэр}
-Caroline{Каролина}
+Horatio{Р“РѕСЂР°С†РёРѕ}
+Hornblower{РҐРѕСЂРЅР±Р»Р°СѓСЌСЂ}
+Caroline{РљР°СЂРѕР»РёРЅР°}
 
-Le Rиve{Мечта}
+Le RРёve{РњРµС‡С‚Р°}
 
-Atropos{Атропос}
-Lydia{Лидия}
+Atropos{РђС‚СЂРѕРїРѕСЃ}
+Lydia{Р›РёРґРёСЏ}
 
-Don_Julian{Дон Жулиан}
-Alvarado{Альварадо}
+Don_Julian{Р”РѕРЅ Р–СѓР»РёР°РЅ}
+Alvarado{РђР»СЊРІР°СЂР°РґРѕ}
 
-Aine{Айне}
+Aine{РђР№РЅРµ}
 
-Petra{Петра}
-Borinqueсa{Боринкеса}
+Petra{РџРµС‚СЂР°}
+BorinqueСЃa{Р‘РѕСЂРёРЅРєРµСЃР°}
 
-Becka{Бекка}
+Becka{Р‘РµРєРєР°}
 
-Aveline{Авелина}
-de_Grandprй{Де Гранпре}
-Hatching a Plot{Создание Сюжета}
-As an official member of the Assassin Brotherhood, you sought to liberate the slave community from the Templar Order influence. After more than 10 years of dedication, you succeeded in eradicating the Templar Order of Louisiana. Recently, you received a letter asking for help from the Caribbean Brotherhood of Assassins.{Как официальный член Братства Ассасинов, вы стремились освободить сообщество рабов от влияния Ордена Тамплиеров. После более чем 10 лет самоотверженной работы вам удалось уничтожить орден тамплиеров в Луизиане. Недавно вы получили письмо с просьбой о помощи от Карибского Братства Ассасинов.}
-Libertй{Свобода}
+Aveline{РђРІРµР»РёРЅР°}
+de_GrandprР№{Р”Рµ Р“СЂР°РЅРїСЂРµ}
+Hatching a Plot{РЎРѕР·РґР°РЅРёРµ РЎСЋР¶РµС‚Р°}
+As an official member of the Assassin Brotherhood, you sought to liberate the slave community from the Templar Order influence. After more than 10 years of dedication, you succeeded in eradicating the Templar Order of Louisiana. Recently, you received a letter asking for help from the Caribbean Brotherhood of Assassins.{РљР°Рє РѕС„РёС†РёР°Р»СЊРЅС‹Р№ С‡Р»РµРЅ Р‘СЂР°С‚СЃС‚РІР° РђСЃСЃР°СЃРёРЅРѕРІ, РІС‹ СЃС‚СЂРµРјРёР»РёСЃСЊ РѕСЃРІРѕР±РѕРґРёС‚СЊ СЃРѕРѕР±С‰РµСЃС‚РІРѕ СЂР°Р±РѕРІ РѕС‚ РІР»РёСЏРЅРёСЏ РћСЂРґРµРЅР° РўР°РјРїР»РёРµСЂРѕРІ. РџРѕСЃР»Рµ Р±РѕР»РµРµ С‡РµРј 10 Р»РµС‚ СЃР°РјРѕРѕС‚РІРµСЂР¶РµРЅРЅРѕР№ СЂР°Р±РѕС‚С‹ РІР°Рј СѓРґР°Р»РѕСЃСЊ СѓРЅРёС‡С‚РѕР¶РёС‚СЊ РѕСЂРґРµРЅ С‚Р°РјРїР»РёРµСЂРѕРІ РІ Р›СѓРёР·РёР°РЅРµ. РќРµРґР°РІРЅРѕ РІС‹ РїРѕР»СѓС‡РёР»Рё РїРёСЃСЊРјРѕ СЃ РїСЂРѕСЃСЊР±РѕР№ Рѕ РїРѕРјРѕС‰Рё РѕС‚ РљР°СЂРёР±СЃРєРѕРіРѕ Р‘СЂР°С‚СЃС‚РІР° РђСЃСЃР°СЃРёРЅРѕРІ.}
+LibertР№{РЎРІРѕР±РѕРґР°}
 
-La Aguja - The Needle{Игла}
-The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.{Дочь богатого помещика и бывшего партизана, чья семья была убита французами. Вы хотите отомстить, и приняли командование партизанской группировкой, изредка работая с британским офицером по имени Ричард Шарп. У Вас даже есть бывший французский корабль, который несколько раз переходил из рук в руки, прежде чем окончательно оказаться Вашим.}
+La Aguja - The Needle{РРіР»Р°}
+The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.{Р”РѕС‡СЊ Р±РѕРіР°С‚РѕРіРѕ РїРѕРјРµС‰РёРєР° Рё Р±С‹РІС€РµРіРѕ РїР°СЂС‚РёР·Р°РЅР°, С‡СЊСЏ СЃРµРјСЊСЏ Р±С‹Р»Р° СѓР±РёС‚Р° С„СЂР°РЅС†СѓР·Р°РјРё. Р’С‹ С…РѕС‚РёС‚Рµ РѕС‚РѕРјСЃС‚РёС‚СЊ, Рё РїСЂРёРЅСЏР»Рё РєРѕРјР°РЅРґРѕРІР°РЅРёРµ РїР°СЂС‚РёР·Р°РЅСЃРєРѕР№ РіСЂСѓРїРїРёСЂРѕРІРєРѕР№, РёР·СЂРµРґРєР° СЂР°Р±РѕС‚Р°СЏ СЃ Р±СЂРёС‚Р°РЅСЃРєРёРј РѕС„РёС†РµСЂРѕРј РїРѕ РёРјРµРЅРё Р РёС‡Р°СЂРґ РЁР°СЂРї. РЈ Р’Р°СЃ РґР°Р¶Рµ РµСЃС‚СЊ Р±С‹РІС€РёР№ С„СЂР°РЅС†СѓР·СЃРєРёР№ РєРѕСЂР°Р±Р»СЊ, РєРѕС‚РѕСЂС‹Р№ РЅРµСЃРєРѕР»СЊРєРѕ СЂР°Р· РїРµСЂРµС…РѕРґРёР» РёР· СЂСѓРє РІ СЂСѓРєРё, РїСЂРµР¶РґРµ С‡РµРј РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕ РѕРєР°Р·Р°С‚СЊСЃСЏ Р’Р°С€РёРј.}
 
-Teresa{Тереза}
-Moreno{Морено}
-Out of the Frying Pan...{Из огня...}
-Born into a governor's family, you fell in with bad company in the form of Jack Sparrow and Will Turner. Never one to merely follow other people's lead, you now have a ship of your own. What will you do with her?{Родившись в семье губернатора, вы попали в плохую компанию авантюристов Джека Воробья и Уилла Тёрнера. Всегда непросто следовать за другими людьми, но теперь у вас есть собственный корабль. Что Вы будете с ним делать?}
+Teresa{РўРµСЂРµР·Р°}
+Moreno{РњРѕСЂРµРЅРѕ}
+Out of the Frying Pan...{РР· РѕРіРЅСЏ...}
+Born into a governor's family, you fell in with bad company in the form of Jack Sparrow and Will Turner. Never one to merely follow other people's lead, you now have a ship of your own. What will you do with her?{Р РѕРґРёРІС€РёСЃСЊ РІ СЃРµРјСЊРµ РіСѓР±РµСЂРЅР°С‚РѕСЂР°, РІС‹ РїРѕРїР°Р»Рё РІ РїР»РѕС…СѓСЋ РєРѕРјРїР°РЅРёСЋ Р°РІР°РЅС‚СЋСЂРёСЃС‚РѕРІ Р”Р¶РµРєР° Р’РѕСЂРѕР±СЊСЏ Рё РЈРёР»Р»Р° РўС‘СЂРЅРµСЂР°. Р’СЃРµРіРґР° РЅРµРїСЂРѕСЃС‚Рѕ СЃР»РµРґРѕРІР°С‚СЊ Р·Р° РґСЂСѓРіРёРјРё Р»СЋРґСЊРјРё, РЅРѕ С‚РµРїРµСЂСЊ Сѓ РІР°СЃ РµСЃС‚СЊ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ РєРѕСЂР°Р±Р»СЊ. Р§С‚Рѕ Р’С‹ Р±СѓРґРµС‚Рµ СЃ РЅРёРј РґРµР»Р°С‚СЊ?}
 
-Elizabeth{Элизабет}
-Swann{Суонн}
-Stingray{Скат}
+Elizabeth{Р­Р»РёР·Р°Р±РµС‚}
+Swann{РЎСѓРѕРЅРЅ}
+Stingray{РЎРєР°С‚}
 
-Isenbrandt{Изебрандт}
-Jurcksen{Юрксен}
+Isenbrandt{РР·РµР±СЂР°РЅРґС‚}
+Jurcksen{Р®СЂРєСЃРµРЅ}
 
-Rachel{Рэйчел}
+Rachel{Р СЌР№С‡РµР»}
 
-Raoul{Рауль}
-Rheims{Реймс}
+Raoul{Р Р°СѓР»СЊ}
+Rheims{Р РµР№РјСЃ}
 
-Lara{Лара}
-Croft{Крофт}
+Lara{Р›Р°СЂР°}
+Croft{РљСЂРѕС„С‚}
 
-Elbaro{Эльбаро}
-Caron{Кэрон}
+Elbaro{Р­Р»СЊР±Р°СЂРѕ}
+Caron{РљСЌСЂРѕРЅ}
 
-Roxanne{Роксана}
-Lalliere{Лаллир}
-La Diablesse{Дьявол}
+Roxanne{Р РѕРєСЃР°РЅР°}
+Lalliere{Р›Р°Р»Р»РёСЂ}
+La Diablesse{Р”СЊСЏРІРѕР»}
 
-Catalina{Каталина}
-the_Pirate{Пиратка}
+Catalina{РљР°С‚Р°Р»РёРЅР°}
+the_Pirate{РџРёСЂР°С‚РєР°}
 
-Jean-Baptiste{Жан-Батист}
-du_Casse{Дюкасс}
-War of the League of Augsburg{Война Аугсбургской Лиги}
-Quite a colourful character, you are! History claims that you became a buccaneer, admiral and colonial administrator who served throughout the Atlantic World during the 17th and 18th centuries. Now at the beginning of your career as officer in the French navy, you are of course required to follow orders. However, your life is yours and you can make whatever choices you see fit.{История утверждает, что Вы были пиратом, адмиралом и колониальным губернатором, который послужил во всём Атлантическом Море в 17 и 18 веках. Теперь, в начале своей карьеры офицера во французском флоте, Вы, конечно, обязаны выполнять приказы. Тем не менее, Вы можете делать всё, что считаете нужным.}
-Magicienne{Кудесник}
+Jean-Baptiste{Р–Р°РЅ-Р‘Р°С‚РёСЃС‚}
+du_Casse{Р”СЋРєР°СЃСЃ}
+War of the League of Augsburg{Р’РѕР№РЅР° РђСѓРіСЃР±СѓСЂРіСЃРєРѕР№ Р›РёРіРё}
+Quite a colourful character, you are! History claims that you became a buccaneer, admiral and colonial administrator who served throughout the Atlantic World during the 17th and 18th centuries. Now at the beginning of your career as officer in the French navy, you are of course required to follow orders. However, your life is yours and you can make whatever choices you see fit.{РСЃС‚РѕСЂРёСЏ СѓС‚РІРµСЂР¶РґР°РµС‚, С‡С‚Рѕ Р’С‹ Р±С‹Р»Рё РїРёСЂР°С‚РѕРј, Р°РґРјРёСЂР°Р»РѕРј Рё РєРѕР»РѕРЅРёР°Р»СЊРЅС‹Рј РіСѓР±РµСЂРЅР°С‚РѕСЂРѕРј, РєРѕС‚РѕСЂС‹Р№ РїРѕСЃР»СѓР¶РёР» РІРѕ РІСЃС‘Рј РђС‚Р»Р°РЅС‚РёС‡РµСЃРєРѕРј РњРѕСЂРµ РІ 17 Рё 18 РІРµРєР°С…. РўРµРїРµСЂСЊ, РІ РЅР°С‡Р°Р»Рµ СЃРІРѕРµР№ РєР°СЂСЊРµСЂС‹ РѕС„РёС†РµСЂР° РІРѕ С„СЂР°РЅС†СѓР·СЃРєРѕРј С„Р»РѕС‚Рµ, Р’С‹, РєРѕРЅРµС‡РЅРѕ, РѕР±СЏР·Р°РЅС‹ РІС‹РїРѕР»РЅСЏС‚СЊ РїСЂРёРєР°Р·С‹. РўРµРј РЅРµ РјРµРЅРµРµ, Р’С‹ РјРѕР¶РµС‚Рµ РґРµР»Р°С‚СЊ РІСЃС‘, С‡С‚Рѕ СЃС‡РёС‚Р°РµС‚Рµ РЅСѓР¶РЅС‹Рј.}
+Magicienne{РљСѓРґРµСЃРЅРёРє}
 
-Pieter{Питер}
-Bloed{Блад}
-Amsterdam{Амстердам}
+Pieter{РџРёС‚РµСЂ}
+Bloed{Р‘Р»Р°Рґ}
+Amsterdam{РђРјСЃС‚РµСЂРґР°Рј}
 
-Francisco{Франциско}
-de_Almeida{Де Алмейда}
-The Portuguese Armada{Португальская Армада}
-As was customary for men in your social circle, you joined the military at an early age. You have fought in conflicts in different parts of Morocco and Spain on the side of the Castilians. Now in the Caribbean, Spain is again your ally. But you never know what the future might bring!{Как было принято для мужчин вашего круга общения, Вы вступили в армию в раннем возрасте. Вы сражались в конфликтах в разных частях Марокко и Испании на стороне кастильцев. Теперь, на Карибах, Испания снова Ваш союзник. Но никогда не знаешь, что может принести будущее!}
-Lebre{Заяц}
+Francisco{Р¤СЂР°РЅС†РёСЃРєРѕ}
+de_Almeida{Р”Рµ РђР»РјРµР№РґР°}
+The Portuguese Armada{РџРѕСЂС‚СѓРіР°Р»СЊСЃРєР°СЏ РђСЂРјР°РґР°}
+As was customary for men in your social circle, you joined the military at an early age. You have fought in conflicts in different parts of Morocco and Spain on the side of the Castilians. Now in the Caribbean, Spain is again your ally. But you never know what the future might bring!{РљР°Рє Р±С‹Р»Рѕ РїСЂРёРЅСЏС‚Рѕ РґР»СЏ РјСѓР¶С‡РёРЅ РІР°С€РµРіРѕ РєСЂСѓРіР° РѕР±С‰РµРЅРёСЏ, Р’С‹ РІСЃС‚СѓРїРёР»Рё РІ Р°СЂРјРёСЋ РІ СЂР°РЅРЅРµРј РІРѕР·СЂР°СЃС‚Рµ. Р’С‹ СЃСЂР°Р¶Р°Р»РёСЃСЊ РІ РєРѕРЅС„Р»РёРєС‚Р°С… РІ СЂР°Р·РЅС‹С… С‡Р°СЃС‚СЏС… РњР°СЂРѕРєРєРѕ Рё РСЃРїР°РЅРёРё РЅР° СЃС‚РѕСЂРѕРЅРµ РєР°СЃС‚РёР»СЊС†РµРІ. РўРµРїРµСЂСЊ, РЅР° РљР°СЂРёР±Р°С…, РСЃРїР°РЅРёСЏ СЃРЅРѕРІР° Р’Р°С€ СЃРѕСЋР·РЅРёРє. РќРѕ РЅРёРєРѕРіРґР° РЅРµ Р·РЅР°РµС€СЊ, С‡С‚Рѕ РјРѕР¶РµС‚ РїСЂРёРЅРµСЃС‚Рё Р±СѓРґСѓС‰РµРµ!}
+Lebre{Р—Р°СЏС†}
 
-Taegan{Тиган}
-Finch{Финч}
+Taegan{РўРёРіР°РЅ}
+Finch{Р¤РёРЅС‡}
 
-Dark{Мрачный}
-Teacher{Учитель}
-Satanists{Сатанисты}
-After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...{После того, как Мальтийский Орден уничтожил ваше логово в Италии, вы бежали на Карибы, поклявшись отомстить во имя Князя Тьмы...}
-Disciple{Ученик}
-
-Anna{Анна}
-De_Leiva{Де Лейва}
-
-Stephen{Стивен}
-Maturin{Мэтьюрин}
-
-Arturo{Артуро}
-Campos{Кампос}
-
-Aubrey{Обри}
-Master & Commander{Младший Капитан}
-Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Surprise. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{Капитан Джон 'Везунчик Джек' Обри отправляется в круиз по Карибскому морю на своем новом судне - КЕВ 'Сюрприз'. Познакомьтесь со своим другом, натуралистом и корабельным врачом Стивеном Мэтьюрином, и повлияйте на ход войны с Францией.}
-Surprise{Сюрприз}
-
-Hector{Гектор}
-Barbossa{Барбосса}
-The Curse of Cortйs{Проклятие Кортеса}
-Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...{Предводитель пиратов Карибского моря. Бунтовщик. А теперь искатель потерянных сокровищ Исла-Де-Муэрте. Вы готовы эффективно использовать своё новообретенное богатство! Но вас ждет неприятный сюрприз...}
-Black Pearl{Чёрная Жемчужина}
-
-On Stranger Tides{На Странных Берегах}
-Are your days of pirating truly behind you? Or do you serve the crown for your own ulterior motives?{Действительно ли ваши пиратские дни позади? Или вы служите короне по своим собственным скрытым мотивам?}
-Providence{Провидение}
+Dark{РњСЂР°С‡РЅС‹Р№}
+Teacher{РЈС‡РёС‚РµР»СЊ}
+Satanists{РЎР°С‚Р°РЅРёСЃС‚С‹}
+After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...{РџРѕСЃР»Рµ С‚РѕРіРѕ, РєР°Рє РњР°Р»СЊС‚РёР№СЃРєРёР№ РћСЂРґРµРЅ СѓРЅРёС‡С‚РѕР¶РёР» РІР°С€Рµ Р»РѕРіРѕРІРѕ РІ РС‚Р°Р»РёРё, РІС‹ Р±РµР¶Р°Р»Рё РЅР° РљР°СЂРёР±С‹, РїРѕРєР»СЏРІС€РёСЃСЊ РѕС‚РѕРјСЃС‚РёС‚СЊ РІРѕ РёРјСЏ РљРЅСЏР·СЏ РўСЊРјС‹...}
+Disciple{РЈС‡РµРЅРёРє}
+
+Anna{РђРЅРЅР°}
+De_Leiva{Р”Рµ Р›РµР№РІР°}
+
+Stephen{РЎС‚РёРІРµРЅ}
+Maturin{РњСЌС‚СЊСЋСЂРёРЅ}
+
+Arturo{РђСЂС‚СѓСЂРѕ}
+Campos{РљР°РјРїРѕСЃ}
+
+Aubrey{РћР±СЂРё}
+Master & Commander{РњР»Р°РґС€РёР№ РљР°РїРёС‚Р°РЅ}
+Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Surprise. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{РљР°РїРёС‚Р°РЅ Р”Р¶РѕРЅ 'Р’РµР·СѓРЅС‡РёРє Р”Р¶РµРє' РћР±СЂРё РѕС‚РїСЂР°РІР»СЏРµС‚СЃСЏ РІ РєСЂСѓРёР· РїРѕ РљР°СЂРёР±СЃРєРѕРјСѓ РјРѕСЂСЋ РЅР° СЃРІРѕРµРј РЅРѕРІРѕРј СЃСѓРґРЅРµ - РљР•Р’ 'РЎСЋСЂРїСЂРёР·'. РџРѕР·РЅР°РєРѕРјСЊС‚РµСЃСЊ СЃРѕ СЃРІРѕРёРј РґСЂСѓРіРѕРј, РЅР°С‚СѓСЂР°Р»РёСЃС‚РѕРј Рё РєРѕСЂР°Р±РµР»СЊРЅС‹Рј РІСЂР°С‡РѕРј РЎС‚РёРІРµРЅРѕРј РњСЌС‚СЊСЋСЂРёРЅРѕРј, Рё РїРѕРІР»РёСЏР№С‚Рµ РЅР° С…РѕРґ РІРѕР№РЅС‹ СЃ Р¤СЂР°РЅС†РёРµР№.}
+Surprise{РЎСЋСЂРїСЂРёР·}
+
+Hector{Р“РµРєС‚РѕСЂ}
+Barbossa{Р‘Р°СЂР±РѕСЃСЃР°}
+The Curse of CortР№s{РџСЂРѕРєР»СЏС‚РёРµ РљРѕСЂС‚РµСЃР°}
+Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...{РџСЂРµРґРІРѕРґРёС‚РµР»СЊ РїРёСЂР°С‚РѕРІ РљР°СЂРёР±СЃРєРѕРіРѕ РјРѕСЂСЏ. Р‘СѓРЅС‚РѕРІС‰РёРє. Рђ С‚РµРїРµСЂСЊ РёСЃРєР°С‚РµР»СЊ РїРѕС‚РµСЂСЏРЅРЅС‹С… СЃРѕРєСЂРѕРІРёС‰ РСЃР»Р°-Р”Рµ-РњСѓСЌСЂС‚Рµ. Р’С‹ РіРѕС‚РѕРІС‹ СЌС„С„РµРєС‚РёРІРЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃРІРѕС‘ РЅРѕРІРѕРѕР±СЂРµС‚РµРЅРЅРѕРµ Р±РѕРіР°С‚СЃС‚РІРѕ! РќРѕ РІР°СЃ Р¶РґРµС‚ РЅРµРїСЂРёСЏС‚РЅС‹Р№ СЃСЋСЂРїСЂРёР·...}
+Black Pearl{Р§С‘СЂРЅР°СЏ Р–РµРјС‡СѓР¶РёРЅР°}
+
+On Stranger Tides{РќР° РЎС‚СЂР°РЅРЅС‹С… Р‘РµСЂРµРіР°С…}
+Are your days of pirating truly behind you? Or do you serve the crown for your own ulterior motives?{Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ Р»Рё РІР°С€Рё РїРёСЂР°С‚СЃРєРёРµ РґРЅРё РїРѕР·Р°РґРё? РР»Рё РІС‹ СЃР»СѓР¶РёС‚Рµ РєРѕСЂРѕРЅРµ РїРѕ СЃРІРѕРёРј СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј СЃРєСЂС‹С‚С‹Рј РјРѕС‚РёРІР°Рј?}
+Providence{РџСЂРѕРІРёРґРµРЅРёРµ}
 
-Beatrise{Беатрис}
+Beatrise{Р‘РµР°С‚СЂРёСЃ}
 
-Beatrice{Беатрис}
-Devlin{Девлин}
-Caribbean Tales{Карибские Байки}
-Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?{Беатрис Девлин любит исследовать недавно открытую Вест-Индию. Вы свободная девушка в свободном мире. Есть ли у Вас все необходимое для того, чтобы создать настоящую Эпоху Пиратов?}
-Discovery{Открытие}
+Beatrice{Р‘РµР°С‚СЂРёСЃ}
+Devlin{Р”РµРІР»РёРЅ}
+Caribbean Tales{РљР°СЂРёР±СЃРєРёРµ Р‘Р°Р№РєРё}
+Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?{Р‘РµР°С‚СЂРёСЃ Р”РµРІР»РёРЅ Р»СЋР±РёС‚ РёСЃСЃР»РµРґРѕРІР°С‚СЊ РЅРµРґР°РІРЅРѕ РѕС‚РєСЂС‹С‚СѓСЋ Р’РµСЃС‚-РРЅРґРёСЋ. Р’С‹ СЃРІРѕР±РѕРґРЅР°СЏ РґРµРІСѓС€РєР° РІ СЃРІРѕР±РѕРґРЅРѕРј РјРёСЂРµ. Р•СЃС‚СЊ Р»Рё Сѓ Р’Р°СЃ РІСЃРµ РЅРµРѕР±С…РѕРґРёРјРѕРµ РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ СЃРѕР·РґР°С‚СЊ РЅР°СЃС‚РѕСЏС‰СѓСЋ Р­РїРѕС…Сѓ РџРёСЂР°С‚РѕРІ?}
+Discovery{РћС‚РєСЂС‹С‚РёРµ}
 
-Bonnie{Бонни}
-Quicksilver{Ртуть}
+Bonnie{Р‘РѕРЅРЅРё}
+Quicksilver{Р С‚СѓС‚СЊ}
 
-Desmond_Ray{Десмонд Рэй}
-Beltrop{Белтроп}
+Desmond_Ray{Р”РµСЃРјРѕРЅРґ Р СЌР№}
+Beltrop{Р‘РµР»С‚СЂРѕРї}
 
-Berend{Беренд}
-De_Voor{Де Вур}
+Berend{Р‘РµСЂРµРЅРґ}
+De_Voor{Р”Рµ Р’СѓСЂ}
 
-Blackbeard{Чёрная Борода}
-No Quarter!{Пощады не Будет!}
-With a one-of-a-kind ship, you are ready to terrorize the Caribbean. But you haven't earned your fame just yet. Are you ready to live up to your name and become the pirate all pirates fear?{Имея единственный в своем роде корабль, Вы готовы терроризировать Карибское море. Но Вам только предстоит заработать свою славу. Вы готовы оправдать это имя, и стать пиратом, которого будут боятся все?}
-Queen Anne's Revenge{Месть Королевы Анны}
+Blackbeard{Р§С‘СЂРЅР°СЏ Р‘РѕСЂРѕРґР°}
+No Quarter!{РџРѕС‰Р°РґС‹ РЅРµ Р‘СѓРґРµС‚!}
+With a one-of-a-kind ship, you are ready to terrorize the Caribbean. But you haven't earned your fame just yet. Are you ready to live up to your name and become the pirate all pirates fear?{РРјРµСЏ РµРґРёРЅСЃС‚РІРµРЅРЅС‹Р№ РІ СЃРІРѕРµРј СЂРѕРґРµ РєРѕСЂР°Р±Р»СЊ, Р’С‹ РіРѕС‚РѕРІС‹ С‚РµСЂСЂРѕСЂРёР·РёСЂРѕРІР°С‚СЊ РљР°СЂРёР±СЃРєРѕРµ РјРѕСЂРµ. РќРѕ Р’Р°Рј С‚РѕР»СЊРєРѕ РїСЂРµРґСЃС‚РѕРёС‚ Р·Р°СЂР°Р±РѕС‚Р°С‚СЊ СЃРІРѕСЋ СЃР»Р°РІСѓ. Р’С‹ РіРѕС‚РѕРІС‹ РѕРїСЂР°РІРґР°С‚СЊ СЌС‚Рѕ РёРјСЏ, Рё СЃС‚Р°С‚СЊ РїРёСЂР°С‚РѕРј, РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґСѓС‚ Р±РѕСЏС‚СЃСЏ РІСЃРµ?}
+Queen Anne's Revenge{РњРµСЃС‚СЊ РљРѕСЂРѕР»РµРІС‹ РђРЅРЅС‹}
 
-Sea Horse{Морской Конек}
+Sea Horse{РњРѕСЂСЃРєРѕР№ РљРѕРЅРµРє}
 
-The Cossack in the Caribbean{Казак на Карибах}
-A Cossack under the great Stenka Rasin, you have escaped after his death and come to the Caribbean seeking your fortune.{Будучи одним из казаков знаменитого Стеньки Разина, Вы сбежали после его смерти и в поисках удачи прибыли на Карибы.}
+The Cossack in the Caribbean{РљР°Р·Р°Рє РЅР° РљР°СЂРёР±Р°С…}
+A Cossack under the great Stenka Rasin, you have escaped after his death and come to the Caribbean seeking your fortune.{Р‘СѓРґСѓС‡Рё РѕРґРЅРёРј РёР· РєР°Р·Р°РєРѕРІ Р·РЅР°РјРµРЅРёС‚РѕРіРѕ РЎС‚РµРЅСЊРєРё Р Р°Р·РёРЅР°, Р’С‹ СЃР±РµР¶Р°Р»Рё РїРѕСЃР»Рµ РµРіРѕ СЃРјРµСЂС‚Рё Рё РІ РїРѕРёСЃРєР°С… СѓРґР°С‡Рё РїСЂРёР±С‹Р»Рё РЅР° РљР°СЂРёР±С‹.}
 
-Bohdan{Богдан}
-Aleskeevich{Алексеевич}
-Voronov{Воронов}
-Babushka{Бабушка}
+Bohdan{Р‘РѕРіРґР°РЅ}
+Aleskeevich{РђР»РµРєСЃРµРµРІРёС‡}
+Voronov{Р’РѕСЂРѕРЅРѕРІ}
+Babushka{Р‘Р°Р±СѓС€РєР°}
 
-Sergio{Серджио}
-The_SeaWolf{Морской Волк}
+Sergio{РЎРµСЂРґР¶РёРѕ}
+The_SeaWolf{РњРѕСЂСЃРєРѕР№ Р’РѕР»Рє}
 
-Bilgemunky{Полутруп}
+Bilgemunky{РџРѕР»СѓС‚СЂСѓРї}
 
-Annabella{Аннабелла}
-Brinkley{Бринкли}
+Annabella{РђРЅРЅР°Р±РµР»Р»Р°}
+Brinkley{Р‘СЂРёРЅРєР»Рё}
 
-Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Sophie. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{Капитан Джон 'Везунчик Джек' Обри отправляется в круиз по Карибскому морю на своем новом судне - КЕВ 'Софи'. Познакомьтесь со своим другом, натуралистом и корабельным врачом Стивеном Мэтьюрином, и повлияйте на ход войны с Францией.}
-Sophie{Софи}
+Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Sophie. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{РљР°РїРёС‚Р°РЅ Р”Р¶РѕРЅ 'Р’РµР·СѓРЅС‡РёРє Р”Р¶РµРє' РћР±СЂРё РѕС‚РїСЂР°РІР»СЏРµС‚СЃСЏ РІ РєСЂСѓРёР· РїРѕ РљР°СЂРёР±СЃРєРѕРјСѓ РјРѕСЂСЋ РЅР° СЃРІРѕРµРј РЅРѕРІРѕРј СЃСѓРґРЅРµ - РљР•Р’ 'РЎРѕС„Рё'. РџРѕР·РЅР°РєРѕРјСЊС‚РµСЃСЊ СЃРѕ СЃРІРѕРёРј РґСЂСѓРіРѕРј, РЅР°С‚СѓСЂР°Р»РёСЃС‚РѕРј Рё РєРѕСЂР°Р±РµР»СЊРЅС‹Рј РІСЂР°С‡РѕРј РЎС‚РёРІРµРЅРѕРј РњСЌС‚СЊСЋСЂРёРЅРѕРј, Рё РїРѕРІР»РёСЏР№С‚Рµ РЅР° С…РѕРґ РІРѕР№РЅС‹ СЃ Р¤СЂР°РЅС†РёРµР№.}
+Sophie{РЎРѕС„Рё}
 
-Chico{Чико}
-Cois{Коис}
+Chico{Р§РёРєРѕ}
+Cois{РљРѕРёСЃ}
 
-Jean{Жан}
-Lafitte{Лафитт}
-The Buccaneer{Буканьер}
-A French smuggler friendly to the United States arrives in port. But will you abandon your profitable ventures to expand the might of the Americas in the Caribbean? Or perhaps join forces with one of the other nations? And how long will you be able to resist the lure of piracy?{Французский контрабандист, дружественный США, прибывает в порт. Но откажетесь ли Вы от своих прибыльных предприятий, чтобы увеличить влияние Америки на Карибах? Или, возможно, объедините усилия с одной из других наций? И как долго Вы сможете противостоять соблазну пиратства?}
-Goelette la Diligente{Прилежная Голетта}
+Jean{Р–Р°РЅ}
+Lafitte{Р›Р°С„РёС‚С‚}
+The Buccaneer{Р‘СѓРєР°РЅСЊРµСЂ}
+A French smuggler friendly to the United States arrives in port. But will you abandon your profitable ventures to expand the might of the Americas in the Caribbean? Or perhaps join forces with one of the other nations? And how long will you be able to resist the lure of piracy?{Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚, РґСЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Р№ РЎРЁРђ, РїСЂРёР±С‹РІР°РµС‚ РІ РїРѕСЂС‚. РќРѕ РѕС‚РєР°Р¶РµС‚РµСЃСЊ Р»Рё Р’С‹ РѕС‚ СЃРІРѕРёС… РїСЂРёР±С‹Р»СЊРЅС‹С… РїСЂРµРґРїСЂРёСЏС‚РёР№, С‡С‚РѕР±С‹ СѓРІРµР»РёС‡РёС‚СЊ РІР»РёСЏРЅРёРµ РђРјРµСЂРёРєРё РЅР° РљР°СЂРёР±Р°С…? РР»Рё, РІРѕР·РјРѕР¶РЅРѕ, РѕР±СЉРµРґРёРЅРёС‚Рµ СѓСЃРёР»РёСЏ СЃ РѕРґРЅРѕР№ РёР· РґСЂСѓРіРёС… РЅР°С†РёР№? Р РєР°Рє РґРѕР»РіРѕ Р’С‹ СЃРјРѕР¶РµС‚Рµ РїСЂРѕС‚РёРІРѕСЃС‚РѕСЏС‚СЊ СЃРѕР±Р»Р°Р·РЅСѓ РїРёСЂР°С‚СЃС‚РІР°?}
+Goelette la Diligente{РџСЂРёР»РµР¶РЅР°СЏ Р“РѕР»РµС‚С‚Р°}
 
-James_T.{Джеймс Ти}
-Hook{Хук}
-Jolly Roger{Весёлый Роджер}
+James_T.{Р”Р¶РµР№РјСЃ РўРё}
+Hook{РҐСѓРє}
+Jolly Roger{Р’РµСЃС‘Р»С‹Р№ Р РѕРґР¶РµСЂ}
 
-Eduardo{Эдвард}
-Villanueva{Вильянуэва}
-Sargento{Сержант}
-Lord of the Adriatic{Властелин Адриатики}
-Relive the piratical adventures of Capitбn Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Переживите заново пиратские приключения капитана Вильянуэвы, грозного корсара Адриатического моря. Означает ли это служить Испании в качестве капера - или стать враждебным ко всему, что встанет у него на пути, - решать вам, игроку.}
+Eduardo{Р­РґРІР°СЂРґ}
+Villanueva{Р’РёР»СЊСЏРЅСѓСЌРІР°}
+Sargento{РЎРµСЂР¶Р°РЅС‚}
+Lord of the Adriatic{Р’Р»Р°СЃС‚РµР»РёРЅ РђРґСЂРёР°С‚РёРєРё}
+Relive the piratical adventures of CapitР±n Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{РџРµСЂРµР¶РёРІРёС‚Рµ Р·Р°РЅРѕРІРѕ РїРёСЂР°С‚СЃРєРёРµ РїСЂРёРєР»СЋС‡РµРЅРёСЏ РєР°РїРёС‚Р°РЅР° Р’РёР»СЊСЏРЅСѓСЌРІС‹, РіСЂРѕР·РЅРѕРіРѕ РєРѕСЂСЃР°СЂР° РђРґСЂРёР°С‚РёС‡РµСЃРєРѕРіРѕ РјРѕСЂСЏ. РћР·РЅР°С‡Р°РµС‚ Р»Рё СЌС‚Рѕ СЃР»СѓР¶РёС‚СЊ РСЃРїР°РЅРёРё РІ РєР°С‡РµСЃС‚РІРµ РєР°РїРµСЂР° - РёР»Рё СЃС‚Р°С‚СЊ РІСЂР°Р¶РґРµР±РЅС‹Рј РєРѕ РІСЃРµРјСѓ, С‡С‚Рѕ РІСЃС‚Р°РЅРµС‚ Сѓ РЅРµРіРѕ РЅР° РїСѓС‚Рё, - СЂРµС€Р°С‚СЊ РІР°Рј, РёРіСЂРѕРєСѓ.}
 
-Sao{Сяо}
-Feng{Фэнь}
-Crouching Tiger, Sailing Dragon{Крадущийся Тигр, Плывущий Дракон}
-Destined to become the Pirate Lord of Singapore and scourge of the South China Sea, you have just made your way to the Caribbean to make a name for yourself. Your uncommon type of ship may give you the leverage you need to become a successful pirate.{Вам было суждено стать Предводителем Пиратов Сингапура и бедствием Южно-Китайского моря, но Вы только что отправились на Карибы, чтобы сделать себе имя. Ваш необычный тип корабля может дать Вам рычаги, необходимые для того, чтобы стать успешным пиратом.}
-Empress{Императрица}
+Sao{РЎСЏРѕ}
+Feng{Р¤СЌРЅСЊ}
+Crouching Tiger, Sailing Dragon{РљСЂР°РґСѓС‰РёР№СЃСЏ РўРёРіСЂ, РџР»С‹РІСѓС‰РёР№ Р”СЂР°РєРѕРЅ}
+Destined to become the Pirate Lord of Singapore and scourge of the South China Sea, you have just made your way to the Caribbean to make a name for yourself. Your uncommon type of ship may give you the leverage you need to become a successful pirate.{Р’Р°Рј Р±С‹Р»Рѕ СЃСѓР¶РґРµРЅРѕ СЃС‚Р°С‚СЊ РџСЂРµРґРІРѕРґРёС‚РµР»РµРј РџРёСЂР°С‚РѕРІ РЎРёРЅРіР°РїСѓСЂР° Рё Р±РµРґСЃС‚РІРёРµРј Р®Р¶РЅРѕ-РљРёС‚Р°Р№СЃРєРѕРіРѕ РјРѕСЂСЏ, РЅРѕ Р’С‹ С‚РѕР»СЊРєРѕ С‡С‚Рѕ РѕС‚РїСЂР°РІРёР»РёСЃСЊ РЅР° РљР°СЂРёР±С‹, С‡С‚РѕР±С‹ СЃРґРµР»Р°С‚СЊ СЃРµР±Рµ РёРјСЏ. Р’Р°С€ РЅРµРѕР±С‹С‡РЅС‹Р№ С‚РёРї РєРѕСЂР°Р±Р»СЏ РјРѕР¶РµС‚ РґР°С‚СЊ Р’Р°Рј СЂС‹С‡Р°РіРё, РЅРµРѕР±С…РѕРґРёРјС‹Рµ РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ СЃС‚Р°С‚СЊ СѓСЃРїРµС€РЅС‹Рј РїРёСЂР°С‚РѕРј.}
+Empress{РРјРїРµСЂР°С‚СЂРёС†Р°}
 
-Capitaine{Капитан}
-Chevalle{Шевалье}
-Lord of the Mediterranean Sea{Владыка Средиземного Моря}
-Chevalle, pirate lord of the Mediterranean sea, has embarked on a journey to the Caribbean. Work as a privateer for France, a pirate for yourself, or a rival power...the choice is yours, Capitaine.{Шевалье, повелитель пиратов Средиземного моря, отправился в путешествие по Карибскому морю. Работайте капером на Францию, пиратом на себя или на конкурирующую державу... выбор за вами, капитан.}
-Fancy{Причудливый}
+Capitaine{РљР°РїРёС‚Р°РЅ}
+Chevalle{РЁРµРІР°Р»СЊРµ}
+Lord of the Mediterranean Sea{Р’Р»Р°РґС‹РєР° РЎСЂРµРґРёР·РµРјРЅРѕРіРѕ РњРѕСЂСЏ}
+Chevalle, pirate lord of the Mediterranean sea, has embarked on a journey to the Caribbean. Work as a privateer for France, a pirate for yourself, or a rival power...the choice is yours, Capitaine.{РЁРµРІР°Р»СЊРµ, РїРѕРІРµР»РёС‚РµР»СЊ РїРёСЂР°С‚РѕРІ РЎСЂРµРґРёР·РµРјРЅРѕРіРѕ РјРѕСЂСЏ, РѕС‚РїСЂР°РІРёР»СЃСЏ РІ РїСѓС‚РµС€РµСЃС‚РІРёРµ РїРѕ РљР°СЂРёР±СЃРєРѕРјСѓ РјРѕСЂСЋ. Р Р°Р±РѕС‚Р°Р№С‚Рµ РєР°РїРµСЂРѕРј РЅР° Р¤СЂР°РЅС†РёСЋ, РїРёСЂР°С‚РѕРј РЅР° СЃРµР±СЏ РёР»Рё РЅР° РєРѕРЅРєСѓСЂРёСЂСѓСЋС‰СѓСЋ РґРµСЂР¶Р°РІСѓ... РІС‹Р±РѕСЂ Р·Р° РІР°РјРё, РєР°РїРёС‚Р°РЅ.}
+Fancy{РџСЂРёС‡СѓРґР»РёРІС‹Р№}
 
-Sumbhajee{Сумбаджи}
-Angria{Ангриа}
-Lord of the Indian Ocean{Владыка Индийского Океана}
-Priest turned pirate lord, Sri Sumbhajee Angria has left the Indian Ocean to resume his piratical activities in the Caribbean.{Священник, ставший повелителем пиратов, Шри Сумбаджи Ангриа покинул Индийский океан, чтобы возобновить свою пиратскую деятельность в Карибском море.}
-Otter{Выдра}
+Sumbhajee{РЎСѓРјР±Р°РґР¶Рё}
+Angria{РђРЅРіСЂРёР°}
+Lord of the Indian Ocean{Р’Р»Р°РґС‹РєР° РРЅРґРёР№СЃРєРѕРіРѕ РћРєРµР°РЅР°}
+Priest turned pirate lord, Sri Sumbhajee Angria has left the Indian Ocean to resume his piratical activities in the Caribbean.{РЎРІСЏС‰РµРЅРЅРёРє, СЃС‚Р°РІС€РёР№ РїРѕРІРµР»РёС‚РµР»РµРј РїРёСЂР°С‚РѕРІ, РЁСЂРё РЎСѓРјР±Р°РґР¶Рё РђРЅРіСЂРёР° РїРѕРєРёРЅСѓР» РРЅРґРёР№СЃРєРёР№ РѕРєРµР°РЅ, С‡С‚РѕР±С‹ РІРѕР·РѕР±РЅРѕРІРёС‚СЊ СЃРІРѕСЋ РїРёСЂР°С‚СЃРєСѓСЋ РґРµСЏС‚РµР»СЊРЅРѕСЃС‚СЊ РІ РљР°СЂРёР±СЃРєРѕРј РјРѕСЂРµ.}
+Otter{Р’С‹РґСЂР°}
 
-Edward{Эдвард}
-Teague{Тиг}
-Pirate Lord of Madagascar{Повелитель Пиратов Мадагаскара}
-Rumour has it this infamous buccaneer fathered the legendary Captain Jack Sparrow. Some say his accomplishments eclipsed even those of Jack. Steer the ship of the mighty Edward Teague.{Ходят слухи, что этот печально известный пират был отцом легендарного капитана Джека Воробья. Некоторые говорят, что его достижения затмили даже достижения Джека. Управляйте кораблем могущественного Эдварда Тига.}
-Troubadour{Трубадур}
+Edward{Р­РґРІР°СЂРґ}
+Teague{РўРёРі}
+Pirate Lord of Madagascar{РџРѕРІРµР»РёС‚РµР»СЊ РџРёСЂР°С‚РѕРІ РњР°РґР°РіР°СЃРєР°СЂР°}
+Rumour has it this infamous buccaneer fathered the legendary Captain Jack Sparrow. Some say his accomplishments eclipsed even those of Jack. Steer the ship of the mighty Edward Teague.{РҐРѕРґСЏС‚ СЃР»СѓС…Рё, С‡С‚Рѕ СЌС‚РѕС‚ РїРµС‡Р°Р»СЊРЅРѕ РёР·РІРµСЃС‚РЅС‹Р№ РїРёСЂР°С‚ Р±С‹Р» РѕС‚С†РѕРј Р»РµРіРµРЅРґР°СЂРЅРѕРіРѕ РєР°РїРёС‚Р°РЅР° Р”Р¶РµРєР° Р’РѕСЂРѕР±СЊСЏ. РќРµРєРѕС‚РѕСЂС‹Рµ РіРѕРІРѕСЂСЏС‚, С‡С‚Рѕ РµРіРѕ РґРѕСЃС‚РёР¶РµРЅРёСЏ Р·Р°С‚РјРёР»Рё РґР°Р¶Рµ РґРѕСЃС‚РёР¶РµРЅРёСЏ Р”Р¶РµРєР°. РЈРїСЂР°РІР»СЏР№С‚Рµ РєРѕСЂР°Р±Р»РµРј РјРѕРіСѓС‰РµСЃС‚РІРµРЅРЅРѕРіРѕ Р­РґРІР°СЂРґР° РўРёРіР°.}
+Troubadour{РўСЂСѓР±Р°РґСѓСЂ}
 
-Amazon{Амазонка}
+Amazon{РђРјР°Р·РѕРЅРєР°}
 
-Theodore{Теодор}
-Groves{Гровс}
-You have been placed in command of your very own ship. Will you live up to be that fine officer?{Вы были назначены командовать своим собственным кораблем. Сможете ли Вы прожить достаточно, чтобы стать прекрасным офицером?}
-After the promotion of James Norrington, you have been placed in charge of HMS Interceptor. Will you continue to retain her status as the fastest ship in His Majesty's Navy, one of the finest of Port Royal?{После продвижения по службе Джеймса Норрингтона, Вы были назначены ответственными за КЕВ 'Перехватчик'. Будете ли Вы продолжать сохранять его статус самого быстрого корабля во флоте Его Величества, одного из лучших в Порт-Рояле?}
+Theodore{РўРµРѕРґРѕСЂ}
+Groves{Р“СЂРѕРІСЃ}
+You have been placed in command of your very own ship. Will you live up to be that fine officer?{Р’С‹ Р±С‹Р»Рё РЅР°Р·РЅР°С‡РµРЅС‹ РєРѕРјР°РЅРґРѕРІР°С‚СЊ СЃРІРѕРёРј СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј РєРѕСЂР°Р±Р»РµРј. РЎРјРѕР¶РµС‚Рµ Р»Рё Р’С‹ РїСЂРѕР¶РёС‚СЊ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ, С‡С‚РѕР±С‹ СЃС‚Р°С‚СЊ РїСЂРµРєСЂР°СЃРЅС‹Рј РѕС„РёС†РµСЂРѕРј?}
+After the promotion of James Norrington, you have been placed in charge of HMS Interceptor. Will you continue to retain her status as the fastest ship in His Majesty's Navy, one of the finest of Port Royal?{РџРѕСЃР»Рµ РїСЂРѕРґРІРёР¶РµРЅРёСЏ РїРѕ СЃР»СѓР¶Р±Рµ Р”Р¶РµР№РјСЃР° РќРѕСЂСЂРёРЅРіС‚РѕРЅР°, Р’С‹ Р±С‹Р»Рё РЅР°Р·РЅР°С‡РµРЅС‹ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅС‹РјРё Р·Р° РљР•Р’ 'РџРµСЂРµС…РІР°С‚С‡РёРє'. Р‘СѓРґРµС‚Рµ Р»Рё Р’С‹ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ СЃРѕС…СЂР°РЅСЏС‚СЊ РµРіРѕ СЃС‚Р°С‚СѓСЃ СЃР°РјРѕРіРѕ Р±С‹СЃС‚СЂРѕРіРѕ РєРѕСЂР°Р±Р»СЏ РІРѕ С„Р»РѕС‚Рµ Р•РіРѕ Р’РµР»РёС‡РµСЃС‚РІР°, РѕРґРЅРѕРіРѕ РёР· Р»СѓС‡С€РёС… РІ РџРѕСЂС‚-Р РѕСЏР»Рµ?}
 
-Interceptor{Перехватчик}
+Interceptor{РџРµСЂРµС…РІР°С‚С‡РёРє}
 
-Having served under Commodore Norrington and chasing menacing pirates across the seas, you now find yourself serving your nation, under different interests. Welcome to the East India trading Company, Lieutenant!{Служа под началом Командора Норрингтона и преследуя грозных пиратов по морям, Вы обнаружили себя служащим своей нации, но уже ради других интересов. Добро пожаловать в Ост-Индийскую Торговую Компанию, лейтенант!}
+Having served under Commodore Norrington and chasing menacing pirates across the seas, you now find yourself serving your nation, under different interests. Welcome to the East India trading Company, Lieutenant!{РЎР»СѓР¶Р° РїРѕРґ РЅР°С‡Р°Р»РѕРј РљРѕРјР°РЅРґРѕСЂР° РќРѕСЂСЂРёРЅРіС‚РѕРЅР° Рё РїСЂРµСЃР»РµРґСѓСЏ РіСЂРѕР·РЅС‹С… РїРёСЂР°С‚РѕРІ РїРѕ РјРѕСЂСЏРј, Р’С‹ РѕР±РЅР°СЂСѓР¶РёР»Рё СЃРµР±СЏ СЃР»СѓР¶Р°С‰РёРј СЃРІРѕРµР№ РЅР°С†РёРё, РЅРѕ СѓР¶Рµ СЂР°РґРё РґСЂСѓРіРёС… РёРЅС‚РµСЂРµСЃРѕРІ. Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ РћСЃС‚-РРЅРґРёР№СЃРєСѓСЋ РўРѕСЂРіРѕРІСѓСЋ РљРѕРјРїР°РЅРёСЋ, Р»РµР№С‚РµРЅР°РЅС‚!}
 
-You have finally managed to be recognised for all the years of chasing that ridiculed pirate, with Commodore Norrington. He has placed you in command of HMS Dauntless. Will you continue to uphold the legacy of this mighty ship?{Вам наконец-то удалось добиться признания за все годы погони за этим смехотворным пиратом вместе с Командором Норрингтоном. Он поставил Вас командовать на КЕВ 'Неустрашимый'. Будете ли Вы продолжать поддерживать наследие этого могучего корабля?}
+You have finally managed to be recognised for all the years of chasing that ridiculed pirate, with Commodore Norrington. He has placed you in command of HMS Dauntless. Will you continue to uphold the legacy of this mighty ship?{Р’Р°Рј РЅР°РєРѕРЅРµС†-С‚Рѕ СѓРґР°Р»РѕСЃСЊ РґРѕР±РёС‚СЊСЃСЏ РїСЂРёР·РЅР°РЅРёСЏ Р·Р° РІСЃРµ РіРѕРґС‹ РїРѕРіРѕРЅРё Р·Р° СЌС‚РёРј СЃРјРµС…РѕС‚РІРѕСЂРЅС‹Рј РїРёСЂР°С‚РѕРј РІРјРµСЃС‚Рµ СЃ РљРѕРјР°РЅРґРѕСЂРѕРј РќРѕСЂСЂРёРЅРіС‚РѕРЅРѕРј. РћРЅ РїРѕСЃС‚Р°РІРёР» Р’Р°СЃ РєРѕРјР°РЅРґРѕРІР°С‚СЊ РЅР° РљР•Р’ 'РќРµСѓСЃС‚СЂР°С€РёРјС‹Р№'. Р‘СѓРґРµС‚Рµ Р»Рё Р’С‹ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ РїРѕРґРґРµСЂР¶РёРІР°С‚СЊ РЅР°СЃР»РµРґРёРµ СЌС‚РѕРіРѕ РјРѕРіСѓС‡РµРіРѕ РєРѕСЂР°Р±Р»СЏ?}
 
-Dauntless{Неустрашимый}
+Dauntless{РќРµСѓСЃС‚СЂР°С€РёРјС‹Р№}
 
-As newly promoted Admiral of the Fleet, you are now in charge of Port Royal's finest ships.{Как недавно назначенный Адмирал Флота, Вы теперь отвечаете за лучшие корабли в Порт-Роял.}
+As newly promoted Admiral of the Fleet, you are now in charge of Port Royal's finest ships.{РљР°Рє РЅРµРґР°РІРЅРѕ РЅР°Р·РЅР°С‡РµРЅРЅС‹Р№ РђРґРјРёСЂР°Р» Р¤Р»РѕС‚Р°, Р’С‹ С‚РµРїРµСЂСЊ РѕС‚РІРµС‡Р°РµС‚Рµ Р·Р° Р»СѓС‡С€РёРµ РєРѕСЂР°Р±Р»Рё РІ РџРѕСЂС‚-Р РѕСЏР».}
 
-Andrew{Эндрю}
-Gillette{Джиллетт}
-After seeing the threats that oppose the nation first hand, you accompanied Commodore Norrington and your trusty companion Lieutenant Groves on many adventures. Now you have been placed in charge of HMS Interceptor and given your own place in the Royal Navy's finest. While young in the service, shall you continue to uphold your duties?{Увидев воочию угрозы, которые противостоят нации, Вы лично сопровождали Командора Норрингтона и Вашего верного компаньона, лейтенанта Гроувза, во многих приключениях. Теперь Вы назначены ответственными за КЕВ 'Перехватчик', и получили свое место в лучших военно-морских силах Королевского Флота. Будучи новичком на службе, продолжите ли Вы выполнять свои обязанности?}
+Andrew{Р­РЅРґСЂСЋ}
+Gillette{Р”Р¶РёР»Р»РµС‚С‚}
+After seeing the threats that oppose the nation first hand, you accompanied Commodore Norrington and your trusty companion Lieutenant Groves on many adventures. Now you have been placed in charge of HMS Interceptor and given your own place in the Royal Navy's finest. While young in the service, shall you continue to uphold your duties?{РЈРІРёРґРµРІ РІРѕРѕС‡РёСЋ СѓРіСЂРѕР·С‹, РєРѕС‚РѕСЂС‹Рµ РїСЂРѕС‚РёРІРѕСЃС‚РѕСЏС‚ РЅР°С†РёРё, Р’С‹ Р»РёС‡РЅРѕ СЃРѕРїСЂРѕРІРѕР¶РґР°Р»Рё РљРѕРјР°РЅРґРѕСЂР° РќРѕСЂСЂРёРЅРіС‚РѕРЅР° Рё Р’Р°С€РµРіРѕ РІРµСЂРЅРѕРіРѕ РєРѕРјРїР°РЅСЊРѕРЅР°, Р»РµР№С‚РµРЅР°РЅС‚Р° Р“СЂРѕСѓРІР·Р°, РІРѕ РјРЅРѕРіРёС… РїСЂРёРєР»СЋС‡РµРЅРёСЏС…. РўРµРїРµСЂСЊ Р’С‹ РЅР°Р·РЅР°С‡РµРЅС‹ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅС‹РјРё Р·Р° РљР•Р’ 'РџРµСЂРµС…РІР°С‚С‡РёРє', Рё РїРѕР»СѓС‡РёР»Рё СЃРІРѕРµ РјРµСЃС‚Рѕ РІ Р»СѓС‡С€РёС… РІРѕРµРЅРЅРѕ-РјРѕСЂСЃРєРёС… СЃРёР»Р°С… РљРѕСЂРѕР»РµРІСЃРєРѕРіРѕ Р¤Р»РѕС‚Р°. Р‘СѓРґСѓС‡Рё РЅРѕРІРёС‡РєРѕРј РЅР° СЃР»СѓР¶Р±Рµ, РїСЂРѕРґРѕР»Р¶РёС‚Рµ Р»Рё Р’С‹ РІС‹РїРѕР»РЅСЏС‚СЊ СЃРІРѕРё РѕР±СЏР·Р°РЅРЅРѕСЃС‚Рё?}
 
-You have been placed in command of your own ship. Will you continue to serve the interests of the East India Trading Company? Or will you perhaps look to make a name for yourself elsewhere?{Вы были назначены командовать своим собственным кораблем. Будете ли Вы по-прежнему служить интересам Ост-Индийской Торговой Компании, или, возможно, попытаетесь сделать себе имя в другом месте?}
+You have been placed in command of your own ship. Will you continue to serve the interests of the East India Trading Company? Or will you perhaps look to make a name for yourself elsewhere?{Р’С‹ Р±С‹Р»Рё РЅР°Р·РЅР°С‡РµРЅС‹ РєРѕРјР°РЅРґРѕРІР°С‚СЊ СЃРІРѕРёРј СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј РєРѕСЂР°Р±Р»РµРј. Р‘СѓРґРµС‚Рµ Р»Рё Р’С‹ РїРѕ-РїСЂРµР¶РЅРµРјСѓ СЃР»СѓР¶РёС‚СЊ РёРЅС‚РµСЂРµСЃР°Рј РћСЃС‚-РРЅРґРёР№СЃРєРѕР№ РўРѕСЂРіРѕРІРѕР№ РљРѕРјРїР°РЅРёРё, РёР»Рё, РІРѕР·РјРѕР¶РЅРѕ, РїРѕРїС‹С‚Р°РµС‚РµСЃСЊ СЃРґРµР»Р°С‚СЊ СЃРµР±Рµ РёРјСЏ РІ РґСЂСѓРіРѕРј РјРµСЃС‚Рµ?}
 
-You are still a young captain now. Will you prove that you are capable of defending the nation? Will you join your colleagues in becoming one of Port Royal's most successful officers?{Вы еще достаточно молодой капитан. Докажете ли Вы, что способны защитить нацию? Присоединитесь ли Вы к своим коллегам, чтобы стать одним из самых успешных офицеров в Порт-Роял?}
+You are still a young captain now. Will you prove that you are capable of defending the nation? Will you join your colleagues in becoming one of Port Royal's most successful officers?{Р’С‹ РµС‰Рµ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РјРѕР»РѕРґРѕР№ РєР°РїРёС‚Р°РЅ. Р”РѕРєР°Р¶РµС‚Рµ Р»Рё Р’С‹, С‡С‚Рѕ СЃРїРѕСЃРѕР±РЅС‹ Р·Р°С‰РёС‚РёС‚СЊ РЅР°С†РёСЋ? РџСЂРёСЃРѕРµРґРёРЅРёС‚РµСЃСЊ Р»Рё Р’С‹ Рє СЃРІРѕРёРј РєРѕР»Р»РµРіР°Рј, С‡С‚РѕР±С‹ СЃС‚Р°С‚СЊ РѕРґРЅРёРј РёР· СЃР°РјС‹С… СѓСЃРїРµС€РЅС‹С… РѕС„РёС†РµСЂРѕРІ РІ РџРѕСЂС‚-Р РѕСЏР»?}
 
-Climbing up the ranks, you have succeeded in becoming a fine officer. Now you have been placed in charge of HMS Dauntless, once under the command of Commodore Norrington. Will you continue to uphold the legacy of this powerful and old friend?{Поднявшись по служебной лестнице, вам удалось стать хорошим офицером. Теперь вы назначены управлять КЕВ 'Неустрашимый', когда-то ходившим под командованием Командора Норрингтона. Будете ли Вы продолжать поддерживать наследие этого могущественного и старого друга?}
+Climbing up the ranks, you have succeeded in becoming a fine officer. Now you have been placed in charge of HMS Dauntless, once under the command of Commodore Norrington. Will you continue to uphold the legacy of this powerful and old friend?{РџРѕРґРЅСЏРІС€РёСЃСЊ РїРѕ СЃР»СѓР¶РµР±РЅРѕР№ Р»РµСЃС‚РЅРёС†Рµ, РІР°Рј СѓРґР°Р»РѕСЃСЊ СЃС‚Р°С‚СЊ С…РѕСЂРѕС€РёРј РѕС„РёС†РµСЂРѕРј. РўРµРїРµСЂСЊ РІС‹ РЅР°Р·РЅР°С‡РµРЅС‹ СѓРїСЂР°РІР»СЏС‚СЊ РљР•Р’ 'РќРµСѓСЃС‚СЂР°С€РёРјС‹Р№', РєРѕРіРґР°-С‚Рѕ С…РѕРґРёРІС€РёРј РїРѕРґ РєРѕРјР°РЅРґРѕРІР°РЅРёРµРј РљРѕРјР°РЅРґРѕСЂР° РќРѕСЂСЂРёРЅРіС‚РѕРЅР°. Р‘СѓРґРµС‚Рµ Р»Рё Р’С‹ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ РїРѕРґРґРµСЂР¶РёРІР°С‚СЊ РЅР°СЃР»РµРґРёРµ СЌС‚РѕРіРѕ РјРѕРіСѓС‰РµСЃС‚РІРµРЅРЅРѕРіРѕ Рё СЃС‚Р°СЂРѕРіРѕ РґСЂСѓРіР°?}
 
-Endeavour{Стремительный}
+Endeavour{РЎС‚СЂРµРјРёС‚РµР»СЊРЅС‹Р№}
 
-Henri{Генри}
-Caesar{Цезарь}
-The Haitian Revolution{Гаитянская революция}
-Born to a slave family on Hispaniola, you joined the revolution to see your island become independent from France. Your search in support has led you to the Pirate Brotherhood on Nevis.{Родившись в семье рабов на Эспаньоле, Вы присоединились к революции чтобы увидеть, как Ваш остров станет независимым от Франции. Ваши поиски поддержки привели Вас к пиратам Берегового Братства на Невисе.}
-Black Caesar{Чёрный Цезарь}
+Henri{Р“РµРЅСЂРё}
+Caesar{Р¦РµР·Р°СЂСЊ}
+The Haitian Revolution{Р“Р°РёС‚СЏРЅСЃРєР°СЏ СЂРµРІРѕР»СЋС†РёСЏ}
+Born to a slave family on Hispaniola, you joined the revolution to see your island become independent from France. Your search in support has led you to the Pirate Brotherhood on Nevis.{Р РѕРґРёРІС€РёСЃСЊ РІ СЃРµРјСЊРµ СЂР°Р±РѕРІ РЅР° Р­СЃРїР°РЅСЊРѕР»Рµ, Р’С‹ РїСЂРёСЃРѕРµРґРёРЅРёР»РёСЃСЊ Рє СЂРµРІРѕР»СЋС†РёРё С‡С‚РѕР±С‹ СѓРІРёРґРµС‚СЊ, РєР°Рє Р’Р°С€ РѕСЃС‚СЂРѕРІ СЃС‚Р°РЅРµС‚ РЅРµР·Р°РІРёСЃРёРјС‹Рј РѕС‚ Р¤СЂР°РЅС†РёРё. Р’Р°С€Рё РїРѕРёСЃРєРё РїРѕРґРґРµСЂР¶РєРё РїСЂРёРІРµР»Рё Р’Р°СЃ Рє РїРёСЂР°С‚Р°Рј Р‘РµСЂРµРіРѕРІРѕРіРѕ Р‘СЂР°С‚СЃС‚РІР° РЅР° РќРµРІРёСЃРµ.}
+Black Caesar{Р§С‘СЂРЅС‹Р№ Р¦РµР·Р°СЂСЊ}
 
-Charles{Чарльз}
-Ardent{Ардент}
-The Caribbean in the Golden Age of Piracy offers many opportunities for those willing to seize them. As a pirate, seizing things is your business!{Карибский бассейн в золотой век пиратства предлагает множество возможностей тем, кто готов их взять. Как пират - Вы умеете брать что-либо гораздо лучше других!}
-Fortune{Удача}
+Charles{Р§Р°СЂР»СЊР·}
+Ardent{РђСЂРґРµРЅС‚}
+The Caribbean in the Golden Age of Piracy offers many opportunities for those willing to seize them. As a pirate, seizing things is your business!{РљР°СЂРёР±СЃРєРёР№ Р±Р°СЃСЃРµР№РЅ РІ Р·РѕР»РѕС‚РѕР№ РІРµРє РїРёСЂР°С‚СЃС‚РІР° РїСЂРµРґР»Р°РіР°РµС‚ РјРЅРѕР¶РµСЃС‚РІРѕ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ С‚РµРј, РєС‚Рѕ РіРѕС‚РѕРІ РёС… РІР·СЏС‚СЊ. РљР°Рє РїРёСЂР°С‚ - Р’С‹ СѓРјРµРµС‚Рµ Р±СЂР°С‚СЊ С‡С‚Рѕ-Р»РёР±Рѕ РіРѕСЂР°Р·РґРѕ Р»СѓС‡С€Рµ РґСЂСѓРіРёС…!}
+Fortune{РЈРґР°С‡Р°}
 
-Helen{Хелен}
+Helen{РҐРµР»РµРЅ}
 
-Lucia{Лючия}
-de_la_Vega{Де Ла Вега}
-Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Обреченная на несчастливый брак, Вы сбежали с пиратом. Теперь у Вас есть собственный корабль, но будете ли Вы вести честную жизнь, или время проведенное с пиратами изменило Вас навсегда?}
-Intrйpido{Бесстрашный}
+Lucia{Р›СЋС‡РёСЏ}
+de_la_Vega{Р”Рµ Р›Р° Р’РµРіР°}
+Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{РћР±СЂРµС‡РµРЅРЅР°СЏ РЅР° РЅРµСЃС‡Р°СЃС‚Р»РёРІС‹Р№ Р±СЂР°Рє, Р’С‹ СЃР±РµР¶Р°Р»Рё СЃ РїРёСЂР°С‚РѕРј. РўРµРїРµСЂСЊ Сѓ Р’Р°СЃ РµСЃС‚СЊ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ РєРѕСЂР°Р±Р»СЊ, РЅРѕ Р±СѓРґРµС‚Рµ Р»Рё Р’С‹ РІРµСЃС‚Рё С‡РµСЃС‚РЅСѓСЋ Р¶РёР·РЅСЊ, РёР»Рё РІСЂРµРјСЏ РїСЂРѕРІРµРґРµРЅРЅРѕРµ СЃ РїРёСЂР°С‚Р°РјРё РёР·РјРµРЅРёР»Рѕ Р’Р°СЃ РЅР°РІСЃРµРіРґР°?}
+IntrР№pido{Р‘РµСЃСЃС‚СЂР°С€РЅС‹Р№}
 
-Edmundo{Эдмундо}
-Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Обреченный на несчастливый брак, Вы сбежали с женщиной-пиратом. Теперь у Вас есть собственный корабль, но будете ли Вы вести честную жизнь, или время, проведенное с пиратами, изменило Вас навсегда?}
+Edmundo{Р­РґРјСѓРЅРґРѕ}
+Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{РћР±СЂРµС‡РµРЅРЅС‹Р№ РЅР° РЅРµСЃС‡Р°СЃС‚Р»РёРІС‹Р№ Р±СЂР°Рє, Р’С‹ СЃР±РµР¶Р°Р»Рё СЃ Р¶РµРЅС‰РёРЅРѕР№-РїРёСЂР°С‚РѕРј. РўРµРїРµСЂСЊ Сѓ Р’Р°СЃ РµСЃС‚СЊ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ РєРѕСЂР°Р±Р»СЊ, РЅРѕ Р±СѓРґРµС‚Рµ Р»Рё Р’С‹ РІРµСЃС‚Рё С‡РµСЃС‚РЅСѓСЋ Р¶РёР·РЅСЊ, РёР»Рё РІСЂРµРјСЏ, РїСЂРѕРІРµРґРµРЅРЅРѕРµ СЃ РїРёСЂР°С‚Р°РјРё, РёР·РјРµРЅРёР»Рѕ Р’Р°СЃ РЅР°РІСЃРµРіРґР°?}
 
-Piers{Пирс}
-Downing{Даунинг}
-Entreprenant{Предприимчивый}
+Piers{РџРёСЂСЃ}
+Downing{Р”Р°СѓРЅРёРЅРі}
+Entreprenant{РџСЂРµРґРїСЂРёРёРјС‡РёРІС‹Р№}
 
-Franзois-Louis{Франсуа-Луи}
-Rousselet{Русселе}
-Le Saint Louis{Святой Луи}
+FranР·ois-Louis{Р¤СЂР°РЅСЃСѓР°-Р›СѓРё}
+Rousselet{Р СѓСЃСЃРµР»Рµ}
+Le Saint Louis{РЎРІСЏС‚РѕР№ Р›СѓРё}
 
-Nelson{Нельсон}
-Nelson's First Command{Первая Команда Нельсона}
-As a commissioned officer in His Majesty's Royal Navy, Horatio has been recently appointed commander of the brig HMS Badger. Will Horatio let his talents be known and make his way into the history books?{В качестве офицера в Королевском Флоте Его Величества, Горацио был недавно назначен командиром на КЕВ 'Барсук'. Сможет ли Горацио раскрыть свои таланты и попасть в учебники истории?}
-Badger{Барсук}
+Nelson{РќРµР»СЊСЃРѕРЅ}
+Nelson's First Command{РџРµСЂРІР°СЏ РљРѕРјР°РЅРґР° РќРµР»СЊСЃРѕРЅР°}
+As a commissioned officer in His Majesty's Royal Navy, Horatio has been recently appointed commander of the brig HMS Badger. Will Horatio let his talents be known and make his way into the history books?{Р’ РєР°С‡РµСЃС‚РІРµ РѕС„РёС†РµСЂР° РІ РљРѕСЂРѕР»РµРІСЃРєРѕРј Р¤Р»РѕС‚Рµ Р•РіРѕ Р’РµР»РёС‡РµСЃС‚РІР°, Р“РѕСЂР°С†РёРѕ Р±С‹Р» РЅРµРґР°РІРЅРѕ РЅР°Р·РЅР°С‡РµРЅ РєРѕРјР°РЅРґРёСЂРѕРј РЅР° РљР•Р’ 'Р‘Р°СЂСЃСѓРє'. РЎРјРѕР¶РµС‚ Р»Рё Р“РѕСЂР°С†РёРѕ СЂР°СЃРєСЂС‹С‚СЊ СЃРІРѕРё С‚Р°Р»Р°РЅС‚С‹ Рё РїРѕРїР°СЃС‚СЊ РІ СѓС‡РµР±РЅРёРєРё РёСЃС‚РѕСЂРёРё?}
+Badger{Р‘Р°СЂСЃСѓРє}
 
-Danielle{Даниэль}
+Danielle{Р”Р°РЅРёСЌР»СЊ}
 
-Lucrezia{Лукреция}
+Lucrezia{Р›СѓРєСЂРµС†РёСЏ}
 
-Greene{Грин}
-A Lady Scorned{Презренная Леди}
-After having your heart broken by a scoundrel named Nathaniel Hawk, you have sworn to never fall for another man again. And whoever said a woman cannot captain a ship? This is the Golden Age of Piracy and there is opportunity aplenty for all those willing to take their chance!{После того, как негодяй по имени Натаниэль Хаук разбил твое сердце, ты поклялась никогда больше не влюбляться. И кто сказал, что женщина не может управлять кораблем? Это золотой век пиратства, и у всех, кто хочет рискнуть, есть множество возможностей!}
-Vertigo{Умопомрачение}
+Greene{Р“СЂРёРЅ}
+A Lady Scorned{РџСЂРµР·СЂРµРЅРЅР°СЏ Р›РµРґРё}
+After having your heart broken by a scoundrel named Nathaniel Hawk, you have sworn to never fall for another man again. And whoever said a woman cannot captain a ship? This is the Golden Age of Piracy and there is opportunity aplenty for all those willing to take their chance!{РџРѕСЃР»Рµ С‚РѕРіРѕ, РєР°Рє РЅРµРіРѕРґСЏР№ РїРѕ РёРјРµРЅРё РќР°С‚Р°РЅРёСЌР»СЊ РҐР°СѓРє СЂР°Р·Р±РёР» С‚РІРѕРµ СЃРµСЂРґС†Рµ, С‚С‹ РїРѕРєР»СЏР»Р°СЃСЊ РЅРёРєРѕРіРґР° Р±РѕР»СЊС€Рµ РЅРµ РІР»СЋР±Р»СЏС‚СЊСЃСЏ. Р РєС‚Рѕ СЃРєР°Р·Р°Р», С‡С‚Рѕ Р¶РµРЅС‰РёРЅР° РЅРµ РјРѕР¶РµС‚ СѓРїСЂР°РІР»СЏС‚СЊ РєРѕСЂР°Р±Р»РµРј? Р­С‚Рѕ Р·РѕР»РѕС‚РѕР№ РІРµРє РїРёСЂР°С‚СЃС‚РІР°, Рё Сѓ РІСЃРµС…, РєС‚Рѕ С…РѕС‡РµС‚ СЂРёСЃРєРЅСѓС‚СЊ, РµСЃС‚СЊ РјРЅРѕР¶РµСЃС‚РІРѕ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№!}
+Vertigo{РЈРјРѕРїРѕРјСЂР°С‡РµРЅРёРµ}
 
-Davy{Дэйви}
-Jones{Джонс}
-Lord of the Sea{Властелин Моря}
-Having fallen for the treacherous godess of the sea herself, you got your heart broken as a result. Now all you have left is a thirst for vengeance and a ship to be reckoned with! And... you've got a trick up your sleeve to bring terror upon all souls at sea.{Запав на коварную богиню моря, Вы разбили свое сердце. Теперь все, что Вам осталось - жажда мести и корабль, с которым нужно считаться! И... у Вас есть кое что в рукаве, чтобы вызвать ужас в каждой душе в море.}
-Flying Dutchman{Летучий Голландец}
+Davy{Р”СЌР№РІРё}
+Jones{Р”Р¶РѕРЅСЃ}
+Lord of the Sea{Р’Р»Р°СЃС‚РµР»РёРЅ РњРѕСЂСЏ}
+Having fallen for the treacherous godess of the sea herself, you got your heart broken as a result. Now all you have left is a thirst for vengeance and a ship to be reckoned with! And... you've got a trick up your sleeve to bring terror upon all souls at sea.{Р—Р°РїР°РІ РЅР° РєРѕРІР°СЂРЅСѓСЋ Р±РѕРіРёРЅСЋ РјРѕСЂСЏ, Р’С‹ СЂР°Р·Р±РёР»Рё СЃРІРѕРµ СЃРµСЂРґС†Рµ. РўРµРїРµСЂСЊ РІСЃРµ, С‡С‚Рѕ Р’Р°Рј РѕСЃС‚Р°Р»РѕСЃСЊ - Р¶Р°Р¶РґР° РјРµСЃС‚Рё Рё РєРѕСЂР°Р±Р»СЊ, СЃ РєРѕС‚РѕСЂС‹Рј РЅСѓР¶РЅРѕ СЃС‡РёС‚Р°С‚СЊСЃСЏ! Р... Сѓ Р’Р°СЃ РµСЃС‚СЊ РєРѕРµ С‡С‚Рѕ РІ СЂСѓРєР°РІРµ, С‡С‚РѕР±С‹ РІС‹Р·РІР°С‚СЊ СѓР¶Р°СЃ РІ РєР°Р¶РґРѕР№ РґСѓС€Рµ РІ РјРѕСЂРµ.}
+Flying Dutchman{Р›РµС‚СѓС‡РёР№ Р“РѕР»Р»Р°РЅРґРµС†}
 
-Anamaria{Аннамария}
-Jolly Mon{Весёлый Понедельник}
+Anamaria{РђРЅРЅР°РјР°СЂРёСЏ}
+Jolly Mon{Р’РµСЃС‘Р»С‹Р№ РџРѕРЅРµРґРµР»СЊРЅРёРє}
 
-Blaze{Блейз}
-Age of Pirates{Эпоха Пиратов}
-Brother to another well-known character, Blaze Devlin is a corsair always on the hunt for treasure. But what Caribbean Tales lie in store for you? The choice is up to you!{Брат другого известного персонажа, Блейз Девлин - корсар, который постоянно находится в поисках сокровищ. Но какие еще Карибские Байки припасены для Вас? Выбор остается за Вами!}
-Fool's Gold{Золото Дураков}
+Blaze{Р‘Р»РµР№Р·}
+Age of Pirates{Р­РїРѕС…Р° РџРёСЂР°С‚РѕРІ}
+Brother to another well-known character, Blaze Devlin is a corsair always on the hunt for treasure. But what Caribbean Tales lie in store for you? The choice is up to you!{Р‘СЂР°С‚ РґСЂСѓРіРѕРіРѕ РёР·РІРµСЃС‚РЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°, Р‘Р»РµР№Р· Р”РµРІР»РёРЅ - РєРѕСЂСЃР°СЂ, РєРѕС‚РѕСЂС‹Р№ РїРѕСЃС‚РѕСЏРЅРЅРѕ РЅР°С…РѕРґРёС‚СЃСЏ РІ РїРѕРёСЃРєР°С… СЃРѕРєСЂРѕРІРёС‰. РќРѕ РєР°РєРёРµ РµС‰Рµ РљР°СЂРёР±СЃРєРёРµ Р‘Р°Р№РєРё РїСЂРёРїР°СЃРµРЅС‹ РґР»СЏ Р’Р°СЃ? Р’С‹Р±РѕСЂ РѕСЃС‚Р°РµС‚СЃСЏ Р·Р° Р’Р°РјРё!}
+Fool's Gold{Р—РѕР»РѕС‚Рѕ Р”СѓСЂР°РєРѕРІ}
 
-de_Maure{Де Мур}
+de_Maure{Р”Рµ РњСѓСЂ}
 
-Valerie{Валерия}
+Valerie{Р’Р°Р»РµСЂРёСЏ}
 
-Diego{Диего}
-de_Espinosa{Де Эспиноса}
+Diego{Р”РёРµРіРѕ}
+de_Espinosa{Р”Рµ Р­СЃРїРёРЅРѕСЃР°}
 
-Eugene{Юджин}
-Martin{Мартин}
+Eugene{Р®РґР¶РёРЅ}
+Martin{РњР°СЂС‚РёРЅ}
 
-Fanielle{Фаниэль}
+Fanielle{Р¤Р°РЅРёСЌР»СЊ}
 
-Ralph{Ральф}
-Fawn{Фавн}
+Ralph{Р Р°Р»СЊС„}
+Fawn{Р¤Р°РІРЅ}
 
-Monkey{Монки}
-D.{Д.}
-Luffy{Луффи}
-Going Merry{Давай Поженимся}
-Having eaten a magic fruit and narrowly avoided being eaten yourself, you now sail the seas in search of the One Piece. Can you rise to become a Pirate King?{Съев магический фрукт и едва не будучи съеденным сам, Вы теперь рыщете по морям в поисках Большого Куша. Сможете ли вы подняться, чтобы стать Королем Пиратов?}
+Monkey{РњРѕРЅРєРё}
+D.{Р”.}
+Luffy{Р›СѓС„С„Рё}
+Going Merry{Р”Р°РІР°Р№ РџРѕР¶РµРЅРёРјСЃСЏ}
+Having eaten a magic fruit and narrowly avoided being eaten yourself, you now sail the seas in search of the One Piece. Can you rise to become a Pirate King?{РЎСЉРµРІ РјР°РіРёС‡РµСЃРєРёР№ С„СЂСѓРєС‚ Рё РµРґРІР° РЅРµ Р±СѓРґСѓС‡Рё СЃСЉРµРґРµРЅРЅС‹Рј СЃР°Рј, Р’С‹ С‚РµРїРµСЂСЊ СЂС‹С‰РµС‚Рµ РїРѕ РјРѕСЂСЏРј РІ РїРѕРёСЃРєР°С… Р‘РѕР»СЊС€РѕРіРѕ РљСѓС€Р°. РЎРјРѕР¶РµС‚Рµ Р»Рё РІС‹ РїРѕРґРЅСЏС‚СЊСЃСЏ, С‡С‚РѕР±С‹ СЃС‚Р°С‚СЊ РљРѕСЂРѕР»РµРј РџРёСЂР°С‚РѕРІ?}
 
-Gherarde{Герард}
-de_Jongh{Де Йонг}
+Gherarde{Р“РµСЂР°СЂРґ}
+de_Jongh{Р”Рµ Р™РѕРЅРі}
 
-Guibert{Гвиберт}
-Daudet{Доде}
+Guibert{Р“РІРёР±РµСЂС‚}
+Daudet{Р”РѕРґРµ}
 
-Phinneas{Финнеас}
-Wake{Уэйк}
+Phinneas{Р¤РёРЅРЅРµР°СЃ}
+Wake{РЈСЌР№Рє}
 
-Bartolomeu{Бартоломью}
-o_Portugues{Португалец}
+Bartolomeu{Р‘Р°СЂС‚РѕР»РѕРјСЊСЋ}
+o_Portugues{РџРѕСЂС‚СѓРіР°Р»РµС†}
 
-Santiago{Сантьяго}
+Santiago{РЎР°РЅС‚СЊСЏРіРѕ}
 
-Franзois{Франсуа}
-de_Hadoque{Де Хадоке}
-La Licorne{Единорог}
+FranР·ois{Р¤СЂР°РЅСЃСѓР°}
+de_Hadoque{Р”Рµ РҐР°РґРѕРєРµ}
+La Licorne{Р•РґРёРЅРѕСЂРѕРі}
 
-Henry{Генри}
-Morgan{Морган}
-Jamaica Merchant{Ямайский Торговец}
+Henry{Р“РµРЅСЂРё}
+Morgan{РњРѕСЂРіР°РЅ}
+Jamaica Merchant{РЇРјР°Р№СЃРєРёР№ РўРѕСЂРіРѕРІРµС†}
 
-Black{Чёрный}
-Caesar{Цезарь}
-Longboat{Баркас}
-From Slave to Pirate{От раба до пирата}
-You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?{Тебя увезли с твоей родины и заковали в цепи на невольничьем корабле. Но не все на корабле - враги. С небольшой помощью неожиданного союзника и шторма вы спасаетесь из своего плена. Что вы будете делать дальше?}
+Black{Р§С‘СЂРЅС‹Р№}
+Caesar{Р¦РµР·Р°СЂСЊ}
+Longboat{Р‘Р°СЂРєР°СЃ}
+From Slave to Pirate{РћС‚ СЂР°Р±Р° РґРѕ РїРёСЂР°С‚Р°}
+You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?{РўРµР±СЏ СѓРІРµР·Р»Рё СЃ С‚РІРѕРµР№ СЂРѕРґРёРЅС‹ Рё Р·Р°РєРѕРІР°Р»Рё РІ С†РµРїРё РЅР° РЅРµРІРѕР»СЊРЅРёС‡СЊРµРј РєРѕСЂР°Р±Р»Рµ. РќРѕ РЅРµ РІСЃРµ РЅР° РєРѕСЂР°Р±Р»Рµ - РІСЂР°РіРё. РЎ РЅРµР±РѕР»СЊС€РѕР№ РїРѕРјРѕС‰СЊСЋ РЅРµРѕР¶РёРґР°РЅРЅРѕРіРѕ СЃРѕСЋР·РЅРёРєР° Рё С€С‚РѕСЂРјР° РІС‹ СЃРїР°СЃР°РµС‚РµСЃСЊ РёР· СЃРІРѕРµРіРѕ РїР»РµРЅР°. Р§С‚Рѕ РІС‹ Р±СѓРґРµС‚Рµ РґРµР»Р°С‚СЊ РґР°Р»СЊС€Рµ?}
 
-the_Beggar{Нищий}
+the_Beggar{РќРёС‰РёР№}
 
-Rackham{Рэкхем}
+Rackham{Р СЌРєС…РµРј}
 
-Jeremy{Джереми}
-Tripper{Триппер}
+Jeremy{Р”Р¶РµСЂРµРјРё}
+Tripper{РўСЂРёРїРїРµСЂ}
 
-de_la_Croix{де ла Круа}
-Tales of a Chevalier{Истории Шевалье}
-A charming French nobleman with a rogue streak. Your latest endeavour left you several jewels richer and a Spanish lady somewhat distraught. Her brother challenged you to a duel at dawn to settle the score.{Очаровательный французский жуликоватый дворянин. Ваша последняя авантюра сделала Вас на несколько драгоценностей богаче, а испанскую даму оставила в некоторой растерянности. Её брат пригласил Вас на дуэль на рассвете, чтобы свести счеты.}
-Le Cheval Furieux{Яростная Лошадь}
+de_la_Croix{РґРµ Р»Р° РљСЂСѓР°}
+Tales of a Chevalier{РСЃС‚РѕСЂРёРё РЁРµРІР°Р»СЊРµ}
+A charming French nobleman with a rogue streak. Your latest endeavour left you several jewels richer and a Spanish lady somewhat distraught. Her brother challenged you to a duel at dawn to settle the score.{РћС‡Р°СЂРѕРІР°С‚РµР»СЊРЅС‹Р№ С„СЂР°РЅС†СѓР·СЃРєРёР№ Р¶СѓР»РёРєРѕРІР°С‚С‹Р№ РґРІРѕСЂСЏРЅРёРЅ. Р’Р°С€Р° РїРѕСЃР»РµРґРЅСЏСЏ Р°РІР°РЅС‚СЋСЂР° СЃРґРµР»Р°Р»Р° Р’Р°СЃ РЅР° РЅРµСЃРєРѕР»СЊРєРѕ РґСЂР°РіРѕС†РµРЅРЅРѕСЃС‚РµР№ Р±РѕРіР°С‡Рµ, Р° РёСЃРїР°РЅСЃРєСѓСЋ РґР°РјСѓ РѕСЃС‚Р°РІРёР»Р° РІ РЅРµРєРѕС‚РѕСЂРѕР№ СЂР°СЃС‚РµСЂСЏРЅРЅРѕСЃС‚Рё. Р•С‘ Р±СЂР°С‚ РїСЂРёРіР»Р°СЃРёР» Р’Р°СЃ РЅР° РґСѓСЌР»СЊ РЅР° СЂР°СЃСЃРІРµС‚Рµ, С‡С‚РѕР±С‹ СЃРІРµСЃС‚Рё СЃС‡РµС‚С‹.}
+Le Cheval Furieux{РЇСЂРѕСЃС‚РЅР°СЏ Р›РѕС€Р°РґСЊ}
 
-Johan{Йоган}
-Elting{Элтинг}
-Neptunis{Нептун}
+Johan{Р™РѕРіР°РЅ}
+Elting{Р­Р»С‚РёРЅРі}
+Neptunis{РќРµРїС‚СѓРЅ}
 
-Juan{Хуан}
-Esteban{Эстебан}
-Kieron{Киерон}
+Juan{РҐСѓР°РЅ}
+Esteban{Р­СЃС‚РµР±Р°РЅ}
+Kieron{РљРёРµСЂРѕРЅ}
 
-Swan{Лебедь}
+Swan{Р›РµР±РµРґСЊ}
 
-A Fine Gentleman{Прекрасный Джентльмен}
-You intend to see to it that any man who sails under a pirate flag or wears a pirate brand gets what he deserves. But while you may be an ambitious young lieutenant in His Majesty's Navy, you do have your heart in the right place.{Вы намерены следить за тем, чтобы любой, кто плавает под пиратским флагом или отмечен меткой 'Пират', получил то, что заслуживает. Но несмотря на то, что Вы можете быть амбициозным молодым лейтенантом во флоте Его Величества, у Вас все еще есть сердце.}
+A Fine Gentleman{РџСЂРµРєСЂР°СЃРЅС‹Р№ Р”Р¶РµРЅС‚Р»СЊРјРµРЅ}
+You intend to see to it that any man who sails under a pirate flag or wears a pirate brand gets what he deserves. But while you may be an ambitious young lieutenant in His Majesty's Navy, you do have your heart in the right place.{Р’С‹ РЅР°РјРµСЂРµРЅС‹ СЃР»РµРґРёС‚СЊ Р·Р° С‚РµРј, С‡С‚РѕР±С‹ Р»СЋР±РѕР№, РєС‚Рѕ РїР»Р°РІР°РµС‚ РїРѕРґ РїРёСЂР°С‚СЃРєРёРј С„Р»Р°РіРѕРј РёР»Рё РѕС‚РјРµС‡РµРЅ РјРµС‚РєРѕР№ 'РџРёСЂР°С‚', РїРѕР»СѓС‡РёР» С‚Рѕ, С‡С‚Рѕ Р·Р°СЃР»СѓР¶РёРІР°РµС‚. РќРѕ РЅРµСЃРјРѕС‚СЂСЏ РЅР° С‚Рѕ, С‡С‚Рѕ Р’С‹ РјРѕР¶РµС‚Рµ Р±С‹С‚СЊ Р°РјР±РёС†РёРѕР·РЅС‹Рј РјРѕР»РѕРґС‹Рј Р»РµР№С‚РµРЅР°РЅС‚РѕРј РІРѕ С„Р»РѕС‚Рµ Р•РіРѕ Р’РµР»РёС‡РµСЃС‚РІР°, Сѓ Р’Р°СЃ РІСЃРµ РµС‰Рµ РµСЃС‚СЊ СЃРµСЂРґС†Рµ.}
 
-Michiel{Микель}
-de_Ruyter{де Рюйтер}
-Bestevaкr{Наилучший}
-Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!{Рожденный в бедной семье во Флиссингене Вы, Микель Адриансзон де Рюйтер - скромный человек. Тем не менее, англо-голландские войны 17-го века предоставят Вам массу возможностей, чтобы стать великим!}
-Neptunus{Нептун}
+Michiel{РњРёРєРµР»СЊ}
+de_Ruyter{РґРµ Р СЋР№С‚РµСЂ}
+BestevaРєr{РќР°РёР»СѓС‡С€РёР№}
+Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!{Р РѕР¶РґРµРЅРЅС‹Р№ РІ Р±РµРґРЅРѕР№ СЃРµРјСЊРµ РІРѕ Р¤Р»РёСЃСЃРёРЅРіРµРЅРµ Р’С‹, РњРёРєРµР»СЊ РђРґСЂРёР°РЅСЃР·РѕРЅ РґРµ Р СЋР№С‚РµСЂ - СЃРєСЂРѕРјРЅС‹Р№ С‡РµР»РѕРІРµРє. РўРµРј РЅРµ РјРµРЅРµРµ, Р°РЅРіР»Рѕ-РіРѕР»Р»Р°РЅРґСЃРєРёРµ РІРѕР№РЅС‹ 17-РіРѕ РІРµРєР° РїСЂРµРґРѕСЃС‚Р°РІСЏС‚ Р’Р°Рј РјР°СЃСЃСѓ РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№, С‡С‚РѕР±С‹ СЃС‚Р°С‚СЊ РІРµР»РёРєРёРј!}
+Neptunus{РќРµРїС‚СѓРЅ}
 
-Edwaert{Эдверт}
-Mansveldt{Мансвельдт}
+Edwaert{Р­РґРІРµСЂС‚}
+Mansveldt{РњР°РЅСЃРІРµР»СЊРґС‚}
 
-Forester{Лесничий}
+Forester{Р›РµСЃРЅРёС‡РёР№}
 
-Meigger{Мейггер}
+Meigger{РњРµР№РіРіРµСЂ}
 
-Thomas{Томас}
-Modyford{Модифорд}
+Thomas{РўРѕРјР°СЃ}
+Modyford{РњРѕРґРёС„РѕСЂРґ}
 
-Daniel{Даниэл}
-Montbart{Монбарт}
+Daniel{Р”Р°РЅРёСЌР»}
+Montbart{РњРѕРЅР±Р°СЂС‚}
 
-Morris{Моррис}
-Williams{Вильямс}
+Morris{РњРѕСЂСЂРёСЃ}
+Williams{Р’РёР»СЊСЏРјСЃ}
 
-Augusto{Аугусто}
-Queiroz{Кейроз}
+Augusto{РђСѓРіСѓСЃС‚Рѕ}
+Queiroz{РљРµР№СЂРѕР·}
 
-Lourenco{Лоренцо}
-Vaz{Ваз}
+Lourenco{Р›РѕСЂРµРЅС†Рѕ}
+Vaz{Р’Р°Р·}
 
-Manuel{Мануэль}
-Sousa{Соуза}
+Manuel{РњР°РЅСѓСЌР»СЊ}
+Sousa{РЎРѕСѓР·Р°}
 
-Padre{Падре}
-Gerardo{Герардо}
+Padre{РџР°РґСЂРµ}
+Gerardo{Р“РµСЂР°СЂРґРѕ}
 
-Nicholas{Николас}
-Butcher{Бутчер}
+Nicholas{РќРёРєРѕР»Р°СЃ}
+Butcher{Р‘СѓС‚С‡РµСЂ}
 
-Rabel{Рабель}
-Chardon{Шардон}
+Rabel{Р Р°Р±РµР»СЊ}
+Chardon{РЁР°СЂРґРѕРЅ}
 
-Pintel{Пинтел}
+Pintel{РџРёРЅС‚РµР»}
 
-Ragetti{Раджетти}
+Ragetti{Р Р°РґР¶РµС‚С‚Рё}
 
-Robert{Роберт}
-Fulton{Фултон}
-Age of Steam{Эпоха Пара}
-Born on a farm in Little Britain, Pennsylvania, on November 14, 1765, you have spent the past ten years developing a new type of ship. Your latest creation is battle-ready and equipped both with regular sails, but also a new design engine. It is time to take her out for sea trials.{Вы родились на ферме в Маленькой Британии, штат Пенсильвания, 14 ноября 1765 года. Последние 10 лет вы потратили на разработку корабля нового типа. Ваше последнее творение готово к бою и оснащено как обычными парусами, так и двигателем новой разработки. Пришло время испытать его на море.}
-Demologos{Демологос}
+Robert{Р РѕР±РµСЂС‚}
+Fulton{Р¤СѓР»С‚РѕРЅ}
+Age of Steam{Р­РїРѕС…Р° РџР°СЂР°}
+Born on a farm in Little Britain, Pennsylvania, on November 14, 1765, you have spent the past ten years developing a new type of ship. Your latest creation is battle-ready and equipped both with regular sails, but also a new design engine. It is time to take her out for sea trials.{Р’С‹ СЂРѕРґРёР»РёСЃСЊ РЅР° С„РµСЂРјРµ РІ РњР°Р»РµРЅСЊРєРѕР№ Р‘СЂРёС‚Р°РЅРёРё, С€С‚Р°С‚ РџРµРЅСЃРёР»СЊРІР°РЅРёСЏ, 14 РЅРѕСЏР±СЂСЏ 1765 РіРѕРґР°. РџРѕСЃР»РµРґРЅРёРµ 10 Р»РµС‚ РІС‹ РїРѕС‚СЂР°С‚РёР»Рё РЅР° СЂР°Р·СЂР°Р±РѕС‚РєСѓ РєРѕСЂР°Р±Р»СЏ РЅРѕРІРѕРіРѕ С‚РёРїР°. Р’Р°С€Рµ РїРѕСЃР»РµРґРЅРµРµ С‚РІРѕСЂРµРЅРёРµ РіРѕС‚РѕРІРѕ Рє Р±РѕСЋ Рё РѕСЃРЅР°С‰РµРЅРѕ РєР°Рє РѕР±С‹С‡РЅС‹РјРё РїР°СЂСѓСЃР°РјРё, С‚Р°Рє Рё РґРІРёРіР°С‚РµР»РµРј РЅРѕРІРѕР№ СЂР°Р·СЂР°Р±РѕС‚РєРё. РџСЂРёС€Р»Рѕ РІСЂРµРјСЏ РёСЃРїС‹С‚Р°С‚СЊ РµРіРѕ РЅР° РјРѕСЂРµ.}
+Demologos{Р”РµРјРѕР»РѕРіРѕСЃ}
 
-Roche{Рок}
-Brasiliano{Бразилец}
+Roche{Р РѕРє}
+Brasiliano{Р‘СЂР°Р·РёР»РµС†}
 
-Josй{Хосе}
-Joaquнm{Хоаким}
-Almeida{Алмейда}
-Rustic Sea Wolf{Деревенский Морской Волк}
-I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character){Я покинул свой португальский дом на Азорских островах, отправившись в Америку в 1796 году в возрасте 19 лет. Некоторое время я был торговцем, но теперь, с началом войны, я стал капером (включая побочные квесты, характерные для этого персонажа).}
+JosР№{РҐРѕСЃРµ}
+JoaquРЅm{РҐРѕР°РєРёРј}
+Almeida{РђР»РјРµР№РґР°}
+Rustic Sea Wolf{Р”РµСЂРµРІРµРЅСЃРєРёР№ РњРѕСЂСЃРєРѕР№ Р’РѕР»Рє}
+I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character){РЇ РїРѕРєРёРЅСѓР» СЃРІРѕР№ РїРѕСЂС‚СѓРіР°Р»СЊСЃРєРёР№ РґРѕРј РЅР° РђР·РѕСЂСЃРєРёС… РѕСЃС‚СЂРѕРІР°С…, РѕС‚РїСЂР°РІРёРІС€РёСЃСЊ РІ РђРјРµСЂРёРєСѓ РІ 1796 РіРѕРґСѓ РІ РІРѕР·СЂР°СЃС‚Рµ 19 Р»РµС‚. РќРµРєРѕС‚РѕСЂРѕРµ РІСЂРµРјСЏ СЏ Р±С‹Р» С‚РѕСЂРіРѕРІС†РµРј, РЅРѕ С‚РµРїРµСЂСЊ, СЃ РЅР°С‡Р°Р»РѕРј РІРѕР№РЅС‹, СЏ СЃС‚Р°Р» РєР°РїРµСЂРѕРј (РІРєР»СЋС‡Р°СЏ РїРѕР±РѕС‡РЅС‹Рµ РєРІРµСЃС‚С‹, С…Р°СЂР°РєС‚РµСЂРЅС‹Рµ РґР»СЏ СЌС‚РѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°).}
 
-Gaspar{Гаспар}
-The Legend of Gasparilla{Легенда о Гаспарилле}
-Eventually becoming the last of the Buccaneers, rumours surrounding your life have been scarce. Most say you were born in Spain in 1756 and served in the Spanish Navy. Whatever may be the truth, you worked yourself up from a lowly position until you gained command of a ship of your own. It is time to make a name for yourself in the waters south of Florida!{В конце концов, Вы стали последним из буканьеров, но слухи, окружающие вашу жизнь, скудны. Большинство говорят, что Вы родились в Испании в 1756 году и служили в испанском флоте. Что бы ни было правдой, Вы поднимались из низшего сословия, пока не получили командование собственным кораблем. Настало время сделать себе имя в водах к югу от Флориды!}
-Gasparilla{Гаспарилла}
+Gaspar{Р“Р°СЃРїР°СЂ}
+The Legend of Gasparilla{Р›РµРіРµРЅРґР° Рѕ Р“Р°СЃРїР°СЂРёР»Р»Рµ}
+Eventually becoming the last of the Buccaneers, rumours surrounding your life have been scarce. Most say you were born in Spain in 1756 and served in the Spanish Navy. Whatever may be the truth, you worked yourself up from a lowly position until you gained command of a ship of your own. It is time to make a name for yourself in the waters south of Florida!{Р’ РєРѕРЅС†Рµ РєРѕРЅС†РѕРІ, Р’С‹ СЃС‚Р°Р»Рё РїРѕСЃР»РµРґРЅРёРј РёР· Р±СѓРєР°РЅСЊРµСЂРѕРІ, РЅРѕ СЃР»СѓС…Рё, РѕРєСЂСѓР¶Р°СЋС‰РёРµ РІР°С€Сѓ Р¶РёР·РЅСЊ, СЃРєСѓРґРЅС‹. Р‘РѕР»СЊС€РёРЅСЃС‚РІРѕ РіРѕРІРѕСЂСЏС‚, С‡С‚Рѕ Р’С‹ СЂРѕРґРёР»РёСЃСЊ РІ РСЃРїР°РЅРёРё РІ 1756 РіРѕРґСѓ Рё СЃР»СѓР¶РёР»Рё РІ РёСЃРїР°РЅСЃРєРѕРј С„Р»РѕС‚Рµ. Р§С‚Рѕ Р±С‹ РЅРё Р±С‹Р»Рѕ РїСЂР°РІРґРѕР№, Р’С‹ РїРѕРґРЅРёРјР°Р»РёСЃСЊ РёР· РЅРёР·С€РµРіРѕ СЃРѕСЃР»РѕРІРёСЏ, РїРѕРєР° РЅРµ РїРѕР»СѓС‡РёР»Рё РєРѕРјР°РЅРґРѕРІР°РЅРёРµ СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј РєРѕСЂР°Р±Р»РµРј. РќР°СЃС‚Р°Р»Рѕ РІСЂРµРјСЏ СЃРґРµР»Р°С‚СЊ СЃРµР±Рµ РёРјСЏ РІ РІРѕРґР°С… Рє СЋРіСѓ РѕС‚ Р¤Р»РѕСЂРёРґС‹!}
+Gasparilla{Р“Р°СЃРїР°СЂРёР»Р»Р°}
 
-Old{Старый}
-Salt{Моряк}
+Old{РЎС‚Р°СЂС‹Р№}
+Salt{РњРѕСЂСЏРє}
 
-Salvadore{Сальвадор}
-Benavides{Бенавидес}
+Salvadore{РЎР°Р»СЊРІР°РґРѕСЂ}
+Benavides{Р‘РµРЅР°РІРёРґРµСЃ}
 
-Serafino{Серафино}
-Masarenhas{Масаренхас}
+Serafino{РЎРµСЂР°С„РёРЅРѕ}
+Masarenhas{РњР°СЃР°СЂРµРЅС…Р°СЃ}
 
-Skull{Скулл}
+Skull{РЎРєСѓР»Р»}
 
-Carrera{Каррера}
-The Might of Spain{Мощь Испании}
-Ever since the Spanish set foot in the New World, others have tried and succeeded in taking more land away from them. But as recently promoted lieutenant in His Most Catholic Majesty's navy, you intend to see that Spain reclaims its rightful place in the world!{С тех пор, как испанцы ступили в Новый Свет, другие пытались и смогли отобрать у них больше земли. Но, как недавно получивший звание лейтенанта во флоте Его Величайшего Католического Величества, вы намерены увидеть как Испания восстанавливает свое законное место в мире!}
-San Jeronimo{Сан Херонимо}
+Carrera{РљР°СЂСЂРµСЂР°}
+The Might of Spain{РњРѕС‰СЊ РСЃРїР°РЅРёРё}
+Ever since the Spanish set foot in the New World, others have tried and succeeded in taking more land away from them. But as recently promoted lieutenant in His Most Catholic Majesty's navy, you intend to see that Spain reclaims its rightful place in the world!{РЎ С‚РµС… РїРѕСЂ, РєР°Рє РёСЃРїР°РЅС†С‹ СЃС‚СѓРїРёР»Рё РІ РќРѕРІС‹Р№ РЎРІРµС‚, РґСЂСѓРіРёРµ РїС‹С‚Р°Р»РёСЃСЊ Рё СЃРјРѕРіР»Рё РѕС‚РѕР±СЂР°С‚СЊ Сѓ РЅРёС… Р±РѕР»СЊС€Рµ Р·РµРјР»Рё. РќРѕ, РєР°Рє РЅРµРґР°РІРЅРѕ РїРѕР»СѓС‡РёРІС€РёР№ Р·РІР°РЅРёРµ Р»РµР№С‚РµРЅР°РЅС‚Р° РІРѕ С„Р»РѕС‚Рµ Р•РіРѕ Р’РµР»РёС‡Р°Р№С€РµРіРѕ РљР°С‚РѕР»РёС‡РµСЃРєРѕРіРѕ Р’РµР»РёС‡РµСЃС‚РІР°, РІС‹ РЅР°РјРµСЂРµРЅС‹ СѓРІРёРґРµС‚СЊ РєР°Рє РСЃРїР°РЅРёСЏ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЃРІРѕРµ Р·Р°РєРѕРЅРЅРѕРµ РјРµСЃС‚Рѕ РІ РјРёСЂРµ!}
+San Jeronimo{РЎР°РЅ РҐРµСЂРѕРЅРёРјРѕ}
 
-Tia{Тиа}
-Dalma{Дальма}
+Tia{РўРёР°}
+Dalma{Р”Р°Р»СЊРјР°}
 
-Lynch{Линч}
+Lynch{Р›РёРЅС‡}
 
-Rose{Роза}
+Rose{Р РѕР·Р°}
 
-Josiah{Джосайя}
-Peabody{Пибоди}
-Play the exploits of a typical U.S. Frigate cruising at sea during the War of 1812. Its captain, Josiah Peabody, demonstrates the revolutionary virtues of a new democracy fighting for its survival against an overwhelmingly superior British Navy.{Повторите подвиги типичного американского фрегата, путешествующего в море во время войны 1812 года. Его капитан Джосия Пибоди демонстрирует революционные достоинства новой демократии, борющейся за свое выживание против подавляющего превосходства британского флота.}
-Delaware{Делавэр}
+Josiah{Р”Р¶РѕСЃР°Р№СЏ}
+Peabody{РџРёР±РѕРґРё}
+Play the exploits of a typical U.S. Frigate cruising at sea during the War of 1812. Its captain, Josiah Peabody, demonstrates the revolutionary virtues of a new democracy fighting for its survival against an overwhelmingly superior British Navy.{РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРґРІРёРіРё С‚РёРїРёС‡РЅРѕРіРѕ Р°РјРµСЂРёРєР°РЅСЃРєРѕРіРѕ С„СЂРµРіР°С‚Р°, РїСѓС‚РµС€РµСЃС‚РІСѓСЋС‰РµРіРѕ РІ РјРѕСЂРµ РІРѕ РІСЂРµРјСЏ РІРѕР№РЅС‹ 1812 РіРѕРґР°. Р•РіРѕ РєР°РїРёС‚Р°РЅ Р”Р¶РѕСЃРёСЏ РџРёР±РѕРґРё РґРµРјРѕРЅСЃС‚СЂРёСЂСѓРµС‚ СЂРµРІРѕР»СЋС†РёРѕРЅРЅС‹Рµ РґРѕСЃС‚РѕРёРЅСЃС‚РІР° РЅРѕРІРѕР№ РґРµРјРѕРєСЂР°С‚РёРё, Р±РѕСЂСЋС‰РµР№СЃСЏ Р·Р° СЃРІРѕРµ РІС‹Р¶РёРІР°РЅРёРµ РїСЂРѕС‚РёРІ РїРѕРґР°РІР»СЏСЋС‰РµРіРѕ РїСЂРµРІРѕСЃС…РѕРґСЃС‚РІР° Р±СЂРёС‚Р°РЅСЃРєРѕРіРѕ С„Р»РѕС‚Р°.}
+Delaware{Р”РµР»Р°РІСЌСЂ}
 
-John{Джон}
-Paul{Пол}
-The American Revolution{Американская Революция}
-Born in Scotland in 1742, your career at sea began at age 13, and by 21 you were the captain of a ship sailing between the West Indies and British ports. You joined the Continental navy for the American Revolution and have just been promoted to lieutenant. However, you have not yet begun to fight. The real battle for independence is yet to come!{Родившись в Шотландии в 1742 году, Вы начали Вашу морскую карьеру в 13 лет, а к 21 году уже были капитаном корабля, курсирующего между Вест-Индией и британскими портами. Вы вступили в Континентальный флот для участия в Американской Революции и только что были произведены в лейтенанты. Тем не менее, Вы еще не начали бороться. Настоящая битва за независимость впереди!}
-Enterprise{Энтерпрайз}
+John{Р”Р¶РѕРЅ}
+Paul{РџРѕР»}
+The American Revolution{РђРјРµСЂРёРєР°РЅСЃРєР°СЏ Р РµРІРѕР»СЋС†РёСЏ}
+Born in Scotland in 1742, your career at sea began at age 13, and by 21 you were the captain of a ship sailing between the West Indies and British ports. You joined the Continental navy for the American Revolution and have just been promoted to lieutenant. However, you have not yet begun to fight. The real battle for independence is yet to come!{Р РѕРґРёРІС€РёСЃСЊ РІ РЁРѕС‚Р»Р°РЅРґРёРё РІ 1742 РіРѕРґСѓ, Р’С‹ РЅР°С‡Р°Р»Рё Р’Р°С€Сѓ РјРѕСЂСЃРєСѓСЋ РєР°СЂСЊРµСЂСѓ РІ 13 Р»РµС‚, Р° Рє 21 РіРѕРґСѓ СѓР¶Рµ Р±С‹Р»Рё РєР°РїРёС‚Р°РЅРѕРј РєРѕСЂР°Р±Р»СЏ, РєСѓСЂСЃРёСЂСѓСЋС‰РµРіРѕ РјРµР¶РґСѓ Р’РµСЃС‚-РРЅРґРёРµР№ Рё Р±СЂРёС‚Р°РЅСЃРєРёРјРё РїРѕСЂС‚Р°РјРё. Р’С‹ РІСЃС‚СѓРїРёР»Рё РІ РљРѕРЅС‚РёРЅРµРЅС‚Р°Р»СЊРЅС‹Р№ С„Р»РѕС‚ РґР»СЏ СѓС‡Р°СЃС‚РёСЏ РІ РђРјРµСЂРёРєР°РЅСЃРєРѕР№ Р РµРІРѕР»СЋС†РёРё Рё С‚РѕР»СЊРєРѕ С‡С‚Рѕ Р±С‹Р»Рё РїСЂРѕРёР·РІРµРґРµРЅС‹ РІ Р»РµР№С‚РµРЅР°РЅС‚С‹. РўРµРј РЅРµ РјРµРЅРµРµ, Р’С‹ РµС‰Рµ РЅРµ РЅР°С‡Р°Р»Рё Р±РѕСЂРѕС‚СЊСЃСЏ. РќР°СЃС‚РѕСЏС‰Р°СЏ Р±РёС‚РІР° Р·Р° РЅРµР·Р°РІРёСЃРёРјРѕСЃС‚СЊ РІРїРµСЂРµРґРё!}
+Enterprise{Р­РЅС‚РµСЂРїСЂР°Р№Р·}
 
-Vito{Вито}
-Leone{Леоне}
+Vito{Р’РёС‚Рѕ}
+Leone{Р›РµРѕРЅРµ}
 
-A Second Calling{Второе Призвание}
-After coming to terms with the truth about your father, you've decided it's time to retire from the smith and embrace the life of a sailor.{Смирившись с правдой о своем отце, вы решили, что пора уйти из кузнечного дела и начать жизнь моряка.}
-Miranda{Миранда}
+A Second Calling{Р’С‚РѕСЂРѕРµ РџСЂРёР·РІР°РЅРёРµ}
+After coming to terms with the truth about your father, you've decided it's time to retire from the smith and embrace the life of a sailor.{РЎРјРёСЂРёРІС€РёСЃСЊ СЃ РїСЂР°РІРґРѕР№ Рѕ СЃРІРѕРµРј РѕС‚С†Рµ, РІС‹ СЂРµС€РёР»Рё, С‡С‚Рѕ РїРѕСЂР° СѓР№С‚Рё РёР· РєСѓР·РЅРµС‡РЅРѕРіРѕ РґРµР»Р° Рё РЅР°С‡Р°С‚СЊ Р¶РёР·РЅСЊ РјРѕСЂСЏРєР°.}
+Miranda{РњРёСЂР°РЅРґР°}
 
-A Touch of Destiny{Прикосновение Судьбы}
-Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.{Проклятие за убийство Дэйви Джонса легло на Вас, и теперь Вы - капитан обновленного Летучего Голландца. Вам поручено переправлять души умерших в загробный мир. Но, конечно, это может подождать! На данный момент Вы должны ознакомиться с задачами капитана. Что Вы станете делать после этого - зависит от вас.}
+A Touch of Destiny{РџСЂРёРєРѕСЃРЅРѕРІРµРЅРёРµ РЎСѓРґСЊР±С‹}
+Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.{РџСЂРѕРєР»СЏС‚РёРµ Р·Р° СѓР±РёР№СЃС‚РІРѕ Р”СЌР№РІРё Р”Р¶РѕРЅСЃР° Р»РµРіР»Рѕ РЅР° Р’Р°СЃ, Рё С‚РµРїРµСЂСЊ Р’С‹ - РєР°РїРёС‚Р°РЅ РѕР±РЅРѕРІР»РµРЅРЅРѕРіРѕ Р›РµС‚СѓС‡РµРіРѕ Р“РѕР»Р»Р°РЅРґС†Р°. Р’Р°Рј РїРѕСЂСѓС‡РµРЅРѕ РїРµСЂРµРїСЂР°РІР»СЏС‚СЊ РґСѓС€Рё СѓРјРµСЂС€РёС… РІ Р·Р°РіСЂРѕР±РЅС‹Р№ РјРёСЂ. РќРѕ, РєРѕРЅРµС‡РЅРѕ, СЌС‚Рѕ РјРѕР¶РµС‚ РїРѕРґРѕР¶РґР°С‚СЊ! РќР° РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚ Р’С‹ РґРѕР»Р¶РЅС‹ РѕР·РЅР°РєРѕРјРёС‚СЊСЃСЏ СЃ Р·Р°РґР°С‡Р°РјРё РєР°РїРёС‚Р°РЅР°. Р§С‚Рѕ Р’С‹ СЃС‚Р°РЅРµС‚Рµ РґРµР»Р°С‚СЊ РїРѕСЃР»Рµ СЌС‚РѕРіРѕ - Р·Р°РІРёСЃРёС‚ РѕС‚ РІР°СЃ.}
 
-Will{Уилл}
-Turner{Тёрнер}
+Will{РЈРёР»Р»}
+Turner{РўС‘СЂРЅРµСЂ}
 
-Bootstrap_Bill{Прихлоп Билл}
+Bootstrap_Bill{РџСЂРёС…Р»РѕРї Р‘РёР»Р»}
 
-Ricardo{Рикардо}
-Orellana{Орельяна}
-The Devil's Ship{Дьявольский Корабль}
-You made a pact with the Devil to save you and your love from certain death in exchange for your soul. The demon betrays you by taking away everything you cared about. With your heart full of rage and revenge, you sow death in your path with the help of your cursed ship.{Вы заключили договор с дьяволом, чтобы он спас вас и вашу любовь от верной смерти в обмен на вашу душу. Демон предал вас, забрав все, что вам было дорого. С сердцем, полным ярости и мести, вы сеете смерть на своем пути с помощью проклятого корабля.}
-La Mariana{Ла Марьяна}
+Ricardo{Р РёРєР°СЂРґРѕ}
+Orellana{РћСЂРµР»СЊСЏРЅР°}
+The Devil's Ship{Р”СЊСЏРІРѕР»СЊСЃРєРёР№ РљРѕСЂР°Р±Р»СЊ}
+You made a pact with the Devil to save you and your love from certain death in exchange for your soul. The demon betrays you by taking away everything you cared about. With your heart full of rage and revenge, you sow death in your path with the help of your cursed ship.{Р’С‹ Р·Р°РєР»СЋС‡РёР»Рё РґРѕРіРѕРІРѕСЂ СЃ РґСЊСЏРІРѕР»РѕРј, С‡С‚РѕР±С‹ РѕРЅ СЃРїР°СЃ РІР°СЃ Рё РІР°С€Сѓ Р»СЋР±РѕРІСЊ РѕС‚ РІРµСЂРЅРѕР№ СЃРјРµСЂС‚Рё РІ РѕР±РјРµРЅ РЅР° РІР°С€Сѓ РґСѓС€Сѓ. Р”РµРјРѕРЅ РїСЂРµРґР°Р» РІР°СЃ, Р·Р°Р±СЂР°РІ РІСЃРµ, С‡С‚Рѕ РІР°Рј Р±С‹Р»Рѕ РґРѕСЂРѕРіРѕ. РЎ СЃРµСЂРґС†РµРј, РїРѕР»РЅС‹Рј СЏСЂРѕСЃС‚Рё Рё РјРµСЃС‚Рё, РІС‹ СЃРµРµС‚Рµ СЃРјРµСЂС‚СЊ РЅР° СЃРІРѕРµРј РїСѓС‚Рё СЃ РїРѕРјРѕС‰СЊСЋ РїСЂРѕРєР»СЏС‚РѕРіРѕ РєРѕСЂР°Р±Р»СЏ.}
+La Mariana{Р›Р° РњР°СЂСЊСЏРЅР°}
 
-Parson{Парсон}
+Parson{РџР°СЂСЃРѕРЅ}
 
-Couchcaptain{Коуч-Капитан}
+Couchcaptain{РљРѕСѓС‡-РљР°РїРёС‚Р°РЅ}
 
-Cutler{Катлер}
-Beckett{Беккет}
-Just Good Business{Просто Хороший Бизнес}
-As head of the East India Trading Company, you are in charge of one of the largest ships in the Caribbean. But you are a merchant first of all, and an unscrupulous one at that! Which means that the task of being captain is one you are not quite familiar with.{Как глава Ост-Индийской Торговой Компании, Вы управляете одним из крупнейших кораблей в Карибском море. Но Вы, прежде всего, торговец, и при этом - недобросовестный! Это означает, что задача быть капитаном - то, с чем вы Вы не очень хорошо знакомы.}
-Lindesfarne{Линдесфарн}
+Cutler{РљР°С‚Р»РµСЂ}
+Beckett{Р‘РµРєРєРµС‚}
+Just Good Business{РџСЂРѕСЃС‚Рѕ РҐРѕСЂРѕС€РёР№ Р‘РёР·РЅРµСЃ}
+As head of the East India Trading Company, you are in charge of one of the largest ships in the Caribbean. But you are a merchant first of all, and an unscrupulous one at that! Which means that the task of being captain is one you are not quite familiar with.{РљР°Рє РіР»Р°РІР° РћСЃС‚-РРЅРґРёР№СЃРєРѕР№ РўРѕСЂРіРѕРІРѕР№ РљРѕРјРїР°РЅРёРё, Р’С‹ СѓРїСЂР°РІР»СЏРµС‚Рµ РѕРґРЅРёРј РёР· РєСЂСѓРїРЅРµР№С€РёС… РєРѕСЂР°Р±Р»РµР№ РІ РљР°СЂРёР±СЃРєРѕРј РјРѕСЂРµ. РќРѕ Р’С‹, РїСЂРµР¶РґРµ РІСЃРµРіРѕ, С‚РѕСЂРіРѕРІРµС†, Рё РїСЂРё СЌС‚РѕРј - РЅРµРґРѕР±СЂРѕСЃРѕРІРµСЃС‚РЅС‹Р№! Р­С‚Рѕ РѕР·РЅР°С‡Р°РµС‚, С‡С‚Рѕ Р·Р°РґР°С‡Р° Р±С‹С‚СЊ РєР°РїРёС‚Р°РЅРѕРј - С‚Рѕ, СЃ С‡РµРј РІС‹ Р’С‹ РЅРµ РѕС‡РµРЅСЊ С…РѕСЂРѕС€Рѕ Р·РЅР°РєРѕРјС‹.}
+Lindesfarne{Р›РёРЅРґРµСЃС„Р°СЂРЅ}
 
-Cruz{Круз}
+Cruz{РљСЂСѓР·}
 
-Merciless{Беспощадный}
-Mark{Марк}
+Merciless{Р‘РµСЃРїРѕС‰Р°РґРЅС‹Р№}
+Mark{РњР°СЂРє}
 
-Sir Christopher{Сэр Кристофер}
-Mings{Мингс}
+Sir Christopher{РЎСЌСЂ РљСЂРёСЃС‚РѕС„РµСЂ}
+Mings{РњРёРЅРіСЃ}
 
-Terror{Террор}
+Terror{РўРµСЂСЂРѕСЂ}
 
-Thomas_the{Томас}
+Thomas_the{РўРѕРјР°СЃ}
 
-Uziah{Узия}
-Wurmwoode{Вурмвуд}
+Uziah{РЈР·РёСЏ}
+Wurmwoode{Р’СѓСЂРјРІСѓРґ}
 
-Emilio{Эмилио}
-Soares{Соарес}
+Emilio{Р­РјРёР»РёРѕ}
+Soares{РЎРѕР°СЂРµСЃ}
 
-Francois{Франсуа}
-L'Ollenais{Л'Олленэ}
-Saint-Jean{Святой Иоанн}
+Francois{Р¤СЂР°РЅСЃСѓР°}
+L'Ollenais{Р›'РћР»Р»РµРЅСЌ}
+Saint-Jean{РЎРІСЏС‚РѕР№ РРѕР°РЅРЅ}
 
-Julian{Джулиан}
-McAllister{МакАлистер}
-Brave Black Flag{Доблестный Чёрный Флаг}
-You have led a mutiny against your cruel captain who meant to kill a group of your countrymen taken as pirates. Now, on the run and marked as a traitor, you must decide what path to follow. Your actions have earned you the respect of the Brotherhood of Pirates. Will you join them under the brave black flag?{Вы подняли мятеж против жестокого капитана, который хотел убить группу Ваших соотечественников, оказавшихся среди захваченных пиратов. Теперь, находясь в бегах и помеченный как предатель, вы должны решить, по какому пути идти. Ваши действия заслужили уважение Берегового Братства. Присоединитесь ли Вы к ним под Храбрым Черным Флагом?}
-Defiance{Вызов}
+Julian{Р”Р¶СѓР»РёР°РЅ}
+McAllister{РњР°РєРђР»РёСЃС‚РµСЂ}
+Brave Black Flag{Р”РѕР±Р»РµСЃС‚РЅС‹Р№ Р§С‘СЂРЅС‹Р№ Р¤Р»Р°Рі}
+You have led a mutiny against your cruel captain who meant to kill a group of your countrymen taken as pirates. Now, on the run and marked as a traitor, you must decide what path to follow. Your actions have earned you the respect of the Brotherhood of Pirates. Will you join them under the brave black flag?{Р’С‹ РїРѕРґРЅСЏР»Рё РјСЏС‚РµР¶ РїСЂРѕС‚РёРІ Р¶РµСЃС‚РѕРєРѕРіРѕ РєР°РїРёС‚Р°РЅР°, РєРѕС‚РѕСЂС‹Р№ С…РѕС‚РµР» СѓР±РёС‚СЊ РіСЂСѓРїРїСѓ Р’Р°С€РёС… СЃРѕРѕС‚РµС‡РµСЃС‚РІРµРЅРЅРёРєРѕРІ, РѕРєР°Р·Р°РІС€РёС…СЃСЏ СЃСЂРµРґРё Р·Р°С…РІР°С‡РµРЅРЅС‹С… РїРёСЂР°С‚РѕРІ. РўРµРїРµСЂСЊ, РЅР°С…РѕРґСЏСЃСЊ РІ Р±РµРіР°С… Рё РїРѕРјРµС‡РµРЅРЅС‹Р№ РєР°Рє РїСЂРµРґР°С‚РµР»СЊ, РІС‹ РґРѕР»Р¶РЅС‹ СЂРµС€РёС‚СЊ, РїРѕ РєР°РєРѕРјСѓ РїСѓС‚Рё РёРґС‚Рё. Р’Р°С€Рё РґРµР№СЃС‚РІРёСЏ Р·Р°СЃР»СѓР¶РёР»Рё СѓРІР°Р¶РµРЅРёРµ Р‘РµСЂРµРіРѕРІРѕРіРѕ Р‘СЂР°С‚СЃС‚РІР°. РџСЂРёСЃРѕРµРґРёРЅРёС‚РµСЃСЊ Р»Рё Р’С‹ Рє РЅРёРј РїРѕРґ РҐСЂР°Р±СЂС‹Рј Р§РµСЂРЅС‹Рј Р¤Р»Р°РіРѕРј?}
+Defiance{Р’С‹Р·РѕРІ}
 
-Milady{Миледи}
-de_Winter{Де Винтер}
-Spy and Assassin{Шпион и Убийца}
-You are a woman who is cunning, relentless, resourceful, amoral and dangerous. Tasked with causing harm to your nations' enemies by whatever means necessary, you will stop at nothing to fulfil that purpose.{Вы женщина хитрая, неумолимая, находчивая, аморальная и опасная. С целью причинить вред врагам ваших нанимателей любыми необходимыми средствами, Вы не остановитесь ни перед чем, чтобы выполнить поставленную задачу.}
-Athos{Атос}
+Milady{РњРёР»РµРґРё}
+de_Winter{Р”Рµ Р’РёРЅС‚РµСЂ}
+Spy and Assassin{РЁРїРёРѕРЅ Рё РЈР±РёР№С†Р°}
+You are a woman who is cunning, relentless, resourceful, amoral and dangerous. Tasked with causing harm to your nations' enemies by whatever means necessary, you will stop at nothing to fulfil that purpose.{Р’С‹ Р¶РµРЅС‰РёРЅР° С…РёС‚СЂР°СЏ, РЅРµСѓРјРѕР»РёРјР°СЏ, РЅР°С…РѕРґС‡РёРІР°СЏ, Р°РјРѕСЂР°Р»СЊРЅР°СЏ Рё РѕРїР°СЃРЅР°СЏ. РЎ С†РµР»СЊСЋ РїСЂРёС‡РёРЅРёС‚СЊ РІСЂРµРґ РІСЂР°РіР°Рј РІР°С€РёС… РЅР°РЅРёРјР°С‚РµР»РµР№ Р»СЋР±С‹РјРё РЅРµРѕР±С…РѕРґРёРјС‹РјРё СЃСЂРµРґСЃС‚РІР°РјРё, Р’С‹ РЅРµ РѕСЃС‚Р°РЅРѕРІРёС‚РµСЃСЊ РЅРё РїРµСЂРµРґ С‡РµРј, С‡С‚РѕР±С‹ РІС‹РїРѕР»РЅРёС‚СЊ РїРѕСЃС‚Р°РІР»РµРЅРЅСѓСЋ Р·Р°РґР°С‡Сѓ.}
+Athos{РђС‚РѕСЃ}
 
-Comte{Граф}
-de_Rochefort{Де Рошфор}
+Comte{Р“СЂР°С„}
+de_Rochefort{Р”Рµ Р РѕС€С„РѕСЂ}
 
-Laurens{Лорен}
-de_Graaf{Де Грааф}
-Scourge of the West{Бич Запада}
-'A great and mischievous pirate' according to Henry Morgan and thought to be the Devil in person by some Spaniards, this Dutch corsair is ready to wreak havoc on the Caribbean!{'Великий и лихой пират', по словам Генри Моргана, и сущий дьявол по мнению некоторых испанцев - этот голландский корсар готов хозяйничать в Карибском море!}
-Wapen van Hoorn{Герб Хоорна}
+Laurens{Р›РѕСЂРµРЅ}
+de_Graaf{Р”Рµ Р“СЂР°Р°С„}
+Scourge of the West{Р‘РёС‡ Р—Р°РїР°РґР°}
+'A great and mischievous pirate' according to Henry Morgan and thought to be the Devil in person by some Spaniards, this Dutch corsair is ready to wreak havoc on the Caribbean!{'Р’РµР»РёРєРёР№ Рё Р»РёС…РѕР№ РїРёСЂР°С‚', РїРѕ СЃР»РѕРІР°Рј Р“РµРЅСЂРё РњРѕСЂРіР°РЅР°, Рё СЃСѓС‰РёР№ РґСЊСЏРІРѕР» РїРѕ РјРЅРµРЅРёСЋ РЅРµРєРѕС‚РѕСЂС‹С… РёСЃРїР°РЅС†РµРІ - СЌС‚РѕС‚ РіРѕР»Р»Р°РЅРґСЃРєРёР№ РєРѕСЂСЃР°СЂ РіРѕС‚РѕРІ С…РѕР·СЏР№РЅРёС‡Р°С‚СЊ РІ РљР°СЂРёР±СЃРєРѕРј РјРѕСЂРµ!}
+Wapen van Hoorn{Р“РµСЂР± РҐРѕРѕСЂРЅР°}
 
-Piet{Пит}
-Pieterszoon{Питерсон}
-Hein{Хейн}
-De Zilvervloot{Серебряный Флот}
-'We hebben een flinke reis voor de boeg. We gaan zout halen. In Afrika.' Dat is Piet's eerste kennismaking met de zee en het harde leven van de zeelieden. Jaren later krijgt Piet Hein een eigen schip. Wat zal hij doen? Nieuw land ontdekken? Handel drijven? Of... de Spaanse zilvervloot veroveren?{'Нам предстоит большое путешествие. Мы собираемся добывать соль. В Африке". Это первое знакомство Пита с морем и тяжелой жизнью моряков. Спустя годы Пит Хайн обзаводится собственным кораблем. Что он будет делать? Исследовать новые земли? Торговать? Или... покорить испанский серебряный флот?}
+Piet{РџРёС‚}
+Pieterszoon{РџРёС‚РµСЂСЃРѕРЅ}
+Hein{РҐРµР№РЅ}
+De Zilvervloot{РЎРµСЂРµР±СЂСЏРЅС‹Р№ Р¤Р»РѕС‚}
+'We hebben een flinke reis voor de boeg. We gaan zout halen. In Afrika.' Dat is Piet's eerste kennismaking met de zee en het harde leven van de zeelieden. Jaren later krijgt Piet Hein een eigen schip. Wat zal hij doen? Nieuw land ontdekken? Handel drijven? Of... de Spaanse zilvervloot veroveren?{'РќР°Рј РїСЂРµРґСЃС‚РѕРёС‚ Р±РѕР»СЊС€РѕРµ РїСѓС‚РµС€РµСЃС‚РІРёРµ. РњС‹ СЃРѕР±РёСЂР°РµРјСЃСЏ РґРѕР±С‹РІР°С‚СЊ СЃРѕР»СЊ. Р’ РђС„СЂРёРєРµ". Р­С‚Рѕ РїРµСЂРІРѕРµ Р·РЅР°РєРѕРјСЃС‚РІРѕ РџРёС‚Р° СЃ РјРѕСЂРµРј Рё С‚СЏР¶РµР»РѕР№ Р¶РёР·РЅСЊСЋ РјРѕСЂСЏРєРѕРІ. РЎРїСѓСЃС‚СЏ РіРѕРґС‹ РџРёС‚ РҐР°Р№РЅ РѕР±Р·Р°РІРѕРґРёС‚СЃСЏ СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј РєРѕСЂР°Р±Р»РµРј. Р§С‚Рѕ РѕРЅ Р±СѓРґРµС‚ РґРµР»Р°С‚СЊ? РСЃСЃР»РµРґРѕРІР°С‚СЊ РЅРѕРІС‹Рµ Р·РµРјР»Рё? РўРѕСЂРіРѕРІР°С‚СЊ? РР»Рё... РїРѕРєРѕСЂРёС‚СЊ РёСЃРїР°РЅСЃРєРёР№ СЃРµСЂРµР±СЂСЏРЅС‹Р№ С„Р»РѕС‚?}
 
-Drake{Дрэйк}
-Stranton{Стрэнтон}
-Phantom{Фантом}
-Cursed Vengeance{Одержимый Местью}
-Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Отправляйтесь в приключение с сокровищами и предательством, кровопролитием и местью. Время, когда пират одерживал верх, завоевывал девушку, сокровища и побеждал своих врагов. То, что вы думаете о жизни пирата, будет поставлено под сомнение, ведь они живут, любят и умирают так, как может жить только пират! По роману Брента Джексона.}
+Drake{Р”СЂСЌР№Рє}
+Stranton{РЎС‚СЂСЌРЅС‚РѕРЅ}
+Phantom{Р¤Р°РЅС‚РѕРј}
+Cursed Vengeance{РћРґРµСЂР¶РёРјС‹Р№ РњРµСЃС‚СЊСЋ}
+Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{РћС‚РїСЂР°РІР»СЏР№С‚РµСЃСЊ РІ РїСЂРёРєР»СЋС‡РµРЅРёРµ СЃ СЃРѕРєСЂРѕРІРёС‰Р°РјРё Рё РїСЂРµРґР°С‚РµР»СЊСЃС‚РІРѕРј, РєСЂРѕРІРѕРїСЂРѕР»РёС‚РёРµРј Рё РјРµСЃС‚СЊСЋ. Р’СЂРµРјСЏ, РєРѕРіРґР° РїРёСЂР°С‚ РѕРґРµСЂР¶РёРІР°Р» РІРµСЂС…, Р·Р°РІРѕРµРІС‹РІР°Р» РґРµРІСѓС€РєСѓ, СЃРѕРєСЂРѕРІРёС‰Р° Рё РїРѕР±РµР¶РґР°Р» СЃРІРѕРёС… РІСЂР°РіРѕРІ. РўРѕ, С‡С‚Рѕ РІС‹ РґСѓРјР°РµС‚Рµ Рѕ Р¶РёР·РЅРё РїРёСЂР°С‚Р°, Р±СѓРґРµС‚ РїРѕСЃС‚Р°РІР»РµРЅРѕ РїРѕРґ СЃРѕРјРЅРµРЅРёРµ, РІРµРґСЊ РѕРЅРё Р¶РёРІСѓС‚, Р»СЋР±СЏС‚ Рё СѓРјРёСЂР°СЋС‚ С‚Р°Рє, РєР°Рє РјРѕР¶РµС‚ Р¶РёС‚СЊ С‚РѕР»СЊРєРѕ РїРёСЂР°С‚! РџРѕ СЂРѕРјР°РЅСѓ Р‘СЂРµРЅС‚Р° Р”Р¶РµРєСЃРѕРЅР°.}
 
-Purpure{Пурпур}
-Squire of the Sea{Морское Приключение}
-Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.{Однажды жила-была маленькая девочка, нежеланная её семье. Любимый сводный дядя отправил её в море в надежде, что она найдёт лучшую жизнь. Но море унесло её в неизведанный мир.}
-Carnation{Гвоздика}
+Purpure{РџСѓСЂРїСѓСЂ}
+Squire of the Sea{РњРѕСЂСЃРєРѕРµ РџСЂРёРєР»СЋС‡РµРЅРёРµ}
+Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.{РћРґРЅР°Р¶РґС‹ Р¶РёР»Р°-Р±С‹Р»Р° РјР°Р»РµРЅСЊРєР°СЏ РґРµРІРѕС‡РєР°, РЅРµР¶РµР»Р°РЅРЅР°СЏ РµС‘ СЃРµРјСЊРµ. Р›СЋР±РёРјС‹Р№ СЃРІРѕРґРЅС‹Р№ РґСЏРґСЏ РѕС‚РїСЂР°РІРёР» РµС‘ РІ РјРѕСЂРµ РІ РЅР°РґРµР¶РґРµ, С‡С‚Рѕ РѕРЅР° РЅР°Р№РґС‘С‚ Р»СѓС‡С€СѓСЋ Р¶РёР·РЅСЊ. РќРѕ РјРѕСЂРµ СѓРЅРµСЃР»Рѕ РµС‘ РІ РЅРµРёР·РІРµРґР°РЅРЅС‹Р№ РјРёСЂ.}
+Carnation{Р“РІРѕР·РґРёРєР°}
 
-Francis{Фрэнсис}
-Drake{Дрейк}
-Disturb us, Lord{Побеспокойся о нас, Господь}
-'It isn't that life ashore is distasteful to me. But life at sea is better.' As privateer in the service of queen Elizabeth I of England and with the Spanish owning nearly the entire Caribbean, it is your job to make life as difficult as possible for the Dons.{'Дело не в том, что жизнь на берегу мне неприятна. Но жизнь в море лучше.' Как капер на службе королевы Елизаветы I Английской, а испанцы владеют почти всеми Карибами, Вы должны сделать жизнь Донов настолько трудной, насколько это возможно.}
-Golden Hind{Золотая Лань}
+Francis{Р¤СЂСЌРЅСЃРёСЃ}
+Drake{Р”СЂРµР№Рє}
+Disturb us, Lord{РџРѕР±РµСЃРїРѕРєРѕР№СЃСЏ Рѕ РЅР°СЃ, Р“РѕСЃРїРѕРґСЊ}
+'It isn't that life ashore is distasteful to me. But life at sea is better.' As privateer in the service of queen Elizabeth I of England and with the Spanish owning nearly the entire Caribbean, it is your job to make life as difficult as possible for the Dons.{'Р”РµР»Рѕ РЅРµ РІ С‚РѕРј, С‡С‚Рѕ Р¶РёР·РЅСЊ РЅР° Р±РµСЂРµРіСѓ РјРЅРµ РЅРµРїСЂРёСЏС‚РЅР°. РќРѕ Р¶РёР·РЅСЊ РІ РјРѕСЂРµ Р»СѓС‡С€Рµ.' РљР°Рє РєР°РїРµСЂ РЅР° СЃР»СѓР¶Р±Рµ РєРѕСЂРѕР»РµРІС‹ Р•Р»РёР·Р°РІРµС‚С‹ I РђРЅРіР»РёР№СЃРєРѕР№, Р° РёСЃРїР°РЅС†С‹ РІР»Р°РґРµСЋС‚ РїРѕС‡С‚Рё РІСЃРµРјРё РљР°СЂРёР±Р°РјРё, Р’С‹ РґРѕР»Р¶РЅС‹ СЃРґРµР»Р°С‚СЊ Р¶РёР·РЅСЊ Р”РѕРЅРѕРІ РЅР°СЃС‚РѕР»СЊРєРѕ С‚СЂСѓРґРЅРѕР№, РЅР°СЃРєРѕР»СЊРєРѕ СЌС‚Рѕ РІРѕР·РјРѕР¶РЅРѕ.}
+Golden Hind{Р—РѕР»РѕС‚Р°СЏ Р›Р°РЅСЊ}
 
-Blas{Блас}
-de_Lezo{Де Лезо}
-The Defender of Cartagena{Защитник Картахены}
-Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.{Блас Де Лезо начал свою морскую карьеру в 1701 году в возрасте 12 лет, служа Франции и Испании во время войны за испанское наследство. Не боясь попасть под обстрел, к 1714 году он потерял ногу, глаз и руку. Несмотря на ранения, он сделал успешную карьеру и сейчас командует военно-морскими силами Картахены-Де-Индиас.}
-Conquistador{Конкистадор}
+Blas{Р‘Р»Р°СЃ}
+de_Lezo{Р”Рµ Р›РµР·Рѕ}
+The Defender of Cartagena{Р—Р°С‰РёС‚РЅРёРє РљР°СЂС‚Р°С…РµРЅС‹}
+Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.{Р‘Р»Р°СЃ Р”Рµ Р›РµР·Рѕ РЅР°С‡Р°Р» СЃРІРѕСЋ РјРѕСЂСЃРєСѓСЋ РєР°СЂСЊРµСЂСѓ РІ 1701 РіРѕРґСѓ РІ РІРѕР·СЂР°СЃС‚Рµ 12 Р»РµС‚, СЃР»СѓР¶Р° Р¤СЂР°РЅС†РёРё Рё РСЃРїР°РЅРёРё РІРѕ РІСЂРµРјСЏ РІРѕР№РЅС‹ Р·Р° РёСЃРїР°РЅСЃРєРѕРµ РЅР°СЃР»РµРґСЃС‚РІРѕ. РќРµ Р±РѕСЏСЃСЊ РїРѕРїР°СЃС‚СЊ РїРѕРґ РѕР±СЃС‚СЂРµР», Рє 1714 РіРѕРґСѓ РѕРЅ РїРѕС‚РµСЂСЏР» РЅРѕРіСѓ, РіР»Р°Р· Рё СЂСѓРєСѓ. РќРµСЃРјРѕС‚СЂСЏ РЅР° СЂР°РЅРµРЅРёСЏ, РѕРЅ СЃРґРµР»Р°Р» СѓСЃРїРµС€РЅСѓСЋ РєР°СЂСЊРµСЂСѓ Рё СЃРµР№С‡Р°СЃ РєРѕРјР°РЅРґСѓРµС‚ РІРѕРµРЅРЅРѕ-РјРѕСЂСЃРєРёРјРё СЃРёР»Р°РјРё РљР°СЂС‚Р°С…РµРЅС‹-Р”Рµ-РРЅРґРёР°СЃ.}
+Conquistador{РљРѕРЅРєРёСЃС‚Р°РґРѕСЂ}
 
-Dervia{Дервия}
-A demoness who came from the underworld seeks an adventure in mortal world.{Демонесса, пришедшая из подземного мира, ищет приключений в мире смертных.}
+Dervia{Р”РµСЂРІРёСЏ}
+A demoness who came from the underworld seeks an adventure in mortal world.{Р”РµРјРѕРЅРµСЃСЃР°, РїСЂРёС€РµРґС€Р°СЏ РёР· РїРѕРґР·РµРјРЅРѕРіРѕ РјРёСЂР°, РёС‰РµС‚ РїСЂРёРєР»СЋС‡РµРЅРёР№ РІ РјРёСЂРµ СЃРјРµСЂС‚РЅС‹С….}
 
-Avergorex{Авергорекс}
-The undead monk who had many names for ages, decides to take up a sword and show his true nature into this cruel world.{Монах-нежить, у которого было много имен на протяжении многих веков, решает взять в руки меч и показать свою истинную сущность этому жестокому миру.}
+Avergorex{РђРІРµСЂРіРѕСЂРµРєСЃ}
+The undead monk who had many names for ages, decides to take up a sword and show his true nature into this cruel world.{РњРѕРЅР°С…-РЅРµР¶РёС‚СЊ, Сѓ РєРѕС‚РѕСЂРѕРіРѕ Р±С‹Р»Рѕ РјРЅРѕРіРѕ РёРјРµРЅ РЅР° РїСЂРѕС‚СЏР¶РµРЅРёРё РјРЅРѕРіРёС… РІРµРєРѕРІ, СЂРµС€Р°РµС‚ РІР·СЏС‚СЊ РІ СЂСѓРєРё РјРµС‡ Рё РїРѕРєР°Р·Р°С‚СЊ СЃРІРѕСЋ РёСЃС‚РёРЅРЅСѓСЋ СЃСѓС‰РЅРѕСЃС‚СЊ СЌС‚РѕРјСѓ Р¶РµСЃС‚РѕРєРѕРјСѓ РјРёСЂСѓ.}
 
 {=====| models.c |=====}
 
@@ -603,345 +603,345 @@ The undead monk who had many names for ages, decides to take up a sword and show
 {=====| QuebradasCostillas.c |=====}
 
 {=====| NK.c |=====}
-Dud{Неудачник}
-Achйron{Ахерон}
-Adams{Адамс}
-Admiraal Zoutman{Адмирал Зутман}
-Aemilia{Эмилия}
-Agamemnon{Агамемнон}
-Aguia{Агия}
-Albemarle{Альбемарль}
-Amazona{Амазонка}
-Ambuscade{Засада}
-America{Америка}
-Andromeda{Андромеда}
-Antelope{Антилопа}
-Apostуl Felipe{Апостол Фелипп}
-Aquila{Аквила}
-Ardent{Ардент}
-Argo{Арго}
-Argonaut{Аргонавт}
-Ark Royal{Арк Роял}
-Armeartes{Армеарт}
-Asterix{Астерикс}
-Atlantis{Атлантида}
-Attitude Adjuster{Дубинка}
-Barfleur{Барфлер}
-Bellona{Беллона}
-Black Heart{Чёрное Сердце}
-Black Joke{Чёрный Юмор}
-Black Pig{Чёрная Свинья}
-Blanche{Бланш}
-Bon Aventure{Хорошее Приключение}
-Bounty{Награда}
-Bourbon{Бурбон}
-Brennus{Бреннус}
-Bucentaure{Буцентор}
-Casanova{Казанова}
-Cassiopee{Кассиопея}
-Centurion{Центурион}
-Challenger{Соперник}
-Clorinda{Клоринда}
-Columbus{Колумбус}
-Comet{Комета}
-Comte de Trйville{Граф Де Труасвиль}
-Constitution{Конституция}
-Cormorant{Баклан}
-Cornelia{Корнелия}
-Coroa{Корона}
-Crimson Blood{Алая Кровь}
-Curlew{Кроншнеп}
-Dafne{Дафна}
-Dauphin Royal{Королевский Дофин}
-Dementor{Дементор}
-Den Graeuwen Heynst{Ден Граувен Хейнст}
-Dolphin{Дельфин}
-Don Juan{Дон Жуан}
-Don Quixote{Дон Кихот}
-Dragуn{Драгин}
-Drake{Селезень}
-Dreadnought{Дредноут}
-Duc de la Guerre{Герцог Войны}
-DuQuesne{Дюкен}
-Edam{Эдам}
-Edinburgh{Эдинбург}
-Eendracht{Эндрахт}
-Eensgezindheid{Энсгезиндхайд}
-Embuscade{Засада}
-Endymion{Эндимион}
-Esmeralda{Эсмеральда}
-Espaciosa{Эспасиоза}
-Espadon{Эспадон}
-Estrella{Эстрелла}
-Evil Under The Sun{Зло Под Солнцем}
-Extremeсa{Экстремека}
-Flower de Luce{Геральдическая Ллилия}
-Forte{Форте}
-Foudre{Фудр}
-Foudroyant{Фудройант}
-Fougueux{Фуге}
-Franklin{Франклин}
-George{Джордж}
-Giavota{Джавота}
-Girona{Жирона}
-Golfinho{Гольфиньо}
-Gouda{Гауда}
-Gouden Leeuwin{Золотая Львица}
-Graaf van Albemarle{Граф Ван Альбемарль}
-Gran Princesa de los Cielos{Великая Принцесса Небес}
-Greta Tuin{Грета Туин}
-Groene Leeuw{Зеленый Лев}
-Groote Christoffel{Грут Кристоффель}
-Haarlem{Харлем}
-Haas{Заяц}
-Hancock{Хэнкок}
-Hare{Заяц}
-Hermione{Гермиона}
-Hinchinbrook{Хинчинбрук}
-Hollandia{Голландия}
-Hotspur{Хотспур}
-Hudson{Гудзон}
-Huijs te Zwieten{Хуйс Те Цвитен}
-Huis te Kruiningen{Хьюис Те Круининген}
-Huis te Oosterwijk{Хьюис Те Остервейк}
-Huis van Nassau{Дом Нассау}
-Hunter{Охотник}
-Ijssel{Эйссел}
-Independence{Независимость}
-Indiscret{Нескромный}
-Insurgent{Повстанец}
-Iphigйnie{Ифигения}
-Jager{Егерь}
-Jamaica{Ямайка}
-Jason{Джейсон}
-Jeanne d'Arc{Жанна Дарк}
-Joyeaux{Украшение}
-Juno{Юнона}
-Kampen{Кампен}
-Kasteel van Medemblik{Кастел Ван Медемблик}
-La Couronne{Корона}
-Lady of the Night{Повелительница Ночи}
-Le Cochon Noir{Чёрная Свинья}
-Le Fleuron{Цветок}
-Le Terrible{Ужасный}
-Lebre{Лебре}
-Leerdammer{Леердаммер}
-Leeroy Jenkins{Лирой Дженкинс}
-Leeuw{Леув}
-Lion de Oro{Лион Де Оро}
-Loire{Луара}
-Lotus{Лотос}
-Lйopard{Леопард}
-Maarsen{Марсен}
-Maaslander{Масландер}
-Madonna del Populo{Мадонна Дель Популо}
-Maillй Brйzй{Майли Брезе}
-Marauder{Мародер}
-Martim de Freitas{Мартим Де Фрейтас}
-Meermin{Мирмин}
-Mercurio{Ртуть}
-Minion{Миньон}
-Mistress of Mayhem{Повелительница Хаоса}
-Montezuma's Revenge{Месть Монтесумы}
-Mordaunt{Мордаунт}
-Morning Star{Утренняя Звезда}
-Mutin{Мятеж}
-Mйduse{Медуза}
-Natividad{Рождество}
-Nervous Energy{Нервная Энергия}
-No More Mr Nice Guy{Нет Больше Славного Парня}
-Nonsuch{Несравненный}
-Norfolk{Норфолк}
-Nosferatu{Носферату}
-Nossa Senhora da Ajuda{Богоматерь Помощи}
-Nossa Senhora da Boa Viagem{Богоматерь Доброго Путешествия}
-Nossa Senhora da Conceicao{Богоматерь Зачатия}
-Nossa Senhora da Gloria{Богоматерь Славы}
-Nossa Senhora da Nazare{Богоматерь Назаре}
-Nossa Senhora da Oliveira e Santo Antуnio{Богоматерь Оливейра и Святой Антонио}
-Nossa Senhora das Necessidades{Богоматерь Потребностей}
-Nossa Senhora do Bom Despacho{Богоматерь Хорошего Решения}
-Nossa Senhora do Cabo e Sao Pedro de Alcantara{Богоматерь Капская и Святой Пётр Алькантарский}
-Nossa Senhora do Cardais{Богоматерь Кардэ}
-Nossa Senhora do Loreto{Богоматерь Лорето}
-Nossa Senhora Madre de Deus e Sao Francisco Xavier{Богоматерь Богородица и Святой Франциск Ксаверий}
-Nuestra Seсora de las Mercedes{Богоматерь Милосердная}
-Nuestra Seсora del Pueblo{Богоматерь Народа}
-Nuevo Invencible{Новый Непобедимый}
-Ohio{Огайо}
-Oranje{Апельсин}
-Papeghaij{Папегайдж}
-Parrano{Паррано}
-Pelican{Пеликан}
-Penguin{Пингвин}
-Piet Hein{Пит Хейн}
-Polychrest{Полихрест}
-Pomone{Помоне}
-Poseidon{Посейдон}
-Postiljon{Почтальон}
-Prima Donna{Примадонна}
-Prince{Принц}
-Prince de Neufchatel{Принц Нефшатель}
-Princesa Carlota{Принцесса Шарлотта}
-Princesa do Ceu{Принцесса Небесная}
-Princess Royal{Королевская Принцесса}
-Principe{Принц}
-Principe de Asturias{Принц Астурийский}
-Principe do Brasil{Принц Бразильский}
-Principe Dom Pedro{Принц Дон Педро}
-Prins Maurits{Принц Морис}
-Prins Willem{Принц Уильям}
-Prinses Royaal{Королевская Принцесса}
-Problem Child{Трудный Ребёнок}
-Queen Charlotte{Королева Шарлотта}
-Raadhuis van Edam{Ратуша Ван Эдама}
-Rabbit{Кролик}
-Railleuse{Насмешка}
-Rainha de Portugal{Королева Португалии}
-Ramillies{Рамиллес}
-Rattlesnake{Гремучая Змея}
-Redface{Краснолицый}
-Redoutable{Грозный}
-Resolution{Решительность}
-Revenge{Месть}
-Richelieu{Ришелье}
-Riddler{Загадочный}
-Roebuck{Робак}
-Rover{Скиталец}
-Royal Charles{Королевский Чарльз}
-Royal Sovereign{Королевский Соверен}
-Ruffian{Хулиган}
-Rye{Рожь}
-Sacramento{Сакраменто}
-Sacrificial Minion{Жертвенный Прислужник}
-Salvador do Mundo{Спаситель Мира}
-San Agustнn{Святой Августин}
-San Andreas{Святой Андреас}
-San Carlos{Святой Карлос}
-San Cayetano{Святой Каэтано}
-San Esteban{Святой Стефан}
-San Felipe{Святой Фелипп}
-San Fernando{Святой Фернанд}
-San Francisco{Святой Франциско}
-San Isidro{Сан-Исидро}
-San Juan{Сан-Хуан}
-San Lorenzo{Сан-Лоренцо}
-San Marcos{Сан-Маркос}
-San Martin{Сан-Мартин}
-San Miguel{Сан-Мигель}
-Santa Ana e Maria{Святая Анна и Мария}
-Santa Ana e Santo Joaquim{Святая Анна и Святой Хоаким}
-Santa Barbara{Санта Барбара}
-Santa Catalina{Святая Каталина}
-Santa Helena{Святая Елена}
-Santa Lauren{Санта Лорен}
-Santa Lucia{Санта Лючия}
-Santa Margarita{Санта-Маргарита}
-Santa Marta{Санта-Марта}
-Santa Rosa{Санта-Роза}
-Santa Teresa{Санта-Тереза}
-Santissimo Sacramento da Trindade{Сантиссимо Таинство Троицы}
-Santo Antonio{Санто-Антонио}
-Santo Augustinho{Святой Августин}
-Santo Domingo{Санто-Доминго}
-Santo Miguel e Almas Santas{Святой Михаил и Святые Души}
-Santнsima Trinidad{Сантисима-Тринидад}
-Sao Bartolomeu{Святой Варфоломей}
-Sao Boaventura{Сан-Боавентура}
-Sao Dere{Сан-Дере}
-Sao Feng{Сяо Фэнь}
-Sao Francisco Xavier{Сан-Франциско Ксавье}
-Sao Joao de Deus{Святой Иоанн Божий}
-Sao Joao Magnвnimo{Святой Иоанн Великолепный}
-Sao Jose{Сан-Хосе}
-Sao Muche{Сан-Муче}
-Sao Pedro{Святой Пётр}
-Sao Watte{Сан-Ватте}
-Schoonoord{Шунорд}
-Sea Devil{Морской Дьявол}
-Sea Eagle{Морской Орел}
-Seaflower{Морской Цветок}
-Serpente{Змея}
-Serpento do Mar{Морская Змея}
-Shannon{Шеннон}
-Shark{Акула}
-Sir Killalot{Сэр Киллалот}
-So Much For Subtlety{Коварный}
-Soleil Royal{Королевское Солнце}
-Soucoupe Volante{Соукоуп Волант}
-Spiegel{Шпигель}
-Su Madre{Мать}
-Success{Успех}
-Sudden Death{Внезапная Смерть}
-Suffolk{Суффолк}
-Swann{Суонн}
-Swiftsure{Рывок}
-Thor{Тор}
-Toro{Торо}
-Triomphant{Триумфатор}
-Triumph{Триумф}
-Tйmйraire{Отважный}
-Ultimate Ship II{Абсолютный Корабль II}
-Unfortunate Conflict Of Evidence{Неудачный Конфликт Доказательств}
-Unicorn{Единорог}
-United States{Соединенные Штаты}
-Uniгo{Юниро}
-Utrecht{Утрехт}
-Valk{Сокол}
-Vanguard{Авангард}
-Veere{Вир}
-Ventura{Вентура}
-Vergulde Raven{Позолоченный Ворон}
-Victory{Победа}
-Volador{Летающий}
-Vrijheid{Свобода}
-Wapen van Rotterdam{Герб Роттердама}
-Washington{Вашингтон}
-Whydah Helnot{Почему Нет}
-Wilhelmina{Вильгельмина}
-Witch of Endor{Ведьма Эндора}
-Witte Lam{Витте Лам}
-Witte Valk{Белый Сокол}
-Ying Tong{Инь Тонг}
-Zaragozana{Сарагоса}
-Zeelandia{Зеландия}
-Zeewolf{Сом}
-Zeven Provincien{Семь Провинций}
-Zwarte Beer{Чёрный Медведь}
-Йlan{Импульс}
-Йtoile{Этуаль}
+Dud{РќРµСѓРґР°С‡РЅРёРє}
+AchР№ron{РђС…РµСЂРѕРЅ}
+Adams{РђРґР°РјСЃ}
+Admiraal Zoutman{РђРґРјРёСЂР°Р» Р—СѓС‚РјР°РЅ}
+Aemilia{Р­РјРёР»РёСЏ}
+Agamemnon{РђРіР°РјРµРјРЅРѕРЅ}
+Aguia{РђРіРёСЏ}
+Albemarle{РђР»СЊР±РµРјР°СЂР»СЊ}
+Amazona{РђРјР°Р·РѕРЅРєР°}
+Ambuscade{Р—Р°СЃР°РґР°}
+America{РђРјРµСЂРёРєР°}
+Andromeda{РђРЅРґСЂРѕРјРµРґР°}
+Antelope{РђРЅС‚РёР»РѕРїР°}
+ApostСѓl Felipe{РђРїРѕСЃС‚РѕР» Р¤РµР»РёРїРї}
+Aquila{РђРєРІРёР»Р°}
+Ardent{РђСЂРґРµРЅС‚}
+Argo{РђСЂРіРѕ}
+Argonaut{РђСЂРіРѕРЅР°РІС‚}
+Ark Royal{РђСЂРє Р РѕСЏР»}
+Armeartes{РђСЂРјРµР°СЂС‚}
+Asterix{РђСЃС‚РµСЂРёРєСЃ}
+Atlantis{РђС‚Р»Р°РЅС‚РёРґР°}
+Attitude Adjuster{Р”СѓР±РёРЅРєР°}
+Barfleur{Р‘Р°СЂС„Р»РµСЂ}
+Bellona{Р‘РµР»Р»РѕРЅР°}
+Black Heart{Р§С‘СЂРЅРѕРµ РЎРµСЂРґС†Рµ}
+Black Joke{Р§С‘СЂРЅС‹Р№ Р®РјРѕСЂ}
+Black Pig{Р§С‘СЂРЅР°СЏ РЎРІРёРЅСЊСЏ}
+Blanche{Р‘Р»Р°РЅС€}
+Bon Aventure{РҐРѕСЂРѕС€РµРµ РџСЂРёРєР»СЋС‡РµРЅРёРµ}
+Bounty{РќР°РіСЂР°РґР°}
+Bourbon{Р‘СѓСЂР±РѕРЅ}
+Brennus{Р‘СЂРµРЅРЅСѓСЃ}
+Bucentaure{Р‘СѓС†РµРЅС‚РѕСЂ}
+Casanova{РљР°Р·Р°РЅРѕРІР°}
+Cassiopee{РљР°СЃСЃРёРѕРїРµСЏ}
+Centurion{Р¦РµРЅС‚СѓСЂРёРѕРЅ}
+Challenger{РЎРѕРїРµСЂРЅРёРє}
+Clorinda{РљР»РѕСЂРёРЅРґР°}
+Columbus{РљРѕР»СѓРјР±СѓСЃ}
+Comet{РљРѕРјРµС‚Р°}
+Comte de TrР№ville{Р“СЂР°С„ Р”Рµ РўСЂСѓР°СЃРІРёР»СЊ}
+Constitution{РљРѕРЅСЃС‚РёС‚СѓС†РёСЏ}
+Cormorant{Р‘Р°РєР»Р°РЅ}
+Cornelia{РљРѕСЂРЅРµР»РёСЏ}
+Coroa{РљРѕСЂРѕРЅР°}
+Crimson Blood{РђР»Р°СЏ РљСЂРѕРІСЊ}
+Curlew{РљСЂРѕРЅС€РЅРµРї}
+Dafne{Р”Р°С„РЅР°}
+Dauphin Royal{РљРѕСЂРѕР»РµРІСЃРєРёР№ Р”РѕС„РёРЅ}
+Dementor{Р”РµРјРµРЅС‚РѕСЂ}
+Den Graeuwen Heynst{Р”РµРЅ Р“СЂР°СѓРІРµРЅ РҐРµР№РЅСЃС‚}
+Dolphin{Р”РµР»СЊС„РёРЅ}
+Don Juan{Р”РѕРЅ Р–СѓР°РЅ}
+Don Quixote{Р”РѕРЅ РљРёС…РѕС‚}
+DragСѓn{Р”СЂР°РіРёРЅ}
+Drake{РЎРµР»РµР·РµРЅСЊ}
+Dreadnought{Р”СЂРµРґРЅРѕСѓС‚}
+Duc de la Guerre{Р“РµСЂС†РѕРі Р’РѕР№РЅС‹}
+DuQuesne{Р”СЋРєРµРЅ}
+Edam{Р­РґР°Рј}
+Edinburgh{Р­РґРёРЅР±СѓСЂРі}
+Eendracht{Р­РЅРґСЂР°С…С‚}
+Eensgezindheid{Р­РЅСЃРіРµР·РёРЅРґС…Р°Р№Рґ}
+Embuscade{Р—Р°СЃР°РґР°}
+Endymion{Р­РЅРґРёРјРёРѕРЅ}
+Esmeralda{Р­СЃРјРµСЂР°Р»СЊРґР°}
+Espaciosa{Р­СЃРїР°СЃРёРѕР·Р°}
+Espadon{Р­СЃРїР°РґРѕРЅ}
+Estrella{Р­СЃС‚СЂРµР»Р»Р°}
+Evil Under The Sun{Р—Р»Рѕ РџРѕРґ РЎРѕР»РЅС†РµРј}
+ExtremeСЃa{Р­РєСЃС‚СЂРµРјРµРєР°}
+Flower de Luce{Р“РµСЂР°Р»СЊРґРёС‡РµСЃРєР°СЏ Р›Р»РёР»РёСЏ}
+Forte{Р¤РѕСЂС‚Рµ}
+Foudre{Р¤СѓРґСЂ}
+Foudroyant{Р¤СѓРґСЂРѕР№Р°РЅС‚}
+Fougueux{Р¤СѓРіРµ}
+Franklin{Р¤СЂР°РЅРєР»РёРЅ}
+George{Р”Р¶РѕСЂРґР¶}
+Giavota{Р”Р¶Р°РІРѕС‚Р°}
+Girona{Р–РёСЂРѕРЅР°}
+Golfinho{Р“РѕР»СЊС„РёРЅСЊРѕ}
+Gouda{Р“Р°СѓРґР°}
+Gouden Leeuwin{Р—РѕР»РѕС‚Р°СЏ Р›СЊРІРёС†Р°}
+Graaf van Albemarle{Р“СЂР°С„ Р’Р°РЅ РђР»СЊР±РµРјР°СЂР»СЊ}
+Gran Princesa de los Cielos{Р’РµР»РёРєР°СЏ РџСЂРёРЅС†РµСЃСЃР° РќРµР±РµСЃ}
+Greta Tuin{Р“СЂРµС‚Р° РўСѓРёРЅ}
+Groene Leeuw{Р—РµР»РµРЅС‹Р№ Р›РµРІ}
+Groote Christoffel{Р“СЂСѓС‚ РљСЂРёСЃС‚РѕС„С„РµР»СЊ}
+Haarlem{РҐР°СЂР»РµРј}
+Haas{Р—Р°СЏС†}
+Hancock{РҐСЌРЅРєРѕРє}
+Hare{Р—Р°СЏС†}
+Hermione{Р“РµСЂРјРёРѕРЅР°}
+Hinchinbrook{РҐРёРЅС‡РёРЅР±СЂСѓРє}
+Hollandia{Р“РѕР»Р»Р°РЅРґРёСЏ}
+Hotspur{РҐРѕС‚СЃРїСѓСЂ}
+Hudson{Р“СѓРґР·РѕРЅ}
+Huijs te Zwieten{РҐСѓР№СЃ РўРµ Р¦РІРёС‚РµРЅ}
+Huis te Kruiningen{РҐСЊСЋРёСЃ РўРµ РљСЂСѓРёРЅРёРЅРіРµРЅ}
+Huis te Oosterwijk{РҐСЊСЋРёСЃ РўРµ РћСЃС‚РµСЂРІРµР№Рє}
+Huis van Nassau{Р”РѕРј РќР°СЃСЃР°Сѓ}
+Hunter{РћС…РѕС‚РЅРёРє}
+Ijssel{Р­Р№СЃСЃРµР»}
+Independence{РќРµР·Р°РІРёСЃРёРјРѕСЃС‚СЊ}
+Indiscret{РќРµСЃРєСЂРѕРјРЅС‹Р№}
+Insurgent{РџРѕРІСЃС‚Р°РЅРµС†}
+IphigР№nie{РС„РёРіРµРЅРёСЏ}
+Jager{Р•РіРµСЂСЊ}
+Jamaica{РЇРјР°Р№РєР°}
+Jason{Р”Р¶РµР№СЃРѕРЅ}
+Jeanne d'Arc{Р–Р°РЅРЅР° Р”Р°СЂРє}
+Joyeaux{РЈРєСЂР°С€РµРЅРёРµ}
+Juno{Р®РЅРѕРЅР°}
+Kampen{РљР°РјРїРµРЅ}
+Kasteel van Medemblik{РљР°СЃС‚РµР» Р’Р°РЅ РњРµРґРµРјР±Р»РёРє}
+La Couronne{РљРѕСЂРѕРЅР°}
+Lady of the Night{РџРѕРІРµР»РёС‚РµР»СЊРЅРёС†Р° РќРѕС‡Рё}
+Le Cochon Noir{Р§С‘СЂРЅР°СЏ РЎРІРёРЅСЊСЏ}
+Le Fleuron{Р¦РІРµС‚РѕРє}
+Le Terrible{РЈР¶Р°СЃРЅС‹Р№}
+Lebre{Р›РµР±СЂРµ}
+Leerdammer{Р›РµРµСЂРґР°РјРјРµСЂ}
+Leeroy Jenkins{Р›РёСЂРѕР№ Р”Р¶РµРЅРєРёРЅСЃ}
+Leeuw{Р›РµСѓРІ}
+Lion de Oro{Р›РёРѕРЅ Р”Рµ РћСЂРѕ}
+Loire{Р›СѓР°СЂР°}
+Lotus{Р›РѕС‚РѕСЃ}
+LР№opard{Р›РµРѕРїР°СЂРґ}
+Maarsen{РњР°СЂСЃРµРЅ}
+Maaslander{РњР°СЃР»Р°РЅРґРµСЂ}
+Madonna del Populo{РњР°РґРѕРЅРЅР° Р”РµР»СЊ РџРѕРїСѓР»Рѕ}
+MaillР№ BrР№zР№{РњР°Р№Р»Рё Р‘СЂРµР·Рµ}
+Marauder{РњР°СЂРѕРґРµСЂ}
+Martim de Freitas{РњР°СЂС‚РёРј Р”Рµ Р¤СЂРµР№С‚Р°СЃ}
+Meermin{РњРёСЂРјРёРЅ}
+Mercurio{Р С‚СѓС‚СЊ}
+Minion{РњРёРЅСЊРѕРЅ}
+Mistress of Mayhem{РџРѕРІРµР»РёС‚РµР»СЊРЅРёС†Р° РҐР°РѕСЃР°}
+Montezuma's Revenge{РњРµСЃС‚СЊ РњРѕРЅС‚РµСЃСѓРјС‹}
+Mordaunt{РњРѕСЂРґР°СѓРЅС‚}
+Morning Star{РЈС‚СЂРµРЅРЅСЏСЏ Р—РІРµР·РґР°}
+Mutin{РњСЏС‚РµР¶}
+MР№duse{РњРµРґСѓР·Р°}
+Natividad{Р РѕР¶РґРµСЃС‚РІРѕ}
+Nervous Energy{РќРµСЂРІРЅР°СЏ Р­РЅРµСЂРіРёСЏ}
+No More Mr Nice Guy{РќРµС‚ Р‘РѕР»СЊС€Рµ РЎР»Р°РІРЅРѕРіРѕ РџР°СЂРЅСЏ}
+Nonsuch{РќРµСЃСЂР°РІРЅРµРЅРЅС‹Р№}
+Norfolk{РќРѕСЂС„РѕР»Рє}
+Nosferatu{РќРѕСЃС„РµСЂР°С‚Сѓ}
+Nossa Senhora da Ajuda{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РџРѕРјРѕС‰Рё}
+Nossa Senhora da Boa Viagem{Р‘РѕРіРѕРјР°С‚РµСЂСЊ Р”РѕР±СЂРѕРіРѕ РџСѓС‚РµС€РµСЃС‚РІРёСЏ}
+Nossa Senhora da Conceicao{Р‘РѕРіРѕРјР°С‚РµСЂСЊ Р—Р°С‡Р°С‚РёСЏ}
+Nossa Senhora da Gloria{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РЎР»Р°РІС‹}
+Nossa Senhora da Nazare{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РќР°Р·Р°СЂРµ}
+Nossa Senhora da Oliveira e Santo AntСѓnio{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РћР»РёРІРµР№СЂР° Рё РЎРІСЏС‚РѕР№ РђРЅС‚РѕРЅРёРѕ}
+Nossa Senhora das Necessidades{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РџРѕС‚СЂРµР±РЅРѕСЃС‚РµР№}
+Nossa Senhora do Bom Despacho{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РҐРѕСЂРѕС€РµРіРѕ Р РµС€РµРЅРёСЏ}
+Nossa Senhora do Cabo e Sao Pedro de Alcantara{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РљР°РїСЃРєР°СЏ Рё РЎРІСЏС‚РѕР№ РџС‘С‚СЂ РђР»СЊРєР°РЅС‚Р°СЂСЃРєРёР№}
+Nossa Senhora do Cardais{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РљР°СЂРґСЌ}
+Nossa Senhora do Loreto{Р‘РѕРіРѕРјР°С‚РµСЂСЊ Р›РѕСЂРµС‚Рѕ}
+Nossa Senhora Madre de Deus e Sao Francisco Xavier{Р‘РѕРіРѕРјР°С‚РµСЂСЊ Р‘РѕРіРѕСЂРѕРґРёС†Р° Рё РЎРІСЏС‚РѕР№ Р¤СЂР°РЅС†РёСЃРє РљСЃР°РІРµСЂРёР№}
+Nuestra SeСЃora de las Mercedes{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РњРёР»РѕСЃРµСЂРґРЅР°СЏ}
+Nuestra SeСЃora del Pueblo{Р‘РѕРіРѕРјР°С‚РµСЂСЊ РќР°СЂРѕРґР°}
+Nuevo Invencible{РќРѕРІС‹Р№ РќРµРїРѕР±РµРґРёРјС‹Р№}
+Ohio{РћРіР°Р№Рѕ}
+Oranje{РђРїРµР»СЊСЃРёРЅ}
+Papeghaij{РџР°РїРµРіР°Р№РґР¶}
+Parrano{РџР°СЂСЂР°РЅРѕ}
+Pelican{РџРµР»РёРєР°РЅ}
+Penguin{РџРёРЅРіРІРёРЅ}
+Piet Hein{РџРёС‚ РҐРµР№РЅ}
+Polychrest{РџРѕР»РёС…СЂРµСЃС‚}
+Pomone{РџРѕРјРѕРЅРµ}
+Poseidon{РџРѕСЃРµР№РґРѕРЅ}
+Postiljon{РџРѕС‡С‚Р°Р»СЊРѕРЅ}
+Prima Donna{РџСЂРёРјР°РґРѕРЅРЅР°}
+Prince{РџСЂРёРЅС†}
+Prince de Neufchatel{РџСЂРёРЅС† РќРµС„С€Р°С‚РµР»СЊ}
+Princesa Carlota{РџСЂРёРЅС†РµСЃСЃР° РЁР°СЂР»РѕС‚С‚Р°}
+Princesa do Ceu{РџСЂРёРЅС†РµСЃСЃР° РќРµР±РµСЃРЅР°СЏ}
+Princess Royal{РљРѕСЂРѕР»РµРІСЃРєР°СЏ РџСЂРёРЅС†РµСЃСЃР°}
+Principe{РџСЂРёРЅС†}
+Principe de Asturias{РџСЂРёРЅС† РђСЃС‚СѓСЂРёР№СЃРєРёР№}
+Principe do Brasil{РџСЂРёРЅС† Р‘СЂР°Р·РёР»СЊСЃРєРёР№}
+Principe Dom Pedro{РџСЂРёРЅС† Р”РѕРЅ РџРµРґСЂРѕ}
+Prins Maurits{РџСЂРёРЅС† РњРѕСЂРёСЃ}
+Prins Willem{РџСЂРёРЅС† РЈРёР»СЊСЏРј}
+Prinses Royaal{РљРѕСЂРѕР»РµРІСЃРєР°СЏ РџСЂРёРЅС†РµСЃСЃР°}
+Problem Child{РўСЂСѓРґРЅС‹Р№ Р РµР±С‘РЅРѕРє}
+Queen Charlotte{РљРѕСЂРѕР»РµРІР° РЁР°СЂР»РѕС‚С‚Р°}
+Raadhuis van Edam{Р Р°С‚СѓС€Р° Р’Р°РЅ Р­РґР°РјР°}
+Rabbit{РљСЂРѕР»РёРє}
+Railleuse{РќР°СЃРјРµС€РєР°}
+Rainha de Portugal{РљРѕСЂРѕР»РµРІР° РџРѕСЂС‚СѓРіР°Р»РёРё}
+Ramillies{Р Р°РјРёР»Р»РµСЃ}
+Rattlesnake{Р“СЂРµРјСѓС‡Р°СЏ Р—РјРµСЏ}
+Redface{РљСЂР°СЃРЅРѕР»РёС†С‹Р№}
+Redoutable{Р“СЂРѕР·РЅС‹Р№}
+Resolution{Р РµС€РёС‚РµР»СЊРЅРѕСЃС‚СЊ}
+Revenge{РњРµСЃС‚СЊ}
+Richelieu{Р РёС€РµР»СЊРµ}
+Riddler{Р—Р°РіР°РґРѕС‡РЅС‹Р№}
+Roebuck{Р РѕР±Р°Рє}
+Rover{РЎРєРёС‚Р°Р»РµС†}
+Royal Charles{РљРѕСЂРѕР»РµРІСЃРєРёР№ Р§Р°СЂР»СЊР·}
+Royal Sovereign{РљРѕСЂРѕР»РµРІСЃРєРёР№ РЎРѕРІРµСЂРµРЅ}
+Ruffian{РҐСѓР»РёРіР°РЅ}
+Rye{Р РѕР¶СЊ}
+Sacramento{РЎР°РєСЂР°РјРµРЅС‚Рѕ}
+Sacrificial Minion{Р–РµСЂС‚РІРµРЅРЅС‹Р№ РџСЂРёСЃР»СѓР¶РЅРёРє}
+Salvador do Mundo{РЎРїР°СЃРёС‚РµР»СЊ РњРёСЂР°}
+San AgustРЅn{РЎРІСЏС‚РѕР№ РђРІРіСѓСЃС‚РёРЅ}
+San Andreas{РЎРІСЏС‚РѕР№ РђРЅРґСЂРµР°СЃ}
+San Carlos{РЎРІСЏС‚РѕР№ РљР°СЂР»РѕСЃ}
+San Cayetano{РЎРІСЏС‚РѕР№ РљР°СЌС‚Р°РЅРѕ}
+San Esteban{РЎРІСЏС‚РѕР№ РЎС‚РµС„Р°РЅ}
+San Felipe{РЎРІСЏС‚РѕР№ Р¤РµР»РёРїРї}
+San Fernando{РЎРІСЏС‚РѕР№ Р¤РµСЂРЅР°РЅРґ}
+San Francisco{РЎРІСЏС‚РѕР№ Р¤СЂР°РЅС†РёСЃРєРѕ}
+San Isidro{РЎР°РЅ-РСЃРёРґСЂРѕ}
+San Juan{РЎР°РЅ-РҐСѓР°РЅ}
+San Lorenzo{РЎР°РЅ-Р›РѕСЂРµРЅС†Рѕ}
+San Marcos{РЎР°РЅ-РњР°СЂРєРѕСЃ}
+San Martin{РЎР°РЅ-РњР°СЂС‚РёРЅ}
+San Miguel{РЎР°РЅ-РњРёРіРµР»СЊ}
+Santa Ana e Maria{РЎРІСЏС‚Р°СЏ РђРЅРЅР° Рё РњР°СЂРёСЏ}
+Santa Ana e Santo Joaquim{РЎРІСЏС‚Р°СЏ РђРЅРЅР° Рё РЎРІСЏС‚РѕР№ РҐРѕР°РєРёРј}
+Santa Barbara{РЎР°РЅС‚Р° Р‘Р°СЂР±Р°СЂР°}
+Santa Catalina{РЎРІСЏС‚Р°СЏ РљР°С‚Р°Р»РёРЅР°}
+Santa Helena{РЎРІСЏС‚Р°СЏ Р•Р»РµРЅР°}
+Santa Lauren{РЎР°РЅС‚Р° Р›РѕСЂРµРЅ}
+Santa Lucia{РЎР°РЅС‚Р° Р›СЋС‡РёСЏ}
+Santa Margarita{РЎР°РЅС‚Р°-РњР°СЂРіР°СЂРёС‚Р°}
+Santa Marta{РЎР°РЅС‚Р°-РњР°СЂС‚Р°}
+Santa Rosa{РЎР°РЅС‚Р°-Р РѕР·Р°}
+Santa Teresa{РЎР°РЅС‚Р°-РўРµСЂРµР·Р°}
+Santissimo Sacramento da Trindade{РЎР°РЅС‚РёСЃСЃРёРјРѕ РўР°РёРЅСЃС‚РІРѕ РўСЂРѕРёС†С‹}
+Santo Antonio{РЎР°РЅС‚Рѕ-РђРЅС‚РѕРЅРёРѕ}
+Santo Augustinho{РЎРІСЏС‚РѕР№ РђРІРіСѓСЃС‚РёРЅ}
+Santo Domingo{РЎР°РЅС‚Рѕ-Р”РѕРјРёРЅРіРѕ}
+Santo Miguel e Almas Santas{РЎРІСЏС‚РѕР№ РњРёС…Р°РёР» Рё РЎРІСЏС‚С‹Рµ Р”СѓС€Рё}
+SantРЅsima Trinidad{РЎР°РЅС‚РёСЃРёРјР°-РўСЂРёРЅРёРґР°Рґ}
+Sao Bartolomeu{РЎРІСЏС‚РѕР№ Р’Р°СЂС„РѕР»РѕРјРµР№}
+Sao Boaventura{РЎР°РЅ-Р‘РѕР°РІРµРЅС‚СѓСЂР°}
+Sao Dere{РЎР°РЅ-Р”РµСЂРµ}
+Sao Feng{РЎСЏРѕ Р¤СЌРЅСЊ}
+Sao Francisco Xavier{РЎР°РЅ-Р¤СЂР°РЅС†РёСЃРєРѕ РљСЃР°РІСЊРµ}
+Sao Joao de Deus{РЎРІСЏС‚РѕР№ РРѕР°РЅРЅ Р‘РѕР¶РёР№}
+Sao Joao MagnРІnimo{РЎРІСЏС‚РѕР№ РРѕР°РЅРЅ Р’РµР»РёРєРѕР»РµРїРЅС‹Р№}
+Sao Jose{РЎР°РЅ-РҐРѕСЃРµ}
+Sao Muche{РЎР°РЅ-РњСѓС‡Рµ}
+Sao Pedro{РЎРІСЏС‚РѕР№ РџС‘С‚СЂ}
+Sao Watte{РЎР°РЅ-Р’Р°С‚С‚Рµ}
+Schoonoord{РЁСѓРЅРѕСЂРґ}
+Sea Devil{РњРѕСЂСЃРєРѕР№ Р”СЊСЏРІРѕР»}
+Sea Eagle{РњРѕСЂСЃРєРѕР№ РћСЂРµР»}
+Seaflower{РњРѕСЂСЃРєРѕР№ Р¦РІРµС‚РѕРє}
+Serpente{Р—РјРµСЏ}
+Serpento do Mar{РњРѕСЂСЃРєР°СЏ Р—РјРµСЏ}
+Shannon{РЁРµРЅРЅРѕРЅ}
+Shark{РђРєСѓР»Р°}
+Sir Killalot{РЎСЌСЂ РљРёР»Р»Р°Р»РѕС‚}
+So Much For Subtlety{РљРѕРІР°СЂРЅС‹Р№}
+Soleil Royal{РљРѕСЂРѕР»РµРІСЃРєРѕРµ РЎРѕР»РЅС†Рµ}
+Soucoupe Volante{РЎРѕСѓРєРѕСѓРї Р’РѕР»Р°РЅС‚}
+Spiegel{РЁРїРёРіРµР»СЊ}
+Su Madre{РњР°С‚СЊ}
+Success{РЈСЃРїРµС…}
+Sudden Death{Р’РЅРµР·Р°РїРЅР°СЏ РЎРјРµСЂС‚СЊ}
+Suffolk{РЎСѓС„С„РѕР»Рє}
+Swann{РЎСѓРѕРЅРЅ}
+Swiftsure{Р С‹РІРѕРє}
+Thor{РўРѕСЂ}
+Toro{РўРѕСЂРѕ}
+Triomphant{РўСЂРёСѓРјС„Р°С‚РѕСЂ}
+Triumph{РўСЂРёСѓРјС„}
+TР№mР№raire{РћС‚РІР°Р¶РЅС‹Р№}
+Ultimate Ship II{РђР±СЃРѕР»СЋС‚РЅС‹Р№ РљРѕСЂР°Р±Р»СЊ II}
+Unfortunate Conflict Of Evidence{РќРµСѓРґР°С‡РЅС‹Р№ РљРѕРЅС„Р»РёРєС‚ Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІ}
+Unicorn{Р•РґРёРЅРѕСЂРѕРі}
+United States{РЎРѕРµРґРёРЅРµРЅРЅС‹Рµ РЁС‚Р°С‚С‹}
+UniРіo{Р®РЅРёСЂРѕ}
+Utrecht{РЈС‚СЂРµС…С‚}
+Valk{РЎРѕРєРѕР»}
+Vanguard{РђРІР°РЅРіР°СЂРґ}
+Veere{Р’РёСЂ}
+Ventura{Р’РµРЅС‚СѓСЂР°}
+Vergulde Raven{РџРѕР·РѕР»РѕС‡РµРЅРЅС‹Р№ Р’РѕСЂРѕРЅ}
+Victory{РџРѕР±РµРґР°}
+Volador{Р›РµС‚Р°СЋС‰РёР№}
+Vrijheid{РЎРІРѕР±РѕРґР°}
+Wapen van Rotterdam{Р“РµСЂР± Р РѕС‚С‚РµСЂРґР°РјР°}
+Washington{Р’Р°С€РёРЅРіС‚РѕРЅ}
+Whydah Helnot{РџРѕС‡РµРјСѓ РќРµС‚}
+Wilhelmina{Р’РёР»СЊРіРµР»СЊРјРёРЅР°}
+Witch of Endor{Р’РµРґСЊРјР° Р­РЅРґРѕСЂР°}
+Witte Lam{Р’РёС‚С‚Рµ Р›Р°Рј}
+Witte Valk{Р‘РµР»С‹Р№ РЎРѕРєРѕР»}
+Ying Tong{РРЅСЊ РўРѕРЅРі}
+Zaragozana{РЎР°СЂР°РіРѕСЃР°}
+Zeelandia{Р—РµР»Р°РЅРґРёСЏ}
+Zeewolf{РЎРѕРј}
+Zeven Provincien{РЎРµРјСЊ РџСЂРѕРІРёРЅС†РёР№}
+Zwarte Beer{Р§С‘СЂРЅС‹Р№ РњРµРґРІРµРґСЊ}
+Р™lan{РРјРїСѓР»СЊСЃ}
+Р™toile{Р­С‚СѓР°Р»СЊ}
 
 {=====| CommonQuest.c |=====}
-Margaret Hatcher{Маргарет Тэтчер}
-Dolphine{Дельфин}
+Margaret Hatcher{РњР°СЂРіР°СЂРµС‚ РўСЌС‚С‡РµСЂ}
+Dolphine{Р”РµР»СЊС„РёРЅ}
 
 {=====| SideQuest.c |=====}
-Montanez{Монтанез}
-Mefisto{Мефисто}
-Hundred Devils{Сотня Дьяволов}
+Montanez{РњРѕРЅС‚Р°РЅРµР·}
+Mefisto{РњРµС„РёСЃС‚Рѕ}
+Hundred Devils{РЎРѕС‚РЅСЏ Р”СЊСЏРІРѕР»РѕРІ}
 666{666}
-Sea Monster{Морское Чудовище}
-Marauder{Мародер}
-Fast Death{Быстрая Смерть}
-Iceni Queen{Ледяная Королева}
-Madonna{Мадонна}
-Duquesa{Герцогиня}
-Comtesse{Графиня}
-Inferno{Преисподня}
-Duk{Дук}
-Prison Ship{Тюремный Корабль}
-Leon{Леон}
-Cheri{Дорогая}
-The Adventurer{Искатель Приключений}
-Vogelstruijs{Фогельструйс}
-HMS Challenger{КЕВ Челленджер}
-Valiente{Доблестный}
-Santiano{Сантьяно}
-Ark Raider{Ковчег Пирата}
-Santa Matilde{Святая Матильда}
-Marнa Santнsima{Сантисима-Тринидад}
-Cardenal Cisneros{Кардинал Сиснерос}
-Бngel de la Guarda{Ангел-Хранитель}
-Septentriуn{Септентриун}
+Sea Monster{РњРѕСЂСЃРєРѕРµ Р§СѓРґРѕРІРёС‰Рµ}
+Marauder{РњР°СЂРѕРґРµСЂ}
+Fast Death{Р‘С‹СЃС‚СЂР°СЏ РЎРјРµСЂС‚СЊ}
+Iceni Queen{Р›РµРґСЏРЅР°СЏ РљРѕСЂРѕР»РµРІР°}
+Madonna{РњР°РґРѕРЅРЅР°}
+Duquesa{Р“РµСЂС†РѕРіРёРЅСЏ}
+Comtesse{Р“СЂР°С„РёРЅСЏ}
+Inferno{РџСЂРµРёСЃРїРѕРґРЅСЏ}
+Duk{Р”СѓРє}
+Prison Ship{РўСЋСЂРµРјРЅС‹Р№ РљРѕСЂР°Р±Р»СЊ}
+Leon{Р›РµРѕРЅ}
+Cheri{Р”РѕСЂРѕРіР°СЏ}
+The Adventurer{РСЃРєР°С‚РµР»СЊ РџСЂРёРєР»СЋС‡РµРЅРёР№}
+Vogelstruijs{Р¤РѕРіРµР»СЊСЃС‚СЂСѓР№СЃ}
+HMS Challenger{РљР•Р’ Р§РµР»Р»РµРЅРґР¶РµСЂ}
+Valiente{Р”РѕР±Р»РµСЃС‚РЅС‹Р№}
+Santiano{РЎР°РЅС‚СЊСЏРЅРѕ}
+Ark Raider{РљРѕРІС‡РµРі РџРёСЂР°С‚Р°}
+Santa Matilde{РЎРІСЏС‚Р°СЏ РњР°С‚РёР»СЊРґР°}
+MarРЅa SantРЅsima{РЎР°РЅС‚РёСЃРёРјР°-РўСЂРёРЅРёРґР°Рґ}
+Cardenal Cisneros{РљР°СЂРґРёРЅР°Р» РЎРёСЃРЅРµСЂРѕСЃ}
+Р‘ngel de la Guarda{РђРЅРіРµР»-РҐСЂР°РЅРёС‚РµР»СЊ}
+SeptentriСѓn{РЎРµРїС‚РµРЅС‚СЂРёСѓРЅ}
 
 {=====| 231 characters |=====}

@@ -1,234 +1,234 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| JackSparrow.c |=====}
-Jack{Джек}
-Sparrow{Воробей}
+Jack{Р”Р¶РµРє}
+Sparrow{Р’РѕСЂРѕР±РµР№}
 
 {=====| StartStoryline.c |=====}
-Verbinski{Вербинский}
+Verbinski{Р’РµСЂР±РёРЅСЃРєРёР№}
 
 {=====| quests_reaction.c |=====}
-Heumac{Хьюмак}
-Tezcacoatl{Тезкакоатль}
-Angler{Англер}
-Ogilvey{Огилвей}
-Maccus{Маккус}
-Clanker{Кланкер}
-James{Джеймс}
-Norrington{Норрингтон}
-Lieutenant{Лейтенант}
-Gillette{Джилетт}
-Helmsman{Хэлмсмэн}
-French{Французский}
-Soldier{Солдат}
-Hadras{Хадрас}
-Urchin{Урчин}
-Wheelback{Уилбэк}
-Wyvern{Вайверн}
-Quittance{Квитанс}
-Penrod{Пэнрод}
-French Soldier{Французский Солдат}
+Heumac{РҐСЊСЋРјР°Рє}
+Tezcacoatl{РўРµР·РєР°РєРѕР°С‚Р»СЊ}
+Angler{РђРЅРіР»РµСЂ}
+Ogilvey{РћРіРёР»РІРµР№}
+Maccus{РњР°РєРєСѓСЃ}
+Clanker{РљР»Р°РЅРєРµСЂ}
+James{Р”Р¶РµР№РјСЃ}
+Norrington{РќРѕСЂСЂРёРЅРіС‚РѕРЅ}
+Lieutenant{Р›РµР№С‚РµРЅР°РЅС‚}
+Gillette{Р”Р¶РёР»РµС‚С‚}
+Helmsman{РҐСЌР»РјСЃРјСЌРЅ}
+French{Р¤СЂР°РЅС†СѓР·СЃРєРёР№}
+Soldier{РЎРѕР»РґР°С‚}
+Hadras{РҐР°РґСЂР°СЃ}
+Urchin{РЈСЂС‡РёРЅ}
+Wheelback{РЈРёР»Р±СЌРє}
+Wyvern{Р’Р°Р№РІРµСЂРЅ}
+Quittance{РљРІРёС‚Р°РЅСЃ}
+Penrod{РџСЌРЅСЂРѕРґ}
+French Soldier{Р¤СЂР°РЅС†СѓР·СЃРєРёР№ РЎРѕР»РґР°С‚}
 
 {=====| Officers.c |=====}
-Captaine{Капитан}
-Chevalle{Шевалье}
-Lucas{Лукас}
-Da Saldanha{Де Салданья}
-Jaoquin{Хоакин}
-De Masse{Де Массе}
-Gombo{Гомбо}
-the Slave{Раб}
-Prognatus{Прогнатус}
-Solvo{Сольво}
+Captaine{РљР°РїРёС‚Р°РЅ}
+Chevalle{РЁРµРІР°Р»СЊРµ}
+Lucas{Р›СѓРєР°СЃ}
+Da Saldanha{Р”Рµ РЎР°Р»РґР°РЅСЊСЏ}
+Jaoquin{РҐРѕР°РєРёРЅ}
+De Masse{Р”Рµ РњР°СЃСЃРµ}
+Gombo{Р“РѕРјР±Рѕ}
+the Slave{Р Р°Р±}
+Prognatus{РџСЂРѕРіРЅР°С‚СѓСЃ}
+Solvo{РЎРѕР»СЊРІРѕ}
 
 {=====| QuebradasCostillas.c |=====}
-Ines{Инес}
-Diaz{Диас}
-Skull{Скулл}
+Ines{РРЅРµСЃ}
+Diaz{Р”РёР°СЃ}
+Skull{РЎРєСѓР»Р»}
 
 {=====| Redmond.c |=====}
-Henry{Генри}
-Weatherby{Уэзерби}
-Swann{Суонн}
+Henry{Р“РµРЅСЂРё}
+Weatherby{РЈСЌР·РµСЂР±Рё}
+Swann{РЎСѓРѕРЅРЅ}
 
 {=====| Story.c |=====}
-Joshamee{Джошеми}
-Gibbs{Гиббс}
-Random{Случайный}
-Drunk{Пьяница}
-Random Drunk{Случайный Пьяница}
+Joshamee{Р”Р¶РѕС€РµРјРё}
+Gibbs{Р“РёР±Р±СЃ}
+Random{РЎР»СѓС‡Р°Р№РЅС‹Р№}
+Drunk{РџСЊСЏРЅРёС†Р°}
+Random Drunk{РЎР»СѓС‡Р°Р№РЅС‹Р№ РџСЊСЏРЅРёС†Р°}
 
 {=====| TempQuest.c |=====}
-Matthew{Мэтью}
-Shaw{Шоу}
-Billy{Билли}
-Brock{Брок}
-Bligh{Блай}
-Edward{Эдвард}
-Teague{Тиг}
-Oswald{Освальд}
-Chappel{Чаппель}
-Sir Christopher{Сэр Кристофер}
-Mings{Мингс}
-Will{Уилл}
-Turner{Тёрнер}
-Annabella{Аннабелла}
-Brin{Брин}
-Bella{Белла}
-Susan{Сьюзан}
-Shaypen{Шаупен}
-Bootstrap Bill{Прихлоп Билл}
-Cutler{Катлер}
-Beckett{Беккет}
-Brinkley{Бринкли}
-Anamaria{Аннамария}
-Tia{Тиа}
-Dalma{Дальма}
-Pirate{Пират}
-1{1-й}
-2{2-й}
-3{3-й}
-Morris{Моррис}
-Murtogg{Муртогг}
-Malvert{Малверт}
-Mullroy{Маллрой}
-Captain{Капитан}
-Elizabeth{Элизабет}
-Simon{Саймон}
-Blunden{Бланден}
-Turpin{Турпин}
-Cabanel{Кабанель}
-Pieter{Питер}
-Boelen{Боэлен}
-John{Джон}
-Clifford{Клиффорд}
-Hector{Гектор}
-Barbossa{Барбосса}
-Anne{Энни}
-Bonny{Бонни}
-Davy{Дэйви}
-Jones{Джонс}
-Konrad{Конрад}
-Kulczycki{Кульчицкий}
-Petros{Петрос}
-Maykin{Мэйкин}
-Blundas{Бландез}
-Cap'n{Капитан}
-Drow{Дроу}
-Thomas{Томас}
-the Terror{Террор}
-Nathan{Нэйтан}
-Kell{Келл}
-Rackham{Рэкхем}
-Peter{Питер}
-Willemoes{Виллемоус}
-Damski{Дамски}
-Maximus{Максимус}
-Philippe{Филипп}
-Couch Captain{Капитан Коуч}
-Charles{Чарльз}
-Claudio{Клаудио}
-Burrieza{Бурриеза}
-Port Guard{Портовый Стражник}
-Silas{Сайлес}
-Simpkins{Симпкинс}
-Tipman{Типман}
-William{Уильям}
-Wanderman{Вандермэн}
-Arthur{Артур}
-Straightly{Стрэйтли}
-Stephen{Стивен}
-Walsh{Уолш}
-Howard{Говард}
-Cummins{Камминс}
-Ragetti{Раджетти}
-Pintel{Пинтел}
-Bartolomeu{Бартоломью}
-o Portugues{Португалец}
-Paul Jones{Пол Джонс}
-Seb'{Себ}
-Hylie{Хайли}
-Pistof{Пистоф}
-Jean-Bart{Жан-Барт}
-Lafin{Лафин}
-Johan{Йоган}
-Klaesz{Клаз}
-Eduardo{Эдуардо}
-Villanueva{Вильянуэва}
-Francois{Франсуа}
-de Hadoque{де Хадоке}
-Sri Sumbhajee{Шри Сумбаджи}
-Angria{Ангрия}
-Pusasn{Пусан}
-Askay{Аскай}
-Ammand{Аман}
-the Corsair{Корсар}
-Yedam{Едам}
-Kinne{Кинн}
-Captain Sao{Капитан Сяо}
-Feng{Фэнь}
-Park{Парк}
-Lian{Лиан}
-Tai{Тай}
-Huang{Хуанг}
-Short{Коротышка}
-Mergildo{Мергильдо}
-Hurtado{Хартадо}
-Jordano{Джордано}
-Marbatico{Марбатико}
-Masked Man{Человек в Маске}
-Old Salt{Старый Моряк}
-Meigger{Мэйггер}
-Stallion{Сталион}
-Skyliner{Скайлайнер}
-Morgan{Морган}
-Terror{Террор}
-Bos'un{Босун}
-Joaquin{Хоакин}
-Justine{Жюстин}
-Le Moigne{Ле Муань}
-Justine's guard{Охранник Жюстина}
-Smith{Смит}
-Snorri{Снорри}
-Baldursson{Балдурсон}
-Francis{Франсис}
-Snake{Снэйк}
-Maggee{Мэгги}
-Reynoud{Рейноуд}
-Verheugen{Верхейге}
-Palafico{Палафико}
-Jimmy{Джимми}
-Legs{Легс}
-Port Admiral{Начальник Порта}
-Talicerdor{Талицердор}
-Guard Captain {Начальник Стражи}
-Prison Guard {Тюремный Стражник}
-Atwood {Этвуд}
-Paddley {Паддли}
-Elton {Элтон}
-Garfield {Гарфилд}
-Cannibal Chief {Вождь Каннибалов}
-Cannibal{Каннибал}
+Matthew{РњСЌС‚СЊСЋ}
+Shaw{РЁРѕСѓ}
+Billy{Р‘РёР»Р»Рё}
+Brock{Р‘СЂРѕРє}
+Bligh{Р‘Р»Р°Р№}
+Edward{Р­РґРІР°СЂРґ}
+Teague{РўРёРі}
+Oswald{РћСЃРІР°Р»СЊРґ}
+Chappel{Р§Р°РїРїРµР»СЊ}
+Sir Christopher{РЎСЌСЂ РљСЂРёСЃС‚РѕС„РµСЂ}
+Mings{РњРёРЅРіСЃ}
+Will{РЈРёР»Р»}
+Turner{РўС‘СЂРЅРµСЂ}
+Annabella{РђРЅРЅР°Р±РµР»Р»Р°}
+Brin{Р‘СЂРёРЅ}
+Bella{Р‘РµР»Р»Р°}
+Susan{РЎСЊСЋР·Р°РЅ}
+Shaypen{РЁР°СѓРїРµРЅ}
+Bootstrap Bill{РџСЂРёС…Р»РѕРї Р‘РёР»Р»}
+Cutler{РљР°С‚Р»РµСЂ}
+Beckett{Р‘РµРєРєРµС‚}
+Brinkley{Р‘СЂРёРЅРєР»Рё}
+Anamaria{РђРЅРЅР°РјР°СЂРёСЏ}
+Tia{РўРёР°}
+Dalma{Р”Р°Р»СЊРјР°}
+Pirate{РџРёСЂР°С‚}
+1{1-Р№}
+2{2-Р№}
+3{3-Р№}
+Morris{РњРѕСЂСЂРёСЃ}
+Murtogg{РњСѓСЂС‚РѕРіРі}
+Malvert{РњР°Р»РІРµСЂС‚}
+Mullroy{РњР°Р»Р»СЂРѕР№}
+Captain{РљР°РїРёС‚Р°РЅ}
+Elizabeth{Р­Р»РёР·Р°Р±РµС‚}
+Simon{РЎР°Р№РјРѕРЅ}
+Blunden{Р‘Р»Р°РЅРґРµРЅ}
+Turpin{РўСѓСЂРїРёРЅ}
+Cabanel{РљР°Р±Р°РЅРµР»СЊ}
+Pieter{РџРёС‚РµСЂ}
+Boelen{Р‘РѕСЌР»РµРЅ}
+John{Р”Р¶РѕРЅ}
+Clifford{РљР»РёС„С„РѕСЂРґ}
+Hector{Р“РµРєС‚РѕСЂ}
+Barbossa{Р‘Р°СЂР±РѕСЃСЃР°}
+Anne{Р­РЅРЅРё}
+Bonny{Р‘РѕРЅРЅРё}
+Davy{Р”СЌР№РІРё}
+Jones{Р”Р¶РѕРЅСЃ}
+Konrad{РљРѕРЅСЂР°Рґ}
+Kulczycki{РљСѓР»СЊС‡РёС†РєРёР№}
+Petros{РџРµС‚СЂРѕСЃ}
+Maykin{РњСЌР№РєРёРЅ}
+Blundas{Р‘Р»Р°РЅРґРµР·}
+Cap'n{РљР°РїРёС‚Р°РЅ}
+Drow{Р”СЂРѕСѓ}
+Thomas{РўРѕРјР°СЃ}
+the Terror{РўРµСЂСЂРѕСЂ}
+Nathan{РќСЌР№С‚Р°РЅ}
+Kell{РљРµР»Р»}
+Rackham{Р СЌРєС…РµРј}
+Peter{РџРёС‚РµСЂ}
+Willemoes{Р’РёР»Р»РµРјРѕСѓСЃ}
+Damski{Р”Р°РјСЃРєРё}
+Maximus{РњР°РєСЃРёРјСѓСЃ}
+Philippe{Р¤РёР»РёРїРї}
+Couch Captain{РљР°РїРёС‚Р°РЅ РљРѕСѓС‡}
+Charles{Р§Р°СЂР»СЊР·}
+Claudio{РљР»Р°СѓРґРёРѕ}
+Burrieza{Р‘СѓСЂСЂРёРµР·Р°}
+Port Guard{РџРѕСЂС‚РѕРІС‹Р№ РЎС‚СЂР°Р¶РЅРёРє}
+Silas{РЎР°Р№Р»РµСЃ}
+Simpkins{РЎРёРјРїРєРёРЅСЃ}
+Tipman{РўРёРїРјР°РЅ}
+William{РЈРёР»СЊСЏРј}
+Wanderman{Р’Р°РЅРґРµСЂРјСЌРЅ}
+Arthur{РђСЂС‚СѓСЂ}
+Straightly{РЎС‚СЂСЌР№С‚Р»Рё}
+Stephen{РЎС‚РёРІРµРЅ}
+Walsh{РЈРѕР»С€}
+Howard{Р“РѕРІР°СЂРґ}
+Cummins{РљР°РјРјРёРЅСЃ}
+Ragetti{Р Р°РґР¶РµС‚С‚Рё}
+Pintel{РџРёРЅС‚РµР»}
+Bartolomeu{Р‘Р°СЂС‚РѕР»РѕРјСЊСЋ}
+o Portugues{РџРѕСЂС‚СѓРіР°Р»РµС†}
+Paul Jones{РџРѕР» Р”Р¶РѕРЅСЃ}
+Seb'{РЎРµР±}
+Hylie{РҐР°Р№Р»Рё}
+Pistof{РџРёСЃС‚РѕС„}
+Jean-Bart{Р–Р°РЅ-Р‘Р°СЂС‚}
+Lafin{Р›Р°С„РёРЅ}
+Johan{Р™РѕРіР°РЅ}
+Klaesz{РљР»Р°Р·}
+Eduardo{Р­РґСѓР°СЂРґРѕ}
+Villanueva{Р’РёР»СЊСЏРЅСѓСЌРІР°}
+Francois{Р¤СЂР°РЅСЃСѓР°}
+de Hadoque{РґРµ РҐР°РґРѕРєРµ}
+Sri Sumbhajee{РЁСЂРё РЎСѓРјР±Р°РґР¶Рё}
+Angria{РђРЅРіСЂРёСЏ}
+Pusasn{РџСѓСЃР°РЅ}
+Askay{РђСЃРєР°Р№}
+Ammand{РђРјР°РЅ}
+the Corsair{РљРѕСЂСЃР°СЂ}
+Yedam{Р•РґР°Рј}
+Kinne{РљРёРЅРЅ}
+Captain Sao{РљР°РїРёС‚Р°РЅ РЎСЏРѕ}
+Feng{Р¤СЌРЅСЊ}
+Park{РџР°СЂРє}
+Lian{Р›РёР°РЅ}
+Tai{РўР°Р№}
+Huang{РҐСѓР°РЅРі}
+Short{РљРѕСЂРѕС‚С‹С€РєР°}
+Mergildo{РњРµСЂРіРёР»СЊРґРѕ}
+Hurtado{РҐР°СЂС‚Р°РґРѕ}
+Jordano{Р”Р¶РѕСЂРґР°РЅРѕ}
+Marbatico{РњР°СЂР±Р°С‚РёРєРѕ}
+Masked Man{Р§РµР»РѕРІРµРє РІ РњР°СЃРєРµ}
+Old Salt{РЎС‚Р°СЂС‹Р№ РњРѕСЂСЏРє}
+Meigger{РњСЌР№РіРіРµСЂ}
+Stallion{РЎС‚Р°Р»РёРѕРЅ}
+Skyliner{РЎРєР°Р№Р»Р°Р№РЅРµСЂ}
+Morgan{РњРѕСЂРіР°РЅ}
+Terror{РўРµСЂСЂРѕСЂ}
+Bos'un{Р‘РѕСЃСѓРЅ}
+Joaquin{РҐРѕР°РєРёРЅ}
+Justine{Р–СЋСЃС‚РёРЅ}
+Le Moigne{Р›Рµ РњСѓР°РЅСЊ}
+Justine's guard{РћС…СЂР°РЅРЅРёРє Р–СЋСЃС‚РёРЅР°}
+Smith{РЎРјРёС‚}
+Snorri{РЎРЅРѕСЂСЂРё}
+Baldursson{Р‘Р°Р»РґСѓСЂСЃРѕРЅ}
+Francis{Р¤СЂР°РЅСЃРёСЃ}
+Snake{РЎРЅСЌР№Рє}
+Maggee{РњСЌРіРіРё}
+Reynoud{Р РµР№РЅРѕСѓРґ}
+Verheugen{Р’РµСЂС…РµР№РіРµ}
+Palafico{РџР°Р»Р°С„РёРєРѕ}
+Jimmy{Р”Р¶РёРјРјРё}
+Legs{Р›РµРіСЃ}
+Port Admiral{РќР°С‡Р°Р»СЊРЅРёРє РџРѕСЂС‚Р°}
+Talicerdor{РўР°Р»РёС†РµСЂРґРѕСЂ}
+Guard Captain {РќР°С‡Р°Р»СЊРЅРёРє РЎС‚СЂР°Р¶Рё}
+Prison Guard {РўСЋСЂРµРјРЅС‹Р№ РЎС‚СЂР°Р¶РЅРёРє}
+Atwood {Р­С‚РІСѓРґ}
+Paddley {РџР°РґРґР»Рё}
+Elton {Р­Р»С‚РѕРЅ}
+Garfield {Р“Р°СЂС„РёР»Рґ}
+Cannibal Chief {Р’РѕР¶РґСЊ РљР°РЅРЅРёР±Р°Р»РѕРІ}
+Cannibal{РљР°РЅРЅРёР±Р°Р»}
 
 {=====| TempQuestEnemy.c |=====}
-Ronald{Рональд}
-Blacklock{Блэклок}
-Harris{Харрис}
-Spanish{Испанец}
-Prison{Арестант}
-Commendant{Комендант}
-Officer{Офицер}
-Midshipman{Мичман}
-Crewmember{Член Команды}
-Mr.{Мистер}
-Mercer{Мерсер}
-Gentleman{Джентельмен}
-Jocard{Жокар}
-Spanish Lieutenant{Испанский Лейтенант}
-Spanish Officer{Испанский Офицер}
-Prison Commendant{Комендант Тюрьмы}
-Spanish Midshipman{Испанский Мичман}
+Ronald{Р РѕРЅР°Р»СЊРґ}
+Blacklock{Р‘Р»СЌРєР»РѕРє}
+Harris{РҐР°СЂСЂРёСЃ}
+Spanish{РСЃРїР°РЅРµС†}
+Prison{РђСЂРµСЃС‚Р°РЅС‚}
+Commendant{РљРѕРјРµРЅРґР°РЅС‚}
+Officer{РћС„РёС†РµСЂ}
+Midshipman{РњРёС‡РјР°РЅ}
+Crewmember{Р§Р»РµРЅ РљРѕРјР°РЅРґС‹}
+Mr.{РњРёСЃС‚РµСЂ}
+Mercer{РњРµСЂСЃРµСЂ}
+Gentleman{Р”Р¶РµРЅС‚РµР»СЊРјРµРЅ}
+Jocard{Р–РѕРєР°СЂ}
+Spanish Lieutenant{РСЃРїР°РЅСЃРєРёР№ Р›РµР№С‚РµРЅР°РЅС‚}
+Spanish Officer{РСЃРїР°РЅСЃРєРёР№ РћС„РёС†РµСЂ}
+Prison Commendant{РљРѕРјРµРЅРґР°РЅС‚ РўСЋСЂСЊРјС‹}
+Spanish Midshipman{РСЃРїР°РЅСЃРєРёР№ РњРёС‡РјР°РЅ}
 
 {=====| Others |=====}
-Nigel{Найджел}
+Nigel{РќР°Р№РґР¶РµР»}
 
 {=====| 189 characters |=====}
