@@ -1,157 +1,157 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| Ardent.c |=====}
-Charles{Р§Р°СЂР»СЊР·}
-Ardent{РђСЂРґРµРЅС‚}
+Charles{Чарльз}
+Ardent{Ардент}
 
 {=====| StartStoryline.c |=====}
-William{РЈРёР»СЊСЏРј}
-McMurrough{РњР°РєРњР°СЂСЂР°}
-O'Brien{Рћ'Р‘СЂР°Р№РµРЅ}
+William{Уильям}
+McMurrough{МакМарра}
+O'Brien{О'Брайен}
 
 {=====| quests_reaction.c |=====}
-de la Vega{Р”Рµ Р›Р° Р’РµРіР°}
-Two Dogs{Р”РІР° РџСЃР°}
-Fighting{Р”РµСЂСѓС‰РёС…СЃСЏ}
-Two Dogs Fighting{Р”РІР° Р”РµСЂСѓС‰РёС…СЃСЏ РџСЃР°}
-not-Fighting{РќРµ Р”РµСЂСѓС‰РёС…СЃСЏ}
-Two Dogs not-Fighting{Р”РІР° РќРµ Р”РµСЂСѓС‰РёС…СЃСЏ РџСЃР°}
-Carlos{РљР°СЂР»РѕСЃ}
-Ardenta{РђСЂРґРѕС‚Р°}
-Indian{РРЅРґРµРµС†}
-Cardinal{РљР°СЂРґРёРЅР°Р»}
-Ximinez{РҐРёРјРµРЅРµСЃ}
-Fang{Р¤Р°РЅРі}
+de la Vega{Де Ла Вега}
+Two Dogs{Два Пса}
+Fighting{Дерущихся}
+Two Dogs Fighting{Два Дерущихся Пса}
+not-Fighting{Не Дерущихся}
+Two Dogs not-Fighting{Два Не Дерущихся Пса}
+Carlos{Карлос}
+Ardenta{Ардота}
+Indian{Индеец}
+Cardinal{Кардинал}
+Ximinez{Хименес}
+Fang{Фанг}
 
 {=====| Story.c |=====}
-Indian Warrior{РРЅРґРµР№СЃРєРёР№ Р’РѕРёРЅ}
-Louwe{Р›Р°Сѓ}
-Louwman{Р›Р°СѓРјР°РЅ}
-Giraldo{Р–РёСЂР°Р»СЊРґРѕ}
-Annibal{РђРЅРЅРёР±Р°Р»}
-Gheerkin{Р“РµСЂРєР°РЅ}
-Kamalaas{РљР°РјР°Р»Р»Р°СЃ}
-Morys{РњРѕСЂРёСЃ}
-Badlad{Р‘Р°РґР»Р°Рґ}
-Ralph{Р Р°Р»СЊС„}
-Partridge{РџР°СЂС‚СЂРёРґР¶}
-Coper{РљРѕРїРµСЂ}
-Blumberger{Р‘Р»СѓРјР±РµСЂРіРµСЂ}
-AmtСѓnio{РђРјС‚РёРЅСЊРѕ}
-Guajira{Р“СѓР°С…РёСЂР°}
-Ayol{РђР№РѕР»}
-Bacha{Р‘Р°С€Р°}
-LucРЅa{Р›СЋСЃРёСЏ}
-Edmundo{Р­РґРјСѓРЅРґРѕ}
-Valerie{Р’Р°Р»РµСЂРё}
-Downing{Р”Р°СѓРЅРёРЅРі}
-Piers{РџРёСЂСЃ}
-Gilbert{Р“РёР»Р±РµСЂС‚}
-Emmett{Р­РјРјРµС‚}
-Dawson{Р”РѕСѓСЃРѕРЅ}
+Indian Warrior{Индейский Воин}
+Louwe{Лау}
+Louwman{Лауман}
+Giraldo{Жиральдо}
+Annibal{Аннибал}
+Gheerkin{Геркан}
+Kamalaas{Камаллас}
+Morys{Морис}
+Badlad{Бадлад}
+Ralph{Ральф}
+Partridge{Партридж}
+Coper{Копер}
+Blumberger{Блумбергер}
+Amtуnio{Амтиньо}
+Guajira{Гуахира}
+Ayol{Айол}
+Bacha{Баша}
+Lucнa{Люсия}
+Edmundo{Эдмундо}
+Valerie{Валери}
+Downing{Даунинг}
+Piers{Пирс}
+Gilbert{Гилберт}
+Emmett{Эммет}
+Dawson{Доусон}
 
 {=====| TempQuest.c |=====}
-Inquisitor{РРЅРєРІРёР·РёС‚РѕСЂ}
-Monkey{РћР±РµР·СЊСЏРЅР°}
-Crescent Moon{Р Р°СЃС‚СѓС‰Р°СЏ Р›СѓРЅР°}
-Rain Cloud{Р“СЂРѕР·РѕРІР°СЏ РўСѓС‡Р°}
-Golden Flower{Р—РѕР»РѕС‚РѕР№ Р¦РІРµС‚РѕРє}
-Nervous Elk{РќРµСЂРІРЅС‹Р№ Р›РѕСЃСЊ}
-Ringboned Wolf{РњРѕР·РѕР»РµРЅРѕРіРёР№ Р’РѕР»Рє}
-Strong Deer{РЎРёР»СЊРЅС‹Р№ РћР»РµРЅСЊ}
-White Crow{Р‘РµР»С‹Р№ Р’РѕСЂРѕРЅ}
-Soaring Hawk{РџР°СЂСЏС‰РёР№ РЇСЃС‚СЂРµР±}
-Ronald{Р РѕРЅР°Р»СЊРґ}
-McDonald{РњР°РєР”РѕРЅР°Р»СЊРґ}
-Doolin{Р”СѓР»РёРЅ}
-Becart{Р‘РµРєР°СЂС‚}
-Grigorio{Р“СЂРёРіРѕСЂРёРѕ}
-Formoselle{Р¤РѕСЂРјРѕР·РµР»СЊ}
-Coenen{РљРѕРЅСЌРЅ}
-Barberien{Р‘Р°СЂР±РЅСЂРёРµРЅ}
-Garfield{Р“Р°СЂС„РёР»Рґ}
-Leighton{Р›РµР№С‚РѕРЅ}
-Wilfred{РЈРёР»С„СЂРµРґ}
-Roscoe{Р РѕСЃРєРѕ}
-Felix{Р¤РµР»РёРєСЃ}
-Prost{РџСЂРѕСЃС‚}
-Steven{РЎС‚РёРІРµРЅ}
-Seagull{РЎРёРіР°Р»}
-Jusepe{Р”Р¶СѓР·РµРїРµ}
-Guimaraes{Р“РёРјР°СЂР°Р№РЅС€}
-Lazaro{Р›Р°Р·Р°СЂРѕ}
-Trillo{РўСЂРёР»Р»Рѕ}
-Suarius{РЎСѓР°СЂРёСѓСЃ}
-Escudero{Р­СЃРєСѓРґРµСЂРѕ}
-Elizabeth{Р­Р»РёР·Р°Р±РµС‚}
-Constantino{РљРѕРЅСЃС‚Р°РЅС‚РёРЅ}
-de Malaspina{РњР°Р»Р°СЃРїРёРЅСЃРєРёР№}
-Maria{РњР°СЂРёСЏ}
-Antonia{РђРЅС‚СѓР°РЅРµС‚С‚Р°}
-of Austria{РђРІСЃС‚СЂРёР№СЃРєР°СЏ}
+Inquisitor{Инквизитор}
+Monkey{Обезьяна}
+Crescent Moon{Растущая Луна}
+Rain Cloud{Грозовая Туча}
+Golden Flower{Золотой Цветок}
+Nervous Elk{Нервный Лось}
+Ringboned Wolf{Мозоленогий Волк}
+Strong Deer{Сильный Олень}
+White Crow{Белый Ворон}
+Soaring Hawk{Парящий Ястреб}
+Ronald{Рональд}
+McDonald{МакДональд}
+Doolin{Дулин}
+Becart{Бекарт}
+Grigorio{Григорио}
+Formoselle{Формозель}
+Coenen{Конэн}
+Barberien{Барбнриен}
+Garfield{Гарфилд}
+Leighton{Лейтон}
+Wilfred{Уилфред}
+Roscoe{Роско}
+Felix{Феликс}
+Prost{Прост}
+Steven{Стивен}
+Seagull{Сигал}
+Jusepe{Джузепе}
+Guimaraes{Гимарайнш}
+Lazaro{Лазаро}
+Trillo{Трилло}
+Suarius{Суариус}
+Escudero{Эскудеро}
+Elizabeth{Элизабет}
+Constantino{Константин}
+de Malaspina{Маласпинский}
+Maria{Мария}
+Antonia{Антуанетта}
+of Austria{Австрийская}
 
 {=====| TempQuestEnemy.c |=====}
-Guard{РЎС‚СЂР°Р¶РЅРёРє}
-1{1-Р№}
-2{2-Р№}
-3{3-Р№}
-Atanagildo{РђС‚Р°РЅР°РіРёР»СЊРґРѕ}
-GalРЅndez{Р“Р°Р»РёРЅРґРµ}
-Eldo{Р•Р»РґРѕ}
-Fiz{Р¤РёС†}
-Javier{РҐР°РІСЊРµСЂ}
-Mendieta{РњРµРЅРґРёС‚Р°}
-Felipe{Р¤РёР»РёРїРї}
-Becerra{Р‘РµС†РµСЂСЂР°}
-Basilio{Р‘Р°Р·РёР»РёРѕ}
-Carretero{РљР°СЂСЂРµС‚РµСЂРѕ}
-Esteban{Р­СЃС‚РµР±Р°РЅ}
-Rovapera{Р РѕРІР°РїРµСЂР°}
-Mauricio{РњР°СѓСЂРёСЃРёРѕ}
-Juradu{Р–СѓСЂР°РґСѓ}
-Malbert{РњР°Р»Р±РµСЂС‚}
-Sangier{РЎРѕРЅР¶Рё}
-Randolph{Р СЌРЅРґРѕР»СЊС„}
-Waghorn{Р’Р°РґР¶С…РѕСЂРЅ}
-Leonard{Р›РµРѕРЅР°СЂРґ}
-Bowyer{Р‘РѕР№РµСЂ}
-Marvin{РњР°СЂРІРёРЅ}
-Corker{РљРѕСЂРєРµСЂ}
-James{Р”Р¶РµР№РјСЃ}
-Haresign{РђСЃР°Р№РЅ}
-Guinemant{Р“РёРЅРµРјРѕ}
-Lavignen{Р›Р°РІРёРЅСЊРµРЅ}
-Valerian{Р’Р°Р»РµСЂРёР°РЅ}
-Decaux{Р”РµРєРѕ}
-Arnald{РђСЂРЅР°Р»СЊРґ}
-Rimeaux{Р РёРјРѕ}
-Bruyant{Р‘СЂР°Р№Р°РЅС‚}
-Moncoutie{РњРѕРЅРєСѓС‚СЊРµ}
-Philip{Р¤РёР»РёРї}
-de Malvoisin{РґРµ РњР°Р»СЊРІРѕР·Р°РЅ}
-FranР·ois-Louis{Р¤СЂР°РЅСЃСѓР°-Р›СѓРё}
-Rousselet{Р СѓСЃСЃРµР»Рµ}
-de ChРІteaurenault{Р”Рµ РЁР°С‚Рѕ-Р РµРЅРѕ}
-4{4-Р№}
-Guibert{Р“РёР±РµСЂС‚}
-Mollaret{РњРѕР»Р»Р°СЂРµ}
-Guillaume{Р“РёР»СЊСЏРј}
-Suguenot{РЎСЋРіРЅРѕ}
-Louis{Р›СѓРё}
-Erignac{Р­СЂРёРЅСЊСЏРє}
-Corin{РљРѕСЂРёРЅ}
-Arzillires{РђСЂР·РёР»Р»РёСЂРµСЃ}
-Renouart{Р РµРЅСѓР°СЂ}
-Bonnefroy{Р‘РѕРЅРЅРµС„СЂСѓР°}
-Jaime{РҐР°Р№РјРµ}
-Lezcano{Р›РµСЃРєР°РЅРѕ}
-Pelayo{РџРµР»Р°Р№Рѕ}
-NСЉСЃez{РќСѓСЃРµР·}
-Emiliano{Р­РјРёР»СЊСЏРЅРѕ}
-de GuzmР±n{Р”Рµ Р“СѓР·РјР°РЅ}
-Gilles{Р–РёР»СЊ}
-Clouzot{РљР»РѕР·Сѓ}
+Guard{Стражник}
+1{1-й}
+2{2-й}
+3{3-й}
+Atanagildo{Атанагильдо}
+Galнndez{Галинде}
+Eldo{Елдо}
+Fiz{Фиц}
+Javier{Хавьер}
+Mendieta{Мендита}
+Felipe{Филипп}
+Becerra{Бецерра}
+Basilio{Базилио}
+Carretero{Карретеро}
+Esteban{Эстебан}
+Rovapera{Ровапера}
+Mauricio{Маурисио}
+Juradu{Жураду}
+Malbert{Малберт}
+Sangier{Сонжи}
+Randolph{Рэндольф}
+Waghorn{Ваджхорн}
+Leonard{Леонард}
+Bowyer{Бойер}
+Marvin{Марвин}
+Corker{Коркер}
+James{Джеймс}
+Haresign{Асайн}
+Guinemant{Гинемо}
+Lavignen{Лавиньен}
+Valerian{Валериан}
+Decaux{Деко}
+Arnald{Арнальд}
+Rimeaux{Римо}
+Bruyant{Брайант}
+Moncoutie{Монкутье}
+Philip{Филип}
+de Malvoisin{де Мальвозан}
+Franзois-Louis{Франсуа-Луи}
+Rousselet{Русселе}
+de Chвteaurenault{Де Шато-Рено}
+4{4-й}
+Guibert{Гиберт}
+Mollaret{Молларе}
+Guillaume{Гильям}
+Suguenot{Сюгно}
+Louis{Луи}
+Erignac{Эриньяк}
+Corin{Корин}
+Arzillires{Арзиллирес}
+Renouart{Ренуарт}
+Bonnefroy{Боннефруа}
+Jaime{Хайме}
+Lezcano{Лескано}
+Pelayo{Пелайо}
+Nъсez{Нусез}
+Emiliano{Эмильяно}
+de Guzmбn{Де Гузман}
+Gilles{Жиль}
+Clouzot{Клозу}
 
 {=====| 90 characters |=====}
 
 {=====| Other |=====}
-Helen{РҐРµР»РµРЅ}
+Helen{Хелен}

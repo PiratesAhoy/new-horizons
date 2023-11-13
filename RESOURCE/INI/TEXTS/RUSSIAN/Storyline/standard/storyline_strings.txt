@@ -1,28 +1,29 @@
-Sea Horse{РњРѕСЂСЃРєРѕР№ РљРѕРЅС‘Рє}
-As a new face in the Caribbean, you are determined to make a name for yourself through fair means or foul. You can try to convince yourself that you fight for riches and glory alone, but you came here for another reason. Will you manage to regain the affection of Danielle and win her heart back again? Or will you simply become another tortured soul; lost amongst these wild and dangerous islands, forced to seek fame and fortune as scant, cold comfort? (Or perhaps you'd prefer to play as Danielle...){РљР°Рє РЅРѕРІРѕРµ Р»РёС†Рѕ РІ РљР°СЂРёР±СЃРєРѕРј РјРѕСЂРµ, Р’С‹ РїРѕР»РЅС‹ СЂРµС€РёРјРѕСЃС‚Рё СЃРґРµР»Р°С‚СЊ СЃРµР±Рµ РёРјСЏ Р»СЋР±С‹РјРё СЃРїРѕСЃРѕР±Р°РјРё. Р’С‹ РјРѕР¶РµС‚Рµ РїРѕРїС‹С‚Р°С‚СЊСЃСЏ СѓР±РµРґРёС‚СЊ СЃРµР±СЏ, С‡С‚Рѕ СЂС‹С‰РµС‚Рµ С‚РѕР»СЊРєРѕ РІ РїРѕРёСЃРєР°С… Р±РѕРіР°С‚СЃС‚РІР° Рё СЃР»Р°РІС‹, РЅРѕ РїСЂРёС€Р»Рё Р’С‹ СЃСЋРґР° РїРѕ РґСЂСѓРіРѕР№ РїСЂРёС‡РёРЅРµ. РЈРґР°СЃС‚СЃСЏ Р»Рё Р’Р°Рј РІРµСЂРЅСѓС‚СЊ Р»СЋР±РѕРІСЊ Р”Р°РЅРёСЌР»СЊ Рё СЃРЅРѕРІР° Р·Р°РІРѕРµРІР°С‚СЊ РµС‘ СЃРµСЂРґС†Рµ? РР»Рё РІС‹ РїСЂРѕСЃС‚Рѕ СЃС‚Р°РЅРµС‚Рµ РµС‰С‘ РѕРґРЅРѕР№ РёР·РјСѓС‡РµРЅРЅРѕР№ РґСѓС€РѕР№; РїРѕС‚РµСЂСЏРЅРЅС‹Р№ СЃСЂРµРґРё СЌС‚РёС… РґРёРєРёС… Рё РѕРїР°СЃРЅС‹С… РѕСЃС‚СЂРѕРІРѕРІ, РІС‹РЅСѓР¶РґРµРЅРЅРѕР№ РёСЃРєР°С‚СЊ СЃР»Р°РІСѓ Рё СѓРґР°С‡Сѓ РІ РєР°С‡РµСЃС‚РІРµ СЃРєСѓРїРѕРіРѕ, С…РѕР»РѕРґРЅРѕРіРѕ СѓС‚РµС€РµРЅРёСЏ? (РР»Рё, РІРѕР·РјРѕР¶РЅРѕ, РІС‹ Р±С‹ РїСЂРµРґРїРѕС‡Р»Рё РёРіСЂР°С‚СЊ Р·Р° Р”Р°РЅРёСЌР»СЊ...)}
-Astra{РђСЃС‚СЂР°}
-Vengeance{РњРµСЃС‚СЊ}
-Belette{Р›Р°СЃРєР°}
-ClР№opРІtre{РљР»РµРѕРїР°С‚СЂР°}
-SР№millante{Р РµР·РІС‹Р№}
-Fleuron{Р¤Р»Р°РіРјР°РЅ}
-Arsinoe{РђСЂСЃРёРЅРѕСЏ}
-l'Entreprise{РџСЂРµРґРїСЂРёРёРјС‡РёРІС‹Р№}
-Alouette{Р–Р°РІРѕСЂРѕРЅРѕРє}
-Friponne{РќРµРїРѕСЃР»СѓС€РЅС‹Р№}
-Aurora{РђРІСЂРѕСЂР°}
-Oiseau{РџС‚РёС†Р°}
-Albion{РђР»СЊР±РёРѕРЅ}
-La Boussole{РљРѕРјРїР°СЃ}
-Amorale{РђРјРѕСЂР°Р»СЊРЅС‹Р№}
-Desperate{РћС‚С‡Р°СЏРЅРЅС‹Р№}
-Monarch{РњРѕРЅР°СЂС…}
-Black Prince{Р§С‘СЂРЅС‹Р№ РџСЂРёРЅС†}
-Meleager{РњРµР»РµР°РіСЂ}
-Tremendous{РћРіСЂРѕРјРЅС‹Р№}
-Bato{РљР°РјРµРЅСЊ}
-Demetra{Р”РµРјРµС‚СЂР°}
-Sovereign of the Seas{РџРѕРІРµР»РёС‚РµР»СЊ РњРѕСЂРµР№}
-Athena{РђС„РёРЅР°}
-Sirena{РЎРёСЂРµРЅР°}
-Volcano{Р’СѓР»РєР°РЅ}
+Tales of a Sea Hawk{История Натаниэля Хаука}
+Sea Horse{Морской Конёк}
+As a new face in the Caribbean, you are determined to make a name for yourself through fair means or foul. You can try to convince yourself that you fight for riches and glory alone, but you came here for another reason. Will you manage to regain the affection of Danielle and win her heart back again? Or will you simply become another tortured soul; lost amongst these wild and dangerous islands, forced to seek fame and fortune as scant, cold comfort? (Or perhaps you'd prefer to play as Danielle...){Как новое лицо в Карибском море, Вы полны решимости сделать себе имя любыми способами. Вы можете попытаться убедить себя, что рыщете только в поисках богатства и славы, но пришли Вы сюда по другой причине. Удастся ли Вам вернуть любовь Даниэль и снова завоевать её сердце? Или вы просто станете ещё одной измученной душой; потерянный среди этих диких и опасных островов, вынужденной искать славу и удачу в качестве скупого, холодного утешения? (Или, возможно, вы бы предпочли играть за Даниэль...)}
+Astra{Астра}
+Vengeance{Месть}
+Belette{Ласка}
+Clйopвtre{Клеопатра}
+Sйmillante{Резвый}
+Fleuron{Флагман}
+Arsinoe{Арсиноя}
+l'Entreprise{Предприимчивый}
+Alouette{Жаворонок}
+Friponne{Непослушный}
+Aurora{Аврора}
+Oiseau{Птица}
+Albion{Альбион}
+La Boussole{Компас}
+Amorale{Аморальный}
+Desperate{Отчаянный}
+Monarch{Монарх}
+Black Prince{Чёрный Принц}
+Meleager{Мелеагр}
+Tremendous{Огромный}
+Bato{Камень}
+Demetra{Деметра}
+Sovereign of the Seas{Повелитель Морей}
+Athena{Афина}
+Sirena{Сирена}
+Volcano{Вулкан}

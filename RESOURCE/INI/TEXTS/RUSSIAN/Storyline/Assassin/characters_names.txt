@@ -1,134 +1,134 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| Assassin.c |=====}
-Johan{Р™РѕРіР°РЅ}
-Elting{Р­Р»С‚РёРЅРі}
+Johan{Йоган}
+Elting{Элтинг}
 
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
 
 {=====| Story.c |=====}
-Salvadore{РЎР°Р»СЊРІР°РґРѕСЂ}
-Benavides{Р‘РµРЅР°РІРёРґРµСЃ}
-Soldier{РЎРѕР»РґР°С‚}
-Indian{РРЅРґРµРµС†}
-Street{РЈР»РёС‡РЅС‹Р№}
-Merchant{РўРѕСЂРіРѕРІРµС†}
-Chief{Р’РѕР¶РґСЊ}
-Indian Chief{Р’РѕР¶РґСЊ РРЅРґРµР№С†РµРІ}
-Street Merchant{РЈР»РёС‡РЅС‹Р№ РўРѕСЂРіРѕРІРµС†}
+Salvadore{Сальвадор}
+Benavides{Бенавидес}
+Soldier{Солдат}
+Indian{Индеец}
+Street{Уличный}
+Merchant{Торговец}
+Chief{Вождь}
+Indian Chief{Вождь Индейцев}
+Street Merchant{Уличный Торговец}
 
 {=====| TempQuest.c |=====}
-Enrique{Р­РЅСЂРёРєРµ}
-Padilla{РџР°РґРёР»СЊСЏ}
-Baltasar{Р‘Р°Р»СЊС‚Р°Р·Р°СЂ}
-Salgada{РЎР°Р»СЊРіР°РґР°}
-Captain{РљР°РїРёС‚Р°РЅ}
-Damski{Р”Р°РјСЃРєРё}
-Chico{Р§РёРєРѕ}
-Cois{РљРѕР№СЃ}
-Dominico{Р”РѕРјРёРЅРёРєРѕ}
-Cuellar{РљСѓСЌР»СЊСЏСЂ}
-Harold{Р“Р°СЂРѕР»СЊРґ}
-Flesher{Р¤Р»РµС€РµСЂ}
-Pelagius{РџРµР»Р°РіРёСѓСЃ}
-Lizarraga{Р›РёР·Р°СЂСЂР°РіР°}
-Gabriel{Р“Р°Р±СЂРёСЌР»СЊ}
-Brugera{Р‘СЂСѓРіРµСЂР°}
-Tello{РўРµР»Р»Рѕ}
-Basadre{Р‘Р°СЃР°РґСЂРµ}
-Aurelien{РћСЂРµР»СЊРµРЅ}
-Bergerat{Р‘РµСЂР¶РµСЂР°С‚}
-Ambroz{РђРјР±СЂРѕР·}
-Bricenos{Р‘СЂРёС†РµРЅРѕСЃ}
-Mateus{РњР°С‚РµСѓСЃ}
-Santos{РЎР°РЅС‚РѕСЃ}
-Desiree'{Р”РµР·РёСЂРµ'}
-Muerte{РњСѓСЌСЂС‚Рµ}
-Thug{Р“СЂРѕРјРёР»Р°}
-Vassal{Р’Р°СЃСЃР°Р»}
-Bethune{Р‘РµС‚СЊСЋРЅ}
-Daryl{Р”СЌСЂРёР»}
-Larry{Р›Р°СЂСЂРё}
-Thomas the{РўРѕРјР°СЃ}
-Terror{РўРµСЂСЂРѕСЂ}
-Camille{РљР°РјРёР»Р»Р°}
-Leone{Р›РµРѕРЅРµ}
-Prisoner{Р—Р°РєР»СЋС‡РµРЅРЅС‹Р№}
-Geffrey{Р”Р¶РµС„С„СЂРё}
-Bampfylde{Р‘Р°РјРїС„РёР»Рґ}
-Bucho{Р‘СѓС‡Рѕ}
-Pepin{РџРµРїРёРЅ}
-Bertillon{Р‘РµСЂС‚РёР»СЊРѕРЅ}
-Bertillon's guard{РћС…СЂР°РЅРЅРёРє Р‘РµСЂС‚РёР»СЊРѕРЅР°}
-Vito{Р’РёС‚Рѕ}
-Amerigo{РђРјРµСЂРёРіРѕ}
-Vieira{Р’РёРµР№СЂР°}
-Nicholas{РќРёРєРѕР»Р°СЃ}
-Butcher{Р‘СѓС‡РµСЂ}
-Roche{Р РѕРє}
-Brasiliano{Р‘СЂР°Р·РёР»РµС†}
-Renouart{Р РµРЅСѓР°СЂС‚}
-Baumont{Р‘Р°СѓРјРѕРЅС‚}
-Lady{Р›РµРґРё}
-Gaga{Р“Р°РіР°}
-Blaas{Р‘Р»Р°Р°СЃ}
-Davids{Р”СЌРІРёРґСЃ}
-Paul{РџРѕР»}
-Brink{Р‘СЂРёРЅРє}
-Sampson{РЎСЌРјРїСЃРѕРЅ}
-Burrell{Р‘Р°СЂСЂРµР»}
-Cesario{Р¦РµР·Р°СЂРёРѕ}
-de Rosas{Р”Рµ Р РѕСЃР°СЃ}
-Hans{РҐР°РЅСЃ}
-Delorme{Р”РµР»РѕСЂРј}
-Rabel{Р Р°Р±СЌР»}
-Chardon{РЁР°СЂРґРѕРЅ}
-Jeremy{Р”Р¶РµСЂРµРјРё}
-Tripper{РўСЂРёРїРїРµСЂ}
-Clement{РљР»РµРјРµРЅС‚}
-Bossicar{Р‘РѕСЃСЃРёРєР°СЂ}
-Wilfred{РЈРёР»С„СЂРµРґ}
-Larner{Р›Р°СЂРЅРµСЂ}
-Bartolomeu{Р‘Р°СЂС‚РѕР»РѕРјСЊСЋ}
-o Portugues{РџРѕСЂС‚СѓРіР°Р»РµС†}
-Emilio{Р­РјРёР»РёРѕ}
-Soares{РЎРѕР°СЂРµСЃ}
-Henry{Р“РµРЅСЂРё}
-Morgan{РњРѕСЂРіР°РЅ}
-Berend{Р‘РµСЂРµРЅРґ}
-de Voor{Р”Рµ Р’СѓСЂ}
-Leonardo{Р›РµРѕРЅР°СЂРґРѕ}
-Corrales{РљРѕСЂСЂР°Р»РµСЃ}
-Andrew{Р­РЅРґСЂСЋ}
-Parson{РџР°СЂСЃРѕРЅ}
-William{РЈРёР»СЊСЏРј}
-Cotter{РљРѕС‚С‚РµСЂ}
-Roxanne{Р РѕРєСЃР°РЅР°}
-Lalliere{Р›Р°Р»Р»РёСЂ}
-Guibert{Р“РёР±РµСЂС‚}
-Daudet{Р”Р°СѓРґРµС‚}
-Diablo{Р”СЊСЏР±Р»Рѕ}
-Villalobos{Р’РёР»СЊСЏР»РѕР±РѕСЃ}
-Pirate{РџРёСЂР°С‚}
-Capitan{РљР°РїРёС‚Р°РЅ}
-Caceres{РљР°СЃРµСЂРµСЃ}
+Enrique{Энрике}
+Padilla{Падилья}
+Baltasar{Бальтазар}
+Salgada{Сальгада}
+Captain{Капитан}
+Damski{Дамски}
+Chico{Чико}
+Cois{Койс}
+Dominico{Доминико}
+Cuellar{Куэльяр}
+Harold{Гарольд}
+Flesher{Флешер}
+Pelagius{Пелагиус}
+Lizarraga{Лизаррага}
+Gabriel{Габриэль}
+Brugera{Бругера}
+Tello{Телло}
+Basadre{Басадре}
+Aurelien{Аврельен}
+Bergerat{Бержерат}
+Ambroz{Амброз}
+Bricenos{Бриценос}
+Mateus{Матеус}
+Santos{Сантос}
+Desiree'{Дезире'}
+Muerte{Муэрте}
+Thug{Громила}
+Vassal{Вассал}
+Bethune{Бетьюн}
+Daryl{Дэрил}
+Larry{Ларри}
+Thomas the{Томас}
+Terror{Террор}
+Camille{Камилла}
+Leone{Леоне}
+Prisoner{Заключенный}
+Geffrey{Джеффри}
+Bampfylde{Бампфилд}
+Bucho{Бучо}
+Pepin{Пепин}
+Bertillon{Бертильон}
+Bertillon's guard{Охранник Бертильона}
+Vito{Вито}
+Amerigo{Америго}
+Vieira{Виейра}
+Nicholas{Николас}
+Butcher{Бучер}
+Roche{Рок}
+Brasiliano{Бразилец}
+Renouart{Ренуарт}
+Baumont{Баумонт}
+Lady{Леди}
+Gaga{Гага}
+Blaas{Блаас}
+Davids{Дэвидс}
+Paul{Пол}
+Brink{Бринк}
+Sampson{Сэмпсон}
+Burrell{Баррел}
+Cesario{Цезарио}
+de Rosas{Де Росас}
+Hans{Ханс}
+Delorme{Делорм}
+Rabel{Рабэл}
+Chardon{Шардон}
+Jeremy{Джереми}
+Tripper{Триппер}
+Clement{Клемент}
+Bossicar{Боссикар}
+Wilfred{Уилфред}
+Larner{Ларнер}
+Bartolomeu{Бартоломью}
+o Portugues{Португалец}
+Emilio{Эмилио}
+Soares{Соарес}
+Henry{Генри}
+Morgan{Морган}
+Berend{Беренд}
+de Voor{Де Вур}
+Leonardo{Леонардо}
+Corrales{Корралес}
+Andrew{Эндрю}
+Parson{Парсон}
+William{Уильям}
+Cotter{Коттер}
+Roxanne{Роксана}
+Lalliere{Лаллир}
+Guibert{Гиберт}
+Daudet{Даудет}
+Diablo{Дьябло}
+Villalobos{Вильялобос}
+Pirate{Пират}
+Capitan{Капитан}
+Caceres{Касерес}
 
 {=====| TempQuestEnemy.c |=====}
-Gilles{Р–РёР»СЊ}
-Chennault{РЁРµРЅРЅРѕР»С‚}
-Aimery{Р­Р№РјРµСЂРё}
-Bourgouin{Р‘СѓСЂРіСѓРёРЅ}
-d'Aigreville{Рґ'Р­РіСЂРµРІРёР»СЊ}
-Barnabas{Р‘Р°СЂРЅР°Р±Р°СЃ}
-Delbridge{Р”РµР»Р±СЂРёРґР¶}
-David{Р”СЌРІРёРґ}
-Fewster{Р¤СЊСЋСЃС‚РµСЂ}
-Laurence{Р›РѕСѓСЂСЌРЅСЃ}
-Damson{Р”СЌРјСЃРѕРЅ}
-Grigorio{Р“СЂРёРіРѕСЂРёРѕ}
-Cadena{РљР°РґРµРЅР°}
-Bautista{Р‘Р°СѓС‚РёСЃС‚Р°}
-Lozano{Р›РѕР·Р°РЅРѕ}
+Gilles{Жиль}
+Chennault{Шеннолт}
+Aimery{Эймери}
+Bourgouin{Бургуин}
+d'Aigreville{д'Эгревиль}
+Barnabas{Барнабас}
+Delbridge{Делбридж}
+David{Дэвид}
+Fewster{Фьюстер}
+Laurence{Лоурэнс}
+Damson{Дэмсон}
+Grigorio{Григорио}
+Cadena{Кадена}
+Bautista{Баутиста}
+Lozano{Лозано}
 
 {=====| 143 characters |=====}

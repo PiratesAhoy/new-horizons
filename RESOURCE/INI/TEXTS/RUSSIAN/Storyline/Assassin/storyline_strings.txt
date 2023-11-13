@@ -1,3 +1,5 @@
-Johan{Р™РѕРіР°РЅ}
-Elting{Р­Р»С‚РёРЅРі}
-Neptunis{РќРµРїС‚СѓРЅ}
+Assassin{Наёмник}
+Johan{Йоган}
+Elting{Элтинг}
+Neptunis{Нептун}
+As a former Dutch soldier, Johan Elting is regarded by his peers as a good fighter. Tired of the army life (and pay), he decided to become a smuggler. Little does he know that soon he will become one of the most feared mercenaries in the Spanish service. But how long will he accept this new status?{Будучи бывшим голландским солдатом, Йоган Элтинг считается хорошим бойцом среди своих сверстников. Устав от армейской жизни (и армейского жалованья), он решил стать контрабандистом. Он ещё не знает, что скоро станет одним из самых страшных наемников на службе Испании. Но как долго он сможет продержаться?}

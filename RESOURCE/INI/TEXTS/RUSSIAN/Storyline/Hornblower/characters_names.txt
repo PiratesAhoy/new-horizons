@@ -1,121 +1,121 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| Hornblower.c |=====}
-Horatio{Р“РѕСЂР°С†РёРѕ}
-Hornblower{РҐРѕСЂРЅР±Р»Р°СѓСЌСЂ}
+Horatio{Горацио}
+Hornblower{Хорнблауэр}
 
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
-Jack{Р”Р¶РµРє}
-Hammond{РҐСЌРјРјРѕРЅРґ}
-Lt. William{Р›С‚. РЈРёР»СЊСЏРј}
-Bush{Р‘СѓС€}
-Thomas{РўРѕРјР°СЃ}
-Wolfe{Р’СѓР»СЊС„}
-Matthews{РњСЌС‚СЊСЋСЃ}
-Lt.{Р›С‚.}
-Chadd{Р§Р°Рґ}
+Jack{Джек}
+Hammond{Хэммонд}
+Lt. William{Лт. Уильям}
+Bush{Буш}
+Thomas{Томас}
+Wolfe{Вульф}
+Matthews{Мэтьюс}
+Lt.{Лт.}
+Chadd{Чад}
 
 {=====| Story.c |=====}
-Keene{РљРёРЅ}
-Edward{Р­РґРІР°СЂРґ}
-Pellew{РџРµР»Р»СЊСЋ}
-Dreadnought{Р”СЂРµРґРЅРѕСѓС‚}
-Foster{Р¤РѕСЃС‚РµСЂ}
-Black Charlie{Р§С‘СЂРЅС‹Р№ Р§Р°СЂР»Рё}
-Harvey{РҐР°СЂРІРё}
-Simpson{РЎРёРјРїСЃРѕРЅ}
-Clayton{РљР»РµР№С‚РѕРЅ}
-Hunter{РҐР°РЅС‚РµСЂ}
-Henry{Р“РµРЅСЂРё}
-Wellard{Р’СЌР№Р»Р°СЂРґ}
-Helmsman{РЁС‚СѓСЂРјР°РЅ}
-Styles{РЎС‚Р°Р№Р»СЃ}
-Perrin{РџРµСЂСЂРёРЅ}
-Oldroyd{РћР»РґСЂРѕР№Рґ}
-Marsh{РњР°СЂС€}
-Eccleston{Р­РєРєР»СЃС‚РѕРЅ}
-Smug{РљРѕРЅ}
-Larr{РўСЂР°Р±Р°РЅРґР°}
-Big{Р’РµСЂР·РёР»Р°}
-Bryan{Р‘СЂР°Р№Р°РЅ}
-James{Р”Р¶РµР№РјСЃ}
-Sawyer{РЎРѕР№РµСЂ}
-Percy{РџРµСЂСЃРё}
-Buckland{Р‘Р°РєР»РµРЅРґ}
-Ebeneezer{Р­Р±РµРЅРёР·РµСЂ}
-Bracegirdle{Р‘СЂРµР№СЃРіРµРґР»}
-William{РЈРёР»СЊСЏРј}
-Uriah{РЈСЂРёСЏ}
-Quelp{РљСѓСЌР»Рї}
-The Earl of{Р“СЂР°С„}
-Edrington{Р­РґСЂРёРЅРіС‚РѕРЅ}
-Arthur{РђСЂС‚СѓСЂ}
-Wellesley{РЈСЌР»Р»СЃР»Рё}
-Chumley{Р§Р°РјР»Рё}
-Barbara{Р‘Р°СЂР±Р°СЂР°}
-Maria{РњР°СЂРёСЏ}
-Mason{РњСЌР№СЃРѕРЅ}
-Ellen{Р­Р»Р»РµРЅ}
-The Duchess of{Р“РµСЂС†РѕРіРёРЅСЏ}
-Wharfedale{Р’РѕСЂС„РґРµР№Р»}
-Teresa{РўРµСЂРµР·Р°}
-Moreno{РњРѕСЂРµРЅРѕ}
-Etienne{Р­С‚СЊРµРЅ}
-de Vergasse{РґРµ Р’РµСЂРіР°СЃСЃ}
-Archie{РђСЂС‡Рё}
-Kennedy{РљРµРЅРЅРµРґРё}
-Clive{РљР»Р°Р№РІ}
-Don{Р”РѕРЅ}
-Masseredo{РњРµСЃСЃР°РёРґСѓ}
-Francisco Manuel{Р¤СЂР°РЅСЃРёСЃРєРѕ РњР°РЅСѓСЌР»СЊ}
-Ortega{РћСЂС‚РµРіР°}
-Richard{Р РёС‡Р°СЂРґ}
-Sharpe{РЁР°СЂРї}
-Patrick{РџР°С‚СЂРёРє}
-Harper{РҐР°СЂРїРµСЂ}
-Higgins{РҐРёРіРіРёРЅСЃ}
-Cooper{РљСѓРїРµСЂ}
-Haggman{РҐР°РіРјРµРЅ}
-Harris{РҐР°СЂСЂРёСЃ}
-Tanner{РўР°РЅРЅРµСЂ}
-Baker{Р‘РµР№РєРµСЂ}
-Fisher{Р¤РёС€РµСЂ}
-Williams{Р’РёР»СЊСЏРјСЃ}
-Norton{РќРѕСЂС‚РѕРЅ}
-Brown{Р‘СЂР°СѓРЅ}
-Evans{Р­РІР°РЅСЃ}
-Archer{РђСЂС‡РµСЂ}
-Tongue{Р‘РѕР»С‚СѓРЅ}
-Mansfield{РњР°РЅСЃС„РёР»Рґ}
-Perkins{РџРµСЂРєРёРЅСЃ}
-Dunnitt{Р”СѓРЅРЅРёС‚С‚}
-Hogan{РҐРѕРіР°РЅ}
-Murray{РњСЋСЂСЂСЌР№}
-Hew{РҐСЊСЋ}
-Dalrymple{Р”Р°Р»СЂРёРјРїР»}
-Wilks{РЈРёР»РєСЃ}
-Tompkins{РўРѕРјРїРєРёРЅСЃ}
-Stanley{РЎС‚РµРЅР»Рё}
-Hughes{РҐСЊСЋР·}
-Guerilla{РџР°СЂС‚РёР·Р°РЅ}
-One{РїРµСЂРІС‹Р№}
-Two{РІС‚РѕСЂРѕР№}
-Three{С‚СЂРµС‚РёР№}
-Donatien{Р”РѕРЅР°СЃСЊС‘}
-Thibaud{РўРёР±Рѕ}
-Rifleman{РЎС‚СЂРµР»РѕРє}
-Major{РњР°Р№РѕСЂ}
-DoctorW{Р”РѕРєС‚РѕСЂ}
-Able Seaman{РЎРїРѕСЃРѕР±РЅС‹Р№ РњРѕСЂСЏРє}
+Keene{Кин}
+Edward{Эдвард}
+Pellew{Пеллью}
+Dreadnought{Дредноут}
+Foster{Фостер}
+Black Charlie{Чёрный Чарли}
+Harvey{Харви}
+Simpson{Симпсон}
+Clayton{Клейтон}
+Hunter{Хантер}
+Henry{Генри}
+Wellard{Вэйлард}
+Helmsman{Штурман}
+Styles{Стайлс}
+Perrin{Перрин}
+Oldroyd{Олдройд}
+Marsh{Марш}
+Eccleston{Экклстон}
+Smug{Кон}
+Larr{Трабанда}
+Big{Верзила}
+Bryan{Брайан}
+James{Джеймс}
+Sawyer{Сойер}
+Percy{Перси}
+Buckland{Бакленд}
+Ebeneezer{Эбенизер}
+Bracegirdle{Брейсгедл}
+William{Уильям}
+Uriah{Урия}
+Quelp{Куэлп}
+The Earl of{Граф}
+Edrington{Эдрингтон}
+Arthur{Артур}
+Wellesley{Уэллсли}
+Chumley{Чамли}
+Barbara{Барбара}
+Maria{Мария}
+Mason{Мэйсон}
+Ellen{Эллен}
+The Duchess of{Герцогиня}
+Wharfedale{Ворфдейл}
+Teresa{Тереза}
+Moreno{Морено}
+Etienne{Этьен}
+de Vergasse{де Вергасс}
+Archie{Арчи}
+Kennedy{Кеннеди}
+Clive{Клайв}
+Don{Дон}
+Masseredo{Мессаиду}
+Francisco Manuel{Франсиско Мануэль}
+Ortega{Ортега}
+Richard{Ричард}
+Sharpe{Шарп}
+Patrick{Патрик}
+Harper{Харпер}
+Higgins{Хиггинс}
+Cooper{Купер}
+Haggman{Хагмен}
+Harris{Харрис}
+Tanner{Таннер}
+Baker{Бейкер}
+Fisher{Фишер}
+Williams{Вильямс}
+Norton{Нортон}
+Brown{Браун}
+Evans{Эванс}
+Archer{Арчер}
+Tongue{Болтун}
+Mansfield{Мансфилд}
+Perkins{Перкинс}
+Dunnitt{Дуннитт}
+Hogan{Хоган}
+Murray{Мюррэй}
+Hew{Хью}
+Dalrymple{Далримпл}
+Wilks{Уилкс}
+Tompkins{Томпкинс}
+Stanley{Стенли}
+Hughes{Хьюз}
+Guerilla{Партизан}
+One{первый}
+Two{второй}
+Three{третий}
+Donatien{Донасьё}
+Thibaud{Тибо}
+Rifleman{Стрелок}
+Major{Майор}
+DoctorW{Доктор}
+Able Seaman{Способный Моряк}
 
 {=====| TempQuest.c |=====}
-Captain{РљР°РїРёС‚Р°РЅ}
-Simon{РЎР°Р№РјРѕРЅ}
-Blunden{Р‘Р»Р°РЅРґРµРЅ}
-Cecil Scott{РЎРµСЃРёР»СЊ РЎРєРѕС‚С‚}
-Forester{Р¤РѕСЂРµСЃС‚РµСЂ}
-Capitaine{РљР°РїРёС‚Р°РЅ}
-de Corvette{3 СЂР°РЅРіР°}
+Captain{Капитан}
+Simon{Саймон}
+Blunden{Бланден}
+Cecil Scott{Сесиль Скотт}
+Forester{Форестер}
+Capitaine{Капитан}
+de Corvette{3 ранга}
 
 {=====| 86 characters |=====}

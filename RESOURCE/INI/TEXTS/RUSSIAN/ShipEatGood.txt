@@ -1,39 +1,39 @@
-Ship_got_good		{%1 С† %2 РїРѕРґРЅСЏС‚Рѕ РЅР° Р±РѕСЂС‚}
-Ship_cant_got_good	{РќРµС‚ РјРµСЃС‚Р° РґР»СЏ %1. РўСЂСЋРј Р·Р°РїРѕР»РЅРµРЅ!}
+Ship_got_good		{%1 ц %2 поднято на борт}
+Ship_cant_got_good	{Нет места для %1. Трюм заполнен!}
 
-seg_Balls		{РЇРґРµСЂ}
-seg_Grapes		{РљР°СЂС‚РµС‡Рё}
-seg_Knippels	{РљРЅРёРїРїРµР»РµР№}
-seg_Bombs		{Р‘РѕРјР±}
-seg_Sailcloth	{РџР°СЂСѓСЃРёРЅС‹}
-seg_Planks		{Р”РѕСЃРѕРє}
-seg_Slaves		{Р Р°Р±РѕРІ}
-seg_Wheat		{РџС€РµРЅРёС†С‹}
-seg_Ebony		{Р§С‘СЂРЅРѕРіРѕ Р”РµСЂРµРІР°}
-seg_Chocolate	{РљР°РєР°Рѕ}
-seg_Sugar		{РЎР°С…Р°СЂР°}
-seg_Wine		{Р’РёРЅР°}
-seg_Linen		{РџРѕР»РѕС‚РЅР°}
-seg_Rum			{Р РѕРјР°}
-seg_Tobacco		{РўР°Р±Р°РєР°}
-seg_Coffee		{РљРѕС„Рµ}
-seg_Mahogany	{РљСЂР°СЃРЅРѕРіРѕ Р”РµСЂРµРІР°}
-seg_Cinnamon	{РљРѕСЂРёС†С‹}
-seg_Copra		{РљРѕРїСЂС‹}
-seg_Paprika		{РџР°РїСЂРёРєРё}
-seg_Fruits		{Р¤СЂСѓРєС‚РѕРІ}
-seg_Ale			{Р­Р»СЏ}
-seg_Silk		{РЁС‘Р»РєР°}
-seg_Clothes		{РћРґРµР¶РґС‹}
-seg_Cotton		{РҐР»РѕРїРєР°}
-seg_Sandal		{РЎР°РЅРґР°Р»Р°}
-seg_Leather		{РљРѕР¶Рё}
-seg_Oil			{РњР°СЃР»Р°}
-seg_Gold		{Р—РѕР»РѕС‚Р°}
-seg_Silver		{РЎРµСЂРµР±СЂР°}
-seg_Bricks		{РљРёСЂРїРёС‡РµР№}
-seg_Food		{РџСЂРѕРІРёР·РёРё}
-seg_Weapon		{РћСЂСѓР¶РёСЏ}
-seg_Gunpowder	{РџРѕСЂРѕС…Р°}
-seg_Ration		{РџСЂРѕРІРёР·РёРё}
-seg_Medicines	{Р›РµРєР°СЂСЃС‚РІ}
+seg_Balls		{Ядер}
+seg_Grapes		{Картечи}
+seg_Knippels	{Книппелей}
+seg_Bombs		{Бомб}
+seg_Sailcloth	{Парусины}
+seg_Planks		{Досок}
+seg_Slaves		{Рабов}
+seg_Wheat		{Пшеницы}
+seg_Ebony		{Чёрного Дерева}
+seg_Chocolate	{Какао}
+seg_Sugar		{Сахара}
+seg_Wine		{Вина}
+seg_Linen		{Полотна}
+seg_Rum			{Рома}
+seg_Tobacco		{Табака}
+seg_Coffee		{Кофе}
+seg_Mahogany	{Красного Дерева}
+seg_Cinnamon	{Корицы}
+seg_Copra		{Копры}
+seg_Paprika		{Паприки}
+seg_Fruits		{Фруктов}
+seg_Ale			{Эля}
+seg_Silk		{Шелка}
+seg_Clothes		{Одежды}
+seg_Cotton		{Хлопка}
+seg_Sandal		{Сандала}
+seg_Leather		{Кожи}
+seg_Oil			{Масла}
+seg_Gold		{Золота}
+seg_Silver		{Серебра}
+seg_Bricks		{Кирпичей}
+seg_Food		{Провизии}
+seg_Weapon		{Оружия}
+seg_Gunpowder	{Пороха}
+seg_Ration		{Провизии}
+seg_Medicines	{Лекарств}
