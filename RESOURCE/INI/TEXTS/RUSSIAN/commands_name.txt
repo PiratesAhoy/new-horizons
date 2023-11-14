@@ -65,7 +65,7 @@ land_Look {Осмотреть}
 land_Back {Назад}
 land_EnterDeck {Палуба}
 land_EnterShip {#sshipname# Палуба}
-land_EnterCabin {Каюта капитана}
+land_EnterCabin {Каюта Капитана}
 land_EnterSeadogs {Каюта Команды}
 land_EnterShipDeck {Палуба}
 land_EnterMainCannonsDeck {Главная Орудийная Палуба}
@@ -74,10 +74,12 @@ land_EnterLowerCannonsDeck {Нижняя Орудийная Палуба}
 land_EnterHold {Трюм}
 land_EnterHold1 {1-й грузовой отсек}
 land_EnterHold2 {2-й грузовой отсек}
-land_UseCorpse {Осмотреть труп}
-land_UseBarrel {Осмотреть бочонок}
+land_UseCorpse {Осмотреть Труп}
+land_UseBarrel {Осмотреть Бочонок}
 land_UseStorage {Пороховой Погреб}
-land_GoToTeachHead {Голова Черной Бороды}
+land_GoToTeachHead {Голова Чёрной Бороды}
+land_UseOpium {Употребить Опиум}
+land_UseVegetal {Употребить Айяуаску}
 
 go_store {Магазин}
 go_shipyard {Верфь}
@@ -99,8 +101,8 @@ go_maincannonsdeck {Главная Орудийная Палуба}
 go_uppercannonsdeck {Верхняя Орудийная Палуба}
 go_lowercannonsdeck {Нижняя Орудийная Палуба}
 go_hold {Трюм}
-go_hold1 {1-й грузовой отсек}
-go_hold2 {2-й грузовой отсек}
+go_hold1 {1-й Грузовой Отсек}
+go_hold2 {2-й Грузовой Отсек}
 go_apothecary {Аптека}
 go_gunsmith {Кузница}
 go_gunblacksmith {Оружейная и Кузница}
@@ -112,6 +114,6 @@ go_tavern2 {Вторая Таверна}
 go_eitc {Ост-Индская Торговая Компания}
 go_dwic {Голландская Вест-Индская Компания}
 go_cdc {Каса-де-Контратасьон}
-go_fwic {Французская Вест-Индская компания}
+go_fwic {Французская Вест-Индская Компания}
 go_academy {Военно-Морская Академия}
 go_HQ {Военно-Морской Штаб}
