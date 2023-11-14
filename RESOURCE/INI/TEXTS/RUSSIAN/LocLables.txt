@@ -33,8 +33,8 @@ Crab Cliffs{Крабовые Утёсы}
 Douwesen Fort{Форт Дувезена}
 QuebradasCostillas{Кебрадас-Костиллас}
 Quebradas Costillas Port{Порт Кебрадас-Костиллас}
-Charlestown{Чарльстаун}
-Charlestown Port{Порт Чарльстаун}
+Charlestown{Чарлстаун}
+Charlestown Port{Порт Чарлстаун}
 KhaelRoa{Каэль-Роа}
 Khael Roa Shore{Берег Каэль-Роа}
 Cayman{Кайман}

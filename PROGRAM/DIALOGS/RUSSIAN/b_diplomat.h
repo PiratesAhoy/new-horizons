@@ -73,7 +73,7 @@ void ProcessDialogEvent()
 		Dialog.ani = "dialog_stay2";
 		Dialog.cam = "1";
 		NextDiag.TempNode = "first time";
-		dialog.text = "Ах, мой дорогой "+ GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + PChar.lastname +  "! Наконец-то я лично встречаюсь с героем, о котором так часто слышал! Разумеется, только самые благоприятные истории. Весть о ваших героических подвигах достигла высших кругов при дворе " + natname + ", который был настолько впечатлен вашим характером, что даже " + GetNationRoyalByType(sti(npchar.nation)) + " выразил желание преодолеть.. эээ... небольшие недоразумения, которые... эээ... омрачили отношения между " + natname + " и тобой. Так что давайте забудем прошлое и отправимся в светлое общее будущее. Если вы готовы сражаться за нашу гордую и великодушную нацию, мы предоставим вам амнистию и королевскую каперскую грамоту. А учитывая ваше лидерство и боевые НАВЫКИ, мы даже предлагаем вам сумму " + npchar.bribe + " золота!";
+		dialog.text = "Ах, мой дорогой "+ GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, true) +  "! Наконец-то я лично встречаюсь с героем, о котором так часто слышал! Разумеется, только самые благоприятные истории. Весть о ваших героических подвигах достигла высших кругов при дворе " + natname + ", который был настолько впечатлен вашим характером, что даже " + GetNationRoyalByType(sti(npchar.nation)) + " выразил желание преодолеть.. эээ... небольшие недоразумения, которые... эээ... омрачили отношения между " + natname + " и тобой. Так что давайте забудем прошлое и отправимся в светлое общее будущее. Если вы готовы сражаться за нашу гордую и великодушную нацию, мы предоставим вам амнистию и королевскую каперскую грамоту. А учитывая ваше лидерство и боевые НАВЫКИ, мы даже предлагаем вам сумму " + npchar.bribe + " золота!";
 
 		if(sti(pchar.money)>sti(npchar.bribe))
 		{
@@ -97,7 +97,7 @@ void ProcessDialogEvent()
 		break;
 
 	case "exit_reput":
-		PlayStereoSound("INTERFACE\took_item.flac");
+		PlayStereoSound("INTERFACE\took_item.wav");
 		AddMoneyToCharacter(pchar, -sti(npchar.bribe));
 		ChangeCharacterReputation(pchar, 3);
 		if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Leadership", sti(npchar.bribe)/10/2 ); AddPartyExpChar(PChar, "Sneak", sti(npchar.bribe)/10/2 ); }
@@ -137,7 +137,7 @@ void ProcessDialogEvent()
 		SetRelationsAsNation(Npchar.nation); // ccc Dec 06
 		ReceiveLetterOfMarque(Npchar.nation);
 
-		PlayStereoSound("INTERFACE\took_item.flac");
+		PlayStereoSound("INTERFACE\took_item.wav");
 		AddMoneyToCharacter(pchar, sti(npchar.bribe));
 		ChangeCharacterReputation(pchar, -6);
 		if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Leadership", sti(npchar.bribe)/10/2 ); AddPartyExpChar(PChar, "Sneak", sti(npchar.bribe)/10/2 ); }

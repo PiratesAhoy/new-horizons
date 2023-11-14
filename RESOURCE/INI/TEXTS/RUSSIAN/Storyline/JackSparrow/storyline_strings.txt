@@ -1,4 +1,6 @@
+Hoist the Colours{Поднять Флаг}
 Black Pearl{Чёрная Жемчужина}
+A lot has been speculated about the early days of Jack Sparrow and we're not even sure if this particular account is entirely accurate. It does explain some of the events that shaped this infamous pirate, but the journey can take multiple twists and turns depending on your choices, which may or may not end with you sailing into the sunset after lifting the Curse of the Black Pearl.{О первых днях Джека Воробья было много предположений, и мы даже не уверены, что эта история полностью достоверна. Она объясняет некоторые события, сформировавшие этого печально известного пирата, но в зависимости от вашего выбора история может принять множество поворотов, которые могут закончиться или не закончиться тем, что вы уплывете в закат после снятия проклятия с Чёрной Жемчужины.}
 
 White Swan{Белый Лебедь}
 Spreading Freedom{Свобода}

@@ -56,15 +56,17 @@ Harbour{Гавани}
 Master{Мастер}
 Bank{Банка}
 Clerk{Служащий}
+Bank Clerk{Служащий Банка}
 Blacksmith{Кузнец}
 Storeowner{Владелец магазина}
 Governor Thomas{Губернатор Томас}
 Bennet{Беннет}
 The Chinese{Китаец}
 Man{Мужчина}
-Black Magic Woman{Чёрная ведьма}
-Plantation{Плантация}
-Guard{Охрана}
+Black Magic Woman{Чёрная Ведьма}
+Plantation{Плантации}
+Guard{Охранник}
+Plantation Guard{Охранник Плантации}
 Captain William{Капитан Уильям}
 Kidd{Кидд}
 Howard{Говард}

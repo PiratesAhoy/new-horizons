@@ -179,7 +179,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "cannon":
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(Pchar, -5000);
 			Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -3;
 			lcn.building.(nr).interior = "cannon";

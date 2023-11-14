@@ -82,7 +82,7 @@ Beckett{Беккет}
 Brinkley{Бринкли}
 Anamaria{Аннамария}
 Tia{Тиа}
-Dalma{Далма}
+Dalma{Дальма}
 Pirate{Пират}
 1{1-й}
 2{2-й}
@@ -162,7 +162,7 @@ Pusasn{Пусан}
 Askay{Аскай}
 Ammand{Аман}
 the Corsair{Корсар}
-Yedam{Йедам}
+Yedam{Едам}
 Kinne{Кинн}
 Captain Sao{Капитан Сяо}
 Feng{Фэнь}

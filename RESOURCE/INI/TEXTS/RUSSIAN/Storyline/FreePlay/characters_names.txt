@@ -9,7 +9,7 @@ Fletcher{Флэтчер}
 Edward{Эдвард}
 Pellew{Пеллью}
 Elbaron{Эльбарон}
-Caron{Карон}
+Caron{Кэрон}
 Taras{Тарас}
 Bulba{Бульба}
 Cardinal{Кардинал}
@@ -39,8 +39,8 @@ Pintel{Пинтел}
 Ian{Иан}
 Mercer{Мерсер}
 Bligh{Блай}
-Uncle{Uncle}
-Gules{Gules}
+Uncle{Дядя}
+Gules{Гюлес}
 
 {=====| quests_reaction.c |=====}
 Bartolomeu{Бартоломью}
@@ -70,8 +70,8 @@ O'Bannon{О'Беннон}
 Angus{Ангус}
 Calhoun{Кэлхаун}
 Bush{Буш}
-Dark Captain{Тёмный Капитан}
-Dark Cannoneer{Тёмный Канонир}
+Dark Captain{Мрачный Капитан}
+Dark Cannoneer{Мрачный Канонир}
 
 {=====| TempQuest.c |=====}
 Bart{Барт}
@@ -118,7 +118,7 @@ Edam{Эдам}
 De Cow{Де Коу}
 Abel{Абель}
 Barco{Барко}
-Renouart{Ренуар}
+Renouart{Ренуарт}
 Larrouse{Лярус}
 
 {=====| 63 characters |=====}

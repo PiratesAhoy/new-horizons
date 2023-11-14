@@ -104,8 +104,8 @@ Mansveldt{Мансвелдт}
 Konrad{Конрад}
 Kulczycki{Кульчицкий}
 Silver{Сильвер}
-Roche{Роше}
-Brasiliano{Бразилиано}
+Roche{Рок}
+Brasiliano{Бразилец}
 Serafino{Серафино}
 Masarenhas{Масареньяс}
 Augusto{Аугусто}

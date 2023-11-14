@@ -37,7 +37,7 @@ Gabriel{Габриэль}
 Brugera{Бругера}
 Tello{Телло}
 Basadre{Басадре}
-Aurelien{Орельен}
+Aurelien{Аврельен}
 Bergerat{Бержерат}
 Ambroz{Амброз}
 Bricenos{Бриценос}

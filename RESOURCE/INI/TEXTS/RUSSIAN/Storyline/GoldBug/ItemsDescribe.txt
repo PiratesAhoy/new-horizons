@@ -63,7 +63,7 @@ itmdescr_bladebirdsack
 itmname_bladecauldron		{Котелок}
 itmdescr_bladecauldron
 {
-Тяжелый чугунный котел.
+Тяжелый чугунный котелок.
 }
 
 itmname_bladecauldron_w		{Котелок}
@@ -81,7 +81,7 @@ itmdescr_bladeemptysack
 itmname_bladewoodsack		{Мешок с Дровами}
 itmdescr_bladewoodsack
 {
-Теперь у меня достаточно дерева для нового костра.
+Теперь у меня достаточно дров.
 }
 
 itmname_bladefryingpan		{Блюдце}
@@ -105,7 +105,7 @@ itmdescr_bladeflag_usa
 itmname_bladespyglass6		{Подзорная Труба}
 itmdescr_bladespyglass6
 {
-Длинная подзорная труба для наблюдения была спрятана внутри свернутого флага.
+Длинная подзорная труба для наблюдения, была спрятана внутри свернутого флага.
 }
 
 itmname_bladeoilbottle		{Бутылка Масла}
@@ -123,7 +123,7 @@ itmdescr_bladebarrel
 itmname_bladebarrel_gp0		{Пустой Бочонок}
 itmdescr_bladebarrel_gp0
 {
-
+.
 }
 
 itmname_bladebarrel_gpW		{Бочонок с Порохом}
@@ -156,10 +156,16 @@ itmdescr_bladewood_short
 Хмм, мне нужно тоже разрубить это дерево.
 }
 
-itmname_bladewood4		{Дерево}
+itmname_bladewood2		{Древесина}
+itmdescr_bladewood2
+{
+Немного сухой древесины из тропического леса.
+}
+
+itmname_bladewood4		{Дрова}
 itmdescr_bladewood4
 {
-Хорошо, думаю, что оно подойдет для камина.
+Хорошо, думаю, что они подойдут для камина.
 }
 
 itmname_sledgehammer		{Кувалда}
@@ -186,10 +192,10 @@ itmdescr_bladesaw
 Крепкий инструмент столяра.
 }
 
-itmname_bladeladle		{Щётка}
+itmname_bladeladle		{Черпак}
 itmdescr_bladeladle
 {
-Чёрная металлическая щётка.
+Чёрный металлический черпак.
 }
 
 itmname_bladebroom		{Веник}
@@ -216,10 +222,10 @@ itmdescr_bladeanchor
 Небольшой, но тяжелый якорь. Как он оказался в портной мастерской?
 }
 
-itmname_bladeboom		{Бум}
+itmname_bladeboom		{Палка}
 itmdescr_bladeboom
 {
-Просто кусок дерева, едва ли опасное оружие.
+Просто палка, едва ли опасное оружие.
 }
 
 itmname_bladepaperroll		{Бумажный Рулон}
@@ -300,7 +306,7 @@ itmdescr_bladecrypto_cl
 itmname_bladecrypto_csk		{Пергамент}
 itmdescr_bladecrypto_csk
 {
-Здесь опять Мёртвая-Голова и Козёл.
+Здесь опять Череп и Козёл.
 }
 
 itmname_bladecrypto_cskp	{Пергамент}
@@ -500,7 +506,7 @@ itmdescr_pistolsalt
 itmname_pistolbucket_empty	{Пустое Ведро}
 itmdescr_pistolbucket_empty
 {
-
+.
 }
 
 itmname_pistolbucket_water	{Ведро}
@@ -515,7 +521,7 @@ itmdescr_pistolbucket_nitre
 Ведро, наполненное Селитрой.
 }
 
-itmname_pistolhand2		{}
+itmname_pistolhand2		{Рука}
 itmdescr_pistolhand2
 {
 .
@@ -524,7 +530,7 @@ itmdescr_pistolhand2
 itmname_pistolnitre_E		{Пустой Мешок}
 itmdescr_pistolnitre_E
 {
-
+.
 }
 
 itmname_pistolnitre_H		{Мешок с Селитрой}
@@ -542,7 +548,7 @@ itmdescr_pistolnitre_big_F
 itmname_pistolsulphur_E		{Пустая Корзина}
 itmdescr_pistolsulphur_E
 {
-
+.
 }
 
 itmname_pistolsulphur_H		{Корзина с Серой}
@@ -557,46 +563,46 @@ itmdescr_pistolsulphur_F
 Корзина наполненная Серой.
 }
 
-itmname_pistolcharcoal_E	{Пустая Банка}
+itmname_pistolcharcoal_E	{Пустая Фляга}
 itmdescr_pistolcharcoal_E
 {
-
+.
 }
 
-itmname_pistolcharcoal_H	{Банка с Древесным Углем}
+itmname_pistolcharcoal_H	{Фляга с Древесным Углем}
 itmdescr_pistolcharcoal_H
 {
-Банка наполовину наполненная Древесным Углем.
+Фляга наполовину наполненная Древесным Углем.
 }
 
-itmname_pistolcharcoal_F	{Банка с Древесным Углем}
+itmname_pistolcharcoal_F	{Фляга с Древесным Углем}
 itmdescr_pistolcharcoal_F
 {
-Банка, наполненная Древесным Углем.
+Фляга, наполненная Древесным Углем.
 }
 
-itmname_pistolpyrite_E		{Пустая Коробка}
+itmname_pistolpyrite_E		{Пустая Коробочка}
 itmdescr_pistolpyrite_E
 {
-
+.
 }
 
-itmname_pistolpyrite_H		{Коробка с Пиритом}
+itmname_pistolpyrite_H		{Коробочка с Пиритом}
 itmdescr_pistolpyrite_H
 {
-Коробка наполовину заполненная Пиритовой Пылью.
+Коробочка наполовину заполненная Пиритовой Пылью.
 }
 
-itmname_pistolpyrite_F		{Коробка с Пиритом}
+itmname_pistolpyrite_F		{Коробочка с Пиритом}
 itmdescr_pistolpyrite_F
 {
-Коробка заполненная Пиритовой Пылью.
+Коробочка заполненная Пиритовой Пылью.
 }
 
 itmname_pistolbarrel_gp0	{Пустой Бочонок}
 itmdescr_pistolbarrel_gp0
 {
-
+.
 }
 
 itmname_pistolbarrel_gpW	{Бочонок с Порохом}
@@ -650,7 +656,7 @@ itmdescr_bagcompass4
 Тяжелый корабельный компас вместе с сумкой.
 }
 
-itmname_p_package 		{Пакет}
+itmname_p_package 		{Награда}
 itmdescr_p_package
 {
 Награда Клода Фролло. Что бы это могло быть?
@@ -728,7 +734,7 @@ itmdescr_caps_box_C
 Пистолетные патроны Кольт производства Элей Брос. Лондон.
 }
 
-itmname_caps_box_O		{Заглушки для ударных инструментов}
+itmname_caps_box_O		{Капсюли}
 itmdescr_caps_box_O
 {
 Ударные капсюли заставляют ваш пистолет щелкать только при одном из ста выстрелов.
@@ -738,10 +744,10 @@ itmdescr_caps_box_O
 //..........................OTHER ITEMS START.........................................
 
 
-itmname_marsh_hen		{Болотная Курица}
+itmname_marsh_hen		{Болотная Куропатка}
 itmdescr_marsh_hen
 {
-Остров Салливана - излюбленный курорт болотных курочек.
+Остров Салливана - излюбленный курорт болотных куропаток.
 }
 
 itmname_shell1			{Ракушка}
@@ -876,10 +882,10 @@ itmdescr_plate
 Голубой фарфор, импортированный Ост-Индской компанией. 
 }
 
-itmname_copper_cauldron		{Котел}
+itmname_copper_cauldron		{Котелок}
 itmdescr_copper_cauldron
 {
-Тяжелый медный котел. 
+Тяжелый медный котелок. 
 }
 
 itmname_chain			{Цепь и Наручники}
@@ -897,31 +903,31 @@ itmdescr_medicine_leaves
 itmname_Poes_clothes		{Одежда}
 itmdescr_Poes_clothes
 {
-   
+.   
 }
 
 itmname_Poes_urn		{Урна}
 itmdescr_Poes_urn
 {
-   
+.
 }
 
 itmname_Poes_books		{Книги}
 itmdescr_Poes_books
 {
-   
+.
 }
 
-itmname_gibbet_rope		{Длинная Веревка}
+itmname_gibbet_rope		{Длинная Верёвка}
 itmdescr_gibbet_rope
 {
-The Long Rope I found in The Maroon Cavern.   
+Длинная верёвка, которую я нашел в бревенчатом доме.
 }
 
-itmname_fort_rope		{Длинная Веревка}
+itmname_fort_rope		{Длинная Верёвка}
 itmdescr_fort_rope
 {
-Длинная веревка, которую я купил в Форт-Молтри.
+Длинная верёвка, которую я купил в Форту Моултри.
 }
 
 itmname_cork			{Пробка}
@@ -957,7 +963,7 @@ itmdescr_picture6
 itmname_glasses			{Очки}
 itmdescr_glasses
 {
-Пара потертых, но прекрасных очков.
+Потертые, но прекрасные очки.
 }
 
 itmname_blue_uniform	        {Униформа}
@@ -990,7 +996,7 @@ itmdescr_G_letter3
 Очень личное письмо.
 }
 
-itmname_sailbag			{Парусный Мешок}
+itmname_sailbag			{Паруса}
 itmdescr_sailbag
 {
 Очень тяжелые эти паруса.
@@ -1011,7 +1017,7 @@ itmdescr_calabash
 itmname_herbs			{Мешок с Травами}
 itmdescr_herbs
 {
-Смесь трав, которая заживляет легкие раны.
+Смесь трав, которые заживляют лёгкие раны.
 }
 
 //..........................OTHER ITEMS END.........................................
@@ -1081,7 +1087,7 @@ itmdescr_book21
 itmname_doc1A			{Согнутая Бумага}
 itmdescr_doc1A
 {
-
+.
 }
 
 itmname_doc1B			{Примечание}
@@ -1090,16 +1096,16 @@ itmdescr_doc1B
 Предметы для правой руки: F3 + F3, предметы для левой руки: F3 + выстрел (Q).//JRH
 }
 
-itmname_doc2A			{Папка}
+itmname_doc2A			{Красная Папка}
 itmdescr_doc2A
 {
-
+.
 }
 
-itmname_doc2B			{Папка}
+itmname_doc2B			{Красная Папка}
 itmdescr_doc2B
 {
-
+.
 }
 
 itmname_doc2C			{Изображение}
@@ -1117,7 +1123,7 @@ itmdescr_doc3C
 itmname_doc2D			{Пустая Страница}
 itmdescr_doc2D
 {
-
+.
 }
 
 itmname_doc3D			{Смешивание Компонентов}
@@ -1186,13 +1192,13 @@ itmdescr_doc6B
 itmname_doc6C			{Как Произвести Серу}
 itmdescr_doc6C
 {
-1)Разложите Камни Пирита на доски. 
-2)Тщательно измельчите их в пиритную пыль.
-3)Соберите Пыль Пирита.
-4)Поместите её в чан. 
-5)Заполните чан водой из внутреннего двора.
-6)Начните дистиллирацию и подождите её завершения.
-7)Достать дистиллированную серу.
+1) Разложите Камни Пирита на доски. 
+2) Тщательно измельчите их в пиритную пыль.
+3) Соберите Пыль Пирита.
+4) Поместите её в чан. 
+5) Заполните чан водой из внутреннего двора.
+6) Начните дистиллирацию и подождите её завершения.
+7) Достаньте дистиллированную серу.
 }
 
 itmname_goldbug			{Золотой Жук}
@@ -1204,7 +1210,7 @@ itmdescr_goldbug
 itmname_wrinkled_paper		{Кусок Бумаги}
 itmdescr_wrinkled_paper
 {
-Кусок бумаги, в который был завернут золотой жук.
+Кусок бумаги, в которую был завернут золотой жук.
 }
 
 itmname_bird_sketch		{Рисунок}
@@ -1228,7 +1234,7 @@ itmdescr_bird_backside
 itmname_BH_sketch		{Рисунок}
 itmdescr_BH_sketch
 {
-Чёрная Волшебница сделала мне этот рисунок Скалы, которую она называет Замок Епископа.
+Чёрная Ведьма сделала мне этот рисунок Скалы, которую она называет Замок Епископа.
 }
 
 itmname_BH_sketch_out		{Рисунок}
@@ -1270,7 +1276,7 @@ itmdescr_book55C
 itmname_book55D			{Моби Дик}
 itmdescr_book55D
 {
-
+.
 }
 
 itmname_book56			{Коллекция Жюля Верна}
@@ -1353,7 +1359,7 @@ itmdescr_book61D
 itmname_sergeants_note		{Записка Сержанта}
 itmdescr_sergeants_note
 {
-В этой записке я получаю револьвер, патроны и длинную веревку от капрала в Оружейной.
+В этой записке я получаю револьвер, патроны и длинную верёвку от капрала в Оружейной.
 }
 
 itmname_poe_manuscript		{Записка По}
@@ -1365,28 +1371,28 @@ itmdescr_poe_manuscript
 
 //..........................MEDICINE BAG START......................................
 
-itmname_med_bag1_obj		{Мешочек с Медикаментами}
+itmname_med_bag1_obj		{Сумка с Лекарствами}
 itmdescr_med_bag1_obj
 {
-Сумка для медикаментов пуста.
+Сумка для лекарств пуста.
 }
 
-itmname_med_bag1_doc_NO		{Мешочек с Медикаментами}
+itmname_med_bag1_doc_NO		{Сумка с Лекарствами}
 itmdescr_med_bag1_doc_NO
 {
-Мешочек с лекарствами, который я получил от индианки. Я осмотрю его, когда вернусь домой или...
+Сумка с лекарствами, которую я получил от знахорки. Я осмотрю её, когда вернусь домой или...
 }
 
-itmname_med_bag1_doc_YES	{Мешочек с Медикаментами}
+itmname_med_bag1_doc_YES	{Сумка с Лекарствами}
 itmdescr_med_bag1_doc_YES
 {
-Мешочек с лекарствами, который я получил от индианки. Теперь давайте посмотрим, что внутри!
+Сумка с лекарствами, которую я получил от знахорки. Теперь давайте посмотрим, что внутри!
 }
 
-itmname_med_bag1_out		{Мешочек с Медикаментами}
+itmname_med_bag1_out		{Сумка с Лекарствами}
 itmdescr_med_bag1_out
 {
-Мешочек с лекарствами, который я получил от индианки. Экипировав его, он увеличивает мою Удачу на +2.
+Сумка с лекарствами, которую я получил от знахорки. Экипировав её, она увеличивает мою Удачу на +2.
 }
 
 itmname_med_bag2_doc		{Предметы Медицины}
@@ -1447,7 +1453,7 @@ itmdescr_detective_kit5
 Набор инструментов заполнен. Я могу вынимать предметы, если захочу.  
 }
 
-itmname_D_feather		{Кисть из Перьев}
+itmname_D_feather		{Кисть из Пера}
 itmdescr_D_feather
 {
 Маленькое перо, используемое в качестве кисточки. При снятии отпечатков пальцев?
@@ -1532,25 +1538,25 @@ itmdescr_key22
 itmname_key24			{Чёрный Ключ}
 itmdescr_key24
 {
-
+.
 }
 
 itmname_key25			{Золотой Ключ}
 itmdescr_key25
 {
-
+.
 }
 
 itmname_key26			{Серебряный Ключ}
 itmdescr_key26
 {
-
+.
 }
 
 itmname_key27			{Красный Ключ}
 itmdescr_key27
 {
-
+.
 }
 
 itmname_key28			{Ключ от Борделя}
@@ -1654,10 +1660,22 @@ itmdescr_potionwine2
 }
 
 itmname_fake_candelabre		{Канделябр}
+itmdescr_fake_candelabre
+{
+.
+}
 
 itmname_wax_candles		{Восковые Свечи}
+itmdescr_wax_candles
+{
+.
+}
 
 itmname_fake_chalice		{Чаша}
+itmdescr_fake_chalice
+{
+.
+}
 
 itmname_altar_bread		{Просвира}
 itmdescr_altar_bread
@@ -1666,14 +1684,34 @@ itmdescr_altar_bread
 }
 
 itmname_flyswatter		{Мухобойка}
+itmdescr_flyswatter
+{
+.
+}
 
 itmname_shrine			{Святилище}
+itmdescr_shrine
+{
+.
+}
 
 itmname_jewelcross		{Крест с Драгоценным Камнем}
+itmdescr_jewelcross
+{
+.
+}
 
 itmname_cowl			{Ряса с Капюшоном}
+itmdescr_cowl
+{
+.
+}
 
 itmname_fake_censer		{Кадило}
+itmdescr_fake_censer
+{
+.
+}
 
 //..........................CHURCH ITEMS END....................................
 //........................TREASURE ITEMS START..................................
@@ -1682,8 +1720,8 @@ itmname_mixed_treasure		{Сокровище}
 itmdescr_mixed_treasure
 {
 В одно мгновение перед нами сверкнуло сокровище неисчислимой ценности. 
-Когда лучи солнца упали в яму, наверху вспыхнуло сияние и блики, 
-от беспорядочного нагромождения золота и драгоценных камней, которые совершенно ослепили наши глаза.
+Когда лучи солнца упали в яму, наверху вспыхнуло сияние и блики, от беспорядочного нагромождения 
+золота и драгоценных камней, которые совершенно ослепили наши глаза.
 }
 
 itmname_emptysack		{Пустой Мешок}
@@ -1699,32 +1737,152 @@ itmdescr_treasuresack
 }
 
 itmname_treasure1		{Престижная Чаша Для Пунша}
+itmdescr_treasure1
+{
+.
+}
+
 itmname_treasure2		{Кадило}
+itmdescr_treasure2
+{
+.
+}
+
 itmname_treasure3		{Опал}
+itmdescr_treasure3
+{
+.
+}
+
 itmname_treasure4		{Слон}
+itmdescr_treasure4
+{
+.
+}
 
 itmname_treasure5		{Большое Кольцо}
+itmdescr_treasure5
+{
+.
+}
+
 itmname_treasure6		{Маленькое Кольцо}
+itmdescr_treasure6
+{
+.
+}
+
 itmname_treasure7		{Кольцо на Палец}
+itmdescr_treasure7
+{
+.
+}
+
 itmname_treasure8		{Маленькая Цепочка}
+itmdescr_treasure8
+{
+.
+}
 
 itmname_treasure9		{Большие Часы}
+itmdescr_treasure9
+{
+.
+}
+
 itmname_treasure10		{Маленькие Часы}
+itmdescr_treasure10
+{
+.
+}
+
 itmname_treasure11		{Средние Часы}
+itmdescr_treasure11
+{
+.
+}
+
 itmname_treasure12		{Богатая Цепочка}
+itmdescr_treasure12
+{
+.
+}
 
 itmname_treasure13		{Французское Распятие}
+itmdescr_treasure13
+{
+.
+}
+
 itmname_treasure14		{Маленькое Распятие}
+itmdescr_treasure14
+{
+.
+}
+
 itmname_treasure15		{Большое Распятие}
+itmdescr_treasure15
+{
+.
+}
+
 itmname_treasure16		{Тяжелая Цепь}
+itmdescr_treasure16
+{
+.
+}
 
 itmname_incas_collection	{Коллекция Сокровищ Инков}
-itmname_sword_handle1		{Рукоять Меча}
-itmname_sword_handle2		{Рукоять Меча}
+itmdescr_incas_collection
+{
+.
+}
+
+itmname_sword_handle1		{Меч}
+itmdescr_sword_handle1
+{
+.
+}
+
+itmname_sword_handle2		{Меч}
+itmdescr_sword_handle2
+{
+.
+}
 
 itmname_coin3			{Дублон}
+itmdescr_coin3
+{
+.
+}
+
 itmname_coin5			{Гвинея}
+itmdescr_coin5
+{
+.
+}
+
 itmname_coin9			{Цехин}
+itmdescr_coin9
+{
+.
+}
+
 itmname_coin12			{Луидор}
+itmdescr_coin12
+{
+.
+}
+
 itmname_coin13			{Гульден}
+itmdescr_coin13
+{
+.
+}
+
 itmname_coin16			{Мойдор}
+itmdescr_coin16
+{
+.
+}
+

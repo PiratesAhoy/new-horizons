@@ -56,7 +56,7 @@ Coxon{Коксон}
 Gregorio{Грегорио}
 Montavez{Монтавез}
 Jose{Хосе}
-Puablo{}
+Puablo{Пуабло}
 Diego{Диего}
 Martinez{Мартинез}
 Alejandra{Алехандра}
@@ -406,7 +406,7 @@ Sweat Shop Sally{Потная Салли}
 Milon{Милон}
 Blacque{Бласкю}
 Orable{Орабл}
-Caron{Карон}
+Caron{Кэрон}
 Rachel{Рэйчел}
 Marc{Марк}
 Sabine{Сабин}
@@ -486,7 +486,7 @@ Beuve{Бэве}
 Jenlain{Дженлейн}
 Corneille{Корнель}
 Maccaux{Маккокс}
-Elzire{Эльзир}
+Elzire{Эльзира}
 Ayarai{Айарай}
 Tomasina{Томасина}
 Pickfurt{Пикфурт}
@@ -771,7 +771,7 @@ Hacepoco{Хацепоко}
 Terry{Терри}
 Snider{Снайдер}
 Gilles{Жиль}
-Roche{Роше}
+Roche{Рок}
 Alvaro{Альваро}
 Dimas{Димас}
 Natan{Нэйтан}
@@ -893,17 +893,17 @@ Crewmember{Член Команды}
 {=====| SideQuest.c |=====}
 Rian{Райан}
 Dekkers{Деккерс}
-Janneke{Яннике}
+Janneke{Джаннеке}
 Blinkerhof{Блинкерхоф}
 Lisebet{Лизабет}
 Schefold{Шефолд}
 Gheraed{Герад}
 Drabbe{Драббэ}
-Balltesar{Бальтезар}
-Figueiredo{Фигэйреду}
+Balltesar{Бальтазар}
+Figueiredo{Фигуйреду}
 Hurtado{Хартадо}
 Jordano{Джордано}
-Yedam{Йедам}
+Yedam{Едам}
 Kinne{Кинн}
 Animist{Сатанист}
 Satanist{Сатанист}
@@ -920,7 +920,7 @@ Billy{Билли}
 Brock{Брок}
 Snorri{Снорри}
 Baldursson{Балдурсон}
-Francis{Франсис}
+Francis{Фрэнсис}
 Snake{Снэйк}
 Angelique{Анжелика}
 Moulin{Мулен}
@@ -953,7 +953,7 @@ Haley{Хейли}
 Gyles{Джайлз}
 Peat{Пит}
 Gordon{Гордон}
-Dark Captain{Тёмный Капитан}
+Dark Captain{Мрачный Капитан}
 Giraldo{Жиральдо}
 Figuiera{Фигуэйра}
 1{1-й}
@@ -1001,7 +1001,7 @@ Cecile{Сесиль}
 Bienbonne{Бьенбонн}
 Etienne{Этьен}
 Dupuis{Дюпюи}
-Rivera{Ривера}
+Rivera{Ривьера}
 Dusac{Дюсак}
 Konrad{Конрад}
 Kulczycki{Кульчицкий}
@@ -1357,4 +1357,6 @@ Scared Monk{Испуганный Монах}
 Cursed Skeleton{Проклятый Скелет}
 Monk{Монах}
 Akellani native{Уроженец Акеллани}
-A rabid monkey{Бешеная обезьяна}
+A rabid monkey{Бешеная Обезьяна}
+Joshamee{Джошами}
+Gibbs{Гиббс}

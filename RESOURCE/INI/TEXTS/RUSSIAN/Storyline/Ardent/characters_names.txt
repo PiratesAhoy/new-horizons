@@ -140,7 +140,7 @@ Louis{Луи}
 Erignac{Эриньяк}
 Corin{Корин}
 Arzillires{Арзиллирес}
-Renouart{Ренуар}
+Renouart{Ренуарт}
 Bonnefroy{Боннефруа}
 Jaime{Хайме}
 Lezcano{Лескано}

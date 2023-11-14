@@ -8,10 +8,15 @@ Pyle{Пайл}
 {=====| quests_reaction.c |=====}
 Israel{Израэль}
 Hands{Хэндс}
-Samuel{Сэмюэль}
+Samuel{Самуэль}
 Odel{Одэл}
 Edward{Эдвард}
 Teach{Тич}
+King David{Кинг Дэвид}
+Crimson Pirate{Кровавый Пират}
+Freedman{Освобождённый}
+Gunnar{Гуннар}
+Musician{Музыкант}
 
 {=====| QuebradasCostillas.c |=====}
 Celestine{Целестина}
@@ -80,8 +85,8 @@ Low{Лау}
 Phineas{Финеас}
 Bunce{Бёнс}
 Gow{Гау}
-Charles Vane's{Чарльз Вейн}
-Charles Vane's Crew{Офицер Чарльза Вейна}
+Charles Vane's{Чарльз Вэйн}
+Charles Vane's Crew{Офицер Чарльза Вэйна}
 Walter{Уолтер}
 Kennedy{Кеннеди}
 England{Ингленд}
@@ -90,7 +95,7 @@ Roberts{Робертс}
 George{Джордж}
 Lowther{Лаутер}
 Calico Jack{Калико Джек}
-Rackham{Рэкхэм}
+Rackham{Рэкхем}
 Edmund{Эдмунд}
 Condent{Конде}
 Christopher{Кристофер}
@@ -115,7 +120,7 @@ Issalini{Иссалини}
 Woodes{Вудс}
 Rogers{Роджерс}
 Grandma{Бабушка}
-Dave{Дейв}
+Dave{Дэйв}
 Edna{Эдна}
 Alexander{Александр}
 Selkirk{Селкирк}
@@ -166,9 +171,9 @@ Flann{Флэнн}
 Marrow{Марроу}
 Mortimer{Мортимер}
 Pitchblende{Питчбленд}
-Guncrew{Канониры}
+Guncrew{Канонир}
 Benjamin{Бенджамин}
-Hornigold{Хорнигольд}
+Hornigold{Хорниголд}
 lieutenant{Лейтенант}
 Richards{Ричардс}
 Caesar{Цезарь}
@@ -182,7 +187,7 @@ Ringrose{Рингроуз}
 Prosper{Проспер}
 Chingachgook{Чингачгук}
 Uncas{Анкас}
-King{Кинг}
+King1{Кинг}
 Mah{Ма}
 Jong{Джонг}
 Pierre{Пьер}
@@ -214,8 +219,10 @@ Blowhorn{Блоухорн}
 Mummy{Мумия}
 Blackbeard's{Чёрной Бороды}
 head{Голова}
+Blackbeard's head{Голова Чёрной Бороды}
 Swedish{Шведский}
-Guy{Гай}
+Guy{Парень}
+Swedish Guy{Шведский Парень}
 Konrad{Конрад}
 Ljungberg{Люнгберг}
 Abraham{Абрахам}
@@ -245,9 +252,11 @@ Filip{Филип}
 Berglund{Берглунд}
 Garcia{Гарсия}
 Emilio{Эмилио}
+Soares{Соарес}
+Sйrgio Soares{Серхио Соарес}
 Gomes{Гомес}
-Sйrgio Soares{Серджио Соарез}
 Sergio{Серхио}
+Pusinante{Пушинанте}
 Cloise{Клуаз}
 Sundin{Сундин}
 Emil{Эмиль}
@@ -263,42 +272,42 @@ Johan{Йоган}
 Lцfqvist{Лёфквист}
 Pehr{Пер}
 Stеhlfot{Стехлфот}
-Sister{Систер}
+Sister{Сестра}
 Jean{Жан}
 Dubou{Дюбо}
 Marc{Марк}
 Bourgneuf{Бурньёф}
 Claude{Клод}
 Deshayes{Дешэй}
-Nicholas{Николас}
+Nicholas{Никола}
 Gautrain{Готрен}
 Leontina{Леонтина}
 Barreto{Баррето}
 Bertrand{Бертран}
 Ogeron{Ожерон}
-Maynard{Майнард}
-Bandit{Бандит}
-Bandit's{Бандиты}
+Maynard{Мэйнард}
+Bandit{Головорез}
+Bandit's{Головорезы}
 leader{Лидер}
 Maltese{Мальтийский}
 Sir William{Сэр Уильям}
-Stapelton{Стэплтон}
+Stapleton{Стэплтон}
 Clerk{Клерк}
 Surgeon{Хирург}
 Captain{Капитан}
 Chaplain{Капеллан}
 German{Немец}
-Knight{Рыцарь}
+Knight{Найт}
 Margaret{Маргарет}
-Pough{Поу}
+Pough{Паф}
 Native{Абориген}
 Louis{Луи}
 Arot{Арот}
-Anna H{Анна Х}
+Anna H{Анна Х.}
 Trafvenfeldt{Трафвенфельдт}
 Angelica{Анжелика}
 Lindstrцm{Линдстрем}
-Wilma S{Вилма С}
+Wilma S{Вилма С.}
 Forsstrцm{Форсстрём}
 Madelaine{Мадлен}
 Hansson{Ханссон}
@@ -347,8 +356,8 @@ Lцfgren{Лёфгрен}
 Simon{Саймон}
 Grandell{Гранделл}
 Cardinal Gabr{Кардинал Габр}
-Fortelius{Фортелюс}
-Vatican{Ватикан}
+Fortelius{Фортелиус}
+Vatican{Ватиканский}
 priest{Священник}
 monk{Монах}
 Petrus{Петрус}
@@ -357,8 +366,8 @@ Olof{Олоф}
 Tomasson{Томассон}
 Postman{Почтальон}
 Greensail{Гринсейл}
-Joseph{Жозеф}
-Brooks Jr{Брукс младший}
+Joseph{Джозеф}
+Brooks Jr{Брукс Младший}
 James{Джеймс}
 Blake{Блейк}
 Philips{Филипс}
@@ -368,7 +377,7 @@ Nathaniel{Натаниэль}
 Jackson{Джексон}
 quartermaster Thomas{Казначей Томас}
 Miller{Миллер}
-White{Белый}
+White1{Белый}
 Gills{Гиллс}
 Gates{Гейтс}
 Brooks Sr{Брукс-Старший}
@@ -383,7 +392,7 @@ Stiles{Стайлс}
 Salter{Сэлтер}
 Carnes{Карнес}
 Boardman Hawes{Бордман Хейз}
-Major Stede{Майор Стед}
+Major Stede{Майор Стид}
 Bonnet{Боннет}
 David{Дэвид}
 Herriot{Херриот}
@@ -407,13 +416,13 @@ Secretary Tobias{Секретарь Тобиас}
 Beggar{Нищий}
 Pilot{Лоцман}
 Merchant{Торговец}
-Anne{Анни}
-Russel Stapelton{Рассел Стэпелтон}
+Anne{Анна}
+Russel Stapleton{Рассел Стэплтон}
 Don{Дон}
 van Vliet{Ван Влиет}
 Vincent Z{Винсент З}
 Officer{Офицер}
-on guard duty{караульной службы}
+on guard duty{Караульной Службы}
 Tookerman{Тукерман}
 Guard{Стражник}
 Gerrard{Джеррард}
@@ -432,5 +441,10 @@ Nick{Ник}
 Conquistador{Конкистадор}
 Templar{Тамплиер}
 Demon{Демон}
+Hilphershausen{Хильферсхаузен}
+Pjotr{Пётр}
+Kropotkin{Кропоткин}
+Swift{Свифт}
+Convict{Осуждённый}
 
 {=====| 570 characters |=====}
