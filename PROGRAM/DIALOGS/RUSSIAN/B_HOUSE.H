@@ -249,7 +249,7 @@ void ProcessDialogEvent()
 
 				// взять строительные ресурсы
 				RemoveCharacterGoods(pchar, GOOD_PLANKS, planks-1 );
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -money);
 				Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -crew;
 
@@ -336,7 +336,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "taxhalf":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, sti(npchar.tax)/2 );
 			ChangeCharacterReputation(Pchar, 1);  // награда: репутация. Изменить по своему вкусу
 			Dialog.text = "Это очень щедро с вашей стороны, Сэр. Я всем расскажу, какой вы добрый и заботливый хозяин, можете быть в этом уверены!";
@@ -345,7 +345,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "taxfull":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, sti(npchar.tax));
 			ChangeCharacterReputation(Pchar, -2);  // наказание: падение репутации. Изменить по своему вкусу
 			Dialog.text =  RandSwear() + LinkRandPhrase("Ну вот, возьми свои чертовы деньги. Но не жалуйтесь, если вы скоро останетесь без арендаторов, потому что мы голодали...", "Тогда у меня нет другого выбора, кроме как одолжить для тебя деньги у ростовщика. Означает, что я, вероятно, окажусь со сломанной рукой... в ЛУЧШЕМ случае...", "Ладно, пиявка, возьми эти деньги, которые я отложил для больной матери.") ;
@@ -354,7 +354,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "taxrevolt":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, sti(npchar.tax));
 			ChangeCharacterReputation(Pchar, -2);  // наказание: падение репутации. Измените по своему вкусу
 			Ambush("outlaws", 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");

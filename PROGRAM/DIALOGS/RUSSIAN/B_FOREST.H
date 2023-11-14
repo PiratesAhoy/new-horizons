@@ -220,7 +220,7 @@ void ProcessDialogEvent()
 
 				// взять строительные ресурсы
 				RemoveCharacterGoods(pchar, GOOD_PLANKS, planks-1 );
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -money);
 				Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -crew;
 				
@@ -234,7 +234,7 @@ void ProcessDialogEvent()
 		case "attack1":
 			Dialog.text = "Рабы на плантациях восстают. И они уже захватили некоторое оружие! Они так озверели за годы жестокого угнетения, что не пощадят ни одного белого мужчину.. или женщину! О, если бы у нас было побольше тех бастионов, частоколов, мин и пушек...";
 			link.l1 = RandSwear() + "Все эти сухопутные парализованы страхом! Избалованные жизнью на суше. Похоже, мне придется сражаться без них.";
-			link.l1.go = "exit_atack1";
+			link.l1.go = "exit_attack1";
 		break;
 
 		case "attack2":
@@ -352,7 +352,7 @@ void ProcessDialogEvent()
 			lcn.building.(nr).taxyear = GetDataYear();
 			lcn.building.(nr).taxMonth = GetDataMonth();
 			lcn.building.(nr).taxDay = GetDataDay();
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, sti(npchar.tax));
 			ChangeCharacterReputation(Pchar, -2);  // наказание: падение репутации. Измените по своему вкусу
 			Ambush("outlaws", 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
