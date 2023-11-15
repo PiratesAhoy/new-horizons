@@ -1139,7 +1139,7 @@ void HoistFlag(int iNation)
 		if (IsMainCharacter (rCharacter))									bPlayerCompanion = true;
 		if (bPlayerCompanion)
 		{
-			rCharacter.nation = iNation;
+			SetCharacterNation(rCharacter, iNation);
 			rCharacter.Flags.DoRefresh = true;
 		}
 		else
