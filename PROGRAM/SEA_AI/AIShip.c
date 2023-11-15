@@ -1219,7 +1219,7 @@ void Ship_Surrender(int chridx)
 
 	int oldnat = sti(chr.nation);
 	chr.oldnation = oldnat;
-	chr.nation = NEUTRAL_NATION;
+	SetCharacterNation(chr, NEUTRAL_NATION);
 	chr.surrendered = true;
 	chr.surrendered.seatime = GetSeaTime();
 
