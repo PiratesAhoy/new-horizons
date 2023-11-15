@@ -5695,3 +5695,13 @@ void RestoreShipModels()
 	}
 	Ship_EndLoad();
 }
+
+void Ship_FlagRefresh(ref rCharacter)
+{
+	if (IsSeaLoaded())
+	{
+		ref flag = GetCharacterFlagEntity(rCharacter);
+		SendMessage(rCharacter, "li", MSG_SHIP_SET_CUSTOM_FLAG, &flag);
+		SendMessage(rCharacter, "l", MSG_SHIP_FLAG_REFRESH);
+	}
+}

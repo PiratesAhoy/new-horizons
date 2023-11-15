@@ -285,6 +285,7 @@ void ProcessCommandExecute()
 					PChar.Flags.Pirate = pirateflagidx;
 					PChar.Flags.Pirate.texture = pirateflagtex;
 					SetNewPicture("HOISTNATION3", "interfaces\flags\Flag_" + GetFlagPicName(PIRATE) + ".tga");
+					Ship_FlagRefresh(PChar);
 				break;
 				case WINDOW_PERSONALFLAG:
 					personalflagtex = tmppersonalflagtex;
@@ -292,6 +293,7 @@ void ProcessCommandExecute()
 					PChar.Flags.Personal = personalflagidx;
 					PChar.Flags.Personal.texture = personalflagtex;
 					SetNewPicture("HOISTNATIONP", "interfaces\flags\Flag_" + GetFlagPicName(PERSONAL_NATION) + ".tga");
+					Ship_FlagRefresh(PChar);
 				break;
 			}
 			SetWindow(WINDOW_MAIN);
@@ -345,7 +347,7 @@ void ProcessCommandExecute()
 					iNation = sti(n);
 				break;
 			}
-			PChar.nation = iNation; // PB: Set New Nation
+			SetCharacterNation(PChar, iNation);
 			UpdateData();
 			return;
 		}

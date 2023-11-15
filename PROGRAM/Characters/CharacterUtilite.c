@@ -4725,3 +4725,7 @@ int RemoveNotCaptivePassenger(ref _refCharacter,ref _refPassenger)
 	return PsgQuantity;
 }
 
+void SetCharacterNation(ref ch, int nation) {
+	ch.nation = nation;
+	Ship_FlagRefresh(ch);
+}
