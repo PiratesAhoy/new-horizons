@@ -47,14 +47,14 @@ void CreateFlagEnvironment()
 	bool hasMerchantFlag = iPeriod >= GetPeriodFromYear(makeint(MERCHANT_FLAGS_MIN_YEAR));
 
 	CreateEntity(&FortFlag, "Flag");
-	FortFlag.texture = "flags\frtflg" + (iPeriod + 1) + ".tga";
+	FortFlag.texture = "flags\frtflg" + (iPeriod + 1) + ".png";
 	LayerAddObject(sCurrentSeaExecute, &FortFlag, iPriority);
 	LayerAddObject(sCurrentSeaRealize, &FortFlag, iPriority);
 	LayerAddObject(SEA_REFLECTION, &FortFlag, 3);
 	iPriority++;
 
 	CreateEntity(&Flag, "Flag");
-	Flag.texture = "flags\shpflg" + (iPeriod + 1) + ".tga";
+	Flag.texture = "flags\shpflg" + (iPeriod + 1) + ".png";
 	Flag.textureRows = 2;
 	LayerAddObject(sCurrentSeaExecute, &Flag, iPriority);
 	LayerAddObject(sCurrentSeaRealize, &Flag, iPriority);
@@ -63,7 +63,7 @@ void CreateFlagEnvironment()
 
 	if (hasMerchantFlag) {
 		CreateEntity(&MerchantFlag, "Flag");
-		MerchantFlag.texture = "flags\merflg" + (iPeriod + 1) + ".tga";
+		MerchantFlag.texture = "flags\merflg" + (iPeriod + 1) + ".png";
 		MerchantFlag.textureRows = 2;
 		LayerAddObject(sCurrentSeaExecute, &MerchantFlag, iPriority);
 		LayerAddObject(sCurrentSeaRealize, &MerchantFlag, iPriority);
@@ -75,7 +75,7 @@ void CreateFlagEnvironment()
 	for (i = 0; i < PIRATEFLAGS_TEXTURES_QUANTITY; i++)
 	{
 		CreateEntity(&PirateFlag[i], "Flag");
-		PirateFlag[i].texture = "flags\pirflg" + (i + 1) + ".tga";
+		PirateFlag[i].texture = "flags\pirflg" + (i + 1) + ".png";
 		PirateFlag[i].textureRows = 2;
 		LayerAddObject(sCurrentSeaExecute, &PirateFlag[i], iPriority);
 		LayerAddObject(sCurrentSeaRealize, &PirateFlag[i], iPriority);
@@ -85,7 +85,7 @@ void CreateFlagEnvironment()
 	for (i = 0; i < PERSONALFLAGS_TEXTURES_QUANTITY; i++)
 	{
 		CreateEntity(&PersonalFlag[i], "Flag");
-		PersonalFlag[i].texture = "flags\perflg" + (i + 1) + ".tga";
+		PersonalFlag[i].texture = "flags\perflg" + (i + 1) + ".png";
 		PersonalFlag[i].textureRows = 2;
 		LayerAddObject(sCurrentSeaExecute, &PersonalFlag[i], iPriority);
 		LayerAddObject(sCurrentSeaRealize, &PersonalFlag[i], iPriority);
