@@ -1360,23 +1360,23 @@ void SetNewFlagImage(string sWhich)
 	switch (sWhich)
 	{
 		case "pirateflag":
-			SetNewPicture("PIRATE_FLAG", "interfaces\flags\Flag_Pirate" + pirateflagidx + pirateflagtex + ".tga");
+			SetNewPicture("PIRATE_FLAG", "interfaces\flags\Flag_Pirate" + pirateflagidx + pirateflagtex + ".png");
 		break;
 		case "personalflag":
-			SetNewPicture("PERSONAL_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".tga");
+			SetNewPicture("PERSONAL_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".png");
 			if (CharNation == PERSONAL_NATION) SetNewFlagImage("nation");
 		break;
 		// default:
 			switch (CharNation)
 			{
 				case PIRATE:
-					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Pirate00.tga");
+					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Pirate00.png");
 				break;
 				case PERSONAL_NATION:
-					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".tga");
+					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".png");
 				break;
 				// default:
-					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_" + GetFlagPicName(CharNation) + ".tga");
+					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_" + GetFlagPicName(CharNation) + ".png");
 			}
 	}
 }
@@ -1974,7 +1974,7 @@ void SetWindow(int iWindow)
 				SetNodeUsing("FLAG_BUTTON40", true);
 			else
 				XI_MarkFlag(4, 0);
-			SetNewPicture("FLAG_PICTURE40", "INTERFACES\Flags\Flag_Pirate00.tga");
+			SetNewPicture("FLAG_PICTURE40", "INTERFACES\Flags\Flag_Pirate00.png");
 			SetNodeUsing("FLAG_PICTURE40", true);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "lblNationPirate", TranslateString("", CheckNationNameByPeriod(PIRATE, curPeriod, true)), FONT_NORMAL, 440, 150, COLOR_NORMAL, 0, SCRIPT_ALIGN_LEFT, true, 0.8, 0);
 			if (CharNation != PERSONAL_NATION)

@@ -270,7 +270,7 @@ void CreateTooltip(string header, string text1, int colonyNation)
 	SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 3, "INFO_TEXT");
 	SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 3, "TEXT");
 
-	SetNewPicture("INFO_PICT", "interfaces\flags\Crest_" + GetNationFlagImage(colonyNation) + ".tga");
+	SetNewPicture("INFO_PICT", "interfaces\flags\Crest_" + GetNationFlagImage(colonyNation) + ".png");
 }
 
 void HideToolT()
