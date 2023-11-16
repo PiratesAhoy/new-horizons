@@ -1974,7 +1974,7 @@ void SetWindow(int iWindow)
 				SetNodeUsing("FLAG_BUTTON40", true);
 			else
 				XI_MarkFlag(4, 0);
-			SetNewPicture("FLAG_PICTURE40", "INTERFACES\Flags\Flag_Pirate00.tga");
+			SetNewPicture("FLAG_PICTURE40", "INTERFACES\Flags\Flag_Pirate00.png");
 			SetNodeUsing("FLAG_PICTURE40", true);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "lblNationPirate", TranslateString("", CheckNationNameByPeriod(PIRATE, curPeriod, true)), FONT_NORMAL, 440, 150, COLOR_NORMAL, 0, SCRIPT_ALIGN_LEFT, true, 0.8, 0);
 			if (CharNation != PERSONAL_NATION)
