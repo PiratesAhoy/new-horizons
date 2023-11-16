@@ -952,7 +952,7 @@ void SetNoneData()
 		SetNodeUsing("NATION", true); // PB
 		if (tempnation >= 0 && tempnation < NATIONS_QUANTITY)
 		{
-			SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(tempnation) + ".tga");
+			SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(tempnation) + ".png");
 			switch (LanguageGetLanguage())
 			{
 				case "Spanish":
@@ -965,12 +965,12 @@ void SetNoneData()
 		{
 			if(tempnation == PERSONAL_NATION)
 			{
-				SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(tempnation) + ".tga");
+				SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(tempnation) + ".png");
 				SetFormatedText("NATIONALDESIGN", XI_ConvertString("Personal") + " " + XI_ConvertString("design"));
 			}
 			else
 			{
-				SetNewPicture("NATION", "interfaces\flags\Crest_Neutral.tga");
+				SetNewPicture("NATION", "interfaces\flags\Crest_Neutral.png");
 				SetFormatedText("NATIONALDESIGN", "Made in Singapore"); // PB: Was XI_ConvertString("Individual design")
 			}
 		}

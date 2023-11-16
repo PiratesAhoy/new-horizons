@@ -42,11 +42,11 @@ void InitInterface(string iniName)
 			nationpic = "Pirate00";
 		else
 			nationpic = GetFlagPicName(i);
-		SetNewPicture("HNATION" + i, "interfaces\flags\Crest_" + nationpic + ".tga");
+		SetNewPicture("HNATION" + i, "interfaces\flags\Crest_" + nationpic + ".png");
 		SetNodeUsing("HNATION" + i, true);
 		SetNodeUsing("_HNATION" + i, true);
 	}
-	SetNewPicture("HNATIONP", "interfaces\flags\Crest_" + GetFlagPicName(PERSONAL_NATION) + ".tga");
+	SetNewPicture("HNATIONP", "interfaces\flags\Crest_" + GetFlagPicName(PERSONAL_NATION) + ".png");
 
 	CreateImage("RelationFromFlag", "MORALE", "high morale", 578, 70, 610, 102);
 
@@ -56,7 +56,7 @@ void InitInterface(string iniName)
 			nationpic = "Pirate00";
 		else
 			nationpic = GetFlagPicName(i);
-		SetNewPicture("VNATION" + i, "interfaces\flags\Crest_" + nationpic + ".tga");
+		SetNewPicture("VNATION" + i, "interfaces\flags\Crest_" + nationpic + ".png");
 		SetNodeUsing("VNATION" + i, true);
 		SetNodeUsing("_VNATION" + i, true);
 
@@ -640,7 +640,7 @@ void SetWindow(int iWindow)
 						SetNodeUsing("FLAG_BUTTON" + i + j, true);
 					else
 						XI_MarkFlag(i, j);
-					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Personal" + i + j + ".tga");
+					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Personal" + i + j + ".png");
 					SetNodeUsing("FLAG_PICTURE" + i + j, true);
 				}
 			}
@@ -739,7 +739,7 @@ void ShowInfo(string nodName)
 					SetToolTipRectangle("");
 					SetToolTipHeader("", header);
 					SetToolTipText("", text);
-					SetToolTipImage("", "interfaces\flags\Crest_" + img + ".tga");
+					SetToolTipImage("", "interfaces\flags\Crest_" + img + ".png");
 					Preprocessor_Remove("Column_Row");
 					Preprocessor_Remove("FlagOf");
 				}

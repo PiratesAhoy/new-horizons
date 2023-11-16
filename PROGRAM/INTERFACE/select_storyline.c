@@ -1360,23 +1360,23 @@ void SetNewFlagImage(string sWhich)
 	switch (sWhich)
 	{
 		case "pirateflag":
-			SetNewPicture("PIRATE_FLAG", "interfaces\flags\Flag_Pirate" + pirateflagidx + pirateflagtex + ".tga");
+			SetNewPicture("PIRATE_FLAG", "interfaces\flags\Flag_Pirate" + pirateflagidx + pirateflagtex + ".png");
 		break;
 		case "personalflag":
-			SetNewPicture("PERSONAL_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".tga");
+			SetNewPicture("PERSONAL_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".png");
 			if (CharNation == PERSONAL_NATION) SetNewFlagImage("nation");
 		break;
 		// default:
 			switch (CharNation)
 			{
 				case PIRATE:
-					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Pirate00.tga");
+					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Pirate00.png");
 				break;
 				case PERSONAL_NATION:
-					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".tga");
+					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".png");
 				break;
 				// default:
-					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_" + GetFlagPicName(CharNation) + ".tga");
+					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_" + GetFlagPicName(CharNation) + ".png");
 			}
 	}
 }
