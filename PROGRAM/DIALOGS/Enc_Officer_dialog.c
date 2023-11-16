@@ -811,7 +811,7 @@ void ProcessDialogEvent()
 			// int money = 0;
 			// int crew = 0;
 
-			d.text = DLG_TEXT[118] + GetSquadronGoods(pchar,GOOD_PLANKS) + ", " + GetSquadronGoods(pchar,GOOD_BRICKS) + DLG_TEXT[119] + ourMoney + DLG_TEXT[120] + ourCrew + DLG_TEXT[121];// MAXIMUS 08.10.2006 // KK
+			d.text = DLG_TEXT[118] + GetSquadronGoods(pchar,GOOD_PLANKS) + "/" + GetSquadronGoods(pchar,GOOD_BRICKS) + DLG_TEXT[119] + ourMoney + DLG_TEXT[120] + ourCrew + DLG_TEXT[121];// MAXIMUS 08.10.2006 // KK
 			Link.l7 = DLG_TEXT[122];
 			Link.l7.go = "box";
 			Link.l6 = DLG_TEXT[123];
@@ -1153,10 +1153,9 @@ void ProcessDialogEvent()
 				money += sti(interiorref.building.money);
 				crew += sti(interiorref.building.crew); // ccc Dec06 fix for apparent calc error
 			}
-
 			if(money > sti(ourMoney) || crew > sti(ourCrew) || planks > GetSquadronGoods(pchar,GOOD_PLANKS) || bricks > GetSquadronGoods(pchar,GOOD_BRICKS))// MAXIMUS 08.10.2006 // KK
 			{
-				d.text = DLG_TEXT[152] + XI_ConvertString(npchar.building) + DLG_TEXT[165] + XI_ConvertString("BS"+npchar.interior) + DLG_TEXT[153] + planks + ", " + bricks + DLG_TEXT[154] + money + DLG_TEXT[155] +crew+ DLG_TEXT[156] + GetSquadronGoods(pchar,GOOD_PLANKS) +DLG_TEXT[157]+ourMoney+DLG_TEXT[158]+ourCrew+DLG_TEXT[159];// MAXIMUS 08.10.2006 // KK
+				d.text = DLG_TEXT[152] + XI_ConvertString(npchar.building) + DLG_TEXT[165] + XI_ConvertString("BS"+npchar.interior) + DLG_TEXT[153] + planks + " / " + bricks + DLG_TEXT[154] + money + DLG_TEXT[155] +crew+ DLG_TEXT[156] + GetSquadronGoods(pchar,GOOD_PLANKS) + " / " + GetSquadronGoods(pchar,GOOD_BRICKS) +DLG_TEXT[157]+ourMoney+DLG_TEXT[158]+ourCrew+DLG_TEXT[159];// MAXIMUS 08.10.2006 // KK
 				Link.l3 = DLG_TEXT[160];
 				Link.l3.go = "exit";
 			}
@@ -1176,9 +1175,11 @@ void ProcessDialogEvent()
 			 	CharacterTurnAy(npchar, ay);
 
 				// take buildingresources
-				RemoveCharacterGoods(pchar, GOOD_PLANKS, planks-1 );
-				RemoveCharacterGoods(pchar, GOOD_BRICKS, bricks - 1); // KK
-				PlayStereoSound("INTERFACE\took_item.flac");
+			//	RemoveCharacterGoods(pchar, GOOD_PLANKS, planks-1 );  // GR: Why -1?
+			//	RemoveCharacterGoods(pchar, GOOD_BRICKS, bricks - 1); // KK
+				RemoveCharacterGoods(pchar, GOOD_PLANKS, planks);
+				RemoveCharacterGoods(pchar, GOOD_BRICKS, bricks); // KK
+				PlayStereoSound("INTERFACE\took_item.wav");
 				AddMoneyToCharacter(Pchar, -money);
 				ourCrew = sti(ourCrew) -crew;// MAXIMUS 08.10.2006
 				Pchar.Ship.crew.quantity = ourCrew; // ccc Dec06 using Maximus ourCrew variable fixes some slight calc errors. So used properly it makes sense.
