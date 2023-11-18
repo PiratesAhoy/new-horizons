@@ -2,7 +2,8 @@ import os
 import shutil
 import fnmatch
 
-shutil.rmtree("publish")
+if os.path.exists("publish"):
+    shutil.rmtree("publish")
 
 os.makedirs("publish", exist_ok=True)
 
@@ -50,6 +51,9 @@ add_pattern("*.c", directory="../PROGRAM", target="PROGRAM")
 add_pattern("*.h", directory="../PROGRAM", target="PROGRAM")
 
 add_directory("../Documentation", target="Documentation")
+
+# Modules
+add_pattern("*.toml", directory="../modules", target="modules")
 
 # Resources
 add_pattern("*.ini", directory="../RESOURCE", target="resource")
