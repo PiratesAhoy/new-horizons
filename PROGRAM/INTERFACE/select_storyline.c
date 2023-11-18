@@ -1981,7 +1981,7 @@ void SetWindow(int iWindow)
 				SetNodeUsing("FLAG_BUTTON41", true);
 			else
 				XI_MarkFlag(4, 1);
-			SetNewPicture("FLAG_PICTURE41", "INTERFACES\Flags\Flag_Personal" + personalflagidx + personalflagtex + ".tga");
+			SetNewPicture("FLAG_PICTURE41", "INTERFACES\Flags\Flag_Personal" + personalflagidx + personalflagtex + ".png");
 			SetNodeUsing("FLAG_PICTURE41", true);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "lblNationPersonal", TranslateString("", CheckNationNameByPeriod(PERSONAL_NATION, curPeriod, true)), FONT_NORMAL, 440, 180, COLOR_NORMAL, 0, SCRIPT_ALIGN_LEFT, true, 0.8, 0);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitleNation"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
@@ -2011,7 +2011,7 @@ void SetWindow(int iWindow)
 						SetNodeUsing("FLAG_BUTTON" + i + j, true);
 					else
 						XI_MarkFlag(i, j);
-					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Pirate" + i + j + ".tga");
+					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Pirate" + i + j + ".png");
 					SetNodeUsing("FLAG_PICTURE" + i + j, true);
 				}
 			}
@@ -2036,7 +2036,7 @@ void SetWindow(int iWindow)
 						SetNodeUsing("FLAG_BUTTON" + i + j, true);
 					else
 						XI_MarkFlag(i, j);
-					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Personal" + i + j + ".tga");
+					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Personal" + i + j + ".png");
 					SetNodeUsing("FLAG_PICTURE" + i + j, true);
 				}
 			}
