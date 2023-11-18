@@ -270,7 +270,7 @@ string TranslateString(string strData1, string strData2)
 
 	str1 = strData1;
 	str2 = strData2;
-	resultString = SpellString("", "storyline_strings.txt", &str1, &str2, joinString);
+	resultString = SpellString("Storyline", "storyline_strings.txt", &str1, &str2, joinString);
 	if (resultString != "") return resultString;
 	if (rStr1 == "") rStr1 = str1;
 	if (rStr2 == "") rStr2 = str2;
@@ -1407,7 +1407,7 @@ string GetCharacterAddressForm(ref chr, int addrtype, bool fname, bool lname)
 	if(fname && lname && CheckAttribute(chr, "middlename"))
 		retstr += " " + chr.middlename;
 	if(lname)
-		retstr += " " + chr.lastname;
+		retstr += " " + GetMyLastName(chr);
 	return retstr;	*/
 	if (!CheckAttribute(chr, "lastname") || chr.lastname == "" || GetMyName(chr) == FirstLetterUp(chr.lastname))	// Character has only one name
 	{
@@ -1556,7 +1556,7 @@ string GetMySimpleName(ref chr)
 // KK -->
 	if(!HasSubStr(chr.lastname,"<") && !HasSubStr(chr.lastname,">") && chr.lastname!="") {
 		if (name != "") name += " ";
-		name += chr.lastname;
+		name += GetMyLastName(chr);
 	}
 // <-- KK
 	return name;
@@ -1652,10 +1652,10 @@ string GetMyRespectfullyName(ref chr)
 	{
 		if(CheckAttribute(chr,"Ship.type") && chr.Ship.type!="" && chr.Ship.type!=SHIP_NOTUSED_TYPE_NAME) // PB: was SHIP_NOTUSED
 		{
-			if(chr.lastname=="") name += XI_ConvertString("captain");	// Was "Scaptain", which returns lower case "captain",
-			else name += XI_ConvertString("captain") + " " + chr.lastname;	// which looks silly in introductions
+			if(chr.lastname=="") name += XI_ConvertString("captain");		// Was "Scaptain", which returns lower case "captain",
+			else name += XI_ConvertString("captain") + " " + GetMyLastName(chr);	// which looks silly in introductions
 		}
-		else name += chr.lastname;
+		else name += GetMyLastName(chr);
 	}
 	return name;
 }

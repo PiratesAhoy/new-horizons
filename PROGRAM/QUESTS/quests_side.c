@@ -3672,9 +3672,11 @@ void SideQuestComplete(string sQuestName)
 		case "Story_gotoQC":
 			ChangeCharacterAddressGroup(characterFromID("Armand Delacroix"), "QC_tavern", "Sit", "Sit8");
 			pchar.quest.estrella_qc = "here";
+			Locations[FindLocation("QC_tavern")].vcskip = true;
 		break;
 
 		case "Story_SitAndDrinkWithDelacroix":
+			DeleteAttribute(&Locations[FindLocation("QC_tavern")],"vcskip");
 			LAi_Fade("Story_SitAndDrinkWithDelacroix_2", "Story_DelacroixStartTalkingInTavern");
 		break;
 		
@@ -3716,6 +3718,7 @@ void SideQuestComplete(string sQuestName)
 			SetCurrentTime(1, 0);
 			Locations[FindLocation("Muelle_town_03")].vcskip = true; // NK
 			StoreOfficers(pchar.id); // KK
+			Characters[GetCharacterIndex("Estrella Disguised")].sex = "woman";	// GR: for some reason, "Estrella Disguised" has been set as a man, possibly to get the correct animation. Now set her as a woman to get the correct reputation.
 			DoQuestReloadToLocation("Muelle_town_01", "reload", "reload14", "Story_Estrella_Afraid");
 		break;
 		
@@ -3783,6 +3786,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 	
 		case "estrella_disguised_exit_run2":
+			LAi_SetFightMode(PChar, false);
 			LAi_SetActorType(characterFromID("Estrella Disguised"));
 			LAi_ActorWaitDialog(Pchar, characterFromID("Estrella Disguised"));
 			characters[GetCharacterIndex("Estrella Disguised")].dialog.currentnode = "reunited";
@@ -4153,12 +4157,16 @@ void SideQuestComplete(string sQuestName)
 			DeleteEnterLocationQuest("Conceicao_tavern", "Hit_start_check");
 			PChar.quest.Hitman = "goto_mateus";
 			LAi_SetActorType(CharacterFromID("Ambroz Bricenos"));
-			LAi_ActorGoToLocation(CharacterFromID("Ambroz Bricenos"), "reload", "reload1", "Conceicao_shore_02", "goto", "citizen06", "Hit_start2", 10.0);
+			LAi_ActorGoToLocation(CharacterFromID("Ambroz Bricenos"), "reload", "reload1", "Conceicao_shore_02", "goto", "citizen06", "", 10.0);
 			chrEnableReloadLocator("Muelle_town_01", "reload21", 1);
 
 			//Add journal entry
 			SetQuestHeader("Hitman");
 			AddQuestRecord("Hitman", 1);
+
+			PChar.quest.Hit_start2.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.Hit_start2.win_condition.l1.location = PChar.location;
+			PChar.quest.Hit_start2.win_condition = "Hit_start2";
 		break;
 
 		case "Hit_start2":
@@ -4166,6 +4174,8 @@ void SideQuestComplete(string sQuestName)
 
 			bDisableFastReload = 0;
 
+		//	LAi_SetActorType(CharacterFromID("Ambroz Bricenos"));
+		//	LAi_type_Actor_Reset(CharacterFromID("Ambroz Bricenos"));
 			LAi_SetWarriorType(CharacterFromID("Ambroz Bricenos"));
 			LAi_warrior_SetStay(CharacterFromID("Ambroz Bricenos"), 1);
 			LAi_warrior_DialogEnable(CharacterFromID("Ambroz Bricenos"), 1);
@@ -5797,8 +5807,12 @@ void SideQuestComplete(string sQuestName)
 			AddMoneyToCharacter(pchar, 40000);
 			AddQuestRecord("Turkshelp", 6);
 			CloseQuestHeader("Turkshelp");
-			LAi_SetActorType(characterFromID("Pieter Boelen"));
-			LAi_ActorRunToLocation(characterFromID("Pieter Boelen"), "reload", "reload3", "none", "", "", "Pieter_at_Douwesen", 30.0);
+			LAi_SetActorType(CharacterFromID("Pieter Boelen"));
+			LAi_ActorRunToLocation(CharacterFromID("Pieter Boelen"), "reload", "reload3", "none", "", "", "", 30.0);
+
+			PChar.quest.Pieter_at_Douwesen.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.Pieter_at_Douwesen.win_condition.l1.location = PChar.location;
+			PChar.quest.Pieter_at_Douwesen.win_condition = "Pieter_at_Douwesen";
 
 			if (GetRMRelation(PChar, PIRATE) < REL_AFTERATTACK) SetRMRelation(PChar, PIRATE, REL_AFTERATTACK);	// GR: You helped a pirate settlement
 		break;
@@ -5865,8 +5879,10 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "Pieter_at_Douwesen":
+			LAi_SetActorType(CharacterFromID("Pieter Boelen"));
+			LAi_type_actor_Reset(CharacterFromID("Pieter Boelen"));
 			LAi_SetImmortal(CharacterFromID("Pieter Boelen"), 0);
-         	ChangeCharacterAddressGroup(CharacterFromID("Pieter Boelen"), "Douwesen_Tavern", "goto", "goto2");
+         		ChangeCharacterAddressGroup(CharacterFromID("Pieter Boelen"), "Douwesen_Tavern", "goto", "goto2");
 			LAi_SetCitizenType(characterFromID("Pieter Boelen"));
 			Characters[GetCharacterIndex("Pieter Boelen")].dialog.filename = "Pieter at Douwesen_dialog.c";
 		break;
@@ -10946,8 +10962,9 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "fight_in_shore_completed":
-			DeleteAttribute(&Locations[FindLocation("Oxbay_jungle_02")],"vcskip"); // PB
-			LAi_QuestDelay("fight_in_shore_completed_almost", 4.0);
+			DeleteAttribute(&Locations[FindLocation("Oxbay_jungle_02")],"vcskip");	// PB
+		//	LAi_QuestDelay("fight_in_shore_completed_almost", 4.0);			// GR: why split the delay and unlock the reloads part way through?
+			LAi_QuestDelay("fight_in_shore_2_completed", 9.0);			// Combine both delays here and go straight to "fight_in_shore_2_completed"
 		break;
 
 		case "fight_in_shore_completed_almost":
@@ -10960,6 +10977,11 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "fight_in_shore_2_completed":
+			locations[FindLocation("Oxbay_shore_02")].reload.l1.disable = 0;	// GR: unlock the reloads here, right before the final dialog
+			locations[FindLocation("Oxbay_shore_02")].reload.l2.disable = 0;
+			locations[FindLocation("Oxbay_shore_02")].reload.l3.disable = 0;
+			locations[FindLocation("Oxbay_shore_02")].reload.l4.disable = 0;
+
 			LAi_SetStayType(pchar);
 			Preprocessor_AddQuestData("nation", GetNationDescByType(GetTownNation("Greenford")));
 			AddQuestRecord("larrouse", 11);

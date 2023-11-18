@@ -92,7 +92,7 @@ void StartStoryLine()
     				ch.nation = iNation;
     				ch.Dialog.Filename = "Robert Fletcher_dialog.c";
     				ch.name = TranslateString("","Dark");
-    				ch.lastname = "Disciple";
+    				ch.lastname = TranslateString("","Disciple");
 				ch.greeting = "Gr_Quest_ANIMISTS";
     				SetModelfromArray(ch, GetModelIndex("animists2"));
 			}

@@ -380,7 +380,7 @@ void CreateCaymanCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	ch.Ship.Name = "Pastenague";
+	ch.Ship.Name = TranslateString("","Pastenague");
 	ch.Ship.Type = "FleutWar2";
 	ch.quest.meeting = "0";
 	LAi_SetStayType(ch);
