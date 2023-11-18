@@ -1958,9 +1958,9 @@ void SetWindow(int iWindow)
 				switch (i)
 				{
 					case PIRATE:        continue;                                                                                                 break;
-					case GUEST1_NATION: SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_Guest1" + curPeriod + ".tga");                  break;
-					case GUEST2_NATION: SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_Guest2" + curPeriod + ".tga");                  break;
-					/* default:      */ SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_" + GetNationIDByType(i) + curPeriod + ".tga");
+					case GUEST1_NATION: SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_Guest1" + curPeriod + ".png");                  break;
+					case GUEST2_NATION: SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_Guest2" + curPeriod + ".png");                  break;
+					/* default:      */ SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_" + GetNationIDByType(i) + curPeriod + ".png");
 				}
 				if (CharNation != i)
 					SetNodeUsing("FLAG_BUTTON1" + j, true);
