@@ -700,7 +700,7 @@ AMBUSH{ЗАСАДА}
 MILITARY RAID{ВОЕННЫЙ НАЛЕТ}
 ALERT{ТРЕВОГА}
 PIRATES RAID{ПИРАТСКИЙ НАЛЁТ}
-You are ALONE now. No other LIVING soul dares to enter here..{Вы сейчас ОДИН. Ни одна ЖИВАЯ душа не рискнёт войти сюда...}
+You are ALONE now. No other LIVING soul dares to enter here..{Теперь вы сами по себе. Ни одна ЖИВАЯ душа не рискнёт войти сюда...}
 The warriormonk disappears... like the smoke of a long forgotten pyre...{Воинственный монах исчезает... подобно дыму давно забытого погребального огня...}
 The weird monk reveals his true nature..{Ужасный монах показал своё истинное лицо..}
 Old vag gone at the moment, but...burglers!{Старого бродяги сейчас нет, но... взломщики!}

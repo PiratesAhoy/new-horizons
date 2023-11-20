@@ -2288,7 +2288,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_ActorDialog(sld, PChar, "", 2.0, 0);
 			AddXP(pchar, SKILL_SAILING, 500, XP_GROUP_OFFIC);
 		break;
-//pÃ¤r
+//pär
 		case "Returned in Greenford for Apothecary":
 			//RestoreCharacterShip(pchar);//PW moved to reduce food use and possible deaths and mutiny and in loop
 			for (i = 0; i < COMPANION_MAX; i++) {//PW now loop for whole pchar fleet
@@ -2396,7 +2396,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_QuestDelay("Finish Beggar Find",0);
 			LAi_QuestDelay("Cartagena_hotel_plants_start",0);
 		break;
-//pÃ¤r
+//pär
 		case "Got Hotel Flyer":
 			AddQuestRecord("plants",39);
 			LAi_QuestDelay("Finish Beggar Find",0);
@@ -2577,7 +2577,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "ghost2_disappears":
 			if(CheckAttribute(Pchar,"hotel_surgery") && Pchar.hotel_surgery == "on") 
-			{PlaySound("INTERFACE\small_door_locked.flac");}
+			{PlaySound("INTERFACE\small_door_locked.wav");}
 
 			if(CheckAttribute(Pchar,"hotel_bandages") && Pchar.hotel_bandages == "on") 
 			{PlaySound("PEOPLE\clothes1.wav");}			
@@ -2624,7 +2624,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "ghost3_disappears":
 			if(CheckAttribute(Pchar,"hotel_crucifix") && Pchar.hotel_crucifix == "on") 
-			{PlaySound("INTERFACE\took_item.flac");}
+			{PlaySound("INTERFACE\took_item.wav");}
 
 			if(CheckAttribute(Pchar,"hotel_bible") && Pchar.hotel_bible == "on") 
 			{PlaySound("INTERFACE\book_close.wav");}		
@@ -2889,7 +2889,7 @@ void SideQuestComplete(string sQuestName)
 			
            		
 		break;
-//pÃ¤r
+//pär
 
 ///////////////////////////////////////////////////////////////
 ///// Smugglers: Thomas O Reily is annoying
@@ -3551,7 +3551,7 @@ void SideQuestComplete(string sQuestName)
 		case "mendes_away_forewer":
 			LAi_SetActorType(characterFromID("Vigila Mendes"));
 			LAi_ActorGoToLocation(characterFromID("Vigila Mendes"), "reload", "locator2", "none", "", "", "", 3.0);
-			//ZAID MURRO - Ã§Ã ÃªÃ°Ã»Ã¢Ã Ã¥Ã¬ Ã¢Ã®Ã§Ã¬Ã®Ã¦Ã­Ã®Ã±Ã²Ã¼ Ã¯Ã°Ã®ÃµÃ®Ã¤Ã¨Ã²Ã¼ Ã½Ã²Ã®Ã² ÃªÃ¢Ã¥Ã±Ã²
+			//ZAID MURRO - çàêðûâàåì âîçìîæíîñòü ïðîõîäèòü ýòîò êâåñò
 			//ChangeCharacterAddress(characterFromID("Zaid Murro"), "none", ""); //NK disable this (dunno why it's here but it breaks Zaid)
 		break;
 
@@ -3672,9 +3672,11 @@ void SideQuestComplete(string sQuestName)
 		case "Story_gotoQC":
 			ChangeCharacterAddressGroup(characterFromID("Armand Delacroix"), "QC_tavern", "Sit", "Sit8");
 			pchar.quest.estrella_qc = "here";
+			Locations[FindLocation("QC_tavern")].vcskip = true;
 		break;
 
 		case "Story_SitAndDrinkWithDelacroix":
+			DeleteAttribute(&Locations[FindLocation("QC_tavern")],"vcskip");
 			LAi_Fade("Story_SitAndDrinkWithDelacroix_2", "Story_DelacroixStartTalkingInTavern");
 		break;
 		
@@ -3690,7 +3692,10 @@ void SideQuestComplete(string sQuestName)
 		break;
 		
 		case "Story_SitAndDrinkWithDelacroix3":
-			LAi_Fade("", "");
+			LAi_Fade("Story_SitAndDrinkWithDelacroix_4", "Story_DelacroixGiddy");
+		break;
+
+		case "Story_SitAndDrinkWithDelacroix_4":
 			LAi_SetActorType(characterFromID("Armand Delacroix"));
 			ChangeCharacterAddress(characterFromID("Armand Delacroix"), "QC_port", "goto19");
 			DoQuestReloadToLocation("QC_port", "goto", "goto18", "Story_DelacroixGiddy");
@@ -3713,6 +3718,7 @@ void SideQuestComplete(string sQuestName)
 			SetCurrentTime(1, 0);
 			Locations[FindLocation("Muelle_town_03")].vcskip = true; // NK
 			StoreOfficers(pchar.id); // KK
+			Characters[GetCharacterIndex("Estrella Disguised")].sex = "woman";	// GR: for some reason, "Estrella Disguised" has been set as a man, possibly to get the correct animation. Now set her as a woman to get the correct reputation.
 			DoQuestReloadToLocation("Muelle_town_01", "reload", "reload14", "Story_Estrella_Afraid");
 		break;
 		
@@ -3780,6 +3786,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 	
 		case "estrella_disguised_exit_run2":
+			LAi_SetFightMode(PChar, false);
 			LAi_SetActorType(characterFromID("Estrella Disguised"));
 			LAi_ActorWaitDialog(Pchar, characterFromID("Estrella Disguised"));
 			characters[GetCharacterIndex("Estrella Disguised")].dialog.currentnode = "reunited";
@@ -4150,12 +4157,16 @@ void SideQuestComplete(string sQuestName)
 			DeleteEnterLocationQuest("Conceicao_tavern", "Hit_start_check");
 			PChar.quest.Hitman = "goto_mateus";
 			LAi_SetActorType(CharacterFromID("Ambroz Bricenos"));
-			LAi_ActorGoToLocation(CharacterFromID("Ambroz Bricenos"), "reload", "reload1", "Conceicao_shore_02", "goto", "citizen06", "Hit_start2", 10.0);
+			LAi_ActorGoToLocation(CharacterFromID("Ambroz Bricenos"), "reload", "reload1", "Conceicao_shore_02", "goto", "citizen06", "", 10.0);
 			chrEnableReloadLocator("Muelle_town_01", "reload21", 1);
 
 			//Add journal entry
 			SetQuestHeader("Hitman");
 			AddQuestRecord("Hitman", 1);
+
+			PChar.quest.Hit_start2.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.Hit_start2.win_condition.l1.location = PChar.location;
+			PChar.quest.Hit_start2.win_condition = "Hit_start2";
 		break;
 
 		case "Hit_start2":
@@ -4163,6 +4174,8 @@ void SideQuestComplete(string sQuestName)
 
 			bDisableFastReload = 0;
 
+		//	LAi_SetActorType(CharacterFromID("Ambroz Bricenos"));
+		//	LAi_type_Actor_Reset(CharacterFromID("Ambroz Bricenos"));
 			LAi_SetWarriorType(CharacterFromID("Ambroz Bricenos"));
 			LAi_warrior_SetStay(CharacterFromID("Ambroz Bricenos"), 1);
 			LAi_warrior_DialogEnable(CharacterFromID("Ambroz Bricenos"), 1);
@@ -5794,8 +5807,12 @@ void SideQuestComplete(string sQuestName)
 			AddMoneyToCharacter(pchar, 40000);
 			AddQuestRecord("Turkshelp", 6);
 			CloseQuestHeader("Turkshelp");
-			LAi_SetActorType(characterFromID("Pieter Boelen"));
-			LAi_ActorRunToLocation(characterFromID("Pieter Boelen"), "reload", "reload3", "none", "", "", "Pieter_at_Douwesen", 30.0);
+			LAi_SetActorType(CharacterFromID("Pieter Boelen"));
+			LAi_ActorRunToLocation(CharacterFromID("Pieter Boelen"), "reload", "reload3", "none", "", "", "", 30.0);
+
+			PChar.quest.Pieter_at_Douwesen.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.Pieter_at_Douwesen.win_condition.l1.location = PChar.location;
+			PChar.quest.Pieter_at_Douwesen.win_condition = "Pieter_at_Douwesen";
 
 			if (GetRMRelation(PChar, PIRATE) < REL_AFTERATTACK) SetRMRelation(PChar, PIRATE, REL_AFTERATTACK);	// GR: You helped a pirate settlement
 		break;
@@ -5862,8 +5879,10 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "Pieter_at_Douwesen":
+			LAi_SetActorType(CharacterFromID("Pieter Boelen"));
+			LAi_type_actor_Reset(CharacterFromID("Pieter Boelen"));
 			LAi_SetImmortal(CharacterFromID("Pieter Boelen"), 0);
-         	ChangeCharacterAddressGroup(CharacterFromID("Pieter Boelen"), "Douwesen_Tavern", "goto", "goto2");
+         		ChangeCharacterAddressGroup(CharacterFromID("Pieter Boelen"), "Douwesen_Tavern", "goto", "goto2");
 			LAi_SetCitizenType(characterFromID("Pieter Boelen"));
 			Characters[GetCharacterIndex("Pieter Boelen")].dialog.filename = "Pieter at Douwesen_dialog.c";
 		break;
@@ -9016,7 +9035,6 @@ void SideQuestComplete(string sQuestName)
 				LAi_SetActorType(CharacterFromID("Nigel Blythe"));
 				LAi_group_MoveCharacter(CharacterFromID("Artois Voysey"), "Artois");
 				LAi_group_MoveCharacter(CharacterFromID("Nigel Blythe"), "Nigel");
-				LAi_group_SetRelation("Artois", "Nigel", LAI_GROUP_ENEMY);
 				LAi_SetImmortal(CharacterFromID("Nigel Blythe"), true);
 				LAi_ActorAttack(characterFromID("Nigel Blythe"), characterFromID("Artois Voysey"), "");
 				LAi_ActorAttack(characterFromID("Artois Voysey"), characterFromID("Nigel Blythe"), "");
@@ -10329,9 +10347,9 @@ void SideQuestComplete(string sQuestName)
 			{
 				case "SPANISH": temp = TranslateString("","Crewmember of") + " " + GetMyName(PChar); break;
 				case "RUSSIAN":
-					if(strright(GetMyName(PChar),1) == "Ã¼") temp = strleft(GetMyName(PChar), strlen(GetMyName(PChar))-1);
+					if(strright(GetMyName(PChar),1) == "ü") temp = strleft(GetMyName(PChar), strlen(GetMyName(PChar))-1);
 					else temp = GetMyName(PChar);
-					temp = TranslateString("","Crewmember of") + " " + temp + "Ã ";
+					temp = TranslateString("","Crewmember of") + " " + temp + "à";
 				break;
 				temp = GetMyName(PChar) + TranslateString("","'s crewmember");
 			}
@@ -10953,8 +10971,8 @@ void SideQuestComplete(string sQuestName)
 			locations[FindLocation("Oxbay_shore_02")].reload.l2.disable = 0;
 			locations[FindLocation("Oxbay_shore_02")].reload.l3.disable = 0;
 			locations[FindLocation("Oxbay_shore_02")].reload.l4.disable = 0;
-//			DoQuestReloadToLocation("Oxbay_shore_02", "reload", "reload2_back", "fight_in_shore_2_completed");
-			LAi_QuestDelay("fight_in_shore_2_completed", 5.0);
+			DoQuestReloadToLocation("Oxbay_shore_02", "reload", "reload2", "fight_in_shore_2_completed");	// GR: changed from "reload2_back" to "reload2" so officers can spawn with you
+//			LAi_QuestDelay("fight_in_shore_2_completed", 5.0);						// GR: This 5 second delay allows you to go to the jungle and break the quest
 		break;
 
 		case "fight_in_shore_2_completed":
@@ -11044,7 +11062,7 @@ void SideQuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Jack Greenfield"), "", "sit", "sit10");
 // NK -->
 			pchar.quest.Attwood1.leave = 1;
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, -2000);
 			LAi_QuestDelay("stand_up", 1.0);
 			LAi_QuestDelay("convoy", 2.0);
@@ -11281,11 +11299,14 @@ void SideQuestComplete(string sQuestName)
 	 	break;
 
 		case "convoy":
-			LAi_Fade("", "");
+			LAi_Fade("fight_with_convoy", "convoy_fight1");
+		break;
+
+		case "fight_with_convoy":
 			ChangeCharacterAddressGroup(CharacterFromID("Jack Greenfield"), "none", "sit", "sit10");
 			ChangeCharacterAddressGroup(CharacterFromID("Martin Warner"), "none", "sit", "sit5");
 
-			DoQuestReloadToLocation("redmond_port", "goto", "goto_2", "convoy_fight1");
+			DoQuestReloadToLocation("redmond_port", "goto", "goto_2", "_");
 		break;
 
 		case "convoy_fight1":
@@ -11782,7 +11803,7 @@ void SideQuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////////////
 // The Kapitein of Kralendijk
 // By Grey Roger
-// Based very loosely on the real life story of the Captain of KÃ¶penick
+// Based very loosely on the real life story of the Captain of Köpenick
 ///////////////////////////////////////////////////////////////////////
 		case "Kapitein_follow_proposer_upstairs":
 			ChangeCharacterAddressGroup(characterFromID("Willem Voigt"), "Philipsburg_tavern", "tables", "table5");
@@ -11952,7 +11973,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "Kapitein_with_soldier_to_room":
 			string kapitein_location = PChar.location;
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, -150);
 			PChar.quest.kapitein = "start";
 			DoQuestReloadToLocation(kapitein_location + "_upstairs", "goto", "goto2", "Kapitein_with_soldier_to_room2");
@@ -12148,8 +12169,8 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "kapitein_get_money2":
-			PlayStereoSound("INTERFACE\took_item.flac");
-			AddMoneyToCharacter(pchar, 35574);		// About 10 times the number of Marks that the real Captain of KÃ¶penick got.
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, 35574);		// About 10 times the number of Marks that the real Captain of Köpenick got.
 			PChar.quest.kapitein = "got_money";
 			LAi_SetActorType(characterFromID("Dou_soldier_1"));
 			Characters[GetCharacterIndex("Dou_soldier_1")].dialog.CurrentNode = "keep_them_here";
@@ -14540,7 +14561,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "crysskull_carib_warrior_surrenders_skull2":
-			PlayStereoSound("INTERFACE\important_item.flac");
+			PlayStereoSound("INTERFACE\important_item.wav");
 			TakeItemFromCharacter(characterFromID("Carib_Warrior"), "cryskull");
 			GiveItem2Character(characterFromID("Archaeologist_captain"), "cryskull");
 			PChar.quest.crysskull_you_stole_skull.over = "yes";
@@ -14768,7 +14789,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "crysskull_get_skull":
 			GiveItem2Character(PChar, "cryskull");
-			PlayStereoSound("INTERFACE\important_item.flac");
+			PlayStereoSound("INTERFACE\important_item.wav");
 			if (PChar.quest.crysskull.ultimatum == "hostage")
 			{
 				Preprocessor_AddQuestData("hostage", GetMyFullName(GetCharacter(sti(PChar.quest.crysskull.hostage))));
@@ -14859,7 +14880,7 @@ void SideQuestComplete(string sQuestName)
 				AddPartyExpChar(PChar, SKILL_SNEAK, 500);
 			}
 			else { AddPartyExp(PChar, 5000); }
-			PlayStereoSound("INTERFACE\important_item.flac");
+			PlayStereoSound("INTERFACE\important_item.wav");
 			TakeItemFromCharacter(PChar, "cryskull");
 			PChar.quest.crys_skull_status = "traded";
 			ChangeCharacterReputation(PChar, 3);
@@ -14876,7 +14897,7 @@ void SideQuestComplete(string sQuestName)
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\drink.flac");
+				PlayStereoSound("INTERFACE\drink.wav");
 				PChar.quest.crysskull_poison_player.over = "yes";
 			}
 			EndQuestMovie();
@@ -15002,7 +15023,7 @@ void SideQuestComplete(string sQuestName)
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\drink.flac");
+				PlayStereoSound("INTERFACE\drink.wav");
 				PChar.quest.crysskull_poison_player.over = "yes";
 				AddQuestRecord("crystal_skull", 17);
 			}
@@ -15178,7 +15199,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "colombian_silver_join_soldier":
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, -2);
 			LAi_Fade("colombian_silver_join_soldier2", "colombian_silver_talk_soldier");
 		break;
@@ -15215,7 +15236,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "colombian_silver_join_officer":
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, -2);
 			LAi_Fade("colombian_silver_join_officer2", "colombian_silver_talk_officer");
 		break;

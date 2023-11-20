@@ -119,6 +119,6 @@ De Cow{Де Коу}
 Abel{Абель}
 Barco{Барко}
 Renouart{Ренуарт}
-Larrouse{Лярус}
+Larrouse{Ларроуз}
 
 {=====| 63 characters |=====}

@@ -26,7 +26,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
+		// ----------------------------------- Диалог первый - первая встреча
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -142,7 +142,7 @@ void ProcessDialogEvent()
 		case "room_24_wait":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			WaitDate("",0,0,0,24,1);
@@ -188,7 +188,7 @@ void ProcessDialogEvent()
 		case "room_night_wait":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_night");
@@ -203,7 +203,7 @@ void ProcessDialogEvent()
 		case "room_day_wait":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_day");
@@ -367,7 +367,7 @@ void ProcessDialogEvent()
 			iTest = 0;
 			dialog.snd = "Voice\INDI\INDI029";
 			dialog.text = DLG_TEXT[99];
-			//Р Р°Р·РіРѕРІРѕСЂ Р‘Р»РµР№Р·Р°
+			//Разговор Блейза
 			if (pchar.quest.main_line == "blaze_talk_with_silehard_complete" && iTest < QUEST_COUNTER)
 			{
 				link.l1 = DLG_TEXT[100] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[101])]) + DLG_TEXT[103];
@@ -531,7 +531,7 @@ void ProcessDialogEvent()
 			NextDiag.CurrentNode =  NextDiag.TempNode;
 			pchar.quest.main_line = "ines_info_denied";
 			Locations[FindLocation("QC_town")].reload.l3.disable = 1;
-			//РІРєР»СЋС‡Р°РµРј РєРІРµСЃС‚ РЅР° РјСѓР¶РёРєР°, РєРѕС‚РѕСЂС‹Р№ РґР°СЃС‚ РёРЅС„Сѓ Рѕ СЂРµР№РјСЃРµ.
+			//включаем квест на мужика, который даст инфу о реймсе.
 		//	pchar.vcskip = true; // NK 04-08
 			locations[FindLocation("QC_town")].vcskip = true; // PB
 			DisableFastTravel(true); // PB
@@ -610,7 +610,7 @@ void ProcessDialogEvent()
 		case "room_night_wait":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_conceicao_tavern");
 			TavernWaitDate("wait_night");
@@ -625,7 +625,7 @@ void ProcessDialogEvent()
 		case "room_day_wait":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.flac");
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_conceicao_tavern");
 			TavernWaitDate("wait_day");
@@ -673,7 +673,7 @@ void ProcessDialogEvent()
 		
 		case "Estrella_Armand2":
 			dialog.text = DLG_TEXT[165];
-			link.l1 = "Armand Delacroix.";
+			link.l1 = GetMySimpleName(CharacterFromID("Armand Delacroix")) + ".";
 			link.l1.go = "Estrella_Armand3";
 		break;
 		
