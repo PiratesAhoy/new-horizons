@@ -449,8 +449,9 @@ void ProcessFrame()
 				// PB <--
 				if (GetTotalCrewQuantity(otherCh) == 0) SetSelectable("RCREW", false);
 // <-- KK
-				if(CheckAttribute(otherCh,"firstname")==true) GameInterface.strings.CharName = otherCh.name + " " + otherCh.firstname + " " + otherCh.lastname;
-				else GameInterface.strings.CharName = otherCh.name + " " + otherCh.lastname;
+			//	if(CheckAttribute(otherCh,"firstname")==true) GameInterface.strings.CharName = otherCh.name + " " + otherCh.firstname + " " + GetMyLastName(otherch);
+			//	else GameInterface.strings.CharName = GetMyName(otherch) + " " + GetMyLastName(otherch);
+				GameInterface.strings.CharName = GetMySimpleName(otherch);
 			}
 			aref tmpar; makearef(tmpar, otherCh.ship); // NK can qty 05-04-18
 // KK -->

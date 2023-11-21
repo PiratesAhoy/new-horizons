@@ -199,7 +199,7 @@ void InitModels(bool isstart)
 	model.price	   =  5000;
 	model.assigned	=  true;
 	model.name = "Geralt";
-	model.lastname = "of Rivia";
+	model.lastname = "of_Rivia";
 	model.Flags.Pirate = 0;
 	model.Flags.Personal = 45;
 	model.loadingScreen = "Quest_Geralt.tga";
@@ -222,7 +222,7 @@ void InitModels(bool isstart)
 	model.assigned	=	true;
 	model.height	=	1.75;
 	model.name = "Morgen";
-	model.lastname = "le Fay";
+	model.lastname = "le_Fay";
 	model.playertype	= PLAYER_TYPE_ADVENTURER;
 	model.ship = "Tartane1";
 	model.shipname = "Myrddin";
@@ -1138,7 +1138,7 @@ void InitModels(bool isstart)
 	model.nation		=  SPAIN;
 	model.price		=  10000;
 	model.assigned		=  true;
-	model.name = "Don Julian";
+	model.name = "Don_Julian";
 	model.lastname = "Alvarado";
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
@@ -1433,7 +1433,7 @@ void InitModels(bool isstart)
 	model.ani		=  "woman_sit";
 	model.height		=  1.75;
 	model.name = "Catalina";
-	model.lastname = "the Pirate";
+	model.lastname = "the_Pirate";
 	model.playertype = PLAYER_TYPE_CORSAIR;
 	AssignModelType(isstart, model, "women", 1.0);
 	AssignModelTypeNation(isstart, model, "Captains", 1.0, PIRATE);
@@ -1451,7 +1451,7 @@ void InitModels(bool isstart)
 	model.ani		=  "woman_sit";
 	model.height		=  1.75;
 	model.name = "Catalina";
-	model.lastname = "the Pirate";
+	model.lastname = "the_Pirate";
 	AssignModelType(isstart, model, "women", 1.0);
 	AssignModelTypeNation(isstart, model, "Captains", 1.0, PIRATE);
 	AddCharacterModel(model);
@@ -1701,7 +1701,7 @@ void InitModels(bool isstart)
 	model.price		=  5000;
 	model.assigned		=  true;
 	model.name = "Jean-Baptiste";
-	model.lastname = "du Casse";
+	model.lastname = "du_Casse";
 	model.storytitle = "War of the League of Augsburg";
 	model.storytext = "Quite a colourful character, you are! History claims that you became a buccaneer, admiral and colonial administrator who served throughout the Atlantic World during the 17th and 18th centuries. Now at the beginning of your career as officer in the French navy, you are of course required to follow orders. However, your life is yours and you can make whatever choices you see fit.";
 	model.playertype = PLAYER_TYPE_NAVAL_OFFICER;
@@ -1804,7 +1804,7 @@ void InitModels(bool isstart)
 	model.price		=  5000;
 	model.assigned		=  true;
 	model.name = "Francisco";
-	model.lastname = "de Almeida";
+	model.lastname = "de_Almeida";
 	model.storytitle = "The Portuguese Armada";
 	model.storytext = "As was customary for men in your social circle, you joined the military at an early age. You have fought in conflicts in different parts of Morocco and Spain on the side of the Castilians. Now in the Caribbean, Spain is again your ally. But you never know what the future might bring!";
 	model.playertype = PLAYER_TYPE_NAVAL_OFFICER;
@@ -2224,7 +2224,7 @@ void InitModels(bool isstart)
 	model.minlevel     =  16;
 	model.minrank	 =  8;
 //	model.name = "Joaquin";
-//	model.lastname = "Da Saldanha";
+//	model.lastname = "Da_Saldanha";
 	model.playertype  = PLAYER_TYPE_NAVAL_OFFICER;
 	AssignModelTypeNatMask(isstart, model, "Rich_Citizens", 1.0, GetNationStringNot(PIRATE));
 	model.period = "" + PERIOD_EARLY_EXPLORERS + PERIOD_THE_SPANISH_MAIN;
@@ -2314,7 +2314,7 @@ void InitModels(bool isstart)
 	model.iscombat		=  -1;
 	model.ismansion		=  true;//Pretty woman, must be a governor's niece or wife
 	model.name = "Anna";
-	model.lastname = "De Leiva";
+	model.lastname = "De_Leiva";
 	AssignModelTypeNatMask(isstart, model, "Rich_Citizens", 1.0, GetNationStringSouthEuro());
 	AddCharacterModel(model);
 
@@ -2596,7 +2596,7 @@ void InitModels(bool isstart)
 	model.nation		=  PIRATE;
 	model.price		=  1000;
 	model.assigned		=  true;
-	model.name = "Desmond Ray";
+	model.name = "Desmond_Ray";
 	model.lastname = "Beltrop";
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
@@ -2607,7 +2607,7 @@ void InitModels(bool isstart)
 	model.nation		=  PIRATE;
 	model.price		=  1000;
 	model.assigned		=  true;
-	model.name = "Desmond Ray";
+	model.name = "Desmond_Ray";
 	model.lastname = "Beltrop";
 	AddCharacterModel(model);
 
@@ -2617,7 +2617,7 @@ void InitModels(bool isstart)
 	model.nation		=  PIRATE;
 	model.price		=  1000;
 	model.assigned		=  true;
-	model.name = "Desmond Ray";
+	model.name = "Desmond_Ray";
 	model.lastname = "Beltrop";
 	AssignModelTypeNation(isstart, model, "Rich_Citizens", 1.0, PIRATE);
 	AddCharacterModel(model);
@@ -2630,7 +2630,7 @@ void InitModels(bool isstart)
 	model.price	   =  470;
 	model.assigned	=  true;
 	model.name = "Berend";
-	model.lastname = "De Voor";
+	model.lastname = "De_Voor";
 	AddCharacterModel(model);
 	// For future quests <--
 
@@ -2884,7 +2884,7 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	model.playertype = PLAYER_TYPE_ADVENTURER;
 	model.name = "Sergio";
-	model.lastname = "The SeaWolf";
+	model.lastname = "The_SeaWolf";
 	model.Flags.Personal = 4;
 	AddCharacterModel(model);
 
@@ -2896,7 +2896,7 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	model.playertype = PLAYER_TYPE_ADVENTURER;
 	model.name = "Sergio";
-	model.lastname = "The SeaWolf";
+	model.lastname = "The_SeaWolf";
 	model.Flags.Personal = 4;
 	AddCharacterModel(model);
 
@@ -2908,7 +2908,7 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	model.playertype = PLAYER_TYPE_ADVENTURER;
 	model.name = "Sergio";
-	model.lastname = "The SeaWolf";
+	model.lastname = "The_SeaWolf";
 	model.Flags.Personal = 4;
 	AddCharacterModel(model);
 
@@ -3078,7 +3078,7 @@ void InitModels(bool isstart)
 	model.nation	  =  ENGLAND;
 	model.price	   =  15000;
 	model.assigned	=  true;
-//	model.name = "John Clifford";
+//	model.name = "John_Clifford";
 //	model.lastname = "Brin";
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
@@ -3426,7 +3426,7 @@ void InitModels(bool isstart)
 	model.nation	  =  PIRATE;
 	model.price	   =  2000;
 	model.assigned	=  true;
-	model.name = "James T.";
+	model.name = "James_T.";
 	model.lastname = "Hook";
 	model.ship = "US_Interceptor";	// GR: was "HMS_Bounty". "US_Interceptor" is "Lady Washington", which played Hook's ship in "Once Upon a Time"
 	model.shipname = "Jolly Roger";
@@ -4094,7 +4094,7 @@ void InitModels(bool isstart)
 	model.height		=  1.75;
 	model.iscombat		= false;
 	model.name		= "Lucia";
-	model.lastname		= "de la Vega";
+	model.lastname		= "de_la_Vega";
 	model.storytext  =  "Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?";
 	model.playertype  = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
@@ -4137,8 +4137,8 @@ void InitModels(bool isstart)
 	model.price		= 2000;
 	model.assigned		= true;
 	model.iscombat		= false;
-	model.name = "Edmundo";
-	model.lastname = "de la Vega";
+	model.name		= "Edmundo";
+	model.lastname		= "de_la_Vega";
 	model.storytext  =  "Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?";
 	model.playertype  = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
@@ -4628,7 +4628,7 @@ void InitModels(bool isstart)
 	model.ani		=  "Blaze";
 	model.status		=  "C_III"; // added as an identifier, for assigning another animation to the new models
 	model.name = "Charles";
-	model.lastname = "de Maure";
+	model.lastname = "de_Maure";
 	AddCharacterModel(model);
 
 	// no model assignment quest character -->
@@ -5007,14 +5007,14 @@ void InitModels(bool isstart)
 	model.id			=  "Espinosa";
 	model.FaceId		=  324;
 	model.nation		=  SPAIN;
-	model.price			=  3700;
+	model.price		=  3700;
 	model.assigned		=  true;
 	model.height		=  1.85;
-	model.sex			=  "man";
-	model.ani			=  "Blaze";
+	model.sex		=  "man";
+	model.ani		=  "Blaze";
 	model.status		=  "C_III"; // added as an identifier, for assigning another animation to the new models
-	model.name			= "Diego";
-	model.lastname		= "de Espinosa"; // KK
+	model.name		= "Diego";
+	model.lastname		= "de_Espinosa"; // KK
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
 
@@ -5285,7 +5285,7 @@ void InitModels(bool isstart)
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "Gherarde";
-	model.lastname = "de Jongh";
+	model.lastname = "de_Jongh";
 	AddCharacterModel(model);
 
 	model.description	= "I want to look like Guibert Daudet.";
@@ -5343,7 +5343,7 @@ void InitModels(bool isstart)
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	AddCharacterModel(model);
 
 	// Armor Mod -->
@@ -5379,7 +5379,7 @@ void InitModels(bool isstart)
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5427,7 +5427,7 @@ void InitModels(bool isstart)
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5475,7 +5475,7 @@ void InitModels(bool isstart)
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5523,7 +5523,7 @@ void InitModels(bool isstart)
 	model.price	   =  75;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5572,7 +5572,7 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	model.camouflage = true; // PB: Camouflage mod
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5594,7 +5594,7 @@ void InitModels(bool isstart)
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5616,7 +5616,7 @@ void InitModels(bool isstart)
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5638,7 +5638,7 @@ void InitModels(bool isstart)
 	model.price	   =  1;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5660,7 +5660,7 @@ void InitModels(bool isstart)
 	model.price	   =  10000;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5683,7 +5683,7 @@ void InitModels(bool isstart)
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "Bartolomeu";
-	model.lastname = "o Portugues";
+	model.lastname = "o_Portugues";
 	model.playertype = PLAYER_TYPE_SOCIAL_CLIMBER;
 	model.difficulty = DIFFICULTY_SEADOG;
 	model.Flags.Pirate = 4;
@@ -5706,7 +5706,7 @@ void InitModels(bool isstart)
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "François";
-	model.lastname = "de Hadoque";
+	model.lastname = "de_Hadoque";
 	model.ship = "FR_Licorne";
 	model.shipname = "La Licorne";
 	AddCharacterModel(model);
@@ -5742,7 +5742,7 @@ void InitModels(bool isstart)
 	model.price	   =  1;
 	model.assigned	=  true;
 	model.name = "Henry";
-	model.lastname = "the Beggar";
+	model.lastname = "the_Beggar";
 	AddCharacterModel(model);
 
 	model.description =  "A very wealthy-looking guy you could easily imagine to be a governor.";
@@ -6083,7 +6083,7 @@ void InitModels(bool isstart)
 	model.price	   =  5000;
 	model.assigned	=  true;
 	model.name = "Jean";
-	model.lastname = "de la Croix";
+	model.lastname = "de_la_Croix";
 	model.storytitle =  "Tales of a Chevalier";
 	model.storytext  =  "A charming French nobleman with a rogue streak. Your latest endeavour left you several jewels richer and a Spanish lady somewhat distraught. Her brother challenged you to a duel at dawn to settle the score.";
 	model.loadingScreen = "Character_LaCroix.tga";
@@ -6366,7 +6366,7 @@ void InitModels(bool isstart)
 	model.price	   =  4500;
 	model.assigned	=  true;
 //	model.name = "Lucas";
-//	model.lastname = "Da Saldanha";
+//	model.lastname = "Da_Saldanha";
 	AddCharacterModel(model);
 
 	model.description	= "A polished Spanish naval uniform, as worn by the son of an admiral.";
@@ -6376,7 +6376,7 @@ void InitModels(bool isstart)
 	model.price		= 5000;
 	model.assigned		= true;
 //	model.name		= "Lucas";
-//	model.lastname		= "Da Saldanha";
+//	model.lastname		= "Da_Saldanha";
 	AddCharacterModel(model);
 
 	model.description =  "This scarlet outfit, and the coiffure I'd recommend go with it, were made the height of fashion in the Mediterranean by that famous Maltese knight Sir Michael Jackson!";
@@ -6386,7 +6386,7 @@ void InitModels(bool isstart)
 	model.price	   =  6000;
 	model.assigned	=  true;
 //	model.name = "Jaoquin";
-//	model.lastname = "De Masse";
+//	model.lastname = "De_Masse";
 	AssignModelType(isstart, model, "Maltese", 1.0);
 	AddCharacterModel(model);
 
@@ -6522,7 +6522,7 @@ void InitModels(bool isstart)
 	model.price	=  900;
 	model.assigned	=  true;
 	model.name	= "Michiel";
-	model.lastname	= "de Ruyter";
+	model.lastname	= "de_Ruyter";
 	model.storytitle = "Bestevaêr";
 	model.storytext = "Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!";
 	model.playertype = PLAYER_TYPE_NAVAL_OFFICER;
@@ -9977,7 +9977,7 @@ void InitModels(bool isstart)
 	model.minrank	=  3;
 	model.assigned	=  true;
 	model.name = "Carrera";
-	model.lastname = "de la Vega";
+	model.lastname = "de_la_Vega";
 	model.storytitle = "The Might of Spain";
 	model.storytext = "Ever since the Spanish set foot in the New World, others have tried and succeeded in taking more land away from them. But as recently promoted lieutenant in His Most Catholic Majesty's navy, you intend to see that Spain reclaims its rightful place in the world!";
 	model.playertype = PLAYER_TYPE_NAVAL_OFFICER;
@@ -10024,7 +10024,7 @@ void InitModels(bool isstart)
 	model.minrank		= 9;	// Not strictly accurate, Blas de Lezo was Teniente General by 1739, but setting him to rank 9 allows the player to earn a promotion
 	model.assigned		= true;
 	model.name		= "Blas";
-	model.lastname		= "de Lezo";
+	model.lastname		= "de_Lezo";
 	model.storytitle	= "The Defender of Cartagena";
 	model.storytext		= "Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.";
 	model.playertype	= PLAYER_TYPE_NAVAL_OFFICER;
@@ -10498,7 +10498,7 @@ void InitModels(bool isstart)
 	model.nation	  = PIRATE;
 	model.price	  = 600;
 	model.assigned	  = true;
-	model.name	  = "Bootstrap Bill";
+	model.name	  = "Bootstrap_Bill";
 	model.lastname	  = "Turner";
 	model.playertype = PLAYER_TYPE_SAILOR;
 	AddCharacterModel(model);
@@ -10834,7 +10834,7 @@ void InitModels(bool isstart)
 	model.height	  =  1.75;
 	model.iscombat = false;
 //	model.name = "Estrella";
-//	model.lastname = "de Alencar";
+//	model.lastname = "de_Alencar";
 	AddCharacterModel(model);
 
 	model.description =  "You have business with me, senor? Are you sure?";
@@ -10941,7 +10941,7 @@ void InitModels(bool isstart)
 	model.nation	  =  PIRATE;
 	model.price	   =  2500;
 	model.assigned	=  true;
-	model.name = "Thomas the";
+	model.name = "Thomas_the";
 	model.lastname = "Terror";
 	AddCharacterModel(model);
 
@@ -11144,17 +11144,17 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	AddCharacterModel(model);
 
-	model.description =  "An aristocratic fancy French lady, but one with a shady past...";
-	model.id    	  =  "Milady";
-	model.FaceId	  = 216;
-	model.nation      =  FRANCE;
-	model.price       =  2500;
-	model.assigned    =  true;
-	model.sex         =  "woman";
-	model.ani         =  "woman_sit";
-	model.height      =  1.75;
-	model.name = "Milady";
-	model.lastname = "de Winter";
+	model.description	=  "An aristocratic fancy French lady, but one with a shady past...";
+	model.id		=  "Milady";
+	model.FaceId		= 216;
+	model.nation		=  FRANCE;
+	model.price		=  2500;
+	model.assigned		=  true;
+	model.sex		=  "woman";
+	model.ani		=  "woman_sit";
+	model.height		=  1.75;
+	model.name		= "Milady";
+	model.lastname		= "de_Winter";
 	model.storytitle = "Spy and Assassin";
 	model.storytext = "You are a woman who is cunning, relentless, resourceful, amoral and dangerous. Tasked with causing harm to your nations' enemies by whatever means necessary, you will stop at nothing to fulfil that purpose.";
 	model.playertype = PLAYER_TYPE_AGENT;
@@ -11178,7 +11178,7 @@ void InitModels(bool isstart)
 	model.ani         =  "woman_sit";
 	model.height      =  1.75;
 	model.name = "Milady";
-	model.lastname = "de Winter";
+	model.lastname = "de_Winter";
 	model.playertype = PLAYER_TYPE_AGENT;
 	model.Flags.Pirate = 34;
 	model.Flags.Personal = 41;
@@ -11195,7 +11195,7 @@ void InitModels(bool isstart)
 	model.nation	  = FRANCE;
 	model.assigned	  = true;
 	model.name	  = "Comte";
-	model.lastname	  = "de Rochefort";
+	model.lastname	  = "de_Rochefort";
 	model.playertype  = PLAYER_TYPE_AGENT;
 	model.Flags.Pirate = 19;
 	model.Flags.Personal = 5;
@@ -13588,7 +13588,7 @@ void InitModels(bool isstart)
 	model.nation	  =  HOLLAND;
 	model.assigned	=  true;
 	model.name = "Laurens";
-	model.lastname = "de Graaf";
+	model.lastname = "de_Graaf";
 	model.storytitle = "Scourge of the West";
 	model.storytext = "'A great and mischievous pirate' according to Henry Morgan and thought to be the Devil in person by some Spaniards, this Dutch corsair is ready to wreak havoc on the Caribbean!";
 	model.playertype = PLAYER_TYPE_CORSAIR;

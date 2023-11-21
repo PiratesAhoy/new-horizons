@@ -1139,12 +1139,16 @@ void DisplaySeaviewCoords()
 {
 	if(bSeaActive && !bAbordageStarted)
 	{
-		string xtext, ztext;
+		string xtext, ztext, itext;
 		int pX = MakeInt(characters[GetMainCharacterIndex()].ship.pos.x);
 		int pZ = MakeInt(characters[GetMainCharacterIndex()].ship.pos.Z);
-		if(pX<0){xtext = "(east)";}else{xtext = "(west)";}
-		if(pZ<0){ztext = "(north)";}else{ztext = "(south)";}
-		LogIt(TranslateString("","Our position from") + " "+characters[GetMainCharacterIndex()].location+": "+pZ+" "+ztext+", "+pX+" "+xtext);
+		if(pX<0){xtext = "east";}else{xtext = "west";}
+		if(pZ<0){ztext = "north";}else{ztext = "south";}
+		xtext = "(" + FirstLetterDown(TranslateString("",xtext)) + ")";
+		ztext = "(" + FirstLetterDown(TranslateString("",ztext)) + ")";
+		if(Characters[GetMainCharacterIndex()].location == "") itext = XI_ConvertString("Open Sea");
+		else itext = FindIslandName(Characters[GetMainCharacterIndex()].location);
+		LogIt(TranslateString("","Our position from") + " "+itext+": "+pZ+" "+ztext+", "+pX+" "+xtext);
 	}
 }
 

@@ -243,7 +243,8 @@ void GiveShip2Character(ref char, string shiptype, string shipname, int cannon_t
 	}
 // <-- KK
 	char.ship.type = shiptype;
-	char.ship.name = shipname;
+	if(TranslateString("",shipname) != "") char.ship.name = TranslateString("",shipname);
+	else char.ship.name = shipname;
 	aref arship; makearef(arship, char.ship);
 	DeleteAttribute(arship,"stats");
 // KK -->

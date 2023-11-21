@@ -192,7 +192,7 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(pchar, 800);
 			// Julian -->
 			GiveItem2Character(Pchar,"spyglass3");
-			Log_SetStringToLog(QUEST_MESSAGE13);
+			Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE13"));
 			// Julian <--
 			CloseQuestHeader("murro"); // NK
 			npchar.location = "none";

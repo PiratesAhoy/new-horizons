@@ -1438,6 +1438,7 @@ bool SetUsedPotionIcons()
 	ref mc = GetMainCharacter();
 
 	bool bUsed = false;
+	int idLngFile = LanguageOpenFile("commands_name.txt");
 
 	makearef(uiref,objLandInterface.UserIcons);
 	nq = GetAttributesNum(uiref);
@@ -1480,7 +1481,7 @@ bool SetUsedPotionIcons()
 		objLandInterface.UserIcons.(UI_name).tex = 6;
 		objLandInterface.UserIcons.(UI_name).name = UI_name;
 		objLandInterface.UserIcons.(UI_name).potion = "opium";
-		objLandInterface.UserIcons.(UI_name).note = "Use Opium";
+		objLandInterface.UserIcons.(UI_name).note = LanguageConvertString(idLngFile, "land_UseOpium");
 		bUsed = true;
 	}
 	if(CheckCharacterItem(mc,"vegetal"))
@@ -1492,7 +1493,7 @@ bool SetUsedPotionIcons()
 		objLandInterface.UserIcons.(UI_name).tex = 6;
 		objLandInterface.UserIcons.(UI_name).name = UI_name;
 		objLandInterface.UserIcons.(UI_name).potion = "vegetal";
-		objLandInterface.UserIcons.(UI_name).note = "Use Vegetal";
+		objLandInterface.UserIcons.(UI_name).note = LanguageConvertString(idLngFile, "land_UseVegetal");
 		bUsed = true;
 	}
 	//Levis <--

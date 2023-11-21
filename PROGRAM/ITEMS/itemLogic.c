@@ -2883,7 +2883,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box5.items.mapBB5A = 1;
 			locations[FindLocation(chr.location)].box6.items.Pell_outfit = 1;
 			locations[FindLocation(chr.location)].box6.items.medical2 = 1;
-			locations[FindLocation(chr.location)].box13.items.bladeclub = 1;
+		//	locations[FindLocation(chr.location)].box13.items.bladeclub = 1;
 			locations[FindLocation(chr.location)].box13.items.pistolwhip = 1;
 			locations[FindLocation(chr.location)].box13.items.key38 = 1;
 		}

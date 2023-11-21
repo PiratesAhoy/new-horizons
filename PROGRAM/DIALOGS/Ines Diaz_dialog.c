@@ -673,7 +673,7 @@ void ProcessDialogEvent()
 		
 		case "Estrella_Armand2":
 			dialog.text = DLG_TEXT[165];
-			link.l1 = "Armand Delacroix.";
+			link.l1 = GetMySimpleName(CharacterFromID("Armand Delacroix")) + ".";
 			link.l1.go = "Estrella_Armand3";
 		break;
 		
