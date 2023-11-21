@@ -144,6 +144,7 @@ bool LoadLocation(ref loc)
 			//Sea
 			if (loc.environment.sea == "true") {
 				CreateSea(EXECUTE,REALIZE);//CreateEntity(&locSea, "sea");
+				CreateCoastFoamEnvironment(loc.id, EXECUTE, REALIZE);
 			} else {
 				if (!ownDeckStarted()) DeleteSeaEnvironment();
 			}
@@ -171,7 +172,10 @@ bool LoadLocation(ref loc)
 		if (!CheckAttribute(loc, "models.back")) {
 			if(isTown || isFort) {
 				//Sea
-				if(loc.environment.sea == "true") CreateSea(EXECUTE,REALIZE);//CreateEntity(&locSea, "sea");
+				if(loc.environment.sea == "true") {
+					CreateSea(EXECUTE,REALIZE);//CreateEntity(&locSea, "sea");
+					CreateCoastFoamEnvironment(loc.id, EXECUTE, REALIZE);
+				}
 				//Weather
 				if(loc.environment.weather == "true") CreateWeather(EXECUTE,REALIZE);//CreateEntity(&locWeather, "weather");
 			}
@@ -738,6 +742,8 @@ bool UnloadLocation(aref loc)
 	DeleteAttribute(mainCharacter, "directsail1.QuestCheckMapEnter");	// PB: This too
 	LogoffCharactersFromLocation(loc);									// PB: Permanently erase certain characters
 	int n;
+
+	DeleteCoastFoamEnvironment();
 
 // KK -->
 	/*bool isNoBoarding = true;

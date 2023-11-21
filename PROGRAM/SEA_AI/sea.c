@@ -18,6 +18,8 @@
 #include "sea_ai\ShipDead.c"
 #include "sea_ai\ShipWalk.c"
 
+#include "sea_ai\CoastFoam.c"
+
 #include "sea_ai\Telescope.c"
 
 #include "battle_interface\BattleInterface.c"
