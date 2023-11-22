@@ -161,7 +161,7 @@ ChrBlock
 Bloquear
 
 }
-ChrAttack
+ChrAttackFast
 {
 Atacar
 
