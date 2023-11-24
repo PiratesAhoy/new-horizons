@@ -2,9 +2,8 @@
 
 [dialog]
 namefont	= "dialog_name"
-name.color = "#eecc66"
-mainfont	= "DIALOG21"
-subfont		= "DIALOG31"
+mainfont	= "dialog_text"
+subfont		= "dialog_answer"
 leftIndent	= 45
 rightIndent	= 40
 nodes_y		= 32
