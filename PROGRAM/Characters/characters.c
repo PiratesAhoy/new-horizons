@@ -369,30 +369,14 @@ void SetDefaultSitIdle(ref character)
 
 void SetDefaultNormWalk(ref character)
 {
-// MAXIMUS: -[unlinks from character.id]->
-	if(IsMainCharacter(character) && AlwaysRunToggle)
-	{
-		character.actions.walk = "run";
-		character.actions.backwalk = "back walk";
-		character.actions.run = "walk";
-		character.actions.backrun = "back run";
-		character.actions.stsUp = "run stairs up";
-		character.actions.stsUpRun = "stairs up";
-		character.actions.stsDown = "run stairs down";
-		character.actions.stsDownRun = "stairs down";
-	}
-	else
-    {
-		character.actions.walk = "walk";
-		character.actions.backwalk = "back walk";
-		character.actions.run = "run";
-		character.actions.backrun = "back run";
-		character.actions.stsUp = "stairs up";
-		character.actions.stsUpRun = "run stairs up";
-		character.actions.stsDown = "stairs down";
-		character.actions.stsDownRun = "run stairs down";
-    }
-// MAXIMUS: <-[unlinks from character.id]-
+	character.actions.walk = "walk";
+	character.actions.backwalk = "back walk";
+	character.actions.run = "run";
+	character.actions.backrun = "back run";
+	character.actions.stsUp = "stairs up";
+	character.actions.stsUpRun = "run stairs up";
+	character.actions.stsDown = "stairs down";
+	character.actions.stsDownRun = "run stairs down";
    
    character.actions.stsUpBack = "back stairs up";
    character.actions.stsDownBack = "back stairs down";
@@ -419,22 +403,10 @@ void SetDefaultNormWalk(ref character)
 
 void SetDefaultFight(ref character)
 {
-// MAXIMUS: -[unlinks from character.id]->
-	if(IsMainCharacter(character) && AlwaysRunToggle)
-	{
-		character.actions.fightwalk = "fight run";
-		character.actions.fightbackwalk = "fight back run";
-		character.actions.fightrun = "fight Walk";
-		character.actions.fightbackrun = "fight back walk";
-	}
-	else
-	{
-		character.actions.fightwalk = "fight walk";
-		character.actions.fightbackwalk = "fight back walk";
-		character.actions.fightrun = "fight run";
-		character.actions.fightbackrun = "fight back run";
-	}
-// MAXIMUS: <-[unlinks from character.id]-
+	character.actions.fightwalk = "fight walk";
+	character.actions.fightbackwalk = "fight back walk";
+	character.actions.fightrun = "fight run";
+	character.actions.fightbackrun = "fight back run";
 
 	character.actions.attack.a1 = "attack_1";
 	character.actions.attack.a2 = "attack_2";

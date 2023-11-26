@@ -822,3 +822,15 @@ void RestoreControls()
 	DeleteAttribute(rTmpControlsList, "");
 }
 // <-- KK
+
+void SetAlwaysRun(bool bRun)
+{
+	AlwaysRunToggle = bRun;
+
+	ControlsInit(GetTargetPlatform(), false);
+	if( GetTargetPlatform()=="pc" )
+	{
+		ControlsMakeInvert();
+		SetRealMouseSensitivity();
+	}
+}
