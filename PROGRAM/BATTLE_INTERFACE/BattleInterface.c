@@ -86,6 +86,7 @@ void InitBattleInterface()
 
 	BI_InitializeCommands();
 	bi_icons_CommandMode = 0;
+	BattleInterface.comstate = 0;
 	BattleInterface.SelCharacter = -1;
 
 	if (iRealismMode == 0)
