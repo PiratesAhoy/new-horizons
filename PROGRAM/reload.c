@@ -149,12 +149,7 @@ int Reload(aref reload_group, string locator_name, string current_location)
 	{
 		DialogExit();
 	}
-	PChar.condition = "reload";//MAXIMUS <--
-	if(sti(GetStorylineVar(FindCurrentStoryline(), "DISABLE_TIPS")) < 1) SetReloadNextTipsImage(); // JRH
 
-// changed by MAXIMUS -->
-	dialogDisable = !ownDeckStarted(); // KK
-// changed by MAXIMUS <--
 
 	reload_xaddress.active = "false";
 	//Check locked locator
@@ -209,6 +204,11 @@ int Reload(aref reload_group, string locator_name, string current_location)
 //		PlaySound("knock");//MAXIMUS
 		return 0;
 	}
+	if (reload_locator_ref.go == "") {
+		trace("Can't reload...");
+		trace("Reload: attribute 'go' in " + GetAttributeName(reload_locator_ref) + " is empty");
+		return 0;
+	}
 	if(CheckAttribute(reload_locator_ref, "emerge") == 0)
 	{
 		trace("Can't reload...");
@@ -234,6 +234,15 @@ int Reload(aref reload_group, string locator_name, string current_location)
 			}
 		}
 	}
+
+	PChar.condition = "reload";//MAXIMUS <--
+
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "DISABLE_TIPS")) < 1) SetReloadNextTipsImage(); // JRH
+
+// changed by MAXIMUS -->
+	dialogDisable = !ownDeckStarted(); // KK
+// changed by MAXIMUS <--
+
 	//Find location & reload
 	reload_island_index = -1;
 	reload_location_index = -1;
