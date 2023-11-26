@@ -1347,11 +1347,7 @@ void ProcessControls()
 			case "NK_AlwaysRunToggle":
 				if (!bSeaActive || bAbordageStarted)
 				{
-					AlwaysRunToggle = !AlwaysRunToggle;
-					BeginChangeCharacterActions(PChar); // NK 04-09-17 have it change now.
-					SetDefaultNormWalk(PChar);
-					SetDefaultFight(PChar);
-					EndChangeCharacterActions(PChar); // NK ditto
+					SetAlwaysRun(!AlwaysRunToggle);
 					if(AlwaysRunToggle) Log_SetStringToLog(TranslateString("","Always run is now on"));
 					else Log_SetStringToLog(TranslateString("","Always run is now off"));
 				}

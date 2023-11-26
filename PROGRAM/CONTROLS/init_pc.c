@@ -68,7 +68,12 @@ void ExternControlsInit(bool bFirst)
 	CI_CreateAndSetControls( "PrimaryLand", "ChrStrafeRight", CI_GetKeyCode(CTL_LAND_SIDESTEP_RIGHT), 0, true );
 	MapControlToGroup("ChrStrafeRight", "FightModeControls");
 
-	CI_CreateAndSetControls( "PrimaryLand", "ChrRun", CI_GetKeyCode(CTL_LAND_RUN), 0, true );
+	if(AlwaysRunToggle) {
+		CI_CreateAndSetControls( "PrimaryLand", "ChrRun", CI_GetKeyCode(CTL_LAND_RUN), USE_AXIS_AS_BUTTON, true );
+	} else {
+		CI_CreateAndSetControls( "PrimaryLand", "ChrRun", CI_GetKeyCode(CTL_LAND_RUN), USE_AXIS_AS_BUTTON + INVERSE_CONTROL, true );
+	}
+
 	MapControlToGroup("ChrRun","FightModeControls");
 	//MapControlToGroup("ChrRun","BattleInterfaceControls");// TIH not needed Aug24'06
 
