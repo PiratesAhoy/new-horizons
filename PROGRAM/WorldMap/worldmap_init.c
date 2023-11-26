@@ -9,6 +9,15 @@ void wdmInitWorldMap()
 
 	wdmReinit();
 
+	//Start date
+	worldMap.date.hour = CharHour;
+	worldMap.date.min = CharMinute;
+	worldMap.date.sec = CharSecond;
+	worldMap.date.day = CharDay;
+	worldMap.date.month = CharMonth;
+	worldMap.date.year = CharYear;
+	worldMap.date.hourPerSec = 1.5;
+
 	//=========================================================================
 	//Labels
 	//=========================================================================
@@ -828,15 +837,6 @@ void wdmReinit() {
 	worldMap.debug = "false";
 	worldMap.evwin = "false";
 	worldMap.noenc = "false";
-
-	//Start date
-	worldMap.date.hour = CharHour;
-	worldMap.date.min = CharMinute;
-	worldMap.date.sec = CharSecond;
-	worldMap.date.day = CharDay;
-	worldMap.date.month = CharMonth;
-	worldMap.date.year = CharYear;
-	worldMap.date.hourPerSec = 1.5;
 
 	worldMap.foodText.scale = 1.0;
 	worldMap.foodText.font = "normal";
