@@ -1230,3 +1230,18 @@ float LAi_NPC_GetAttackWeightFeint()
 	npc_return_tmp = 0;
 	return npc_return_tmp;
 }
+
+#event_handler("Check_ChrHitAttack", "LAi_CheckChrHit");
+int LAi_CheckChrHit()
+{
+	aref attacker = GetEventData();
+	aref defender = GetEventData();
+	bool isRecoil = GetEventData();
+
+	if (rand(100) > 20) {
+		return LAI_CHARACTER_HIT_SOFT;
+	}
+	else {
+		return LAI_CHARACTER_HIT_HARD;
+	}
+}
