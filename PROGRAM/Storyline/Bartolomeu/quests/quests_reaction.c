@@ -3460,7 +3460,7 @@ void QuestComplete(string sQuestName)
 		case "gifleperdiguero":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Luis Perdiguero"));
-			LAi_ActorAnimation(pchar, "attack_2", "sautfenetre", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "sautfenetre", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			break;
 
@@ -3992,7 +3992,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "finalalliere2":
-			LAi_ActorAnimation(pchar, "attack_2", "finalalliere3", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "finalalliere3", 0.0);
 			TakeItemFromCharacter(pchar, "darien_idol");
 			PlayStereoSound("INTERFACE\took_item.flac");
 			break;
@@ -4950,7 +4950,7 @@ void QuestComplete(string sQuestName)
 		case "giflecole":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Spanish Governor"));
-			LAi_ActorAnimation(pchar, "attack_2", "Lancer_Video2", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "Lancer_Video2", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			break;
 
