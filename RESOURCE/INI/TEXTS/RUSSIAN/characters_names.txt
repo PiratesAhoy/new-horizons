@@ -1,9 +1,9 @@
 // MAXIMUS 27.05.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| Antigua.c |=====}
-Portadmiral{Начальник порта}
-Lord Barham{Лорд Бэрхем}
+Portadmiral{Начальник Порта}
+Lord Barham{Лорд Бархэм}
 Regulating{Управляющий}
-RCaptain{колонией}
+RCaptain{Колонией}
 
 {=====| Aruba.c |=====}
 Hendrick{Хендрик}
@@ -282,7 +282,7 @@ Hollander{Голландец}
 Oweyn{Овейн}
 McDorey{МакДори}
 Arendt{Арен}
-Verheugen{Верхаген}
+Verheugen{Верхеген}
 Prosper{Проспер}
 Fraigneau{Фрейно}
 Benoit{Бенуа}
@@ -592,7 +592,7 @@ Bagage{Багаж}
 Arielle{Ариэль}
 Dumont{Дюмон}
 Dorian{Дориан}
-Denise{Денис}
+Denise{Дэнис}
 Fleur{Флер}
 Dimitri{Дмитрий}
 Lunesque{Лунеск}
@@ -700,7 +700,7 @@ Florens{Флоренс}
 Clauss{Клаусс}
 Attwood{Эттвуд}
 Blood{Блад}
-Txiki{Тсики}
+Txiki{Чики}
 Pijuan{Пижуан}
 
 {=====| Other.c |=====}
@@ -929,7 +929,7 @@ Antoine{Антуан}
 Chamfort{Шамфорт}
 Robert_fr{Роберт}
 Durand{Дюран}
-Reynoud{Рейнойд}
+Reynoud{Рейноуд}
 Davy{Дэйви}
 Jones{Джонс}
 Octave{Октава}
