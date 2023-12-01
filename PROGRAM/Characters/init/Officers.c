@@ -250,7 +250,7 @@ void CreateOfficersCharacters(ref n)
 	ch.money = "0";
 	ch.quest.meeting = "0";
 	ch.quest.goldmine = "0";
-	ch.Ship.Name = "Cheri";
+	ch.Ship.Name = TranslateString("","Cheri");
 	ch.Ship.Type = "PiratBrig50"; // Petros: was Brig1
 	ch.Ship.Stopped = true;
 	//KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS12;
@@ -672,7 +672,7 @@ void CreateOfficersCharacters(ref n)
 	ch.skill.Sneak = "2";
 	ch.money = "0";
 	ch.quest.meeting = "0";
-	ch.Ship.Name = "Arabella";
+	ch.Ship.Name = TranslateString("","Arabella");
 	switch(GetCurrentPeriod())
 	{
 		case PERIOD_EARLY_EXPLORERS:

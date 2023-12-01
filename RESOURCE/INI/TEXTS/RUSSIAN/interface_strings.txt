@@ -130,7 +130,7 @@ If you're careful, you just might make it.{Если повезёт - вы доб
 But given your past performance you'll all starve'{Но, в память о твоих 'заслугах', вы не получите и крошки хлеба.}
 You regain consciousness after a long feverish sleep{Вы приходите в себя после долгого лихорадочного сна...}
 Fire has reached the{На корабле}
-'s powder magazine!{горит пороховой склад!!!}
+'s powder magazine!{ горит пороховой склад!!!}
 One fire doused!{Один пожар потушен!}
 men burnt{человек(а) обгорело}
 Fire still burning! Execute firedrill procedure immediately!{Пожар продолжается! Нажмите "С" для тушения!}
@@ -222,8 +222,8 @@ Colony of{Колония}
 captured by{захвачена нацией}
 Your prisoner{Ваш пленник}
 jumped overboard and escaped!{сбежал! Прыгнул за борт и скрылся!}
-Sir, the{Кэп! На корабле}
-Ma'am, the{Мэм! На корабле}
+Sir, the{Сэр! Корабль}
+Ma'am, the{Мэм! Корабль}
 has struck her colors!{подняли белый флаг!}
 has struck her colors to the enemy!{решили атаковать нас!}
 Fire! Execute firedrill procedure!{Корабль горит! Нажмите "С", чтобы отправить всех на его тушение!}
@@ -694,13 +694,14 @@ Your spade hits a stone and breaks..{Ваша лопата ударяется о
 You dig up a treasurechest{Вы выкопали сундук с сокровищами...}
 An  Akkelani witchdoctor. Mummified.. but spitting VENOM !{Аккеланский знахарь. Мумифицирован... но плюётся ЯДОМ!}
 Looks like someone has been digging here..{Похоже, кто-то уже копал здесь...}
-Do you want to dig as well? With your SWORD{Вы тоже хотите копать? Своим клинком}
+Do you want to dig as well? With your SWORD{Вы тоже хотите копать? С помощью своего клинка}
+Do you want to dig as well? With your{Вы тоже хотите копать? С помощью предмета }
 TAVERNBRAWL{ДРАКА В ТАВЕРНЕ}
 AMBUSH{ЗАСАДА}
 MILITARY RAID{ВОЕННЫЙ НАЛЕТ}
 ALERT{ТРЕВОГА}
 PIRATES RAID{ПИРАТСКИЙ НАЛЁТ}
-You are ALONE now. No other LIVING soul dares to enter here..{Вы сейчас ОДИН. Ни одна ЖИВАЯ душа не рискнёт войти сюда...}
+You are ALONE now. No other LIVING soul dares to enter here..{Теперь вы сами по себе. Ни одна ЖИВАЯ душа не рискнёт войти сюда...}
 The warriormonk disappears... like the smoke of a long forgotten pyre...{Воинственный монах исчезает... подобно дыму давно забытого погребального огня...}
 The weird monk reveals his true nature..{Ужасный монах показал своё истинное лицо..}
 Old vag gone at the moment, but...burglers!{Старого бродяги сейчас нет, но... взломщики!}
@@ -1170,7 +1171,7 @@ Office{Кабинет}
 Naval Store{Военно-Морской Магазин}
 Naval Shipyard{Военно-Морская Верфь}
 British Naval Headquarters{Британский Военно-Морской Штаб}
-British Naval Headquarters Study{Исследовательская Британского Военно-Морского Штаба}
+British Naval Headquarters Study{Кабинет Британского Военно-Морского Штаба}
 #stown_name# Plantation{Плантация #stown_name#}
 Plantation{Плантация}
 Fire Ship deck{Палуба Горящего Корабля}
