@@ -4762,7 +4762,7 @@ void Ship_UpdateParameters()
 	if(HasCharacterShipAttribute(rCharacter, "fog_trail") || IsCursed)
 	{
 		int puffs_per_second = 10;
-		if(SeaCameras.Camera == "SeaDeckCamera")	puffs_per_second = 1;
+		if(Scene.Camera == DECK_CAMERA)	puffs_per_second = 1;
 		for (i=0; i < puffs_per_second; i++)
 		{
 			PostEvent("CreateCursedPearlFog", delay, "i", rCharacter);
@@ -4775,7 +4775,7 @@ void Ship_UpdateParameters()
 	if(HasCharacterShipAttribute(rCharacter, "devil_trail"))
 	{
 		int (puffs_per_second = 10);
-		if(SeaCameras.Camera == "SeaDeckCamera")	puffs_per_second = 1;
+		if(Scene.Camera == DECK_CAMERA)	puffs_per_second = 1;
 		for (i=0; i < puffs_per_second; i++)
 		{
 			PostEvent("CreateCursedDevilFog", delay, "i", rCharacter);
@@ -5038,7 +5038,7 @@ void Ship_UpdateTmpSkills(ref rCharacter)
 	// NK <--
 	//Seriously why ... -Levis
 	/*
-	if (SeaCameras.Camera == "SeaDeckCamera" && sti(rCharacter.index) == GetMainCharacterIndex())
+	if (Scene.Camera == DECK_CAMERA && sti(rCharacter.index) == GetMainCharacterIndex())
 	{
 		switch (GetTargetPlatform())
 		{

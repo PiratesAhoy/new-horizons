@@ -4977,7 +4977,7 @@ Cost for level 50 is 55,374,000
 // Levis -->
 		case "get_shot_gun_mode":
 			globalSGMode = true;
-			if(FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
+			if(ENABLE_FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
 			PlaySound("OBJECTS\duel\reload1.wav");
 		break;
 		

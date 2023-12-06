@@ -1011,6 +1011,6 @@ Set all to -1 to disable this mod
 #define DISARM_MODE						0
 #define VISIBLE_LOCATORS				0
 #define WITH_BRIGHT_COLOURS				0		// VISIBLE_LOCATORS must be on to change this
-#define FREE_CAMERA						0
+#define ENABLE_FREE_CAMERA						0
 #define SIDESTEP_ENABLED				0		// BOOL - 0 (default) = off, 1 = on: you can use sidestep during the game (NOTE: No collision detection!)
 #define ENABLE_CHEATMODE				0		// Cheats can be triggered with numpad buttons

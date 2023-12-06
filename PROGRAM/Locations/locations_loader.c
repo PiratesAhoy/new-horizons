@@ -550,11 +550,12 @@ bool LoadLocation(ref loc)
 	}
 	// CTM <--
 	//Camera===============================================================================
-	locCameraEnableFree = FREE_CAMERA;				// PB: For Free Camera Mode
+	locCameraEnableFree = ENABLE_FREE_CAMERA;				// PB: For Free Camera Mode
 	DeleteAttribute(mainCharacter, "scrollchars");	// PB: For Cheatmode
 	InitOpenSeaMod();								// stljeffbb Jan 15 2012
 	ReloadProgressUpdate();
-	CreateEntity(&locCamera, "locationcamera");
+	CreateEntity(&locCamera, "LocationCamera");
+	SetActiveCamera(LOCATION_CAMERA);
 	SendMessage(&locCamera, "li", MSG_CAMERA_SETTARGET, mainCharacter);
 	locCameraFollow();
 	if(CheckAttribute(loc, "lockCamAngle") == true) // KK && LAi_boarding_process)
@@ -1169,7 +1170,7 @@ void LocLoadShips(ref Location)
 		if(CheckAttribute(rCharacter,"sailaway"))
 		{
 			if(!CheckAttribute(rCharacter,"Ship.Strand"))					rCharacter.Ship.Strand = false;
-			if(!CheckAttribute(SeaCameras,"camera"))						SeaCameras.Camera = "SeaShipCamera";
+			if(!CheckAttribute(Scene,"camera"))								Scene.Camera = SHIP_CAMERA;
 			if(!CheckAttribute(rCharacter,"ship.cannons.Charge"))			rCharacter.ship.cannons.Charge.Type = GOOD_BALLS;
 			if(!CheckAttribute(rCharacter,"TmpPerks.LongRangeShoot"))		rCharacter.TmpPerks.LongRangeShoot = false;
 			if(!CheckAttribute(rCharacter,"TmpPerks.shipspeedup"))			rCharacter.TmpPerks.shipspeedup = false;

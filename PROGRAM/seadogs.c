@@ -7,6 +7,7 @@
 #include "sulan_shipslog.c"
 #include "globals.c"
 #include "animals.c"
+#include "camera.c"
 #include "sea_ai\sea.c"
 #include "ships\ships.c"
 #include "Encounters\Encounters.c"
@@ -1631,7 +1632,7 @@ void ProcessControls()
 						{
 							LAi_SetFightMode(PChar, true);
 							globalSGMode = true;
-							if(FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
+							if(ENABLE_FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
 							PlaySound("OBJECTS\duel\reload1.wav");
 						}
 					}
@@ -1649,7 +1650,7 @@ void ProcessControls()
 							{
 								LAi_SetFightMode(PChar, true);
 								globalSGMode = true;
-								if(FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
+								if(ENABLE_FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
 								PlaySound("OBJECTS\duel\reload1.wav");
 							}
 						}
@@ -1738,7 +1739,7 @@ void ProcessControls()
 				}
 				else
 				{
-					if(FREE_CAMERA)														// Levis: We don't want to go in here if we are in shotgun mode or in fightmode
+					if(ENABLE_FREE_CAMERA)														// Levis: We don't want to go in here if we are in shotgun mode or in fightmode
 					{
 						if(locCameraCurMode == LOCCAMERA_FOLLOW)	locCameraFree();
 						else										locCameraFollow();

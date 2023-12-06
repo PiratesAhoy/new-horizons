@@ -10,7 +10,7 @@ bool locCameraEnableFree;
 
 void locCameraInit()
 {
-	locCameraEnableFree = FREE_CAMERA;
+	locCameraEnableFree = ENABLE_FREE_CAMERA;
 	locCameraEnableSpecialMode = false;
 	//locCameraEnableFree = true;
 	locCameraCurMode = LOCCAMERA_FOLLOW;

@@ -669,7 +669,7 @@ string GetCurControlGroup()
 		if( CheckAttribute(&BattleInterface,"ComState") && sti(BattleInterface.ComState) != 0 )
 			return "BattleInterfaceControls";
 
-		if( SeaCameras.Camera == "SeaDeckCamera" )	{ return "Sailing1Pers"; }
+		if( Scene.Camera == DECK_CAMERA )	{ return "Sailing1Pers"; }
 		else { return "Sailing3Pers"; }
 	}
 
