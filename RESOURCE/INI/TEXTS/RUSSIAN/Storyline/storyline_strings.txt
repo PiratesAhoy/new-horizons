@@ -942,6 +942,7 @@ Santa Matilde{Святая Матильда}
 Marнa Santнsima{Сантисима-Тринидад}
 Cardenal Cisneros{Кардинал Сиснерос}
 Бngel de la Guarda{Ангел-Хранитель}
-Septentriуn{Септентриун}
+Septentriуn{Септентрион}
+Arabella{Арабелла}
 
 {=====| 231 characters |=====}
