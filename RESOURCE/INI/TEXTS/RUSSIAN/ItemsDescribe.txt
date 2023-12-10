@@ -1995,7 +1995,7 @@ itmdescr_book15
 
 //Levis' exorcism book -->
 
-itmname_book_exorcist {Перестать Обманывать}
+itmname_book_exorcist {Книга Экзорциста}
 itmdescr_book_exorcist
 {
 Загадочная книга на загадочном языке, найденная у мертвого искателя приключений.

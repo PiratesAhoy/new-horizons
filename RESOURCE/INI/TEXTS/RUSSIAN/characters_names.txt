@@ -687,7 +687,7 @@ Coffier{Коффир}
 Da Saldanha{Де Салданья}
 Rys{Рис}
 Bloom{Блум}
-Larrouse{Лярус}
+Larrouse{Ларроуз}
 Jaoquin{Жаокин}
 De Masse{Де Массе}
 Nigel{Найджел}
