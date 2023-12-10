@@ -92,7 +92,7 @@ About_Build_4
 
 - Your crew can use the weapons, guns, armour and medications in your weaponslocker when boarding. This can make the difference between victory and defeat!
 
-- In Realistic and Iron Man Mode, you need a compass and a sextant in order to see your ship on the archipelago map (default key [M]). Also, in every mode, they increase your sailing skill.
+- In Realistic and Iron Man Mode, you need a chronometer and a sextant in order to see your ship on the archipelago map (default key [M]). Also, in every mode, they increase your sailing skill.
 
 - In order to execute a fire drill when you find your ship ablaze, you need the perk "Basic Ship Defence". The default key for this is [C].
 
