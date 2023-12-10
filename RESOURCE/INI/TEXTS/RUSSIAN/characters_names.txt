@@ -26,7 +26,7 @@ Jacomina{Джакомина}
 Boymans{Бойманс}
 Leo{Лео}
 Visscher{Вишер}
-Jan{Ян}
+Jan{Жан}
 Thijs{Тайс}
 Arawak{Аравак}
 Indian{Индеец}
@@ -404,12 +404,12 @@ Sweat Shop Sally{Потная Салли}
 
 {=====| FalaiseDeFleur.c |=====}
 Milon{Милон}
-Blacque{Бласкю}
+Blacque{Блакуи}
 Orable{Орабл}
 Caron{Кэрон}
 Rachel{Рэйчел}
 Marc{Марк}
-Sabine{Сабин}
+Sabine{Сабина}
 Sabina{Сабина}
 Sabie{Саби}
 Sabi{Саби}
@@ -420,7 +420,7 @@ Lucien{Люсьен}
 Bescanceny{Бесканцени}
 Teodoro{Теодоро}
 Andre{Андрэ}
-Juliao{Джулия}
+Juliao{Джулиао}
 Rene{Ренэ}
 Duguay{Дугай}
 Pater{Отец}
@@ -682,12 +682,12 @@ o' ye Hoarde{Сокровищ}
 {=====| Officers.c |=====}
 Fred{Фред}
 Bob{Боб}
-Baldewyn{Болдуин}
+Baldewyn{Балдуин}
 Coffier{Коффир}
 Da Saldanha{Де Салданья}
 Rys{Рис}
 Bloom{Блум}
-Larrouse{Лярус}
+Larrouse{Ларроуз}
 Jaoquin{Жаокин}
 De Masse{Де Массе}
 Nigel{Найджел}

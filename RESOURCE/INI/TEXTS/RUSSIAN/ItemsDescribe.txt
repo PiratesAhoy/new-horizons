@@ -39,7 +39,7 @@ itmdescr_letter_to_bernard
 itmname_prison_letter	{Письмо от Отца Бернарда}
 itmdescr_prison_letter
 {
-Письмо от #sFatherBernard#, позволяющее вам забрать узника из тюрьмы #sGreenford# на #sisland_Oxbay#.
+Письмо от Отца Бернарда, позволяющее вам забрать узника из тюрьмы города #sGreenford# на острове #sisland_Oxbay#.
 }
 
 itmname_old_journal	{Старый Дневник}
@@ -67,7 +67,7 @@ itmdescr_small_chest
 itmname_SpanishLetter	{Испанское Письмо}
 itmdescr_SpanishLetter
 {
-Этот документ, подписанный Вице-Адмиралом Сальваторе, доказывает, что 'Фогельструйс' везет боеприпасы для завоевания #sRedmond# и должен доставить груз в #sSanto Domingo#.
+Этот документ, подписанный Вице-Адмиралом Сальвадором, доказывает, что корабль 'Фогельструйс' доставляет боеприпасы для завоевания города #sRedmond#. Он должен доставить груз в город #sSanto Domingo#.
 }
 
 itmname_Trade_Passport {Торговая Лицензия}
@@ -124,15 +124,15 @@ itmdescr_Devil_Contract
 Этот документ, подписанный Мефистофелем, доказывает, что вы заключили контракт с Дьяволом. Это означает, что вы прокляты! Теперь вы привязаны к своему кораблю на вечность и будете переправлять души для Ада.
 }
 
-itmname_Correspondence1 {Письмо Сильвии Бондис}
+itmname_Correspondence1 {Письмо Арно Маттона}
 itmdescr_Correspondence1
 {
-Переписка между Арно Маттоном и Сильвии Бондис относительно Сабины.
+Письмо от Арно Маттона для Сильвии Бондье, относительно Сабины.
 }
-itmname_Correspondence2 {Письмо Арно Маттону}
+itmname_Correspondence2 {Письмо Сильвии Бондье}
 itmdescr_Correspondence2
 {
-Переписка между Сильвии Бондис и Арно Маттоном относительно Сабины.
+Письмо от Сильвии Бондье для Арно Маттона, относительно Сабины.
 }
 // Клинки, Шпаги, Сабли и т.д
 
@@ -1995,7 +1995,7 @@ itmdescr_book15
 
 //Levis' exorcism book -->
 
-itmname_book_exorcist {Перестать Обманывать}
+itmname_book_exorcist {Книга Экзорциста}
 itmdescr_book_exorcist
 {
 Загадочная книга на загадочном языке, найденная у мертвого искателя приключений.
@@ -2241,5 +2241,5 @@ itmdescr_mapKRTempleGround {
 
 itmname_mapKRTempleUpper {Карта Храма #slocation#}
 itmdescr_mapKRTempleUpper {
-Карта верхних уровней #slocation#.
+Карта верхних уровней храма #slocation#.
 }
