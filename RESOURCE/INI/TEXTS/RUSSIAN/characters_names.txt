@@ -1,9 +1,9 @@
 // MAXIMUS 27.05.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| Antigua.c |=====}
-Portadmiral{Начальник порта}
-Lord Barham{Лорд Бэрхем}
+Portadmiral{Начальник Порта}
+Lord Barham{Лорд Бархэм}
 Regulating{Управляющий}
-RCaptain{колонией}
+RCaptain{Колонией}
 
 {=====| Aruba.c |=====}
 Hendrick{Хендрик}
@@ -26,7 +26,7 @@ Jacomina{Джакомина}
 Boymans{Бойманс}
 Leo{Лео}
 Visscher{Вишер}
-Jan{Ян}
+Jan{Жан}
 Thijs{Тайс}
 Arawak{Аравак}
 Indian{Индеец}
@@ -282,7 +282,7 @@ Hollander{Голландец}
 Oweyn{Овейн}
 McDorey{МакДори}
 Arendt{Арен}
-Verheugen{Верхаген}
+Verheugen{Верхеген}
 Prosper{Проспер}
 Fraigneau{Фрейно}
 Benoit{Бенуа}
@@ -404,12 +404,12 @@ Sweat Shop Sally{Потная Салли}
 
 {=====| FalaiseDeFleur.c |=====}
 Milon{Милон}
-Blacque{Бласкю}
+Blacque{Блакуи}
 Orable{Орабл}
 Caron{Кэрон}
 Rachel{Рэйчел}
 Marc{Марк}
-Sabine{Сабин}
+Sabine{Сабина}
 Sabina{Сабина}
 Sabie{Саби}
 Sabi{Саби}
@@ -420,7 +420,7 @@ Lucien{Люсьен}
 Bescanceny{Бесканцени}
 Teodoro{Теодоро}
 Andre{Андрэ}
-Juliao{Джулия}
+Juliao{Джулиао}
 Rene{Ренэ}
 Duguay{Дугай}
 Pater{Отец}
@@ -592,7 +592,7 @@ Bagage{Багаж}
 Arielle{Ариэль}
 Dumont{Дюмон}
 Dorian{Дориан}
-Denise{Денис}
+Denise{Дэнис}
 Fleur{Флер}
 Dimitri{Дмитрий}
 Lunesque{Лунеск}
@@ -682,12 +682,12 @@ o' ye Hoarde{Сокровищ}
 {=====| Officers.c |=====}
 Fred{Фред}
 Bob{Боб}
-Baldewyn{Болдуин}
+Baldewyn{Балдуин}
 Coffier{Коффир}
 Da Saldanha{Де Салданья}
 Rys{Рис}
 Bloom{Блум}
-Larrouse{Лярус}
+Larrouse{Ларроуз}
 Jaoquin{Жаокин}
 De Masse{Де Массе}
 Nigel{Найджел}
@@ -700,7 +700,7 @@ Florens{Флоренс}
 Clauss{Клаусс}
 Attwood{Эттвуд}
 Blood{Блад}
-Txiki{Тсики}
+Txiki{Чики}
 Pijuan{Пижуан}
 
 {=====| Other.c |=====}
@@ -929,7 +929,7 @@ Antoine{Антуан}
 Chamfort{Шамфорт}
 Robert_fr{Роберт}
 Durand{Дюран}
-Reynoud{Рейнойд}
+Reynoud{Рейноуд}
 Davy{Дэйви}
 Jones{Джонс}
 Octave{Октава}
