@@ -34,7 +34,7 @@ void LocationInitSideQuestLocations(ref n)
 // ELIZABETH SHAW'S DISAPPEARENCE (Davy Jones First Contact quest)
 
 	Locations[n].id = "Quest_Cayman_Port";
-	locations[n].id.label = "Grand Cayman Port";
+	locations[n].id.label = "#stown_name# Port";
 	Locations[n].image = "Town_FalaiseDeFleur_Port2_England";
 
 	//Town sack
@@ -77,7 +77,7 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].filespath.textures = "locations\ENGLAND";
 
 	Locations[n].id = "Quest_Grand_Cayman_town";
-	locations[n].id.label = "Grand Cayman";
+	locations[n].id.label = "#stown_name#";
 	Locations[n].image = "Town_Douwesen_Town_England";
 
 	//Town sack

@@ -106,11 +106,13 @@ void ProcessDialogEvent()
 			Dialog.Text = DLG_TEXT[20];
 			if(sti(GetStorylineVar(FindCurrentStoryline(), "JACK_SPARROW")) > 0)
 			{
-				Link.l1 = GetDataDay() + " " + GetMonthName(GetDataMonth()) + " " + GetDataYear() + DLG_TEXT[22];
+			//	Link.l1 = GetDataDay() + " " + GetMonthName(GetDataMonth()) + " " + GetDataYear() + DLG_TEXT[22];
+				Link.l1 = GetHumanDate(GetDataYear(), GetDataMonth(), GetDataDay()) + DLG_TEXT[22];																	   
 			}
 			else
 			{
-				Link.l1 = GetDataDay() + " " + GetMonthName(GetDataMonth()) + " " + GetDataYear() + DLG_TEXT[21];
+			//	Link.l1 = GetDataDay() + " " + GetMonthName(GetDataMonth()) + " " + GetDataYear() + DLG_TEXT[21];
+				Link.l1 = GetHumanDate(GetDataYear(), GetDataMonth(), GetDataDay()) + DLG_TEXT[21];																	   
 			}
 			Link.l1.go = "exit";
 			AddDialogExitQuest("jela");

@@ -977,7 +977,7 @@ void Box_EnterToLocator(aref loc, string locName)
 		PlaySound("people\step_sand.wav");
 		Logit(TranslateString("","Looks like someone has been digging here.."));
 		if(GetCharacterEquipByGroup(chr,BLADE_ITEM_TYPE) == "Minersspade" && CheckCharacterItem(chr, "Minersspade"))
-			Logit(TranslateString("","Do you want to dig as well? With your ") + GetItemNameByID(chr.equip.blade) + "???"));
+			Logit(TranslateString("","Do you want to dig as well? With your") + GetItemNameByID(chr.equip.blade) + "???"));
 		else
 			LogIt(TranslateString("","What am I going to dig with? My HANDS? I need a spade!"));
 	}
