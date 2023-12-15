@@ -1411,12 +1411,12 @@ void Ship_SetCannonQtyByCrew(ref rCharacter)
 	if (CrewRequired < 1) CrewRequired = 1;
 
 	int CrewQuantity  = GetCrewQuantity(rCharacter);
-	if(iRealismMode>0)
-	{
-		int MinSailCrew = GetCharacterShipHP(rCharacter)/100;	// crew needed for sailing, intentionally not using mininum crew here
-		if (MinSailCrew >= 100000/100) MinSailCrew = 100;		// Cursed ships are a special case
-		CrewQuantity -= MinSailCrew;
-	}
+	// if(iRealismMode>0)
+	// {
+	// 	int MinSailCrew = GetCharacterShipHP(rCharacter)/100;	// crew needed for sailing, intentionally not using mininum crew here
+	// 	if (MinSailCrew >= 100000/100) MinSailCrew = 100;		// Cursed ships are a special case
+	// 	CrewQuantity -= MinSailCrew;
+	// }
 	if (CrewQuantity < CrewPerGun) CrewQuantity = CrewPerGun;		// detail one gun crew from the MinSailCrew
 
 	float crewratio = 1.0;
