@@ -8,7 +8,8 @@ object FreeCamera;
 
 void UpdateCamera()
 {
-	if (!IsEntity(&Scene) ) {
+	aref sceneRef;
+	if (!FindEntity(&sceneRef, "Scene") ) {
 		CreateEntity(&Scene, "Scene");
 		LayerAddObject(EXECUTE, &Scene, 0);
 		LayerAddObject(SEA_EXECUTE, &Scene, 0);
