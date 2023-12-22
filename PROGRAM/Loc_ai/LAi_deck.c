@@ -74,11 +74,11 @@ void Return2SeaAfterDeck()
 		SetEventHandler("FaderEvent_EndFade", "DeckToSea_ReloadEndFadeAfter", 0);
 	} else {
 // <-- KK
-		//Установить хендлеры для обработки
+		// Set handlers for processing
 		SetEventHandler("FaderEvent_StartFade", "Deck_ReloadStartFadeAfter", 0);
 		SetEventHandler("FaderEvent_EndFade", "Deck_ReloadEndFadeAfter", 0);
 	}
-	//Создаём фейдер и запускаем
+	// Create a fader and launch
 	CreateEntity(&boarding_fader, "fader");
 	SetReloadImage(&boarding_fader, "sea");
 
@@ -440,6 +440,8 @@ void Deck_ReloadEndFadeAfter()
 	bAbordageStarted = false;
 	Sea.AbordageMode = false;
 	chrWaitReloadLocator = "";
+
+	SetActiveCamera(CurrentShipCamera);
 
 	InitBattleInterface();
 	StartBattleInterface();
@@ -894,6 +896,7 @@ void DeckToSea_ReloadStartFadeAfter()
 	DelEventHandler("FaderEvent_StartFade", "DeckToSea_ReloadStartFadeAfter");
 
 	UnloadDeck();
+	SetActiveCamera(CurrentShipCamera);
 	Sea.MaxSeaHeight = fOldMaxSeaHeight;
 }
 
@@ -1184,7 +1187,7 @@ void Land_DeckStartNow(int chridx, string deckname)
 	bDeckEnter = true;
 
 	deckID = deckname;
-	if (!bEmergeOnStartloc && HasSubStr(deckname, "ShipDeck")) 
+	if (!bEmergeOnStartloc && HasSubStr(deckname, "ShipDeck"))
 	{
 		LAi_QuestDelay("gunner_ammo", 1.0);
 

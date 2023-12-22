@@ -714,7 +714,7 @@ void LAi_LoadLocation(string locationID)
 		boarding_location = locIndex;
 		if (LoadLocation(&Locations[boarding_location]))
 		{
-			if (!Surrendered) { 
+			if (!Surrendered) {
 				// Let us take out the sabre
 				SendMessage(mchr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightMode", 1);
 				// We arrange the characters
@@ -902,7 +902,7 @@ bool SurrenderAction(ref mchr, ref ch, string locationID, string homeLocator, st
 	string desc = "This captain surrendered";
 	SetSkillCharMod(refEnCaptain, "Leadership", -1, id, desc); //Levis
 //	SetSkillCharMod(refEnCaptain, "Grappling", -1, id, desc); //Levis, TY after poll generally agreed to remove this part of the modifier
-	
+
 	refEnCaptain.nodisarm = 1;
 	if (!CheckAttribute(refEnCaptain,"chr_ai.type")) refEnCaptain.chr_ai.type = "stay";
 	if (!CheckAttribute(refEnCaptain,"model.entity")) refEnCaptain.model.entity = "NPCharacter";
@@ -1204,6 +1204,9 @@ void LAi_ReloadEndFade()
 			ChangeCharacterAddressGroup(refEnCharacter, "none", "", ""); // KK
 			if(!CheckAttribute(boarding_enemy,"storedAttributes")) DeleteAttribute(boarding_enemy,"storedAttributes");
 			RestoreCharacter(boarding_enemy);
+
+			SetActiveCamera(CurrentShipCamera);
+
 			LaunchRansackMain(mchr, boarding_enemy, "");
 			LAi_boarding_process = false;
 			if(CheckAttribute(mchr,"TalkWithSurrenderedCaptain")) DeleteAttribute(mchr,"TalkWithSurrenderedCaptain");//MAXIMUS: just in case
@@ -1417,7 +1420,7 @@ void LAi_ActivateReload()
 {
 //	SDLogIt("***ActivateReload()");		// Uncommenting this gives many many entries in the log
 	int tmpi;
-	ref mchr = GetMainCharacter(); 
+	ref mchr = GetMainCharacter();
 	ref chr;
 	string controlName = GetEventData();
 	if (controlName != "ChrAction") return;
@@ -2181,7 +2184,7 @@ int GetFortBoardingLocationsCount()
 void PrepareLocationForBoardingFort()
 {
 	int fortidx, homeland;
-	string town; 
+	string town;
 	ref fort;
 
 	fortidx = FindLocation("BOARDING_Fort");
@@ -2373,7 +2376,7 @@ void SetUpGovernor()
 		LAi_SetSitType(captured_governor);
 	LAi_SetLoginTime(captured_governor, 0.0, 24.0);
 	LAi_group_MoveCharacter(captured_governor, LAI_GROUP_PLAYER);
-	if (captured_governor.sex == "woman") captured_governor.greeting = "Gr_Rachel Blacque";		// "Gr_Angelique Moulin" ("Bonjour, monsieur. At your service."), "Gr_Arabella Silehard" ("I'm not so much a governor as I am an agent of the monarchy"), "Gr_Rachel Blacque" ("Oui, monsieur? You wish to speak with me?") 
+	if (captured_governor.sex == "woman") captured_governor.greeting = "Gr_Rachel Blacque";		// "Gr_Angelique Moulin" ("Bonjour, monsieur. At your service."), "Gr_Arabella Silehard" ("I'm not so much a governor as I am an agent of the monarchy"), "Gr_Rachel Blacque" ("Oui, monsieur? You wish to speak with me?")
 	else captured_governor.greeting = "Gr_Clauss";							// "Parlez, captain?" Was "Gr_Dark Teacher" which is identical
 	captured_governor.town = town;
 
