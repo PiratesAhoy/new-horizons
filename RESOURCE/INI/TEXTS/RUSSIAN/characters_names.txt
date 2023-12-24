@@ -357,7 +357,7 @@ Hafte{Хафт}
 Elting{Элтинг}
 Andries{Андрис}
 Lorine{Лорин}
-Willem{Виллем}
+Willem{Вильгельм}
 Maritz{Мариц}
 Pieter{Питер}
 Nolt{Нолт}
@@ -962,7 +962,7 @@ Figuiera{Фигуэйра}
 Friedrich{Фридрих}
 Maxwell{Максвелл}
 Meranda{Меранда}
-seven{севен}
+seven{Севен}
 Claudio{Клаудио}
 Murena{Мурена}
 Ethilrede{Этильред}
@@ -978,7 +978,7 @@ Desiree'{Дезире'}
 Muerte{Муэрте}
 Thug{Громила}
 Vassal{Вассал}
-Bethune{Битюн}
+Bethune{Бетьюн}
 Daryl{Дэрил}
 Larry{Ларри}
 Captain Jack{Капитан Джек}
@@ -1049,8 +1049,10 @@ Constantino{Константино}
 Avellбn{Авеллан}
 Growling{Рычащий}
 Bear{Медведь}
+Growling Bear{Рычащий Медведь}
 Kicking{Клюющийся}
 Raven{Ворон}
+Kicking Raven{Клюющийся Ворон}
 Lewis{Льюис}
 Vickers{Викерс}
 Carpenter1{Плотник}
@@ -1360,3 +1362,13 @@ Akellani native{Уроженец Акеллани}
 A rabid monkey{Бешеная Обезьяна}
 Joshamee{Джошами}
 Gibbs{Гиббс}
+Shuggy{Грязный}
+Garry{Гарри}
+Crystal{Кристал}
+Eccleston{Экклстон}
+Boulton{Бултон}
+Carib{Кариб}
+Carib Warrior{Карибский Воин}
+Shore Indian{Береговой Индеец}
+Laurens-Jan{Лоуренс-Ян}
+Revenboer{Ревенбур}

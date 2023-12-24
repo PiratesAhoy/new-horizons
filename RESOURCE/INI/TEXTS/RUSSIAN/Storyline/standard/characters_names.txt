@@ -22,7 +22,7 @@ Serrao{Серрао}
 
 {=====| Story.c |=====}
 Vincent{Винсент}
-Bethune{Битюн}
+Bethune{Бетьюн}
 Waulter{Волтер}
 Tomlison{Томлисон}
 Remy{Реми}
