@@ -1,6 +1,6 @@
 name = "extra-storylines"
 enabled = false
-version = [15, 0, 0, "beta", 1]
+version = [15, 0, 0, "beta", 2]
 description = "Extra storylines that still need to be tested before general inclusion."
 authors = [
     "PiratesAhoy!",
