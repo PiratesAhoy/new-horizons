@@ -1301,8 +1301,12 @@ bool PlaceFleetNearShore(string id)
 		worldMap.playerShipX = x;
 		worldMap.playerShipZ = z;
 		worldMap.playerShipAY = 3.0;
+		return true;
 	}
-	return true;
+	else {
+		Trace("Failed to find shore position for '" + id + "'");
+		return false;
+	}
 }
 
 void SetTownGarrisonForNation(string town, int iNation)
