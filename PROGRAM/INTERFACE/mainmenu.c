@@ -254,6 +254,9 @@ void IDoExit(int exitCode, bool bClear)
 		//oldMusicID = pch.musfix.old.id;
 		DeleteAttribute(pch,"musfix");
 	}
+
+	DeleteBackEnvironment();
+
 	// NK <--
 	DelEventHandler("InterfaceBreak","ProcessBreakExit");
 	DelEventHandler("exitCancel","ProcessCancelExit");
@@ -370,19 +373,49 @@ bool CheckForSaveGames()
 object InterfaceBackScene;
 void CreateBackEnvironment()
 {
-	LayerFreeze(EXECUTE,false);
-	LayerFreeze(REALIZE,false);
+	LayerFreeze(EXECUTE, false);
+	LayerFreeze(REALIZE, false);
 
-	CreateSea(EXECUTE,REALIZE);
-	CreateWeather(EXECUTE,REALIZE);
+	if( CheckAttribute(&InterfaceStates,"backEnvironmentIsCreated") && InterfaceStates.backEnvironmentIsCreated=="1" )
+	{
+		return;
+	}
+
+	CreateCoastFoamEnvironment("redmond", EXECUTE, REALIZE);
+	CreateSea(EXECUTE, REALIZE);
+	CreateWeather(EXECUTE, REALIZE);
 	CreateShipEnvironment();
 	Sea.MaxSeaHeight = 1.0;
 	Sea.isDone = "";
 
+	InterfaceBackScene.texturePath = "";
+	InterfaceBackScene.island.model = "Islands\Redmond\Redmond";
+	InterfaceBackScene.fort.model = "Islands\Redmond\Redmond_fort1";
+
 	CreateEntity(&InterfaceBackScene,"InterfaceBackScene");
-	LayerAddObject(EXECUTE, &InterfaceBackScene, -1);
+	LayerAddObject(EXECUTE, &InterfaceBackScene, 0);
 	LayerAddObject(REALIZE, &InterfaceBackScene, 1000);
 
-	SendMessage(&InterfaceBackScene, "ls", 0, "Islands\Redmond\Redmond"); // set model
+	SendMessage(&InterfaceBackScene, "ls", 0, "main_menu"); // set main model
 	SendMessage(&InterfaceBackScene, "ls", 1, "camera_1"); // set camera
+	SendMessage(&InterfaceBackScene, "ls", 10, "island"); // add model
+	SendMessage(&InterfaceBackScene, "ls", 10, "fort"); // add model
+}
+
+void DeleteBackEnvironment()
+{
+	LayerDelObject(EXECUTE, &InterfaceBackScene);
+	LayerDelObject(REALIZE, &InterfaceBackScene);
+
+	InterfaceStates.backEnvironmentIsCreated = false;
+
+	// DeleteClass( GetCharacter(iChar));
+	DeleteShipEnvironment();
+	DeleteWeather();
+	DeleteSea();
+	DeleteClass( InterfaceBackScene );
+	DeleteCoastFoamEnvironment();
+
+	iNextWeatherNum = -1;
+	iCurWeatherHour = -1;
 }
