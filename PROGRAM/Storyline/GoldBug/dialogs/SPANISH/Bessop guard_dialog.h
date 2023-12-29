@@ -5,7 +5,7 @@ string DLG_TEXT[12] = {
 "Mire, no soy ningún ladrón, solo quiero hacer unas preguntas.",
 "Pues no puede. La plantación está cerrada a todos los forasteros.",
 "Hum... Pero dígame, ¿es esta la plantación Bessop?",
-"No, ya no. Hace timepo que no pertenece a la familia Bessop. ¡Ahora siga su camino!",
+"No, ya no. Hace tiempo que no pertenece a la familia Bessop. ¡Ahora siga su camino!",
 "¿Queda aquí algún esclavo de los tiempos de Bessop?",
 "Supongo. ¿Va a marcharse pacíficamente o vamos a tener que...?",
 "Está bien, está bien. Volvamos a Charleston, Júpiter.",

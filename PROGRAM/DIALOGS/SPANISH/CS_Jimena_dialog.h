@@ -17,7 +17,7 @@ string DLG_TEXT[40] = {
 "¡Es es mucho!",
 "Aquí las medicinas son muy caras, pero quizás sea más barato si las compras en otra colonia y las traes hasta aquí. ¡Y vas a nacesitar el espacio de todos modos, si planeas hacerte con toda es plata!",
 "Cierto. Muy bien, conseguire las medicinas.",
-"Cunado las tengas, vuelve a hablar conmigo. No menciones el tren de la plata. ",
+"Cuando las tengas, vuelve a hablar conmigo. No menciones el tren de la plata. ",
 "Dime que me quedaría mejor un vestido azul. Esa será la señal de que lo tienes otdo listo para entregar las medicinas a los indios.",
 "Un vestido azul, ¿eh? Ahora que lo dices, creo que te sentaría muy bien. Pero no lo volveré a mencionar hasta que tenga tus medicinas.",
 "¡Parece que es su día de suerte! Porque resulta que ya tengo a bordo un cargamento de medicinas.",

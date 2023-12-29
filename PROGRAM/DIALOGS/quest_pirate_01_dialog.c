@@ -111,7 +111,7 @@ void ProcessDialogEvent()
 
 		case "go_with_blaze_2":
 			Dialog.snd = "voice\QUP1\QUP1013";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -100);
 			dialog.text = DLG_TEXT[28];
 			link.l1 = DLG_TEXT[29];
@@ -247,7 +247,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[71];
 			link.l1 = DLG_TEXT[72] + characters[GetCharacterIndex(DLG_TEXT[73])].lastname;
 			link.l1.go = "ines_info_denied_6";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 356);
 		break;
 

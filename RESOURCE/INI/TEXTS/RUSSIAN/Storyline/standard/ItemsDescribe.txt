@@ -1,7 +1,7 @@
 itmname_chest	{Сундучок МакДори}
 itmdescr_chest
 {
-Небольшой сундучок, который Оуэн МакДори попросил вас доставить Чарльзу Уиндему на #sisland_Redmond#.
+Небольшой сундучок, который Оуэн МакДори попросил вас доставить Чарльзу Уиндему на остров #sisland_Redmond#.
 }
 
 itmname_coins	{Проклятые Монеты}
@@ -13,7 +13,7 @@ itmdescr_coins
 itmname_gov_letter	{Письмо Губернатора}
 itmdescr_gov_letter
 {
-Письмо от губернатора Сайлхарда, которое он поручил нам доставить Изенбрандту Юрксену на #sisland_Quebradas Costillas#.
+Письмо от губернатора Сайлхарда, которое он поручил нам доставить Изенбрандту Юрксену на остров #sisland_Quebradas Costillas#.
 }
 
 itmname_incas_idol	{Золотой Идол}
@@ -61,13 +61,13 @@ itmdescr_compramat_to_domigues
 itmname_rheims_letter	{Письмо Реймса}
 itmdescr_rheims_letter
 {
-Письмо от капитана Реймса губернатору города #sRedmond# на #sisland_Redmond#, Роберту Кристоферу Сайлхарду.
+Письмо от капитана Реймса губернатору города #sRedmond# на острове #sisland_Redmond#, Роберту Кристоферу Сайлхарду.
 }
 
 itmname_massoni_papers	{Бумаги Валентина Массони}
 itmdescr_massoni_papers
 {
-Бумаги, из которых следует, что барк с боеприпасами сейчас находится в #sFalaise de Fleur# на #sisland_Falaise de Fleur#, и ждёт судно сопровождения.
+Бумаги, из которых следует, что барк с боеприпасами сейчас находится в городе #sFalaise de Fleur# на острове #sisland_Falaise de Fleur#, и ждёт судно сопровождения.
 }
 
 itmname_artefact	{Артефакт}

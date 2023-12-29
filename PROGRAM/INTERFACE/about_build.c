@@ -36,7 +36,7 @@ void ProcessShowMain()
 
 void ReturnToMainView()
 {
-	CreateString(true,"DescribeName","Build "+BUILDVERSION,FONT_NORMAL,COLOR_MONEY,385,50,SCRIPT_ALIGN_CENTER,0.7);
+	CreateString(true,"DescribeName","Version "+ Modules.core.version,FONT_NORMAL,COLOR_MONEY,385,50,SCRIPT_ALIGN_CENTER,0.7);
 	CreateString(true,"Info_0",LanguageConvertString(lngFileID,"B_10"),FONT_NORMAL,COLOR_MONEY,385,374,SCRIPT_ALIGN_CENTER,0.7);
 	CreateString(true,"Info_1",LanguageConvertString(lngFileID,"About_Build_10_1"),FONT_NORMAL,COLOR_NORMAL,300,396,SCRIPT_ALIGN_RIGHT,0.7);
 	CreateString(true,"Info_2",LanguageConvertString(lngFileID,"About_Build_10_2"),FONT_NORMAL,COLOR_NORMAL,300,418,SCRIPT_ALIGN_RIGHT,0.7);

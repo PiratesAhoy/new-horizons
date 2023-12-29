@@ -48,7 +48,7 @@ void ProcessDialogEvent()
 		case "node_2":
 			if(makeint(PChar.money)>=1)
 			{	
-			    PlayStereoSound("INTERFACE\took_item.wav");
+			    PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -1);
 				dialog.snd = "Voice\HENR\HENR004";
 				d.Text = DLG_TEXT[8] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[9];
@@ -80,7 +80,7 @@ void ProcessDialogEvent()
 		case "Node_4":
 			if(makeint(PChar.money)>=1)
 			{	
-			    PlayStereoSound("INTERFACE\took_item.wav");
+			    PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -1);
 				dialog.snd = "Voice\HENR\HENR007";
 				d.Text = DLG_TEXT[20] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[21];
@@ -176,7 +176,7 @@ void ProcessDialogEvent()
 			if(makeint(PChar.money)>=RandQuestSum)
 			{
 				Diag.TempNode = "Node_29";
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, - (RandQuestSum));
 				dialog.snd = "Voice\HENR\HENR016";
 				d.Text = DLG_TEXT[59] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[60];
@@ -230,7 +230,7 @@ void ProcessDialogEvent()
 		case "Node_16":
 			if(makeint(PChar.money)>=1)
 			{
-			    PlayStereoSound("INTERFACE\took_item.wav");
+			    PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -1);
 				dialog.snd = "Voice\HENR\HENR023";
 				d.Text = DLG_TEXT[79] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[80];
@@ -263,7 +263,7 @@ void ProcessDialogEvent()
 		case "Node_18":
 			if(makeint(PChar.money) >= 1)
 			{
-			    PlayStereoSound("INTERFACE\took_item.wav");
+			    PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -1);
 				dialog.snd = "Voice\HENR\HENR026";
 				d.Text = DLG_TEXT[91] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[92];
@@ -360,7 +360,7 @@ void ProcessDialogEvent()
 		case "Node_26":
 			if(makeint(PChar.money)>=RandQuestSum)
 			{
-			    PlayStereoSound("INTERFACE\took_item.wav");
+			    PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -(RandQuestSum));
 				Diag.TempNode = "Node_29";
 				dialog.snd = "Voice\HENR\HENR035";
@@ -411,7 +411,7 @@ void ProcessDialogEvent()
 		case "node_30":
 			if(makeint(PChar.money)>=1)
 			{
-			    PlayStereoSound("INTERFACE\took_item.wav");
+			    PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -1);
 				dialog.snd = "Voice\HENR\HENR042";
 				d.Text = DLG_TEXT[150] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[151];

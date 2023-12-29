@@ -200,8 +200,7 @@ void WdmStartFade()
 	DelEventHandler("FaderEvent_StartFade", "WdmStartFade");
 	//Delete entity
 	worldMap.playerShipUpdate = "";
-	DeleteClass(&worldMap);
-	worldMap.isLoaded = "false";
+	DestroyWorldmap();
 }
 
 void WdmEndFade()
@@ -296,8 +295,7 @@ void WdmToLandStartFade()
 	DelEventHandler("FaderEvent_StartFade", "WdmToLandStartFade");
 	//Delete entity
 	worldMap.playerShipUpdate = "";
-	DeleteClass(&worldMap);
-	worldMap.isLoaded = "false";
+	DestroyWorldmap();
 }
 
 void WdmToLandEndFade()

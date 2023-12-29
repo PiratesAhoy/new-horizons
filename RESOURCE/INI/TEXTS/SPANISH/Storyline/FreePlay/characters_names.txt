@@ -39,6 +39,8 @@ Pintel{Pintel}
 Ian{Ian}
 Mercer{Mercer}
 Bligh{Bligh}
+Uncle{Tío}
+Gules{Gules}
 
 {=====| quests_reaction.c |=====}
 Bartolomeu{Bartolomeu}
@@ -51,6 +53,7 @@ Weatherby{Weatherby}
 Swann{Swann}
 Christopher{Christopher}
 Silehard{Silehard}
+
 {=====| Officers.c |=====}
 William{William}
 Sullivan{Sullivan}

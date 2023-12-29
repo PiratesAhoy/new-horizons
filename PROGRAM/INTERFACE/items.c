@@ -596,7 +596,7 @@ if(comName=="activate" || comName=="click")
 
 			if(itmName == "book55C")
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				TakeItemFromCharacter(Pchar, "book55C");
 				GiveItem2Character(Pchar, "book55D");
 				GiveItem2Character(Pchar, "key29");
@@ -1608,7 +1608,7 @@ if(comName=="activate" || comName=="click")
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "MSC_CONFIRM_NO_BUTTON");
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 2, "MSC_CONFIRM_YES_BUTTON");
 			SetFormatedText("MSC_TEXTWINDOW", TranslateString("", "TossItemInterface"));
-			SetFormatedText("MSC_TEXTWINDOW", "Are you sure you want to toss this item?");
+			//SetFormatedText("MSC_TEXTWINDOW", TranslateString("", "Are you sure you want to toss this item?"));
 		}
 	break;
 // <-- Levis
@@ -2606,7 +2606,7 @@ void I_ExamineItem()
 	if(itmName == "BB_hatC")
 	{
 		PlaySound("PEOPLE\clothes1.wav");
-		PlaySound("INTERFACE\took_item.wav");
+		PlaySound("INTERFACE\took_item.flac");
 		TakeItemFromCharacter(Pchar, "BB_hatC");
 		GiveItem2Character(Pchar, "BB_hatA2");
 		GiveItem2Character(Pchar, "BB_key");
@@ -3282,7 +3282,7 @@ void I_ExamineItem()
 	if(itmName == "bandages_trousersX")
 	{
 		PlaySound("PEOPLE\clothes1.wav");
-		PlaySound("INTERFACE\took_item.wav");
+		PlaySound("INTERFACE\took_item.flac");
 		TakeItemFromCharacter(Pchar, "bandages_trousersX");
 		GiveItem2Character(Pchar, "bandages_trousersQ");
 		GiveItem2Character(Pchar, "key36");
@@ -3372,7 +3372,7 @@ void I_ExamineItem()
 			GiveItem2Character(Pchar, "mapBB1"); 
 
 			Logit(TranslateString("","You've received e new item"));
-			PlaySound("INTERFACE\important_item.wav");
+			PlaySound("INTERFACE\important_item.flac");
 
 			if(!CheckAttribute(Pchar,"quest.study_mapBB1") || Pchar.quest.study_mapBB1 != "yes")
 			{
@@ -3672,7 +3672,7 @@ void I_ExamineItem()
 
 	if(itmName == "bandana_key")
 	{
-		PlaySound("INTERFACE\took_item.wav");
+		PlaySound("INTERFACE\took_item.flac");
 		TakeItemFromCharacter(Pchar, "bandana_key");
 		GiveItem2Character(Pchar, "key17"); 
 		
@@ -3950,6 +3950,9 @@ void UpdateItemData()
 		switch(LanguageGetLanguage())
 		{
 			case "Russian":
+				GameInterface.strings.ItemName = GameInterface.strings.ItemName + " " + Quality;
+			break;
+			case "Spanish":
 				GameInterface.strings.ItemName = GameInterface.strings.ItemName + " " + Quality;
 			break;
 			GameInterface.strings.ItemName = Quality + " " + GameInterface.strings.ItemName;//default for English
@@ -4373,6 +4376,9 @@ void FillSelectedScroll(string itemsID)
 						switch(LanguageGetLanguage())
 						{
 							case "Russian":
+								name = name + " " + TranslateString("", "q"+arItem.QualityName);
+							break;
+							case "Spanish":
 								name = name + " " + TranslateString("", "q"+arItem.QualityName);
 							break;
 							name = TranslateString("", "q"+arItem.QualityName) + " " + name; // PB: Correct quality name //default for English

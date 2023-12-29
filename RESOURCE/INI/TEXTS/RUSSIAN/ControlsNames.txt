@@ -161,7 +161,7 @@ ChrBlock
 Поставить блок в драке
 
 }
-ChrAttack
+ChrAttackFast
 {
 Атака в драке
 

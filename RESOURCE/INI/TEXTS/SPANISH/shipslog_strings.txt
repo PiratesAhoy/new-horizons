@@ -80,7 +80,7 @@ Promoted to #snationdesc# #srank#{Me han ascendido a #srank# #snationdesc#}
 My dedication and faithful service for #snationname# have earned me the rank of #srank#.{Mi dedicación y mi leal servicio a #snationname# me han hecho merecer el ascenso al rango de #srank#.}
 The #snationdesc# governor #sgovname# awarded me with the title and #snewland# acres of land.{El gobernador #snationdesc# #sgovname# me ha otorgado el título y #snewland# acres de tierra que lo acompañan.}
 
-Joined Service of #snationname#{Me he puesto al servico de #snationname#}
+Joined Service of #snationname#{Me he puesto al servicio de #snationname#}
 I received a Letter of Marque from #snationname#. Now I am in their service, I can legally sink and capture ships, which means prize money and potential promotions for me in the future.{He recibido una patente de corso de #snationname#. Ahora que estoy a su servicio, puedo hunidr y apresar barcos legalmente, lo que significará oportunidades de botín y futuros ascensos.}
 
 Left Service of #snationname#{He abandonado el servicio de #snationname#}
@@ -103,7 +103,7 @@ This is good news as it was a very hard time to keep friendly relations with two
 
 #snationnamei# and #snationnamej# have allied{#snationnamei# y #snationnamej# se han aliado}
 #snationnamei# and #snationnamej# have formed an alliance. Attacking ships or towns of either nation will also decrease the standing with the ally.{#snationnamei# y #snationnamej# han formado una alianza. Atacar a barcos o ciudades de cualquiera de las dos naciones también perjudicará mi reputación con el país aliado.}
-Very good news, indeed. Working for the #snationdesci# and the #snationdescj#, as I currently do, my deeds will raise my standing with both nations.{Muy buenas noticas para mí, desde luego. Trabajando a la vez para el gobierno #snationdesci# y el #snationdescj#, como estoy haciendo ahora, mis hazañas aumentarán mi reputación en ambas naciones.}
+Very good news, indeed. Working for the #snationdesci# and the #snationdescj#, as I currently do, my deeds will raise my standing with both nations.{Muy buenas noticias para mí, desde luego. Trabajando a la vez para el gobierno #snationdesci# y el #snationdescj#, como estoy haciendo ahora, mis hazañas aumentarán mi reputación en ambas naciones.}
 Whoops! It seems I have bothered them a little too much. But their alliance won't stop me.{¡Vaya por Dios! Parece que he molestado a estos dos países un poco más de la cuenta. Pero su alianza no me detendrá.}
 \n \nThis makes working for the #snationdesc1# somewhat more difficult, as sinking #snationdesc2# ships is no longer an option.{\n \nEsto hará algo más difícil continuar trabajando para el gobierno #snationdesc1#, ya que hundir barcos con pabellón #snationdesc2# ya no es una opción.}
 

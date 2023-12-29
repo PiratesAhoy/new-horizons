@@ -65,7 +65,7 @@ void ProcessDialogEvent()
 		case "finale_evacuate_where_is_ship":
 			TakeItemFromCharacter(PChar, "BattleOrders");
 			dialog.text = DLG_TEXT[6];
-			link.l1 = DLG_TEXT[7] + GetCharacterShipLocationName(PChar) + ".";
+			link.l1 = DLG_TEXT[7] + TranslateString("",GetCharacterShipLocationName(PChar)) + ".";
 			link.l1.go = "finale_evacuate_get_family";
 		break;
 
@@ -97,7 +97,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_new_deal":
-			Preprocessor_Add("person", PChar.sex);
+			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 			dialog.text = DLG_TEXT[17];
 			link.l1 = DLG_TEXT[18];
 			link.l1.go = "finale_new_deal_accepted";
@@ -131,7 +131,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_reward_for_warship":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			if (CheckAttribute(PChar, "quest.finale_fort_reward"))
 			{
 				dialog.text = DLG_TEXT[26];
@@ -165,7 +165,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_reward_for_villain":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 10000);
 			dialog.text = DLG_TEXT[29];
 			link.l1 = DLG_TEXT[30];
@@ -269,7 +269,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_villain_dead_in_residence":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 10000);
 			Preprocessor_Add("villain", GetMySimpleName(CharacterFromID(PChar.quest.villain)));
 			dialog.text = DLG_TEXT[55];
@@ -279,7 +279,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_reward_for_warship2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			if (CheckAttribute(PChar, "quest.finale_fort_reward"))
 			{
 				dialog.text = DLG_TEXT[26];
@@ -341,7 +341,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_evil_reward_for_villain":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 10000);
 			dialog.text = DLG_TEXT[65];
 			if (CheckAttribute(PChar, "quest.finale_fort_reward")) link.l1 = DLG_TEXT[56] + PChar.quest.finale_fort_reward + ".";
@@ -363,7 +363,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_dont_believe_you":
-			Preprocessor_Add("person", PChar.sex);
+			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 			Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 			if (HaveLetterOfMarque(ENGLAND)) dialog.text = DLG_TEXT[71] + DLG_TEXT[73] + DLG_TEXT[74];
 			else dialog.text = DLG_TEXT[71] + DLG_TEXT[72] + DLG_TEXT[74];
@@ -373,7 +373,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_so_it_is_true":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 200000);
 			dialog.text = DLG_TEXT[76] + GetMyRespectfullyName(PChar) + DLG_TEXT[77];
 			if (LAi_IsDead(characterFromID(PChar.quest.villain)))

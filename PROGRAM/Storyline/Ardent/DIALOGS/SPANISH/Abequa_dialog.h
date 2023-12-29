@@ -1,0 +1,15 @@
+string DLG_TEXT[13] = {
+"Hola.",
+"Hola.",
+"Oigo lo que dices. Recuerdo bien los oficiales. Ellos amables conmigo, dan botella de vino. Si tú amable conmigo, cuento todo sobre ellos.",
+"¿Dijeron adónde se dirgían a continuación?",
+"¿Tú amable conmigo?",
+"Ah. Ya veo por dónde van los tiros. ¿Dónde puedo conprarte una botella de vino?",
+"Yo también puedo ser amable. Toma esta botella de buen vino. Ahora, háblame de los oficiales.",
+"¿Qué te parece esta botella de excelente ron en lugar del vino?",
+"La taberna de la ciudad vende botellas. No la de cerca del puerto. Esa no quiere que marineros compran botellas y las llevan de vuelta al barco.",
+"Está bien, veré si puedo conseguirte una botella. ¡No te vayas muy lejos!",
+"¡Gracias! Tú muy amable. Oficiales amables también. Vamos a habitación, compartimos botellas. Ellos dicen al día siguiente su barco lleno de oro, luego navegan a #sisland_Curacao#\n Desde allí, navegan a #sRedmond#.",
+"¡Oh, buen ron de #sisland_Oxbay#, no barato de #sRedmond#! ¡Muy amable! Oficiales amables también. Vamos a habitación, compartimos botellas. Ellos dicen al día siguiente su barco lleno de oro, luego navegan a #sisland_Curacao#\n Desde allí, navegan a #sRedmond#.",
+"Eso es lo que quería saber. ¡Disfruta de tu botella!",
+}

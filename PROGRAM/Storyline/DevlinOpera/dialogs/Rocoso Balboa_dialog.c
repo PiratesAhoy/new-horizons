@@ -414,7 +414,7 @@ void ProcessDialogEvent()
 		case "Balboa_challenge2":
 			dialog.text = DLG_TEXT[95] + GetNationRoyalByType(SPAIN) + DLG_TEXT[96];
 			link.l1 = DLG_TEXT[97];
-			link.l1.go = "Balboa_challenge2";
+			link.l1.go = "exit";
 			AddDialogExitQuest("Duel_Blaze_Balboa");
 		break;
 

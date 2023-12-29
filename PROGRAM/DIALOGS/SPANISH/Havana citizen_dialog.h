@@ -162,7 +162,7 @@ string DLG_TEXT[170] = {
 "Menuda historia. Me gustaría saber algo más.",
 "Parece un artesano con experiencia. ¡Tendré que comprobar qué es capaz de hacer con mis armas!",
 "Mi espada favorita de todos los tiempos en el mundo ha perdido un poco el filo. ¿A quién puedo confiársela?",
-"¿Recuerdas cómo tenías que encontrar el patíbulo de cmaino a la taberna? Hay una carromato aparcado no muy lejos. A la vuelta de la esquina del carromato está la herrería. Tiene un pequeño carro afuera.",
+"¿Recuerdas cómo tenías que encontrar el patíbulo de camino a la taberna? Hay una carromato aparcado no muy lejos. A la vuelta de la esquina del carromato está la herrería. Tiene un pequeño carro afuera.",
 "¡Perfecto! ¡Parece que finalmente podré afilar mi sable desgastado!",
 "¿Dónde está el astillero?",
 "¿Dónde puedo conseguir un precio decente por las mercancías de calidad que he traído a la ciudad?",

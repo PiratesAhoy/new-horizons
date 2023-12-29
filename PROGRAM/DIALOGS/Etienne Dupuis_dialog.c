@@ -124,7 +124,7 @@ void ProcessDialogEvent()
 		break;
               
 		case "begin_4":
-                        PlayStereoSound("INTERFACE\took_item.wav");
+                        PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);
 			dialog.snd = "Voice\CLLA\CLLA006";
 			dialog.text = DLG_TEXT[9];

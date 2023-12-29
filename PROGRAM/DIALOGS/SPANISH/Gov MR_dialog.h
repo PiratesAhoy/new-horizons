@@ -66,7 +66,7 @@ string DLG_TEXT[80] = {
 "Sí.",
 "Lo haré.",
 "Er... sí, lo haré.",
-", tome este anillo como signo de mi amor y fidelidad. En el nombre del Padre, del Hijo y del Espíritu Santo.",
+", toma este anillo como signo de mi amor y fidelidad. En el nombre del Padre, del Hijo y del Espíritu Santo.",
 "¡Arrr!",
 "Bueno, no sé si esto te interesará, pero he oído una conversación entre mi padre y un emisario español. El cargamento de plata que lleva toda la plata de las colonias españolas en Sudamérica va de camino a #sCartagena#.",
 "Sabes que los españoles reúnen toda la plata que extraen de sus colonias en Sudamérica para enviarla a España en una gran flota, ¿verdad? Esa flota ha sido avistada de camino a #sCartagena#. Así que la plata probablemente también esté de camino allí.",

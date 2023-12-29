@@ -95,7 +95,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_cargo_job_accepted":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -50);
 			dialog.text = DLG_TEXT[25] + GetAddressForm(ADDR_CIVIL, SPAIN, chrsex(PChar)) + DLG_TEXT[26];
 			link.l1 = DLG_TEXT[27];
@@ -136,7 +136,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_spy_rumbled":
-			PlayStereoSound("INTERFACE\drink.wav");
+			PlayStereoSound("INTERFACE\drink.flac");
 			dialog.text = DLG_TEXT[43];
 			link.l1 = DLG_TEXT[44];
 			link.l1.go = "exit";

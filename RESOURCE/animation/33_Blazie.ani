@@ -315,7 +315,7 @@ event = "swim", 188, normal
 ;Действия стояния в режиме боя
 ;===================================================================================
 
-;Пауза1 
+;Пауза1
 [fight stand_1]
 start_time = 3233
 end_time = 3254
@@ -736,6 +736,50 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
+[hit_feint]
+type = normal
+start_time = 3210
+end_time = 3232
+
+speed = 1.2
+loop = false
+
+data = "Blend time", "0.2"
+event = "SndAlliace_manhit", 3210, normal
+
+[hit_round]
+type = normal
+start_time = 3210
+end_time = 3232
+
+speed = 1.2
+loop = false
+
+data = "Blend time", "0.2"
+event = "SndAlliace_manhit", 3210, normal
+
+[hit_parry]
+type = normal
+start_time = 3210
+end_time = 3232
+
+speed = 1.2
+loop = false
+
+data = "Blend time", "0.2"
+event = "SndAlliace_parryhit", 3210, normal
+
+[hit_fire]
+type = normal
+start_time = 3210
+end_time = 3232
+
+speed = 1.2
+loop = false
+
+data = "Blend time", "0.2"
+event = "SndAlliace_bullethit", 3210, normal
+
 ;--------------------------------------------------
 
 ;Блок
@@ -939,31 +983,31 @@ event = "Death sound", 2596, normal
 ;govenment
 ;===================================================================================
 
-;Разглядывать свои руки	
+;Разглядывать свои руки
 [Gov_ObserveHands]
 start_time = 2618	
 end_time = 2729	
 data = "Blend time", "0.3"		; sec
 
-;Закинуть одну ногу на другую	
+;Закинуть одну ногу на другую
 [Gov_LegOnLeg]
 start_time = 2729	
 end_time = 2798	
 data = "Blend time", "0.3"		; sec
 
-;Смотреть по сторонам	
+;Смотреть по сторонам
 [Gov_Look_Around]
 start_time = 2798	
 end_time = 2872
 data = "Blend time", "0.3"		; sec
 
-;Раздумывать1	
+;Раздумывать1
 [Gov_think_1]
 start_time = 2873	
 end_time = 2926
 data = "Blend time", "0.3"		; sec
 
-;Раздумывать2	
+;Раздумывать2
 [Gov_think_2]
 start_time = 2926	
 end_time = 2965
@@ -1035,31 +1079,31 @@ start_time = 542
 end_time = 602	
 data = "Blend time", "0.1"		; sec
 
-;Сидеть	
+;Сидеть
 [Ground_sitting]
 start_time = 602
 end_time = 722
 data = "Blend time", "0.1"		; sec
 
-;Оглядываться	
+;Оглядываться
 [Ground_look_around]
 start_time = 722	
 end_time = 822
 data = "Blend time", "0.1"		; sec
 
-;Чесаться	
+;Чесаться
 [Ground_Scratch]
 start_time = 822
 end_time = 889
 data = "Blend time", "0.1"		; sec
 
-;Просить милостыню	
+;Просить милостыню
 [Ground_Beg]
 start_time = 889
 end_time = 939
 data = "Blend time", "0.1"		; sec
 
-;Встать	
+;Встать
 [Ground_StandUp]
 start_time = 939	
 end_time = 999
@@ -1164,7 +1208,7 @@ loop = false
 
 data = "Blend time", "0.4"		; sec
 
-;Оглядеться 
+;Оглядеться
 [Barman_look_around]
 start_time = 1361
 end_time = 1426

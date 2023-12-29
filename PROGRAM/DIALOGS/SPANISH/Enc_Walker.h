@@ -293,7 +293,7 @@ string DLG_TEXT[306] = {
 "No, es demasiado.",
 "Espera un segundo y pregúntame de nuevo. Tengo que enderezarme el cuello de la camisa...",
 "De acuerdo.",
-"Hum... Te he visto antes..., durante una escaramuza naval hace algún tiempo, en el alcázar de un barco, creo... ¡Oye, tú eres ese demonio del Averno que pasó navegando cerca de nuestro barco! ¡Pensamos que tu barco era amistoso hasta el momento en que abriste tus portas, abriste fuego contra nuestro barco y después nos abordaste y masacraste a nuestra tripulación! !ALARMA! ¡Piratas disfrazados!",
+"Hum... Te he visto antes..., durante una escaramuza naval hace algún tiempo, en el alcázar de un barco, creo... ¡Oye, tú eres ese demonio del Averno que se atacó nuestro barco! ¡Pensamos que tu barco era amistoso hasta el momento en que abrió sus portas y disparó contra nuestro barco! ¡Después nos abordaste y masacraste a nuestra tripulación! ¡ALARMA! ¡Piratas disfrazados!",
 "Debería haber matado a TODOS los testigos de mis piraterías pasadas...",
 "296",
 "¡Psst!... Oye, tengo algo aquí que te puede interesar.",

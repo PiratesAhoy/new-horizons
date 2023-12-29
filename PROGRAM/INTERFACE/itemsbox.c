@@ -1738,7 +1738,7 @@ void ChangeItemsSlot()
 	if(itm2=="coin1" || itm2=="coin2" || itm2=="coin3"|| itm2=="coin4" || itm2=="coin5" || itm2=="coin6" || itm2=="coin7"|| itm2=="coin8"
 	|| itm2=="coin9" || itm2=="coin10"|| itm2=="coin11" || itm2=="coin12" || itm2=="coin13" || itm2=="coin14"|| itm2=="coin15" || itm2=="coin16")
 	{
-		PlaySound("INTERFACE\took_item.wav");
+		PlaySound("INTERFACE\took_item.flac");
 
 		//count how many coins there are in the collection box now!
 		mchref.quest.collect_coins = sti(mchref.quest.collect_coins) - 1;
@@ -3150,7 +3150,7 @@ void TakeItems(bool bMoreThanOneItem)
 			if(itm2=="coin1" || itm2=="coin2" || itm2=="coin3"|| itm2=="coin4" || itm2=="coin5" || itm2=="coin6" || itm2=="coin7"|| itm2=="coin8"
 			|| itm2=="coin9" || itm2=="coin10"|| itm2=="coin11" || itm2=="coin12" || itm2=="coin13" || itm2=="coin14"|| itm2=="coin15" || itm2=="coin16")
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 
 				//count how many coins there are in the collection box now!
 				mchref.quest.collect_coins = sti(mchref.quest.collect_coins) - 1;

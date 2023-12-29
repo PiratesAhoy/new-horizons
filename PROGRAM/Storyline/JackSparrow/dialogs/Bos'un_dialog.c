@@ -100,7 +100,7 @@ void ProcessDialogEvent()
 			Link.l99 = DLG_TEXT[18];
 			Link.l99.go = "exit";
 			AddMoneyToCharacter(PChar, 20000);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddDialogExitQuest("Jocard_Deck5");
 		break;
 

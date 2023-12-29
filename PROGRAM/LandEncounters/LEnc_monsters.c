@@ -1098,8 +1098,10 @@ void LEnc_MonstersLoginCorrectParams(ref location, aref chr, string group, strin
 
 		// ccc -->
 		chr.money = 0;
-		chr.name = VC_MONKEY_NAME;
-		chr.lastname = VC_MONKEY_LNAME;
+	//	chr.name = VC_MONKEY_NAME;
+	//	chr.lastname = VC_MONKEY_LNAME;
+		chr.name = TranslateString(VC_MONKEY_NAME, VC_MONKEY_LNAME);	// GR: translatable Akellani
+		chr.lastname = "";						// GR
 		// ccc <--
 		break;
 		
@@ -1384,8 +1386,10 @@ void LEnc_MonstersLoginCorrectParams(ref location, aref chr, string group, strin
 	if (sti(GetAttribute(chr, "isIndian")) == true)
 	{
 		gunProb = 1.0;
-		chr.name = VC_MUMMY_NAME; // ccc10.2
-		chr.lastname = VC_MUMMY_LNAME; // ccc10.2
+	//	chr.name = VC_MUMMY_NAME; // ccc10.2
+	//	chr.lastname = VC_MUMMY_LNAME; // ccc10.2
+		chr.name = TranslateString(VC_MUMMY_NAME, VC_MUMMY_LNAME);	// GR: translatable Akellani
+		chr.lastname = "";						// GR
 		if(VC_MUMMY_NOMONEY) chr.money = 0; // NK
 		GiveItem2Character(chr, "indian"+ makeint(1 + rand(15)) );	// jun05 booty for stealing
 		GiveItem2Character(chr, "mineral"+ makeint(1 + rand(2)) );	// jun05 booty for stealing

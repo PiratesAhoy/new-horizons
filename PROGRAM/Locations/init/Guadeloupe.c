@@ -141,14 +141,16 @@ void LocationInitguadeloupe(ref n)
 
 	Locations[n].reload.l12.go = "";//House
 	Locations[n].reload.l12.emerge = "reload1";
-	Locations[n].reload.l12.label = "House.";
+//	Locations[n].reload.l12.label = "House."; // Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l12.label = "";
 	Locations[n].reload.l12.disable = 1;
 	Locations[n].reload.l12.name = "houseS3";
 	Locations[n].reload.l12.autoreload = "0";
 
 	Locations[n].reload.l13.go = "";//House
 	Locations[n].reload.l13.emerge = "reload1";
-	Locations[n].reload.l13.label = "House.";
+//	Locations[n].reload.l13.label = "House."; // Not translated despite being in "interface_strings.txt"
+	Locations[n].reload.l13.label = "";
 	Locations[n].reload.l13.disable = 1;
 	Locations[n].reload.l13.name = "houseH1";
 	Locations[n].reload.l13.autoreload = "0";

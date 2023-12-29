@@ -15,7 +15,7 @@ string DLG_TEXT[30] = {
 "Seguro que sí...",
 "¡Puede que no sea el dios Neptuno, pero puedo provocar una tormenta en tu cama!",
 "¡Soy pirata, no por el oro ni por la plata, sino por ese tesoro que tienes entre las patas!",
-"¡Qué buena mercancía tienes, carino.",
+"¡Qué buena mercancía tienes, cariño.",
 "Me encantaría saquear tu aldea.",
 "Ven aquí, chica, ¡quiero limpiar esa cubierta!",
 "¡Quiero navegar por tus siete mares!",

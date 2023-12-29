@@ -1,0 +1,34 @@
+[storyline.jack_sparrow]
+id = "jack_sparrow"
+dir = "JackSparrow"
+
+[storyline.jack_sparrow.start]
+location = "Tortuga_Port"
+port = "Tortuga_Port"
+model = "depp"
+first_name = "Jack"
+last_name = "Sparrow"
+nation = "pirate"
+player_type = "adventurer"
+difficulty = "mariner"
+pirate_flag = 6
+personal_flag = 21
+ship = "BlackPearl"
+ship_name = "Black Pearl"
+
+[storyline.new_horizons.start.editable]
+difficulty = true
+
+[storyline.jack_sparrow.start.date]
+hour = 20
+min = 24
+sec = 42
+day = 9
+month = 6
+year = 1740
+
+[storyline.jack_sparrow.variables]
+ISLA_DE_MUERTE = -1
+START_MIN_LEVEL = 1
+JACK_SPARROW = 1
+HAVANA_NO_PRISONERS = 1

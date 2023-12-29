@@ -1,4 +1,4 @@
-string DLG_TEXT[454] = { 
+string DLG_TEXT[455] = { 
 "I'm told you've gone to great lengths to request an audience. My name is ",
 ". Now, if you please, tell me the purpose of your visit, ",
 ".",
@@ -445,6 +445,7 @@ string DLG_TEXT[454] = {
 "Yes, there is something for which you may be suitable, ",
 ". But now is not the best time to discuss business. Remind me tomorrow morning.",
 "I agree. Let us enjoy this meal for now. And the wine!",
+" to ",
 "your daughter",
 "your son",
 "my daughter",

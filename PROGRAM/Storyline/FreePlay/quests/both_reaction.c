@@ -2243,10 +2243,18 @@ void BothQuestComplete(string sQuestName)
 				rldLocator = "reload1"; 
 			}
 // KK -->
-			PChar.quest.TavernSitWaiting.win_condition.l1 = "ExitFromLocation";
-			PChar.quest.TavernSitWaiting.win_condition.l1.character = PChar.id;
-			PChar.quest.TavernSitWaiting.win_condition.l1.location = PChar.location;
-			PChar.quest.TavernSitWaiting.win_condition = "TavernSitWaiting";
+			if(CheckAttribute(PChar, "quest.remove_hatcher"))
+			{
+			//	DeleteAttribute(PChar, "quest.remove_hatcher");
+				ChangeCharacterAddressGroup(CharacterFromID("Malcolm Hatcher"), "none", "", "");
+			}
+			else
+			{
+				PChar.quest.TavernSitWaiting.win_condition.l1 = "ExitFromLocation";
+				PChar.quest.TavernSitWaiting.win_condition.l1.character = PChar.id;
+				PChar.quest.TavernSitWaiting.win_condition.l1.location = PChar.location;
+				PChar.quest.TavernSitWaiting.win_condition = "TavernSitWaiting";
+			}
 
 			LAi_QuestDelay("begining", 0.0);// "0." is bad, use something legit
 			PChar.quest.Begining.over = "yes";
@@ -3847,7 +3855,12 @@ void BothQuestComplete(string sQuestName)
 
 			Locations[FindLocation(loadPort)].locators_radius.(gotoGroup).(gotoLocator) = 0.5;
 // added by MAXIMUS [choose character mod] <--
-			LAi_QuestDelay("TavernSitWaiting", 0); // KK
+			if(CheckAttribute(PChar, "quest.remove_hatcher"))
+			{
+			//	DeleteAttribute(PChar, "quest.remove_hatcher");
+				ChangeCharacterAddressGroup(CharacterFromID("Malcolm Hatcher"), "none", "", "");
+			}
+			else LAi_QuestDelay("TavernSitWaiting", 0); // KK
 
 			EndQuestMovie();
 			locDisableUpdateTime = false;
@@ -4189,7 +4202,12 @@ void BothQuestComplete(string sQuestName)
 
 			Locations[FindLocation(loadPort)].locators_radius.(gotoGroup).(gotoLocator) = 0.5;
 // added by MAXIMUS [choose character mod] <--
-			LAi_QuestDelay("TavernSitWaiting", 0.0); // KK
+			if(CheckAttribute(PChar, "quest.remove_hatcher"))
+			{
+			//	DeleteAttribute(PChar, "quest.remove_hatcher");
+				ChangeCharacterAddressGroup(CharacterFromID("Malcolm Hatcher"), "none", "", "");
+			}
+			else LAi_QuestDelay("TavernSitWaiting", 0.0); // KK
 
 			EndQuestMovie();
 			locDisableUpdateTime = false;

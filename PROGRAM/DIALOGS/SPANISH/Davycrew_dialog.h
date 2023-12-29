@@ -13,10 +13,10 @@ string DLG_TEXT[20] = {
 "Confieso que nunca me ha gustado este tipo de reunión familiar.",
 "¿Pensaste que podrías escapar de nosotros, Sparrow? ¡Qué equivocado estabas ... ¡Ahora, síguenos!",
 "Supongo que no tengo otra opción.",
-"Davy Jones te está esperando en la orilla. ¡Ve a reunirtecon él!",
+"Davy Jones te está esperando en la orilla. ¡Ve a reunirte con él!",
 "Confieso que nunca me ha gustado este tipo de reunión familiar ...",
 "Bueno, bueno... ¡Mira a quién tenemos aquí! Visitando la guarida del rey del mar, ¿verdad? ¡Te esté esperando en su cámara, escaleras arriba!",
 "De hecho, estaba buscando una audiencia con el Sr. Jones... por así decirlo.",
-No tienes aspecto de encajar aquí. Quizñas en unos cientos de años...",
+"No tienes aspecto de encajar aquí. Quizñas en unos cientos de años...",
 "No tengo intención de quedarme tanto tiempo.",
 };

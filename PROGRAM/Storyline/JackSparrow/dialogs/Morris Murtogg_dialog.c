@@ -197,7 +197,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "exitMurtogg3":
-			PlaySound("OBJECTS\shipcharge\ball_splash1.wav");
+			PlaySound("OBJECTS\shipcharge\ball_splash1.flac");
 			PlaySound("OBJECTS\shipcharge\ship_bow");
 			AddDialogExitQuest("can_you_swim");
 			DialogExit();

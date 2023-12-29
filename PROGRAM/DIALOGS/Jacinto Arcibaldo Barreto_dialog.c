@@ -90,7 +90,7 @@ void ProcessDialogEvent()
 			AddQuestrecord("nigel", 15);
 			DeleteAttribute(PChar, "quest.nigel_con_parri_checker");
 			PChar.quest.con_parri_expired.over = "yes";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 3000);
 			ChangeCharacterReputation(pchar, 1);
 			AddDialogExitQuest("nigel_third_encounter");
@@ -106,7 +106,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[23];
 			link.l1 = DLG_TEXT[24];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 6000);
 			ChangeCharacterReputation(pchar, 1);
 		break;
@@ -282,7 +282,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[133];
 			link.l1 = DLG_TEXT[134];
 			link.l1.go = "gov_22";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 40000);
 		break;
 
@@ -298,7 +298,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[137];
 			link.l1 = DLG_TEXT[138];
 			link.l1.go = "gov_24";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			GiveItem2Character(Pchar, "bladeBP");
 		break;
 
@@ -394,7 +394,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[163];
 			link.l1 = DLG_TEXT[164];
 			link.l1.go = "gov_36";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 50000);
 		break;
 

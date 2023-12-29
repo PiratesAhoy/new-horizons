@@ -15,7 +15,7 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 
 	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
-	Preprocessor_Add("English", GetNationDescByType(GetTownNation("Greenford")));
+	Preprocessor_Add("English", XI_ConvertString(GetNationDescByType(GetTownNation("Greenford"))));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -368,7 +368,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[54] + makeint(npchar.quest.goldmine)*10000 + DLG_TEXT[55] + makeint(npchar.quest.goldmine)*5000 + DLG_TEXT[56];
 			link.l1 = DLG_TEXT[57];
 			link.l1.go = "half_2";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.quest.goldmine)*5000);
 			if(AUTO_SKILL_SYSTEM)
 			{

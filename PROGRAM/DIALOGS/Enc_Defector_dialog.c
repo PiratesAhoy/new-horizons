@@ -100,7 +100,7 @@ void ProcessDialogEvent()
 				case 2:					// Gem
 					gemtype = "jewelry" + (rand(3) + 1);
 					Preprocessor_Add("gem", GetItemNameByID(gemtype));
-					PlayStereoSound("INTERFACE\important_item.wav");
+					PlayStereoSound("INTERFACE\important_item.flac");
 					GiveItem2Character(PChar, gemtype);
 					PChar.quest.defector_gemtype = gemtype;
 					PChar.quest.defector_island = FindIslandByLocation(PChar.location);
@@ -110,7 +110,7 @@ void ProcessDialogEvent()
 				break;
 
 				case 3:					// Criminal tools
-					PlayStereoSound("INTERFACE\important_item.wav");
+					PlayStereoSound("INTERFACE\important_item.flac");
 					GiveItem2Character(PChar, "bladex3");
 					GiveItem2Character(PChar, "lockpick");
 					TakenItems(PChar, "pistolpdart", 1 + rand(4));

@@ -65,5 +65,5 @@ string DLG_TEXT[67] = {
 "Mis disculpas, pero el capitán Torres ha alquilado todas mis habotaciones para él y sus oficiales.",
 "Entonces, me quedaré en la sala común de la taberna.",
 "Por desgracioa, eso tampoco será posible. Un guardia me ha recomendado que no deje a nadie quedarse aquí toda la noche, porque a menudo causan problemas. Y no le falta razón. Debería haber visto a ese marinero que vino esta noche, apenas podía tenerse en pie cuando salió por la puerta. Me apuesto las botas a que no llegó muy lejos...",
-"¡Está bien, no habrá sueño par amí esta noche! [PIENSA:] Quizás no debería irme a dormir de todas formas. ¡Todavía hay algunos marineros perdidos por ahí!",
+"¡Está bien, no habrá sueño para mí esta noche! [PIENSA:] Quizás no debería irme a dormir de todas formas. ¡Todavía hay algunos marineros perdidos por ahí!",
 };

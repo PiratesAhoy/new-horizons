@@ -795,11 +795,11 @@ void ChangeStoryline(bool bRight)
 	
 	//Levis custom start date -->
 	GameInterface.strings.StartYear = CharYear;
-	GameInterface.strings.StartMonth = TranslateString("",GetMonthName(CharMonth));
+	GameInterface.strings.StartMonth = FirstLetterUp(TranslateString("",GetMonthName(CharMonth)));
 	GameInterface.strings.StartDay = CharDay;
 	GameInterface.strings.StartPeriod = TranslateString("", GetPeriodName(curPeriod));
 	bool canchangedate = true;
-	if(CheckAttribute(arstart,"date.lock")) canchangedate = false;
+	if(CheckAttribute(arstart,"date.lock") && sti(arstart.date.lock) == true) canchangedate = false;
 	SetNodeUsing("YEAR", canchangedate);
 	SetNodeUsing("MONTH", canchangedate);
 	SetNodeUsing("DAY", canchangedate);
@@ -981,7 +981,7 @@ void RefreshScreen()
 					iNationsQuantity = CheckNationsQuantity(curPeriod);
 
 					GameInterface.strings.StartYear = CharYear;
-					GameInterface.strings.StartMonth = TranslateString("", GetMonthName(CharMonth)); //MAXIMUS 17.05.2019: needed for localization
+					GameInterface.strings.StartMonth = FirstLetterUp(TranslateString("", GetMonthName(CharMonth))); //MAXIMUS 17.05.2019: needed for localization
 					GameInterface.strings.StartDay = CharDay;
 					GameInterface.strings.StartPeriod = TranslateString("", GetPeriodName(curPeriod)); //MAXIMUS 17.05.2019: needed for localization
 				}
@@ -1282,7 +1282,7 @@ void GiveHimName(ref char)
 		if (CheckAttribute(char, "middlename")) {
 			CharMiddleName = char.middlename;
 			CharOldMiddleName = CharMiddleName;
-			tmpName = tmpName + " " + CharOldMiddleName;
+			if (CharOldMiddleName != "") tmpName = tmpName + " " + CharOldMiddleName;
 		} else {
 			CharMiddleName = "";
 			CharOldMiddleName = "";
@@ -1290,7 +1290,7 @@ void GiveHimName(ref char)
 		if (CheckAttribute(char, "lastname")) {
 			CharLastName = char.lastname;
 			CharOldLastName = CharLastName;
-			tmpName = tmpName + " " + CharOldLastName;
+			if (CharOldLastName != "") tmpName = tmpName + " " + CharOldLastName;
 		}
 
 		CharFirstName = GetTranslatedStoryLine(slno, CharFirstName);
@@ -1360,23 +1360,23 @@ void SetNewFlagImage(string sWhich)
 	switch (sWhich)
 	{
 		case "pirateflag":
-			SetNewPicture("PIRATE_FLAG", "interfaces\flags\Flag_Pirate" + pirateflagidx + pirateflagtex + ".tga");
+			SetNewPicture("PIRATE_FLAG", "interfaces\flags\Flag_Pirate" + pirateflagidx + pirateflagtex + ".png");
 		break;
 		case "personalflag":
-			SetNewPicture("PERSONAL_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".tga");
+			SetNewPicture("PERSONAL_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".png");
 			if (CharNation == PERSONAL_NATION) SetNewFlagImage("nation");
 		break;
 		// default:
 			switch (CharNation)
 			{
 				case PIRATE:
-					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Pirate00.tga");
+					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Pirate00.png");
 				break;
 				case PERSONAL_NATION:
-					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".tga");
+					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_Personal" + personalflagidx + personalflagtex + ".png");
 				break;
 				// default:
-					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_" + GetFlagPicName(CharNation) + ".tga");
+					SetNewPicture("NATION_FLAG", "interfaces\flags\Flag_" + GetFlagPicName(CharNation) + ".png");
 			}
 	}
 }
@@ -1396,7 +1396,7 @@ void ChangeStartDate(int year, int month, int day)
 	//CharSecond = sti(arstart.date.sec);
 	curPeriod = GetPeriodFromYear(CharYear);
 	GameInterface.strings.StartYear = CharYear;
-	GameInterface.strings.StartMonth = TranslateString("",GetMonthName(CharMonth));
+	GameInterface.strings.StartMonth = FirstLetterUp(TranslateString("",GetMonthName(CharMonth)));
 	GameInterface.strings.StartDay = CharDay;
 	curPeriod = GetPeriodFromYear(CharYear);
 	SetCurrentPeriod(curPeriod);
@@ -1958,9 +1958,9 @@ void SetWindow(int iWindow)
 				switch (i)
 				{
 					case PIRATE:        continue;                                                                                                 break;
-					case GUEST1_NATION: SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_Guest1" + curPeriod + ".tga");                  break;
-					case GUEST2_NATION: SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_Guest2" + curPeriod + ".tga");                  break;
-					/* default:      */ SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_" + GetNationIDByType(i) + curPeriod + ".tga");
+					case GUEST1_NATION: SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_Guest1" + curPeriod + ".png");                  break;
+					case GUEST2_NATION: SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_Guest2" + curPeriod + ".png");                  break;
+					/* default:      */ SetNewPicture("FLAG_PICTURE1" + j, "INTERFACES\Flags\Flag_" + GetNationIDByType(i) + curPeriod + ".png");
 				}
 				if (CharNation != i)
 					SetNodeUsing("FLAG_BUTTON1" + j, true);
@@ -1974,14 +1974,14 @@ void SetWindow(int iWindow)
 				SetNodeUsing("FLAG_BUTTON40", true);
 			else
 				XI_MarkFlag(4, 0);
-			SetNewPicture("FLAG_PICTURE40", "INTERFACES\Flags\Flag_Pirate00.tga");
+			SetNewPicture("FLAG_PICTURE40", "INTERFACES\Flags\Flag_Pirate00.png");
 			SetNodeUsing("FLAG_PICTURE40", true);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "lblNationPirate", TranslateString("", CheckNationNameByPeriod(PIRATE, curPeriod, true)), FONT_NORMAL, 440, 150, COLOR_NORMAL, 0, SCRIPT_ALIGN_LEFT, true, 0.8, 0);
 			if (CharNation != PERSONAL_NATION)
 				SetNodeUsing("FLAG_BUTTON41", true);
 			else
 				XI_MarkFlag(4, 1);
-			SetNewPicture("FLAG_PICTURE41", "INTERFACES\Flags\Flag_Personal" + personalflagidx + personalflagtex + ".tga");
+			SetNewPicture("FLAG_PICTURE41", "INTERFACES\Flags\Flag_Personal" + personalflagidx + personalflagtex + ".png");
 			SetNodeUsing("FLAG_PICTURE41", true);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "lblNationPersonal", TranslateString("", CheckNationNameByPeriod(PERSONAL_NATION, curPeriod, true)), FONT_NORMAL, 440, 180, COLOR_NORMAL, 0, SCRIPT_ALIGN_LEFT, true, 0.8, 0);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitleNation"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
@@ -2011,7 +2011,7 @@ void SetWindow(int iWindow)
 						SetNodeUsing("FLAG_BUTTON" + i + j, true);
 					else
 						XI_MarkFlag(i, j);
-					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Pirate" + i + j + ".tga");
+					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Pirate" + i + j + ".png");
 					SetNodeUsing("FLAG_PICTURE" + i + j, true);
 				}
 			}
@@ -2036,7 +2036,7 @@ void SetWindow(int iWindow)
 						SetNodeUsing("FLAG_BUTTON" + i + j, true);
 					else
 						XI_MarkFlag(i, j);
-					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Personal" + i + j + ".tga");
+					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Personal" + i + j + ".png");
 					SetNodeUsing("FLAG_PICTURE" + i + j, true);
 				}
 			}
@@ -3441,7 +3441,7 @@ int GetFreeSkillPoints()
 void NavyLockShipSelection(bool LockShip, ref model)
 {
 	bool canchangedate = true;
-	if(CheckAttribute(arstart,"date.lock")) canchangedate = false;
+	if(CheckAttribute(arstart,"date.lock") && sti(arstart.date.lock) == true) canchangedate = false;
 
 	if (LockShip)
 	{

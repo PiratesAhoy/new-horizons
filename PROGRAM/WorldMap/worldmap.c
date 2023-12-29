@@ -98,7 +98,9 @@ void wdmCreateMap(float dx, float dz, float ay)
 	// if (bNewInterface)
 	// 	CreateEntity(&worldMap, "wrldmap2");
 	// else
+	if (!IsEntity(&worldMap)) {
 		CreateEntity(&worldMap,"worldmap");
+	}
 // <-- KK
 	worldMap.isLoaded = "true";
 	//Set player ship position
@@ -261,15 +263,15 @@ bool wdmGetShorePos(string locid, ref x, ref z)
 	string wrlmapcity = locid;
 	if (CheckAttribute(&Locations[locidx], "worldmap")) wrlmapcity = Locations[locidx].worldmap;
 	string island = Locations[locidx].island;
-	aref arShores; makearef(arShores, worldMap.islands.(island).locations);
-	int iNum = GetAttributesNum(arShores);
-	for (int i = 0; i < iNum; i++)
-	{
-		aref arShore = GetAttributeN(arShores, i);
-		if (CheckAttribute(arShore, "name") == true && arShore.name == wrlmapcity) {
-			if (CheckAttribute(arShore, "ship.pos.x") && CheckAttribute(arShore, "ship.pos.z")) {
-				x = stf(arShore.ship.pos.x);
-				z = stf(arShore.ship.pos.z);
+	aref labels_attr;
+	makearef(labels_attr, worldmap.labels);
+	for (int i = 0; i < GetAttributesNum(labels_attr); i++) {
+		aref label_attr = GetAttributeN(labels_attr, i);
+		string label_name = GetAttributeName(label_attr);
+		if (label_attr.id == wrlmapcity) {
+			if (CheckAttribute(label_attr, "position.x") && CheckAttribute(label_attr, "position.z") ) {
+				x = stf(label_attr.position.x);
+				z = stf(label_attr.position.z);
 				return true;
 			}
 			break;
@@ -382,9 +384,13 @@ void wdmInit()
 		UnloadSegment("worldmap\worldmap_init.c");
 	}
 
-	if (!IsEntity(&worldMap)) {
-		CreateEntity(&worldMap,"worldmap");
-		DeleteClass(&worldMap);
-	}
+//	if (!IsEntity(&worldMap)) {
+//		CreateEntity(&worldMap,"worldmap");
+//		DeleteClass(&worldMap);
+//	}
 }
-// <-- KK
+
+void DestroyWorldmap() {
+	DeleteClass(&worldMap);
+	worldMap.isLoaded = "false";
+}

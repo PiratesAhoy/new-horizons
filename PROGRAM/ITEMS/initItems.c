@@ -187,11 +187,11 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitQuestBlade(n, "bladetop",                        "top2", "JRH13", 10,   "", "",      0,  0, 	  "", 0,   1);    //alchemy
 
   n = InitQuestBlade(n, "bladebottle_CE0",           "bottle_CE0", "JRH13",  1,   "", "",      0,  0, 	  "", 0,   1);    //empty
-  n = InitQuestBlade(n, "bladebottle_CW1",           "bottle_CW1", "JRH13",  2,   "", "",      0,  0, 	  "", 0,   1);    //� water
-  n = InitQuestBlade(n, "bladebottle_CT1_sulf",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //� H2SO4
-  n = InitQuestBlade(n, "bladebottle_CT1_nitr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //� HNO3
-  n = InitQuestBlade(n, "bladebottle_CT1_hydr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //� HCl
-  n = InitQuestBlade(n, "bladebottle_CT1_hydrnitr",  "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //� HNO3+HCl
+  n = InitQuestBlade(n, "bladebottle_CW1",           "bottle_CW1", "JRH13",  2,   "", "",      0,  0, 	  "", 0,   1);    //½ water
+  n = InitQuestBlade(n, "bladebottle_CT1_sulf",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ H2SO4
+  n = InitQuestBlade(n, "bladebottle_CT1_nitr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ HNO3
+  n = InitQuestBlade(n, "bladebottle_CT1_hydr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ HCl
+  n = InitQuestBlade(n, "bladebottle_CT1_hydrnitr",  "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ HNO3+HCl
 
   n = InitQuestBlade(n, "bladebottle_CT2_sulf_w",    "bottle_CT2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //H2SO4 + water
   n = InitQuestBlade(n, "bladebottle_CT2_sulf_c",    "bottle_CT2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //H2SO4 + chilesalp
@@ -555,78 +555,78 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitItem(n,"Sparrow_Ring1", "",       2, 7, 0.10,  5,  2500,   0,   0,  0, 1,    +2, +1,  0,  0,  0,  0,  0,  0,  0,  0,    0, 1, 1, 1); // Jack Sparrow's Ring
   // ccc building kit start -->
   //----------------------------------------------------------------------------------------------------------------------------
-  // BUILDING     ItemIndex                                                             planks                     piercing
-  // EXTERIORS        | ID                  modelID          chrmodel                      |   money            maxDmg|
-  //                  |  |                     |              |           dialog           |    |    crew  minDmg |   |  block
-  //------------------|--|---------------------|--------------|-------------|--------------|----|-----|------|----|---|---|-----
-  n = InitBLDexterior(n,"house",      "B_house02",    "B_man",        "b_house.c",        20,  4000,  3,   1.0, 2.0,  0, 20 );  // house
-  n = InitBLDexterior(n,"workshop",   "B_workshop",   "B_worker",     "b_workshop.c",     20,  4000,  3,   1.0, 2.0,  0, 20 );  // workshop
-  n = InitBLDexterior(n,"farm",       "B_farm",       "B_farmer",     "B_farm.c",         30,  5000, 10,   1.0, 2.0,  0, 20 );  // farm
-  n = InitBLDexterior(n,"mansion",    "B_manor",      "B_girl",       "b_mansion.c",      30, 20000,  5,   1.0, 2.0,  0, 20 );  // mansion
-  n = InitBLDexterior(n,"observatory","B_lighthouse", "B_girl",       "b_mansion.c",      30, 20000,  5,   1.0, 2.0,  0, 20 );  // observatory
-  n = InitBLDexterior(n,"forest",     "B_leaf",       "B_man",        "b_forest.c",        2,  1000,  5,   1.0, 2.0,  0, 20 );  // forest
-  n = InitBLDexterior(n,"jungle",     "b_bigforest",  "B_invisible",  "b_bigforest.c",    20,  1000,  5,   1.0, 2.0,  0, 20 );  // BIG forest added Feb06
-  n = InitBLDexterior(n,"jungle2",    "b_leaf",       "B_invisible",  "b_bigforest.c",     2,  1000,  5,   1.0, 2.0,  0, 20 );  // small forest added Feb06
-  n = InitBLDexterior(n,"College",    "b_college",    "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // College  added Feb06
-  n = InitBLDexterior(n,"church",     "b_church",     "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // church added Feb06
-  n = InitBLDexterior(n,"barracks",   "b_barracks",   "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // barracks added Feb06
-  n = InitBLDexterior(n,"windmill",   "b_windmill",   "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // windmill added Feb06
-  n = InitBLDexterior(n,"shipyard",   "b_shipyard",   "B_worker",     "B_shipyard.c",     40, 10000,  5,   1.0, 2.0,  0, 20 );  // shipyard added Feb06
-  n = InitBLDexterior(n,"shipyard2",  "b_shipyard",   "B_worker",     "B_shipyard2.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // PB: Shipyard that doesn't function
-  n = InitBLDexterior(n,"warehouse",  "b_warehouse",  "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // warehouse  added Feb06
+  // BUILDING     ItemIndex                                                             planks           crew           piercing
+  // EXTERIORS        | ID                  modelID          chrmodel                      |   bricks      |   minDmg      |
+  //                  |  |                     |              |           dialog           |       money   |      |  maxDmg|  block
+  //------------------|--|---------------------|--------------|-------------|--------------|----|----|-----|------|---|----|---|-----
+  n = InitBLDexterior(n,"house",      "B_house02",    "B_man",        "b_house.c",        10,  10,  4000,  3,   1.0, 2.0,  0, 20 );  // house
+  n = InitBLDexterior(n,"workshop",   "B_workshop",   "B_worker",     "b_workshop.c",     20,   0,  4000,  3,   1.0, 2.0,  0, 20 );  // workshop
+  n = InitBLDexterior(n,"farm",       "B_farm",       "B_farmer",     "B_farm.c",         15,  15,  5000, 10,   1.0, 2.0,  0, 20 );  // farm
+  n = InitBLDexterior(n,"mansion",    "B_manor",      "B_girl",       "b_mansion.c",      20,  50, 20000,  5,   1.0, 2.0,  0, 20 );  // mansion
+  n = InitBLDexterior(n,"observatory","B_lighthouse", "B_girl",       "b_mansion.c",      10,  30, 20000,  5,   1.0, 2.0,  0, 20 );  // observatory
+  n = InitBLDexterior(n,"forest",     "B_leaf",       "B_man",        "b_forest.c",        0,   0,  2000,  5,   1.0, 2.0,  0, 20 );  // forest
+  n = InitBLDexterior(n,"jungle",     "b_bigforest",  "B_invisible",  "b_bigforest.c",    40,   0,  1000,  5,   1.0, 2.0,  0, 20 );  // BIG forest added Feb06
+  n = InitBLDexterior(n,"jungle2",    "b_leaf",       "B_invisible",  "b_bigforest.c",    20,   0,  1000,  5,   1.0, 2.0,  0, 20 );  // small forest added Feb06
+  n = InitBLDexterior(n,"College",    "b_college",    "B_invisible",  "B_invisible.c",     4,  40, 10000,  5,   1.0, 2.0,  0, 20 );  // College  added Feb06
+  n = InitBLDexterior(n,"church",     "b_church",     "B_invisible",  "B_invisible.c",     4,  40, 10000,  5,   1.0, 2.0,  0, 20 );  // church added Feb06
+  n = InitBLDexterior(n,"barracks",   "b_barracks",   "B_invisible",  "B_invisible.c",     4,  40, 10000,  5,   1.0, 2.0,  0, 20 );  // barracks added Feb06
+  n = InitBLDexterior(n,"windmill",   "b_windmill",   "B_invisible",  "B_invisible.c",    20,  20, 10000,  5,   1.0, 2.0,  0, 20 );  // windmill added Feb06
+  n = InitBLDexterior(n,"shipyard",   "b_shipyard",   "B_worker",     "B_shipyard.c",     10,  40, 10000,  5,   1.0, 2.0,  0, 20 );  // shipyard added Feb06
+  n = InitBLDexterior(n,"shipyard2",  "b_shipyard",   "B_worker",     "B_shipyard2.c",    10,  40, 10000,  5,   1.0, 2.0,  0, 20 );  // PB: Shipyard that doesn't function
+  n = InitBLDexterior(n,"warehouse",  "b_warehouse",  "B_invisible",  "B_invisible.c",    20,  20, 10000,  5,   1.0, 2.0,  0, 20 );  // warehouse  added Feb06
   n = InitBLDexterior(n,"warehouse_destroyed","b_warehouse_destroyed",
-						      "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // ruined warehouse added 24/9/20
-  n = InitBLDexterior(n,"keep",       "B_keep",       "B_soldier",    "b_keep.c",         30, 20000, 15,   1.0, 2.0,  0, 20 );  // keep
-  n = InitBLDexterior(n,"tower",      "B_tower",      "B_soldier",    "b_keep.c",         30, 20000, 15,   1.0, 2.0,  0, 20 );  // Tower (old Keep)
-  n = InitBLDexterior(n,"bastion",    "B_town",       "B_soldier",    "b_fortification.c",30, 10000, 15,   1.0, 2.0,  0, 20 );  // bastion
-  n = InitBLDexterior(n,"townwalls",  "B_townwalls",  "B_soldier",    "b_fortification.c",90, 50000, 30,   1.0, 2.0,  0, 20 );  // townwalls  added Feb06  used for Antigua
-  n = InitBLDexterior(n,"box",        "B_box",        "B_invisible",  "b_box.c",           2,   100,  0,   1.0, 2.0,  0, 20 );  // box
-  n = InitBLDexterior(n,"fence",      "B_fence",      "B_soldier",    "b_fortification.c",10,  1000,  5,   1.0, 2.0,  0, 20 );  // stockade fence
-  n = InitBLDexterior(n,"fence2",     "B_fence",      "B_invisible",  "",                 10,  1000,  5,   1.0, 2.0,  0, 20 );  // stockade fence
-  n = InitBLDexterior(n,"bastion2",   "B_town",       "B_invisible",  "",                 30, 10000, 15,   1.0, 2.0,  0, 20 );  // bastion
-  n = InitBLDexterior(n,"keep2",      "B_keep",       "B_invisible",  "",                 30, 20000, 15,   1.0, 2.0,  0, 20 );  // keep
-  n = InitBLDexterior(n,"bale",       "B_Bale",       "B_invisible",  "b_box.c",           2,   100,  0,   1.0, 2.0,  0, 20 );  // Bale
-  n = InitBLDexterior(n,"entrance",   "B_entrance",   "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // entrance
-  n = InitBLDexterior(n,"wall",       "B_wall",       "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // wall
-  n = InitBLDexterior(n,"Sign",       "B_sign",       "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // Sign
-  n = InitBLDexterior(n,"keep3",      "B_keep3",      "B_soldier",    "b_keep.c",         30, 20000, 15,   1.0, 2.0,  0, 20 );  // bigger keep
-  n = InitBLDexterior(n,"tower2",     "B_tower2",     "B_invisible",  "b_keep.c",         30, 20000, 15,   1.0, 2.0,  0, 20 );  // Tower with gallows
-  n = InitBLDexterior(n,"cannonb",    "B_cannonb",    "B_invisible",  "",                 30, 10000, 15,   1.0, 2.0,  0, 20 );  // big cannon
-  n = InitBLDexterior(n,"cannonl",    "B_cannonl",    "B_invisible",  "",                 30, 10000, 15,   1.0, 2.0,  0, 20 );  // small cannon
-  n = InitBLDexterior(n,"hut",        "B_hut",        "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // hut
-  n = InitBLDexterior(n,"boxes",      "B_boxes",      "B_invisible",  "b_box.c",           2,   100,  0,   1.0, 2.0,  0, 20 );  // boxes
-  n = InitBLDexterior(n,"chain",      "B_chain",      "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // chain
-  n = InitBLDexterior(n,"gallows",    "B_gallows",    "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // gallows
-  n = InitBLDexterior(n,"hutindy",    "B_hutindy",    "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // indian hut
-  n = InitBLDexterior(n,"ladder",     "B_ladder",     "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // ladder
-  n = InitBLDexterior(n,"roche",      "B_roche",      "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // roche brasiliano
-  n = InitBLDexterior(n,"grapnel",    "B_grapnel",    "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // grapnel
-  n = InitBLDexterior(n,"tent",       "B_tent",       "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // military tent
-  n = InitBLDexterior(n,"pit",        "B_pit",        "B_invisible",  "",                 20,  4000,  3,   1.0, 2.0,  0, 20 );  // fire pit
-  n = InitBLDexterior(n,"fontain",    "B_fontain",    "B_invisible",	"",               20,  4000,  3,   1.0, 2.0,  0, 20 ); 	// fountain
-  n = InitBLDexterior(n,"fontain2",   "B_fontain2",   "B_invisible",	"",               20,  4000,  3,   1.0, 2.0,  0, 20 ); 	// small fountain
-  n = InitBLDexterior(n,"hedgerow",   "B_hedgerow",   "B_invisible",	"",               20,  4000,  3,   1.0, 2.0,  0, 20 ); 	// hedgerow
-  n = InitBLDexterior(n,"hedgerow2",  "B_hedgerow2",  "B_invisible",	"",               20,  4000,  3,   1.0, 2.0,  0, 20 ); 	// hedgerow2
-  n = InitBLDexterior(n,"boulder",    "B_boulder",    "B_invisible",	"",                2,   100,  3,   1.0, 2.0,  0, 20 ); 	// boulder / rock
-  n = InitBLDexterior(n,"Field_Cannon_1",     "Field_Cannon_1",     "B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // iron field cannon
-  n = InitBLDexterior(n,"Field_Cannon_1x2",   "Field_Cannon_1x2",   "B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // iron double-barrel field cannon
-  n = InitBLDexterior(n,"Field_Cannon_2",     "Field_Cannon_2",     "B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // bronze field cannon
-  n = InitBLDexterior(n,"Field_Cannon_2x2",   "Field_Cannon_2x2",   "B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // bronze double-barrel field cannon
-  n = InitBLDexterior(n,"Field_Cannon_3",     "Field_Cannon_3",     "B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // black field cannon
-  n = InitBLDexterior(n,"Field_Cannon_3x2",   "Field_Cannon_3x2",   "B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // black double-barrel field cannon
-  n = InitBLDexterior(n,"Field_Cannon_broken","Field_Cannon_broken","B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // broken iron field cannon
-  n = InitBLDexterior(n,"window_lit", "B_Window_Lit", "B_invisible",	"",                2,   100,  0,   1.0, 2.0,  0, 20 ); 	// window in Santiago lit at night
+						      "B_invisible",  "B_invisible.c",    20,  20, 10000,  5,   1.0, 2.0,  0, 20 );  // ruined warehouse added 24/9/20
+  n = InitBLDexterior(n,"keep",       "B_keep",       "B_soldier",    "b_keep.c",         30, 100, 20000, 15,   1.0, 2.0,  0, 20 );  // keep
+  n = InitBLDexterior(n,"tower",      "B_tower",      "B_soldier",    "b_keep.c",         10,  50, 20000, 15,   1.0, 2.0,  0, 20 );  // Tower (old Keep)
+  n = InitBLDexterior(n,"bastion",    "B_town",       "B_soldier",    "b_fortification.c",10,  30, 10000, 15,   1.0, 2.0,  0, 20 );  // bastion
+  n = InitBLDexterior(n,"townwalls",  "B_townwalls",  "B_soldier",    "b_fortification.c",60, 120, 50000, 30,   1.0, 2.0,  0, 20 );  // townwalls  added Feb06  used for Antigua
+  n = InitBLDexterior(n,"box",        "B_box",        "B_invisible",  "b_box.c",           2,   0,   100,  0,   1.0, 2.0,  0, 20 );  // box
+  n = InitBLDexterior(n,"fence",      "B_fence",      "B_soldier",    "b_fortification.c",10,   0,  1000,  5,   1.0, 2.0,  0, 20 );  // stockade fence
+  n = InitBLDexterior(n,"fence2",     "B_fence",      "B_invisible",  "",                 10,   0,  1000,  5,   1.0, 2.0,  0, 20 );  // stockade fence
+  n = InitBLDexterior(n,"bastion2",   "B_town",       "B_invisible",  "",                 10,  30, 10000, 15,   1.0, 2.0,  0, 20 );  // bastion
+  n = InitBLDexterior(n,"keep2",      "B_keep",       "B_invisible",  "",                 30, 100, 20000, 15,   1.0, 2.0,  0, 20 );  // keep
+  n = InitBLDexterior(n,"bale",       "B_Bale",       "B_invisible",  "b_box.c",           2,   0,   100,  0,   1.0, 2.0,  0, 20 );  // Bale
+  n = InitBLDexterior(n,"entrance",   "B_entrance",   "B_invisible",  "",                  2,  20,  4000,  3,   1.0, 2.0,  0, 20 );  // entrance
+  n = InitBLDexterior(n,"wall",       "B_wall",       "B_invisible",  "",                  2,  20,  4000,  3,   1.0, 2.0,  0, 20 );  // wall
+  n = InitBLDexterior(n,"Sign",       "B_sign",       "B_invisible",  "",                  2,  20,  4000,  3,   1.0, 2.0,  0, 20 );  // Sign
+  n = InitBLDexterior(n,"keep3",      "B_keep3",      "B_soldier",    "b_keep.c",         30, 100, 20000, 15,   1.0, 2.0,  0, 20 );  // bigger keep
+  n = InitBLDexterior(n,"tower2",     "B_tower2",     "B_invisible",  "b_keep.c",         10,  50, 20000, 15,   1.0, 2.0,  0, 20 );  // Tower with gallows
+  n = InitBLDexterior(n,"cannonb",    "B_cannonb",    "B_invisible",  "",                 40,   0, 10000, 15,   1.0, 2.0,  0, 20 );  // big cannon
+  n = InitBLDexterior(n,"cannonl",    "B_cannonl",    "B_invisible",  "",                 20,   0,  6000, 15,   1.0, 2.0,  0, 20 );  // small cannon
+  n = InitBLDexterior(n,"hut",        "B_hut",        "B_invisible",  "",                 20,   0,  4000,  3,   1.0, 2.0,  0, 20 );  // hut
+  n = InitBLDexterior(n,"boxes",      "B_boxes",      "B_invisible",  "b_box.c",           2,   0,   100,  0,   1.0, 2.0,  0, 20 );  // boxes
+  n = InitBLDexterior(n,"chain",      "B_chain",      "B_invisible",  "",                 20,   0,  4000,  3,   1.0, 2.0,  0, 20 );  // chain
+  n = InitBLDexterior(n,"gallows",    "B_gallows",    "B_invisible",  "",                 20,   0,  4000,  3,   1.0, 2.0,  0, 20 );  // gallows
+  n = InitBLDexterior(n,"hutindy",    "B_hutindy",    "B_invisible",  "",                 10,  10,  4000,  3,   1.0, 2.0,  0, 20 );  // indian hut
+  n = InitBLDexterior(n,"ladder",     "B_ladder",     "B_invisible",  "",                 20,   0,  4000,  3,   1.0, 2.0,  0, 20 );  // ladder
+  n = InitBLDexterior(n,"roche",      "B_roche",      "B_invisible",  "",                 20,   0,  4000,  3,   1.0, 2.0,  0, 20 );  // roche brasiliano
+  n = InitBLDexterior(n,"grapnel",    "B_grapnel",    "B_invisible",  "",                 20,   0,  4000,  3,   1.0, 2.0,  0, 20 );  // grapnel
+  n = InitBLDexterior(n,"tent",       "B_tent",       "B_invisible",  "B_invisible.c",    40,   0, 10000,  5,   1.0, 2.0,  0, 20 );  // military tent
+  n = InitBLDexterior(n,"pit",        "B_pit",        "B_invisible",  "",                  2,  20,  4000,  3,   1.0, 2.0,  0, 20 );  // fire pit
+  n = InitBLDexterior(n,"fontain",    "B_fontain",    "B_invisible",	"",                2,  20,  4000,  3,   1.0, 2.0,  0, 20 ); 	// fountain
+  n = InitBLDexterior(n,"fontain2",   "B_fontain2",   "B_invisible",	"",                2,  20,  4000,  3,   1.0, 2.0,  0, 20 ); 	// small fountain
+  n = InitBLDexterior(n,"hedgerow",   "B_hedgerow",   "B_invisible",	"",               20,   0,  4000,  3,   1.0, 2.0,  0, 20 ); 	// hedgerow
+  n = InitBLDexterior(n,"hedgerow2",  "B_hedgerow2",  "B_invisible",	"",               20,   0,  4000,  3,   1.0, 2.0,  0, 20 ); 	// hedgerow2
+  n = InitBLDexterior(n,"boulder",    "B_boulder",    "B_invisible",	"",                0,   2,   100,  3,   1.0, 2.0,  0, 20 ); 	// boulder / rock
+  n = InitBLDexterior(n,"Field_Cannon_1",     "Field_Cannon_1",     "B_invisible", "",    30,   0,  6000, 15,   1.0, 2.0,  0, 20 );  // iron field cannon
+  n = InitBLDexterior(n,"Field_Cannon_1x2",   "Field_Cannon_1x2",   "B_invisible", "",    40,   0, 12000, 15,   1.0, 2.0,  0, 20 );  // iron double-barrel field cannon
+  n = InitBLDexterior(n,"Field_Cannon_2",     "Field_Cannon_2",     "B_invisible", "",    30,   0,  8000, 15,   1.0, 2.0,  0, 20 );  // bronze field cannon
+  n = InitBLDexterior(n,"Field_Cannon_2x2",   "Field_Cannon_2x2",   "B_invisible", "",    40,   0, 16000, 15,   1.0, 2.0,  0, 20 );  // bronze double-barrel field cannon
+  n = InitBLDexterior(n,"Field_Cannon_3",     "Field_Cannon_3",     "B_invisible", "",    30,   0, 10000, 15,   1.0, 2.0,  0, 20 );  // black field cannon
+  n = InitBLDexterior(n,"Field_Cannon_3x2",   "Field_Cannon_3x2",   "B_invisible", "",    40,   0, 20000, 15,   1.0, 2.0,  0, 20 );  // black double-barrel field cannon
+  n = InitBLDexterior(n,"Field_Cannon_broken","Field_Cannon_broken","B_invisible", "",    30,   0, 10000, 15,   1.0, 2.0,  0, 20 );  // broken iron field cannon
+  n = InitBLDexterior(n,"window_lit", "B_Window_Lit", "B_invisible",	"",                2,   0,   100,  0,   1.0, 2.0,  0, 20 ); 	// window in Santiago lit at night
 
-  n = InitBLDexterior(n,"dovecote",   "b_dovecote",   "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // JRH special for quest in Tortuga
-  n = InitBLDexterior(n,"stone_floor","b_stone_floor","B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // JRH special for quest in Tortuga
+  n = InitBLDexterior(n,"dovecote",   "b_dovecote",   "B_invisible",  "B_invisible.c",    60,  60, 10000,  5,   1.0, 2.0,  0, 20 );  // JRH special for quest in Tortuga
+  n = InitBLDexterior(n,"stone_floor","b_stone_floor","B_invisible",  "B_invisible.c",     0,  40, 10000,  5,   1.0, 2.0,  0, 20 );  // JRH special for quest in Tortuga
 
-  n = InitBLDexterior(n,"Totem1",     "B_Totem1",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );  // Indian totems
-  n = InitBLDexterior(n,"Totem2",     "B_Totem2",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );
-  n = InitBLDexterior(n,"Totem3",     "B_Totem3",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );
-  n = InitBLDexterior(n,"Totem4",     "B_Totem4",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );
-  n = InitBLDexterior(n,"Totem5",     "B_Totem5",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );  //Indian village2
-  n = InitBLDexterior(n,"Tipi2",      "B_tipi2",       "B_invisible",  "",                 5,  1000,  5,   1.0, 2.0,  0, 20 );	// Indian tepee
-  n = InitBLDexterior(n,"Tipi3",      "B_tipi3",       "B_invisible",  "",                 5,  1000,  5,   1.0, 2.0,  0, 20 );	// Indian tepee
+  n = InitBLDexterior(n,"Totem1",     "B_Totem1",      "B_invisible",  "",                 2,   0,   100,  5,   1.0, 2.0,  0, 20 );  // Indian totems
+  n = InitBLDexterior(n,"Totem2",     "B_Totem2",      "B_invisible",  "",                 2,   0,   100,  5,   1.0, 2.0,  0, 20 );
+  n = InitBLDexterior(n,"Totem3",     "B_Totem3",      "B_invisible",  "",                 2,   0,   100,  5,   1.0, 2.0,  0, 20 );
+  n = InitBLDexterior(n,"Totem4",     "B_Totem4",      "B_invisible",  "",                 2,   0,   100,  5,   1.0, 2.0,  0, 20 );
+  n = InitBLDexterior(n,"Totem5",     "B_Totem5",      "B_invisible",  "",                 2,   0,   100,  5,   1.0, 2.0,  0, 20 );  //Indian village2
+  n = InitBLDexterior(n,"Tipi2",      "B_tipi2",       "B_invisible",  "",                 5,   0,  1000,  5,   1.0, 2.0,  0, 20 );	// Indian tepee
+  n = InitBLDexterior(n,"Tipi3",      "B_tipi3",       "B_invisible",  "",                 5,   0,  1000,  5,   1.0, 2.0,  0, 20 );	// Indian tepee
 
   //-----------------------------------------------------------------------------------------------------------------------------
   // BUILDING     ItemIndex                                  planks         Charges              Accuracy
@@ -652,7 +652,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //	              ItemIndex  |     		    	         model
   //----------------------|------|---------------------------------|----------------------------------------------------------------
 //all items are available for all storylines JRH
-  n = InitBuildingItemJRH(n,	"toolchest1",  			"toolchest"); 		//Carpenter´s chest - start mode
+  n = InitBuildingItemJRH(n,	"toolchest1",  			"toolchest"); 		//Carpenter�s chest - start mode
 
   n = InitBuildingItemJRH(n,	"brF4R",  			"Flotsam4R"); 		//broken roof pieces
   n = InitBuildingItemJRH(n,	"brF11",  			"Flotsam11");
@@ -4980,7 +4980,7 @@ int InitPotion(
   potionitm.rare      = rare;
 
 //JRH -->
-  potionitm.potion.sound = "INTERFACE\drink.wav";
+  potionitm.potion.sound = "INTERFACE\drink.flac";
   switch(id)
   {
 	case "medical1":   potionitm.potion.sound = "PEOPLE\clothes2.wav";  break; 	
@@ -5238,31 +5238,32 @@ int InitAmmoMod(  ref ItemIndex, string id, string groupID, string  picTexture, 
 //-------------------------------------------------------------------------------------------------------------------------------
 // TIH --> compact this file with function usage
 int InitBLDexterior(  ref ItemIndex, string id, string model,
-            string chrmodel, string dialog, int planks, int money, int crew,
-            float dmg_min, float dmg_max, int piercing, int block
+            string chrmodel, string dialog, int planks, int bricks, int money,
+            int crew, float dmg_min, float dmg_max, int piercing, int block
           )
 {
   ref bld;
   int bldIndex = ItemIndex;
   makeref(bld,Items[bldIndex]);
 
-  bld.id      = id;
-  bld.groupID   = BLADE_ITEM_TYPE;
-  bld.name    = "itmname_building";
-  bld.describe  = "itmdescr_building";
-  bld.picIndex  = 13;
-  bld.picTexture  = "ITEMS_4";
-  bld.folder    = "ammo";
-  bld.model     = "BuildingSet\"+model; // PB: Clean up "AMMO" subfolder
-  bld.building.chrmodel   = chrmodel;
-  bld.building.dialog   = dialog;
-  bld.building.planks   = planks;
-  bld.building.money    = money;
-  bld.building.crew     = crew;
-  bld.dmg_min   = dmg_min;
-  bld.dmg_max   = dmg_max;
-  bld.piercing  = piercing;
-  bld.block     = block;
+  bld.id		= id;
+  bld.groupID		= BLADE_ITEM_TYPE;
+  bld.name		= "itmname_building";
+  bld.describe		= "itmdescr_building";
+  bld.picIndex		= 13;
+  bld.picTexture	= "ITEMS_4";
+  bld.folder		= "ammo";
+  bld.model		= "BuildingSet\"+model; // PB: Clean up "AMMO" subfolder
+  bld.building.chrmodel	= chrmodel;
+  bld.building.dialog	= dialog;
+  bld.building.planks	= planks;
+  bld.building.bricks	= bricks;
+  bld.building.money	= money;
+  bld.building.crew	= crew;
+  bld.dmg_min		= dmg_min;
+  bld.dmg_max		= dmg_max;
+  bld.piercing		= piercing;
+  bld.block		= block;
 
   bldIndex++;
   return bldIndex;
@@ -5281,22 +5282,23 @@ int InitBLDinterior(  ref ItemIndex, string id, string model,
   int bldIndex = ItemIndex;
   makeref(bld,Items[bldIndex]);
 
-  bld.id      = id;
-  bld.groupID   = GUN_ITEM_TYPE;
-  bld.name    = "itmname_building";
-  bld.describe  = "itmdescr_building";
-  bld.picIndex  = 13;
-  bld.picTexture  = "ITEMS_4";
-  bld.folder    = "ammo";
-  bld.model     = "BuildingSet\"+model; // PB: Clean up "AMMO" subfolder
-  bld.building.planks = planks;
-  bld.building.money  = money;
-  bld.building.crew   = crew;
-  bld.chargeQ   = chargeQ;
-  bld.chargespeed = chargespeed;
-  bld.dmg_min   = dmg_min;
-  bld.dmg_max   = dmg_max;
-  bld.accuracy  = accuracy;
+  bld.id		= id;
+  bld.groupID		= GUN_ITEM_TYPE;
+  bld.name		= "itmname_building";
+  bld.describe		= "itmdescr_building";
+  bld.picIndex		= 13;
+  bld.picTexture	= "ITEMS_4";
+  bld.folder		= "ammo";
+  bld.model		= "BuildingSet\"+model; // PB: Clean up "AMMO" subfolder
+  bld.building.planks	= planks;
+  bld.building.bricks	= 0; // GR: "bricks" attribute checked by building code elsewhere, so set a default value here to prevent errors
+  bld.building.money	= money;
+  bld.building.crew	= crew;
+  bld.chargeQ		= chargeQ;
+  bld.chargespeed	= chargespeed;
+  bld.dmg_min		= dmg_min;
+  bld.dmg_max		= dmg_max;
+  bld.accuracy		= accuracy;
 
   bldIndex++;
   return bldIndex;

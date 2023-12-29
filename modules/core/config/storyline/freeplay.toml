@@ -1,0 +1,43 @@
+[storyline.free_play]
+dir = "FreePlay"
+
+[storyline.free_play.start]
+location = "Tutorial_Deck"
+port = "QC_port"
+model = "47_JRMMSub"
+first_name = "Julian"
+last_name = "McAllister"
+nation = "england"
+player_type = "rebel"
+difficulty = "seadog"
+pirate_flag = 5
+personal_flag = 30
+ship = "BrigRoyal"
+ship_name = "Defiance"
+
+[storyline.free_play.start.editable]
+location = true
+port = true
+model = true
+first_name = true
+last_name = true
+nation = true
+player_type = true
+personal_flag = true
+pirate_flag = true
+ship = true
+ship_name = true
+difficulty = true
+date = true
+
+[storyline.free_play.start.date]
+hour = 13
+min = 20
+sec = 33
+day = 14
+month = 5
+year = 1682
+
+[storyline.free_play.variables]
+CHANGING_RELATIONS = 1
+ISLA_DE_MUERTE = 0

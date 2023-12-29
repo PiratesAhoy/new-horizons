@@ -272,7 +272,7 @@ bool UnlockPerkCharacter(ref Character, string perkName)
 				int lngFileID = LanguageOpenFile("AbilityDescribe.txt");
 				string Text = LanguageConvertString(lngFileID,"Unlocked");
 				string Name = LanguageConvertString(lngFileID,perkName);
-				PlaySound("INTERFACE\notebook.wav");
+				PlaySound("INTERFACE\notebook.flac");
 				Logit(Text + " " + Name);
 				LanguageCloseFile(lngFileID);
 			}

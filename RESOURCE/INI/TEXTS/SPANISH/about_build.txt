@@ -92,7 +92,7 @@ About_Build_4
 
 - Durante el abordaje, tu tripulación puede usar armas, armaduras y medicinas almacenadas en tu armero. Esto puede significar la diferencia entre victoria y derrota.
 
-- En los modos Realista y Iron Man necesitas una brújula, un cronómetro y un sextante para poder ver tu posición en el mapa del archipiélago (tecla por defecto [M]). Además, en cualquier modo, estos objetos mejoran tu destreza de navegación.
+- En los modos Realista y Iron Man necesitas un cronómetro y un sextante para poder ver tu posición en el mapa del archipiélago (tecla por defecto [M]). Además, en cualquier modo, estos objetos mejoran tu destreza de navegación.
 
 - Para ejecutar un zafarrancho de incendio, necesitas la habilidad "Defensa naval basica". La tecla por defecto es [C].
 

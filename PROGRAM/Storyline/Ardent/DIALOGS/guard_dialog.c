@@ -188,6 +188,7 @@ void ProcessDialogEvent()
 		case "did_you_get_ring":
 			dialog.text = DLG_TEXT[39];
 			link.l1 = DLG_TEXT[40];
+			AddDialogExitQuest("out_of_store_ring2");
 			link.l1.go = "Exit";
 		break;
 
@@ -463,7 +464,7 @@ void ProcessDialogEvent()
 		case "treachery_story_confirmed":
 			dialog.text = DLG_TEXT[114];
 			link.l1 = DLG_TEXT[115];
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 5);
 			link.l1.go = "exit";
 		break;
@@ -741,7 +742,7 @@ void ProcessDialogEvent()
 
 		case "exit_bribe_accepted":
 			PChar.quest.abduction_guard_status = "bribed";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -5000);
 			AddMoneyToCharacter(NPChar, 5000);
 			AddDialogExitQuest("abduction_open_barracks_door");

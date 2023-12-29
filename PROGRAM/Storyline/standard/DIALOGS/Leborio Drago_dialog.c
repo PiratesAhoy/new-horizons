@@ -402,7 +402,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[97] + GetMyShipNameShow(PChar) + DLG_TEXT[98];
 			link.l1.go = "exit";
 			npchar.quest.hire = "hired";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1500);
 			AddPassenger(pchar, npchar, -1);
 			GiveItem2Character(npchar, "blade4");

@@ -17,7 +17,7 @@ void InitInterface(string iniName)
 
 	bool in_sailing_mode = bSeaActive;
 
-	SetSelectable("BTN_FREE_CAMERA", in_sailing_mode);
+	SetSelectable("BTN_FREE_CAMERA", true);
 	SetSelectable("BTN_SPAWN_FLEET", in_sailing_mode && iNumShips <= 1);
 	SetSelectable("BTN_3", IsNearEnemy());
 }
@@ -42,8 +42,18 @@ void ProcessCancelExit()
 
 void EnableFreeCamera()
 {
-	SeaCameras.Camera = "SeaFreeCamera";
-	SeaCameras_UpdateCamera();
+	if (Scene.Camera != FREE_CAMERA) {
+		Scene.Camera = FREE_CAMERA;
+	}
+	else {
+		if (IsEntity(&locCamera)) {
+			Scene.Camera = LOCATION_CAMERA;
+		}
+		else if (IsEntity(&SeaShipCamera)) {
+			Scene.Camera = SHIP_CAMERA;
+		}
+	}
+	UpdateCamera();
 
 	ProcessCancelExit();
 }

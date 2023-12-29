@@ -621,7 +621,8 @@ float LAi_CalcDeadExp(aref attack, aref enemy)
 				//traceandlog("from chr " + enemy.id + " you got " + tmp + " +++++++++++++");
 			}
 		}
-		if(enemy.lastname == VC_MONKEY_LNAME) //ccc monkeyhide
+	//	if(enemy.lastname == VC_MONKEY_LNAME)		//ccc monkeyhide, GR - no longer works because name is translated
+		if(GetAttribute(enemy, "sex") == "monkey")	// GR: try 'sex' attribute instead, should be set to "monkey" in 'LEnc_monsters.c'
 		{
 			AddCharacterGoods(GetMainCharacter(), GOOD_LEATHER, 1);
 			Log_SetStringToLog(TranslateString("","You got the beast's hide!"));
@@ -1228,4 +1229,19 @@ float LAi_NPC_GetAttackWeightFeint()
 {
 	npc_return_tmp = 0;
 	return npc_return_tmp;
+}
+
+#event_handler("Check_ChrHitAttack", "LAi_CheckChrHit");
+int LAi_CheckChrHit()
+{
+	aref attacker = GetEventData();
+	aref defender = GetEventData();
+	bool isRecoil = GetEventData();
+
+	if (rand(100) > 20) {
+		return LAI_CHARACTER_HIT_SOFT;
+	}
+	else {
+		return LAI_CHARACTER_HIT_HARD;
+	}
 }

@@ -46,5 +46,5 @@ string DLG_TEXT[48] = {
 ", antes de que llame a los guardias.",
 "Muy bien.",
 "Sí, estoy esperado uncargamento de #squantity# toneladas de #scargo#. ¿Lo tienes?",
-"Hum... Una parte del cargamento parece haberse extraviado. ¡No te preocupes, reemplazaré lo que s eha perdido y te lo traeré!",
+"Hum... Una parte del cargamento parece haberse extraviado. ¡No te preocupes, reemplazaré lo que se ha perdido y te lo traeré!",
 };

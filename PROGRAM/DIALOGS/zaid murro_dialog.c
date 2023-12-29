@@ -188,7 +188,7 @@ void ProcessDialogEvent()
 			else { AddPartyExp(pchar, 1800); }
 			Officersreaction("good");
 			ChangeCharacterReputation(pchar, 2);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 800);
 			// Julian -->
 			GiveItem2Character(Pchar,"spyglass3");

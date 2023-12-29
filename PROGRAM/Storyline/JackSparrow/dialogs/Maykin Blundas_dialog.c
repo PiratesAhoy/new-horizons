@@ -152,7 +152,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Blundas_for_Skulls3TEMP":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			dialog.text = DLG_TEXT[33];
 			link.l1 = DLG_TEXT[34];
 			link.l1.go = "Exit_Blundas_for_SkullsTEMP";

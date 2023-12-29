@@ -144,6 +144,7 @@ bool LoadLocation(ref loc)
 			//Sea
 			if (loc.environment.sea == "true") {
 				CreateSea(EXECUTE,REALIZE);//CreateEntity(&locSea, "sea");
+				CreateCoastFoamEnvironment(loc.id, EXECUTE, REALIZE);
 			} else {
 				if (!ownDeckStarted()) DeleteSeaEnvironment();
 			}
@@ -171,7 +172,10 @@ bool LoadLocation(ref loc)
 		if (!CheckAttribute(loc, "models.back")) {
 			if(isTown || isFort) {
 				//Sea
-				if(loc.environment.sea == "true") CreateSea(EXECUTE,REALIZE);//CreateEntity(&locSea, "sea");
+				if(loc.environment.sea == "true") {
+					CreateSea(EXECUTE,REALIZE);//CreateEntity(&locSea, "sea");
+					CreateCoastFoamEnvironment(loc.id, EXECUTE, REALIZE);
+				}
 				//Weather
 				if(loc.environment.weather == "true") CreateWeather(EXECUTE,REALIZE);//CreateEntity(&locWeather, "weather");
 			}
@@ -546,11 +550,12 @@ bool LoadLocation(ref loc)
 	}
 	// CTM <--
 	//Camera===============================================================================
-	locCameraEnableFree = FREE_CAMERA;				// PB: For Free Camera Mode
+	locCameraEnableFree = ENABLE_FREE_CAMERA;				// PB: For Free Camera Mode
 	DeleteAttribute(mainCharacter, "scrollchars");	// PB: For Cheatmode
 	InitOpenSeaMod();								// stljeffbb Jan 15 2012
 	ReloadProgressUpdate();
-	CreateEntity(&locCamera, "locationcamera");
+	CreateEntity(&locCamera, "LocationCamera");
+	SetActiveCamera(LOCATION_CAMERA);
 	SendMessage(&locCamera, "li", MSG_CAMERA_SETTARGET, mainCharacter);
 	locCameraFollow();
 	if(CheckAttribute(loc, "lockCamAngle") == true) // KK && LAi_boarding_process)
@@ -739,6 +744,8 @@ bool UnloadLocation(aref loc)
 	LogoffCharactersFromLocation(loc);									// PB: Permanently erase certain characters
 	int n;
 
+	DeleteCoastFoamEnvironment();
+
 // KK -->
 	/*bool isNoBoarding = true;
 	bool isFort = false;
@@ -842,7 +849,10 @@ bool LocLoadModel(aref loc, string sat, string addition)
 	if(res == 0) return 0;
 	//Устанавливаем флаги
 	object mdl;
-	SendMessage(loc, "le", MSG_LOCATION_GET_MODEL, &mdl);
+	if(SendMessage(loc, "le", MSG_LOCATION_GET_MODEL, &mdl) != 0)
+	{
+//		SetTownFlag(loc, &mdl); // KK
+	}
 	// Проверяем на пену
 	attr = sat + ".foam";
 	if(CheckAttribute(loc, attr) != 0)
@@ -1160,7 +1170,7 @@ void LocLoadShips(ref Location)
 		if(CheckAttribute(rCharacter,"sailaway"))
 		{
 			if(!CheckAttribute(rCharacter,"Ship.Strand"))					rCharacter.Ship.Strand = false;
-			if(!CheckAttribute(SeaCameras,"camera"))						SeaCameras.Camera = "SeaShipCamera";
+			if(!CheckAttribute(Scene,"camera"))								Scene.Camera = SHIP_CAMERA;
 			if(!CheckAttribute(rCharacter,"ship.cannons.Charge"))			rCharacter.ship.cannons.Charge.Type = GOOD_BALLS;
 			if(!CheckAttribute(rCharacter,"TmpPerks.LongRangeShoot"))		rCharacter.TmpPerks.LongRangeShoot = false;
 			if(!CheckAttribute(rCharacter,"TmpPerks.shipspeedup"))			rCharacter.TmpPerks.shipspeedup = false;

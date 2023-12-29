@@ -115,7 +115,7 @@ string FindTownName(string townid)
 	if (CheckAttribute(rtown, "name"))
 	{
 		// PB: For Renamed Personal Towns -->
-		if(GetTownNation(townid) == PERSONAL_NATION)
+		if(GetTownNation(townid) == PERSONAL_NATION && XI_ConvertString(rtown.name)=="")
 			return rtown.name;
 		else
 			return XI_ConvertString(rtown.name);
@@ -1301,8 +1301,12 @@ bool PlaceFleetNearShore(string id)
 		worldMap.playerShipX = x;
 		worldMap.playerShipZ = z;
 		worldMap.playerShipAY = 3.0;
+		return true;
 	}
-	return true;
+	else {
+		Trace("Failed to find shore position for '" + id + "'");
+		return false;
+	}
 }
 
 void SetTownGarrisonForNation(string town, int iNation)

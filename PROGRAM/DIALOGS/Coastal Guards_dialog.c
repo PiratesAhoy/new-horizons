@@ -198,7 +198,7 @@ void ProcessDialogEvent()
 		// Or righteous Disney censorship? Added three new cases instead:
 
 		case "MoneyAccepted10":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, - makeint(sti(Pchar.money)/10));
 			d.Text = DLG_TEXT[21];
 			Link.l1 = DLG_TEXT[22];
@@ -206,7 +206,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "MoneyAccepted5":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, - makeint(sti(Pchar.money)/5));
 			d.Text = DLG_TEXT[21];
 			Link.l1 = DLG_TEXT[22];
@@ -214,7 +214,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "MoneyAccepted2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, - makeint(sti(Pchar.money)/2));
 			d.Text = DLG_TEXT[21];
 			Link.l1 = DLG_TEXT[22];

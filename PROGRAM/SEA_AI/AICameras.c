@@ -1,15 +1,13 @@
-object	SeaCameras;
-aref	Crosshair;
-object	SeaShipCamera,SeaFreeCamera,SeaDeckCamera;
-ref		SeaShipCharacterForCamera;
-bool	bCanSwitchCameras = true;
-
+object SeaCameras;
+object SeaShipCamera;
+object SeaDeckCamera;
+aref Crosshair;
+ref SeaShipCharacterForCamera;
+bool bCanSwitchCameras = true;
 bool bCameraOnMyShip = true; // KK
 
 void DeleteSeaCamerasEnvironment()
 {
-	DeleteClass(&SeaCameras);
-	DeleteClass(&SeaFreeCamera);
 	DeleteClass(&SeaShipCamera);
 	DeleteClass(&SeaDeckCamera);
 	DelEventHandler("SeaCameras_Switch", "SeaCameras_Switch");
@@ -21,16 +19,10 @@ void CreateSeaCamerasEnvironment()
 	bCanSwitchCameras = true;
 
 	CreateEntity(&SeaCameras, "SEA_CAMERAS");
-	CreateEntity(&SeaFreeCamera, "FREE_CAMERA");
 	CreateEntity(&SeaShipCamera, "SHIP_CAMERA");
 	CreateEntity(&SeaDeckCamera, "DECK_CAMERA");
 
-	LayerAddObject(INFO_REALIZE, &SeaCameras, 1);
-	LayerAddObject(SEA_EXECUTE, &SeaShipCamera, 1);
-	LayerAddObject(SEA_EXECUTE, &SeaFreeCamera, 1);
-	LayerAddObject(SEA_EXECUTE, &SeaDeckCamera, 1);
-
-	SeaFreeCamera.Perspective = 1.285;
+	FreeCamera.Perspective = 1.285;
 
 	// Ship camera paramerets
 	SeaShipCamera.Perspective = 1.285;
@@ -69,10 +61,10 @@ void CreateSeaCamerasEnvironment()
 	makearef(Crosshair,SeaCameras.Crosshair);
 
 	if (DECK_VIEW_ON_SEAENTER && !bAbordageStarted && actLoadFlag == 0) {
-		SeaCameras.Camera = "SeaDeckCamera";
+		Scene.Camera = DECK_CAMERA;
 		Crosshair.OutsideCamera = false;
 	} else {
-		SeaCameras.Camera = "SeaShipCamera";
+		Scene.Camera = SHIP_CAMERA;
 		Crosshair.OutsideCamera = true;
 	}
 // <-- KK
@@ -116,19 +108,18 @@ void SeaCameras_Switch()
 	if (!bCanSwitchCameras || !bCameraOnMyShip) return; // KK
 
 	int bSwitch = false;
-	//Trace("Sea Camera Switch");
-	switch (SeaCameras.Camera)
+	switch (Scene.Camera)
 	{
-		case "SeaFreeCamera":
-			SeaCameras.Camera = "SeaShipCamera";
+		case FREE_CAMERA:
+			Scene.Camera = SHIP_CAMERA;
 			Crosshair.OutsideCamera = true;
 			PeopleOnShip.IsOnDeck = 0;
 			bSwitch = true;
 		break;
-		case "SeaShipCamera":
+		case SHIP_CAMERA:
 			if (!LAi_IsDead(&Characters[GetMainCharacterIndex()]))
 			{
-				SeaCameras.Camera = "SeaDeckCamera";
+				Scene.Camera = DECK_CAMERA;
 // KK -->
 				if (GetCaracterShipCannonsType(GetMainCharacter()) != CANNON_TYPE_NONECANNON)
 					Crosshair.OutsideCamera = false;
@@ -139,13 +130,13 @@ void SeaCameras_Switch()
 				bSwitch = true;
 			}
 		break;
-		case "SeaDeckCamera":
+		case DECK_CAMERA:
 			switch (GetTargetPlatform())
 			{
-				case "xbox": SeaCameras.Camera = "SeaShipCamera"; break;
+				case "xbox": Scene.Camera = SHIP_CAMERA; break;
 				case "pc":
-					if(!FREE_CAMERA)	SeaCameras.Camera = "SeaShipCamera";
-					else				SeaCameras.Camera = "SeaFreeCamera";
+					if(!ENABLE_FREE_CAMERA)	Scene.Camera = SHIP_CAMERA;
+					else				Scene.Camera = FREE_CAMERA;
 				break;
 			}
 			Crosshair.OutsideCamera = true;
@@ -153,42 +144,27 @@ void SeaCameras_Switch()
 			bSwitch = true;
 		break;
 	}
-	if (bSwitch) SeaCameras_UpdateCamera();
-}
-
-void SeaCameras_UpdateCamera()
-{
-	switch (SeaCameras.Camera)
-	{
-		case "SeaShipCamera":
-			SendMessage(&SeaCameras, "lia", AI_CAMERAS_SET_CAMERA, &SeaShipCamera, &SeaShipCharacterForCamera);
-		break;
-		case "SeaFreeCamera":
-			SendMessage(&SeaCameras, "lia", AI_CAMERAS_SET_CAMERA, &SeaFreeCamera, &SeaShipCharacterForCamera);
-		break;
-		case "SeaDeckCamera":
-			SendMessage(&SeaCameras, "lia", AI_CAMERAS_SET_CAMERA, &SeaDeckCamera, &SeaShipCharacterForCamera);
-		break;
+	if (bSwitch) {
+		UpdateCamera();
 	}
 }
 
 void SeaCameras_SetDieCamera()
 {
 	bool bOldCanSwitchCameras;
-	if (SeaCameras.Camera == "SeaDeckCamera")
+	if (Scene.Camera == DECK_CAMERA)
 	{
-		SeaCameras.Camera = "SeaShipCamera";
 		Crosshair.OutsideCamera = true;
 		PeopleOnShip.IsOnDeck = 0;
-		SeaCameras_UpdateCamera();
+		SetActiveCamera(SHIP_CAMERA);
 	}
 }
 
 bool SeaCameras_isCameraOutside()
 {
-	if (SeaCameras.Camera == "SeaShipCamera") return true;
-	if (SeaCameras.Camera == "SeaFreeCamera") return true;
-	if (SeaCameras.Camera == "SeaDeckCamera") return false;
+	if (Scene.Camera == SHIP_CAMERA) return true;
+	if (Scene.Camera == FREE_CAMERA) return true;
+	if (Scene.Camera == DECK_CAMERA) return false;
 	return false;
 }
 
@@ -196,13 +172,15 @@ void SeaCameras_SetShipForSeaCamera(object Character)
 {
 	bCameraOnMyShip = IsMainCharacter(&Character); // KK
 	makeref(SeaShipCharacterForCamera, Character);
-	SeaCameras_UpdateCamera();
+	SendMessage(&SeaShipCamera, "sa", "SetCharacter", SeaShipCharacterForCamera);
+	SendMessage(&SeaDeckCamera, "sa", "SetCharacter", SeaShipCharacterForCamera);
+	UpdateCamera();
 }
 
 // KK -->
 void SeaCameras_SetNextShip()
 {
-	if (SeaCameras.Camera == "SeaDeckCamera") return;
+	if (Scene.Camera == DECK_CAMERA) return;
 	int curchridx = GetCharacterIndex(SeaShipCharacterForCamera.id);
 	if (curchridx < 0) return;
 	int i = 0;
@@ -221,7 +199,7 @@ void SeaCameras_SetNextShip()
 
 void SeaCameras_SetPreviousShip()
 {
-	if (SeaCameras.Camera == "SeaDeckCamera") return;
+	if (Scene.Camera == DECK_CAMERA) return;
 	int curchridx = GetCharacterIndex(SeaShipCharacterForCamera.id);
 	if (curchridx < 0) return;
 	int i = iNumShips - 1;

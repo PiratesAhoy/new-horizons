@@ -43,7 +43,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "meeting":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -500); // NK
 			d.Text = DLG_TEXT[3];
 			Link.l1 = DLG_TEXT[4];

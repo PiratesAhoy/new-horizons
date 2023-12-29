@@ -45,7 +45,7 @@ string DLG_TEXT[50] = {
 "Por favor, Monsieur Legrand, si quisiera llenar el equipo con todos los objetos y cerrarlo...",
 "Sí, supongo que tiene razón. Ahora ya lo tiene fácil para rellenar las letras restantes. Solo una pista más; mire aquí: 'SE.ENTH'.",
 "De acuerdo, y gracias por su ayuda, Mr. Dupin.",					//45
-"Gracias a usted. Pero ahora tendrá que disculparme, tnego clientes esperando...",
+"Gracias a usted. Pero ahora tendrá que disculparme, tengo clientes esperando...",
 "En ese caso, adiós. Iré a ver si Mr. Poe ha regresado.",
 "Oh, no ha sido nada. Tenga su copia del mensaje secreto. Er... Monsieur Legrand, ¿le importaría si me quedo con el pergamino que encontró en la playa? Verá, estoy muy interesado en esta clase de cosas.",
 "Claro, por qué no. Me ha sido de gran ayuda. Por favor, quédeselo.",

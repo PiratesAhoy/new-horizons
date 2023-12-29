@@ -1,4 +1,15 @@
 title=Hermit and The Frogs
-text.t1=I'm looking for K. O'Byrne, a hermit, living in the jungle of #sisland_Cayman#. His hut must be somehwere off the trail to the settlement of #sGrand Cayman#.
+text.t1=I'm looking for K. O'Byrne, a hermit, living in the jungle of #sisland_Cayman#. His hut must be somewhere off the trail to the settlement of #sGrand Cayman#.
 text.t2=I must go through the jungle to #sGrand Cayman# and talk to the local bigwig at the town hall about the pirate problem. Hopefully he will help Annie and the old O'Byrne.
 text.t3=O'Byrne was right! The spineless monkey these poor colonists accepted as their governor won't lift a finger. I must return to the house in the jungle and discuss things with O'Byrne and Annie.
+text.t4=I'm going to confuse the living daylights out of these corsairs, until they leave O'Byrne and Annie alone. But first, I must return to the bay and tell Bea to hide.
+text.t5=Now I must find the base camp of Columbus' expedition. Hopefully the pirate scouts will be there as well!
+text.t6=That idiot of a Pirate Captain sent me to 'keep an eye' on his first mate. Little does he know, I have other plans... The mate is still in the base camp, not too far from where we landed initially.
+text.t7=Everything is going according to plan. The first mate and his men are preparing an ambush for the Captain. I better get back to the pirate ship at Punta el Ron.
+text.t8=Now I must lead Captain Bonamy to the abandoned fort - right into the trap of Mad Kay Hubecher!
+text.t9=With all their leaders dead, whatever is left of this pirate crew will aimlessly leave the island for good. I better go back and report the good news to O'Byrne.
+text.t10=Time to go back to Bea, before she throws a hissy fit! She's waiting at #sGrand Cayman# port.
+text.t11=Time to go back to Bea, before she throws a hissy fit! She must have returned to Eden Rock by now.
+text.t12=I'm going to attack the pirates at sea! Let's just go back to the bay and ask Beatrice to borrow me the ship.
+text.t13=I did it, ha-ha! Today, I achieved a victory people will talk about for a long time. I should get back to Eden Rock to see Bea's face!
+text.t14=I must visit O'Byrne one last time. He will be impressed to hear what I did to those corsairs!

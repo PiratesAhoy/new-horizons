@@ -833,7 +833,7 @@ void LocationInitQuestLocations(ref n)
 
 	// -------------------------------------------------
 	Locations[n].id = "JRH_tavern_upstairs";		//see also "Redmond_tavern_upstairs" in Redmond (standard alternative: sleep/reincarnation)
-	locations[n].id.label = "Room in Redmond tavern";
+	locations[n].id.label = "Room in #stown_name# tavern";
 	Locations[n].image = "Inside_Doubleflour_House_Room";
 
 	//Town sack
@@ -1351,7 +1351,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l2.go = "Redmond_tavern";
 	Locations[n].reload.l2.emerge = "reload6";
 	Locations[n].reload.l2.autoreload = "0";
-	Locations[n].reload.l2.label = "Redmond tavern.";
+	Locations[n].reload.l2.label = "#stown_name# tavern.";
 	Locations[n].locators_radius.reload.reload2 = 0.7;
 
 	//library

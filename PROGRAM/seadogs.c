@@ -7,6 +7,7 @@
 #include "sulan_shipslog.c"
 #include "globals.c"
 #include "animals.c"
+#include "camera.c"
 #include "sea_ai\sea.c"
 #include "ships\ships.c"
 #include "Encounters\Encounters.c"
@@ -54,6 +55,7 @@
 #include "smuggling.c";	//Everything related to smuggling moved to here -Levis
 #include "Characters\Leveling.c"; //Everything related to leveling move to this -Levis
 #include "compatibility.c";
+#include "module_loader/module_loader.c"
 
 extern void UpdateWorldMap();
 extern void InitGoods();
@@ -157,12 +159,12 @@ void ProcessCheat()
 					mc.scrollchars = sti(mc.scrollchars) - 1;
 					if(sti(mc.scrollchars) < 0) mc.scrollchars = OFFICER_MAX + COMPANION_MAX - 2;
 				}
-				LogIt("Selected character is " + Cheat_ScrollCharacterName(mc.scrollchars));
+				LogIt(TranslateString("","Selected character is") + " " + Cheat_ScrollCharacterName(mc.scrollchars));
 			break;
 
 			case "ScrollCharactersMain":
 				mc.scrollchars = 0
-				LogIt("Selected character is " + Cheat_ScrollCharacterName(mc.scrollchars));
+				LogIt(TranslateString("","Selected character is") + " " + Cheat_ScrollCharacterName(mc.scrollchars));
 			break;
 
 			case "ScrollCharactersRight":
@@ -179,7 +181,7 @@ void ProcessCheat()
 					mc.scrollchars = sti(mc.scrollchars) + 1;
 					if(sti(mc.scrollchars) > OFFICER_MAX + COMPANION_MAX - 2) mc.scrollchars = 0;
 				}
-				LogIt("Selected character is " + Cheat_ScrollCharacterName(mc.scrollchars));
+				LogIt(TranslateString("","Selected character is") + " " + Cheat_ScrollCharacterName(mc.scrollchars));
 			break;
 
 			case "God":
@@ -220,8 +222,8 @@ void ProcessCheat()
 			case "Gold":
 				mc.money = sti(mc.money) + 100000;
 				mc.wealth = sti(mc.wealth) + 10000;
-				Log_SetStringToLog("+ 100000 " + XI_ConvertString("Gold") + " for " + Cheat_ScrollCharacterName(0));
-				Log_SetStringToLog("+ 10000 " + XI_ConvertString("Wealth") + " for " + Cheat_ScrollCharacterName(0));
+				Log_SetStringToLog("+ 100000 " + XI_ConvertString("Gold") + " " + XI_Convertstring("for") + " " + Cheat_ScrollCharacterName(0));
+				Log_SetStringToLog("+ 10000 " + XI_ConvertString("Wealth") + " " + XI_Convertstring("for") + " " + Cheat_ScrollCharacterName(0));
 			break;
 
 			case "Reputation":
@@ -320,9 +322,14 @@ void Main()
 //	LocationTestProcess();
 //	return;
 
+	ReloadProgressStart();
+
+	LoadModules();
+	ReloadProgressUpdate();
+
 	// PB: Log Build Version to File -->
 	trace("----------------------------------------");
-	trace("Build " + BUILDVERSION);
+	trace("Build " + Modules.core.version);
 	trace("Savegame Compatibility: " + IS_SGV);
 	trace("----------------------------------------");
 	trace("");
@@ -335,7 +342,6 @@ void Main()
 	onesec = RDTSC_E(iRDTSC_main);*/
 	// NK <--
 
-	ReloadProgressStart();
 	ControlsInit(GetTargetPlatform(),true);
 	nTeleportLocation = 1;
 	sTeleportLocName = "Oxbay_port";
@@ -354,9 +360,6 @@ void Main()
 			trace("Gauging: interface");
 		}
 	}
-
-	InitStoryLines();
-	trace("Gauging: Storylines");
 
 	InitProfiles();
 	trace("Gauging: Profiles");
@@ -1345,11 +1348,7 @@ void ProcessControls()
 			case "NK_AlwaysRunToggle":
 				if (!bSeaActive || bAbordageStarted)
 				{
-					AlwaysRunToggle = !AlwaysRunToggle;
-					BeginChangeCharacterActions(PChar); // NK 04-09-17 have it change now.
-					SetDefaultNormWalk(PChar);
-					SetDefaultFight(PChar);
-					EndChangeCharacterActions(PChar); // NK ditto
+					SetAlwaysRun(!AlwaysRunToggle);
 					if(AlwaysRunToggle) Log_SetStringToLog(TranslateString("","Always run is now on"));
 					else Log_SetStringToLog(TranslateString("","Always run is now off"));
 				}
@@ -1633,7 +1632,7 @@ void ProcessControls()
 						{
 							LAi_SetFightMode(PChar, true);
 							globalSGMode = true;
-							if(FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
+							if(ENABLE_FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
 							PlaySound("OBJECTS\duel\reload1.wav");
 						}
 					}
@@ -1651,7 +1650,7 @@ void ProcessControls()
 							{
 								LAi_SetFightMode(PChar, true);
 								globalSGMode = true;
-								if(FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
+								if(ENABLE_FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
 								PlaySound("OBJECTS\duel\reload1.wav");
 							}
 						}
@@ -1740,7 +1739,7 @@ void ProcessControls()
 				}
 				else
 				{
-					if(FREE_CAMERA)														// Levis: We don't want to go in here if we are in shotgun mode or in fightmode
+					if(ENABLE_FREE_CAMERA)														// Levis: We don't want to go in here if we are in shotgun mode or in fightmode
 					{
 						if(locCameraCurMode == LOCCAMERA_FOLLOW)	locCameraFree();
 						else										locCameraFollow();

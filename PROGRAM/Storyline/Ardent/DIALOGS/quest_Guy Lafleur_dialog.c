@@ -86,7 +86,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_get_outfit_now":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -1 * sti(NPChar.quest.disguise_price));
 			DeleteAttribute(NPChar, "quest.disguise_price");
 			dialog.text = DLG_TEXT[21];
@@ -98,7 +98,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_get_outfit_bagged":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -1 * sti(NPChar.quest.disguise_price));
 			DeleteAttribute(NPChar, "quest.disguise_price");
 			dialog.text = DLG_TEXT[21];

@@ -194,7 +194,7 @@ void ProcessDialogEvent()
 					AddPartyExpChar(pchar, "Sneak", 15);
 				}
 				else { AddPartyExp(pchar, 1350); }
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, 2000);
 				ChangeCharacterReputation(pchar, 1);
 				AddQuestRecord("nigel", 9);

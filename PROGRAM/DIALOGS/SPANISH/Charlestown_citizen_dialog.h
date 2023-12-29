@@ -108,7 +108,7 @@ string DLG_TEXT[174] = {
 "James Griffith",
 ".",
 "He cambiado de opinión. Olvídalo.",
-"Bueno, #sCharlestown# tiene un gobernador militar, está aquí para poner las cosas en orden. Se llama "
+"Bueno, #sCharlestown# tiene un gobernador militar, está aquí para poner las cosas en orden. Se llama ",
 "Thomas Modiford",
 ". No le gusta la gente que no le escucha con la suficiente atencion, y tiene un temperamento muy irascible, así que no bajes la guardia con él.",
 "Ya veo. Tengo una pregunta.",

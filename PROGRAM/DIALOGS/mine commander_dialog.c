@@ -202,7 +202,7 @@ void ProcessDialogEvent()
 		case "resque_leborio_6":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1000);
 			AddQuestRecord("search_danielle", 19);
 			if (pchar.quest.main_line == "ask_for_resque_leborio")

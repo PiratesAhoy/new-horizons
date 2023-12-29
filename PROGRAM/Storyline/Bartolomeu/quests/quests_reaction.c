@@ -3173,6 +3173,7 @@ void QuestComplete(string sQuestName)
 			Group_SetTaskAttack("Nathaniel Hawk", PLAYER_GROUP, true);
 			Group_LockTask("Nathaniel Hawk");
 			Group_SetAddress("Nathaniel Hawk", Characters[GetMainCharacterIndex()].location, "", "");
+			Characters[GetCharacterIndex("Nathaniel Hawk")].nosurrender = 2;
 
 			UpdateRelations();
 
@@ -3459,7 +3460,7 @@ void QuestComplete(string sQuestName)
 		case "gifleperdiguero":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Luis Perdiguero"));
-			LAi_ActorAnimation(pchar, "attack_2", "sautfenetre", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "sautfenetre", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			break;
 
@@ -3991,9 +3992,9 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "finalalliere2":
-			LAi_ActorAnimation(pchar, "attack_2", "finalalliere3", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "finalalliere3", 0.0);
 			TakeItemFromCharacter(pchar, "darien_idol");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			break;
 
 		case "finalalliere3":
@@ -4949,7 +4950,7 @@ void QuestComplete(string sQuestName)
 		case "giflecole":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Spanish Governor"));
-			LAi_ActorAnimation(pchar, "attack_2", "Lancer_Video2", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "Lancer_Video2", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			break;
 
@@ -10668,7 +10669,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "use_fire_irons3":
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			LAi_SetFightMode(Pchar, false);
 			Locations[FindLocation("Governor_Daughter_House")].image = "Inside_Residence3";
 			break;
@@ -10846,7 +10847,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "inside_fort3":
-			PlaySound("INTERFACE\door_locked.wav");
+			PlaySound("INTERFACE\door_locked.flac");
 
 			LAi_SetActorType(characterFromID("Augusto Queiroz"));
 			Characters[GetCharacterIndex("Augusto Queiroz")].dialog.currentnode = "begin_34";

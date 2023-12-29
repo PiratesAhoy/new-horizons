@@ -75,7 +75,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "pay_for_dress":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -1000);
 			dialog.text = DLG_TEXT[12];
 			link.l1 = DLG_TEXT[13];

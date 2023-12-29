@@ -27,7 +27,7 @@ void ProcessDialogEvent()
 		case "bill":
 			Dialog.text = DLG_TEXT[33];
 			Link.l1 = DLG_TEXT[34];
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(Pchar, -100);
 			Link.l1.go = "exit";
 		break;
@@ -267,7 +267,7 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			GiveItem2Character(Pchar,"leeches");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -300);
 		break;
 
@@ -354,7 +354,7 @@ void increaseMaxHP(ref pChar, ref nextDiag)
 		string logMsg3 = "  " + DLG_TEXT[37];
 		DialogExit();
 		NextDiag.CurrentNode = NextDiag.TempNode;
-		PlayStereoSound("INTERFACE\took_item.wav");
+		PlayStereoSound("INTERFACE\took_item.flac");
 		AddMoneyToCharacter(Pchar, -200);
 		pchar.chr_ai.poison = 0;
 		LAi_SetCurHPMax(pchar);

@@ -66,7 +66,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "bribery":
-			PlayStereoSound("INTERFACE\took_item.wav");				
+			PlayStereoSound("INTERFACE\took_item.flac");
 			if (makeint(PChar.money) >= 500) AddMoneytoCharacter(PChar, -500);
 			else PChar.money = 0;
 			dialog.text = DLG_TEXT[15];

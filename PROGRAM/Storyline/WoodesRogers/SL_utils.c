@@ -218,7 +218,7 @@ void OpenBoxProcedure_WR()
 
 					LAi_QuestDelay("return_Eden_contract", 0.1);
 				}
-				else PlaySound("INTERFACE\small_door_locked.wav");
+				else PlaySound("INTERFACE\small_door_locked.flac");
 			break;
 
 			case "box4":
@@ -238,7 +238,7 @@ void OpenBoxProcedure_WR()
 					PlaySound("INTERFACE\small_door.wav");
 					LaunchItemsBox(&ar);
 				}
-				else PlaySound("INTERFACE\small_door_locked.wav");
+				else PlaySound("INTERFACE\small_door_locked.flac");
 			break;
 
 			case "box6":
@@ -2830,7 +2830,7 @@ void OpenBoxProcedure_WR()
 			case "box4":
 				if(CheckAttribute(chr, "wreck_shore_mast") && chr.wreck_shore_mast == "way_down")
 				{
-					PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.wav");
+					PlaySound("OBJECTS\SHIPCHARGE\ball_splash1.flac");
 					ChangeCharacterAddressGroup(chr, "Turks_wreck_shore", "quest", "splash");
 					chr.wreck_shore_mast = "way_up";
 				}
@@ -6469,7 +6469,7 @@ void OpenBoxProcedure_WR()
 				//GOLD COINS
 				LaunchItemsBox(&ar);
 
-				Logit(TranslateString("","No, the Gold Coins are too heavy - the crew will take them to the ship.."));
+				Logit(TranslateString("","No, the Gold Coins are too heavy - the crew will take them to the ship."));
 			break;
 
 			case "box8":
@@ -7188,7 +7188,7 @@ void OpenBoxProcedure_WR()
 				if(CheckAttribute(chr, "careen_tower") && chr.careen_tower == "down")
 				{
 					chr.careen_tower = "up";
-					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 					CreateParticleSystemX("ball_splash", 93.5, 1.0, 27.5, 0.0, 0.0, 0.0, 0);
 					CreateParticleSystemX("ball_splash", 93.5, 0.0, 27.5, 0.0, 0.0, 0.0, 0);
 					ChangeCharacterAddressGroup(chr, "BB_careen_shore", "goto", "tower_down");
@@ -9749,7 +9749,7 @@ void OpenBoxProcedure_WR()
 
 					if(CheckAttribute(chr, "quest.keymiddle") && chr.quest.keymiddle == "on_counter")
 					{
-						PlaySound("INTERFACE\took_item.wav");
+						PlaySound("INTERFACE\took_item.flac");
 						chr.quest.keymiddle = "picked_up";
 						GiveItem2Character(chr,"key18");
 
@@ -10153,7 +10153,7 @@ void OpenBoxProcedure_WR()
 							if(CheckAttribute(chr,"quest.tablemap") && chr.quest.tablemap == "on_floor")
 							{
 								//pick up key here
-								PlaySound("INTERFACE\took_item.wav");
+								PlaySound("INTERFACE\took_item.flac");
 								chr.quest.beltkey = "picked_up";
 								GiveItem2Character(chr, "bladekeysimple");
 								EquipCharacterByItem(chr, "bladekeysimple");
@@ -10362,7 +10362,7 @@ void OpenBoxProcedure_WR()
 				}
 				else
 				{
-					PlaySound("INTERFACE\small_door_locked.wav");
+					PlaySound("INTERFACE\small_door_locked.flac");
 					return;
 				}
 			break;
@@ -17681,7 +17681,7 @@ void OpenBoxProcedure_WR()
 				{
 					chr.quest.med_chest = "F2B_placed";
 					Log_SetStringToLog(XI_ConvertString("You give item"));
-					PlaySound("INTERFACE\important_item.wav");
+					PlaySound("INTERFACE\important_item.flac");
 					TakeItemFromCharacter(chr, "pistolmdchest_F2A");
 					TakeItemFromCharacter(chr, "pistolmdchest_F2B");
 
@@ -17693,7 +17693,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "F2B_C_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdchest_F2A_C");
 						TakeItemFromCharacter(chr, "pistolmdchest_F2B_C");
 						TakeItemFromCharacter(chr, "rolls_of_bandages");
@@ -17707,7 +17707,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "F2B_S_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdchest_F2A_S");
 						TakeItemFromCharacter(chr, "pistolmdchest_F2B_S");
 						TakeItemFromCharacter(chr, "leeches");	//if you got any
@@ -17721,7 +17721,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "F2B_CS_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdchest_F2A_CS");
 						TakeItemFromCharacter(chr, "pistolmdchest_F2B_CS");
 						TakeItemFromCharacter(chr, "rolls_of_bandages");
@@ -17736,7 +17736,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "F3B_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdchest_F3A");
 						TakeItemFromCharacter(chr, "pistolmdchest_F3B");
 
@@ -17749,7 +17749,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "F3B_C_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdchest_F3A_C");
 						TakeItemFromCharacter(chr, "pistolmdchest_F3B_C");
 						TakeItemFromCharacter(chr, "rolls_of_bandages");
@@ -17763,7 +17763,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "F3B_S_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdchest_F3A_S");
 						TakeItemFromCharacter(chr, "pistolmdchest_F3B_S");
 						TakeItemFromCharacter(chr, "leeches");	//if you got any
@@ -17777,7 +17777,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "F3B_CS_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdchest_F3A_CS");
 						TakeItemFromCharacter(chr, "pistolmdchest_F3B_CS");
 						TakeItemFromCharacter(chr, "rolls_of_bandages");
@@ -17792,7 +17792,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "cloth_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdcloth");
 
 						Locations[FindLocation("wr_food_supply")].models.always.locators = "store03_locators_JRH2_C";
@@ -17804,7 +17804,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "sack_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdsack");
 
 						Locations[FindLocation("wr_food_supply")].models.always.locators = "store03_locators_JRH2_S";
@@ -17816,7 +17816,7 @@ void OpenBoxProcedure_WR()
 					{
 						chr.quest.med_chest = "clothsack_placed";
 						Log_SetStringToLog(XI_ConvertString("You give item"));
-						PlaySound("INTERFACE\important_item.wav");
+						PlaySound("INTERFACE\important_item.flac");
 						TakeItemFromCharacter(chr, "pistolmdclothsack");
 						TakeItemFromCharacter(chr, "leeches");	//if you got any
 
@@ -18622,7 +18622,7 @@ void OpenBoxProcedure_WR()
 					{
 						PlaySound("INTERFACE\rum_barrel_empty.wav");
 						if(CheckAttribute(chr,"quest.rum_phase") && chr.quest.rum_phase != "3")
-						PlaySound("INTERFACE\took_item.wav");
+						PlaySound("INTERFACE\took_item.flac");
 					}
 				}
 
@@ -18641,7 +18641,7 @@ void OpenBoxProcedure_WR()
 					{
 						PlaySound("INTERFACE\rum_barrel_empty.wav");
 						if(CheckAttribute(chr,"quest.rum_phase") && chr.quest.rum_phase != "3")
-						PlaySound("INTERFACE\took_item.wav");
+						PlaySound("INTERFACE\took_item.flac");
 					}
 				}
 
@@ -18684,7 +18684,7 @@ void OpenBoxProcedure_WR()
 							{
 								//no key sound please
 							}
-							else PlaySound("INTERFACE\took_item.wav");
+							else PlaySound("INTERFACE\took_item.flac");
 						}
 					}
 				}

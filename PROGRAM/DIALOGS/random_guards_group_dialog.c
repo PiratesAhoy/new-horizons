@@ -76,7 +76,7 @@ void ProcessDialogEvent()
 			// PB: You are a KNOWN enemy because you're flying a hostile flag
 			if (sti(NPChar.nation) != PERSONAL_NATION && GetFlagRMRelation(sti(Npchar.nation)) == RELATION_ENEMY)
 			{
-				sNation = " " + GetNationDescByType(GetCurrentFlag());
+				sNation = " " + XI_ConvertString(GetNationDescByType(GetCurrentFlag()));
 				if (GetCurrentFlag() == PERSONAL_NATION && LanguageGetLanguage() == "English") sNation = "n"; // PB: Grammar "an enemy"
 				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				Dialog.Text = DLG_TEXT[7] + GetMySimpleName(PChar) + DLG_TEXT[8] + sNation + DLG_TEXT[32];
@@ -109,7 +109,7 @@ void ProcessDialogEvent()
 					//MT: If at war with the nation the guard belongs to, there is a chance to be detected (false flags should only occur when at war):
 					if (sti(NPChar.nation) != PERSONAL_NATION && GetNationRelation(PERSONAL_NATION, sti(Npchar.nation)) == RELATION_ENEMY && frnd() < GetChanceDetectFalseFlag())
 					{
-						sNation = " " + GetNationDescByType(GetServedNation());
+						sNation = " " + XI_ConvertString(GetNationDescByType(GetServedNation()));
 						if (GetServedNation() == PERSONAL_NATION) sNation = ""; // PB: Grammar "a spy"
 						Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 						Dialog.Text = DLG_TEXT[7] + GetMySimpleName(PChar) + DLG_TEXT[8] + sNation + DLG_TEXT[10];

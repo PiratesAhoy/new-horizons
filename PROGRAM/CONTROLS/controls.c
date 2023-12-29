@@ -151,7 +151,7 @@ bool KB_SetKeyboardMode(bool onoff)
 {
 	if(onoff && !bKeyboardEnabled)
 	{
-		PlaySound("interface\notebook.wav");
+		PlaySound("interface\notebook.flac");
 		// Screwface
 		int idx = sti(GlobalSettings.Storyline);
 		CurrentStoryline = idx;
@@ -371,7 +371,7 @@ void KB_AddCharacter(string c)
 			}
 		}
 	}
-	PlaySound("interface\Ok.wav");
+	PlaySound("interface\ok.flac");
 	sTmp = GetInterfaceLanguageName(GetKeyboardLayout());
 	if(CheckAttribute(GameInterface,"tempLang")) sTmp = GameInterface.tempLang;
 	switch (sTmp) {
@@ -669,7 +669,7 @@ string GetCurControlGroup()
 		if( CheckAttribute(&BattleInterface,"ComState") && sti(BattleInterface.ComState) != 0 )
 			return "BattleInterfaceControls";
 
-		if( SeaCameras.Camera == "SeaDeckCamera" )	{ return "Sailing1Pers"; }
+		if( Scene.Camera == DECK_CAMERA )	{ return "Sailing1Pers"; }
 		else { return "Sailing3Pers"; }
 	}
 
@@ -822,3 +822,15 @@ void RestoreControls()
 	DeleteAttribute(rTmpControlsList, "");
 }
 // <-- KK
+
+void SetAlwaysRun(bool bRun)
+{
+	AlwaysRunToggle = bRun;
+
+	ControlsInit(GetTargetPlatform(), false);
+	if( GetTargetPlatform()=="pc" )
+	{
+		ControlsMakeInvert();
+		SetRealMouseSensitivity();
+	}
+}

@@ -163,7 +163,7 @@ ChrBlock
 Block
 
 }
-ChrAttack
+ChrAttackFast
 {
 Attack
 

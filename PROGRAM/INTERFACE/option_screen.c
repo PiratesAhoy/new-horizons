@@ -1776,7 +1776,7 @@ void SetShowGroup(string groupName)
 	aref arGroup;
 	makearef(arGroup,objControlsState.keygroups.(groupName));
 
-	// Прописать контроли в список
+	// ѕрописать контроли в список
 	DeleteAttribute(&objArrayControls,"");
 	int i, idx, tmpcolor;
 	aref arControl;
@@ -1830,8 +1830,8 @@ void procFTUpdate()
 {
 	string nodName = GetEventData();
 	if(nodName!="CONTROLSWINDOW") return;
-	int grNum = GetEventData(); // первая группа в изменениях
-	int strNum = GetEventData(); // первая строка в изменениях
+	int grNum = GetEventData(); // перва€ группа в изменени€х
+	int strNum = GetEventData(); // перва€ строка в изменени€х
 
 	object objPos,obj;
 	DeleteAttribute(&objPos,"");

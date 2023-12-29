@@ -163,7 +163,7 @@ void ProcessDialogEvent()
 // NK -->
 		case "Silehard_dead":
 			d.Text = DLG_TEXT[399];
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 200000);
 			pchar.quest.silehard_defeat = "dead";
 			Link.l1 = DLG_TEXT[400];
@@ -178,7 +178,7 @@ void ProcessDialogEvent()
 
 		case "Silehard_prison2":
 			d.Text = DLG_TEXT[403];
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 400000);
 			pchar.quest.silehard_defeat = "prison";
 			RemovePassenger(Pchar,CharacterFromID("Robert Christopher Silehard"));
@@ -224,7 +224,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Pirates_killed_1":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 5000);
 			PChar.quest.killed.pirates = "0";
 			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_IMPTITLE, false, false)); // KK
@@ -323,7 +323,7 @@ void ProcessDialogEvent()
 		case "Story_Oxbay_Captured_12":
 			if(CalcCharacterSkill(PChar,SKILL_COMMERCE) > 1) // NK
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");		// LDH - added 14Oct06 - Governor never actually gave you the money
+				PlayStereoSound("INTERFACE\took_item.flac");		// LDH - added 14Oct06 - Governor never actually gave you the money
 				AddMoneyToCharacter(pchar, 1000);
 				d.Text = DLG_TEXT[69];
 				Link.l1 = DLG_TEXT[70];
@@ -371,7 +371,7 @@ void ProcessDialogEvent()
 		case "Story_1stTaskComplete_2":
 			PChar.quest.Story_1stTaskComplete = "2";
 			Pchar.quest.Story_1stTaskPayment = "7000";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar,3000);
 			if (AUTO_SKILL_SYSTEM)
 			{
@@ -456,7 +456,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Story_2ndTask_8":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar,makeint(Pchar.quest.Story_1stTaskPayment));
 			Pchar.quest.Story_1stTaskPayment.over = "yes";
 			d.Text = DLG_TEXT[120] + GetMyName(Pchar) + DLG_TEXT[121];
@@ -523,7 +523,7 @@ void ProcessDialogEvent()
 
 
 		case "2nd_task_failed_2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			addMoneytoCharacter(PChar, 5000);
 			addMoneyTocharacter(Pchar, 6000);
 			d.text =  DLG_TEXT[137];
@@ -562,7 +562,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "2nd_Task_Complete_2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			addMoneyTocharacter(Pchar, 10000);
 			d.text = DLG_TEXT[149];
 			Link.l1 = DLG_TEXT[150];
@@ -807,7 +807,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[196] + GetMyName(Pchar) + DLG_TEXT[197];
 			Link.l1 = DLG_TEXT[198];
 			Link.l1.go = "incas_collection_complete_5";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 10000);
 			if (AUTO_SKILL_SYSTEM)
 			{
@@ -868,7 +868,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[215] + GetMyName(Pchar) + DLG_TEXT[216];
 			Link.l1 = DLG_TEXT[217];
 			Link.l1.go = "letter_to_Isenbrandt_complete_4";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 2500);
 			if (AUTO_SKILL_SYSTEM)
 			{
@@ -911,7 +911,7 @@ void ProcessDialogEvent()
 			SetQuestHeader("blaze_to_incas_collection");
 			AddQuestRecord("blaze_to_incas_collection", 1);
 			pchar.quest.main_line = "blaze_to_incas_collection_begin";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 10000);
 			setCharacterShipLocation(&characters[GetCharacterIndex("Pirate Captain 05")], "Douwesen_shore_01");
 			pchar.quest.prepare_fighting_on_deck.win_condition.l1 = "location";
@@ -975,7 +975,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "blaze_return_to_silehard_5":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 5000);
 			if (AUTO_SKILL_SYSTEM)
 			{
@@ -1040,7 +1040,7 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[278];
 			Link.l1.go = "exit";
 			pchar.quest.main_line = "blaze_talk_with_silehard_complete";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 5000);
 			SetQuestHeader("Blaze_search_Rheims");
 			AddQuestRecord("Blaze_search_Rheims", 1);
@@ -1113,7 +1113,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "escape_from_prison_5":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1000);
 			dialog.text = DLG_TEXT[294];
 			Link.l1 = DLG_TEXT[295];
@@ -1159,7 +1159,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[304];
 			Link.l1 = DLG_TEXT[305];
 			Link.l1.go = "escape_from_prison_8";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(pchar, 1000);
 		break;
 

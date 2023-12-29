@@ -435,7 +435,7 @@ Anna Balck, sastre.
 itmname_book70_start	{Libro quemado}
 itmdescr_book70_start
 {
-Este libro ocn un signo misterioso ha sido dañado por el fuego.  
+Este libro con un signo misterioso ha sido dañado por el fuego.  
 }
 
 itmname_book70		{Libro de alquimia}
@@ -1260,7 +1260,7 @@ itmdescr_anti_scurvy_pills
 itmname_filled_medium_drawer	{Cajón con varias botellas de medicinas}
 itmdescr_filled_medium_drawer
 {
-Hmm, el cirujano debe haber robado esto del cofre d emedicinas. 
+Hmm, el cirujano debe haber robado esto del cofre de medicinas. 
 }
 
 itmname_mortar_ointment		{Mortero y ungüento}

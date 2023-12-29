@@ -1208,9 +1208,12 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
-			SetQuestHeader("Capture_greenford");
-			AddQuestRecord("Capture_greenford", 2);
-			Preprocessor_Remove("Danielle");
+			if(!CheckAttribute(PChar,"QuestInfo.Capture_greenford"))
+			{
+				SetQuestHeader("Capture_greenford");
+				AddQuestRecord("Capture_greenford", 2);
+				Preprocessor_Remove("Danielle");
+			}
 
 			AddDialogExitQuest("Story_GreenfordAssaultStarted");
 		break;
@@ -1466,12 +1469,12 @@ void ProcessDialogEvent()
 			Link.l1.go = "Danielle_departs4";
 			if (checkquestattribute("Silehard_defeat", "prison"))
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -200000);
 			}
 			if (checkquestattribute("Silehard_defeat", "dead"))
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -100000);
 			}
 		break;	

@@ -167,7 +167,7 @@ string DLG_TEXT[165] = {
 "Creo que un indio nos estaba escuchando en la taberna mientras hablaba con el capitán. Lo seguí, pero perdí su pista.",
 "Bueno, no podemos hacer nad aal respecto. Hum... A no ser que sea cierto el rumor que he oído: dicen que hacen negocios en el almacén que hay cerca del fuerte. Tal vez puedas echar un vistazo con mucha precaución a ver si averiguas algo. Si no, continúa con el plan de ir al faro después de medianoche. Eso es lo principal.",
 "Creo que un indio nos estaba escuchando en la taberna mientras hablaba con el capitán. Lo seguí y se metió en un almacén.",
-"Bueno, puede que sea solo una coincidencia; podrías comprobarlo en persona o informar al comandante de la prisión. Lo más importante es que no te olvides del plan: ir al faro depsués d emedianoche.",
+"Bueno, puede que sea solo una coincidencia; podrías comprobarlo en persona o informar al comandante de la prisión. Lo más importante es que no te olvides del plan: ir al faro después d emedianoche.",
 "Bueno, supongo que tendré que conseguir el opio par aquitarme a esos nativos de encima.",
 "Ah, capitán, tienes razón. Sin embargo, tengo que asegurarme de que tu barco está a la altura de mis necesidades y, por desgracia, no puedo hacer eso si no está en el puerto. Tal vez puedas volver a verme cuando tu barco esté aquí.",//170
 "Puede que lo haga.",

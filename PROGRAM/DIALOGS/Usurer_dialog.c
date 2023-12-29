@@ -26,7 +26,7 @@ void ProcessDialogEvent()
 		case "LoanGranted_exit":
 			Diag.CurrentNode = Diag.TempNode;
 
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, makeint(Pchar.Quest.Loans.(NPC_Area).Sum));
 			// Pagliarini -->
 			Pchar.Quest.Loans.(NPC_Area).TotalSum = makeint(Pchar.Quest.Loans.(NPC_Area).TotalSum) + makeint(Pchar.Quest.Loans.(NPC_Area).Sum);
@@ -52,7 +52,7 @@ void ProcessDialogEvent()
 			Preprocessor_AddQuestData("deadline", GetHumanDate(sti(Pchar.quest.(NPC_Area).win_condition.l1.date.year), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.month), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.day))); 
 			Preprocessor_AddQuestData("loanshark", GetMySimpleName(NPChar));
 
-			WriteNewLogEntry("Visited "+FindTownName(GetCurrentTownID()),"I was desperate enough to borrow some money from the local loanshark. Now I have to return "+iLoanAmount+" plus interest to "+GetMySimpleName(NPChar)+" by "+GetHumanDate(sti(Pchar.quest.(NPC_Area).win_condition.l1.date.year), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.month), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.day))+".","Ship",true);
+			WriteNewLogEntry(GetTranslatedLog("Visited")+" "+FindTownName(GetCurrentTownID()),PreProcessText(GetTranslatedLog("I was desperate enough to borrow some money from the local loanshark. Now I have to return #sammount# plus interest to #sloanshark# by #sdeadline#.")),"Ship",true);
 
 			switch (GetTownIDFromLocID(Npchar.location))
 			{
@@ -136,7 +136,7 @@ void ProcessDialogEvent()
 			Diag.CurrentNode = Diag.TempNode;			
 			
 		//	DepositSum = -DepositSum;
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -(makeint(Pchar.Quest.Deposits.(NPC_Area).Sum)));
 			NPChar_Investment = makeint(sti(Pchar.Quest.Deposits.(NPC_Area).Sum) * NPC_INVEST_RATE);
 			SetTownGold(NPC_Area, GetTownGold(NPC_Area) + NPChar_Investment); // GR: Some of deposit invested into town gold
@@ -160,7 +160,10 @@ void ProcessDialogEvent()
 			Pchar.Quest.Deposits.(NPC_Area).StartYear = getDataYear();
 			Pchar.Quest.Deposits.(NPC_Area).StartTime = getTime();
 			DialogExit();
-			WriteNewLogEntry("Visited "+FindTownName(GetCurrentTownID()),"I deposited some money at the local loanshark. "+GetMySimpleName(NPChar)+" promised a good interest for my "+makeint(Pchar.Quest.Deposits.(NPC_Area).Sum)+" pieces of gold.","Ship",true);      
+			
+			Preprocessor_Add("loanshark", GetMySimpleName(NPChar));
+			WriteNewLogEntry(GetTranslatedLog("Visited")+" "+FindTownName(GetCurrentTownID()),PreProcessText(GetTranslatedLog("I deposited some money at the local loanshark. #sloanshark# promised a good interest for my"))+" "+makeint(Pchar.Quest.Deposits.(NPC_Area).Sum)+" "+GetTranslatedLog("pieces of gold."),"Ship",true);  
+			Preprocessor_Delete("loanshark");			
 		break;
 
 		case "exit":
@@ -464,7 +467,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "loan_return":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			addMoneyToCharacter(Pchar, -(makeint(Pchar.Quest.Loans.(NPC_Area).Result)));
 			DeleteAttribute(PChar, "quest.loans." + (NPC_Area)); 
 			pchar.loan = "false";			//REMOVE THIS WHEN WORK PROP
@@ -627,7 +630,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Deposit_return_1":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			addMoneyToCharacter(Pchar, makeint(Pchar.Quest.Deposits.(NPC_Area).Result));
 			DeleteAttribute(PChar,"quest.deposits." + (NPC_Area));
 			Dialog.snd = "voice\USDI\USDI035";

@@ -79,7 +79,7 @@ void ProcessDialogEvent()
 			break;
 
 		case "begin_5":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, sti(NPChar.quest.money) * -1);
 			dialog.snd = "Voice\CLLA\CLLA004";
 			dialog.text = DLG_TEXT[9];

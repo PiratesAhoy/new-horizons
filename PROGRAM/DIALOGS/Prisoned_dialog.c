@@ -350,7 +350,7 @@ trace("Prisoned_dialog: locationNation = " + locationNation);
 			{
 				Link.l1 = DLG_TEXT[25];
 				Link.l1.go = "Exit_hire";
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -OfficerPrice);
   				AddWealthToCharacter(NPChar, OfficerPrice);
 			}
@@ -619,7 +619,7 @@ trace("Prisoned_dialog: locationNation = " + locationNation);
 			DeleteAttribute(NPChar,"status");
 			DeleteAttribute(NPChar,"ransom");
 			AddMoneyToCharacter(PChar,sti(NPChar.Money));
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 
 			if(GetMySimpleOldName(NPChar) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 			switch(NPChar.chr_ai.type)// MAXIMUS: just a little fun in the game
@@ -645,7 +645,7 @@ trace("Prisoned_dialog: locationNation = " + locationNation);
 			DeleteAttribute(NPChar,"status");
 			DeleteAttribute(NPChar,"ransom");
 			AddMoneyToCharacter(PChar,prisonRansomCost);
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 
 			if(GetMySimpleOldName(NPChar) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 			switch(NPChar.chr_ai.type)// MAXIMUS: just a little fun in the game

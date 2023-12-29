@@ -1,4 +1,4 @@
-string DLG_TEXT[52] = {
+string DLG_TEXT[53] = {
 "Tú no eres pirata, #sladlass# y te arrepentirás de tu intrusión.",
 "...",
 "¡Bonjour! ¡Aquí está mi guarida! He oído que eres capitán, que eres capaz y que, como yo, no albergas ningún amor por la corona espanola!",
@@ -12,7 +12,7 @@ string DLG_TEXT[52] = {
 "No me interesa. Lo siento.",
 "¡Bien! Estos son los términos. No tendrás que aportar suministros para mi tripulación durante nuestra asociacion, pero puedes asumir el coste de las reparaciones de mi barco en puertos amigos, si lo deseas. ¿Te parece bien?",
 "¿Tendré que pagar tu salario y el de tu tripulación?",
-"No, por supuesto que no, y mi tripulación no consumirá tus raciones, pero... ¡No te despistes! Cuando decidas romper nuestra sociedad, todo el botín se dividirá en dos partes iguales, ¡y si el total del botín no alcanza las ",
+"No, por supuesto que no, y mi tripulación no consumirá tus raciones, pero... ¡No te despistes! Cuando decidas disolver nuestra sociedad, todo el botín se dividirá en dos partes iguales, ¡y si el total del botín no alcanza las ",
 "Calma. ¿Acaso dudas de mi lealtad? Tu proposición me parece bien. ¿Cuando zarpamos?",
 "Lo siento, pero creo que soy capaz de salir de expedición sin necesidad de socios.",
 "¡Tan pronto como sea posible! ¡Quiero oler el hermoso perfume de la pólvora y la sangre cuanto antes! ¡Ja, ja!",

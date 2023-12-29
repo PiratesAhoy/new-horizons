@@ -391,7 +391,7 @@ void ProcessDialogEvent()
 		case "money_end":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -(makeint(pchar.quest.money_to_ferro)));
 			GiveItem2Character(pchar, "domingues_fucked");
 			pchar.quest.main_line = "compramat_done";

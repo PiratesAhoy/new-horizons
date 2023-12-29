@@ -462,7 +462,7 @@ void ProcessDialogEvent()
 			link.l1.go = "ransom_money_1";
 			link.l2 = pcharrepphrase(DLG_TEXT[87], DLG_TEXT[88]);
 			link.l2.go = "ransom_bad";
-			PlayStereoSound("INTERFACE\took_item.wav");// PW moved from "ransom_money_1"
+			PlayStereoSound("INTERFACE\took_item.flac");// PW moved from "ransom_money_1"
 			AddMoneyToCharacter(pchar, 5000);// PW moved from "ransom_money_1"
 		break;
 
@@ -631,7 +631,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[136];
 			link.l1 = DLG_TEXT[137];
 			link.l1.go = "daughter_9";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 1500);
 		break;
 
@@ -669,7 +669,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "baldewyn_work_done":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -2500));
 			dialog.snd = "Voice\ARMA\ARMA034";
 			dialog.text = DLG_TEXT[149];
@@ -679,7 +679,7 @@ void ProcessDialogEvent()
 			link.l2.go = "exit";
 			link.l3 = pcharrepphrase(DLG_TEXT[154], DLG_TEXT[155]);
 			link.l3.go = "First time";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "almost_done_1";
 			npchar.quest_begin = "0";
@@ -695,7 +695,7 @@ void ProcessDialogEvent()
 			link.l3 = pcharrepphrase(DLG_TEXT[159], DLG_TEXT[160]);
 			link.l3.go = "First time";
 			characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "almost_done_1";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -2000);
 			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "0") Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
 		break;
@@ -734,7 +734,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			link.l2 = DLG_TEXT[172];
 			link.l2.go = "First time";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "wait_month"; //Fix:Storekeeper:19.09
 			npchar.quest_begin = "0";
@@ -1001,7 +1001,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[221];
 			link.l1 = DLG_TEXT[222] + GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false) + DLG_TEXT[223];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1500);
 		break;
 
@@ -1091,7 +1091,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[254];
 			link.l1 = DLG_TEXT[255];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			if (AUTO_SKILL_SYSTEM)
 			{
@@ -1244,7 +1244,7 @@ void ProcessDialogEvent()
 			link.l2.go = "First Time";
 			characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "done";
 			npchar.quest_begin = "0";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, makeint(npchar.money.quest));
 			ChangeCharacterReputation(pchar, -1);
 			if (AUTO_SKILL_SYSTEM)
@@ -1271,7 +1271,7 @@ void ProcessDialogEvent()
 				link.l2.go = "First Time";
 				characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "done";
 				npchar.quest_begin = "0";
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, makeint(npchar.money.quest)*2);
 				ChangeCharacterReputation(pchar, -1);
 				if (AUTO_SKILL_SYSTEM)

@@ -63,7 +63,7 @@ void ProcessDialogEvent()
 	int tax = 0;
 
 	string adress;
-	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " Commander, Sir, ";}else{adress = "";}
+	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " mi comandante,";}else{adress = "";}
 
 	PlayStereoSound("ambient\jail\chains.wav");
 	PlayStereoSound("ambient\cave\drop5.wav");
@@ -85,75 +85,75 @@ void ProcessDialogEvent()
 			{
 				PlayStereoSound("voice\Eng_m_a_070.wav");	
 				ChangeCharacterReputation(Pchar, -2);  // punishment: reputationloss. Will be offset if accept the fight	
-				Dialog.text = adress + LinkRandPhrase(" hostile forces sighted. Form up for defence.", " enemy movements in our sector! Beat to quarters!", "Suspicious movements at our perimeter, man battlestations!");
+				Dialog.text = adress + LinkRandPhrase(", fuerzas hostiles avistadas. Preparad la defensa.", ", ¡movimientos enemigos en nustro sector! ¡Zafarrancho de combate!", "¡Movimientos sospechosos en el perímetro, todos a sus puestos!");
 
-				link.l1 = "A detailed report, Marine, NOW.";
+				link.l1 = "Un informe detallado, soldado. Ahora.";
 				if(rand(100)>50) {Link.l1.go = "attack1";}
 				else{Link.l1.go = "attack2";}
 
-				link.l9 = "Leave me alone with that, that's YOUR job! After all that's what I hired you for: as cannonfodd.. er.. cannonfeeder. I have no time anyway: must hurry back to my safe white house, don my bomberjacket and deliver some toughsounding quips to the electorate..";
+				link.l9 = "¡Déjame en paz con esas tonterías, ese es tu trabajo! Para eso os he contratado como carne de cañ... cañoneros expertos. De todas formas no tengo tiempo: tengo que irme.";
 				link.l9.go = "exit";
 			}
 			else
 			{	
-				Dialog.text =  "Report " + buildingstr + " manned and ready for battle ," + adress + " all quiet in this sector.";
+				Dialog.text =  "Informo de que la fortaleza está guarnecida y lista para el combate," + adress + " todo está tranquilo en este sector.";
 
 				if(NPChar.chr_ai.group==LAI_GROUP_PLAYER)
 				{
-					link.l1 = "We withdraw from this position. Tear down this " + buildingstr + ", load the planks into our hold and report to the Sergeant of my Marines for shipduties.";
+					link.l1 = "Nos retiramos de esta posición. Desmantelad la fortaleza, cargad las tablas en la bodega y presentaos al contramaestre para que os asigne vuestros deberes a bordo.";
 					link.l1.go = "dismantle";
 
-					link.l21 = "I need a safe place to store some of my treasure and equipment, and this olde keep looks like a VERY safe place. Can you keep some stuff for me here?";
+					link.l21 = "Necesito un lugar seguro para almacenar algunos de mis tesoros y objetos personales, y esta vieja fortaleza parece un lugar muy seguro. ¿Puedes poner algunas cosas a buen recaudo aquí?";
 					link.l21.go = "items";
-					link.l22 = "I'd like to have a word about my possessions with that Ole Creeper fellow.";
+					link.l22 = "Me gustaría hablar sobre mis posesiones almacenadas con ese tal Guardián de la Modorra.";
 					link.l22.go = "items";
 
 					if(sti(pchar.money)>5000 && !CheckCharacterItem(NPChar,"cannon") )
 					{
-					link.l23 = "I wonder if it makes sense to position a gun here.";	// ccc feb06
+					link.l23 = "Me pregunto si tendría sentido apostar un cañón aquí.";	// ccc feb06
 					link.l23.go = "cannon";
 					}
 
 					if(CheckCharacterItem(PChar,"pistolgrenade") && !CheckCharacterItem(NPChar,"pistolgrenade") )
 					{
-					link.l24 = "Marine, I have a special task for you: Here, take this grenade, and if the enemy should break trough and storm this position...";
+					link.l24 = "Soldado, tengo una misión especial para ti. Toma esta granada, y si el enemigo nos supera y asalta esta posición...";
 					link.l24.go = "grenade";
 					}
 				}
 				else
 				{
-					link.l1 = "Just passing by... ";
+					link.l1 = "Solo pasaba por aquí... ";
 					link.l1.go = "exit";
 				}
 
-				Link.l4 = "Very good, Marine, carry on.";
+				Link.l4 = "Muy bien, soldado, continúa.";
 				Link.l4.go = "exit";
 
 				// ccc feb06 link.l6 = "Who the hell designed this maze of masonry? Can't take a step here without smashing my head into some vault or pillar..";
 				// ccc feb06 link.l6.go = "odd";
 
-				link.l5 = "Hey, why do stand here so motionless? " + LinkRandPhrase("Have you swallowed a broomstick...", "Come on, relax a little... AT EASE!", "I expect a bit more activity from my marines, ya hear me?");
+				link.l5 = "Eh, ¿qué haces ahí sin moverte? " + LinkRandPhrase("¿Te has tragado un palo de escoba?...", "Vamos, relájate un poco... ¡DESCANSE, SOLDADO!", "Espero un poco más de actividad por parte de mis infantes de marina, ¿me oyes?");
 				link.l5.go = "motion";
 
-				link.l9 = "Hey, you there in front of the keyboard! This is a building that YOU created, so how about creating your own dialog as well? Just use Notepad to open the file program\dialogs\ " + NPchar.dialog.filename + " and overwrite this text with your own. Then follow the instructions in the comments.";
+				link.l9 = "¡Eh, tú, enfrente del teclado! Este es un edificio creado POR TI, así que, ¿por qué no creas tu propio diálogo para acompañarlo? Solo tienes que usar Bloc de Notas para abrir el archivo PROGRAM\DIALOGS\SPANISH\" + NPchar.dialog.filename + " y sobreescribir este texto con el tuyo. Luego sigue las instrucciones en los comentarios.";
 				link.l9.go = "your_dialog"; //this is the case that runs if you choose the dialogoption l9. It is right below.
 			}
 		break;
                 
 		case "your_dialog":
-			Dialog.text = "Overwrite this with the dialogtext of the NPC." ;
+			Dialog.text = "Escribe aquí el texto de diálogo del NPC." ;
 
-			link.l1 = "Text of the player dialogoption link.l1 which ends the dialog ";
+			link.l1 = "Texto de diálogo del jugador: opción link.l1, que cierra el diálogo ";
 			link.l1.go = "exit";	// link l1 exits the dialog
 
-			link.l2 = "Text of the player dialogoption link.l2 which leads to another exchange ";
+			link.l2 = "Texto de diálogo del jugador: opción link.l2, que conduce a otro intercambio ";
 			link.l2.go = "your_dialog2";	// l2 leads to the case your_dialog2
 		break;	// end of case "your_dialog"
                 
 		case "your_dialog2":
-			Dialog.text = "Overwrite this with the dialogtext of the NPC." ;
+			Dialog.text = "Escribe aquí el texto de diálogo del NPC." ;
 
-			link.l1 = "Text of the player dialogoption link.l1 which ends the dialog";
+			link.l1 = "Texto de diálogo del jugador: opción link.l1, que cierra el diálogo";
 			link.l1.go = "exit";	// link l1 exits the dialog
 
 			// Here are some codelines that give you money, items, goods or experience. To activate them delete the comment slashes '//' in front of the code. You can change the amounts to your liking.
@@ -177,8 +177,8 @@ void ProcessDialogEvent()
 
 // give grenade to building for selfdefense                
 		case "grenade":
-			Dialog.text = "...I'll blast them to kingdom come. I know my duty, Commander!" ;
-			link.l1 = "That's the spirit, Marine! With your sense of duty you'll soon become corporal. (..if you live that long..)";
+			Dialog.text = "..., los volaré en pedazos. ¡Conozco mi deber, mi comandante!" ;
+			link.l1 = "¡Así se habla, soldado! Con tu sentido del deber, pronto llegarás a cabo (... si vives lo sifciente).";
 			link.l1.go = "exit";
 			TakeItemFromCharacter(pchar, "pistolgrenade" );
 			GiveItem2Character(NPchar, "pistolgrenade");
@@ -186,21 +186,21 @@ void ProcessDialogEvent()
 
 // give cannon to building for selfdefense                
 		case "cannon":
-			Dialog.text = "Absolutely, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! A cannon down here covering the entrance could blast any intruder to kingdom come." ;	// ccc feb06
-			link.l1 = "Maybe, but I don't want to spend even more money here.";	// ccc feb06
+			Dialog.text = "¡Por supuesto, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + "! Un cañón aquí, cubriendo la entrada, podrá volar por los aires a cualquier intruso." ;	// ccc feb06
+			link.l1 = "Quizás, pero no quiero gastar todavía más dinero aquí.";	// ccc feb06
 			link.l1.go = "exit";
 
-			link.l2 = "Here are 5000 Gold, can you.. err.. obtain a proper gun with that?";
+			link.l2 = "Aquí tienes 5000 piezas de oro. ¿Puedes... obtener un buen cañón con ese dinero?";
 			link.l2.go = "cannon2";
 		break;
 
 		case "cannon2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -5000);
 			Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -3;
 			lcn.building.(nr).interior = "cannon";
-			Dialog.text = "Yes, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", I know the mastersergeant of the local magazine quite well. For 5000 Gold he'd sell his whole ordinance. Just give me a few hours." ;
-			link.l1 = "That's the spirit, Marine! With your understanding of logistics you'll soon become corporal. (..if you live that long..)";
+			Dialog.text = "Sí, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + ", conozco bastante bien al sargento mayor del arsenal local. Por 5000 piezas de oro, vendería toda su artillería. Solo necesitaré unas pocas horas." ;
+			link.l1 = "¡Así se habla, soldado! Con tu buen entendimiento de la logística, pronto llegarás a cabo (.. si vives lo suficiente).";
 			link.l1.go = "exit";
 		break;
 
@@ -211,10 +211,10 @@ void ProcessDialogEvent()
   	 		lcn.building.(nr).taxyear = GetDataYear();
 			lcn.building.(nr).taxMonth = GetDataMonth();
 			lcn.building.(nr).taxDay = GetDataDay();
-  			Dialog.text = LinkRandPhrase("Ah, speaking of valuables, that reminds me that I found a piece of jewelry in the old catacombs below this keep. I was pis.. err.. patroling down there when I noticed a fresh crevice in one of the walls. Behind that I found an old burial chamber, and amongst some old bones there was this little gem blinking at me, as if inviting me to take it. But on second thought I realized that ", "By the way, I have an addition to your possessions: this piece of jewelry. Found it yesterday when clearing away some debris from a recently collapsed wall. Among the stones there was a broken urn, ashes, bonesplinters, teeth.. AND this beautiful gem. Of course ", "Before you deal with your inventory you can add this piece of jewelry to it. Yesterday I was clearing the burialchamber in the keep's former chapel -to make room there for ru.. err.. ammunition storage- when this shining object fell out of a heap of bones I was carrying. Right into my lap, like a gift from heaven. Or Hades rather. By rights ")  + "it belongs to you as you are now the owner of this estate. So I'd rather hand it over to you lest the curse of it's dead owner falls on me." ;
-  			link.l1 = "(Curse of it's dead owner? Yikes!) Oh no, keep it for yourself. After all you deserve a reward for your honesty and loyalty, Marine! With your sense of honesty you'll soon become corporal. (..if you live that long..)";
+  			Dialog.text = LinkRandPhrase("Ah, hablando de objetos valiosos, eso me recuerda que encontré una joya en las viejas catacumbas debajo de la fortaleza. Estaba mean... patrullando ahí abajo cuando descubrí una hendidura en la pared. Conducía a una antigua cámara funeraria y, entre un montón de viejos huesos, encontré esta pequeña gema. La forma en que brillaba era como si me invitar a tomarla. Pero al pensarlo mejor, me di cuenta de que ", "Por cierto, tengo una nueva adición para tus posesiones: esta joya. La encontré ayer despejando escombros de un muro derrumbado. Entre las piedras, había una urna rota, cenizas, astillas de hueso, dientes... Y esta hermosa gema. Por supuesto, ", "Antes de empezar a rebuscar en tu inventario, añade esta joya. Ayer estaba despejando la cripta de la antigua capilla de la fortaleza para hacer sitio a mis reservas de ron... munición, cuando este objeto brillante se cayó de un montón de huesos que estaba transportando. Cayó en mi regazo ocmo un regalo del cielo. O del Hades, quizás. Por derecho, ")  + "te pertenece a ti, ya que la propiedad es tuya. Así que prefiero entregártela, no sea que la maldición de su dueño muerto caiga sobre mí." ;
+  			link.l1 = "(¿Maldición de su dueño muerto? ¡Qué yuyu!) Oh, no, quedátela. Después de todo, mereces una recompensa por tu honestidad y tu lealtad, soldado. Con tu sentido de la honradez, pronto llegarás a cabo (.. si vive lo suficiente).";
   			link.l1.go = "reward";
-  			link.l2 = "Curse? Superstitious rubbish! You want to scare me into leaving you that gem, eh? Not with me, hand it over to your commander. NOW! ";
+  			link.l2 = "¿Mladición? ¡Supersticiones estúpidas! Quieres asustarme para que te deje la gema a tí, ¿eh? No funcionará, dámela. ¡Es una orden de tu comandante! ";
   			link.l2.go = "jewel";
 			}
 			else
@@ -222,8 +222,8 @@ void ProcessDialogEvent()
   	 		lcn.building.(nr).taxyear = GetDataYear();
 			lcn.building.(nr).taxMonth = GetDataMonth();
 			lcn.building.(nr).taxDay = GetDataDay();
-  			Dialog.text = "Aye, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", I'll call the Keeper of this Donjon. By the way, his ways are a bit a bit oldfash.. err.. traditional, has been living in this ancient Tower too long, if you ask me. But exactly that traditional attitude makes him a most reliable Keeper for your treasure. You can give him anything for safekeeping and be sure that he will give it back to you whenever you want it." ;
-  			link.l1 = "I hope so. Now where is that medievil factotum?";
+  			Dialog.text = "Sí, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + ", llamaré al Guardián de la Mazmorra. Por cierto, puede que su forma de ser sea un poco anticua... tradicional; ha estado viviendo en esta vetusta torre demasiado tiempo, si quieres mi opinión. Pero esa actitud tradicional es precisamente la que hace de él un excelente guardián de tus tesoros. Puedes darle cualquier cosa para que la ponga a buen recaudo y ten por seguro que te la devolverá cuando la necesites." ;
+  			link.l1 = "Eso espero. ¿Dónde está ese factótum medieval?";
   			link.l1.go = "items2";
 			}
 		break;
@@ -236,21 +236,21 @@ void ProcessDialogEvent()
   			NextDiag.CurrentNode = NextDiag.TempNode;
   			pchar.chr_ai.poison = 20 + rand(50 -sti(PChar.skill.Sneak) -sti(PChar.skill.defence) );
   			PlaySound("OBJECTS\DUEL\man_hit6.wav");
-  			Logit("Curse? A plaguevictims grave? Whatever, you suddenly feel terribly sick!");
+  			Logit("¿Maldición? ¿La tumba de una víctima de peste? ¡Sea lo que sea, de repente sientes un terrible malestar!");
 			}
 			else
 		  {
   		  pchar.ship.crew.morale=makeint(stf(pchar.ship.crew.morale) -5 );  // punishment: crew moraledrop. Change figure to your liking
-  			Dialog.text = "Aye, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", your wish is my command. By the way, what about a little.. err.. reward? Wouldn't it be good for your troops' morale if honest loyal soldiers were rewarded?" ;
-  			link.l1 = "Insolent bastard! Veiled demands? How dare you! Enough of that, I want to deal with my treasues. NOW!";
+  			Dialog.text = "Sí, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + ",tus deseos son órdenes. Por cierto, ¿qué tal una pequeña... recompensa? ¿No sería bueno para la moral de la tropa recompensar a los soldados leales y honrados?" ;
+  			link.l1 = "¡Bastardo insolente! ¿Demandas veladas? ¡Cómo te atreves! Ya basta, quiero ocuparme d emis tesoros. ¡AHORA!";
   			link.l1.go = "items";
 			}
 		break;
 
 		case "reward":
 			ChangeCharacterReputation(Pchar, 2);  // reward: reputation. Change figure to your liking
-			Dialog.text = "That's most generous of you, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ". I'll tell everybody what a kind and caring commander you are, you can be sure of that!";
-			link.l1 = "Oh, don't bother, I'm not so keen on my reputation. By the way, I grant you leave tonight. Why don't you go downtown, mingle with the townfolk, chat a lot... And now back to MY treasure, if you please.";
+			Dialog.text = "Es muy generoso por tu parte, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + ". ¡Le diré a todo el mundo que eres un comandante amable y que se preocupa por sus soldados, te lo aseguro!";
+			link.l1 = "Oh, no te molestes, no me importa tanto mi reputación. Por cierto, te concedo un permiso para esta noche. ¿Por qué no vas a la ciudad, confraternizas con los vecinos, hablas con ellos...? ¡Diviértete!";
 			link.l1.go = "items";
 		break;
 
@@ -272,14 +272,14 @@ void ProcessDialogEvent()
 
 // random attacks
 		case "attack1":
-			Dialog.text = "Savage Akellani cannibals approaching, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! Oh, if we had only more of those bastions, stockades, mines and cannon...";
-			link.l1 = RandSwear() + " Attention, soldier! Hold this position whatever happens. Keep up firing, don't let the enemy draw you into close combat. I will take care of the bladework...",
+			Dialog.text = "¡Se acercan los salvajes caníbales akellani, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + "! Oh, si tan solo tuviéramos más bastiones, empalizadas, minas y cañones...";
+			link.l1 = RandSwear() + " ¡Atención, soldado! Mantén esta posición pase lo que pase. No dejes de dispararg y no dejes que el enemigo te arrastre a un combate cuerpo a cuerpo. Yo me ocuparé de eso...";
 			link.l1.go = "exit_attack1";
 		break;
 
 		case "attack2":
-			Dialog.text = "Francisco Pizarro the Younger and his horde of maurading conquistadores approaching, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! Lusting for blood, plunder and rape... Oh, if we had only more of those bastions, stockades, mines and cannon...";
-			link.l1 = RandSwear() + " Attention, soldier! Hold this position whatever happens. Keep up firing, don't let the enemy draw you into close combat. I will take care of the bladework...",
+			Dialog.text = "¡Francisco Pizarro el Joven y su horda de conquistadores merodeadores se acercan, " + XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + "! Ávidos de sangre, botín y bajos instintos... Oh, si tan solo tuviéramos más bastiones, empalizadas, minas y cañones...";
+			link.l1 = RandSwear() + " ¡Atención, soldado! Mantén esta posición pase lo que pase. No dejes de dispararg y no dejes que el enemigo te arrastre a un combate cuerpo a cuerpo. Yo me ocuparé de eso...";
 			link.l1.go = "exit_attack2";
 		break;
 
@@ -323,14 +323,14 @@ void ProcessDialogEvent()
 
 // info about modding                
 		case "odd":
-			Dialog.text = "Well, true, the design of this tower is antiquated. The Pentagonal Keep was invented during Norman times, when scaling and simple siege machines were the main threat for a fortification. The massive vaults were designed to withstand battering rams and undermining, so the lower storeys here are almost completely filled with masonry and offer no space for accomodation. The invention of gunpowder has made this architecture obsolete. Nowadays these towers are often used as prison or for storing valuables, cause that's what they were designed for in the first place: keeping people from getting in. Or out." ;
-			link.l1 = "Ummm, in that regard it's a very successful design: I find it very difficult to get in or out without smashing into some wall.";
+			Dialog.text = "Sí, es cierto, el diseño de esta fortaleza es anticuado. El torreón pentagonal fue inventado en tiempos de los normandos, cuando las principales amenazas para una fortificación eran las escalas y las máquinas de asedio simples. Está pensado para resisitr contra arietes y minas, por lo que los sótanos y pisos inferiores están casi completamente rellenos de sillares y ofrecen poco espacio para el alojamiento. La invención de la pólvora ha hecho que esta arquitectura se quede obsoleta. Hoy en día, estas torres se suelen usar como prisiones o para almacenar tesoros, porque esa era su función original: evitar que la gente entrara. O saliera." ;
+			link.l1 = "Hum, en ese caso es un diseño muy exitoso: encuentro muy difícil entrar o salir sin atravesar una pared.";
 			link.l1.go = "exit";
 		break;
 
 		case "motion":
-			Dialog.text = LinkRandPhrase(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", we always stand to attention in a superior's presence. That's the drill, and the drill is everything.", "I have my eye on a suspicious target, and I don't want too lose it. 'Keep your aim, never flinch, never blink' our drill sergeant used to say.", "First rule of camouflage: movement attracts attention. So never move if you don't have to.");
-			link.l1 = "Allright, I understand... Carry on.";
+			Dialog.text = LinkRandPhrase(XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)) + ", siempre nos ponemos firmes en presencia de un superior. Esa es nuestra ionstrucción y la instrucción lo es todo.", "Le tengo el ojo echado a un objetivo sospoechoso y no quiero perderlo. 'Apunta bien, no te muevas, no parpadees', solía decir nuestro sargento instructor.", "La primera regla del camuflaje: el movimiento atrae la atención. Así que nunca te muevas si no tienes que hacerlo.");
+			link.l1 = "Está bien, entiendo... Continúa.";
 			link.l1.go = "exit";
 		break;
 

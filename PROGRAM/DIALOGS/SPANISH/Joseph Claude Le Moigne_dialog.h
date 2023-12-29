@@ -94,7 +94,7 @@ string DLG_TEXT[183] = {
 ", pero",
 " los piratas siempre deben ser hundidos en cuanto sean avistados.",
 "Haré que Su Excelencia se sienta orgulloso.",
-"¿Como está mi hoja de servicos, señor?",
+"¿Como está mi hoja de servicios, señor?",
 "Has hundido ",
 " barcos ingleses, ",
 " barcos piratas, un total de ",

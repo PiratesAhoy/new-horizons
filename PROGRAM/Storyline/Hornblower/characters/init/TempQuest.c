@@ -36,7 +36,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Téméraire";
+	ch.Ship.Name = TranslateString("","Téméraire");
 	ch.Ship.Type = "FR_Superbe";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -62,7 +62,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "quest_ship_12";
 	ch.Dialog.Filename = "falaise de fleur soldier_dialog.c";
 	ch.nation = PIRATE;
-	ch.Ship.Name = "Fast Death";
+	ch.Ship.Name = TranslateString("","Fast Death");
 	ch.Ship.Type = 	"PiratCorvette";
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
@@ -118,7 +118,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "0";
-	ch.Ship.Name = "Téméraire";
+	ch.Ship.Name = TranslateString("","Téméraire");
 	ch.Ship.Type = "FR_Superbe";
 	ch.Ship.Stopped = true; 
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -192,7 +192,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Méduse";
+	ch.Ship.Name = TranslateString("","Méduse");
 	ch.Ship.Type = "FR_Greyhound";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);

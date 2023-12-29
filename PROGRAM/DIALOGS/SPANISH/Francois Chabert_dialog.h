@@ -1,5 +1,5 @@
 string DLG_TEXT[277] = {
-"¡Oh, cuánta gente! ¡Te doy la bienvenida, mi estimbale ",
+"¡Oh, cuánta gente! ¡Te doy la bienvenida, mi estimable ",
 "!",
 "Es un placer conocerte. Mi nombre es ",
 ".",
@@ -25,7 +25,7 @@ string DLG_TEXT[277] = {
 "El ron también cuesta 1 pieza de oro. Si no tienes dinero, no es problema mío.",
 "Pero, ¿todavía estás aquí? Tampoco te puedes permitir las 2 piezas de oro que cuesta el ron...",
 "Está bien, trae ese vino. Después puedes responderme a un par de preguntas...",
-"¡Maldita sea, eso es un robo a mano armada! Trae el vino y responde a mis preguntas."
+"¡Maldita sea, eso es un robo a mano armada! Trae el vino y responde a mis preguntas.",
 "Mala suerte.",
 "Seguro que podré vivir un día más sin tu vino.",
 "Bien, ¿qué puedo hacer por ti?",
@@ -268,7 +268,7 @@ string DLG_TEXT[277] = {
 "Ya veo... Bien, ¿dónde puedo pasar la noche entonces?",
 "Oh, toda clase de trabajos: transporte de mercancías, entregas especiales, perseguir piratas. Y ",
 "Amiel Berangere",
-" fue contratado para escoltar un buque de guerra."
+" fue contratado para escoltar un buque de guerra.",
 "Hum.... ¿Qué clase de buque exactamente?",
 "Parecía un barco de abastecimiento. Seguramente llevarán alimentos a la flota francesa. Estamos en guerra, ya sabes, así que lo contrataron para asegurarse de que el barco no terminase en el fondo del mar. También puede que transporte pólvora o bombas.",
 "Ya veo... Entonces, ¿dónde puedo pasar la noche?",

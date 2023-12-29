@@ -1,9 +1,9 @@
 // MAXIMUS 27.05.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| Antigua.c |=====}
-Portadmiral{Начальник порта}
-Lord Barham{Лорд Бэрхем}
+Portadmiral{Начальник Порта}
+Lord Barham{Лорд Бархэм}
 Regulating{Управляющий}
-RCaptain{колонией}
+RCaptain{Колонией}
 
 {=====| Aruba.c |=====}
 Hendrick{Хендрик}
@@ -26,14 +26,14 @@ Jacomina{Джакомина}
 Boymans{Бойманс}
 Leo{Лео}
 Visscher{Вишер}
-Jan{Ян}
+Jan{Жан}
 Thijs{Тайс}
 Arawak{Аравак}
 Indian{Индеец}
-IndianF{Индианка}
+IndianF{Индеанка}
 Chief{Вождь}
 Arawak Indian{Аравакский Индеец}
-Arawak IndianF{Аравакская Индианка}
+Arawak IndianF{Аравакская Индеанка}
 Arawak Chief{Вождь Араваков}
 
 {=====| cayman.c |=====}
@@ -56,7 +56,7 @@ Coxon{Коксон}
 Gregorio{Грегорио}
 Montavez{Монтавез}
 Jose{Хосе}
-Puablo{}
+Puablo{Пуабло}
 Diego{Диего}
 Martinez{Мартинез}
 Alejandra{Алехандра}
@@ -189,7 +189,7 @@ Regalo{Ригало}
 Uargo{Уарго}
 
 {=====| cuba.c |=====}
-Felipe{Фелип}
+Felipe{Филипп}
 Cisneros{Циснерос}
 Horacio{Горацио}
 de la Vega{Де Ла Вега}
@@ -282,7 +282,7 @@ Hollander{Голландец}
 Oweyn{Овейн}
 McDorey{МакДори}
 Arendt{Арен}
-Verheugen{Верхаген}
+Verheugen{Верхеген}
 Prosper{Проспер}
 Fraigneau{Фрейно}
 Benoit{Бенуа}
@@ -338,7 +338,7 @@ Mattheus{Маттеус}
 Doull{Долл}
 Eduard{Эдуард}
 Gerrits{Гэрритс}
-Johan{Йохан}
+Johan{Йоган}
 Van Pelt{Ван Пелт}
 Raes{Раэс}
 Stevense{Стивенс}
@@ -357,7 +357,7 @@ Hafte{Хафт}
 Elting{Элтинг}
 Andries{Андрис}
 Lorine{Лорин}
-Willem{Виллем}
+Willem{Вильгельм}
 Maritz{Мариц}
 Pieter{Питер}
 Nolt{Нолт}
@@ -404,12 +404,12 @@ Sweat Shop Sally{Потная Салли}
 
 {=====| FalaiseDeFleur.c |=====}
 Milon{Милон}
-Blacque{Бласкю}
+Blacque{Блакуи}
 Orable{Орабл}
-Caron{Карон}
+Caron{Кэрон}
 Rachel{Рэйчел}
 Marc{Марк}
-Sabine{Сабин}
+Sabine{Сабина}
 Sabina{Сабина}
 Sabie{Саби}
 Sabi{Саби}
@@ -420,7 +420,7 @@ Lucien{Люсьен}
 Bescanceny{Бесканцени}
 Teodoro{Теодоро}
 Andre{Андрэ}
-Juliao{Джулия}
+Juliao{Джулиао}
 Rene{Ренэ}
 Duguay{Дугай}
 Pater{Отец}
@@ -486,7 +486,7 @@ Beuve{Бэве}
 Jenlain{Дженлейн}
 Corneille{Корнель}
 Maccaux{Маккокс}
-Elzire{Эльзир}
+Elzire{Эльзира}
 Ayarai{Айарай}
 Tomasina{Томасина}
 Pickfurt{Пикфурт}
@@ -592,7 +592,7 @@ Bagage{Багаж}
 Arielle{Ариэль}
 Dumont{Дюмон}
 Dorian{Дориан}
-Denise{Денис}
+Denise{Дэнис}
 Fleur{Флер}
 Dimitri{Дмитрий}
 Lunesque{Лунеск}
@@ -682,12 +682,12 @@ o' ye Hoarde{Сокровищ}
 {=====| Officers.c |=====}
 Fred{Фред}
 Bob{Боб}
-Baldewyn{Болдуин}
+Baldewyn{Балдуин}
 Coffier{Коффир}
 Da Saldanha{Де Салданья}
 Rys{Рис}
 Bloom{Блум}
-Larrouse{Лярус}
+Larrouse{Ларроуз}
 Jaoquin{Жаокин}
 De Masse{Де Массе}
 Nigel{Найджел}
@@ -700,7 +700,7 @@ Florens{Флоренс}
 Clauss{Клаусс}
 Attwood{Эттвуд}
 Blood{Блад}
-Txiki{Тсики}
+Txiki{Чики}
 Pijuan{Пижуан}
 
 {=====| Other.c |=====}
@@ -757,7 +757,7 @@ Bratcher{Братчер}
 Ronald{Рональд}
 Blacklock{Блэклок}
 Miner{Шахтер}
-Mines Commander{Управляющий Рудниками}
+Mines Commander{Управляющий Шахтой}
 Jerald{Джеральд}
 Gilbert{Гилберт}
 Ballester{Бэллестэр}
@@ -771,7 +771,7 @@ Hacepoco{Хацепоко}
 Terry{Терри}
 Snider{Снайдер}
 Gilles{Жиль}
-Roche{Роше}
+Roche{Рок}
 Alvaro{Альваро}
 Dimas{Димас}
 Natan{Нэйтан}
@@ -796,7 +796,7 @@ Marrow{Марроу}
 Newson{Ньюсон}
 Celestine{Целестина}
 Maupassant{Мопассан}
-Natalia{Наталиа}
+Natalia{Наталия}
 Decoteau{Декото}
 Serena{Серена}
 Tisserand{Тиссеран}
@@ -816,6 +816,8 @@ Goyle{Гойл}
 Stone{Стоун}
 Luna{Луна}
 Grange{Грейндж}
+Vivienne{Вивьен}
+Stewart{Стюарт}
 
 {=====| Redmond.c |=====}
 Henry{Генри}
@@ -891,17 +893,17 @@ Crewmember{Член Команды}
 {=====| SideQuest.c |=====}
 Rian{Райан}
 Dekkers{Деккерс}
-Janneke{Яннике}
+Janneke{Джаннеке}
 Blinkerhof{Блинкерхоф}
 Lisebet{Лизабет}
 Schefold{Шефолд}
 Gheraed{Герад}
 Drabbe{Драббэ}
-Balltesar{Бальтезар}
-Figueiredo{Фигэйреду}
+Balltesar{Бальтазар}
+Figueiredo{Фигуйреду}
 Hurtado{Хартадо}
 Jordano{Джордано}
-Yedam{Йедам}
+Yedam{Едам}
 Kinne{Кинн}
 Animist{Сатанист}
 Satanist{Сатанист}
@@ -918,7 +920,7 @@ Billy{Билли}
 Brock{Брок}
 Snorri{Снорри}
 Baldursson{Балдурсон}
-Francis{Франсис}
+Francis{Фрэнсис}
 Snake{Снэйк}
 Angelique{Анжелика}
 Moulin{Мулен}
@@ -927,7 +929,7 @@ Antoine{Антуан}
 Chamfort{Шамфорт}
 Robert_fr{Роберт}
 Durand{Дюран}
-Reynoud{Рейнойд}
+Reynoud{Рейноуд}
 Davy{Дэйви}
 Jones{Джонс}
 Octave{Октава}
@@ -951,7 +953,7 @@ Haley{Хейли}
 Gyles{Джайлз}
 Peat{Пит}
 Gordon{Гордон}
-Dark Captain{Тёмный Капитан}
+Dark Captain{Мрачный Капитан}
 Giraldo{Жиральдо}
 Figuiera{Фигуэйра}
 1{1-й}
@@ -960,7 +962,7 @@ Figuiera{Фигуэйра}
 Friedrich{Фридрих}
 Maxwell{Максвелл}
 Meranda{Меранда}
-seven{севен}
+seven{Севен}
 Claudio{Клаудио}
 Murena{Мурена}
 Ethilrede{Этильред}
@@ -976,7 +978,7 @@ Desiree'{Дезире'}
 Muerte{Муэрте}
 Thug{Громила}
 Vassal{Вассал}
-Bethune{Битюн}
+Bethune{Бетьюн}
 Daryl{Дэрил}
 Larry{Ларри}
 Captain Jack{Капитан Джек}
@@ -999,7 +1001,7 @@ Cecile{Сесиль}
 Bienbonne{Бьенбонн}
 Etienne{Этьен}
 Dupuis{Дюпюи}
-Rivera{Ривера}
+Rivera{Ривьера}
 Dusac{Дюсак}
 Konrad{Конрад}
 Kulczycki{Кульчицкий}
@@ -1047,11 +1049,13 @@ Constantino{Константино}
 Avellбn{Авеллан}
 Growling{Рычащий}
 Bear{Медведь}
+Growling Bear{Рычащий Медведь}
 Kicking{Клюющийся}
 Raven{Ворон}
+Kicking Raven{Клюющийся Ворон}
 Lewis{Льюис}
 Vickers{Викерс}
-Carpenter1{Карпентер}
+Carpenter1{Плотник}
 
 {=====| StoreOwners.c |=====}
 Agent-Victualler{Интендант}
@@ -1268,8 +1272,8 @@ Valderrama{Вальдеррама}
 Christine{Кристина}
 Hoppe{Хоппе}
 Admiral{Адмирал}
-Coastbrother{Береговой брат}
-Leading{Начальник}
+Coastbrother{Берегового Братства}
+Leading{Лидер}
 
 {=====| Usurers.c |=====}
 Robyn{Робин}
@@ -1354,3 +1358,17 @@ Anamaria{Аннамария}
 Scared Monk{Испуганный Монах}
 Cursed Skeleton{Проклятый Скелет}
 Monk{Монах}
+Akellani native{Уроженец Акеллани}
+A rabid monkey{Бешеная Обезьяна}
+Joshamee{Джошами}
+Gibbs{Гиббс}
+Shuggy{Грязный}
+Garry{Гарри}
+Crystal{Кристал}
+Eccleston{Экклстон}
+Boulton{Бултон}
+Carib{Кариб}
+Carib Warrior{Карибский Воин}
+Shore Indian{Береговой Индеец}
+Laurens-Jan{Лоуренс-Ян}
+Revenboer{Ревенбур}

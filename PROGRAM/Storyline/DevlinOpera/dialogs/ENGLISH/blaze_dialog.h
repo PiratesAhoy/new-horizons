@@ -1,4 +1,4 @@
-string DLG_TEXT[385] = {
+string DLG_TEXT[390] = {
 "Oh, it's you, ",
 ". What are you doing here?",
 "None of your business ",
@@ -384,4 +384,9 @@ string DLG_TEXT[385] = {
 "Just wait here, I'll try to find a key!",
 "How convenient, he had the map in his pocket. My business here is done.",
 "...",
+"That was the first part - now I just wait here, until their friends show up to look for them. Then we will see, if these pirates are as dumb as I imagine - or even dumber.", // 385
+"Fair share for a good day's work! With all their leaders dead, whatever is left of this pirate crew will aimlessly leave the island for good. I better go back and report the good news to O'Byrne.",
+"I shouldn't go this way, or else I will lead the Corsairs right to O'Byrne's house!",
+"Wrong way, fellas, let's turn around!", // 388
+"Blast it! I forgot about the pirates, that have already gone ashore to scout the area! Looks like they captured old O'Byrne!",
 };

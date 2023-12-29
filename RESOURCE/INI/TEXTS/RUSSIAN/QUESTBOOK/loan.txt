@@ -1,4 +1,4 @@
-title=«айм у ростовщика
+title=«айм у –остовщика
 text.t1=ѕришлось зан€ть #dammount# золотых монет у ростовщика #sloanshark# в городе #stown# на #sisland#, и теперь его нужно вернуть до #sdeadline#.
 text.t2=ѕришлось зан€ть #dammount# золотых монет у ростовщика #sloanshark# в городе #stown# на #sisland#, и теперь его нужно вернуть до #sdeadline#.
 text.t3=ѕришлось зан€ть #dammount# золотых монет у ростовщика #sloanshark# в городе #stown# на #sisland#, и теперь его нужно вернуть до #sdeadline#.

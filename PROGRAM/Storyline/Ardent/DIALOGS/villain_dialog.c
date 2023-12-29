@@ -16,19 +16,19 @@ void ProcessDialogEvent()
 	{
 		if (CheckAttribute(NPChar, "married"))
 		{
-			villain_title_France = "Madame";
-			villain_title_England = "Mrs.";
+			villain_title_France = XI_ConvertString("Madame");
+			villain_title_England = XI_ConvertString("Mrs.");
 		}
 		else
 		{
-			villain_title_France = "Mademoiselle";
-			villain_title_England = "Miss";
+			villain_title_France = XI_ConvertString("Mademoiselle");
+			villain_title_England = XI_ConvertString("Miss");
 		}
 	}
 	else
 	{
-		villain_title_France = "Monsieur";
-		villain_title_England = "Mr.";
+		villain_title_France = XI_ConvertString("Monsieur");
+		villain_title_England = XI_ConvertString("Mr.");
 	}
 
 	ref PChar;
@@ -136,7 +136,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "truth":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 200);
 			dialog.text = DLG_TEXT[24] + GetMySimpleName(characterFromID("Grigorio Formoselle")) + DLG_TEXT[25] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[26] + GetMyName(characterFromID("Grigorio Formoselle")) + DLG_TEXT[27];
 			link.l1 = DLG_TEXT[28];
@@ -162,7 +162,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "second_letter_delivered2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 2000);
 			TakeItemFromCharacter(Pchar, "SignetRing");
 			dialog.text = DLG_TEXT[33]+ GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[34] + gov_kid_pronoun3 + DLG_TEXT[35];
@@ -245,7 +245,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "hunt_guadeloupe_encounter1_2":
-			dialog.text = DLG_TEXT[58] + GetMyPronounObj(PChar) + "!";
+			dialog.text = DLG_TEXT[58] + XI_ConvertString(GetMyPronounObj(PChar)) + "!";
 			link.l1 = DLG_TEXT[59];
 			AddDialogExitQuest("hunt_guadeloupe_arrest1");
 			link.l1.go = "exit";

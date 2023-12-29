@@ -112,7 +112,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "gov_5":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -10000);
 			dialog.snd = "Voice\CLLA\CLLA006";
 			dialog.text = DLG_TEXT[81];
@@ -149,7 +149,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_abduction_prison_pass4":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -10000);
 			GiveItem2Character(PChar, "PrisonPass");
 			AddQuestRecord("Abduction", 10);

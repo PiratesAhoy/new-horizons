@@ -8,7 +8,7 @@ void Telescope_Request()
 		nTelescopeIn = 0;
 	}
 
-	if (nTelescopeIn != 0 && SeaCameras.Camera == "SeaDeckCamera") {
+	if (nTelescopeIn != 0 && Scene.Camera == DECK_CAMERA) {
 		SendMessage(&objISpyGlass, "ll", MSG_TELESCOPE_REQUEST, 1);
 	}
 	else {

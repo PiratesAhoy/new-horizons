@@ -1,13 +1,13 @@
 string DLG_TEXT[40] = {
 "Felicitaciones, realmente has logrado redimir a todas esas pobres almas atrapadas en este lugar. Ahora puedo descansar en paz. La fama y el conocimiento serán tu recompensa. Pero ten en cuenta que el mal acecha siempre y en todas partes, así que pronto tendrás que luchar de nuevo. ",
 "Me parece bien: cuantas más peleas, más botí... esto... honor. Adiós y buen viaje, donde quiera que vayas ahora. ",
-TÚ... A MÍ... NO... MATAR",
+"TÚ... A MÍ... NO... MATAR",
 "Bueno, puede que seas persistente, pero también tonto y lento. Puedo matarte fácilmente otras doce veces... y apuesto a que no tienes tantas vidas... eh..., o muertes...",
 "Ah, no importa, seguiré matándote hasta que ambos recibamos nuestra recompensa: yo mi bien merecido tesoro y tú tu bien merecida muerte. Quién sabe, tal vez tú seas quien encuentre la felicidad..",
 "Pero pierdes algunos huesos cada vez que vuelves a recomponer tus... restos. ¿Y cómo vas a luchar sin brazos? ¿Vas a escuopirme tus dientes?",
 "¿Por qué no me dejas en paz?...",
 "Oye, ¿no te alegras de que te haya librado de esa miserable existencia no muerta? ¡Ahora, tu alma es libre de las ataduras de tu cuerpo malidto!",
-"Gracias, muchas gracias por redimir mi alma de esa miserable existencia no muerta..",
+"Gracias, muchas gracias por redimir mi alma de esa miserable existencia no muerta.",
 "¡Sí, sí, ya he oído esa historia! Solo dame mi recompensa y vete al infierno..., o al cielo, lo que sea.",
 "¡Bah, palabras! Preferiría que me lo agradecieras con dinero. Y que desaparecieras después.",
 "Ahórrame el sermón y dame tu espada. Y luego, vete al Hades, donde te correspnde estar...",
@@ -38,6 +38,6 @@ TÚ... A MÍ... NO... MATAR",
 "¿¿¿Miles de doblones???",
 "Je, je, ¿ahora me estás prestadno atención? ¡Sí, miles! Verás, en mi vida anterior fui un grna ladrón, antes de convertirme en un torpe muerto viviente. Veamos si al recuperar mi mente he recuperado mis hanilidades\n Bueno, estos dedos huesudos pueden meterse bajo tu ropa bastante rápido... Ves, te he quitado la bolsa antes de que hayas podido parpadear. ¡Ja, ja! ¡Está será mi última broma sobre este mundo! ¡Adiós, nos veremos en el infierno!",
 "¡No dejaré que te escapes con todo ese oro! ¡Quédate y lucha como un hombre... o fantasma! ¡QUÉDATE, TE DIGO!... ",
-"Verás, la espada, el fuego y el trabajo forzado convierten a un pueblo pagano mucho más rápido que los sermones. Aunque no fue tan buena idea usar las bóvedas del templo como cripta para nuestros hermanos muertos. Desenterramos muchas tumbas Akellani, y además de artefacrtos preciosos, tanbién encontramos las momias de sus sacerdotes... ¡momias muy animadas!\n Los antiguos dioses todavía tienen poder sobre este lugar, y eso impide a muchos de los enterrados aquí descansar en paz. Así que es peligroso para las almas VIVAS aventurarse aquí abajo. De vez en cuando, la Orden envía a algún gran maestre o un grupo de osados caballeros para purgar este lugar, despedazando todo lo que s enecuentran en su cmaino\n Pero los muertos vivientes pueden ser muy persistentes, y algunas son tan peligrosas que ningún héroe puede enfrentarse a ellos.",
+"Verás, la espada, el fuego y el trabajo forzado convierten a un pueblo pagano mucho más rápido que los sermones. Aunque no fue tan buena idea usar las bóvedas del templo como cripta para nuestros hermanos muertos. Desenterramos muchas tumbas Akellani, y además de artefacrtos preciosos, tanbién encontramos las momias de sus sacerdotes... ¡momias muy animadas!\n Los antiguos dioses todavía tienen poder sobre este lugar, y eso impide a muchos de los enterrados aquí descansar en paz. Así que es peligroso para las almas VIVAS aventurarse aquí abajo. De vez en cuando, la Orden envía a algún gran maestre o un grupo de osados caballeros para purgar este lugar, despedazando todo lo que s enecuentran en su camino\n Pero los muertos vivientes pueden ser muy persistentes, y algunas son tan peligrosas que ningún héroe puede enfrentarse a ellos.",
 
 };

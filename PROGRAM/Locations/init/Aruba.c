@@ -581,7 +581,7 @@ void LocationInitAruba(ref n)
 	//Reload map
 	Locations[n].reload.l5.name = "rock1_back";
 	Locations[n].reload.l5.go = "Aruba_Dungeon";
-	Locations[n].reload.l5.emerge = "reload2";
+	Locations[n].reload.l5.emerge = "reload1";
 	Locations[n].reload.l5.autoreload = "1";
 	Locations[n].locators_radius.reload.rock1_back = 1.5;
 	Locations[n].reload.l5.label = "Arawak Burialground.";
@@ -907,22 +907,24 @@ void LocationInitAruba(ref n)
 	n = n + 1;	
 	
 	// ----------------- Aruba_Dungeon --------------------
-	Locations[n].filespath.models = "locations\Inside\Dungeon_1";
+	Locations[n].filespath.models = "locations\Inside\CavernMedium2";
 	Locations[n].id = "Aruba_Dungeon";
-	Locations[n].image = "Inside_Dungeon_1";
+	Locations[n].image = "Inside_BurialGround";
 	Locations[n].monsters = "1";
 	locations[n].id.label = "Arawak Burialground";
 
 	//Sound
-	locations[n].type = "Dungeon";
+	locations[n].type = "inca_temple";
 	//Models
 	//Always
-	Locations[n].models.always.locators = "d01_l";
-	Locations[n].models.always.house = "d01";
+	Locations[n].models.always.locators = "CavernMedium2_locators";
+	Locations[n].models.always.l1 = "CavernMedium2";
+	Locations[n].models.always.l2 = "cavernMedium2_lamps";
+
 	//Day
-	Locations[n].models.day.charactersPatch = "d01_p";
+	Locations[n].models.day.charactersPatch = "CavernMedium2_patch";
 	//Night
-	Locations[n].models.night.charactersPatch = "d01_p";
+	Locations[n].models.night.charactersPatch = "CavernMedium2_patch";
 	//Environment
 	Locations[n].environment.weather = "false";
 	Locations[n].environment.sea = "false";
@@ -930,24 +932,17 @@ void LocationInitAruba(ref n)
 	LAi_LocationFantomsGen(&locations[n], true);
 
 	//Reload map
-	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Aruba_shore";
+	Locations[n].reload.l1.emerge = "rock1_back";
+	Locations[n].reload.l1.autoreload = "1";
+
+	Locations[n].reload.l2.name = "reload1_back";
 	Locations[n].reload.l2.go = "Aruba_shore";
-	Locations[n].reload.l2.emerge = "rock1_back";
+	Locations[n].reload.l2.emerge = "rock1";
 	Locations[n].reload.l2.autoreload = "1";
 
-	Locations[n].reload.l3.name = "reload2_back";
-	Locations[n].reload.l3.go = "Aruba_shore";
-	Locations[n].reload.l3.emerge = "rock1";
-	Locations[n].reload.l3.autoreload = "1";
-	Locations[n].locators_radius.reload.reload2_back = 1.5;
-
-/*
-	Locations[n].reload.l12.name = "reloadc4";
-	Locations[n].reload.l12.go = "Marigot_dungeon";
-	Locations[n].reload.l12.emerge = "reload2";
-*/
-
-	Locations[n].items.randitem1 = "blade20";
+	Locations[n].locators_radius.box.box2 = 1.8;
 
 	Locations[n].island = "Aruba";
 	n = n + 1;

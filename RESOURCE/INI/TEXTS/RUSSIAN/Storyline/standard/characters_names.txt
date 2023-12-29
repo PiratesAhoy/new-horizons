@@ -22,7 +22,7 @@ Serrao{Серрао}
 
 {=====| Story.c |=====}
 Vincent{Винсент}
-Bethune{Битюн}
+Bethune{Бетьюн}
 Waulter{Волтер}
 Tomlison{Томлисон}
 Remy{Реми}
@@ -98,6 +98,7 @@ Violate{Виолате}
 Gyles{Жиль}
 Dubois{Дюбуа}
 citizen{Горожанин}
+citizen_F{Горожанка}
 Soldier{Солдат}
 Ragetti{Раджетти}
 Pintel{Пинтел}

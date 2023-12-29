@@ -100,7 +100,7 @@ void ProcessDialogEvent()
 
 		case "smuggler_payoff":
 			Diag.TempNode = "smuggler_till_next_time";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -1 * sti(PChar.quest.agentquest.smuggler_fare));
 			PChar.quest.agentquest.smuggler_fare = 0;
 			int govnation;
@@ -371,7 +371,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "agent_start_receive_money":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 2500);
 			dialog.text = DLG_TEXT[91] + GetMyName(PChar) + DLG_TEXT[92];
 			link.l1 = DLG_TEXT[93] + GetMyName(NPChar) + DLG_TEXT[94];

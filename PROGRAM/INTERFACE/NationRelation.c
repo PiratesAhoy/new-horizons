@@ -42,11 +42,11 @@ void InitInterface(string iniName)
 			nationpic = "Pirate00";
 		else
 			nationpic = GetFlagPicName(i);
-		SetNewPicture("HNATION" + i, "interfaces\flags\Crest_" + nationpic + ".tga");
+		SetNewPicture("HNATION" + i, "interfaces\flags\Crest_" + nationpic + ".png");
 		SetNodeUsing("HNATION" + i, true);
 		SetNodeUsing("_HNATION" + i, true);
 	}
-	SetNewPicture("HNATIONP", "interfaces\flags\Crest_" + GetFlagPicName(PERSONAL_NATION) + ".tga");
+	SetNewPicture("HNATIONP", "interfaces\flags\Crest_" + GetFlagPicName(PERSONAL_NATION) + ".png");
 
 	CreateImage("RelationFromFlag", "MORALE", "high morale", 578, 70, 610, 102);
 
@@ -56,7 +56,7 @@ void InitInterface(string iniName)
 			nationpic = "Pirate00";
 		else
 			nationpic = GetFlagPicName(i);
-		SetNewPicture("VNATION" + i, "interfaces\flags\Crest_" + nationpic + ".tga");
+		SetNewPicture("VNATION" + i, "interfaces\flags\Crest_" + nationpic + ".png");
 		SetNodeUsing("VNATION" + i, true);
 		SetNodeUsing("_VNATION" + i, true);
 
@@ -95,12 +95,12 @@ void InitInterface(string iniName)
 		CreateCheckbox("CHECKBOX_NATION" + i, "", FONT_NORMAL, COLOR_NORMAL, 110 + (50 * i), 385, 1.0, CHECKBOXTYPE_TWOSELECT, CHECKBOX_OFF);
 
 		nationpic = GetFlagPicName(i);
-		SetNewPicture("HOISTNATION" + i, "interfaces\flags\Flag_" + nationpic + ".tga");
+		SetNewPicture("HOISTNATION" + i, "interfaces\flags\Flag_" + nationpic + ".png");
 		SetNodeUsing("HOISTNATION" + i, true);
 	}
 	if (IsFlagSelectable(PERSONAL_NATION) == true || sti(PChar.nation) == PERSONAL_NATION) {
 		CreateCheckbox("CHECKBOX_NATIONP", "", FONT_NORMAL, COLOR_NORMAL, 510, 385, 1.0, CHECKBOXTYPE_TWOSELECT, CHECKBOX_OFF);
-		SetNewPicture("HOISTNATIONP", "interfaces\flags\Flag_" + GetFlagPicName(PERSONAL_NATION) + ".tga");
+		SetNewPicture("HOISTNATIONP", "interfaces\flags\Flag_" + GetFlagPicName(PERSONAL_NATION) + ".png");
 		SetNodeUsing("HOISTNATIONP", true);
 	} else {
 		SetNodeUsing("CHECKBOX_NATIONP", false);
@@ -284,14 +284,16 @@ void ProcessCommandExecute()
 					pirateflagidx = tmppirateflagidx;
 					PChar.Flags.Pirate = pirateflagidx;
 					PChar.Flags.Pirate.texture = pirateflagtex;
-					SetNewPicture("HOISTNATION3", "interfaces\flags\Flag_" + GetFlagPicName(PIRATE) + ".tga");
+					SetNewPicture("HOISTNATION3", "interfaces\flags\Flag_" + GetFlagPicName(PIRATE) + ".png");
+					Ship_FlagRefresh(PChar);
 				break;
 				case WINDOW_PERSONALFLAG:
 					personalflagtex = tmppersonalflagtex;
 					personalflagidx = tmppersonalflagidx;
 					PChar.Flags.Personal = personalflagidx;
 					PChar.Flags.Personal.texture = personalflagtex;
-					SetNewPicture("HOISTNATIONP", "interfaces\flags\Flag_" + GetFlagPicName(PERSONAL_NATION) + ".tga");
+					SetNewPicture("HOISTNATIONP", "interfaces\flags\Flag_" + GetFlagPicName(PERSONAL_NATION) + ".png");
+					Ship_FlagRefresh(PChar);
 				break;
 			}
 			SetWindow(WINDOW_MAIN);
@@ -345,7 +347,7 @@ void ProcessCommandExecute()
 					iNation = sti(n);
 				break;
 			}
-			PChar.nation = iNation; // PB: Set New Nation
+			SetCharacterNation(PChar, iNation);
 			UpdateData();
 			return;
 		}
@@ -614,7 +616,7 @@ void SetWindow(int iWindow)
 						SetNodeUsing("FLAG_BUTTON" + i + j, true);
 					else
 						XI_MarkFlag(i, j);
-					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Pirate" + i + j + ".tga");
+					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Pirate" + i + j + ".png");
 					SetNodeUsing("FLAG_PICTURE" + i + j, true);
 				}
 			}
@@ -638,7 +640,7 @@ void SetWindow(int iWindow)
 						SetNodeUsing("FLAG_BUTTON" + i + j, true);
 					else
 						XI_MarkFlag(i, j);
-					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Personal" + i + j + ".tga");
+					SetNewPicture("FLAG_PICTURE" + i + j, "INTERFACES\Flags\Flag_Personal" + i + j + ".png");
 					SetNodeUsing("FLAG_PICTURE" + i + j, true);
 				}
 			}
@@ -737,7 +739,7 @@ void ShowInfo(string nodName)
 					SetToolTipRectangle("");
 					SetToolTipHeader("", header);
 					SetToolTipText("", text);
-					SetToolTipImage("", "interfaces\flags\Crest_" + img + ".tga");
+					SetToolTipImage("", "interfaces\flags\Crest_" + img + ".png");
 					Preprocessor_Remove("Column_Row");
 					Preprocessor_Remove("FlagOf");
 				}

@@ -75,7 +75,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "purse":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -sti(Npchar.crimpgold) );
 			if (rand(100)<70)
 			{
@@ -93,7 +93,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_crew":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -100);
 			AddCharacterCrew(pchar, sti(Npchar.crimp));
 			LAi_SetActorType(NPchar);

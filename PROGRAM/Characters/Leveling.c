@@ -283,7 +283,7 @@ bool AddXPtoChar(ref chref, string expName, int _exp)
 					else
 					{
 						LevelText = GetMySimpleName(chref) + " " + TranslateString("","has gained a new level!") + " " + TranslateString("","(Now level") + " " + GetTotalRank(chref) + ")");
-						PlayStereoSound("interface\new_level.wav");
+						PlayStereoSound("interface\new_level.flac");
 						AddMsgToCharacter(chref,MSGICON_LEVELUP);
 					}
 					LogIt(LevelText);

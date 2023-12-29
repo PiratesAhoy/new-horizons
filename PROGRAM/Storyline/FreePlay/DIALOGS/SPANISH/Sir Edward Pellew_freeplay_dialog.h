@@ -28,7 +28,7 @@ string DLG_TEXT[47] = {
 "Muy bien, señor. Zarparé hacia Playa de Sabana tan pronto como esté a bordo del ",
 "¡Ah, ",
 ", ese informe que me envió era más apasionante que una novela!",
-"¿Los conoces a todos? ¿Leighton, Elliot, Boulton, Keene? Los conoce, ¿verdad?",
+"¿Los conoce a todos? ¿Leighton, Elliot, Boulton, Keene? Los conoce, ¿verdad?",
 "Ya los conozco bastante.",
 "Bueno, ",
 ", después de ese viaje, no va a encontrar emocionante lo que le ofrecemos: un navío de línea.",

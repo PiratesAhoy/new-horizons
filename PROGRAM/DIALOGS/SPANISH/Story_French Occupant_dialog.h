@@ -1,5 +1,5 @@
 string DLG_TEXT[2] = {
-"Favor...no ves que estoy de Servicio?",
-"Siento.",
+"Por favor... ¿no ves que estoy de servicio?",
+"Lo siento.",
 
 };

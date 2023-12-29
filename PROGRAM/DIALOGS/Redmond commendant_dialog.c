@@ -68,7 +68,7 @@ void ProcessDialogEvent()
 			Diag.CurrentNode = "First time";
 // NK -->
 			AddDialogExitQuest("Let_my_edgar_go");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar,-5000);
 	
 			ChangeCharacterAddressGroup(CharacterFromID("Jack Greenfield"), "", "sit", "sit2");

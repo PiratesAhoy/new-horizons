@@ -1440,7 +1440,7 @@ void OpenBoxProcedure_BUG()
 
 			case "box3":
 				PlaySound("INTERFACE\book_open.wav");
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				GiveItem2Character(chr, "key2");
 				SetLocatorRadius(locations[FindLocation(chr.location)], "box", "box3", 0.001);
 				Locations[FindLocation("Legrands_attic")].locators_radius.box.box3 = 0.001;
@@ -1589,7 +1589,7 @@ void OpenBoxProcedure_BUG()
 
 			case "box7":
 				//ale
-				PlaySound("INTERFACE\drink.wav");
+				PlaySound("INTERFACE\drink.flac");
 				Logit(TranslateString("","Good beer!"));
 			break;
 
@@ -4187,7 +4187,7 @@ void OpenBoxProcedure_BUG()
 		switch(chr.boxname)
 		{
 			case "box1":
-				PlaySound("INTERFACE\small_door_locked.wav");
+				PlaySound("INTERFACE\small_door_locked.flac");
 			break;
 		}
 
@@ -4203,7 +4203,7 @@ void OpenBoxProcedure_BUG()
 			break;
 
 			case "box2":
-				PlaySound("INTERFACE\small_door_locked.wav");
+				PlaySound("INTERFACE\small_door_locked.flac");
 			break;
 
 			case "box3":
@@ -5412,7 +5412,7 @@ void OpenBoxProcedure_BUG()
 			break;	
 
 			case "box3":
-				PlaySound("INTERFACE\small_door_locked.wav");
+				PlaySound("INTERFACE\small_door_locked.flac");
 			break;
 
 			case "box4":
@@ -11971,7 +11971,7 @@ void OpenBoxProcedure_BUG()
 					if(chr.treasure_tour == "boat") 
 					{
 						PlaySound("OBJECTS\DUEL\man_attack1.wav");
-						PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+						PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 						LAi_SetActorType(chr);
 						LAi_ActorAnimation(chr, "jump", "pchar_playertype", 1.8);
 
@@ -13767,7 +13767,7 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 
 				if(CheckAttribute(attack, "quest.nitre_position") && attack.quest.nitre_position == "planks")
 				{
-					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 					RemoveCharacterEquip(attack, GUN_ITEM_TYPE);
 					TakeItemFromCharacter(attack, "pistolbucket_nitre");
 					GiveItem2Character(attack, "pistolbucket_empty");	
@@ -13785,7 +13785,7 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 				if(CheckAttribute(attack, "quest.sulfur_position") && attack.quest.sulfur_position == "ladder")
 				{
 					attack.quest.sulfur_water = "filled";
-					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+					PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.flac");
 					RemoveCharacterEquip(attack, GUN_ITEM_TYPE);
 					TakeItemFromCharacter(attack, "pistolbucket_water");
 					GiveItem2Character(attack, "pistolbucket_empty");	

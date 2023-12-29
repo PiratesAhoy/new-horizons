@@ -72,7 +72,7 @@ void ProcessDialogEvent()
 			if(makeint(Pchar.reputation) >= 80)
 			{
 	            int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				addMoneyToCharacter(Pchar, makeint(PChar.rank)*100);
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"You got") + " " + (makeint(PChar.rank)*100) + " " + LanguageConvertString(tmpLangFileID,"gold.")); // NK
 				d.Text = DLG_TEXT[14];
@@ -99,7 +99,7 @@ void ProcessDialogEvent()
 				}
 				else
 				{
-					PlayStereoSound("INTERFACE\took_item.wav");
+					PlayStereoSound("INTERFACE\took_item.flac");
 					addMoneyToCharacter(Pchar, makeint(PChar.rank)*100);
 					Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"You got") + " " + (makeint(PChar.rank)*100) + " " + LanguageConvertString(tmpLangFileID,"gold.")); // NK
 					d.Text = DLG_TEXT[18];

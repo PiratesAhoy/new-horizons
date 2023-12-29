@@ -17,7 +17,7 @@ Bullinger{Буллингер}
 Pirate{Пират}
 Juan{Хуан}
 Esteban{Эстебан}
-Gherarde{Герарда}
+Gherarde{Герард}
 de Jongh{де Йонг}
 Manuel{Мануэль}
 Sousa{Соуза}
@@ -29,7 +29,7 @@ Street{Уличный}
 Merchant{Торговец}
 Chago{Чаго}
 Castaneda{Кастаньеда}
-Lucia{Лючия}
+Lucia{Люсия}
 Montavez{Монтавез}
 Sebastian{Себастьян}
 Ortega{Ортега}
@@ -49,9 +49,9 @@ Merin{Мерин}
 Elias{Элиас}
 Bartels{Бартелс}
 Roxanne{Роксана}
-Lalliere{Лалльер}
+Lalliere{Лаллир}
 Pedro{Педро}
-Rivera{Ривера}
+Rivera{Ривьера}
 Francisco{Франсиско}
 Cruz{Крус}
 William{Уильям}
@@ -68,7 +68,7 @@ Dusac{Дюсак}
 Simon{Саймон}
 Chapman{Чапман}
 Alfonso{Альфонсо}
-Galindez{Галиндез}
+Galindez{Галиндес}
 Benoit{Бенуа}
 Belcour{Белькур}
 Adriance{Эдрианс}
@@ -94,8 +94,8 @@ Perdiguero{Пердигеро}
 Facundo{Факундо}
 Llano{Льяно}
 Francois{Франсуа}
-L'Ollonais{Лоллонэ}
-Txiki{Тики}
+L'Ollonais{Л'Оллонейс}
+Txiki{Чики}
 Pijuan{Пижуан}
 Henry{Генри}
 Morgan{Морган}
@@ -104,8 +104,8 @@ Mansveldt{Мансвелдт}
 Konrad{Конрад}
 Kulczycki{Кульчицкий}
 Silver{Сильвер}
-Roche{Роше}
-Brasiliano{Бразилиано}
+Roche{Рок}
+Brasiliano{Бразилец}
 Serafino{Серафино}
 Masarenhas{Масареньяс}
 Augusto{Аугусто}
@@ -116,7 +116,7 @@ Campos{Кампос}
 Leonardo{Леонардо}
 Corrales{Корралес}
 Guibert{Гиберт}
-Daudet{Доде}
+Daudet{Даудет}
 Spanish{Испанский}
 Governor{Губернатор}
 Johan{Йоган}

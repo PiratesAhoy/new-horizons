@@ -228,7 +228,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "More_dialogue_from_Teague2":
-			LAi_ActorRunToLocator(characterFromID("Teague Sparrow"), "reload", "reload1", "Now_a_word_from_the_governor2", 10);	
+			LAi_ActorRunToLocator(characterFromID("Teague Sparrow"), "reload", "reload1", "Now_a_word_from_the_governor2", 10);
 		break;
 
 		case "Now_a_word_from_the_governor2":
@@ -872,7 +872,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.Working_with_Susan2.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Working_with_Susan2.win_condition.l1.location = "Tortuga_port";
 			Pchar.quest.Working_with_Susan2.win_condition = "Working_with_Susan2";
-			
+
 			Pchar.quest.Wrong_harbour_with_Susan.win_condition.l1 = "location";
 			PChar.quest.Wrong_harbour_with_Susan.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Wrong_harbour_with_Susan.win_condition.l1.location = "QC_port";
@@ -2070,7 +2070,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Second_meeting_Drow_Rackham":
-			pchar.quest.Jacks_early_days = "Travel_to_Petros";			
+			pchar.quest.Jacks_early_days = "Travel_to_Petros";
 			ChangeCharacterAddressGroup(characterFromID("Cap'n Drow"),"Pointe_a_pitre_Tavern", "goto", "goto2");
 			ChangeCharacterAddressGroup(characterFromID("Jack Rackham"),"Pointe_a_pitre_Tavern", "goto", "goto17");
 			ChangeCharacterAddressGroup(characterFromID("Anne Bonny"),"Pointe_a_pitre_Tavern", "goto", "goto9");
@@ -2114,7 +2114,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Continue_with_Gibbs_and_Willemoes":
-			LAi_ActorFollowEverywhere(characterFromID("Mr. Gibbs"), "", 60.0); // TALISMAN added to make Gibbs walk follow to Petros Plant 
+			LAi_ActorFollowEverywhere(characterFromID("Mr. Gibbs"), "", 60.0); // TALISMAN added to make Gibbs walk follow to Petros Plant
 			pchar.quest.Now_get_to_see_Petros.win_condition.l1 = "location";
 			pchar.quest.Now_get_to_see_Petros.win_condition.l1.location = "Guadeloupe_Plantation";
 			pchar.quest.Now_get_to_see_Petros.win_condition = "Now_get_to_see_Petros_house";
@@ -2327,7 +2327,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Meet_Nathan_Kell.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Meet_Nathan_Kell.win_condition.l1.location = "Greenford_town";
 			Pchar.quest.Meet_Nathan_Kell.win_condition = "Meet_Nathan_Kell";
-			
+
 // Traps for not going through mine canyon vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 			Pchar.quest.Lazy_way_to_Beckett_Capture.win_condition.l1 = "location";
 			PChar.quest.Lazy_way_to_Beckett_Capture.win_condition.l1.character = Pchar.id;
@@ -2392,7 +2392,7 @@ void QuestComplete(string sQuestName)
 			Pchar.Quest.Lazy_way_to_Beckett_Capture.over = "yes";
 			Pchar.Quest.Oxbay_way_to_Beckett_Capture.over = "yes";
 			ChangeCharacterAddressGroup(characterFromID("Lieutenant Bligh"), "Greenford_town", "goto", "goto30");
-			
+
 			ChangeCharacterAddressGroup(characterFromID("Captain Damski"), "Greenford_church", "goto", "goto1");
 			characters[GetCharacterIndex("Captain Damski")].Dialog.Filename = "Captain Damski_dialog.c";
 			LAi_SetStayType(characterFromID("Captain Damski"));
@@ -2403,7 +2403,7 @@ void QuestComplete(string sQuestName)
 		case "Moving_along_In_search_for_Nathan_Kell":
 			DisableFastTravel(true);
 			ChangeCharacterAddress(characterFromID("Apothecary"), "None", "");
-			
+
 			Pchar.quest.Found_Nathan_Kell.win_condition.l1 = "locator";
 			PChar.quest.Found_Nathan_Kell.win_condition.l1.location = "Greenford_town";
 			Pchar.quest.Found_Nathan_Kell.win_condition.l1.locator_group = "reload";
@@ -2452,7 +2452,7 @@ void QuestComplete(string sQuestName)
 		case "With_Kell_to_Oxbay":
 			ChangeCharacterAddress(characterFromID("Captain Damski"), "None", "");
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Nathan Kell"));
-			LAi_SetOfficerType(characterFromID("Nathan Kell"));	
+			LAi_SetOfficerType(characterFromID("Nathan Kell"));
 
 			Pchar.quest.Exit_Nathan_Kells_room.win_condition.l1 = "locator";
 			PChar.quest.Exit_Nathan_Kells_room.win_condition.l1.location = "Guadeloupe_Plantation_bedroom";
@@ -2624,12 +2624,12 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(characterFromID("Konrad Kulczycki"), false);
 			setCharacterShipLocation(characterFromID("Konrad Kulczycki"), "Oxbay_port");
 			LAi_SetOfficerType(characterfromID("Konrad Kulczycki"));
-			
+
 			SetCompanionIndex(Pchar, -1, GetCharacterIndex("Nathan Kell"));
 			SetCharacterRemovable(characterFromID("Nathan Kell"), false);
 			setCharacterShipLocation(characterFromID("Nathan Kell"), "Oxbay_port");
 			LAi_SetOfficerType(characterfromID("Nathan Kell"));
-			
+
 			SetCompanionIndex(Pchar, -1, GetCharacterIndex("Petros"));
 			SetCharacterRemovable(characterFromID("Petros"), false);
 			setCharacterShipLocation(characterFromID("Petros"), "Oxbay_port");
@@ -2688,7 +2688,7 @@ void QuestComplete(string sQuestName)
 
 			ChangeCharacterAddressGroup(characterfromID("Konrad Kulczycki"), "Turks_port", "officers", "reload1_1");
 			ChangeCharacterAddressGroup(characterfromID("Petros"), "Turks_port", "officers", "reload1_2");				//JRH was 1_3
-			ChangeCharacterAddressGroup(characterfromID("Nathan Kell"), "Turks_port", "officers", "reload1_3");			//JRH was 1_2			
+			ChangeCharacterAddressGroup(characterfromID("Nathan Kell"), "Turks_port", "officers", "reload1_3");			//JRH was 1_2
 			ChangeCharacterAddressGroup(characterfromID("Captain Damski"), "Turks_port", "goto", "P_reload1_2");			//JRH: new Turks, was goto2
 
 			LAi_SetOfficerType(characterFromID("Captain Damski"));
@@ -2741,7 +2741,7 @@ void QuestComplete(string sQuestName)
 
 		case "Back_to_Lighthouse_from_Turks2":
 			PChar.Turks = "Brotherhood";
-//			LAi_QuestDelay("Turks_taken_by_brotherhood", 0.0);		
+//			LAi_QuestDelay("Turks_taken_by_brotherhood", 0.0);
 
 			pchar.quest.return_to_lighthouse_and_Annamaria.win_condition.l1 = "location";
 			pchar.quest.return_to_lighthouse_and_Annamaria.win_condition.l1.location = "Oxbay_lighthouse";
@@ -2884,7 +2884,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.Jacks_early_days = "For_Treasure_at_Guadeloupe";
 			ChangeCharacterAddressGroup(characterFromID("Lieutenant Bligh"),"Pointe_a_pitre_Tavern", "goto", "goto8");
 			LAi_SetActorType(characterfromID("Lieutenant Bligh"));
-			
+
 			ChangeCharacterAddressGroup(characterFromID("Cap'n Drow"),"Pointe_a_pitre_Tavern", "goto", "goto9");
 			LAi_SetActorType(characterfromID("Cap'n Drow"));
 			ChangeCharacterAddressGroup(characterFromID("Jack Rackham"),"Pointe_a_pitre_Tavern", "goto", "goto2");
@@ -3015,7 +3015,7 @@ void QuestComplete(string sQuestName)
 		case "Maximus_Philippe_to_Isla_de_Meurte":
 //			AddQuestRecord("Aztec", 9);  // TALISMAN replaced with new Quest record Aztec 17
 			AddQuestRecord("Aztec",17);
-			
+
 			if (pchar.location == "Guadeloupe_Port")
 			{
 				ChangeCharacterAddressGroup(characterFromID("Captain Philippe"), "Guadeloupe_Port", "officers", "Reload4_2");
@@ -3042,7 +3042,7 @@ void QuestComplete(string sQuestName)
 
 		case "Maximus_and_Philippe_on_the_Beach":
 			ChangeCharacterAddressGroup(characterFromID("Captain Philippe"), "Grotto", "goto", "goto2");
-			ChangeCharacterAddressGroup(characterFromID("Captain Maximus"), "Grotto", "goto", "goto1");	
+			ChangeCharacterAddressGroup(characterFromID("Captain Maximus"), "Grotto", "goto", "goto1");
 
 			pchar.quest.Maximus_and_Philippe_In_the_Grotto.win_condition.l1 = "locator";
 			pchar.quest.Maximus_and_Philippe_In_the_Grotto.win_condition.l1.location = "Grotto";
@@ -3115,12 +3115,12 @@ void QuestComplete(string sQuestName)
 			// PB: Normal temporary characters -->
 
 			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, true, 1.0, "mummy", "goto", "citizen01");
-			sld.name = "Heumac";
+			sld.name = TranslateString("","Heumac");
 			sld.lastname = "";
 			LAi_group_MoveCharacter(sld, "MUERTA_ENEMIES");
 
 			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, true, 1.0, "mummy", "goto", "locator13");
-			sld.name = "Tezcacoatl";
+			sld.name = TranslateString("","Tezcacoatl");
 			sld.lastname = "";
 			LAi_group_MoveCharacter(sld, "MUERTA_ENEMIES");
 
@@ -3322,7 +3322,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetOfficerType(characterFromID("Cap'n Drow"));
 			ChangeCharacterAddressGroup(characterfromID("Cap'n Drow"),"PaP_prison", "goto", "goto23");
 			ChangeCharacterAddressGroup(PChar,"PaP_prison", "goto", "goto12");
-			
+
 //TALISMAN - VVVVVVV - CHANGED so that after capture on Guadeloupe - go to search for Kell NOT capture by Beckett at Lighthouse VVVVVVVVVVV
 //			pchar.quest.Turks_with_KK.win_condition.l1 = "location";
 //			pchar.quest.Turks_with_KK.win_condition.l1.location = "Turks_port";
@@ -3337,8 +3337,8 @@ void QuestComplete(string sQuestName)
 			pchar.quest.Turks_with_Drow.win_condition.l1.location = "Turks_port";
 			pchar.quest.Turks_with_Drow.win_condition = "Turks_with_Drow";
 		break;
-		
-		case "Fight_PaP_EITC_2":		
+
+		case "Fight_PaP_EITC_2":
 			LAi_SetActorType(characterFromID("Arthur Straightly"));
 			LAi_SetActorType(characterFromID("Stephen Walsh"));
 			LAi_SetActorType(characterFromID("William Wanderman"));
@@ -3375,7 +3375,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.disable_rebirth = true
 			PostEvent("LAi_event_GameOver", 0, "s", "land");
 		break;
-		
+
 		case "Turks_with_Drow":
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -3383,7 +3383,7 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Sneak", 50);
 			}
 			else { AddPartyExp(pchar, 1500); }
-			
+
 			ChangeCharacterAddress(characterfromID("Arthur Straightly"),"none", "");
 			ChangeCharacterAddress(characterfromID("Stephen Walsh"),"none", "");
 			ChangeCharacterAddress(characterfromID("William Wanderman"),"none", "");
@@ -3414,8 +3414,8 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Petros"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Petros")].dialog.currentnode = "Turks_after_Guadeloupe_capture";
 		break;
-		
-// TALISMAN - END OF CHANGES ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
+
+// TALISMAN - END OF CHANGES ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 //Temp... Will be putting in sidequest to make it longer
 
 //Re-Do Mings quest if player did not pick up map on first visit to Antigua vvvvvvvvvvvvvvvvvvv
@@ -4114,7 +4114,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Oxbay_town")].vcskip = true;
 			LAi_ActorTurnToCharacter(characterFromID("James Norrington"), pchar);
 			characters[GetCharacterIndex("James Norrington")].Dialog.Filename = "James Norrington_dialog.c";
-			LAi_SetActorType(characterFromID("James Norrington"));	
+			LAi_SetActorType(characterFromID("James Norrington"));
 			Characters[GetCharacterIndex("James Norrington")].dialog.CurrentNode = "first time";
 			LAi_ActorDialog(characterFromID("James Norrington"), pchar, "", 10.0, 10.0);
 		break;
@@ -4154,7 +4154,7 @@ void QuestComplete(string sQuestName)
 			}
 		break;
 
-		case "Beckett_talk_1":	
+		case "Beckett_talk_1":
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 1500);
@@ -4193,7 +4193,7 @@ void QuestComplete(string sQuestName)
 			if (GetAttribute(pchar, "Annamaria") != "Lighthouse")
 			{
 				ChangeCharacterAddressGroup(CharacterFromID("Annamaria"),"Oxbay_town","goto","goto41");
-				LAi_SetActorType(characterFromID("Annamaria"));			
+				LAi_SetActorType(characterFromID("Annamaria"));
 				Locations[FindLocation("Oxbay_town")].vcskip = true;
 
 				Pchar.quest.Annamaria_standard_story.win_condition.l1 = "location";
@@ -4224,7 +4224,7 @@ void QuestComplete(string sQuestName)
 			if (GetAttribute(pchar, "Annamaria") != "Lighthouse")
 			{
 				ChangeCharacterAddressGroup(CharacterFromID("Annamaria"),"Oxbay_town","goto","goto41");
-				LAi_SetActorType(characterFromID("Annamaria"));			
+				LAi_SetActorType(characterFromID("Annamaria"));
 				Locations[FindLocation("Oxbay_town")].vcskip = true;
 
 				Pchar.quest.Annamaria_standard_story.win_condition.l1 = "location";
@@ -4321,7 +4321,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.back_to_Tia_Dalma.win_condition.l3 = "NPC_Death";
 			Pchar.quest.back_to_Tia_Dalma.win_condition.l3.character = "Pirates_3";
 			PChar.quest.back_to_Tia_Dalma.win_condition = "back_to_Tia_Dalma";
-			
+
 			pchar.quest.back_to_Tia_Dalma_failed.win_condition.l1 = "NPC_Death";
 			pchar.quest.back_to_Tia_Dalma_failed.win_condition.l1.character = PChar.id;
 			pchar.quest.back_to_Tia_Dalma_failed.win_condition = "back_to_Tia_Dalma_failed";
@@ -4378,7 +4378,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorRunToLocator(characterFromID("Tia Dalma"), "officers", "reload2_2", "Goodbye Tia Dalma2", 20.0);
 		break;
 
-		case "Goodbye Tia Dalma2": 
+		case "Goodbye Tia Dalma2":
 			ChangeCharacterAddress(characterFromID("Tia Dalma"), "None", "");
 			pchar.Jack = "Met_Tia";
 			PChar.Flags.Personal = 1; // PB: Non-British Jack-flag
@@ -4537,7 +4537,7 @@ void QuestComplete(string sQuestName)
 			// Thomas the Terror: Chevalle side quest available now
 			ChangeCharacterAddressGroup(CharacterFromID("Captaine Chevalle"), "PoPrince_tavern", "goto", "goto2");
 			// Captain Maggee: Villanueva set to Brothel
-			if (IsBrothelEnabled()) 
+			if (IsBrothelEnabled())
 			{
 				ChangeCharacterAddressGroup(CharacterFromID("Eduardo Villanueva"), "Tortuga_Brothel_room", "goto", "locator3");
 			}
@@ -4568,7 +4568,7 @@ void QuestComplete(string sQuestName)
 
 		case "to_oxbay_shore_complete_2":
 			characters[GetCharacterIndex("Davy Jones")].Dialog.Filename = "Davy Jones_dialog.c";
-			LAi_SetActorType(characterFromID("Davy Jones"));	
+			LAi_SetActorType(characterFromID("Davy Jones"));
 			Characters[GetCharacterIndex("Davy Jones")].dialog.CurrentNode = "first time";
 			LAi_ActorDialog(characterFromID("Davy Jones"), pchar, "", 10.0, 10.0);
 		break;
@@ -4839,8 +4839,8 @@ void QuestComplete(string sQuestName)
 			{
 				changeCharacterAddressGroup(characterFromID("Pintel"), "Tortuga_port", "goto", "goto27");
 
-				LAi_QuestDelay("Pintel_stay_where_you_are_loop1", 0.1);	
-				
+				LAi_QuestDelay("Pintel_stay_where_you_are_loop1", 0.1);
+
 			}
 			else return;
 		break;
@@ -4848,7 +4848,7 @@ void QuestComplete(string sQuestName)
 	//-----------------------------------------------------------------------------------------------------------------
 		case "Find_Ragetti_and_Pintel":
 			LAi_QuestDelay("Pintel_stay_where_you_are_loop1", 0.1);							//JRH
-	
+
 			//changeCharacterAddressGroup(characterFromID("Ragetti"), "Tortuga_town_01", "goto", "goto22");
 			//changeCharacterAddressGroup(characterFromID("Pintel"), "Tortuga_town_01", "officers", "reload19_3");
 			changeCharacterAddressGroup(characterFromID("Ragetti"), "Tortuga_port", "goto", "goto26");		//JRH change
@@ -4925,7 +4925,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Me_and_Barbossa_on_the_Beach.win_condition.l1 = "location";
 			Pchar.quest.Me_and_Barbossa_on_the_Beach.win_condition.l1.location = "Grotto";
 			PChar.quest.Me_and_Barbossa_on_the_Beach.win_condition = "Me_and_Barbossa_on_the_Beach";
-			
+
 			Locations[FindLocation("Grotto")].locators_radius.goto.goto4 = 3.0; // PB: Easier to trigger
 		break;
 
@@ -4961,7 +4961,7 @@ void QuestComplete(string sQuestName)
 			else {AddPartyExp(pchar, 5000);}
 			LAi_SetActorType(characterFromID("Barbossa"));
 			LAi_ActorFollowEverywhere(characterFromID("Barbossa"), "Barbossa_To_Cayman_Tavern2", 60.0);
-			
+
 			Locations[FindLocation("Grotto")].locators_radius.goto.goto4 = 1.0; // PB: Back to normal
 		break;
 
@@ -5197,7 +5197,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.Smuggler = "With_Smugglers_To_Tortuga";
 			bQuestDisableMapEnter = false;
 			LAi_ActorTurnToCharacter(characterFromID("Treas_Pirate_1"), pchar);
-			
+
 			LAi_QuestDelay("Chatter_to_smuggler2", 5.0);
 		break;
 
@@ -5266,7 +5266,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorSelfDialog(Pchar, "player_back");
 			PChar.quest.Jackpot = "search";
 
-			if (IsBrothelEnabled()) 
+			if (IsBrothelEnabled())
 			{
 				ChangeCharacterAddressGroup(CharacterFromID("Captaine Chevalle"), "Tortuga_Brothel_room", "goto", "locator2");
 				Pchar.quest.MeetVillanueva.win_condition.l1 = "location";
@@ -5295,7 +5295,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Storyteller"));
 			LAi_ActorSetSitMode(characterFromID("Storyteller"));
 
-			SetModelfromArray(PChar, GetModelIndex(pchar.originalmodel)); 
+			SetModelfromArray(PChar, GetModelIndex(pchar.originalmodel));
 
 			ChangeCharacterAddressGroup(characterFromID("Storyteller"), "Tortuga_Tavern", "candles", "sit5");
 			DoQuestReloadToLocation("Tortuga_tavern", "candles", "sit4", "Gibbs_in_Tavern2_4");
@@ -5310,7 +5310,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Storyteller"));
 			LAi_ActorSetSitMode(characterFromID("Storyteller"));
 
-			SetModelfromArray(PChar, GetModelIndex(pchar.originalmodel)); 
+			SetModelfromArray(PChar, GetModelIndex(pchar.originalmodel));
 
 			ChangeCharacterAddressGroup(characterFromID("Storyteller"), "Tortuga_Tavern", "candles", "sit5");
 			ChangeCharacterAddressGroup(pchar, "Tortuga_Tavern", "candles", "sit4");
@@ -5363,8 +5363,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Tortuga_Get_ready_for_Film3":
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			PChar.name = TranslateString("","Jack");
+			PChar.lastname = TranslateString("","Sparrow");
 			GiveModel2Player("Jack",true);
 			SetCurrentTime(14.00, 0);
 
@@ -5964,9 +5964,9 @@ void QuestComplete(string sQuestName)
 		case "Swann_starts_talking":
 			Lai_ActorGoToLocator(characterfromID("Red_soldier_2"), "goto", "goto_17", "", -1);
 			LAi_ActorTurnToCharacter(characterFromID("Red_soldier_2"), PChar);
-			LAi_ActorTurnToCharacter(characterFromID("Red_soldier_1"), PChar);			
+			LAi_ActorTurnToCharacter(characterFromID("Red_soldier_1"), PChar);
 			LAi_ActorGoToLocator(characterFromID("Malvert Mullroy"), "goto", "goto_44", "", -1);
-			LAi_ActorTurnToCharacter(characterFromID("Morris Murtogg"), PChar);	
+			LAi_ActorTurnToCharacter(characterFromID("Morris Murtogg"), PChar);
 			LAi_ActorTurnToCharacter(characterFromID("Malvert Mullroy"), PChar);
 			LAi_SetActorType(pchar);
 			LAi_ActorWaitDialog(pchar, characterFromID("Weatherby Swann"));
@@ -5975,7 +5975,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Escape_to_Shipyard_at_Redmond":
-			LAi_ActorAnimation(pchar, "attack_2", "Norrington_puch_up", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "Norrington_puch_up", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			Lai_KillCharacter(characterFromID("Weatherby Swann"));
 		break;
@@ -5996,7 +5996,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Off_to_shipyard_now2":
-			LAi_ActorAnimation(pchar, "attack_2", "Off_to_shipyard_now3", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "Off_to_shipyard_now3", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			Lai_KillCharacter(characterFromID("Malvert Mullroy"));
 		break;
@@ -6006,15 +6006,15 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Off_to_shipyard_now4":
-			LAi_ActorAnimation(pchar, "attack_2", "Off_to_shipyard_now5", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "Off_to_shipyard_now5", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			Lai_KillCharacter(characterFromID("Morris Murtogg"));
-			GiveItem2Character(Pchar, "blade4");  
+			GiveItem2Character(Pchar, "blade4");
 			EquipCharacterByItem(Pchar, "blade4");
 		break;
 
 		case "Off_to_shipyard_now5":
-			LAi_ActorRunToLocator(pchar, "goto", "goto_42", "Fight_Port_soldiers", 0.0); 
+			LAi_ActorRunToLocator(pchar, "goto", "goto_42", "Fight_Port_soldiers", 0.0);
 		break;
 
 		case "Fight_Port_soldiers":
@@ -6033,11 +6033,7 @@ void QuestComplete(string sQuestName)
 
 		case "Off_to_shipyard_now6":
 			LAi_SetActorType(pchar);
-			LAi_ActorRunToLocator(pchar, "goto", "goto_17", "Off_to_shipyard_now7", 2.0);
-		break;
-
-		case "Off_to_shipyard_now7":
-			LAi_Fade("Fight_with_Turner_in_Shipyard","");
+			LAi_ActorRunToLocator(pchar, "goto", "goto_17", "Fight_with_Turner_in_Shipyard", 2.0);
 		break;
 
 		case "Fight_with_Turner_in_Shipyard":
@@ -6060,13 +6056,13 @@ void QuestComplete(string sQuestName)
 			LAi_SetImmortal(Pchar, true);
 			LAi_LocationFightDisable(&Locations[FindLocation(pchar.location)], false);
 			LAi_SetImmortal(characterFromID("Will Turner"), true);
-			LAi_QuestDelay("Captured_by_Turner", 15.0);	
+			LAi_QuestDelay("Captured_by_Turner", 15.0);
 			LAi_ActorAttack(characterfromID("Will Turner"), pchar, "");
 		break;
 
 		case "Captured_by_Turner":
 			LAi_SetFightMode(PChar, false);
-			LAi_QuestDelay("Captured_by_Turner2", 1.0);	
+			LAi_QuestDelay("Captured_by_Turner2", 1.0);
 		break;
 
 		case "Captured_by_Turner2":
@@ -6086,7 +6082,7 @@ void QuestComplete(string sQuestName)
 
 		case "In_the_Clink2":
 			LAi_SetPlayerType(pchar);
-			LAi_ActorAnimation(characterfromID("Port Guard"), "attack_2", "", 0.0);
+			LAi_ActorAnimation(characterfromID("Port Guard"), "attack_fast_2", "", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			LAi_QuestDelay("Swann_put_me_in_prison", 1.0);
 		break;
@@ -6294,8 +6290,8 @@ void QuestComplete(string sQuestName)
 
 		case "Dauntless_Deck_NORR":
 			SetModelfromArray(PChar, GetModelIndex("Conorrington"));
-			PChar.name = "James";
-			PChar.lastname = "Norrington";
+			PChar.name = TranslateString("","James");
+			PChar.lastname = TranslateString("","Norrington");
 
 			pchar.sailaway = true;
 			SetCharacterShipLocation(characterFromID("Port Guard"), "none");
@@ -6443,7 +6439,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Mr. Gibbs"), "Tortuga_tavern", "candles", "sit5");
 			ChangeCharacterAddressGroup(CharacterFromID("Will Turner"), "Tortuga_port", "goto", "goto16");
 			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "begin_4";
-			LAi_ActorWaitDialog(CharacterFromID("Mr. Gibbs"), Pchar); 
+			LAi_ActorWaitDialog(CharacterFromID("Mr. Gibbs"), Pchar);
 			LAi_ActorDialog(pchar, characterFromID("Mr. Gibbs"),"", 10.0, 10.0);
 		break;
 
@@ -6526,8 +6522,8 @@ void QuestComplete(string sQuestName)
 
 		case "gifleAnnamaria":
 			Lai_SetActorType(characterFromID("Annamaria"));
-			LAi_ActorAnimation(characterFromID("Annamaria"), "attack_2", "boatAnnamaria", -1);
-			PlaySound("OBJECTS\duel\punch1.wav"); 
+			LAi_ActorAnimation(characterFromID("Annamaria"), "attack_fast_2", "boatAnnamaria", -1);
+			PlaySound("OBJECTS\duel\punch1.wav");
 		break;
 
 		case "boatAnnamaria":
@@ -6583,7 +6579,7 @@ void QuestComplete(string sQuestName)
 			AddQuestRecord("Curse Of", 3);
 
 			PChar.quest.Muerte = "allerislademuerte";
-			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Mr. Gibbs")); 
+			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Mr. Gibbs"));
 			LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
 			SetCrewQuantity(pchar, makeint(GetCrewQuantity(pchar) + 15));
 
@@ -6749,8 +6745,8 @@ void QuestComplete(string sQuestName)
 			GiveShip2Character(pchar, SHIP_CURSED, TranslateString(PreprocessText("#scursed_ship#"), ""),-1,PIRATE,true,true);
 			AddCharacterGoods(pchar, GOOD_GUNPOWDER, 5000);
 			// PB: Become Barbossa -->
-			PChar.name = "Hector";
-			PChar.lastname = "Barbossa";
+			PChar.name = TranslateString("","Hector");
+			PChar.lastname = TranslateString("","Barbossa");
 			GiveModel2Player("Barbossa",true);
 			PChar.Flags.Pirate = 0; // PB: Jack Rackham Pirate Flag (used by Barbossa)
 			PChar.Flags.Pirate.texture = 0;
@@ -6860,7 +6856,7 @@ void QuestComplete(string sQuestName)
 //			sld.id = "crewmanb3";
 //			LAi_SetImmortal(characterFromID("crewmanb3"), true);
 //			LAi_group_MoveCharacter(sld, "CREW_BARBOSSA");
-//			LAi_group_FightGroups("CREW_BARBOSSA", LAI_GROUP_PLAYER, true);	
+//			LAi_group_FightGroups("CREW_BARBOSSA", LAI_GROUP_PLAYER, true);
 //			LAi_QuestDelay("parlercrewbp", 4.0);
 			Lai_QuestDelay("denouveaului", 4.0);
 		break;
@@ -6977,7 +6973,7 @@ void QuestComplete(string sQuestName)
 
 		case "abordauntless":
 			DoQuestReloadToLocation("Black_Pearl", "rld", "aloc15", "equipage");
-            ChangeCharacterAddressGroup(CharacterFromID("James Norrington"), "Black_Pearl", "rld", "aloc14");
+			ChangeCharacterAddressGroup(CharacterFromID("James Norrington"), "Black_Pearl", "rld", "aloc14");
 			Characters[GetCharacterIndex("James Norrington")].dialog.CurrentNode = "begin_3";
 			LAi_ActorDialog(characterFromID("James Norrington"), pchar, "", 10.0, 10.0);
 		break;
@@ -7022,7 +7018,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetImmortal(characterFromID("crewmanbar4"), true);
 			LAi_group_MoveCharacter(sld, "CAVE_CREW");
 			sld = LAi_CreateFantomCharacter(false, 0, false, true, 0.25, "Skel3", "goto", "goto14");
-			sld.id = "crewmanbar5";	
+			sld.id = "crewmanbar5";
 			LAi_SetImmortal(characterFromID("crewmanbar5"), true);
 			LAi_group_MoveCharacter(sld, "CAVE_CREW");
 			sld = LAi_CreateFantomCharacter(false, 0, false, true, 0.25, "Skel4", "goto", "goto10");
@@ -7113,7 +7109,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("James Norrington"),"Quest_Redmond_fort", "rld", "loc1");
 			ChangeCharacterAddressGroup(CharacterFromID("Weatherby Swann"),"Quest_Redmond_fort", "rld", "loc3");
 			ChangeCharacterAddressGroup(CharacterFromID("Elizabeth Swann"),"Quest_Redmond_fort", "rld", "loc2");
-			ChangeCharacterAddressGroup(CharacterFromID("Laurence Bannerman"),"Quest_Redmond_fort", "rld", "loc5");	
+			ChangeCharacterAddressGroup(CharacterFromID("Laurence Bannerman"),"Quest_Redmond_fort", "rld", "loc5");
 			ChangeCharacterAddressGroup(CharacterFromID("Will Turner"),"Quest_Redmond_fort", "rld", "loc4");
 			ChangeCharacterAddressGroup(characterfromID("Red_soldier_1"), "Quest_Redmond_fort", "rld", "loc8");
 			ChangeCharacterAddressGroup(characterfromID("Red_soldier_2"), "Quest_Redmond_fort", "rld", "loc7");
@@ -7157,8 +7153,8 @@ void QuestComplete(string sQuestName)
 			LAi_ActorTurnToCharacter(characterFromID("Eng_soldier_2"), PChar);
 			LAi_ActorTurnToCharacter(characterFromID("Eng_soldier_3"), PChar);
 			LAi_ActorTurnToCharacter(characterFromID("Will Turner"), characterFromID("Elizabeth Swann"));
-			LAi_ActorTurnToCharacter(characterFromID("Laurence Bannerman"), PChar);	
-			LAi_ActorTurnToCharacter(pchar, characterFromID("Laurence Bannerman"));	
+			LAi_ActorTurnToCharacter(characterFromID("Laurence Bannerman"), PChar);
+			LAi_ActorTurnToCharacter(pchar, characterFromID("Laurence Bannerman"));
 			LAi_QuestDelay("Captured_and_sentence3", 2.0);
 		break;
 
@@ -7226,7 +7222,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorTurnToCharacter(characterFromID("Weatherby Swann"), characterFromID("Elizabeth Swann"));
 			LAi_ActorRunToLocator(characterFromID("Will Turner"), "rld", "loc10", "", -1);
 			LAi_ActorRunToLocator(characterFromID("Elizabeth Swann"), "reload", "reloadc2", "Governor_follows_Elizabeth", -1);
-			LAi_ActorGoToLocator(Pchar, "rld", "loc4", "", -1);	
+			LAi_ActorGoToLocator(Pchar, "rld", "loc4", "", -1);
 		break;
 
 		case "Governor_follows_Elizabeth":
@@ -7234,7 +7230,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Will Turner"), "None", "");
 			ChangeCharacterAddress(characterFromID("Elizabeth Swann"), "None", "");
 			Characters[GetCharacterIndex("Weatherby Swann")].Dialog.CurrentNode = "Following_Elizabeth";
-			LAi_ActorDialog(characterFromID("Weatherby Swann"), Pchar, "", 5.0, 0);	
+			LAi_ActorDialog(characterFromID("Weatherby Swann"), Pchar, "", 5.0, 0);
 		break;
 
 		case "The_final_escape":
@@ -7309,10 +7305,10 @@ void QuestComplete(string sQuestName)
 				pchar.EmblemedSails.nationFileName = "Ships\Sails\sail_Petros_black_red.tga"; // PB
 			}
 			// <-- KK
-			setCharacterShipLocation(pchar, "Redmond_shore_02"); 
+			setCharacterShipLocation(pchar, "Redmond_shore_02");
 			DoReloadCharacterToLocation("Redmond_shore_02", "Jack", "fall");
 			//ChangeCharacterAddressGroup(CharacterFromID("Mr. Gibbs"),"Redmond_shore_02","officers","reload1_3");
-			//LAi_QuestDelay("GotBlackPearlBackAgain", 1.0); 
+			//LAi_QuestDelay("GotBlackPearlBackAgain", 1.0);
 			LAi_QuestDelay("findecotbp", 2.0);
 		break;
 
@@ -7338,10 +7334,10 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Elizabeth Swann"), "none", "");
  			SetOfficersIndex(Pchar, 2, GetCharacterIndex("Annamaria"));	// GR: Anamaria appears on the Black Pearl in the "jack_exit_DMC" video, so make her an officer too
 			LAi_SetOfficerType(CharacterFromID("Annamaria"));
-			LAi_SetImmortal(CharacterFromID("Annamaria"), false);
+			LAi_SetImmortal(CharacterFromID("Annamaria"), true); // Sebrian - DMC Char stays immortal
  			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Mr. Gibbs"));
 			LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
-			LAi_SetImmortal(CharacterFromID("Mr. Gibbs"), false);
+			LAi_SetImmortal(CharacterFromID("Mr. Gibbs"), true); // Sebrian -  DMC Char stays immortal
 			Characters[GetCharacterIndex("Annamaria")].Dialog.Filename = "Enc_Officer_dialog.c";
 			Characters[GetCharacterIndex("Annamaria")].Dialog.CurrentNode = "Hired";
 			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Enc_Officer_dialog.c";
@@ -8288,9 +8284,9 @@ void QuestComplete(string sQuestName)
 		case "meetdaughter":
 			PChar.quest.Firstcontact = "daughter";
 			SetCharacterToNearLocatorFromMe("Elizabeth Shaw", 3);
-			LAi_SetActorType(pchar); 
+			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Elizabeth Shaw"));
-			LAi_ActorWaitDialog(CharacterFromID("Elizabeth Shaw"), Pchar); 
+			LAi_ActorWaitDialog(CharacterFromID("Elizabeth Shaw"), Pchar);
 			LAi_ActorDialog(pchar, characterFromID("Elizabeth Shaw"), "", 10.0, 1.0);
 
 			PChar.quest.Kraken_attack_predmc.win_condition.l1 = "Timer";
@@ -8428,7 +8424,7 @@ void QuestComplete(string sQuestName)
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
- 
+
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Maccus", "goto", "sitizen07");
 			sld.name = TranslateString("", "Maccus");
 			sld.lastname = "";
@@ -8509,7 +8505,7 @@ void QuestComplete(string sQuestName)
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
- 
+
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Maccus", "officers", "Falaise_de_fleur_location_03_02_2");
 			sld.name = TranslateString("", "Maccus");
 			sld.lastname = "";
@@ -8746,7 +8742,7 @@ void QuestComplete(string sQuestName)
 
 		case "Tia_to_Davy2":
 			DisableFastTravel(true);
-			
+
 			SetCharacterToNearLocatorFromMe("Davy Jones", 3);
 			SetCharacterToNearLocatorFromMe("Tia Dalma", 5);
 
@@ -8820,20 +8816,3119 @@ void QuestComplete(string sQuestName)
 		case "reload_to_sea_after_davy":
 			QuestToSeaLogin_PrepareLoc("FalaiseDeFleur", "reload", "reload_2", false);
 			QuestToSeaLogin_Launch();
+			DisableFastTravel(false);
+
+		//Dead man's chest start
+			SetQuestHeader("Dead mans chest");
+			AddQuestRecord("Dead mans chest", 1);
+			AddQuestRecord("Dead mans chest", 2);
+			AddPassenger(Pchar, characterFromID("Tia Dalma"), 0);
+			SetCharacterRemovable(characterFromID("Tia Dalma"), false);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Tia Dalma"));
+			LAi_SetImmortal(CharacterFromID("Tia Dalma"), true);
+			//Sail to antigua Muscetto Cove
+			Pchar.quest.sailed_to_antigua.win_condition.l1 = "location";
+			Pchar.quest.sailed_to_antigua.win_condition.l1.location = "Antigua_shore";
+			Pchar.quest.sailed_to_antigua.win_condition = "sailed_to_antigua";
 		break;
 
-		case "At_Shack_Warning":
-			LAi_type_actor_Reset(characterFromID("Tia Dalma"));
-			ChangeCharacterAddressGroup(characterFromID("Tia Dalma"), "Tia_shack", "sit", "sit1");
-			LAi_ActorSetSitMode(characterFromID("Tia Dalma"));
+		//Sailed to antigua Muscetto Cove
+		case "sailed_to_antigua":
+			LAi_LocationFightDisable(&Locations[FindLocation("Antigua_shore")], true);
+			LAi_SetActorType(characterfromID("Tia Dalma"));
+			LAi_ActorDialog(characterFromID("Tia Dalma"),PChar,"",2.0,-1);
+			Characters[GetCharacterIndex("Tia Dalma")].dialog.currentnode = "Arrived_to_antigua_talk";
+			DisableFastTravel(true);
+		break;
 
+		//Dialogue just before shack in swamp
+		case "Swamp_near_shack":
+			LAi_LocationFightDisable(&Locations[FindLocation("Antigua_shore")], false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Tia_Dalma_swamp")], true);
+			SetCurrentTime(23.00, 0);
+			DoQuestReloadToLocation("Tia_Dalma_swamp", "reload", "reload1" ,"_");
+			Pchar.quest.At_swamp_talk.win_condition.l1 = "location";
+			Pchar.quest.At_swamp_talk.win_condition.l1.location = "Tia_Dalma_swamp";
+			Pchar.quest.At_swamp_talk.win_condition = "At_swamp_talk";
+		break;
+
+		//Walk dalma to shack
+		case "At_swamp_talk":
+			LAi_SetActorType(characterfromID("Tia Dalma"));
+			LAi_ActorDialog(characterFromID("Tia Dalma"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("Tia Dalma")].dialog.currentnode = "to_the_shack";
+		break;
+
+		//Dalma follow pc
+		case "To_shack_follow":
+			LAi_SetOfficerType(characterfromID("Tia Dalma"));
+			Locations[FindLocation("Tia_Dalma_hut")].reload.l1.disable = "1";
+			Pchar.quest.At_Shack_Warning.win_condition.l1 = "location";
+			Pchar.quest.At_Shack_Warning.win_condition.l1.location = "Tia_Dalma_hut";
+			Pchar.quest.At_Shack_Warning.win_condition = "At_Shack_Warning";
+		break;
+
+		//In shack, Talk to dalma, tell me about key and chest
+		case "At_Shack_Warning":
+			SetCharacterRemovable(characterFromID("Tia Dalma"), true);
+			RemovePassenger(Pchar, characterFromID("Tia Dalma"));
+			AddQuestRecord("Dead mans chest", 3);
+			LAi_type_actor_Reset(characterFromID("Tia Dalma"));
+			ChangeCharacterAddressGroup(characterFromID("Tia Dalma"), "Tia_Dalma_hut", "goto", "Dalma");
 			LAi_SetActorType(characterfromID("Tia Dalma"));
 			LAi_ActorDialog(characterFromID("Tia Dalma"),PChar,"",1.0,1.0);
 			Characters[GetCharacterIndex("Tia Dalma")].dialog.currentnode = "find_the_key";
 
-			CloseQuestHeader("Contact");
+			Pchar.quest.At_swamp_talk_self.win_condition.l1 = "location";
+			Pchar.quest.At_swamp_talk_self.win_condition.l1.location = "Tia_Dalma_swamp";
+			Pchar.quest.At_swamp_talk_self.win_condition = "At_swamp_talk_self";
 		break;
-		// CTM - Explaining Davy Jones over <--
+
+		case "shack_open1":
+			Locations[FindLocation("Tia_Dalma_hut")].reload.l1.disable = "0";
+		break;
+
+        //Tia_Dalma_swamp talk self to to ship
+		case "At_swamp_talk_self":
+			Locations[FindLocation("Tia_Dalma_hut")].reload.l1.disable = "0";
+			LAi_SetActorType(Pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "At_swamp_talk_self";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+		break;
+
+        //Load to deck to talk to gibbs
+		case "Prepare_Gibbs_Deck":	// Triggered by self dialog
+			DoQuestReloadToLocation(GetCharacterShipQDeck(pchar), "goto", "goto27", "Ship_deck_gibbs_talk");
+		break;
+
+		//Talk to gibbs on deck
+		case "Ship_deck_gibbs_talk":
+			SetCharacterToNearLocatorFromMe("Mr. Gibbs", 15);
+			LAi_SetActorType(characterfromID("Mr. Gibbs"));
+			LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",2.0,-1);
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Mr. Gibbs_dialog.c";
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "talk_jack_ship";
+		break;
+
+		//Return gibbs to normal and set sail
+		case "Set_sail_turks":
+			DisableFastTravel(false);
+			QuestToSeaLogin_PrepareLoc("Antigua", "reload", "reload_3", false);
+			QuestToSeaLogin_Launch();
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "none", "", "");
+			LAi_SetOfficerType(characterfromID("Mr. Gibbs"));
+			//Need to go to turks port now
+			Pchar.quest.at_turks_port_talk.win_condition.l1 = "location";
+			Pchar.quest.at_turks_port_talk.win_condition.l1.location = "Turks_port";
+			Pchar.quest.at_turks_port_talk.win_condition = "at_turks_port_talk";
+		break;
+
+	   //Go to Elton Garfield on docks
+		case "at_turks_port_talk":
+			DisableFastTravel(true);
+			LAi_LocationFightDisable(&Locations[FindLocation("Turks_port")], true);
+			SetCharacterToNearLocatorFromMe("Elton Garfield", 2);
+			//Deal with run/walk mode, here must walk
+			LAi_SetActorType(pchar);
+			if(AlwaysRunToggle == true)  {
+				LAi_ActorRunToLocator (pchar, "soldiers", "protector2", "reset_player_after_Elton", 5);
+			}
+			else {
+				LAi_ActorGoToLocator(pchar, "soldiers", "protector2", "reset_player_after_Elton", 5);
+			}
+		break;
+
+		//Reset player char to playable, talk to Elton Garfield, find out about guards/spawn them
+		//TODO Make him reapper somewhere durring quests, as an officer on your ship, more ideas later maybe
+		case "reset_player_after_Elton":
+			LAi_SetPlayerType(pchar);
+			LAi_SetActorType(characterfromID("Elton Garfield"));
+			Characters[GetCharacterIndex("Elton Garfield")].dialog.currentnode = "turks_prison";
+			LAi_ActorDialogNow(characterFromID("Elton Garfield"),PChar,"",1);//start talking right away
+		break;
+
+		case "add_quest_record_4DMC":
+			DisableFastTravel(false);
+			ChangeCharacterAddressGroup(CharacterFromID("prison_guard_captain"),"Turks_port","soldiers","soldier1");
+			ChangeCharacterAddressGroup(CharacterFromID("turks_prison_guard1"),"Turks_port","patrol","patrol7");
+			Characters[GetCharacterIndex("prison_guard_captain")].dialog.currentnode = "turks_prison";
+			Characters[GetCharacterIndex("turks_prison_guard1")].dialog.currentnode = "turks_prison";
+			LAi_ActorWaitDialog(characterFromID("prison_guard_captain"), pchar);
+			LAi_ActorWaitDialog(characterFromID("turks_prison_guard1"), pchar);
+			AddQuestRecord("Dead mans chest", 4);
+		break;
+
+		//Need to go to a guard captain and try to get arrested by hitting him
+		case "hit_captain_guard_talk_captain":
+			LAi_SetActorType(pchar);
+			LAi_SetActorType(characterfromID("prison_guard_captain"));
+			LAi_ActorAnimation(pchar, "attack_2", "",0.0);
+			PlaySound("OBJECTS\duel\punch1.wav");
+			LAi_ActorAnimation(CharacterFromID("prison_guard_captain"), "afraid", "", 0.0);
+			LAi_QuestDelay("after_hit_recover", 1.0);
+		break;
+
+		case "after_hit_recover":
+			SetNextWeather("Moon Night");
+			LAi_SetPlayerType(pchar);
+			LAi_QuestDelay("to_turks_prison", 0.5);
+		break;
+
+		//Talk to captain after he recovers
+		case "to_turks_prison":
+			LAi_SetActorType(characterfromID("prison_guard_captain"));
+			LAi_ActorDialog(characterFromID("prison_guard_captain"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("prison_guard_captain")].dialog.currentnode = "after_hit";
+		break;
+
+		//Load into prison
+		case "to_turks_prison_load":
+			TakeNItems(PChar, "pistol1", 1);
+			if (ENABLE_AMMOMOD)
+			{
+				TakeNItems(PChar, "gunpowder", 6);
+				TakeNItems(PChar, "pistolbullets", 6);
+			}
+			EquipCharacterbyItem(Pchar, "pistol1");
+
+			InterfaceStates.Buttons.Save.enable = 0;
+			LAi_SetImmortal(CharacterFromID("Atwood Paddley"), 1);
+			LAi_LocationFightDisable(&Locations[FindLocation("Fake_Turks_prison")], true);
+			Locations[FindLocation("Fake_Turks_prison")].vcskip = true;
+			DoQuestReloadToLocation("Fake_Turks_prison", "goto", "goto16" ,"_");
+			DisableFastTravel(true);
+
+			//spawn npcs
+			ChangeCharacterAddressGroup(CharacterFromID("prison_guard_captain"),"Fake_Turks_prison","officers","reload1_1");
+			ChangeCharacterAddressGroup(CharacterFromID("turks_prison_guard1"),"Fake_Turks_prison","goto","goto14");
+			ChangeCharacterAddressGroup(CharacterFromID("Atwood Paddley"),"Fake_Turks_prison","goto","goto9");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_1"),"Fake_Turks_prison","officers","reload1_2");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_2"),"Fake_Turks_prison","goto","goto13");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_3"),"Fake_Turks_prison","goto","goto18");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_4"),"Fake_Turks_prison","goto","goto21");
+
+			//Talk to captain again in prison
+			LAi_SetActorType(characterfromID("prison_guard_captain"));
+			LAi_ActorDialog(characterFromID("prison_guard_captain"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("prison_guard_captain")].dialog.currentnode = "turks_prison_inside";
+			//Used if player kills guards
+			Characters[GetCharacterIndex("Atwood Paddley")].dialog.currentnode = "turks_prison";
+		break;
+
+		//Player Choise 1 - surrender
+		//Walk me to cell
+		case "turks_prison_captured_walk":
+			LAi_SetActorType(characterFromID("prison_guard_captain"));
+			LAi_SetActorType(CharacterFromID("turks_prison_guard1"));
+
+			LAi_ActorGoToLocator(characterFromID("prison_guard_captain"), "goto", "goto12", "captain_prison_talk_next_to_cell", 31);
+			LAi_ActorFollow(CharacterFromID("turks_prison_guard1"),pchar,"",31);
+
+			//Deal with run/walk mode, here must walk
+			LAi_SetActorType(pchar);
+			if(AlwaysRunToggle == true)
+			{
+				LAi_ActorRunToLocator (pchar, "goto", "Goto23", "", 31);
+			}
+			else
+			{
+				LAi_ActorGoToLocator(pchar, "goto", "Goto23", "", 31);
+			}
+		break;
+
+		//Player Choise 1 - surrender
+		//Talk to guard captain
+		case "captain_prison_talk_next_to_cell":
+			LAi_SetPlayerType(pchar);
+			LAi_SetActorType(characterFromID("prison_guard_captain"));
+			LAi_ActorDialog(characterFromID("prison_guard_captain"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("prison_guard_captain")].dialog.currentnode = "turks_prison_surrender";
+			//Used if player surrenders
+			Characters[GetCharacterIndex("Atwood Paddley")].dialog.currentnode = "turks_prison_surrender";
+		break;
+
+		//Player Choise 1 - surrender
+		//Throw player in cell, talk to Atwood FADE
+		case "captain_prison_throw_to_cell":
+			LAi_Fade("captain_prison_throw_to_cell2", "");
+		break;
+
+		//Player Choise 1 - surrender
+		//Throw player in cell, talk to Atwood
+		case "captain_prison_throw_to_cell2":
+			ChangeCharacterAddressGroup(pchar,"Fake_Turks_prison","goto","goto24");
+			ChangeCharacterAddressGroup(CharacterFromID("prison_guard_captain"),"Fake_Turks_prison","officers","reload1_1");
+			ChangeCharacterAddressGroup(CharacterFromID("turks_prison_guard1"),"Fake_Turks_prison","goto","goto14");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_2"),"Fake_Turks_prison","officers","reload1_2");
+			LAi_SetStayType(characterfromID("turks_prison_guard1"));
+			LAi_SetActorType(characterFromID("Atwood Paddley"));
+			LAi_ActorDialog(characterFromID("Atwood Paddley"),PChar,"",1.0,1.0);
+		break;
+
+		//Player Choise 2 - fight
+		//Shoot captain kill him
+		case "turks_prison_figh_guards":
+			LAi_LocationFightDisable(&Locations[FindLocation("Fake_Turks_prison")], false);
+			LAi_SetActorType(pchar);
+			LAi_ActorAttack(pchar,characterfromID("prison_guard_captain"), "");
+			LAi_QuestDelay("kill_prioson_captain", 2.7);
+		break;
+
+		case "kill_prioson_captain":
+			LAi_SetStayType(pchar);
+			Lai_KillCharacter(characterfromID("prison_guard_captain"));
+			LAi_QuestDelay("fight_prepare", 2.0);
+		break;
+
+		//Draw sword again TODO: Maake player keep the blade drawn
+		case "fight_prepare":
+			pchar.quest.disable_rebirth = true;
+			LAi_SetPlayerType(pchar);
+			LAi_SetFightMode(pchar, true);
+			//LAi_SetImmortal(pchar, true); //REMOVE LATER WHEN QUEST DONE!!
+			LAi_QuestDelay("prison_guards_attack1", 0.2);
+		break;
+
+		//First 3 Guards attack player
+		case "prison_guards_attack1":
+			LAi_SetActorType(characterfromID("Pirates_1"));
+			LAi_SetActorType(characterfromID("Pirates_3"));
+			LAi_SetActorType(characterfromID("turks_prison_guard1"));
+			LAi_ActorAttack(characterfromID("turks_prison_guard1"),pchar, "");
+			LAi_ActorAttack(characterfromID("Pirates_1"),pchar, "");
+			LAi_ActorAttack(characterfromID("Pirates_3"),pchar, "");
+
+			pchar.quest.prison_guards_attack2_self.win_condition.l1 = "locator";
+			pchar.quest.prison_guards_attack2_self.win_condition.l1.location = "Fake_Turks_prison";
+			pchar.quest.prison_guards_attack2_self.win_condition.l1.locator_group = "merchant";
+			pchar.quest.prison_guards_attack2_self.win_condition.l1.locator = "reload13";
+			pchar.quest.prison_guards_attack2_self.win_condition = "prison_guards_attack2_self";
+		break;
+
+		//Talk to self when reaching locator, think where to find Atwood
+		case "prison_guards_attack2_self":
+			LAi_SetActorType(Pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "At_turks_talk_self1";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+		break;
+
+		//Set other 2 guards to attack pchar
+		case "prison_guards_attack2":
+			LAi_SetPlayerType(pchar);
+			LAi_SetActorType(characterfromID("Pirates_2"));
+			LAi_SetActorType(characterfromID("Pirates_4"));
+			LAi_ActorAttack(characterfromID("Pirates_2"),pchar, "");
+			LAi_ActorAttack(characterfromID("Pirates_4"),pchar, "");
+		break;
+
+		//Delay after talking to Atwood, otherwise some weirdness happens
+		case "after_atwood_delay":
+			LAi_QuestDelay("after_atwood_talk_self", 1.0);
+		break;
+
+		//Talk to self after meeting Atwood (hear guards coming!)
+		case "after_atwood_talk_self":
+			LAi_SetActorType(pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Turks_talk_self1_after_atwood";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+		break;
+
+		//Delay after talking to Atwood ESCAPE CELL, otherwise some weirdness happens
+		case "after_atwood_delay_escape_cell":
+			LAi_Fade("", "");
+			ChangeCharacterAddressGroup(pchar,"Fake_Turks_prison","goto","goto23");
+			LAi_QuestDelay("after_atwood_talk_self", 1.0);
+		break;
+
+		//After talk self, auto run to coffin's room
+		case "after_atwood_coffin":
+			LAi_SetActorType(pchar);
+			//Deal with run/walk mode, here must run
+			if(AlwaysRunToggle == false)  {
+				LAi_ActorRunToLocator (pchar, "goto", "goto13", "prepare_loc_coffin_self_dia", 6);
+			}
+			else {
+				LAi_ActorGoToLocator(pchar, "goto", "goto13", "prepare_loc_coffin_self_dia", 6);
+			}
+		break;
+
+		//Next to coffin room talk self, explain to self, coffins are in the room, so player understands
+		case "prepare_loc_coffin_self_dia":
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Turks_talk_self1_get_in_coffin";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+			LAi_ActorTurnToLocator(PChar, "reload", "reload10");
+		break;
+
+		//Reset the guards so they can get spawned correctly
+		case "prepare_guards_move":
+			LAi_type_actor_Reset(characterFromID("Pirates_1"));
+			LAi_type_actor_Reset(characterFromID("Pirates_4"));
+			ChangeCharacterAddress(characterFromID("Pirates_1"), "none", "");
+			ChangeCharacterAddress(characterFromID("Pirates_4"), "none", "");
+
+			SetModelFromID(CharacterFromID("Pirates_1"), "Corsair3");
+			SetModelFromID(CharacterFromID("Pirates_4"), "Pirat2");
+
+			//Set the camera outside cell to emulate player in coffin
+			locx = stf(loadedLocation.locators.camera.camera12.x);
+			locy = stf(loadedLocation.locators.camera.camera12.y);
+			locz = stf(loadedLocation.locators.camera.camera12.z);
+			locCameraToPos(locx, locy, locz, false);
+			//fade next quest
+			LAi_Fade("escape_in_coffin", "");
+		break;
+
+		//Move guards into scene for last dialogue
+		case "escape_in_coffin":
+			//Move character into the cell
+			ChangeCharacterAddressGroup(pchar,"Fake_Turks_prison","goto","goto11");
+			LAi_SetActorType(pchar);
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_1"),"Fake_Turks_prison","goto","goto21");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_4"),"Fake_Turks_prison","reload","reload6");
+			LAi_QuestDelay("escape_in_coffin2", 1.0);
+		break;
+
+		//Run npc guards to locators
+		case "escape_in_coffin2":
+			LAi_SetActorType(characterfromID("Pirates_1"));
+			LAi_SetActorType(characterfromID("Pirates_4"));
+			LAi_ActorRunToLocator(characterFromID("Pirates_1"), "reload", "reload10", "escape_in_coffin_guard_talk", 10);
+			LAi_ActorRunToLocator(characterFromID("Pirates_4"), "Goto", "Goto13", "", 11);
+		break;
+
+		//Npc guard talks to self/other guard
+		case "escape_in_coffin_guard_talk":
+			LAi_SetPlayerType(pchar);
+			Characters[GetCharacterIndex("Pirates_1")].dialog.currentnode = "escape_in_coffin_guard_talk_self";
+			LAi_ActorDialogNow(characterFromID("Pirates_1"),PChar,"",10);//start talking right away
+			LAi_ActorTurnToCharacter(characterFromID("Pirates_1"), characterFromID("Pirates_4"));
+		break;
+
+		//Fade before video just to make it a bit prettier
+		case "escape_in_coffin_video":
+			LAi_Fade("escape_in_coffin_video_play", "");
+		break;
+
+		//Play video
+		case "escape_in_coffin_video_play":
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("LegendJackSparrow\RUSSIAN\DMC_Coffin_escape", 25, "tp_deck_after_prison_deck_check");
+			else PostVideoAndQuest("LegendJackSparrow\DMC_Coffin_escape", 25, "tp_deck_after_prison_deck_check");//check which ship deck player is using
+			SetCurrentTime(24.00, 0);
+			DisableFastTravel(true);
+		break;
+
+		//check deck string from bigger to smaller decks
+		case "tp_deck_after_prison_deck_check":
+			switch(GetCharacterShipQDeck(pchar))
+			{
+				case "ShipDeck7":
+					LAi_QuestDelay("tp_deck_after_prison6and7", 0.0);;
+				break;
+
+				case "ShipDeck6":
+					LAi_QuestDelay("tp_deck_after_prison6and7", 0.0);
+				break;
+
+				//default:
+				LAi_QuestDelay("load_deck_turks_other", 0.0);
+			}
+		break;
+
+		//Dialogue on ships deck with the crew
+		//Used for deck6 and deck7 pearl and similar ships
+		case "tp_deck_after_prison6and7":
+			DoQuestReloadToLocation(GetCharacterShipQDeck(pchar), "goto", "goto27", "dialogue_start_deck_turks6and7");
+			//LAi_QuestDelay("dialogue_start_deck_turks", 1.0);
+		break;
+
+		//To sea and now and set sail
+		//Used for deck6 and deck7 pearl and similar ships
+		case "dialogue_start_deck_turks6and7":
+			LAi_LocationFightDisable(&Locations[FindLocation(GetCharacterShipQDeck(pchar))], true);
+			ChangeCharacterAddressGroup(CharacterFromID("Annamaria"),GetCharacterShipQDeck(pchar),"goto","goto20");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_5"),GetCharacterShipQDeck(pchar),"goto","goto11");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_6"),GetCharacterShipQDeck(pchar),"goto","goto21");
+			ChangeCharacterAddressGroup(CharacterFromID("Mr. Gibbs"),GetCharacterShipQDeck(pchar),"goto","goto2");
+
+			LAi_SetActorType(CharacterFromID("Mr. Gibbs"));
+			LAi_SetActorType(characterFromID("Annamaria"));
+			LAi_ActorTurnToCharacter(characterFromID("Annamaria"), pchar);
+			LAi_ActorTurnToCharacter(characterFromID("Pirates_5"), pchar);
+			LAi_ActorTurnToCharacter(characterFromID("Pirates_6"), pchar);
+
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Mr. Gibbs_dialog.c";
+			LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "talk_jack_ship_turks";
+		break;
+
+		//Dialogue on ships deck with the crew
+		//Used for any other deck
+		case "load_deck_turks_other":
+			DoQuestReloadToLocation(GetCharacterShipQDeck(pchar), "reload", "boatr", "dialogue_start_deck_turks_other");
+		break;
+
+		//Dialogue on ships deck with the crew
+		//Used for other decks as scene should't requite anything really specific
+		case "dialogue_start_deck_turks_other":
+			LAi_LocationFightDisable(&Locations[FindLocation(GetCharacterShipQDeck(pchar))], true);
+			PlaceCharacter(characterFromID("Annamaria"), "goto");
+			PlaceCharacter(characterFromID("Pirates_5"), "goto");
+			PlaceCharacter(characterFromID("Pirates_6"), "goto");
+			PlaceCharacter(characterFromID("Mr. Gibbs"), "goto");
+
+			LAi_SetActorType(CharacterFromID("Mr. Gibbs"));
+			LAi_SetActorType(characterFromID("Annamaria"));
+			LAi_ActorTurnToCharacter(characterFromID("Annamaria"), pchar);
+			LAi_ActorTurnToCharacter(characterFromID("Pirates_5"), pchar);
+			LAi_ActorTurnToCharacter(characterFromID("Pirates_6"), pchar);
+
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Mr. Gibbs_dialog.c";
+			LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "talk_jack_ship_turks";
+		break;
+
+		//After movie move to ship's deck, talk to crew
+		case "tp_deck_anamaria_dialog":
+			Characters[GetCharacterIndex("Annamaria")].Dialog.Filename = "Annamaria_dialog.c";
+			LAi_ActorDialog(characterFromID("Annamaria"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("Annamaria")].dialog.currentnode = "talk_jack_ship_turks_anamaria";
+		break;
+
+		//After movie move to ship's deck, talk to crew
+		case "tp_deck_gibbs_dialog_turks":
+			LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "tp_deck_gibbs_dialog_turks";
+		break;
+
+		//Cleanup, continue with DMC after here
+		case "cleanup_after_turks":
+			ChangeCharacterAddressGroup(CharacterFromID("prison_guard_captain"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("turks_prison_guard1"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Atwood Paddley"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_1"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_2"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_3"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_4"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_5"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_6"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Annamaria"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Elton Garfield"), "none", "", "");
+
+			LAi_LocationFightDisable(&Locations[FindLocation("Turks_port")], false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Fake_Turks_prison")], false);
+			LAi_LocationFightDisable(&Locations[FindLocation(GetCharacterShipQDeck(pchar))], false);
+
+			//Set gibbs and anamaria back to officers
+			LAi_SetOfficerType(characterfromID("Annamaria"));
+			LAi_SetOfficerType(characterfromID("Mr. Gibbs"));
+
+			Characters[GetCharacterIndex("Annamaria")].Dialog.Filename = "Enc_Officer_dialog.c";
+			Characters[GetCharacterIndex("Annamaria")].Dialog.CurrentNode = "Hired";
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Enc_Officer_dialog.c";
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.CurrentNode = "Hired";
+
+			DeleteAttribute(&Locations[FindLocation("Fake_Turks_prison")],"vcskip")
+			DisableFastTravel(false);
+			pchar.quest.disable_rebirth = false;
+
+			InterfaceStates.Buttons.Save.enable = 1;
+			LAi_QuestDelay("to_sea_sail_away", 0.3);
+		break;
+
+		//To sea and now and set sail
+		//Sail to Cozumel/roa
+		case "to_sea_sail_away":
+			QuestToSeaLogin_PrepareLoc("Turks", "reload", "reload_3", false);
+			QuestToSeaLogin_Launch();
+			AddQuestRecord("Dead mans chest", 5);
+			AddQuestRecord("Dead mans chest", 6);
+			Pchar.quest.Arrive_to_KhaelRoa_Bay.win_condition.l1 = "location";
+			Pchar.quest.Arrive_to_KhaelRoa_Bay.win_condition.l1.location = "KhaelRoa";
+			Pchar.quest.Arrive_to_KhaelRoa_Bay.win_condition = "Arrive_to_KhaelRoa_Bay";
+		break;
+
+		case "Arrive_to_KhaelRoa_Bay":
+			SetCurrentTime(24.00, 0);
+			InterfaceStates.Buttons.Save.enable = 0;
+			DisableFastTravel(true);
+			if(GetCharacterShipCabin(pchar)!="Cabin_none")  {
+			Locations[FindLocation(GetCharacterShipCabin(pchar))].reload.l1.disable = 1;
+			}
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l3.disable = 1;
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l5.disable = 1;
+			DoReloadFromSeaToLocation(GetCharacterShipQDeck(PChar), "rld", "startloc");
+			LAi_QuestDelay("bootstrap_deck_check", 1.0);
+		break;
+
+		//---SHIP CHECK CABIN CARGO SEADOGS---//
+		//All ships above rank 7 have crew qurters
+		//Has all
+		case "bootstrap_deck_check":
+			if(GetCharacterShipCabin(pchar)!="Cabin_none" && GetCharacterShipCargoHoldCount(pchar) >= 1 && GetCharacterShipCQuarters(pchar)!="")  {
+				LAi_QuestDelay("tp_deck_bootstrap_cabin_seadogs_cargo", 0.0);
+			}
+			//Else check for cargo and cabin
+			else {
+			   LAi_QuestDelay("bootstrap_deck_check2", 0.0);
+			}
+		break;
+
+		case "bootstrap_deck_check2":
+			//Has cabin and cargo but no crew quarters.
+			if(GetCharacterShipCabin(pchar)!="Cabin_none" && GetCharacterShipCargoHoldCount(pchar) >= 1 && GetCharacterShipCQuarters(pchar) =="")  {
+				LAi_QuestDelay("tp_deck_bootstrap_cabin_cargo", 0.0);
+			}
+			//Has no cabin OR cargo, most likely only has deck
+			else {
+			   LAi_QuestDelay("tp_deck_bootstrap_deck_only", 0.0);
+			}
+		break;
+		//---SHIP CHECK CABIN CARGO SEADOGS---//
+
+		//---IF SHIP HAS CABIN AND SEADOGS AND CARGO ---//
+		//Load to cabin, then move to cabin exit and tp seadogs
+		case "tp_deck_bootstrap_cabin_seadogs_cargo":
+			DoReloadCharacterToLocation(GetCharacterShipCabin(pchar), "rld", "startloc");
+			LAi_QuestDelay("tp_deck_bootstrap_cabin_cargo_self", 1.0);
+		break;
+
+		//Load to cabin, then move to cabin exit and tp seadogs
+		case "tp_deck_bootstrap_cabin_cargo_self":
+			LAi_SetActorType(pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Deck_cabin_bootstrap";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+		break;
+
+		//Load to cabin, then move to cabin exit and tp seadogs
+		case "tp_deck_bootstrap_cabin_seadogs_cargo2":
+			Locations[FindLocation(GetCharacterShipCabin(pchar))].reload.l1.disable = 1; //disable reload cabin doors
+			DisableFastTravel(true);
+			//bQuestDisableAllCommands = true;
+			Locations[FindLocation("Fake_Seadogs")].vcskip = true;
+			LAi_SetActorType(pchar);
+
+			//Deal with run/walk mode, here must walk
+			if(AlwaysRunToggle == true)
+			{
+				LAi_ActorRunToLocator (pchar, "reload", "reload1", "to_seadogs_bootstrap_parl_check", 10);
+			}
+			else
+			{
+				LAi_ActorGoToLocator(pchar, "reload", "reload1", "to_seadogs_bootstrap_parl_check", 10);
+			}
+		break;
+
+		//RLD To seadogs check for pearl deck
+		case "to_seadogs_bootstrap_parl_check":
+			//Check if has pearls deck, load pearls textures
+			if(GetCharacterShipQDeck(pchar) == "ShipDeck7")
+			{
+				Locations[FindLocation("Fake_Seadogs")].filespath.textures = "locations\decks\BlackPearl";//pearls texture path
+				DoReloadCharacterToLocation("Fake_Seadogs", "reload", "reload2");
+				LAi_QuestDelay("to_cargo_from_seadogs_bootst", 0.5);
+			}
+			//Is not pearl load default
+			else
+			{
+				DoReloadCharacterToLocation("Fake_Seadogs", "reload", "reload2");
+				LAi_QuestDelay("to_cargo_from_seadogs_bootst", 0.5);
+			}
+		break;
+
+		case "to_cargo_from_seadogs_bootst":
+			LAi_SetActorType(pchar);
+			//Deal with run/walk mode, here must walk
+			if(AlwaysRunToggle == true)
+			{
+				LAi_ActorRunToLocator (pchar, "goto", "goto6", "to_cargo_from_seadogs_bootst2", 6);
+			}
+			else
+			{
+				LAi_ActorGoToLocator(pchar, "goto", "goto6", "to_cargo_from_seadogs_bootst2", 6);
+			}
+		break;
+
+		//tp to cargo
+		case "to_cargo_from_seadogs_bootst2":
+			LAi_SetActorType(pchar);
+			//Deal with run/walk mode, here must walk
+			if(AlwaysRunToggle == true)  {
+				LAi_ActorRunToLocator (pchar, "reload", "reload1", "to_cargo_bootstrap_parl_check", 10);
+			}
+			else {
+				LAi_ActorGoToLocator(pchar, "reload", "reload1", "to_cargo_bootstrap_parl_check", 10);
+			}
+		break;
+		//---IF SHIP HAS CABIN AND SEADOGS AND CARGO ---//
+
+		//---IF SHIP HAS CABIN CARGO ONLY---//
+		case "tp_deck_bootstrap_cabin_cargo":
+			LAi_SetActorType(pchar);
+			DoQuestReloadToLocation(GetCharacterShipCabin(pchar), "rld", "startloc", "tp_deck_bootstrap_cabin_cargo_self2");
+		break;
+
+		//Load to cabin, then move to cabin exit and tp cargo
+		case "tp_deck_bootstrap_cabin_cargo_self2":
+			LAi_SetActorType(pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Deck_cabin_bootstrap_no_seadogs";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+		break;
+		//---IF SHIP HAS CABIN CARGO ONLY---//
+
+		//FOR RLD To CARGO check for deck/ship textures
+		case "to_cargo_bootstrap_parl_check":
+			//Check if has pearls deck, load pearls textures
+			if(GetCharacterShipQDeck(pchar) == "ShipDeck7")  {
+				Locations[FindLocation("Fake_Hold1")].filespath.textures = "locations\decks\BlackPearl";//pearls texture path
+				DoReloadCharacterToLocation("Fake_Hold1", "reload", "reload2");
+				LAi_QuestDelay("walk_to_cargo_Rum", 0.5);
+			}
+			//Is not pearl load default
+			else {
+				DoReloadCharacterToLocation("Fake_Hold1", "reload", "reload2");
+				LAi_QuestDelay("walk_to_cargo_Rum", 0.5);
+			}
+		break;
+
+		//Walk to rum bottles in cargo
+		case "walk_to_cargo_Rum":
+			LAi_SetActorType(pchar);
+			//Deal with run/walk mode, here must walk
+			if(AlwaysRunToggle == true)  {
+				LAi_ActorRunToLocator (pchar, "rld", "prison4", "talk_self_cargo_deck_bootstrap", 12);
+			}
+			else {
+				LAi_ActorGoToLocator(pchar, "rld", "prison4", "talk_self_cargo_deck_bootstrap", 12);
+			}
+        break;
+
+
+		//---IF SHIP HAS DECK ONLY---//
+		case "tp_deck_bootstrap_deck_only":
+			LAi_SetActorType(pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Deck_walk_bootstrap";//Walk to deck side walk_to_deck_Rum
+			LAi_ActorSelfDialog(Pchar, "player_back");
+        break;
+
+		//Walk to rum bottles on deck side
+		case "walk_to_deck_Rum":
+			LAi_SetActorType(pchar);
+			//Deal with run/walk mode, here must walk
+			if(AlwaysRunToggle == true)  {
+				LAi_ActorRunToLocator (pchar, "reload", "boatr", "talk_self_cargo_deck_bootstrap", 22);
+			}
+			else {
+				LAi_ActorGoToLocator(pchar, "reload", "boatr", "talk_self_cargo_deck_bootstrap", 22);
+			}
+        break;
+		//---IF SHIP HAS DECK ONLY---//
+
+
+		//Talk self try to grab the rum on DECK OR CARGO
+        case "talk_self_cargo_deck_bootstrap":
+			LAi_SetActorType(pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Deck_cargo_deck_bootstrap";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+        break;
+
+
+		//Spawn bootsrap talk on DECK OR CARGO
+        case "talk_cargo_deck_spawn_bootstrap":
+		LAi_LocationFightDisable(&Locations[FindLocation(GetCharacterShipQDeck(pchar))], true);
+		LAi_LocationFightDisable(&Locations[FindLocation("Fake_Hold1")], true);
+
+		//Has cargo
+		if(GetCharacterShipCargoHoldCount(pchar) >= 1)  {
+		   ChangeCharacterAddressGroup(CharacterFromID("Bootstrap Bill Turner"), "Fake_Hold1", "rld", "prison2");
+		   LAi_SetActorType(CharacterFromID("Bootstrap Bill Turner"));
+		   Characters[GetCharacterIndex("Bootstrap Bill Turner")].dialog.currentnode = "talk_jack_cargo_deck_DMC";
+		   LAi_ActorDialogNow(characterFromID("Bootstrap Bill Turner"),PChar,"",10);
+		}
+		//Has no cargo
+		else {
+		   PlaceCharacter(characterFromID("Bootstrap Bill Turner"), "goto");
+		   LAi_SetActorType(CharacterFromID("Bootstrap Bill Turner"));
+		   Characters[GetCharacterIndex("Bootstrap Bill Turner")].dialog.currentnode = "talk_jack_cargo_deck_DMC";
+		   LAi_ActorDialogNow(characterFromID("Bootstrap Bill Turner"),PChar,"",10);
+		 }
+		break;
+
+		//Despawn bootstrap, check players ship deck's
+		case "talk_cargo_deck_despawn_bootstrap":
+		ChangeCharacterAddressGroup(CharacterFromID("Bootstrap Bill Turner"), "none", "", "");
+		LAi_QuestDelay("bootstrap_deck_check3", 0.3);
+		break;
+
+		//---SHIP CHECK CABIN CARGO SEADOGS---//
+		//Run to wake up the crew section
+		//Has cargo and seadogs
+		case "bootstrap_deck_check3":
+		if(GetCharacterShipCargoHoldCount(pchar) >= 1 && GetCharacterShipCQuarters(pchar)!="")  {
+			LAi_QuestDelay("run_from_cargo_toseadogs_after", 0.0);
+		}
+		//Else check for just the cargo
+		else {
+			LAi_QuestDelay("bootstrap_deck_check4", 0.0);
+		}
+		break;
+
+		case "bootstrap_deck_check4":
+		//Has only cargo - run to exit only
+		if(GetCharacterShipCargoHoldCount(pchar) >= 1)  {
+			LAi_QuestDelay("run_from_cargo_todeck_after", 0.0);
+		}
+		//SHIP ONLY HAS DECK
+		else {
+			//Talk self and fade to gibbs talk / player already on deck
+			LAi_SetActorType(pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Deck_self_bootstrap_fade";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+		}
+		break;
+		//---SHIP CHECK CABIN CARGO SEADOGS---//
+
+
+		//---IF SHIP HAS CABIN CARGO AND DEADOGS---//
+		//Run to cargo exit next to seadogs
+		case "run_from_cargo_toseadogs_after":
+			LAi_SetActorType(pchar);
+			//Deal with run/walk mode, here must run
+			if(AlwaysRunToggle == true)  {
+				LAi_ActorGoToLocator (pchar, "reload", "reload2", "run_from_cargo_tp_seadogs", 12);
+			}
+			else {
+				LAi_ActorRunToLocator(pchar, "reload", "reload2", "run_from_cargo_tp_seadogs", 12);
+			}
+        break;
+
+		//Tp seadogs
+		case "run_from_cargo_tp_seadogs":
+			DoReloadCharacterToLocation("Fake_Seadogs", "reload", "reload1");
+			LAi_QuestDelay("run_to_locator_seadogs1", 0.5);
+		break;
+
+		case "run_to_locator_seadogs1":
+			LAi_ActorRunToLocator(pchar, "goto", "goto2", "at_seadogs_after_cargo_selftalk", 6);
+		break;
+
+		case "at_seadogs_after_cargo_selftalk":
+			LAi_SetActorType(pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Seadogs_deck_bootstrap";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+		break;
+
+		case "tp_to_deck_gibbs_talk_tp":
+			DoReloadCharacterToLocation(GetCharacterShipQDeck(pchar), "reload", "boatr");
+			LAi_QuestDelay("fade_before_gibbs_deck", 0.5);
+		break;
+		//---IF SHIP HAS CABIN CARGO AND SEADOGS---//
+
+
+		//---IF SHIP HAS CABIN AND CARGO ONLY---//
+		case "run_from_cargo_todeck_after":
+			LAi_SetActorType(pchar);
+			//Deal with run/walk mode, here must run
+			if(AlwaysRunToggle == true)  {
+				LAi_ActorGoToLocator (pchar, "reload", "reload2", "tp_to_deck_from_cargo", 12);
+			}
+			else {
+				LAi_ActorRunToLocator(pchar, "reload", "reload2", "tp_to_deck_from_cargo", 12);
+			}
+        break;
+
+		case "tp_to_deck_from_cargo":
+			DoReloadCharacterToLocation(GetCharacterShipQDeck(pchar), "reload", "boatr");
+			LAi_QuestDelay("at_deck_selftalk", 0.2);
+		break;
+
+		//If no seadogs or only deck
+		case "at_deck_selftalk":
+			LAi_SetActorType(pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Deck_self_bootstrap_fade";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+		break;
+		//---IF SHIP HAS CABIN AND CARGO ONLY---//
+
+		//Fade before Gibbs for all decks
+		case "fade_before_gibbs_deck":
+			LAi_Fade("tp_to_deck_gibbs_talk2", "");
+		break;
+
+		//Talk with Gibbs after fade, for all decks
+		case "tp_to_deck_gibbs_talk2":
+			LAi_LocationFightDisable(&Locations[FindLocation(GetCharacterShipQDeck(pchar))], true);
+			PlaceCharacter(characterFromID("Pirates_1"), "goto");
+			PlaceCharacter(characterFromID("Pirates_2"), "goto");
+			PlaceCharacter(characterFromID("Pirates_3"), "goto");
+			PlaceCharacter(characterFromID("Pirates_4"), "goto");
+
+			PlaceCharacter(characterFromID("Mr. Gibbs"), "goto");
+			LAi_QuestDelay("tp_to_deck_gibbs_talk3", 0.2);
+		break;
+
+		//Talk to gibbs on deck before cannibal
+		case "tp_to_deck_gibbs_talk3":
+			LAi_SetPlayerType(pchar);
+			LAi_SetActorType(CharacterFromID("Mr. Gibbs"));
+			LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Mr. Gibbs_dialog.c";
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "tp_deck_gibbs_dialog_bootstrap";
+			SetNextWeather("Clear");
+		break;
+
+		//Reload to cannibal island shore
+		case "load_shore_cannibal":
+			InterfaceStates.Buttons.Save.enable = 1;
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Pirates_1"), "none", "", "");
+		    ChangeCharacterAddressGroup(CharacterFromID("Pirates_2"), "none", "", "");
+		    ChangeCharacterAddressGroup(CharacterFromID("Pirates_3"), "none", "", "");
+		    ChangeCharacterAddressGroup(CharacterFromID("Pirates_4"), "none", "", "");
+
+			if(GetCharacterShipCabin(pchar)!="Cabin_none")  {
+				Locations[FindLocation(GetCharacterShipCabin(pchar))].reload.l1.disable = 0;
+			}
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l3.disable = 0;
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l5.disable = 0;
+
+			StorePassengers(PChar.id);//remove and save current Officers/Passengers
+			pchar.quest.disable_rebirth = true;
+
+			SetCurrentTime(12.00, 0);
+			DoQuestReloadToLocation("KhaelRoa_shore_fake", "goto", "goto4", "_");
+			SetCharacterShipLocation(PChar, "KhaelRoa_shore_fake");
+			LAi_QuestDelay("talk_gibbs_cannibal", 0.5);
+		break;
+
+		case "talk_gibbs_cannibal":
+			ChangeCharacterAddressGroup(CharacterFromID("Mr. Gibbs"), "KhaelRoa_shore_fake", "goto", "goto3");//maybe better locators
+			ChangeCharacterAddressGroup(CharacterFromID("Annamaria"), "KhaelRoa_shore_fake", "goto", "goto3");//maybe better locators
+			LAi_SetActorType(CharacterFromID("Mr. Gibbs"));
+			LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",3.0,1.0);
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Mr. Gibbs_dialog.c";
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "talk_gibbs_cannibal_shore";
+
+		break;
+
+		case "talk_gibbs_canniba2":
+			SetOfficersIndex(Pchar, 2, GetCharacterIndex("Annamaria"));
+			LAi_SetOfficerType(CharacterFromID("Annamaria"));
+ 			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Mr. Gibbs"));
+			LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
+
+			SetCharacterRemovable(characterFromID("Mr. Gibbs"), false);
+			SetCharacterRemovable(characterFromID("Annamaria"), false);
+
+			AddQuestRecord("Dead mans chest", 7);
+			Locations[FindLocation("KhaelRoa_Jungle_Fake_1")].reload.l3.disable = "1";
+			Locations[FindLocation("KhaelRoa_Jungle_Fake_1")].reload.l5.disable = "1";
+
+			Locations[FindLocation("KhaelRoa_Jungle_Fake_1")].vcskip = true;
+			Pchar.quest.spawn_cannibals_1.win_condition.l1 = "location";
+			Pchar.quest.spawn_cannibals_1.win_condition.l1.location = "KhaelRoa_Jungle_Fake_1";
+			Pchar.quest.spawn_cannibals_1.win_condition = "spawn_cannibals_1";
+		break;
+
+		case "spawn_cannibals_1":
+		sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "monsters", "monster1");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto4");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto5");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto7");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto8");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto3");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			LAi_QuestDelay("attack_cannibals_1", 0.1);
+
+		break;
+
+		case "attack_cannibals_1":
+			LAi_group_FightGroups("CANNIBAL", LAI_GROUP_PLAYER, true);
+
+			LAi_group_SetCheck("CANNIBAL", "talk_anamaria_cannibal");
+		break;
+
+		case "talk_anamaria_cannibal":
+			LAi_QuestDelay("talk_anamaria_cannibal1", 0.5);
+		break;
+
+		case "talk_anamaria_cannibal1":
+			LAi_SetFightMode(PChar, false);
+			LAi_SetActorType(CharacterFromID("Annamaria"));
+			LAi_ActorDialog(characterFromID("Annamaria"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("Annamaria")].Dialog.Filename = "Annamaria_dialog.c";
+			Characters[GetCharacterIndex("Annamaria")].dialog.currentnode = "talk_anamaria_cannibal";
+		break;
+
+		case "talk_anamaria_cannibal2":
+			LAi_SetOfficerType(CharacterFromID("Annamaria"));
+			Pchar.quest.spawn_cannibals_2.win_condition.l1 = "location";
+			Pchar.quest.spawn_cannibals_2.win_condition.l1.location = "roa_Cave_fake";
+			Pchar.quest.spawn_cannibals_2.win_condition = "spawn_cannibals_2";
+		break;
+
+		case "spawn_cannibals_2":
+		sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack", "monsters", "monster1");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+
+			EquipCharacterByItem(sld, "bladearrows");
+			GiveItem2Character(sld, "pistolbow");
+			EquipCharacterByItem(sld, "pistolbow");
+			sld.id = "Cannibal_j";
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack_1", "goto", "goto5");
+			sld.name = TranslateString("", "Cannibal");
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+
+			EquipCharacterByItem(sld, "bladearrows");
+			GiveItem2Character(sld, "pistolbow");
+			EquipCharacterByItem(sld, "pistolbow");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			sld.id = "Cannibal_g";
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack", "goto", "goto4");
+			sld.name = TranslateString("", "Cannibal");
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+
+			EquipCharacterByItem(sld, "bladearrows");
+			GiveItem2Character(sld, "pistolbow");
+			EquipCharacterByItem(sld, "pistolbow");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			sld.id = "Cannibal_A";
+
+			InterfaceStates.Buttons.Save.enable = 0;
+			LAi_QuestDelay("run_to_cave_locators", 0.5);
+
+		break;
+
+		case "run_to_cave_locators":
+		LAi_SetActorType(pchar);
+		LAi_SetActorType(characterFromID("Annamaria"));
+		LAi_SetActorType(characterFromID("Mr. Gibbs"));
+
+		LAi_ActorRunToLocator(characterFromID("Annamaria"), "goto", "goto9", "", 18);
+		LAi_ActorRunToLocator(characterFromID("Mr. Gibbs"), "goto", "goto7", "", 18);
+		LAi_QuestDelay("run_to_cave_locators_player", 1.8);
+		break;
+
+		case "run_to_cave_locators_player":
+		LAi_SetActorType(characterFromID("Cannibal_j"));
+		//Deal with run/walk mode, here must run
+		if(AlwaysRunToggle == false)  {
+			LAi_ActorRunToLocator (pchar, "goto", "Goto10", "dialogue_gibbs_cave", 31);
+		}
+		else {
+			LAi_ActorGoToLocator(pchar, "goto", "Goto10", "dialogue_gibbs_cave", 31);
+		}
+		break;
+
+		//Jack it's an ambush!
+		case "dialogue_gibbs_cave":
+		LAi_SetPlayerType(pchar);
+		LAi_SetActorType(characterFromID("Mr. Gibbs"));
+		LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",0.0,1.0);
+		Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Mr. Gibbs_dialog.c";
+		Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "dialogue_gibbs_cave";
+		break;
+
+		case "attack_cannibals_2":
+			LAi_SetActorType(pchar);
+			LAi_SetActorType(characterFromID("Cannibal_j"));
+			LAi_SetActorType(characterFromID("Cannibal_A"));
+			LAi_SetActorType(characterFromID("Cannibal_g"));
+
+
+			LAi_ActorAttack(characterFromID("Cannibal_j"), pchar, "");
+			LAi_ActorAttack(characterFromID("Cannibal_A"), characterFromID("Annamaria"), "");
+			LAi_ActorAttack(characterFromID("Cannibal_g"), characterFromID("Mr. Gibbs"), "");
+
+			LAi_QuestDelay("attack_cannibals_poison", 3.2);
+		break;
+
+		case "attack_cannibals_poison":
+		LAi_SetStayType(CharacterFromID("Cannibal_j"));
+		LAi_SetStayType(CharacterFromID("Cannibal_A"));
+		LAi_SetStayType(CharacterFromID("Cannibal_g"));
+		LAi_ApplyCharacterDamage(Pchar, 15);
+		LAi_ApplyCharacterDamage(characterFromID("Annamaria"), 15);
+		LAi_ApplyCharacterDamage(characterFromID("Mr. Gibbs"), 15);
+		LAi_QuestDelay("dialogue_gibbs_cave_poisoned", 1.0)
+		break;
+
+		//I'm poisoned dialogue
+		case "dialogue_gibbs_cave_poisoned":
+		LAi_SetPlayerType(pchar);
+		LAi_SetActorType(characterFromID("Mr. Gibbs"));
+		Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Mr. Gibbs_dialog.c";
+		Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "dialogue_gibbs_cave_poisoned";
+		LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+		break;
+
+		//Fade before setting actors to sitting/stunned
+		case "fade_before_stunned":
+			LAi_Fade("set_stunned_and_fade", "");
+		break;
+
+		case "set_stunned_and_fade":
+		LAi_SetStunnedTypeNoGroup(PChar);
+		LAi_SetStunnedTypeNoGroup(characterFromID("Annamaria"));
+		LAi_SetStunnedTypeNoGroup(characterFromID("Mr. Gibbs"));
+
+		LAi_QuestDelay("fade_before_lay", 3.0)
+		break;
+
+		//Fade before setting actors to sitting/stunned
+		case "fade_before_lay":
+			LAi_Fade("set_lay_and_fade", "");
+		break;
+
+		case "set_lay_and_fade":
+		LAi_SetActorType(PChar);
+		LAi_SetActorType(characterFromID("Annamaria"));
+		LAi_SetActorType(characterFromID("Mr. Gibbs"));
+
+		LAi_SetActorType(characterFromID("Cannibal_j"));
+		LAi_SetActorType(characterFromID("Cannibal_A"));
+		LAi_SetActorType(characterFromID("Cannibal_g"));
+
+		LAi_ActorSetLayMode(PChar);
+		LAi_ActorSetLayMode(characterFromID("Mr. Gibbs"));
+		LAi_ActorSetLayMode(characterFromID("Annamaria"));
+
+		LAi_ActorGoToLocator(characterFromID("Cannibal_j"), "goto", "goto10", "", 7);
+		LAi_ActorGoToLocator(characterFromID("Cannibal_A"), "goto", "goto9", "", 7);
+		LAi_ActorGoToLocator(characterFromID("Cannibal_g"), "goto", "goto7", "", 8);
+
+		LAi_QuestDelay("TP_Indian_village_fade", 2.5)
+		break;
+
+		//Fade before setting actors to sitting/stunned
+		case "TP_Indian_village_fade":
+			LAi_Fade("TP_Indian_village", "");
+		break;
+
+		case "TP_Indian_village":
+			ChangeCharacterAddressGroup(characterFromID("Annamaria"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "none", "", "");
+
+			LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
+			LAi_SetOfficerType(CharacterFromID("Annamaria"));
+
+			RemovePassenger(pchar, characterFromID("Mr. Gibbs"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Mr. Gibbs"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Annamaria"));
+			RemovePassenger(pchar, characterFromID("Annamaria"));
+
+			DoQuestReloadToLocation("Indian_Village2", "goto", "goto4", "spawn_cannibals_3");
+		break;
+
+		case "spawn_cannibals_3":
+			ChangeCharacterAddressGroup(characterFromID("Cannibal_chief"), "Indian_Village2", "goto", "goto5")
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack_1", "soldiers", "soldier1");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack", "goto", "goto17");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack_1", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack_1", "goto", "goto18");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack", "rld", "loc1");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+
+			LAi_QuestDelay("get_up_canibals_talk1", 2.0);
+
+		break;
+
+		case "get_up_canibals_talk1":
+		LAi_Fade("get_up_canibals_talk2", "");
+		break;
+
+		case "get_up_canibals_talk2":
+		LAi_SetPlayerType(pchar);
+		LAi_SetActorType(characterFromID("Cannibal_chief"));
+		Characters[GetCharacterIndex("Cannibal_chief")].dialog.currentnode = "get_up_canibals_talk";
+		LAi_ActorDialogNow(characterFromID("Cannibal_chief"), pchar, "", -1);
+		break;
+
+		case "reload_in_village":
+		DoQuestReloadToLocation("Indian_Village2", "goto", "goto11", "spawn_cannibals_and_will");
+		LAi_group_SetRelation(LAI_GROUP_PLAYER, "CANNIBAL", LAI_GROUP_NEUTRAL);
+		LAi_SetActorType(characterFromID("Will Turner"));
+		break;
+
+		case "spawn_cannibals_and_will":
+		ChangeCharacterAddressGroup(characterFromID("Cannibal_chief"), "none", "", "");
+		ChangeCharacterAddressGroup(characterFromID("Will Turner"), "Indian_Village2", "rld", "loc0");
+
+		LAi_group_MoveCharacter(characterFromID("Cannibal_chief"), "CANNIBAL");
+		sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, "RabBlack_1", "goto", "goto1");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			sld.id = "Cannibal_1";
+			LAi_group_MoveCharacter(characterFromID("Cannibal_1"), "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, "RabBlack", "goto", "goto20");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+
+			EquipCharacterByItem(sld, "bladearrows");
+			GiveItem2Character(sld, "pistolbow");
+			EquipCharacterByItem(sld, "pistolbow");
+			LAi_SetHP(sld, 80.0, 80.0);
+			sld.id = "Cannibal_2";
+			LAi_group_MoveCharacter(characterFromID("Cannibal_2"), "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, "RabBlack_1", "goto", "goto16");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 50.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, "RabBlack", "goto", "goto17");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+
+			EquipCharacterByItem(sld, "bladearrows");
+			GiveItem2Character(sld, "pistolbow");
+			EquipCharacterByItem(sld, "pistolbow");
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, "RabBlack", "goto", "goto3");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, "RabBlack_1", "goto", "goto18");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, "RabBlack", "goto", "goto13");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+			GiveItem2Character(sld, "bladearrows");
+
+			EquipCharacterByItem(sld, "bladearrows");
+			GiveItem2Character(sld, "pistolbow");
+			EquipCharacterByItem(sld, "pistolbow");
+
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+			LAi_QuestDelay("cannibals_and_will_walk", 0.4);
+		break;
+
+
+		case "cannibals_and_will_walk":
+			LAi_SetImmortal(characterFromID("Will Turner"), true);
+			LAi_SetActorType(pchar);
+			LAi_SetActorType(characterFromID("Cannibal_1"));
+			LAi_SetActorType(CharacterFromID("Will Turner"));
+			LAi_SetActorType(CharacterFromID("Cannibal_2"));
+
+			LAi_ActorTurnToCharacter(pchar, CharacterFromID("Will Turner"));
+
+			LAi_ActorGoToLocator(characterFromID("Cannibal_1"), "soldiers", "protector1", "", 31);
+			LAi_ActorGoToLocator(characterFromID("Will Turner"), "sit", "ground1", "cannibals_will_talk", 31);
+			LAi_ActorFollow(CharacterFromID("Cannibal_2"),characterFromID("Will Turner"),"",31);
+		break;
+
+		case "cannibals_will_talk":
+			LAi_SetPlayerType(pchar);
+			Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "cannibals_will_talk";
+			LAi_ActorDialogNow(characterFromID("Will Turner"), pchar, "", -1);
+		break;
+
+		case "cannibals_will_fight":
+			LAi_group_MoveCharacter(characterFromID("Cannibal_1"), "CANNIBAL");
+			LAi_group_MoveCharacter(characterFromID("Cannibal_2"), "CANNIBAL");
+
+			Locations[FindLocation("KhaelRoa_Jungle_Fake_Bridge")].reload.l1.disable = "1";
+			Locations[FindLocation("Indian_Village2")].reload.l1.disable = "1";
+
+			SetOfficersIndex(Pchar, 1, GetCharacterIndex("Will Turner"));
+			LAi_SetOfficerType(CharacterFromID("Will Turner"));
+			SetCharacterRemovable(characterFromID("Will Turner"), false);
+
+			LAi_SetFightMode(PChar, true);
+
+			LAi_ActorAttack(characterFromID("Cannibal_1"), pchar, "");
+			LAi_ActorAttack(characterFromID("Cannibal_2"), pchar, "");
+
+			LAi_group_FightGroups("CANNIBAL", LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck("CANNIBAL", "cannibals_will_talk2");
+		break;
+
+		//Delay just in case
+		case "cannibals_will_talk2":
+			LAi_LocationFightDisable(&Locations[FindLocation("Indian_Village2")], true);
+			LAi_QuestDelay("cannibals_will_talk3", 2.4);
+		break;
+
+		//Jack lets get out of here
+		case "cannibals_will_talk3":
+			LAi_SetFightMode(PChar, false);
+			LAi_SetPlayerType(pchar);
+			LAi_SetActorType(CharacterFromID("Will Turner"));
+			Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "cannibals_will_talk2";
+			LAi_ActorDialogNow(characterFromID("Will Turner"), pchar, "", -1);
+
+			Locations[FindLocation("Indian_Village2")].reload.l1.disable = "0";
+			Locations[FindLocation("KhaelRoa_Jungle_Fake_Bridge")].reload.l2.disable = "1";
+		break;
+
+		case "cannibals_bridge_run1":
+			LAi_SetOfficerType(CharacterFromID("Will Turner"));
+			Pchar.quest.cannibals_bridge_run2.win_condition.l1 = "location";
+			Pchar.quest.cannibals_bridge_run2.win_condition.l1.location = "KhaelRoa_Jungle_Fake_Bridge";
+			Pchar.quest.cannibals_bridge_run2.win_condition = "cannibals_bridge_run2";
+		break;
+
+		case "cannibals_bridge_run2":
+			locx = stf(loadedLocation.locators.camera.camera1.x);
+			locy = stf(loadedLocation.locators.camera.camera1.y);
+			locz = stf(loadedLocation.locators.camera.camera1.z);
+			locCameraToPos(locx, locy, locz, false);
+
+			LAi_QuestDelay("cannibals_bridge_run3", 2.4);
+			//Deal with run/walk mode, here must run
+			LAi_SetActorType(pchar);
+			if(AlwaysRunToggle == false)  {
+			LAi_ActorRunToLocator (pchar, "goto", "goto40", "spawn_cannibals_bridge_2", 31);
+			}
+			else {
+			LAi_ActorGoToLocator(pchar, "goto", "goto40", "spawn_cannibals_bridge_2", 31);
+			}
+		break;
+
+		case "cannibals_bridge_run3":
+			LAi_SetActorType(CharacterFromID("Will Turner"));
+			LAi_ActorRunToLocator(characterFromID("Will Turner"), "goto", "goto41", "", 31);
+
+			LAi_group_MoveCharacter(CharacterFromID("Will Turner"), "PLAYER");
+			LAi_group_MoveCharacter(PChar, "PLAYER");
+
+			LAi_QuestDelay("spawn_cannibals_bridge_1", 0.1);
+		break;
+
+		case "spawn_cannibals_bridge_1":
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 40.0, 40.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 40.0, 40.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 40.0, 40.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 30.0, 30.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 30.0, 30.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+			LAi_group_FightGroups("CANNIBAL", "PLAYER", true);
+		break;
+
+
+		case "spawn_cannibals_bridge_2":
+			locCameraFollow();
+			LAi_SetPlayerType(pchar);
+			LAi_SetFightMode(PChar, true);
+			LAi_SetOfficerType(CharacterFromID("Will Turner"));
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "officers", "reload1_1");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 286.0, 286.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "officers", "reload1_2");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 286.0, 286.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			LAi_group_FightGroups("CANNIBAL", "PLAYER", true)
+			LAi_group_SetCheck("CANNIBAL", "cannibals_bridge_escape_to_cavern");
+		break;
+
+		case "cannibals_bridge_escape_to_cavern":
+			LAi_group_MoveCharacter(CharacterFromID("Will Turner"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(PChar, LAI_GROUP_PLAYER);
+			InterfaceStates.Buttons.Save.enable = 1;
+
+			Locations[FindLocation("KhaelRoa_Jungle_Fake_Bridge")].reload.l2.disable = "0";
+			Pchar.quest.spawn_cannibals_cavern.win_condition.l1 = "location";
+			Pchar.quest.spawn_cannibals_cavern.win_condition.l1.location = "KhaelRoa_Cavern_fake";
+			Pchar.quest.spawn_cannibals_cavern.win_condition = "spawn_cannibals_cavern";
+		break;
+
+		case "spawn_cannibals_cavern":
+			InterfaceStates.Buttons.Save.enable = 0;
+			RemovePassenger(pchar, characterFromID("Will Turner"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Will Turner"));
+
+			ChangeCharacterAddressGroup(characterFromID("Annamaria"), "KhaelRoa_Cavern_fake", "monsters", "monster8");
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "KhaelRoa_Cavern_fake", "monsters", "monster7");
+			LAi_group_MoveCharacter(CharacterFromID("Annamaria"), "NPC");
+			LAi_group_MoveCharacter(CharacterFromID("Mr. Gibbs"), "NPC");
+
+			LAi_SetImmortal(characterFromID("Annamaria"), true);
+			LAi_SetImmortal(characterFromID("Mr. Gibbs"), true);
+
+
+			LAi_SetStunnedTypeNoGroup(characterFromID("Mr. Gibbs"));
+			LAi_SetActorType(CharacterFromID("Annamaria"));
+			LAi_SetFightMode(PChar, true);
+			LAi_ActorTurnToCharacter(characterFromID("Annamaria"), pchar);
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "monsters", "monster9");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 100.0, 100.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "monsters", "monster5");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 100.0, 100.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "monsters", "monster2");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 100.0, 100.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "monsters", "monster1");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 100.0, 100.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL")
+
+			LAi_QuestDelay("cavern_fight_cabbibals", 0.5);
+		break;
+
+		case "cavern_fight_cabbibals":
+			ChangeCharacterAddressGroup(characterFromID("Will Turner"), "KhaelRoa_Cavern_fake", "officers", "reload2_3");
+			SetOfficersIndex(Pchar, 1, GetCharacterIndex("Will Turner"));
+			LAi_SetOfficerType(CharacterFromID("Will Turner"));
+
+			SetCharacterRemovable(characterFromID("Will Turner"), false);
+			LAi_SetImmortal(characterFromID("Will Turner"), true);
+
+			Locations[FindLocation("KhaelRoa_Cavern_fake")].reload.l1.disable = "1";
+			Locations[FindLocation("KhaelRoa_Cavern_fake")].reload.l2.disable = "1";
+			Locations[FindLocation("KhaelRoa_Cavern_fake")].reload.l3.disable = "1";
+			Locations[FindLocation("KhaelRoa_Cavern_fake")].reload.l4.disable = "1";
+
+			LAi_group_FightGroups("CANNIBAL", LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck("CANNIBAL", "cavern_talk_gibbs_escape1");
+		break;
+
+		case "cavern_talk_gibbs_escape1":
+			LAi_QuestDelay("cavern_talk_gibbs_escape2", 1.0);
+		break;
+
+		case "cavern_talk_gibbs_escape2":
+			LAi_SetFightMode(PChar, false);
+			//Deal with run/walk mode, here must run
+			LAi_SetActorType(pchar);
+			if(AlwaysRunToggle == false)  {
+				LAi_ActorRunToLocator (pchar, "monsters", "monster9", "cavern_talk_gibbs_fade", 11);
+			}
+			else {
+				LAi_ActorGoToLocator(pchar, "monsters", "monster9", "cavern_talk_gibbs_fade", 11);
+			}
+		break;
+
+		case "cavern_talk_gibbs_fade":
+		LAi_Fade("cavern_talk_gibbs_escape3", "");
+		break;
+
+		case "cavern_talk_gibbs_escape3":
+			LAi_SetPlayerType(pchar);
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Mr. Gibbs_dialog.c";
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "cavern_talk_gibbs_escape";
+			LAi_SetActorType(CharacterFromID("Mr. Gibbs"));
+			LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+		break;
+
+
+		case "cavern_talk_gibbs_escape4":
+			InterfaceStates.Buttons.Save.enable = 1;
+			SetOfficersIndex(Pchar, 2, GetCharacterIndex("Annamaria"));
+			LAi_SetOfficerType(CharacterFromID("Annamaria"));
+ 			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Mr. Gibbs"));
+			LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
+
+			LAi_SetImmortal(characterFromID("Annamaria"), true);
+			LAi_SetImmortal(characterFromID("Mr. Gibbs"), true);
+			SetCharacterRemovable(characterFromID("Annamaria"), false);
+			SetCharacterRemovable(characterFromID("Mr. Gibbs"), false);
+
+			Locations[FindLocation("KhaelRoa_Cavern_fake")].reload.l1.disable = "0";
+			Locations[FindLocation("KhaelRoa_Cavern_fake")].reload.l2.disable = "0";
+
+			Pchar.quest.spawn_cannibals_4.win_condition.l1 = "location";
+			Pchar.quest.spawn_cannibals_4.win_condition.l1.location = "KhaelRoa_Jungle_Fake_1";
+			Pchar.quest.spawn_cannibals_4.win_condition = "spawn_cannibals_4";
+		break;
+
+
+		case "spawn_cannibals_4":
+		Locations[FindLocation("KhaelRoa_Jungle_Fake_1")].reload.l4.disable = "1";
+		sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "monsters", "monster1");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto4");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto5");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto7");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto8");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto3");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			LAi_QuestDelay("attack_cannibals_4", 0.1);
+
+		break;
+
+		case "attack_cannibals_4":
+			LAi_group_FightGroups("CANNIBAL", LAI_GROUP_PLAYER, true);
+
+			LAi_group_SetCheck("CANNIBAL", "talk_anamaria_cannibals3");
+		break;
+
+		case "talk_anamaria_cannibals3":
+			LAi_QuestDelay("talk_anamaria_cannibals4", 0.5);
+		break;
+
+		case "talk_anamaria_cannibals4":
+			LAi_SetFightMode(PChar, false);
+			LAi_SetPlayerType(pchar);
+			LAi_SetActorType(CharacterFromID("Annamaria"));
+			LAi_ActorDialog(characterFromID("Annamaria"),PChar,"",1.0,1.0);
+			Characters[GetCharacterIndex("Annamaria")].Dialog.Filename = "Annamaria_dialog.c";
+			Characters[GetCharacterIndex("Annamaria")].dialog.currentnode = "talk_anamaria_cannibal2";
+		break;
+
+		case "reload_to_shore_cannibal":
+			RemovePassenger(pchar, characterFromID("Will Turner"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Will Turner"));
+			RemovePassenger(pchar, characterFromID("Annamaria"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Annamaria"));
+			RemovePassenger(pchar, characterFromID("Mr. Gibbs"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Mr. Gibbs"));
+			LAi_QuestDelay("reload_to_shore_canniba2", 0.1);
+		break;
+
+
+		case "reload_to_shore_canniba2":
+			DoQuestReloadToLocation("KhaelRoa_shore_fake", "goto", "goto6", "_");
+			ChangeCharacterAddressGroup(characterFromID("Will Turner"), "KhaelRoa_shore_fake", "goto", "goto6");
+			ChangeCharacterAddressGroup(characterFromID("Annamaria"), "KhaelRoa_shore_fake", "goto", "goto6");
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "KhaelRoa_shore_fake", "goto", "goto6");
+			LAi_QuestDelay("shore_cannibal_escape1", 0.3);
+		break;
+
+		case "shore_cannibal_escape1":
+			LAi_SetActorType(pchar);
+			LAi_SetActorType(characterFromID("Will Turner"));
+			LAi_SetActorType(characterFromID("Annamaria"));
+			LAi_SetActorType(characterFromID("Mr. Gibbs"));
+
+			InterfaceStates.Buttons.Save.enable = 0;
+			locx = stf(loadedLocation.locators.goto.goto2.x);
+			locy = stf(loadedLocation.locators.goto.goto2.y);
+			locz = 25;
+			locCameraToPos(locx, locy, locz, false);
+
+			LAi_QuestDelay("shore_cannibal_run_boat", 0.2);
+		break;
+
+		case "shore_cannibal_run_boat":
+		LAi_ActorRunToLocator(characterFromID("Will Turner"), "reload", "boat", "", 12);
+		LAi_ActorRunToLocator(characterFromID("Annamaria"), "reload", "boat", "", 12);
+		LAi_ActorRunToLocator(characterFromID("Mr. Gibbs"), "reload", "boat", "", 12);
+		//Deal with run/walk mode, here must run
+		if(AlwaysRunToggle == true)  {
+			LAi_ActorGoToLocator (pchar, "reload", "boat", "", 12);
+		}
+		else {
+			LAi_ActorRunToLocator(pchar, "reload", "boat", "", 12);
+		}
+		LAi_QuestDelay("spawn_cannibals_5", 1.5);
+		break;
+
+		case "spawn_cannibals_5":
+		Locations[FindLocation("KhaelRoa_Jungle_Fake_1")].reload.l4.disable = "1";
+		sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "RabBlack_1", "goto", "goto6");
+			sld.name = TranslateString("", "Cannibal");
+			sld.lastname = "";
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "CANNIBAL");
+
+			LAi_QuestDelay("fight_player_shore", 0.0);
+		break;
+
+		case "fight_player_shore":
+			LAi_group_MoveCharacter(PChar, "PLAYER");
+			LAi_group_FightGroups("CANNIBAL", "PLAYER", true)
+
+			LAi_QuestDelay("escape_cannibals_video_fade", 6.1);
+		break;
+
+		case "escape_cannibals_video_fade":
+			LAi_Fade("escape_cannibals_video_play", "");
+			locCameraFollow();
+		break;
+
+		//Play video
+		case "escape_cannibals_video_play":
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("LegendJackSparrow\RUSSIAN\DMC_cannibals_escape", 25, "tp_deck_after_cannibals");
+			else PostVideoAndQuest("LegendJackSparrow\DMC_cannibals_escape", 25, "tp_deck_after_cannibals");
+			//SetCurrentTime(24.00, 0);
+			DisableFastTravel(true);
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l3.disable = 1;
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l5.disable = 1;
+		break;
+
+		case "tp_deck_after_cannibals":
+
+			DoQuestReloadToLocation(GetCharacterShipQDeck(pchar), "reload", "boatr", "dialogue_start_deck_cannibals_after");
+			//LAi_QuestDelay("dialogue_start_deck_turks", 1.0);
+		break;
+
+		case "dialogue_start_deck_cannibals_after":
+		LAi_LocationFightDisable(&Locations[FindLocation(GetCharacterShipQDeck(pchar))], true);
+		PlaceCharacter(characterFromID("Will Turner"), "goto");
+		PlaceCharacter(characterFromID("Mr. Gibbs"), "goto");
+		PlaceCharacter(characterFromID("Annamaria"), "goto");
+
+		LAi_SetPlayerType(pchar);
+		LAi_SetActorType(CharacterFromID("Mr. Gibbs"));
+		LAi_SetActorType(characterFromID("Annamaria"));
+		LAi_SetActorType(characterFromID("Will Turner"));
+		LAi_ActorTurnToCharacter(characterFromID("Annamaria"), pchar);
+		LAi_ActorTurnToCharacter(characterFromID("Mr. Gibbs"), pchar);
+		LAi_ActorTurnToCharacter(characterFromID("Will Turner"), pchar);
+
+		LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",1.0,1.0);
+		Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "after_cannib_talk";
+		break;
+
+		case "dialogue_start_deck_cannibals_after_will":
+		LAi_ActorDialog(characterFromID("Will Turner"),PChar,"",1.0,1.0);
+		Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "after_cannib_talk_will";
+		break;
+
+
+		//Cleanup, continue with DMC after here
+		case "cleanup_after_roa":
+		ChangeCharacterAddressGroup(characterFromID("Annamaria"), "none", "", "");
+		ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "none", "", "");
+		ChangeCharacterAddressGroup(characterFromID("Will Turner"), "none", "", "");
+		LAi_LocationFightDisable(&Locations[FindLocation(GetCharacterShipQDeck(pchar))], false);
+
+		LAi_SetOfficerType(characterfromID("Annamaria"));
+		LAi_SetOfficerType(characterfromID("Mr. Gibbs"));
+		LAi_SetOfficerType(characterfromID("Will Turner"));;
+
+		Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l3.disable = 0;
+		Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l5.disable = 0;
+
+		RestorePassengers(PChar.id);
+
+		DisableFastTravel(false);
+		pchar.quest.disable_rebirth = false;
+		InterfaceStates.Buttons.Save.enable = 1;
+
+		//Kraken attacks if player takes more than 22 days to sail to Muscetto Cove
+		PChar.quest.Kraken_attack_dmc_1.win_condition.l1 = "Timer";
+		PChar.quest.Kraken_attack_dmc_1.win_condition.l1.date.day = GetAddingDataDay(0,0,22);
+		PChar.quest.Kraken_attack_dmc_1.win_condition.l1.date.month = GetAddingDataMonth(0,0,22);
+		PChar.quest.Kraken_attack_dmc_1.win_condition.l1.date.year = GetAddingDataYear(0,0,22);
+		PChar.quest.Kraken_attack_dmc_1.win_condition = "Kraken_attack_dmc_1";
+
+		LAi_QuestDelay("to_sea_sail_away_roa", 0.3);
+		break;
+
+		//To sea and now and set sail
+		case "to_sea_sail_away_roa":
+		QuestToSeaLogin_PrepareLoc("KhaelRoa", "reload", "reload_1", false);
+		QuestToSeaLogin_Launch();
+
+		SetOfficersIndex(Pchar, 1, GetCharacterIndex("Will Turner"));
+		LAi_SetOfficerType(CharacterFromID("Will Turner"));
+		SetOfficersIndex(Pchar, 2, GetCharacterIndex("Annamaria"));
+		LAi_SetOfficerType(CharacterFromID("Annamaria"));
+ 		SetOfficersIndex(Pchar, 3, GetCharacterIndex("Mr. Gibbs"));
+		LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
+
+		SetCharacterRemovable(characterFromID("Annamaria"), true);
+		SetCharacterRemovable(characterFromID("Mr. Gibbs"), true);
+		SetCharacterRemovable(characterFromID("Will Turner"), true);
+
+		AddQuestRecord("Dead mans chest", 8);
+		//Sail to antigua Muscetto Cove
+		Pchar.quest.sailed_to_antigua_2.win_condition.l1 = "location";
+		Pchar.quest.sailed_to_antigua_2.win_condition.l1.location = "Antigua_shore";
+		Pchar.quest.sailed_to_antigua_2.win_condition = "sailed_to_antigua_2";
+		break;
+
+		case "Kraken_attack_dmc_1":
+			if (!bSeaActive)
+			{
+				DoQuestCheckDelay("Krak_loop_dmc_1", 1.0);
+			}
+			else
+			{
+				KrakenAttack(pchar, GetCharacterShipHP(pchar)/50); // PB: Enough tentacles to sink you twice - 100 //SEB: was 100 before
+				DisableFastTravel(true);
+				bQuestDisableMapEnter = true;
+				for(cc = 0; cc<ISLANDS_QUANTITY; cc++)
+				{
+					Island_SetReloadEnableGlobal(Islands[cc].id, false);
+				}
+
+				pchar.ship.hp = GetCharacterShipHP(pchar)/2; // make it easier for kraken to sink us
+
+				Pchar.quest.Kraken_got_us_DMC_1.win_condition.l1 = "Ship_HP";
+				Pchar.quest.Kraken_got_us_DMC_1.win_condition.l1.character = PChar.id;
+				Pchar.quest.Kraken_got_us_DMC_1.win_condition.l1.quantity = 0;
+				Pchar.quest.Kraken_got_us_DMC_1.win_condition.l1.operation = "=";
+				Pchar.quest.Kraken_got_us_DMC_1.win_condition = "Kraken_got_us_DMC_1";
+
+				DoQuestCheckDelay("Kraken_got_us_DMC1", 10.0);
+			}
+		break;
+
+		case "Krak_loop_dmc_1":
+			DoQuestCheckDelay("Kraken_attack_dmc_1", 1.0);
+		break;
+
+		case "Kraken_got_us_DMC_1":
+			DoQuestCheckDelay("Kraken_got_us_DMC2", 10.0);
+		break;
+
+		case "Kraken_got_us_DMC1":
+			pchar.ship.hp = 0;
+			LAi_SetImmortal(PChar, false);
+			DoQuestCheckDelay("Kraken_got_us_DMC2", 15.0);
+		break;
+
+		case "Kraken_got_us_DMC2":
+			pchar.quest.disable_rebirth = true;
+			PostEvent("LAi_event_GameOver", 0, "s", "kraken");
+		break;
+
+		//Sailed to antigua Muscetto Cove talk to Gibbs
+		case "sailed_to_antigua_2":
+			PChar.quest.Kraken_attack_dmc_1.over = "yes"; // Kraken leaves for now
+			StorePassengers(PChar.id);//remove and save current Officers/Passengers
+
+			InterfaceStates.Buttons.Save.enable = 0;
+			LAi_LocationFightDisable(&Locations[FindLocation("Antigua_shore")], true);
+
+			SetCharacterToNearLocatorFromMe("Mr. Gibbs", 10);
+			SetCharacterToNearLocatorFromMe("Will Turner", 8);
+			SetCharacterToNearLocatorFromMe("Annamaria", 9);
+
+			LAi_SetActorType(characterfromID("Mr. Gibbs"));
+			LAi_SetActorType(characterfromID("Will Turner"));
+			LAi_SetActorType(characterfromID("Annamaria"));
+
+			LAi_ActorTurnToCharacter(characterfromID("Will Turner"), Pchar);
+			LAi_ActorTurnToCharacter(characterfromID("Annamaria"), Pchar);
+
+			LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",2.0,-1);
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "talk_jack_antigua"; // Lead to antigua_walk_to_dalma_1
+			DisableFastTravel(true);
+		break;
+
+		//Go to Jungle from shore
+		case "antigua_walk_to_dalma_1":
+		LAi_SetActorType(PChar);
+
+		//Deal with run/walk mode, here must run
+		if(AlwaysRunToggle == true)  {
+		LAi_ActorGoToLocator(pchar, "officers", "reload2_3", "reload_to_jungle_dalma2", 35);
+		}
+		else {
+		LAi_ActorRunToLocator (pchar, "officers", "reload2_3", "reload_to_jungle_dalma2", 35);
+		}
+        LAi_QuestDelay("antigua_walk_to_dalma_crew", 0.7);//crew must be behind jack
+		break;
+
+
+		case "antigua_walk_to_dalma_crew":
+			LAi_ActorRunToLocator (characterfromID("Mr. Gibbs"), "officers", "reload2_2", "", 35);
+			LAi_ActorRunToLocator (characterfromID("Will Turner"), "officers", "reload2_2", "", 35);
+			LAi_ActorRunToLocator (characterfromID("Annamaria"), "officers", "reload2_1", "", 35);
+		break;
+
+
+		case "reload_to_jungle_dalma2":
+			SetCurrentTime(18.00, 0);
+	 		SetNextWeather("Heavy Rain");
+
+			DoQuestReloadToLocation("Cuba_Jungle_02_fake", "reload", "reload1", "_");
+			Locations[FindLocation("Cuba_Jungle_02_fake")].reload.l4.disable = 1;
+
+			LAi_LocationFightDisable(&Locations[FindLocation("Cuba_Jungle_02_fake")], true);
+			LAi_SetPlayerType(pchar);
+
+			ChangeCharacterAddressGroup(characterFromID("Will Turner"), "Cuba_Jungle_02_fake", "reload", "reload1");
+			ChangeCharacterAddressGroup(characterFromID("Annamaria"), "Cuba_Jungle_02_fake", "reload", "reload1");
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "Cuba_Jungle_02_fake", "reload", "reload1");
+
+			SetOfficersIndex(Pchar, 1, GetCharacterIndex("Will Turner"));
+			LAi_SetOfficerType(CharacterFromID("Will Turner"));
+			SetOfficersIndex(Pchar, 2, GetCharacterIndex("Annamaria"));
+			LAi_SetOfficerType(CharacterFromID("Annamaria"));
+			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Mr. Gibbs"));
+			LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
+
+			LAi_SetImmortal(characterFromID("Annamaria"), true);
+			LAi_SetImmortal(characterFromID("Mr. Gibbs"), true);
+			LAi_SetImmortal(characterFromID("Will Turner"), true);
+
+			SetCharacterRemovable(characterFromID("Annamaria"), false);
+			SetCharacterRemovable(characterFromID("Mr. Gibbs"), false);
+			SetCharacterRemovable(characterFromID("Will Turner"), false);
+
+			Pchar.quest.At_swamp_talk_will.win_condition.l1 = "location";
+			Pchar.quest.At_swamp_talk_will.win_condition.l1.location = "Tia_Dalma_swamp";
+			Pchar.quest.At_swamp_talk_will.win_condition = "At_swamp_talk_will";
+
+			Pchar.quest.At_smugglers_fight_walk.win_condition.l1 = "location";
+			Pchar.quest.At_smugglers_fight_walk.win_condition.l1.location = "Smugglers_Fort_fake";
+			Pchar.quest.At_smugglers_fight_walk.win_condition = "At_smugglers_fight_walk";
+
+			LAi_QuestDelay("At_jungle_talk_will", 0.5);
+		break;
+
+
+		//Do you really remember the way jack ?
+		case "At_jungle_talk_will":
+			LAi_SetActorType(characterfromID("Will Turner"));
+			LAi_ActorDialog(characterFromID("Will Turner"),PChar,"",2.0,-1);
+			Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "At_jungle_talk_will"; // Lead to At_jungle_will_walk
+		break;
+
+		//Will takes charge/walk
+		case "At_jungle_will_walk":
+			LAi_SetActorType(characterfromID("Will Turner"));
+			LAi_SetActorType(Pchar);//so player can't move
+			LAi_ActorRunToLocator(characterfromID("Will Turner"), "reload", "reload3_back", "will_reload", 35);
+			LAi_QuestDelay("player_turn_will", 0.5);
+		break;
+
+		case "player_turn_will":
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Will Turner"));
+			LAi_QuestDelay("player_turn_will2", 1.5);
+		break;
+
+		case "player_turn_will2":
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Will Turner"));
+			LAi_QuestDelay("let_player_move", 1.5);
+		break;
+
+		case "let_player_move":
+			InterfaceStates.Buttons.Save.enable = 1;
+			LAi_SetPlayerType(pchar);
+		break;
+
+		case "will_reload":
+			ChangeCharacterAddressGroup(characterFromID("Will Turner"), "Smugglers_Fort_fake", "goto", "character3");
+		break;
+
+		case "At_smugglers_fight_walk":
+			InterfaceStates.Buttons.Save.enable = 0;
+			LAi_LocationFightDisable(&Locations[FindLocation("Smugglers_Fort_fake")], true);
+
+			ChangeCharacterAddressGroup(characterFromID("Will Turner"), "Smugglers_Fort_fake", "goto", "character3");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.7, "Pirat6", "goto", "goto19");
+			sld.name = TranslateString("", "Smuggler");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			sld.id = "Smuggler_1";
+			LAi_group_MoveCharacter(sld, "PIRATE_SMUG");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 1.0, "50LCroft", "goto", "goto21");
+			sld.name = TranslateString("", "Smuggler");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "PIRATE_SMUG");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.7, "Corsair1_1", "goto", "goto23");
+			sld.name = TranslateString("", "Smuggler");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "PIRATE_SMUG");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.7, "Corsair2", "goto", "goto36");
+			sld.name = TranslateString("", "Smuggler");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "PIRATE_SMUG");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.7, "Pirat9", "goto", "goto37");
+			sld.name = TranslateString("", "Smuggler");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "PIRATE_SMUG");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.7, "Pirat8", "goto", "goto15");
+			sld.name = TranslateString("", "Smuggler");
+			sld.lastname = "";
+			LAi_SetHP(sld, 180.0, 180.0);
+			LAi_group_MoveCharacter(sld, "PIRATE_SMUG");
+
+			LAi_ActorTurnToCharacter(characterFromID("Will Turner"), characterFromID("Smuggler_1"));
+			LAi_ActorTurnToCharacter(characterFromID("Smuggler_1"), characterFromID("Will Turner"));
+
+
+			LAi_SetActorType(PChar);
+			//Deal with run/walk mode, here must run
+			if(AlwaysRunToggle == true)  {
+			LAi_ActorGoToLocator(pchar, "goto", "goto20", "At_smugglers_fight_talk", 8);
+			}
+			else {
+			LAi_ActorRunToLocator (pchar, "goto", "goto20", "At_smugglers_fight_talk", 8);
+			}
+
+		break;
+
+		case "At_smugglers_fight_talk":
+			LAi_SetPlayerType(pchar);
+			LAi_SetActorType(characterFromID("Smuggler_1"));
+			Characters[GetCharacterIndex("Smuggler_1")].Dialog.Filename = "Turks_prison_guard1_dialog.c";//Prison guard dialog, leads to either At_smugglers_fight_action or At_smugglers_fight_bribe
+			Characters[GetCharacterIndex("Smuggler_1")].Dialog.currentnode = "Smuggler_Jack_Talk";
+			LAi_ActorDialog(characterFromID("Smuggler_1"), pchar, "", 2.0, 2.0);
+		break;
+
+		case "At_smugglers_fight_action":
+			Locations[FindLocation("Smugglers_Fort_fake")].reload.l5.disable = "1";
+			LAi_LocationFightDisable(&Locations[FindLocation("Smugglers_Fort_fake")], false);
+			LAi_SetPlayerType(pchar);
+			LAi_SetFightMode(PChar, true);
+			pchar.quest.disable_rebirth = true;
+			InterfaceStates.Buttons.Save.enable = 0;
+
+			SetOfficersIndex(Pchar, 1, GetCharacterIndex("Will Turner"));
+			LAi_SetOfficerType(CharacterFromID("Will Turner"));
+			SetCharacterRemovable(characterFromID("Will Turner"), false);
+			LAi_SetImmortal(characterFromID("Will Turner"), true);
+
+			//LAi_ActorAttack(characterfromID("Smuggler_1"), pchar, "");
+			LAi_group_MoveCharacter(characterfromID("Smuggler_1"), "PIRATE_SMUG");
+			LAi_group_FightGroups("PIRATE_SMUG", LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck("PIRATE_SMUG", "At_smugglers_delay_talk");
+		break;
+
+
+		case "At_smugglers_delay_talk":
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Smugglers_Fort_fake")], true);
+			LAi_QuestDelay("At_smugglers_talk_will", 0.5);
+		break;
+
+		case "At_smugglers_fight_bribe":
+			AddMoneyToCharacter(PChar, -10000);
+			LAi_LocationFightDisable(&Locations[FindLocation("Smugglers_Fort_fake")], true);
+
+			LAi_QuestDelay("At_smugglers_talk_will", 0.6);
+		break;
+
+
+		//After smugglers resovled/fought
+		case "At_smugglers_talk_will":
+			LAi_SetActorType(characterfromID("Will Turner"));
+
+			LAi_ActorTurnToCharacter(characterFromID("Will Turner"), PChar);
+			LAi_ActorTurnToCharacter(PChar, characterFromID("Will Turner"));
+
+			LAi_ActorDialog(characterFromID("Will Turner"),PChar,"",2.0,-1);
+			Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "talk_jack_antigua"; // Lead to At_smugglers_talk_will_2
+		break;
+
+		case "At_smugglers_talk_will_2":
+			Locations[FindLocation("Smugglers_Fort_fake")].reload.l5.disable = 0;
+			Locations[FindLocation("Cuba_Jungle_02_fake")].reload.l4.disable = 0;
+			Locations[FindLocation("Cuba_Jungle_02_fake")].reload.l5.disable = 1;
+			InterfaceStates.Buttons.Save.enable = 1;
+
+			SetOfficersIndex(Pchar, 1, GetCharacterIndex("Will Turner"));
+			LAi_SetOfficerType(CharacterFromID("Will Turner"));
+			SetCharacterRemovable(characterFromID("Will Turner"), false);
+
+			LAi_SetImmortal(characterFromID("Will Turner"), true);
+			SetCurrentTime(24.00, 0);
+			SetNextWeather("Heavy Rain");
+		break;
+
+
+		//Dalma talk swamp
+		case "At_swamp_talk_will":
+			LAi_SetActorType(characterfromID("Will Turner"));
+			LAi_ActorDialog(characterFromID("Will Turner"),PChar,"",2.0,2.0);
+			Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "talk_jack_swamp"; // Lead to antigua_walk_to_dalma_1
+		break;
+
+
+
+		case "At_swamp_talk_will2":
+		InterfaceStates.Buttons.Save.enable = 0;
+		SetOfficersIndex(Pchar, 1, GetCharacterIndex("Will Turner"));
+		LAi_SetOfficerType(CharacterFromID("Will Turner"));
+		SetCharacterRemovable(characterFromID("Will Turner"), false);
+		LAi_SetImmortal(characterFromID("Will Turner"), true);
+
+		Locations[FindLocation("Tia_Dalma_hut")].items.randitem27 = "key8";		//invisible model
+		LAi_QuestDelay("player_run_hut", 0.3);
+		break;
+
+		case "player_run_hut":
+			LAi_SetActorType(Pchar);
+			LAi_SetActorType(characterfromID("Will Turner"));
+			LAi_SetActorType(characterFromID("Annamaria"));
+			LAi_SetActorType(characterFromID("Mr. Gibbs"));
+
+
+			//Deal with run/walk mode, here must run
+			if(AlwaysRunToggle == true)  {
+			LAi_ActorGoToLocator(pchar, "rld", "loc1", "player_reload_hut", 18);
+			}
+			else {
+			LAi_ActorRunToLocator (pchar, "rld", "loc1", "player_reload_hut", 18);
+			}
+			LAi_QuestDelay("crew_run_hut", 0.1);
+		break;
+
+		case "crew_run_hut":
+			LAi_ActorFollow(characterFromID("Annamaria"),pchar,"",10);
+			LAi_ActorFollow(characterFromID("Mr. Gibbs"),pchar,"",10);
+			LAi_ActorFollow(characterFromID("Will Turner"),pchar,"",10);
+		break;
+
+		case "player_reload_hut":
+			LAi_LocationFightDisable(&Locations[FindLocation("Tia_Dalma_hut")], true);
+			Locations[FindLocation("Tia_Dalma_hut")].reload.l1.disable = "1";
+			InterfaceStates.Buttons.Save.enable = 0;
+			DoQuestReloadToLocation("Tia_Dalma_hut", "rld", "loc1", "At_Shack_Warning2");
+		break;
+
+		case "At_Shack_Warning2":
+		LAi_SetActorType(Pchar);
+		LAi_SetActorType(characterfromID("Will Turner"));
+		LAi_SetActorType(characterFromID("Annamaria"));
+		LAi_SetActorType(characterFromID("Mr. Gibbs"));
+
+		ChangeCharacterAddressGroup(characterFromID("Will Turner"), "Tia_Dalma_hut", "sit", "sit1");
+		ChangeCharacterAddressGroup(characterFromID("Annamaria"), "Tia_Dalma_hut", "reload", "reload1");
+		ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "Tia_Dalma_hut", "rld", "loc2");
+		ChangeCharacterAddressGroup(characterFromID("Tia Dalma"), "Tia_Dalma_hut", "goto", "Dalma");
+
+		LAi_SetActorType(characterfromID("Tia Dalma"));
+
+		LAi_ActorTurnToCharacter(characterFromID("Will Turner"), characterfromID("Tia Dalma"));
+		LAi_ActorSetSitMode(CharacterFromID("Will Turner"));
+
+		LAi_QuestDelay("At_Shack_Warning2_1", 1.0);
+		break;
+
+		case "At_Shack_Warning2_1":
+		LAi_ActorGoToLocator(characterFromID("Annamaria"), "goto", "goto1", "At_Shack_Warning2_2", 10);
+		break;
+
+		//Dalma/Jack
+		case "At_Shack_Warning2_2":
+		LAi_ActorTurnToCharacter(characterFromID("Annamaria"), characterfromID("Tia Dalma"));
+		LAi_SetPlayerType(pchar);
+		Characters[GetCharacterIndex("Tia Dalma")].dialog.currentnode = "find_the_key4";
+		LAi_ActorDialogNow(characterFromID("Tia Dalma"), pchar, "", -1);
+		break;
+
+		//Will
+		case "At_Shack_Warning2_3":
+		LAi_ActorTurnToCharacter(characterFromID("Tia Dalma"), characterfromID("Will Turner"));
+		Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "talk_dalma_hut";
+		LAi_ActorDialogNow(characterFromID("Will Turner"), pchar, "", -1);
+		break;
+
+		//Dalma/Jack
+		case "At_Shack_Warning2_4":
+		Characters[GetCharacterIndex("Tia Dalma")].dialog.currentnode = "find_the_key6";
+		LAi_ActorDialogNow(characterFromID("Tia Dalma"), pchar, "", -1);
+		break;
+
+		//Gibbs
+		case "At_Shack_Warning2_5":
+		Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "talk_dalma_antigua";
+		LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+		break;
+
+		//Dalma/Jack
+		case "At_Shack_Warning2_6":
+		Characters[GetCharacterIndex("Tia Dalma")].dialog.currentnode = "find_the_key8";
+		LAi_ActorDialogNow(characterFromID("Tia Dalma"), pchar, "", -1);
+		break;
+
+
+		//Will/Jack
+		case "At_Shack_Warning2_7":
+		Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "talk_dalma_hut2";
+		LAi_ActorDialogNow(characterFromID("Will Turner"), pchar, "", -1);
+		break;
+
+		//Gibbs
+		case "At_Shack_Warning2_8":
+		Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "talk_dalma_antigua2";
+		LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+		break;
+
+		//Dalma
+		case "At_Shack_Warning2_9":
+		Characters[GetCharacterIndex("Tia Dalma")].dialog.currentnode = "find_the_key9";
+		LAi_ActorDialogNow(characterFromID("Tia Dalma"), pchar, "", -1);
+		break;
+
+		//Anamaria
+		case "At_Shack_Warning2_10":
+		Characters[GetCharacterIndex("Annamaria")].dialog.currentnode = "talk_anamaria_dalma";
+		LAi_ActorDialogNow(characterFromID("Annamaria"), pchar, "", -1);
+		break;
+
+		//Dalma
+		case "At_Shack_Warning2_11":
+		Characters[GetCharacterIndex("Tia Dalma")].dialog.currentnode = "find_the_key10";
+		LAi_ActorDialogNow(characterFromID("Tia Dalma"), pchar, "", -1);
+		break;
+
+		//Will/Jack
+		case "At_Shack_Warning2_12":
+		Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "talk_dalma_hut3";
+		LAi_ActorDialogNow(characterFromID("Will Turner"), pchar, "", -1);
+		break;
+
+		//Dalma
+		case "At_Shack_Warning2_13":
+		Characters[GetCharacterIndex("Tia Dalma")].dialog.currentnode = "find_the_key11";
+		LAi_ActorDialogNow(characterFromID("Tia Dalma"), pchar, "", -1);
+		break;
+
+		case "Video_to_shipwreck":
+			LAi_Fade("Video_to_shipwreck2", "");
+		break;
+
+		//Play video
+		case "Video_to_shipwreck2":
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("LegendJackSparrow\RUSSIAN\DMC_dutchman_wreck", 25, "Video_to_shipwreck3");
+			else PostVideoAndQuest("LegendJackSparrow\DMC_dutchman_wreck", 25, "Video_to_shipwreck3");
+			SetCurrentTime(24.00, 0);
+			SetNextWeather("Heavy Rain");
+			SetModel(characterFromID("Will Turner"), "WillTurner2", "man", "man", 1.8, false);
+		break;
+
+		case "Video_to_shipwreck3":
+			LAi_Fade("tp_deck_before_shipwreck", "");
+		break;
+
+		case "tp_deck_before_shipwreck":
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l3.disable = 1;
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l5.disable = 1;
+			DoQuestReloadToLocation(GetCharacterShipQDeck(pchar), "reload", "boatr", "dialogue_start_deck_shipwreck");
+			LAi_SetActorType(characterfromID("Will Turner"));
+			LAi_SetActorType(characterFromID("Mr. Gibbs"));
+		break;
+
+		case "dialogue_start_deck_shipwreck":
+			PlaceCharacter(characterFromID("Will Turner"), "goto");
+			PlaceCharacter(characterFromID("Mr. Gibbs"), "goto");
+
+			RestorePassengers(PChar.id);
+
+			LAi_QuestDelay("dialogue_start_deck_shipwreck_2", 1.0);
+		break;
+
+		case "dialogue_start_deck_shipwreck_2":
+			Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "talk_shipwreck_dutchman";
+			LAi_ActorDialogNow(characterFromID("Will Turner"), pchar, "", -1);
+		break;
+
+		case "dialogue_start_deck_shipwreck_3":
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "talk_shipwreck_dutchman";
+			LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+		break;
+
+		case "dialogue_start_deck_shipwreck_4":
+			Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "talk_shipwreck_dutchman_2";
+			LAi_ActorDialogNow(characterFromID("Will Turner"), pchar, "", -1);
+		break;
+
+		case "tp_deck_shipwreck":
+			ExchangeCharacterShip(PChar, CharacterFromID("Will Turner"));
+			TempRemoveItems(PChar);
+			PChar.quest.old_blade = GetCharacterEquipByGroup(PChar, BLADE_ITEM_TYPE);
+			PChar.quest.old_gun = GetCharacterEquipByGroup(PChar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(PChar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(PChar, BLADE_ITEM_TYPE);
+
+			PChar.quest.your_rep = GetCharacterReputation(PChar);
+			PChar.reputation = GetCharacterReputation(CharacterFromID("Will Turner"));
+
+			GiveItem2Character(Pchar, "blade26");	// PB: Gives you your fists
+			GiveItem2Character(Pchar, "jerkin");
+			TakeNItems(PChar, "medical1", 12); // PB
+			EquipCharacterbyItem(Pchar, "blade26");
+			EquipCharacterbyItem(Pchar, "jerkin");
+
+			PChar.name = "William";
+			PChar.lastname = "Turner";
+			GiveModel2Player("WillTurner2",true);
+
+			RemovePassenger(pchar, characterFromID("Will Turner"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Will Turner"));
+
+			LAi_SetActorType(characterfromID("Will Turner"));
+
+			ChangeCharacterAddress(characterFromID("Will Turner"), "none", "");
+			ChangeCharacterAddress(characterFromID("Mr. Gibbs"), "none", "");
+
+			StorePassengers(PChar.id);
+			LAi_QuestDelay("tp_deck_shipwreck2", 0.2);
+		break;
+
+		case "tp_deck_shipwreck2":
+			SetCharacterShipLocation(characterFromID("Reynoud Verheugen"), "SFSI_deck");
+			Pchar.wreck_deck = "MD";
+			Pchar.sailors_spoken = "NONE";
+			DoQuestReloadToLocation("SFSI_deck", "goto", "npc2" ,"wreck_deck_status");
+			LAi_LocationFightDisable(&Locations[FindLocation("SFSI_deck")], true);
+			LAi_QuestDelay("wreck_deck_arrive", 0.2);
+		break;
+
+		//JRH
+		case "wreck_deck_arrive":
+			InterfaceStates.Buttons.Save.enable = 1;
+			LAi_SetActorType(Pchar);
+
+			ChangeCharacterAddressGroup(characterfromID("Sailor_1"),"SFSI_deck", "rld", "loc2");
+			ChangeCharacterAddressGroup(characterfromID("Sailor_2"),"SFSI_deck", "rld", "loc3");
+
+			LAi_SetImmortal(characterFromID("Sailor_1"), true);
+			LAi_SetImmortal(characterFromID("Sailor_2"), true);
+
+			LAi_CharacterEnableDialog(characterFromID("Sailor_1"));
+			LAi_CharacterEnableDialog(characterFromID("Sailor_2"));
+
+			LAi_ActorWaitDialog(characterFromID("Sailor_1"), pchar);
+			LAi_ActorWaitDialog(characterFromID("Sailor_2"), pchar);
+
+			Characters[GetCharacterIndex("Sailor_1")].Dialog.currentnode = "Shipwreck_will_talk";
+			Characters[GetCharacterIndex("Sailor_2")].Dialog.currentnode = "Shipwreck_will_talk2";
+
+			LAi_QuestDelay("wreck_deck_arrive1", 0.5);
+		break;
+
+		case "wreck_deck_arrive1":
+			LAi_ActorTurnToLocator(Pchar, "goto", "S2X_down");
+
+			LAi_QuestDelay("pchar_talkself", 0.2);
+		break;
+
+		//SEB: Dialogue self when arrived,
+		case "pchar_talkself":
+			LAi_SetActorType(Pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Shipwreck_enter";
+			LAi_ActorSelfDialog(Pchar, "player_back");//Leads to pchar_playertype
+		break;
+
+		case "pchar_playertype":
+			LAi_SetPlayerType(pchar);
+		break;
+		//JRH
+
+		//Check if the player has spoken to both sailors
+		case "Sailor_talk_status_check":
+		if(Pchar.sailors_spoken == "NONE")  {
+
+			Pchar.sailors_spoken = "FIRST";
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "rld", "loc4");
+			LAi_QuestDelay("will_talk_self1", 0.2);
+			}
+
+			else {
+
+			ChangeCharacterAddressGroup(characterfromID("Corpse"),"SFSI_deck", "rld", "loc4");
+			LAi_ActorSetLayMode(characterFromID("Corpse"));
+
+			LAi_CharacterEnableDialog(characterFromID("Corpse"));
+			LAi_SetImmortal(characterFromID("Corpse"), true);
+			LAi_ActorWaitDialog(characterFromID("Corpse"), pchar);
+			Characters[GetCharacterIndex("Corpse")].Dialog.currentnode = "Shipwreck_will_talk_corpse"; //lead to Video_at_shipwreck_dutchman
+
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "rld", "loc4");
+			LAi_QuestDelay("will_talk_self2", 0.2);
+
+		}
+		break;
+
+		case "will_talk_self1":
+			LAi_SetActorType(Pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Shipwreck_after_sailor_1";//There must be someone else
+			LAi_ActorSelfDialog(Pchar, "player_back");//Leads to pchar_playertype
+		break;
+
+		case "will_talk_self2":
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Shipwreck_corpse";
+			LAi_ActorSelfDialog(Pchar, "player_back");//Leads to pchar_playertype
+		break;
+
+
+		case "Video_at_shipwreck_dutchman":
+			LAi_Fade("Video_at_shipwreck_dutchman2", "");
+		break;
+
+		//Play video/ make dutchman appear
+		case "Video_at_shipwreck_dutchman2":
+			PostVideoAndQuest("LegendJackSparrow\DMC_Wreck_dutchman_appear", 25, "Video_at_shipwreck_dutchman3");
+			LAi_SetImmortal(characterFromID("Corpse"), false);
+			LAi_SetImmortal(characterFromID("Sailor_1"), false);
+			LAi_SetImmortal(characterFromID("Sailor_2"), false);
+			SetCurrentTime(24.00, 0);
+			SetNextWeather("Heavy Rain");
+		break;
+
+
+		case "Video_at_shipwreck_dutchman3":
+			SetCharacterShipLocation(characterFromID("Davy Jones"), "SFSI_deck_Dutchman");
+			DoQuestReloadToLocation("SFSI_deck_Dutchman", "goto", "npc5" ,"_");
+
+			LAi_QuestDelay("pchar_turn_dutchman", 0.5);
+		break;
+
+		case "pchar_turn_dutchman":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "ships_other", "ship1");
+
+			PauseAllSounds();
+			FadeOutMusic(150);
+			PlaystereoOGG("music_emerge_dutchman");
+			LAi_QuestDelay("Spawn_davy_crew", 9.5);
+
+		break;
+
+		case "Spawn_davy_crew":
+			InterfaceStates.Buttons.Save.enable = 0;
+			Pchar.killed_by_davy = "NO";
+
+			LAi_SetPlayerType(pchar);
+			LAi_SetFightMode(PChar, true);
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "Palafico", "goto", "npc1");
+			sld.name = TranslateString("", "Palafico");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+			LAi_group_MoveCharacter(sld, "DAVY_CREW");
+			sld.id = "Palafico";
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "Penrod", "reload", "reload4");
+			sld.name = TranslateString("", "Penrod");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+			LAi_group_MoveCharacter(sld, "DAVY_CREW");
+			sld.id = "Penrod";
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "Maccus", "goto", "npc4");
+			sld.name = TranslateString("", "Maccus");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+			LAi_group_MoveCharacter(sld, "DAVY_CREW");
+			sld.id = "Maccus";
+
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "Hadras", "goto", "npc2");
+			sld.name = TranslateString("", "Hadras");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+			LAi_group_MoveCharacter(sld, "DAVY_CREW");
+			sld.id = "Hadras";
+
+		bSuppressResurrection = true;
+
+		LAi_SetImmortal(CharacterFromID("Hadras"), true)
+		LAi_SetImmortal(CharacterFromID("Maccus"), true)
+
+		PChar.quest.set_crew_and_will_fade_delay.win_condition.l1 = "NPC_Death";
+		PChar.quest.set_crew_and_will_fade_delay.win_condition.l1.character = PChar.id;
+		PChar.quest.set_crew_and_will_fade_delay.win_condition = "set_crew_and_will_fade_delay";
+
+		LAi_LocationFightDisable(&Locations[FindLocation(pchar.location)], false);
+		LAi_group_FightGroups("DAVY_CREW", LAI_GROUP_PLAYER, true);
+
+		DoQuestCheckDelay("crew_kill_will", 10.0);
+		break;
+
+		case "crew_kill_will":
+			if(Pchar.killed_by_davy == "NO")  {
+			Pchar.killed_by_davy = "YES";
+			Lai_KillCharacter(pchar);
+
+			bSuppressResurrection = true;
+			LAi_QuestDelay("set_crew_and_will_fade", 4.0);
+		}
+		break;
+
+		case "set_crew_and_will_fade_delay":
+			if(Pchar.killed_by_davy == "NO")  {
+			Pchar.killed_by_davy = "YES";
+
+			bSuppressResurrection = true;
+			LAi_QuestDelay("set_crew_and_will_fade", 4.0);
+		}
+		break
+
+		case "set_crew_and_will_fade":
+			LAi_Fade("reload_wreck_Will_jones", "");
+		break;
+
+		case "reload_wreck_Will_jones":
+			DoQuestReloadToLocation("SFSI_deck_Dutchman", "goto", "npc3" ,"set_crew_and_will");
+		break;
+
+
+		case "set_crew_and_will":
+			LAi_LocationFightDisable(&Locations[FindLocation("SFSI_deck_Dutchman")], true);
+
+			LAi_ActorTurnToLocator(Pchar, "goto", "arrive");
+			LAi_SetPlayerType(pchar);
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "Palafico", "goto", "npc1");
+			sld.name = TranslateString("", "Palafico");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+			LAi_group_MoveCharacter(sld, "DAVY_CREW");
+			sld.id = "Palafico";
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "Penrod", "rld", "loc4");
+			sld.name = TranslateString("", "Penrod");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+			LAi_group_MoveCharacter(sld, "DAVY_CREW");
+			sld.id = "Penrod";
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "Maccus", "goto", "npc4");
+			sld.name = TranslateString("", "Maccus");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+			LAi_group_MoveCharacter(sld, "DAVY_CREW");
+			sld.id = "Maccus";
+
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "Hadras", "goto", "npc2");
+			sld.name = TranslateString("", "Hadras");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+			LAi_group_MoveCharacter(sld, "DAVY_CREW");
+			sld.id = "Hadras";
+
+			LAi_group_SetRelation(LAI_GROUP_PLAYER, "DAVY_CREW", LAI_GROUP_NEUTRAL);
+
+			LAi_SetCurHP(pchar, LAi_GetCharacterMaxHP(pchar)); // PB: To heal character
+
+			ChangeCharacterAddressGroup(characterfromID("Sailor_1"),"SFSI_deck_Dutchman", "goto", "npc1");
+			ChangeCharacterAddressGroup(characterfromID("Sailor_2"),"SFSI_deck_Dutchman", "goto", "npc2");
+
+			ChangeCharacterAddressGroup(characterFromID("Palafico"), "SFSI_deck_Dutchman", "goto", "npc5");
+			ChangeCharacterAddressGroup(characterFromID("Penrod"), "SFSI_deck_Dutchman", "rld", "loc4");
+			ChangeCharacterAddressGroup(characterFromID("Maccus"), "SFSI_deck_Dutchman", "goto", "npc4");
+			ChangeCharacterAddressGroup(characterFromID("Hadras"), "SFSI_deck_Dutchman", "reload", "reload4");
+
+			LAi_SetActorType(Pchar);
+			LAi_SetActorType(CharacterFromID("Sailor_2"));
+			LAi_SetActorType(CharacterFromID("Sailor_1"));
+
+			LAi_SetActorType(CharacterFromID("Palafico"));
+			LAi_SetActorType(CharacterFromID("Penrod"));
+			LAi_SetActorType(CharacterFromID("Maccus"));
+			LAi_SetActorType(CharacterFromID("Hadras"));
+
+			LAi_QuestDelay("Turn_loc_shipwreck", 1.0);
+
+		break;
+
+		case "Turn_loc_shipwreck":
+			LAi_ActorTurnToLocator(Pchar, "goto", "npc1");
+			LAi_ActorTurnToLocator(CharacterFromID("Sailor_2"), "goto", "arrive");
+			LAi_ActorTurnToLocator(CharacterFromID("Sailor_1"), "goto", "arrive");
+
+			LAi_QuestDelay("Davy_arrive", 1.5);
+		break;
+
+		case "Davy_arrive":
+			ChangeCharacterAddressGroup(CharacterFromID("Davy Jones"),"SFSI_deck_Dutchman", "goto", "arrive");
+
+			LAi_QuestDelay("Davy_arrive_walk", 0.6);
+		break;
+
+		case "Davy_arrive_walk":
+			LAi_ActorGoToLocator(characterFromID("Davy Jones"), "rld", "loc5", "MACCUS_talk", 10);
+		break;
+
+		// Three men still alive. The rest have moved on.
+		case "MACCUS_talk":
+			Characters[GetCharacterIndex("Maccus")].Dialog.Filename = "Turks_prison_guard1_dialog.c";
+			Characters[GetCharacterIndex("Maccus")].dialog.currentnode = "MACCUS_talk";//Lead to Davy_talk_Sailor_1
+			LAi_ActorTurnToCharacter(characterFromID("Maccus"), characterfromID("Davy Jones"));
+			LAi_ActorTurnToCharacter(characterFromID("Davy Jones"), characterfromID("Maccus"));
+			LAi_SetPlayerType(PChar);
+			LAi_ActorDialogNow(characterFromID("Maccus"), pchar, "", -1);
+		break;
+
+		//Do you fear death? Smokes
+		case "Davy_talk_Sailor_1":
+			PlaySound("VOICE\ENGLISH\DavyJones1.wav");
+			Characters[GetCharacterIndex("Davy Jones")].dialog.currentnode = "Davy_talk_shipwreck1";
+			LAi_ActorDialogNow(characterFromID("Davy Jones"), pchar, "", -1);;
+			LAi_ActorTurnToCharacter(characterFromID("Davy Jones"), characterfromID("Sailor_1"));
+			LAi_ActorTurnToCharacter(characterFromID("Sailor_1"), characterfromID("Davy Jones"));
+
+			//Smoke pipe
+			GetCharacterPos(characterfromid("Davy Jones"), &locx, &locy, &locz);
+			CreateParticleSystemX("gunfire", locx, (locy + 1.8), locz, locx, (locy + 1), (locz + 5),8);
+		break;
+
+		// Don't listen to him!
+		case "Sailor_2_to_davy":
+			Characters[GetCharacterIndex("Sailor_2")].Dialog.Filename = "Turks_prison_guard1_dialog.c";
+			Characters[GetCharacterIndex("Sailor_2")].Dialog.currentnode = "Sailor_2_to_davy"; //lead to Davy_talk_Sailor_2
+			LAi_ActorDialogNow(characterFromID("Sailor_2"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("Sailor_2"), characterfromID("Davy Jones"));
+			LAi_ActorTurnToCharacter(characterFromID("Davy Jones"), characterfromID("Sailor_2"));
+		break;
+
+		// Do you not fear death? Smokes
+		case "Davy_talk_Sailor_2":
+			Characters[GetCharacterIndex("Davy Jones")].dialog.currentnode = "Davy_talk_shipwreck1_sail2";
+
+			LAi_ActorDialogNow(characterFromID("Davy Jones"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("Davy Jones"), characterfromID("Sailor_2"));
+			LAi_ActorTurnToCharacter(characterFromID("Sailor_2"), characterfromID("Davy Jones"));
+
+			//Smoke pipe
+			GetCharacterPos(characterfromid("Davy Jones"), &locx, &locy, &locz);
+			CreateParticleSystemX("gunfire", (locx - 0.3), (locy + 1.8), locz, locx, (locy + 1), (locz + 5),8);
+		break;
+
+		// I'll take my chances, Sir.
+		case "Sailor_2_to_davy_2":
+			Characters[GetCharacterIndex("Sailor_2")].Dialog.Filename = "Turks_prison_guard1_dialog.c";
+			Characters[GetCharacterIndex("Sailor_2")].Dialog.currentnode = "Sailor_2_to_davy_2"; //lead to Davy_talk_Sailor_2
+
+			LAi_ActorDialogNow(characterFromID("Sailor_2"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("Sailor_2"), characterfromID("Davy Jones"));
+			LAi_ActorTurnToCharacter(characterFromID("Davy Jones"), characterfromID("Sailor_2"));
+		break;
+
+		// To the depths.
+		case "Davy_talk_Sailor_2_2":
+			Characters[GetCharacterIndex("Davy Jones")].dialog.currentnode = "Davy_talk_shipwreck1_sail2_2";
+
+			LAi_ActorDialogNow(characterFromID("Davy Jones"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("Davy Jones"), characterfromID("Sailor_2"));
+			LAi_ActorTurnToCharacter(characterFromID("Sailor_2"), characterfromID("Davy Jones"));
+		break;
+
+		case "Davy_talk_Sailor_2_kill":
+			LAi_LocationFightDisable(&Locations[FindLocation("SFSI_deck_Dutchman")], false);
+			LAi_SetActorType(Pchar);
+			LAi_ActorAttack(characterfromID("Maccus"), characterfromID("Sailor_2"), "");
+			LAi_QuestDelay("crew_kill_Sailor_2", 4.0);
+
+		break;
+
+		case "crew_kill_Sailor_2":
+			Lai_KillCharacter(characterfromID("Sailor_2"));
+			LAi_QuestDelay("Davy_talk_Sailor_1_2", 1.0);
+		break;
+
+		//Cruel bastard!
+		case "Davy_talk_Sailor_1_2":
+			LAi_LocationFightDisable(&Locations[FindLocation("SFSI_deck_Dutchman")], true);
+			LAi_SetPlayerType(PChar);
+
+			Characters[GetCharacterIndex("Sailor_1")].dialog.currentnode = "Sailor_1_to_davy_2";
+
+			LAi_ActorDialogNow(characterFromID("Sailor_1"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("Davy Jones"), characterfromID("Sailor_1"));
+			LAi_ActorTurnToCharacter(characterFromID("Sailor_1"), characterfromID("Davy Jones"));
+		break;
+
+		//life is cruel
+		case "Davy_talk_Sailor_1_3":
+			Characters[GetCharacterIndex("Davy Jones")].dialog.currentnode = "Davy_talk_shipwreck1_sail1_2";
+
+			LAi_ActorDialogNow(characterFromID("Davy Jones"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("Davy Jones"), characterfromID("Sailor_1"));
+			LAi_ActorTurnToCharacter(characterFromID("Sailor_1"), characterfromID("Davy Jones"));
+		break;
+
+		//I will, serve.
+		case "Davy_talk_Sailor_1_4":
+			Characters[GetCharacterIndex("Sailor_1")].dialog.currentnode = "Sailor_1_to_davy_3";
+
+			LAi_ActorDialogNow(characterFromID("Sailor_1"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("Davy Jones"), characterfromID("Sailor_1"));
+			LAi_ActorTurnToCharacter(characterFromID("Sailor_1"), characterfromID("Davy Jones"));
+		break;
+
+		//You are neither dead nor dying. What is your purpose here?  Huh! Did he, now? I'm sorely tempted  to accept that offer.
+		case "Davy_talk_will":
+			Characters[GetCharacterIndex("Davy Jones")].dialog.currentnode = "Davy_talk_will";
+			LAi_ActorDialogNow(characterFromID("Davy Jones"), pchar, "", -1);
+		break;
+
+		//Play video
+		case "Video_to_deck_from_shipw":
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("LegendJackSparrow\RUSSIAN\DMC_dutchman_wreck_davey", 36, "Video_to_deck_from_shipw2");
+			else PostVideoAndQuest("LegendJackSparrow\DMC_dutchman_wreck_davey", 36, "Video_to_deck_from_shipw2");
+			SetCurrentTime(24.00, 0);
+			SetNextWeather("Heavy Rain");
+		break;
+
+		case "Video_to_deck_from_shipw2":
+			LAi_Fade("tp_deck_after_shipwreck", "");
+		break;
+
+		case "tp_deck_after_shipwreck":
+			DisableFastTravel(true);
+
+			ExchangeCharacterShip(PChar, CharacterFromID("Will Turner"));
+
+			PChar.name = "Jack";
+			PChar.lastname = "Sparrow";
+
+			GiveModel2Player("Jack",true);
+			RestoreTempRemovedItems(PChar);
+			if (PChar.quest.old_blade != "") EquipCharacterByItem(PChar,PChar.quest.old_blade);
+			if (PChar.quest.old_gun != "") EquipCharacterByItem(PChar,PChar.quest.old_gun);
+			DeleteQuestAttribute("old_blade");
+			DeleteQuestAttribute("old_gun");
+			//RestorePassengers(PChar.id);
+
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l3.disable = 1;
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l5.disable = 1;
+			DoQuestReloadToLocation(GetCharacterShipQDeck(pchar), "reload", "boatr", "_");
+			LAi_QuestDelay("Davy_talk_sparrow_d", 1.0);
+		break;
+
+		case "Davy_talk_sparrow_d":
+			LAi_LocationFightDisable(&Locations[FindLocation(GetCharacterShipQDeck(pchar))], true);
+			LAi_SetActorType(CharacterFromID("Mr. Gibbs"));
+
+			PlaceCharacter(characterFromID("Davy Jones"), "goto");
+			PlaceCharacter(characterFromID("Mr. Gibbs"), "goto");
+
+			Characters[GetCharacterIndex("Davy Jones")].dialog.currentnode = "Davy_to_jack_deck";
+			LAi_ActorDialogNow(characterFromID("Davy Jones"), pchar, "", -1);
+		break;
+
+
+		case "Sparrow_gibbs_after_shipw":
+			ChangeCharacterAddress(characterFromID("Davy Jones"), "none", "");
+
+			LAi_SetActorType(CharacterFromID("Mr. Gibbs"));
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Mr. Gibbs_dialog.c";
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "talk_shipwreck_dutchman_after";
+			LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1)
+
+			SetCurrentTime(14.00, 0);
+			SetNextWeather("Clear");
+		break;
+
+		case "Sparrow_to_tortuga_after_shipw":
+			Locations[FindLocation("Tortuga_port")].reload.l2.disable = 1;
+			LAi_LocationFightDisable(&Locations[FindLocation(GetCharacterShipQDeck(pchar))], false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Tortuga_port")], true);
+
+			SetCharacterShipLocation(PChar, "Tortuga_port");
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "Tortuga_port", "officers", "reload1_2");
+			DoQuestReloadToLocation("Tortuga_port", "reload", "reload1", "_");
+
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l3.disable = 0;
+			Locations[FindLocation(GetCharacterShipQDeck(PChar))].reload.l5.disable = 0;
+
+			LAi_QuestDelay("Tortuga_gibbs_DMC", 1.0);
+		break;
+
+		case "Tortuga_gibbs_DMC":
+			setCharacterShipLocation(PChar, "Tortuga_port");
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "Tortuga_gibbs_DMC_talk";
+			LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",3.0,3.0);
+		break;
+
+		case "Tortuga_gibbs_DMC_tavern":
+			DoQuestReloadToLocation("Tortuga_tavern_fake", "sit", "sit8", "_");
+
+			SetModelFromID(CharacterFromID("Elizabeth Swann"), "lizswann");
+			SetModelFromID(CharacterFromID("James Norrington"), "47_Norrington_Pirate");
+
+			GiveItem2Character(CharacterFromID("Elizabeth Swann"), "blade6");
+			GiveItem2Character(CharacterFromID("Elizabeth Swann"), "pistol7");
+			EquipCharacterByItem(CharacterFromID("Elizabeth Swann"), "blade6");
+			EquipCharacterByItem(CharacterFromID("Elizabeth Swann"), "pistol7");
+
+			GiveItem2Character(CharacterFromID("James Norrington"), "bladeNorr");
+			EquipCharacterByItem(CharacterFromID("James Norrington"), "blade6");
+
+			LAi_SetActorType(characterFromID("James Norrington"));
+			LAi_SetActorType(characterFromID("Elizabeth Swann"));
+			LAi_SetActorType(Pchar);
+			LAi_SetActorType(characterFromID("Mr. Gibbs"));
+
+			LAi_ActorSetSitMode(characterFromID("Mr. Gibbs"));
+			LAi_SetSitType(Pchar);
+
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "Tortuga_tavern_fake", "sit", "sit11");
+			ChangeCharacterAddressGroup(CharacterFromID("James Norrington"),"Tortuga_tavern_fake", "goto", "goto9");
+			ChangeCharacterAddressGroup(CharacterFromID("Elizabeth Swann"),"Tortuga_tavern_fake", "goto", "goto6");
+
+			LAi_QuestDelay("Tortuga_gibbs_DMC_tavern_spawn", 0.1);
+		break;
+
+		case "Tortuga_gibbs_DMC_tavern_spawn":
+			sld = LAi_CreateFantomCharacter(false, 0, false, false, 0.0, "Corsair1", "merchant", "goto1");
+			sld.name = TranslateString("", "Barmen");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+
+			sld = LAi_CreateFantomCharacter(false, 0, false, false, 0.0, "Towngirl2", "waitress", "stay2");
+			sld.name = TranslateString("", "Waitress");
+			sld.lastname = "";
+			LAi_SetHP(sld, 380.0, 380.0);
+
+			//Goto goto3 for appaeing //GOTO GOTO 2 to go
+			sld = LAi_CreateFantomCharacter(false, 0, false, true, 0.25, "Brodyaga", "goto", "goto3");
+			LAi_SetHP(sld, 100.0, 100.0);
+			sld.dialog.filename = "Turks_prison_guard1_dialog.c";
+			sld.id = "crewman1";
+			LAi_SetActorType(characterFromID("crewman1"));
+
+			LAi_ActorGoToLocator(characterFromID("crewman1"), "goto", "goto2", "Gibbs_to_crewman_tavern", 5);
+		break;
+
+		//Gibbs to crewman
+		case "Gibbs_to_crewman_tavern":
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "Tavern_gibbs_DMC_talk";
+
+			LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("crewman1"), characterfromID("Mr. Gibbs"));
+		break;
+
+		//Crewman to gibbs
+		case "Crewman_to_gibbs_tavern":
+			Characters[GetCharacterIndex("crewman1")].dialog.currentnode = "Crewman_to_gibbs_tavern";
+
+			LAi_ActorDialogNow(characterFromID("crewman1"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("crewman1"), characterfromID("Mr. Gibbs"));
+		break;
+
+		//Gibbs to crewman after
+		case "Gibbs_to_crewman_tavern_after":
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "Tavern_gibbs_DMC_talk_after";
+
+			LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("crewman1"), characterfromID("Mr. Gibbs"));
+		break;
+
+		case "Crewman1go":
+			LAi_ActorGoToLocator(characterFromID("crewman1"), "goto", "goto7", "Gibbs_to_crewman2_tavern", 5);
+		break;
+
+		//Spawn crewman 2
+		case "Gibbs_to_crewman2_tavern":
+
+			//Goto goto3 for appaeing //GOTO GOTO 2 to go
+			sld = LAi_CreateFantomCharacter(false, 0, false, true, 0.25, "Corsair3", "goto", "goto3");
+			LAi_SetHP(sld, 100.0, 100.0);
+			sld.dialog.filename = "Turks_prison_guard1_dialog.c";
+			sld.id = "crewman2";
+			LAi_SetActorType(characterFromID("crewman2"));
+
+			LAi_ActorGoToLocator(characterFromID("crewman2"), "goto", "goto2", "Crewman2_to_gibbs_tavern", 5);
+		break;
+
+		//Crewman2 to gibbs
+		case "Crewman2_to_gibbs_tavern":
+			Characters[GetCharacterIndex("crewman2")].dialog.currentnode = "Crewman2_to_gibbs_tavern";
+
+			LAi_ActorDialogNow(characterFromID("crewman2"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("crewman2"), characterfromID("Mr. Gibbs"));
+		break;
+
+		//Gibbs to crewman2 after
+		case "Gibbs_to_crewman2_tavern_after":
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "Tavern_gibbs_DMC_talk_after2";
+
+			LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("crewman2"), characterfromID("Mr. Gibbs"));
+		break;
+
+		case "Crewman2go":
+			LAi_ActorGoToLocator(characterFromID("crewman2"), "tables", "stay1", "Gibbs_to_cewman3_tavern", 3);
+		break;
+
+		//Spawn crewman 3
+		case "Gibbs_to_cewman3_tavern":
+
+			//Goto goto3 for appaeing //GOTO GOTO 2 to go
+			sld = LAi_CreateFantomCharacter(false, 0, false, true, 0.25, "Fisherman1", "goto", "goto3");
+			LAi_SetHP(sld, 100.0, 100.0);
+			sld.dialog.filename = "Turks_prison_guard1_dialog.c";
+			sld.id = "crewman3";
+			LAi_SetActorType(characterFromID("crewman3"));
+
+			LAi_ActorGoToLocator(characterFromID("crewman3"), "goto", "goto2", "Crewman3_to_gibbs_tavern", 5);
+		break;
+
+		//Crewman3 to gibbs
+		case "Crewman3_to_gibbs_tavern":
+			Characters[GetCharacterIndex("crewman3")].dialog.currentnode = "Crewman3_to_gibbs_tavern";
+
+			LAi_ActorDialogNow(characterFromID("crewman3"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("crewman3"), characterfromID("Mr. Gibbs"));
+		break;
+
+		//Gibbs to crewman3 after
+		case "Gibbs_to_crewman3_tavern_after":
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "Tavern_gibbs_DMC_talk_after3";
+
+			LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("crewman3"), characterfromID("Mr. Gibbs"));
+		break;
+
+		case "Crewman3go":
+			LAi_ActorGoToLocator(characterFromID("crewman3"), "goto", "goto8", "Norrington_go", 4);
+		break;
+
+		//Norrington scene
+		case "Norrington_go":
+			LAi_ActorGoToLocator(characterFromID("James Norrington"), "goto", "goto2", "Gibbs_to_norrington", 6);
+		break;
+
+		case "Gibbs_to_norrington":
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "Talk_Gibbs_to_norrington";
+
+			LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("James Norrington"), characterfromID("Mr. Gibbs"));
+		break;
+
+
+		case "Norrington_to_gibbs":
+			Characters[GetCharacterIndex("James Norrington")].dialog.currentnode = "Talk_at_Tortuga_Tavern";
+
+			LAi_ActorDialogNow(characterFromID("James Norrington"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("James Norrington"), characterfromID("Mr. Gibbs"));
+		break;
+
+		case "Gibbs_to_norrington_2":
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "Talk_Gibbs_to_norrington_2";
+
+			LAi_ActorDialogNow(characterFromID("Mr. Gibbs"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("James Norrington"), characterfromID("Mr. Gibbs"));
+		break;
+
+		case "Norrington_to_gibbs_2":
+			Characters[GetCharacterIndex("James Norrington")].dialog.currentnode = "Talk_at_Tortuga_Tavern_2";
+
+			LAi_ActorDialogNow(characterFromID("James Norrington"), pchar, "", -1);
+			LAi_ActorTurnToCharacter(characterFromID("James Norrington"), Pchar);
+		break;
+
+		case "Norrington_attack_stand_fade":
+			LAi_fade("Norrington_attack_stand", "");
+		break;
+
+		case "Norrington_attack_stand":
+			LAi_SetPlayerType(pchar);
+			LAi_SetActorType(characterFromID("Mr. Gibbs"));
+
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "Tortuga_tavern_fake", "tables", "stay3");
+			ChangeCharacterAddressGroup(Pchar, "Tortuga_tavern_fake", "rld", "loc1");
+
+			LAi_ActorTurnToCharacter(characterFromID("crewman1"), PChar);
+			LAi_ActorTurnToCharacter(characterFromID("crewman2"), PChar);
+			LAi_ActorTurnToCharacter(characterFromID("crewman3"), PChar);
+			LAi_ActorTurnToCharacter(characterFromID("Mr. Gibbs"), PChar);
+
+			LAi_QuestDelay("Norrington_attack_1", 0.2);
+		break;
+
+		case "Norrington_attack_1":
+			LAi_ActorAttack(characterfromID("James Norrington"), pchar, "");
+			LAi_SetFightMode(PChar, true);
+			LAi_SetImmortal(CharacterFromID("James Norrington"), true)
+			LAi_QuestDelay("Norrington_attack_2", 0.1);
+		break;
+
+		case "Norrington_attack_2":
+			LAi_ActorAttack(characterfromID("Elizabeth Swann"), characterfromID("James Norrington"), "");
+			LAi_SetImmortal(CharacterFromID("Elizabeth Swann"), true)
+			LAi_QuestDelay("Norrington_attack_3", 4.0);
+		break;
+
+		case "Norrington_attack_3":
+			LAi_SetImmortal(CharacterFromID("James Norrington"), false)
+			Lai_KillCharacter(characterfromID("James Norrington"));
+			LAi_QuestDelay("Elizabeth_tavern_talk", 1.0);
+		break;
+
+		case "Elizabeth_tavern_talk":
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Tortuga_tavern_fake")], true);
+			Characters[GetCharacterIndex("Elizabeth Swann")].dialog.currentnode = "Talk_at_Tortuga_Tavern_Eliza";
+			LAi_ActorDialogNow(characterFromID("Elizabeth Swann"), pchar, "", -1);
+		break;
+
+		case "Elizabeth_tortuga_port_tp":
+			LAi_LocationFightDisable(&Locations[FindLocation("Tortuga_port")], true);
+		    LAi_LocationFightDisable(&Locations[FindLocation("Tortuga_tavern_fake")], false);
+
+			LAi_SetCurHP(CharacterFromID("James Norrington"), LAi_GetCharacterMaxHP(CharacterFromID("James Norrington"))); // Just in case
+
+			DoQuestReloadToLocation("Tortuga_port", "reload", "reload1", "_");
+
+			ChangeCharacterAddressGroup(characterFromID("Elizabeth Swann"), "Tortuga_port", "officers", "reload1_1");
+			ChangeCharacterAddressGroup(characterFromID("James Norrington"), "Tortuga_port", "officers", "reload1_2");
+			ChangeCharacterAddressGroup(characterFromID("Mr. Gibbs"), "Tortuga_port", "officers", "reload1_3");
+
+			LAi_QuestDelay("Elizabeth_tortuga_port_talk2", 1.0);
+		break;
+
+		case "Elizabeth_tortuga_port_talk2":
+			Characters[GetCharacterIndex("Elizabeth Swann")].dialog.currentnode = "Elizabeth_tortuga_port_talk";
+			LAi_ActorDialog(characterFromID("Elizabeth Swann"),PChar,"",4.0,4.0);
+		break;
+
+		case "Norrington_tortuga_port_talk":
+			Characters[GetCharacterIndex("James Norrington")].dialog.currentnode = "Talk_at_Tortuga_Port";
+			LAi_ActorDialog(characterFromID("James Norrington"),PChar,"",3.0,3.0);
+		break;
+
+		case "Elizabeth_tortuga_port_talk3":
+			Characters[GetCharacterIndex("Elizabeth Swann")].dialog.currentnode = "Elizabeth_tortuga_port_talk_3";
+			LAi_ActorDialog(characterFromID("Elizabeth Swann"),PChar,"",3.0,3.0);
+		break;
+
+		case "Gibbs_talk_port_final":
+			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "Gibbs_port_final_talk";
+			LAi_ActorDialog(characterFromID("Mr. Gibbs"),PChar,"",3.0,3.0);
+		break;
+
+		case "After_Tortuga_port_cleanup":
+			setCharacterShipLocation(PChar, "Tortuga_port");
+			AddQuestRecord("Dead mans chest", 9);
+			RestorePassengers(PChar.id);
+			LAi_LocationFightDisable(&Locations[FindLocation("Tortuga_port")], false);
+			bQuestDisableMapEnter = false;
+			DisableFastTravel(false);
+			bSuppressResurrection = false;
+			InterfaceStates.Buttons.Save.enable = 1;
+
+			LAi_SetImmortal(CharacterFromID("Elizabeth Swann"), false)
+			LAi_SetImmortal(CharacterFromID("Annamaria"), false)
+			LAi_SetImmortal(CharacterFromID("Mr. Gibbs"), false)
+			LAi_SetImmortal(CharacterFromID("James Norrington"), false)
+
+			LAi_SetOfficerType(CharacterFromID("Annamaria"));
+			LAi_SetOfficerType(CharacterFromID("James Norrington"));
+			LAi_SetOfficerType(CharacterFromID("Elizabeth Swann"));
+
+			AddPassenger(Pchar, characterFromID("Annamaria"), 0);
+			AddPassenger(Pchar, characterFromID("James Norrington"), 0);
+			AddPassenger(Pchar, characterFromID("Elizabeth Swann"), 0);
+
+			LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
+			SetOfficersIndex(Pchar, 1, GetCharacterIndex("Mr. Gibbs"));
+
+			SetCharacterRemovable(characterFromID("Annamaria"), true);
+			SetCharacterRemovable(characterFromID("Mr. Gibbs"), true);
+
+			LAi_QuestDelay("tp_deck_after_port_tortuga", 1.0);
+		break;
+
+		case "tp_deck_after_port_tortuga":
+			Locations[FindLocation("Tortuga_port")].reload.l2.disable = 0;
+			DoQuestReloadToLocation(GetCharacterShipQDeck(pchar), "rld", "startloc", "_");
+			//LAi_QuestDelay("to_sea_sail_away_after_tortuga", 0.3);
+		break;
+
+		//To sea and now and set sail
+		//Sail to continue DMC
+		case "to_sea_sail_away_after_tortuga":
+			QuestToSeaLogin_PrepareLoc("Hispaniola", "reload", "reload_7", false);
+			QuestToSeaLogin_Launch();
+		break;
 
 		//JRH code for wreck stairs -->
 		//-------------------------------------------------------------------------
@@ -8853,7 +11948,7 @@ void QuestComplete(string sQuestName)
 		case "Pchar_playertype":
 			LAi_SetPlayerType(Pchar);
 		break;
-	
+
 		case "wreck_deck_MD":
 			DeleteAttribute(PChar, "quest.S1A_up.win_condition");
 			DeleteAttribute(PChar, "quest.S2A_up.win_condition");
@@ -8863,7 +11958,7 @@ void QuestComplete(string sQuestName)
 			DeleteAttribute(PChar, "quest.S3D_down.win_condition");
 			DeleteAttribute(PChar, "quest.S4A_up.win_condition");
 			DeleteAttribute(PChar, "quest.S4D_down.win_condition");
-		
+
 			Pchar.wreck_deck = "MD";
 
 			LAi_QuestDelay("wreck_deck_status", 0.5);
@@ -8878,7 +11973,7 @@ void QuestComplete(string sQuestName)
 			DeleteAttribute(PChar, "quest.S3D_down.win_condition");
 			DeleteAttribute(PChar, "quest.S4A_up.win_condition");
 			DeleteAttribute(PChar, "quest.S4D_down.win_condition");
-	
+
 			Pchar.wreck_deck = "FC";
 
 			LAi_QuestDelay("wreck_deck_status", 0.5);
@@ -8893,7 +11988,7 @@ void QuestComplete(string sQuestName)
 			DeleteAttribute(PChar, "quest.S3D_down.win_condition");
 			DeleteAttribute(PChar, "quest.S4A_up.win_condition");
 			DeleteAttribute(PChar, "quest.S4D_down.win_condition");
-	
+
 			Pchar.wreck_deck = "QD";
 
 			LAi_QuestDelay("wreck_deck_status", 0.5);
@@ -8908,7 +12003,7 @@ void QuestComplete(string sQuestName)
 			DeleteAttribute(PChar, "quest.S3D_down.win_condition");
 			DeleteAttribute(PChar, "quest.S4A_up.win_condition");
 			DeleteAttribute(PChar, "quest.S4D_down.win_condition");
-	
+
 			Pchar.wreck_deck = "PD";
 
 			LAi_QuestDelay("wreck_deck_status", 0.5);
@@ -8930,7 +12025,7 @@ void QuestComplete(string sQuestName)
 				pchar.quest.S2A_up.win_condition.l1.locator_group = "quest";
 				pchar.quest.S2A_up.win_condition.l1.locator = "S2_low";
 				pchar.quest.S2A_up.win_condition = "S2A_up";
-		
+
 				pchar.quest.S3A_up.win_condition.l1 = "locator";
 				pchar.quest.S3A_up.win_condition.l1.location = "SFSI_deck";
 				pchar.quest.S3A_up.win_condition.l1.locator_group = "quest";
@@ -8977,7 +12072,7 @@ void QuestComplete(string sQuestName)
 				pchar.quest.S4_high.win_condition = "S4_high";
 			}
 		break;
-	
+
 		//------------------------------------------------------------------------------
 
 		case "S1A_up":
@@ -9022,8 +12117,8 @@ void QuestComplete(string sQuestName)
 			LAi_ActorGoToLocator(Pchar, "goto", "S1F_up", "wreck_deck_FC", 2.0);
 		break;
 
-		//---------------------------------------------------------------------		
-	
+		//---------------------------------------------------------------------
+
 		case "S1E_down":
 			PlaySound("PEOPLE\step_wood2.wav");
 			ChangeCharacterAddressGroup(Pchar, "SFSI_deck", "goto", "S1E_down");
@@ -9068,7 +12163,7 @@ void QuestComplete(string sQuestName)
 
 		//---------------------------------------------------------------------
 		//---------------------------------------------------------------------
-	
+
 		case "S2A_up":
 			PlaySound("PEOPLE\step_wood.wav");
 			ChangeCharacterAddressGroup(Pchar, "SFSI_deck", "goto", "S2A_up");
@@ -9110,9 +12205,9 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(Pchar);
 			LAi_ActorGoToLocator(Pchar, "goto", "S2F_up", "wreck_deck_FC", 2.0);
 		break;
-	
-		//---------------------------------------------------------------------		
-	
+
+		//---------------------------------------------------------------------
+
 		case "S2E_down":
 			PlaySound("PEOPLE\step_stairway2.wav");
 			ChangeCharacterAddressGroup(Pchar, "SFSI_deck", "goto", "S2E_down");
@@ -9154,7 +12249,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(Pchar);
 			LAi_ActorGoToLocator(Pchar, "goto", "S2X_down", "wreck_deck_MD", 2.0);
 		break;
-	
+
 		//---------------------------------------------------------------------
 		//---------------------------------------------------------------------
 
@@ -9410,13 +12505,13 @@ void QuestComplete(string sQuestName)
 			pchar.quest.S_br.win_condition.l1.locator_group = "quest";
 			pchar.quest.S_br.win_condition.l1.locator = "br";
 			pchar.quest.S_br.win_condition = "S_br";
-		
+
 			pchar.quest.S_tunnel.win_condition.l1 = "locator";
 			pchar.quest.S_tunnel.win_condition.l1.location = "Singapore_port";
 			pchar.quest.S_tunnel.win_condition.l1.locator_group = "quest";
 			pchar.quest.S_tunnel.win_condition.l1.locator = "tunnel";
 			pchar.quest.S_tunnel.win_condition = "S_tunnel";
-		
+
 			pchar.quest.extra1.win_condition.l1 = "locator";
 			pchar.quest.extra1.win_condition.l1.location = "Singapore_port";
 			pchar.quest.extra1.win_condition.l1.locator_group = "quest";
@@ -9536,7 +12631,7 @@ void QuestComplete(string sQuestName)
 			if(GetOfficersIndex(Pchar, 3) != -1)
 			{
 				iPassenger = GetOfficersIndex(Pchar, 3);
-				ChangeCharacterAddressGroup(&Characters[iPassenger], "Singapore_port", "quest", "st3_up");		
+				ChangeCharacterAddressGroup(&Characters[iPassenger], "Singapore_port", "quest", "st3_up");
 			}
 		break;
 
@@ -9556,7 +12651,7 @@ void QuestComplete(string sQuestName)
 			if(GetOfficersIndex(Pchar, 3) != -1)
 			{
 				iPassenger = GetOfficersIndex(Pchar, 3);
-				ChangeCharacterAddressGroup(&Characters[iPassenger], "Singapore_port", "quest", "st3_down");		
+				ChangeCharacterAddressGroup(&Characters[iPassenger], "Singapore_port", "quest", "st3_down");
 			}
 		break;
 
@@ -9576,7 +12671,7 @@ void QuestComplete(string sQuestName)
 					break;
 				}
 			}
-			   
+
 			LAi_QuestDelay("Singapore_check_points", 0.01);
 		break;
 
@@ -9652,7 +12747,7 @@ void QuestComplete(string sQuestName)
 					break;
 				}
 			}
-			   
+
 			LAi_QuestDelay("Singapore_check_points", 0.01);
 		break;
 
@@ -9670,14 +12765,14 @@ void QuestComplete(string sQuestName)
 						LAi_ActorGoToLocator(Pchar, "quest", "tunnel_fort", "Singapore_check_points", 3.5)
 					break;
 
-					case "Singapore_town":								
+					case "Singapore_town":
 						PauseAllSounds();
 						Locations[FindLocation(Pchar.location)].type = "silent_port";
 						PostEvent("LoadSceneSound", 0);
 
 						LAi_SetActorType(Pchar);
 						LAi_ActorGoToLocator(Pchar, "quest", "tunnel_sea", "Singapore_check_points", 3.5)
-						
+
 					break;
 				}
 			}
@@ -9714,7 +12809,7 @@ void QuestComplete(string sQuestName)
 				PlaySound("OBJECTS\VOICES\DEAD\male\dead7.wav");
 			}
 			else PlaySound("OBJECTS\VOICES\DEAD\female\dead_wom5.wav");
-			
+
 
 			LAi_QuestDelay("Singapore_check_points", 0.01);
 		break;
@@ -9730,7 +12825,7 @@ void QuestComplete(string sQuestName)
 			}
 			else //PlaySound("VOICE\ENGLISH\gr_wench3_sigh.wav");
 				PlaySound("VOICE\ENGLISH\gr_wench3_oh.wav");
-			
+
 			LAi_QuestDelay("Singapore_check_points", 0.5);
 		break;
 
@@ -9745,7 +12840,7 @@ void QuestComplete(string sQuestName)
 			}
 			else //PlaySound("VOICE\ENGLISH\gr_wench3_sigh.wav");
 				PlaySound("VOICE\ENGLISH\gr_wench3_oh.wav");
-			
+
 			LAi_QuestDelay("Singapore_check_points", 0.5);
 		break;
 
@@ -9876,7 +12971,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.BH_SC1.win_condition.l1.locator_group = "quest";
 			pchar.quest.BH_SC1.win_condition.l1.locator = "SC1";
 			pchar.quest.BH_SC1.win_condition = "BH_SC1";
-			
+
 			pchar.quest.BH_SC2.win_condition.l1 = "locator";
 			pchar.quest.BH_SC2.win_condition.l1.location = "Singapore_bathhouse";
 			pchar.quest.BH_SC2.win_condition.l1.locator_group = "quest";
@@ -11025,7 +14120,7 @@ void QuestComplete(string sQuestName)
 			switch(steam)
 			{
 				case 0:
-					//ri14	
+					//ri14
 					PlaySound("INTERFACE\fire_on.wav");
 					CreateParticleSystem("smoke" , 4.9, 0.1, -19.2, -1.57, 0.0, 0.0, 2);
 					CreateParticleSystem("waterfog" , 4.9, 0.1, -19.2, -1.57, 0.0, 0.0, 2);
@@ -11055,7 +14150,7 @@ void QuestComplete(string sQuestName)
 					PlaySound("INTERFACE\gas_off2.wav");
 					CreateParticleSystem("smoke" , 24.9, 2.1, -22.3, -1.57, 0.0, 0.0, 2);
 					CreateParticleSystem("waterfog" , 24.9, 2.1, -22.3, -1.57, 0.0, 0.0, 2);
-				break;	
+				break;
 
 				case 5:
 					PlaySound("INTERFACE\oxygen.wav");
@@ -11092,7 +14187,7 @@ void QuestComplete(string sQuestName)
 					CreateParticleSystem("smoke" , -12.1, 2.1, -38.3, -1.57, 0.0, 0.0, 2);
 					CreateParticleSystem("waterfog" , -12.1, 2.1, -38.3, -1.57, 0.0, 0.0, 2);
 				break;
-			
+
 				case 11:
 					PlaySound("INTERFACE\gas_on.wav");
 					CreateParticleSystem("smoke" , 8.9, 2.1, -40.3, -1.57, 0.0, 0.0, 2);
@@ -11143,7 +14238,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.BH_steam_on.win_condition.l1.location = "Singapore_bathhouse";
 			pchar.quest.BH_steam_on.win_condition = "BH_steam_on";
 		break;
-		
+
 		case "BH_steam_on":
 			pchar.BH_steam = "on";
 
@@ -11165,7 +14260,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.BH_fog_on.win_condition.l1.locator = "reload2_back";
 			pchar.quest.BH_fog_on.win_condition = "BH_fog_on";
 		break;
-	
+
 		case "BH_fog_on":
 			SetNextWeather("Heavy Fog");
 

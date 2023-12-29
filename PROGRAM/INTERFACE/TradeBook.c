@@ -208,7 +208,7 @@ void InitInterface_S(string iniName, string town)
 
 // KK -->
 	int town_nation = GetTownNation(town);
-	SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(town_nation) + ".tga");
+	SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(town_nation) + ".png");
 	SetSelectable("MANAGE_BUTTON", town_nation == PERSONAL_NATION);
 
 	bool hasShip = false;
@@ -271,7 +271,7 @@ void SetVariable()
 	int town_nation = GetTownNation(town);
 // KK -->
 	GameInterface.strings.TownName = FindTownName(town);
-	SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(town_nation) + ".tga");
+	SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(town_nation) + ".png");
 	SetSelectable("MANAGE_BUTTON", town_nation == PERSONAL_NATION);
 // <-- KK
 	int curStore = GetTownStoreIndex(GetTownIDFromIsland(refIsland.id, curTown));//MAXIMUS: the simplest way :) -->
@@ -283,7 +283,7 @@ void SetVariable()
 		town = GetTownIDFromIsland(refIsland.id, curTown);
 		town_nation = GetTownNation(town);
 		GameInterface.strings.TownName = FindTownName(town); // KK
-		SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(town_nation) + ".tga"); // KK
+		SetNewPicture("NATION", "interfaces\flags\Crest_" + GetNationFlagImage(town_nation) + ".png"); // KK
 		curStore = GetTownStoreIndex(GetTownIDFromIsland(refIsland.id, curTown));
 	}
 

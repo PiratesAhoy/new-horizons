@@ -1,0 +1,16 @@
+string DLG_TEXT[14] = {
+"Esta es la mejor comida que vas a probar en el resto de tu vida.",
+"Casi me hace desear que llegue el momento del ahorcamiento.",
+"Métete esto por el gaznate antes de que te lo cierren con una soga.",
+"¿Sería posible un poco de pan?",
+"Alguien debe apreciarte muhco, para encerrarte aquí y darte la oportunidad de probar mi famoso potaje.",
+"Yolo llamaría un castigo cruel e inusual.",
+"¡Aquí está tu comida, pirata!",
+"¿A esto le llamas comida? ¡No le serviría esto ni a las ratas de la sentina!",
+"¿Qué haces fuera de tu celda? ¡Guardias!",
+"¡Cállate, a no ser que quieras otro dolor de cabeza!",
+"¡Oh, no, otra vez tú!",
+"Sí, otra vez yo.",
+"Bueno, no te molestes en arrearme en la mollera otra vez. Ya no llevo la llave encima. ¡Disfruta del potaje!",
+"Oh, no, otra vez no...",
+}

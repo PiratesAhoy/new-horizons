@@ -1169,7 +1169,7 @@ void MoneyOperation()
 	UpdateMoneyPile(gambleChar, imageGroup);
 	switch(gameResult)
 	{
-		case "win": PlayStereoSound("INTERFACE\took_item.wav"); break;
+		case "win": PlayStereoSound("INTERFACE\took_item.flac"); break;
 		case "lose": PlayStereoSound("gamble_give_money"); break;
 	}
 	

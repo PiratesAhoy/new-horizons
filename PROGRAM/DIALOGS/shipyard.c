@@ -23,7 +23,7 @@ void ProcessDialogEvent()
 		//Fetch Quest -->
 		case "fetch quest":
 			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
-			d.Text = DLG_TEXT[1] + NPChar.fetch_quest.amount + " " + Goods[sti(NPChar.fetch_quest.good)].name + DLG_TEXT[2] + NPChar.fetch_quest.money + DLG_TEXT[3]  + NPChar.fetch_quest.expire;
+			d.Text = DLG_TEXT[1] + NPChar.fetch_quest.amount + " " + XI_ConvertString(Goods[sti(NPChar.fetch_quest.good)].name) + DLG_TEXT[2] + NPChar.fetch_quest.money + DLG_TEXT[3]  + NPChar.fetch_quest.expire;
 			Link.l1 = DLG_TEXT[4];
 			Link.l1.go = "agree fetch";
 			Link.l2 = DLG_TEXT[5];
@@ -110,12 +110,12 @@ void ProcessDialogEvent()
 			/*WriteNewLogEntry(("Helping the dockyard of "+ctown.name), ("The dockyard of "+ctown.name+" asked me to get "+NPChar.fetch_quest.amount+" "+ Goods[sti(NPChar.fetch_quest.good)].name +" from somewhere and deliver it back to him to get "+NPChar.fetch_quest.money+" gold coins. But I have to deliver it before "+NPChar.fetch_quest.expire+" or i will receive nothing."), "Personal", true);
 			Logit("Ships Log Updated");
 			AddMsgToCharacter(PChar,MSGICON_LOGBOOK);
-			PlaySound("INTERFACE\notebook.wav");*/
+			PlaySound("INTERFACE\notebook.flac");*/
 			//Questbook
 			Preprocessor_AddQuestData("town",ctown.name);
-			Preprocessor_AddQuestData("type","shipyard");
+			Preprocessor_AddQuestData("type",XI_ConvertString("shipyard"));
 			Preprocessor_AddQuestData("amount",sti(NPChar.fetch_quest.amount));
-			Preprocessor_AddQuestData("good",Goods[sti(NPChar.fetch_quest.good)].name);
+			Preprocessor_AddQuestData("good",XI_ConvertString(Goods[sti(NPChar.fetch_quest.good)].name));
 			Preprocessor_AddQuestData("money",sti(NPChar.fetch_quest.money));
 			Preprocessor_AddQuestData("pronoun2",XI_ConvertString(GetMyPronounObj(NPChar)));
 			Preprocessor_AddQuestData("date",NPChar.fetch_quest.expire);

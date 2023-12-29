@@ -94,7 +94,7 @@ void ProcessDialogEvent()
 		case "gambled_girl_sold":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 		//	AddMoneyToCharacter(pchar, pchar.quest.gambling_with_girl);
 		
 			//JRH -->

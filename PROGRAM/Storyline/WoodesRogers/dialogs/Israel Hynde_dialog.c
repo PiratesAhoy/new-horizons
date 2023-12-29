@@ -279,7 +279,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				GiveItem2Character(Pchar, "key15");
 				Pchar.quest.med_Anderson = "food_keys_done";	
 				

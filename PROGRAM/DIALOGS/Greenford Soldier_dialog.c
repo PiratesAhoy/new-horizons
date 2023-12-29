@@ -291,7 +291,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[72] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[73];
 			link.l1 = DLG_TEXT[74];
 			link.l1.go = "research_exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1200);
 		break;
 

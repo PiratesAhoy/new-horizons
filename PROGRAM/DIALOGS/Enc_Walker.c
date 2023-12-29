@@ -425,7 +425,7 @@ void ProcessDialogEvent()
 		// TIH <--
 
 		case "bandage":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -120);
 			GiveItem2Character(PChar, "medical1");
 			Diag.CurrentNode = "once_more_bandage";
@@ -448,7 +448,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "beg":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -10);
 			switch (Rand(2))
 			{
@@ -692,7 +692,7 @@ void ProcessDialogEvent()
 //			else { PChar.skill.Fencing = makeint(PChar.skill.Fencing) + 1; }
 			//PChar.skill.Fencing = makeint(PChar.skill.Fencing) + 1;		// LDH reverted 03Feb09
 			AddXPtoSkill(Pchar,"Fencing",CalculateSkillExperienceFromRank(sti(Pchar.skill.Fencing)+1)); //Levis
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -sti(NPChar.sum));
 			GotSkill("fencing"); // ccc apr11
 			Diag.CurrentNode = "get_out";
@@ -740,7 +740,7 @@ void ProcessDialogEvent()
 //			else { PChar.skill.Defence = makeint(PChar.skill.Defence) + 1; }
 			//PChar.skill.Defence = makeint(PChar.skill.Defence) + 1;		// LDH reverted 03Feb09
 			AddXPtoSkill(Pchar,"Defence",CalculateSkillExperienceFromRank(sti(Pchar.skill.Defence)+1)); //Levis
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -sti(NPChar.sum));
 			GotSkill("Defence"); // ccc apr11
 			Diag.CurrentNode = "get_out";
@@ -788,7 +788,7 @@ void ProcessDialogEvent()
 //			else { PChar.skill.Leadership = makeint(PChar.skill.Leadership) + 1; }
 			//PChar.skill.Leadership = makeint(PChar.skill.Leadership) + 1;		// LDH reverted 03Feb09
 			AddXPtoSkill(Pchar,"Leadership",CalculateSkillExperienceFromRank(sti(Pchar.skill.Leadership)+1)); //Levis
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -sti(NPChar.sum));
 			GotSkill("leadership"); // ccc apr11
 			Diag.CurrentNode = "get_out";
@@ -836,7 +836,7 @@ void ProcessDialogEvent()
 //			else { PChar.skill.Sailing = makeint(PChar.skill.Sailing) + 1; }
 			//PChar.skill.Sailing = makeint(PChar.skill.Sailing) + 1;		// LDH reverted 03Feb09
 			AddXPtoSkill(Pchar,"Sailing",CalculateSkillExperienceFromRank(sti(Pchar.skill.Sailing)+1)); //Levis
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, - sti(NPChar.sum));
 			GotSkill("sailing"); // ccc apr11
 			Diag.CurrentNode = "get_out";
@@ -884,7 +884,7 @@ void ProcessDialogEvent()
 //			else { PChar.skill.Accuracy = makeint(PChar.skill.Accuracy) + 1; }
 			//PChar.skill.Accuracy = makeint(PChar.skill.Accuracy) + 1;		// LDH reverted 03Feb09
 			AddXPtoSkill(Pchar,"Accuracy",CalculateSkillExperienceFromRank(sti(Pchar.skill.Accuracy)+1)); //Levis
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -sti(NPChar.sum));
 			GotSkill("accuracy"); // ccc apr11
 			Diag.CurrentNode = "get_out";
@@ -932,7 +932,7 @@ void ProcessDialogEvent()
 //			else { PChar.skill.Cannons = makeint(PChar.skill.Cannons) + 1; }
 			//PChar.skill.Cannons = makeint(PChar.skill.Cannons) + 1;		// LDH reverted 03Feb09
 			AddXPtoSkill(Pchar,"Cannons",CalculateSkillExperienceFromRank(sti(Pchar.skill.Cannons)+1)); //Levis
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -sti(NPChar.sum));
 			GotSkill("gunnery"); // ccc apr11
 			Diag.CurrentNode = "get_out";
@@ -980,7 +980,7 @@ void ProcessDialogEvent()
 //			else { PChar.skill.Grappling = makeint(PChar.skill.Grappling) + 1; }
 			//PChar.skill.Grappling = makeint(PChar.skill.Grappling) + 1;		// LDH reverted 03Feb09
 			AddXPtoSkill(Pchar,"Grappling",CalculateSkillExperienceFromRank(sti(Pchar.skill.Grappling)+1)); //Levis
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -sti(NPChar.sum));
 			GotSkill("grappling"); // ccc apr11
 			Diag.CurrentNode = "get_out";
@@ -1028,7 +1028,7 @@ void ProcessDialogEvent()
 //			else { PChar.skill.Repair = makeint(PChar.skill.Repair) + 1; }
 			//PChar.skill.Repair = makeint(PChar.skill.Repair) + 1;		// LDH reverted 03Feb09
 			AddXPtoSkill(Pchar,"Repair",CalculateSkillExperienceFromRank(sti(Pchar.skill.Repair)+1)); //Levis
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -sti(NPChar.sum));
 			GotSkill("repair"); // ccc apr11
 			Diag.CurrentNode = "get_out";
@@ -1076,7 +1076,7 @@ void ProcessDialogEvent()
 //			else { PChar.skill.Commerce = makeint(PChar.skill.Commerce) + 1; }
 			//PChar.skill.Commerce = makeint(PChar.skill.Commerce) + 1;		// LDH reverted 03Feb09
 			AddXPtoSkill(Pchar,"Commerce",CalculateSkillExperienceFromRank(sti(Pchar.skill.Commerce)+1)); //Levis
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -sti(NPChar.sum));
 			GotSkill("commerce"); // ccc apr11
 			Diag.CurrentNode = "get_out";
@@ -1199,7 +1199,7 @@ void ProcessDialogEvent()
 				case 0:
 					Diag.CurrentNode = "get_out";
 					DialogExit();
-					PlaySound("INTERFACE\took_item.wav");
+					PlaySound("INTERFACE\took_item.flac");
 					int win=100+rand(3000); 
 					AddMoneyToCharacter(PChar, win);
 					Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"You got") + " " + win + " " + LanguageConvertString(tmpLangFileID,"gold."));
@@ -1284,7 +1284,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "moneydouble":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			if (CheckAttribute(NPChar, "pickgold"))
 			{
 				// Aconcagua: use pickgold stored at "stolen" instead of whole money
@@ -1319,7 +1319,7 @@ void ProcessDialogEvent()
 		case "moneyback":
 			if(rand(100)>30)
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				// Aconcagua: this seems what was originally intended by KK when calculating FakeMoney at "stolen"
 				// what was the intention of reducing the stolen money, however?
 				// PB: I have no clue, so let's get rid of it
@@ -1368,7 +1368,7 @@ void ProcessDialogEvent()
 			{
 				ChangeCharacterReputation(PChar, 2);
 			}
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			// TIH --> to prevent giving all your money back to the bastard! Aug29''06
 			int donationSum = 50 + rand(300);
 			if ( sti(PChar.money) < donationSum ) donationSum = makeint(sti(PChar.money) / 2);
@@ -1425,7 +1425,7 @@ void ProcessDialogEvent()
 			DialogExit();
 			GenerateTreasureQuest();
 			AddMoneyToCharacter(PChar, -sti(NPChar.sum));
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			DeleteAttribute(NPChar, "sum");
 			PChar.treasuremap = true; // PB: For blinking "X Marks the Spot"
 			LaunchPelagoMap();
@@ -1494,7 +1494,7 @@ void ProcessDialogEvent()
 				if(money - leftover < pickgold)
 				pickgold = money - leftover;
 				if(GetDifficulty() < DIFFICULTY_SEADOG) // PB: You shouldn't be notified when you get pick-pocketed
-					PlayStereoSound("INTERFACE\took_item.wav");
+					PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar, -pickgold);
 				// Aconcagua: add pickgold -> on fighting/stealing, get char's money, too
 				AddMoneyToCharacter(NPChar, pickgold);
@@ -1514,7 +1514,7 @@ void ProcessDialogEvent()
 			{ 
 				if (pickch>30&&pickch<60)			
 				{
-					PlaySound("INTERFACE\took_item.wav");
+					PlaySound("INTERFACE\took_item.flac");
 					d.text = DLG_TEXT[255]; 
 					winlink=rand(100); 
 					if (winlink>=50) 
@@ -1570,7 +1570,7 @@ void ProcessDialogEvent()
 			{
 				ChangeCharacterReputation(PChar, 1); //ccc from 3
 			}
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -20);
 			Diag.CurrentNode = "thanx";
 			DialogExit();

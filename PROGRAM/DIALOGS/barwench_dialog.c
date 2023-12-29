@@ -121,7 +121,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "rum":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -1000);
 			GiveItem2Character(PChar, "potionrum");
 			Diag.CurrentNode = Diag.TempNode;
@@ -130,7 +130,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "wine":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -1000);
 			GiveItem2Character(PChar, "potionwine");
 			Diag.CurrentNode = Diag.TempNode;

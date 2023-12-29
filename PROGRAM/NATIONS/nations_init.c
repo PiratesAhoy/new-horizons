@@ -992,7 +992,7 @@ void InitNations()
 			rNation.Titles.9 = "Representative";
 			rNation.Titles.10 = "Senator Elect";
 			rNation.Titles.11 = "Senator";
-			rNation.Titles.12 = "Governor";
+			rNation.Titles.12 = "GovernorUS";
 			// NK <--
 		}
 	

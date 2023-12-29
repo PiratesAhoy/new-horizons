@@ -279,7 +279,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "buy_wine_bottle":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -335);
 			GiveItem2Character(PChar, "potionwine");
 			AddDialogExitQuest("sleep_in_tavern");
@@ -294,7 +294,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "buy_rum_bottle":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -137);
 			GiveItem2Character(PChar, "potionrum");
 			AddDialogExitQuest("sleep_in_tavern");

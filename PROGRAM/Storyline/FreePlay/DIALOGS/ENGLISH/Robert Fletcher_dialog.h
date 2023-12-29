@@ -1,4 +1,4 @@
-string DLG_TEXT[313] = {
+string DLG_TEXT[318] = {
 "We've made port at the pirate settlement on #sisland_Quebradas Costillas#. I had my personal Roger hoisted so no one will give us trouble. The officers and a piece of your crew have elected to make their way through the jungle for #sCharlestown#. I guess they don't want to be hunted down by the English as traitors. Alas you don't have that option. I cannot thank you enough for what you did for my crew and me.",
 "Captain Champers was a pig of a man and what he intended for you was monstrous. I didn't see a choice.",
 "Treacherous dogs. I suppose I saw that coming. What can I do for you, Captain?",
@@ -312,4 +312,9 @@ string DLG_TEXT[313] = {
 "Good. Let's anchor here and prepare for our next voyage.",
 "Now that we've got the rest of the crew out of the way, let's get to the boat. We'll need to throw our weapons overboard before we leave, they'll only make the boat heavier.",
 "Thank you again for freeing me. As for weapons, we can find something after we reach shore.",
+"Purpure, we've finally arrived in the New World. It's a land of opportunity and I look forward to hearing from you again. Sadly, I can no longer accompany you after this. I'm getting on in years.",
+"I'll miss you terribly, uncle! Take care of yourself when you get back to England.",
+"Dear uncle, is something the matter?",
+"Yes, Purpure. The wind is becoming stronger and I fear a storm is on the way.",
+"I think I'll be alright, uncle. Don't worry about me. I can turn over a new leaf away from my father, at least.",
 }

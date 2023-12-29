@@ -354,5 +354,36 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].vcskip = true;
 	n = n + 1;
 
+//-------------------------------------------------------------- BONAMY CARGO HOLD
+	//ID
+	Locations[n].id = "Devlin_Hold1";
+	locations[n].id.label = "Cargo hold";
+	//Info
+	Locations[n].filespath.models = "locations\decks\hold";
+	Locations[n].image = "deck_hold.tga"; // KK
+	//Sound
+//	Locations[n].type = "ship";
+	Locations[n].type = "deck";
+//	Locations[n].camshuttle = 1;
+//	Locations[n].fastreload = "ship";
+//	Locations[n].monsters = 1; // KK
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "hold_ld"; // KK
+	Locations[n].models.always.l1 = "hold";
+	//Day
+	Locations[n].models.day.charactersPatch = "hold_p";
+	Locations[n].models.day.fonar = "hold_fd";
+	//Night
+	Locations[n].models.night.charactersPatch = "hold_p";
+	Locations[n].models.night.fonar = "hold_fn";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "true";
+	Locations[n].environment.curse = "false"; // PB: Cursed Coins
+
+	n = n + 1;
+
 
 }

@@ -68,7 +68,7 @@ string DLG_TEXT[117] = {
 "Bueno. Entonces, tendré que esperar.",
 "Tengo algunas preguntas más.",
 "Hola, ",
-", cuanto tiempo sin verte. ¿Cómo te va?",
+", cuánto tiempo sin verte. ¿Cómo te va?",
 "Bien, bien. ¿Te importa si te hago un par de preguntas?",
 "No es asunto tuyo. Las preguntas las hago yo.",
 "Estoy buscando marineros para engrosar mi tripulación.",

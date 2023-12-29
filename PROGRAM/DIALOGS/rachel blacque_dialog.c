@@ -305,7 +305,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[72] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) DLG_TEXT[73];
 			Link.l1 = DLG_TEXT[74];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -100);
 			Preprocessor_AddQuestData("Rachel", GetMyName(NPChar));
 			AddQuestRecord("Blacques", 6); // NK

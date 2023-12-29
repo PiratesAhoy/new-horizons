@@ -52,7 +52,13 @@ void GenerateQuestShip(string character_id, int iNation) // KK
 	rFantom.skipPostInit = true; // PB: Make sure this captain is initialized RIGHT NOW and not later!
 	InitCharacterSkills(rFantom);
 	Fantom_SetRandomMoney(rFantom, rFantom.FantomType);
+	rFantom.money = sti(rFantom.ShipMoney)/3;						// GR: Give some of shipmoney to captain so you can rob him
+	rFantom.ShipMoney = sti(rFantom.ShipMoney)*200/300;
 
+	TakeItemFromCharacter(rFantom, CheckCharacterEquipByGroup(&rFantom, BLADE_ITEM_TYPE));	// GR: Remove whatever random weapons the captain has kept from a previous role...
+	TakeItemFromCharacter(rFantom, CheckCharacterEquipByGroup(&rFantom, GUN_ITEM_TYPE));
+	LAi_NPC_Equip(rFantom, sti(rFantom.rank), true, 0.5*mult);				// GR: ... and give him new weapons suited to his level and type																									   
+													
 	SetRandomNameToCharacter(rFantom);
 	rFantom.old.name = rFantom.name; // KK
 	rFantom.old.lastname = rFantom.lastname; // KK
@@ -449,10 +455,10 @@ string GenerateFetchCargo(ref ctown) //temp function until economy overhaul
 					options[option]="tailor"; option++;
 					break;
 				case "blacksmith":
-					if (ENABLE_WEAPONSMOD) options[option]="blacksmith"; option++; // PB: NOT if the relevant mod is OFF!
+					if (ENABLE_WEAPONSMOD) {options[option]="blacksmith"; option++;} // PB: NOT if the relevant mod is OFF!
 					break;
 				case "gunsmith":
-					if (ENABLE_WEAPONSMOD) options[option]="gunsmith"; option++; // PB: NOT if the relevant mod is OFF!
+					if (ENABLE_WEAPONSMOD) {options[option]="gunsmith"; option++;} // PB: NOT if the relevant mod is OFF!
 					break;
 				case "apothecary":
 					options[option]="apothecary"; option++;
@@ -1747,7 +1753,7 @@ void CommonQuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Enc_Char1")].nodisarm = 1; // PB: Disable disarming
 			LAi_SetImmortal(CharacterFromID("Enc_Char1"), true);
 
-			//ѕри первом подходе или истечении времени сработает квест
+			//При первом подходе или истечении времени сработает квест
 			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
 			LAi_ActorFollow(CharacterFromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "", 240);
 			LAi_ActorFollow(CharacterFromID("Enc_Char3"), CharacterFromID("Enc_Char1"), "", 240);
@@ -1873,7 +1879,7 @@ void CommonQuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("Enc_Char3"));
 			LAi_SetActorType(CharacterFromID("Enc_Char4"));
 
-			//ѕри первом подходе или истечении времени сработает квест
+			//При первом подходе или истечении времени сработает квест
 			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
 			LAi_ActorFollow(CharacterFromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "", 240);
 			LAi_ActorFollow(CharacterFromID("Enc_Char3"), CharacterFromID("Enc_Char1"), "", 240);
@@ -2583,7 +2589,7 @@ Cost for level 50 is 55,374,000
 				if (GetTownGovernorIndex(GetTownIDFromIsland(pchar.quest.generate_kill_quest.destination, iColony)) != -1) cc++;
 			}
 			if (cc > 1)
-				Preprocessor_AddQuestData("town", FindTownName(PChar.quest.generate_kill_quest.town) + " " + TranslateString("", "on") + " " + FindIslandName(pchar.quest.generate_kill_quest.destination));
+				Preprocessor_AddQuestData("town", FindTownName(PChar.quest.generate_kill_quest.town) + " " + TranslateString("", "onisland") + " " + FindIslandName(pchar.quest.generate_kill_quest.destination));
 			else
 				Preprocessor_AddQuestData("town", FindTownName(PChar.quest.generate_kill_quest.town));
 			Preprocessor_AddQuestData("ship_descr", GetShipDescribe("Quest pirate", true, true, true, true));
@@ -3127,6 +3133,7 @@ Cost for level 50 is 55,374,000
 			LAi_ActorGoToLocator(CharacterFromID(Pchar.quest.friend_in_tavern), "reload", neededLocator, "go_to_see_girl_1", -1);
 			if(AlwaysRunToggle)
 			{
+				PChar.quest.run_toggled = "true";
 				AlwaysRunToggle = false;
 				BeginChangeCharacterActions(GetMainCharacter());
 				SetDefaultNormWalk(GetMainCharacter());
@@ -3162,15 +3169,16 @@ Cost for level 50 is 55,374,000
 
 		case "to_the_room_for_see_girl_2":
 			LAi_SetPlayerType(pchar);
-/*			if(!AlwaysRunToggle)	// GR: Why force the player into running mode?
+		    if(!AlwaysRunToggle && CheckAttribute(PChar, "quest.run_toggled"))	// GR: If you previously had always-run set and were forced into walking mode, revert to always running
 			{
 				AlwaysRunToggle = true;
 				BeginChangeCharacterActions(GetMainCharacter());
 				SetDefaultNormWalk(GetMainCharacter());
 				SetDefaultFight(GetMainCharacter());
 				EndChangeCharacterActions(GetMainCharacter());
+				DeleteQuestAttribute("run_toggled");
 			}
-*/
+			
 			LAi_ClearIndexedLocators(Pchar.location, "goto");
 			LAi_SetStayType(characterFromID("Virginie d'Espivant"));
 // changed by MAXIMUS 18.11.2006 [for nice show of this process] <--
@@ -4861,8 +4869,8 @@ Cost for level 50 is 55,374,000
 				sld.greeting = "Gr_Mr. Gibbs";
 				sld.money = rand(100);
 				sld.id = "Mr. Gibbs";
-				sld.name = "Joshamee";
-				sld.lastname = "Gibbs";
+				sld.name = TranslateString("","Joshamee");
+				sld.lastname = TranslateString("","Gibbs");
 				sld.reputation = REPUTATION_GOOD;
 				sld.nation = PIRATE;
 				sld.sex = "man";
@@ -4977,7 +4985,7 @@ Cost for level 50 is 55,374,000
 // Levis -->
 		case "get_shot_gun_mode":
 			globalSGMode = true;
-			if(FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
+			if(ENABLE_FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
 			PlaySound("OBJECTS\duel\reload1.wav");
 		break;
 		
@@ -6710,7 +6718,7 @@ void SupplyAmmo(bool bOverride)
 			if(bGotAmmo)
 			{
 				LogIt(TranslateString("","Your shore party has been resupplied with Ammunition!"));
-				PlaySound("INTERFACE\important_item.wav");
+				PlaySound("INTERFACE\important_item.flac");
 			}
 		}
 	}

@@ -9,11 +9,14 @@ Devlin{Девлин}
 
 {=====| QuebradasCostillas.c |=====}
 Skull{Череп}
+Sixto{Сиксто}
+Costa{Коста}
+Rico1{Рико}
 
 {=====| Cuba.c |=====}
 Subteniente{Субтеньенте}
 Chorizo{Чоризо}
-Rocoso{Рокосо}
+Rocoso{Рокозо}
 Don Evaristo{Дон Эваристо}
 Dragan{Драган}
 van Mourik{Ван Моурик}
@@ -24,18 +27,18 @@ Flobb{Флобб}
 
 {=====| Story.c |=====}
 Mystery{Таинственный}
-Messenger{Посыльный}
+Messenger{Посланник}
 Brin Mistress{Госпожа Брин}
 Emmanuel{Эммануэль}
 Bonnie{Бонни}
 Blaze{Блейз}
 Short Jack{Коротышка Джек}
-Gold{Голд}
+GoldDO{Голд}
 Couch Captain{Капитан Коуч}
 Charles{Чарльз}
 Sir Christopher{Сэр Кристофер}
 Mings{Мингс}
-Nathan{Натан}
+Nathan{Нэйтан}
 Kell{Келл}
 Petros{Петрос}
 Robert{Роберт}
@@ -56,5 +59,89 @@ Roberts{Робертс}
 Merciless{Беспощадный}
 Mark{Марк}
 Sharp{Шарп}
+
+{=====| FalaiseDeFleur.c |=====}
+Toni{Тони}
+Haraldo{Харальдо}
+Isabel{Изабель}
+Marino{Марино}
+Grey{Грей}
+Pepe{Пепе}
+Grande{Гранде}
+Kofi{Кофи}
+Macchiato{Маккиато}
+Doma{Дома}
+Perignone{Периньоне}
+Puerta{Пуэрта}
+Velador{Веладор}
+Franz{Франц}
+Gynster{Гинстер}
+Ernesto{Эрнесто}
+Dirty{Грязный}
+Chico{Чико}
+Malo{Мало}
+Audience{Наблюдатель}
+Guzman{Гузман}
+Jauri{Джаури}
+Lil{Лил}
+Bonto{Бонто}
+Triton{Тритон}
+Barbos{Барбос}
+Silvia{Сильвия}
+
+{=====| Cayman.c |=====}
+Killian{Киллиан}
+O'Byrne{О'Бирн}
+Annie{Энни}
+Scout{Разведчик}
+Mad Kay{Безумный Кай}
+Hubecher{Хубечер}
+Godefroi{Годфруа}
+Bonamy{Бонами}
+Crazy Luc{Сумасшедший Люк}
+Helveur{Хельвер}
+
+{=====| Hispaniola.c |=====}
+Johnny{Джонни}
+Jackson{Джексон}
+Jackie{Джеки}
+Johnson{Джонсон}
+Cunning Frog{Хитрая Жаба}
+Private{Рядовой}
+Pyle{Пайл}
+Cheyenne{Шайенн}
+Borgen{Борген}
+Feck{Фек}
+Bionicle{Бионикл}
+Humana{Человеческий}
+Osseus{Скелет}
+Contessa{Графиня}
+Calzone{Кальцоне}
+Torsten{Торстен}
+Storenfried{Сторенфрид}
+Shirley{Ширли}
+Lieselotte{Лизелотта}
+Lt{Лт.}
+Bornhowler{Борнхоулер}
+Finstock{Финсток}
+Kurt{Курт}
+Krautwurm{Краутвурм}
+Georg{Георгий}
+Geheim{Гехейм}
+Mondo{Мондо}
+Margrit{Маргрит}
+Eugster{Югстер}
+Donkey{Донки}
+Kong{Конг}
+Ferdinand{Фердинанд}
+Marcel{Марсель}
+Guille{Гиль}
+Jungle Julia{Джулия из Джунглей}
+the Kid{Сопляк}
+Buffoon{Шут Гороховый}
+Lorena{Лорена}
+Lopez{Лопес}
+Compulsive{Навязчивый}
+Village Idiot{Деревенский Идиот}
 
 {=====| 18 characters |=====}

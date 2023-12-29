@@ -1,0 +1,16 @@
+string DLG_TEXT[14] = {
+"¡Ook!",
+"¡Qué monito más... mono!",
+"¡Eek!",
+"¿Nadie te ha dado de comer?",
+"¡Ook eek!",
+"¡Deja de seguirme!",
+"¡Eek ook!",
+"¡Piérdete, mono delgaducho!",
+"¡Eek eek ook ook eek!",
+"¡Tienes que estar de broma! Ahora me va a seguir un ejército de monos, chillando sin parar!",
+"¡Eek ook ook EEEK!",
+"¿Qué? ¿Ya estás en casa con tus amigos y por fin puedo librarme de ti?",
+"¡EEEK EEEK!",
+"Oh, perdona. Por supuesto, no es que quisiera librarme de ti, pero está bien que estés donde quieres estar. Adiós, eh... amiguito.",
+}

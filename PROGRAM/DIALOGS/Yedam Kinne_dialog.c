@@ -117,7 +117,7 @@ void ProcessDialogEvent()
 
 		case "good_6":
 			Dialog.snd = "voice\YEKI\YEKI009";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -2000);
 			dialog.text = DLG_TEXT[21];
 			link.l1 = DLG_TEXT[22];
@@ -240,7 +240,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_abduction_good_pass":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5000);
 			dialog.text = DLG_TEXT[37];
 			AddDialogExitQuest("abduction_wait_for_pass");
@@ -261,7 +261,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_abduction_cheap_pass":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);
 			GiveItem2Character(PChar, "FakePrisonPass");
 			NPChar.done_business = "true";
@@ -316,7 +316,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[52] + GetMyLastName(PChar) + "!";
 			link.l1 = DLG_TEXT[40];
 			NPChar.done_business = "true";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -3000);
 			AddDialogExitQuest("kapitein_got_papers");
 			link.l1.go = "exit";

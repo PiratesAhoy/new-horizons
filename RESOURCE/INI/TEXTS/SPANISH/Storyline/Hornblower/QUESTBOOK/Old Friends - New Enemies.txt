@@ -1,6 +1,6 @@
 title=Viejos amigos, nuevos enemigos.
 text.t1=He vuelto a encontrarme con el señor Bush. Nos alojaremos en casa de la señora Mason.
-text.t2=He llevado al señor Bush a una timba de cartas en la casa del boticario.
+text.t2=Voy a llevar al señor Bush a una timba de cartas en la casa del boticario.
 text.t3=Tengo un nuevo barco y el señor Bush es mi primer oficial. Debemos ir a la taberna para reclutar una tripulación.
 text.t4=Escoltados por el barco del señor Quelp, debemos dirigirnos a Cayman. Es rumbo oeste hasta Bonaire, después noroeste hasta Cayman.
 text.t5=Hemos llegado a Cayman. El señor Quelp desembarcó muy rápido... qué extraño. Ahora debemos encontrar al señor Sharpe y sus hombres del 95th.
@@ -17,4 +17,4 @@ text.t15=Hemos destruido el semáforo pero estamos atrapados en el calabozo del 
 text.t16=Hemos destruido la batería y descubierto al traidor. Ahora, de vuelta al barco para zarpar rumbo al puerto de Bridgetown.
 text.t17=Debería visitar a Maria para asegurarme de que está bien. En marcha hacia su casa.
 text.t18=De vuelta en casa. Le he pedido a Maria que se case conmigo y ha dicho que sí (¿Qué es lo que he hecho?).
-text.t19=Me han asignado el mando de la fragata 'Atropos'.
+text.t19=Me han asignado el mando de la corbeta 'Atropos'.

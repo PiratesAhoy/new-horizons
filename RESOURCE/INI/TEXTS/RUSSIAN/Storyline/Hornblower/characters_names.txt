@@ -12,7 +12,7 @@ Lt. William{Лт. Уильям}
 Bush{Буш}
 Thomas{Томас}
 Wolfe{Вульф}
-Matthews{Мэтьюз}
+Matthews{Мэтьюс}
 Lt.{Лт.}
 Chadd{Чад}
 
@@ -89,7 +89,7 @@ Archer{Арчер}
 Tongue{Болтун}
 Mansfield{Мансфилд}
 Perkins{Перкинс}
-Dunnitt{Даннитт}
+Dunnitt{Дуннитт}
 Hogan{Хоган}
 Murray{Мюррэй}
 Hew{Хью}
@@ -105,7 +105,7 @@ Three{третий}
 Donatien{Донасьё}
 Thibaud{Тибо}
 Rifleman{Стрелок}
-Major{Мажор}
+Major{Майор}
 DoctorW{Доктор}
 Able Seaman{Способный Моряк}
 

@@ -4258,35 +4258,35 @@ void SubmergeDutchman()
 				Ship_ChangeCharge(rCharacter, sti(rCharacter.Ship.Cannons.Charge.Type)); 
 				gX = 0; gY = 45 - stf(rCharacter.ship.SubmergeDutchman); gZ = 16;
 				CreateParticleSystemX("dutchman_emerge",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 3.0, 0.0, 2);
-			//	PlayStereoSound("objects\shipcharge\ball_splash1.wav");
+			//	PlayStereoSound("objects\shipcharge\ball_splash1.flac");
 				rCharacter.ship.PlayedSplash = 2;
 			}
 			if(stf(rCharacter.ship.SubmergeDutchman)-45 <= stf(rCharacter.ship.CorrectImmersion) && sti(GetAttribute(rCharacter, "ship.PlayedSplash")) == 2)
 			{
 				gX = 0; gY = 45 - stf(rCharacter.ship.SubmergeDutchman); gZ = 16;
 				CreateParticleSystemX("dutchman_emerge",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 3.0, 0.0, 2);
-			//	PlayStereoSound("objects\shipcharge\ball_splash1.wav");
+			//	PlayStereoSound("objects\shipcharge\ball_splash1.flac");
 				rCharacter.ship.PlayedSplash = 3;
 			}
 			if(stf(rCharacter.ship.SubmergeDutchman)-40 <= stf(rCharacter.ship.CorrectImmersion) && sti(GetAttribute(rCharacter, "ship.PlayedSplash")) == 3)
 			{
 				gX = 0; gY = 45 - stf(rCharacter.ship.SubmergeDutchman); gZ = 16;
 				CreateParticleSystemX("dutchman_emerge",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 3.0, 0.0, 2);
-			//	PlayStereoSound("objects\shipcharge\ball_splash1.wav");
+			//	PlayStereoSound("objects\shipcharge\ball_splash1.flac");
 				rCharacter.ship.PlayedSplash = 4;
 			}
 			if(stf(rCharacter.ship.SubmergeDutchman)-35 <= stf(rCharacter.ship.CorrectImmersion) && sti(GetAttribute(rCharacter, "ship.PlayedSplash")) == 4)
 			{
 				gX = 0; gY = 35 - stf(rCharacter.ship.SubmergeDutchman); gZ = -13;
 				CreateParticleSystemX("dutchman_emerge",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 3.0, 0.0, 2);
-			//	PlayStereoSound("objects\shipcharge\ball_splash1.wav");
+			//	PlayStereoSound("objects\shipcharge\ball_splash1.flac");
 				rCharacter.ship.PlayedSplash = 5;
 			}
 			if(stf(rCharacter.ship.SubmergeDutchman)-25 <= stf(rCharacter.ship.CorrectImmersion) && sti(GetAttribute(rCharacter, "ship.PlayedSplash")) == 5)
 			{
 				gX = 0; gY = 45 - stf(rCharacter.ship.SubmergeDutchman); gZ = 16;
 				CreateParticleSystemX("dutchman_emerge",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 3.0, 0.0, 2);
-			//	PlayStereoSound("objects\shipcharge\ball_splash1.wav");
+			//	PlayStereoSound("objects\shipcharge\ball_splash1.flac");
 				rCharacter.ship.PlayedSplash = 6;
 			}
 			if(stf(rCharacter.ship.SubmergeDutchman)-10 <= stf(rCharacter.ship.CorrectImmersion) && sti(GetAttribute(rCharacter, "ship.PlayedSplash")) == 6)
@@ -4340,7 +4340,7 @@ void SubmergeDutchman()
 				CreateParticleSystemX("dutchman_emerge",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 3.0, 0.0, 2);
 				gX =  0; gY = 0; gZ = -30;
 				CreateParticleSystemX("dutchman_emerge",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 3.0, 0.0, 2);
-			//	PlayStereoSound("objects\shipcharge\ball_splash1.wav");
+			//	PlayStereoSound("objects\shipcharge\ball_splash1.flac");
 				rCharacter.ship.PlayedSplash = 7;
 			}
 			if(stf(rCharacter.ship.SubmergeDutchman)-0 <= stf(rCharacter.ship.CorrectImmersion) && sti(GetAttribute(rCharacter, "ship.PlayedSplash")) == 7)
@@ -4393,7 +4393,7 @@ void SubmergeDutchman()
 				CreateParticleSystemX("dutchman_emerge",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 3.0, 0.0, 2);
 				gX =  0; gY = 0; gZ = -30;
 				CreateParticleSystemX("dutchman_emerge",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 3.0, 0.0, 2);
-			//	PlayStereoSound("objects\shipcharge\ball_splash1.wav");
+			//	PlayStereoSound("objects\shipcharge\ball_splash1.flac");
 				rCharacter.ship.PlayedSplash = 8;
 			}
 			if(stf(rCharacter.ship.SubmergeDutchman) <= stf(rCharacter.ship.CorrectImmersion))

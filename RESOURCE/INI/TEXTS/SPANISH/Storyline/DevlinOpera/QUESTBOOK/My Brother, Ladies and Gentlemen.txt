@@ -1,0 +1,4 @@
+title=Mi hermano, damas y caballeros
+text.t1=Un pescador de #sisland_Quebradas Costillas# me dijo que preguntara en la taberna acerca de Blaze. Se refirió a él como 'El Mercader'. 
+text.t2=Mi querido hermano ha estado traficando con ron de contrabando y ahora les ha robado un cargamento entero a los piratas de #sisland_Quebradas Costillas#. Típico.
+text.t3=Un académico joven y bastante peculiar me dijo que el barco contrabandiosta de Blaze puso rumbo al sur. Hay varias islas pequeñas en esa dirección. Tendré que comrpobarlas una por una.

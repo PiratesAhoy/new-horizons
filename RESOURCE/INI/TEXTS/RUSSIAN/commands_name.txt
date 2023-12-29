@@ -1,44 +1,44 @@
 
 sea_Cancel {Отмена}
-sea_Moor {Бросить якорь}
+sea_Moor {Бросить Якорь}
 sea_Port {Порт}
 sea_Fort {Форт}
 sea_Shore {Берег}
-sea_SailTo {Доплыть до}
+sea_SailTo {Доплыть}
 sea_Board {Абордаж}
 sea_LandTroops {Десант}
 sea_Map {Карта}
 sea_Attack {Атака}
 sea_Defend {Защита}
 sea_SailAway {Уплыть}
-sea_HeaveToDrift {Лечь в дрейф}
+sea_HeaveToDrift {Лечь в Дрейф}
 sea_Transfer {Обмен}
 sea_Charge {Перезарядить}
 sea_Speed {Паруса}
 sea_CCommand {Приказать}
-sea_Ability {Использовать способность}
+sea_Ability {Использовать Способность}
 sea_ImmediateDeath {Уничтожить!}
-sea_HoistFlag {Поднять флаг}
-sea_EnterCabin {Каюта капитана}
+sea_HoistFlag {Поднять Флаг}
+sea_EnterCabin {Каюта Капитана}
 sea_EnterDeck {Палуба}
-sea_EnterShip {Палуба корабля #sshipname#}
+sea_EnterShip {#sshipname# Палуба}
 sea_EnterSeadogs {Кают-компания}
 sea_EnterShipDeck {Палуба}
-sea_EnterMainCannonsDeck {Главная орудийная палуба}
-sea_EnterUpperCannonsDeck {Верхняя орудийная палуба}
-sea_EnterLowerCannonsDeck {Нижняя орудийная палуба}
+sea_EnterMainCannonsDeck {Главная Орудийная Палуба}
+sea_EnterUpperCannonsDeck {Верхняя Орудийная Палуба}
+sea_EnterLowerCannonsDeck {Нижняя Орудийная Палуба}
 sea_EnterHold {Трюм}
 sea_EnterHold1 {1-й Грузовой отсек}
 sea_EnterHold2 {2-й Грузовой отсек}
 sea_LowerSails {Спустить паруса}
-sea_BattleSails {Боевое положение}
-sea_FullSails {Полные паруса}
-sea_FCoHS_Hail {Приветствовать корабль}
-sea_FCoHS_Contact {Посетить корабль}
+sea_BattleSails {Боевое Положение}
+sea_FullSails {Полные Паруса}
+sea_FCoHS_Hail {Приветствовать Корабль}
+sea_FCoHS_Contact {Посетить Корабль}
 sea_KrakenAttack {Вызов Кракена}
 sea_SubmergeDutchman {Погрузиться/Всплыть}
 sea_PearlSweeps {Закончить}
-sea_QARSword {Быстрый Всплеск}
+sea_QARSword {Сабля Тритона}
 sea_TritonAttack {Атака Такелажа}
 sea_NeptuneTrident {Трезубец Нептуна}
 
@@ -53,7 +53,7 @@ sea_Explosion {Взорвать}
 land_ItemsDead {Обыск трупа}
 land_FastReload {Переход}
 land_ItemsUse {Использовать}
-land_DialogStart {Поговорить}
+land_DialogStart {Говорить}
 land_ItemsChange {Обменяться}
 land_TakeItem {Взять}
 land_PlaceItem {Положить}
@@ -64,20 +64,22 @@ land_ExitDeck {Море}
 land_Look {Осмотреть}
 land_Back {Назад}
 land_EnterDeck {Палуба}
-land_EnterShip {Палуба корабля #sshipname#}
-land_EnterCabin {Каюта капитана}
-land_EnterSeadogs {Кубрик}
+land_EnterShip {#sshipname# Палуба}
+land_EnterCabin {Каюта Капитана}
+land_EnterSeadogs {Каюта Команды}
 land_EnterShipDeck {Палуба}
-land_EnterMainCannonsDeck {Главная орудийная палуба}
-land_EnterUpperCannonsDeck {Верхняя орудийная палуба}
-land_EnterLowerCannonsDeck {Нижняя орудийная палуба}
+land_EnterMainCannonsDeck {Главная Орудийная Палуба}
+land_EnterUpperCannonsDeck {Верхняя Орудийная Палуба}
+land_EnterLowerCannonsDeck {Нижняя Орудийная Палуба}
 land_EnterHold {Трюм}
 land_EnterHold1 {1-й грузовой отсек}
 land_EnterHold2 {2-й грузовой отсек}
-land_UseCorpse {Осмотреть труп}
-land_UseBarrel {Осмотреть бочонок}
-land_UseStorage {Пороховой погреб}
-land_GoToTeachHead {Голова Черной Бороды}
+land_UseCorpse {Осмотреть Труп}
+land_UseBarrel {Осмотреть Бочонок}
+land_UseStorage {Пороховой Погреб}
+land_GoToTeachHead {Голова Чёрной Бороды}
+land_UseOpium {Употребить Опиум}
+land_UseVegetal {Употребить Айяуаску}
 
 go_store {Магазин}
 go_shipyard {Верфь}
@@ -93,23 +95,25 @@ go_fort {Форт}
 go_tailorshop {Портной}
 go_blacksmith {Кузница}
 go_shipdeck {Палуба}
-go_cabin {Каюта капитана}
-go_seadogs {Кубрик}
-go_maincannonsdeck {Главная орудийная палуба}
-go_uppercannonsdeck {Верхняя орудийная палуба}
-go_lowercannonsdeck {Нижняя орудийная палуба}
+go_cabin {Каюта Капитана}
+go_seadogs {Каюта Команды}
+go_maincannonsdeck {Главная Орудийная Палуба}
+go_uppercannonsdeck {Верхняя Орудийная Палуба}
+go_lowercannonsdeck {Нижняя Орудийная Палуба}
 go_hold {Трюм}
-go_hold1 {1-й грузовой отсек}
-go_hold2 {2-й грузовой отсек}
+go_hold1 {1-й Грузовой Отсек}
+go_hold2 {2-й Грузовой Отсек}
 go_apothecary {Аптека}
 go_gunsmith {Кузница}
-go_gunblacksmith {Кузнец-оружейник}
-go_opium {Курильня опиума}
+go_gunblacksmith {Оружейная и Кузница}
+go_opium {Курильня}
 go_library {Библиотека}
-go_maltese {Мальтийское аббатство}
-go_indianstore {Магазин индейца}
-go_tavern2 {Вторая таверна}
+go_maltese {Мальтийское Аббатство}
+go_indianstore {Магазин Индейца}
+go_tavern2 {Вторая Таверна}
 go_eitc {Ост-Индская Торговая Компания}
 go_dwic {Голландская Вест-Индская Компания}
-go_academy {Военно-морская академия}
-go_HQ {Военно-морской штаб}
+go_cdc {Каса-де-Контратасьон}
+go_fwic {Французская Вест-Индская Компания}
+go_academy {Военно-Морская Академия}
+go_HQ {Военно-Морской Штаб}

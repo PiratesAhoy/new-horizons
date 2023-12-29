@@ -736,6 +736,50 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
+[hit_feint]
+type = normal
+start_time = 3210
+end_time = 3232
+
+speed = 1.2
+loop = false
+
+data = "Blend time", "0.2"
+event = "SndAlliace_manhit", 3210, normal
+
+[hit_round]
+type = normal
+start_time = 3210
+end_time = 3232
+
+speed = 1.2
+loop = false
+
+data = "Blend time", "0.2"
+event = "SndAlliace_manhit", 3210, normal
+
+[hit_parry]
+type = normal
+start_time = 3210
+end_time = 3232
+
+speed = 1.2
+loop = false
+
+data = "Blend time", "0.2"
+event = "SndAlliace_parryhit", 3210, normal
+
+[hit_fire]
+type = normal
+start_time = 3210
+end_time = 3232
+
+speed = 1.2
+loop = false
+
+data = "Blend time", "0.2"
+event = "SndAlliace_bullethit", 3210, normal
+
 ;--------------------------------------------------
 
 ;Блок

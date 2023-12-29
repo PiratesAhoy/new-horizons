@@ -78,7 +78,7 @@ void ProcessDialogEvent()
 
 		case "Node_5":
 			AddMoneyToCharacter(PChar, -5);
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			dialog.snd = "Voice\FAGA\FAGA006";
 			d.Text = DLG_TEXT[19] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[20];
 			Link.l1 = DLG_TEXT[21];

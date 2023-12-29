@@ -184,7 +184,7 @@ void ProcessDialogEvent()
 					AddPartyExpChar(pchar, "Sneak", 70);
 				}
 				else { AddPartyExp(pchar, 7000); }
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, 15000);
 				dialog.snd = "Voice\FATB\FATB010";
 				dialog.text = DLG_TEXT[33];
@@ -201,7 +201,7 @@ void ProcessDialogEvent()
 					AddPartyExpChar(pchar, "Sneak", 70);
 				}
 				else { AddPartyExp(pchar, 7000); }
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, 15000);
 				dialog.snd = "Voice\FATB\FATB010";
 				dialog.text = DLG_TEXT[33];
@@ -436,7 +436,7 @@ void ProcessDialogEvent()
 //			link.l2.go = "ANIMISTS_letter_2";  // --> Cat
 			AddQuestRecord("church_help", 13);
 			CloseQuestHeader("church_help");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 2500);
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -469,7 +469,7 @@ void ProcessDialogEvent()
 //			link.l2.go = "ANIMISTS_letter_2";  // --> Cat
 			AddQuestRecord("church_help", 14);
 			CloseQuestHeader("church_help");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 2500);
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -607,7 +607,7 @@ void ProcessDialogEvent()
 
 		case "donation paid_500":
 			dialog.snd = "Voice\FATB\FATB046";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[125];
@@ -620,7 +620,7 @@ void ProcessDialogEvent()
 		
 		case "donation paid_2500":
 			dialog.snd = "Voice\FATB\FATB046";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[128];
@@ -633,7 +633,7 @@ void ProcessDialogEvent()
 		
 		case "donation paid_5000":
 			dialog.snd = "Voice\FATB\FATB046";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[131];
@@ -655,9 +655,9 @@ void ProcessDialogEvent()
 
 // GR: Ardent storyline -->
 		case "ardent_abduction_sad_marriage1":
-			Preprocessor_Add("romance", GetMyFullName(characterFromID(PChar.quest.romance)));
-			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
-			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounPossessive(PChar)));
+			Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID(PChar.quest.romance))));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounPossessive(CharacterFromID(PChar.quest.romance))));
 		/*	if (PChar.sex == "man")
 			{
 				Preprocessor_Add("pronoun", XI_ConvertString("she"));

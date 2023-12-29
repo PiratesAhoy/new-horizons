@@ -190,7 +190,7 @@ void ProcessDialogEvent()
 		case "room_24_wait":
 			DialogExit();
 			Diag.CurrentNode =  Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			pchar.reloadto = "reload1";
 			AddDialogExitQuest("sleep_in_tavern");

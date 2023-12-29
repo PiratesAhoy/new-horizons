@@ -47,6 +47,6 @@ string DLG_TEXT[50] = {
 "Gracias. ¡Te sigo!",
 "Aquí es donde te dejo. Por traernos las medicinas que necesiábamos, siempre te recibiremos cordialmente si vuelves a nuestra aldea.",
 "Gracias. puede que visite tu aldea en algún momento. Adiós.",
-"¿Dónde estña la medicina? No veo tu barco.",
+"¿Dónde está la medicina? No veo tu barco.",
 "Está anclado en otro sitio. Lo traeré aquí. Adiós, por ahora.",
 }

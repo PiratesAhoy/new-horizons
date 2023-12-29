@@ -280,7 +280,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "shipyard_key":
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			LAi_SetActorType(CharacterFromID("Defoe"));
 			LAi_ActorTurnToCharacter(characterFromID("Defoe"), characterFromID("Claire Voyant"));
 			Dialog.text = DLG_TEXT[46];

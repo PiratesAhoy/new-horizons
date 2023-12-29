@@ -3479,7 +3479,7 @@ bool TakeNItems(ref _refCharacter,string itemName, int n)
 					|| itemName == "pistolbelt")
 				{
 					if(n>0)	{Log_SetStringToLog(XI_ConvertString("You take item"));
-					PlayStereoSound("interface\important_item.wav");}
+					PlayStereoSound("interface\important_item.flac");}
 				}
 				//<-- JRH
 				else
@@ -3497,7 +3497,7 @@ bool TakeNItems(ref _refCharacter,string itemName, int n)
 						else Log_SetStringToLog(XI_ConvertString("You take item"));
 					}
 					if(n<0)	{Log_SetStringToLog(XI_ConvertString("You give item"));}
-					PlayStereoSound("interface\important_item.wav");
+					PlayStereoSound("interface\important_item.flac");
 				}
 			}
 			if( n>0 && IsOfficer(_refCharacter) || IsCompanion(_refCharacter) ) {
@@ -3741,11 +3741,12 @@ void SetRandomNameToCharacter(ref rCharacter)
 			}
 		}
 	}*/
-	if (CheckAttribute(rCharacter, "questchar")) {
-		if (CheckAttribute(rCharacter, "old.name")) rCharacter.name = rCharacter.old.name;
-		if (CheckAttribute(rCharacter, "old.middlename")) rCharacter.middlename = rCharacter.old.middlename; // KK
-		if (CheckAttribute(rCharacter, "old.nickname")) rCharacter.nickname = rCharacter.old.nickname; // KK
-		if (CheckAttribute(rCharacter, "old.lastname")) rCharacter.lastname = rCharacter.old.lastname;
+	if (CheckAttribute(rCharacter, "questchar"))
+	{
+		if (CheckAttribute(rCharacter, "old.name")) rCharacter.name = TranslateString("",rCharacter.old.name);
+		if (CheckAttribute(rCharacter, "old.middlename")) rCharacter.middlename = TranslateString("",rCharacter.old.middlename); // KK
+		if (CheckAttribute(rCharacter, "old.nickname")) rCharacter.nickname = TranslateString("",rCharacter.old.nickname); // KK
+		if (CheckAttribute(rCharacter, "old.lastname")) rCharacter.lastname = TranslateString("",rCharacter.old.lastname);
 		return;
 	}
 // MAXIMUS random name on death fix 24.11.2006 <--
@@ -4724,3 +4725,7 @@ int RemoveNotCaptivePassenger(ref _refCharacter,ref _refPassenger)
 	return PsgQuantity;
 }
 
+void SetCharacterNation(ref ch, int nation) {
+	ch.nation = nation;
+	Ship_FlagRefresh(ch);
+}

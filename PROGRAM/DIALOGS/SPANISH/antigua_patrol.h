@@ -7,7 +7,7 @@ string DLG_TEXT[29] = {
 "Soy ",
 ", y aquí están mi nombramiento y los papeles del barco para demostrarlo. ¿Es eso lo bastante rápido para tu considerable mal genio?",
 "¡Oh, sí, por supuesto, señor! Mi identificación está aquí, en esta bolsa, justo debajo de las 200 piezas de oro. *GUIÑO*",
-"Si no despareces de mi vista ahora mismo te enseñaré lo que es la rapidez... ¡con mi espada!",
+"Si no desapareces de mi vista ahora mismo te enseñaré lo que es la rapidez... ¡con mi espada!",
 "¡No te atrevas a dirigirte a un superior en ese tono de nuevo, insolente esbirro! ¿No sabes quién soy? ¡Soy el Inspector Real de los Regimientos Caribeños de Su Majestad, y acabo de llegar en el último barco para supervisar nuestras tropas aquí! Ahora no me molestes más, ¡o tendré que explicarle a tu comandante por qué he llegado tarde a mi cita con él!",
 "Ah, sí, la el cuño de las monedas te identifica como una persona que se preocupa por el bienestar de los guardias mal pagados, je, je... De acuerdo, te dejaré pasar, pero sólo por eta vez. ¡Y más vale que te comportes!",
 "¡Claro que sí! ¿Quién crees que soy? ¿Alguna especie de truhán? *GUIÑO*",

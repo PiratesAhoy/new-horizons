@@ -95,7 +95,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "node_9":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1);
 			Dialog.Text = DLG_TEXT[30] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[31];
 			Link.l1 = DLG_TEXT[32];
@@ -297,7 +297,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[106] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[107])]) + DLG_TEXT[109];
 			link.l1 = DLG_TEXT[110];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500);
 			characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers = "orable_truth";
 		break;
@@ -306,7 +306,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[111];
 			link.l1 = DLG_TEXT[112];
 			link.l1.go = "smugglers_bad_1";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 500); // NK thanks to Taghmon
 		break;
 

@@ -132,7 +132,7 @@ string DLG_TEXT[186] = {
 "Hablemos de otra cosa.",			//130
 "No hay nada más... excepto algunas playas desoladas y una gran superficie de selva.\nLa selva empieza justo fuera de las murallas de la ciudad, y se han abierto un par de caminos que la atraviesan, pero no hay ninguna razón para aventurarse allí. Aparte de las bestias salvajes, también hay forajidos y salteadores de caminos viviendo allí.",
 "¡Qué miedo! Cuénteme más.",
-"Desbrozar la selva es un trabajo duro. Por eso las cosas son difíciñes fuera de la ciudad.\nPero la tierra es fértil, y produce excelentes cosechas. \nCon el timepo, creo que las plantaciones reemplazarán a la selva, y la ciudad estará rodeada de granjas, caminos y pradosand the town will be surrounded by farms, roads and fields.",
+"Desbrozar la selva es un trabajo duro. Por eso las cosas son difíciñes fuera de la ciudad.\nPero la tierra es fértil, y produce excelentes cosechas. \nCon el tiempo, creo que las plantaciones reemplazarán a la selva, y la ciudad estará rodeada de granjas, caminos y prados.",
 "Más...",
 "Hum... Hay una magnífica cadena montañosa..., selva que no sirve de nada a nadie...\n Playas desoladas..., y eso es todo. Lo interesante está dentrio de las murallas de la ciudad.",
 "Cuénteme más.",
@@ -157,7 +157,7 @@ string DLG_TEXT[186] = {
 " Tenemos una población de ",
 " ciudadanos.",
 "Al principio, la colonia de #sRedmond# fue fundada por los españoles, pero en 1655 el asentamiento cayó en buenas manos inglesas: se construyeron casas en torno a un fuerte estratégicamente colocado a la entrada de la bahía. Buenas manos inglesas le arrebataron la ciudad a los españoles, eso es cierto, pero no eran los bastante duertes como par aprotegerla de posibles ataques de los franceses, o de los mismos españoles..., así que el gobernador se paoyó en la 'ayuda' de los piratas...",
-"De ese modo, durante 30 años, #sRedmond# fue un refugio de piratas y proscritos; la situación era tan extrema que la ciudad fue conocida como la 'Sodoma del Nuevo Mundo'. La razón de que hubiera tnatos bucaneros, y otros rufianes era la estratégica posición de #sisland_Redmond# en el Caribe: la isla, situada en el centro de las posesiones españolas, era muy apropiada para atacar las rutas de navegación españolas y saquear las ciudades controladas por España. Por esa razón, el famoso pirata Henry Morgan tenía su base aquí y planeó sus ataques contra Panamá, Portobelo y Maracaibo desde esta ciudad.",
+"De ese modo, durante 30 años, #sRedmond# fue un refugio de piratas y proscritos; la situación era tan extrema que la ciudad fue conocida como la 'Sodoma del Nuevo Mundo'. La razón de que hubiera tantos bucaneros, y otros rufianes era la estratégica posición de #sisland_Redmond# en el Caribe: la isla, situada en el centro de las posesiones españolas, era muy apropiada para atacar las rutas de navegación españolas y saquear las ciudades controladas por España. Por esa razón, el famoso pirata Henry Morgan tenía su base aquí y planeó sus ataques contra Panamá, Portobelo y Maracaibo desde esta ciudad.",
 "Pero desde 1687, cuando se promulgaron las leyes de persecución de la piratería, el periodo de hegemonía de los rufianes terminó, y ahora la colonia es rica y próspera, una de las más importantes colonias británicas en las Indias Occidentales.",
 "...",										//160
 "He oído que aquí hay un banco y oficina de correos, ¿es verdad?",

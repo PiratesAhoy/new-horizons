@@ -1,0 +1,5 @@
+title=El ermitaño y las ranas
+text.t1=Estoy buscando a K. O'Byrne, un ermitaño que vive en la selva de #sisland_Cayman#. Su cabaña debe de estar en algún lugar apartado del camino que conduce al asentamiento de #sGrand Cayman#.
+text.t2=Debo atravesar la selva para llegar a #sGrand Cayman# y hablar con el mandamás local en el ayuntamiento acerca de su problema con los piratas. Espero que él pueda ayudar a Annie y al viejo O'Byrne.
+text.t3=¡O'Byrne tenía razón! Ese mono sin agallas que estos pobres colonos aceptaron como gobernador no levantará un dedo. Debo volver a la casa de la selva y discutir la situación con O'Byrne y Annie.
+a

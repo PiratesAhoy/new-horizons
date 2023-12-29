@@ -48,26 +48,26 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 			NextDiag.TempNode = "first time";
-			dialog.text = "Now, young " + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ", whose rash voice resonates in these so venerable vaults, state your desire with the manners of a noble " + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ", or let silence rule o'er ancient walls once more. Walls, once hung with tapestries of silk and velvet, once seeing regal feasts and regal battles.. and regal treachery and murder! Now silence is this ruin's royalty, these cold stone's only veil, for cent'ries past, and cent'ries come. Silence of peace? Silence of death? Which it shall be for you is not yet written in the scriptures.";
-			link.l1 = "Huh? Wha.. I didn't hear any door.. Where do you come from so suddenly and stealthy?";
+			dialog.text = "Joven, cuya voz impaciente resuena en estas tan venerables bóvedas, manifiesta tu deseo con modales nobles, o deja que el silencio reine una vez más sobre los antigos muros. Muros antaño vestidos con tapices de seda y terciopelo, que una vez vieron grandes banquetes y grandes batallas... ¡y grandes traciones y asesinatos! Ahora el silencio es el único manto que cubre estas ruinas, el único velo de estas frías piedras, por los siglos de los siglos. ¿Silencio de paz? ¿Silencio de muerte? Cuál será para ti aún no está escrito.";
+			link.l1 = "¿Eh? ¿Qué...? No he oído la puerta... ¿De dónde has salido tan de repente y sin hacer ruido?";
 			link.l1.go = "help_2";
-			link.l4 = "So you are supposed to be the famous guardian of treasures? How can I be sure that you don't embezzle my stuff, eh?";
+			link.l4 = "¿Tú eres el famoso guardián de tesoros? ¿Qué garantías tengo de que no te apropiarás de mis cosas, eh?";
 			link.l4.go = "help_3";
-			link.l2 = "(Darned, where is my 'Shakespeare for Elemantary School'? Ah, here..) Ehem.. Here I stand, humbled in the face of age and wisdom, wishing to entrust you, treasured trustee, my humble trove, though knowing it amounts to nought before these eyes and stones which witnessed so much greater treasure. And so much greater men!";
+			link.l2 = "(Maldita sea, ¿dónde está mi ejemplar de 'Shakespeare para escolares'? Ah, aquí..) Ejem... Aquí me presento, humilde e insignificante ante el rostro de los siglos y la sabiduría, deseando confiarte, oh, confidencial tesorero, mi modesto peculio, bien que sé que no ha de compararse su valor con el de esos ojos y estas piedras que han sido testigos de más encumbrados tesoros, ¡y más encumbrados hombres!";
 			link.l2.go = "items";
-			link.l3 = "Oh, please, can't we just get down to the safekeeping business?";
+			link.l3 = "Oh, por favor, ¿no podemos ir al grano?";
 			link.l3.go = "items1";
 		break;
 
 		case "help_2":
-			dialog.text = "Who else but me, haunting these ancient walls so long as to resemble mortar holding stone and stone together, brittle, yes, but still standing upright and proud, who else should better know the hidden ways that men now long forgotten build here once, a vain attempt to hide their wicked ways. Vain as all their wickedness, alas, did nothing to avert their fatal fate. Their fate, will it be yours as well? Who knows that now? Who'll know when hit it will? Who will know, once it has hit, of you? No one, nevermore!";
-			link.l1 = "Oh so right you are, o Olde Keeper, out of dust we become only to become dust once again! But what we in between achieve is what makes us men or mice. To be rich and famous, or not to be at all, THAT is the question. ";
+			dialog.text = "Quién si no yo, que he recorrido estos antiguos muros desde hace tantos años que me asemejo al mortero que une las piedras: quebradizo, sí, pero aún erguido y orgulloso, ¿quién si no había de conocer los caminos ocultos que hombres olvidados tiempo ha constuyeron en un vano afán por esconder sus actos ruínes? Vano, pues todas sus maldades, ¡ay!, nada hicieron para eludir su fatídico sino. Su sino, ¿habrá de ser también el tuyo? ¿Quién sabe? ¿Quién sabe cuándo golpeará? ¿Quién sabrá de ti, una vez que haya golpeado? ¡Nadie, nunca más!";
+			link.l1 = "Tus palabras son muy ciertas, oh, anciano Guardián, ¡del polvo salimos para convertirnos en polvo nuevamente! Pero lo que en ese intervalo logramos es lo que diferencia a hombres de ratones. Ser rico y famoso, o no ser nada, esa es la cuestión. ";
 			link.l1.go = "items";
 		break;
 
 		case "help_3":
-			dialog.text = "Don't you, knave, question my blood's hounour! My house served kings and counts and barons for cent'ries without fail. One of my blood kept Lionheart's ransom, and not a copper spent but for his liege lords freedom. One of my blood, Londinum's royal Tower's keeper when the Third Richard kept in chains his very brother's sons, could not condone the cruel crime his oath of office forced him to partake in. But rather than betray his master, depraved as he might be, he chose to end his life in honour. But not before performing the sad act sealing the poor princelings' fate. A heinous act, for sure, and hurting my forefather's soul as much as his poor victims' bodies. But always did he hold his duty higher than his welfare, than his salvation even, yes! And so will I, as long as I can breathe!";
-			link.l1 = "So save your breathe then, most faithful Keeper, as to be so much the longer able to perform your burd'ning duty. As for the knavish kings and barons, the plague on all their houses!";
+			dialog.text = "¡No oses, bergante, cuestionar el honor de mi sangre! Mi casa sirvió a reyes y condes y barones por largos siglos sin mácula. Uno de mi misma sangre tuvo a su cuidado el rescate de Corazón de León, y ni una blanca gastó que no fuera para procurar la libertad de su señor. Otro de mi sangre, guardián de la real Torre de Londinum en tiempos del Tercer Ricardo, que allí tenía encadenados a los hijos de su hermano, no pudiendo soportar el cruel crimen que su juramento de lealtad le obligaba a perpetrar, decidió poner fin a su vida con honor antes de traicionar a su señor, por depravado que este fuera. Pero no antes de cumplir la triste tarea de sellar el destino de los desdichados príncipes. Un acto atroz, sin duda, y que mortificó el alma de mi antepasado tanto como los cuerpos de sus vícitmas fueron mortificados. Pero siempre tuvo su deber en mayor estima que su bienestar, ¡incluso que su salvación, sí! ¡Como yo, mientras tenga aliento de vida!";
+			link.l1 = "Ahorra aliento, entonces, fidelíisimo Guardián, para que puedas por mucho tiempo cumplir tu pesado deber. En cuanto a esos viles reyes y barones, ¡la peste caiga sobre sus casas!";
 			link.l1.go = "items";
 		break;
 
@@ -75,8 +75,8 @@ void ProcessDialogEvent()
 			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Sneak", 100 ); }
 			else { AddPartyExp(PChar, 100 ); }
 			WaitDate("", 0, 0, 0, 2, 0);
-			dialog.text = "How dare you, yokel! Don't you mock The Bard, mimicking words of beauty with stumbling a tongue, sooting the sooth of his venerable verse with vain wit! Here, hear his true text, truant, and may his very words win you a hundred cents of wisdom! (Keeper recites Hamlet... for two hours) But halt, enough of idle words, time is out of joint already! Now will I open the Domesday Book of what your wicked designs and vainglorious schemes won you?";
-			link.l1 = "Err.. yes, PLEASE! All's well that ends well, eh?";
+			dialog.text = "¡¿Cómo osas, rústica criatura?! ¡No escarnezcas al Bardo, imitando sus palabras de belleza suma con tu torpe lengua, empañando la verdad de su venerable verso con vano ingenio! ¡Oye ahora su verdadero texto, truhán, y que sus palabras valgan para ganarte cien céntimos de sabiduría! (el Guardián recita Hamlet... durante dos horas) ¡Pero, alto, basta de palabras ociosas, las arenas del tiempo se nos escapan entre los dedos! ¿Abriré ahora el tomo de lo que tus malvados planes y vanas maquinaciones te han reportado?";
+			link.l1 = "Eh... ¡Sí, por favor! Bien está lo que bien acaba, ¿eh?";
 			link.l1.go = "items1";
 		break;
 
@@ -86,7 +86,7 @@ void ProcessDialogEvent()
 			LaunchCharacterItemChange(NPChar);
 
 			ChangeCharacterAddress(NPChar, "none", "");
-			Logit("The Keeper disappears without word or sound, as if the ancient walls swallowed him...")
+			Logit("El Guardián desaparece sin decir ni una palabra ni hacer ni un sonido, como si los antiguos muros se lo hubieran tragado...")
 		break;
 
 		case "Exit":
@@ -94,7 +94,7 @@ void ProcessDialogEvent()
 			NextDiag.CurrentNode = NextDiag.TempNode;
 
 			ChangeCharacterAddress(NPChar, "none", "");
-			Logit("The Keeper disappears without word or sound, as if the ancient walls had swallowed him...")
+			Logit("El Guardián desaparece sin decir ni una palabra ni hacer ni un sonido, como si los antiguos muros se lo hubieran tragado...")
 		break;
 	}
 }

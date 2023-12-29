@@ -7,18 +7,18 @@ The Road Back to Greatness{Возврат к Величию}
 You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.{Вы дворянка, потомок древнейшего рода Швеции, но правление Карла XI принесло Вам постоянно уменьшающееся влияние и тающие привилегии. Вступив в заговор с целью вернуть то, что было потеряно, Вы внезапно очутились в бегах, скрываясь от смертного приговора. Поскольку идти больше некуда, и целое государство охотится за Вами - Вы бежали в Новый Свет.}
 Krеkan{Давилка}
 
-Ciri{Чири}
+Ciri{Цири}
 Riannon{Рианнон}
 Little Horse{Конек}
 
 Geralt{Геральт}
-of Rivia{из Ривии}
+of_Rivia{из Ривии}
 Travelling Worlds{Путешествие По Мирам}
 Take the role of Geralt of Rivia, a Witcher. A mutant, trained to kill monsters since childhood. Thrust into a different world and separated from your loved ones, you now search for your daughter in the Caribbean. Whether you find her or not, is a mystery...{Возьмите на себя роль Геральта из Ривии, Ведьмака. Мутант, с детства обученный убивать монстров. Попав в другой мир и оторвавшись от своих близких, вы теперь ищете свою дочь на Карибах. Найдете вы её или нет, остается загадкой...}
 Roach{Роуч}
 
 Morgen{Морган}
-le Fay{Ле Фэй}
+le_Fay{Ле Фэй}
 Myrddin{Кречет}
 
 Ronald{Рональд}
@@ -42,9 +42,10 @@ Caroline{Каролина}
 
 Le Rиve{Мечта}
 
-Atropos{Неотвратимая}
+Atropos{Атропос}
+Lydia{Лидия}
 
-Don Julian{Дон Жулиан}
+Don_Julian{Дон Жулиан}
 Alvarado{Альварадо}
 
 Aine{Айне}
@@ -53,6 +54,13 @@ Petra{Петра}
 Borinqueсa{Боринкеса}
 
 Becka{Бекка}
+
+Aveline{Авелина}
+de_Grandprй{Де Гранпре}
+Hatching a Plot{Создание Сюжета}
+As an official member of the Assassin Brotherhood, you sought to liberate the slave community from the Templar Order influence. After more than 10 years of dedication, you succeeded in eradicating the Templar Order of Louisiana. Recently, you received a letter asking for help from the Caribbean Brotherhood of Assassins.{Как официальный член Братства Ассасинов, вы стремились освободить сообщество рабов от влияния Ордена Тамплиеров. После более чем 10 лет самоотверженной работы вам удалось уничтожить орден тамплиеров в Луизиане. Недавно вы получили письмо с просьбой о помощи от Карибского Братства Ассасинов.}
+Libertй{Свобода}
+
 La Aguja - The Needle{Игла}
 The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.{Дочь богатого помещика и бывшего партизана, чья семья была убита французами. Вы хотите отомстить, и приняли командование партизанской группировкой, изредка работая с британским офицером по имени Ричард Шарп. У Вас даже есть бывший французский корабль, который несколько раз переходил из рук в руки, прежде чем окончательно оказаться Вашим.}
 
@@ -77,27 +85,27 @@ Lara{Лара}
 Croft{Крофт}
 
 Elbaro{Эльбаро}
-Caron{Карон}
+Caron{Кэрон}
 
-Roxanne{Роксан}
-Lalliere{Лальер}
+Roxanne{Роксана}
+Lalliere{Лаллир}
 La Diablesse{Дьявол}
 
 Catalina{Каталина}
-the Pirate{Пиратка}
+the_Pirate{Пиратка}
 
 Jean-Baptiste{Жан-Батист}
-du Casse{дю Касс}
+du_Casse{Дюкасс}
 War of the League of Augsburg{Война Аугсбургской Лиги}
-Quite a colourful character, you are! History claims that you became a buccaneer, admiral and colonial administrator who served throughout the Atlantic World during the 17th and 18th centuries. Now at the beginning of your career as officer in the French navy, you are of course required to follow orders. However, your life is yours and you can make whatever choices you see fit.{Вы довольно красочный персонаж! История утверждает, что Вы были пиратом, адмиралом и колониальным администратором, который послужил во всем Атлантическом Мире в 17 и 18 веках. Теперь, в начале своей карьеры офицера во французском флоте, Вы, конечно, обязаны выполнять приказы. Тем не менее, Ваша жизнь принадлежит Вам, и Вы можете делать все, что считаете нужным.}
+Quite a colourful character, you are! History claims that you became a buccaneer, admiral and colonial administrator who served throughout the Atlantic World during the 17th and 18th centuries. Now at the beginning of your career as officer in the French navy, you are of course required to follow orders. However, your life is yours and you can make whatever choices you see fit.{История утверждает, что Вы были пиратом, адмиралом и колониальным губернатором, который послужил во всём Атлантическом Море в 17 и 18 веках. Теперь, в начале своей карьеры офицера во французском флоте, Вы, конечно, обязаны выполнять приказы. Тем не менее, Вы можете делать всё, что считаете нужным.}
 Magicienne{Кудесник}
 
 Pieter{Питер}
-Bloed{Блед}
+Bloed{Блад}
 Amsterdam{Амстердам}
 
 Francisco{Франциско}
-de Almeida{де Алмейда}
+de_Almeida{Де Алмейда}
 The Portuguese Armada{Португальская Армада}
 As was customary for men in your social circle, you joined the military at an early age. You have fought in conflicts in different parts of Morocco and Spain on the side of the Castilians. Now in the Caribbean, Spain is again your ally. But you never know what the future might bring!{Как было принято для мужчин вашего круга общения, Вы вступили в армию в раннем возрасте. Вы сражались в конфликтах в разных частях Марокко и Испании на стороне кастильцев. Теперь, на Карибах, Испания снова Ваш союзник. Но никогда не знаешь, что может принести будущее!}
 Lebre{Заяц}
@@ -109,9 +117,10 @@ Dark{Мрачный}
 Teacher{Учитель}
 Satanists{Сатанисты}
 After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...{После того, как Мальтийский Орден уничтожил ваше логово в Италии, вы бежали на Карибы, поклявшись отомстить во имя Князя Тьмы...}
+Disciple{Ученик}
 
 Anna{Анна}
-De Leiva{Де Лейва}
+De_Leiva{Де Лейва}
 
 Stephen{Стивен}
 Maturin{Мэтьюрин}
@@ -145,14 +154,14 @@ Discovery{Открытие}
 Bonnie{Бонни}
 Quicksilver{Ртуть}
 
-Desmond Ray{Десмонд Рэй}
+Desmond_Ray{Десмонд Рэй}
 Beltrop{Белтроп}
 
 Berend{Беренд}
-De Voor{Де Вур}
+De_Voor{Де Вур}
 
 Blackbeard{Чёрная Борода}
-No Quarter!{Пощады не будет!}
+No Quarter!{Пощады не Будет!}
 With a one-of-a-kind ship, you are ready to terrorize the Caribbean. But you haven't earned your fame just yet. Are you ready to live up to your name and become the pirate all pirates fear?{Имея единственный в своем роде корабль, Вы готовы терроризировать Карибское море. Но Вам только предстоит заработать свою славу. Вы готовы оправдать это имя, и стать пиратом, которого будут боятся все?}
 Queen Anne's Revenge{Месть Королевы Анны}
 
@@ -165,6 +174,9 @@ Bohdan{Богдан}
 Aleskeevich{Алексеевич}
 Voronov{Воронов}
 Babushka{Бабушка}
+
+Sergio{Серджио}
+The_SeaWolf{Морской Волк}
 
 Bilgemunky{Полутруп}
 
@@ -183,9 +195,9 @@ The Buccaneer{Буканьер}
 A French smuggler friendly to the United States arrives in port. But will you abandon your profitable ventures to expand the might of the Americas in the Caribbean? Or perhaps join forces with one of the other nations? And how long will you be able to resist the lure of piracy?{Французский контрабандист, дружественный США, прибывает в порт. Но откажетесь ли Вы от своих прибыльных предприятий, чтобы увеличить влияние Америки на Карибах? Или, возможно, объедините усилия с одной из других наций? И как долго Вы сможете противостоять соблазну пиратства?}
 Goelette la Diligente{Прилежная Голетта}
 
-James T.{Джеймс Ти}
+James_T.{Джеймс Ти}
 Hook{Хук}
-Jolly Roger{Веселый Роджер}
+Jolly Roger{Весёлый Роджер}
 
 Eduardo{Эдвард}
 Villanueva{Вильянуэва}
@@ -232,7 +244,7 @@ You have finally managed to be recognised for all the years of chasing that ridi
 
 Dauntless{Неустрашимый}
 
-As newly promoted Admiral of the Fleet, you are now in charge of Port Royal's finest ships.{Как недавно назначенный Адмирал Флота, Вы теперь отвечаете за лучшие корабли в Пор-Роял.}
+As newly promoted Admiral of the Fleet, you are now in charge of Port Royal's finest ships.{Как недавно назначенный Адмирал Флота, Вы теперь отвечаете за лучшие корабли в Порт-Роял.}
 
 Andrew{Эндрю}
 Gillette{Джиллетт}
@@ -260,7 +272,7 @@ Fortune{Удача}
 Helen{Хелен}
 
 Lucia{Лючия}
-de la Vega{Де Ла Вега}
+de_la_Vega{Де Ла Вега}
 Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Обреченная на несчастливый брак, Вы сбежали с пиратом. Теперь у Вас есть собственный корабль, но будете ли Вы вести честную жизнь, или время проведенное с пиратами изменило Вас навсегда?}
 Intrйpido{Бесстрашный}
 
@@ -284,7 +296,7 @@ Danielle{Даниэль}
 
 Lucrezia{Лукреция}
 
-Greene{Грини}
+Greene{Грин}
 A Lady Scorned{Презренная Леди}
 After having your heart broken by a scoundrel named Nathaniel Hawk, you have sworn to never fall for another man again. And whoever said a woman cannot captain a ship? This is the Golden Age of Piracy and there is opportunity aplenty for all those willing to take their chance!{После того, как негодяй по имени Натаниэль Хаук разбил твое сердце, ты поклялась никогда больше не влюбляться. И кто сказал, что женщина не может управлять кораблем? Это золотой век пиратства, и у всех, кто хочет рискнуть, есть множество возможностей!}
 Vertigo{Умопомрачение}
@@ -296,16 +308,19 @@ Having fallen for the treacherous godess of the sea herself, you got your heart 
 Flying Dutchman{Летучий Голландец}
 
 Anamaria{Аннамария}
-Jolly Mon{Веселый Понедельник}
+Jolly Mon{Весёлый Понедельник}
 
 Blaze{Блейз}
 Age of Pirates{Эпоха Пиратов}
 Brother to another well-known character, Blaze Devlin is a corsair always on the hunt for treasure. But what Caribbean Tales lie in store for you? The choice is up to you!{Брат другого известного персонажа, Блейз Девлин - корсар, который постоянно находится в поисках сокровищ. Но какие еще Карибские Байки припасены для Вас? Выбор остается за Вами!}
 Fool's Gold{Золото Дураков}
 
-Valerie{Валери}
+de_Maure{Де Мур}
+
+Valerie{Валерия}
 
 Diego{Диего}
+de_Espinosa{Де Эспиноса}
 
 Eugene{Юджин}
 Martin{Мартин}
@@ -315,26 +330,28 @@ Fanielle{Фаниэль}
 Ralph{Ральф}
 Fawn{Фавн}
 
-Monkey{Мартышка}
-D.{Ди}
-Luffy{Лаффи}
+Monkey{Монки}
+D.{Д.}
+Luffy{Луффи}
 Going Merry{Давай Поженимся}
 Having eaten a magic fruit and narrowly avoided being eaten yourself, you now sail the seas in search of the One Piece. Can you rise to become a Pirate King?{Съев магический фрукт и едва не будучи съеденным сам, Вы теперь рыщете по морям в поисках Большого Куша. Сможете ли вы подняться, чтобы стать Королем Пиратов?}
 
-
 Gherarde{Герард}
-de Jongh{Де Йонг}
+de_Jongh{Де Йонг}
+
+Guibert{Гвиберт}
+Daudet{Доде}
 
 Phinneas{Финнеас}
 Wake{Уэйк}
 
 Bartolomeu{Бартоломью}
-o Portugues{Португалец}
+o_Portugues{Португалец}
 
 Santiago{Сантьяго}
 
 Franзois{Франсуа}
-de Hadoque{Де Хадоке}
+de_Hadoque{Де Хадоке}
 La Licorne{Единорог}
 
 Henry{Генри}
@@ -347,16 +364,16 @@ Longboat{Баркас}
 From Slave to Pirate{От раба до пирата}
 You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?{Тебя увезли с твоей родины и заковали в цепи на невольничьем корабле. Но не все на корабле - враги. С небольшой помощью неожиданного союзника и шторма вы спасаетесь из своего плена. Что вы будете делать дальше?}
 
-the Beggar{Нищий}
+the_Beggar{Нищий}
 
 Rackham{Рэкхем}
 
 Jeremy{Джереми}
 Tripper{Триппер}
 
-de la Croix{де ла Круа}
+de_la_Croix{де ла Круа}
 Tales of a Chevalier{Истории Шевалье}
-A charming French nobleman with a rogue streak. Your latest endeavour left you several jewels richer and a Spanish lady somewhat distraught. Her brother challenged you to a duel at dawn to settle the score.{Очаровательный французский жуликоватый дворянин. Ваша последняя авантюра сделала Вас на несколько драгоценностей богаче, а испанскую даму оставила в некоторой растерянности. Ее брат пригласил Вас на дуэль на рассвете, чтобы свести счеты.}
+A charming French nobleman with a rogue streak. Your latest endeavour left you several jewels richer and a Spanish lady somewhat distraught. Her brother challenged you to a duel at dawn to settle the score.{Очаровательный французский жуликоватый дворянин. Ваша последняя авантюра сделала Вас на несколько драгоценностей богаче, а испанскую даму оставила в некоторой растерянности. Её брат пригласил Вас на дуэль на рассвете, чтобы свести счеты.}
 Le Cheval Furieux{Яростная Лошадь}
 
 Johan{Йоган}
@@ -369,11 +386,11 @@ Kieron{Киерон}
 
 Swan{Лебедь}
 
-A Fine Gentleman{Прекрасный джентльмен}
+A Fine Gentleman{Прекрасный Джентльмен}
 You intend to see to it that any man who sails under a pirate flag or wears a pirate brand gets what he deserves. But while you may be an ambitious young lieutenant in His Majesty's Navy, you do have your heart in the right place.{Вы намерены следить за тем, чтобы любой, кто плавает под пиратским флагом или отмечен меткой 'Пират', получил то, что заслуживает. Но несмотря на то, что Вы можете быть амбициозным молодым лейтенантом во флоте Его Величества, у Вас все еще есть сердце.}
 
 Michiel{Микель}
-de Ruyter{де Рюйтер}
+de_Ruyter{де Рюйтер}
 Bestevaкr{Наилучший}
 Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!{Рожденный в бедной семье во Флиссингене Вы, Микель Адриансзон де Рюйтер - скромный человек. Тем не менее, англо-голландские войны 17-го века предоставят Вам массу возможностей, чтобы стать великим!}
 Neptunus{Нептун}
@@ -388,7 +405,7 @@ Meigger{Мейггер}
 Thomas{Томас}
 Modyford{Модифорд}
 
-Daniel{Даниэль}
+Daniel{Даниэл}
 Montbart{Монбарт}
 
 Morris{Моррис}
@@ -407,7 +424,7 @@ Padre{Падре}
 Gerardo{Герардо}
 
 Nicholas{Николас}
-Butcher{Батчер}
+Butcher{Бутчер}
 
 Rabel{Рабель}
 Chardon{Шардон}
@@ -422,8 +439,8 @@ Age of Steam{Эпоха Пара}
 Born on a farm in Little Britain, Pennsylvania, on November 14, 1765, you have spent the past ten years developing a new type of ship. Your latest creation is battle-ready and equipped both with regular sails, but also a new design engine. It is time to take her out for sea trials.{Вы родились на ферме в Маленькой Британии, штат Пенсильвания, 14 ноября 1765 года. Последние 10 лет вы потратили на разработку корабля нового типа. Ваше последнее творение готово к бою и оснащено как обычными парусами, так и двигателем новой разработки. Пришло время испытать его на море.}
 Demologos{Демологос}
 
-Roche{Рош}
-Brasiliano{Бразилиано}
+Roche{Рок}
+Brasiliano{Бразилец}
 
 Josй{Хосе}
 Joaquнm{Хоаким}
@@ -436,8 +453,8 @@ The Legend of Gasparilla{Легенда о Гаспарилле}
 Eventually becoming the last of the Buccaneers, rumours surrounding your life have been scarce. Most say you were born in Spain in 1756 and served in the Spanish Navy. Whatever may be the truth, you worked yourself up from a lowly position until you gained command of a ship of your own. It is time to make a name for yourself in the waters south of Florida!{В конце концов, Вы стали последним из буканьеров, но слухи, окружающие вашу жизнь, скудны. Большинство говорят, что Вы родились в Испании в 1756 году и служили в испанском флоте. Что бы ни было правдой, Вы поднимались из низшего сословия, пока не получили командование собственным кораблем. Настало время сделать себе имя в водах к югу от Флориды!}
 Gasparilla{Гаспарилла}
 
-Old{Старая}
-Salt{Соль}
+Old{Старый}
+Salt{Моряк}
 
 Salvadore{Сальвадор}
 Benavides{Бенавидес}
@@ -445,7 +462,7 @@ Benavides{Бенавидес}
 Serafino{Серафино}
 Masarenhas{Масаренхас}
 
-Skull{Череп}
+Skull{Скулл}
 
 Carrera{Каррера}
 The Might of Spain{Мощь Испании}
@@ -457,7 +474,9 @@ Dalma{Дальма}
 
 Lynch{Линч}
 
-Josiah{Джосия}
+Rose{Роза}
+
+Josiah{Джосайя}
 Peabody{Пибоди}
 Play the exploits of a typical U.S. Frigate cruising at sea during the War of 1812. Its captain, Josiah Peabody, demonstrates the revolutionary virtues of a new democracy fighting for its survival against an overwhelmingly superior British Navy.{Повторите подвиги типичного американского фрегата, путешествующего в море во время войны 1812 года. Его капитан Джосия Пибоди демонстрирует революционные достоинства новой демократии, борющейся за свое выживание против подавляющего превосходства британского флота.}
 Delaware{Делавэр}
@@ -481,7 +500,7 @@ Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchma
 Will{Уилл}
 Turner{Тёрнер}
 
-Bootstrap Bill{Прихлоп Билл}
+Bootstrap_Bill{Прихлоп Билл}
 
 Ricardo{Рикардо}
 Orellana{Орельяна}
@@ -491,12 +510,13 @@ La Mariana{Ла Марьяна}
 
 Parson{Парсон}
 
-Couchcaptain{Диванный-Капитан}
+Couchcaptain{Коуч-Капитан}
 
 Cutler{Катлер}
 Beckett{Беккет}
 Just Good Business{Просто Хороший Бизнес}
 As head of the East India Trading Company, you are in charge of one of the largest ships in the Caribbean. But you are a merchant first of all, and an unscrupulous one at that! Which means that the task of being captain is one you are not quite familiar with.{Как глава Ост-Индийской Торговой Компании, Вы управляете одним из крупнейших кораблей в Карибском море. Но Вы, прежде всего, торговец, и при этом - недобросовестный! Это означает, что задача быть капитаном - то, с чем вы Вы не очень хорошо знакомы.}
+Lindesfarne{Линдесфарн}
 
 Cruz{Круз}
 
@@ -508,7 +528,7 @@ Mings{Мингс}
 
 Terror{Террор}
 
-Thomas the{Томас}
+Thomas_the{Томас}
 
 Uziah{Узия}
 Wurmwoode{Вурмвуд}
@@ -522,21 +542,21 @@ Saint-Jean{Святой Иоанн}
 
 Julian{Джулиан}
 McAllister{МакАлистер}
-Brave Black Flag{Храбрый Черный Флаг}
+Brave Black Flag{Доблестный Чёрный Флаг}
 You have led a mutiny against your cruel captain who meant to kill a group of your countrymen taken as pirates. Now, on the run and marked as a traitor, you must decide what path to follow. Your actions have earned you the respect of the Brotherhood of Pirates. Will you join them under the brave black flag?{Вы подняли мятеж против жестокого капитана, который хотел убить группу Ваших соотечественников, оказавшихся среди захваченных пиратов. Теперь, находясь в бегах и помеченный как предатель, вы должны решить, по какому пути идти. Ваши действия заслужили уважение Берегового Братства. Присоединитесь ли Вы к ним под Храбрым Черным Флагом?}
 Defiance{Вызов}
 
 Milady{Миледи}
-de Winter{Де Винтер}
-Spy and Assassin{Шпион и убийца}
+de_Winter{Де Винтер}
+Spy and Assassin{Шпион и Убийца}
 You are a woman who is cunning, relentless, resourceful, amoral and dangerous. Tasked with causing harm to your nations' enemies by whatever means necessary, you will stop at nothing to fulfil that purpose.{Вы женщина хитрая, неумолимая, находчивая, аморальная и опасная. С целью причинить вред врагам ваших нанимателей любыми необходимыми средствами, Вы не остановитесь ни перед чем, чтобы выполнить поставленную задачу.}
 Athos{Атос}
 
 Comte{Граф}
-de Rochefort{Де Рошфор}
+de_Rochefort{Де Рошфор}
 
 Laurens{Лорен}
-de Graaf{Де Грааф}
+de_Graaf{Де Грааф}
 Scourge of the West{Бич Запада}
 'A great and mischievous pirate' according to Henry Morgan and thought to be the Devil in person by some Spaniards, this Dutch corsair is ready to wreak havoc on the Caribbean!{'Великий и лихой пират', по словам Генри Моргана, и сущий дьявол по мнению некоторых испанцев - этот голландский корсар готов хозяйничать в Карибском море!}
 Wapen van Hoorn{Герб Хоорна}
@@ -550,8 +570,13 @@ De Zilvervloot{Серебряный Флот}
 Drake{Дрэйк}
 Stranton{Стрэнтон}
 Phantom{Фантом}
-Cursed Vengeance{Проклятая Месть}
+Cursed Vengeance{Одержимый Местью}
 Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Отправляйтесь в приключение с сокровищами и предательством, кровопролитием и местью. Время, когда пират одерживал верх, завоевывал девушку, сокровища и побеждал своих врагов. То, что вы думаете о жизни пирата, будет поставлено под сомнение, ведь они живут, любят и умирают так, как может жить только пират! По роману Брента Джексона.}
+
+Purpure{Пурпур}
+Squire of the Sea{Морское Приключение}
+Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.{Однажды жила-была маленькая девочка, нежеланная её семье. Любимый сводный дядя отправил её в море в надежде, что она найдёт лучшую жизнь. Но море унесло её в неизведанный мир.}
+Carnation{Гвоздика}
 
 Francis{Фрэнсис}
 Drake{Дрейк}
@@ -560,9 +585,9 @@ Disturb us, Lord{Побеспокойся о нас, Господь}
 Golden Hind{Золотая Лань}
 
 Blas{Блас}
-de Lezo{Де Лезо}
+de_Lezo{Де Лезо}
 The Defender of Cartagena{Защитник Картахены}
-Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.{Блас Де Лезо начал свою морскую карьеру в 1701 году в возрасте 12 лет, служа Франции и Испании во время войны за испанское наследство. Не боясь попасть под обстрел, к 1714 году он потерял ногу, глаз и руку - шрамы, которые он носил как почетные знаки. Несмотря на ранения, он сделал успешную карьеру и сейчас командует военно-морскими силами Картахены-Де-Индиас.}
+Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.{Блас Де Лезо начал свою морскую карьеру в 1701 году в возрасте 12 лет, служа Франции и Испании во время войны за испанское наследство. Не боясь попасть под обстрел, к 1714 году он потерял ногу, глаз и руку. Несмотря на ранения, он сделал успешную карьеру и сейчас командует военно-морскими силами Картахены-Де-Индиас.}
 Conquistador{Конкистадор}
 
 Dervia{Дервия}
@@ -574,5 +599,350 @@ The undead monk who had many names for ages, decides to take up a sword and show
 {=====| models.c |=====}
 
 {=====| models.h |=====}
+
+{=====| QuebradasCostillas.c |=====}
+
+{=====| NK.c |=====}
+Dud{Неудачник}
+Achйron{Ахерон}
+Adams{Адамс}
+Admiraal Zoutman{Адмирал Зутман}
+Aemilia{Эмилия}
+Agamemnon{Агамемнон}
+Aguia{Агия}
+Albemarle{Альбемарль}
+Amazona{Амазонка}
+Ambuscade{Засада}
+America{Америка}
+Andromeda{Андромеда}
+Antelope{Антилопа}
+Apostуl Felipe{Апостол Фелипп}
+Aquila{Аквила}
+Ardent{Ардент}
+Argo{Арго}
+Argonaut{Аргонавт}
+Ark Royal{Арк Роял}
+Armeartes{Армеарт}
+Asterix{Астерикс}
+Atlantis{Атлантида}
+Attitude Adjuster{Дубинка}
+Barfleur{Барфлер}
+Bellona{Беллона}
+Black Heart{Чёрное Сердце}
+Black Joke{Чёрный Юмор}
+Black Pig{Чёрная Свинья}
+Blanche{Бланш}
+Bon Aventure{Хорошее Приключение}
+Bounty{Награда}
+Bourbon{Бурбон}
+Brennus{Бреннус}
+Bucentaure{Буцентор}
+Casanova{Казанова}
+Cassiopee{Кассиопея}
+Centurion{Центурион}
+Challenger{Соперник}
+Clorinda{Клоринда}
+Columbus{Колумбус}
+Comet{Комета}
+Comte de Trйville{Граф Де Труасвиль}
+Constitution{Конституция}
+Cormorant{Баклан}
+Cornelia{Корнелия}
+Coroa{Корона}
+Crimson Blood{Алая Кровь}
+Curlew{Кроншнеп}
+Dafne{Дафна}
+Dauphin Royal{Королевский Дофин}
+Dementor{Дементор}
+Den Graeuwen Heynst{Ден Граувен Хейнст}
+Dolphin{Дельфин}
+Don Juan{Дон Жуан}
+Don Quixote{Дон Кихот}
+Dragуn{Драгин}
+Drake{Селезень}
+Dreadnought{Дредноут}
+Duc de la Guerre{Герцог Войны}
+DuQuesne{Дюкен}
+Edam{Эдам}
+Edinburgh{Эдинбург}
+Eendracht{Эндрахт}
+Eensgezindheid{Энсгезиндхайд}
+Embuscade{Засада}
+Endymion{Эндимион}
+Esmeralda{Эсмеральда}
+Espaciosa{Эспасиоза}
+Espadon{Эспадон}
+Estrella{Эстрелла}
+Evil Under The Sun{Зло Под Солнцем}
+Extremeсa{Экстремека}
+Flower de Luce{Геральдическая Ллилия}
+Forte{Форте}
+Foudre{Фудр}
+Foudroyant{Фудройант}
+Fougueux{Фуге}
+Franklin{Франклин}
+George{Джордж}
+Giavota{Джавота}
+Girona{Жирона}
+Golfinho{Гольфиньо}
+Gouda{Гауда}
+Gouden Leeuwin{Золотая Львица}
+Graaf van Albemarle{Граф Ван Альбемарль}
+Gran Princesa de los Cielos{Великая Принцесса Небес}
+Greta Tuin{Грета Туин}
+Groene Leeuw{Зеленый Лев}
+Groote Christoffel{Грут Кристоффель}
+Haarlem{Харлем}
+Haas{Заяц}
+Hancock{Хэнкок}
+Hare{Заяц}
+Hermione{Гермиона}
+Hinchinbrook{Хинчинбрук}
+Hollandia{Голландия}
+Hotspur{Хотспур}
+Hudson{Гудзон}
+Huijs te Zwieten{Хуйс Те Цвитен}
+Huis te Kruiningen{Хьюис Те Круининген}
+Huis te Oosterwijk{Хьюис Те Остервейк}
+Huis van Nassau{Дом Нассау}
+Hunter{Охотник}
+Ijssel{Эйссел}
+Independence{Независимость}
+Indiscret{Нескромный}
+Insurgent{Повстанец}
+Iphigйnie{Ифигения}
+Jager{Егерь}
+Jamaica{Ямайка}
+Jason{Джейсон}
+Jeanne d'Arc{Жанна Дарк}
+Joyeaux{Украшение}
+Juno{Юнона}
+Kampen{Кампен}
+Kasteel van Medemblik{Кастел Ван Медемблик}
+La Couronne{Корона}
+Lady of the Night{Повелительница Ночи}
+Le Cochon Noir{Чёрная Свинья}
+Le Fleuron{Цветок}
+Le Terrible{Ужасный}
+Lebre{Лебре}
+Leerdammer{Леердаммер}
+Leeroy Jenkins{Лирой Дженкинс}
+Leeuw{Леув}
+Lion de Oro{Лион Де Оро}
+Loire{Луара}
+Lotus{Лотос}
+Lйopard{Леопард}
+Maarsen{Марсен}
+Maaslander{Масландер}
+Madonna del Populo{Мадонна Дель Популо}
+Maillй Brйzй{Майли Брезе}
+Marauder{Мародер}
+Martim de Freitas{Мартим Де Фрейтас}
+Meermin{Мирмин}
+Mercurio{Ртуть}
+Minion{Миньон}
+Mistress of Mayhem{Повелительница Хаоса}
+Montezuma's Revenge{Месть Монтесумы}
+Mordaunt{Мордаунт}
+Morning Star{Утренняя Звезда}
+Mutin{Мятеж}
+Mйduse{Медуза}
+Natividad{Рождество}
+Nervous Energy{Нервная Энергия}
+No More Mr Nice Guy{Нет Больше Славного Парня}
+Nonsuch{Несравненный}
+Norfolk{Норфолк}
+Nosferatu{Носферату}
+Nossa Senhora da Ajuda{Богоматерь Помощи}
+Nossa Senhora da Boa Viagem{Богоматерь Доброго Путешествия}
+Nossa Senhora da Conceicao{Богоматерь Зачатия}
+Nossa Senhora da Gloria{Богоматерь Славы}
+Nossa Senhora da Nazare{Богоматерь Назаре}
+Nossa Senhora da Oliveira e Santo Antуnio{Богоматерь Оливейра и Святой Антонио}
+Nossa Senhora das Necessidades{Богоматерь Потребностей}
+Nossa Senhora do Bom Despacho{Богоматерь Хорошего Решения}
+Nossa Senhora do Cabo e Sao Pedro de Alcantara{Богоматерь Капская и Святой Пётр Алькантарский}
+Nossa Senhora do Cardais{Богоматерь Кардэ}
+Nossa Senhora do Loreto{Богоматерь Лорето}
+Nossa Senhora Madre de Deus e Sao Francisco Xavier{Богоматерь Богородица и Святой Франциск Ксаверий}
+Nuestra Seсora de las Mercedes{Богоматерь Милосердная}
+Nuestra Seсora del Pueblo{Богоматерь Народа}
+Nuevo Invencible{Новый Непобедимый}
+Ohio{Огайо}
+Oranje{Апельсин}
+Papeghaij{Папегайдж}
+Parrano{Паррано}
+Pelican{Пеликан}
+Penguin{Пингвин}
+Piet Hein{Пит Хейн}
+Polychrest{Полихрест}
+Pomone{Помоне}
+Poseidon{Посейдон}
+Postiljon{Почтальон}
+Prima Donna{Примадонна}
+Prince{Принц}
+Prince de Neufchatel{Принц Нефшатель}
+Princesa Carlota{Принцесса Шарлотта}
+Princesa do Ceu{Принцесса Небесная}
+Princess Royal{Королевская Принцесса}
+Principe{Принц}
+Principe de Asturias{Принц Астурийский}
+Principe do Brasil{Принц Бразильский}
+Principe Dom Pedro{Принц Дон Педро}
+Prins Maurits{Принц Морис}
+Prins Willem{Принц Уильям}
+Prinses Royaal{Королевская Принцесса}
+Problem Child{Трудный Ребёнок}
+Queen Charlotte{Королева Шарлотта}
+Raadhuis van Edam{Ратуша Ван Эдама}
+Rabbit{Кролик}
+Railleuse{Насмешка}
+Rainha de Portugal{Королева Португалии}
+Ramillies{Рамиллес}
+Rattlesnake{Гремучая Змея}
+Redface{Краснолицый}
+Redoutable{Грозный}
+Resolution{Решительность}
+Revenge{Месть}
+Richelieu{Ришелье}
+Riddler{Загадочный}
+Roebuck{Робак}
+Rover{Скиталец}
+Royal Charles{Королевский Чарльз}
+Royal Sovereign{Королевский Соверен}
+Ruffian{Хулиган}
+Rye{Рожь}
+Sacramento{Сакраменто}
+Sacrificial Minion{Жертвенный Прислужник}
+Salvador do Mundo{Спаситель Мира}
+San Agustнn{Святой Августин}
+San Andreas{Святой Андреас}
+San Carlos{Святой Карлос}
+San Cayetano{Святой Каэтано}
+San Esteban{Святой Стефан}
+San Felipe{Святой Фелипп}
+San Fernando{Святой Фернанд}
+San Francisco{Святой Франциско}
+San Isidro{Сан-Исидро}
+San Juan{Сан-Хуан}
+San Lorenzo{Сан-Лоренцо}
+San Marcos{Сан-Маркос}
+San Martin{Сан-Мартин}
+San Miguel{Сан-Мигель}
+Santa Ana e Maria{Святая Анна и Мария}
+Santa Ana e Santo Joaquim{Святая Анна и Святой Хоаким}
+Santa Barbara{Санта Барбара}
+Santa Catalina{Святая Каталина}
+Santa Helena{Святая Елена}
+Santa Lauren{Санта Лорен}
+Santa Lucia{Санта Лючия}
+Santa Margarita{Санта-Маргарита}
+Santa Marta{Санта-Марта}
+Santa Rosa{Санта-Роза}
+Santa Teresa{Санта-Тереза}
+Santissimo Sacramento da Trindade{Сантиссимо Таинство Троицы}
+Santo Antonio{Санто-Антонио}
+Santo Augustinho{Святой Августин}
+Santo Domingo{Санто-Доминго}
+Santo Miguel e Almas Santas{Святой Михаил и Святые Души}
+Santнsima Trinidad{Сантисима-Тринидад}
+Sao Bartolomeu{Святой Варфоломей}
+Sao Boaventura{Сан-Боавентура}
+Sao Dere{Сан-Дере}
+Sao Feng{Сяо Фэнь}
+Sao Francisco Xavier{Сан-Франциско Ксавье}
+Sao Joao de Deus{Святой Иоанн Божий}
+Sao Joao Magnвnimo{Святой Иоанн Великолепный}
+Sao Jose{Сан-Хосе}
+Sao Muche{Сан-Муче}
+Sao Pedro{Святой Пётр}
+Sao Watte{Сан-Ватте}
+Schoonoord{Шунорд}
+Sea Devil{Морской Дьявол}
+Sea Eagle{Морской Орел}
+Seaflower{Морской Цветок}
+Serpente{Змея}
+Serpento do Mar{Морская Змея}
+Shannon{Шеннон}
+Shark{Акула}
+Sir Killalot{Сэр Киллалот}
+So Much For Subtlety{Коварный}
+Soleil Royal{Королевское Солнце}
+Soucoupe Volante{Соукоуп Волант}
+Spiegel{Шпигель}
+Su Madre{Мать}
+Success{Успех}
+Sudden Death{Внезапная Смерть}
+Suffolk{Суффолк}
+Swann{Суонн}
+Swiftsure{Рывок}
+Thor{Тор}
+Toro{Торо}
+Triomphant{Триумфатор}
+Triumph{Триумф}
+Tйmйraire{Отважный}
+Ultimate Ship II{Абсолютный Корабль II}
+Unfortunate Conflict Of Evidence{Неудачный Конфликт Доказательств}
+Unicorn{Единорог}
+United States{Соединенные Штаты}
+Uniгo{Юниро}
+Utrecht{Утрехт}
+Valk{Сокол}
+Vanguard{Авангард}
+Veere{Вир}
+Ventura{Вентура}
+Vergulde Raven{Позолоченный Ворон}
+Victory{Победа}
+Volador{Летающий}
+Vrijheid{Свобода}
+Wapen van Rotterdam{Герб Роттердама}
+Washington{Вашингтон}
+Whydah Helnot{Почему Нет}
+Wilhelmina{Вильгельмина}
+Witch of Endor{Ведьма Эндора}
+Witte Lam{Витте Лам}
+Witte Valk{Белый Сокол}
+Ying Tong{Инь Тонг}
+Zaragozana{Сарагоса}
+Zeelandia{Зеландия}
+Zeewolf{Сом}
+Zeven Provincien{Семь Провинций}
+Zwarte Beer{Чёрный Медведь}
+Йlan{Импульс}
+Йtoile{Этуаль}
+
+{=====| CommonQuest.c |=====}
+Margaret Hatcher{Маргарет Тэтчер}
+Dolphine{Дельфин}
+
+{=====| SideQuest.c |=====}
+Montanez{Монтанез}
+Mefisto{Мефисто}
+Hundred Devils{Сотня Дьяволов}
+666{666}
+Sea Monster{Морское Чудовище}
+Marauder{Мародер}
+Fast Death{Быстрая Смерть}
+Iceni Queen{Ледяная Королева}
+Madonna{Мадонна}
+Duquesa{Герцогиня}
+Comtesse{Графиня}
+Inferno{Преисподня}
+Duk{Дук}
+Prison Ship{Тюремный Корабль}
+Leon{Леон}
+Cheri{Дорогая}
+The Adventurer{Искатель Приключений}
+Vogelstruijs{Фогельструйс}
+HMS Challenger{КЕВ Челленджер}
+Valiente{Доблестный}
+Santiano{Сантьяно}
+Ark Raider{Ковчег Пирата}
+Santa Matilde{Святая Матильда}
+Marнa Santнsima{Сантисима-Тринидад}
+Cardenal Cisneros{Кардинал Сиснерос}
+Бngel de la Guarda{Ангел-Хранитель}
+Septentriуn{Септентрион}
+Arabella{Арабелла}
 
 {=====| 231 characters |=====}

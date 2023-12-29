@@ -1,4 +1,4 @@
-Build Version: Friday 9th June 2023
+Build Version: Tuesday 3rd October 2023
 Build 14
 
 ==========================
@@ -200,6 +200,7 @@ Build 14:
   . Map legends made translatable by Homo Eructus
   . 'TranslateString' checks general "storyline_strings.txt" as well as storyline-specific versions by Grey Roger
   . Log entries for weddings made translatable by Homo Eructus
+  . Bahia de San Antonio and Bahia de Moa swapped to put San Antonio nearer to Havana and Bahia de Moa nearer to Santiago, by Grey Roger
 
 - Bug Fixes:
   . Fix to prevent Merchant Guild attack when player group was not responsible by Pieter Boelen
@@ -343,6 +344,7 @@ Build 14:
   . Malcolm Hatcher dialog fixed to correctly show one or two goods for favourable trade, and where to take it/them, by Grey Roger
   . Double translating of island names in ship berthing, resulting in some islands showing blank names, fixed by Grey Roger
   . "PROGRAM\MAXIMUS_functions.c": functions 'FirstLetter', 'FirstLetterUp' and 'FirstLetterDown' changed to use multinational 'ToUpper' and 'ToLower' instead of English-specific 'ToUpperEng' and 'ToLowerEng', by Grey Roger
+  . "PROGRAM\INTERFACE\select_storyline.c": bug which adds spaces to "OldName" of characters with single names fixed by Grey Roger
 
 - Storyline Updates:
   . Sidequests:
@@ -447,6 +449,8 @@ Build 14:
     > Bridgetown soldiers restored to normal behaviour after stealing idol, monster detection radius restored to normal after temple, by Grey Roger
     > Option to make Virgile Boone join you at Octopus Bay if your ship is moored there, by Grey Roger
     > "Blaze_Crewmember_01" and similar changed to use player character's actual name instead of "Nathaniel" (also in Claire Larrouse sidequest) by Grey Roger
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
   . Ardent storyline:
     > New chapter "Imperial Escort" by Grey Roger
     > Various bugs fixed; camouflaged door to Downing's Dungeon added, by Grey Roger
@@ -459,6 +463,8 @@ Build 14:
     > "Dining_room" seat locators fixed, room used for reception scene after wedding, by Grey Roger
     > Helen visits tailor instead of pretending to search for ring for Edmundo by Grey Roger
     > After arresting you at Guadeloupe, Piers/Valerie Downing releases your French prisoners, by Grey Roger
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
   . Assassin storyline:
     > Hitman quest ending restored by Pieter Boelen
     > Isla Mona attempted fix by Bartolomeu o Portugues
@@ -471,12 +477,16 @@ Build 14:
     > Guibert Daudet portrait added by Grey Roger
     > Roxanne equips piranha, not fists, to avoid quest stop by Grey Roger
     > Roche Brasiliano does not surrender; Sao Jorge tavern keeper does not talk about Vito Leone; Vice Admiral repeatedly demands you produce 'La Couronne' if you don't have it; by Grey Roger
-    > If Chico Cois can't find a free slot to join you as officer, he forces his way into slot 1 by Grey R
+    > If Chico Cois can't find a free slot to join you as officer, he forces his way into slot 1 by Grey Roger
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
   . Bartolomeu o Portugues storyline:
     > Cargo Quests disabled for Hispaniola Buccaneer Camp by Pieter Boelen
     > Elting given his sword in "Cartagena Firework" to prevent him from stunning enemies in sniping scene by Grey Roger
     > Roxanne equips piranha, not fists, to avoid quest stop by Grey Roger
     > Auto-hoist Spanish flag after recapturing "Anaconda"; get fort keys automatically after killing fort commandant while rescuing Roxanne to avoid bug with stacked loot boxes and for disabled corpse mode, by Grey Roger
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
   . Free Play storyline:
     > Drake Stranton added by Jack Rackham and Grey Roger, based on the novel by Brent Jackson and using a loading screen with art by Nita and Brent Jackson
     > Tiny boat ship stats affected only for Castaway (instead of Swashbuckler difficulty) by Pieter Boelen
@@ -493,6 +503,8 @@ Build 14:
     > Davy Jones gets weedy skeletons in deck crew and in crew quarters, new special crew models also appear in crew quarters, by Grey Roger
     > Special start setups for Will Turner, Dark Teacher, Danielle Greene, Anamaria, Blackbeard, Cutler Beckett and various Pirate Lords by Lonious
     > Ricardo Orellana gets scary spooky skeletons as deck crew by GhostOfDeath91
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
   . Hornblower storyline:
     > Lieutenant Bush custom model added by Grey Roger
     > Various potential errors fixed by Grey Roger
@@ -500,6 +512,8 @@ Build 14:
     > Monk on Martinique shore removed for battle scene, restored when you reach Speightstown, by Grey Roger
     > Various characters changed from "GuardianType" to "GuardianTypeNoGroup" or "CivilianGuardianType" to prevent them from always carrying muskets, by Grey Roger
     > Russian voice and video files used when playing in Russian, by AkrimalS
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
   . Jack Sparrow storyline:
     > First Contact bugs fixed by Pieter Boelen
     > Various bugs fixed by Grey Roger
@@ -515,20 +529,30 @@ Build 14:
     > New cut-scene videos from DMC by Sebrian
     > New locations for DMC by Jack Rackham"
     > Addition to Ines Diaz dialog to allow sleeping on the table in "Brinkley" path if you have knocked out Susan Shaypen, by Grey Roger
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
   . Woodes Rogers storyline:
     > More new WIP content added by Jack Rackham
     > Part 2 extension added and playable by Jack Rackham
     > Coast Brothers concert added by Jack Rackham
     > Walk patches corrected for Redmond terrace, Vane's church attic and the galleons quarterdeck, by Jack Rackham
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
   . The Gold-Bug storyline:
     > Ending fixed by Jack Rackham
     > Legrand´s hut outside chimney only smokes when inside fire is on, by Jack Rackham
     > Bug with gunpowder barrels fixed by Jack Rackham
+    > Names when player switches character made translatable - Jack Rackham
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
   . Devlin Opera storyline:
     > New quests "My Brother, Ladies and Gentlemen" and "Yo Ho Ho and a shipment of rum", choice of ways to complete "Yo Ho Ho and a shipment of rum", by BathtubPirate
     > Blaze Devlin's fight scene checks for stunned opponents by Grey Roger
     > New quest "El Navegante" with choice of ways to complete it, by BathtubPirate
     > New quests starting in Santo Domingo by BathtubPirate
+    > New quests on Cayman by Bathtub Pirate
+    > Translated into Russian by AkrimalS
+    > Translated into Spanish by Homo Eructus
 
 - Model and Texture Updates:
   . Improved jungle grass and sky textures by Corsairs-Harbour.ru
@@ -667,6 +691,10 @@ Build 14:
   . Interface textures and components realigned by Baste
   . Soldiers show correct flags on interface portraits by Grey Roger
   . New character model "Ardent_F_TG" by Grey Roger
+  . New location model "CavernMedium2", used for Arawak burialground on Aruba
+  . New row of pirate flags added by Grey Roger
+  . New version of uncursed Flying Dutchman by QARownsBP
+  . New playable character "Purpure" by Grey Roger and Purpure Longstride
 
 - ADDITIONAL INSTALLATION OPTIONS:
   . Possibility to revert to original black-and-yellow paint scheme for British ships

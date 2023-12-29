@@ -142,7 +142,7 @@ void ProcessDialogEvent()
 			Diag.TempNode = "hostile";
 			GiveItem2Character(PChar, "lockpick");
 			AddDialogExitQuest("abduction_got_lockpick");
-			PlayStereoSound("INTERFACE\important_item.wav");
+			PlayStereoSound("INTERFACE\important_item.flac");
 			Logit(TranslateString("","You have been given a lockpick."));
 			link.l1.go = "exit";
 		break;
@@ -255,7 +255,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[81];
 			Diag.TempNode = "First time";
 			AddDialogExitQuest("museum_gilbert_opens_door");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, -20);
 			link.l1 = DLG_TEXT[82];
 			link.l1.go = "exit";

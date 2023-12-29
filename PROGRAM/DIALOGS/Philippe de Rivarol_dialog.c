@@ -105,7 +105,7 @@ void ProcessDialogEvent()
 			AddQuestrecord("nigel", 15);
 			DeleteAttribute(PChar, "quest.nigel_con_parri_checker");
 			PChar.quest.con_parri_expired.over = "yes";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 3000);
 			ChangeCharacterReputation(pchar, 1);
 			AddDialogExitQuest("nigel_third_encounter");
@@ -121,7 +121,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[23];
 			link.l1 = DLG_TEXT[24];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 6000);
 			ChangeCharacterReputation(pchar, 1);
 		break;

@@ -73,7 +73,7 @@ void ProcessDialogEvent()
 		
 		case "Death the Sweetheart":
 			SetMusic("storyteller_sad");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -10);
 			NPChar.setmusic = 1;
 			Dialog.Text = DLG_TEXT[12];
@@ -113,7 +113,7 @@ void ProcessDialogEvent()
 		
 		case "Happy Boy":
 			SetMusic("storyteller_fun");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(Pchar, -10);
 			NPChar.setmusic = 1;
 			Dialog.Text = DLG_TEXT[20];

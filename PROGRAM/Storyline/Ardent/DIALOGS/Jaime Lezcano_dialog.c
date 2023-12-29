@@ -162,7 +162,8 @@ void ProcessDialogEvent()
 		case "imperial_escort_negotations_in_cave7_evil":
 			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
 			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
-			AddQuestRecord("Imperial Escort", 26);
+			if (CheckQuestAttribute("etherbomb_thrown", "true")) AddQuestRecord("Imperial Escort", 26);
+			else AddQuestRecord("Imperial Escort", 37);
 			Preprocessor_Remove("envoy");
 			Preprocessor_Remove("agent");
 			PChar.quest.imperial_escort.cave_result = "negotiation_evil1";
@@ -244,7 +245,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_negotations_outside_cave7":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -100000);
 			if(PChar.quest.imperial_escort.cave_result == "negotiation_good2") dialog.text = DLG_TEXT[81];
 			else dialog.text = DLG_TEXT[82];

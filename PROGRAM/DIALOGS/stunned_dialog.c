@@ -76,7 +76,7 @@ void ProcessDialogEvent()
 				if(NPChar.sex == "woman") {PlaySound("OBJECTS\Voices\dead\female\dead_wom2.wav");}	// groan
 				else{PlaySound("OBJECTS\Voices\dead\male\dead1.wav");}
 
-				PlaySound("INTERFACE\took_item.wav");
+				PlaySound("INTERFACE\took_item.flac");
 				if(!LAi_group_IsEnemy(PChar,NPChar) && !CheckAttribute(NPChar, "pickgold"))  // rephit for robbing neutrals ???  NOT SURE ABOUT GAMEBALANCE.  GR: no rephit if NPChar robbed you
 				{
 					ChangeCharacterReputation(pchar, -1);

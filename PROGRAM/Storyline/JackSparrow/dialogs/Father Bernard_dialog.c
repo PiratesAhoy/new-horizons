@@ -412,7 +412,7 @@ void ProcessDialogEvent()
 			AddQuestRecord("Ammand", 13);
 			CloseQuestHeader("Ammand");
 			pchar.church = "1";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 2500);
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -443,7 +443,7 @@ void ProcessDialogEvent()
 			AddQuestRecord("Ammand", 14);
 			CloseQuestHeader("Ammand");
 			pchar.church = "1";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 2500);
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -578,7 +578,7 @@ void ProcessDialogEvent()
 
 		case "donation paid_500":
 			dialog.snd = "Voice\FATB\FATB046";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[125];
@@ -591,7 +591,7 @@ void ProcessDialogEvent()
 		
 		case "donation paid_2500":
 			dialog.snd = "Voice\FATB\FATB046";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[128];
@@ -604,7 +604,7 @@ void ProcessDialogEvent()
 		
 		case "donation paid_5000":
 			dialog.snd = "Voice\FATB\FATB046";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[131];

@@ -2,7 +2,7 @@ Ship_critical			{Критическое попадание!}
 Ship_got_good_1			{Вы подняли}
 Ship_got_good_2			{ц.}
 Ship_cant_got_good_1	{Некуда погрузить}
-Ship_cant_got_good_2	{. Трюм заполнен!}
+Ship_cant_got_good_2	{- Трюм заполнен!}
 
 Fort_destroy	{разрушен.}
 Fort_cannon		{Орудие уничтожено!}

@@ -39,7 +39,7 @@ void ProcessDialogEvent()
 			TakeNItems(PChar, "ayahuasca", 1);
 			AddMoneyToCharacter(PChar, -1*sti(NPChar.price)*1);
 			NPChar.ayahuasca.sold = sti(NPChar.ayahuasca.sold)+1;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			dialog.text = DLG_TEXT[5];
 			Link.l1 = DLG_TEXT[6]
 			Link.l1.go = "Exit";

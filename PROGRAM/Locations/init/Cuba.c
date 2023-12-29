@@ -1203,7 +1203,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].reload.l2.name = "boat";
 	Locations[n].reload.l2.go = "Cuba";
-	Locations[n].reload.l2.emerge = "reload_2";
+	Locations[n].reload.l2.emerge = "reload_5";
 	Locations[n].reload.l2.autoreload = "0";
 	if (VISIT_DECK == 1)
 		Locations[n].reload.l2.label = "Ship.";
@@ -3186,7 +3186,7 @@ void LocationInitCuba(ref n)
 
 	Locations[n].reload.l2.name = "boat";
 	Locations[n].reload.l2.go = "Cuba";
-	Locations[n].reload.l2.emerge = "reload_5";
+	Locations[n].reload.l2.emerge = "reload_2";
 	Locations[n].reload.l2.autoreload = "0";
 	if (VISIT_DECK == 1)
 		Locations[n].reload.l2.label = "Ship.";

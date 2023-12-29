@@ -213,7 +213,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[42];
 			link.l1 = DLG_TEXT[43];
 			link.l1.go = "begin_21";
-                        PlayStereoSound("INTERFACE\took_item.wav");
+                        PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 30000);
 
                break;
@@ -806,7 +806,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
                        AddDialogExitQuest("chegauxmal");
 		       GiveItem2Character(Pchar, "Darien_idol");
-                       PlayStereoSound("INTERFACE\took_item.wav");
+                       PlayStereoSound("INTERFACE\took_item.flac");
 
 		break;
 		

@@ -92,7 +92,7 @@ string DLG_TEXT[99] = {
 "Se siente.",
 "¿Sí, capitán? ¿Qué quieres?",
 "Vengo en busca de la fragata británica 'Lightning'. Debería haber arribado aquí hace un par de días. ¿Ha llegado ya?",
-"Los holandese sno nos llevamos particularmente bien con los ingleses, en caso de que lo hayas olvidado. Pero no, no he visto ninguna fragata británica aquí.",
+"Los holandeses no nos llevamos particularmente bien con los ingleses, en caso de que lo hayas olvidado. Pero no, no he visto ninguna fragata británica aquí.",
 "¿Seguro, Excelencia? El almirante del puerto de #sisland_Antigua#, Lord Barham, me aseguró que había zarpado rumbo a #sPhilipsburg#.",
 "Solo puedo decirte lo que sé: no he visto ninguna fragata aquí. Tal vez tuvo que cambiar de rumbo debido a esa violenta tormenta que se desató hace unos días.",
 "¿Una violenta tormenta? Lord Barham también mencionó que el misterioso barco pirata apareció en medio de una tormenta. Me pregunto si...",

@@ -995,7 +995,7 @@ string GetMyShipName(ref refCharacter)
 	if (shipname == "") return "";
 	if (IsShipMerchant(refCharacter) == false && iNation >= 0 && iNation < NATIONS_QUANTITY) {
 		makeref(rNation, Nations[iNation]);
-		if (CheckAttribute(rNation, "ShipNamePrefix") && GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) shipname = rNation.ShipNamePrefix + " " + shipname; // PB
+		if (CheckAttribute(rNation, "ShipNamePrefix") && GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) shipname = XI_ConvertString(rNation.ShipNamePrefix) + " " + shipname; // PB
 	}
 	return shipname;
 }
@@ -1010,7 +1010,7 @@ string GetMyShipNameShow(ref refCharacter)
 	if (shipname == "''") return "";
 	if (IsShipMerchant(refCharacter) == false && GetAttribute(refCharacter, "ship.type") != SHIP_FORT_NAME && iNation >= 0 && iNation < NATIONS_QUANTITY) { // PB: Don't do this for forts
 		makeref(rNation, Nations[iNation]);
-		if (CheckAttribute(rNation, "ShipNamePrefix") && GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) shipname = rNation.ShipNamePrefix + " " + shipname; // PB
+		if (CheckAttribute(rNation, "ShipNamePrefix") && GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) shipname = XI_ConvertString(rNation.ShipNamePrefix) + " " + shipname; // PB
 	}
 	return shipname;
 }

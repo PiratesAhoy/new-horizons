@@ -67,7 +67,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[9];
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "ANIMISTS_4";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1);
 		break;
 

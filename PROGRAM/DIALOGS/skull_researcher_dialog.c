@@ -216,7 +216,7 @@ void ProcessDialogEvent()
 			else
 			{
 				price = makeint(NPChar.price);
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -1 * price);
 				GiveItem2Character(PChar, NPChar.item);
 				dialog.text = DLG_TEXT[21] + title + " " + GetMyLastName(PChar) + ".";
@@ -291,7 +291,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "sell_tomahawk_low":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 15000);
 			TakeItemFromCharacter(PChar, "tomahawk_chief");
 			dialog.text = DLG_TEXT[80];
@@ -300,7 +300,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "sell_tomahawk_high":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 20000);
 			TakeItemFromCharacter(PChar, "tomahawk_chief");
 			dialog.text = DLG_TEXT[60];
@@ -328,7 +328,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "sell_skull_for_gold":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, 20000);
 			TakeItemFromCharacter(PChar, "cryskull");
 			Preprocessor_AddQuestData("researcher", GetMyFullName(NPChar));
@@ -371,7 +371,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "trade_skull_for_antidote3":
-			PlayStereoSound("INTERFACE\important_item.wav");
+			PlayStereoSound("INTERFACE\important_item.flac");
 			TakeItemFromCharacter(PChar, "cryskull");
 			dialog.text = DLG_TEXT[77];
 			link.l1 = DLG_TEXT[78];
@@ -389,7 +389,7 @@ void ProcessDialogEvent()
 			Preprocessor_AddQuestData("researcher", GetMyFullName(NPChar));
 			AddQuestRecord("crystal_skull", 15);
 			Preprocessor_Remove("researcher");
-			PlayStereoSound("INTERFACE\drink.wav");
+			PlayStereoSound("INTERFACE\drink.flac");
 			PChar.quest.crysskull_poison_player.over = "yes";
 			dialog.text = DLG_TEXT[92];
 			link.l1 = DLG_TEXT[93];

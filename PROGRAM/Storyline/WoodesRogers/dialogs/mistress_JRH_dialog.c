@@ -89,7 +89,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "choose_girl_quest":
- 			PlayStereoSound("INTERFACE\took_item.wav");						
+ 			PlayStereoSound("INTERFACE\took_item.flac");
 			Dialog.Text = DLG_TEXT[17];		//JRH substitute
 			link.l1 = DLG_TEXT[18];
 			link.l1.go = "Natalia";
@@ -102,7 +102,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "choose_girl_no_quest":
-			PlayStereoSound("INTERFACE\took_item.wav");  								
+			PlayStereoSound("INTERFACE\took_item.flac");
 			Dialog.Text = DLG_TEXT[22];		
 			link.l1 = DLG_TEXT[18];
 			link.l1.go = "Natalia";

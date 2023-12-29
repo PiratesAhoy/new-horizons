@@ -106,7 +106,7 @@ string DLG_TEXT[178] = {
 "Está muy bien educado. Dicen que estudió en Inglaterra y Holanda. Pero de alguna manera se metió en problemas con las autoridades, y vino a parar aquá.",
 "Ya veo. Déjame hacerte otra pregunta.",
 "Gracias, y adiós.",
-"No puedo decir nada malo de él. Es muy honesto. Es humilde y compasivo, y nadie ha tneido nunca una mala palabra que decir de él.",
+"No puedo decir nada malo de él. Es muy honesto. Es humilde y compasivo, y nadie ha tenido nunca una mala palabra que decir de él.",
 "Ya veo. Déjame hacerte otra pregunta.",
 "Gracias, y adiós.",
 "¿Y adónde quieres ir exactamente, ",

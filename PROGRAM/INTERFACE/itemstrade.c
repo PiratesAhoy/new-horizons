@@ -680,11 +680,11 @@ void ProcessCancelExit()
 	// Sulan -->
 	if(nPlayerMoneyStart < sti(refMyCh.Money))
 	{
-		WriteNewLogEntry("Visited "+FindTownName(GetCurrentTownID()),"Traded off all the collected blades, pistols, gems and other junk to a local merchant. The trade earned me "+(sti(refMyCh.Money)-nPlayermoneyStart)+" pieces of gold.","Ship",true);
+		WriteNewLogEntry(GetTranslatedLog("Visited")+" "+FindTownName(GetCurrentTownID()),GetTranslatedLog("Traded off all the collected blades, pistols, gems and other junk to a local merchant. The trade earned me")+" "+(sti(refMyCh.Money)-nPlayermoneyStart)+" "+GetTranslatedLog("pieces of gold."),"Ship",true);
 	}
 	if(nPlayerMoneyStart > sti(refMyCh.Money))
 	{
-		WriteNewLogEntry("Visited "+FindTownName(GetCurrentTownID()),"Found some interesting new items while browsing through the inventory of a local merchant. I had to pay "+(nPlayerMoneyStart-sti(refMyCh.Money))+" pieces of gold.","Ship",true);
+		WriteNewLogEntry(GetTranslatedLog("Visited")+" "+FindTownName(GetCurrentTownID()),GetTranslatedLog("Found some interesting new items while browsing through the inventory of a local merchant. I had to pay")+" "+(nPlayerMoneyStart-sti(refMyCh.Money))+" "+GetTranslatedLog("pieces of gold."),"Ship",true);
 	}
 	// Sulan <--
 

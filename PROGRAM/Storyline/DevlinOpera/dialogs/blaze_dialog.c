@@ -1401,5 +1401,33 @@ void ProcessDialogEvent()
 		AddDialogExitQuest("Switch_to_Beatrice");
 	break;
 
+	case "Waiting_for_Kay":
+		Dialog.Text = DLG_TEXT[385];
+		Link.l1 = DLG_TEXT[384];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Kay_picks_up");
+	break;
+
+	case "Blaze_killed_Bonamy":
+		Dialog.Text = DLG_TEXT[386];
+		Link.l1 = DLG_TEXT[384];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Camp_to_Hermit");
+	break;
+
+	case "Stop_house":
+		Dialog.Text = DLG_TEXT[387];
+		Link.l1 = DLG_TEXT[388];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Stop_house2");
+	break;
+
+	case "KOB_in_trouble":
+		Dialog.Text = DLG_TEXT[389];
+		Link.l1 = DLG_TEXT[384];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("KOB_kidnapped3");
+	break;
+
 	}
 }

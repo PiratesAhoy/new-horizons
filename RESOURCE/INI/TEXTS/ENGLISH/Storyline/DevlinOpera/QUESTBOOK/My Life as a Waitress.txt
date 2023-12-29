@@ -1,6 +1,6 @@
 title=My Life as a Waitress
 text.t1=I need to help Marcel Jauri waiting the tables by taking drink orders and choosing the right beverages. The patrons will only give hints and clues about each other.
-text.t2=I must only ever choose a persons drink when I'm sure about it. I can always come back to any patron, so no pressure.
+text.t2=I must only ever choose a person's drink when I'm sure about it. I can always come back to any patron, so no pressure.
 text.t3=No guessing is required. I can get there through logic and the process of elimination.
 text.t4=Only a hat is a hat. Wigs and hoods don't count as hats.
 text.t5=If in doubt where to start, I must remember that dead men don't drink.

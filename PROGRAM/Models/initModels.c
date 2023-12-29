@@ -13660,6 +13660,31 @@ void InitModels(bool isstart)
 	model.playertype	= PLAYER_TYPE_CASTAWAY;
 	AddCharacterModel(model);
 
+	model.description	= "Purple is the theme of this outfit, with various shades on the shirt, vest and skirt.";
+	model.id		= "Purpure";
+	model.FaceId		= 625;
+	model.nation		= ENGLAND;
+	model.price		= 1000;
+	model.assigned		= true;
+	model.sex		= "woman";
+	model.ani		= "woman_sit";
+	model.height		= 1.75;
+	model.iscombat		= false;
+	model.name		= "Purpure";
+	model.lastname		= "";
+	model.storytitle	= "Squire of the Sea";
+	model.storytext		= "Once, there was a little girl unwanted by her family. Her beloved stepuncle put her out to sea. But the sea took her away to another world.";
+	model.playertype 	= PLAYER_TYPE_ADVENTURER;
+	model.difficulty	= DIFFICULTY_MARINER;
+	model.Flags.Pirate = 12;
+	model.Flags.Personal = 5;
+	model.ship		= "US_Hannah";
+	model.shipname		= "Carnation";
+	model.date.day		= 26;
+	model.date.month	= 9;
+	model.date.year		= 1830;
+	AddCharacterModel(model);
+
 	model.description =  "";
 	model.id	   =  "zombie1";
 	model.FaceId	= 544;

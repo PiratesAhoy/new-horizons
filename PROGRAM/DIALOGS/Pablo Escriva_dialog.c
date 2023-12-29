@@ -246,7 +246,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[39] + GetMyLastName(PChar) + "!";
 			link.l1 = DLG_TEXT[31];
 			NPChar.already_met = "true";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -3000);
 			AddDialogExitQuest("kapitein_got_papers");
 			link.l1.go = "exit";
@@ -263,7 +263,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "exit_pay_up":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -1 * sti(PChar.quest.hunt_document_price));
 			AddDialogExitQuest("hunt_forger_come_back_tomorrow");
 			Diag.CurrentNode = Diag.TempNode;

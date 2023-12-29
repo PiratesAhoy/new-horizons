@@ -36,7 +36,7 @@ string DLG_TEXT[132] = {
 "!!!",
 "Mi turno. He sacado... ¡",
 "! ¡Has perdido, amiguito!",
-"¡Maldita sea! ¿Qué le pasó a mi suerte? Muy bien, ¡toma a la chica y vete!",
+"¡Maldita sea! ¿Adónde ha ido mi suerte? Muy bien, ¡toma a la chica y vete!",
 "Con mucho gusto.",
 "¿Qué?",
 "¡Alimaña asquerosa! ¡No mereces vivir!",
@@ -128,7 +128,7 @@ string DLG_TEXT[132] = {
 "He oído hablar del evento, claro, ¿pero cuál es el valor real de la invitación?",
 "Para jugadores como nosotros, no tiene precio; no solo para probar tus habilidades, ¡sino quizás para ganar el dinero del premio y un codiciado trofeo!",
 "Está bien. Me ha picado la curiosidad, vuelve a tirar esos dados.",
-"Eso es. Y que la diosa Fortuna me sonría por fin...",
-", has vuelto a perder. Me llevaré esa invitación, no creo que esa competición fuera para ti, de todos modos.",
+"Eso es. Y que la diosa Fortuna me sonría por fin... ¡¡¡",
+", has vuelto a perder! Me llevaré esa invitación, no creo que esa competición fuera para ti, de todos modos.",
 "No, ya he tenido suficiente. Sal de esta habitación mientras puedas y deja a la chica donde está.",
 };

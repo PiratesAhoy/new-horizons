@@ -42,7 +42,7 @@ string DLG_TEXT[88] = {
 "So you say you saw blood on #spronoun3# boots that night?",
 "I saw #spronoun2# in a street light.",
 "Ah. Then what?",
-"We arrested #spronoun2#, and then, when we saw a corpse lying in pool of blood, we took the #sgirl# into custody.",
+"We arrested #spronoun2#, and then, when we saw a corpse lying in a pool of blood, we took the #sgirl# into custody.",
 "I see. Did you find anything interesting on #spronoun2#?",
 "I was searching #spronoun2#, but I was interrupted.",
 "What do you mean?",

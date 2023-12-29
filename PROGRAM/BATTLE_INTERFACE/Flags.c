@@ -52,7 +52,7 @@ ref procGetRiggingData()
 		case GUEST2_NATION:    gRiggingRetVal[0] = 7;                                break; //JRH 7, was 6
 		case PRIVATEER_NATION: gRiggingRetVal[0] = GetPersonalFlag(rCharacter, &n);  break;
 		case UNKNOWN_NATION:   gRiggingRetVal[0] = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break; //added by KAM		// changed after build 11 by KAM
-		case NEUTRAL_NATION:   gRiggingRetVal[0] = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break; //added by KAM
+		case NEUTRAL_NATION:   gRiggingRetVal[0] = 6; break; //added by KAM
 		case PERSONAL_NATION:  gRiggingRetVal[0] = GetPersonalFlag(rCharacter, &n);  break;
 	}
 
@@ -91,7 +91,6 @@ string GetShipFlagType(ref chr, int pos)
 	int nMasts = GetAttributesNum(arMasts);
 	int m = 0;
 	int i = 1;
-	if (CheckAttribute(chr, "surrendered")) return FLAG_NONE; // Screwface: to fix the white flags
 	while (i <= nMasts)
 	{
 		string sMast = "Mast" + m;
@@ -214,7 +213,7 @@ int GetPirateFlag(ref chr, int ntex)
 	{
 		ref cmdr = Group_GetGroupCommander(GetGroupIDFromCharacter(chr));
 		if (!CheckAttribute(cmdr, "Flags.Pirate") || !CheckAttribute(cmdr, "Flags.Pirate.texture")) {
-			ntex = rand(PIRATEFLAGS_TEXTURES_QUANTITY - 2); //PW: -2 to disable last row in random encounters
+			ntex = rand(PIRATEFLAGS_TEXTURES_QUANTITY - 3); //PW: -3 to disable last 2 rows in random encounters
 			cmdr.Flags.Pirate.texture = ntex;
 			cmdr.Flags.Pirate = rand(FLAGS_PICTURES_QUANTITY_PER_TEXTURE - 2); // PB: -2 to disable last column in random encounters
 		}
@@ -286,6 +285,10 @@ ref GetCharacterFlagEntity(ref character) {
 				result = &PersonalFlag[sti(index)];
 				found = true;
 			}
+		break;
+		case NEUTRAL_NATION:
+			result = &Flag;
+			found = true;
 		break;
 		if (IsShipMerchant(character) ) {
 			result = &MerchantFlag;

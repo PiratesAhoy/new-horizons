@@ -361,7 +361,7 @@ void ProcessDialogEvent()
 				Link.l1 = DLG_TEXT[56];
 				Link.l1.go = "exit";
 				sum = Npchar.money;
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, sti(sum));
 				AddMoneyToCharacter(Npchar, -sti(sum));
 				float points = stf(sum/4000);
@@ -448,10 +448,23 @@ void ProcessDialogEvent()
 		case "defi2":
 				if(rand(2)==0)
 				{
-					Dialog.Text = DLG_TEXT[60];
-					Link.l1 = DLG_TEXT[61];
+					Preprocessor_Add("ladlass", XI_ConvertString(GetAddressForm(ADDR_INFORMAL, ENGLAND, GetAttribute(PChar, "sex") == "woman")));
+					Dialog.Text = DLG_TEXT[64];
+					if (sti(NPChar.nation) == GetCurrentFlag())
+					{
+						Preprocessor_Add("nation", XI_ConvertString(GetNationDescByType(sti(NPChar.nation))));
+						Dialog.Text = Dialog.Text + DLG_TEXT[65];
+					}
+					else
+					{
+						Preprocessor_Add("nation", XI_ConvertString(GetNationNameByType(sti(NPChar.nation))));
+						Dialog.Text = Dialog.Text + DLG_TEXT[66];
+					}
+					Dialog.Text = Dialog.Text + DLG_TEXT[67];
+					Link.l1 = DLG_TEXT[68];
 					Link.l1.go = "exit";
-					SetCoastalEnemy(Npchar.model, Npchar.sex, GetMyName(NPChar), Npchar.lastname);
+					Link.l2 = DLG_TEXT[69];
+					Link.l2.go = "defi3";
 					Diag.TempNode = "exit";
 				}
 				else
@@ -464,6 +477,13 @@ void ProcessDialogEvent()
 				}					
 		break;
 
-
+		case "defi3":
+				Preprocessor_Add("mister", XI_ConvertString(GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false)));
+				Dialog.Text = DLG_TEXT[60];
+				Link.l1 = DLG_TEXT[61];
+				Link.l1.go = "exit";
+				SetCoastalEnemy(Npchar.model, Npchar.sex, GetMyName(NPChar), Npchar.lastname);
+				Diag.TempNode = "exit";
+		break;
 	}
 }

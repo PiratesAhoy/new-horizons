@@ -1,4 +1,4 @@
-string DLG_TEXT[57] = {
+string DLG_TEXT[49] = {
 "¿Qué opinas de nuestro último combate? ¡No recuerdo nada parecido!",
 "¡Sí! ¡Fue una gloriosa carnicería! ¡Y lo que nos espera en el futuro! Así es nuestra vida, amigo mío.",
 "¡Si quieres pelear de nuevo, necesito algunos hombres que desembarquen conmigo la próxima vez que toquemos tierra!",
@@ -43,16 +43,9 @@ string DLG_TEXT[57] = {
 "Me gustaría saber qué hora es.",
 "No importa, acabo de acordarme. Continúa.",
 "#ssir#, ahora son las ",
-". ¿Quieres que esperemos un rato?","No, ahora es tan buen momento como cualquier otro. ¡Vamos!",
+". ¿Quieres que esperemos un rato?",
+"No, ahora es tan buen momento como cualquier otro. ¡Vamos!",
 "Sí, esperaremos una hora más.",
+"Sí, esperaremos 3 horas más.",
 "Sí, esperaremos 8 horas más.",
-"Yes, let's wait until a specific time.",
-"Very well, until when should we wait? [hhmm]",
-"You want us to wait until ",
-", #ssir#?",
-"Yes, that's right.",
-"No, I changed my mind. Let's go now!",
-"I don't understand. Until when should we wait?",
-"Let me say it again.",
-"Never mind. Let's go now!"
 };

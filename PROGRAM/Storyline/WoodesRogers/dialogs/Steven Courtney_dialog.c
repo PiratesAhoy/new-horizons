@@ -77,7 +77,7 @@ void ProcessDialogEvent()
 	
 		case "lieutenant2":
 			PlaySound("AMBIENT\RESIDENCE\some1.wav");
-			PlaySound("INTERFACE\notebook.wav");
+			PlaySound("INTERFACE\notebook.flac");
 		//	AddLandToCharacter(Pchar, "Jamaica", "England", 50);
 		
 			iNation = sti(NPChar.nation);

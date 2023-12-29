@@ -51,7 +51,7 @@ string DLG_TEXT[68] = {
 "¿¡WHAT!? ¡Me han parecido solo unos minutos!",
 "¿Viste algo?",
 "Sí vi a Quetzalcoatl; estaba en Cartagena y traraba de tenderme un libro. Pero yo no podía sostenerlo y el libro se cayó al suelo.",
-"Huum... Quizás deberías ir allí. No estoy segura de qué beneficio tendrá, pero quizás te traiga algunas repsuestas.",
+"Huum... Quizás deberías ir allí. No estoy segura de qué beneficio tendrá, pero quizás te traiga algunas respuestas.",
 "Parece un plan razonable. Gracias por la ayuda.",
 "Negocios on negocios. Creo que habíamos acordado 500 piezas de oro, ¿no?",
 "En efecto, aquí están.",

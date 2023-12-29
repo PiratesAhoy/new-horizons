@@ -423,7 +423,7 @@ La cámara gira para centrarse en el personaje de frente (PotC original).
 }
 settingloc_camera3
 {
-#Comportamiento de la cámara cunado el jugador se acerca a una puerta.
+#Comportamiento de la cámara cuando el jugador se acerca a una puerta.
 }
 onsea_compass{Apariencia de la brújula}
 settingonsea_compass1

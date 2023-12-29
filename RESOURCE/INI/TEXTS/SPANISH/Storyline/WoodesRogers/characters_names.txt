@@ -41,6 +41,7 @@ Constable{Agente}
 Mills{Mills}
 Young{Young}
 Mutineer{Amotinado}
+Mutineer_F{Amotinada}
 Thug{Matón}
 Leading{Líder}
 Coastbrother{Hermano de la Costa}
@@ -61,7 +62,9 @@ Fry{Fry}
 Stretton{Stretton}
 Rogers'{Rogers}
 Crew{Tripulación}
+Rogers' Crew{Tripulación de Rogers}
 Former Crew{Antigua tripulación}
+Rogers' Former Crew{Antigua tripulación de Rogers}
 Vane{Vane}
 Bellamy{Bellamy}
 Paul{Paul}
@@ -78,6 +81,7 @@ Phineas{Phineas}
 Bunce{Bunce}
 Gow{Gow}
 Charles Vane's{Charles Vane}
+Charles Vane's Crew{Tripulación de Charles Vane}
 Walter{Walter}
 Kennedy{Kennedy}
 England{England}
@@ -123,6 +127,7 @@ Citizen{Ciudadano}
 Claire{Claire}
 Voyant{Voyant}
 Minerva{Minerva}
+Buccaneer{Bucanero}
 Mather-Wren{Mather-Wren}
 Silehard{Silehard}
 Sarah{Sarah}

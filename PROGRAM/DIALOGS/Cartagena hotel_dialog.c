@@ -457,7 +457,7 @@ void ProcessDialogEvent()
 					LAi_SetStayType(characterFromID("hotel_ghost2"));
 
 					if(CheckAttribute(Pchar,"hotel_surgery") && Pchar.hotel_surgery == "on") 
-					{PlaySound("INTERFACE\small_door_locked.wav");}
+					{PlaySound("INTERFACE\small_door_locked.flac");}
 
 					if(CheckAttribute(Pchar,"hotel_bandages") && Pchar.hotel_bandages == "on") 
 					{PlaySound("PEOPLE\clothes1.wav");}
@@ -471,7 +471,7 @@ void ProcessDialogEvent()
 					LAi_SetStayType(characterFromID("hotel_ghost3"));
 
 					if(CheckAttribute(Pchar,"hotel_crucifix") && Pchar.hotel_crucifix == "on") 
-					{PlaySound("INTERFACE\took_item.wav");}
+					{PlaySound("INTERFACE\took_item.flac");}
 
 					if(CheckAttribute(Pchar,"hotel_bible") && Pchar.hotel_bible == "on") 
 					{PlaySound("INTERFACE\book_close.wav");}

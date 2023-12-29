@@ -26,7 +26,7 @@ void InitInterface(string iniName)
 		if(i>2) column = 600;
 		row = 170+i*100;
 		if(i>2) row = row - 400;
-		SetNewPicture("NATION" + i, "interfaces\flags\Crest_" + GetFlagPicName(i) + ".tga");
+		SetNewPicture("NATION" + i, "interfaces\flags\Crest_" + GetFlagPicName(i) + ".png");
 		SetNodeUsing( "NATION" + i, true);
 		CreateImage(i+"Black", "ICONS", "black rectangle", column,row,column+70,row+20);
 		// PB: Indicate Served Nation -->

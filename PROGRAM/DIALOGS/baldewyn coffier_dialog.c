@@ -311,7 +311,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[123] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[124];
 			link.l1 = DLG_TEXT[125];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -10000);
 			ChangeCharacterReputation(pchar, 2);
 			AddDialogExitQuest("baldewyn_wait_month");
@@ -340,7 +340,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[131];
 			link.l1 = DLG_TEXT[132] + GetMyShipNameShow(PChar) + DLG_TEXT[133];
 			link.l1.go = "exit";
-			//PlayStereoSound("INTERFACE\took_item.wav");
+			//PlayStereoSound("INTERFACE\took_item.flac");
 			//AddMoneyToCharacter(pchar,-2500); //Fix:Storekeeper;19.09
 			AddPassenger(pchar, npchar, 0);
 			npchar.quest.hire = "hired";
@@ -352,7 +352,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[134];
 			link.l1 = DLG_TEXT[135] + GetMyShipNameShow(PChar) + DLG_TEXT[136];
 			link.l1.go = "exit";
-			//PlayStereoSound("INTERFACE\took_item.wav");
+			//PlayStereoSound("INTERFACE\took_item.flac");
 			//AddMoneyToCharacter(pchar, -2500); //Fix:Storekeeper;19.09
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -411,7 +411,7 @@ void ProcessDialogEvent()
 			link.l2 = DLG_TEXT[140];
 			link.l2.go = "work";
 			npchar.quest.hire =  "almost_done";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 15000);
 			if(AUTO_SKILL_SYSTEM)
 			{

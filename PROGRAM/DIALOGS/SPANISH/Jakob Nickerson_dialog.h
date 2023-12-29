@@ -26,7 +26,7 @@ string DLG_TEXT[31] = {
 "Veamos lo que tus instalaciones pueden ofrecer.",
 "Me gustaría instalar cañones nuevos en mi barco.",
 "Debo irme. Gracias.",
-"Me niego a tratar con una persona con tu reputación y relaciones. Márchate ahora mismo, ",
+"No me gusta tu reputación ni las compañías que frecuentas. Me niego a tratar contigo. Márchate ahora mismo, ",
 ", antes de que llame a los guardias.",
 "Después de cerrar este diálogo, pulsa ENTER para abrir la interfaz de cambio de velas.",
 "Salir",

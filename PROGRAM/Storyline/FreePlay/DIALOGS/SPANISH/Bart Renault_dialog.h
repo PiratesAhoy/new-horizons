@@ -6,7 +6,7 @@ string DLG_TEXT[16] = {
 "¿Tú también oyes ese extraño siseo?", 
 "¿Te estás divirtiendo?",
 "No, claro que no. ¡¿Cómo puedes disfrutar así con la situación de los prisioneros, perro?!",
-"¡Oh, vamos, no seas tan impertinente! Estás hablando con un compatriota. Yo también soy #scountry# y puedo dejarte libre. Por #smoney# piezas de a ocho, serás de nuevo #sgender# libre.",
+"¡Oh, vamos, no seas tan impertinente! Estás hablando con un compatriota. Yo también soy #scountry# y puedo dejarte libre. Por #smoney# piezas de a ocho, volverás a ser #sgender# libre.",
 "¿¡#smoney#!? ¡Eso sólo me deja 1! Es mejor que seguir pudriéndome aquí. Muy bien, trato hecho. ¡Ahora, sácame!",
 "Despúes de ti, #ssir#.",
 "Ese era el último. ¡Ahora sal de aquí antes de que lleguen más guardias!",
@@ -14,5 +14,5 @@ string DLG_TEXT[16] = {
 "No hay supervivientes, así que no necesitan saberlo. ¡Ahora enciérrame en esa celda para que parezca que no tengo nada que ver con tu liberación!",
 "Debe gustarte mucho tu trabajo si estás dispuesto a correr el riesgo de quedarte. ¡Buena suerte!",
 "muy independiente",
-"en realidad un pirata",
+"un pirata de vocación",
 };

@@ -156,7 +156,7 @@ void ProcessDialogEvent()
 		case "key":
 			dialog.snd = "Voice\FRCO\FRCO003";
 			GiveItem2Character(Pchar, "key21");
-			PlaySound("INTERFACE\took_item.wav");
+			PlaySound("INTERFACE\took_item.flac");
 			dialog.text = DLG_TEXT[59];
 			link.l1 = DLG_TEXT[43];
 			link.l1.go = "exit";

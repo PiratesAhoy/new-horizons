@@ -15,18 +15,18 @@ void ProcessDialogEvent()
 	merch_kid_pronoun3 = XI_ConvertString(GetMyPronounPossessive(characterFromID(PChar.quest.villain)));
 	if (PChar.sex == "man")
 	{
-		your_gov_kid = DLG_TEXT[446];
-		your_gov_kid2 = DLG_TEXT[450];
-		my_gov_kid = DLG_TEXT[448];
-		my_gov_kid2 = DLG_TEXT[452];
-		merch_kid = XI_ConvertString("son");
-	}
-	else
-	{
 		your_gov_kid = DLG_TEXT[447];
 		your_gov_kid2 = DLG_TEXT[451];
 		my_gov_kid = DLG_TEXT[449];
 		my_gov_kid2 = DLG_TEXT[453];
+		merch_kid = XI_ConvertString("son");
+	}
+	else
+	{
+		your_gov_kid = DLG_TEXT[448];
+		your_gov_kid2 = DLG_TEXT[452];
+		my_gov_kid = DLG_TEXT[450];
+		my_gov_kid2 = DLG_TEXT[454];
 		merch_kid = XI_ConvertString("daughter");
 	}
 
@@ -202,7 +202,7 @@ void ProcessDialogEvent()
 				offer = DLG_TEXT[100];
 				PChar.quest.ardent_kidnap.ransom = 50000;
 			}
-			dialog.text = DLG_TEXT[97] + GetMySimpleName(CharacterFromID(PChar.quest.romance)) + " to " + GetMySimpleName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[98] + offer + DLG_TEXT[101] + my_gov_kid + DLG_TEXT[102];
+			dialog.text = DLG_TEXT[97] + GetMySimpleName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[446] + GetMySimpleName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[98] + offer + DLG_TEXT[101] + my_gov_kid + DLG_TEXT[102];
 			link.l1 = DLG_TEXT[103];
 			link.l1.go = "ransom_accept";
 			link.l2 = DLG_TEXT[104];
@@ -511,7 +511,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "hand_it_over":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			x = makeint(PChar.quest.marriage.money) * -1;
 			AddMoneytoCharacter(PChar, x);
 			LeaveService(PChar, PIRATE, false);	// You give up being a pirate
@@ -1054,7 +1054,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneytoCharacter(PChar, 5000);
 				dialog.text = DLG_TEXT[295] + name + DLG_TEXT[297] + DLG_TEXT[298];
 			}
@@ -1207,7 +1207,9 @@ void ProcessDialogEvent()
 				NPChar.templand = GetCharacterLand(PChar);
 				Promote(&PChar, &NPChar, SPAIN);
 				if (GetRank(PChar, SPAIN) < 3) Promote(&PChar, &NPChar, SPAIN); // Double promotion if low rank
-				dialog.text = DLG_TEXT[359] + DLG_TEXT[375] + TranslateString(GetRankName(PChar, SPAIN),"") + DLG_TEXT[376] + (GetCharacterLand(PChar) - sti(NPChar.templand)) + DLG_TEXT[377];
+				dialog.text = DLG_TEXT[359] + DLG_TEXT[375] + TranslateString(GetRankName(PChar, SPAIN),"");
+				if (GetCharacterLand(PChar) - sti(NPChar.templand) > 0) dialog.text = dialog.text + DLG_TEXT[376] + (GetCharacterLand(PChar) - sti(NPChar.templand)) + DLG_TEXT[377];
+				else dialog.text = dialog.text + ".";
 				DeleteAttribute(NPChar,"templand");
 				if (!LAi_IsDead(characterFromID(PChar.quest.romance)) && PChar.married == MR_SINGLE && !CheckAttribute(PChar, "quest.spain_betrayal"))
 				{
@@ -1378,7 +1380,7 @@ void ProcessDialogEvent()
 				if (CheckAttribute(PChar, "quest.spain_betrayal")) link.l1.go = "exit";
 				else link.l1.go = "finale_after_santiago_promotion_or_lom";
 			}
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 100000);
 			if (reward == "") reward = DLG_TEXT[408];
 			else reward = reward + DLG_TEXT[407];
@@ -1622,7 +1624,7 @@ void ProcessDialogEvent()
 			Preprocessor_AddQuestData("governor", GetMyLastName(CharacterFromID("Javier Balboa")));
 			AddQuestRecord("Battle Royale", 16);
 			Preprocessor_Remove("governor");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneytoCharacter(PChar, 100000);
 			AddDialogExitQuest("finale_end_story");
 			DialogExit();

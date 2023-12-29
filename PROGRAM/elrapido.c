@@ -102,5 +102,5 @@ void Restock_Ammo(int gunpowder, int pistol_bullets, int grapeshot, int musket_b
 	}
 // <-- KK
 
-	//PlaySound("interface\took_item.wav");	//JRH sound off when entering Captains cabin
+	//PlaySound("interface\took_item.flac");	//JRH sound off when entering Captains cabin
 }

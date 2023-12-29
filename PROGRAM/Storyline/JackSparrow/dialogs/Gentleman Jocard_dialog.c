@@ -241,7 +241,7 @@ void ProcessDialogEvent()
 			link.l1.go = "Jocard_Request3";
 			
 			GiveItem2Character(pchar, "Sparrow_Ring1");
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 
 			//Characters[GetCharacterIndex("Gentleman Jocard")].model = "9JC";
 			//Characters[GetCharacterIndex("Gentleman Jocard")].headmodel = "h_9JC";

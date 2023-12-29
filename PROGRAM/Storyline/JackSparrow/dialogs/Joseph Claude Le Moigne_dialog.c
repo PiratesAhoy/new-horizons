@@ -112,7 +112,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[114];
 			link.l1.go = "exit";
 			pchar.quest.gambling_with_girl = "done";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 4000);
 			if(GetRMRelation(PChar, iNation) < REL_NEUTRAL) SetRMRelation(PChar, iNation, REL_NEUTRAL); // RM
 			if(AUTO_SKILL_SYSTEM)
@@ -158,7 +158,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[126];
 			link.l1.go = "exit";
 			pchar.quest.gambling_with_girl = "done";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 7000);
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -192,7 +192,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[132];
 			link.l1.go = "exit";
 			pchar.quest.gambling_with_girl = "done";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, 4000);
 			if(GetRMRelation(PChar, iNation) < REL_AMNESTY) SetRMRelation(PChar, iNation, REL_AMNESTY); // RM
 			if(AUTO_SKILL_SYSTEM)

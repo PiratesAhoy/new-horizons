@@ -46,7 +46,7 @@ string DLG_TEXT[66] = {
 "What?! Three 'X's? What does this mean? Is only one of them the site of the treasure? What's up with the names?",
 "I don't know, but we'll only find out if we go there! And maybe look for the persons named on the map... The nearest one is on #sisland_Hispaniola#, near the town of #sSanto Domingo# as it looks. Let's start our search there!",
 "Another day, another adventure, another big town in the Kingdom of New Spain!",
-"Yes, the first european settlement in the new world, as they say. Finding a man named Marcel Jauri in this place could be difficult. Strange name by the way. And weirdly familiar. Let's just hope he's well known around here.",
+"Yes, the first European settlement in the new world, as they say. Finding a man named Marcel Jauri in this place could be difficult. Strange name by the way. And weirdly familiar. Let's just hope he's well known around here.",
 "Where do we start?",
 "In the tavern of course! And no, Blaze, we won't stop for a drink!", //49
 "Good luck, Beatrice! We will wait here for you!",
@@ -63,6 +63,6 @@ string DLG_TEXT[66] = {
 "'To find the place you search ASAP'... This doesn't help much. I think our best lead is still going after the names on our combined treasure map. We found Marcel Jauri, so why shouldn't we find the other two as well? Perhaps they can bring some clarity to this whole affair.",
 "That sounds like a plan to me as well! Let's do it and see what kind of adventure awaits this time!",
 "I think so too. Let's pay this one here a visit: The map shows the name Killian O'Byrne on #sisland_Cayman#. This will be our next stop. The marker is not very precise on a map of this scale, I think we should find a map of the whole island first and compare it to the one with the names.",
-"Iiiih, snakes! Do we really have to poke around in the jungle? Can't this man come to us somehow?",
+"Eeeeh, snakes! Do we really have to poke around in the jungle? Can't this man come to us somehow?",
 "I must admit, it doesn't sound particularly inviting. Perhaps this hermit is a bit... strange, after living alone in the woods for so long.",
 };

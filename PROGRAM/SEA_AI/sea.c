@@ -18,6 +18,8 @@
 #include "sea_ai\ShipDead.c"
 #include "sea_ai\ShipWalk.c"
 
+#include "sea_ai\CoastFoam.c"
+
 #include "sea_ai\Telescope.c"
 
 #include "battle_interface\BattleInterface.c"
@@ -31,6 +33,7 @@ int		sCurrentSeaRealize = REALIZE;
 
 int		iAITemplatesNum;
 bool	bSeaActive;
+bool	bSeaLoaded = false;
 bool 	bSkipSeaLogin = false;
 bool	bIslandLoaded = false;
 bool	bSeaReloadStarted = false;
@@ -62,6 +65,10 @@ float	fSeaExp = 0.0;
 float	fSeaExpTimer = 0.0;
 
 int	iSeaSectionLang = -1;
+
+bool IsSeaLoaded() {
+	return bSeaLoaded;
+}
 
 void DeleteSeaEnvironment()
 {
@@ -1301,6 +1308,8 @@ void Sea_LoginGroup(string sGroupID)
 
 void Sea_FirstInit()
 {
+	bSeaLoaded = true;
+
 	trace("Sea_FirstInit");
 	RefreshBattleInterface(true); // PB: Set CORRECT relations after reload has finished
 

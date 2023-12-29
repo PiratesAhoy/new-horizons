@@ -2021,7 +2021,7 @@ void ProcessDialogEvent()
 			// NK to buy the clothing -->
 			tempstr = NPChar.model;
 			PChar.clothes.(tempstr) = true;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -sti(Models[GetModelIndex(tempstr)].price));
 			// NK <--
 			SetModel(NPChar, PChar.AppearanceMod.ClothierModel, "man", "man", 1.8, false);
@@ -2035,7 +2035,7 @@ void ProcessDialogEvent()
 			PChar.clothes.(tempstr) = true;
 			tempstr = NPChar.model;
 			PChar.clothes.(tempstr) = true;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -sti(Models[GetModelIndex(tempstr)].price));
 			// NK <--
 			intOfficer = sti(PChar.AppearanceMod.OfficerIndex);
@@ -2151,7 +2151,7 @@ void ProcessDialogEvent()
 			PChar.clothes.(tempstr) = true;
 			tempstr = NPChar.model;
 			PChar.clothes.(tempstr) = true;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -sti(Models[GetModelIndex(tempstr)].price));
 			SetModel(PChar, NPChar.model, NPChar.model.animation, NPChar.sex, stf(NPChar.model.height), true);
 			SetModel(NPChar, PChar.AppearanceMod.ClothierModel, "man", "man", 1.8, false);
@@ -2206,7 +2206,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "kapitein_buy_uniform":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -4000);
 			AddDialogExitQuest("kapitein_buy_uniform");
 			if (PChar.sex == "woman")

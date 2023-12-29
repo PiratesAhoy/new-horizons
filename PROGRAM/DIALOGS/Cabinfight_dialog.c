@@ -563,13 +563,13 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			// This really needs a branch if the player doesn't have enough money to hire this guy
 //			if(makeint(PChar.money) >= OfficerPrice)
 //			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -OfficerPrice);
   				AddWealthToCharacter(NPChar, OfficerPrice);
 //			}
 			// LDH <--
 /* original code
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -(makeint(NPChar.quest.OfficerPrice)));
 			AddMoneyToCharacter(NPChar, makeint(NPChar.quest.OfficerPrice));
 */
@@ -784,7 +784,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 
 			if(NPSword != "")
 			{
-				PlayStereoSound("INTERFACE\important_item.wav");
+				PlayStereoSound("INTERFACE\important_item.flac");
 //				GiveItem2Character(PChar, NPSword);
 				stuff_idx = GetItemIndex(NPSword);
 				if(stuff_idx >= 0) stuff_given = XI_ConvertString("a") + " " + TranslateString("",Items[stuff_idx].name);
@@ -797,7 +797,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 				if(stuff_idx >= 0) stuff_given = stuff_given + " " + XI_ConvertString("and") + " " + XI_ConvertString("a") + " " + TranslateString("",Items[stuff_idx].name);
 				else stuff_given = stuff_given + ", INVALID GUN '" + NPGun + "'";
 			}
-			traceandlog(TranslateString("","You got ") + stuff_given + ".");
+			traceandlog(TranslateString("","You got") + " " + stuff_given + ".");
 
 			switch(Rand(1))
 		    	{
@@ -945,7 +945,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			} // MAXIMUS 28.07.2006 [so, these sections were removed from Reinit.c] <--
 			bCrewCaptured = true;// sets a global
 			realCrew = GetCrewQuantity(PChar);
-			dialog.text = DLG_TEXT[96];
+			dialog.text = DLG_TEXT[97];
 			if(bAllowRelease) // TIH allow to release free Aug24'06
 			{
 				link.l1 = DLG_TEXT[71];
@@ -1115,7 +1115,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 				if(CORPSEMODE<4)// MAXIMUS 17.02.2007
 				{
 					Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
-					PlayStereoSound("INTERFACE\took_item.wav");
+					PlayStereoSound("INTERFACE\took_item.flac");
 					AddMoneyToCharacter(PChar,sti(NPChar.wealth));
 					if(CheckAttribute(NPChar,"wealth")) NPChar.wealth = "0";
 				}
@@ -1157,7 +1157,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			if(CORPSEMODE<4)// MAXIMUS 17.02.2007
 			{
 				Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(PChar,sti(NPChar.wealth));
 			}
 			else
@@ -1211,7 +1211,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 
 			boarding_enemy.status = "dead";
 			boarding_enemy.position = "corpse";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar,sti(NPChar.wealth));
 			Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 			bCaptureShip = true;
@@ -1258,7 +1258,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 
 			boarding_enemy.status = "dead";
 			boarding_enemy.position = "corpse";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar,sti(NPChar.wealth));
 			Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 			bCaptureShip = true;
@@ -1296,7 +1296,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 				if(CORPSEMODE<4)// MAXIMUS 17.02.2007
 				{
 					Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
-					PlayStereoSound("INTERFACE\took_item.wav");
+					PlayStereoSound("INTERFACE\took_item.flac");
 					AddMoneyToCharacter(PChar,sti(NPChar.wealth));
 					if(CheckAttribute(NPChar,"wealth")) NPChar.wealth = "0";
 				}
@@ -1311,7 +1311,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 		break;
 
 		case "Exit_release":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar,sti(NPChar.wealth));
 			Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 			if(CheckAttribute(NPChar,"wealth")) NPChar.wealth = "0";

@@ -330,7 +330,7 @@ void ProcessDialogEvent()
 		case "room_24_wait":
 			DialogExit();
 			Diag.CurrentNode =  Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			WaitDate("",0,0,0,24,1);
@@ -376,7 +376,7 @@ void ProcessDialogEvent()
 		case "room_night_wait":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_night");
@@ -391,7 +391,7 @@ void ProcessDialogEvent()
 		case "room_day_wait":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -5);
 			AddDialogExitQuest("sleep_in_tavern");
 			TavernWaitDate2("wait_day");
@@ -507,7 +507,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[104];
 			if (makeint(pchar.money) >= 5)
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -5);
 				Link.l1 = DLG_TEXT[105];
 				Link.l1.go = "exit";

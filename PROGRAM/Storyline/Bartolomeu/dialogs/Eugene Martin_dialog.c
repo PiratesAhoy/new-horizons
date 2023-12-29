@@ -171,7 +171,7 @@ void ProcessDialogEvent()
 		dialog.text = DLG_TEXT[22];
 		link.l1 = DLG_TEXT[23];
 		link.l1.go = "begin_13";
-		PlayStereoSound("INTERFACE\took_item.wav");
+		PlayStereoSound("INTERFACE\took_item.flac");
 		AddMoneyToCharacter(pchar, 10000);
 
 		break;
@@ -221,7 +221,7 @@ void ProcessDialogEvent()
 		dialog.text = DLG_TEXT[30];
 		link.l1 = DLG_TEXT[31];
 		link.l1.go = "begin_17";
-		PlayStereoSound("INTERFACE\took_item.wav");
+		PlayStereoSound("INTERFACE\took_item.flac");
 		AddMoneyToCharacter(pchar, 8000);
 
 		break;
@@ -295,7 +295,7 @@ void ProcessDialogEvent()
 	case "begin_23":
 		dialog.snd = "Voice\CLLA\CLLA004";
 		dialog.text = DLG_TEXT[44];
-		PlayStereoSound("INTERFACE\took_item.wav");
+		PlayStereoSound("INTERFACE\took_item.flac");
 		AddMoneyToCharacter(pchar, 7000);
 
 		if (makeint(pchar.money >= 35000))
@@ -317,7 +317,7 @@ void ProcessDialogEvent()
 		dialog.text = DLG_TEXT[50];
 		link.l1 = DLG_TEXT[51];
 		link.l1.go = "begin_25";
-		PlayStereoSound("INTERFACE\took_item.wav");
+		PlayStereoSound("INTERFACE\took_item.flac");
 		AddMoneyToCharacter(pchar, -35000);
 
 		break;

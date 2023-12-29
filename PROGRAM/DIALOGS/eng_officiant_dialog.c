@@ -197,7 +197,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Give Albatros exit":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			TakeItemFromCharacter(Pchar,"albatross");
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
@@ -205,7 +205,7 @@ void ProcessDialogEvent()
 		//Levis end albatros <--
 
 		case "room_day_wait_with_girl":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			DialogExit();
 			Pchar.sexwith.CurrentNode = "after_love";
 			AddDialogExitQuest("sleep_in_tavern_with_girl"); //Levis: Extra atmosphere
@@ -223,7 +223,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "room_night_wait_with_girl":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			DialogExit();
 			Pchar.sexwith.CurrentNode = "after_love";
 			AddDialogExitQuest("sleep_in_tavern_with_girl"); //Levis: Extra atmosphere

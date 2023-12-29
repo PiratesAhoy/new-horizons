@@ -59,7 +59,7 @@ void ChangeTownNation (string townsk, int nat)		// functioncall must include tow
 			}
 		}
 	}
-	PlayStereoSound("INTERFACE\notebook.wav");		// notification by sound and screenmessage	
+	PlayStereoSound("INTERFACE\notebook.flac");		// notification by sound and screenmessage
 	Log_SetStringToLog(townsk + " " + TranslateString("","has been occupied by") + " " + TranslateString("",GetNationDescByType(nat)) + " " + XI_ConvertString("forces"));
 }
 
@@ -448,7 +448,7 @@ void GiveItemsBack(ref chr)
 		chr.skill.(skillnm) = skillpt + 1;
 		chr.skill.(skillnm).lp = newLp - skillPtSqr;
 		logit(chr.name + " " + chr.lastname + TranslateString("","'s") + " " + XI_ConvertString(skillnm) + " " + TranslateString("","skill has improved to") + " " + chr.skill.(skillnm) );
-		PlayStereoSound("interface\new_level.wav");
+		PlayStereoSound("interface\new_level.flac");
 	}
 /*
 	if (sti(chr.index) == GetMainCharacterIndex())
@@ -500,7 +500,7 @@ void LAi_AttemptSteal(aref attack, aref enemy, aref weapon)
 	{
 		bEnemyExchange = true; // added by MAXIMUS
 		LaunchCharacterItemChange(enemy);	// ccc jun 05 stealinterface
-		PlaySound("INTERFACE\took_item.wav");
+		PlaySound("INTERFACE\took_item.flac");
 		// PB: Restore After Location Reload -->
 		enemy.stuntime.old_type = enemy.chr_ai.type;
 		enemy.stuntime.group    = enemy.chr_ai.group;
@@ -577,9 +577,11 @@ void MerchantGuildAttack(aref enemy, bool bKill)
 		ChangeCharacterReputation(PChar, -100);				// TIH MUST BE INT Nov17'06
 		pchar.traitor = true;								// PB: Trigger massive penalties
 		UpdateRMRelation(PChar, iNation, REPCH_FRIENDLY);	// PB: Straight function call
-		string sLogTitle = "Merchant Guild Member Killed";
-		string sLogEntry = "I do not remember the specifics, but a " + GetNationDescByType(iNation) + " merchant got killed in my presence. Was it one of my officers who did it? Myself? Or a complete accident? Either way, the Merchant Guild blamed me and I was lucky to escape with my life. This has had a notable effect on my relations and reputation.";
-		WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+		Preprocessor_Add("nationdesc", XI_ConvertString(GetNationDescByType(iNation)));
+		string sLogTitle = GetTranslatedLog("Merchant Guild Member Killed");
+		string sLogEntry = GetTranslatedLog("I do not remember the specifics, but a #snationdesc# merchant got killed in my presence. Was it one of my officers who did it? Myself? Or a complete accident? Either way, the Merchant Guild blamed me and I was lucky to escape with my life. This has had a notable effect on my relations and reputation.");
+		WriteNewLogEntry(sLogTitle,PreprocessText(sLogEntry), "Personal", true);
+		Preprocessor_Delete("nationdesc");
 		// TIH <--
 	}
 }

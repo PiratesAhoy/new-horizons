@@ -1,4 +1,4 @@
-string DLG_TEXT[25] = {
+string DLG_TEXT[29] = {
 "Encontré este extraño libro y pensé que podrías saber qué es.",
 "Déjame ver, #schild#. Hum... ¡Esto es muy especial! Creo que sé lo que tienes aquí, #schild#, pero no me siento cómodo hablando de esto contigo. ¿Tal vez primero podrías mostrarme una señal de buena fe?",
 "¿Qué te parece si dono algo de dinero a la Iglesia?",
@@ -19,7 +19,7 @@ string DLG_TEXT[25] = {
 "Muchas gracias. Buscaré allí.",
 "Bueno, encontré un libro con cosas raras del que todavía tengo que averiguar muchas cosas.",
 "¡Ah, ya sé lo que es esto! Este libro contiene todo tipo de exorcismos. Parece que nuestro valiente señor Winchester finalmente encontré a un rival a su altura. También he descubierto para qué s esupone que sirve el objeto que te di. Puedes acomplarlo al arma que llevaba nuestro querido señor Winchester. Esto debería permitirte apuntar mejor. Espero que hayas encontrado su arma también; de lo contrario, tal vez quieras volver y mirar un poco más de cerca.",
-"Muchas gracias por la información."
+"Muchas gracias por la información.",
 "No, por supuesto que no, #schild#. El libro que tienes en tus manos contiene todo tipo de conjuros para exorcismos. Reconozco este libro.Parece que nuestro valiente señor Winchester finalmente encontré a un rival a su altura. Espero que hayas encontrado su arma también; de lo contrario, tal vez quieras volver y mirar un poco más de cerca. Sin mebargo, requiere, una santa cruz para practicar un exorcismo y nos estamos quedando sin ellas, pero puede que hubiera una con el libro.",
 "El libro de exorcismos es inútil para ti, pero muy valioso para la Iglesia. ¿Querrías intercambiar el libro por una cierta cantidad de la raíz a la que llamamos turbit de la India?",
 "Sí, aunque no tengo ni idea de qué es eso, no puede ser tan inútil como el libro.",

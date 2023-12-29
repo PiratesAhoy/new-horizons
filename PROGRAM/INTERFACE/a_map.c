@@ -105,8 +105,6 @@ void ShowMap()
 	for (int n = 0; n < GetAttributesNum(refLabel); n++) {
 		string labelId = GetAttributeName(GetAttributeN(refLabel,n));
 
-		trace("labelId: " + labelId);
-
 		if (!CheckAttribute(worldMap, "labels." + labelId)) {
 			trace("Label " + labelId + " not valid");
 			continue;
@@ -128,9 +126,11 @@ void ShowMap()
 			CreateString(true,labelId,labelText,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY,SCRIPT_ALIGN_CENTER,0.7);
 		}
 		if (labelType == "Town") {
-			string townId = worldMap.labels.(labelId).id;
+			string town_id = worldMap.labels.(labelId).id;
+			string town_name = worldMap.labels.(labelId).name;
 			// Convoy quests
-			if(GetAttribute(chm, "quest.generate_convoy_quest.destination") == townId)
+			string convoy_destination = GetAttribute(chm, "quest.generate_convoy_quest.destination");
+			if(convoy_destination == town_id || convoy_destination == town_name)
 			{
 				CreateImage("CONVOY", "ICONS", "ship speed icon", fakeX-5, fakeY+7, fakeX+9, fakeY+21);
 				if(HasSubStr(chm.location,"tavern") || chm.location == "Antigua_mansion_study")
@@ -145,13 +145,13 @@ void ShowMap()
 			if(GetAttribute(chm, "quest.generate_trade_quest_progress") == "begin")	ShowTradeQuest = 1;
 			if(HasSubStr(chm.location,"store"))										ShowTradeQuest = 2;
 			string iTradeColony = GetAttribute(chm, "quest.generate_trade_quest_progress.iTradeColony");
-			trace("iTradeColony = " + iTradeColony);
-			trace("townId = " + townId);
-			if(iTradeColony == townId && ShowTradeQuest > 0) {
-				CreateImage("CARGO", "ICONS", "ship capacity icon", fakeX-5, fakeY+7, fakeX+9, fakeY+21);
-				if(ShowTradeQuest > 1) {
-					SetPictureBlind("CARGO",true,minBlindColor,maxBlindColor);
-					SetPictureBlind("SHIP",false,minBlindColor,maxBlindColor);
+			if (iTradeColony == town_id || iTradeColony == town_name) {
+				if(ShowTradeQuest > 0) {
+					CreateImage("CARGO", "ICONS", "ship capacity icon", fakeX-5, fakeY+7, fakeX+9, fakeY+21);
+					if(ShowTradeQuest > 1) {
+						SetPictureBlind("CARGO",true,minBlindColor,maxBlindColor);
+						SetPictureBlind("SHIP",false,minBlindColor,maxBlindColor);
+					}
 				}
 			}
 		}
@@ -270,7 +270,7 @@ void CreateTooltip(string header, string text1, int colonyNation)
 	SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 3, "INFO_TEXT");
 	SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 3, "TEXT");
 
-	SetNewPicture("INFO_PICT", "interfaces\flags\Crest_" + GetNationFlagImage(colonyNation) + ".tga");
+	SetNewPicture("INFO_PICT", "interfaces\flags\Crest_" + GetNationFlagImage(colonyNation) + ".png");
 }
 
 void HideToolT()

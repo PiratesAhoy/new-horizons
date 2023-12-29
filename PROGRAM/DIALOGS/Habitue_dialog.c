@@ -517,7 +517,7 @@ void ProcessDialogEvent()
 			if (iPCDice >24) {iPCDice = 24;} // typo fix
 			if (iPCDice < makeint(pchar.iEnemyDice))
 			{
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, -gameBet);
 				npchar.money = makeint(npchar.money) + gameBet;
 				dialog.snd = "Voice\HADI\HADI025";
@@ -543,7 +543,7 @@ void ProcessDialogEvent()
 				link.l1.go = "gambling_opponent_strike";
 				link.l2 = DLG_TEXT[60];
 				link.l2.go = "exit_sit";
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(pchar, gameBet);
 				npchar.money = makeint(npchar.money) - gameBet;
 				pchar.quest.gambling = makeint(pchar.quest.gambling) + 1;
@@ -593,7 +593,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "sit_2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			PlayStereoSound("AMBIENT\TAVERN\tinkle1.wav"); //ASVS
 			PlayStereoSound("AMBIENT\TAVERN\man6.wav");    //ASVS
 			AddMoneyToCharacter(pchar, -1);

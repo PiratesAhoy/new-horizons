@@ -1922,7 +1922,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.location	= "";
 	ch.location.group = "";
 	ch.location.locator = "";
-	ch.Dialog.Filename = "Emiliano de Guzman_dialog.c";
+	ch.Dialog.Filename = "Emiliano de Guzmán_dialog.c";
 	ch.rank 	= 35;
 	ch.reputation = "None";
 	ch.experience = "0";

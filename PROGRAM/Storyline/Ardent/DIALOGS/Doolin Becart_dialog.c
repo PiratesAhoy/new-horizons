@@ -70,7 +70,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "on_our_way":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(PChar, -50);
 			AddDialogExitQuest("sail_with_doolin");
 			Diag.CurrentNode = Diag.TempNode;
@@ -112,7 +112,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "buy_fish2":
-			PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.flac");
 			AddMoneyToCharacter(pchar, -20);
 			AddCharacterGoods(PChar, GOOD_WHEAT, 2);
 			if (isofficer(characterFromID("Two Dogs"))) AddDialogExitQuest("bass_joke");

@@ -46,7 +46,7 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[4];
 				link.l1.go = "exit";
 				GiveItem2Character(Pchar,"pistolgas");
-				PlayStereoSound("INTERFACE\took_item.wav");
+				PlayStereoSound("INTERFACE\took_item.flac");
 				AddMoneyToCharacter(Pchar, -400);
 			}
 			else

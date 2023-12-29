@@ -35,7 +35,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 //	LAi_SetWaitressType(ch);
-	LAi_SetOfficerType(ch);			//JRH so sheÂ´s following you
+	LAi_SetOfficerType(ch);			//JRH so she´s following you
 	LAi_SetLoginTime(ch, 0.0, 24.0);	//JRH
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	ch.questchar = true;

@@ -47,14 +47,14 @@ void CreateFlagEnvironment()
 	bool hasMerchantFlag = iPeriod >= GetPeriodFromYear(makeint(MERCHANT_FLAGS_MIN_YEAR));
 
 	CreateEntity(&FortFlag, "Flag");
-	FortFlag.texture = "flags\frtflg" + (iPeriod + 1) + ".tga";
+	FortFlag.texture = "flags\frtflg" + (iPeriod + 1) + ".png";
 	LayerAddObject(sCurrentSeaExecute, &FortFlag, iPriority);
 	LayerAddObject(sCurrentSeaRealize, &FortFlag, iPriority);
 	LayerAddObject(SEA_REFLECTION, &FortFlag, 3);
 	iPriority++;
 
 	CreateEntity(&Flag, "Flag");
-	Flag.texture = "flags\shpflg" + (iPeriod + 1) + ".tga";
+	Flag.texture = "flags\shpflg" + (iPeriod + 1) + ".png";
 	Flag.textureRows = 2;
 	LayerAddObject(sCurrentSeaExecute, &Flag, iPriority);
 	LayerAddObject(sCurrentSeaRealize, &Flag, iPriority);
@@ -63,7 +63,7 @@ void CreateFlagEnvironment()
 
 	if (hasMerchantFlag) {
 		CreateEntity(&MerchantFlag, "Flag");
-		MerchantFlag.texture = "flags\merflg" + (iPeriod + 1) + ".tga";
+		MerchantFlag.texture = "flags\merflg" + (iPeriod + 1) + ".png";
 		MerchantFlag.textureRows = 2;
 		LayerAddObject(sCurrentSeaExecute, &MerchantFlag, iPriority);
 		LayerAddObject(sCurrentSeaRealize, &MerchantFlag, iPriority);
@@ -75,7 +75,7 @@ void CreateFlagEnvironment()
 	for (i = 0; i < PIRATEFLAGS_TEXTURES_QUANTITY; i++)
 	{
 		CreateEntity(&PirateFlag[i], "Flag");
-		PirateFlag[i].texture = "flags\pirflg" + (i + 1) + ".tga";
+		PirateFlag[i].texture = "flags\pirflg" + (i + 1) + ".png";
 		PirateFlag[i].textureRows = 2;
 		LayerAddObject(sCurrentSeaExecute, &PirateFlag[i], iPriority);
 		LayerAddObject(sCurrentSeaRealize, &PirateFlag[i], iPriority);
@@ -85,7 +85,7 @@ void CreateFlagEnvironment()
 	for (i = 0; i < PERSONALFLAGS_TEXTURES_QUANTITY; i++)
 	{
 		CreateEntity(&PersonalFlag[i], "Flag");
-		PersonalFlag[i].texture = "flags\perflg" + (i + 1) + ".tga";
+		PersonalFlag[i].texture = "flags\perflg" + (i + 1) + ".png";
 		PersonalFlag[i].textureRows = 2;
 		LayerAddObject(sCurrentSeaExecute, &PersonalFlag[i], iPriority);
 		LayerAddObject(sCurrentSeaRealize, &PersonalFlag[i], iPriority);
@@ -1219,7 +1219,7 @@ void Ship_Surrender(int chridx)
 
 	int oldnat = sti(chr.nation);
 	chr.oldnation = oldnat;
-	chr.nation = NEUTRAL_NATION;
+	SetCharacterNation(chr, NEUTRAL_NATION);
 	chr.surrendered = true;
 	chr.surrendered.seatime = GetSeaTime();
 
@@ -1348,7 +1348,7 @@ void Ship_Surrender(int chridx)
 		// DeathDaisy <--
 		if (oldrel == RELATION_ENEMY) {
 			TraceAndLog(TranslateString("", PCharTitle + ", the") + " " + GetMyShipNameShow(chr) + " " + TranslateString("","has struck her colors!")); // KK
-			PlaySound("interface\notebook.wav");
+			PlaySound("interface\notebook.flac");
 			PlaySound("objects\abordage\abordage_wining.wav");
 		} else {
 			TraceAndLog(TranslateString("", PCharTitle + ", the") + " " + GetMyShipNameShow(chr) + " " + TranslateString("","has struck her colors to the enemy!")); // KK
@@ -1411,12 +1411,12 @@ void Ship_SetCannonQtyByCrew(ref rCharacter)
 	if (CrewRequired < 1) CrewRequired = 1;
 
 	int CrewQuantity  = GetCrewQuantity(rCharacter);
-	if(iRealismMode>0)
-	{
-		int MinSailCrew = GetCharacterShipHP(rCharacter)/100;	// crew needed for sailing, intentionally not using mininum crew here
-		if (MinSailCrew >= 100000/100) MinSailCrew = 100;		// Cursed ships are a special case
-		CrewQuantity -= MinSailCrew;
-	}
+	// if(iRealismMode>0)
+	// {
+	// 	int MinSailCrew = GetCharacterShipHP(rCharacter)/100;	// crew needed for sailing, intentionally not using mininum crew here
+	// 	if (MinSailCrew >= 100000/100) MinSailCrew = 100;		// Cursed ships are a special case
+	// 	CrewQuantity -= MinSailCrew;
+	// }
 	if (CrewQuantity < CrewPerGun) CrewQuantity = CrewPerGun;		// detail one gun crew from the MinSailCrew
 
 	float crewratio = 1.0;
@@ -2237,7 +2237,7 @@ void Ship_ActivateFirePlace()
 		if (FIREDAMAGE > 1) {
 			AddPerkToActiveList("FireOnShip"); // KK
 			Log_SetStringToLog(TranslateString("","Fire! Execute firedrill procedure!")); // infomessage MAR18 // KK
-			PlaySound("interface\notebook.wav"); // soundeffect MAR18
+			PlaySound("interface\notebook.flac"); // soundeffect MAR18
 		}
 	}
 	// ccc firedrill end
@@ -2601,7 +2601,7 @@ void Ship_ApplyHullHitpoints(ref rOurCharacter, float fHP, int iKillStatus, int 
 					z = stf(rOurCharacter.ship.pos.z);
 				}
 				if(IsMainCharacter(rOurCharacter)) { // KK
-					PlaySound("interface\notebook.wav"); // like CCC's firedrill
+					PlaySound("interface\notebook.flac"); // like CCC's firedrill
 					logit(TranslateString("","We lost a cannon! From the") + " " + TranslateString("",GetQuadText(quad)) + " " + XI_ConvertString("arc") + "!" + stringret(fix," " + TranslateString("","We think we can fix it, captain."), ""));
 				}
 				else
@@ -3425,7 +3425,7 @@ void Ship_HullHitEvent()
 				if (sti(rOurCharacter.nation) != PIRATE && !CheckAttribute(rBallCharacter, "false_flag_note") && !CheckAttribute(rOurCharacter, "skipRM"))
 				{
 					LogIt(TranslateString("", "Captain, we are under a flag friendly to the ship we're attacking. We may be branded a pirate if we don't hoist our true colours!"));
-					PlaySound("INTERFACE\notebook.wav");
+					PlaySound("INTERFACE\notebook.flac");
 					rBallCharacter.false_flag_note = true;
 				}
 			}
@@ -3530,7 +3530,7 @@ void Ship_FireDamage()
 				rOurCharacter.explosion = true;
 				if (iRealismMode == 0 || Ship_GetDistance2D(GetMainCharacter(), rOurCharacter) < GetVisibilityRange(1)) { // KK: Explosion can be seen from LONG range
 					Log_SetStringToLog(TranslateString("","Fire has reached the") + " " + GetMyShipNameShow(rOurCharacter) + TranslateString("","'s powder magazine!")); // KK
-					PlaySound("interface\notebook.wav"); // sound so you notice
+					PlaySound("interface\notebook.flac"); // sound so you notice
 				}
 				if (CANNONPOWDER_MOD) {// TIH --> mod toggle 7-7-06
 					// added by MAXIMUS [gunpowder mod] -->
@@ -4762,7 +4762,7 @@ void Ship_UpdateParameters()
 	if(HasCharacterShipAttribute(rCharacter, "fog_trail") || IsCursed)
 	{
 		int puffs_per_second = 10;
-		if(SeaCameras.Camera == "SeaDeckCamera")	puffs_per_second = 1;
+		if(Scene.Camera == DECK_CAMERA)	puffs_per_second = 1;
 		for (i=0; i < puffs_per_second; i++)
 		{
 			PostEvent("CreateCursedPearlFog", delay, "i", rCharacter);
@@ -4775,7 +4775,7 @@ void Ship_UpdateParameters()
 	if(HasCharacterShipAttribute(rCharacter, "devil_trail"))
 	{
 		int (puffs_per_second = 10);
-		if(SeaCameras.Camera == "SeaDeckCamera")	puffs_per_second = 1;
+		if(Scene.Camera == DECK_CAMERA)	puffs_per_second = 1;
 		for (i=0; i < puffs_per_second; i++)
 		{
 			PostEvent("CreateCursedDevilFog", delay, "i", rCharacter);
@@ -5038,7 +5038,7 @@ void Ship_UpdateTmpSkills(ref rCharacter)
 	// NK <--
 	//Seriously why ... -Levis
 	/*
-	if (SeaCameras.Camera == "SeaDeckCamera" && sti(rCharacter.index) == GetMainCharacterIndex())
+	if (Scene.Camera == DECK_CAMERA && sti(rCharacter.index) == GetMainCharacterIndex())
 	{
 		switch (GetTargetPlatform())
 		{
@@ -5694,4 +5694,14 @@ void RestoreShipModels()
 		}
 	}
 	Ship_EndLoad();
+}
+
+void Ship_FlagRefresh(ref rCharacter)
+{
+	if (IsSeaLoaded())
+	{
+		ref flag = GetCharacterFlagEntity(rCharacter);
+		SendMessage(rCharacter, "li", MSG_SHIP_SET_CUSTOM_FLAG, &flag);
+		SendMessage(rCharacter, "l", MSG_SHIP_FLAG_REFRESH);
+	}
 }

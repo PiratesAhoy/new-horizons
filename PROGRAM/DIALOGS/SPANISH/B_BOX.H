@@ -68,39 +68,39 @@ void ProcessDialogEvent()
 			Dialog.snd = "voice\PADI\PADI001";
 
 	
-			Dialog.text =  "A simple box, half buried in the ground. Serves as obstruction and can be boobytrapped by means of a grenade.";
+			Dialog.text =  "Una simple caja, semienterrada en la arena. Sirve como obstáculo y puede convertirse en una trampa con una granada.";
 
-			link.l1 = "That thing is just a useless nuisance. Boatswain! Clear this away. And put the planks into our store.";
+			link.l1 = "Esta cosa es solo una molestia inútil. ¡Contramaestre! Despeja todo esto. Y devuelve las tablas a la bodega.";
 			link.l1.go = "dismantle";
 
 			if(!CheckCharacterItem(NPChar,"pistolgrenade") && CheckCharacterItem(PChar,"pistolgrenade") )
 			{
-					link.l21 = "Just the place for a boobytrap. A grenade with a flintlock wired to the lid will be a nice surprise for any nosey guy. And hardly anyone will resist the temptation...";
+					link.l21 = "Un lugar prefecto para una trampa. Una grnaada con un pedernal conectado a la tapa le dará una buena sorpresa a cualquier entrometido. Y a ver quién resiste la tentación...";
 					link.l21.go = "grenade";
 
 			}
-			Link.l4 = "I'd better leave that thing alone...";
+			Link.l4 = "Será mejor que no toque nada...";
 			Link.l4.go = "exit";
 
-			link.l9 = "Hey, you there in front of the keyboard! This is a building that YOU created, so how about creating your own dialog as well? Just use Notepad to open the file program\dialogs\" + NPchar.dialog.filename + " and overwrite this text with your own. Then follow the instructions in the comments.";
+			link.l9 = ¡Eh, tú, enfrente del teclado! Este es una construcción creada POR TI, así que, ¿por qué no creas tu propio diálogo para acompañarlo? Solo tienes que usar Bloc de Notas para abrir el archivo PROGRAM\DIALOGS\SPANISH\" + NPchar.dialog.filename + " y sobreescribir este texto con el tuyo. Luego sigue las instrucciones en los comentarios.";
 			link.l9.go = "your_dialog"; //this is the case that runs if you choose the dialogoption l9. It is right below.
 		
 		break;
                 
 		case "your_dialog":
-			Dialog.text = "Overwrite this with the dialogtext of the NPC." ;
+			Dialog.text = "Escribe aquí el texto de diálogo del NPC." ;
 
-			link.l1 = "Text of the player dialogoption link.l1 which ends the dialog ";
+			link.l1 = "Texto de diálogo del jugador: opción link.l1, que cierra el diálogo ";
 			link.l1.go = "exit";	// link l1 exits the dialog
 
-			link.l2 = "Text of the player dialogoption link.l2 which leads to another exchange ";
+			link.l2 = "Texto de diálogo del jugador: opción link.l2, que conduce a otro intercambio ";
 			link.l2.go = "your_dialog2";	// l2 leads to the case your_dialog2
 		break;	// end of case "your_dialog"
                 
 		case "your_dialog2":
-			Dialog.text = "Overwrite this with the dialogtext of the NPC." ;
+			Dialog.text = "Escribe aquí el texto de diálogo del NPC." ;
 
-			link.l1 = "Text of the player dialogoption link.l1 which ends the dialog";
+			link.l1 = "Texto de diálogo del jugador: opción link.l1, que cierra el diálogo";
 			link.l1.go = "exit";	// link l1 exits the dialog
 
 			// Here are some codelines that give you gold, items, goods or experience. To activate them delete the comment slashes '//' in front of the code. You can change the amounts to your liking.
