@@ -941,8 +941,8 @@ Legs{Легс}
 Penrod{Пенрод}
 Bart{Барт}
 Cooke{Кук}
-Wally{Вэлли}
-Cutty{Катти}
+Wally{Валли}
+Cutty{Симпатичный}
 Bill{Билл}
 Jellybones{Джеллибонс}
 Oraglio{Ораглио}

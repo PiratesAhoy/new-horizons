@@ -1469,16 +1469,16 @@ itmdescr_roseskull
 Один из трех хрустальных черепов, изготовленных Майя для совершения своих ритуалов.
 }
 
-itmname_BlueSkull	{Голубой Хрустальный Череп}
+itmname_BlueSkull	{Синий Хрустальный Череп}
 itmdescr_blueskull
 {
 Этот хрустальный череп важнее всех для ритуалов племени Майя. 
 }
 
-itmname_cryskull	{Хрустальный Череп}
+itmname_cryskull	{Янтарный Череп}
 itmdescr_cryskull
 {
-Модель черепа в натуральную величину, сделанная из какого-то хрусталя.
+Модель черепа в натуральную величину, сделанная из какого-то янтаря.
 }
 
 itmname_mineral15	{Самородок Платины}
@@ -1829,10 +1829,10 @@ itmdescr_sextant
 Секстант является измерительным прибором, который, как правило, используется для измерения угла подъема небесного объекта над горизонтом. Это очень полезная вещь для штурманов, чтобы определить положение своего корабля.
 }
 
-itmname_doctortoolkit {Набор Доктора} // Black Bart & Gedscho
+itmname_doctortoolkit {Набор Врача} // Black Bart & Gedscho
 itmdescr_doctortoolkit
 {
-С помощью набора доктора вы можете попытаться спасти раненых членов экипажа от смерти после морского боя. Это уменьшит потери в бою.
+С помощью набора врача вы можете попытаться спасти раненых членов команды от смерти после морского боя. Это уменьшит потери в бою.
 }
 
 itmname_carpentertools {Набор Плотника} // JRMM
@@ -2130,7 +2130,7 @@ itmdescr_vegetal
 //Levis' ayahuasca <--
 //JRH apothecary sidequest -->
 
-itmname_hotel_crucifix {Распятие}
+itmname_hotel_crucifix {Крестик}
 itmdescr_hotel_crucifix
 {
 Принадлежность священника.
@@ -2148,13 +2148,13 @@ itmdescr_hotel_sextant
 Принадлежность штурмана.
 }
 
-itmname_hotel_drawing {Набор для Рисования}
+itmname_hotel_drawing {Набор Штурмана}
 itmdescr_hotel_drawing
 {
 Принадлежность штурмана.
 }
 
-itmname_hotel_megaphone {Мегафон}
+itmname_hotel_megaphone {Рупор}
 itmdescr_hotel_megaphone
 {
 Принадлежность капитана.
@@ -2166,7 +2166,7 @@ itmdescr_hotel_spyglass
 Принадлежность капитана.
 }
 
-itmname_hotel_whistle {Боцманская Трубка}
+itmname_hotel_whistle {Боцманский Свисток}
 itmdescr_hotel_whistle
 {
 Принадлежность боцмана.
