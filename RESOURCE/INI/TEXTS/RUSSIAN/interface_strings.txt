@@ -795,7 +795,7 @@ Danger! Abbey out of repair!{Осторожно! Аббатство давно �
 Naval officers only!{Только для морских офицеров!}
 Towncenter{Городской Центр}
 Warehouse{Склад}
-Abbey of the Maltese order{Аббатство Мальтийского ордена}
+Abbey of the Maltese order{Аббатство Мальтийского Ордена}
 Greenford port{Порт Гринфорда}
 Exit from Greenford{Выход из Гринфорда}
 Greenford shipyard{Верфь Гринфорда}
@@ -2261,7 +2261,7 @@ No, it looks more like unclean Silver. If all that could be Gold!{Нет, бол
 Just one drop...{Лишь одна капля...}
 I'll use more this time. Five drops perhaps.{На этот раз использую побольше. Вероятно, пять капель.}
 
-Yes! That was the last ghost. Maybe the indian wants to talk to me now...{Да! Это был последний призрак. Возможно, теперь индеец хочет поговорить со мной...}
+Yes! That was the last ghost. Maybe the indian wants to talk to me now...{Да! Это был последний мертвец. Возможно, теперь индеец захочет поговорить со мной...}
 Cartagena fort{Форт Картахена}
 Cartagena fort.{Форт Картахена}
 Cartagena Hotel{Гостиница Картахена}
@@ -2495,7 +2495,7 @@ To be continued... Hopefully soon!{Продолжение следует... На
 
 You succumb to the Carib poison.{Вы поддаетесь Карибскому Яду.}
 has been executed.{был казнен.}
-Sorry, but I can't take the chance that you'll make good on your threat to take back the amber skull... FIRE!{Извините, но я не могу рисковать тем, что вы выполните свою угрозу вернуть янтарный череп... ОГОНЬ!}
+Sorry, but I can't take the chance that you'll make good on your threat to take back the amber skull... FIRE!{Извините, но я не могу так рисковать, вдруг вы осуществите свою угрозу и вернёте янтарный череп... ОГОНЬ!}
 You failed to rescue{Вам не удалось спасти}
 
 Two months later...{Два месяца спустя...}
