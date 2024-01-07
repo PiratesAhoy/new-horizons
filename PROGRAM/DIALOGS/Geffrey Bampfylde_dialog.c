@@ -64,7 +64,7 @@ void ProcessDialogEvent()
 			link.l1.go = "Exit_kill";
 			link.l2 = DLG_TEXT[15];
 			link.l2.go = "cash";
-			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			if (FindCurrentStoryline() != FindStoryline("assassin"))
 			{
 				link.l3 = DLG_TEXT[16];
 				link.l3.go = "Exit_spare";
@@ -78,7 +78,7 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(PChar, 5000);
 			dialog.snd = "Voice\GEBA\GEBA007";
 			dialog.text = DLG_TEXT[17];
-			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			if (FindCurrentStoryline() != FindStoryline("assassin"))
 			{
 				link.l1 = DLG_TEXT[18];
 				link.l1.go = "Exit_spare_cash";

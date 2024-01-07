@@ -48,7 +48,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[7];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "Exit_kill";
-			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			if (FindCurrentStoryline() != FindStoryline("assassin"))
 			{
 				link.l2 = DLG_TEXT[9];
 				link.l2.go = "Exit_spare";

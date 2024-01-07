@@ -44,5 +44,5 @@ string DLG_TEXT[45] = {
 "So it would seem.",
 //Jack cannibal scene
 "Een dah-lah! Eeseepi tan daga!? Wa-say kohn.",
-"Kay-lay lam. Lam piki-piki. Lam eensy weensy. Lam say-say... eunuchy. Snip-snip. [THINKS: Looks like they think i'm some sort of a god...Not good!]",
+"Kay-lay lam. Lam piki-piki. Lam eensy weensy. Lam say-say... eunuchy. Snip-snip. [THINKS: Looks like they think I'm some sort of a god... Not good!]",
 };

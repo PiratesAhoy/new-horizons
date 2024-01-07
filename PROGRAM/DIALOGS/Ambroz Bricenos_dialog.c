@@ -118,7 +118,7 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(PChar, 1500);
 			dialog.snd = "Voice\AMBR\AMBR011";
 			dialog.text = DLG_TEXT[38];
-			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			if (FindCurrentStoryline() != FindStoryline("assassin"))
 			{
 				link.l1 = DLG_TEXT[39];
 				link.l1.go = "Exit_spare";
@@ -130,7 +130,7 @@ void ProcessDialogEvent()
 		case "spare":
 			dialog.snd = "Voice\AMBR\AMBR012";
 			dialog.text = DLG_TEXT[41];
-			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			if (FindCurrentStoryline() != FindStoryline("assassin"))
 			{
 				link.l1 = DLG_TEXT[42];
 				link.l1.go = "Exit_spare";

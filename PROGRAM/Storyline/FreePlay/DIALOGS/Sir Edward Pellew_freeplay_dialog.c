@@ -82,7 +82,7 @@ void ProcessDialogEvent()
 		case "mission1_1":
 			NPChar.quest.Natividad_given = true;
 			dialog.text = DLG_TEXT[9] + GetMyFullName(CharacterFromID("El Supremo")) + DLG_TEXT[10];
-			if (FindCurrentStoryline() == FindStoryline("Hornblower"))
+			if (FindCurrentStoryline() == FindStoryline("hornblower"))
 			{
 				link.l1 = DLG_TEXT[11];
 				link.l1.go = "mission1_2";
