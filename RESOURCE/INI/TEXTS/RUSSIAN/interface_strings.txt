@@ -1048,7 +1048,7 @@ White Bay{Белый Залив}
 Pirate Fort{Пиратский Форт}
 House of leader of #sisland_name# pirates{Дом Главаря Пиратов #sisland_name#}
 Palm Beach{Пальмовый Берег}
-Crab Cliffs{Крабовые Утёсы}
+Crab Cliffs{Крабовый Утёс}
 House in Jungle{Дом в Джунглях}
 Rheims house on #sisland_name#{Дом Реймса #sisland_name#}
 Room in Pirate tavern{Комната в Пиратской Таверне}
@@ -1060,7 +1060,7 @@ Smuggler's Home{Дом Контрабандистов}
 Pirate Fort.{Пиратский Форт}
 House of leader of #sisland_name# pirates.{Дом Главаря Пиратов #sisland_name#}
 Palm Beach.{Пальмовый Берег}
-Crab Cliffs.{Крабовые Утёсы}
+Crab Cliffs.{Крабовый Утёс}
 House in Jungle.{Дом в Джунглях}
 Rheims house on #sisland_name#.{Дом Реймса #sisland_name#}
 Room in Pirate tavern.{Комната в Пиратской Таверне}
