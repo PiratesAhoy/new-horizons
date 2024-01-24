@@ -844,7 +844,7 @@ Bewighte{Бевайт}
 Peutherer{Пьютерер}
 Yvonne{Ивон}
 Dale{Дэйл}
-Matthew{Мэтью}
+Matthew{Мэттью}
 Hoskins{Хоскинс}
 Vallentain{Валентайн}
 Belt{Белт}

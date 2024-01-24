@@ -58,7 +58,7 @@ Drunk{Пьяница}
 Random Drunk{Случайный Пьяница}
 
 {=====| TempQuest.c |=====}
-Matthew{Мэтью}
+Matthew{Мэттью}
 Shaw{Шоу}
 Billy{Билли}
 Brock{Брок}
