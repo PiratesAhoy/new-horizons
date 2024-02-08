@@ -96,7 +96,7 @@ Kristian{Кристиан}
 Colombian{Колумбиец}
 Native{Родной}
 Colombian Indian{Колумбийский Индеец}
-Colombian IndianF{Колумбийская Индианка}
+Colombian IndianF{Колумбийская Индеанка}
 Colombian Chief{Колумбийский Вождь}
 Chima{Чима}
 Alejandro{Алехандро}
@@ -684,11 +684,11 @@ Fred{Фред}
 Bob{Боб}
 Baldewyn{Балдуин}
 Coffier{Коффир}
-Da Saldanha{Де Салданья}
+Da Saldanha{Да Сальданья}
 Rys{Рис}
 Bloom{Блум}
 Larrouse{Ларроуз}
-Jaoquin{Жаокин}
+Jaoquin{Жоаким}
 De Masse{Де Массе}
 Nigel{Найджел}
 Blythe{Блайт}
@@ -759,8 +759,8 @@ Blacklock{Блэклок}
 Miner{Шахтер}
 Mines Commander{Управляющий Шахтой}
 Jerald{Джеральд}
-Gilbert{Гилберт}
-Ballester{Бэллестэр}
+Gilbert{Гильберт}
+Ballester{Баллестер}
 Steven{Стивен}
 Mather-Wren{Мазер-Врен}
 Hacepoco{Хацепоко}
@@ -771,7 +771,7 @@ Hacepoco{Хацепоко}
 Terry{Терри}
 Snider{Снайдер}
 Gilles{Жиль}
-Roche{Рок}
+Roche1{Рок}
 Alvaro{Альваро}
 Dimas{Димас}
 Natan{Нэйтан}
@@ -844,7 +844,7 @@ Bewighte{Бевайт}
 Peutherer{Пьютерер}
 Yvonne{Ивон}
 Dale{Дэйл}
-Matthew{Мэтью}
+Matthew{Мэттью}
 Hoskins{Хоскинс}
 Vallentain{Валентайн}
 Belt{Белт}
@@ -1010,7 +1010,7 @@ Nathaniel's Crewmember{Член Команды Хаука}
 Clair{Клэр}
 Larrousse{Ларрусс}
 France_bukaner_01{Французский Пират}
-Skull{Череп}
+Skull{Скулл}
 Will{Уилл}
 Turner{Тёрнер}
 Swann{Суонн}
@@ -1056,6 +1056,17 @@ Kicking Raven{Клюющийся Ворон}
 Lewis{Льюис}
 Vickers{Викерс}
 Carpenter1{Плотник}
+Meredith{Мередит}
+Byrom{Байром}
+Shore Indian{Береговой Индеец}
+Gilberto{Гильберто}
+Solano{Солано}
+Rafael{Рафаэль}
+Patiсo{Патико}
+Angulo{Ангуло}
+Donato{Донато}
+Elcano{Элькано}
+Echevarrнa{Эчеваррио}
 
 {=====| StoreOwners.c |=====}
 Agent-Victualler{Интендант}
@@ -1122,7 +1133,6 @@ Caspers{Каспер}
 Owen{Оуэн}
 Tripper{Триппер}
 Dempster{Демпстер}
-Rafael{Рафаэль}
 Pinto{Пинто}
 Hugo{Хуго}
 Aguayo{Агуайо}
@@ -1168,7 +1178,7 @@ Hanpool{Хэнпул}
 Damerell{Дэмерэлл}
 Frederyk{Фредерик}
 Kember{Кембер}
-Nadine{Надин}
+Nadine{Надина}
 Burrieza{Бурриеза}
 Tiago{Тиаго}
 Marquina{Маркина}
@@ -1254,8 +1264,8 @@ Xalmiento{Халмьенто}
 Inocencia{Иноценсия}
 Ussica{Уссика}
 Salvadore{Сальвадор}
-Jimena{Химена}
-Lуpez{Лупез}
+Jimena{Джимена}
+Lуpez{Лопес}
 
 {=====| Turks.c |=====}
 Dante{Данте}
@@ -1369,6 +1379,5 @@ Eccleston{Экклстон}
 Boulton{Бултон}
 Carib{Кариб}
 Carib Warrior{Карибский Воин}
-Shore Indian{Береговой Индеец}
 Laurens-Jan{Лоуренс-Ян}
 Revenboer{Ревенбур}

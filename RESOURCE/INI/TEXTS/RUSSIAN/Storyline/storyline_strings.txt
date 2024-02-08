@@ -918,7 +918,7 @@ Dolphine{Дельфин}
 {=====| SideQuest.c |=====}
 Montanez{Монтанез}
 Mefisto{Мефисто}
-Hundred Devils{Сотня Дьяволов}
+Hundred Devils{Сотня Чертей}
 666{666}
 Sea Monster{Морское Чудовище}
 Marauder{Мародер}

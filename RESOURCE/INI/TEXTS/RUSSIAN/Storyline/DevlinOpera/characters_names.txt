@@ -8,7 +8,7 @@ Devlin{Девлин}
 {=====| quests_reaction.c |=====}
 
 {=====| QuebradasCostillas.c |=====}
-Skull{Череп}
+Skull{Скулл}
 Sixto{Сиксто}
 Costa{Коста}
 Rico1{Рико}
