@@ -1885,4 +1885,3 @@ itmdescr_coin16
 {
 .
 }
-

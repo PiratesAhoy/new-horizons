@@ -50,6 +50,7 @@ Doctor{Доктор}
 KP{КП}
 Street{Уличный}
 Merchant{Торговец}
+Street Merchant{Уличный Торговец}
 Shipyard{Верфи}
 Owner{Владелец}
 Harbour{Гавани}
