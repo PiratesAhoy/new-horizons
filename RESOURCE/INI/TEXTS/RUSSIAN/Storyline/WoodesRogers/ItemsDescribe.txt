@@ -2208,6 +2208,12 @@ itmdescr_bladeA2
 Рапира.
 }
 
+itmname_bladeA4			{Клинок}
+itmdescr_bladeA4
+{
+Рапира.
+}
+
 itmname_bladeA5			{Клинок}
 itmdescr_bladeA5
 {

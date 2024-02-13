@@ -75,6 +75,10 @@ Karl XII{Карл XII}
 Ulrika Eleonora{Ульрика Элеонора}
 Fredrik I{Фредрик I}
 Adolf Fredrik{Адольф Фредрик}
+Victoria{Виктория}
+Louis Philippe I{Луи-Филипп I}
+Isabella II{Изабелла II}
+Martin Van Buren{Мартин Ван Бюрен}
 
 {=====| 82 names |=====}
 
