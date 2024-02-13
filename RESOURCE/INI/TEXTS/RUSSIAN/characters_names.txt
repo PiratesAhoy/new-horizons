@@ -684,11 +684,11 @@ Fred{Фред}
 Bob{Боб}
 Baldewyn{Балдуин}
 Coffier{Коффир}
-Da Saldanha{Де Салданья}
+Da Saldanha{Да Сальданья}
 Rys{Рис}
 Bloom{Блум}
 Larrouse{Ларроуз}
-Jaoquin{Жаокин}
+Jaoquin{Жоаким}
 De Masse{Де Массе}
 Nigel{Найджел}
 Blythe{Блайт}
@@ -759,8 +759,8 @@ Blacklock{Блэклок}
 Miner{Шахтер}
 Mines Commander{Управляющий Шахтой}
 Jerald{Джеральд}
-Gilbert{Гилберт}
-Ballester{Бэллестэр}
+Gilbert{Гильберт}
+Ballester{Баллестер}
 Steven{Стивен}
 Mather-Wren{Мазер-Врен}
 Hacepoco{Хацепоко}
@@ -771,7 +771,7 @@ Hacepoco{Хацепоко}
 Terry{Терри}
 Snider{Снайдер}
 Gilles{Жиль}
-Roche{Рок}
+Roche1{Рок}
 Alvaro{Альваро}
 Dimas{Димас}
 Natan{Нэйтан}
@@ -1010,7 +1010,7 @@ Nathaniel's Crewmember{Член Команды Хаука}
 Clair{Клэр}
 Larrousse{Ларрусс}
 France_bukaner_01{Французский Пират}
-Skull{Череп}
+Skull{Скулл}
 Will{Уилл}
 Turner{Тёрнер}
 Swann{Суонн}
@@ -1178,7 +1178,7 @@ Hanpool{Хэнпул}
 Damerell{Дэмерэлл}
 Frederyk{Фредерик}
 Kember{Кембер}
-Nadine{Надин}
+Nadine{Надина}
 Burrieza{Бурриеза}
 Tiago{Тиаго}
 Marquina{Маркина}

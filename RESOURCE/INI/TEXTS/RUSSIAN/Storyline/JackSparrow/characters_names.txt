@@ -32,8 +32,8 @@ French Soldier{Французский Солдат}
 Captaine{Капитан}
 Chevalle{Шевалье}
 Lucas{Лукас}
-Da Saldanha{Де Салданья}
-Jaoquin{Хоакин}
+Da Saldanha{Да Сальданья}
+Jaoquin{Жоаким}
 De Masse{Де Массе}
 Gombo{Гомбо}
 the Slave{Раб}
@@ -158,9 +158,9 @@ Francois{Франсуа}
 de Hadoque{де Хадоке}
 Sri Sumbhajee{Шри Сумбаджи}
 Angria{Ангрия}
-Pusasn{Пусан}
+Pusasn{Пусаш}
 Askay{Аскай}
-Ammand{Аман}
+Ammand{Амманд}
 the Corsair{Корсар}
 Yedam{Едам}
 Kinne{Кинн}
@@ -184,9 +184,9 @@ Morgan{Морган}
 Terror{Террор}
 Bos'un{Босун}
 Joaquin{Хоакин}
-Justine{Жюстин}
+Justine{Жюстина}
 Le Moigne{Ле Муань}
-Justine's guard{Охранник Жюстина}
+Justine's guard{Охранник Жюстины}
 Smith{Смит}
 Snorri{Снорри}
 Baldursson{Балдурсон}
@@ -221,8 +221,8 @@ Midshipman{Мичман}
 Crewmember{Член Команды}
 Mr.{Мистер}
 Mercer{Мерсер}
-Gentleman{Джентельмен}
-Jocard{Жокар}
+Gentleman{Джентльмен}
+Jocard{Джокард}
 Spanish Lieutenant{Испанский Лейтенант}
 Spanish Officer{Испанский Офицер}
 Prison Commendant{Комендант Тюрьмы}

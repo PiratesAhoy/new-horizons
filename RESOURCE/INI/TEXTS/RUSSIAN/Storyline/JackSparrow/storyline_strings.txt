@@ -28,7 +28,7 @@ The Big Buccaneer{Большой Пират}
 Compass Rose{Картушка}
 The Comfy Sofa{Удобный Диван}
 Montanez{Монтанез}
-Hundred Devils{Сотня Дьяволов}
+Hundred Devils{Сотня Чертей}
 666{666}
 Van Diemen{Ван Димен}
 Victory1{Победа}

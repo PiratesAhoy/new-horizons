@@ -45,7 +45,7 @@ Edmundo{Эдмундо}
 Valerie{Валери}
 Downing{Даунинг}
 Piers{Пирс}
-Gilbert{Гилберт}
+Gilbert{Гильберт}
 Emmett{Эммет}
 Dawson{Доусон}
 
