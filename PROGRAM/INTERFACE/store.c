@@ -224,15 +224,8 @@ void FillScroll()
 // KK -->
 	if(bNewIcons==true) GameInterface.scrollitems.ImagesGroup.t1 = "GOODS_NEW";
 	else GameInterface.scrollitems.ImagesGroup.t1 = "GOODS";
-	
-	switch (LanguageGetLanguage())
-	{
-		case "Polish":
-			GameInterface.scrollitems.ImagesGroup.t2 = "TRADE_STATE_POL";
-		break;
-		// default:
-		GameInterface.scrollitems.ImagesGroup.t2 = "TRADE_STATE";
-	}
+
+	GameInterface.scrollitems.ImagesGroup.t2 = "TRADE_STATE";
 
 	int idx = 1;
     for(i=0; i<GOODS_QUANTITY; i++)

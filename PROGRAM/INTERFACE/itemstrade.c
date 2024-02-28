@@ -395,13 +395,7 @@ void FillSelectedScroll()
 	arImgGrp.t1 = "usedflag";
 	// KK -->
 	if (!LAi_IsCapturedLocation) {
-		switch (LanguageGetLanguage()) {
-			case "Polish":
-				arImgGrp.t2 = "TRADE_STATE_POL";
-			break;
-			// default:
-			arImgGrp.t2 = "TRADE_STATE";
-		}
+		arImgGrp.t2 = "TRADE_STATE";
 	}
 	// <-- KK
 	FillImagesGroupForItems(arImgGrp);
