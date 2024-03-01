@@ -1067,6 +1067,10 @@ Angulo{Ангуло}
 Donato{Донато}
 Elcano{Элькано}
 Echevarrнa{Эчеваррио}
+Susanne{Сюзанна}
+Meireles{Мейрелес}
+Agostinho{Августин}
+Gil{Гил}
 
 {=====| StoreOwners.c |=====}
 Agent-Victualler{Интендант}
@@ -1381,3 +1385,4 @@ Carib{Кариб}
 Carib Warrior{Карибский Воин}
 Laurens-Jan{Лоуренс-Ян}
 Revenboer{Ревенбур}
+Toothless Pew{Беззубый Пью}
