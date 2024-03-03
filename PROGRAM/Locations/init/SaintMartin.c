@@ -798,7 +798,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].reload.l6.emerge = "Falaise_de_fleur_location_01_02";
 	Locations[n].reload.l6.autoreload = "0";
 	Locations[n].reload.l6.label = "Port.";
-/*
+
 	Locations[n].reload.l4.name = "door_6";
 	Locations[n].reload.l4.go = "Marigot_church";
 	Locations[n].reload.l4.emerge = "Reload1";
@@ -806,7 +806,7 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].reload.l4.label = "Church.";
 	Locations[n].reload.l4.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l4.goto_disable = 1; // Screwface: Disable Go-To location
-*/
+
 	Locations[n].reload.l7.name = "door_9";
 	Locations[n].reload.l7.go = "Marigot_mansion_hall";
 	Locations[n].reload.l7.emerge = "reload1";
@@ -819,13 +819,13 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].reload.l8.emerge = "reload1";
 	Locations[n].reload.l8.autoreload = "0";
 	Locations[n].reload.l8.label = "House.";
-	
-	Locations[n].reload.l9.name = "door_6";
-	Locations[n].reload.l9.go = "Marigot_Church";
-	Locations[n].reload.l9.emerge = "reload1";
+/*
+	Locations[n].reload.l9.name = "door_6";		// GR: Why was this added? 'reload.l4' already defines the church reload,
+	Locations[n].reload.l9.go = "Marigot_Church";	// and includes lines to close it at night and to disable fast travel
+	Locations[n].reload.l9.emerge = "reload1";	// until you have found the door.
 	Locations[n].reload.l9.autoreload = "0";
 	Locations[n].reload.l9.label = "Church";
-
+*/
 
 	Locations[n].island = "SaintMartin"; // NK 04-08-29
 	n = n + 1;
@@ -960,11 +960,15 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].reload.l3.autoreload = "0";
 	Locations[n].reload.l3.label = "Jungle.";
 
-/*	Locations[n].reload.l4.name = "door_7";
-	Locations[n].reload.l4.go = ""; // KK
-	Locations[n].reload.l4.emerge = "";
+	Locations[n].reload.l4.name = "door_7";
+	Locations[n].reload.l4.go = "Marigot_prison";
+	Locations[n].reload.l4.emerge = "reload1";
 	Locations[n].reload.l4.autoreload = "0";
-	Locations[n].reload.l4.label = "";*/
+	Locations[n].reload.l4.label = "Prison.";
+	Locations[n].reload.l4.close_for_night = 1;
+	Locations[n].locators_radius.reload.reload1 = 0.75;
+	// if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l4.goto_disable = 1; // Screwface: Disable Go-To location
+	locations[n].reload.l4.disable = 1;	// Normally locked - it's a prison and you're not supposed to wander in!
 
 	Locations[n].reload.l7.name = "door_1";
 	Locations[n].reload.l7.go = "Marigot_tavern";
@@ -994,6 +998,50 @@ void LocationInitSaintMartin(ref n)
 
 	Locations[n].island = "SaintMartin"; // NK 04-08-29
 	n = n + 1;
+
+	// Prison -------------------------------------------------
+
+	Locations[n].id = "Marigot_prison";
+	locations[n].id.label = "#stown_name# prison";
+	Locations[n].filespath.models = "locations\inside\prison";
+	Locations[n].image = "Inside_Prison.tga";
+
+	//Town sack
+	Locations[n].townsack = "Marigot";
+
+	//Sound
+	locations[n].type = "jail";
+	LAi_LocationFantomsGen(&locations[n], true);
+	//Models
+	//Always
+	Locations[n].models.always.prison = "Pri";
+	Locations[n].models.always.locators = "Pri_l";
+	Locations[n].models.always.window = "Pri_w";
+	//Locations[n].models.always.flame = "prison_flame";
+	//Day
+	Locations[n].models.day.charactersPatch = "Pri_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Pri_p";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Marigot_town_02";
+	Locations[n].reload.l1.emerge = "door_7";
+	Locations[n].reload.l1.label = "#stown_name#.";
+
+	locations[n].reload.l2.name = "reload12";
+	locations[n].reload.l2.go = "";
+	locations[n].reload.l2.emerge = "reload12";
+	locations[n].reload.l2.disable = 1;
+	Locations[n].locators_radius.reload.reload12 = 0.5;
+	LAi_LocationFightDisable(&Locations[n], true);
+
+
+	Locations[n].island = "SaintMartin";
+	n = n + 1;
+
     // ---------------------------------------------------
     Locations[n].id = "Marigot_exit";
 	locations[n].id.label = "Jungle";

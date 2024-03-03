@@ -238,7 +238,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Mergildo Hurtado_dialog.c";
-	ch.Ship.Name = "Montanez";
+	ch.Ship.Name = TranslateString("","Montanez");
 	ch.Ship.Type = "Barque1"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipFalseFlag = true; // PB: Skip False Flag Detection
@@ -768,7 +768,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "";//locator8
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 // KK -->
@@ -821,7 +821,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.old.Dialog.Filename = ch.Dialog.Filename; // KK
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "666"; // KK
+	ch.Ship.Name = TranslateString("","666"); // KK
 	ch.Ship.Type = "Brig2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 6; // GR: Animists Pirate Flag
@@ -916,7 +916,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "";//locator8
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 6; // GR: Animists Pirate Flag
@@ -970,7 +970,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.old.Dialog.Filename = ch.Dialog.Filename; // KK
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "666"; // KK
+	ch.Ship.Name = TranslateString("","666"); // KK
 	ch.Ship.Type = "Brig2"; // PRS3
 	ch.Ship.Stopped = true;
 // KK -->
@@ -1062,7 +1062,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "";//locator8
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 // KK -->
@@ -1114,7 +1114,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.old.Dialog.Filename = ch.Dialog.Filename; // KK
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "666"; // KK
+	ch.Ship.Name = TranslateString("","666"); // KK
 	ch.Ship.Type = "Brig2"; // PRS3
 	ch.Ship.Stopped = true;
 // KK -->
@@ -1206,7 +1206,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "";//locator8
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "Hundred Devils"; // KK
+	ch.Ship.Name = TranslateString("","Hundred Devils"); // KK
 	ch.Ship.Type = "Barque2"; // PRS3
 	ch.Ship.Stopped = true;
 // KK -->
@@ -1258,7 +1258,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.Dialog.Filename = "Quest_ANIMISTS_dialog.c";
 	ch.old.Dialog.Filename = ch.Dialog.Filename; // KK
 	ch.greeting = "Gr_Quest_ANIMISTS";
-	ch.Ship.Name = "666"; // KK
+	ch.Ship.Name = TranslateString("","666"); // KK
 	ch.Ship.Type = "Brig2"; // PRS3
 	ch.Ship.Stopped = true;
 // KK -->
@@ -1351,27 +1351,27 @@ void CreateSideQuestCharacters(ref n)
 	switch(GetCurrentPeriod())
 	{
 		case PERIOD_EARLY_EXPLORERS:
-			ch.Ship.Name = "Sea Monster";
+			ch.Ship.Name = TranslateString("","Sea Monster");
 			ch.Ship.Type = 	"FleutWar";				// Skyworm
 		break;
 		case PERIOD_THE_SPANISH_MAIN:
-			ch.Ship.Name = "Sea Monster";
+			ch.Ship.Name = TranslateString("","Sea Monster");
 			ch.Ship.Type = 	"FleutWar";				// Skyworm
 		break;
 		case PERIOD_GOLDEN_AGE_OF_PIRACY:
-			ch.Ship.Name = "Marauder";
+			ch.Ship.Name = TranslateString("","Marauder");
 			ch.Ship.Type = 	"PiratFrigateSup";		// Armada
 		break;
 		case PERIOD_COLONIAL_POWERS:
-			ch.Ship.Name = "Fast Death";
+			ch.Ship.Name = TranslateString("","Fast Death");
 			ch.Ship.Type = 	"PiratCorvette";		// Armada
 		break;
 		case PERIOD_REVOLUTIONS:
-			ch.Ship.Name = "Iceni Queen";
+			ch.Ship.Name = TranslateString("","Iceni Queen");
 			ch.Ship.Type = 	"SuperFrigate";			// JRMM
 		break;
 		case PERIOD_NAPOLEONIC:
-			ch.Ship.Name = "Iceni Queen";
+			ch.Ship.Name = TranslateString("","Iceni Queen");
 			ch.Ship.Type = 	"SuperFrigate";			// JRMM
 		break;
 	}
@@ -2188,7 +2188,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Davy Jones_dialog.c";
-	ch.Ship.Name = "Flying Dutchman";
+	ch.Ship.Name = TranslateString("","Flying Dutchman");
 	ch.Ship.Type = "CursedDutchman";
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 1;
@@ -2521,7 +2521,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "Quest_ships";
 	ch.location.locator = "quest_ship_11";//locator8
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Fast Death";
+	ch.Ship.Name = TranslateString("","Fast Death");
 	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) ch.Ship.Type = "Carrack";
 	else ch.Ship.Type = "Brig1"; // PRS3
 	ch.Ship.Stopped = true;
@@ -2567,7 +2567,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "Quest_ships";
 	ch.location.locator = "quest_ship_11";//locator8
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Madonna";
+	ch.Ship.Name = TranslateString("","Madonna");
 	ch.Ship.Type = "Lugger1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
@@ -2612,7 +2612,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "Quest_ships";
 	ch.location.locator = "quest_ship_11";//locator8
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Duquesa";	// GR - was "Madonna"
+	ch.Ship.Name = TranslateString("","Duquesa");	// GR - was "Madonna"
 	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) ch.Ship.Type = "PO_Caravel50";
 	else ch.Ship.Type = "BarqueHeavy";	// GR - was "Barque1"
 	ch.Ship.Stopped = true;
@@ -2660,7 +2660,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
 //	ch.Ship.Name = "Madonna";			// GR: Almost all the ships in this quest were named "Madonna"!
 //	ch.Ship.Type = "Caravel1"; // PRS3		   GR: "Caravel1" doesn't exist beyond "Spanish Main"
-	ch.Ship.Name = "Comtesse";
+	ch.Ship.Name = TranslateString("","Comtesse");
 	switch(GetCurrentPeriod())
 	{
 		case PERIOD_EARLY_EXPLORERS:
@@ -2796,7 +2796,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Mefisto";
+	ch.Ship.Name = TranslateString("","Mefisto");
 	ch.Ship.Type = "Frigate_sat"; // PRS3
 	if (GetCurrentPeriod() < PERIOD_GOLDEN_AGE_OF_PIRACY)
 		ch.Ship.Type = "FleutWarSat";		// Grey Roger: alternative for early periods
@@ -2851,7 +2851,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "Quest_ships";
 	ch.location.locator = "quest_ship_11";
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Inferno"; // KK (second Mefisto?)
+	ch.Ship.Name = TranslateString("","Inferno"); // KK (second Mefisto?)
 	ch.Ship.Type = "PiratFrigateSup"; // PRS3 // KK
 	ch.Ship.Stopped = true;
 	ch.nosurrender = 2; // TIH: doesn't give up easily
@@ -3103,7 +3103,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "0";
-	ch.Ship.Name = "Duk";
+	ch.Ship.Name = TranslateString("","Duk");
 	ch.Ship.Type = "PiratBrig50"; // Petros: was Brig1
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS12;
@@ -3164,7 +3164,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "Quest_ships";
 	ch.location.locator = "quest_ship_2"; 		// Petros: was quest_ship_11
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Neptunus";
+	ch.Ship.Name = TranslateString("","Neptunus");
 	if (GetCurrentPeriod() < PERIOD_COLONIAL_POWERS)
 		ch.Ship.Type = "FleutWar2";		// GR: more appropriate for earlier periods
 	else
@@ -3256,7 +3256,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	ch.Ship.Name = "Prison Ship";
+	ch.Ship.Name = TranslateString("","Prison Ship");
 	ch.Ship.Type = "Brig1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS12;
@@ -4573,7 +4573,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Pieter Boelen_dialog.c";
 	// PB -->
-	ch.Ship.Name = "Amsterdam";
+	ch.Ship.Name = TranslateString("","Amsterdam");
 	if (GetCurrentPeriod() < PERIOD_COLONIAL_POWERS)
 		ch.ship.Type = "NL_Derfflinger";
 	else
@@ -4715,7 +4715,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "0";
-	ch.Ship.Name = "Santa Marta";
+	ch.Ship.Name = TranslateString("","Santa Marta");
 	ch.Ship.Type = "Galeon2";
 	ch.Ship.Stopped = true; 
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -4734,10 +4734,14 @@ void CreateSideQuestCharacters(ref n)
 	ch.model = "imgovwife";
 	ch.sex = "woman";
 	ch.sound_type = "pirate";
-	ch.location	= "none";
-	ch.location.group = "";
-	ch.location.locator = "";
-	ch.Dialog.Filename = "Cecile Bienbonne_dialog.c";
+//	ch.location	= "none";
+//	ch.location.group = "";
+//	ch.location.locator = "";
+//	ch.Dialog.Filename = "Cecile Bienbonne_dialog.c";
+	ch.location	= "PaP_Brothel";	// GR: Put Cecile to work in brothel.
+	ch.location.group = "goto";
+	ch.location.locator = "goto2";
+	ch.Dialog.Filename = "wench_dialog.c";	// She will switch to her own dialog in the quest, then switch back when the quest ends
 	ch.rank 	= 1;
 	ch.reputation = "none";
 	ch.experience = "0";
@@ -4754,7 +4758,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.money = "500";
 	ch.quest.meeting = "0";
 	LAi_SetCitizenType(ch);
-	LAi_SetLoginTime(ch, 8.0, 20.0);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 40.0, 40.0);
 	ch.greeting = "Gr_Cecile Bienbonne";
 	ch.questchar = true;//MAXIMUS: identifier for captives
@@ -4965,7 +4969,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = "0";
 	LAi_SetCivilianGuardianType(ch); // PB
-	LAi_SetLoginTime(ch, 8.0, 20.0);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -5019,7 +5023,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.id		= "Silver";
 	ch.model	= "Hugnt18";
 	ch.sex = "man";	
-	ch.Ship.Name = "Leon";
+	ch.Ship.Name = TranslateString("","Leon");
 	ch.Ship.Type = "SP_ApostolFelipe";
 	ch.Ship.Stopped = true; 
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -5245,7 +5249,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.money = "0";
 	ch.quest.meeting = "0";
 	ch.quest.goldmine = "0";
-	ch.Ship.Name = "Cheri";
+	ch.Ship.Name = TranslateString("","Cheri");
 	ch.Ship.Type = "PiratBrig50"; // Petros: was Brig1
 	ch.Ship.Stopped = true;
 	//KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS12;
@@ -5347,7 +5351,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "2";
 	ch.money = "10000";
-	ch.Ship.Name = "Dud";
+	ch.Ship.Name = TranslateString("","Dud");
 	ch.ship.type = "PiratFrigateSup"; // PRS3
 	// done by setbaseship - NK 05-04-09 ch.ship.cargo.goods.bombs = 1000;
 	ch.Ship.Stopped = true;
@@ -5387,7 +5391,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Will Turner_dialog.c";
-	ch.Ship.Name = "The Adventurer";
+	ch.Ship.Name = TranslateString("","The Adventurer");
 	if (GetCurrentPeriod() < PERIOD_COLONIAL_POWERS)
 		ch.ship.Type = "FastGalleon1";
 	else
@@ -5735,8 +5739,8 @@ void CreateSideQuestCharacters(ref n)
 		TakenItems(ch, "pistolbullets", 6);
 	}
 	//JRH ammo mod <--
-	ch.Ship.Name = "Vogelstruijs";	
-	ch.Ship.Type = "Pinnace2";		
+	ch.Ship.Name = TranslateString("","Vogelstruijs");
+	ch.Ship.Type = "Pinnace2";
 	ch.Ship.Stopped = true;
 	ch.location	= "none";
 	ch.location.group = "";
@@ -5785,7 +5789,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Robert Cook_dialog.c";
 	// PB -->
-	ch.Ship.Name = "HMS Challenger";
+	ch.Ship.Name = TranslateString("","HMS Challenger");
 	ch.Ship.Type = "Frigate1";
 	ch.Ship.Stopped = true;
 	GiveItem2Character(ch, "blade26+1");
@@ -6105,7 +6109,7 @@ void CreateSideQuestCharacters(ref n)
 	//JRH ammo mod <--
 	ch.Dialog.Filename = "Sir Rodney Leighton_dialog.c";
 	ch.nation = ENGLAND;
-	ch.Ship.Name = "Ardent";
+	ch.Ship.Name = TranslateString("","Ardent");
 	ch.Ship.Type = "HMS_Bellona";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 20;
@@ -6279,7 +6283,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.nation = PIRATE;
 	GiveItem2Character(ch, "blade47");
 	ch.equip.blade = "blade47";
-	ch.Ship.Name = "Valiente";
+	ch.Ship.Name = TranslateString("","Valiente");
 	ch.Ship.Type = "Tartane1";
 	ch.Ship.Stopped = true;
 	ch.rank 	= 1;
@@ -6341,7 +6345,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Natividad";
+	ch.Ship.Name = TranslateString("","Natividad");
 	ch.Ship.Type = "SP_Natividad";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -6385,7 +6389,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Santiano";
+	ch.Ship.Name = TranslateString("","Santiano");
 	ch.Ship.Type = "Lugger1";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -6469,8 +6473,8 @@ void CreateSideQuestCharacters(ref n)
 	ch.nation = PIRATE;
 	ch.old.name = "Growling";
 	ch.old.lastname = "Bear";
-	ch.name = TranslateString("","Growling");
-	ch.lastname = TranslateString("","Bear");
+	ch.name = TranslateString("Growling","Bear");
+	ch.lastname = "";
 	ch.id		= "Carib_Warrior";
 	ch.model = "Native";
 	ch.sex = "man";
@@ -6508,8 +6512,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Kicking";
 	ch.old.lastname = "Raven";
-	ch.name = TranslateString("","Kicking");
-	ch.lastname = TranslateString("","Raven");
+	ch.name = TranslateString("Kicking","Raven");
+	ch.lastname = "";
 	ch.id		= "Carib_Chief";
 	ch.model	= "Native_Chief";
 	ch.sex = "man";
@@ -6571,7 +6575,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Archaeologist_captain_dialog.c";
 	ch.greeting = "Gr_Gyles Dubois";
-	ch.Ship.Name = "Ark Raider"; // KK	
+	ch.Ship.Name = TranslateString("","Ark Raider"); // KK	
 	if (GetCurrentPeriod() <= PERIOD_THE_SPANISH_MAIN)
 	{
 		ch.Ship.Type = "RN_Galeon_L";		
@@ -6958,7 +6962,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 4000 + rand(1000);	
-	ch.Ship.Name = "Santa Matilde";
+	ch.Ship.Name = TranslateString("","Santa Matilde");
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "Galeon50";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "FR_Fleuron";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "FR_Superbe";
@@ -7022,7 +7026,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 2500 + rand(1000);	
-	ch.Ship.Name = "María Santísima";
+	ch.Ship.Name = TranslateString("","María Santísima");
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "WallerPinnace";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "FR_BattleFrigate";
@@ -7086,7 +7090,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 1500 + rand(1000);	
-	ch.Ship.Name = "Cardenal Cisneros";
+	ch.Ship.Name = TranslateString("","Cardenal Cisneros");
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "WallerPinnace";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "FR_BattleFrigate";
@@ -7150,7 +7154,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 1500 + rand(1000);	
-	ch.Ship.Name = "Ángel de la Guarda";
+	ch.Ship.Name = TranslateString("","Ángel de la Guarda");
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "Frigate1";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "SP_Surprise";
@@ -7230,7 +7234,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 1500 + rand(1000);	
-	ch.Ship.Name = "Septentrión";
+	ch.Ship.Name = TranslateString("","Septentrión");
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "FastGalleon1";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "Frigate1";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "SP_Surprise";
@@ -7303,5 +7307,374 @@ void CreateSideQuestCharacters(ref n)
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 100.0, 100.0);
+	AddGameCharacter(n, ch);
+
+	ch.old.name		= "Susanne";
+	ch.old.lastname		= "Maginot";
+	ch.name			= TranslateString("","Susanne");
+	ch.lastname		= TranslateString("","Maginot");
+	ch.nation		= FRANCE;
+	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
+	ch.model		= "diz1";
+	ch.id			= "Susanne Maginot";
+	ch.sound_type		= "female_citizen";
+	ch.sex			= "woman";
+	ch.location		= "none";
+	ch.location.group	= "";
+	ch.location.locator	= "";
+	ch.Dialog.Filename	= "Susanne Maginot_dialog.c";
+	ch.greeting		= "Gr_Sabine Matton";
+	ch.rank 		= 1;
+	ch.reputation		= "40";
+	ch.experience		= "0";
+	ch.skill.Leadership	= "2";
+	ch.skill.Fencing	= "1";
+	ch.skill.Sailing	= "1";
+	ch.skill.Accuracy	= "1";
+	ch.skill.Cannons	= "1";
+	ch.skill.Grappling	= "1";
+	ch.skill.Repair		= "1";
+	ch.skill.Defence	= "1";
+	ch.skill.Commerce	= "1";
+	ch.skill.Sneak		= "2";
+	ch.money		= "10";
+	ch.quest.meeting	= "0";
+	ch.questchar		= true;
+	ch.quest.officertype	= OFFIC_TYPE_CIVILIAN;
+	ch.quest.officerprice	= 0;
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	AddGameCharacter(n, ch);
+
+	// Barrakuda - for "Night Craft" sidequest
+	ch.old.name	= "Barrakuda";
+	ch.lastname	= "";
+	ch.name		= TranslateString("", "Barracuda");
+	ch.lastname	= "";
+	ch.id		= "Barrakuda";
+	ch.nation	= PIRATE;
+	ch.model	= "shkiper";
+	ch.sex		= "man";
+	GiveItem2Character(ch, "blade41");	// was "blade18", Nicholas Sharp's sword
+	ch.equip.blade	= "blade41";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "barrakuda_dialog.c";
+	ch.rank 	= 22;
+	ch.reputation = "1";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "10";
+	ch.skill.Cannons = "10";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "10";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.Ship.Name = TranslateString("", "Barracuda");
+	ch.perks.list.ShipSpeedUp = true;
+	ch.perks.list.ShipTurnRateUp = true;
+	ch.perks.list.SailingProfessional = true;
+	ch.perks.list.HullDamageUp = true;
+	ch.perks.list.SailsDamageUp = true;
+	ch.perks.list.CrewDamageUp = true;
+	ch.perks.list.CriticalShoot = true;
+	ch.perks.list.LongRangeShoot = true;
+	ch.perks.list.CannonProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.FastReload = true;
+//	ch.Ship.Type = "Barrakuda";
+	ch.Ship.Type = "Salamander1";	// If you change this then also change quest case "barrakuda_died"
+	ch.Ship.Stopped = true;
+	ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 124.0, 124.0);
+	ch.questchar = true;	// Protect skills from levelling
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "Agostinho";
+	ch.lastname	= "d'Allmeida";
+	ch.name 	= TranslateString("", "Agostinho");
+	ch.lastname	= TranslateString("", "d'Allmeida");
+	ch.id		= "Smuggler_quest_pirate_01";
+	ch.nation	= PIRATE;
+	ch.model	= "pirat3";		// was "pirat2"
+	ch.sex		= "man";
+	GiveItem2Character(ch, "blade29");	// Portuguese Officer's Sword, was "blade14" Spanish Nobility Longsword
+	ch.equip.blade	= "blade29";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "";
+	ch.rank 	= 18;
+	ch.reputation = "1";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "8";
+	ch.skill.Cannons = "8";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.Ship.Name = TranslateString("", "Retribution");
+	ch.perks.list.CrewDamageUp = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.CannonProfessional = true;
+	ch.perks.list.ShipSpeedUp = true;
+	ch.perks.list.ShipTurnRateUp = true;
+	ch.perks.list.SailingProfessional = true;
+	ch.perks.list.FastReload = true;
+	ch.perks.list.LongRangeShoot = true;
+	ch.Ship.Type = "RN_Corvette";
+	ch.Ship.Stopped = true;
+	ch.Ship.Cannons.Type = CANNON_TYPE_CARRONADE_LBS24;
+	ch.skipRM = true;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 124.0, 124.0);
+	ch.questchar = true;	// Protect skills from levelling
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "Jorge";
+	ch.lastname	= "Meireles";
+	ch.name 	= TranslateString("", "Jorge");
+	ch.lastname	= TranslateString("", "Meireles");
+	ch.id		= "Smuggler_quest_pirate_02";
+	ch.nation	= PIRATE;
+	ch.model	= "pirat12";		// was another "pirat2"
+	ch.sex		= "man";
+	GiveItem2Character(ch, "blade50");	//Venetian Navy Cutlass, was "blade14" Spanish Nobility Longsword
+	ch.equip.blade = "blade50";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "";
+	ch.rank 	= 18;
+	ch.reputation = "1";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "10";
+	ch.skill.Cannons = "6";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.Ship.Name = TranslateString("", "Obstacle");
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ShipDefenseProfessional = true;
+	ch.perks.list.CannonProfessional = true;
+	ch.perks.list.ShipSpeedUp = true;
+	ch.perks.list.ShipTurnRateUp = true;
+	ch.perks.list.SailingProfessional = true;
+	ch.perks.list.CriticalShoot = true;
+	ch.perks.list.FastReload = true;
+	ch.Ship.Type = "Corvette2";
+	ch.Ship.Stopped = true;
+	ch.Ship.Cannons.Type = CANNON_TYPE_CARRONADE_LBS24;
+	ch.skipRM = true;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 124.0, 124.0);
+	ch.questchar = true;	// Protect skills from levelling
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "Francisco";
+	ch.lastname	= "Monteiro";
+	ch.name 	= TranslateString("", "Francisco");
+	ch.lastname	= TranslateString("", "Monteiro");
+	ch.id		= "Smuggler_quest_pirate_03";
+	ch.nation	= PIRATE;
+	ch.model	= "pirat5";		// was another "pirat2"
+	ch.sex = "man";
+	GiveItem2Character(ch, "bladeC11");	// Milanese longsword, was "blade14" Spanish Nobility Longsword
+	ch.equip.blade = "bladeC11";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "";
+	ch.rank 	= 18;
+	ch.reputation = "1";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "8";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "8";
+	ch.skill.Cannons = "10";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.Ship.Name = TranslateString("", "Unstoppable");
+	ch.perks.list.HullDamageUp = true;
+	ch.perks.list.SailsDamageUp = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.CannonProfessional = true;
+	ch.perks.list.ShipSpeedUp = true;
+	ch.perks.list.ShipTurnRateUp = true;
+	ch.perks.list.SailingProfessional = true;
+	ch.perks.list.CriticalShoot = true;
+	ch.perks.list.FastReload = true;
+	ch.perks.list.LongRangeShoot = true;
+	ch.Ship.Type = "HeavyLineship";
+	ch.Ship.Stopped = true;
+	ch.Ship.Cannons.Type = CANNON_TYPE_CARRONADE_LBS24;
+	ch.skipRM = true;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 124.0, 124.0);
+	ch.questchar = true;	// Protect skills from levelling
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "Gil";
+	ch.lastname	= "Bessa";
+	ch.name 	= TranslateString("", "Gil");
+	ch.lastname	= TranslateString("", "Bessa");
+	ch.id		= "Smuggler_quest_pirate_04";
+	ch.nation	= PIRATE;
+	ch.model	= "pirat15";		// was another "pirat2"
+	ch.sex		= "man";
+	GiveItem2Character(ch, "bladeC18");	// Shellcup Falchion, was "blade14" Spanish Nobility Longsword
+	ch.equip.blade = "bladeC18";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "";
+	ch.rank 	= 18;
+	ch.reputation = "1";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "10";
+	ch.skill.Cannons = "10";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.Ship.Name = TranslateString("", "Smashing");
+	ch.perks.list.SailsDamageUp = true;
+	ch.perks.list.CrewDamageUp = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.CannonProfessional = true;
+	ch.perks.list.ShipSpeedUp = true;
+	ch.perks.list.ShipTurnRateUp = true;
+	ch.perks.list.CriticalShoot = true;
+	ch.perks.list.FastReload = true;
+	ch.perks.list.LongRangeShoot = true;
+	ch.Ship.Type = "BrigQeen1";
+	ch.Ship.Stopped = true;
+	ch.Ship.Cannons.Type = CANNON_TYPE_CARRONADE_LBS18;
+	ch.skipRM = true;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 124.0, 124.0);
+	ch.questchar = true;	// Protect skills from levelling
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "Smuggler";
+	ch.lastname	= "";
+	ch.name 	= TranslateString("", "Smuggler");
+	ch.lastname = "";
+	ch.id		= "Quest_Smuggler_Line_01";
+	ch.nation	= PIRATE;
+	ch.model	= "pirat2";
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade10");
+	ch.equip.blade = "blade10";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "";
+	ch.rank 	= 12;
+	ch.reputation = "1";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "6";
+	ch.skill.Cannons = "6";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "6";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.Ship.Name = TranslateString("", "Apostle");
+	ch.perks.list.SailsDamageUp = true;
+	ch.perks.list.CrewDamageUp = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ShipDefenseProfessional = true;
+	ch.perks.list.ShipSpeedUp = true;
+	ch.perks.list.ShipTurnRateUp = true;
+	ch.perks.list.SailingProfessional = true;
+	ch.Ship.Type = "SchoonerWar";
+	ch.Ship.Stopped = true;
+	ch.Ship.Cannons.Type = CANNON_TYPE_LONG_LBS9;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 124.0, 124.0);
+	ch.questchar = true;	// Protect skills from levelling
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "Smuggler";
+	ch.lastname	= "";
+	ch.name 	= TranslateString("", "Smuggler");
+	ch.lastname = "";
+	ch.id		= "Quest_Smuggler_Line_02";
+	ch.nation	= PIRATE;
+	ch.model	= "pirat2";
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade10");
+	ch.equip.blade = "blade10";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "";
+	ch.rank 	= 12;
+	ch.reputation = "1";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "8";
+	ch.skill.Cannons = "8";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.Ship.Name = TranslateString("", "Secretive");
+	ch.perks.list.SailsDamageUp = true;
+	ch.perks.list.CrewDamageUp = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ShipDefenseProfessional = true;
+	ch.perks.list.ShipSpeedUp = true;
+	ch.perks.list.ShipTurnRateUp = true;
+	ch.perks.list.LongRangeShoot = true;
+	ch.Ship.Type = "Brigantina2";
+	ch.Ship.Stopped = true;
+	ch.Ship.Cannons.Type = CANNON_TYPE_LONG_LBS9;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 124.0, 124.0);
+	ch.questchar = true;	// Protect skills from levelling
 	AddGameCharacter(n, ch);
 }

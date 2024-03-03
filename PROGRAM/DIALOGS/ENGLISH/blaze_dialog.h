@@ -1,4 +1,4 @@
-string DLG_TEXT[388] = {
+string DLG_TEXT[390] = {
 "Oh, it's you, ",
 ". What are you doing here?",
 "None of your business ",
@@ -130,7 +130,7 @@ string DLG_TEXT[388] = {
 ", one thing at a time. Let's save the poor old man first.",
 "Whatever you say.",
 "What should we do now? We can't find the treasure if we can't translate that legend. And I'm afraid the old man...",
-"We've already set ourselves against the #sGovernor# and the English crown. What do we have to lose if we just capture that miserable town and free Aurentius?",
+"We've already set ourselves against #sGovernor# and the English crown. What do we have to lose if we just capture that miserable town and free Aurentius?",
 "I didn't realize you had suicidal tendencies. But if you're serious about this, then let's have a little fun!",
 "Now you're talking! And I'm feeling like a real pirate. I'll attack the fort from the sea, and you and your men can lay siege to the town from land. What do you say?",
 "I say I've created a monster, ",
@@ -145,7 +145,7 @@ string DLG_TEXT[388] = {
 "You really do think I'm just a foolish girl, don't you? No, I kept them with me.",
 ", my dear, did I ever tell you you're the smartest lady pirate I know?",
 "No. As I recall, you've mostly been enraptured by my 'unmatched sharp tongue.' Now tell me: How in the world did you get here?",
-"After I captured the ship that was sent to deliver the idol to the #sGovernor#, I set a course for our meeting place. But I ran into foul weather and was washed overboard like a landlubber. I was sure I was dead, but as it happened I found myself washed ashore near #sisland_Douwesen#.",
+"After I captured the ship that was sent to deliver the idol to #sGovernor#, I set a course for our meeting place. But I ran into foul weather and was washed overboard like a landlubber. I was sure I was dead, but as it happened I found myself washed ashore near #sisland_Douwesen#.",
 "Yes. Fortune does favor the foolish.",
 "Easy, now! I've had a rough time of it. When I came to my senses, I staggered into #sDouwesen# and managed to get a small ship. Not long after, I ended up here. You can well imagine how surprised I was to see my old ship in #sIsla Muelle# harbor. She was still being repaired after that storm.",
 "Incredible! Fortune favors the foolish, but even you aren't fool enough to be THAT lucky!",
@@ -267,7 +267,7 @@ string DLG_TEXT[388] = {
 "(You see the port soldier)",
 "That's him again! Let's catch him!",
 "(Barbossa talking to his crew)", 
-"Gentlemen, the time has come! Our torment is nearing an end! For ten years we've been tested and tried. And each man here has moved his mettle a hundred times over and a hundred times again. Punished we were the lot of us, disproportionate to our crime. Here it is! The cursed treasure of Cortés himself. Every last piece that went astray we have returned. Save for this!",
+"Gentlemen, the time has come! Our torment is nearing an end! For ten years we've been tested and tried. And each man here has moved his mettle a hundred times over and a hundred times again. Punished we were the lot of us, disproportionate to our crime. Here it is! The cursed treasure of Cortйs himself. Every last piece that went astray we have returned. Save for this!",
 "Maybe you are immortal, but I can still knock you out idiot! Now, I have to join my crew to invert the situation on my ship.",
 "Captain ",
 "You are accused for crimes against the Crown. Said crimes being numerous in quantity and sinister in nature. The most egregious of these to be cited herewith: piracy, smuggling, sailing under false colours, arson, kidnapping, looting, poaching, brigandage, pilfening, depravity, depredation and general lawlessness. For these crimes, you are sentenced to be hung by the neck until dead. May God have mercy on your soul.",
@@ -325,7 +325,7 @@ string DLG_TEXT[388] = {
 "I have the warden's key! Now to get out of here...",
 "Nothing worth having at the moment. I should spend some time in the tavern and try again later. Also, I'll need to see if the store can sell me a map of #sisland_Cuba#'s waters.",
 "Looks like the crew fell for it. Now to grab the ship before they realise they've been had.",
-"The ship's papers ought to be somewhere around here - aha, got them! Ship 'Tonina' - what sort of name is that, we'll need to change it! Captain is - or rather, was - Alférez de Navío Esteban Rovapera.",
+"The ship's papers ought to be somewhere around here - aha, got them! Ship 'Tonina' - what sort of name is that, we'll need to change it! Captain is - or rather, was - Alfйrez de Navнo Esteban Rovapera.",
 "So much for buying a map of #sisland_Cuba#. But there's one right in the window. I'll have to return when it's dark.",
 "So much for buying a map of #sisland_Cuba#. But there's one right in the window. And it's dark now...",
 "Wait a moment... that rope had better be tied securely!",
@@ -346,7 +346,7 @@ string DLG_TEXT[388] = {
 "And I've given him one of the most powerful warships in these waters...",
 "I won't be able to move that rock by myself. Looks like I'm stuck here...",
 "The '",
-"' isn't in port! Capitán ",
+"' isn't in port! Capitбn ",
 " must have been impatient and left for #sHavana# already.",
 "I'll have to sail there myself and hope to catch up with him.",
 "The kidnappers are probably in that cave with #senvoy#. If I charge in, they may kill her, or she may be killed accidentally in the fight.",	//350
@@ -387,4 +387,6 @@ string DLG_TEXT[388] = {
 "...",
 "Well, I may be the punching bag, but you, Chico, you're the scabbard!",
 "I should take the money and get out of here. Little Bea must already be furious.",
+"So, I’ve been in this damn cell for three days already, damn me... Hmm... what’s that noise?",
+"...",
 };

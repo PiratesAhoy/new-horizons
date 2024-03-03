@@ -100,6 +100,7 @@ void InitItems()  // economics adjusted by BB & Sulan 2011-08
   n = InitQuestItem(n,"Correspondence1","Correspondence1",		"",	 		4,	14,		0,0,	"","",	"","",		"","",""	); //PW letter1 for arnaud/sabine matton sidequest
   n = InitQuestItem(n,"Correspondence2","Correspondence2",		"",	 		4,	14,		0,0,	"","",	"","",		"","",""	); //PW letter2 for arnaud/sabine matton sidequest
   n = InitQuestItem(n,"cryskull",	"cryskull",		 	"cryskul",  		12,	8,		0,0,	"","",	"","",		"","",""	); // GR: amber skull for "Crystal Skull" sidequest
+  n = InitQuestItem(n,"shop_papers",	"shop_papers",			"",			4,	3,		0,0,	"","",	"","",		"","",""	); // GR: for "Night Craft" sidequest
   QUESTITEMS_QUANTITY = n;
   // <-- KK
 
@@ -553,6 +554,8 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   // <-- added by SCM for Mateus Santos Quest
   n = InitItem(n,"Sparrow_Ring", "",        2, 6, 0.10,  5,  3000,   0,   0,  0, 1,    +2, +1,  0,  0,  0,  0,  0,  0,  0,  0,    0, 1, 1, 1); // Jack Sparrow's Ring
   n = InitItem(n,"Sparrow_Ring1", "",       2, 7, 0.10,  5,  2500,   0,   0,  0, 1,    +2, +1,  0,  0,  0,  0,  0,  0,  0,  0,    0, 1, 1, 1); // Jack Sparrow's Ring
+  // --> added by Grey Roger for Night Craft quest
+  n = InitItem(n,"Jean_Ring",     "",    "GR",11, 0.10,  5,  2500,   0,   0,  0, 1,     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,    1, 1, 1, 1); // Jean Maginot's Ring
   // ccc building kit start -->
   //----------------------------------------------------------------------------------------------------------------------------
   // BUILDING     ItemIndex                                                             planks           crew           piercing
@@ -652,7 +655,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //	              ItemIndex  |     		    	         model
   //----------------------|------|---------------------------------|----------------------------------------------------------------
 //all items are available for all storylines JRH
-  n = InitBuildingItemJRH(n,	"toolchest1",  			"toolchest"); 		//Carpenter�s chest - start mode
+  n = InitBuildingItemJRH(n,	"toolchest1",  			"toolchest"); 		//Carpenter's chest - start mode
 
   n = InitBuildingItemJRH(n,	"brF4R",  			"Flotsam4R"); 		//broken roof pieces
   n = InitBuildingItemJRH(n,	"brF11",  			"Flotsam11");
@@ -763,6 +766,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,    "hatch3U_T",			"hatch3U_T");		//prison cell floor (hatch3U open)
   n = InitBuildingItemJRH(n,	"hatch3V",			"hatch3V");		//farm servant window
   n = InitBuildingItemJRH(n,	"hatch4",			"hatch4");		//roof hatch shop office
+  n = InitBuildingItemJRH(n,	"hatch4_45",			"hatch4_45");		//prison_bridge
   n = InitBuildingItemJRH(n,	"hatch5",			"hatch5");		//ship hatch galley, tilted
   n = InitBuildingItemJRH(n,	"hatch5_A",			"hatch5_A");		//ship hatch galley, vertical closed
   n = InitBuildingItemJRH(n,	"hatch5_B",			"hatch5_B");		//ship hatch galley, vertical closed upside down
@@ -913,6 +917,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"smg3",				"smg3");		//goods on shore
   n = InitBuildingItemJRH(n,	"smg7",				"smg7");		//goods on shore
   n = InitBuildingItemJRH(n,	"smg11",			"smg11");		//goods on shore
+  n = InitBuildingItemJRH(n,	"smgT",				"smgT");		//smg TEHO used in Singapore
 
   n = InitBuildingItemJRH(n,	"fish02",			"fish02");		//galleon deck prow
   n = InitBuildingItemJRH(n,	"cauldron1",			"cauldron1");		//farm_kitchen
@@ -1308,7 +1313,8 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 
  n = InitBuildingItemJRH(n,	"door_A05",			"door_A05");		//sacristy, also Santo Domingo bridge
  n = InitBuildingItemJRH(n,	"gatedoor_attic_brick",		"gatedoor_attic_brick");//attic stairs, hiding door & frame, also Santo Domingo bridge
- n = InitBuildingItemJRH(n,	"porch",			"porch");		//bb_prison entre
+ n = InitBuildingItemJRH(n,	"porch",			"porch");		//bb_prison_elevator
+ n = InitBuildingItemJRH(n,	"porch_45",			"porch_45");		//bb_prison entre
 
  //Moved to common by Levis & JRH:
  n = InitBuildingItemJRH(n,	"door_M11",			"door_M11");		//ships: cabin door, a little bigger, hotel
@@ -1445,7 +1451,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.name                    = "itmname_pistolmaquahuitl";
   itm.describe                = "itmdescr_pistolmaquahuitl";
   itm.folder                  = "ammo";
-  itm.model                   = "maquahuitl_cursed";
+  itm.model                   = "maquahuitl";
   itm.picIndex                = 5;
   itm.picTexture              = "ITEMS_BOP";
   itm.price                   = 180;
@@ -3296,6 +3302,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBlade(n, "bladeC10","bladeC10",               21,  11,  0.50,   5,  209, 15.0, 25.0, 27, 18,  "",        2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Falchion (CoAS Metazot)//BB
   n = InitBlade(n, "bladeC11","bladeC11",               21,  13,  0.20,   8,  449, 17.0, 22.0, 30, 32,  "",        5,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Milanese longsword(CoAS Metazot)//BB model is very long(so now a longsword)
   n = InitBlade(n, "bladeC12","bladeC12",               21,  12,  0.20,  10,  483, 14.0, 35.0, 37, 19,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Katzbalger (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC13","bladeC13",               25,   4,  0.00,  99, 3000, 18.0, 70.0, 65, 20,  "",        4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_COLONIAL_POWERS); // Beltrop's "Hurricane" sword
   n = InitBlade(n, "bladeC17","bladeC17",               25,   2,  0.00,  10, 3420, 24.0, 62.0, 39, 45,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_COLONIAL_POWERS); // Flamberge Rapier // GR - for "Ardent" storyline
   n = InitBlade(n, "bladeC18","bladeC18",               21,  10,  0.20,  10,  590, 25.0, 39.0, 39, 20,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Shellcup Falchion (CoAS Metazot)//BB
   n = InitBlade(n, "bladeC23","bladeC23",                9,   8,  0.00,  99, 5532, 36.0, 50.0, 48, 37,  SPAIN,     4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Toledo rapier (CoAS GoF) // GR - for "Ardent" storyline
@@ -4251,6 +4258,7 @@ bool IsWeaponUnique(string id)
 	case "blade32":		isUnique = true;        break;  // Damascus Shamshir          - Portugese presentation blade
 	case "blade43":		isUnique = true;        break;  // US Cavalry Saber           - American presentation blade
 	case "blade34":		isUnique = true;        break;  // Dragon's Head              - Pirate special blade
+	case "bladeC13":	isUnique = true;	break;	// "Hurricane" sword          - Beltrop's sword for "Night Craft" quest
 	case "bladeC17":	isUnique = true;	break;	// Flamberge rapier           - For "Ardent" storyline only
 	case "bladeC23":	isUnique = true;	break;	// Toledo rapier              - For "Ardent" storyline only
 	case "bladeC36":	isUnique = true;	break;	// Katana	              - Japanese import
