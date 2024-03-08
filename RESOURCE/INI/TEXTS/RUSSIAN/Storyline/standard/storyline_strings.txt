@@ -27,3 +27,5 @@ Sovereign of the Seas{Повелитель Морей}
 Athena{Афина}
 Sirena{Сирена}
 Volcano{Вулкан}
+Fearless{Бесстрашный}
+Barracuda{Барракуда}

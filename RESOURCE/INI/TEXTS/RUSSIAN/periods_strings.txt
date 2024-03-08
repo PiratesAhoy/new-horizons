@@ -216,9 +216,9 @@ Witham{Уитам}
 Sir Richard{Сэр Ричард}
 Dutton{Даттон}
 Colomo{Коломо}
-de Lujбn{де Лухан}
+de Lujбn{Де Лухан}
 Claude{Клод}
-Le Moigne II{Ле Мойн II}
+Le Moigne II{Ле Муань II}
 Moore{Мур}
 Michael{Майкл}
 Smith{Смит}

@@ -192,21 +192,21 @@ Snorri{Снорри}
 Baldursson{Балдурсон}
 Francis{Франсис}
 Snake{Снэйк}
-Maggee{Мэгги}
+Maggee{Мэджи}
 Reynoud{Рейноуд}
-Verheugen{Верхейге}
+Verheugen{Верхеген}
 Palafico{Палафико}
 Jimmy{Джимми}
 Legs{Легс}
 Port Admiral{Начальник Порта}
 Talicerdor{Талицердор}
-Guard Captain {Начальник Стражи}
-Prison Guard {Тюремный Стражник}
-Atwood {Этвуд}
-Paddley {Паддли}
-Elton {Элтон}
-Garfield {Гарфилд}
-Cannibal Chief {Вождь Каннибалов}
+Guard Captain{Начальник Стражи}
+Prison Guard{Тюремный Стражник}
+Atwood{Этвуд}
+Paddley{Паддли}
+Elton{Элтон}
+Garfield{Гарфилд}
+Cannibal Chief{Вождь Каннибалов}
 Cannibal{Каннибал}
 
 {=====| TempQuestEnemy.c |=====}
