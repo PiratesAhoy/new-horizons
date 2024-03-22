@@ -18,7 +18,7 @@ Mazarin{Мазарини}
 Teague{Тиг}
 Sparrow{Воробей}
 Franзois{Франсуа}
-de Hadoque{Де Хадоке}
+de Hadoque{Де Хадок}
 Koleniko{Коленико}
 Ragetti{Раджетти}
 Mother{Мать}
@@ -28,7 +28,7 @@ Black Caesar{Чёрный Цезарь}
 Raoul{Рауль}
 Dupont{Дюпон}
 Askay{Аскай}
-Pusasn{Пусасн}
+Pusasn{Пусан}
 Lian{Лиан}
 Park{Парк}
 Tai{Тай}
@@ -119,6 +119,6 @@ De Cow{Де Коу}
 Abel{Абель}
 Barco{Барко}
 Renouart{Ренуарт}
-Larrouse{Лярус}
+Larrouse{Ларроуз}
 
 {=====| 63 characters |=====}

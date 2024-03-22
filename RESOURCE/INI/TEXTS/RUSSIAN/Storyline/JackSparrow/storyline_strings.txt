@@ -33,3 +33,4 @@ Hundred Devils{Сотня Чертей}
 Van Diemen{Ван Димен}
 Victory1{Победа}
 Sparrow Hawk{Ястреб-Перепелятник}
+Ranger{Рейнджер}
