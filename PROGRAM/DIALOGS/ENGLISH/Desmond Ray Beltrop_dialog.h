@@ -104,7 +104,7 @@ string DLG_TEXT[258] = {
 "Hmm... so... your hold will easily accommodate the entire cargo...",
 "That's great! When can I leave?!",
 "Don't be in such a hurry, ",
-". Let me remind you again what you have to do. So, #sMarigot# on isle of #sisland_Saint Martin#, shopkeeper Jean Marigot, gratuity on arrival.",
+". Let me remind you again what you have to do. So, #sMarigot# on isle of #sisland_Saint Martin#, shopkeeper Jean Maginot, gratuity on arrival.",
 "#sMarigot# on isle of #sisland_Saint Martin#, Maginot, money. Did I hear you right?",
 "You're all being ironic... Good luck to you, my friend.",
 "As they say in snowy Moscovia, where the bears live: 'To hell with it.'",
