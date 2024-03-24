@@ -28,7 +28,7 @@ string DLG_TEXT[48] = {
 "Oh! Do you know my father, then?",
 "Of course I know! I can be said to be your dad's confidant!",
 "Whether I know him or not makes no difference to you? Now get out of my way, wench.",
-"Ugh! What a rude guy! My dad definitely wonâ€™t mess with people like you!",
+"Ugh! What a rude guy! My dad definitely won't mess with people like you!",
 "Your dad?! Ha! I'm afraid you don't know much about him! And in general - get out of the way.",
 "Strange, but he didn't tell me anything about you...",
 "Ha! Do you think he will let you in on all his affairs?!",
