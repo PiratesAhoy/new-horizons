@@ -464,6 +464,16 @@ void LaunchAboutBuildScreen()
 	}
 }
 
+void LaunchCreditsScreen()
+{
+	if(procInterfacePrepare(INTERFACE_CREDITS))
+	{
+		nPrevInterface = -1;
+		CurrentInterface = INTERFACE_CREDITS;
+		InitInterface(Interfaces[CurrentInterface].IniFile);
+	}
+}
+
 void LaunchOfficer(ref refCharacter)
 {
 	if( curKeyGroupName=="WorldMapControls" || curKeyGroupName=="FightModeControls" ) return;

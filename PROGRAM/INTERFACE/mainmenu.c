@@ -221,9 +221,7 @@ void AboutBuildPress()
 
 void CreditsPress()
 {
-	SetEventHandler(EVENT_END_VIDEO,"LaunchMainMenu_afterVideo",0);
-	bMainMenuLaunchAfterVideo = true;
-	StartPostVideo("credits",1);
+	IDoExit( RC_INTERFACE_DO_CREDITS, false );
 }
 
 void QuitPress()

@@ -62,6 +62,7 @@
 //Levis Readable Books
 #define INTERFACE_BOOK					56 // added by Levis
 #define INTERFACE_INSTALLERROR			57 // added by PB
+#define INTERFACE_CREDITS				58
 
 #define RC_INTERFACE_DO_NOTHING			-1
 
@@ -149,5 +150,6 @@
 #define RC_INTERFACE_MONKEY_EXIT				45177 // added by Sulan
 //Levis Readable Books
 #define RC_INTERFACE_BOOK_EXIT					45178 // added by Levis
+#define RC_INTERFACE_CREDITS_EXIT				45178
 
 #define MAX_SAVE_STORE_BLOCKS	160
