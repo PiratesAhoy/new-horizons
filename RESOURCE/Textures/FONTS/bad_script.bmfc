@@ -30,7 +30,7 @@ paddingLeft=1
 spacingHoriz=1
 spacingVert=1
 useFixedHeight=0
-forceZero=1
+forceZero=0
 widthPaddingFactor=0.00
 
 # output file
