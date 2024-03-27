@@ -1,0 +1,40 @@
+categories = [
+    "project_lead",
+    "scripting",
+    "quest_writing",
+    "artwork",
+    "music",
+    "engine",
+    "translation",
+    "testing",
+    "legacy",
+]
+
+[[contributors]]
+name = "Hammie"
+weight = 10
+categories = [
+    "project_lead",
+    "scripting",
+    "engine",
+]
+
+[[contributors]]
+name = "AkrimalS"
+categories = [
+    "scripting",
+    "translation",
+]
+
+[[contributors]]
+name = "Tommy61157"
+categories = [
+    "testing",
+]
+
+[[contributors]]
+name = "Grey Roger"
+weight = 10
+categories = [
+    "legacy",
+]
