@@ -749,3 +749,5 @@ NL_CastelF_Descr{The 'Castell Friedrichsburg' was built in 1688 and is a coastal
 This one bears a Dutch green and gold paint scheme.}
 SP_CastelF_Descr{The 'Castell Friedrichsburg' was built in 1688 and is a coastal patrol ship with shallow draft. She has good speed and manueverability and can sail well into the wind.
 This one bears a Spanish black and red paint scheme.}
+
+Salamander1_Descr{With a hull like a xebec, and the sails and guns of a frigate, this ship is both agile and powerful.}

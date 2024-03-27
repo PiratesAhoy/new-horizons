@@ -1326,6 +1326,12 @@ void ProcessDialogEvent()
 		Link.l1.go = "exit";
 	break;
 
+	case "colombian_silver_second_sighting":
+		Dialog.Text = DLG_TEXT[279];
+		Link.l1 = "...";
+		Link.l1.go = "exit";
+	break;
+
 	case "colombian_silver_battle_over":
 		Dialog.Text = DLG_TEXT[365];
 		Link.l1 = DLG_TEXT[366];
@@ -1419,5 +1425,13 @@ void ProcessDialogEvent()
 		AddDialogExitQuest("Switch_to_Beatrice");
 	break;
 // Devlin Opera
+
+// Night Craft
+	case "smuggler_line_second_mission_prison_wait_for_resque":
+		dialog.text = DLG_TEXT[388];
+		link.l1 = DLG_TEXT[389];
+		link.l1.go = "exit";
+		AddDialogExitQuest("second_mission_prison_prepare_for_resque");
+	break;
 	}
 }

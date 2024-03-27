@@ -1,4 +1,4 @@
-string DLG_TEXT[89] = {
+string DLG_TEXT[99] = {
 "I don't believe I've seen you here before, #saddr#.",
 "Yes, it's my first time here. My name is ",
 ".",
@@ -27,11 +27,11 @@ string DLG_TEXT[89] = {
 ". Do you know if he's been on this island?",
 "I'm looking for ",
 "Ferro Cerezo",
-"Ferro Cerezo",
 ". Maybe you know where I can find him.",
 "I'm looking for a certain man that came to the island not long ago. He's Italian, an older man. Does that ring a bell?",
 "I'm interested in someone named Artois Voysey. He is a tall young man with dark hair. Has he showed up around here?",
 "I need some work. Don't you know any rich boy on this island who is afraid to travel alone?",
+"I heard that pirates have become active in these waters. They say as many as five ships! Where is the local governor looking?",
 "Let's change tack, and talk about something else.",
 "Yes, I've seen him, but I doubt it's going to make you happy.\nYou see, this lad came in here with some scoundrel, and five minutes later the door swings open, and two villains in black masks come in.\nThey took your Artois with them, and heavily wounded his friend. He's in one of the rooms upstairs right now.",
 "Thousand curses! I need to see him! Maybe he knows who these masked troublemakers are.",
@@ -88,4 +88,14 @@ string DLG_TEXT[89] = {
 "I'll do that.",
 "No, there is nobody for that moment, Maybe next time.",
 "Hmm. Then I will wait.",
+"Don't you touch him! Thank God he was smart enough to accept the help of the captain who came up with the whole pirate idea. Ha-ha!",
+"Hey, wait, what do you mean?",
+"That those are our ships flying the pirate flag. His Excellency got pretty fed up with the smugglers establishing themselves on our island and decided to root them out.",
+"Hmm... And who was the man who came to his aid and offered him such a brilliant idea?",
+"I don't know his name or what he looks like, but I heard that he used to be a smuggler himself...",
+"Ha! So there's a traitor amongst these assholes?!",
+"Aha! Imagine that! And I like your political views, mate. That Beltrop had everyone here in fear\nEven you, I remember you had some trouble with him when you were looking for your man.",
+"That's for sure! Can you imagine - they kidnapped my friend because he owed them money, then took him to their place to extort the money. So I helped him out.",
+"You're a good guy! Here's some rum for you, paid for by the establishment.",
+"Thanks!",
 };

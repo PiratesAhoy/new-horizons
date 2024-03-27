@@ -483,7 +483,9 @@ void ProcessDialogEvent()
 
 			GiveItem2Character(Pchar,"aztec_compass");
 			GiveItem2Character(Pchar,"EITC_Passport");
-			
+			GiveItem2Character(Pchar,"blade42");
+			EquipCharacterByItem(Pchar, "blade42");						   
+			bQuestDisableSeaEnter = false;
 			// TALISMAN - to give bits of map to open Muerte Treasure Cave -->
 			GiveItem2Character(Pchar,"Map_Doc_1");
 			GiveItem2Character(Pchar,"Map_Doc_2");

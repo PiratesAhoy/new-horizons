@@ -174,7 +174,7 @@ void ProcessDialogEvent()
 			}
 			if (pchar.quest.main_line == "to_secret_redmond_shore")
 			{
-				if (makeint(environment.time) >22.0 || makeint(environment.time) <5.0)
+				if (GetTime() >= 22.0 || GetTime() < 5.0)
 				{
 					pchar.quest.main_line = "after_wait_for_night_in_shore";
 				}
@@ -1963,6 +1963,93 @@ void ProcessDialogEvent()
 		break;
         // boal 05.09.03 offecer need to go to abordage <--
 // <-- CatalinaThePirate Fix Danielle Officer
+
+	// Night Craft
+		case "smuggler_line":
+			dialog.text = DLG_TEXT[576];
+			link.l1 = DLG_TEXT[577];
+			link.l1.go = "exit";
+			
+			if (CheckQuestAttribute("smuggler_line", "in_Marigot_prison"))
+			{
+				if (CheckQuestAttribute("danielle_on_ship", "true"))
+				{
+					dialog.text = GetMyName(PChar) + DLG_TEXT[578];
+					link.l1 = DLG_TEXT[579];
+					link.l1.go = "smuggler_line_second_mission_danielle_officer";
+				}
+				else
+				{
+					dialog.text = GetMyName(PChar) + DLG_TEXT[578];
+					link.l1 = DLG_TEXT[579];
+					link.l1.go = "smuggler_line_second_mission_danielle_not_officer";
+				}
+			}
+			if (CheckQuestAttribute("smuggler_line", "second_mission_exit_from_prison"))
+			{
+				dialog.text = DLG_TEXT[580];
+				link.l1 = DLG_TEXT[581];
+				link.l1.go = "second_mission_exit_from_prison";
+			}
+			NextDiag.TempNode = "smuggler_line";
+		break;
+
+		case "smuggler_line_second_mission_danielle_officer":
+			dialog.text = DLG_TEXT[582];
+			link.l1 = DLG_TEXT[583];
+			link.l1.go = "smuggler_line_second_mission_danielle_officer_2";
+		break;
+
+		case "smuggler_line_second_mission_danielle_officer_2":
+			dialog.text = DLG_TEXT[584];
+			link.l1 = DLG_TEXT[585];
+			link.l1.go = "smuggler_line_second_mission_danielle_officer_3";
+		break;
+
+		case "smuggler_line_second_mission_danielle_officer_3":	
+			dialog.text = DLG_TEXT[586];
+			link.l1 = DLG_TEXT[587];
+			link.l1.go = "smuggler_line_second_mission_danielle_officer_4";
+		break;
+
+		case "smuggler_line_second_mission_danielle_officer_4":	
+			dialog.text = DLG_TEXT[588];
+			link.l1 = DLG_TEXT[589];
+			link.l1.go = "smuggler_line_second_mission_ending_speak_in_prison";
+		break;
+
+		case "smuggler_line_second_mission_ending_speak_in_prison":
+			dialog.text = DLG_TEXT[590];
+			link.l1 = DLG_TEXT[591];
+			link.l1.go = "exit";
+			AddDialogExitQuest("second_mission_exit_from_cam");
+		break;
+
+		case "smuggler_line_second_mission_danielle_not_officer":
+			dialog.text  = DLG_TEXT[592];
+			link.l1 = DLG_TEXT[593];
+			link.l1.go = "smuggler_line_second_mission_danielle_not_officer_2";
+		break;
+
+		case "smuggler_line_second_mission_danielle_not_officer_2":
+			dialog.text = DLG_TEXT[594];
+			link.l1 = DLG_TEXT[595];
+			link.l1.go = "smuggler_line_second_mission_danielle_not_officer_3";
+		break;
+
+		case "smuggler_line_second_mission_danielle_not_officer_3":
+			dialog.text = DLG_TEXT[596];
+			link.l1 = DLG_TEXT[597];
+			link.l1.go = "exit";
+			AddDialogExitQuest("second_mission_exit_from_cam");
+		break;
+
+		case "second_mission_exit_from_prison":
+			dialog.text = DLG_TEXT[598];
+			link.l1 = DLG_TEXT[599];
+			link.l1.go = "exit";
+			AddDialogExitQuest("second_mission_exit_from_cam_without_danielle");
+		break;
 
 		case "Exit":
 			DialogExit();

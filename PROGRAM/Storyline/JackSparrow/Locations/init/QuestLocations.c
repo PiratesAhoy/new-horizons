@@ -107,7 +107,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.go = "Redmond_Town_01";
 	Locations[n].reload.l1.emerge = "door_5";
 	Locations[n].reload.l1.autoreload = "0";
-	Locations[n].reload.l1.label = "Redmond. Center.";
+	Locations[n].reload.l1.label = "#stown_name#. Center.";
 
 	n = n + 1;
 
@@ -402,7 +402,7 @@ void LocationInitQuestLocations(ref n)
 	//First Contact
 
 	Locations[n].id = "Quest_FalaiseDeFleur_Port2";
-	locations[n].id.label = "Falaise De Fleur Port";
+	locations[n].id.label = "#stown_name# Port";
 	Locations[n].image = "Town_FalaiseDeFleur_Port2";
 
 	//Town sack
@@ -446,7 +446,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.textures = "locations\FRANCE";
 	
 	Locations[n].id = "Quest_Falaise_de_fleur_location_03";
-	locations[n].id.label = "Falaise De Fleur";
+	locations[n].id.label = "#stown_name#";
 	Locations[n].image = "Town_FalaiseDeFleur_Town_02";
 
 	//Town sack
@@ -477,7 +477,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.go = "Quest_Falaise_de_fleur_location_04";
 	Locations[n].reload.l1.emerge = "Falaise_de_fleur_location_04_03";
 	Locations[n].reload.l1.autoreload = "0";
-	Locations[n].reload.l1.label = "Saint Pierre";
+	Locations[n].reload.l1.label = "#stown_name#";
 
 	Locations[n].reload.l2.name = "Falaise_de_fleur_townhall";
 	Locations[n].reload.l2.go = "";
@@ -492,7 +492,7 @@ void LocationInitQuestLocations(ref n)
 	//--------------------------------------------------
 
 	Locations[n].id = "Quest_Falaise_de_fleur_location_04";
-	locations[n].id.label = "Falaise De Fleur";
+	locations[n].id.label = "#stown_name#";
 
 	Locations[n].image = "Town_FalaiseDeFleur_Town_03";
 
@@ -522,7 +522,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.name = "Falaise_de_fleur_location_04_03";
 	Locations[n].reload.l1.go = "";
 	Locations[n].reload.l1.emerge = "";
-	Locations[n].reload.l1.label = "Falaise De Fleur Center.";
+	Locations[n].reload.l1.label = "#stown_name#. Center";
 
 	Locations[n].vcskip = true;
 
@@ -1764,12 +1764,11 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.emerge = "reload1";
 	n = n + 1;
 
-
 	//---------------------------------------------
 
 	//ID
 	Locations[n].id = "Fake_Seadogs";
-	locations[n].id.label = "Crew's quarters";
+	locations[n].id.label = "Crew's quarters.";
 	//Info
 	Locations[n].filespath.models = "locations\decks\seadogs"; // KK
 	Locations[n].image = "deck_seadogs"; // KK
@@ -1817,7 +1816,7 @@ void LocationInitQuestLocations(ref n)
 
 	//ID
 	Locations[n].id = "Fake_Hold1";
-	locations[n].id.label = "Cargo hold";
+	locations[n].id.label = "Cargo hold.";
 	//Info
 	Locations[n].filespath.models = "locations\decks\hold";
 	Locations[n].image = "deck_hold"; // KK
@@ -1857,8 +1856,7 @@ void LocationInitQuestLocations(ref n)
 	// <-- KK
 
 	n = n + 1;
-	
-	
+
 	// -------------------------------------------------
 	Locations[n].id = "KhaelRoa_shore_fake";
 	//Locations[n].worldmap = "Khael Roa";
@@ -1875,8 +1873,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.always.seabed = "KRport_sb";
 	Locations[n].models.always.seabed.foam = "1";
 	Locations[n].models.always.grasspatch = "KRport_g";
-	
-	
+
 	//Day
 	Locations[n].models.day.charactersPatch = "KRport_p";	
 	//Night
@@ -1907,18 +1904,18 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].island = "KhaelRoa"; // NK 04-08-29
 	n = n + 1;
-	
+
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Outside\Jungle_6";
 
 	Locations[n].id = "KhaelRoa_Jungle_Fake_1";
-	locations[n].id.label = "Khael Roa jungles";		//spell-checked by KAM
+	locations[n].id.label = "#sisland_name# jungles";		//spell-checked by KAM
 	Locations[n].image = "Outside_Jungle_6";
 	//Sound
 	locations[n].type = "indian_jungle";
 	Locations[n].island = "KhaelRoa"; // NK 04-11-03
-		
+
 	//Models
 	//Always
 	Locations[n].models.always.locators = "Jungle06_l";
@@ -1942,7 +1939,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].environment.weather = "true";
 	Locations[n].environment.sea = "false";
 	//Reload map
-	
+
 /*  Locations[n].reload.l1.name = "reload1";
 	Locations[n].reload.l1.go = "KhaelRoa_Jungle_02";
 	Locations[n].reload.l1.emerge = "reload1";
@@ -1958,7 +1955,6 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].locators_radius.reload.reload2 = 2.5;
 	Locations[n].reload.l2.label = "Shore.";
 
-
 	Locations[n].reload.l4.name = "reload2_back";
 	Locations[n].reload.l4.go = "roa_Cave_fake";
 	Locations[n].reload.l4.emerge = "reload2";
@@ -1966,26 +1962,24 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].locators_radius.reload.reload2_back = 2.5;
 	Locations[n].reload.l4.label = "Shore";
 
-/**/
 /*	Locations[n].reload.l6.name = "reload1_back";
 	Locations[n].reload.l6.go = "KhaelRoa_Jungle_02";
 	Locations[n].reload.l6.emerge = "reload1";
 	Locations[n].reload.l6.autoreload = "1";
 	Locations[n].locators_radius.reload.reload1_back = 2.5;
 	Locations[n].reload.l6.label = "Jungle.";
-	
 */
 	Locations[n].vcskip = true; // SEB
 
 	Locations[n].island = "KhaelRoa"; // NK 04-08-29
 	n = n + 1;
-	
+
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Outside\Cave Entrance";
 
 	Locations[n].id = "roa_Cave_fake";
-	locations[n].id.label = "Entrance to #sisland_name# cave";
+	locations[n].id.label = "#sisland_name# cave entrance";
 	Locations[n].image = "Outside_Cave_Entrance";
 	//Sound
 	locations[n].type = "indian_jungle";
@@ -2062,16 +2056,15 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.always.l2.tech = "EnvironmentShader";
 	Locations[n].models.always.l2.reflection = 0.25;
 
-
 	Locations[n].models.always.Waterfall1 = "water";
 	Locations[n].models.always.Waterfall1.uvslide.v0 = 0.0;
-    Locations[n].models.always.Waterfall1.uvslide.v1 = 0.0;
-    Locations[n].models.always.Waterfall1.tech = "LocationWaterFall";
+	Locations[n].models.always.Waterfall1.uvslide.v1 = 0.0;
+	Locations[n].models.always.Waterfall1.tech = "LocationWaterFall";
 	Locations[n].models.always.Waterfall1.level = 50;
 
 	Locations[n].models.always.Waterfall2 = "cfall";
 	Locations[n].models.always.Waterfall2.uvslide.v0 = 0.3;
-    Locations[n].models.always.Waterfall2.uvslide.v1 = 0.0;
+	Locations[n].models.always.Waterfall2.uvslide.v1 = 0.0;
 	Locations[n].models.always.Waterfall2.tech = "LocationWaterFall";
 	Locations[n].models.always.Waterfall2.level = 50;
 
@@ -2115,9 +2108,7 @@ void LocationInitQuestLocations(ref n)
 	n = n + 1;
 
 // -------------------------------------------------
-	
-	
-	// -------------------------------------------------
+
 	Locations[n].filespath.models = "locations\Outside\Passage";
 
 	Locations[n].id = "KhaelRoa_Jungle_Fake_Bridge";
@@ -2171,7 +2162,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].island = "KhaelRoa"; // NK 04-08-29
 
 	n = n + 1;
-	
+
 	// -------------------------------------------------
 	Locations[n].id = "Indian_Village2";
 	locations[n].id.label = "Indian Village";
@@ -2202,7 +2193,6 @@ void LocationInitQuestLocations(ref n)
 	//Environment
 	Locations[n].environment.weather = "true";
 	Locations[n].environment.sea = "false";	
-	
 
 	//Reload map
 	Locations[n].reload.l1.name = "reload1_back";
@@ -2210,7 +2200,6 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.emerge = "reload4_back";
 	Locations[n].reload.l1.autoreload = "1";
 	Locations[n].reload.l1.label = "Old Bridge";
-
 
 	Locations[n].locators_radius.randitem.randitem1 = 0.01;
 	Locations[n].items.randitem1 = "tipi";
@@ -2261,7 +2250,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].environment.weather = "true";
 	Locations[n].environment.sea = "false";
 	//Reload map
-	
+
 /*	
 	Locations[n].reload.l1.name = "reload1";
 	Locations[n].reload.l1.go = "Cuba_Shore_03";
@@ -2270,7 +2259,6 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].locators_radius.reload.reload1 = 2.5;
 	Locations[n].reload.l1.label = "Punta de Maisi";
 */
-	/**/
 	//cuba jung 3
 	Locations[n].reload.l2.name = "reload2";
 	Locations[n].reload.l2.go = "Tia_Dalma_swamp";
@@ -2344,7 +2332,6 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.always.l4.level = 6;
 	Locations[n].models.always.l4.tech = "LocationModelBlend";
 
-
 	//Day
 	Locations[n].models.day.fonar = "PiF_fd";
 	Locations[n].models.day.charactersPatch = "PiF_p";
@@ -2383,8 +2370,7 @@ void LocationInitQuestLocations(ref n)
 	
 	Locations[n].island = "Antigua"; // NK 04-08-29
 	n = n + 1;
-	
-	
+
 	//  -------------------------------------------------
 
 	Locations[n].id = "SFSI_deck";
@@ -2461,7 +2447,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].locators_radius.quest.Q1 = 0.8;
 
 	//Locations[n].island = "Antigua";
-	
+
 	n = n + 1;
 
 	//  -------------------------------------------------
@@ -2540,7 +2526,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].locators_radius.quest.Q1 = 0.8;
 
 	//Locations[n].island = "Antigua";
-	
+
 	n = n + 1;
 
 	// -------------------------------------------------
@@ -2626,6 +2612,598 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].vcskip = true; // SEB
 	
 	Locations[n].island = "Hispaniola"; // NK 04-08-29
-	n = n + 1;	
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].id = "Graveyard_SBR";
+	locations[n].id.label = "Graveyard";
+	Locations[n].filespath.models = "locations\Outside\Graveyard";
+	Locations[n].image = "Outside_graveyard";
+	
+	//Sound
+	locations[n].type = "deserted_mountains";
+
+	//Models
+	//Always
+	Locations[n].models.always.jungle = "Churchyard";
+	Locations[n].models.always.grassPatch = "Churchyard_grass";
+	Locations[n].models.always.l1 = "Churchyard_plan1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "Churchyard_plan2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "Churchyard_plan3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+	Locations[n].models.always.l4 = "church_ruin";
+
+	//Day
+	Locations[n].models.day.locators = "Churchyard_ld_SBR";
+	Locations[n].models.day.charactersPatch = "Churchyard_patch";
+
+	//Night
+	Locations[n].models.night.locators = "Churchyard_ln_SBR";
+	Locations[n].models.night.charactersPatch = "Churchyard_patch";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+
+	Locations[n].locators_radius.reload.reload1_back = 2.0;
+
+	Locations[n].locators_radius.reload.reload2_back = 2.0;
+
+	Locations[n].locators_radius.reload.reload6 = 0.001;		//not used
+
+	Locations[n].locators_radius.box.box2 = 0.3;
+	Locations[n].locators_radius.box.box3 = 0.1;
+	Locations[n].locators_radius.box.box5 = 0.3;
+	
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "hatch11";
+	
+	LAi_LocationMonstersGen(&locations[n], false);
+	Locations[n].island = "Colombia";
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].id = "Singapore_port";
+	locations[n].id.label = "#stown_name# port.";
+	Locations[n].filespath.models = "locations\town_Singapore";
+	Locations[n].image = "Town_Singapore";
+
+	//Town sack
+//	Locations[n].townsack = "Oxbay";
+
+	//Sound
+	locations[n].type = "silent_port";
+	
+	//Models
+	//Always
+	Locations[n].models.always.locators = "locator_upgrades";
+
+	Locations[n].models.always.l1 = "1050002";
+	Locations[n].models.always.l1.foam = "1";
+	Locations[n].models.always.l2 = "tree";
+	Locations[n].models.always.l3 = "Bell";
+
+	Locations[n].models.always.l4 = "roll_of_planks";
+	Locations[n].models.always.l4.locator.group = "upgrades";
+	Locations[n].models.always.l4.locator.name = "plank1";
+
+	Locations[n].models.always.l5 = "roll_of_planks";
+	Locations[n].models.always.l5.locator.group = "upgrades";
+	Locations[n].models.always.l5.locator.name = "plank2";
+
+	Locations[n].models.always.l6 = "roll_of_planks";
+	Locations[n].models.always.l6.locator.group = "upgrades";
+	Locations[n].models.always.l6.locator.name = "plank3";
+
+	Locations[n].models.always.l7 = "roll_of_planks";
+	Locations[n].models.always.l7.locator.group = "upgrades";
+	Locations[n].models.always.l7.locator.name = "plank12";	
+
+	Locations[n].models.always.l8 = "buddha";
+	Locations[n].models.always.l9 = "residence";
+
+	Locations[n].models.night.l10 = "donkey";
+	Locations[n].models.night.l10.locator.group = "upgrades";
+	Locations[n].models.night.l10.locator.name = "donkey1";
+
+	Locations[n].models.night.l11 = "donkey";
+	Locations[n].models.night.l11.locator.group = "upgrades";
+	Locations[n].models.night.l11.locator.name = "donkey2";
+
+	Locations[n].models.night.l12 = "donkey";
+	Locations[n].models.night.l12.locator.group = "upgrades";
+	Locations[n].models.night.l12.locator.name = "donkey3";
+
+	Locations[n].models.night.l13 = "donkey";
+	Locations[n].models.night.l13.locator.group = "upgrades";
+	Locations[n].models.night.l13.locator.name = "donkey4";
+
+	Locations[n].models.night.l14 = "donkey";
+	Locations[n].models.night.l14.locator.group = "upgrades";
+	Locations[n].models.night.l14.locator.name = "donkey5";
+
+	Locations[n].models.always.l15 = "chimney";
+	Locations[n].models.always.l16 = "sign_store";
+	Locations[n].models.always.l17 = "anvil";
+	Locations[n].models.night.l18 = "2_wagons";
+	Locations[n].models.always.l19 = "prison_door";
+	Locations[n].models.day.l20 = "dummy";
+
+	//Day
+	Locations[n].models.day.locators = "locator_day";
+	Locations[n].models.day.fonar = "xiaowujian_fd";
+	Locations[n].models.day.charactersPatch = "walk_patch_day";
+	
+	//Night
+	Locations[n].models.night.locators = "locator_night";
+	Locations[n].models.night.fonar = "xiaowujian_fn";
+	Locations[n].models.night.charactersPatch = "walk_patch_night";
+	
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "true";
+	Locations[n].MaxSeaHeight = 0.7;
+	//Reload map
+
+	Locations[n].reload.l8.name = "reload8";
+	Locations[n].reload.l8.go = "Bathhouse_stairs";
+	Locations[n].reload.l8.emerge = "reload1";
+	Locations[n].reload.l8.autoreload = "0";
+
+	Locations[n].locators_radius.quest.st1 = 1.0;
+	Locations[n].locators_radius.quest.st2 = 1.0;
+	Locations[n].locators_radius.quest.st3 = 1.0;
+	Locations[n].locators_radius.quest.ho = 0.9;
+	Locations[n].locators_radius.quest.ya = 1.2;
+	Locations[n].locators_radius.quest.br = 2.0;
+	Locations[n].locators_radius.quest.tunnel = 2.8;
+	Locations[n].locators_radius.quest.extra1 = 1.0;
+	Locations[n].locators_radius.quest.extra2 = 1.0;
+	Locations[n].locators_radius.quest.headache = 1.0;
+	Locations[n].locators_radius.quest.ladder_L = 0.6;
+	Locations[n].locators_radius.quest.ladder_R = 0.6;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.0001;
+	Locations[n].items.randitem1 = "field_cannon_1";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.0001;
+	Locations[n].items.randitem2 = "derrick";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.0001;
+	Locations[n].items.randitem3 = "field_cannon_1";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.0001;
+	Locations[n].items.randitem4 = "derrick";
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.0001;
+	Locations[n].items.randitem5 = "3Feet";
+
+	Locations[n].locators_radius.randitem.randitem6 = 0.0001;
+	Locations[n].items.randitem6 = "big_hut";
+
+	Locations[n].locators_radius.randitem.randitem7 = 0.0001;
+	Locations[n].items.randitem7 = "pole1";
+
+	Locations[n].locators_radius.randitem.randitem8 = 0.0001;
+	Locations[n].items.randitem8 = "pirate_shed";
+
+	Locations[n].locators_radius.randitem.randitem9 = 0.0001;
+	Locations[n].items.randitem9 = "bars_down";
+
+	Locations[n].locators_radius.randitem.randitem10 = 0.0001;
+	Locations[n].items.randitem10 = "field_cannon_1";
+
+	Locations[n].locators_radius.randitem.randitem11 = 0.0001;
+	Locations[n].items.randitem11 = "bars_down";
+
+	Locations[n].locators_radius.randitem.randitem12 = 0.0001;
+	Locations[n].items.randitem12 = "bars_down";
+
+	Locations[n].locators_radius.randitem.randitem13 = 0.0001;
+	Locations[n].items.randitem13 = "bars_down";
+
+	Locations[n].locators_radius.randitem.randitem14 = 0.0001;
+	Locations[n].items.randitem14 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem15 = 0.0001;
+	Locations[n].items.randitem15 = "derrick";
+
+	Locations[n].locators_radius.randitem.randitem16 = 0.0001;
+	Locations[n].items.randitem16 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem17 = 0.0001;
+	Locations[n].items.randitem17 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem18 = 0.0001;
+	Locations[n].items.randitem18 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem19 = 0.0001;
+	Locations[n].items.randitem19 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem20 = 0.0001;
+	Locations[n].items.randitem20 = "koster1";
+
+	Locations[n].locators_radius.randitem.randitem21 = 0.0001;
+	Locations[n].items.randitem21 = "koster1";
+
+	Locations[n].locators_radius.randitem.randitem22 = 0.0001;
+	Locations[n].items.randitem22 = "koster1";
+
+	Locations[n].locators_radius.randitem.randitem23 = 0.0001;
+	Locations[n].items.randitem23 = "koster1";
+
+	Locations[n].locators_radius.randitem.randitem24 = 0.0001;
+	Locations[n].items.randitem24 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem25 = 0.0001;
+	Locations[n].items.randitem25 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem26 = 0.0001;
+	Locations[n].items.randitem26 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem27 = 0.0001;
+	Locations[n].items.randitem27 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem28 = 0.0001;
+	Locations[n].items.randitem28 = "3Feet";
+
+	Locations[n].locators_radius.randitem.randitem29 = 0.0001;
+	Locations[n].items.randitem29 = "3Feet";
+	
+	Locations[n].locators_radius.randitem.randitem30 = 0.0001;
+	Locations[n].items.randitem30 = "3Feet";
+
+	Locations[n].locators_radius.randitem.randitem31 = 0.0001;
+	Locations[n].items.randitem31 = "shipyard";
+
+	Locations[n].locators_radius.randitem.randitem32 = 0.0001;
+	Locations[n].items.randitem32 = "market_P2";
+
+	Locations[n].locators_radius.randitem.randitem33 = 0.0001;
+	Locations[n].items.randitem33 = "barrel_roll";
+
+	Locations[n].locators_radius.randitem.randitem34 = 0.0001;
+	Locations[n].items.randitem34 = "smg11";
+
+	Locations[n].locators_radius.randitem.randitem35 = 0.0001;
+	Locations[n].items.randitem35 = "smg11";
+
+	Locations[n].locators_radius.randitem.randitem36 = 0.0001;
+	Locations[n].items.randitem36 = "textileB";
+
+	Locations[n].locators_radius.randitem.randitem37 = 0.0001;
+	Locations[n].items.randitem37 = "horse_fence";
+
+	Locations[n].locators_radius.randitem.randitem38 = 0.0001;
+	Locations[n].items.randitem38 = "pole1";
+
+	Locations[n].locators_radius.randitem.randitem39 = 0.0001;
+	Locations[n].items.randitem39 = "textileB";
+
+	Locations[n].locators_radius.randitem.randitem40 = 0.0001;
+	Locations[n].items.randitem40 = "porch";
+
+	Locations[n].locators_radius.randitem.randitem41 = 0.0001;
+	Locations[n].items.randitem41 = "blade3carpets";
+
+	Locations[n].locators_radius.randitem.randitem42 = 0.0001;
+	Locations[n].items.randitem42 = "market_P2";
+
+	Locations[n].locators_radius.randitem.randitem43 = 0.0001;
+	Locations[n].items.randitem43 = "market_C4";
+
+	Locations[n].locators_radius.randitem.randitem44 = 0.0001;
+	Locations[n].items.randitem44 = "blade3carpets";
+
+	Locations[n].locators_radius.randitem.randitem45 = 0.0001;
+	Locations[n].items.randitem45 = "3Feet";
+
+	Locations[n].locators_radius.randitem.randitem46 = 0.0001;
+	Locations[n].items.randitem46 = "3Feet";
+
+	Locations[n].locators_radius.randitem.randitem47 = 0.0001;
+	Locations[n].items.randitem47 = "market_tent";
+
+	Locations[n].locators_radius.randitem.randitem48 = 0.0001;
+	Locations[n].items.randitem48 = "pole1";
+
+	Locations[n].locators_radius.randitem.randitem49 = 0.0001;
+	Locations[n].items.randitem49 = "medicine_table";
+
+	Locations[n].locators_radius.randitem.randitem50 = 0.0001;
+	Locations[n].items.randitem50 = "fire_irons_item";
+	
+	Locations[n].locators_radius.randitem.randitem51 = 0.0001;
+	Locations[n].items.randitem51 = "blade3carpets";
+
+	Locations[n].locators_radius.randitem.randitem52 = 0.0001;
+	Locations[n].items.randitem52 = "smgT";
+
+	Locations[n].locators_radius.randitem.randitem53 = 0.0001;
+	Locations[n].items.randitem53 = "smgT";
+
+	Locations[n].locators_radius.randitem.randitem54 = 0.0001;
+	Locations[n].items.randitem54 = "market_P2";
+
+	Locations[n].locators_radius.randitem.randitem55 = 0.0001;
+	Locations[n].items.randitem55 = "gibbet1";
+
+	Locations[n].locators_radius.randitem.randitem56 = 0.0001;
+	Locations[n].items.randitem56 = "well";
+
+	Locations[n].locators_radius.randitem.randitem57 = 0.0001;
+	Locations[n].items.randitem57 = "market_p1";
+
+	Locations[n].locators_radius.randitem.randitem58 = 0.0001;
+	Locations[n].items.randitem58 = "wagon";
+
+	Locations[n].locators_radius.randitem.randitem59 = 0.0001;
+	Locations[n].items.randitem59 = "smgT";
+
+	Locations[n].locators_radius.randitem.randitem60 = 0.0001;
+	Locations[n].items.randitem60 = "1_lanternF_night";
+
+	Locations[n].locators_radius.randitem.randitem61 = 0.0001;
+	Locations[n].items.randitem61 = "anchor_big";
+
+	Locations[n].locators_radius.randitem.randitem62 = 0.0001;
+	Locations[n].items.randitem62 = "barrel_roll";
+
+	Locations[n].locators_radius.randitem.randitem63 = 0.0001;
+	Locations[n].items.randitem63 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem64 = 0.0001;
+	Locations[n].items.randitem64 = "smuggler_goods";
+
+	Locations[n].locators_radius.randitem.randitem65 = 0.0001;
+	Locations[n].items.randitem65 = "door_sklad";
+
+	Locations[n].locators_radius.randitem.randitem66 = 0.0001;
+	Locations[n].items.randitem66 = "wheelbarrow";
+
+	Locations[n].locators_radius.randitem.randitem67 = 0.0001;
+	Locations[n].items.randitem67 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem68 = 0.0001;
+	Locations[n].items.randitem68 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem69 = 0.0001;
+	Locations[n].items.randitem69 = "chair";
+
+	Locations[n].locators_radius.randitem.randitem70 = 0.0001;
+	Locations[n].items.randitem70 = "chair_fallen";
+
+	Locations[n].locators_radius.randitem.randitem71 = 0.0001;
+	Locations[n].items.randitem71 = "1_lanternF_day";
+
+	Locations[n].locators_radius.randitem.randitem72 = 0.0001;
+	Locations[n].items.randitem72 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem73 = 0.0001;
+	Locations[n].items.randitem73 = "gatedoor_stone";
+
+	Locations[n].locators_radius.randitem.randitem74 = 0.0001;
+	Locations[n].items.randitem74 = "chair";
+
+	Locations[n].locators_radius.randitem.randitem75 = 0.0001;
+	Locations[n].items.randitem75 = "market_P2";
+
+	LAi_LocationFantomsGen(&locations[n], true);
+
+	Locations[n].island = "Oxbay"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].filespath.models = "locations\Inside\Dungeon_1";
+	Locations[n].filespath.textures = "locations\inside\Dungeon_1\bathhouse";
+	Locations[n].id = "Bathhouse_stairs";
+	locations[n].id.label = "Bathhouse stairs";
+	Locations[n].image = "Inside_bathhouse_stairs";
+
+	//Sound
+	locations[n].type = "Vane_silent_temple";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "d01_l_bathhouse";
+	Locations[n].models.always.house = "d01";
+	//Day
+	Locations[n].models.day.charactersPatch = "d01_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "d01_p";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//LAi_LocationFantomsGen(&locations[n], true);
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Singapore_port";
+	Locations[n].reload.l1.emerge = "reload8";
+	Locations[n].reload.l1.autoreload = "0";
+	
+	Locations[n].reload.l3.name = "reload2_back";
+	Locations[n].reload.l3.go = "Singapore_bathhouse";
+	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.autoreload = "1";				
+	Locations[n].locators_radius.reload.reload2_back = 0.5;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.1;
+	Locations[n].items.randitem1 = "gatedoor_WT1";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.1;
+	Locations[n].items.randitem2 = "porch";				//lower door
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.1;
+	Locations[n].items.randitem3 = "porch";				//upper door
+
+	Locations[n].island = "Redmond";
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].id = "Singapore_bathhouse";
+	locations[n].id.label = "Bathhouse";
+	Locations[n].filespath.models = "locations\inside\Bathhouse";
+	Locations[n].image = "Inside_bathhouse";
+
+	//Sound
+//	locations[n].type = "Vane_temple";
+	locations[n].type = "Vane_silent_temple";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "locator";
+	Locations[n].models.always.l1 = "1001045";
+	Locations[n].models.always.l2 = "wujian";
+	Locations[n].models.always.l3 = "dome";
+	Locations[n].models.always.l4 = "extra_wall";
+	Locations[n].models.always.l5 = "throne";
+
+	Locations[n].models.always.l6 = "extra_floor";
+	Locations[n].models.always.l6.locator.group = "upgrades";
+	Locations[n].models.always.l6.locator.name = "extra_floor";
+
+	Locations[n].models.always.l7 = "louver";
+	Locations[n].models.always.l7.locator.group = "upgrades";
+	Locations[n].models.always.l7.locator.name = "louver2";
+
+	Locations[n].models.always.l8 = "louver";
+	Locations[n].models.always.l8.locator.group = "upgrades";
+	Locations[n].models.always.l8.locator.name = "louver3";
+
+	Locations[n].models.always.l9 = "louver";
+	Locations[n].models.always.l9.locator.group = "upgrades";
+	Locations[n].models.always.l9.locator.name = "louver4";
+
+	Locations[n].models.always.l10 = "louver";
+	Locations[n].models.always.l10.locator.group = "upgrades";
+	Locations[n].models.always.l10.locator.name = "louver5";
+
+	Locations[n].models.always.l11 = "louver";
+	Locations[n].models.always.l11.locator.group = "upgrades";
+	Locations[n].models.always.l11.locator.name = "louver6";
+
+	Locations[n].models.always.l12 = "louver";
+	Locations[n].models.always.l12.locator.group = "upgrades";
+	Locations[n].models.always.l12.locator.name = "louver7";
+
+	Locations[n].models.always.l13 = "louver";
+	Locations[n].models.always.l13.locator.group = "upgrades";
+	Locations[n].models.always.l13.locator.name = "louver8";
+
+	Locations[n].models.always.l14 = "louver";
+	Locations[n].models.always.l14.locator.group = "upgrades";
+	Locations[n].models.always.l14.locator.name = "louver9";
+
+	Locations[n].models.always.l15 = "louver";
+	Locations[n].models.always.l15.locator.group = "upgrades";
+	Locations[n].models.always.l15.locator.name = "louver10";
+
+	Locations[n].models.always.l16 = "louver";
+	Locations[n].models.always.l16.locator.group = "upgrades";
+	Locations[n].models.always.l16.locator.name = "louver11";
+
+	Locations[n].models.always.l17 = "louver";
+	Locations[n].models.always.l17.locator.group = "upgrades";
+	Locations[n].models.always.l17.locator.name = "louver12";
+
+	Locations[n].models.always.l18 = "louver";
+	Locations[n].models.always.l18.locator.group = "upgrades";
+	Locations[n].models.always.l18.locator.name = "louver13";
+
+	Locations[n].models.always.l19 = "louver";
+	Locations[n].models.always.l19.locator.group = "upgrades";
+	Locations[n].models.always.l19.locator.name = "louver14";
+
+	Locations[n].models.always.l20 = "louver";
+	Locations[n].models.always.l20.locator.group = "upgrades";
+	Locations[n].models.always.l20.locator.name = "louver15";
+
+	Locations[n].models.always.l21 = "porch";
+
+	//Day
+	Locations[n].models.day.charactersPatch = "walk_patch";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "walk_patch";
+
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "true";
+	Locations[n].lockWeather = "Heavy Fog";
+	Locations[n].MaxSeaHeight = 0.1;
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1_back";
+	Locations[n].reload.l1.go = "Bathhouse_stairs";
+    	Locations[n].reload.l1.emerge = "reload2";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "";
+
+	Locations[n].locators_radius.quest.SS2 = 1.5;
+	Locations[n].locators_radius.quest.SS3 = 1.5;
+	Locations[n].locators_radius.quest.SS4 = 1.5;
+	Locations[n].locators_radius.quest.SC1 = 1.5;
+	Locations[n].locators_radius.quest.SC2 = 1.5;
+	Locations[n].locators_radius.quest.SC3 = 1.5;
+	Locations[n].locators_radius.quest.SC4 = 1.5;
+	Locations[n].locators_radius.quest.SC5 = 1.5;
+
+	Locations[n].locators_radius.quest.NC1 = 1.5;
+	Locations[n].locators_radius.quest.NC2 = 1.5;
+	Locations[n].locators_radius.quest.NC3 = 1.5;
+	Locations[n].locators_radius.quest.NC4 = 1.5;
+	Locations[n].locators_radius.quest.NC5 = 1.5;
+	Locations[n].locators_radius.quest.NN1 = 1.5;
+	Locations[n].locators_radius.quest.NN2 = 1.5;
+	Locations[n].locators_radius.quest.NN3 = 1.5;
+	Locations[n].locators_radius.quest.NN4 = 1.5;
+	Locations[n].locators_radius.quest.NN5 = 1.5;
+
+	Locations[n].locators_radius.quest.WC1 = 1.5;
+	Locations[n].locators_radius.quest.WC2 = 1.5;
+	Locations[n].locators_radius.quest.WC3 = 1.5;
+	Locations[n].locators_radius.quest.WC4 = 1.5;
+	Locations[n].locators_radius.quest.WC5 = 1.5;
+	Locations[n].locators_radius.quest.WW1 = 1.5;
+	Locations[n].locators_radius.quest.WW2 = 1.5;
+	Locations[n].locators_radius.quest.WW3 = 1.5;
+	Locations[n].locators_radius.quest.WW4 = 1.5;
+	Locations[n].locators_radius.quest.WW5 = 1.5;
+
+	Locations[n].locators_radius.quest.EC1 = 1.5;
+	Locations[n].locators_radius.quest.EC2 = 1.5;
+	Locations[n].locators_radius.quest.EC3 = 1.5;
+	Locations[n].locators_radius.quest.EC4 = 1.5;
+	Locations[n].locators_radius.quest.EC5 = 1.5;
+	Locations[n].locators_radius.quest.EE1 = 1.5;
+	Locations[n].locators_radius.quest.EE2 = 1.5;
+	Locations[n].locators_radius.quest.EE3 = 1.5;
+	Locations[n].locators_radius.quest.EE4 = 1.5;
+	Locations[n].locators_radius.quest.EE5 = 1.5;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.0001;
+	Locations[n].items.randitem1 = "pillow1";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.0001;
+	Locations[n].items.randitem2 = "pillow2";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.0001;
+	Locations[n].items.randitem3 = "pillow3";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Antigua";
+	n = n + 1;
 
 }

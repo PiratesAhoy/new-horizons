@@ -2534,7 +2534,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].reload.l1.go = "Santo_Domingo_Town";
 	Locations[n].reload.l1.emerge = "reload27";
 	Locations[n].reload.l1.autoreload = "0";
-	locations[n].id.label = "#stown_name#";
+	Locations[n].reload.l1.label = "#stown_name#";
 
 	LAi_LocationFightDisable(&Locations[n], true);
 

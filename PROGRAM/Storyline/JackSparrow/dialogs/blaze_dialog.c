@@ -995,6 +995,7 @@ void ProcessDialogEvent()
 
 //Sao Feng
 	case "His_stealing_our_ship":
+		Preprocessor_Add("stolen_ship", XI_ConvertString(Preprocessor_Get("uncursed_ship")));
 		Dialog.Text = DLG_TEXT[304];
 		Link.l1.go = "exit";
 	break;

@@ -26,3 +26,5 @@ Sovereign of the Seas{Sovereign of the Seas}
 Athena{Athena}
 Sirena{Sirena}
 Volcano{Volcano}
+Fearless{Fearless}
+Barracuda{Barracuda}

@@ -28,7 +28,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[0] + GetMyFullName(NPChar) + DLG_TEXT[1] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[2];		// changed from .spa to .por by KAM
 			Link.l1 = DLG_TEXT[3] + GetMyFullName(PChar) + DLG_TEXT[4];
 			Link.l1.go = "node_1";
-			NextDiag.TempNode = "First time";
+			NextDiag.TempNode = "second time";	// was "First time"
 		break;
 
 		case "node_1":
@@ -45,108 +45,74 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 		break;
 
+		case "second time":
+			dialog.text = DLG_TEXT[5];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "quests";
+			link.l2 = DLG_TEXT[7];
+			link.l2.go = "node_2";
+		break;
+
 		case "quests":
-			dialog.text = DLG_TEXT[13] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[14];		// changed from .spa to .por by KAM
-			if (CheckQuestAttribute("nigel_con_parri_checker", "win_win") || CheckQuestAttribute("nigel_con_parri_checker", "win"))
-			{
-				link.l2 = DLG_TEXT[15];
-				link.l2.go = "garri";
-			}
+			dialog.text = DLG_TEXT[13] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[14];
 			if (CheckQuestAttribute("Firstcontact", "searc2"))
 			{
-				dialog.text = DLG_TEXT[91];
-				link.l1 = DLG_TEXT[92];
+				dialog.text = DLG_TEXT[78];
+				link.l1 = DLG_TEXT[79];
 				link.l1.go = "gov_1";
 			}
-			link.l99 = DLG_TEXT[16];
+			link.l99 = DLG_TEXT[15];
 			link.l99.go = "exit";
 		break;
 
 		case "gov_1":
 			dialog.snd = "Voice\REGR\REGR008";
-			dialog.text = DLG_TEXT[93];
-			link.l1 = DLG_TEXT[94];
+			dialog.text = DLG_TEXT[80];
+			link.l1 = DLG_TEXT[81];
 			link.l1.go = "gov_2";
 		break;
 
 		case "gov_2":
 			dialog.snd = "Voice\REGR\REGR008";
-			dialog.text = DLG_TEXT[95];
-			link.l1 = DLG_TEXT[96];
+			dialog.text = DLG_TEXT[82];
+			link.l1 = DLG_TEXT[83];
 			link.l1.go = "gov_3";
 		break;
 
 		case "gov_3":
 			dialog.snd = "Voice\REGR\REGR008";
-			dialog.text = DLG_TEXT[97];
-			link.l1 = DLG_TEXT[98];
+			dialog.text = DLG_TEXT[84];
+			link.l1 = DLG_TEXT[85];
 			link.l1.go = "exit";
 			PChar.quest.Firstcontact = "inn1";
 			AddQuestRecord("Contact", 13);
 		break;
 
-		case "garri":
-			dialog.text = DLG_TEXT[17];
-			link.l1 = DLG_TEXT[18];
-			link.l1.go = "garri_2";
+		case "smuggler_line":
+			dialog.text = DLG_TEXT[86] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + "!";
+			link.l1 = DLG_TEXT[87];
+			link.l1.go = "smuggler_line_2";
+			
+			NextDiag.TempNode = "Second time";
 		break;
 
-		case "garri_2":
-			dialog.text = DLG_TEXT[19];
-			link.l1 = DLG_TEXT[20];
-			if (CheckQuestAttribute("nigel_con_parri_checker", "win_win"))
-			{
-				link.l1.go = "garri_3";
-			}
-			else
-			{
-				link.l1.go = "exit";
-			}
-			AddQuestrecord("nigel", 15);
-			DeleteAttribute(PChar, "quest.nigel_con_parri_checker");
-			PChar.quest.con_parri_expired.over = "yes";
-			PlayStereoSound("INTERFACE\took_item.flac");
-			AddMoneyToCharacter(pchar, 3000);
-			ChangeCharacterReputation(pchar, 1);
-			AddDialogExitQuest("nigel_third_encounter");
+		case "smuggler_line_2":
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
+			dialog.text = DLG_TEXT[88];
+			link.l1 = DLG_TEXT[89];
+			link.l1.go = "smuggler_line_3";
 		break;
 
-		case "garri_3":
-			dialog.text = DLG_TEXT[21];
-			link.l1 = DLG_TEXT[22];
-			link.l1.go = "garri_4";
-		break;
-
-		case "garri_4":
-			dialog.text = DLG_TEXT[23];
-			link.l1 = DLG_TEXT[24];
+		case "smuggler_line_3":
+			dialog.text = DLG_TEXT[90];
+			link.l1 = DLG_TEXT[91];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.flac");
-			AddMoneyToCharacter(pchar, 6000);
-			ChangeCharacterReputation(pchar, 1);
+			AddDialogExitQuest("second_mission_to_prison");
 		break;
 
 		case "Exit":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-		break;
-
-		case "j_day":
-			dialog.text = GetMyFullName(PChar) + DLG_TEXT[25];
-			link.l1 = DLG_TEXT[26];
-			link.l1.go = "continue1";
-		break;
-
-		case "continue1":
-			LAi_QuestDelay("ex_dialog", 2);
-			DialogExit();
-			NextDiag.CurrentNode = "j_day2";
-		break;
-
-		case "j_day2":
-			dialog.text = GetMyFullName(PChar) + DLG_TEXT[27];
-			link.l1 = DLG_TEXT[28];
-			link.l1.go = "exit";
 		break;
 	}
 }

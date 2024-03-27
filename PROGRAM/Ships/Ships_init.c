@@ -11448,6 +11448,96 @@ void InitShips()
 // on this day and date Jan 02 2010, 1036h
 
 //-------------------------------------------------------------------------
+//      Salamander
+//     Imported from GoF by Grey Roger
+//-------------------------------------------------------------------------
+
+	makeref(refShip,ShipsTypes[n]);
+	n++;
+	refShip.Name			= "Salamander1";
+	refShip.All			= "Frigate1";
+	refShip.sname			= "Salamander";
+	refShip.id			= refShip.Name;
+	refShip.Class			= 5;
+	refShip.Cannon			= CANNON_TYPE_CARRONADE_LBS32;
+	refShip.MaxCaliber		= 18;
+	refShip.Weight			= Tonnes2CWT(1000);
+	refShip.Capacity		= 3500;
+	refShip.CannonsQuantity		= 44;
+	// NK cannon qtys 05-04-18 -->
+	refShip.Cannons.Borts.cannonf.qty = 2;
+	refShip.Cannons.Borts.cannonb.qty = 4;
+	// NK <--
+	refShip.MaxCrew			= 430;
+	refShip.MinCrew			= 86;
+	refShip.Price		   	= 156000;
+	refShip.HP			= 3800;
+	refShip.SP			= 200;
+
+	refShip.BigPicTexName	= "SHIPS5"; // Armada
+// KK -->
+	refShip.BI.Tex = 10;
+	refShip.BI.Pic = 1;
+	refShip.QDeck = "ShipDeck1";
+	refShip.CannonsDeck = 1;
+	refShip.CargoHold = 1;
+	refShip.Cabin = "Cabin_medium";
+	refShip.Flags.Mast1.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast2.Flag1 = FLAG_ENSIGN;
+	refShip.Flags.Mast3.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast4.Flag1 = FLAG_ENSIGN;
+// <-- KK
+
+	//Period
+	refShip.period.0 = 0.0; //
+	refShip.period.1 = 0.0; //
+	refShip.period.2 = 0.0; //
+	refShip.period.3 = 0.1; //
+	refShip.period.4 = 0.1; //
+	refShip.period.5 = 0.1; //
+	//Nation
+	refShip.england = 0.0; //
+	refShip.france = 0.0; //
+	refShip.holland = 0.0; //
+	refShip.portugal = 0.0; //
+	refShip.pirate = 0.1; //
+	refShip.spain = 0.1; //
+	refShip.america = 0.0; //
+	refShip.sweden = 0.0; //
+
+	refShip.CanEncounter	= false;
+	refShip.CanBuy		= false;
+	refShip.Type.Trade	= false;
+	refShip.Type.War	= true;
+
+	refship.WaterLine = 0.1;
+	refship.SpeedDependWeight = 0.3;
+	refship.SubSeaDependWeight = 0.9;
+
+	refShip.GeraldSails.rey_b3	= 1;
+	refShip.GeraldSails.rey_b2	= 1;
+
+// Lateen and deep draft, better than average upwind performance
+	refShip.ClosestPoint = 0.28;
+	refShip.BestPoint = 0.8;
+	// KK refShip.RigType = sDet;
+
+
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA){
+		refShip.SpeedRate		= 13.0;
+		refShip.TurnRate		= 72;
+		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.5;
+		refShip.InertiaAccelerationY	= 2.2;	refShip.InertiaBrakingY		= 0.5;
+		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
+	}else{
+		refShip.SpeedRate		= 13.0;
+		refShip.TurnRate		= 33;
+		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
+		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 4;
+		refShip.InertiaAccelerationZ	= 4.0;	refShip.InertiaBrakingZ		= 2.0;
+	}
+
+//-------------------------------------------------------------------------
 // USS Enterprise by Kazeite / American Brig
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 113> (WBT2T) - HMS Interceptor model, with historical stats. Short hull - 10kts historical speed
 //-------------------------------------------------------------------------

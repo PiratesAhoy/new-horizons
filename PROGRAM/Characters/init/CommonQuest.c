@@ -28,7 +28,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.rank 	= 7;
 	ch.reputation = "30";
 	ch.experience = "0";
-	ch.Ship.Name = "Margaret Hatcher"; // KK
+	ch.Ship.Name = TranslateString("","Margaret Hatcher"); // KK
 	ch.Ship.Type = "RN_Poseidon"; // PB: To ensure he uses "Cabin1" aka. "Tut_deck"
 	ch.Ship.Stopped = true; // KK
 	ch.skill.Leadership = "1";
@@ -63,7 +63,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.location.locator = "goto2";
 	ch.Dialog.Filename = "Blackbeard_dialog.c";
 	ch.nation = PIRATE;
-	ch.Ship.Name = "Queen Anne's Revenge";
+	ch.Ship.Name = TranslateString("","Queen Anne's Revenge");
 	ch.Ship.Type = "QueenAnnesRevenge";
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 5;
@@ -723,6 +723,45 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
+				// quest_smuggler_02
+	ch.old.name = "Smuggler";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Smuggler");
+	ch.lastname = "";
+	ch.id		= "quest_smuggler_02";
+	ch.model = "capstan2";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	LAi_NoRebirthEnable(ch);
+	ch.nation = PIRATE;
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "none"
+	ch.location.group = "goto";
+	ch.location.locator = "goto4";
+	ch.Dialog.Filename = "quest_smuggler_02_dialog.c";
+	ch.rank 	= 1;
+	ch.reputation = "52";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetActorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_NoRebirthEnable(ch);
+	ch.greeting = "Gr_Smuggler Agent";
+	ch.questchar = true;
+	AddGameCharacter(n, ch);
+
 			//первый капитан береговой стражи
 	ch.old.name = "";
 	ch.old.lastname = "";
@@ -738,7 +777,7 @@ int CreateCommonQuestCharacters(int in)
 //	ch.Dialog.Filename = "blaze_dialog.c";
 	ch.reputation = "50";
 	ch.experience = 0;//CalculateExperienceFromRank(sti(ch.rank));
-	ch.Ship.Name = "Dolphine";
+	ch.Ship.Name = TranslateString("","Dolphine");
 	//ch.Ship.Type = SHIP_FRIGATE_ENGLAND;
 	ch.Ship.Type = "Lugger1"; // PRS3
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
@@ -765,7 +804,7 @@ int CreateCommonQuestCharacters(int in)
 //	ch.Dialog.Filename = "blaze_dialog.c";
 	ch.reputation = "50";
 	ch.experience = 0;//CalculateExperienceFromRank(sti(ch.rank));
-	ch.Ship.Name = "Dolphine";
+	ch.Ship.Name = TranslateString("","Dolphine");
 	//ch.Ship.Type = SHIP_FRIGATE_ENGLAND;
 	ch.Ship.Type = "Lugger1"; // PRS3
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
@@ -792,7 +831,7 @@ int CreateCommonQuestCharacters(int in)
 //	ch.Dialog.Filename = "blaze_dialog.c";
 	ch.reputation = "50";
 	ch.experience = 0;//CalculateExperienceFromRank(sti(ch.rank));
-	ch.Ship.Name = "Dolphine";
+	ch.Ship.Name = TranslateString("","Dolphine");
 	//ch.Ship.Type = SHIP_FRIGATE_ENGLAND;
 	ch.Ship.Type = "Lugger1"; // PRS3
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
@@ -817,7 +856,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.location.locator = "";
 	ch.reputation = "50";
 	ch.experience = 0;
-	ch.Ship.Name = "Dolphine";
+	ch.Ship.Name = TranslateString("","Dolphine");
 	ch.Ship.Type = "Lugger1"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -840,7 +879,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.location.locator = "";
 	ch.reputation = "50";
 	ch.experience = 0;
-	ch.Ship.Name = "Dolphine";
+	ch.Ship.Name = TranslateString("","Dolphine");
 	ch.Ship.Type = "Lugger1"; // PRS3
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -1319,7 +1358,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.location.locator = "";
 	ch.reputation = "50";
 	ch.experience = 0;
-	ch.Ship.Name = "Dolphine";
+	ch.Ship.Name = TranslateString("","Dolphine");
 	ch.Ship.Type = "Lugger1"; // PRS3
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
 	// done by setbaseship - NK 05-04-09 ch.ship.cargo.goods.bombs = 1000;
@@ -1344,7 +1383,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.location.locator = "";
 	ch.reputation = "50";
 	ch.experience = 0;
-	ch.Ship.Name = "Dolphine";
+	ch.Ship.Name = TranslateString("","Dolphine");
 	ch.Ship.Type = "Lugger1"; // PRS3
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
 	// done by setbaseship - NK 05-04-09 ch.ship.cargo.goods.bombs = 1000;
@@ -1369,7 +1408,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.location.locator = "";
 	ch.reputation = "50";
 	ch.experience = 0;
-	ch.Ship.Name = "Dolphine";
+	ch.Ship.Name = TranslateString("","Dolphine");
 	ch.Ship.Type = "Lugger1"; // PRS3
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
 	// done by setbaseship - NK 05-04-09 ch.ship.cargo.goods.bombs = 1000;

@@ -30,7 +30,7 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
-			if(TradeCheck(PChar, NPChar, true))
+			if(TradeCheck(PChar, NPChar, true) || CheckQuestAttribute("smuggler_line", "completed"))
 			{ // NK
 				if (npchar.quest.meeting == "0")
 				{
@@ -92,9 +92,11 @@ void ProcessDialogEvent()
 		case "node_3":
 			dialog.snd = "Voice\EMRI\EMRI003";
 			dialog.text = DLG_TEXT[11];
-			if(TradeCheck(PChar, NPChar, false)) {
-			link.l1 = pcharrepphrase(DLG_TEXT[12], DLG_TEXT[13]);
-			link.l1.go = "market"; }
+			if(TradeCheck(PChar, NPChar, false) || CheckQuestAttribute("smuggler_line", "completed"))
+			{
+				link.l1 = pcharrepphrase(DLG_TEXT[12], DLG_TEXT[13]);
+				link.l1.go = "market";
+			}
 			link.l2 = pcharrepphrase(DLG_TEXT[14], DLG_TEXT[15]);
 			link.l2.go = "quests";
 			link.l3 = pcharrepphrase(DLG_TEXT[16], DLG_TEXT[17]);
@@ -176,7 +178,7 @@ void ProcessDialogEvent()
 			{
 				npchar.quest.trade_date = lastspeak_date;
 				//проверка враждебности нам страны торговца
-				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
+				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY && !CheckQuestAttribute("smuggler_line", "completed")) // KK
 				{
 					Preprocessor_Add("nation_desc", XI_ConvertString(GetNationDescByType(sti(NPChar.nation))));
 					dialog.snd = "Voice\EMRI\EMRI007";
