@@ -251,7 +251,7 @@ void ProcessDialogEvent()
 						otherquest = true;
 					}
 				}
-				if (!CheckAttribute(PChar, "quest.agentquest") && sti(PChar.PlayerType) == PLAYER_TYPE_AGENT && FindCurrentStoryline() == FindStoryline("FreePlay") && PChar.rank >= 10 && GetCharacterBaseSkill(PChar, SKILL_SNEAK) >= 6)
+				if (!CheckAttribute(PChar, "quest.agentquest") && sti(PChar.PlayerType) == PLAYER_TYPE_AGENT && FindCurrentStoryline() == FindStoryline("free_play") && PChar.rank >= 10 && GetCharacterBaseSkill(PChar, SKILL_SNEAK) >= 6)
 				{
 					if (GetServedNation() == iNation || HaveLetterOfMarque(iNation))
 					{

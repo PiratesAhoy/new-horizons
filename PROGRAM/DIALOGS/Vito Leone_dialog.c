@@ -116,7 +116,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[40]+ Characters[GetCharacterIndex(DLG_TEXT[41])].lastname +DLG_TEXT[42];
 			link.l1 = DLG_TEXT[43];
 			link.l1.go = "9";
-			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			if (FindCurrentStoryline() != FindStoryline("assassin"))
 			{
 				link.l2 = DLG_TEXT[44];
 				link.l2.go = "Exit_kill";
@@ -128,7 +128,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[45]+ Characters[GetCharacterIndex(DLG_TEXT[46])].lastname +DLG_TEXT[47];
 			link.l1 = DLG_TEXT[48]+ Characters[GetCharacterIndex(DLG_TEXT[49])].lastname +DLG_TEXT[50];
 			link.l1.go = "10";
-			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			if (FindCurrentStoryline() != FindStoryline("assassin"))
 			{
 				link.l2 = DLG_TEXT[51]+ Characters[GetCharacterIndex(DLG_TEXT[52])].lastname +DLG_TEXT[53];
 				link.l2.go = "Exit_spare";
@@ -142,7 +142,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[55];
 			link.l1 = DLG_TEXT[56];
 			link.l1.go = "Exit_hit";
-			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			if (FindCurrentStoryline() != FindStoryline("assassin"))
 			{
 				link.l2 = DLG_TEXT[57]+ Characters[GetCharacterIndex(DLG_TEXT[58])].lastname +DLG_TEXT[59];
 				link.l2.go = "Exit_spare";

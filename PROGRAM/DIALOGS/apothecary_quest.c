@@ -477,7 +477,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-			if (FindCurrentStoryline() == FindStoryline("JackSparrow"))
+			if (FindCurrentStoryline() == FindStoryline("jack_sparrow"))
 				{
     				Link.l1 = DLG_TEXT[180];
 				Link.l1.go = "exit"; 
@@ -626,7 +626,7 @@ void ProcessDialogEvent()
 		case "Tell Steven about warehouse"://PW optional new dialog if you know about warehouse 
 			DeleteAttribute(PChar, "quest.mysterious_plants.setwarehouse");
 			d.Text = DLG_TEXT[168];
-			if (FindCurrentStoryline() == FindStoryline("JackSparrow"))
+			if (FindCurrentStoryline() == FindStoryline("jack_sparrow"))
 				{
     				Link.l1 = DLG_TEXT[179];
 				}

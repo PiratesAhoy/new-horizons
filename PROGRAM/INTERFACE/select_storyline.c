@@ -207,7 +207,7 @@ void InitInterface(string iniName)
 	CreateString(true, "LblPeriod", XI_ConvertString("Period") + ":", FONT_NORMAL, COLOR_NORMAL, 200, 289, SCRIPT_ALIGN_LEFT, 0.7);
 	CreateString(true, "StartPeriod", TranslateString("", GetPeriodName(curPeriod)), FONT_NORMAL, COLOR_NORMAL, 250, 289, SCRIPT_ALIGN_LEFT, 0.7);
 	//Levis custom startdate end
-	
+
 	SetFormatedText("INFO_TEXT", GetTranslatedStoryLine(slno, GetStorylineDescription(slno))); //MAXIMUS 17.05.2019: needed for localization
 	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"INFO_TEXT",5);
 
@@ -383,7 +383,7 @@ void ProcCommand()
 				ChangeDifficulty(true);
 			}
 		break;
-		
+
 		//Levis custom startdate -->
 		case "DAY":
 			if (comName == "leftstep") {
@@ -393,7 +393,7 @@ void ProcCommand()
 				ChangeStartDate(0,0,1);
 			}
 		break;
-		
+
 		case "MONTH":
 			if (comName == "leftstep") {
 				ChangeStartDate(0,-1,0);
@@ -402,7 +402,7 @@ void ProcCommand()
 				ChangeStartDate(0,1,0);
 			}
 		break;
-		
+
 		case "YEAR":
 			if (comName == "leftstep") {
 				ChangeStartDate(-1,0,0);
@@ -426,7 +426,7 @@ void ProcCommand()
 			if (comName == "leftstep") {
 				if (curWindow == WINDOW_CHARACTER) ChangeOutfitSex(false);
 				if (curWindow == WINDOW_SHIP) ChangeShipClass(false);
-				
+
 			}
 			if (comName == "rightstep") {
 				if (curWindow == WINDOW_CHARACTER) ChangeOutfitSex(true);
@@ -634,7 +634,7 @@ void ProcessStartGame()
 	ReleaseSound(0);
 	// PB: Prevent overriding this later -->
 	CharFirstName = tmpName; //MAXIMUS 17.05.2019: needed for localization ==>
-	if(CheckAttribute(GameInterface, "strings.CharacterName.named")==true) 
+	if(CheckAttribute(GameInterface, "strings.CharacterName.named")==true)
 	{
 		characters[GetMainCharacterIndex()].named = true;
 		CharFirstName = GameInterface.strings.CharacterName;
@@ -732,7 +732,7 @@ void ChangeStoryline(bool bRight)
 	curOutfitModel = OUTFITMODEL_ANY;
 	curOutfitOffType = OUTFITOFFTYPE_ANY;
 	curOutfitNation = -1;
-	if (slno == FindStoryline("FreePlay"))
+	if (slno == FindStoryline("free_play"))
 	{
 		curOutfitSex = OUTFITSEX_ANY;
 		curOutfitNamed = OUTFITNAMED_SPECIFIC;
@@ -788,11 +788,11 @@ void ChangeStoryline(bool bRight)
 	if (CheckAttribute(arstart, "date.hour"))	CharHour   = sti(arstart.date.hour);
 	if (CheckAttribute(arstart, "date.min"))	CharMinute = sti(arstart.date.min);
 	if (CheckAttribute(arstart, "date.sec"))	CharSecond = sti(arstart.date.sec);
-	
+
 	curPeriod = GetPeriodFromYear(CharYear);
 	SetCurrentPeriod(curPeriod);
 	iNationsQuantity = CheckNationsQuantity(curPeriod);
-	
+
 	//Levis custom start date -->
 	GameInterface.strings.StartYear = CharYear;
 	GameInterface.strings.StartMonth = FirstLetterUp(TranslateString("",GetMonthName(CharMonth)));
@@ -804,7 +804,7 @@ void ChangeStoryline(bool bRight)
 	SetNodeUsing("MONTH", canchangedate);
 	SetNodeUsing("DAY", canchangedate);
 	//Levis custom startdate <--
-	
+
 	Storylines.current = slno;
 
 	if (CheckAttribute(arstart, "model")) {
@@ -840,7 +840,7 @@ void ChangeStoryline(bool bRight)
 		GameInterface.strings.CharacterName = GameInterface.strings.CharacterName + " " + GetTranslatedStoryLine(slno, CharLastName);
 		//MAXIMUS 17.05.2019: <==
 	}
-	
+
 	curShip = -1;
 	if (CheckAttribute(arstart, "ship"))
 	{
@@ -907,7 +907,7 @@ void RefreshScreen()
 			//GameInterface.strings.StartDate = TranslateString("", "unknown"); //Levis
 			//GameInterface.strings.StartLocation = TranslateString("", "unknown"); //Levis
 
-			makeref(model, Models[curOutfit]); 
+			makeref(model, Models[curOutfit]);
 			faceid = model.FaceId;
 			if (faceid >= 0)
 				SetNewPicture("DEFAULT_CHARACTER", "interfaces\portraits\256\face_" + faceid + ".tga");
@@ -923,7 +923,7 @@ void RefreshScreen()
 			{
 				GameInterface.character = false;
 				bool IsNotLocked;
-				if (slno == FindStoryline("FreePlay"))
+				if (slno == FindStoryline("free_play"))
 				{
 					IsNotLocked = CheckAttribute(arstart, "ship.lock") == false || sti(arstart.ship.lock) == false);
 					if (CheckAttribute(model, "ship") && IsNotLocked)
@@ -985,7 +985,7 @@ void RefreshScreen()
 					GameInterface.strings.StartDay = CharDay;
 					GameInterface.strings.StartPeriod = TranslateString("", GetPeriodName(curPeriod)); //MAXIMUS 17.05.2019: needed for localization
 				}
-				if (slno == FindStoryline("FreePlay") && CheckAttribute(model, "storytext"))
+				if (slno == FindStoryline("free_play") && CheckAttribute(model, "storytext"))
 				{
 					SetFormatedText("INFO_TEXT", GetTranslatedStoryLine(slno, model.storytext)); //MAXIMUS 17.05.2019: needed for localization
 				}
@@ -993,7 +993,7 @@ void RefreshScreen()
 				{
 					SetFormatedText("INFO_TEXT", GetTranslatedStoryLine(slno, GetStorylineDescription(slno))); //MAXIMUS 17.05.2019: needed for localization
 				}
-				if (slno == FindStoryline("FreePlay") && CheckAttribute(model, "storytitle"))
+				if (slno == FindStoryline("free_play") && CheckAttribute(model, "storytitle"))
 				{
 					GameInterface.strings.StorylineTitle = GetTranslatedStoryLine(slno, model.storytitle); //MAXIMUS 17.05.2019: needed for localization
 				}
@@ -1025,17 +1025,17 @@ void RefreshScreen()
 					id = TranslateString("", Locations[lidx].id.label) + ", ";
 					switch(CharNation)
 					{
-						case PERSONAL_NATION:		lidx = FindLocation("Oxbay_port");					break; // PB: was arstart.port
+						case PERSONAL_NATION:	lidx = FindLocation("Oxbay_port");					break; // PB: was arstart.port
 						case ENGLAND:			lidx = FindLocation("Oxbay_port");					break;
 						case FRANCE:			lidx = FindLocation("Falaise_de_fleur_port_01");	break;
-						case SPAIN:			lidx = FindLocation("Muelle_port");					break;
+						case SPAIN:				lidx = FindLocation("Muelle_port");					break;
 						case PIRATE:			lidx = FindLocation("QC_port");						break;
 						case HOLLAND:			lidx = FindLocation("Douwesen_port");				break;
 						case PORTUGAL:			lidx = FindLocation("Conceicao_port");				break;
 						case AMERICA:			lidx = FindLocation("Eleuthera_Port");				break;
 					}
 					// PB: Player Type -->
-					if (slno == FindStoryline("FreePlay"))
+					if (slno == FindStoryline("free_play"))
 					{
 						NavyLockShipSelection(false, model);
 						if (NationNoIsland(CharNation, curPeriod))
@@ -1044,8 +1044,7 @@ void RefreshScreen()
 						switch(curPlayerType)
 						{
 							case PLAYER_TYPE_REBEL:
-								lidx = FindLocation("QC_port");						// Rebels always start at Nevis
-
+								lidx = FindLocation("QC_port");							// Rebels always start at Nevis
 								if (GameInterface.strings.CharacterName == GetTranslatedStoryLine(slno, "Dark") + " " + GetTranslatedStoryLine(slno, "Teacher") && GetAttribute(model, "id") == "Animists1")
 								{									// Except when they don't!
 									id += TranslateString("", "Satanists Lair");
@@ -1149,7 +1148,7 @@ void RefreshScreen()
 				GameInterface.strings.StartLocation = id;
 			}
 			SetNodeUsing("NATIONFLAG_BUTTON", true);
-			
+
 			GameInterface.strings.Difficulty = TranslateString("", GetDifficultyName(CharDifficulty));
 			if (CheckAttribute(&GameInterface, "CustomSkill")) DeleteAttribute(&GameInterface, "CustomSkill");
 			GameInterface.CustomSkill.Value.v1 = rand(9);
@@ -1208,7 +1207,7 @@ void RefreshScreen()
 				SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "OutfitName", id, FONT_NORMAL, 380, 130, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 1.0, 0);
 			else
 				SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "OutfitName", TranslateString("", model.id), FONT_NORMAL, 380, 130, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 1.0, 0);
-			if (slno == FindStoryline("FreePlay") && CheckAttribute(model, "storytext"))	SetFormatedText("SELECT_DESCRIPTION", GetTranslatedStoryLine(slno, model.storytext));
+			if (slno == FindStoryline("free_play") && CheckAttribute(model, "storytext"))	SetFormatedText("SELECT_DESCRIPTION", GetTranslatedStoryLine(slno, model.storytext));
 			else if (CheckAttribute(model, "description")) SetFormatedText("SELECT_DESCRIPTION", LanguageConvertString(idModelDescr, model.description));
 			SendMessage(&GameInterface, "lsl", MSG_INTERFACE_MSG_TO_NODE, "SELECT_DESCRIPTION", 5);
 			GameInterface.SELECTPICT.pic1.img2 = "face";
@@ -1216,7 +1215,7 @@ void RefreshScreen()
 			GameInterface.SELECTPICT.ListSize = 1;
 			GameInterface.SELECTPICT.NotUsed = 1;
 			SendMessage(&GameInterface, "ls", MSG_INTERFACE_REFRESH_SCROLL, "SELECTPICT");
-			if (slno == FindStoryline("FreePlay"))
+			if (slno == FindStoryline("free_play"))
 			{
 				GameInterface.character = true; // PB
 				SetSelectable("DIALOG_SELECT_BUTTON", true);
@@ -1590,7 +1589,7 @@ void SetWindow(int iWindow)
 	int i, j;
 	string sTmp1, sTmp2;
 	switch (curWindow)
-	{	
+	{
 		case WINDOW_MAIN:
 			SetSelectable("EXIT_BUTTON", false);
 			SetSelectable("STORYLINE", false);
@@ -1832,7 +1831,7 @@ void SetWindow(int iWindow)
 	}
 	curWindow = iWindow;
 	switch (curWindow)
-	{	
+	{
 		case WINDOW_MAIN:
 			SetSelectable("EXIT_BUTTON", true);
 			SetSelectable("STORYLINE", true);

@@ -94,6 +94,6 @@ string DLG_TEXT[97] = {
 "Jack, this island is dangerous! We should head back to the ship, what if there's even more of them ?!",
 "Nonsense lass, a bunch of tribesman won't be enough to scare us away! We shall press forward!",
 "We need to get back to the ship captain, this island is filled with them!",
-"As a matter of fact, I can hear more of them approaching...RUN!",
+"As a matter of fact, I can hear more of them approaching... RUN!",
 "Literally, or figuratively? He couldn't literally put his heart in a chest! Could he??",
 };

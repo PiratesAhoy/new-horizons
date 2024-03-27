@@ -90,7 +90,7 @@ void ProcessDialogEvent()
 				link.l2.go = "search_for_Ferro_Cerezo";
 			}
 //Hitman
-			if(CheckQuestAttribute("Hitman", "mark_vito") && FindCurrentStoryline() != FindStoryline("Assassin")) // GR: Prevent this dialog during "Assassin" storyline
+			if(CheckQuestAttribute("Hitman", "mark_vito") && FindCurrentStoryline() != FindStoryline("assassin")) // GR: Prevent this dialog during "Assassin" storyline
 			{
 				link.l3 = DLG_TEXT[30];
 				link.l3.go = "vito";

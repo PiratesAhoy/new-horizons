@@ -29,6 +29,8 @@ bool noConfirm = false; // added by MAXIMUS [confirmation dialog will be disable
 
 void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 {
+	Trace("============================================");
+	Trace("InitInterface_RS, iniName = " + iniName + ", faceID = " + faceID);
 	ref pch = GetMainCharacter();
 
 	// JRH remove ghost ammo -->
@@ -3750,7 +3752,7 @@ int GetItemQntByOrder(bool my,int num)
 		else
 		{
 			iqty = GetCharacterItem(g_refItems, itmName);
-			if (IsEquipCharacterByItem(g_refItems, itmName))
+			if (IsEquipCharacterByItem(g_refItems, itmName) && !bDeadExchange)  // PB: Dead corpses don't care about still having anything equipped (workaround for WEIRD BUG!)
 			{
 				iqty--;
 				if (iqty <= 0) iqty = 0;

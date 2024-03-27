@@ -135,7 +135,7 @@ void InitMusic()
 	//============================| DEVLIN QUEST |===========================//<-- BTP
 
 	//===========================| Hornblower Quest |===========================// Grey Roger -->
-	if (FindCurrentStoryline() == FindStoryline("Hornblower"))
+	if (FindCurrentStoryline() == FindStoryline("hornblower"))
 	{
 		trace("Adding Hornblower tracks");
 		tmpref.Hornblower_start.f1.name = "MUSIC\Hornblower_start.ogg";
@@ -150,7 +150,7 @@ void InitMusic()
 	//===========================| Hornblower Quest |===========================//<-- Grey Roger
 
 	//=============================| Ardent Quest |=============================// Grey Roger -->
-	if (FindCurrentStoryline() == FindStoryline("Ardent"))
+	if (FindCurrentStoryline() == FindStoryline("ardent"))
 	{
 		trace("Adding Ardent tracks");
 		tmpref.Ardent_start.f1.name = "MUSIC\The Song Of The High Seas.ogg";			// GR: Victory at Sea

@@ -81,7 +81,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "bluff_called":
-			if (FindCurrentStoryline() == FindStoryline("Hornblower")) dialog.text = DLG_TEXT[8] + DLG_TEXT[9];
+			if (FindCurrentStoryline() == FindStoryline("hornblower")) dialog.text = DLG_TEXT[8] + DLG_TEXT[9];
 			else dialog.text = DLG_TEXT[8];
 			link.l1 = DLG_TEXT[10];
 			AddDialogExitQuest("hornblower_execution");

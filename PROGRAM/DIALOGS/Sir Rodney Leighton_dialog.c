@@ -91,7 +91,7 @@ void ProcessDialogEvent()
 
 		case "mission1_1":
 			dialog.text = DLG_TEXT[12] + GetMyFullName(CharacterFromID("El Supremo")) + DLG_TEXT[13];
-			if (FindCurrentStoryline() == FindStoryline("Hornblower"))
+			if (FindCurrentStoryline() == FindStoryline("hornblower"))
 			{
 				link.l1 = DLG_TEXT[14];
 				link.l1.go = "mission1_2";
