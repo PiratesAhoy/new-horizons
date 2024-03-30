@@ -7,7 +7,7 @@ categories = [
     "engine",
     "translation",
     "testing",
-    "legacy",
+    "build14",
 ]
 
 [[contributors]]
@@ -36,5 +36,1221 @@ categories = [
 name = "Grey Roger"
 weight = 10
 categories = [
-    "legacy",
+    "build14",
+]
+
+[[contributors]]
+name = "Tempesta"
+weight = 5
+categories = [
+    "music",
+]
+
+[[contributors]]
+name = "Espkk"
+weight = 10
+categories = [
+    "engine",
+]
+
+[[contributors]]
+name = "Pieter Boelen"
+weight = 9
+categories = [
+    "scripting",
+    "build14",
+]
+
+[[contributors]]
+name = "Mirsaneli"
+categories = [
+    "scripting",
+]
+
+[[contributors]]
+name = "Nomad"
+categories = [
+    "artwork",
+]
+
+[[contributors]]
+name = "Nathan Kell"
+weight = 9
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Pirate_KK"
+weight = 9
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Maximus"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Couchcaptain Charles"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Inez Dias"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Screwface"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Swindler"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Hook"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Incredible Hat"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "KBlack"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Giuliooto"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "El Rapido"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Simple Virtual Sailor"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "AlexusB"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Dr Maturin"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Jonathan Aldridge"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Kevin Atlanta"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Philippe"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "KiwisDoFly"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "KnowNothingBozo"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "HawkerT"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Mithrandir"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Ron Losey"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Catalina the Pirate"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Bartolomeu o Portugues"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Sir Christopher Mings"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Short Jack Gold"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Petros"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "High Sea Lass"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Jack Davidson"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Captain Spectre"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Daede"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Alan Smithee"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Seb"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Thomas the Terror"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Captain Sir Henry Morgan"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Damski62"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Duncan"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Super Durnius"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Vanderdecken"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "JMV"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Deringer"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Deep One"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Kazeite"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Captain Hawk"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Inzane"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Captain Augast"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Merciless Mark"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Bonjourmonami"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Bava"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Colosseum"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Razr"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "SeaNorris"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Yo Ho Ho"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "ZarethPL"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Elsilhe"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Elsilhe"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Jezus"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Jack Black"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Officerpuppy"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Jopie Seethoek"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Captain Matt"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "BoochA"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Captain Hammered"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Clutch Marauder"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Duke Suraknar"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Greydog"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Grumblepunk"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Hayreddin Barbossa"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Hose Head"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Kieron"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Lady Eliza Jane"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Mehrunes"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Moetman"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Sailor Al"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Scheffnow"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Verruckt"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Von Reinhart"
+categories = [
+    "build14",
+]
+
+ # Buil14 Create support
+
+[[contributors]]
+name = "John Paul Jones"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Estharos"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Stian"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Weapon"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Chocolate Bill"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Zodiac125"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Fred Bob"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Mad Jack"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "DChaley"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Admiral 8Q"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Bonny Megs"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Capn Toast"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Captain Cookie"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Captain Dams"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Child of Thor"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Diomed"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Doober"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Donkey Pirate"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Keith"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Kevo44"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Skull"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Black Bart"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Morgan Terror"
+categories = [
+    "build14",
+]
+
+# Buil14 Promotion
+
+[[contributors]]
+name = "Capn Drow"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Peter Willemoes"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Kevin Atlanta"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Legolas"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Mr_Cyberpunk"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Piranha"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Modder_Freak"
+categories = [
+    "build14",
+]
+
+# Buil14 Testing
+
+[[contributors]]
+name = "Black Hawk"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Capn Tucker"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "CapnLenaMarie"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Capt H M Murdock"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Captain Reaper"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Cmdr Quan"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Colmaniac"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Coquiton"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Corsair"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Cpt Fabris"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Cpt Yuke"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Den Dee"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Dirty Dog"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Gedscho"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Hangar18"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Irr4tion4l"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Izzie"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Jason"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Koor"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Long John"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Long John Silver"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Lord Nelson"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Maior"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Mr Mistophelees"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Nicev1869"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Nosie"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Pirate Sam"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Rad"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "ReiFukai"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Rico"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Skull 76"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Suoive D"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Thnikkaman"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Vengence"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Victor1234"
+categories = [
+    "build14",
+]
+
+# Akella
+
+[[contributors]]
+name = "Dimitry Arkhipov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Dimitry Demianovsky"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Anry"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Yuri Rohach"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Segey Kapitsin"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Alexey Malnov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Elena Sablina"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Kesha"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Anton Iolev"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Pavel Ledin"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Igor Kudryavtsev"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Natalya Kozlova"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Dmitry Demianovsky"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Maxim Spirenkov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Ivan Shcheblykin"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Nikita Kurnosov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Pavel Ostapenko"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Vladimir Korotkov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Renat Nezametdinov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Artem Romanko"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Andrey Osipov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Fedor Soprunov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Yuri Lenin"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Gennady Gerasimenko"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Julia Korpacheva"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Leonid Lebedev"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Michael Urman"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Sergey Tichonov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Ivan 'Nash' Kuznetsov"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Svetlana Metelkina"
+categories = [
+    "build14",
+]
+
+# Bethesda
+
+[[contributors]]
+name = "Todd Vaughn"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Joel Breton"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Ashley Cheng"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Emil Pagliarulo"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Ken Rolston"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Dak Bennett"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Pete Hines"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Diana Calihanna"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Michael Wagner"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Michael Fridley"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Michael Mazzucaa"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Alan Nanes"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Jennifer Noland"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Nathan McDyer"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Olga Antsiferoya"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Chip Ellinghaus"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Grant Slawson"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Keira Knightley"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Catherine Flye"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Peter Gil"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Ralph Cosham"
+categories = [
+    "build14",
+]
+
+[[contributors]]
+name = "Nat Benchley"
+categories = [
+    "build14",
 ]

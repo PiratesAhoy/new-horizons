@@ -60,18 +60,28 @@ void LoadModuleCredits(aref config) {
 string GetCreditsText() {
 	string result = "";
 
+	int offset = 0;
 	aref config_categories;
 	makearef(config_categories, Credits)
 	for (int i = 0; i < GetAttributesNum(config_categories); i++) {
 		string category_id = GetAttributeName(GetAttributeN(config_categories, i) );
-		string title = i18n("interface:credits:" + category_id);
-		result = result + title + "\n";
 		aref category;
 		makearef(category, Credits.(category_id));
-		for (int j = 0; j < GetAttributesNum(category); j++) {
-			aref contributor = GetAttributeN(category, j);
-			string contributor_name = contributor;
-			result = result + contributor_name + "\n";
+		int category_entries = GetAttributesNum(category);
+
+		if (category_entries > 0) {
+			string title = i18n("interface:credits:" + category_id);
+			SendMessage(&GameInterface, "lsle", MSG_INTERFACE_MSG_TO_NODE, "INFO_TEXT", 0,  title);
+			SendMessage(&GameInterface, "lslll", MSG_INTERFACE_MSG_TO_NODE, "INFO_TEXT", 8, offset, argb(255,251,237,68));
+			offset += 1;
+			for (int j = 0; j < category_entries; j++) {
+				aref contributor = GetAttributeN(category, j);
+				string contributor_name = contributor;
+				SendMessage(&GameInterface, "lsle", MSG_INTERFACE_MSG_TO_NODE, "INFO_TEXT", 0, contributor_name);
+				offset += 1;
+			}
+			offset += 1;
+			SendMessage(&GameInterface, "lsle", MSG_INTERFACE_MSG_TO_NODE, "INFO_TEXT", 0, "\n");
 		}
 	}
 
@@ -89,7 +99,8 @@ void InitInterface(string ini_name)
 	SetEventHandler("InterfaceBreak", "ProcessCancelExit", 0);
 	SetEventHandler("exitCancel", "ProcessCancelExit", 0);
 
-	SetFormatedText("INFO_TEXT", GetCreditsText());
+	SetFormatedText("INFO_TEXT", "");
+	GetCreditsText();
 }
 
 void ProcessCancelExit()
