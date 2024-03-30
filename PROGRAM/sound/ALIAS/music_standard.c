@@ -12,6 +12,12 @@ void InitMusic()
 	//============ MAIN THEME ========================
 	tmpref.music_main_theme.f1.name = "MUSIC\Main_Theme.ogg";
 
+	//============ Credits ========================
+	tmpref.credits.f1.name = "MUSIC/credits/credits_professional_pirate.mp3";
+//	tmpref.credits.f2.name = "MUSIC/YoHo_With_Vocals.ogg";
+//	tmpref.credits.f3.name = "MUSIC/credits/credits_drunken_sailor.mp3";
+//	tmpref.credits.f4.name = "MUSIC/YoHo2.ogg";
+
 	//============ BARTOLOMEU MAIN THEME ==============
 	tmpref.music_Bart_main_theme.f1.name = "MUSIC\Hispaniola.ogg";
 

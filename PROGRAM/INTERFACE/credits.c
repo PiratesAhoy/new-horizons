@@ -57,8 +57,8 @@ void LoadModuleCredits(aref config) {
 	}
 }
 
-string GetCreditsText() {
-	string result = "";
+void SetCreditsText() {
+	SetFormatedText("INFO_TEXT", "");
 
 	int offset = 0;
 	aref config_categories;
@@ -84,8 +84,6 @@ string GetCreditsText() {
 			SendMessage(&GameInterface, "lsle", MSG_INTERFACE_MSG_TO_NODE, "INFO_TEXT", 0, "\n");
 		}
 	}
-
-	return result;
 }
 
 void InitInterface(string ini_name)
@@ -98,9 +96,12 @@ void InitInterface(string ini_name)
 
 	SetEventHandler("InterfaceBreak", "ProcessCancelExit", 0);
 	SetEventHandler("exitCancel", "ProcessCancelExit", 0);
+	SetEventHandler("CreditsMoveTextEvent", "MoveText", 0);
 
-	SetFormatedText("INFO_TEXT", "");
-	GetCreditsText();
+	PostEvent("CreditsMoveTextEvent", 3000);
+
+	SetCreditsText();
+	SetMusic("credits");
 }
 
 void ProcessCancelExit()
@@ -113,8 +114,23 @@ void IDoExit(int exitCode)
 {
 	DelEventHandler("InterfaceBreak","ProcessCancelExit");
 	DelEventHandler("exitCancel","ProcessCancelExit");
+	DelEventHandler("CreditsMoveTextEvent","MoveText");
 
 	interfaceResultCommand = exitCode;
 	if(CheckAttribute(&InterfaceStates,"InstantExit") && sti(InterfaceStates.InstantExit)==true) EndCancelInterface(true);
 	else EndCancelInterface(false);
+}
+
+void MoveText()
+{
+	if(gCreditsProgress >= 1)
+	{
+		ProcessCancelExit();
+	}
+	else
+	{
+		SendMessage(&GameInterface, "lslf", MSG_INTERFACE_MSG_TO_NODE, "INFO_TEXT", 2, gCreditsProgress);
+		PostEvent("CreditsMoveTextEvent", 20);
+		gCreditsProgress = gCreditsProgress + 0.0001;
+	}
 }
