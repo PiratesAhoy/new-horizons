@@ -1,3 +1,6 @@
+#define CREDITS_DEFAULT_WEIGHT 1
+#define CREDITS_MAX_WEIGHT 2000
+
 float gCreditsProgress;
 
 Object Credits;
@@ -26,16 +29,13 @@ void LoadCreditsConfig(ref config, string root) {
 }
 
 void LoadModuleCredits(aref config) {
-	Credits.text = "";
-
 	aref config_categories;
 	aref config_contributors;
 	makearef(config_categories, config.categories)
 	for (int i = 0; i < GetAttributesNum(config_categories); i++) {
 		string category_id = config_categories.(i);
-		string title = i18n("interface:credits:" + category_id);
-		Credits.(i).title = title;
-		Credits.text = Credits.text + title + "\n";
+		aref category;
+		makearef(category, Credits.(category_id));
 		makearef(config_contributors, config.contributors);
 		for (int j = 0; j < GetAttributesNum(config_contributors); j++) {
 			aref contributor;
@@ -44,11 +44,38 @@ void LoadModuleCredits(aref config) {
 			makearef(contributor_categories, contributor.categories);
 			for (int k = 0; k < GetAttributesNum(contributor_categories); k++) {
 				if (contributor_categories.(k) == category_id) {
-					Credits.text = Credits.text + contributor.name + "\n";
+					int weight = CREDITS_DEFAULT_WEIGHT;
+					if (CheckAttribute(contributor, "weight") ) {
+						weight = makeint(contributor.weight);
+					}
+					string sort_id = (CREDITS_MAX_WEIGHT - weight) + "_" + contributor.name;
+					category.(sort_id) = contributor.name;
 				}
 			}
 		}
+		sort(category);
 	}
+}
+
+string GetCreditsText() {
+	string result = "";
+
+	aref config_categories;
+	makearef(config_categories, Credits)
+	for (int i = 0; i < GetAttributesNum(config_categories); i++) {
+		string category_id = GetAttributeName(GetAttributeN(config_categories, i) );
+		string title = i18n("interface:credits:" + category_id);
+		result = result + title + "\n";
+		aref category;
+		makearef(category, Credits.(category_id));
+		for (int j = 0; j < GetAttributesNum(category); j++) {
+			aref contributor = GetAttributeN(category, j);
+			string contributor_name = contributor;
+			result = result + contributor_name + "\n";
+		}
+	}
+
+	return result;
 }
 
 void InitInterface(string ini_name)
@@ -62,7 +89,7 @@ void InitInterface(string ini_name)
 	SetEventHandler("InterfaceBreak", "ProcessCancelExit", 0);
 	SetEventHandler("exitCancel", "ProcessCancelExit", 0);
 
-	SetFormatedText("INFO_TEXT", Credits.text);
+	SetFormatedText("INFO_TEXT", GetCreditsText());
 }
 
 void ProcessCancelExit()
