@@ -1,3 +1,4 @@
 [[actions]]
 name = "play"
 path = "engine.exe"
+sandbox = true
