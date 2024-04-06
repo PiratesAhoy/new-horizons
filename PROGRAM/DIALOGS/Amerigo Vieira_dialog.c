@@ -76,7 +76,7 @@ void ProcessDialogEvent()
 		case "spare":
 			dialog.snd = "Voice\AMVI\AMVI006";
 			dialog.text = DLG_TEXT[17]+ Characters[GetCharacterIndex(DLG_TEXT[18])].lastname +DLG_TEXT[19];
-			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			if (FindCurrentStoryline() != FindStoryline("assassin"))
 			{
 				link.l1 = DLG_TEXT[20];
 				link.l1.go = "Exit_spare";
