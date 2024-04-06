@@ -6501,7 +6501,13 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Virgile Boon"), Pchar, "", 25.0, 1.0);
 		break;
 
-// GR: -->	case "turpin_cabanel_fight": moved to "quests_side.c"
+		case "turpin_cabanel_fight":
+			LAi_group_MoveCharacter(characterFromID("Turpin Cabanel"), "FRANCE_SOLDIERS");
+			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			if(GetRMRelation(PChar, FRANCE) > REL_WAR) SetRMRelation(PChar, FRANCE, REL_WAR); // RM
+			LeaveService(PChar, FRANCE, true); // RM
+			ChangeCharacterReputation(pchar, -2);
+		break;
 
 		case "researcher_I_go_to_the_right_exit":
 			LAi_SetActorType(pchar);
@@ -7392,7 +7398,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.smuggler_line_first_mission_soldiers_arrest_maginot_exit.win_condition = "smuggler_line_first_mission_soldiers_arrest_maginot_exit";
 		break;
 
-		case "smuggler_line_first_mission_soldiers_arrest_maginot_exit":			
+		case "smuggler_line_first_mission_soldiers_arrest_maginot_exit":
 			Locations[FindLocation("Marigot_port")].reload.l6.disable = 1;
 			LAi_ActorSelfDialog(PChar, "");
 			AddQuestRecord("smuggler_line", 6);
@@ -7507,7 +7513,8 @@ void QuestComplete(string sQuestName)
 
 		case "second_mission_money_troubles_fight":
 			LAi_LocationFightDisable(&Locations[FindLocation("Marigot_port")], false);
-			SetNationRelation2MainCharacter(FRANCE, RELATION_ENEMY);		
+			DisableFastTravel(false);
+			SetNationRelation2MainCharacter(FRANCE, RELATION_ENEMY);
 			LAi_SetWarriorType(CharacterFromID("smuggler_line_soldier_01"));
 			LAi_SetWarriorType(CharacterFromID("smuggler_line_soldier_02"));
 			LAi_SetWarriorType(CharacterFromID("smuggler_line_soldier_03"));	
@@ -7918,44 +7925,64 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "third_mission_to_douwesen_shore":
+			DisableFastTravel(true);
 			LAi_LockFightMode(PChar, true);
 			PChar.quest.smuggler_line = "third_mission_to_douwesen_shore";
 			PChar.quest.third_mission_to_douwesen_expired.over = "yes";
 			Locations[FindLocation("Douwesen_shore_02")].reload.l2.disable = 1;
-			ChangeCharacterAddress(CharacterFromID("Desmond Ray Beltrop"), "Douwesen_shore_02", "goto7");
-			ChangeCharacterAddress(CharacterFromID(PChar.quest.smuggler_line.QCGov), "Douwesen_shore_02", "goto5");
+			ChangeCharacterAddressGroup(CharacterFromID("Desmond Ray Beltrop"), "Douwesen_shore_02", "goto", "goto7");
+			ChangeCharacterAddressGroup(CharacterFromID(PChar.quest.smuggler_line.QCGov), "Douwesen_shore_02", "goto", "goto5");
+			LAi_SetActorType(PChar);
+			LAi_ActorFollow(PChar, CharacterFromID("Desmond Ray Beltrop"), "third_mission_to_douwesen_shore2", 10.0);
+		break;
+
+		case "third_mission_to_douwesen_shore2":
+			LAi_SetPlayerType(PChar);
 			LAi_SetActorType(CharacterFromID("Desmond Ray Beltrop"));
 			LAi_ActorDialog(CharacterFromID("Desmond Ray Beltrop"), PChar, "", 4.0, 1.0);
 		break;
 
 		case "third_mission_speak_with_pirate_head":		// triggered by dialog with Desmond Ray Beltrop
+			LAi_ActorFollow(CharacterFromID("Desmond Ray Beltrop"), CharacterFromID(PChar.quest.smuggler_line.QCGov), "", 10.0);
+			LAi_SetActorType(PChar);
+			LAi_ActorFollow(PChar, CharacterFromID(PChar.quest.smuggler_line.QCGov), "third_mission_speak_with_pirate_head2", 10.0);
+		break;
+
+		case "third_mission_speak_with_pirate_head2":
+			LAi_SetPlayerType(PChar);
 			characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.smgnode = characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.currentnode;
 			characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.currentnode = "third time two";
 			PChar.quest.smuggler_line = "third_mission_speak_with_pirate_head";
-			LAi_ActorFollow(CharacterFromID("Desmond Ray Beltrop"), CharacterFromID(PChar.quest.smuggler_line.QCGov), "", 10.0);
 			LAi_SetActorType(CharacterFromID(PChar.quest.smuggler_line.QCGov));
 			LAi_ActorDialog(CharacterFromID(PChar.quest.smuggler_line.QCGov), PChar, "", 10.0, 1.0);
 		break;
 
 		case "third_mission_pirate_head_exit_from_shore":	// triggered by dialog with pirate boss
 			PChar.quest.smuggler_line = "third_mission_pirate_head_exit_from_shore";
-			LAi_SetActorType(PChar);			// Nail player in place until pirate boss has left
-			LAi_ActorTurnToLocator(PChar, "reload", "reload2_back");
+		//	LAi_SetActorType(PChar);			// Nail player in place until pirate boss has left
+		//	LAi_ActorTurnToLocator(PChar, "reload", "reload2_back");
+		//	LAi_ActorTurnToLocator(PChar, "goto", "goto2");
 			LAi_SetActorType(CharacterFromID(PChar.quest.smuggler_line.QCGov));
-			LAi_ActorRunToLocation(CharacterFromID(PChar.quest.smuggler_line.QCGov), "reload", "reload2_back", "QC_residence", "goto", "goto1", "third_mission_pirate_head_exit_from_shore_enter_to_residence", 25.0);
+		//	LAi_ActorRunToLocation(CharacterFromID(PChar.quest.smuggler_line.QCGov), "reload", "reload2_back", "QC_residence", "goto", "goto1", "third_mission_pirate_head_exit_from_shore_enter_to_residence", 25.0);
+			LAi_ActorRunToLocation(CharacterFromID(PChar.quest.smuggler_line.QCGov), "reload", "reload2_back", "QC_residence", "goto", "goto1", "_", 25.0);
 			LAi_type_actor_Reset(CharacterFromID("Desmond Ray Beltrop"));
 			LAi_ActorDialog(CharacterFromID("Desmond Ray Beltrop"), PChar, "", 1.0, 1.0);
-			Locations[FindLocation("Douwesen_shore_02")].reload.l2.disable = 0;
+			PChar.quest.third_mission_pirate_head_exit_from_shore_enter_to_residence.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.third_mission_pirate_head_exit_from_shore_enter_to_residence.win_condition.l1.location = "Douwesen_shore_02";
+			PChar.quest.third_mission_pirate_head_exit_from_shore_enter_to_residence.win_condition = "third_mission_pirate_head_exit_from_shore_enter_to_residence";
 		break;
 
 		case "third_mission_pirate_head_exit_from_shore_enter_to_residence":
-			LAi_SetPlayerType(PChar);
+		//	LAi_SetPlayerType(PChar);
+			ChangeCharacterAddressGroup(CharacterFromID(PChar.quest.smuggler_line.QCGov), "QC_residence", "goto", "goto1");
 			LAi_SetStayType(CharacterFromID(PChar.quest.smuggler_line.QCGov));
 			characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.currentnode = characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.smgnode;
 			DeleteAttribute(CharacterFromID(PChar.quest.smuggler_line.QCGov), "dialog.smgnode");
 		break;
 
 		case "third_mission_award":
+			DisableFastTravel(false);
+			Locations[FindLocation("Douwesen_shore_02")].reload.l2.disable = 0;
 			PChar.quest.smuggler_line.third_mission = "completed";
 			if(AUTO_SKILL_SYSTEM)AddPartyExpChar(PChar, "Leadership", 1500);
 			else AddPartyExp(PChar, 1500);
@@ -7981,17 +8008,20 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "fourth_mission_to_Marigot":
+			DisableFastTravel(true);
 			PChar.quest.smuggler_line = "fourth_mission_to_Marigot";
 			characters[GetCharacterIndex("Susanne Maginot")].dialog.smgnode = characters[GetCharacterIndex("Susanne Maginot")].dialog.currentnode;
 			characters[GetCharacterIndex("Susanne Maginot")].dialog.currentnode = "smuggler_line";
 			PlaceCharacter(CharacterFromID("Susanne Maginot"), "goto");
 			LAi_SetActorType(CharacterFromID("Susanne Maginot"));
-			LAi_ActorDialog(CharacterFromID("Susanne Maginot"), PChar, "", 2.0, 1.0);
+			LAi_ActorDialog(CharacterFromID("Susanne Maginot"), PChar, "", 5.0, 5.0);
 		break;
 
 		case "fourth_mission_capture_susanne":
+			DisableFastTravel(false);
 			PChar.quest.smuggler_line = "fourth_mission_capture_susanne";
 			LAi_ActorRunToLocation(CharacterFromID("Susanne Maginot"), "reload", "werf", "none", "", "", "", 25.0);
+			Characters[GetCharacterIndex("Susanne Maginot")].location = "none";
 			AddPassenger(PChar, CharacterFromID("Susanne Maginot"), 1);
 			AddQuestRecord("smuggler_line", 32);
 		break;
@@ -8038,6 +8068,8 @@ void QuestComplete(string sQuestName)
 		case "fourth_mission_meet_with_jean_in_tavern_bad":
 			LAi_ActorRunToLocation(CharacterFromID("Jean Maginot"), "reload", "reload1", "none", "", "", "", 25.0);
 			GiveItem2Character(PChar, "shop_papers");
+			ChangeCharacterReputation(PChar, -5);
+			OfficersReaction("bad");
 			PChar.quest.smuggler_line = "fourth_mission_meet_with_jean_in_tavern_good";
 			AddQuestRecord("smuggler_line", 36);
 			LAi_setPlayerType(PChar);
@@ -8055,11 +8087,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "fourth_mission_fight":
+			NPChar = CharacterFromID("Jean Maginot");
+			GiveItem2Character(NPChar, "MerchantsBlade");
+			EquiPCharacterByItem(NPChar, "MerchantsBlade");
 			DisableFastTravel(true);
 			LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], false);
-			LAi_SetHp(CharacterFromID("Jean Maginot"), 1.0, 1.0);
+			// LAi_SetHp(NPChar, 1.0, 1.0);
 			LAi_SetActorType(PChar);
-			LAi_ActorAttack(PChar, CharacterFromID("Jean Maginot"), "fourth_mission_kill_jean");
+			LAi_ActorAttack(PChar, NPChar, "fourth_mission_kill_jean");
 		break;
 
 		case "fourth_mission_kill_jean":
@@ -8155,7 +8190,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "fourth_mission_to_jean":
+			DisableFastTravel(false);
 			PChar.quest.smuggler_line = "fourth_mission_to_jean";
+			Characters[GetCharacterIndex("Susanne Maginot")].location = "none";
 		break;
 
 		case "fourth_mission_ring":
@@ -8452,7 +8489,17 @@ void QuestComplete(string sQuestName)
 			PChar.quest.trap_completed.win_condition = "trap_completed";
 			bQuestDisableMapEnter = true;
 			Island_SetReloadEnableGlobal(PChar.location, false);
-			SetNationRelation2MainCharacter(PORTUGAL, RELATION_ENEMY);
+			if (GetNationRelation2MainCharacter(PORTUGAL) != RELATION_ENEMY)
+			{
+				PChar.quest.smuggler_line.old_portugal_relation = GetRMRelation(PChar, PORTUGAL);
+				PChar.quest.smuggler_line.old_portugal_rank = GetRank(PChar, PORTUGAL);
+				if(CheckAttribute(PChar, "knighted") && sti(PChar.knighted) == PORTUGAL)
+				{
+					PChar.quest.smuggler_line.old_knighted = PChar.knighted;
+					PChar.quest.smuggler_line.old_title = PChar.title;
+				}
+				SetNationRelation2MainCharacter(PORTUGAL, RELATION_ENEMY);
+			}
 			
 			AddQuestRecord("smuggler_line", 56);
 		break;
@@ -8499,6 +8546,19 @@ void QuestComplete(string sQuestName)
 				DeleteAttribute(CharacterFromID("Conceicao Commander"), "recognized");
 				DeleteAttribute(CharacterFromID("Conceicao Commander"), "smuggler_line_notrecognized");
 			}
+
+			if (CheckAttribute(PChar, "quest.smuggler_line.old_portugal_relation"))
+			{
+				SetRank(PChar, PORTUGAL, sti(PChar.quest.smuggler_line.old_portugal_rank));
+				SetRMRelation(PChar, PORTUGAL, stf(PChar.quest.smuggler_line.old_portugal_relation));
+				if(CheckAttribute(PChar, "quest.imperial_escort.old_knighted"))
+				{
+					PChar.knighted = PChar.quest.smuggler_line.old_knighted;
+					SetRankTitle(PChar, PChar.quest.smuggler_line.old_title);
+					DeleteQuestAttribute("smuggler_line.old_knighted");
+					DeleteQuestAttribute("uest.smuggler_line.old_title");
+				}
+			}
 		break;
 
 		case "smuggler_line_final_fight":
@@ -8527,7 +8587,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.smuggler_line = "traitor3";
 			AddQuestRecord("smuggler_line", 63);
 		break;
-// "Night Craft" quest ><--
+// "Night Craft" quest <--
 
 		PChar.questnotfound = true; // PB: Testing
 	}

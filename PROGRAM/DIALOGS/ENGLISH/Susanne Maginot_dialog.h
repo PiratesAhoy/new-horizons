@@ -32,7 +32,7 @@ string DLG_TEXT[48] = {
 "Your dad?! Ha! I'm afraid you don't know much about him! And in general - get out of the way.",
 "Strange, but he didn't tell me anything about you...",
 "Ha! Do you think he will let you in on all his affairs?!",
-"You see, it's not always parents who initiate their children into their plans and don't always introduce them to their friends...",
+"You see, parents don't always initiate their children into their plans and don't always introduce them to their friends...",
 "You're wrong! My father always tells me about all his acquaintances and affairs!",
 "How misguided you are, baby, ha-ha.",
 "You may be right, but...",

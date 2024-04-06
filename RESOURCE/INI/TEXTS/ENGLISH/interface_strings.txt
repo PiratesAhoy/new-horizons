@@ -702,7 +702,7 @@ You must dig DEEPER !{You must dig DEEPER !}
 On THIS shovelload blinks a jewel..{On THIS shovelload blinks a jewel..}
 The sword of a buried abbot{The sword of a buried abbot}
 An artefact from the temple that once stood here{An artefact from the temple that once stood here}
-You plunge into the remains of a halfdecayed plaguevictim..{You plunge into the remains of a halfdecayed plaguevictim..}
+You plunge into the remains of a halfdecayed plaguevictim..{You plunge into the remains of a half-decayed plague victim..}
 Someone's buried here.. but he aint dead!!{Someone's buried here.. but he aint dead!!}
 A file of LIVING Maltese knights comes to exorcise their crypt{A file of LIVING Maltese knights comes to exorcise their crypt}
 You might be exorcised as well..{You might be exorcised as well..}
@@ -905,6 +905,8 @@ Gaming House.{Gaming House.}
 The Dark Frigate{The Dark Frigate}
 The Faithful Bride{The Faithful Bride}
 Will Turner's House{Will Turner's House}
+Spanish Camp{Spanish Camp}
+Battle Rocks port{Battle Rocks port}
 
 Khael Roa Shore{Khael Roa Shore}
 Incas Temple{Incas Temple}
@@ -1184,6 +1186,8 @@ Arsenal.{Barracks}
 #stown_name# Naval HQ{#stown_name# Naval HQ}
 Officer Commanding #stown_name# Naval HQ{Officer Commanding #stown_name# Naval HQ}
 Mrs. Mason's House{Mrs. Mason's House}
+Yedam Kinne's house{Yedam Kinne's house}
+Mine commander's house{Mine commander's house}
 Office{Office}
 Naval Store{Naval Store}
 Naval Shipyard{Naval Shipyard}
@@ -1341,9 +1345,10 @@ CrewMutinyArticles4{You don't have rum...}
 CrewMutinyArticles5{Your pockets are empty...}
 GainedPerk{gained new Ability -}
 You unlocked the perk:{You unlocked the perk:}
-PlaguevictimsGrave{Curse? A plaguevictims grave? Whatever, you suddenly feel terribly sick!}
+PlaguevictimsGrave{Curse? A plague victim's grave? Whatever, you suddenly feel terribly sick!}
 Petit Tabac{Petit Tabac}
 Battle_Rocks{Petit Tabac}
+Devil Creek{Devil Creek}
 Isla De Muerte{Isla De Muerte}
 IslaDeMuerte{Isla De Muerte}
 Deserted shore{Deserted shore}
@@ -2503,7 +2508,7 @@ Hint: To make an officer available to command your ship, assign that officer to 
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
 Capitán{Capitán}
-CapitÝo{CapitÝo}
+Capitão{Capitão}
 Teniente{Teniente}
 Electress{Electress}
 
