@@ -469,7 +469,7 @@ Captain, the{Капитан, корабль}
 is under attack by the Kraken!{находится под атакой Кракена!}
 Captain, the Kraken has finished its attack on the{Капитан, Кракен завершил свою атаку на корабль}
 Captain, the Kraken is ready for another attack!{Капитан, Кракен готов к новой атаке!}
-Captain, the crew is ready for another go at the oars!{Капитан, команда готова ещё раз взяться за весла!}
+Captain, the crew is ready for another go at the oars!{Капитан, команда готова ещё раз взяться за вёсла!}
 Captain, the Sword of Triton has recharged itself!{Капитан, Сабля Тритона перезарядилась!}
 
 Engines: Full{Двигатели: Полная Мощность}
@@ -2331,7 +2331,7 @@ Kristiania port{Порт Кристиании}
 Kristiania center{Центр Кристиании}
 Townhall office - open later today{Кабинет Резиденции - Откроется Позже}
 Townhall office{Кабинет Резиденции}
-Kitchen - staff only{Кухня – только для персонала.}
+Kitchen - staff only{Кухня}
 Kristiania Usurerhouse. Closed today because of the naval visit.{Контора Ростовщика Кристиании. Сегодня закрыто из-за визита военно-морских сил.}
 Kristiania Blacksmith. Closed today because of the naval visit.{Кузнец Кристиании. Сегодня закрыто из-за визита военно-морских сил.}
 Kristiania Apothecary. Closed because of illness.{Аптекарь Кристиании. Закрыто по причине болезни.}

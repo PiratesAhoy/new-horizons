@@ -37,7 +37,7 @@ sea_FCoHS_Hail {Приветствовать Корабль}
 sea_FCoHS_Contact {Посетить Корабль}
 sea_KrakenAttack {Вызов Кракена}
 sea_SubmergeDutchman {Погрузиться/Всплыть}
-sea_PearlSweeps {Закончить}
+sea_PearlSweeps {Работать Вёслами}
 sea_QARSword {Сабля Тритона}
 sea_TritonAttack {Атака Такелажа}
 sea_NeptuneTrident {Трезубец Нептуна}
