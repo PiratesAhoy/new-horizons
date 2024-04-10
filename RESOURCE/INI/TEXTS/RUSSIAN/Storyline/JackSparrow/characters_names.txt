@@ -150,15 +150,15 @@ Hylie{Хайли}
 Pistof{Пистоф}
 Jean-Bart{Жан-Барт}
 Lafin{Лафин}
-Johan{Йоган}
-Klaesz{Клаз}
+Johan{Йохан}
+Klaesz{Клаес}
 Eduardo{Эдуардо}
 Villanueva{Вильянуэва}
 Francois{Франсуа}
-de Hadoque{де Хадоке}
+de Hadoque{Де Хадок}
 Sri Sumbhajee{Шри Сумбаджи}
 Angria{Ангрия}
-Pusasn{Пусаш}
+Pusasn{Пусан}
 Askay{Аскай}
 Ammand{Амманд}
 the Corsair{Корсар}
