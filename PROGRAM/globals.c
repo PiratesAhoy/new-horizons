@@ -2,6 +2,8 @@
 #include "storm-engine\messages.h"
 #include "Sound\sound.c"
 
+ref PChar;
+PChar = GetMainCharacter();
 //--------------------------------------------------------------------
 // Math section
 //--------------------------------------------------------------------

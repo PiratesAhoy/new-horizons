@@ -54,6 +54,7 @@
 #include "FCoHS\FCoHS_Main.c"; // Friendly Contact on High Seas Mod
 #include "smuggling.c";	//Everything related to smuggling moved to here -Levis
 #include "Characters\Leveling.c"; //Everything related to leveling move to this -Levis
+#include "MrMyt92_code.c";
 #include "compatibility.c";
 #include "module_loader/module_loader.c"
 
