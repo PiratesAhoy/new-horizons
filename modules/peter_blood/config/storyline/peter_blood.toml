@@ -1,0 +1,32 @@
+[storyline.peter_blood]
+id = "peter_blood"
+dir = "peter_blood"
+
+[storyline.peter_blood.start]
+location = "Oxbay_town"
+port = "Oxbay_port"
+model = "bocman3"
+first_name = "Peter"
+last_name = "Blood"
+nation = "england"
+player_type = "social_climber"
+pirate_flag = 4
+personal_flag = 8
+ship = "FastGalleon1"
+ship_name = "Discovery"
+
+[storyline.peter_blood.start.editable]
+difficulty = true
+
+[storyline.peter_blood.start.date]
+hour = 11
+min = 0
+sec = 0
+day = 1
+month = 1
+year = 1665
+
+[storyline.peter_blood.variables]
+START_MIN_LEVEL = 1
+CHANGING_RELATIONS = 1
+ISLA_DE_MUERTE = 0

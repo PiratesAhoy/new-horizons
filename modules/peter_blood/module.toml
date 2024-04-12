@@ -1,0 +1,10 @@
+name = "peter-blood"
+enabled = true
+version = [15, 0, 0, "beta", 2]
+description = "Peter Blood storyline ported over from CoAS"
+authors = [
+    "PiratesAhoy!",
+]
+dependencies = [
+    "core",
+]
