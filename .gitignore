@@ -4,11 +4,15 @@
 /Blender/
 /installer/
 /stash/
+/resource/shared
+/resource/techniques
 
 /options
 
 *.log
 *.exe
+*.dll
+*.pdb
 *.xls
 *.7z
 *.zip
