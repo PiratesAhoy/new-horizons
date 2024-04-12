@@ -2,6 +2,9 @@
 id = "jack_sparrow"
 dir = "JackSparrow"
 
+[storyline.jack_sparrow.tags]
+beta = true
+
 [storyline.jack_sparrow.start]
 location = "Tortuga_Port"
 port = "Tortuga_Port"

@@ -2,6 +2,9 @@
 id = "bartolomeu"
 dir = "Bartolomeu"
 
+[storyline.bartolomeu.tags]
+beta = true
+
 [storyline.bartolomeu.start]
 location = "PoPrince_Port"
 port = "PoPrince_Port"

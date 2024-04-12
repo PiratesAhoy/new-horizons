@@ -2,6 +2,9 @@
 id = "devlin_opera"
 dir = "DevlinOpera"
 
+[storyline.devlin_opera.tags]
+beta = true
+
 [storyline.devlin_opera.start]
 location = "Redmond_port"
 port = "Redmond_port"

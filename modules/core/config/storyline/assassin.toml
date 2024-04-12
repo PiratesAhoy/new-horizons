@@ -2,6 +2,9 @@
 id = "assassin"
 dir = "Assassin"
 
+[storyline.assassin.tags]
+beta = true
+
 [storyline.assassin.start]
 location = "Douwesen_port"
 port = "Douwesen_port"

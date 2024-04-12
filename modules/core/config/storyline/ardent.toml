@@ -2,6 +2,9 @@
 id = "ardent"
 dir = "Ardent"
 
+[storyline.ardent.tags]
+beta = true
+
 [storyline.ardent.start]
 location = "Tutorial_Deck"
 port = "Cuba_port"

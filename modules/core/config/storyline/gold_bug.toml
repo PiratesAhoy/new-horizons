@@ -2,6 +2,9 @@
 id = "gold_bug"
 dir = "GoldBug"
 
+[storyline.gold_bug.tags]
+beta = true
+
 [storyline.gold_bug.start]
 location = "Charleston_Port"
 port = "Charleston_Port"

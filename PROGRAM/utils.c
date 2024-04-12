@@ -2212,8 +2212,21 @@ string GetStorylineTitle(int idx)
 		aref arsl = GetAttributeN(sl, i);
 		if (!CheckAttribute(arsl, "index")) continue;
 		if (sti(arsl.index) == idx) {
-			if (CheckAttribute(arsl, "title"))
-				return arsl.title;
+			if (CheckAttribute(arsl, "title") ){
+				string title = arsl.title;
+				// Add tags to storyline title
+				if (CheckAttribute(arsl, "tags") ) {
+					aref tags;
+					makearef(tags, arsl.tags);
+					for (int k = 0; k < GetAttributesNum(tags); k++) {
+						string tag_name = GetAttributeName(GetAttributeN(tags, k));
+						if (makeint(tags.(tag_name)) == 1) {
+							title = "[" + tag_name + "] " + title;
+						}
+					}
+				}
+				return title;
+			}
 			else
 				break;
 		}

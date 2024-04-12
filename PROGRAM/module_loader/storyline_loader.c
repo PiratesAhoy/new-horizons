@@ -108,5 +108,14 @@ void LoadStoryline(aref config, string id, int n) {
 		AddStorylineVar(n, variable_name, config_variables.(variable_name));
 	}
 
+	if (CheckAttribute(config, "tags") ) {
+		aref tags;
+		makearef(tags, config.tags);
+		for (int k = 0; k < GetAttributesNum(tags); k++) {
+			string tag_name = GetAttributeName(GetAttributeN(tags, k));
+			sl.tags.(tag_name) = tags.(tag_name);
+		}
+	}
+
 	Trace("Registered storyline '" + id + "'");
 }
