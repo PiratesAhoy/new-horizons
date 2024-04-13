@@ -2,6 +2,8 @@
 #include "module_loader/storyline_loader.c"
 #include "module_loader/compatibility.c"
 
+#define CORE_MODULE "core"
+
 native void LoadConfig(ref target, string path);
 native string FindConfig(string path);
 native void ListFiles(ref target, string root);

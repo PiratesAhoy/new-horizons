@@ -2965,6 +2965,8 @@ void ReinitInterface()
 	Interfaces[INTERFACE_INSTALLERROR].SectionName = "interface\installerror.c";
 	Interfaces[INTERFACE_INSTALLERROR].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\installerror.ini";
 // PB: Catch Erroneous Install <--
+	Interfaces[INTERFACE_CREDITS].SectionName = "interface\credits.c";
+	Interfaces[INTERFACE_CREDITS].IniFile = "RESOURCE\INI\INTERFACES\credits.ini";
 }
 
 string GetCurrentInterfacePath()

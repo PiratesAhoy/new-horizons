@@ -664,6 +664,7 @@ void InterfaceDoExit()
 			break;
 // added by MAXIMUS <--
 		case RC_INTERFACE_DO_CREDITS:
+			LaunchCreditsScreen();
 			break;
 		case RC_INTERFACE_DO_RESUME_GAME:
 			break;
