@@ -1,0 +1,5 @@
+itmname_key_pitt	{Pitt Key}
+itmdescr_key_pitt
+{
+This small key will help open the chest on the estate balcony.
+}

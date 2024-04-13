@@ -77,3 +77,13 @@ string LAi_FindFreeRandomLocator(string group)
 	}
 	return "";
 }
+void SaveCurrentQuestDateParam(string _quest)
+{
+    aref  arQ;
+    makearef(arQ, PChar.(_quest));
+
+    arQ.control_day = GetDataDay();
+    arQ.control_month = GetDataMonth();
+    arQ.control_year = GetDataYear();
+    arQ.control_time = GetTime();
+}

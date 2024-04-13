@@ -5,7 +5,7 @@ void StartStoryLine()
 	string sTeleportLocName = "";
 	string rldGroup = "";
 	string rldLocator = "";
-	pchar.testlocnum = "Oxbay_town";
+	pchar.testlocnum = "Estate";
 	switch(pchar.testlocnum)
 	{
 	case "Estate":
@@ -95,5 +95,5 @@ void StartStoryLine()
 	LAi_SetPlayerType(pchar);
 	LAi_SetImmortal(pchar, true);
 	Pchar.questTemp.CapBloodLine.stat = "Begining";
-//	DoQuestCheckDelay("Blood0", 1.0);
+	DoQuestCheckDelay("Blood0", 1.0);
 	}

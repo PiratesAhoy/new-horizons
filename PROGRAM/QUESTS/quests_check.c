@@ -54,6 +54,9 @@ bool ProcessCondition(aref condition)
 
 	switch(sConditionName)
 	{
+			case "item_equip":
+		return IsEquipCharacterByItem(refCharacter,condition.item_equip);
+	break;
 	case "Goods":
 		return TestIntValue(GetCargoGoods(refCharacter,sti(condition.goods)),sti(condition.quantity),condition.operation);
 	break;

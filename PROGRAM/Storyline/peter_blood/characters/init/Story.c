@@ -11,6 +11,7 @@ void CreateStoryCharacters(ref n)
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
 	ch.Dialog.Filename = "bishop.c";
+	ch.Dialog.CurrentNode = "First time";
 	ch.greeting = "Gr_Marc Blacque";
 	ch.nation = ENGLAND;
 	ch.rank 	= 1;
@@ -31,6 +32,7 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Shkiper";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
+	ch.Dialog.CurrentNode = "First time";
 	ch.Dialog.Filename = "bishop.c";
 	ch.greeting = "Gr_Marc Blacque";
 	ch.nation = ENGLAND;
@@ -52,6 +54,7 @@ void CreateStoryCharacters(ref n)
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
 	ch.Dialog.Filename = "bishop.c";
+	ch.Dialog.CurrentNode = "First time";
 	ch.greeting = "Gr_Marc Blacque";
 	ch.nation = ENGLAND;
 	ch.rank 	= 1;
@@ -72,6 +75,7 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Offic_eng_17";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
+	ch.Dialog.CurrentNode = "First time";
 	ch.Dialog.Filename = "bishop.c";
 	ch.greeting = "Gr_Marc Blacque";
 	ch.nation = ENGLAND;
@@ -106,6 +110,7 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Storeman";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
+	ch.Dialog.CurrentNode = "First time";
 	ch.Dialog.Filename = "questNPC.c";
 	ch.greeting = "Gr_Marc Blacque";
 	ch.nation = ENGLAND;
@@ -122,6 +127,7 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Offic_eng_17";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
+	ch.Dialog.CurrentNode = "First time";
 	ch.Dialog.Filename = "questNPC.c";
 	ch.greeting = "Gr_Marc Blacque";
 	ch.nation = ENGLAND;
@@ -139,6 +145,7 @@ void CreateStoryCharacters(ref n)
 	ch.sex = "woman";
 	ch.sound_type = "male_citizen";
 	ch.Dialog.Filename = "questNPC.c";
+	ch.Dialog.CurrentNode = "First time";
 	ch.greeting = "Gr_Marc Blacque";
 	ch.nation = ENGLAND;
 	ch.rank 	= 1;
@@ -157,6 +164,7 @@ void CreateStoryCharacters(ref n)
 	ch.sound_type = "male_citizen";
 	ch.Dialog.Filename = "bishop.c";
 	ch.greeting = "Gr_Marc Blacque";
+	ch.Dialog.CurrentNode = "First time";
 	ch.nation = ENGLAND;
 	ch.rank 	= 1;
 	ch.reputation = "50";
@@ -172,6 +180,7 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Chelovek1";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
+	ch.Dialog.CurrentNode = "First time";
 	ch.Dialog.Filename = "bishop.c";
 	ch.greeting = "Gr_Marc Blacque";
 	ch.nation = ENGLAND;
@@ -181,99 +190,6 @@ void CreateStoryCharacters(ref n)
 	ch.quest.meeting = "0";
 	LAi_SetStayType(ch);
 	LAi_SetImmortal(ch, true);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	AddGameCharacter(n, ch);
-	
-	
-//Test_NPC
-	for (i=1; i<=8; i++)
-{
-	ch.id		= "Test_NPC"+i;
-	ch.model = "iroquois_"+i;
-	ch.sex = "man";
-	ch.sound_type = "male_citizen";
-	ch.nation = ENGLAND;
-	ch.rank 	= 1;
-	ch.reputation = "50";
-	ch.experience = "0";
-	ch.skill.Leadership = "2";
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "3";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.money = "10";
-	ch.quest.meeting = "0";
-	ch.model.animation = "man";
-	ch.location	= "Antigua_shore_test";
-	ch.location.group = "goto";
-	ch.location.locator = "goto"+i;
-	LAi_SetStayType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetImmortal(ch, true);
-	AddGameCharacter(n, ch);
-}
-	ch.id		= "Mary2";
-	ch.model = "Mary2";
-	ch.sex = "woman";
-	ch.sound_type = "male_citizen";
-	ch.model.animation = "Mary";
-	ch.greeting = "Gr_Marc Blacque";
-	ch.nation = ENGLAND;
-	ch.rank 	= 1;
-	ch.reputation = "50";
-	ch.experience = "0";
-	ch.skill.Leadership = "2";
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "3";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.money = "10";
-	ch.quest.meeting = "0";
-	LAi_SetStayType(ch);
-	ch.location	= "Antigua_shore_test";
-	ch.location.group = "goto";
-	ch.location.locator = "goto12";
-	LAi_SetImmortal(ch, true);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	AddGameCharacter(n, ch);
-	
-	ch.id		= "maska";
-	ch.model = "Maska";
-	ch.sex = "man";
-	ch.sound_type = "male_citizen";
-	ch.greeting = "Gr_Marc Blacque";
-	ch.model.animation = "maska";
-	ch.nation = ENGLAND;
-	ch.rank 	= 1;
-	ch.reputation = "50";
-	ch.experience = "0";
-	ch.skill.Leadership = "2";
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "3";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.money = "10";
-	ch.quest.meeting = "0";
-	LAi_SetStayType(ch);
-	LAi_SetImmortal(ch, true);
-	ch.location	= "Antigua_shore_test";
-	ch.location.group = "goto";
-	ch.location.locator = "goto13";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	AddGameCharacter(n, ch);
 }

@@ -1010,7 +1010,7 @@ Set all to -1 to disable this mod
 #define RANDOM_LOCS_TOGGLE				0
 #define DISARM_MODE						0
 #define VISIBLE_LOCATORS				0
-#define WITH_BRIGHT_COLOURS				0		// VISIBLE_LOCATORS must be on to change this
+#define WITH_BRIGHT_COLOURS				1		// VISIBLE_LOCATORS must be on to change this
 #define ENABLE_FREE_CAMERA						0
 #define SIDESTEP_ENABLED				0		// BOOL - 0 (default) = off, 1 = on: you can use sidestep during the game (NOTE: No collision detection!)
 #define ENABLE_CHEATMODE				0		// Cheats can be triggered with numpad buttons

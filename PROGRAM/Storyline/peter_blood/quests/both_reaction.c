@@ -153,7 +153,6 @@ TakeNItems(sld1, "pistolbullets", 6);
 for (i=1; i<=5; i++)
 {
 sld = characterFromID("Dragun_"+i);
-SetEnergyToCharacter(sld);
 LAi_SetImmortal(sld, true);
 GiveItem2Character(sld, "blade4");
 EquipCharacterByItem(sld, "blade4");

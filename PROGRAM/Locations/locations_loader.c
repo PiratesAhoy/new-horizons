@@ -575,7 +575,7 @@ bool LoadLocation(ref loc)
 	//DumpAttributes(loc);
 	//SendMessage(Sound,"lf",MSG_SOUND_SET_MASTER_VOLUME,1.0);
 
-	if(VISIBLE_LOCATORS)    // LDH 05Dec06 added toggle instead of commenting out line
+	if(VISIBLE_LOCATORS || WITH_BRIGHT_COLOURS)    // LDH 05Dec06 added toggle instead of commenting out line
 	{
 	    if(WITH_BRIGHT_COLOURS)	//JRH
 	    {

@@ -3,7 +3,8 @@
 #include "Sound\sound.c"
 
 ref PChar;
-PChar = GetMainCharacter();
+bool chrDisableReloadToLocation = false;
+bool bBettaTestMode = false;
 //--------------------------------------------------------------------
 // Math section
 //--------------------------------------------------------------------
@@ -288,6 +289,7 @@ void SetMainCharacterIndex(int index)
 		Characters[nMainCharacterIndex].model.entity = "NPCharacter";
 	}
 	nMainCharacterIndex = index; 
+PChar = GetMainCharacter();
 	Characters[nMainCharacterIndex].MainCharacter = "1";
 	Characters[nMainCharacterIndex].model.entity = "Player";
 }

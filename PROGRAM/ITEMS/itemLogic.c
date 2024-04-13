@@ -837,7 +837,22 @@ void Box_EnterToLocator(aref loc, string locName)
 
 	ref chr = GetMainCharacter();
 	chr.boxname = locName;
-
+	
+if(CheckAttribute(Locations[FindLocation(chr.location)], "boxneedkey."+locName) && Locations[FindLocation(chr.location)].boxneedkey.(locName) == true)
+	{
+	if(CheckAttribute(Locations[FindLocation(chr.location)], "boxneedkey."+locName+".KeyItem") && CheckCharacterItem(chr, Locations[FindLocation(chr.location)].boxneedkey.(locName).KeyItem))
+	{
+	PlaySound("INTERFACE\took_item.wav");
+	Locations[FindLocation(chr.location)].boxneedkey.(locName) = false;
+	TakeItemFromCharacter(chr, Locations[FindLocation(chr.location)].boxneedkey.(locName).KeyItem);
+	}
+	else
+	{
+	PlaySound("knock");
+	return;
+	}
+	
+	}
 	//MAXIMUS: moved here for preventing wrong action showing -->
 	Log_SetActiveAction("OpenBox");
 	//MAXIMUS: moved here for preventing wrong action showing <--

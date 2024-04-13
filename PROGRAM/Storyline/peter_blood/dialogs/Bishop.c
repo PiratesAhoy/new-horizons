@@ -7,7 +7,8 @@ void ProcessDialogEvent()
     string sTemp;
 
 	DeleteAttribute(&Dialog,"Links");
-
+ref PChar;
+PChar = GetMainCharacter();
 	makeref(NPChar,CharacterRef);
 	makearef(Link, Dialog.Links);
 	makearef(NextDiag, NPChar.Dialog);
@@ -157,7 +158,7 @@ void ProcessDialogEvent()
                     dialog.text = DLG_TEXT_BL1[9];
             		link.l1 = DLG_TEXT_BL1[10];
                     link.l1.go = "Exit_Away";
-                    Pchar.questTemp.CapBloodLine.sLocator = "reload1";
+                    Pchar.questTemp.CapBloodLine.sLocator = "goto1";
                     Pchar.questTemp.CapBloodLine.iTime = -1;
            			if (bBettaTestMode)
                     {
@@ -700,7 +701,7 @@ void ProcessDialogEvent()
             link.l1.go = "Exit";
             NextDiag.TempNode = "SStep_3";
 
-			sld = GetCharacter(NPC_GenerateCharacter("MisStid", "AnnaDeLeiva", "woman", "towngirl2", 10, ENGLAND, 3, false));
+			/*sld = GetCharacter(NPC_GenerateCharacter("MisStid", "AnnaDeLeiva", "woman", "towngirl2", 10, ENGLAND, 3, false));
             sld.dialog.filename = "Quest\CapBloodLine\Bishop.c";
 			sld.name = DLG_TEXT_BL1[137];
 			sld.lastname = DLG_TEXT_BL1[138];

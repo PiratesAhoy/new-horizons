@@ -447,6 +447,7 @@ void chrCharacterKeys()
 
 bool chrIsNowEnableReload()
 {
+	if(chrDisableReloadToLocation) return false; // boal
 	//Skip if not set reload locator
 	if(chrWaitReloadLocator == "") return false;
 	//Skip if active dialog

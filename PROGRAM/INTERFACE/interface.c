@@ -136,6 +136,30 @@ void DoQuickLoad()
 	}
 // <-- KK
 }
+void ChangeShowIntarface()
+{
+    if (bSeaActive && !bAbordageStarted)
+    {
+        if (!IsEntity(BattleInterface))
+        {
+            InitBattleInterface();
+            StartBattleInterface();
+            RefreshBattleInterface(true);
+        }
+        else DeleteBattleInterface();
+    }
+    else
+    {
+		if (!IsEntity(worldMap))
+		{
+			if (!bLandInterfaceStart)
+	        {
+	            StartBattleLandInterface();
+	        }
+	        else EndBattleLandInterface();
+        }
+    }
+}
 
 void DoQuickSave()
 {
