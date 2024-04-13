@@ -74,6 +74,12 @@ categories = [
 ]
 
 [[contributors]]
+name = "Jtem"
+categories = [
+    "translation",
+]
+
+[[contributors]]
 name = "Nathan Kell"
 weight = 9
 categories = [
