@@ -1,11 +1,19 @@
 import os
 import shutil
 import fnmatch
+import dload
+import datetime
 
 if os.path.exists("publish"):
     shutil.rmtree("publish")
 
 os.makedirs("publish", exist_ok=True)
+
+with open("userversion.txt", 'w') as f:
+    f.write(datetime.datetime.now().strftime("%Y%m%d") )
+
+# Download engine
+dload.save_unzip("https://github.com/PiratesAhoy/storm-engine/releases/download/pa15.0.0-beta.3/storm-engine.release-steam-false.zip", "engine")
 
 def add_file(source_file, target_file=None):
     if target_file is None:
