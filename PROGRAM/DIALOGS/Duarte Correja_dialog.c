@@ -86,24 +86,29 @@ void ProcessDialogEvent()
 			}
 			if (pchar.quest.main_line == "search_for_Ferro_Cerezo"  && iTest < QUEST_COUNTER)
 			{
-				link.l2 = DLG_TEXT[26] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[27])]) + DLG_TEXT[29];
+				link.l2 = DLG_TEXT[26] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[27])]) + DLG_TEXT[28];
 				link.l2.go = "search_for_Ferro_Cerezo";
 			}
 //Hitman
 			if(CheckQuestAttribute("Hitman", "mark_vito") && FindCurrentStoryline() != FindStoryline("Assassin")) // GR: Prevent this dialog during "Assassin" storyline
 			{
-				link.l3 = DLG_TEXT[30];
+				link.l3 = DLG_TEXT[29];
 				link.l3.go = "vito";
 			}
 			if (CheckQuestAttribute("Voysey_lost", "1"))
 			{
-				link.l4 = DLG_TEXT[31];
+				link.l4 = DLG_TEXT[30];
 				link.l4.go = "artois";
 			}
 			if (!CheckQuestAttribute("generate_convoy_quest_progress", "begin") && npchar.work != lastspeak_date)
 			{
-				link.l10 = DLG_TEXT[32];
+				link.l10 = DLG_TEXT[31];
 				link.l10.go = "convoy";
+			}
+			if (checkquestattribute("smuggler_line", "fifth_mission_accepted"))
+			{
+				link.l11 = DLG_TEXT[32];
+				link.l11.go = "fifth_mission_accepted";
 			}
 			link.l99 = DLG_TEXT[33];
 			link.l99.go = "second time";
@@ -179,7 +184,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "crew":
-			if (makeint(environment.time) > 22.0 || makeint(environment.time) < 10.0)
+			if (GetTime() >= 22.0 || GetTime() < 10.0)
 			{
 				dialog.snd = "Voice\DUCO\DUCO012";
 				Dialog.text = DLG_TEXT[61];
@@ -209,7 +214,7 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\DUCO\DUCO013";
 			dialog.text = DLG_TEXT[64];
 			string roomWait = "";
-			if (makeint(environment.time) >= 22.0 || makeint(environment.time) < 10.0)
+			if (GetTime() >= 22.0 || GetTime() < 10.0)
 			{
 				roomWait = "eveningwait";
 				link.l1 = DLG_TEXT[65];
@@ -384,6 +389,37 @@ void ProcessDialogEvent()
 					}
 				}
 			}
+		break;
+
+		case "fifth_mission_accepted":
+			dialog.text = DLG_TEXT[89];
+			link.l1 = DLG_TEXT[90];
+			link.l1.go = "fifth_mission_accepted_2";
+		break;
+
+		case "fifth_mission_accepted_2":
+			dialog.text = DLG_TEXT[91];
+			link.l1 = DLG_TEXT[92];
+			link.l1.go = "fifth_mission_accepted_3";
+		break;
+
+		case "fifth_mission_accepted_3":
+			dialog.text = DLG_TEXT[93];
+			link.l1 = DLG_TEXT[94];
+			link.l1.go = "fifth_mission_accepted_4";
+		break;
+
+		case "fifth_mission_accepted_4":
+			dialog.text = DLG_TEXT[95];
+			link.l1 = DLG_TEXT[96];
+			link.l1.go = "fifth_mission_accepted_5";
+		break;
+
+		case "fifth_mission_accepted_5":
+			dialog.text = DLG_TEXT[97];
+			link.l1 = DLG_TEXT[98];
+			link.l1.go = "exit";
+			AddDialogExitQuest("fifth_mission_know_about_betrayer");
 		break;
 	}
 }

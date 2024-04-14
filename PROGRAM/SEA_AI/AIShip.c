@@ -2814,7 +2814,7 @@ void ShipDead(int iDeadCharacterIndex, int iKillStatus, int iKillerCharacterInde
 			if (iExp > 0) sSunkString = sSunkString + " " + TranslateString("","Gained") + " " + iExp + " " + TranslateString("","Total XP") + "."; // KK
 		} else {
 			if ( bHandofGod && rand(100)>95 ) { // TIH easteregg
-				sSunkString = sSunkShipType + " " + GetMyShipNameShow(rDead) + " " + TranslateString("","has been sunk by the") + " " + TranslateString("","hand of god") + TranslateString("", ". God gained") + " " + (1000+rand(2000)) + " " + TranslateString("","Total XP") + ".";
+				sSunkString = sSunkShipType + " " + GetMyShipNameShow(rDead) + " " + TranslateString("","has been sunk by the") + " " + TranslateString("","hand of god") + ". " + TranslateString("", "God gained") + " " + (1000+rand(2000)) + " " + TranslateString("","Total XP") + ".";
 			} else {
 				sSunkString = sSunkShipType + " " + GetMyShipNameShow(rDead) + " " + TranslateString("","has been sunk by") + " " + sKillShipName + "."; // KK
 			}

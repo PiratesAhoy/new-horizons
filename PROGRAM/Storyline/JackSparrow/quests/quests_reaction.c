@@ -121,15 +121,15 @@ void QuestComplete(string sQuestName)
 			Pchar.dialog.filename = "blaze_dialog.c";
 			ChangeCharacterAddressGroup(CharacterFromID("Storyteller"), "none", "", "");
 			ChangeCharacterAddressGroup(CharacterFromID("Random Drunk"), "none", "", "");
-			DisableFastTravel(false);
+			DisableFastTravel(true);
 			Locations[FindLocation("Tortuga_port")].reload.l2.disable = 0;
-			bQuestDisableSeaEnter = false;
-
+			Locations[FindLocation("Cayman_port")].reload.l1.disable = 1;
+			Locations[FindLocation("Cayman_port")].reload.l3.disable = 1;
+			
 			DoQuestReloadToLocation("Cayman_Port", "reload", "sea", "_");
 		break;
 
 		case "Sparrow_load":
-			DisableFastTravel(true);
 			LAi_SetActorType(characterFromID("Grand Cayman soldier 02"));
 			Characters[GetCharacterIndex("Grand Cayman soldier 02")].Dialog.Filename = "Port Guard_Dialog.c";
 			Characters[GetCharacterIndex("Grand Cayman soldier 02")].Dialog.CurrentNode = "opening_scene";
@@ -163,6 +163,9 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(pchar);
 			LAi_ActorGoToLocator(Pchar, "goto", "goto11", "into_position_Cayman", 10);
 			Characters[GetCharacterIndex("Port Guard")].dialog.currentnode = "under arrest";
+			bQuestDisableSeaEnter = false;
+			Locations[FindLocation("Cayman_port")].reload.l1.disable = 0;
+			Locations[FindLocation("Cayman_port")].reload.l3.disable = 0;
 		break;
 
 		case "into_position_Cayman":
@@ -354,6 +357,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.Blundas_in_the_Tavern.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Blundas_in_the_Tavern.win_condition.l1.location = "Oxbay_tavern";
 			Pchar.quest.Blundas_in_the_Tavern.win_condition = "Blundas_in_the_Tavern";
+			Characters[GetCharacterIndex("Thomas the Terror")].location = "";														
 		break;
 
 		case "Blundas_in_the_Tavern":
@@ -6033,7 +6037,11 @@ void QuestComplete(string sQuestName)
 
 		case "Off_to_shipyard_now6":
 			LAi_SetActorType(pchar);
-			LAi_ActorRunToLocator(pchar, "goto", "goto_17", "Fight_with_Turner_in_Shipyard", 2.0);
+			LAi_ActorRunToLocator(pchar, "goto", "goto_17", "Off_to_shipyard_now7", 2.0);
+		break;
+		
+		case "Off_to_shipyard_now7":
+			LAi_Fade("Fight_with_Turner_in_Shipyard","");
 		break;
 
 		case "Fight_with_Turner_in_Shipyard":
@@ -7441,6 +7449,7 @@ void QuestComplete(string sQuestName)
 			PChar.Lucas = "0";
 
 			DeleteEnterLocationQuest("Santo_Domingo_townhall", "Luc_start_check");
+			Characters[GetCharacterIndex("Thomas Tipman")].dialog.currentnode = "First time";
 
 			//JOURNAL
 			SetQuestHeader("Lucas");
@@ -7545,7 +7554,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Lucas Da Saldanha"), "Rheims_house_in_smugglers", "sit", "sit2");
 			LAi_SetSitType(CharacterFromID("Lucas Da Saldanha"));
 			Locations[FindLocation("Smugglers_Lair")].reload.l5.close_for_night = 0;
-			Locations[FindLocation("Rheims_house_in_smugglers")].id.label = "Kidnappers' Hideout";
+			Locations[FindLocation("Rheims_house_in_smugglers")].id.label = TranslateString("","Kidnappers' Hideout");
 			Locations[FindLocation("Smugglers_Tavern")].vcskip = true; // NK
 
 			PChar.quest.Lucas_ransom_deadline.win_condition.l1 = "Timer";
@@ -7960,6 +7969,7 @@ void QuestComplete(string sQuestName)
 				Characters[GetCharacterIndex("Captain Maggee")].dialog.CurrentNode = "story";
 				LAi_SetActorType(CharacterFromID("Captain Maggee"));
 				LAi_ActorDialog(CharacterFromID("Captain Maggee"), PChar, "", 100.0, 100.0);
+				DisableFastTravel(true);
 			}
 		break;
 
@@ -7969,6 +7979,7 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.CurrentNode = "governer";
 			LAi_SetActorType(CharacterFromID("Lucas Da Saldanha"));
 			LAi_ActorDialog(CharacterFromID("Lucas Da Saldanha"), PChar, "", 2.0, -1);
+			DisableFastTravel(false);
 
 			//JOURNAL
 			AddQuestRecord("Lucas", 17);
@@ -9818,10 +9829,7 @@ void QuestComplete(string sQuestName)
 			sld.name = TranslateString("", "Cannibal");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
-			GiveItem2Character(sld, "bladearrows");
-			GiveItem2Character(sld, "bladearrows");
-			GiveItem2Character(sld, "bladearrows");
-
+			TakeNItems(sld, "bladearrows", 3);
 			EquipCharacterByItem(sld, "bladearrows");
 			GiveItem2Character(sld, "pistolbow");
 			EquipCharacterByItem(sld, "pistolbow");
@@ -9829,10 +9837,7 @@ void QuestComplete(string sQuestName)
 
 			sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack_1", "goto", "goto5");
 			sld.name = TranslateString("", "Cannibal");
-			GiveItem2Character(sld, "bladearrows");
-			GiveItem2Character(sld, "bladearrows");
-			GiveItem2Character(sld, "bladearrows");
-
+			TakeNItems(sld, "bladearrows", 3);
 			EquipCharacterByItem(sld, "bladearrows");
 			GiveItem2Character(sld, "pistolbow");
 			EquipCharacterByItem(sld, "pistolbow");
@@ -9842,10 +9847,7 @@ void QuestComplete(string sQuestName)
 
 			sld = LAi_CreateFantomCharacter(false, 1, true, true, 1.0, "RabBlack", "goto", "goto4");
 			sld.name = TranslateString("", "Cannibal");
-			GiveItem2Character(sld, "bladearrows");
-			GiveItem2Character(sld, "bladearrows");
-			GiveItem2Character(sld, "bladearrows");
-
+			TakeNItems(sld, "bladearrows", 3);
 			EquipCharacterByItem(sld, "bladearrows");
 			GiveItem2Character(sld, "pistolbow");
 			EquipCharacterByItem(sld, "pistolbow");
@@ -11139,8 +11141,8 @@ void QuestComplete(string sQuestName)
 			EquipCharacterbyItem(Pchar, "blade26");
 			EquipCharacterbyItem(Pchar, "jerkin");
 
-			PChar.name = "William";
-			PChar.lastname = "Turner";
+			PChar.name = TranslateString("","William");
+			PChar.lastname = TranslateString("","Turner");
 			GiveModel2Player("WillTurner2",true);
 
 			RemovePassenger(pchar, characterFromID("Will Turner"));
@@ -11253,7 +11255,8 @@ void QuestComplete(string sQuestName)
 
 		//Play video/ make dutchman appear
 		case "Video_at_shipwreck_dutchman2":
-			PostVideoAndQuest("LegendJackSparrow\DMC_Wreck_dutchman_appear", 25, "Video_at_shipwreck_dutchman3");
+			if(LanguageGetLanguage() == "RUSSIAN") PostVideoAndQuest("LegendJackSparrow\RUSSIAN\DMC_Wreck_dutchman_appear", 25, "Video_at_shipwreck_dutchman3");
+			else PostVideoAndQuest("LegendJackSparrow\DMC_Wreck_dutchman_appear", 25, "Video_at_shipwreck_dutchman3");
 			LAi_SetImmortal(characterFromID("Corpse"), false);
 			LAi_SetImmortal(characterFromID("Sailor_1"), false);
 			LAi_SetImmortal(characterFromID("Sailor_2"), false);
@@ -11414,7 +11417,9 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("Hadras"));
 
 			LAi_QuestDelay("Turn_loc_shipwreck", 1.0);
-
+			PChar.name = TranslateString("","William");
+			PChar.lastname = TranslateString("","Turner");
+			
 		break;
 
 		case "Turn_loc_shipwreck":
@@ -11565,8 +11570,8 @@ void QuestComplete(string sQuestName)
 
 			ExchangeCharacterShip(PChar, CharacterFromID("Will Turner"));
 
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			PChar.name = TranslateString("","Jack");
+			PChar.lastname = TranslateString("","Sparrow");
 
 			GiveModel2Player("Jack",true);
 			RestoreTempRemovedItems(PChar);
@@ -11866,6 +11871,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Elizabeth_tortuga_port_talk2":
+			Characters[GetCharacterIndex("James Norrington")].name  = TranslateString("", "James");
+			Characters[GetCharacterIndex("James Norrington")].lastname = TranslateString("", "Norrington");																					  
 			Characters[GetCharacterIndex("Elizabeth Swann")].dialog.currentnode = "Elizabeth_tortuga_port_talk";
 			LAi_ActorDialog(characterFromID("Elizabeth Swann"),PChar,"",4.0,4.0);
 		break;
@@ -11914,11 +11921,14 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(characterFromID("Annamaria"), true);
 			SetCharacterRemovable(characterFromID("Mr. Gibbs"), true);
 
-			LAi_QuestDelay("tp_deck_after_port_tortuga", 1.0);
+			//LAi_QuestDelay("tp_deck_after_port_tortuga", 1.0);
+			Locations[FindLocation("Tortuga_port")].reload.l2.disable = 0;													 
+			HoistFlag(PIRATE);
+			Characters[GetCharacterIndex("James Norrington")].Dialog.Filename = "Enc_Officer_dialog.c";
+			Characters[GetCharacterIndex("James Norrington")].Dialog.CurrentNode = "Hired";																  
 		break;
 
 		case "tp_deck_after_port_tortuga":
-			Locations[FindLocation("Tortuga_port")].reload.l2.disable = 0;
 			DoQuestReloadToLocation(GetCharacterShipQDeck(pchar), "rld", "startloc", "_");
 			//LAi_QuestDelay("to_sea_sail_away_after_tortuga", 0.3);
 		break;

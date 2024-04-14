@@ -21,6 +21,7 @@
 #include "sea_ai\walk\Tartane_walk.c"
 #include "sea_ai\walk\Xebec1_walk.c"
 #include "sea_ai\walk\Xebec2_walk.c"
+#include "sea_ai\walk\Salamander_walk.c"
 #include "sea_ai\walk\Yacht1_walk.c"
 #include "sea_ai\walk\Yacht2_walk.c"
 #include "sea_ai\walk\Pinnace_walk.c"
@@ -136,6 +137,7 @@ void Ship_Walk_Init()
 	Tartane_walk_init();
 	Xebec1_walk_init();
 	Xebec2_walk_init();
+	Salamander_walk_init();
 	Yacht1_walk_init();
 	Yacht2_walk_init();
 	Pinnace_walk_init();
@@ -359,6 +361,10 @@ void Ship_Walk_Create()
 	case "XEBEC2":
 	    SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship, Xebec2_walk_count, &Xebec2_walk_verts, &Xebec2_walk_graph, &Xebec2_walk_types);
         //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "XEBEC2", Xebec2_walk_count, &Xebec2_walk_verts, &Xebec2_walk_graph, &Xebec2_walk_types);
+        break;
+	case "SALAMANDER1":
+	    SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship, Salamander_walk_count, &Salamander_walk_verts, &Salamander_walk_graph, &Salamander_walk_types);
+        //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "SALAMANDER1", Salamander_walk_count, &Salamander_walk_verts, &Salamander_walk_graph, &Salamander_walk_types);
         break;
 	case "YACHT1": 
     	SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship, Yacht1_walk_count, &Yacht1_walk_verts, &Yacht1_walk_graph, &Yacht1_walk_types);

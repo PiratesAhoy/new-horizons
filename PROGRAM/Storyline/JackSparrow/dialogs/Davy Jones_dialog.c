@@ -205,7 +205,7 @@ void ProcessDialogEvent()
 
 		case "begin_17":
 			dialog.snd = "Voice\CLLA\CLLA004";
-			dialog.text = DLG_TEXT[34] + GetMyFullName(PChar) + " !";
+			dialog.text = DLG_TEXT[34] + GetMyFullName(PChar) + "!";
 			link.l1.go = "exit";
 			AddDialogExitQuest("Davyshootsme");
 			break;

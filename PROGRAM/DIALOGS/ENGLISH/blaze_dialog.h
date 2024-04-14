@@ -1,4 +1,4 @@
-string DLG_TEXT[388] = {
+string DLG_TEXT[390] = {
 "Oh, it's you, ",
 ". What are you doing here?",
 "None of your business ",
@@ -130,7 +130,7 @@ string DLG_TEXT[388] = {
 ", one thing at a time. Let's save the poor old man first.",
 "Whatever you say.",
 "What should we do now? We can't find the treasure if we can't translate that legend. And I'm afraid the old man...",
-"We've already set ourselves against the #sGovernor# and the English crown. What do we have to lose if we just capture that miserable town and free Aurentius?",
+"We've already set ourselves against #sGovernor# and the English crown. What do we have to lose if we just capture that miserable town and free Aurentius?",
 "I didn't realize you had suicidal tendencies. But if you're serious about this, then let's have a little fun!",
 "Now you're talking! And I'm feeling like a real pirate. I'll attack the fort from the sea, and you and your men can lay siege to the town from land. What do you say?",
 "I say I've created a monster, ",
@@ -145,7 +145,7 @@ string DLG_TEXT[388] = {
 "You really do think I'm just a foolish girl, don't you? No, I kept them with me.",
 ", my dear, did I ever tell you you're the smartest lady pirate I know?",
 "No. As I recall, you've mostly been enraptured by my 'unmatched sharp tongue.' Now tell me: How in the world did you get here?",
-"After I captured the ship that was sent to deliver the idol to the #sGovernor#, I set a course for our meeting place. But I ran into foul weather and was washed overboard like a landlubber. I was sure I was dead, but as it happened I found myself washed ashore near #sisland_Douwesen#.",
+"After I captured the ship that was sent to deliver the idol to #sGovernor#, I set a course for our meeting place. But I ran into foul weather and was washed overboard like a landlubber. I was sure I was dead, but as it happened I found myself washed ashore near #sisland_Douwesen#.",
 "Yes. Fortune does favor the foolish.",
 "Easy, now! I've had a rough time of it. When I came to my senses, I staggered into #sDouwesen# and managed to get a small ship. Not long after, I ended up here. You can well imagine how surprised I was to see my old ship in #sIsla Muelle# harbor. She was still being repaired after that storm.",
 "Incredible! Fortune favors the foolish, but even you aren't fool enough to be THAT lucky!",
@@ -387,4 +387,6 @@ string DLG_TEXT[388] = {
 "...",
 "Well, I may be the punching bag, but you, Chico, you're the scabbard!",
 "I should take the money and get out of here. Little Bea must already be furious.",
+"So, I’ve been in this damn cell for three days already, damn me... Hmm... what’s that noise?",
+"...",
 };

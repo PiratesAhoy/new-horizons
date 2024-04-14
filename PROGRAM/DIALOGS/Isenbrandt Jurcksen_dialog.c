@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- -иалог первый - первая вс=реча
+		// ----------------------------------- Dialogue one - first meeting
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -152,6 +152,76 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[41];
 			link.l1.go = "exit";
 			AddDialogExitQuest("piratefun");
+		break;
+
+		case "third time two":
+			dialog.text = DLG_TEXT[43];
+			link.l1 = DLG_TEXT[44];
+			link.l1.go = "exit";
+			if (CheckQuestAttribute("smuggler_line", "third_mission_speak_with_pirate_head"))
+			{
+				Preprocessor_Add("gender", XI_ConvertString(PChar.sex));
+				dialog.text = DLG_TEXT[45];
+				link.l1 = DLG_TEXT[46];
+				link.l1.go = "smuggler_line";
+			}
+		break;
+
+		case "smuggler_line":
+			dialog.text = DLG_TEXT[47];
+			link.l1 = DLG_TEXT[48];
+			link.l1.go = "exit";
+		//	if (CheckQuestAttribute("main_line", "completed"))
+		//	{
+		//		dialog.text = DLG_TEXT[49];
+		//		link.l1 = DLG_TEXT[50];
+		//		link.l1.go = "possible_pirate_line";
+		//	}
+		//	else
+		//	{
+				dialog.text = DLG_TEXT[51];
+				link.l1 = DLG_TEXT[52];
+				link.l1.go = "smuggler_line_3";
+		//	}
+		break;
+
+		case "possible_pirate_line":
+			dialog.text = DLG_TEXT[53];
+		//	link.l1 = DLG_TEXT[54];
+		//	link.l1.go = "possible_pirate_line_2";
+			link.l2 = DLG_TEXT[55];
+			link.l2.go = "smuggler_line_2";
+		break;
+
+		case "smuggler_line_2":
+			dialog.text = DLG_TEXT[56];
+			link.l1 = DLG_TEXT[57]
+			link.l1.go = "smuggler_line_3";
+		break;
+
+		case "smuggler_line_3":
+			dialog.text = DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
+			link.l1.go = "smuggler_line_4";
+		break;
+
+		case "smuggler_line_4":
+			dialog.text = DLG_TEXT[60];
+			link.l1 = DLG_TEXT[61];
+			link.l1.go = "smuggler_line_5";
+		break;
+
+		case "smuggler_line_5":
+			dialog.text = DLG_TEXT[62];
+			link.l1 = DLG_TEXT[63];
+			link.l1.go = "smuggler_line_6";
+		break;
+
+		case "smuggler_line_6":
+			dialog.text = DLG_TEXT[64];
+			link.l1 = DLG_TEXT[65];
+			link.l1.go = "exit";
+			AddDialogExitQuest("third_mission_pirate_head_exit_from_shore");
 		break;
 
 		case "Exit":

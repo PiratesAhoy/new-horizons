@@ -279,6 +279,7 @@ You can't save while carrying a holy relic! Give it to a monk{You can't save whi
 You can't save while carrying a holy relic in this old abbey! Give it to a monk{You can't save while carrying a holy relic in this old abbey! Give it to the monk}
 You can't save or load until{You can't save or load until}
 leaves.{leaves.}
+You can't save without an active Profile{You can't save without an active Profile}
 NewSave{New Save}
 God mode{God mode}
 Selected character is{Selected character is}
@@ -701,7 +702,7 @@ You must dig DEEPER !{You must dig DEEPER !}
 On THIS shovelload blinks a jewel..{On THIS shovelload blinks a jewel..}
 The sword of a buried abbot{The sword of a buried abbot}
 An artefact from the temple that once stood here{An artefact from the temple that once stood here}
-You plunge into the remains of a halfdecayed plaguevictim..{You plunge into the remains of a halfdecayed plaguevictim..}
+You plunge into the remains of a halfdecayed plaguevictim..{You plunge into the remains of a half-decayed plague victim..}
 Someone's buried here.. but he aint dead!!{Someone's buried here.. but he aint dead!!}
 A file of LIVING Maltese knights comes to exorcise their crypt{A file of LIVING Maltese knights comes to exorcise their crypt}
 You might be exorcised as well..{You might be exorcised as well..}
@@ -711,6 +712,7 @@ You dig up a treasurechest{You dig up a treasurechest}
 An  Akkelani witchdoctor. Mummified.. but spitting VENOM !{An  Akkelani witchdoctor. Mummified.. but spitting VENOM !}
 Looks like someone has been digging here..{Looks like someone has been digging here..}
 Do you want to dig as well? With your SWORD{Do you want to dig as well? With your SWORD}
+Do you want to dig as well? With your{Do you want to dig as well? With your }
 TAVERNBRAWL{TAVERNBRAWL}
 AMBUSH{AMBUSH}
 MILITARY RAID{MILITARY RAID}
@@ -903,6 +905,8 @@ Gaming House.{Gaming House.}
 The Dark Frigate{The Dark Frigate}
 The Faithful Bride{The Faithful Bride}
 Will Turner's House{Will Turner's House}
+Spanish Camp{Spanish Camp}
+Battle Rocks port{Battle Rocks port}
 
 Khael Roa Shore{Khael Roa Shore}
 Incas Temple{Incas Temple}
@@ -1182,6 +1186,8 @@ Arsenal.{Barracks}
 #stown_name# Naval HQ{#stown_name# Naval HQ}
 Officer Commanding #stown_name# Naval HQ{Officer Commanding #stown_name# Naval HQ}
 Mrs. Mason's House{Mrs. Mason's House}
+Yedam Kinne's house{Yedam Kinne's house}
+Mine commander's house{Mine commander's house}
 Office{Office}
 Naval Store{Naval Store}
 Naval Shipyard{Naval Shipyard}
@@ -1339,9 +1345,10 @@ CrewMutinyArticles4{You don't have rum...}
 CrewMutinyArticles5{Your pockets are empty...}
 GainedPerk{gained new Ability -}
 You unlocked the perk:{You unlocked the perk:}
-PlaguevictimsGrave{Curse? A plaguevictims grave? Whatever, you suddenly feel terribly sick!}
+PlaguevictimsGrave{Curse? A plague victim's grave? Whatever, you suddenly feel terribly sick!}
 Petit Tabac{Petit Tabac}
 Battle_Rocks{Petit Tabac}
+Devil Creek{Devil Creek}
 Isla De Muerte{Isla De Muerte}
 IslaDeMuerte{Isla De Muerte}
 Deserted shore{Deserted shore}
@@ -1432,6 +1439,7 @@ Outskirts{Outskirts}
 Bahia de Moa{Bahia de Moa}
 Guadeloupe lighthouse{Guadeloupe lighthouse}
 Redmond Townhall. Silehards's Bedroom{Redmond Townhall. Silehards's Bedroom}
+#stown_name# Townhall. Silehards's Bedroom{#stown_name# Townhall. Silehards's Bedroom}
 Pirate bark{Pirate bark}
 Gamboa ship{Gamboa ship}
 Kidnappers' Hideout, 2nd floor{Kidnappers' Hideout, 2nd floor}
@@ -1604,6 +1612,7 @@ Gun deck{Gun deck}
 Redmond old mine{Redmond old mine}
 Friday's room{Friday's room}
 Port Royale Fort{Port Royale Fort}
+Armory{Armory}
 
 Rogers' kitchen{Rogers' kitchen}
 Rogers' bedroom{Rogers' bedroom}
@@ -1615,6 +1624,16 @@ Rogers' storeroom{Rogers' storeroom}
 Rogers' secret laboratory{Rogers' secret laboratory}
 Rogers' secret storeroom{Rogers' secret storeroom}
 Wood tower{Wood tower}
+
+Somewhere in the Caribbean{Somewhere in the Caribbean}
+Marooned Island{Marooned Island}
+Manowar hold{Manowar hold}
+Secret room{Secret room}
+Entrance to Prison{Entrance to Prison}
+Elevator{Elevator}
+Prison central hall{Prison central hall}
+Kristiania canyon{Kristiania canyon}
+Kristiania entre{Kristiania entre}
 
 You equipped a Powder Flask and an Ammunition Pouch.{You equipped a Powder Flask and an Ammunition Pouch.}
 If I push the fat trader I can take his cutlass!{If I push the fat trader I can take his cutlass!}
@@ -1916,15 +1935,19 @@ Fort Moultrie restaurant{Fort Moultrie restaurant}
 Fort Moultrie hotel{Fort Moultrie hotel}
 Fort Moultrie prison{Fort Moultrie prison}
 Fort Moultrie barracks{Fort Moultrie barracks}
+Fort Moultrie armory{Fort Moultrie armory}
+Fort Moultrie shore{Fort Moultrie shore}
+Prison stairs{Prison stairs}
+Gate tower stairs{Gate tower stairs}
 Lieutenant G:s house{Lieutenant G:s house}
 Lieutenant G:s office{Lieutenant G:s office}
 Lieutenant G:s bedroom{Lieutenant G:s bedroom}
-Fort Moultrie shore{Fort Moultrie shore}
 Charleston{Charleston}
 Charleston port{Charleston port}
 Charleston port tavern{Charleston port tavern}
 The Red Death{The Red Death}
 The Maelstrom{The Maelstrom}
+Room in the Maelstrom{Room in the Maelstrom}
 Charleston town{Charleston town}
 Charleston shipyard{Charleston shipyard}
 Charleston townhall{Charleston townhall}
@@ -1932,6 +1955,20 @@ Charleston store{Charleston store}
 Charleston Post & Bank{Charleston Post & Bank}
 Charleston tailor{Charleston tailor}
 Charleston blacksmith{Charleston blacksmith}
+Strongroom{Strongroom}
+To the Wine Cellar{To the Wine Cellar}
+First floor{First floor}
+Pym's drawing room{Pym's drawing room}
+Charleston Brothel{Charleston Brothel}
+To the Brothel{To the Brothel}
+Chinatown{Chinatown}
+Restaurant Tin Ho{Restaurant Tin Ho}
+Gunpowder mill{Gunpowder mill}
+Fireworks laboratory{Fireworks laboratory}
+Sulfur room{Sulfur room}
+Salpeter barn{Salpeter barn}
+Charcoal oven{Charcoal oven}
+Charcoal storeroom{Charcoal storeroom}
 Post Office{Post Office}
 Poe's house{Poe's house}
 Poe's bedroom{Poe's bedroom}
@@ -1943,6 +1980,7 @@ Charleston shore{Charleston shore}
 Robert Cook and Maya{Robert Cook and Maya}
 Bishops Hostel{Bishops Hostel}
 Bessop Plantation{Bessop Plantation}
+Guards only{Guards only}
 
 It's too high, I can't climb the rocks.{It's too high, I can't climb the rocks.}
 Oxbay? Greenford? What are they talking about?{Oxbay? Greenford? What are they talking about?}
@@ -2004,6 +2042,8 @@ The Brig Grampus{The Brig Grampus}
 The magnet makes something move inside.{The magnet makes something move inside.}
 Yes, with the Magnet I got a Key out of the collection box.{Yes, with the Magnet I got a Key out of the collection box.}
 Private.{Private.}
+Private{Private}
+Charleston.{Charleston.}
 Textiles.{Textiles.}
 A photo of Edgar{A photo of Edgar}
 The painting is signed by Frans Hals 1641{The painting is signed by Frans Hals 1641}
@@ -2027,6 +2067,7 @@ There is some Salpeter in the water but not enough.{There is some Salpeter in th
 The Salpeter is not dry yet.{The Salpeter is not dry yet.}
 There is no Salpeter here yet - only water.{There is no Salpeter here yet - only water.}
 It's here on the planks they let the Salpeter dry.{It's here on the planks they let the Salpeter dry.}
+I need a Tool to scrape the Salpeter from the planks.{I need a Tool to scrape the Salpeter from the planks.}
 No, I have enough pyrite on the floor already.{No, I have enough pyrite on the floor already.}
 I need a tool to smash the Pyrite stones to dust.{I need a tool to smash the Pyrite stones to dust.}
 There are still some stones left.{There are still some stones left.}
@@ -2163,6 +2204,8 @@ East wing{East wing}
 Rotunda upper levels{Rotunda upper levels}
 Rotunda middle levels{Rotunda middle levels}
 Rotunda lower levels{Rotunda lower levels}
+Rotunda bottom level{Rotunda bottom level}
+Prison Office{Prison Office}
 I'll need a Rope here.{I'll need a Rope here.}
 Kitchen{Kitchen}
 Dormitorium{Dormitorium}
@@ -2187,6 +2230,7 @@ To the Harbour Master{To the Harbour Master}
 Charleston Harbour Master{Charleston Harbour Master}
 Detective Agency 1st floor{Detective Agency 1st floor}
 C. Auguste Dupin - Private Investigator{C. Auguste Dupin - Private Investigator}
+Dupin's room{Dupin's room}
 
 Something under that straw?{Something under that straw?}
 No, I'll only cut myself on those shards.{No, I'll only cut myself on those shards.}
@@ -2270,6 +2314,84 @@ It's something inside.{It's something inside.}
 I need a small hook to reach it.{I need a small hook to reach it.}
 Nueva Suecia upper town{Nueva Suecia upper town}
 Nueva Suecia lower town{Nueva Suecia lower town}
+Nueva Suecia inner town{Nueva Suecia inner town}
+Nueva Suecia tailor's shop{Nueva Suecia tailor's shop}
+Storeroom textiles{Storeroom textiles}
+Tailor's room{Tailor's room}
+Stairs{Stairs}
+The Siberia.{The Siberia.}
+Priest's room{Priest's room}
+Kristiania cathedral{Kristiania cathedral}
+Kristiania shipyard{Kristiania shipyard}
+Spanish galleon{Spanish galleon}
+Kristiania port{Kristiania port}
+Kristiania center{Kristiania center}
+Townhall office - open later today{Townhall office - open later today}
+Townhall office{Townhall office}
+Kitchen - staff only{Kitchen - staff only}
+Kristiania Usurerhouse. Closed today because of the naval visit.{Kristiania Usurerhouse. Closed today because of the naval visit.}
+Kristiania Blacksmith. Closed today because of the naval visit.{Kristiania Blacksmith. Closed today because of the naval visit.}
+Kristiania Apothecary. Closed because of illness.{Kristiania Apothecary. Closed because of illness.}
+Kristiania prison. Vistors not allowed.{Kristiania prison. Vistors not allowed.}
+Executioner. Leave me alone{Executioner. Leave me alone.}
+Opium house. Closed auction days.{Opium house. Closed auction days.}
+Brothel open all days except Mondays.{Brothel open all days except Mondays.}
+Magasin is swedish for warehouse. Stay away - the owner.{'Magasin' is Swedish for warehouse. Stay away - the owner.}
+Swedish Governor Walter{Swedish Governor Walter}
+Kristiana store.{Kristiania store.}
+To the Brothel{To the Brothel}
+To Kristiania center{To Kristiania center}
+Exit from Kristiania{Exit from Kristiania}
+Kristiania Chapel{Kristiania Chapel}
+Fort tower{Fort tower}
+Fort Commander Hilpershaussen{Fort Commander Hilpershaussen}
+Kristiania downhill{Kristiania downhill}
+Kristiania cathedral passage{Kristiania cathedral passage}
+Kristiania suburb{Kristiania suburb}
+Kristiania swamp exit{Kristiania swamp exit}
+Living Room{Living Room}
+Blackbeard's tower{Blackbeard's tower}
+into the unknown...{into the unknown...}
+Islet{Islet}
+Hideout{Hideout}
+Sloop{Sloop}
+Hold{Hold}
+Large Cabin{Large Cabin}
+Small Cabin{Small Cabin}
+Citadel{Citadel}
+This part of the Citadel is damaged{This part of the Citadel is damaged}
+Maynard's room{Maynard's room}
+Citadel Cave{Citadel Cave}
+Gunsmith workshop{Gunsmith workshop}
+#stown_name# surgeon{#stown_name# surgeon}
+#stown_name# sailmaker{#stown_name# sailmaker}
+#stown_name# tower{#stown_name# tower}
+#stown_name# tower.{#stown_name# tower.}
+Tower stairs{Tower stairs}
+To the Dovecote{To the Dovecote}
+Tower passage{Tower passage}
+cloister passage{cloister passage}
+Abbey{Abbey}
+Bell tower{Bell tower}
+Refectory{Refectory}
+Abbess{Abbess}
+Small Chapel{Small Chapel}
+Estate{Estate}
+Garden{Garden}
+Garden house{Garden house}
+Attic room{Attic room}
+Teach house{Teach house}
+Teach room{Teach room}
+Estate wine cellar{Estate wine cellar}
+Repairs finished. The Gate will open today.{Repairs finished. The Gate will open today.}
+Blockhouse{Blockhouse}
+Weather deck{Weather deck}
+Gun deck prow{Gun deck prow}
+Gun deck stern{Gun deck stern}
+Animals hold prow{Animals hold prow}
+Convicts hold prow{Convicts hold prow}
+Slaves hold stern{Slaves hold stern}
+
 It's just about too high.{It's just about too high.}
 It's time to go downstairs and visit Caroline in her Drawing Room.{It's time to go downstairs and visit Caroline in her Drawing Room.}
 It's a trap! I have to creep under the musket.{It's a trap! I have to creep under the musket.}
@@ -2301,6 +2423,7 @@ Insert coin.{Insert coin.}
 No, the cannon is stuck!{No, the cannon is stuck!}
 So he could read? Most about Alchemy!{So he could read? Most about Alchemy!}
 No, the Gold Bars are too heavy - the crew will take them to the ship.{No, the Gold Bars are too heavy - the crew will take them to the ship.}
+No, the Gold Coins are too heavy - the crew will take them to the ship.{No, the Gold Coins are too heavy - the crew will take them to the ship.}
 No, the Silver Bars are too heavy - the crew will take them to the ship.{No, the Silver Bars are too heavy - the crew will take them to the ship.}
 No, the Valuable Weapons are too heavy - the crew will take them to the ship.{No, the Valuable Weapons are too heavy - the crew will take them to the ship.}
 No, it's not the time for that.{No, it's not the time for that.}
@@ -2350,6 +2473,7 @@ Old Inquisition prison{Old Inquisition prison}
 Archives{Archives}
 Abandoned fort{Abandoned fort}
 Slave Camp{Slave Camp}
+Slave Mine{Slave Mine}
 Dining Room{Dining Room}
 Dining Room.{Dining Room}
 
@@ -2384,7 +2508,7 @@ Hint: To make an officer available to command your ship, assign that officer to 
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
 Capitán{Capitán}
-CapitÝo{CapitÝo}
+Capitão{Capitão}
 Teniente{Teniente}
 Electress{Electress}
 
@@ -2450,6 +2574,11 @@ You take a uniform from one of the dead soldiers{You take a uniform from one of 
 The{The}
 was repaired and reprovisioned{was repaired and reprovisioned}
 was repaired and new guns were installed{was repaired and new guns were installed}
+
+From the corpse of Desmond Ray Beltrop you took a blade with a mark on the blade - 'HURRICANE'.{From the corpse of Desmond Ray Beltrop you took a blade with a mark on the blade - 'HURRICANE'.}
+Barracuda left you and took part in the battle on the enemy side.{Barracuda left you and took part in the battle on the enemy side.}
+
+Gold removed -10000{Gold removed -10000}
 
 - LEGEND -{- LEGEND -}
 : Ship Position{: Ship Position}

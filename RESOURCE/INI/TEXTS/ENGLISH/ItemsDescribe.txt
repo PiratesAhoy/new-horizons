@@ -129,10 +129,17 @@ itmdescr_Correspondence1
 {
 Correspondence between Arnaud Matton and Sylvie Bondies regarding Sabine.
 }
+
 itmname_Correspondence2 {Letter to Arnaud Matton}
 itmdescr_Correspondence2
 {
 Correspondence between Sylvie Bondies and Arnaud Matton regarding Sabine.
+}
+
+itmname_shop_papers {Deed of sale}
+itmdescr_shop_papers
+{
+These papers say that their bearer bought Jean Maginot's store in Marigot and is its rightful owner.
 }
 
 
@@ -360,6 +367,12 @@ itmname_bladeC12	{Katzbalger}
 itmdescr_bladeC12
 {
 A Double-edged blade with three large and two small fullers, s-shaped quillions with ball finials, as well as a flared fungus-shaped pommel merging flush into a wooden grip.
+}
+
+itmname_bladeC13	{'Hurricane' sword}
+itmdescr_bladeC13
+{
+This is one of a series of swords from an unknown master. You took it from the cold, dead fingers of Desmond Ray Beltrop.
 }
 
 itmname_bladeC6	{Smallsword}
@@ -1579,6 +1592,12 @@ itmdescr_Santos_Journal2
 More targets on Santos Hit List; Petros, Pieter Boelen, Pirate Sam, Rafe Bligh, Rico,(aka Drunken, aka El Capitain, aka Admiral Makkay), Screwface, Skull, Spaz, Vassal, William, and that Dastardly Sir Christopher Mings! Also some college professor named Losey who apparently once gave him a bad grade.
 }
 ; <-- Mateus Santos quest items added by SCM
+
+itmname_Jean_Ring {Jean Maginot's Ring}
+itmdescr_Jean_Ring
+{
+Family ring of the Maginot family. You have no idea how you got it.
+}
 
 // ccc Building kit aug 05
 

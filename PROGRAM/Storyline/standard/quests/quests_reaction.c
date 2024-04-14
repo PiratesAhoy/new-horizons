@@ -1,6 +1,6 @@
 void QuestComplete(string sQuestName)
 {
-	ref PChar, sld;
+	ref PChar, NPChar, sld;
 // KK -->
 	int iPassenger, cidx, iHP, cc, n;
 	float locx, locy, locz;
@@ -1348,7 +1348,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_Blaze_and_Glover_Land_troops":
-			if (makeint(environment.time) >=23 || makeint(environment.time) <= 6)
+			if (GetTime() >= 23.0 || GetTime() <= 6.0)
 			{
 				pchar.quest.checker_for_greenford_tavern_for_meet_with_evan_glover.over = "yes";
 				Locations[FindLocation("Greenford_town")].reload.l4.disable = 0;
@@ -1531,7 +1531,8 @@ void QuestComplete(string sQuestName)
 				LAi_SetActorType(&characters[iPassenger]);
 				LAi_ActorStay(&characters[iPassenger]);
 			}
-			StoreOfficers(pchar.id);
+		//	StoreOfficers(pchar.id);	// Leaves passengers in place, allows player to reassign officers
+			StorePassengers(Pchar.id);	// Removes everybody!
 			ChangeCharacterAddress(characterFromID("Ox_soldier_3"), "none", "");
 			ChangeCharacterAddress(characterFromID("Ox_soldier_4"), "none", "");
 			ChangeCharacterAddress(characterFromID("Ox_soldier_5"), "none", "");
@@ -2474,6 +2475,7 @@ void QuestComplete(string sQuestName)
 				LAi_SetOfficerType(characterFromID("danielle"));
 			//}
 			SetCharacterRemovable(characterFromID("Danielle"), false);
+			Pchar.quest.danielle_on_ship = "true";
 
 			Pchar.quest.Story_KillSoldiersAtLighthouse.win_condition.l1 = "NPC_Death";
 			Pchar.quest.Story_KillSoldiersAtLighthouse.win_condition.l1.character = "Lighthouse_Guard_01";
@@ -3204,6 +3206,7 @@ void QuestComplete(string sQuestName)
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Danielle"));
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("Researcher"));
 			LAi_SetOfficerType(characterFromID("danielle"));
+			Pchar.quest.danielle_on_ship = "true";
 		break;
 
 		case "researcher_becomes_officer":
@@ -3267,6 +3270,7 @@ void QuestComplete(string sQuestName)
 		case "danielle_AfterGreenfordSiege_exit":
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Danielle"));
 			SetCharacterRemovable(characterFromID("Danielle"), false);
+			Pchar.quest.danielle_on_ship = "true";
 			ChangeCharacterAddress(characterFromID("researcher"),"Oxbay_lighthouse", "goto30");
 			Characters[GetCharacterIndex("researcher")].dialog.CurrentNode = "AlreadyTranslated";
 			DoQuestReloadToLocation("Oxbay_lighthouse", "Goto", "goto24", "Story_TalkWithResearcherAfterSiegeGreenford");
@@ -3423,6 +3427,7 @@ void QuestComplete(string sQuestName)
 
 			SetOfficersIndex(PChar, 1, getCharacterIndex("Danielle"));
 			SetCharacterRemovable(characterFromID("danielle"), false);
+			Pchar.quest.danielle_on_ship = "true";
 			SetOfficersIndex(PChar, 2, getCharacterIndex("Researcher"));
 			SetCharacterRemovable(characterFromID("researcher"), false);
 
@@ -4161,10 +4166,15 @@ void QuestComplete(string sQuestName)
 			pchar.quest.main_line = "blaze_talk_with_beltrop";
 			LAi_SetActorType(characterFromID("Desmond Ray Beltrop"));
 			LAi_ActorDialog(characterFromID("Desmond Ray Beltrop"), pchar, "beltrop_back_to_hovernor_type", 50, 0);
+
+		// "Night Craft" quest trigger
+			Pchar.quest.smuggler_line_begin.win_condition.l1 = "location";
+			Pchar.quest.smuggler_line_begin.win_condition.l1.location = "redmond_town_01";
+			Pchar.quest.smuggler_line_begin.win_condition = "smuggler_line_begin";
 		break;
 
 		case "beltrop_back_to_hovernor_type":
-			if (makeint(environment.time) >= 22 || makeint(environment.time) < 6)
+			if (GetTime() >= 22.0 || GetTime() <= 6.0)
 			{
 				pchar.quest.main_line = "night_for_rheims_house_complete";
 				Locations[FindLocation("Smugglers_Lair")].reload.l6.disable = 0;
@@ -5745,6 +5755,7 @@ void QuestComplete(string sQuestName)
 
 		case "commendant_exit_from_mines_complete":
 			ChangeCharacterAddress(characterFromID("mine_commander"), "Mines_commander_house", "goto3");
+			LAi_SetGuardianType(characterFromID("mine_commander"));
 			restorepassengers("Blaze");
 			pchar.money = pchar.tempmoney;
 			pchar.tempmoney = 0;
@@ -7210,7 +7221,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Danielle"), Pchar, "", 8.0, 1.0);
 
 			DeleteAttribute(&Locations[FindLocation("Redmond_town_01")],"vcskip");
-			Locations[FindLocation("Redmond_town_01")].vcskip = false;
+		//	Locations[FindLocation("Redmond_town_01")].vcskip = false;
 		break;
 
 		case "Story_Danielle_Departs_Exit":
@@ -7232,6 +7243,1351 @@ void QuestComplete(string sQuestName)
 		break;
 
 // <-- CatalinaThePirate Fix for Danielle after final
+
+// "Night Craft" quest -->
+		case "smuggler_line_begin":
+			Locations[FindLocation("Redmond_Town_01")].reload.l5.disable = 1;
+			DisableFastTravel(true);
+			LAi_SetFightMode(PChar, false);
+			PChar.quest.smuggler_line = "begin";
+			PlaceCharacter(CharacterFromID("quest_smuggler_02"), "goto");
+			LAi_SetActorType(CharacterFromID("quest_smuggler_02"));
+			Lai_ActorDialog(CharacterFromID("quest_smuggler_02"), PChar, "", 3.0, 1.0);
+		break;
+
+		case "smuggler_line_begin_exit":	// Triggered by dialog with "quest_smuggler_02"
+			Locations[FindLocation("Redmond_Town_01")].reload.l5.disable = 0;
+			DisableFastTravel(false);
+			homelocator = LAi_FindFarLocator("reload", locx, locy, locz);
+			LAi_ActorRunToLocation(CharacterFromID("quest_smuggler_02"), "reload", homelocator, "none", "", "", "", 10.0);
+			SetQuestHeader("smuggler_line");
+			AddQuestRecord("smuggler_line", 1);
+			characters[GetCharacterIndex("Desmond Ray Beltrop")].dialog.currentnode = "smuggler_line";
+			PChar.quest.smuggler_line = "to_beltrop";
+		break;
+
+		case "smuggler_line_not_begin_exit":	// Triggered by dialog with "quest_smuggler_02"
+			Locations[FindLocation("Redmond_Town_01")].reload.l5.disable = 0;
+			DisableFastTravel(false);
+			homelocator = LAi_FindFarLocator("reload", locx, locy, locz);
+			LAi_ActorRunToLocation(CharacterFromID("quest_smuggler_02"), "reload", homelocator, "none", "", "", "", 10.0);
+			characters[GetCharacterIndex("Desmond Ray Beltrop")].dialog.currentnode = "smuggler_line";
+			PChar.quest.smuggler_line = "refused";
+		break;
+
+		case "smuggler_line_decline":		// Triggered by dialog with "Desmond Ray Beltrop"
+			PChar.quest.smuggler_line = "wait_for_change_mind";
+			if (!CheckAttribute(PChar, "QuestInfo.smuggler_line")) SetQuestHeader("smuggler_line");
+			AddQuestRecord("smuggler_line", 2);
+		break;
+
+		case "smuggler_line_first_mission_free_space_off":
+			PChar.quest.smuggler_line = "first_mission_free_space_off";
+			if (!CheckAttribute(PChar, "QuestInfo.smuggler_line")) SetQuestHeader("smuggler_line");
+			AddQuestRecord("smuggler_line", 3);
+			
+			PChar.quest.smuggler_line_first_mission_free_space_off_expired.win_condition.l1 = "Timer";
+			PChar.quest.smuggler_line_first_mission_free_space_off_expired.win_condition.l1.date.day = GetAddingDataDay(0, 0, 15);
+   			PChar.quest.smuggler_line_first_mission_free_space_off_expired.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 15);
+			PChar.quest.smuggler_line_first_mission_free_space_off_expired.win_condition.l1.date.year = GetAddingDataYear(0, 0, 15);
+			PChar.quest.smuggler_line_first_mission_free_space_off_expired.win_condition = "smuggler_line_first_mission_free_space_off_expired";
+		break;
+
+		case "smuggler_line_first_mission_free_space_off_expired":
+			PChar.quest.smuggler_line = "first_mission_free_space_off_expired";
+		break;
+
+		case "smuggler_line_first_mission_accept":
+			PChar.quest.smuggler_line = "smuggler_line_first_mission_accept";
+			if (!CheckAttribute(PChar, "QuestInfo.smuggler_line")) SetQuestHeader("smuggler_line");
+			AddQuestRecord("smuggler_line", 4);
+			AddCharacterGoods(PChar, GOOD_SANDAL, 300);
+			PChar.quest.smuggler_line_first_mission_free_space_off_expired.over = "yes";
+			NPChar = characterfromID("Jean Maginot");	// was Arnaud Matton but then this quest conflicts with existing "Sabine Matton" quest
+			StoreDialog(NPChar);
+			NPChar.Dialog.Filename = "France Trader_dialog.c";
+			if (NPChar.quest.meeting == "0") NPChar.dialog.CurrentNode = "First time";
+			else NPChar.dialog.CurrentNode = "second time";
+			Islands[FindIsland("SaintMartin")].Trade.Contraband.id1 = GOOD_SANDAL;	// Saint Martin normally obeys Dutch smuggling in which sandal is not contraband
+		break;
+
+		case "smuggler_line_first_mission_wait_night":	// Triggered by dialog with Jean Maginot
+			WaitDate("", 0,0,1,0,0);
+			PChar.quest.smuggler_line = "smuggler_line_first_mission_before_soldiers";
+			RemoveCharacterGoods(PChar,GOOD_SANDAL, 300);
+			LAi_Fade("", "smuggler_line_first_mission_before_soldiers");
+			AddQuestRecord("smuggler_line", 5);
+		break;
+
+		case "smuggler_line_first_mission_wait_night_short_cargo":
+			WaitDate("", 0,0,1,0,0);
+			PChar.quest.smuggler_line = "smuggler_line_first_mission_get_more_sandal";
+			LAi_Fade("", "smuggler_line_first_mission_short_cargo");
+		break;
+
+		case "smuggler_line_first_mission_short_cargo":
+			Characters[getCharacterIndex("Jean Maginot")].dialog.currentnode = "smuggler_line_first_mission_short_cargo";
+			LAi_SetActorType(CharacterFromID("Jean Maginot"));
+			LAi_ActorDialogNow(CharacterFromID("Jean Maginot"), PChar, "smuggler_line_reset_maginot", -1);
+		break;
+
+		case "smuggler_line_reset_maginot":
+			LAi_SetMerchantType(CharacterFromID("Jean Maginot"));
+		break;
+
+		case "smuggler_line_first_mission_before_soldiers":
+			Characters[getCharacterIndex("Jean Maginot")].dialog.currentnode = "smuggler_line_first_mission_before_soldiers";
+			LAi_SetActorType(CharacterFromID("Jean Maginot"));
+			LAi_ActorDialogNow(CharacterFromID("Jean Maginot"), PChar, "", -1);
+		break;
+
+		case "smuggler_line_first_mission_soldiers":
+			PChar.quest.smuggler_line = "smuggler_line_first_mission_meet_soldiers";
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m1, "reload", "locator2");
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			sld.id = "smuggler_line_soldier_01";
+			LAi_setActorType(sld);
+			LAi_ActorFollow(sld, PChar, "", 2.0);
+			
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m2, "reload", "locator2");
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			sld.id = "smuggler_line_soldier_02";
+			LAi_setActorType(sld);
+			LAi_ActorFollow(sld, PChar, "", 2.0);
+			
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m0, "reload", "locator2");
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			sld.id = "smuggler_line_soldier_03";
+			sld.dialog.filename = "quest_soldier_dialog.c";
+			LAi_setActorType(sld);
+			LAi_ActorFollow(sld, PChar, "smuggler_line_first_mission_speak_with_soldiers", 2.0);
+		break;
+
+		case "smuggler_line_first_mission_speak_with_soldiers":
+			LAi_ActorDialog(CharacterFromID("smuggler_line_soldier_03"), PChar, "", 3.0, 1.0);
+		break;
+
+		case "smuggler_line_first_mission_jean_first_talk_with_soldiers":
+			PChar.quest.smuggler_line = "smuggler_line_first_mission_jean_first_talk_with_soldiers";
+			characters[GetCharacterIndex("Jean Maginot")].dialog.currentnode = "smuggler_line_first_mission_jean_first_talk_with_soldiers";
+			LAi_ActorDialogNow(CharacterFromID("Jean Maginot"), PChar, "", -1.0);
+		break;
+
+		case "smuggler_line_first_mission_jean_first_talk_with_soldiers2":
+			sld = CharacterFromID("smuggler_line_soldier_03");
+			LAi_setActorType(sld);
+			LAi_type_actor_Reset(sld);
+			sld.dialog.currentnode = "first_mission_arrest_jean";
+			LAi_ActorDialog(sld, PChar, "", 3.0, 1.0);
+		break;
+
+		case "smuggler_line_first_mission_soldiers_arrest_jean":
+			PChar.quest.smuggler_line = "smuggler_line_first_mission_soldiers_arrest_maginot";
+			LAi_setActorType(CharacterFromID("smuggler_line_soldier_03"));
+			LAi_type_actor_Reset(CharacterFromID("smuggler_line_soldier_01"));
+			LAi_type_actor_Reset(CharacterFromID("smuggler_line_soldier_02"));
+			LAi_type_actor_Reset(CharacterFromID("smuggler_line_soldier_03"));
+			
+			LAi_ActorFollow(CharacterFromID("smuggler_line_soldier_01"), CharacterFromID("Jean Maginot"), "", 15.0);
+			LAi_ActorFollow(CharacterFromID("smuggler_line_soldier_02"), CharacterFromID("Jean Maginot"), "", 15.0);
+			LAi_ActorFollow(CharacterFromID("smuggler_line_soldier_03"), CharacterFromID("Jean Maginot"), "", 15.0);
+			
+			PChar.quest.smuggler_line_first_mission_soldiers_arrest_maginot_exit.win_condition.l1 = "Location";
+			PChar.quest.smuggler_line_first_mission_soldiers_arrest_maginot_exit.win_condition.l1.location = "Marigot_port";
+			PChar.quest.smuggler_line_first_mission_soldiers_arrest_maginot_exit.win_condition = "smuggler_line_first_mission_soldiers_arrest_maginot_exit";
+		break;
+
+		case "smuggler_line_first_mission_soldiers_arrest_maginot_exit":
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 1;
+			LAi_ActorSelfDialog(PChar, "");
+			AddQuestRecord("smuggler_line", 6);
+			
+			PChar.quest.smuggler_line_first_mission_wait_for_maginot.win_condition.l1 = "Timer";
+			PChar.quest.smuggler_line_first_mission_wait_for_maginot.win_condition.l1.date.day = GetAddingDataDay(0, 0, 1);
+   			PChar.quest.smuggler_line_first_mission_wait_for_maginot.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 1);
+			PChar.quest.smuggler_line_first_mission_wait_for_maginot.win_condition.l1.date.year = GetAddingDataYear(0, 0, 1);
+			PChar.quest.smuggler_line_first_mission_wait_for_maginot.win_condition = "smuggler_line_first_mission_wait_for_maginot";
+			
+			PChar.quest.smuggler_line_first_mission_wait_for_maginot_decline.win_condition.l1 = "Location";
+			PChar.quest.smuggler_line_first_mission_wait_for_maginot_decline.win_condition.l1.location = "SaintMartin";
+			PChar.quest.smuggler_line_first_mission_wait_for_maginot_decline.win_condition = "smuggler_line_first_mission_wait_for_maginot_decline";
+		break;
+
+		case "smuggler_line_first_mission_wait_for_maginot":
+			AddQuestRecord("smuggler_line", 7);
+		break;
+
+		case "smuggler_line_first_mission_wait_for_maginot_decline":
+			PChar.quest.smuggler_line_first_mission_wait_for_maginot.over = "yes";
+		break;
+
+		case "smuggler_line_first_mission_award":
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Leadership", 2500);
+			else AddPartyExp(PChar, 2500);
+			AddMoneyToCharacter(PChar, 750*makeint(PChar.skill.commerce));
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 0;
+		//	RestoreDialog(CharacterFromID("Jean Maginot"));
+			LAi_SetMerchantType(CharacterFromID("Jean Maginot"));
+			PChar.quest.smuggler_line.first_mission = "completed";
+		break;
+
+		case "smuggler_line_second_mission_accept":
+			PChar.quest.smuggler_line = "second_mission_accept";
+			AddQuestRecord("smuggler_line", 8);
+			NPChar = characterfromID("Jean Maginot");
+			StoreDialog(NPChar);
+			NPChar.Dialog.Filename = "France Trader_dialog.c";
+			NPChar.dialog.CurrentNode = "second time";
+		break;
+
+		case "second_mission_money_prepare_for_troubles":
+			GiveItem2Character(PChar, "Jean_ring");
+			PChar.quest.smuggler_line = "second_mission_money_prepare_for_troubles";
+			AddQuestRecord("smuggler_line", 9);
+			AddMoneyToCharacter(PChar, 10000);
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Sneak", 2000);
+			else AddPartyExp(PChar, 2000);
+			DisableFastTravel(true);
+			Locations[FindLocation("Marigot_port")].vcskip = true;
+			LAi_LocationFightDisable(&Locations[FindLocation("Marigot_port")], true);
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 1;
+			Locations[FindLocation("Marigot_port")].locators_radius.goto.goto5 = 4;
+			Locations[FindLocation("Marigot_port")].locators_radius.goto.goto4 = 9.5;
+			
+			PChar.quest.second_mission_money_prepare_for_troubles_port.win_condition.l1 = "Location";
+			PChar.quest.second_mission_money_prepare_for_troubles_port.win_condition.l1.location = "Marigot_port";
+			PChar.quest.second_mission_money_prepare_for_troubles_port.win_condition = "second_mission_money_troubles";
+
+			PChar.quest.second_mission_money_reset_marigot.win_condition.l1 = "Location";
+			PChar.quest.second_mission_money_reset_marigot.win_condition.l1.location = PChar.location.from_sea;
+			PChar.quest.second_mission_money_reset_marigot.win_condition = "second_mission_reset_marigot";
+		break;
+
+		case "second_mission_money_troubles":
+			DeleteAttribute(&Locations[FindLocation("Marigot_port")],"vcskip");
+			GetCharacterPos(GetMainCharacter(), &locx, &locy, &locz);
+			homelocator = LAi_FindNearestFreeLocator("goto", locx, locy, locz);
+			
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m0, "goto", homelocator);
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			sld.id = "smuggler_line_soldier_03";
+			sld.dialog.filename = "quest_soldier_dialog.c";
+			LAi_setActorType(sld);
+			
+			GetCharacterPos(GetMainCharacter(), &locx, &locy, &locz);
+			homelocator = LAi_FindNearestFreeLocator("goto", locx, locy, locz);
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m1, "goto", homelocator);
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			sld.id = "smuggler_line_soldier_01";
+			LAi_setActorType(sld);
+			
+			GetCharacterPos(GetMainCharacter(), &locx, &locy, &locz);
+			homelocator = LAi_FindNearestFreeLocator("goto", locx, locy, locz);
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m2, "goto", homelocator);
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			sld.id = "smuggler_line_soldier_02";
+			LAi_setActorType(sld);
+
+			PChar.quest.second_mission_money_troubles2.win_condition.l1 = "Locator";
+			PChar.quest.second_mission_money_troubles2.win_condition.l1.location = "Marigot_port";
+			PChar.quest.second_mission_money_troubles2.win_condition.l1.locator_group = "goto";
+			PChar.quest.second_mission_money_troubles2.win_condition.l1.locator = "goto5";					// Locator near foot of stairs from store
+			PChar.quest.second_mission_money_troubles2.win_condition = "second_mission_money_troubles2";
+
+			PChar.quest.second_mission_money_troubles2a.win_condition.l1 = "Locator";
+			PChar.quest.second_mission_money_troubles2a.win_condition.l1.location = "Marigot_port";
+			PChar.quest.second_mission_money_troubles2a.win_condition.l1.locator_group = "goto";
+			PChar.quest.second_mission_money_troubles2a.win_condition.l1.locator = "goto4";					// Locator to the side in case player sidesteps off stairs
+			PChar.quest.second_mission_money_troubles2a.win_condition = "second_mission_money_troubles2";
+		break;
+
+		case "second_mission_money_troubles2":
+			LAi_LocationFightDisable(&Locations[FindLocation("Marigot_port")], false);
+			PChar.quest.second_mission_money_troubles2.over ="yes";
+			PChar.quest.second_mission_money_troubles2a.over = "yes";
+			LAi_ActorDialog(CharacterFromID("smuggler_line_soldier_03"), PChar, "", 3.0, 1.0);
+			LAi_ActorFollow(CharacterFromID("smuggler_line_soldier_01"), PChar, "", 2.0);
+			LAi_ActorFollow(CharacterFromID("smuggler_line_soldier_02"), PChar, "", 2.0);
+		break;
+
+		case "second_mission_money_troubles_fight":
+			LAi_LocationFightDisable(&Locations[FindLocation("Marigot_port")], false);
+			DisableFastTravel(false);
+			SetNationRelation2MainCharacter(FRANCE, RELATION_ENEMY);
+			LAi_SetWarriorType(CharacterFromID("smuggler_line_soldier_01"));
+			LAi_SetWarriorType(CharacterFromID("smuggler_line_soldier_02"));
+			LAi_SetWarriorType(CharacterFromID("smuggler_line_soldier_03"));	
+			LAi_group_MoveCharacter(CharacterFromID("smuggler_line_soldier_01"), "FRANCE_SOLDIERS");
+			LAi_group_MoveCharacter(CharacterFromID("smuggler_line_soldier_02"), "FRANCE_SOLDIERS");
+			LAi_group_MoveCharacter(CharacterFromID("smuggler_line_soldier_03"), "FRANCE_SOLDIERS");
+			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, true);	
+			AddQuestRecord("smuggler_line", 10);	
+			AddQuestRecord("smuggler_line", 11);		
+			PChar.quest.smuggler_line = "second_mission_to_beltrop_with_money_and_with_ring";
+		break;
+
+		case "second_mission_money_to_france_governor":
+			AddQuestRecord("smuggler_line", 10);
+			AddQuestRecord("smuggler_line", 12);
+			DoQuestReloadToLocation("Marigot_mansion_hall", "reload", "reload1", "second_mission_speak_with_france_governor");
+			RemoveCharacterEquip(PChar, BLADE_ITEM_TYPE);
+			RemoveCharacterEquip(PChar, GUN_ITEM_TYPE);
+			EnableEquip(PChar, BLADE_ITEM_TYPE, false);
+			EnableEquip(PChar, GUN_ITEM_TYPE, false);
+			StorePassengers("Blaze");
+		break;
+
+		case "second_mission_speak_with_france_governor":
+			TakeItemFromCharacter(PChar, "Jean_ring");
+			LAi_SetActorType(CharacterFromID("Philippe de Rivarol"));
+			LAi_SetActorType(PChar);
+			
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m1, "goto", "goto4");
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			sld.id = "smuggler_line_soldier_01";
+			LAi_setActorType(sld);
+			LAi_ActorFollow(sld, PChar, "", 2.0);
+			
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m2, "goto", "goto6");
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			sld.id = "smuggler_line_soldier_02";
+			LAi_setActorType(sld);
+			LAi_ActorFollow(sld, PChar, "", 2.0);
+			
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m0, "goto", "goto9");
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			sld.id = "smuggler_line_soldier_03";
+			sld.dialog.filename = "quest_soldier_dialog.c";
+			LAi_setActorType(sld);
+			LAi_ActorDialog(sld, PChar, "", 3.0, 1.0);
+			
+			characters[getCharacterIndex("Philippe de Rivarol")].dialog.currentnode = "smuggler_line";
+			LAi_ActorWaitDialog(PChar, CharacterFromID("Philippe de Rivarol"));
+			LAi_ActorDialog(CharacterFromID("Philippe de Rivarol"), PChar, "", 5.0, 5.0);
+		break;
+
+		case "second_mission_money_delivered_to_beltrop":
+			AddMoneyToCharacter(PChar, -7000);
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Leadership", 2000);
+				AddPartyExpChar(PChar, "Sneak", 2000);
+			}
+			else AddPartyExp(PChar, 4000);
+			AddQuestRecord("smuggler_line", 16);
+			PChar.quest.smuggler_line.second_mission = "completed";
+			RestoreDialog(CharacterFromID("Jean Maginot"));
+			LAi_SetMerchantType(CharacterFromID("Jean Maginot"));
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 0;
+		break;
+
+		case "second_mission_to_prison":
+			characters[getCharacterIndex("Philippe de Rivarol")].dialog.currentnode = "second time";
+			LAi_SetHuberStayType(CharacterFromID("Philippe de Rivarol"));
+			SetTownCapturedState("Marigot", true);
+			StorePassengers("Blaze");
+			Locations[FindLocation("Marigot_prison")].vcskip = true;
+			WaitDate("", 0, 0, 3, rand(11), rand(59));
+			DoQuestReloadToLocation("Marigot_prison", "goto", "goto9", "second_mission_prison_wait_for_resque");
+		break;
+
+		case "second_mission_prison_wait_for_resque":
+			PChar.dialog.currentnode = "smuggler_line_second_mission_prison_wait_for_resque";
+			LAi_ActorSelfDialog(PChar, "");
+		break;
+
+		case "second_mission_prison_prepare_for_resque":
+			PChar.quest.smuggler_line = "in_Marigot_prison";
+			AddQuestRecord("smuggler_line", 13);
+			LAi_SetPlayerType(PChar);
+			ChangeCharacterAddressGroup(CharacterFromID("danielle"), "Marigot_prison", "merchant", "reload13");
+			LAi_SetActorType(CharacterFromID("danielle"));
+			LAi_ActorRunToLocator(CharacterFromID("danielle"), "goto", "goto23", "second_mission_danielle_speak_with_blaze_in_prison", -1);
+		break;
+
+		case "second_mission_danielle_speak_with_blaze_in_prison":
+			characters[getCharacterIndex("danielle")].dialog.smgnode = characters[getCharacterIndex("danielle")].dialog.currentnode;
+			characters[getCharacterIndex("danielle")].dialog.currentnode = "smuggler_line";
+			LAi_ActorDialogNow(CharacterFromID("danielle"), PChar, "", -1);
+		break;
+
+		case "second_mission_exit_from_cam":
+			LAi_fade("second_mission_exit_from_cam_completed", "")
+		break;
+
+		case "second_mission_exit_from_cam_completed":
+			EnableEquip(PChar, BLADE_ITEM_TYPE, true);
+			EnableEquip(PChar, GUN_ITEM_TYPE, true);
+			EquiPCharacterByItem(PChar, FindCharacterItemByGroup(PChar, BLADE_ITEM_TYPE));
+			EquiPCharacterByItem(PChar, FindCharacterItemByGroup(PChar, GUN_ITEM_TYPE));
+			ChangeCharacterAddress(PChar, "Marigot_prison", "goto12");
+			PChar.quest.smuggler_line = "second_mission_exit_from_prison";
+			ChangeCharacterAddress(CharacterFromID("danielle"), "Marigot_prison", "goto23");
+			if (CheckQuestAttribute("danielle_on_ship", "true"))
+			{
+				characters[getCharacterIndex("danielle")].dialog.currentnode = characters[getCharacterIndex("danielle")].dialog.smgnode;
+				DeleteAttribute(CharacterFromID("danielle"), "dialog.smgnode");
+				RestorePassengers("Blaze");
+				LAi_SetOfficerType(CharacterFromID("danielle"));
+				PChar.quest.smuggler_line = "second_mission_return_to_beltrop_after_prison";
+				Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+				Preprocessor_AddQuestData("her", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
+				AddQuestRecord("smuggler_line", 14);
+				Preprocessor_Remove("she");
+				Preprocessor_Remove("Danielle");
+			}
+			else
+			{
+				characters[getCharacterIndex("danielle")].dialog.currentnode = "smuggler_line";
+				LAi_ActorDialog(CharacterFromID("danielle"), PChar, "", 1.0, 1.0);
+			}
+			reStorePassengers("Blaze");
+			DisableFastTravel(false);
+			PChar.quest.smuggler_line_second_mission_uncapture_Marigot.win_condition.l1 = "Timer";
+			PChar.quest.smuggler_line_second_mission_uncapture_Marigot.win_condition.l1.date.day = GetAddingDataDay(0, 0, 6);
+    			PChar.quest.smuggler_line_second_mission_uncapture_Marigot.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 6);
+			PChar.quest.smuggler_line_second_mission_uncapture_Marigot.win_condition.l1.date.year = GetAddingDataYear(0, 0, 6);
+			PChar.quest.smuggler_line_second_mission_uncapture_Marigot.win_condition = "smuggler_line_second_mission_uncapture_Marigot";
+		break;
+
+		case "second_mission_exit_from_cam_without_danielle":
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			Preprocessor_AddQuestData("she", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
+			Preprocessor_AddQuestData("her", XI_ConvertString(GetMyPronounPossessive(CharacterFromID("Danielle"))));
+			AddQuestRecord("smuggler_line", 15);
+			Preprocessor_Remove("her");
+			Preprocessor_Remove("she");
+			Preprocessor_Remove("Danielle");
+			LAi_ActorRunToLocation(CharacterFromID("danielle"), "reload", "reload1", "none", "", "", "", 85.0);
+			PChar.quest.smuggler_line = "second_mission_return_to_beltrop_after_prison";
+			characters[getCharacterIndex("danielle")].dialog.currentnode = characters[getCharacterIndex("danielle")].dialog.smgnode;
+			DeleteAttribute(CharacterFromID("danielle"), "dialog.smgnode");
+		break;
+
+		case "smuggler_line_second_mission_uncapture_Marigot":
+			SetTownCapturedState("Marigot", false);
+		break;
+
+		case "second_mission_money_not_delivered_to_beltrop":
+			AddQuestRecord("smuggler_line", 17);
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Sneak", 2500);
+			else AddPartyExp(PChar, 2500);
+			PChar.quest.smuggler_line.second_mission = "completed";
+			RestoreDialog(CharacterFromID("Jean Maginot"));
+			LAi_SetMerchantType(CharacterFromID("Jean Maginot"));
+		break;
+
+		case "second_mission_wait_two_days":
+			AddQuestRecord("smuggler_line", 18);
+			PChar.quest.second_mission_to_tavern_room.win_condition.l1 = "location";
+			PChar.quest.second_mission_to_tavern_room.win_condition.l1.location = "Marigot_tavern_upstairs";
+			PChar.quest.second_mission_to_tavern_room.win_condition = "second_mission_to_tavern_room";
+			PChar.quest.smuggler_line = "second_mission_to_tavern_room_wait_for_killers";
+		break;
+
+		case "second_mission_to_tavern_room":
+			LAi_QuestDelay("second_mission_to_tavern_room_wait_for_killers", 1.0);
+		break;
+
+		case "second_mission_to_tavern_room_wait_for_killers":
+			Lai_setActorType(PChar);
+			Lai_ActorGoToLocator(PChar, "goto", "goto4", "second_mission_meet_with_killers", 5.0);
+		break;
+
+		case "second_mission_meet_with_killers":
+			LAi_SetActorType(PChar);
+			
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "mask_2", "goto", "goto7");
+			sld.id = "smuggler_line_killer_01";
+			LAi_setActorType(sld);
+			LAi_ActorFollow(sld, PChar, "", 2.0);
+			
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "mask_3", "goto", "goto8");
+			sld.id = "smuggler_line_killer_02";
+			sld.dialog.filename = "quest_soldier_dialog.c";
+			LAi_setActorType(sld);
+			LAi_ActorDialog(sld, PChar, "", 3.0, 1.0);
+			
+			LAi_ActorWaitDialog(PChar, CharacterFromID("smuggler_line_killer_02"));
+		break;
+
+		case "second_mission_fight_with_killers":
+			LAi_SetPlayerType(PChar);
+			LAi_SetWarriorType(CharacterFromID("smuggler_line_killer_01"));
+			LAi_SetWarriorType(CharacterFromID("smuggler_line_killer_02"));
+			LAi_group_MoveCharacter(CharacterFromID("smuggler_line_killer_01"), "SMUGGLER_LINE_KILLERS");
+			LAi_group_MoveCharacter(CharacterFromID("smuggler_line_killer_02"), "SMUGGLER_LINE_KILLERS");
+			LAi_group_SetRelation("SMUGGLER_LINE_KILLERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SMUGGLER_LINE_KILLERS", LAI_GROUP_PLAYER, true);	
+			AddQuestRecord("smuggler_line", 19);	
+			
+			PChar.quest.smuggler_line = "second_mission_after_fight_with_killers";
+			Characters[GetCharacterIndex("Jean Maginot")].dialog.CurrentNode = "second_mission_after_fight_with_killers_return";
+		break;
+
+		case "second_mission_after_fight_with_killers_take_money":
+			PChar.quest.smuggler_line = "second_mission_after_fight_with_killers_take_money";
+			AddQuestRecord("smuggler_line", 23);
+			AddMoneyToCharacter(PChar, 10000);
+		break;
+
+		case "second_mission_after_fight_with_killers_return_to_beltrop":
+			AddQuestRecord("smuggler_line", 20);
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Sneak", 1500);
+			else AddPartyExp(PChar, 1500);
+			ChangeSmugglerLiking(PChar, 10);
+			RestoreDialog(CharacterFromID("Jean Maginot"));
+			LAi_SetMerchantType(CharacterFromID("Jean Maginot"));
+		break;
+
+		case "second_mission_truth_to_maginot":
+			AddQuestRecord("smuggler_line", 21);
+			PChar.quest.smuggler_line = "second_mission_truth_to_maginot";
+		break;
+
+		case "second_mission_truth_to_maginot_and_say_beltrop":
+			AddQuestRecord("smuggler_line", 22);
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Sneak", 750);
+			else AddPartyExp(PChar, 750);
+			ChangeSmugglerLiking(PChar, 5);
+			RestoreDialog(CharacterFromID("Jean Maginot"));
+			LAi_SetMerchantType(CharacterFromID("Jean Maginot"));
+		break;
+
+		case "second_mission_after_fight_with_killers_return_money":
+			AddMoneyToCharacter(PChar, -7000);
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Leadership", 2000);
+				AddPartyExpChar(PChar, "Sneak", 2000);
+			}
+			else AddPartyExp(PChar, 4000);
+			ChangeSmugglerLiking(PChar, 10);
+			AddQuestRecord("smuggler_line", 16);
+			PChar.quest.smuggler_line.second_mission = "completed";
+			RestoreDialog(CharacterFromID("Jean Maginot"));
+			LAi_SetMerchantType(CharacterFromID("Jean Maginot"));
+		break;
+
+		case "second_mission_reset_marigot":
+			DisableFastTravel(false);
+			Locations[FindLocation("Marigot_port")].locators_radius.goto.goto5 = 1;
+			Locations[FindLocation("Marigot_port")].locators_radius.goto.goto4 = 1;
+		break;
+
+		case "third_mission_accept":
+			AddQuestRecord("smuggler_line", 24);
+			GiveShip2Character(CharacterFromID("Desmond Ray Beltrop"), "PO_Warship", TranslateString("","Fearless"), -1, PIRATE, true, true);
+			PChar.quest.smuggler_line = "third_mission_accepted";
+			PChar.quest.third_mission_to_douwesen_expired.win_condition.l1 = "timer";
+			PChar.quest.third_mission_to_douwesen_expired.win_condition.l1.date.day = GetAddingDataDay(0, 0, 14);
+    			PChar.quest.third_mission_to_douwesen_expired.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 14);
+			PChar.quest.third_mission_to_douwesen_expired.win_condition.l1.date.year = GetAddingDataYear(0, 0, 14);
+			PChar.quest.third_mission_to_douwesen_expired.win_condition = "third_mission_to_douwesen_expired";
+			
+			PChar.quest.third_mission_to_douwesen_shore.win_condition.l1 = "location";
+			PChar.quest.third_mission_to_douwesen_shore.win_condition.l1.location = "Douwesen_shore_02";
+			PChar.quest.third_mission_to_douwesen_shore.win_condition = "third_mission_to_douwesen_shore";
+			
+			PChar.quest.third_mission_to_douwesen.win_condition.l1 = "location";
+			PChar.quest.third_mission_to_douwesen.win_condition.l1.location = "Douwesen";
+			PChar.quest.third_mission_to_douwesen.win_condition = "third_mission_to_douwesen";
+			
+			PChar.quest.beltrop_death.win_condition.l1 = "Npc_death";
+			PChar.quest.beltrop_death.win_condition.l1.character = "Desmond Ray Beltrop";
+			PChar.quest.beltrop_death.win_condition = "beltrop_death";
+		break;
+
+		case "beltrop_death":
+			if (checkQuestAttribute("smuggler_line", "third_mission_accepted"))
+			{
+				AddQuestRecord("smuggler_line", 27);
+				ChangeCharacterReputation (PChar, -10);
+				ChangeSmugglerLiking(PChar, -40);
+				if(CORPSEMODE < 2)
+				{
+					if (ENABLE_WEAPONSMOD) GiveItem2Character(PChar, "bladeC13+3");
+					else GiveItem2Character(NPChar, "bladeC13");
+					Log_SetStringToLog(TranslateString("","From the corpse of Desmond Ray Beltrop you took a blade with a mark on the blade - 'HURRICANE'."));
+				}
+			}
+			if (checkQuestAttribute("smuggler_line", "third_mission_to_douwesen_expired_fire_fight") || checkQuestAttribute("smuggler_line", "fourth_mission_kill_jean_fire_fight"))
+			{
+				AddQuestRecord("smuggler_line", 29);
+				ChangeCharacterReputation (PChar, -10);
+				ChangeSmugglerLiking(PChar, -40);
+				if (ENABLE_WEAPONSMOD) GiveItem2Character(PChar, "bladeC13+3");
+				else GiveItem2Character(NPChar, "bladeC13");
+				Log_SetStringToLog(TranslateString("","From the corpse of Desmond Ray Beltrop you took a blade with a mark on the blade - 'HURRICANE'."));
+			}
+			if (checkQuestAttribute("smuggler_line", "traitor"))
+			{
+				AddQuestRecord("smuggler_line", 61);
+				ChangeCharacterReputation (PChar, -10);
+				ChangeSmugglerLiking(PChar, -40);
+				if (ENABLE_WEAPONSMOD) GiveItem2Character(PChar, "bladeC13+3");
+				else GiveItem2Character(NPChar, "bladeC13");
+				Log_SetStringToLog(TranslateString("","From the corpse of Desmond Ray Beltrop you took a blade with a mark on the blade - 'HURRICANE'."));
+				
+				Group_CreateGroup("Beltrop");
+				Group_AddCharacter("Beltrop", "Desmond Ray Beltrop");
+				Group_SetGroupCommander("Beltrop", "Desmond Ray Beltrop");
+				Group_SetAddress("Beltrop", "Conceiaco", "Quest_Ships","Quest_Ship_7");
+				SetCharacterRelationBoth(GetCharacterIndex("Desmond Ray Beltrop"),GetMainCharacterIndex(),RELATION_ENEMY);
+				LAi_LocationFightDisable(&locations[FindLocation(PChar.location)], true);
+			}
+			if (checkQuestAttribute("smuggler_line", "traitor2"))
+			{
+				AddQuestRecord("smuggler_line", 62);
+				ChangeCharacterReputation (PChar, -10);
+				ChangeSmugglerLiking(PChar, -40);
+				if (ENABLE_WEAPONSMOD) GiveItem2Character(PChar, "bladeC13+3");
+				else GiveItem2Character(NPChar, "bladeC13");
+				Log_SetStringToLog(TranslateString("","From the corpse of Desmond Ray Beltrop you took a blade with a mark on the blade - 'HURRICANE'."));
+				
+				Group_CreateGroup("Beltrop");
+				Group_AddCharacter("Beltrop", "Desmond Ray Beltrop");
+				Group_SetGroupCommander("Beltrop", "Desmond Ray Beltrop");
+				Group_SetAddress("Beltrop", "Conceiaco", "Quest_Ships","Quest_Ship_7");
+				SetCharacterRelationBoth(GetCharacterIndex("Desmond Ray Beltrop"),GetMainCharacterIndex(),RELATION_ENEMY);
+				LAi_LocationFightDisable(&locations[FindLocation(PChar.location)], true);
+			}
+			
+			if (checkQuestAttribute("smuggler_line", "traitor3"))
+			{
+				AddQuestRecord("smuggler_line", 62);
+				ChangeCharacterReputation (PChar, -10);
+				ChangeSmugglerLiking(PChar, -40);
+				if (ENABLE_WEAPONSMOD) GiveItem2Character(PChar, "bladeC13+3");
+				else GiveItem2Character(NPChar, "bladeC13");
+				Log_SetStringToLog(TranslateString("","From the corpse of Desmond Ray Beltrop you took a blade with a mark on the blade - 'HURRICANE'."));
+				
+				Group_CreateGroup("Beltrop");
+				Group_AddCharacter("Beltrop", "Desmond Ray Beltrop");
+				Group_SetGroupCommander("Beltrop", "Desmond Ray Beltrop");
+				Group_SetAddress("Beltrop", "Douwesen", "Quest_Ships","Quest_Ship_7");
+				SetCharacterRelationBoth(GetCharacterIndex("Desmond Ray Beltrop"),GetMainCharacterIndex(),RELATION_ENEMY);
+				LAi_ActorDialog(CharacterFromID(PChar.quest.smuggler_line.QCGov), PChar, "", 2.0, 1.0);
+				PChar.quest.pirate_line = "accepted";
+			}
+			
+			PChar.quest.smuggler_line = "failed";
+			CloseQuestHeader("smuggler_line");
+		break;
+
+		case "third_mission_to_douwesen":
+			NPChar = CharacterFromID("Desmond Ray Beltrop");
+			NPChar.skipRM = true;					// Beltrop flies a Portuguese flag but Portugal isn't upset if you kill the smuggler boss
+			NPChar.nosurrender = 2;					// Beltrop will not become your officer!
+			NPChar.quest.officertype = OFFIC_TYPE_CAPMERCHANT;
+			NPChar.Ship.crew.morale = 65;
+			NPChar.fantomtype = "trade";				// No naval flag, no military boarders
+			if (ENABLE_WEAPONSMOD)
+			{
+				GiveItem2Character(NPChar, "bladeC13+3");	// 'Hurricane' sword
+				EquiPCharacterByItem(NPChar, "bladeC13+3");
+			}
+			else
+			{
+				GiveItem2Character(NPChar, "bladeC13");
+				EquiPCharacterByItem(NPChar, "bladeC13");
+			}
+
+			Group_CreateGroup("Beltrop");
+			Group_AddCharacter("Beltrop", "Desmond Ray Beltrop");
+			Group_SetGroupCommander("Beltrop", "Desmond Ray Beltrop");
+			Group_SetAddress("Beltrop", "Douwesen", "Quest_Ships","Quest_Ship_7");
+			SetCharacterRelationBoth(GetCharacterIndex("Desmond Ray Beltrop"),GetMainCharacterIndex(),RELATION_FRIEND);
+		break;
+
+		case "third_mission_to_douwesen_expired":
+			AddQuestRecord("smuggler_line", 25);
+			PChar.quest.smuggler_line = "third_mission_to_douwesen_expired";
+			PChar.quest.third_mission_to_douwesen_shore.over = "yes";
+		break;
+
+		case "third_mission_to_douwesen_expired_fire_without_fight":
+			AddQuestRecord("smuggler_line", 28);
+			PChar.quest.smuggler_line = "failed";
+			CloseQuestHeader("smuggler_line");
+		break;
+
+		case "third_mission_to_douwesen_expired_fire_fight":
+			PChar.quest.smuggler_line = "third_mission_to_douwesen_expired_fire_fight";
+			LAi_SetWarriorType(CharacterFromID("Desmond Ray Beltrop"));
+			LAi_group_MoveCharacter(CharacterFromID("Desmond Ray Beltrop"), "SMUGGLERS_SOLDIERS");
+			LAi_group_SetRelation("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, true);
+		break;
+
+		case "third_mission_to_douwesen_shore":
+			DisableFastTravel(true);
+			LAi_LockFightMode(PChar, true);
+			PChar.quest.smuggler_line = "third_mission_to_douwesen_shore";
+			PChar.quest.third_mission_to_douwesen_expired.over = "yes";
+			Locations[FindLocation("Douwesen_shore_02")].reload.l2.disable = 1;
+			ChangeCharacterAddressGroup(CharacterFromID("Desmond Ray Beltrop"), "Douwesen_shore_02", "goto", "goto7");
+			ChangeCharacterAddressGroup(CharacterFromID(PChar.quest.smuggler_line.QCGov), "Douwesen_shore_02", "goto", "goto5");
+			LAi_SetActorType(PChar);
+			LAi_ActorFollow(PChar, CharacterFromID("Desmond Ray Beltrop"), "third_mission_to_douwesen_shore2", 10.0);
+		break;
+
+		case "third_mission_to_douwesen_shore2":
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(CharacterFromID("Desmond Ray Beltrop"));
+			LAi_ActorDialog(CharacterFromID("Desmond Ray Beltrop"), PChar, "", 4.0, 1.0);
+		break;
+
+		case "third_mission_speak_with_pirate_head":		// triggered by dialog with Desmond Ray Beltrop
+			LAi_ActorFollow(CharacterFromID("Desmond Ray Beltrop"), CharacterFromID(PChar.quest.smuggler_line.QCGov), "", 10.0);
+			LAi_SetActorType(PChar);
+			LAi_ActorFollow(PChar, CharacterFromID(PChar.quest.smuggler_line.QCGov), "third_mission_speak_with_pirate_head2", 10.0);
+		break;
+
+		case "third_mission_speak_with_pirate_head2":
+			LAi_SetPlayerType(PChar);
+			characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.smgnode = characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.currentnode;
+			characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.currentnode = "third time two";
+			PChar.quest.smuggler_line = "third_mission_speak_with_pirate_head";
+			LAi_SetActorType(CharacterFromID(PChar.quest.smuggler_line.QCGov));
+			LAi_ActorDialog(CharacterFromID(PChar.quest.smuggler_line.QCGov), PChar, "", 10.0, 1.0);
+		break;
+
+		case "third_mission_pirate_head_exit_from_shore":	// triggered by dialog with pirate boss
+			PChar.quest.smuggler_line = "third_mission_pirate_head_exit_from_shore";
+		//	LAi_SetActorType(PChar);			// Nail player in place until pirate boss has left
+		//	LAi_ActorTurnToLocator(PChar, "reload", "reload2_back");
+		//	LAi_ActorTurnToLocator(PChar, "goto", "goto2");
+			LAi_SetActorType(CharacterFromID(PChar.quest.smuggler_line.QCGov));
+		//	LAi_ActorRunToLocation(CharacterFromID(PChar.quest.smuggler_line.QCGov), "reload", "reload2_back", "QC_residence", "goto", "goto1", "third_mission_pirate_head_exit_from_shore_enter_to_residence", 25.0);
+			LAi_ActorRunToLocation(CharacterFromID(PChar.quest.smuggler_line.QCGov), "reload", "reload2_back", "QC_residence", "goto", "goto1", "_", 25.0);
+			LAi_type_actor_Reset(CharacterFromID("Desmond Ray Beltrop"));
+			LAi_ActorDialog(CharacterFromID("Desmond Ray Beltrop"), PChar, "", 1.0, 1.0);
+			PChar.quest.third_mission_pirate_head_exit_from_shore_enter_to_residence.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.third_mission_pirate_head_exit_from_shore_enter_to_residence.win_condition.l1.location = "Douwesen_shore_02";
+			PChar.quest.third_mission_pirate_head_exit_from_shore_enter_to_residence.win_condition = "third_mission_pirate_head_exit_from_shore_enter_to_residence";
+		break;
+
+		case "third_mission_pirate_head_exit_from_shore_enter_to_residence":
+		//	LAi_SetPlayerType(PChar);
+			ChangeCharacterAddressGroup(CharacterFromID(PChar.quest.smuggler_line.QCGov), "QC_residence", "goto", "goto1");
+			LAi_SetStayType(CharacterFromID(PChar.quest.smuggler_line.QCGov));
+			characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.currentnode = characters[GetCharacterIndex(PChar.quest.smuggler_line.QCGov)].dialog.smgnode;
+			DeleteAttribute(CharacterFromID(PChar.quest.smuggler_line.QCGov), "dialog.smgnode");
+		break;
+
+		case "third_mission_award":
+			DisableFastTravel(false);
+			Locations[FindLocation("Douwesen_shore_02")].reload.l2.disable = 0;
+			PChar.quest.smuggler_line.third_mission = "completed";
+			if(AUTO_SKILL_SYSTEM)AddPartyExpChar(PChar, "Leadership", 1500);
+			else AddPartyExp(PChar, 1500);
+			AddMoneyToCharacter(PChar, 3000);
+			AddQuestRecord("smuggler_line", 30);
+		break;
+
+		case "fourth_mission_acepted":
+			PChar.quest.smuggler_line = "fourth_mission_acepted";
+			AddQuestRecord("smuggler_line", 31);
+			PChar.quest.fourth_mission_to_Marigot.win_condition.l1 = "Location";
+			PChar.quest.fourth_mission_to_Marigot.win_condition.l1.location = "Marigot_port";
+			PChar.quest.fourth_mission_to_Marigot.win_condition = "fourth_mission_to_Marigot";
+			characters[GetCharacterIndex("Desmond Ray Beltrop")].location = "Smugglers_Residence";
+			characters[GetCharacterIndex("Desmond Ray Beltrop")].location.group = "goto";
+			characters[GetCharacterIndex("Desmond Ray Beltrop")].location.locator = "goto1";
+			Group_SetAddress("Beltrop", "none", "Quest_Ships","Quest_Ship_7");
+			LAi_SetStayType(CharacterFromID("Desmond Ray Beltrop"));
+			NPChar = characterfromID("Jean Maginot");
+			StoreDialog(NPChar);
+			NPChar.Dialog.Filename = "France Trader_dialog.c";
+			NPChar.dialog.CurrentNode = "second time";
+		break;
+
+		case "fourth_mission_to_Marigot":
+			DisableFastTravel(true);
+			PChar.quest.smuggler_line = "fourth_mission_to_Marigot";
+			characters[GetCharacterIndex("Susanne Maginot")].dialog.smgnode = characters[GetCharacterIndex("Susanne Maginot")].dialog.currentnode;
+			characters[GetCharacterIndex("Susanne Maginot")].dialog.currentnode = "smuggler_line";
+			PlaceCharacter(CharacterFromID("Susanne Maginot"), "goto");
+			LAi_SetActorType(CharacterFromID("Susanne Maginot"));
+			LAi_ActorDialog(CharacterFromID("Susanne Maginot"), PChar, "", 5.0, 5.0);
+		break;
+
+		case "fourth_mission_capture_susanne":
+			DisableFastTravel(false);
+			PChar.quest.smuggler_line = "fourth_mission_capture_susanne";
+			LAi_ActorRunToLocation(CharacterFromID("Susanne Maginot"), "reload", "werf", "none", "", "", "", 25.0);
+			Characters[GetCharacterIndex("Susanne Maginot")].location = "none";
+			AddPassenger(PChar, CharacterFromID("Susanne Maginot"), 1);
+			AddQuestRecord("smuggler_line", 32);
+		break;
+
+		case "fourth_mission_capture_susanne_wait_in_tavern":
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Sneak", 2000);
+			else AddPartyExp(PChar, 2000);
+			PChar.quest.smuggler_line = "fourth_mission_capture_susanne_wait_in_tavern";
+			AddQuestRecord("smuggler_line", 33);
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 1;
+			PChar.quest.fourth_mission_to_tavern.win_condition.l1 = "location";
+			PChar.quest.fourth_mission_to_tavern.win_condition.l1.location = "Marigot_tavern_upstairs";
+			PChar.quest.fourth_mission_to_tavern.win_condition = "fourth_mission_to_tavern";
+		break;
+
+		case "fourth_mission_to_tavern":
+			LAi_QuestDelay("fourth_mission_to_tavern_wait_jean", 1.0);
+		break;
+
+		case "fourth_mission_to_tavern_wait_jean":
+			Lai_setActorType(PChar);
+			Lai_ActorGoToLocator(PChar, "goto", "goto4", "fourth_mission_meet_with_jean_in_tavern", 5.0);
+		break;
+
+		case "fourth_mission_meet_with_jean_in_tavern":
+			LAi_RemoveLoginTime(CharacterFromID("Jean Maginot"));
+			characters[GetCharacterIndex("Jean Maginot")].dialog.currentnode = "resque_susanne";
+			PChar.quest.smuggler_line = "fourth_mission_meet_with_jean_in_tavern";
+			ChangeCharacterAddressGroup(CharacterFromID("Jean Maginot"), "Marigot_tavern_upstairs", "reload", "reload1");
+			LAi_SetActorType(CharacterFromID("Jean Maginot"));
+			LAi_ActorWaitDialog(PChar, CharacterFromID("Jean Maginot"));
+			LAi_ActorDialog(CharacterFromID("Jean Maginot"), PChar, "", 3.0, 1.0);
+		break;
+
+		case "fourth_mission_meet_with_jean_in_tavern_good":
+			LAi_ActorRunToLocation(CharacterFromID("Jean Maginot"), "reload", "reload1", "none", "", "", "", 25.0);
+			RemovePassenger(PChar, CharacterFromID("Susanne Maginot"));
+			GiveItem2Character(PChar, "shop_papers");
+			PChar.quest.smuggler_line = "fourth_mission_meet_with_jean_in_tavern_good";
+			AddQuestRecord("smuggler_line", 34);
+			LAi_setPlayerType(PChar);
+		break;
+
+		case "fourth_mission_meet_with_jean_in_tavern_bad":
+			LAi_ActorRunToLocation(CharacterFromID("Jean Maginot"), "reload", "reload1", "none", "", "", "", 25.0);
+			GiveItem2Character(PChar, "shop_papers");
+			ChangeCharacterReputation(PChar, -5);
+			OfficersReaction("bad");
+			PChar.quest.smuggler_line = "fourth_mission_meet_with_jean_in_tavern_good";
+			AddQuestRecord("smuggler_line", 36);
+			LAi_setPlayerType(PChar);
+			PChar.quest.fourth_mission_soldiers.win_condition.l1 = "location";
+			PChar.quest.fourth_mission_soldiers.win_condition.l1.location = "Marigot_Town_02";
+			PChar.quest.fourth_mission_soldiers.win_condition = "fourth_mission_soldiers";
+		break;
+
+		case "fourth_mission_soldiers":
+			AddQuestRecord("smuggler_line", 37);
+			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, true);
+			SetNationRelation2MainCharacter(FRANCE, RELATION_ENEMY);
+			DisableFastTravel(false);
+		break;
+
+		case "fourth_mission_fight":
+			NPChar = CharacterFromID("Jean Maginot");
+			GiveItem2Character(NPChar, "MerchantsBlade");
+			EquiPCharacterByItem(NPChar, "MerchantsBlade");
+			DisableFastTravel(true);
+			LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], false);
+			// LAi_SetHp(NPChar, 1.0, 1.0);
+			LAi_SetActorType(PChar);
+			LAi_ActorAttack(PChar, NPChar, "fourth_mission_kill_jean");
+		break;
+
+		case "fourth_mission_kill_jean":
+			LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], true);
+			AddQuestRecord("smuggler_line", 38);
+			LAi_SetPlayerType(PChar);
+			LAi_group_MoveCharacter(CharacterFromID("MarigotPatrol1"), "FRANCE_SOLDIERS");
+			LAi_group_MoveCharacter(CharacterFromID("MarigotPatrol2"), "FRANCE_SOLDIERS");
+			PChar.quest.fourth_mission_soldiers.win_condition.l1 = "location";
+			PChar.quest.fourth_mission_soldiers.win_condition.l1.location = "Marigot_Port";
+			PChar.quest.fourth_mission_soldiers.win_condition = "fourth_mission_soldiers";
+			PChar.quest.smuggler_line = "fourth_mission_kill_jean";
+		break;
+
+		case "fourth_mission_completed":
+			PChar.quest.smuggler_line.fourth_mission = "completed";
+			AddQuestRecord("smuggler_line", 35);
+			TakeItemFromCharacter(PChar, "shop_papers");
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Leadership", 5000);
+				AddPartyExpChar(PChar, "Sneak", 1000);
+			}
+			else AddPartyExp(PChar, 6000);
+			AddMoneyToCharacter(PChar, 8000);
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 0;
+			NPChar = CharacterFromID("Jean Maginot");
+			SetModelFromID(NPChar, "pirat2");
+			NPChar.name = TranslateString("Toothless", "Pew");
+			NPChar.lastname = "";
+			NPChar.location = "Marigot_store";
+			NPChar.location.group = "sit";
+			NPChar.location.locator = "sit1";
+			LAi_SetMerchantType(NPChar);
+			RestoreDialog(NPChar);
+		break;
+
+		case "fourth_mission_kill_jean_fire_fight":
+			PChar.quest.smuggler_line = "fourth_mission_kill_jean_fire_fight";
+			LAi_SetWarriorType(CharacterFromID("Desmond Ray Beltrop"));
+			LAi_group_MoveCharacter(CharacterFromID("Desmond Ray Beltrop"), "SMUGGLERS_SOLDIERS");
+			LAi_group_SetRelation("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, true);
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 0;
+			NPChar = CharacterFromID("Jean Maginot");
+			SetModelFromID(NPChar, "pirat2");
+			NPChar.name = TranslateString("Toothless", "Pew");
+			NPChar.lastname = "";
+			NPChar.location = "Marigot_store";
+			NPChar.location.group = "sit";
+			NPChar.location.locator = "sit1";
+			LAi_SetMerchantType(NPChar);
+			RestoreDialog(NPChar);
+		break;
+
+		case "fourth_mission_kill_jean_fire_without_fight":
+			AddQuestRecord("smuggler_line", 28);
+			PChar.quest.smuggler_line = "failed";
+			CloseQuestHeader("smuggler_line");
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 0;
+			NPChar = CharacterFromID("Jean Maginot");
+			SetModelFromID(NPChar, "pirat2");
+			NPChar.name = TranslateString("Toothless", "Pew");
+			NPChar.lastname = "";
+			NPChar.location = "Marigot_store";
+			NPChar.location.group = "sit";
+			NPChar.location.locator = "sit1";
+			LAi_SetMerchantType(NPChar);
+			RestoreDialog(NPChar);
+		break;
+
+		case "fourth_mission_failed":
+			AddQuestRecord("smuggler_line", 39);
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Sneak", 3000);
+			else AddPartyExp(PChar, 3000);
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 0;
+		//	characters[GetCharacterIndex("Jean Maginot")].model = "pirate2";
+		//	characters[GetCharacterIndex("Jean Maginot")].headModel = "h_pirate2";
+			NPChar = CharacterFromID("Jean Maginot");
+			SetModelFromID(NPChar, "pirat2");
+			NPChar.name = TranslateString("Toothless", "Pew");
+			NPChar.lastname = "";
+			NPChar.location = "Marigot_store";
+			NPChar.location.group = "sit";
+			NPChar.location.locator = "sit1";
+			LAi_SetMerchantType(NPChar);
+			LAi_CharacterEnableDialog(NPChar);
+			RestoreDialog(NPChar);
+			LAi_CharacterEnableDialog(CharacterFromID("MarigotPatrol7"));
+			RestoreDialog(CharacterFromID("MarigotPatrol7"));
+			ChangeCharacterAddressGroup(CharacterFromID("MarigotPatrol7"), "Marigot_Town_01", "goto", "goto1");
+			LAi_SetPatrolType(CharacterFromID("MarigotPatrol7"));
+		break;
+
+		case "fourth_mission_to_jean":
+			DisableFastTravel(false);
+			PChar.quest.smuggler_line = "fourth_mission_to_jean";
+			Characters[GetCharacterIndex("Susanne Maginot")].location = "none";
+		break;
+
+		case "fourth_mission_ring":
+			PChar.quest.smuggler_line = "fourth_mission_ring";
+			AddQuestRecord("smuggler_line", 41);
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Sneak", 1000);
+			else AddpartyExp(PChar, 1000);
+			NPChar = CharacterFromID("MarigotPatrol7");
+			LAi_type_actor_Reset(CharacterFromID("MarigotPatrol7"));
+		//	PlaceCharacter(CharacterFromID("MarigotPatrol7"), "goto");
+			StoreDialog(NPChar);
+			NPChar.Dialog.Filename = "quest_soldier_dialog.c";
+			NPChar.dialog.currentnode = "fourth_mission";
+		break;	
+
+		case "fourth_mission_ring_france_was_enemy":
+			PChar.quest.smuggler_line = "fourth_mission_ring_france_was_enemy";
+			AddQuestRecord("smuggler_line", 42);
+			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, true);
+		break;
+
+		case "fourth_mission_with_officer_to_shop_wrong":
+			AddQuestRecord("smuggler_line", 43);
+			PChar.quest.smuggler_line = "fourth_mission_with_officer_to_shop_wrong";
+			LAi_SetActorType(CharacterFromID("MarigotPatrol7"));
+			LAi_ActorRunToLocation(CharacterFromID("MarigotPatrol7"), "reload", "reload_3_3_back", "none", "", "", "", 95.0);
+			PChar.quest.fourth_mission_with_officer_to_shop_complete.win_condition.l1 = "location";
+			PChar.quest.fourth_mission_with_officer_to_shop_complete.win_condition.l1.location = "Marigot_store";
+			PChar.quest.fourth_mission_with_officer_to_shop_complete.win_condition = "fourth_mission_with_officer_to_shop_complete";
+		break;
+
+		case "fourth_mission_with_officer_to_shop_right":
+			AddQuestRecord("smuggler_line", 44);
+			PChar.quest.smuggler_line = "fourth_mission_with_officer_to_shop_right";
+			LAi_SetActorType(CharacterFromID("MarigotPatrol7"));
+			LAi_ActorRunToLocation(CharacterFromID("MarigotPatrol7"), "reload", "reload_3_3_back", "none", "", "", "", 95.0);
+			PChar.quest.fourth_mission_with_officer_to_shop_complete.win_condition.l1 = "location";
+			PChar.quest.fourth_mission_with_officer_to_shop_complete.win_condition.l1.location = "Marigot_store";
+			PChar.quest.fourth_mission_with_officer_to_shop_complete.win_condition = "fourth_mission_with_officer_to_shop_complete";
+		break;
+
+		case "fourth_mission_with_officer_to_shop_complete":
+			NPChar = CharacterFromID("MarigotPatrol7");
+			LAi_type_actor_Reset(CharacterFromID("MarigotPatrol7"));
+			PlaceCharacter(CharacterFromID("MarigotPatrol7"), "goto");
+			NPChar.Dialog.Filename = "quest_soldier_dialog.c";
+			NPChar.dialog.currentnode = "fourth_mission";
+			Lai_ActorDialog(CharacterFromID("MarigotPatrol7"), PChar, "", 2.0, 1.0);
+		break;
+
+		case "fourth_mission_jean_to_soldier1":
+			Characters[GetCharacterIndex("Jean Maginot")].dialog.currentnode = "smuggler_line_fourth_mission_jean_first_talk_with_soldiers";
+			LAi_SetActorType(CharacterFromID("Jean Maginot"));
+			LAi_ActorDialogNow(CharacterFromID("Jean Maginot"), PChar, "", -1.0);
+		break;
+
+		case "fourth_mission_soldier_to_player":
+			NPChar = CharacterFromID("MarigotPatrol7");
+			if (CheckQuestAttribute("smuggler_line", "fourth_mission_with_officer_to_shop_wrong"))
+			{
+				NPChar.dialog.currentnode = "fourth_mission_with_officer_to_shop_wrong";
+			}
+			else
+			{
+				NPChar.dialog.currentnode = "fourth_mission_with_officer_to_shop_right";
+			}
+			LAi_SetActorType(NPChar);
+			LAi_ActorDialogNow(NPChar, PChar, "", -1.0);
+		break;
+
+		case "fourth_mission_after_shop_wrong":
+			AddQuestRecord("smuggler_line", 45);
+			PChar.quest.smuggler_line = "fourth_mission_with_officer_to_shop_wrong";
+			Locations[FindLocation("Marigot_port")].reload.l6.disable = 1;
+			LAi_CharacterDisableDialog(CharacterFromID("Jean Maginot"));
+			LAi_CharacterDisableDialog(CharacterFromID("MarigotPatrol7"));
+		break;
+
+		case "fourth_mission_officer_exit_from_shop":
+			AddQuestRecord("smuggler_line", 46);
+			LAi_SetMerchantType(CharacterFromID("Jean Maginot"));
+			PChar.quest.smuggler_line = "fourth_mission_officer_exit_from_shop";
+			PChar.quest.fourth_mission_officer_reset.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.fourth_mission_officer_reset.win_condition.l1.location = "Marigot_store";
+			PChar.quest.fourth_mission_officer_reset.win_condition = "fourth_mission_officer_reset";
+		break;
+
+		case "fourth_mission_officer_reset":
+			RestoreDialog(CharacterFromID("MarigotPatrol7"));
+			ChangeCharacterAddressGroup(CharacterFromID("MarigotPatrol7"), "Marigot_Town_01", "goto", "goto1");
+			LAi_SetPatrolType(CharacterFromID("MarigotPatrol7"));
+		break;
+
+		case "fourth_mission_ring_completed":
+			LAi_SetPatrolType(CharacterFromID("MarigotPatrol7"));
+			RestoreDialog(CharacterFromID("MarigotPatrol7"));
+			AddQuestRecord("smuggler_line", 47);
+			PChar.quest.smuggler_line = "fourth_mission_ring_completed";
+			GiveItem2Character(PChar, "shop_papers");
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Leadership", 1000);
+				AddPartyExpChar(PChar, "Sneak", 1000);
+			}
+			else AddPartyExp(PChar, 2000);
+		break;
+
+		case "fourth_mission_return_to_beltrop":
+			PChar.quest.smuggler_line = "fourth_mission_return_to_beltrop";
+			AddQuestRecord("smuggler_line", 40);
+		break;
+
+		case "fifth_mission_meet_with_barrakuda":
+			PChar.quest.smuggler_line = "fifth_mission_meet_with_barrakuda";
+			ChangeCharacterAddressGroup(CharacterFromID("barrakuda"), PChar.location, "reload", "reload1");
+			LAi_SetActorType(CharacterFromID("barrakuda"));
+			LAi_ActorDialog(CharacterFromID("barrakuda"), PChar, "", 3.0, 1.0);
+		break;
+
+		case "fifth_mission_meet_with_barrakuda_2":
+			LAi_SetActorType(CharacterFromID("Desmond Ray Beltrop"));
+			Characters[GetCharacterIndex("Desmond Ray Beltrop")].dialog.currentnode = "fifth_mission_meet_with_barrakuda_2";
+			LAi_ActorDialog(CharacterFromID("Desmond Ray Beltrop"), PChar, "", 3.0, 1.0);
+		break;
+
+		case "fifth_mission_wait_for_join_barrakuda":
+			LAi_SetMerchantType(CharacterFromID("Desmond Ray Beltrop"));
+			LAi_SetStayType(CharacterFromID("barrakuda"));
+			PChar.quest.smuggler_line = "fifth_mission_wait_for_join_barrakuda";
+			AddQuestRecord("smuggler_line", 48);
+		break;
+
+		case "fifth_mission_accept":
+			LAi_SetMerchantType(CharacterFromID("Desmond Ray Beltrop"));
+			PChar.quest.smuggler_line = "fifth_mission_accepted";
+			AddQuestRecord("smuggler_line", 49);
+			SetCharacterRemovable(CharacterFromID("Barrakuda"), false);
+			PChar.quest.barrakuda_died.win_condition.l1 = "NPC_Death";
+			PChar.quest.barrakuda_died.win_condition.l1.character = "Barrakuda";
+			PChar.quest.barrakuda_died.win_condition = "barrakuda_died";
+			LAi_SetStayType(CharacterFromID("barrakuda"));
+			characters[GetCharacterIndex("barrakuda")].location = "none"
+		break;
+
+		case "fifth_mission_accept_second":
+			PChar.quest.smuggler_line = "fifth_mission_accepted";
+			AddQuestRecord("smuggler_line", 50);
+			SetCharacterRemovable(CharacterFromID("Virgile Boon"), false);
+			PChar.quest.barrakuda_died.win_condition.l1 = "NPC_Death";
+			PChar.quest.barrakuda_died.win_condition.l1.character = "Barrakuda";
+			PChar.quest.barrakuda_died.win_condition = "barrakuda_died";
+		break;
+
+		case "fifth_mission_know_about_betrayer":
+			PChar.quest.smuggler_line = "fifth_mission_know_about_betrayer";
+			AddQuestRecord("smuggler_line", 51);
+			//делаем отвлетвление с тем, что мы узнаем палы барракуды
+		break;
+
+		case "fifth_mission_prepare_for_trap":
+			PChar.quest.smuggler_line = "fifth_mission_prepare_fro_trap";
+			AddQuestRecord("smuggler_line", 53);
+			PChar.quest.fifth_mission_trap_charged.win_condition.l1 = "Timer";
+			PChar.quest.fifth_mission_trap_charged.win_condition.l1.date.day = GetAddingDataDay(0, 0, 7);
+    			PChar.quest.fifth_mission_trap_charged.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 7);
+			PChar.quest.fifth_mission_trap_charged.win_condition.l1.date.year = GetAddingDataYear(0, 0, 7);
+			PChar.quest.fifth_mission_trap_charged.win_condition = "fifth_mission_trap_charged";			
+		break;
+
+		case "fifth_mission_trap_charged":
+			//дизейблим проверку на узнавание лпанов Барракуда, делаем проверку на их знание - от этого изменятся диалоги
+			PChar.quest.smuggler_line = "fifth_mission_trap_charged";
+			AddQuestRecord("smuggler_line", 54);
+		break;
+
+		case "fifth_mission_move_fleet":
+			PChar.quest.smuggler_line = "fifth_mission_move_fleet";
+			AddQuestRecord("smuggler_line", 64);
+		break;
+
+		case "fifth_mission_trap":
+			PChar.quest.smuggler_line = "fifth_mission_trap";
+			AddQuestRecord("smuggler_line", 55);
+			PChar.quest.fifth_mission_trap_begin.win_condition.l1 = "location";
+			PChar.quest.fifth_mission_trap_begin.win_condition.l1.location = "Conceicao";
+			PChar.quest.fifth_mission_trap_begin.win_condition = "fifth_mission_trap_begin";
+		break;
+
+		case "fifth_mission_trap_begin":
+			PChar.quest.smuggler_line = "fifth_mission_trap_begin";
+			
+			Characters[GetCharacterIndex("Quest_Smuggler_Line_01")].nation = PERSONAL_NATION;
+			Characters[GetCharacterIndex("Quest_Smuggler_Line_02")].nation = PERSONAL_NATION;
+			Characters[GetCharacterIndex("Quest_Smuggler_Line_01")].flags.personal = 6;
+			Characters[GetCharacterIndex("Quest_Smuggler_Line_01")].flags.personal.texture = 1;
+			Characters[GetCharacterIndex("Quest_Smuggler_Line_02")].flags.personal = 6;
+			Characters[GetCharacterIndex("Quest_Smuggler_Line_02")].flags.personal.texture = 1;
+			Characters[GetCharacterIndex("Quest_Smuggler_Line_01")].Ship.crew.morale = 50 + rand(20);
+			Characters[GetCharacterIndex("Quest_Smuggler_Line_02")].Ship.crew.morale = 50 + rand(20);
+			Group_CreateGroup("Story_Smuggler_Squadron");
+			Group_AddCharacter("Story_Smuggler_Squadron", "Quest_Smuggler_Line_01");
+			Group_AddCharacter("Story_Smuggler_Squadron", "Quest_Smuggler_Line_02");
+			Group_SetGroupCommander("Story_Smuggler_Squadron", "Quest_Smuggler_Line_01");
+			SetCharacterRelationBoth(GetCharacterIndex("Quest_Smuggler_Line_01"),GetMainCharacterIndex(),RELATION_FRIEND);
+			Group_SetAddress("Story_Smuggler_Squadron", "Conceicao", "Quest_Ships","Quest_Ship_1");
+			Group_SetPursuitGroup("Story_Smuggler_Squadron", PLAYER_GROUP);
+
+			SetNationRelationBoth(ENGLAND, PRIVATEER_NATION, RELATION_NEUTRAL);
+			SetNationRelationBoth(FRANCE, PRIVATEER_NATION, RELATION_NEUTRAL);
+			SetNationRelationBoth(SPAIN, PRIVATEER_NATION, RELATION_NEUTRAL);
+			SetNationRelationBoth(PIRATE, PRIVATEER_NATION, RELATION_NEUTRAL);
+			SetNationRelationBoth(HOLLAND, PRIVATEER_NATION, RELATION_NEUTRAL);
+			SetNationRelationBoth(PORTUGAL, PRIVATEER_NATION, RELATION_NEUTRAL);
+			SetNationRelationBoth(PERSONAL_NATION, PRIVATEER_NATION, RELATION_ENEMY);
+			for(n=1; n<=4; n++)
+			{
+				NPChar = CharacterFromID("Smuggler_quest_pirate_0" + n);
+				NPChar.recognized = true;
+				NPChar.nation = PRIVATEER_NATION;
+				NPChar.flags.personal = 1;
+				NPChar.flags.personal.texture = 2;
+				NPChar.Ship.crew.morale = 50 + rand(20);
+				NPChar.nosurrender = 1;
+			}
+			Group_CreateGroup("Story_AntiSmuggler_Squadron");
+			Group_AddCharacter("Story_AntiSmuggler_Squadron", "Smuggler_quest_pirate_01");
+			Group_AddCharacter("Story_AntiSmuggler_Squadron", "Smuggler_quest_pirate_02");
+
+			Group_AddCharacter("Story_AntiSmuggler_Squadron", "Smuggler_quest_pirate_03");	// Was "Story_AntiSmuggler_Squadron2",
+			Group_AddCharacter("Story_AntiSmuggler_Squadron", "Smuggler_quest_pirate_04");	// why have two different squadrons?
+			Group_SetGroupCommander("Story_AntiSmuggler_Squadron", "Smuggler_quest_pirate_01");
+			SetCharacterRelationBoth(GetCharacterIndex("Smuggler_quest_pirate_01"),GetMainCharacterIndex(),RELATION_ENEMY);
+		//	Group_SetGroupCommander("Story_AntiSmuggler_Squadron2", "Smuggler_quest_pirate_03");
+		//	SetCharacterRelationBoth(GetCharacterIndex("Smuggler_quest_pirate_03"),GetMainCharacterIndex(),RELATION_ENEMY);
+
+			PChar.quest.trap_completed.win_condition.l1 = "NPC_Death";
+			PChar.quest.trap_completed.win_condition.l1.character = "Smuggler_quest_pirate_01";
+			PChar.quest.trap_completed.win_condition.l2 = "NPC_Death";
+			PChar.quest.trap_completed.win_condition.l2.character = "Smuggler_quest_pirate_02";
+			PChar.quest.trap_completed.win_condition.l3 = "NPC_Death";
+			PChar.quest.trap_completed.win_condition.l3.character = "Smuggler_quest_pirate_03";
+			PChar.quest.trap_completed.win_condition.l4 = "NPC_Death";
+			PChar.quest.trap_completed.win_condition.l4.character = "Smuggler_quest_pirate_04";
+			//PChar.quest.trap_completed.win_condition.l5 = "NPC_Death";
+			//PChar.quest.trap_completed.win_condition.l5.character = "Smuggler_quest_pirate_05";
+
+			if (!CheckAttribute(CharacterFromID("Conceicao Commander"), "recognized")) Characters[GetCharacterIndex("Conceicao Commander")].smuggler_line_notrecognized = true;
+			Characters[GetCharacterIndex("Conceicao Commander")].recognized = true;
+		//	SetCharacterRelationBoth(GetCharacterIndex("Conceicao Commander"),GetMainCharacterIndex(),RELATION_ENEMY);
+			SetCharacterRelationBoth(GetCharacterIndex("Conceicao Commander"),GetCharacterIndex("Smuggler_quest_pirate_01"),RELATION_FRIEND);
+		//	SetCharacterRelationBoth(GetCharacterIndex("Conceicao Commander"),GetCharacterIndex("Smuggler_quest_pirate_03"),RELATION_FRIEND);
+			if (!CheckQuestAttribute("smuggler_barrakuda", "died"))
+			{
+				NPChar = CharacterFromID("Barrakuda");
+				NPChar.recognized = true;
+				NPChar.nation = PRIVATEER_NATION;
+				NPChar.flags.personal = 1;
+				NPChar.flags.personal.texture = 2;
+				NPChar.Ship.crew.morale = 65;
+				NPChar.nosurrender = 2;
+				NPChar.SkipRM = true;
+	
+				RemoveCharacterCompanion(PChar, NPChar);
+				AddQuestRecord("smuggler_line", 57);
+				Log_SetStringToLog(TranslateString("", "Barracuda left you and took part in the battle on the enemy side."));
+				
+				//Group_CreateGroup("Barrakuda");
+				Group_AddCharacter("Story_AntiSmuggler_Squadron", "Barrakuda");
+				//Group_SetGroupCommander("Barrakuda", "Barrakuda");
+				SetCharacterRelationBoth(GetCharacterIndex("Barrakuda"),GetMainCharacterIndex(),RELATION_ENEMY);
+				//Group_SetAddress("Barrakuda", "Conceicao", "Quest_Ships","Quest_Ship_1");
+
+				//Group_SetTaskAttack("Barrakuda", PLAYER_GROUP);
+				//Group_LockTask("Barrakuda");
+				PChar.quest.smuggler_barrakuda = "betrayer";
+				PChar.quest.trap_completed.win_condition.l5 = "NPC_Death";
+				PChar.quest.trap_completed.win_condition.l5.character = "Barrakuda";
+				SetCharacterRelationBoth(GetCharacterIndex("Conceicao Commander"),GetCharacterIndex("Barrakuda"),RELATION_FRIEND);
+			}
+			
+			Group_SetAddress("Story_AntiSmuggler_Squadron", "Conceicao", "Quest_Ships","Quest_Ship_1");
+			Group_SetTaskAttack("Story_AntiSmuggler_Squadron", PLAYER_GROUP, true);
+			Group_LockTask("Story_AntiSmuggler_Squadron");
+			
+		//	Group_SetAddress("Story_AntiSmuggler_Squadron2", "Conceicao", "Quest_Ships","Quest_Ship_1");
+			
+			Group_SetTaskAttack("Story_AntiSmuggler_Squadron", "Story_Smuggler_Squadron", true);
+			Group_LockTask("Story_AntiSmuggler_Squadron");
+			
+		//	Group_SetTaskAttack("Story_Smuggler_Squadron", "Story_AntiSmuggler_Squadron2", true);
+		//	Group_LockTask("Story_Smuggler_Squadron");
+			
+			PChar.quest.trap_completed.win_condition = "trap_completed";
+			bQuestDisableMapEnter = true;
+			Island_SetReloadEnableGlobal(PChar.location, false);
+			if (GetNationRelation2MainCharacter(PORTUGAL) != RELATION_ENEMY)
+			{
+				PChar.quest.smuggler_line.old_portugal_relation = GetRMRelation(PChar, PORTUGAL);
+				PChar.quest.smuggler_line.old_portugal_rank = GetRank(PChar, PORTUGAL);
+				if(CheckAttribute(PChar, "knighted") && sti(PChar.knighted) == PORTUGAL)
+				{
+					PChar.quest.smuggler_line.old_knighted = PChar.knighted;
+					PChar.quest.smuggler_line.old_title = PChar.title;
+				}
+				SetNationRelation2MainCharacter(PORTUGAL, RELATION_ENEMY);
+			}
+			
+			AddQuestRecord("smuggler_line", 56);
+		break;
+
+		case "trap_completed":
+			bQuestDisableMapEnter = false;
+			Island_SetReloadEnableGlobal(PChar.location, true);
+			Group_SetAddress("Story_Smuggler_Squadron", "none", "Quest_Ships","Quest_Ship_7");
+			AddQuestRecord("smuggler_line", 59);
+			PChar.quest.smuggler_line = "trap_completed";
+		break;
+
+		case "barrakuda_died":
+			if (!checkQuestAttribute("smuggler_barrakuda", "betrayer"))
+			{
+				temp = "Salamander1";	// Copied from Barrakuda's definition in "Sidequest.c", change this if you change his ship
+				if (PChar.ship.type == temp || characters[GetCompanionIndex(PChar, 1)] == temp || characters[GetCompanionIndex(PChar, 2)] == temp || characters[GetCompanionIndex(PChar, 3)] == temp)
+				{
+					PChar.quest.smuggler_barrakuda = "died_bad";
+					AddQuestRecord("smuggler_line", 52);
+				}
+			}
+			else
+			{
+				AddQuestRecord("smuggler_line", 58);
+			}
+		break;
+
+		case "smuggler_line_completed":
+			AddQuestRecord("smuggler_line", 60);
+			CloseQuestHeader("smuggler_line");
+			PChar.quest.smuggler_line = "completed";
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Leadership", 15000);
+				AddPartyExpChar(PChar, "Sneak", 5000);
+			}
+			else AddPartyExp(PChar, 20000);
+			AddMoneyToCharacter(PChar, 20000);
+			ChangeSmugglerLiking(PChar, 40);
+
+			if (CheckAttribute(CharacterFromID("Conceicao Commander"), "smuggler_line_notrecognized"))
+			{
+				DeleteAttribute(CharacterFromID("Conceicao Commander"), "recognized");
+				DeleteAttribute(CharacterFromID("Conceicao Commander"), "smuggler_line_notrecognized");
+			}
+
+			if (CheckAttribute(PChar, "quest.smuggler_line.old_portugal_relation"))
+			{
+				SetRank(PChar, PORTUGAL, sti(PChar.quest.smuggler_line.old_portugal_rank));
+				SetRMRelation(PChar, PORTUGAL, stf(PChar.quest.smuggler_line.old_portugal_relation));
+				if(CheckAttribute(PChar, "quest.imperial_escort.old_knighted"))
+				{
+					PChar.knighted = PChar.quest.smuggler_line.old_knighted;
+					SetRankTitle(PChar, PChar.quest.smuggler_line.old_title);
+					DeleteQuestAttribute("smuggler_line.old_knighted");
+					DeleteQuestAttribute("uest.smuggler_line.old_title");
+				}
+			}
+		break;
+
+		case "smuggler_line_final_fight":
+			LAi_LocationFightDisable(&locations[FindLocation(PChar.location)], false);
+			LAi_SetWarriorType(CharacterFromID("Desmond Ray Beltrop"));
+			LAi_group_MoveCharacter(CharacterFromID("Desmond Ray Beltrop"), "SMUGGLERS_SOLDIERS");
+			LAi_group_SetRelation("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, true);
+			PChar.quest.smuggler_line = "traitor";
+		break;
+
+		case "smuggler_line_final_fight_2":
+			LAi_LocationFightDisable(&locations[FindLocation(PChar.location)], false);
+			LAi_SetWarriorType(CharacterFromID("Desmond Ray Beltrop"));
+			LAi_group_MoveCharacter(CharacterFromID("Desmond Ray Beltrop"), "SMUGGLERS_SOLDIERS");
+			LAi_group_SetRelation("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, true);
+			PChar.quest.smuggler_line = "traitor2";
+		break;
+
+		case "possible_pirate_line":
+			LAi_SetWarriorType(CharacterFromID("Desmond Ray Beltrop"));
+			LAi_group_MoveCharacter(CharacterFromID("Desmond Ray Beltrop"), "SMUGGLERS_SOLDIERS");
+			LAi_group_SetRelation("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, true);
+			PChar.quest.smuggler_line = "traitor3";
+			AddQuestRecord("smuggler_line", 63);
+		break;
+// "Night Craft" quest <--
 
 		PChar.questnotfound = true; // PB: Testing
 	}

@@ -89,7 +89,7 @@ void ProcessDialogEvent()
 		
 		case "Bribe_smugglers2":
 			PlaySound("interface\coins7.wav");
-			Logit("Gold removed -10000");
+			Logit(TranslateString("","Gold removed -10000"));
 			Dialog.Text = DLG_TEXT[11];
 			Link.l1 = DLG_TEXT[12];
 			AddDialogExitQuest("At_smugglers_fight_bribe");
