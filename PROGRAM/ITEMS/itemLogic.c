@@ -1060,6 +1060,11 @@ void OpenBoxProcedure()
 	int mb;
 	//note in INTERFACE\itemsbox search JRH: normal box sounds avoided when not wanted
 
+	if(CheckAttribute(Locations[locidx], "boxneedkey."+atrName) && Locations[locidx].boxneedkey.(atrName) == true)
+		{
+		PlaySound("knock");
+		return;
+	}
 		float x, y, z;
 		string lctr;
 		ref corpse;

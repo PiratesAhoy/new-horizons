@@ -39,9 +39,6 @@ void CreateStoryCharacters(ref n)
 	ch.rank 	= 1;
 	ch.reputation = "50";
 	ch.quest.meeting = "0";
-	ch.location	= "Estate";
-	ch.location.group = "goto";
-	ch.location.locator = "goto12";
 	LAi_SetStayType(ch);
 	ch.talker = 10;
 	LAi_SetImmortal(ch, true);

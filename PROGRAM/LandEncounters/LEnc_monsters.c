@@ -721,6 +721,7 @@ bool LEnc_MonstersLoginSelectModel(ref location, aref modelInfo, string group, s
 	if (!CheckAttribute(location, "id")) return false;
 	ref PChar = GetMainCharacter();
 	string locid = location.id;
+	if (HasSubStr(location.id, "estate")) return false;
 	if (HasSubStr(location.id, "bedroom")) locid = "Bedroom";
 // <-- KK
 	if (HasSubStr(location.id, "brothel")) locid = "Brothel";

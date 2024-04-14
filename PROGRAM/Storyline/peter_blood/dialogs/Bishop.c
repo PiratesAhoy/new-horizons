@@ -38,15 +38,13 @@ PChar = GetMainCharacter();
 
 	switch(Dialog.CurrentNode)
 	{
-	    // --> Бишоп
-		// ----------------------------------- Диалог первый - первая встреча
+	    // --> Р‘РёС€РѕРї
+		// ----------------------------------- Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "Exit":
             NextDiag.CurrentNode = NextDiag.TempNode;
 			DialogExit();
 		break;
-
         case "Exit_Away":
-
             LAi_SetActorTypeNoGroup(npchar);
             LAi_ActorGoToLocation(npchar, "reload", Pchar.questTemp.CapBloodLine.sLocator, "none", "", "", "", sti(Pchar.questTemp.CapBloodLine.iTime));
             NextDiag.CurrentNode = NextDiag.TempNode;
@@ -61,7 +59,6 @@ PChar = GetMainCharacter();
             NextDiag.CurrentNode = NextDiag.TempNode;
             DialogExit();
         break;
-
         case "GFight":
 		            AddDialogExitQuest("Blood14");
 
@@ -433,7 +430,7 @@ PChar = GetMainCharacter();
             NextDiag.TempNode = "First Bishop";
              //#20190120-02
             LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false); //_Townhall
-            //сроки 4 часа
+            //СЃСЂРѕРєРё 4 С‡Р°СЃР°
             PChar.quest.CapBloodLineTimer_1.win_condition.l1            = "Timer";
             PChar.quest.CapBloodLineTimer_1.win_condition.l1.date.hour  = 4;
             PChar.quest.CapBloodLineTimer_1.win_condition.l1.date.day   = GetAddingDataDay(0, 0, 1);
@@ -489,7 +486,7 @@ PChar = GetMainCharacter();
             DialogExit()
 		break;
 
-		// -->Эндрю Бейнс
+		// -->Р­РЅРґСЂСЋ Р‘РµР№РЅСЃ
 
 		case "EBStep_0":
 
@@ -529,7 +526,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-		//--> капитан Гобард
+		//--> РєР°РїРёС‚Р°РЅ Р“РѕР±Р°СЂРґ
 
 		case "CGStep_1":
         	dialog.text = DLG_TEXT_BL1[98];
@@ -593,7 +590,7 @@ PChar = GetMainCharacter();
 		break;
 
 
-		// -->Стражник на входе
+		// -->РЎС‚СЂР°Р¶РЅРёРє РЅР° РІС…РѕРґРµ
 
 		case "First Guard":
         	dialog.text = DLG_TEXT_BL1[120];
@@ -607,10 +604,10 @@ PChar = GetMainCharacter();
             dialog.text = DLG_TEXT_BL1[122];
         	link.l1 = DLG_TEXT_BL1[123];
             link.l1.go = "Exit";
-            LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false);//отпираем резеденцию
+            LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false);//РѕС‚РїРёСЂР°РµРј СЂРµР·РµРґРµРЅС†РёСЋ
             //LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false);
             LocatorReloadEnterDisable("BridgeTown_town", "reloadR1", false);
-            //солдата на место
+            //СЃРѕР»РґР°С‚Р° РЅР° РјРµСЃС‚Рѕ
             LAi_SetLoginTime(npchar, 6.0, 23.0);
             npchar.protector = false;
             npchar.protector.CheckAlways = 0;
@@ -625,10 +622,10 @@ PChar = GetMainCharacter();
             {
        	        link.l1 = DLG_TEXT_BL1[125];
                 link.l1.go = "Exit";
-                LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false);//отпираем резеденцию
+                LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false);//РѕС‚РїРёСЂР°РµРј СЂРµР·РµРґРµРЅС†РёСЋ
                 //LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false);
                 LocatorReloadEnterDisable("BridgeTown_town", "reloadR1", false);
-                //солдата на место
+                //СЃРѕР»РґР°С‚Р° РЅР° РјРµСЃС‚Рѕ
                 npchar.protector = false;
                 npchar.protector.CheckAlways = 0;
                 npchar.dialog.filename = "Quest\CapBloodLine\questNPC.c";
@@ -658,10 +655,10 @@ PChar = GetMainCharacter();
             {
        	        link.l1 = DLG_TEXT_BL1[130];
                 link.l1.go = "Exit";
-                LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false);//отпираем резеденцию
+                LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false);//РѕС‚РїРёСЂР°РµРј СЂРµР·РµРґРµРЅС†РёСЋ
                 //LocatorReloadEnterDisable("BridgeTown_town", "reload3_back", false);
                 LocatorReloadEnterDisable("BridgeTown_town", "reloadR1", false);
-                //солдата на место
+                //СЃРѕР»РґР°С‚Р° РЅР° РјРµСЃС‚Рѕ
                 npchar.protector = false;
                 npchar.protector.CheckAlways = 0;
                 npchar.dialog.filename = "Quest\CapBloodLine\questNPC.c";
@@ -677,7 +674,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-        // --> Стид
+        // --> РЎС‚РёРґ
 
 
  		case "SStep_0":
@@ -803,7 +800,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-        //--> Миссис Стид
+        //--> РњРёСЃСЃРёСЃ РЎС‚РёРґ
 
         case "MSStep_0":
 
@@ -859,7 +856,7 @@ PChar = GetMainCharacter();
 
         NextDiag.CurrentNode = NextDiag.TempNode;
 		DialogExit();
-		//Вывести экран в темноту, выполнить квест questFadeOut, вернуть всё обратно, выполнить квест questFadeIn
+		//Р’С‹РІРµСЃС‚Рё СЌРєСЂР°РЅ РІ С‚РµРјРЅРѕС‚Сѓ, РІС‹РїРѕР»РЅРёС‚СЊ РєРІРµСЃС‚ questFadeOut, РІРµСЂРЅСѓС‚СЊ РІСЃС‘ РѕР±СЂР°С‚РЅРѕ, РІС‹РїРѕР»РЅРёС‚СЊ РєРІРµСЃС‚ questFadeIn
         //LAi_Fade("", "CapBloodLine_q1_Complited");
    //     CapBloodLine_q1_Complited("");
 
@@ -922,7 +919,7 @@ PChar = GetMainCharacter();
 
 
 
-        //--> Нэтталл
+        //--> РќСЌС‚С‚Р°Р»Р»
 
         case "NStep_0":
 
@@ -1019,7 +1016,7 @@ PChar = GetMainCharacter();
             Pchar.questTemp.CapBloodLine.TalkWithNettl = true;
 		break;
 
-        //--> Вакер
+        //--> Р’Р°РєРµСЂ
 
         case "WStep_0":
 
@@ -1059,7 +1056,7 @@ PChar = GetMainCharacter();
             AddQuestRecord("CapBloodLine_q2", "1");
 
 		break;
-		//Предложение Вакера - вторая встреча
+		//РџСЂРµРґР»РѕР¶РµРЅРёРµ Р’Р°РєРµСЂР° - РІС‚РѕСЂР°СЏ РІСЃС‚СЂРµС‡Р°
         case "WStep_3":
 
             dialog.text = DLG_TEXT_BL1[203];
@@ -1132,7 +1129,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-		//Предложение Вакера - заключение
+		//РџСЂРµРґР»РѕР¶РµРЅРёРµ Р’Р°РєРµСЂР° - Р·Р°РєР»СЋС‡РµРЅРёРµ
 
         case "WStep_11":
 
@@ -1202,7 +1199,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-        //--> Мистер Дэн
+        //--> РњРёСЃС‚РµСЂ Р”СЌРЅ
 
         case "DStep_0":
 
@@ -1264,7 +1261,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-		//--> Джереми Питт
+		//--> Р”Р¶РµСЂРµРјРё РџРёС‚С‚
 
 		 case "PStep_0":
 
@@ -1278,7 +1275,7 @@ PChar = GetMainCharacter();
 
             dialog.text = DLG_TEXT_BL1[247];
         	link.l1 = DLG_TEXT_BL1[248];
-        	link.l1.go = "PStep_2";  //(+ небольшой % авторитета)
+        	link.l1.go = "PStep_2";  //(+ РЅРµР±РѕР»СЊС€РѕР№ % Р°РІС‚РѕСЂРёС‚РµС‚Р°)
         	link.l2 = DLG_TEXT_BL1[249];
         	link.l2.go = "PStep_3";
 
@@ -1318,7 +1315,7 @@ PChar = GetMainCharacter();
                 dialog.text = DLG_TEXT_BL1[254];
                 link.l1 = DLG_TEXT_BL1[255];
                 link.l1.go = "PStep_9";
-                while (GetCharacterItem(pchar,"Weapon_for_escape") > 0)//homo fix 06/02/08 отбираем все квестовое оружие
+                while (GetCharacterItem(pchar,"Weapon_for_escape") > 0)//homo fix 06/02/08 РѕС‚Р±РёСЂР°РµРј РІСЃРµ РєРІРµСЃС‚РѕРІРѕРµ РѕСЂСѓР¶РёРµ
                 {
                     TakeItemFromCharacter(Pchar, "Weapon_for_escape");
                 }
@@ -1348,7 +1345,7 @@ PChar = GetMainCharacter();
             dialog.text = DLG_TEXT_BL1[261];
         	link.l1 = DLG_TEXT_BL1[262];
             link.l1.go = "Exit_RunAway";
-			//кладем ключ на стол
+			//РєР»Р°РґРµРј РєР»СЋС‡ РЅР° СЃС‚РѕР»
 			sld = ItemsFromID("key_pitt");
 			sld.shown = true;
 			sld.startLocation = "Estate";
@@ -1517,7 +1514,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-		//-->оружейние Гриффин
+		//-->РѕСЂСѓР¶РµР№РЅРёРµ Р“СЂРёС„С„РёРЅ
 
         case "GRStep_0":
 
@@ -1586,7 +1583,7 @@ PChar = GetMainCharacter();
             sld.name = "";
             sld.lastname = DLG_TEXT_BL1[303];
             GiveItem2Character(sld, "Griffins_Weapon");
-            sld.SaveItemsForDead = true; // сохранять на трупе вещи
+            sld.SaveItemsForDead = true; // СЃРѕС…СЂР°РЅСЏС‚СЊ РЅР° С‚СЂСѓРїРµ РІРµС‰Рё
             sld.DontClearDead = true;
             LAi_SetActorTypeNoGroup(sld);
             LAi_ActorSetLayMode(sld);
@@ -1771,7 +1768,7 @@ PChar = GetMainCharacter();
 		break;
 
 
-        //-->рыбак Хелльс
+        //-->СЂС‹Р±Р°Рє РҐРµР»Р»СЊСЃ
 
         case "HStep_0":
 
@@ -1892,7 +1889,7 @@ PChar = GetMainCharacter();
 		break;
 
 
-        //-->Испанский шпион
+        //-->РСЃРїР°РЅСЃРєРёР№ С€РїРёРѕРЅ
 
         case "SSStep_0":
 
@@ -1946,7 +1943,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-		//--> Контрабандист
+		//--> РљРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚
 
         case "QSStep_0":
 
@@ -2104,7 +2101,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-        //--> Натаниэль Хагторп
+        //--> РќР°С‚Р°РЅРёСЌР»СЊ РҐР°РіС‚РѕСЂРї
 
         case "HTStep_0":
 
@@ -2213,7 +2210,7 @@ PChar = GetMainCharacter();
                 link.l1 = DLG_TEXT_BL1[416];
                 link.l1.go = "HTStep_11";
                 TakeItemFromCharacter(Pchar, "DOjeronRing");
-       //         ref itm = ItemsFromID("DOjeronRing"); //возвращаем все как было
+       //         ref itm = ItemsFromID("DOjeronRing"); //РІРѕР·РІСЂР°С‰Р°РµРј РІСЃРµ РєР°Рє Р±С‹Р»Рѕ
           //      BackItemName("DOjeronRing");
            //     BackItemDescribe("DOjeronRing");
          //       itm.picIndex = 2;
@@ -2382,7 +2379,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-        //--> Николас Дайк
+        //--> РќРёРєРѕР»Р°СЃ Р”Р°Р№Рє
 
         case "DKStep_0":
 
@@ -2450,7 +2447,7 @@ PChar = GetMainCharacter();
 
 		break;
 
-        //--> Нед Огл
+        //--> РќРµРґ РћРіР»
 
         case "OGLStep_0":
 

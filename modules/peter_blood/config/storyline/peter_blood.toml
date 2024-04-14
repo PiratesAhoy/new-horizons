@@ -3,8 +3,8 @@ id = "peter_blood"
 dir = "peter_blood"
 
 [storyline.peter_blood.start]
-location = "Oxbay_town"
-port = "Oxbay_port"
+location = "Estate"
+port = "Estate"
 model = "bocman3"
 first_name = "Peter"
 last_name = "Blood"
@@ -14,6 +14,7 @@ pirate_flag = 4
 personal_flag = 8
 ship = "FastGalleon1"
 ship_name = "Discovery"
+freedom_level = 2
 
 [storyline.peter_blood.start.editable]
 difficulty = true

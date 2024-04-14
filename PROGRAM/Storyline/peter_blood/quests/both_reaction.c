@@ -12,7 +12,8 @@ PChar = GetMainCharacter();
 switch(sQuestName)
 {
 case "Blood0":
-LAi_SetImmortal(pchar, true);
+sld = characterFromID("Beyns");
+ChangeCharacterAddressGroup(sld, "Estate", "goto", "goto12");
 GiveItem2Character(pchar, "medical1");
 GiveItem2Character(pchar, "medical1");
 GiveItem2Character(pchar, "medical1");
