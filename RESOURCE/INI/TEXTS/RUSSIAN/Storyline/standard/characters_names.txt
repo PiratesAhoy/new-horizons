@@ -138,6 +138,6 @@ Harry{Гарри}
 Stephan{Стефан}
 Bonser{Бонсер}
 Oswald{Освальд}
-Chappel{Чаппель}
+Chappel{Шаппель}
 
 {=====| 123 characters |=====}

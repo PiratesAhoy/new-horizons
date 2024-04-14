@@ -17,7 +17,7 @@ James{Джеймс}
 Norrington{Норрингтон}
 Lieutenant{Лейтенант}
 Gillette{Джилетт}
-Helmsman{Хэлмсмэн}
+Helmsman{Штурман}
 French{Французский}
 Soldier{Солдат}
 Hadras{Хадрас}
@@ -66,7 +66,7 @@ Bligh{Блай}
 Edward{Эдвард}
 Teague{Тиг}
 Oswald{Освальд}
-Chappel{Чаппель}
+Chappel{Шаппель}
 Sir Christopher{Сэр Кристофер}
 Mings{Мингс}
 Will{Уилл}
