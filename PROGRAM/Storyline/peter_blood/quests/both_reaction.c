@@ -72,6 +72,7 @@ LAi_ActorTurnToLocator(Pchar, "sit", "sit2");
 LAi_ActorAnimation(Pchar, "Barman_idle", "Blood5", 5);
 break;
 case "Blood5":
+LAi_SetStayTypeNoGroup(pchar);
 LAi_Fade("", "");
 EndQuestMovie();
 DoQuestCheckDelay("Blood6", 2.0);
