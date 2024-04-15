@@ -75,6 +75,7 @@ add_pattern("*.ptc", directory="../RESOURCE", target="resource")
 
 # Audio and video
 add_pattern("*.ogg", directory="../RESOURCE", target="resource")
+add_pattern("*.mp3", directory="../RESOURCE", target="resource")
 add_pattern("*.wav", directory="../RESOURCE", target="resource")
 add_pattern("*.flac", directory="../RESOURCE", target="resource")
 add_pattern("*.wmv", directory="../RESOURCE", target="resource")
