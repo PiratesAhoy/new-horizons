@@ -3,14 +3,42 @@ import shutil
 import fnmatch
 import dload
 import datetime
+from git import Repo
+import tomlkit
+import semver
 
 if os.path.exists("publish"):
     shutil.rmtree("publish")
 
 os.makedirs("publish", exist_ok=True)
 
+def get_current_tag(repo: Repo):
+    for tag in repo.tags:
+        if tag.commit == repo.head.commit:
+            return tag
+    return None
+
+repo = Repo("..")
+assert not repo.bare
+current_tag = get_current_tag(repo)
+
 with open("userversion.txt", 'w') as f:
-    f.write(datetime.datetime.now().strftime("%Y%m%d") )
+    with open("../modules/core/module.toml") as mod_file:
+        mod = tomlkit.parse(mod_file.read())
+
+    if current_tag is not None:
+        f.write(current_tag.name)
+        version = semver.Version.parse(current_tag.name)
+        prelease = list(map(lambda v: int(v) if v.isdigit() else v, version.prerelease.split('.')))
+        mod['version'] = [version.major, version.minor, version.patch] + prelease
+    else:
+        version = datetime.datetime.now().strftime("%Y%m%d")
+        f.write(version)
+        mod['version'][3] = 'nightly'
+        mod['version'][4] = version
+
+    with open("../modules/core/module.toml", 'w') as mod_file:
+        tomlkit.dump(mod, mod_file)
 
 # Download engine
 dload.save_unzip("https://github.com/PiratesAhoy/storm-engine/releases/download/pa15.0.0-beta.3/storm-engine.release-steam-false.zip", "engine")
@@ -96,3 +124,7 @@ add_pattern("*.png", directory="../RESOURCE", target="resource")
 
 # Fonts
 add_pattern("*.fnt", directory="../RESOURCE", target="resource")
+
+# Publish to itch.io
+channel = "nightly-windows" if current_tag is None else "windows"
+os.system(f"butler push publish cmdrhammie/beyond-new-horizons:{channel} --if-changed --userversion-file userversion.txt")
