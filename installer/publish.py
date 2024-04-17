@@ -127,4 +127,8 @@ add_pattern("*.fnt", directory="../RESOURCE", target="resource")
 
 # Publish to itch.io
 channel = "nightly-windows" if current_tag is None else "windows"
-os.system(f"butler push publish cmdrhammie/beyond-new-horizons:{channel} --if-changed --userversion-file userversion.txt")
+butler_command = f"butler push publish cmdrhammie/beyond-new-horizons:{channel} --if-changed --userversion-file userversion.txt"
+print(f"Running '{butler_command}'")
+output = os.popen(butler_command)
+for line in output.readlines():
+    print(line, end='')
