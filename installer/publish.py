@@ -1,6 +1,9 @@
 import os
 import shutil
 import fnmatch
+import subprocess
+import sys
+
 import dload
 import datetime
 from git import Repo
@@ -68,67 +71,69 @@ def add_pattern(pattern, directory=None, target=None):
 
 # The listing of files to add
 # _____________________________________________________________________________
+def copy_files():
+    add_file("engine/engine.exe")
+    add_file("engine/crashpad_handler.exe")
+    add_file("engine/engine.pdb")
+    add_file("engine/fmod.dll")
+    add_file("engine/mimalloc.dll")
+    add_file("engine/mimalloc-redirect.dll")
 
-add_file("engine/engine.exe")
-add_file("engine/crashpad_handler.exe")
-add_file("engine/engine.pdb")
-add_file("engine/fmod.dll")
-add_file("engine/mimalloc.dll")
-add_file("engine/mimalloc-redirect.dll")
+    add_file("../.itch.toml")
+    add_file("resources/engine.ini")
+    add_file("resources/build14_beta4_final", "resource/build14_beta4_final")
 
-add_file("../.itch.toml")
-add_file("resources/engine.ini")
-add_file("resources/build14_beta4_final", "resource/build14_beta4_final")
+    add_pattern("*.h", directory="engine/resource", target="resource")
+    add_pattern("*.fx", directory="engine/resource", target="resource")
 
-add_pattern("*.h", directory="engine/resource", target="resource")
-add_pattern("*.fx", directory="engine/resource", target="resource")
+    add_pattern("*.c", directory="../PROGRAM", target="PROGRAM")
+    add_pattern("*.h", directory="../PROGRAM", target="PROGRAM")
 
-add_pattern("*.c", directory="../PROGRAM", target="PROGRAM")
-add_pattern("*.h", directory="../PROGRAM", target="PROGRAM")
+    add_directory("../Documentation", target="Documentation")
 
-add_directory("../Documentation", target="Documentation")
+    # Modules
+    add_pattern("*.toml", directory="../modules", target="modules")
 
-# Modules
-add_pattern("*.toml", directory="../modules", target="modules")
+    # Resources
+    add_pattern("*.ini", directory="../RESOURCE", target="resource")
+    add_pattern("*.toml", directory="../RESOURCE", target="resource")
+    add_pattern("*.txt", directory="../RESOURCE", target="resource")
+    add_pattern("*.ani", directory="../RESOURCE", target="resource")
+    add_pattern("*.an", directory="../RESOURCE", target="resource")
+    add_pattern("*.zap", directory="../RESOURCE", target="resource")
+    add_pattern("*.grs", directory="../RESOURCE", target="resource")
+    add_pattern("*.ptc", directory="../RESOURCE", target="resource")
 
-# Resources
-add_pattern("*.ini", directory="../RESOURCE", target="resource")
-add_pattern("*.toml", directory="../RESOURCE", target="resource")
-add_pattern("*.txt", directory="../RESOURCE", target="resource")
-add_pattern("*.ani", directory="../RESOURCE", target="resource")
-add_pattern("*.an", directory="../RESOURCE", target="resource")
-add_pattern("*.zap", directory="../RESOURCE", target="resource")
-add_pattern("*.grs", directory="../RESOURCE", target="resource")
-add_pattern("*.ptc", directory="../RESOURCE", target="resource")
+    # Audio and video
+    add_pattern("*.ogg", directory="../RESOURCE", target="resource")
+    add_pattern("*.mp3", directory="../RESOURCE", target="resource")
+    add_pattern("*.wav", directory="../RESOURCE", target="resource")
+    add_pattern("*.flac", directory="../RESOURCE", target="resource")
+    add_pattern("*.wmv", directory="../RESOURCE", target="resource")
 
-# Audio and video
-add_pattern("*.ogg", directory="../RESOURCE", target="resource")
-add_pattern("*.mp3", directory="../RESOURCE", target="resource")
-add_pattern("*.wav", directory="../RESOURCE", target="resource")
-add_pattern("*.flac", directory="../RESOURCE", target="resource")
-add_pattern("*.wmv", directory="../RESOURCE", target="resource")
+    # Models
+    add_pattern("*.gm", directory="../RESOURCE", target="resource")
+    add_pattern("*.col", directory="../RESOURCE", target="resource")
 
-# Models
-add_pattern("*.gm", directory="../RESOURCE", target="resource")
-add_pattern("*.col", directory="../RESOURCE", target="resource")
+    # Particles
+    add_pattern("*.xps", directory="../RESOURCE", target="resource")
+    add_pattern("*.xml", directory="../RESOURCE", target="resource")
 
-# Particles
-add_pattern("*.xps", directory="../RESOURCE", target="resource")
-add_pattern("*.xml", directory="../RESOURCE", target="resource")
+    # Textures
+    add_pattern("*.tx", directory="../RESOURCE", target="resource")
+    add_pattern("*.tga", directory="../RESOURCE", target="resource")
+    add_pattern("*.jpg", directory="../RESOURCE", target="resource")
+    add_pattern("*.png", directory="../RESOURCE", target="resource")
 
-# Textures
-add_pattern("*.tx", directory="../RESOURCE", target="resource")
-add_pattern("*.tga", directory="../RESOURCE", target="resource")
-add_pattern("*.jpg", directory="../RESOURCE", target="resource")
-add_pattern("*.png", directory="../RESOURCE", target="resource")
+    # Fonts
+    add_pattern("*.fnt", directory="../RESOURCE", target="resource")
 
-# Fonts
-add_pattern("*.fnt", directory="../RESOURCE", target="resource")
+copy_files()
 
 # Publish to itch.io
 channel = "nightly-windows" if current_tag is None else "windows"
 butler_command = f"butler push publish cmdrhammie/beyond-new-horizons:{channel} --if-changed --userversion-file userversion.txt"
 print(f"Running '{butler_command}'")
-output = os.popen(butler_command)
-for line in output.readlines():
-    print(line, end='')
+process = subprocess.Popen(butler_command, stdout=subprocess.PIPE)
+for c in iter(lambda: process.stdout.read(1), b""):
+    sys.stdout.buffer.write(c)
