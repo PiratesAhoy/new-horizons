@@ -11,6 +11,10 @@ pipeline {
 				label 'os:windows'
 			}
 
+			when {
+				changeset "**"
+			}
+
 			steps {
 				checkout scm
 				dir("installer") {
