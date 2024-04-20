@@ -10,7 +10,8 @@ QUEST_MESSAGE9 {¡Ahora no tienes a nadie en este mundo cruel!}
 QUEST_MESSAGE10 {¡A un pirata de corazón despiadado}
 QUEST_MESSAGE11 {le daremos unpremio inesperado!}
 QUEST_MESSAGE12 {¡Lo siento, pero ya tienes demasiados oficiales! ¡Despide a alguno y vuelve a intentarlo!}
-  
+QUEST_MESSAGE13 {Zaid gives you a very useful spyglass!}
+
 Address_Form_Spa {Señor}
 Address_Form_Fra {Monsieur}
 Address_Form_Eng {Sir}

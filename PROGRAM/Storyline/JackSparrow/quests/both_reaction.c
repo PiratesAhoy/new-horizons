@@ -3638,7 +3638,7 @@ void BothQuestComplete(string sQuestName)
 
 		case "treasure_found":
 			AddMoneyToCharacter(PChar, 25000);
-			Log_SetStringToLog(QUEST_MESSAGE4);
+			Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE4"));
 			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Sneak", 15000); }
 			else { AddPartyExp(pchar, 15000); }
 			if (IsOfficer(characterFromID("Gentleman Jocard")))

@@ -1152,7 +1152,7 @@ void TIH_OfficerHiredProcess(ref RefChar, bool bLowSalary, bool bAutoAssign, boo
 	}
 	else
 	{
-		Log_SetStringToLog(QUEST_MESSAGE12);
+		Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE12"));
 	}
 	DeleteAttribute(Pchar, "quest.HiringOfficerIDX");// deleted here, because we certainly no longer need it now
 //	if (!CheckAttribute(PChar, "IsOnDeck") && bAbordageStarted) refEnCharacter = NewOfficer;
@@ -2443,7 +2443,7 @@ void TIH_PrisonerTakenProcess(ref RefChar, bool bPurgeCrud)
 		LAi_group_FightGroups(LAI_GROUP_BRDENEMY, LAI_GROUP_PLAYER, true);
 		LAi_group_SetCheck(LAI_GROUP_BRDENEMY, "Abordage_End"); // PB was: LAi_group_SetCheckEvent(LAI_GROUP_BRDENEMY);
 
-//		Log_SetStringToLog(QUEST_MESSAGE12);
+//		Log_SetStringToLog(GlobalStringConvert("QUEST_MESSAGE12"));
 	}
 	//LanguageCloseFile(tmpLangFileID);
 	//DeleteAttribute(Pchar, "quest.HiringOfficerIDX");// deleted here, because we certainly no longer need it now

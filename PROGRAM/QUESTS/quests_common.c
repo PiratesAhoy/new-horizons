@@ -1,4 +1,3 @@
-#include "QUESTS\Quest_Messages.h"
 #include "QUESTS\facemaker.c" // function now moved to a separate file by KAM
 
 #define DEBUG_FETCH_QUEST		0 	//(bool) set to 1 for debug messages

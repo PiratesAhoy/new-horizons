@@ -10,6 +10,7 @@ QUEST_MESSAGE9 {Now you're on your own in this cruel world!}
 QUEST_MESSAGE10 {To a pirate who has no mercy in his}
 QUEST_MESSAGE11 {wicked heart we give a secret reward!}
 QUEST_MESSAGE12 {Sorry, you have too many officers! Fire one or more of your officers and try again!}
+QUEST_MESSAGE13 {Zaid gives you a very useful spyglass!}
 
 Address_Form_Spa {Señor}
 Address_Form_Fra {Monsieur}
