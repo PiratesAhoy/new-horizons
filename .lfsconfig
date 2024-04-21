@@ -1,3 +1,3 @@
 [lfs]
-	url = http://storm.hammie.be/lfs/new-horizons
+	url = https://storm.hammie.be/lfs/new-horizons
 	pushurl = https://github.com/PiratesAhoy/new-horizons.git/info/lfs
