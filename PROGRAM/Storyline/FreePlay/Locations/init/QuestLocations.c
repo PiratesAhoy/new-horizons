@@ -135,7 +135,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "MH3_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh3_";
 	//Reload map
@@ -173,7 +174,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "MH02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\smumh2_";
 	//Reload map

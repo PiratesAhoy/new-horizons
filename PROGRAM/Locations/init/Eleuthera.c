@@ -197,7 +197,8 @@ void LocationInitEleuthera(ref n)
 	locations[n].models.night.charactersPatch = "Cellar_downstairs_patch";
 
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 
 	//Reload map
@@ -410,7 +411,8 @@ void LocationInitEleuthera(ref n)
 	locations[n].models.night.charactersPatch = "Store03_patch";
 
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	//Reload map
 	locations[n].reload.l1.name = "reload1_back";
@@ -470,7 +472,8 @@ void LocationInitEleuthera(ref n)
 	locations[n].models.night.charactersPatch = "sh05_patch";
 
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	//Reload map
 	locations[n].reload.l1.name = "reload1_back";
@@ -555,7 +558,8 @@ void LocationInitEleuthera(ref n)
 	Locations[n].models.night.fonar		   = "ss_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "..\back\inside_back_";
 
@@ -662,7 +666,8 @@ void LocationInitEleuthera(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "cavern_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -731,7 +736,8 @@ void LocationInitEleuthera(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "CavernMedium_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1278,7 +1284,8 @@ void LocationInitEleuthera(ref n)
 	Locations[n].models.night.charactersPatch = "Res06_2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1_back";
@@ -1519,7 +1526,8 @@ void LocationInitEleuthera(ref n)
 	locations[n].models.night.charactersPatch = "Tavern_room_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "..\back\inside_back_";
 
@@ -1546,7 +1554,8 @@ void LocationInitEleuthera(ref n)
 	InitStore01(Locations[n].id);
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	locations[n].reload.l1.name = "reload1";
@@ -1589,7 +1598,8 @@ void LocationInitEleuthera(ref n)
 	locations[n].models.night.charactersPatch = "Brothel_patch";
 
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	//Reload map
 	locations[n].reload.l1.name = "reload1";
@@ -1641,7 +1651,8 @@ void LocationInitEleuthera(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "mh5_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1685,7 +1696,8 @@ void LocationInitEleuthera(ref n)
 	locations[n].models.night.charactersPatch = "Brothel_room_patch";
 
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	//Reload map
 	locations[n].reload.l1.name = "reload1";
@@ -1746,7 +1758,8 @@ void LocationInitEleuthera(ref n)
 	Locations[n].models.night.fn = "sh01_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxsh1_";
 	//Reload map
@@ -1787,7 +1800,8 @@ void LocationInitEleuthera(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Res05_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\cores5_";
 
@@ -1856,7 +1870,8 @@ void LocationInitEleuthera(ref n)
 //	Locations[n].models.night.env = "d02_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].monsters = 0;
 	//Reload map
@@ -1899,7 +1914,8 @@ void LocationInitEleuthera(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -2017,7 +2033,8 @@ void LocationInitEleuthera(ref n)
 	Locations[n].models.night.fonar		   = "ss_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "..\back\inside_back_";
 
@@ -2063,7 +2080,8 @@ void LocationInitEleuthera(ref n)
 	locations[n].models.night.charactersPatch = "Brothel_patch";
 
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	//Reload map
 	locations[n].reload.l1.name = "reload1_back";
@@ -2115,7 +2133,8 @@ void LocationInitEleuthera(ref n)
 	locations[n].models.night.charactersPatch = "Brothel_room_patch";
 
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	//Reload map
 	locations[n].reload.l1.name = "reload1";

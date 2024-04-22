@@ -25,7 +25,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LT_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlt_";
 
@@ -101,7 +102,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "bed_p";	
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 	//Reload map
@@ -306,7 +308,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";

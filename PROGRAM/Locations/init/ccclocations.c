@@ -27,7 +27,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.charactersPatch = "resp_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcresp_";
 	//Reload map
@@ -66,7 +67,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.charactersPatch = "pirh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcpirh_";
 
@@ -109,7 +111,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.charactersPatch = "mh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxmh_";
 
@@ -150,7 +153,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.lights.candles = "candelabrum_small";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redrsb_";	//the view out of windows, leave original, no Oxbay model fits
 
@@ -198,7 +202,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Res03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures3_";
 	//Reload map
@@ -240,7 +245,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.charactersPatch = "bed_p";	
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 	//Reload map
@@ -513,7 +519,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LS_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\douls_";
 	//Reload map
@@ -710,7 +717,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LS_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\douls_";
 	//Reload map
@@ -767,7 +775,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.lights.candles = "candelabrum_small";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redrsb_";	//the view out of windows, leave original, no Oxbay model fits
 
@@ -815,7 +824,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Res03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures3_";
 	//Reload map
@@ -857,7 +867,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.charactersPatch = "bed_p";	
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 	//Reload map
@@ -1026,7 +1037,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.night.fn = "sh01_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxsh1_";
 	//Reload map
@@ -1070,7 +1082,8 @@ void LocationInitCCCLocations(ref n)
 //	Locations[n].models.night.lamp = "FalaiseDeFleur05_night";
 	Locations[n].models.night.charactersPatch = "Res02_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures2_";
 	//Reload map
@@ -1119,7 +1132,8 @@ void LocationInitCCCLocations(ref n)
 //	Locations[n].models.night.lamp = "FalaiseDeFleur05_night";
 	Locations[n].models.night.charactersPatch = "Church3_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -1233,7 +1247,8 @@ void LocationInitCCCLocations(ref n)
 //	Locations[n].models.night.env = "d02_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].monsters = 1;
 	//Reload map

@@ -424,7 +424,8 @@ void Reinit_KhaelRoa()
 	//Night
 	Locations[n].models.night.charactersPatch = "d04_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -538,7 +539,8 @@ void Reinit_KhaelRoa()
 	//Night
 	Locations[n].models.night.charactersPatch = "cavern_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map

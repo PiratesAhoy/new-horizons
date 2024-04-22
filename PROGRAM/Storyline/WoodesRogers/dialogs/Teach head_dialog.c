@@ -1212,9 +1212,11 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_town_exit_2")].reload.l1.disable = 1;	//to town
 				Locations[FindLocation("Redmond_shore_02")].models.always.locators = "shore03_l_JRH";
 			
-				Locations[FindLocation("wr_dungeon4_main")].environment.weather = "false";
+				Locations[FindLocation("wr_dungeon4_main")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 				Locations[FindLocation("wr_dungeon4_main")].environment.sea = "false";
-				Locations[FindLocation("wr_dungeon4_loop")].environment.weather = "false";
+				Locations[FindLocation("wr_dungeon4_loop")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 				Locations[FindLocation("wr_dungeon4_loop")].environment.sea = "false";
 
 				ChangeCharacterAddressGroup(CharacterFromID("Red_guard_1"), "Redmond_town_exit_2", "goto", "goto11");
@@ -1447,9 +1449,11 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_town_exit_2")].reload.l1.disable = 1;	//to town
 				Locations[FindLocation("Redmond_shore_02")].models.always.locators = "shore03_l_JRH";
 			
-				Locations[FindLocation("wr_dungeon4_main")].environment.weather = "false";
+				Locations[FindLocation("wr_dungeon4_main")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 				Locations[FindLocation("wr_dungeon4_main")].environment.sea = "false";
-				Locations[FindLocation("wr_dungeon4_loop")].environment.weather = "false";
+				Locations[FindLocation("wr_dungeon4_loop")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 				Locations[FindLocation("wr_dungeon4_loop")].environment.sea = "false";
 
 				ChangeCharacterAddressGroup(CharacterFromID("Red_guard_1"), "Redmond_town_exit_2", "goto", "goto11");

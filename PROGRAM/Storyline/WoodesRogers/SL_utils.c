@@ -18058,7 +18058,8 @@ void OpenBoxProcedure_WR()
 
 					Locations[FindLocation("wr_mine")].reload.l5.disable = 1;		//tunnelA
 					Locations[FindLocation("wr_dungeon3_left")].environment.sea = "false";	//tunnelA
-					Locations[FindLocation("wr_dungeon3_left")].environment.weather = "false";
+					Locations[FindLocation("wr_dungeon3_left")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 
 					SetCurrentTime(11.00, 0);
 					SetNextWeather("Clear");

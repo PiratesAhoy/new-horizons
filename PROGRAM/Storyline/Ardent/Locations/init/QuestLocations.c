@@ -325,7 +325,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "sh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\ffsh_";
 	//Reload map
@@ -684,7 +685,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "bed_p";	
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 
@@ -727,7 +729,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Dining_room_patch";	
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\ffres1_";
 	//Reload map
@@ -767,7 +770,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.lights.candles = "candelabrum_small";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redrsb_"; // View out of windows is wrong but file is dictated by "type" and "models" lines
 	//Reload map
@@ -804,7 +808,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -851,7 +856,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "resp_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grms_";
 	//Reload map

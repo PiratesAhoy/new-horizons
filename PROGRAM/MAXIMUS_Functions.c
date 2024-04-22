@@ -719,7 +719,8 @@ void InitQCBrothel()
 	Locations[n].models.night.charactersPatch = "LT_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlt_";
 
@@ -1145,7 +1146,8 @@ void InitArsenal(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "Arsenal_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1178,7 +1180,8 @@ void InitBank(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "Bank_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1208,7 +1211,8 @@ void InitResidence7(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "res07_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1240,7 +1244,8 @@ void InitChurch1(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "church_1_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1272,7 +1277,8 @@ void InitStorehouse(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "storehouse_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1304,7 +1310,8 @@ void InitStore02(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "store02_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1336,7 +1343,8 @@ void InitStore01(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "store01_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1367,7 +1375,8 @@ void InitShipyard4(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "Sh04_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1395,7 +1404,8 @@ void InitBrothel(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "Brothel_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1432,7 +1442,8 @@ void InitBrothelRoom(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "brothel_room_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1462,7 +1473,8 @@ void InitTavern02(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "tavern02_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1495,7 +1507,8 @@ void InitTavern01(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "Tavern01_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1528,7 +1541,8 @@ void InitStoneHouse(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "StoneHouse_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1556,7 +1570,8 @@ void InitHut(string locationID)
 	//Night
 	Locations[n].models.night.charactersPatch = "hut_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map

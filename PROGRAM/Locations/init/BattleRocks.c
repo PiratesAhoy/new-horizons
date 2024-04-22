@@ -560,7 +560,8 @@ void LocationInitBattleRocks(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "mine_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map

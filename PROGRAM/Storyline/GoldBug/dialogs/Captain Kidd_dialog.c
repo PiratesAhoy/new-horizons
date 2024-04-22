@@ -754,7 +754,8 @@ void ProcessDialogEvent()
 			Pchar.quest.gate_other_side  = "yes";
 
 	
-			Locations[FindLocation("Maroon_cavern")].environment.weather = "false";
+			Locations[FindLocation("Maroon_cavern")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("Maroon_cavern")].environment.sea = "false";
 			Locations[FindLocation("Maroon_cavern")].models.always.locators = "CavernMedium_locators_GB_dry";
 			Locations[FindLocation("Maroon_cavern")].models.always.l4 = "";		
@@ -888,7 +889,8 @@ void ProcessDialogEvent()
 			Pchar.Lut_G_cipher = "done";
 			Pchar.quest.town_exit_closed = "no";
 
-			Locations[FindLocation("Maroon_cavern")].environment.weather = "false";
+			Locations[FindLocation("Maroon_cavern")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("Maroon_cavern")].environment.sea = "false";
 			Locations[FindLocation("Maroon_cavern")].models.always.locators = "CavernMedium_locators_GB_dry";
 			Locations[FindLocation("Maroon_cavern")].models.always.l4 = "";		
@@ -948,7 +950,8 @@ void ProcessDialogEvent()
 
 			Pchar.quest.Fort_M_flag_pos = "up";
 			Locations[FindLocation("Fort_Moultrie")].models.always.locators = "fort2_locators_GB3";			
-			Locations[FindLocation("Maroon_cavern")].environment.weather = "false";
+			Locations[FindLocation("Maroon_cavern")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("Maroon_cavern")].environment.sea = "false";
 			Locations[FindLocation("Maroon_cavern")].models.always.locators = "CavernMedium_locators_GB_dry";
 			Locations[FindLocation("Maroon_cavern")].models.always.l4 = "";		

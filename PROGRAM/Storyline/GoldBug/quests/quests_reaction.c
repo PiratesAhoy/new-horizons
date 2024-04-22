@@ -13693,7 +13693,8 @@ void QuestComplete(string sQuestName)
 				SetNextWeather("Clear");
 	 			DeleteAttribute(Pchar, "quest.JRH_rain");
 				Locations[FindLocation(Pchar.location)].models.always.locators = "cavernMedium_locators_GB_dry";
-				locations[FindLocation("Maroon_Cavern")].environment.weather = "false";
+				locations[FindLocation("Maroon_Cavern")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 				locations[FindLocation("Maroon_Cavern")].environment.sea = "false";
 
 				if(Characters[GetCharacterIndex("maroon3")].Ship.Type == "obj_barrel3_roll")
@@ -15655,7 +15656,8 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("indian_bandit"), "none", "", "");
 			ChangeCharacterAddressGroup(characterFromID("deserter_us1"), "none", "", "");
 //JRH BH2
-			Locations[FindLocation("Maroon_cavern")].environment.weather = "false";
+			Locations[FindLocation("Maroon_cavern")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("Maroon_cavern")].environment.sea = "false";
 			Locations[FindLocation("Maroon_cavern")].models.always.locators = "CavernMedium_locators_GB_dry";
 			Locations[FindLocation("Maroon_cavern")].models.always.l4 = "";		
@@ -22772,7 +22774,8 @@ void QuestComplete(string sQuestName)
 
 			Pchar.quest.Fort_M_flag_pos = "up";
 			Locations[FindLocation("Fort_Moultrie")].models.always.locators = "fort2_locators_GB3";	
-			Locations[FindLocation("Maroon_cavern")].environment.weather = "false";
+			Locations[FindLocation("Maroon_cavern")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("Maroon_cavern")].environment.sea = "false";
 			Locations[FindLocation("Maroon_cavern")].models.always.locators = "CavernMedium_locators_GB_dry";
 			Locations[FindLocation("Maroon_cavern")].models.always.l4 = "";		

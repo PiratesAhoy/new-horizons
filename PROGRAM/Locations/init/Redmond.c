@@ -1163,7 +1163,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.charactersPatch = "LT_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlt_";
 	//Reload map
@@ -1233,7 +1234,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlf2_";
 
@@ -1275,7 +1277,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.charactersPatch = "MS_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redms_";
 	//Reload map
@@ -1320,7 +1323,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.fonar = "SS_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redss_";
 	//Reload map
@@ -1418,7 +1422,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.fn = "Sh01_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -1505,7 +1510,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.lights.candles = "candelabrum_small";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redrsb_";
 	//Reload map
@@ -1547,7 +1553,8 @@ void LocationInitRedmond(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Res02_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures2_";
 	//Reload map
@@ -1599,7 +1606,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.charactersPatch = "Res04_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\dour4_";
 
@@ -1637,7 +1645,8 @@ void LocationInitRedmond(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -1682,7 +1691,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.charactersPatch = "Church_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -1742,7 +1752,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.fonar		   = "ss_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh4_";
 	//Reload map
@@ -1786,7 +1797,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.charactersPatch = "mh6_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh6_";
 	//Reload map
@@ -1829,7 +1841,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.charactersPatch = "sh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redsh_";
 	//Reload map
@@ -1871,7 +1884,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.charactersPatch = "mh8_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh8_";
 	//Reload map
@@ -2383,7 +2397,8 @@ void LocationInitRedmond(ref n)
 //	Locations[n].models.night.env = "d02_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].monsters = 1;
 	//Reload map
@@ -2426,7 +2441,8 @@ void LocationInitRedmond(ref n)
 	Locations[n].models.night.charactersPatch = "mh5_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\ffmh5_";
 	//Reload map
@@ -2469,7 +2485,8 @@ void LocationInitRedmond(ref n)
 //	Locations[n].models.night.lamp = "FalaiseDeFleur05_night";
 	Locations[n].models.night.charactersPatch = "Res02_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures2_";
 	//Reload map

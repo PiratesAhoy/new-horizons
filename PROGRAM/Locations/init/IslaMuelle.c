@@ -527,7 +527,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "sh02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mush2_";
 	//Reload map
@@ -571,7 +572,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "mh5_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh5_";
 	//Reload map
@@ -616,7 +618,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.fonar = "SS_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\muss_";
 	//Reload map
@@ -660,7 +663,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "ST_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\must_";
 	//Reload map
@@ -708,7 +712,8 @@ void LocationInitIslaMuelle(ref n)
 
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mulf2_";
 	//Reload map
@@ -748,7 +753,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mulf2_";
 	//Reload map
@@ -788,7 +794,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "mh4_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh4_";
 	//Reload map
@@ -829,7 +836,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "MH9_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh9_";
 	//Reload map
@@ -870,7 +878,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "MH5_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh5_";
 	//Reload map
@@ -911,7 +920,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "mh3_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh3_";
 	//Reload map
@@ -952,7 +962,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "mh8_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh8_";
 	//Reload map
@@ -999,7 +1010,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.fonar		   = "ss_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh9_";
 	//Reload map
@@ -1041,7 +1053,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "MH8_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh8_";
 	//Reload map
@@ -1084,7 +1097,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mulf1_";
 	//Reload map
@@ -1127,7 +1141,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "Res03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures3_";
 	//Reload map
@@ -1168,7 +1183,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mulf2_";
 	//Reload map
@@ -1408,7 +1424,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mulf1_";
 	//Reload map
@@ -1567,7 +1584,8 @@ void LocationInitIslaMuelle(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "SCave_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -1614,7 +1632,8 @@ void LocationInitIslaMuelle(ref n)
 //	Locations[n].models.night.lamp = "FalaiseDeFleur05_night";
 	Locations[n].models.night.charactersPatch = "Church3_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -1656,7 +1675,8 @@ void LocationInitIslaMuelle(ref n)
 //	Locations[n].models.night.lamp = "FalaiseDeFleur05_night";
 	Locations[n].models.night.charactersPatch = "Res02_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures2_";
 	//Reload map

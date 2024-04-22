@@ -159,7 +159,8 @@ void LocationInitConceicao(ref n)
 	Location.models.night.charactersPatch = "sh02_p";
 
 	//Environment
-	Location.environment.weather = "false";
+	Location.environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Location.environment.sea = "false";
 	Location.models.back = "back\mush2_";
 	//Reload map

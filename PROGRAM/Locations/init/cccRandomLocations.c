@@ -25,7 +25,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.charactersPatch = "resp_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcresp_";
 
@@ -55,7 +56,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.charactersPatch = "pirh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcpirh_";
 
@@ -86,7 +88,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.charactersPatch = "mh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxmh_";
 
@@ -117,7 +120,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.lights.candles = "candelabrum_small";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redrsb_";
 
@@ -148,7 +152,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Res03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures3_";
 
@@ -176,7 +181,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.charactersPatch = "bed_p";	
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 
@@ -214,7 +220,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LS_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\douls_";
 
@@ -249,7 +256,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.fn = "sh01_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxsh1_";
  
@@ -281,7 +289,8 @@ void LocationInitCCCRandomLocations(ref n)
 //	Locations[n].models.night.lamp = "FalaiseDeFleur05_night";
 	Locations[n].models.night.charactersPatch = "Res02_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures2_";
  
@@ -311,7 +320,8 @@ void LocationInitCCCRandomLocations(ref n)
 //	Locations[n].models.night.env = "d02_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].monsters = 1;
  
@@ -374,7 +384,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.charactersPatch = "res01_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\ffres1_";
 
@@ -408,7 +419,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.charactersPatch = "MS_p";
 	//Environment
 
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\coms_";
 
@@ -440,7 +452,8 @@ void LocationInitCCCRandomLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LT_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxlt_";
 

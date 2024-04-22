@@ -12801,7 +12801,8 @@ void QuestComplete(string sQuestName)
 		case "windem_opens_attic4":
 			Locations[FindLocation("Redmond_Town_01")].reload.l18.disable = 1;//window to residence
 
-			Locations[FindLocation("Storeroom_attic")].environment.weather = "false";
+			Locations[FindLocation("Storeroom_attic")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			ChangeCharacterAddressGroup(Pchar, "Charles_windem_room", "reload", "reload1");
 
 			pchar.quest.windem_opens_attic5.win_condition.l1 = "locator";
@@ -14055,7 +14056,8 @@ void QuestComplete(string sQuestName)
 				LAi_SetStayType(characterFromID("wr_no_head2"));
 				LAi_SetStayType(characterFromID("wr_no_head3"));
 
-				Locations[FindLocation("wr_mine")].environment.weather = "false";
+				Locations[FindLocation("wr_mine")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 
 				ChangeCharacterAddressGroup(CharacterFromID("wench3"), "Redmond_town_exit_2", "goto", "goto8");
 
@@ -16545,10 +16547,12 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.swimming = "done";
 			Pchar.quest.swimtime = "no";
 
-			Locations[FindLocation("wr_dungeon3_left")].environment.weather = "false";
+			Locations[FindLocation("wr_dungeon3_left")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("wr_dungeon3_left")].environment.sea = "false";
 
-			Locations[FindLocation("wr_dungeon3_right")].environment.weather = "false";
+			Locations[FindLocation("wr_dungeon3_right")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("wr_dungeon3_right")].environment.sea = "false";
 
 			Locations[FindLocation("wr_mine")].reload.l5.disable = 1;//tunnel2
@@ -17531,9 +17535,11 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_town_exit_2")].reload.l1.disable = 1;	//to town
 			Locations[FindLocation("Redmond_shore_02")].models.always.locators = "shore03_l_JRH";
 
-			Locations[FindLocation("wr_dungeon4_main")].environment.weather = "false";
+			Locations[FindLocation("wr_dungeon4_main")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("wr_dungeon4_main")].environment.sea = "false";
-			Locations[FindLocation("wr_dungeon4_loop")].environment.weather = "false";
+			Locations[FindLocation("wr_dungeon4_loop")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("wr_dungeon4_loop")].environment.sea = "false";
 
 			ChangeCharacterAddressGroup(CharacterFromID("Red_guard_1"), "Redmond_town_exit_2", "goto", "goto11");
@@ -22675,7 +22681,8 @@ void QuestComplete(string sQuestName)
 
 		case "fill_temple_boxes":
 			locations[FindLocation("wr_crypt")].id.label = "Port Royal catacombs";
-			Locations[FindLocation("wr_chapel")].environment.weather = "false";
+			Locations[FindLocation("wr_chapel")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Pchar.quest.JRH_rain = "";
 			locations[FindLocation(Pchar.location)].box4.items.pistolmine = 1;
 			locations[FindLocation(Pchar.location)].box5.items.note3 = 1;
@@ -39584,7 +39591,8 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_dungeon3_right")].reload.l1.disable = 1;	//to cell
 			Locations[FindLocation("wr_dungeon3_left")].models.always.locators = "d03_l_JRH_L2";
 
-			Locations[FindLocation("wr_mine")].environment.weather = "false";
+			Locations[FindLocation("wr_mine")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 			Locations[FindLocation("wr_mine")].environment.sea = "false";
 			//Locations[FindLocation("wr_mine")].reload.l2.disable = 1;		//to LS cellar
 			Locations[FindLocation("wr_mine")].reload.l3.disable = 1;		//to guard room
@@ -40102,8 +40110,10 @@ void QuestComplete(string sQuestName)
 
 		case "cat_burglar0":
 			Locations[FindLocation("wr_dungeon4_low")].environment.weather = "false";		//reset
-			Locations[FindLocation("wr_dungeon3_right")].environment.weather = "false";
-			Locations[FindLocation("wr_friday")].environment.weather = "false";
+			Locations[FindLocation("wr_dungeon3_right")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
+			Locations[FindLocation("wr_friday")].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 
 			PlaySound("PEOPLE\creak2.wav");
 

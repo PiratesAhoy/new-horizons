@@ -503,7 +503,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Grot_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "true";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1_back";
@@ -857,7 +858,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlf2_";
 
@@ -918,7 +920,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "bed_p";	
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 
@@ -976,7 +979,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "FlamHouse_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 
@@ -1089,7 +1093,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Tavern_room_patch";	
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh_";
 
@@ -1236,7 +1241,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "tavern03_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh4_";
 
@@ -1332,7 +1338,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "store04_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh4_";
 
@@ -1442,7 +1449,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "sh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redsh_";
 
@@ -1517,7 +1525,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Res02_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redrsb_";
 
@@ -1761,7 +1770,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Res03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redrsb_";
 
@@ -1820,7 +1830,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "sh05_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Locations[n].models.back = "back\mures2_";
 	Locations[n].models.back = "back\redb_";
@@ -1916,7 +1927,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "MS_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Locations[n].models.back = "back\redms_";
 
@@ -1973,7 +1985,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "res01_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redms_";
 
@@ -2075,7 +2088,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LS_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -2175,7 +2189,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "MS_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -2257,7 +2272,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "tavern02_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Locations[n].models.back = "back\smumh2_";		//needed?
 
@@ -2406,7 +2422,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "pirh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh10_";
 
@@ -2485,7 +2502,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "MH02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh10_";
 
@@ -2552,7 +2570,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "store04_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh4_";
 
@@ -2634,7 +2653,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "sh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redsh_";
 
@@ -2695,7 +2715,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "residence05_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 
@@ -2796,7 +2817,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Sh03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 
@@ -2935,7 +2957,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Brothel_room_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 
@@ -3008,7 +3031,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "mine_p";
 	//Environment
 
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -3134,7 +3158,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Hut_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -3205,7 +3230,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -3356,7 +3382,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -3455,7 +3482,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "d02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -4491,7 +4519,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	locations[n].models.night.charactersPatch = "largehouse01_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\farm_";
 
@@ -4552,7 +4581,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "store04_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\shp_";
 
@@ -4662,7 +4692,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlf2_";
 
@@ -4753,7 +4784,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "cavern_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -5026,7 +5058,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlf2_";
 
@@ -5220,7 +5253,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Sh03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\pcha_";
 
@@ -5298,7 +5332,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Church_1_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";	
 	Locations[n].models.back = "back\pcha_";
 
@@ -5401,7 +5436,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "store04_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh4_";
 
@@ -5491,7 +5527,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "Church2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -5546,7 +5583,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlf2_";
 
@@ -5616,7 +5654,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "SCave_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -5710,7 +5749,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "d01_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -5917,7 +5957,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	locations[n].models.night.charactersPatch = "Bank_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 
 	//Reload map
@@ -6029,7 +6070,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "d01_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//LAi_LocationFantomsGen(&locations[n], true);
@@ -6081,7 +6123,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "d01_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -6404,7 +6447,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	locations[n].models.night.charactersPatch = "SmallResidence_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 
@@ -6463,7 +6507,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	locations[n].models.night.charactersPatch = "SmallResidence_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redb_";
 
@@ -7863,7 +7908,8 @@ Locations[n].models.always.locators = "qdeck_l_JRH";
 	Locations[n].models.night.charactersPatch = "mh6_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	
 	Locations[n].models.back = "back\shp_";		//test skip for flood
@@ -8349,7 +8395,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	locations[n].models.night.charactersPatch = "largehouse01_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\farm_";
 
@@ -8407,7 +8454,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	locations[n].models.night.charactersPatch = "largehouse02_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\farm_";
 
@@ -8478,7 +8526,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "StoreSmall_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -8566,7 +8615,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "sh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\farm_";
 
@@ -8649,7 +8699,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	locations[n].models.night.charactersPatch = "sklad_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\farm2_";
 
@@ -8815,7 +8866,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "TwoFloorHouse_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\farm_";
 
@@ -8941,7 +8993,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	locations[n].models.night.charactersPatch = "sklad03_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 
 	Locations[n].locators_radius.box.box7 = 0.001;			//0.5 Q2
@@ -8996,7 +9049,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "MT_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcsh_";
 	//Reload map
@@ -9055,7 +9109,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.fonar = "SS_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcss_";
 	//Reload map
@@ -9135,7 +9190,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "mh10_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcsh_";
 	//Reload map
@@ -9191,7 +9247,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "sh02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcsh_";
 	//Reload map
@@ -9243,7 +9300,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "sh02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcsh_";
 
@@ -9518,7 +9576,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "sh02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -9680,7 +9739,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "d02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -9839,7 +9899,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	Locations[n].models.night.charactersPatch = "d01_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//LAi_LocationFantomsGen(&locations[n], true);
@@ -9892,7 +9953,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -10034,7 +10096,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri2_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false"; 
 
 	Locations[n].locators_radius.box.box1 = 0.5;
@@ -10172,7 +10235,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "store03_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";		
 	Locations[n].models.back = "back\shp_";
 
@@ -10624,7 +10688,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.fonar = "SS_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh9_";
 
@@ -10691,7 +10756,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "mh5_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh5_";
 
@@ -10776,7 +10842,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "MH3_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mumh3_";
 	//Reload map
@@ -10958,7 +11025,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "Tavern_1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mulf2_";	
 
@@ -11012,7 +11080,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "LH_F2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mulf2_";
 	//Reload map
@@ -11194,7 +11263,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	Locations[n].models.night.charactersPatch = "Church3_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	Locations[n].locators_radius.box.box2 = 0.5;
@@ -11303,7 +11373,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "Sh03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 //	Locations[n].models.back = "back\redb_";
 	Locations[n].models.back = "back\mures2_";
@@ -11768,7 +11839,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 //	Locations[n].models.night.fn = "Sh01_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -11831,7 +11903,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	Locations[n].models.night.charactersPatch = "Sh04_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -11887,7 +11960,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.fonar = "SS_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grmh9_";
 	//Reload map
@@ -12000,7 +12074,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	Locations[n].models.night.charactersPatch = "d01_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -12130,7 +12205,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "Church2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -12248,7 +12324,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "store04_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\shp_";
 
@@ -12368,7 +12445,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "sh02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\shp_";
 
@@ -12488,7 +12566,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	Locations[n].models.night.charactersPatch = "d01_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -14074,7 +14153,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "FlamHouse_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\juch_";
 
@@ -14191,7 +14271,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "Res03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\juch2_";
 
@@ -14347,7 +14428,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "d03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -14531,7 +14613,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "FortVRight_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	locations[n].environment.weather.rain = false;
 
@@ -15045,7 +15128,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//locations[n].models.night.charactersPatch = "walk_patch_HIGH";
 
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	
 	//Reload map
@@ -15279,7 +15363,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.fonar = "Hut_attic_cloth";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Locations[n].models.back = "back\juch_";
 
@@ -15354,7 +15439,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "Hut_isle_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\shp_";
 
@@ -15731,7 +15817,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\shp_";
 
@@ -15806,7 +15893,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -15849,7 +15937,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "mh5_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\shp_";
 
@@ -15917,7 +16006,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\shp_";
 
@@ -15991,7 +16081,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -16055,7 +16146,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -16102,7 +16194,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	//Night
 	Locations[n].models.night.charactersPatch = "Grot_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "true";
 	//Reload map
 
@@ -16450,7 +16543,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\tor2_";
 
@@ -16519,7 +16613,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "walk_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -16620,7 +16715,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].locators_radius.reload.reload4 = 0.3;
 	
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	Locations[n].locators_radius.box.box5 = 0.2;
@@ -16700,7 +16796,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].reload.l2.autoreload = "0";
 	
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	Locations[n].locators_radius.randitem.randitem1 = 0.01;
@@ -17254,7 +17351,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlf2_";
 
@@ -17328,7 +17426,8 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlf2_";
 
@@ -17410,7 +17509,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "LH_F2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Locations[n].models.back = "back\redlf2_";
 	Locations[n].models.back = "back\tor2_";				//JRH	
@@ -17455,7 +17555,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "StoreSmall_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -17784,7 +17885,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "Tavern_2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\SMUMH_";	
 	//Reload map
@@ -17872,7 +17974,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "Church2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -17915,7 +18018,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "Tavern_room_patch";	
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redmh_";
 
@@ -17962,7 +18066,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "church_IM_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";	
 
 	//Reload map
@@ -18006,7 +18111,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "crypt_inside_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";	
 
 	//Reload map
@@ -18047,7 +18153,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "crypt_2_1_inside_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";	
 
 	//Reload map
@@ -18095,7 +18202,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "crypt_2_2_inside_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";	
 
 	//Reload map
@@ -18152,7 +18260,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "crypt_2_2_inside_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";	
 
 	//Reload map
@@ -18716,7 +18825,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "resp_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\juch_";
 
@@ -18881,7 +18991,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//Night
 	locations[n].models.night.charactersPatch = "largehouse01_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\farm_";
 
@@ -18935,7 +19046,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.fonar = "Hut_attic_cloth";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Locations[n].models.back = "back\juch_";
 
@@ -18994,7 +19106,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "MH02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\juch_";
 
@@ -19058,7 +19171,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.fonar = "Hut_attic_cloth";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Locations[n].models.back = "back\juch_";
 
@@ -19116,7 +19230,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "Dining_room_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\juch2_";
 
@@ -19245,7 +19360,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "store04_patch";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -19334,7 +19450,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "Church2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -19388,7 +19505,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 //	Locations[n].models.back = "back\doulf2_";
 //	Locations[n].models.back = "..\back\inside_back_";
@@ -19472,7 +19590,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "Res03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\juch2_";
 
@@ -19604,7 +19723,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	//Night
 	Locations[n].models.night.charactersPatch = "Grot_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "true";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1_back";
@@ -20023,7 +20143,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "sh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\farm_";
 
@@ -21223,7 +21344,8 @@ Locations[n].items.randitem1 = "door_TortugaT";
 	Locations[n].models.night.charactersPatch = "Tavern_1_p_JRH";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mulf2_";	
 

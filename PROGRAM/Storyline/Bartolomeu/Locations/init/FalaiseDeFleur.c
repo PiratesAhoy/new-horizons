@@ -113,7 +113,8 @@ void LocationInitFalaiseDeFleur(ref n)
 	location.models.night.charactersPatch = "MH_p";
 
 	//Environment
-	location.environment.weather = "false";
+	location.environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	location.environment.sea = "false";
 	location.models.back = "back\doumh_";
 	//Reload map

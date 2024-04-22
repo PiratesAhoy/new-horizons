@@ -149,7 +149,8 @@ void LocationInitQuestLocations(ref n)
 	//Night
 	locations[n].models.night.charactersPatch = "sklad03_patch";
 	//Environment
-	locations[n].environment.weather = "false";
+	locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	locations[n].environment.sea = "false";
 
 	//Reload map
@@ -339,7 +340,8 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.night.charactersPatch = "LT_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redlt_";
 	//Reload map

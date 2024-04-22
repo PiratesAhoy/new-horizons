@@ -397,7 +397,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "resp_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcresp_";
 	//Reload map
@@ -440,7 +441,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.fonar = "SS_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcss_";
 	//Reload map
@@ -501,7 +503,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "sh02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\ffsh2_";//<<<--------------FOR OXBAY USE "back\oxsh1_";
 	//Reload map
@@ -542,7 +545,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "SH_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcsh_";
 	//Reload map
@@ -584,7 +588,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "ST_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcst_";
 
@@ -633,7 +638,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "SH_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcsh_";
 
@@ -733,7 +739,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "pirh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcpirh_";
 
@@ -775,7 +782,8 @@ void LocationInitQuebradasCostillas(ref n)
 
 	//Environment
 	Locations[n].models.back = "back\qcsh_";
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -843,7 +851,8 @@ void LocationInitQuebradasCostillas(ref n)
 
 	//Environment
 	Locations[n].models.back = "back\qclf2_";
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1261,7 +1270,8 @@ void LocationInitQuebradasCostillas(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -1307,7 +1317,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "Sh03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grsh3_";
 	//Reload map
@@ -1349,7 +1360,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "sh02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\ffsh2_";
 	//Reload map
@@ -1392,7 +1404,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "MT_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grmt_";
 	//Reload map
@@ -1440,7 +1453,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grlf2_";
 	//Reload map
@@ -1483,7 +1497,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.fonar = "SS_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redss_";
 	//Reload map
@@ -1534,7 +1549,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\fflf1_";
 	//Reload map
@@ -1575,7 +1591,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "MH_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\doumh_";
 	//Reload map
@@ -1646,7 +1663,8 @@ void LocationInitQuebradasCostillas(ref n)
 	InitStoreHouse(Locations[n].id);
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\fflf1_";
 	//Reload map
@@ -1702,7 +1720,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "sh02_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\ffsh2_";
 
@@ -1748,7 +1767,8 @@ void LocationInitQuebradasCostillas(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "cellar_downstairs_patch";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1793,7 +1813,8 @@ void LocationInitQuebradasCostillas(ref n)
 	//Night
 	Locations[n].models.night.charactersPatch = "mine_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -1880,7 +1901,8 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "SH_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\qcsh_";
 	//Reload map

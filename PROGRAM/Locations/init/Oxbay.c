@@ -343,7 +343,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.fn = "sh01_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxsh1_";
 	//Reload map
@@ -390,7 +391,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.fonar = "ss_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxss_";
 	//Reload map
@@ -435,7 +437,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "LT_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxlt_";
 	//Reload map
@@ -491,7 +494,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "LH_F2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxlf2_";
 	//Reload map
@@ -534,7 +538,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxlf1_";
 	//Reload map
@@ -578,7 +583,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "mh5_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxmh5_";
 
@@ -620,7 +626,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "sh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxsh_";
 
@@ -664,7 +671,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.fonar		   = "ss_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxss_";
 
@@ -706,7 +714,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "mh10_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxmh10_";
 
@@ -747,7 +756,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "mh7_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\oxmh7_";
 
@@ -1562,7 +1572,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "Sh03_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grsh3_";
 	//Reload map
@@ -1607,7 +1618,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "MS_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grms_";
 	//Reload map
@@ -1653,7 +1665,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "MT_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grmt_";
 	//Reload map
@@ -1701,7 +1714,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "LH_F2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grlf2_";
 	//Reload map
@@ -1743,7 +1757,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "MH_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grmh_";
 	//Reload map
@@ -1789,7 +1804,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "mh4_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grmh4_";
 	//Reload map
@@ -1834,7 +1850,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.fonar		   = "ss_fn";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grmh9_";
 	//Reload map
@@ -1877,7 +1894,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "mh8_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grmh8_";
 	//Reload map
@@ -1923,7 +1941,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "mh9_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grmh9_";
 	//Reload map
@@ -1967,7 +1986,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grlf1_";
 	//Reload map
@@ -2011,7 +2031,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 //	Locations[n].models.night.lamp = "FalaiseDeFleur05_night";
 	Locations[n].models.night.charactersPatch = "Res02_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\mures2_";
 	//Reload map
@@ -2063,7 +2084,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "Res04_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\dour4_";
 
@@ -2108,7 +2130,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "LH_F1_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grlf1_";
 	//Reload map
@@ -2331,7 +2354,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	//Night
 	Locations[n].models.night.charactersPatch = "mine_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -2383,7 +2407,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	//Night
 	Locations[n].models.night.charactersPatch = "Pri_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -2420,7 +2445,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "Sh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\pifsh_";
 	//Reload map
@@ -2459,7 +2485,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "Sh_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grsh_";
 	//Reload map
@@ -2499,7 +2526,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "Church2_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -2539,7 +2567,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].models.night.charactersPatch = "MH_p";
 
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\grmh_";
 
@@ -2574,7 +2603,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	//Night
 	Locations[n].models.night.charactersPatch = "d01_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	LAi_LocationFantomsGen(&locations[n], true);
@@ -2628,7 +2658,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	//Night
 	Locations[n].models.night.charactersPatch = "d03_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 
 	//Reload map
@@ -2679,7 +2710,8 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	//Night
 	Locations[n].models.night.charactersPatch = "Res05_p";
 	//Environment
-	Locations[n].environment.weather = "false";
+	Locations[n].environment.weather = "true";
+	locations[n].lockWeather = "Inside";
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\cores5_";
 
