@@ -9958,12 +9958,7 @@ void QuestComplete(string sQuestName)
 		LAi_ActorGoToLocator(characterFromID("Cannibal_A"), "goto", "goto9", "", 7);
 		LAi_ActorGoToLocator(characterFromID("Cannibal_g"), "goto", "goto7", "", 8);
 
-		LAi_QuestDelay("TP_Indian_village_fade", 2.5)
-		break;
-
-		//Fade before setting actors to sitting/stunned
-		case "TP_Indian_village_fade":
-			LAi_Fade("TP_Indian_village", "");
+		LAi_QuestDelay("TP_Indian_village", 2.5)
 		break;
 
 		case "TP_Indian_village":
