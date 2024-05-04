@@ -1260,3 +1260,9 @@ name = "Nat Benchley"
 categories = [
     "build14",
 ]
+
+[[contributors]]
+name = "Peter Norton"
+categories = [
+    "translation",
+]

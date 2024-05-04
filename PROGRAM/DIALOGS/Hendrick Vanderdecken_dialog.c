@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	iMonth = environment.date.month;
 	string lastspeak_date = iday + " " + iMonth;
 
-	
+
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
@@ -32,8 +32,8 @@ void ProcessDialogEvent()
 
 			if(NPChar.quest.meeting == "0")
 			{
-				d.Text = "Good day, " + GetMyFullName(PChar) + ".";
-				Link.l1 = "You know who I am?";
+				d.Text = DLG_TEXT[0] + GetMyFullName(PChar) + DLG_TEXT[1];
+				Link.l1 = DLG_TEXT[2];
 				Link.l1.go = "meeting";
 				NPChar.quest.meeting = "1"; 
 			}
@@ -41,19 +41,19 @@ void ProcessDialogEvent()
 			{
 				if(pchar.model	== "Vanderdecken")
 				{
-					dialog.text = "Hello again. Thanks for dealing with me.";
-					Link.l1 = "No thanks at all! I want my personality back!";
+					d.Text = DLG_TEXT[3];
+					Link.l1 = DLG_TEXT[4];
 					Link.l1.go = "personality_back";
-					Link.l2 = "Thank YOU! The ladies will love me with my new look!";
+					Link.l2 = DLG_TEXT[5];
 					Link.l2.go = "exit";
 					Diag.TempNode = "First time";
 				}
 				else
 				{
-					dialog.text = "Come back for more, have you?";
-					Link.l1 = "Not at all. Just paying my respects to Your Cursedness.";
+					d.Text = DLG_TEXT[6];
+					Link.l1 = DLG_TEXT[7];
 					Link.l1.go = "exit";
-					Link.l2 = "Yes, I have. Gimme, gimme!";
+					Link.l2 = DLG_TEXT[8];
 					Link.l2.go = "shipyard";
 					Diag.TempNode = "First time";
 				}
@@ -61,39 +61,39 @@ void ProcessDialogEvent()
 		break;
 
 		case "Meeting":
-			d.Text = "Of course. Do I look like an ordinary person to you?";
-			Link.l1 = "Now you mention it; no, you don't.";				
+			d.Text = DLG_TEXT[9];
+			Link.l1 = DLG_TEXT[10];	
 			Link.l1.go = "Meeting2";
 		break;
 
 		case "Meeting2":
-			d.Text = "I am captain " + GetMyFullName(NPChar) + ". Perhaps you've heard of me.";
-			Link.l1 = "I recall hearing that you captained the Flying Dutchman. But what of Davy Jones then?";
+			d.Text = DLG_TEXT[11] + GetMyFullName(NPChar) + DLG_TEXT[12];
+			Link.l1 = DLG_TEXT[13];
 			Link.l1.go = "Meeting3";
 		break;
 
 		case "Meeting3":
-			d.Text = "Ah; even an old cursed pirate captain like myself might want to retire at some point.";
-			Link.l1 = "So you gave your ship to this Davy Jones character? Just like that?";
+			d.Text = DLG_TEXT[14];
+			Link.l1 = DLG_TEXT[15];
 			Link.l1.go = "Meeting4";
 		break;
 
 		case "Meeting4":
-			d.Text = "I didn't give her away. There is always a price to be paid for a special ship like that. I can offer the same to you.";
-			Link.l1 = "What exactly do you mean?";
+			d.Text = DLG_TEXT[16];
+			Link.l1 = DLG_TEXT[17];
 			Link.l1.go = "Shipyard";
 		break;
 
 		case "Shipyard":
-			dialog.Text = "Are you willing to pay what it takes?";
-			Link.l1 = "Sure thing. Now how about those oh-so-special-ships of yours?";
+			d.Text = DLG_TEXT[18];
+			Link.l1 = DLG_TEXT[19];
 			Link.l1.go = "Shipyard_interface";
 			if(CheckCharacterItem(npchar,"cursedcoin"))
 			{
-				Link.l2 = "Well... I usually lose my finest ships to nasty storms anyway. So there's no point, really.";
+				Link.l2 = DLG_TEXT[20];
 				Link.l2.go = "BuyTrident";
 			}
-			Link.l3 = "Ehm. On second thought; no, not really. I've got to go someplace else. Bye.";
+			Link.l3 = DLG_TEXT[21];
 			Link.l3.go = "Exit";
 			Diag.TempNode = "First time";
 		break;
@@ -139,35 +139,35 @@ void ProcessDialogEvent()
 		break;
 
 		case "personality_back":
-			d.Text = "Since you are such a splendid customer, I'll make you a deal: Have another look at my stock.";
-			Link.l1 = "What good is that going to do me?";				
+			d.Text = DLG_TEXT[22];
+			Link.l1 = DLG_TEXT[23];
 			Link.l1.go = "Shipyard";
 		break;
 
 		case "BuyTrident":
-			d.Text = "What if I could offer you an antidote to storms? In a manner of speaking, that is. I've admittedly grown rather fond of it, but I'll sell it to you if the price is right. How does 1,000,000 gold pieces sound to you?";
-			Link.l1 = "Oh, you old joker! You can't be serious on that. Wha? You ARE serious? Uhm... I'll send you my reply by us pirates' new patented 'Express Bottle Messaging System'. It's known as 'E-Bottle' for short. Anyway, time to go now!";
+			d.Text = DLG_TEXT[24];
+			Link.l1 = DLG_TEXT[25];
 			Link.l1.go = "Exit";
 			if(sti(Pchar.money) >= 1000000)
 			{
-				Link.l2 = "That's a hefty sum indeed! But it so happens I do have that amount of cash. So I'll take it right now, you don't have to wrap it.";
+				Link.l2 = DLG_TEXT[26];
 				Link.l2.go = "BuyTrident2";
 			}
 		break;
 
 		case "BuyTrident2":
-			d.Text = "And there's a special offer on today! Buy one Trident for 1,000,000 of your gold coins and you will get one of mine in return. Half hour warranty included.";
-			Link.l1 = "Two for the price of one, is it? It seems I'm in luck! I WANT IT!!!";
+			d.Text = DLG_TEXT[27];
+			Link.l1 = DLG_TEXT[28];
 			Link.l1.go = "Exit_buy";
-			Link.l2 = "But... This coin looks mysterious. It seems to give off an aura of great ancient power! I don't want it!";
+			Link.l2 = DLG_TEXT[29];
 			Link.l2.go = "BuyTridentNo";
 		break;
 		
 		case "BuyTridentNo":
-			d.Text = "Sorry, no backsies. Now! GET! OUT!!!";
-			Link.l1 = "But I mean it! I really DON'T want that coin. Just that Trident will do.";
+			d.Text = DLG_TEXT[30];
+			Link.l1 = DLG_TEXT[31];
 			Link.l1.go = "BuyTridentNo";
-			Link.l2 = "I get the message. I'll be going now... (To self: Oh dear! What did I get myself into this time?)";
+			Link.l2 = DLG_TEXT[32];
 			Link.l2.go = "Exit_buy2";
 		break;
 
