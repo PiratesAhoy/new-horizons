@@ -5,7 +5,7 @@ void StartStoryLine()
 	string sTeleportLocName = "";
 	string rldGroup = "";
 	string rldLocator = "";
-	pchar.testlocnum = "Estate";
+	pchar.testlocnum = "Oxbay_town";
 	switch(pchar.testlocnum)
 	{
 	case "Estate":
@@ -72,10 +72,10 @@ void StartStoryLine()
 	rldLocator = "reload_18";
 	break;
 	case "Oxbay_town":
-	loadPort = "Oxbay_town";
-	sTeleportLocName = "Oxbay_tavern";
+	loadPort = "Oxbay_port";
+	sTeleportLocName = "Oxbay_Plantation";
 	rldGroup = "goto";
-	rldLocator = "goto3";
+	rldLocator = "goto1";
 	break;
 	case "LostShipsCity_town":
 	loadPort = "LostShipsCity_town";

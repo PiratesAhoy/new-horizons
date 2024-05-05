@@ -231,6 +231,535 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].island = "Oxbay"; // NK 04-08-29
 	n = n + 1;
+	
+	
+	Locations[n].id = "Oxbay_town_center";
+	locations[n].id.label = "#stown_name#";
+	locations[n].worldmap = "Oxbay";
+	Locations[n].image = "Town_FalaiseDeFleur_Town_02";
+
+	//Town sack
+	Locations[n].townsack = "oxbay";
+
+	//Sound
+	locations[n].type = "town";
+	LAi_LocationFantomsGen(&locations[n], true);
+	locations[n].fastreload = "oxbay";
+	//Models
+	//Always
+	Locations[n].filespath.models = "locations\Town_FalaiseDeFleur\town_02";
+	Locations[n].filespath.textures = "locations\ENGLAND";
+	Locations[n].models.always.locators = "FF02_l";
+	Locations[n].models.always.grassPatch = "FF02_g";
+	Locations[n].models.always.city = "FF02";
+		//Day
+	Locations[n].models.day.fonar = "FF02_fd";
+	Locations[n].models.day.charactersPatch = "FF02_pd";
+	Locations[n].models.day.jumppatch = "FF02_j";
+	Locations[n].models.day.rinok = "FF02_e01";
+	//Night
+	Locations[n].models.night.fonar = "FF02_fn";
+	Locations[n].models.night.charactersPatch = "FF02_pn";
+	Locations[n].models.night.jumppatch = "FF02_j";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	//Reload map
+	Locations[n].reload.l1.name = "Falaise_de_fleur_location_03_02";
+	Locations[n].reload.l1.go = "Oxbay_Near_Plantation";
+	Locations[n].reload.l1.emerge = "reload2";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "#stown_name#. Slums.";
+
+	Locations[n].reload.l2.name = "Falaise_de_fleur_location_03_04";
+	Locations[n].reload.l2.go = "Falaise_de_fleur_location_04";
+	Locations[n].reload.l2.emerge = "Falaise_de_fleur_location_04_03";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].reload.l2.label = "#stown_name#.";
+
+	Locations[n].reload.l3.name = "Falaise_de_fleur_townhall";
+	Locations[n].reload.l3.go = "Oxbay_townhall";
+	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.autoreload = "0";
+	Locations[n].reload.l3.label = "Residence.";
+	Locations[n].reload.l3.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l3.goto_disable = 1; // Screwface: Disable Go-To location
+
+	Locations[n].reload.l4.name = "Falaise_de_fleur_tavern";
+	Locations[n].reload.l4.go = "Oxbay_mansion_hall";
+	Locations[n].reload.l4.emerge = "reload1";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "Tavern.";
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l4.goto_disable = 1; // Screwface: Disable Go-To location
+
+	Locations[n].reload.l5.name = "Falaise_de_fleur_shipyard";
+	Locations[n].reload.l5.go = "Oxbayhouse1";
+	Locations[n].reload.l5.emerge = "locator2";
+	Locations[n].reload.l5.autoreload = "0";
+	Locations[n].reload.l5.label = "Shipyard.";
+
+	Locations[n].reload.l6.name = "Falause_de_fleur_smuggler";
+	Locations[n].reload.l6.go = "Oxbayhouse2";
+	Locations[n].reload.l6.emerge = "reload1";
+	Locations[n].reload.l6.autoreload = "0";
+	Locations[n].reload.l6.label = "House.";
+
+	locations[n].reload.l7.name = "home5";
+	Locations[n].reload.l7.go = "Oxbay_church";
+	Locations[n].reload.l7.emerge = "reload1";
+	Locations[n].reload.l7.autoreload = "0";
+	Locations[n].reload.l7.label = "Church.";
+	Locations[n].reload.l7.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l7.goto_disable = 1; // Screwface: Disable Go-To location
+
+	locations[n].reload.l8.name = "home3";
+	Locations[n].reload.l8.go = "Oxbay_Brothel";
+	Locations[n].reload.l8.emerge = "reload1";
+	Locations[n].reload.l8.autoreload = "0";
+	Locations[n].reload.l8.label = "Loanshark's Office.";
+	Locations[n].reload.l8.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l8.goto_disable = 1; // Screwface: Disable Go-To location
+
+	locations[n].reload.l9.name = "home6";
+	Locations[n].reload.l9.go = "Oxbayhouse3";
+	Locations[n].reload.l9.emerge = "reload1";
+	Locations[n].reload.l9.autoreload = "0";
+	Locations[n].reload.l9.label = "House.";
+
+	locations[n].reload.l10.name = "home2";
+	Locations[n].reload.l10.go = "";
+	Locations[n].reload.l10.emerge = "reload1";
+	Locations[n].reload.l10.autoreload = "0";
+	Locations[n].reload.l10.label = "House.";
+	Locations[n].reload.l10.close_for_night = 1;
+
+		locations[n].reload.l11.name = "home1";
+		Locations[n].reload.l11.go = "FdF_blacksmith";
+		Locations[n].reload.l11.emerge = "reload1";
+		Locations[n].reload.l11.close_for_night = 1;
+		Locations[n].reload.l11.autoreload = "0";
+		Locations[n].reload.l11.label = "Smithy";
+
+	Locations[n].reload.l12.name = "home7";
+	Locations[n].reload.l12.go = "Ransom_house_f1";
+	Locations[n].reload.l12.emerge = "reload1";
+	Locations[n].reload.l12.autoreload = "0";
+	Locations[n].reload.l12.label = "House.";
+	Locations[n].reload.l12.close_for_night = 0;
+
+	Locations[n].island = "oxbay"; // NK 04-08-29
+	n = n + 1;
+
+ 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// РЕЗИДЕНЦИЯ
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_townhall";
+	locations[n].id.label = "Townhall";
+	locations[n].filespath.models = "locations\inside\ResidenceA01";
+	locations[n].image = "Inside_ResidencA1.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "residence";
+	locations[n].fastreload = "Oxbay";
+	locations[n].island = "Oxbay";
+	// стража
+	locations[n].soldiers = true;
+	LAi_LocationFantomsGen(&locations[n], true);
+	//Models
+	//Always
+	locations[n].models.always.locators = "Residence01_locators";
+	locations[n].models.always.l1 = "Residence01";
+	locations[n].models.always.l1.level = 65538;
+	locations[n].models.always.window = "residence01_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;	
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "Residence01_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "Residence01_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_town_center";
+	locations[n].reload.l1.emerge = "reload3";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Street";
+
+	locations[n].reload.l2.name = "reload2";
+	locations[n].reload.l2.go = "Oxbay_Res_Room_1";
+	locations[n].reload.l2.emerge = "reload1";
+	locations[n].reload.l2.autoreload = "0";
+	locations[n].reload.l2.label = "Room";
+
+	locations[n].reload.l3.name = "reload3"; //кабинет направо от входа
+	locations[n].reload.l3.go = "Oxbay_TownhallRoom";
+	locations[n].reload.l3.emerge = "reload1";
+	locations[n].reload.l3.autoreload = "0";
+	locations[n].reload.l3.label = "TownhallRoom";
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_TownhallRoom"; //кабинет со спальней и выходом в город сбоку
+	locations[n].id.label = "TownhallRoom";
+	locations[n].image = "loading\inside\BigHouseBack.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\BigHouseBack";
+	locations[n].models.always.house = "BigHouseBack";
+	locations[n].models.always.house.level = 65538;
+	locations[n].models.always.window = "BigHouseBack_windows";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;
+
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "BigHouseBack_patch";
+	locations[n].models.day.locators = "BigHouseBack_locators";
+	//Night
+	locations[n].models.night.charactersPatch = "BigHouseBack_patch";
+	locations[n].models.night.locators = "BigHouseBack_Nlocators";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_townhall";
+	locations[n].reload.l1.emerge = "reload3";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Townhall";
+
+	locations[n].reload.l2.name = "reload2";
+	locations[n].reload.l2.go = "Oxbay_Res_Room_2";
+	locations[n].reload.l2.emerge = "reload1";
+	locations[n].reload.l2.autoreload = "0";
+	locations[n].reload.l2.label = "BedRoom";
+
+	locations[n].reload.l3.name = "reload3";
+	locations[n].reload.l3.go = "Oxbay_town";
+	locations[n].reload.l3.emerge = "reloadR1";
+	locations[n].reload.l3.autoreload = "0";
+	locations[n].reload.l3.label = "Street";
+	locations[n].locators_radius.item.item1 = 1.0;
+	n = n + 1;
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_Res_Room_1";
+	locations[n].id.label = "Room";
+	locations[n].image = "loading\inside\BigHouse04.tga";
+	locations[n].townsack = "Oxbay";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Always
+	locations[n].filespath.models = "locations\Inside\BigHouse04";
+	locations[n].models.always.house = "BigHouse04";
+	locations[n].models.always.house.level = 65538;
+	locations[n].models.always.window = "BigHouse04_windows";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;
+
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "BigHouse04_patch";
+	locations[n].models.day.locators = "BigHouse04_locators";
+	//Night
+	locations[n].models.night.charactersPatch = "BigHouse04_patch";
+	locations[n].models.night.locators = "BigHouse04_Nlocators";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_townhall";
+	locations[n].reload.l1.emerge = "reload2";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "";
+	n = n + 1;
+
+
+ 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Bedroom
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_Res_Room_2";
+	locations[n].id.label = "Bedroom";
+	locations[n].image = "loading\inside\Bedroom.tga";
+	//Town sack
+locations[n].townsack = "Oxbay";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Always
+	locations[n].filespath.models = "locations\inside\bedRoom1";
+	locations[n].models.always.bedRoom1 = "bedRoom1";
+	locations[n].models.always.bedRoom1.level = 65538;
+	Locations[n].models.always.bedRoom1windows = "BedRoom1_windows";
+	Locations[n].models.always.bedRoom1windows.tech = "LocationWindows";
+	locations[n].models.always.bedRoom1windows.level = 65539;
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.locators = "bedRoom1_locators";
+	Locations[n].models.day.bedRoom1rand = "bedRoom1_rand";
+	locations[n].models.day.charactersPatch = "bedRoom1_patch";
+	//Night
+	locations[n].models.night.locators = "bedRoom1_Nlocators";
+	locations[n].models.night.charactersPatch = "bedRoom1_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_TownhallRoom";
+	locations[n].reload.l1.emerge = "reload2";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Room";
+	n = n + 1;
+
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// БОРДЕЛЬ
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_Brothel";
+	locations[n].id.label = "Brothel";
+	locations[n].filespath.models = "locations\inside\Brothel";
+	locations[n].image = "loading\inside\brothell_hall.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "brothel";
+	locations[n].fastreload = "Oxbay";
+	locations[n].island = "Oxbay";
+	locations[n].brothel = true;	
+	//Models
+	//Always
+	locations[n].models.always.locators = "Brothel_locators";
+	locations[n].models.always.store = "Brothel";
+	locations[n].models.always.window = "Brothel_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 50;
+	
+Locations[n].models.back = "..\back\inside_back_";
+
+	//Day
+	locations[n].models.day.charactersPatch = "Brothel_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "Brothel_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_town_center";
+	locations[n].reload.l1.emerge = "home3";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Street";
+	
+	locations[n].reload.l2.name = "reload2_back";
+	locations[n].reload.l2.go = "Oxbay_Brothel_room";
+	locations[n].reload.l2.emerge = "reload1";
+	locations[n].reload.l2.autoreload = "0";
+	locations[n].reload.l2.label = "Brothel Room";
+	locations[n].reload.l2.disable = 1;  //закроем, но связка пусть будет для квестов.
+
+	locations[n].reload.l3.name = "reload1_back";
+	locations[n].reload.l3.go = "Oxbay_SecBrRoom";
+	locations[n].reload.l3.emerge = "reload1";
+	locations[n].reload.l3.autoreload = "0";
+	locations[n].reload.l3.label = "Brothel";
+   	Locations[n].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn random mistress
+	LAi_LocationFightDisable(&locations[n], true);
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Комнаты в борделе
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_Brothel_room";
+	locations[n].id.label = "Brothel Room";
+	locations[n].filespath.models = "locations\inside\Brothel_room";
+	locations[n].image = "loading\inside\brothell_room.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "room";
+	locations[n].fastreload = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Models
+	//Always
+	locations[n].models.always.locators = "Brothel_room_locators";
+	locations[n].models.always.store = "Brothel_room";
+	locations[n].models.always.window = "Brothel_room_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 50;
+	
+Locations[n].models.back = "..\back\inside_back_";
+	//Day
+	locations[n].models.day.charactersPatch = "Brothel_room_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "Brothel_room_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1_back";
+	locations[n].reload.l1.go = "Oxbay_brothel";
+	locations[n].reload.l1.emerge = "reload2";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Brothel";
+	LAi_LocationFightDisable(&locations[n], true);
+	locations[n].locators_radius.item.item1 = 1;
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_SecBrRoom"; // вторая комната борделя
+	locations[n].id.label = "Room";
+	locations[n].image = "loading\inside\BigHouse03.tga";
+ 	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "room";
+	locations[n].fastreload = "Oxbay";
+	locations[n].island = "Oxbay";
+	locations[n].brothel = true;	
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\BigHouse03";
+	locations[n].models.always.house = "BigHouse03";
+	locations[n].models.always.house.level = 65538;
+	locations[n].models.always.window = "BigHouse03_windows";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;
+
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "BigHouse03_patch";
+	locations[n].models.day.locators = "BigHouse03_locators";
+	//Night
+	locations[n].models.night.charactersPatch = "BigHouse03_patch";
+	locations[n].models.night.locators = "BigHouse03_Nlocators";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_Brothel";
+	locations[n].reload.l1.emerge = "reload1_back";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Brothel";
+
+	locations[n].reload.l2.name = "reload2";
+	locations[n].reload.l2.go = "Oxbay_town";
+	locations[n].reload.l2.emerge = "reload91";
+	locations[n].reload.l2.autoreload = "0";
+	locations[n].reload.l2.label = "Street";
+	LAi_LocationFightDisable(&locations[n], true);
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ЦЕРКОВЬ
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_church";
+	locations[n].filespath.models = "locations\inside\Church01";
+	locations[n].id.label = "Church";
+	locations[n].image = "loading\inside\church.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "church";
+	locations[n].fastreload = "Oxbay";
+	locations[n].island = "Oxbay";
+	locations[n].fanatic = true;
+	//Models
+	//Always
+	locations[n].models.always.locators = "Church01_locators";
+	locations[n].models.always.tavern = "Church01";
+	locations[n].models.always.tavern.level = 65538;
+	locations[n].models.always.window = "Church01_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;
+
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "Church01_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "Church01_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1_back";
+	locations[n].reload.l1.go = "Oxbay_town_center";
+	locations[n].reload.l1.emerge = "home5";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Street";
+	LAi_LocationFightDisable(&locations[n], true);
+	n = n + 1;
+	
+ 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ПОРТОВЫЙ ОФИС
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_PortOffice";
+	locations[n].id.label = "PortOffice";
+	locations[n].image = "loading\inside\portoffice.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\PortOffice";
+	locations[n].models.always.housePortOffice = "PortOffice";
+	locations[n].models.always.housePortOffice.level = 65538;
+	locations[n].models.always.locators = "PortOffice_locators";
+
+	Locations[n].models.always.PortOffice = "PortOffice_windows";
+	Locations[n].models.always.PortOffice.tech = "LocationWindows";
+	locations[n].models.always.PortOffice.level = 65539;
+
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "PortOffice_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "PortOffice_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_town";
+	locations[n].reload.l1.emerge = "reload10";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Street";
+	LAi_LocationFightDisable(&locations[n], true);
+	n = n + 1;
+	
 
 	// -------------------------------------------------
 
@@ -1865,6 +2394,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].island = "Oxbay"; // NK 04-08-29
 	n = n + 1;
 
+
 	//--------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\mh8";
@@ -2726,4 +3256,382 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 
 	Locations[n].island = "Oxbay"; // NK 04-08-29
 	n = n + 1;
+	
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Плантация Барбадоса
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Oxbay_Plantation";
+	locations[n].id.label = "Plantation";
+	locations[n].image = "loading\Plantation.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Sound
+	locations[n].type = "town";
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\BarbadosPlantation";
+	locations[n].models.always.BarbadosPlantation = "BarbadosPlantation";	
+	locations[n].models.always.reflect = "BarbadosPlantation_reflect";
+	Locations[n].models.always.reflect.sea_reflection = 1;	
+	locations[n].models.always.gate = "BarbadosPlantation_gateopen";	
+	locations[n].models.always.locators = "BarbadosPlantation_locators";	
+	locations[n].models.always.grassPatch = "BarbadosPlantation_grass";
+	Locations[n].models.always.grassPatch.texture = "grass\grassshore.tga.tx";	
+	Locations[n].models.always.Waterfall = "waterfall";
+	Locations[n].models.always.Waterfall.uvslide.v0 = 0.3;
+    Locations[n].models.always.Waterfall.uvslide.v1 = 0.0;
+	Locations[n].models.always.Waterfall.tech = "LocationWaterFall";
+	Locations[n].models.always.Waterfall.level = 99949;	
+	locations[n].models.always.plan1 = "plan1";
+	locations[n].models.always.plan1.level = 9;	
+	locations[n].models.always.plan2 = "plan2";
+	locations[n].models.always.plan2.level = 8;	
+	locations[n].models.always.plan3 = "plan3";
+	locations[n].models.always.plan3.level = 7;	
+	locations[n].models.always.plan4 = "plan4";
+	locations[n].models.always.plan4.level = 6;
+	//Day
+	locations[n].models.day.charactersPatch = "BarbadosPlantation_patchopen";
+	locations[n].models.day.fonar = "BarbadosPlantation_fd";
+	//Night
+	locations[n].models.night.charactersPatch = "BarbadosPlantation_patchopen";
+	locations[n].models.night.fonar = "BarbadosPlantation_fn";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "true";
+	//Reload map
+	locations[n].reload.l1.name = "reload1_back";
+	locations[n].reload.l1.go = "oxbay_old_fort";
+	locations[n].reload.l1.emerge = "reload1";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Jungle";
+	locations[n].locators_radius.reload.reload1_back = 2;
+
+	locations[n].reload.l2.name = "reload2_back";
+	locations[n].reload.l2.go = "Oxbay_Near_Plantation";
+	locations[n].reload.l2.emerge = "reload1";
+	locations[n].reload.l2.autoreload = "1";
+	locations[n].reload.l2.label = "Oxbay Fort";
+	locations[n].locators_radius.reload.reload2_back = 2;
+	//дома
+	locations[n].reload.l3.name = "houseSp1";
+	locations[n].reload.l3.go = "Plantation_Sp1";
+	locations[n].reload.l3.emerge = "reload1";
+	locations[n].reload.l3.autoreload = "0";
+	locations[n].reload.l3.label = "house";
+
+	locations[n].reload.l4.name = "houseS1";
+	locations[n].reload.l4.go = "Plantation_S1";
+	locations[n].reload.l4.emerge = "reload1";
+	locations[n].reload.l4.autoreload = "0";
+	locations[n].reload.l4.label = "house";
+
+	locations[n].reload.l5.name = "houseS2";
+	locations[n].reload.l5.go = "Plantation_S2";
+	locations[n].reload.l5.emerge = "reload1";
+	locations[n].reload.l5.autoreload = "0";
+	locations[n].reload.l5.label = "house";
+
+	locations[n].reload.l6.name = "houseF1";
+	locations[n].reload.l6.go = "Plantation_F1";
+	locations[n].reload.l6.emerge = "reload1";
+	locations[n].reload.l6.autoreload = "0";
+	locations[n].reload.l6.label = "house";
+
+	locations[n].reload.l7.name = "houseF2";
+	locations[n].reload.l7.go = "Plantation_F2";
+	locations[n].reload.l7.emerge = "reload1";
+	locations[n].reload.l7.autoreload = "0";
+	locations[n].reload.l7.label = "house";
+
+    locations[n].locators_radius.quest.detector1 = 5.0; //homo
+    n = n + 1;
+
+	Locations[n].filespath.models = "locations\town_Douwesen\exit";
+	Locations[n].filespath.textures = "locations\ENGLAND";
+
+	Locations[n].id = "Oxbay_Near_Plantation";
+	locations[n].id.label = "Oxbay_Near_Plantation";
+	Locations[n].image = "Town_Douwesen_Exit";
+
+	//Town sack
+	Locations[n].townsack = "oxbay";
+
+	//Sound
+	locations[n].type = "jungle";
+//	locations[n].fastreload = "oxbay";
+	LAi_LocationMonstersGen(&locations[n], true);
+	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
+	//Models
+	//Always
+	Locations[n].models.always.locators = "DouExit_l";
+
+	Locations[n].models.always.Waterfall1 = "waterfall";
+    Locations[n].models.always.Waterfall1.uvslide.u0 = 0.3;
+	Locations[n].models.always.Waterfall1.tech = "LocationWaterFall";
+	Locations[n].models.always.Waterfall1.level = 50;
+    //Locations[n].models.always.Waterfall2 = "waterfall1";
+    //Locations[n].models.always.Waterfall2.uvslide.u0 = 0.4;
+	//Locations[n].models.always.Waterfall2.tech = "LocationWaterFall";
+	//Locations[n].models.always.Waterfall2.level = 51;
+    Locations[n].models.always.Waterfall3 = "waterfall2";
+    Locations[n].models.always.Waterfall3.uvslide.u0 = 0.2;
+	Locations[n].models.always.Waterfall3.tech = "LocationWaterFall";
+	Locations[n].models.always.Waterfall3.level = 52;
+
+	Locations[n].models.always.exit = "DouExit";
+	Locations[n].models.always.grassPatch = "DouExit_g";
+	Locations[n].models.always.l0 = "plan_4";
+	Locations[n].models.always.l0.level = 9;
+	Locations[n].models.always.l0.tech = "LocationModelBlend";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 8;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 7;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 6;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+
+	//Day
+	Locations[n].models.day.charactersPatch = "DouExit_p";
+	Locations[n].models.day.fonar = "DouExit_fd";
+	//Night
+	Locations[n].models.night.charactersPatch = "DouExit_p";
+	Locations[n].models.night.fonar = "DouExit_fn";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "Reload1";
+	Locations[n].reload.l1.go = "Oxbay_Plantation";
+	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].locators_radius.reload.reload1 = 4;
+	Locations[n].reload.l1.label = "Jungle.";
+
+	Locations[n].reload.l2.name = "Reload2";
+	Locations[n].reload.l2.go = "oxbay_town_center";
+	Locations[n].reload.l2.emerge = "Falaise_de_fleur_location_03_02";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].reload.l2.label = "#stown_name#.";
+
+	Locations[n].island = "oxbay"; // NK 04-08-29
+	n = n + 1;
+
+locations[n].id = "oxbay_old_fort";
+locations[n].id.label = "oxbay_old_fort";
+locations[n].image = "loading\towns\pearl1.tga.tx";
+locations[n].citizens = true;
+locations[n].soldiers = true;
+//Town sack
+locations[n].townsack = "oxbay";
+//Sound
+locations[n].type = "town";
+locations[n].island = "oxbay";
+//Models
+//Always
+	Locations[n].filespath.models = "locations\Fort_inside\White_fort";
+Locations[n].models.always.locators = "fort2_locators_blood";
+Locations[n].models.always.l1 = "Fort2";
+Locations[n].models.always.grassPatch = "Fort2_grass";
+//Day
+Locations[n].models.day.charactersPatch = "Fort2_patch";
+Locations[n].models.day.fonar = "Fort2_fd";
+//Night
+Locations[n].models.night.charactersPatch = "Fort2_patch";
+Locations[n].models.night.fonar = "Fort2 _fn";
+//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "true";
+//Reload map
+Locations[n].reload.l1.name = "reload1";
+Locations[n].reload.l1.go = "Oxbay_Plantation";
+Locations[n].reload.l1.emerge = "reload1";
+locations[n].locators_radius.reload.reload1 = 1.8;
+n = n + 1;
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Plantation_Sp1";
+	locations[n].filespath.models = "locations\inside\StoneHouse";
+	locations[n].id.label = "House";
+	locations[n].image = "loading\inside\stonehouse.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Sound
+	locations[n].type = "house";
+	//Models
+	//Always
+	locations[n].models.always.tavern = "StoneHouse";
+	locations[n].models.always.tavern.level = 65538;
+	locations[n].models.always.window = "StoneHouse_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;
+	locations[n].models.day.locators = "StoneHouse_locators";
+	locations[n].models.night.locators = "StoneHouse_Nlocators";
+
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+    //Day
+	locations[n].models.day.charactersPatch = "StoneHouse_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "StoneHouse_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_Plantation";
+	locations[n].reload.l1.emerge = "houseSp1";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Plantation";
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Plantation_S1";
+	locations[n].filespath.models = "locations\inside\Hut";
+	locations[n].id.label = "House";
+	locations[n].image = "loading\inside\hut.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Sound
+	locations[n].type = "house";
+	//Models
+	//Always
+	locations[n].models.always.locators = "Hut_locators";
+	locations[n].models.always.tavern = "Hut";
+	locations[n].models.always.tavern.level = 65538;
+	locations[n].models.always.window = "Hut_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;
+
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "Hut_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "Hut_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_Plantation";
+	locations[n].reload.l1.emerge = "houseS1";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Plantation";
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Plantation_S2";
+	locations[n].id.label = "House";
+	locations[n].image = "loading\inside\hut.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Sound
+	locations[n].type = "house";
+	//Models
+	//Always
+locations[n].filespath.models = "locations\inside\Hut1";
+locations[n].models.always.locators = "Hut1_locators";
+locations[n].models.always.hut1 = "Hut1";
+//Day
+locations[n].models.day.charactersPatch = "Hut1_patch";
+//Night
+locations[n].models.night.charactersPatch = "Hut1_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_Plantation";
+	locations[n].reload.l1.emerge = "houseS2";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Plantation";
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Plantation_F1";
+	locations[n].id.label = "Room";
+	locations[n].image = "loading\inside\mediumhouse10.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Sound
+	locations[n].type = "house";
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\mediumhouse05";
+	locations[n].models.always.mediumhouse05 = "mediumhouse05";
+	locations[n].models.always.mediumhouse05.level = 65538;
+	locations[n].models.day.locators = "mediumhouse05_locators";
+	locations[n].models.night.locators = "mediumhouse05_Nlocators";
+
+	Locations[n].models.always.mediumhouse05windows = "mediumhouse05_windows";
+	Locations[n].models.always.mediumhouse05windows.tech = "LocationWindows";
+	locations[n].models.always.mediumhouse05windows.level = 65539;
+
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	Locations[n].models.day.mediumhouse05rand= "mediumhouse05_rand";
+	locations[n].models.day.charactersPatch = "mediumhouse05_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "mediumhouse05_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_Plantation";
+	locations[n].reload.l1.emerge = "houseF1";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Plantation";
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Plantation_F2";
+	locations[n].id.label = "House";
+	locations[n].image = "loading\inside\mediumhouse10.tga";
+	//Town sack
+	locations[n].townsack = "Oxbay";
+	locations[n].island = "Oxbay";
+	//Sound
+	locations[n].type = "house";
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\mediumhouse09";
+	locations[n].models.always.house = "mediumhouse09";
+	locations[n].models.always.house.level = 65538;
+	locations[n].models.day.locators = "mediumhouse09_locators";
+	locations[n].models.night.locators = "mediumhouse09_Nlocators";
+
+	Locations[n].models.always.mediumhouse09windows = "mediumhouse09_windows";
+	Locations[n].models.always.mediumhouse09windows.tech = "LocationWindows";
+	locations[n].models.always.mediumhouse09windows.level = 65539;
+
+Locations[n].models.back = "..\back\inside_back_";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	Locations[n].models.day.mediumhouse09rand= "mediumhouse09_rand";
+	locations[n].models.day.charactersPatch = "mediumhouse09_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "mediumhouse09_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Oxbay_Plantation";
+	locations[n].reload.l1.emerge = "houseF2";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Plantation";
+	n = n + 1;
+
 }

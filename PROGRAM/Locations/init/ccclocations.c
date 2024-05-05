@@ -33,8 +33,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.back = "back\qcresp_";
 	//Reload map
 	Locations[n].reload.l1.name = "Reload1";
-	Locations[n].reload.l1.go = "Oxbay_suburb";
-	Locations[n].reload.l1.emerge = "locator19";
+	Locations[n].reload.l1.go = "Oxbay_town_center";
+	Locations[n].reload.l1.emerge = "locator2";
 	Locations[n].reload.l1.autoreload = "0";
 
 
@@ -74,8 +74,8 @@ void LocationInitCCCLocations(ref n)
 
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
-	Locations[n].reload.l1.go = "Oxbay_suburb";
-	Locations[n].reload.l1.emerge = "locator20";
+	Locations[n].reload.l1.go = "Oxbay_town_center";
+	Locations[n].reload.l1.emerge = "Falause_de_fleur_smuggler";
 	Locations[n].reload.l1.autoreload = "0";
 
 
@@ -117,8 +117,8 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].models.back = "back\oxmh_";
 
 	Locations[n].reload.l1.name = "reload1";
-	Locations[n].reload.l1.go = "Oxbay_suburb";
-	Locations[n].reload.l1.emerge = "locator22";		// change, exit back to new doorlocator
+	Locations[n].reload.l1.go = "Oxbay_town_center";
+	Locations[n].reload.l1.emerge = "home6";		// change, exit back to new doorlocator
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name#";
 
@@ -160,8 +160,8 @@ void LocationInitCCCLocations(ref n)
 
 	//Reload map
 	Locations[n].reload.l1.name = "reload3";		//building kit
-	Locations[n].reload.l1.go = "Oxbay_suburb";		//building kit
-	Locations[n].reload.l1.emerge = "home_01";		//building kit
+	Locations[n].reload.l1.go = "Oxbay_town_center";		//building kit
+	Locations[n].reload.l1.emerge = "Falaise_de_fleur_tavern";		//building kit
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Town.";		//change, just eyecandy
 	
@@ -318,11 +318,6 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].reload.l3.autoreload = "0";
 	Locations[n].reload.l3.label = "MILITARY AREA. NO TRESPASSING!";
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l3.goto_disable = 1; // Screwface: Disable Go-To location
-
-	Locations[n].reload.l4.name = "locator19";
-	Locations[n].reload.l4.go = "Oxbayhouse1";
-	Locations[n].reload.l4.emerge = "reload1";
-	Locations[n].reload.l4.autoreload = "0";
 
 	Locations[n].reload.l5.name = "locator20";
 	Locations[n].reload.l5.go = "Oxbayhouse2";
