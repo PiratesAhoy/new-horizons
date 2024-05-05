@@ -256,7 +256,7 @@ void ProcessCommandExecute()
 	string n;
 
 	if (bRMouseDown) {
-		if (comName == "click") ShowInfo(nodName);
+		if (comName == "rclick") ShowInfo(nodName);
 		return;
 	}
 

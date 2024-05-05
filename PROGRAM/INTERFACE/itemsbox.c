@@ -1482,7 +1482,7 @@ void ProcInterfaceCommand()
 
 // KK -->
 	if (bRMouseDown) {
-		if (comName != "click") return;
+		if (comName != "rclick") return;
 
 		ShowDescription(nodeName);
 		return;

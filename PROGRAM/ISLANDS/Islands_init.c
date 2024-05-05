@@ -659,7 +659,7 @@ void InitIslands()
 		rIsland.visible = false;
 		rIsland.Enc_enable = false;
 		rIsland.skipCR = true; // KK
-		rIsland.smuggling_nation = PERSONAL_NATION; // PB: Can use as your own personal Hide-Out
+		rIsland.smuggling_nation = PIRATE; // PB: Can use as your own personal Hide-Out
 		// NK -->
 		rIsland.towns.quantity = 1;
 		rIsland.towns.1 = "Khael Roa";
