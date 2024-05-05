@@ -1025,7 +1025,7 @@ void ProcessCommandExecute()
 	string nodName = GetEventData();
 
 	if (bRMouseDown) {
-		if (comName != "click") return;
+		if (comName != "rclick") return;
 
 		ShowInfo(nodName);
 		return;

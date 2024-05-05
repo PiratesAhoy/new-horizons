@@ -254,9 +254,10 @@ void ProcessCommandExecute()
 	string nodName = GetEventData();
 	int iNation, cn, i, j;
 	string n;
+	Log_SetStringToLog(comName);
 
 	if (bRMouseDown) {
-		if (comName == "click") ShowInfo(nodName);
+		if (comName == "rclick") ShowInfo(nodName);
 		return;
 	}
 

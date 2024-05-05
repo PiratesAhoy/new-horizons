@@ -185,7 +185,7 @@ void ProcessCommandExecute()
 {
 	string comName = GetEventData();
 	string nodName = GetEventData();
-	if(comName!="click") return;
+	if(!hasSubStr(comName, "click")) return;
 //	if (!bRMouseDown) return; // PB: Add functionality to left button too
 
 	for(int i=0; i<ISLANDS_QUANTITY+2; i++)
