@@ -495,12 +495,16 @@ settingpirates_black_sails4
 {
 #Black sails can help you recognize pirates from afar
 }
-ship_info{Ships info bars in sea (if ON works only with Arcade Game Mode in Realism Settings)}
+ship_info{Ships info bars in sea}
+settingship_info1
+{
+Hide ships info bars in sea 
+}
 settingship_info2
 {
 Show ships info bars in sea 
 }
-settingship_info1
+settingship_info3
 {
-Hide ships info bars in sea 
+#if ON works only with Arcade Game Mode in Realism Settings
 }
