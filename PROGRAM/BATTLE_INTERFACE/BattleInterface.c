@@ -199,7 +199,6 @@ void InitBattleInterface()
 
 	Log_SetActiveAction("Nothing");
 
-	BattleInterface.ShipInfoImages.RelationTexture = "battle_interface\ship_arrows1.tga";
 	BattleInterface.ShipInfoImages.RelationOffset.x = 0.0;
 	BattleInterface.ShipInfoImages.RelationOffset.y = 0.3;
 	BattleInterface.ShipInfoImages.RelationOffset.z = 0.0;
@@ -235,7 +234,7 @@ void InitBattleInterface()
 	BattleInterface.ShipInfoImages.CrewOffset.z = 0.0;
 	BattleInterface.ShipInfoImages.CrewUV = "0.0,0.0,1.0,0.166";
 
-	BattleInterface.ShifInfoVisible = SHIP_INFO && iRealismMode == 0;
+	BattleInterface.ShifInfoVisible = (SHIP_INFO == 1) && (iRealismMode == 0);
 
 	BIVisible(sti(InterfaceStates.BIVisible)); // KK
 }
@@ -2542,10 +2541,6 @@ void SetParameterData()
 	BattleInterface.ShipInfoImages.CrewOffset.y = 0.55;
 	BattleInterface.ShipInfoImages.CrewOffset.z = 0.0;
 	BattleInterface.ShipInfoImages.CrewUV = "0.0,0.0,1.0,0.166";
-
-	if (iRealismMode < 1) {
-		BattleInterface.ShifInfoVisible = true;
-	}
 
 	LanguageCloseFile(idLngFile);
 // <-- KK
