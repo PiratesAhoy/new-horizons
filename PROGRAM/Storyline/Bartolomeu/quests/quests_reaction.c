@@ -5245,7 +5245,7 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Sneak", 200);
 			}
 			else { AddPartyExp(pchar, 20000); }
-			SetOfficersIndex(PChar, -1, GetCharacterIndex("Emilio Soares"));
+			if(SetOfficersIndex(PChar, -1, GetCharacterIndex("Emilio Soares")) == GetCharacterIndex("Emilio Soares")) SetOfficersIndex(PChar, 1, GetCharacterIndex("Emilio Soares"));
 			RemoveCharacterCompanion(Pchar, characterFromID("Roxanne Lalliere"));
 			LAi_SetActorType(CharacterFromID("Roxanne Lalliere"));
 			LAi_ActorRunToLocation(characterFromID("Roxanne Lalliere"), "goto", "locator12", "none", "", "", "", 6.0);
@@ -5518,7 +5518,7 @@ void QuestComplete(string sQuestName)
 
 		case "partir_bahia":
 			AddQuestRecord("Hunter", "12");
-			SetOfficersIndex(PChar, -1, GetCharacterIndex("Emilio Soares"));
+			if(SetOfficersIndex(PChar, -1, GetCharacterIndex("Emilio Soares")) == GetCharacterIndex("Emilio Soares")) SetOfficersIndex(PChar, 1, GetCharacterIndex("Emilio Soares"));
 			LAi_SetActorType(CharacterFromID("Roxanne Lalliere"));
 			LAi_ActorFollowEverywhere(characterFromID("Roxanne Lalliere"), "", 60.0);
 
