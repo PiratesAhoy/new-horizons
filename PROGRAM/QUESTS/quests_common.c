@@ -4441,6 +4441,11 @@ Cost for level 50 is 55,374,000
 				PChar.quest.ResurrectionEvent.win_condition = "ResurrectionEvent";
 				DoReloadCharacterToLocation(ResurrectingOfficiant.resurrection.location, "goto", "goto2");
 			}
+			if(FindLocation(ResurrectingOfficiant.resurrection.location) == -1)
+			{ 
+				LaunchMainMenu();
+				break;
+			}
 			Locations[FindLocation(ResurrectingOfficiant.resurrection.location)].reload.l1.disable = 1;
 		break;
 

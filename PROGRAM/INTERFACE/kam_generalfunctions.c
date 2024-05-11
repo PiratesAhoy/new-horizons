@@ -32,8 +32,6 @@ string KAM_GetDefaultEmblemedSail(ref char)
 		case 4: // Pure White, with emblems
 			tempstring = "sail_purewhite_nation" + char.nation + ".tga";
 		break;
-		// default, with emblems
-			tempstring = "sail_whole_white_nation" + char.nation + ".tga";
 	}
 
 	// Additional Sail Settings
@@ -98,8 +96,6 @@ string KAM_GetDefaultEmblemedSail(ref char)
 				case 4: // Pure White, with emblems
 					tempstring = "sail_purewhite_nation10.tga";
 				break;
-				// default, with emblems
-					tempstring = "sail_whole_white_nation10.tga";
 			}
 		break;
 	}
@@ -112,6 +108,8 @@ string KAM_GetDefaultEmblemedSail(ref char)
 	if (!IsMainCharacter(char) && !IsCompanion(char) && CheckAttribute(char, "Ship.EmblemedSails.nationFileName")) {
 		tempstring = char.Ship.EmblemedSails.nationFileName;
 	}
+
+
 
 	if (FindFile("RESOURCE\Textures\ships\sails", "*.tga.tx", tempstring + ".tx") == "") return KAM_GetDefaultNormalSail(char); // KK
 // <-- KK

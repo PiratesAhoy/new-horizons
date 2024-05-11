@@ -16788,33 +16788,21 @@ void OpenBoxProcedure_WR()
 
 				if(CheckAttribute(chr,"quest.anchor_lost") && chr.quest.anchor_lost == "up")
 				{
-					if(LAi_IsFightMode(chr))
-					{
-						//second 'open box'
-						PlaySound("INTERFACE\button3.flac");
-						RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
-						TakeItemFromCharacter(chr, "bladeanchor");
-						GiveItem2Character(chr, "bladeX4");
-						EquipCharacterByItem(chr, "bladeX4");
+					//Lipsar: edited it to one case, was bugged cause we cant open boxes in fight mode
+					PlaySound("INTERFACE\button3.flac");
+					RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
+					TakeItemFromCharacter(chr, "bladeanchor");
+					GiveItem2Character(chr, "bladeX4");
+					EquipCharacterByItem(chr, "bladeX4");
 
-						chr.quest.anchor_mechanism = "complete";
-						chr.quest.anchor_size = "small";
-						Locations[FindLocation("wr_ships")].models.always.l5 = "anchor_small1";
-						chr.quest.anchor = "up";
-						Locations[FindLocation("wr_ships")].locators_radius.box.box15 = 0.0001;
+					chr.quest.anchor_mechanism = "complete";
+					chr.quest.anchor_size = "small";
+					Locations[FindLocation("wr_ships")].models.always.l5 = "anchor_small1";
+					chr.quest.anchor = "up";
+					Locations[FindLocation("wr_ships")].locators_radius.box.box15 = 0.0001;
 
-						LAi_QuestDelay("anchor_placed_at_corvette", 0.5);
-					}
-					else
-					{
-						//first 'open box'
-						RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
-						EquipCharacterByItem(chr, "bladeanchor");
-						LAi_LocationFightDisable(&Locations[FindLocation("wr_ships")], false);
-						LAi_SetFightMode(chr, true);
-					}
+					LAi_QuestDelay("anchor_placed_at_corvette", 0.5);
 				}
-
 				return;
 			break;
 

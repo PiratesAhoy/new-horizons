@@ -65,9 +65,9 @@ ref procGetSailTextureData()
 				arSail = GetAttributeN(arEmbl,i);
 				attrName = GetAttributeName(arSail);
 				tmpStr = GetAttributeValue(arSail);
-				if(tmpStr=="1")	{BI_objRetValue.(attrName) = nationFileName;}
-				else	{BI_objRetValue.(attrName) = tmpStr;}				// <--
+				BI_objRetValue.(attrName) = tmpStr;				// <--
 			}
+			BI_objRetValue.geraldTex = nationFileName;
 		}
 	}
 

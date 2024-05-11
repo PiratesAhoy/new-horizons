@@ -42047,23 +42047,6 @@ void QuestComplete(string sQuestName)
 			LAi_ActorTurnToCharacter(characterFromID("wr_pir7"), Pchar);
 			LAi_NoRebirthEnable(characterFromID("wr_pir7"));
 
-			if(CheckCharacterItem(Pchar, "blade1"));
-			{
-				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
-				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
-				TakeItemFromCharacter(Pchar, "bladeX4");
-				EquipCharacterByItem(Pchar, "blade1");
-				EquipCharacterByItem(Pchar, "pistol20");
-
-				weaponID12 = GetCharacterEquipByGroup(Pchar,GUN_ITEM_TYPE);
-				Items_FindItem(weaponID12, &weapon12);
-
-				weapon12.model = "pistol201";
-				Pchar.chr_ai.charge = "6";
-				Pchar.chr_ai.chargeprc = "0";
-				weapon12.change = 7;
-			}
-
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload9");
 			LAi_SetActorType(CharacterFromID("Selkirk"));

@@ -63,7 +63,6 @@ int idModelDescr = -1;
 int tmpCharSkills[NUM_DIFF_SKILLS];
 float tmpCharBonusSkills[NUM_DIFF_SKILLS];
 
-string ProfileName;
 aref arstart;
 string tmpName = ""; //MAXIMUS 17.05.2019: needed for localization
 
@@ -129,7 +128,6 @@ void InitInterface(string iniName)
 	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 
 	slno = FindDefaultStoryline();
-	ProfileName = DEFAULT_PROFILE_NAME;
 
 	arstart = GetStorylineStartParams(slno);
 
@@ -215,6 +213,8 @@ void InitInterface(string iniName)
 	CreateTextbox(true, "CharacterName", "CHARNAME_TEXTBOX", "BOX1", "RAMKA1", "", 124, 375, 1.0);
 	CreateTextbox(true, "ShipName", "SHIPNAME_TEXTBOX", "BOX2", "RAMKA2", "", 516, 375, 1.0);
 	CreateTextbox(false, "SearchText", "SEARCH_TEXTBOX", "BOX3", "RAMKA3", "", 500, 368, 0.8);
+
+	GameInterface.strings.Profile = DEFAULT_PROFILE_NAME;
 
 	if (GetStorylinesQuantity() == 1) {
 		SetNodeUsing("STORYLINE", false);
@@ -894,7 +894,6 @@ void RefreshScreen()
 			GameInterface.strings.SearchText = "";
 			Refresh_SearchText();
 			SetNewPicture("DEFAULT_CHARACTER", "interfaces\empty_face.tga");
-			GameInterface.strings.Profile = ProfileName;
 			if(!CheckAttribute(GameInterface, "strings.CharacterName"))	GameInterface.strings.CharacterName = "";
 			if(!CheckAttribute(GameInterface, "strings.ShipName"))		GameInterface.strings.ShipName = "";
 			GameInterface.SHIP.pic1.str1 = "";
@@ -1534,7 +1533,7 @@ void ChangeDifficulty(bool bRight)
 
 bool CheckProfiles(string curProfile)
 {
-	ProfileName = curProfile;
+	GameInterface.strings.Profile = curProfile;
 
 	return GetProfileSavesQuantity(GetStoryline(slno), curProfile) == 0;
 }
