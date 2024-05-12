@@ -4444,6 +4444,7 @@ Cost for level 50 is 55,374,000
 			if(FindLocation(ResurrectingOfficiant.resurrection.location) == -1)
 			{ 
 				LaunchMainMenu();
+				InterfaceStates.Buttons.Resume.enable = 0;
 				break;
 			}
 			Locations[FindLocation(ResurrectingOfficiant.resurrection.location)].reload.l1.disable = 1;
