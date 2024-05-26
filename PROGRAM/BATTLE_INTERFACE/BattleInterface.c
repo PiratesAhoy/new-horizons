@@ -199,6 +199,43 @@ void InitBattleInterface()
 
 	Log_SetActiveAction("Nothing");
 
+	BattleInterface.ShipInfoImages.RelationOffset.x = 0.0;
+	BattleInterface.ShipInfoImages.RelationOffset.y = 0.3;
+	BattleInterface.ShipInfoImages.RelationOffset.z = 0.0;
+	BattleInterface.ShipInfoImages.RelationSize = "0.75,0.5";
+	BattleInterface.ShipInfoImages.RelationUV1 = "0.0,0.0,0.25,1.0"; // friend
+	BattleInterface.ShipInfoImages.RelationUV2 = "0.25,0.0,0.5,1.0"; // enemy
+	BattleInterface.ShipInfoImages.RelationUV3 = "0.5,0.0,0.75,1.0"; // neutral
+
+	BattleInterface.ShipInfoImages.ProgressTexture = "battle_interface\indicators.tga"; // Индикаторы над кораблями HP/SP/CREW
+	BattleInterface.ShipInfoImages.ProgressSize = "2.0,0.1"; // Цветные индикаторы
+
+	BattleInterface.ShipInfoImages.ProgressBackOffset.x = 0.0;
+	BattleInterface.ShipInfoImages.ProgressBackOffset.y = 0.65;
+	BattleInterface.ShipInfoImages.ProgressBackOffset.z = 0.0;
+	BattleInterface.ShipInfoImages.ProgressBackSize = "2.0,0.3";
+	BattleInterface.ShipInfoImages.ProgressBackUV = "0.0,0.5,1.0,1.0";
+
+	// Hull
+	BattleInterface.ShipInfoImages.HullOffset.x = 0.0;
+	BattleInterface.ShipInfoImages.HullOffset.y = 0.75;
+	BattleInterface.ShipInfoImages.HullOffset.z = 0.0;
+	BattleInterface.ShipInfoImages.HullUV = "0.0,0.333,1.0,0.5";
+
+	// Sails
+	BattleInterface.ShipInfoImages.SailOffset.x = 0.0;
+	BattleInterface.ShipInfoImages.SailOffset.y = 0.65;
+	BattleInterface.ShipInfoImages.SailOffset.z = 0.0;
+	BattleInterface.ShipInfoImages.SailUV = "0.0,0.167,1.0,0.333";
+
+	// Crew
+	BattleInterface.ShipInfoImages.CrewOffset.x = 0.0;
+	BattleInterface.ShipInfoImages.CrewOffset.y = 0.55;
+	BattleInterface.ShipInfoImages.CrewOffset.z = 0.0;
+	BattleInterface.ShipInfoImages.CrewUV = "0.0,0.0,1.0,0.166";
+
+	BattleInterface.ShifInfoVisible = (SHIP_INFO == 1) && (iRealismMode == 0);
+
 	BIVisible(sti(InterfaceStates.BIVisible)); // KK
 }
 
@@ -2504,10 +2541,6 @@ void SetParameterData()
 	BattleInterface.ShipInfoImages.CrewOffset.y = 0.55;
 	BattleInterface.ShipInfoImages.CrewOffset.z = 0.0;
 	BattleInterface.ShipInfoImages.CrewUV = "0.0,0.0,1.0,0.166";
-
-	if (iRealismMode < 1) {
-		BattleInterface.ShifInfoVisible = true;
-	}
 
 	LanguageCloseFile(idLngFile);
 // <-- KK

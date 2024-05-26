@@ -196,3 +196,7 @@ int PIRATES_BLACK_SAILS = 0;
 	// 0: Pirates use the same sails as DEFAULT_SAILS (set above)
 	// 1: Pirates use plain black sails
 	// 2: Pirates use emblemed black sails
+
+int SHIP_INFO = 1;
+	//0: No bars above ships
+	//1: bars above ships

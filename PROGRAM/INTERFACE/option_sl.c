@@ -5,6 +5,7 @@ int REALISM_CHARACTER = 0;
 int REALISM_INTERFACE = 0;
 int REALISM_SEA = 0;
 
+
 // KK -->
 void InitGlobalOptions()
 {
@@ -381,6 +382,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 		/////////////////////////////////////////////////////////////////////
 		Settings.BuildSettings.GENERAL_GAME = GENERAL_GAME;
 		/////////////////////////////////////////////////////////////////////
+				Settings.BuildSettings.SHIP_INFO = SHIP_INFO
 				Settings.BuildSettings.VISIT_DECK = VISIT_DECK;
 				Settings.BuildSettings.ENABLE_BUILDINGSET = ENABLE_BUILDINGSET;
 				Settings.BuildSettings.ENABLE_BROTHEL = ENABLE_BROTHEL;
@@ -443,6 +445,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 		/////////////////////////////////////////////////////////////////////
 		GENERAL_GAME = Settings.BuildSettings.GENERAL_GAME;
 		/////////////////////////////////////////////////////////////////////
+				SHIP_INFO = Settings.BuildSettings.SHIP_INFO;
 				VISIT_DECK = Settings.BuildSettings.VISIT_DECK;
 				ENABLE_BUILDINGSET = Settings.BuildSettings.ENABLE_BUILDINGSET;
 				ENABLE_BROTHEL = Settings.BuildSettings.ENABLE_BROTHEL;

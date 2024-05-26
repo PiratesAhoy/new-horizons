@@ -694,6 +694,7 @@ void CreateDateTimeDisplay()
 	int imonth = GetDataMonth();
 	int iday = GetDataDay();
 	sDateTimeDisplay = XI_ConvertString(GetDayName(GetWeekday(iday, imonth, iyear))) + ", " + GetHumanDate(iyear, imonth, iday);
+	sDateTimeDisplay += ". " + CreateLocDescribe();
 
 	ref chMain = GetMainCharacter();
 	bool btmp = true;
@@ -998,6 +999,7 @@ void procUpdateTime()
 		int iday = GetDataDay();
 		sDateTimeDisplay = XI_ConvertString(GetDayName(GetWeekday(iday, imonth, iyear))) + ", " + GetHumanDate(iyear, imonth, iday);
 		if (sti(mchr.HasClock)) sDateTimeDisplay += " " + GetStringTime(stf(mchr.CurrentTime));
+		sDateTimeDisplay +=". " + CreateLocDescribe();
 		// DeathDaisy: approximate time of day when not having a clock
 		else{ 
 			string TimeOfDay;
