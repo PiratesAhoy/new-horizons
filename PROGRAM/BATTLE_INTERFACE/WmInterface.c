@@ -76,6 +76,7 @@ void WM_UpdateCurrentAction()
 	if( bDefault ) {
 		if( sti(worldMap.encounter_island) ) {
 			Trace("WM_UpdateCurrentAction: Approaching " + worldMap.encounter_island);
+			PlaySound("#land_ho");
 			Log_SetActiveAction("EnterToIsland");
 		} else {
 			Trace("WM_UpdateCurrentAction: Entering open waters");
