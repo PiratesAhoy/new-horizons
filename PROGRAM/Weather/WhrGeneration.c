@@ -211,11 +211,13 @@ void Whr_Generator(){
 				//Weathers.Sea.Harmonics.h8 = "2.77,17.0,0.0502,82.28,288.00";
 				//Weathers.Sea.Harmonics.h9 = "1.77,17.0,0.1002,82.28,188.00";
 				Weathers.Sea.Harmonics.h10 = "1.0,14.0,0.5002,82.28,28.00"; //
+				Weathers.Sea2.Amp1 = 30.0;
+				Weathers.Sea2.Amp2 = 1.0;
 				if(Characters[GetMainCharacterIndex()].location !="")
 				{
+					Sea.MaxSeaHeight = 50.0;
+				} else {
 					Sea.MaxSeaHeight = 300.0;
-					Weathers.Sea2.Amp1 = 30.0;
-					Weathers.Sea2.Amp2 = 1.0;
 				}
 			}
 		}
