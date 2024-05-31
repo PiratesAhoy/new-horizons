@@ -77,11 +77,11 @@ my pet human{мой любимый человек}
 
 {=====| CharacterUtilite.c |=====}
 Promoted to #snationdesc# #srank#{Повышен до #snationdesc# #srank#}
-My dedication and faithful service for #snationname# have earned me the rank of #srank#.{Моя самоотверженность и верная служба в #snationname# принесли мне звание #srank#.}
+My dedication and faithful service for #snationname# have earned me the rank of #srank#.{Моя самоотверженность и верная служба для нации #snationname# принесли мне звание #srank#.}
 The #snationdesc# governor #sgovname# awarded me with the title and #snewland# acres of land.{#snationdesc# губернатор #sgovname# наградил меня званием и #snewland# акрами земли.}
 
 Joined Service of #snationname#{Начал службу на нацию #snationname#}
-I received a Letter of Marque from #snationname#. Now I am in their service, I can legally sink and capture ships, which means prize money and potential promotions for me in the future.{Я получил каперское свидетельство от нации #snationname#. Сейчас я у них на службе, могу легально топить и захватывать корабли, а это значит призовые деньги и потенциальное продвижение по службе для меня в будущем.}
+I received a Letter of Marque from #snationname#. Now I am in their service, I can legally sink and capture ships, which means prize money and potential promotions for me in the future.{Мне удалось получить каперское свидетельство от нации #snationname#. Сейчас я у них на службе, могу легально топить и захватывать корабли, а это значит призовые деньги и потенциальное продвижение по службе для меня в будущем.}
 
 Left Service of #snationname#{Покинул службу на нацию #snationname#}
 This marks the end of my service for #snationname#. But at least I am free now to pursue other goals.{Это знаменует собой окончание моей службы на нацию #snationname#. Но, по крайней мере, теперь я свободен и могу преследовать другие цели.}
@@ -165,7 +165,7 @@ The ship was about to sink when we captured her. We spotted three leaks in the h
 Visited{Посещен город}
 Visited the local shipwright.{Посещена местная верфь.\n}
 The shipwright agreed to repair the '#sshipname#' for the amount of #scost# pieces of gold.{Корабельный мастер согласился отремонтировать корабль '#sshipname#' за #scost# золотых монет.}
-Sold the '#sarcurship#', a #srship# for #ssellprice# pieces of gold.{Продан корабль '#sarcurship#', и #srship# за #ssellprice# золотых монет.\n}
+Sold the '#sarcurship#', a #srship# for #ssellprice# pieces of gold.{Продан корабль #srship# '#sarcurship#' за #ssellprice# золотых монет.\n}
 Bought a new ship, the '#snewship#' for #sbprice# pieces of gold.{Куплен новый корабль '#snewship#' за #sbprice# золотых монет.\n}
 Had the sails of the '#sarcurship#' repaired for #ssailcost# pieces of gold.{Отремонтированы паруса корабля '#sarcurship#' за #ssailcost# золотых монет.\n}
 Had the hull of the '#sarcurship#' repaired for #shullcost# pieces of gold.{Отремонтирован корпус корабля '#sarcurship#' за #shullcost# золотых монет.\n}
@@ -243,7 +243,7 @@ I was desperate enough to borrow some money from the local loanshark. Now I have
 I deposited some money at the local loanshark. #sloanshark# promised a good interest for my{Я внёс немного денег в местный банк. #sloanshark# пообещал хорошие проценты за мои}
 
 {=====| Ardent: both_reaction.c |=====}
-Captured!{Схвачен!}
+Captured!{Захвачен!}
 Damnation! That was one smuggling run too many. The patrol ships were too much for ours to take on and the wind wouldn't let us escape to sea.{Проклятие! Надо было не делать этот контрабандный рейс. Патрульных кораблей было слишком много, чтобы справиться с ними, а ветер не позволял нам выйти в море.}
 Damnation! That ship wasn't an easy merchant after all, but a fighting ship filled with soldiers. That will teach me to look at a ship's flag before attacking, though as we're being boarded, I may not have time to make use of the lesson.{Проклятие! В конце концов, этот корабль был не просто торговым, а боевым кораблем, полным солдат. Это научит меня смотреть на флаг корабля перед атакой, хотя, если нас возьмут на абордаж, у меня может не хватить времени воспользоваться этим уроком.}
 

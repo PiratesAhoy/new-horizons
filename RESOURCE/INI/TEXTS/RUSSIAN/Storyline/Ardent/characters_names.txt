@@ -10,11 +10,11 @@ O'Brien{О'Брайен}
 
 {=====| quests_reaction.c |=====}
 de la Vega{Де Ла Вега}
-Two Dogs{Два Пса}
+Two Dogs{Две Собаки}
 Fighting{Дерущихся}
-Two Dogs Fighting{Два Дерущихся Пса}
+Two Dogs Fighting{Две Дерущихся Собаки}
 not-Fighting{Не Дерущихся}
-Two Dogs not-Fighting{Два Не Дерущихся Пса}
+Two Dogs not-Fighting{Две Не Дерущихся Собаки}
 Carlos{Карлос}
 Ardenta{Ардота}
 Indian{Индеец}
@@ -42,10 +42,10 @@ Ayol{Айол}
 Bacha{Баша}
 Lucнa{Люсия}
 Edmundo{Эдмундо}
-Valerie{Валери}
+Valerie{Валерия}
 Downing{Даунинг}
 Piers{Пирс}
-Gilbert{Гильберт}
+Gilbert{Гилберт}
 Emmett{Эммет}
 Dawson{Доусон}
 
@@ -107,7 +107,7 @@ Carretero{Карретеро}
 Esteban{Эстебан}
 Rovapera{Ровапера}
 Mauricio{Маурисио}
-Juradu{Жураду}
+Juradu{Джурадо}
 Malbert{Малберт}
 Sangier{Сонжи}
 Randolph{Рэндольф}
@@ -122,12 +122,12 @@ Guinemant{Гинемо}
 Lavignen{Лавиньен}
 Valerian{Валериан}
 Decaux{Деко}
-Arnald{Арнальд}
+Arnald{Арнольд}
 Rimeaux{Римо}
 Bruyant{Брайант}
 Moncoutie{Монкутье}
-Philip{Филип}
-de Malvoisin{де Мальвозан}
+Philip{Филипп}
+de Malvoisin{Де Мальвозан}
 Franзois-Louis{Франсуа-Луи}
 Rousselet{Русселе}
 de Chвteaurenault{Де Шато-Рено}
@@ -149,9 +149,12 @@ Nъсez{Нусез}
 Emiliano{Эмильяно}
 de Guzmбn{Де Гузман}
 Gilles{Жиль}
-Clouzot{Клозу}
+Clouzot{Клузо}
 
 {=====| 90 characters |=====}
 
 {=====| Other |=====}
 Helen{Хелен}
+Clement{Клемент}
+Clementine{Клементина}
+Arguelles{Аргуэльес}
