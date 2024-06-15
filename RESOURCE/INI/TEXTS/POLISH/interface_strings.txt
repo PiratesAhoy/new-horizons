@@ -1,35 +1,35 @@
-Delete savefile confirm{Are you sure you want remove this game?}
-Overwrite savefile confirm{Are you sure you want overwrite this game?}
-Low storage and unable save create{Insufficent space on your harddrive. Unable to save.}
-Load game confirm{Are you sure you want load this game?}
-Unable to Load save game{Unable to load save game.}
-save game limit {You have reached the max number of save games allowed. You must delete a game before you can save a new game.}
-You can't save while sailing or boarding!{You can't save while sailing or boarding!}
-on ship in{on ship in}
-#sisland_name# Waters{#sisland_name# Waters}
+Delete savefile confirm{Are you sure you want remove this game?|Jesteś pewien, że chcesz usunąć ten zapis?}
+Overwrite savefile confirm{Are you sure you want overwrite this game?|Jesteś pewien, że chcesz nadpisać ten zapis?}
+Low storage and unable save create{Insufficent space on your harddrive. Unable to save.|Niewystarczająca ilość miejsca na dysku. Zapis niemożliwy.}
+Load game confirm{Are you sure you want load this game?|Jesteś pewien, że chcesz wczytać ten zapis?}
+Unable to Load save game{Unable to load save game.|Niepowodzenie przy próbie wczytania gry.}
+save game limit {You have reached the max number of save games allowed. You must delete a game before you can save a new game.|Osiągnięto dozwolony limit zapisów gry. Przed zapisem należy usunąć wcześniejszy zapis gry.}
+You can't save while sailing or boarding!{You can't save while sailing or boarding!|Nie można dokonać zapisu w trakcie żeglugi bądź abordażu}
+on ship in{on ship in|na statku}
+#sisland_name# Waters{#sisland_name# Waters|Wody}
 
-Salary info {Your crew demands its monthly salary. Will you pay them?}
+Salary info {Your crew demands its monthly salary. Will you pay them?|Twoja załoga domaga się zapłaty. Zapłacisz im?}
 
-New game confirm{Are you sure you want start a new game?}
+New game confirm{Are you sure you want start a new game?|Jesteś pewien, że chcesz rozpocząć nową grę?}
 
 Insert Disk Ok {Please insert "Pirates Of The Caribbean" disc 1 and press <Ok> to start application or <Exit> to quit.}
 
-Buy cannons confirm1{Do you really want to buy}
-Buy cannons confirm2{By adding cannons of less caliber you will decrease the firepower of Your ship to}
-Buy cannons confirm3{caliber. You agree?}
-Buy cannons confirm4{By adding cannons of greater caliber you will not increase the firepower of Your ship to}
-Transfer cannons confirm1{Do you really want to transfer}
-Transfer cannons confirm2{on to the ship}
+Buy cannons confirm1{Do you really want to buy|Na pewno chcesz dokonać zakupu}
+Buy cannons confirm2{By adding cannons of less caliber you will decrease the firepower of Your ship to|Poprzez instalację dział o mnieszym kalibrze zmniejszasz siłę ognoa Twojego okrętu}
+Buy cannons confirm3{caliber. You agree?| Zgadzasz się?}
+Buy cannons confirm4{By adding cannons of greater caliber you will not increase the firepower of Your ship to|Poprzez instalację dział o większym kalibrze siła ognia okrętu nie ulegnie zmianie}
+Transfer cannons confirm1{Do you really want to transfer|Na pewno chcesz to przenieść}
+Transfer cannons confirm2{on to the ship|na swój okręt}
 Transfer cannons confirm3{By transferring cannons equal or less than the maximum caliber you will get cannons of}
 Transfer cannons confirm4{By transferring cannons more than the maximum caliber you will get cannons of}
-Exit from cannons confirm{The purchase isn't confirmed. Do you really want to exit?}
-Adding{Replaces only damaged cannons}
-Exit from abordage confirm{Do you really want to leave this ship?}
-Exit from fortabordage confirm{Do you really want to halt the fort robbery?}
-Exit from exchange confirm{Do you really want to exit?}
-Not enough crew assigned{Not enough crew assigned!}
+Exit from cannons confirm{The purchase isn't confirmed. Do you really want to exit?|Zakup niezatwierdzony. Na pewno chcesz wyjść?}
+Adding{Replaces only damaged cannons|Zamień tylko niesprawne działa}
+Exit from abordage confirm{Do you really want to leave this ship?|Na pewno chcesz opuścić ten statek?}
+Exit from fortabordage confirm{Do you really want to halt the fort robbery?|Na pewno chcesz przerwać rabunek?}
+Exit from exchange confirm{Do you really want to exit?|Na pewno chcesz wyjść?}
+Not enough crew assigned{Not enough crew assigned!|Niewystarczająca załoga}
 Min crew reached{Min crew reached!}
-This officer has too low Leadership and Sailing skills to command this ship. Assign anyway?{This officer has too low Leadership and Sailing skills to command this ship. Assign anyway?}
+This officer has too low Leadership and Sailing skills to command this ship. Assign anyway?{This officer has too low Leadership and Sailing skills to command this ship. Assign anyway?|Ten oficer posiada za niskie statystyki Dowodzenia oraz Żeglugi, żeby dowodzić tym statkiem. Przydzielić mimo wszystko?}
 You can't command a fleet until reaching level{You can't command a fleet until reaching level}
 Leadership. Assign anyway?{Leadership. Assign anyway?}
 's current colours{current colours}
