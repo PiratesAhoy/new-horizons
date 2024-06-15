@@ -1,39 +1,39 @@
-Ship_got_good		{You've got %1 cwt of %2}
-Ship_cant_got_good	{Can't load %1 - hold is full!}
+Ship_got_good		{Masz %1 z %2}
+Ship_cant_got_good	{Nie można załadować %1! Ładownia pełna!}
 
-seg_Balls		{Cannonballs}
-seg_Grapes		{Grapes}
-seg_Knippels	{Knippels}
-seg_Bombs		{Bombs}
-seg_Sailcloth	{Sailcloth}
-seg_Planks		{Planks}
-seg_Slaves		{Slaves}
-seg_Wheat		{Wheat}
-seg_Ebony		{Ebony}
-seg_Chocolate	{Chocolate}
-seg_Sugar		{Sugar}
-seg_Wine		{Wine}
-seg_Linen		{Linen}
+seg_Balls		{Kule armatnie}
+seg_Grapes		{Kartacze}
+seg_Knippels		{Kule łańcuchowe}
+seg_Bombs		{Granaty}
+seg_Sailcloth		{Płótno żaglowe}
+seg_Planks		{Deski}
+seg_Slaves		{Niewolnicy}
+seg_Wheat		{Zboże}
+seg_Ebony		{Heban}
+seg_Chocolate		{Czekolada}
+seg_Sugar		{Cukier}
+seg_Wine		{Wino}
+seg_Linen		{Len}
 seg_Rum			{Rum}
-seg_Tobacco		{Tobacco}
-seg_Coffee		{Coffee}
-seg_Mahogany	{Mahogany}
-seg_Cinnamon	{Cinnamon}
-seg_Copra		{Copra}
-seg_Paprika		{Paprika}
-seg_Fruits		{Fruits}
-seg_Ale			{Ale}
-seg_Silk		{Silk}
-seg_Clothes		{Clothes}
-seg_Cotton		{Cotton}
-seg_Sandal		{Sandal}
-seg_Leather		{Leather}
-seg_Oil			{Oil}
-seg_Gold		{Gold}
-seg_Silver		{Silver}
-seg_Bricks		{Bricks}
-seg_Food		{Food}
-seg_Weapon		{Weapons}
-seg_Gunpowder	{Gunpowder}
-seg_Ration		{Food}
-seg_Medicines	{Medicaments}
+seg_Tobacco		{Tytoń}
+seg_Coffee		{Kawa}
+seg_Mahogany		{Mahoń}
+seg_Cinnamon		{Cynamon}
+seg_Copra		{Kopra}
+seg_Paprika		{Papryka}
+seg_Fruits		{Owoce}
+seg_Ale			{Piwo}
+seg_Silk		{Jedwab}
+seg_Clothes		{Ubrania}
+seg_Cotton		{Bawełna}
+seg_Sandal		{Drewno sandałowe}
+seg_Leather		{Skóra}
+seg_Oil			{Oliwa}
+seg_Gold		{Złoto}
+seg_Silver		{Srebro}
+seg_Bricks		{Cegły}
+seg_Food		{Jedzenie}
+seg_Weapon		{Broń}
+seg_Gunpowder		{Proch strzelniczy}
+seg_Ration		{Jedzenie}
+seg_Medicines		{Lekarstwa}
