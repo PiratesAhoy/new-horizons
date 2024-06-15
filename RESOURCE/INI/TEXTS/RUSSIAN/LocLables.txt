@@ -40,7 +40,7 @@ Khael Roa Shore{Берег Каэль-Роа}
 Cayman{Кайман}
 Grand Cayman{Большой Кайман}
 Cayman Kai{Кайман-Кай}
-Sand Bluff{Песчаный Утес}
+Sand Bluff{Песчаный Утёс}
 Eden Rock{Райская Скала}
 Grand Cayman Fort{Форт Большого Каймана}
 Hispaniola{Испаньола}

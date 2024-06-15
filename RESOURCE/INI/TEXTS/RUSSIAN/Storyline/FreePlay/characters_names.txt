@@ -41,6 +41,7 @@ Mercer{Мерсер}
 Bligh{Блай}
 Uncle{Дядя}
 Gules{Гюлес}
+Mephistopheles{Мефистофель}
 
 {=====| quests_reaction.c |=====}
 Bartolomeu{Бартоломью}

@@ -1236,7 +1236,7 @@ Windem{Уиндэм}
 Simona{Симона}
 Tolman{Толмэн}
 Voyant{Воянт}
-Fructoso{Фруктоcо}
+Fructoso{Фруктозо}
 Juana{Хуана}
 Garcнa{Гарча}
 Ramos{Рамос}

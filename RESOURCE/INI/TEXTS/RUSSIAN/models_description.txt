@@ -212,6 +212,7 @@ Get a fresh midshipman's uniform that shows promise for the future!{Получи
 Fred Bob the pirate!{Пират Фред Боб!}
 A nice Caribbean complexion, white open-collared longsleeved shirt, green vest, pony-tail hair, look what it does for the curves!  Speaking of which...{Замечательный карибский цвет лица, белая рубашка без воротника, с длинными рукавами. Зеленый жилет, конский хвост, посмотрите, какие формы!}
 A light blue open-collared longsleeved shirt, brown vest, burgundy laced bodice, pony-tail hair, look what it does for the curves!  Speaking of which...{Легкая синяя рубашка без воротника, с длинными рукавами. Коричневый жилет, бордовый шнурованный корсаж, конский хвост, посмотрите, какие формы!}
+A dress with light blue sleeves and collar, brown laced bodice, burgundy skirt, dark red hair, look what it does for the curves!  Speaking of which...{Платье со светло-голубыми рукавами и воротником, коричневый лиф со шнуровкой, бордовая юбка, темно-рыжие волосы, посмотрите, какие формы!}
 If ye be yearnin' t' be a Bilgemunky, this be yer outfit.{Если ты хочешь быть фокусником, то это твой наряд.}
 Retro French soldier look, but with a renegade flair, and a red bandana to top it off.{Вид старинного французского солдата, но со склонностью к предательствам и красной банданой сверху.}
 Give me an outfit suitable for an adventurer, but this time, make it a bit more evil.{Дайте мне наряд, подходящий для авантюриста, но на этот раз сделайте его немного злее.}
@@ -336,7 +337,8 @@ An elegant and revealing gown with Steel Cuirass.{Элегантное и отк
 An elegant and revealing gown with Battle Cuirass.{Элегантное и откровенное платье с боевой кирасой.}
 An elegant and revealing gown with Gold Cuirass.{Элегантное и откровенное платье с золотой кирасой.}
 I want to look like Roxanne Lalliere.{Я хочу выглядеть как Роксана Лаллир.}
-I want to look like Aveline de Grandprй.{Я хочу выглядеть как Авелина де Грандпре.}
+Here is an assassin but a beautiful one!{Я хочу выглядеть как прекрасная убийца Авелина де Грандпре!}
+The scar on his cheek shows that this man is a veteran of many fights.{Шрам на щеке показывает, что этот человек - ветеран многих боёв.}
 Catalina like simple and practical sturdy leather but without the cuirass.{Каталина в простой и практичной добротной коже, но без кирасы.}
 I want something simple and practical, sturdy leather and steel like Catalina was known to wear.{Я хочу что-нибудь простое и практичное, добротную кожу и сталь, как у Каталины.}
 Simple and practical sturdy leather with Steel Cuirass.{Простая и практичная добротная кожа со стальной кирасой.}
