@@ -1,27 +1,34 @@
 pipeline {
-	agent none
+  agent none
 
-	triggers {
-		cron('@daily')
-	}
+  parameters {
+    booleanParam(name: 'FORCE', defaultValue: false, description: 'Force update')
+  }
 
-	stages {
-		stage('Build') {
-			agent {
-				label 'os:windows'
-			}
+  triggers {
+    cron('@daily')
+  }
 
-			when {
-				changeset "**"
-			}
+  stages {
+    stage('Build') {
+      agent {
+        label 'os:windows'
+      }
 
-			steps {
-				checkout scm
-				dir("installer") {
-					bat "pip install -r requirements.txt"
-					bat "python publish.py"
-				}
-			}
-		}
-	}
+      when {
+        anyOf {
+          changeset "**"
+          expression { params.FORCE }
+        }
+      }
+
+      steps {
+        checkout scm
+        dir("installer") {
+          bat "pip install -r requirements.txt"
+          bat "python publish.py"
+        }
+      }
+    }
+  }
 }
