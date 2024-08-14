@@ -2,6 +2,41 @@ Ardent{Ардент}
 Fortune{Фортуна}
 Time to put the 'gold' and 'piracy' into the Golden Age of Piracy! Kidnap, burglary and outright piracy - Charles Ardent does it all! (Though there are those that say Ardent was actually a woman, Helen.){Пора поместить 'золото' и 'пиратство' в Золотой Век Пиратства! Похищения, кражи со взломом и откровенное пиратство - Чарльз Ардент делал все это! (Хотя есть те, кто утверждает, что Ардент - на самом деле была женщиной Хелен.)}
 
+HINT: If that warden comes close enough to the bars, you can mug him!{ПОДСКАЗКА: Если надзиратель подойдёт достаточно близко к решетке, вы можете ограбить его!}
+Crew remaining:{Команды осталось:}
+crew died of maltreatment{моряков погибло от жестокого обращения}
+HINT: You aren't well armed and your officers aren't armed at all. Take all the help you can get!{ПОДСКАЗКА: Вы плохо вооружены, а ваши офицеры вообще не вооружены. Возьмите всё, что может помочь!}
+crew died in the battle{моряков погибло в бою}
+I'm taking one of the soldier's uniforms. A disguise might be useful later.{Я возьму одну из солдатских униформ. Маскировка может пригодиться позже.}
+HINT: The captain will be more willing to talk to someone who looks like a soldier.{ПОДСКАЗКА: Капитан будет охотнее разговаривать с кем-то, кто выглядит как солдат.}
+You broke the window and grabbed the map. Now RUN!{Ты разбил Окно и схватил Карту. А теперь БЕГИ!}
+That looks like the original crew returning. Better get aboard and get out of here!{Похоже, возвращается команда. Лучше поднимайтесь на борт и убирайтесь отсюда!}
+Now to wait for the 'Siroco'...{Теперь осталось дождаться 'Сирокко'...}
+Maybe there's something in that room with the wall markings...{Может быть, в той комнате с надписями на стенах есть что-то...}
+You have been given a lockpick.{Вы получили отмычки!}
+Run! They're after you!{Бегите в джунгли! Вас преследует стража!}
+Search party{Поисковая группа}
+Someone heard that window break!{Кто-то услышал звук разбитого окна!}
+Yedam Kinne should have finished with the pass by now.{Едам Кинн уже должен был закончить с изготовлением пропуска.}
+Time to go to church!{Время идти в Церковь!}
+This uniform is uncomfortable, being made for a man, but I'd better wear it whenever I need to talk to the governor.{Эта униформа неудобна, поскольку сшита для мужчины, но мне лучше надевать её всякий раз, когда мне нужно поговорить с губернатором.}
+Finally! Out of that ill-fitting uniform and back into my proper clothes.{Наконец-то! Снимаю эту плохо сидящую униформу и возвращаюсь в свою нормальную одежду.}
+Again I have to wear a man's uniform. Better than letting the French see me in my usual outfit, I suppose...{Снова мне приходится надевать мужскую форму. Полагаю, это лучше, чем позволить французам увидеть меня в моём обычном наряде...}
+Back to my own ship and back to my own clothes!{Обратно на мой собственный корабль и обратно к моей собственной одежде!}
+You found all your weapons.{Вы нашли всё своё оружие.}
+You found your equipment. Equip some of it!{Вы нашли свою экипировку. Снарядите кое-что из этого!}
+The lock on this door must date back to the time when this town was Spanish.{Замок на этой двери, должно быть ещё со времён, когда этот город был Испанским.}
+It opens with the same key that you used to escape from Havana prison!{Он открывается тем же ключом, которым вы воспользовались для побега из Гаванской тюрьмы!}
+A few minutes later...{Прошло несколько минут...}
+Hint: To make an officer available to command your ship, assign that officer to one of the shore party slots.{ПОДСКАЗКА: Чтобы назначить офицера для командования вашим кораблем, назначьте этого офицера на одно из мест береговой группы.}
+Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.{ПОДСКАЗКА: Чтобы назначить офицера для командования вашим кораблем, назначьте этого офицера на одно из первых трёх мест в береговой группе.}
+Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{ПОДСКАЗКА: Чтобы предоставить офицера в качестве сопровождающего, назначьте этого офицера на одно из мест береговой охраны.}
+Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{ПОДСКАЗКА: Чтобы предоставить офицера в качестве сопровождающего, назначьте этого офицера на одно из первых трёх мест для береговой охраны.}
+Capitбn{Капитан}
+CapitЭo{Капитэо}
+Teniente{Лейтенант}
+Electress{Избранница}
+
 Esme{Эсме}
 Hasta{Хаста}
 Neptuno{Нептун}

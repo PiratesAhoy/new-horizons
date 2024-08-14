@@ -2298,12 +2298,6 @@ itmdescr_bladeBB
 Тяжелая сабля с вырезанной на рукоятке буквой 'E'.
 }
 
-itmname_machete		 	{Мачете}
-itmdescr_machete
-{
-Используется для резки сахарного тростника.
-}
-
 itmname_BBDagger		{Кинжал}
 itmdescr_BBDagger
 {
@@ -2425,12 +2419,6 @@ itmname_pistolbladeBB		{Клинок}
 itmdescr_pistolbladeBB
 {
 Ещё один тяжелый кортик с вырезанной на рукояти буквой 'T'. Да, я читал, что он использовал два клинка.
-}
-
-itmname_pistolwhip		{Кнут}
-itmdescr_pistolwhip
-{
-Однохвостый кнут из плетеной кожи, предназначенный как орудие для работы со скотом. Используйте его, чтобы разоружить врагов.
 }
 
 itmname_pistolcannon		{Ручное Орудие}

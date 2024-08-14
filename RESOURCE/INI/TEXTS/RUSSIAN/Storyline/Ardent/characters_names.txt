@@ -51,7 +51,7 @@ Dawson{Доусон}
 
 {=====| TempQuest.c |=====}
 Inquisitor{Инквизитор}
-Monkey{Обезьяна}
+Monkey{Обезьянка}
 Crescent Moon{Растущая Луна}
 Rain Cloud{Грозовая Туча}
 Golden Flower{Золотой Цветок}

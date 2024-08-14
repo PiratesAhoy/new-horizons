@@ -172,7 +172,7 @@ void ProcessDialogEvent()
 				link.l12 = "Ммм, извините меня, я не хочу быть мелочным, но это 'здание' выглядит немного странно для меня...";
 				link.l12.go = "odd";
 
-				link.l13 = "Эй, ты там, перед клавиатурой! Это здание, которое ВЫ создали, так как насчет того, чтобы создать свой собственный диалог? Просто используйте Блокнот, чтобы открыть файл program\dialogs\" " + NPchar.dialog.filename + " перезапишите этот текст своим. Тогда следуйте инструкциям в комментариях.";
+				link.l13 = "Эй, ты там, перед клавиатурой! Это здание, которое ВЫ создали, так как насчет того, чтобы создать свой собственный диалог? Просто используйте Блокнот, чтобы открыть файл program\dialogs\ " + NPchar.dialog.filename + " перезапишите этот текст своим. Тогда следуйте инструкциям в комментариях.";
 				link.l13.go = "your_dialog"; //это тот случай, который выполняется, если вы выберете опцию диалога 113. Это прямо внизу.
 			}
 		break;
@@ -461,7 +461,7 @@ void ProcessDialogEvent()
 		case "chat2":
 			dialog.text = SelectRumour(FindIslandByLocation(LoadedLocation.id), GetNationIDByType(GetCurrentLocationNation()) );
 
-			if (makeint(environment.time) >= 22.0 || makeint(environment.time) < 10.0)
+			if (GetTime() >= 22.0 || GetTime() < 10.0)
 			{
 				Link.l1 = B_TEXT[22];
 				Link.l1.go = "hall_day_wait";
@@ -556,7 +556,7 @@ void ProcessDialogEvent()
 		case "exit infected2":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			if (makeint(environment.time) < 22.0 && makeint(environment.time) >= 10.0) TavernWaitDate2("wait_day"); // NK чтобы поймать, если не ночь
+			if (GetTime() < 22.0 && GetTime() >= 10.0) TavernWaitDate2("wait_day"); // NK чтобы поймать, если не ночь
 			TavernWaitDate("wait_day"); // NK таким образом, происходит затухание
 			pchar.chr_ai.poison = 20 + rand(50 -sti(PChar.skill.Sneak) -sti(PChar.skill.defence) );
 			grgbonus = 200+Rand(200)

@@ -246,12 +246,6 @@ itmdescr_bladepickaxe2
 Длинный острый инструмент, используемый в горнодобывающем деле.
 }
 
-itmname_machete		 	{Мачете}
-itmdescr_machete
-{
-Используется для рубки сахарного тростника.
-}
-
 itmname_holy_water		 {Святая Вода}
 itmdescr_holy_water
 {
@@ -1760,6 +1754,7 @@ itmdescr_treasure4
 .
 }
 
+
 itmname_treasure5		{Большое Кольцо}
 itmdescr_treasure5
 {
@@ -1783,6 +1778,7 @@ itmdescr_treasure8
 {
 .
 }
+
 
 itmname_treasure9		{Большие Часы}
 itmdescr_treasure9
@@ -1849,6 +1845,7 @@ itmdescr_sword_handle2
 {
 .
 }
+
 
 itmname_coin3			{Дублон}
 itmdescr_coin3
