@@ -2262,3 +2262,15 @@ itmname_mapKRTempleUpper {Карта Храма #slocation#}
 itmdescr_mapKRTempleUpper {
 Карта верхних уровней храма #slocation#.
 }
+
+itmname_machete		 	{Мачете}
+itmdescr_machete
+{
+Используется для нарезки сахарного тростника.
+}
+
+itmname_pistolwhip		{Кнут}
+itmdescr_pistolwhip
+{
+Однохвостый хлыст из плетёной кожи, предназначенный для работы со скотом. Используйте его, чтобы обезоружить врагов.
+}

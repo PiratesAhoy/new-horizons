@@ -57,7 +57,7 @@ Glover{Гловер}
 Wilfred{Уилфред}
 English Soldier{Английский Солдат}
 French Soldier{Французский Солдат}
-Rabel{Рабэл}
+Rabel{Рабель}
 Yverneau{Иверно}
 Anacleto{Анаклето}
 Rui Sa{Руй Са}
@@ -79,7 +79,7 @@ Norton{Нортон}
 Brian{Брайан}
 The Slayer{Истребитель}
 Ferro{Ферро}
-Cerezo{Церезо}
+Cerezo{Черезо}
 Hector{Гектор}
 Barbossa{Барбосса}
 Robert{Роберт}
@@ -87,7 +87,7 @@ Christopher{Кристофер}
 Silehard{Сайлхард}
 
 {=====| TempQuest.c |=====}
-Bythesea{Байтси}
+Bythesea{Байтези}
 Harold{Харольд}
 Barrat{Баррат}
 Sailor{Моряк}

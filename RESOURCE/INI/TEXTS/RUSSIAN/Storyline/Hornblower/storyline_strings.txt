@@ -2,6 +2,8 @@ The Chronicles of Horatio Hornblower{Хроники Горацио Хорнбл�
 Justinian{Юстиниан}
 As a seventeen-year-old with a touch for seasickness, young Horatio Hornblower hardly cuts a dash in His Majesty's Navy. Yet from the moment he is ordered to board the Justinian, he proves his seafaring mettle on the waves. With a character-forming duel, several chases and some strange tavern encounters, the young Hornblower is soon forged into a formidable man of the sea.{Будучи семнадцатилетним подростком, страдающим морской болезнью, молодой Горацио Хорнблауэр с трудом попадает во флот Его Величества. Тем не менее, с того момента, как ему приказано подняться на борт 'Юстиниана', он доказывает свою морскую стойкость на волнах. Молодой Хорнблауэр после исключительной дуэли, нескольких погонь и странных встреч в тавернах, вскоре превращается в грозного человека на море.}
 
+Donatien Thibaud has surrendered his sword to you.{Донатьен Тибо отдал вам свой меч.}
+
 Justinian{Юстиниан}
 Indefatigable{Неустанный}
 Happy Times{Счастливые Времена}
@@ -18,5 +20,5 @@ Phantom{Фантом}
 Hound{Гончая}
 Mulberry{Шелковица}
 Resource{Ресурс}
-Tйmйraire{Вулкан}
-Mйduse{Медуза}
+Temeraire{Отважный}
+Meduse{Медуза}

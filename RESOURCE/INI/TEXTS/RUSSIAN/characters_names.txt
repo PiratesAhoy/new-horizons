@@ -279,8 +279,8 @@ Maurice{Морис}
 Dupont{Дюпон}
 Abraham{Абрахам}
 Hollander{Голландец}
-Oweyn{Овейн}
-McDorey{МакДори}
+Oweyn{Оуэн}
+McDorey{Макдори}
 Arendt{Арен}
 Verheugen{Верхеген}
 Prosper{Проспер}
@@ -1006,7 +1006,8 @@ Dusac{Дюсак}
 Konrad{Конрад}
 Kulczycki{Кульчицкий}
 Silver{Сильвер}
-Nathaniel's Crewmember{Член Команды Хаука}
+Nathaniel's Crewmember{Член Команды Натаниэля}
+Danielle's Crewmember{Член Команды Даниэль}
 Clair{Клэр}
 Larrousse{Ларрусс}
 France_bukaner_01{Французский Пират}
@@ -1058,7 +1059,6 @@ Vickers{Викерс}
 Carpenter1{Плотник}
 Meredith{Мередит}
 Byrom{Байром}
-Shore Indian{Береговой Индеец}
 Gilberto{Гильберто}
 Solano{Солано}
 Rafael{Рафаэль}
@@ -1383,6 +1383,7 @@ Eccleston{Экклстон}
 Boulton{Бултон}
 Carib{Кариб}
 Carib Warrior{Карибский Воин}
+Shore Indian{Береговой Индеец}
 Laurens-Jan{Лоуренс-Ян}
 Revenboer{Ревенбур}
 Toothless Pew{Беззубый Пью}
