@@ -54,6 +54,7 @@ land_ItemsDead {Loot Corpse}
 land_FastReload {Fast Travel}
 land_ItemsUse {UseItem}
 land_DialogStart {Talk}
+land_TalkSelf {Talk to Self}
 land_ItemsChange {Exchange}
 land_TakeItem {Take Item}
 land_PlaceItem {Place Item}

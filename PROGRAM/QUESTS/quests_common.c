@@ -1040,6 +1040,12 @@ void CommonQuestComplete(string sQuestName)
 			Lai_SetPlayerType(pchar);
 			Pchar.dialog.filename = "blaze_dialog.c"; // PB: To ensure this is reset after using a custom file for self dialog
 		break;
+		
+		// Vex: Self Dialog Port -->
+		case "pchar_back_to_player":
+			Lai_SetPlayerType(pchar);
+		break;
+		// <-- Vex: Self Dialog Port
 
 		// Grey Roger: This is also taken from "standard"
 		// Needed for "Strange Things Going On", also for one of the Thiefbuster traps
