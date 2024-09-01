@@ -12,6 +12,34 @@ bool bLandInterfaceStart = false;
 
 bool bInterlocutorActive = false; // KK
 
+
+bool bSelfDialogTurn = true; // Vex: Self Dialog Port; changes whether the player turns to face the camera when talking to themself
+
+// Vex: Self Dialog Port -->
+void StartActorSelfDialog(string _CurrentNode)
+{
+	ref pchar = GetMainCharacter();
+	pchar.Dialog.Filename = "MainHero_dialog.c";
+    LAi_SetActorType(pchar);
+    locCameraSleep(true);
+
+	if(bSelfDialogTurn){
+		 LAi_CharacterSaveAy(pchar);
+		if (stf(pchar.chr_ai.type.ay) > 0)
+		{
+			CharacterTurnAy(pchar,  -PI + abs(stf(pchar.chr_ai.type.ay)));  // 180 == 1
+		}
+		else
+		{
+			CharacterTurnAy(pchar,  PI - abs(stf(pchar.chr_ai.type.ay)));  // 180 == 1
+		}
+	}
+   
+    pchar.Dialog.CurrentNode = _CurrentNode;
+    LAi_ActorSelfDialog(pchar, "pchar_back_to_player");
+}
+// <-- Vex: Self Dialog Port
+
 void procBattleCommandSound()
 {
 	string comName = GetEventData();
@@ -197,6 +225,12 @@ ref BLI_CheckCommand()
 		case "BI_DialogStart":
 			g_intRetVal = 0;
 		break;
+		
+		// Vex: Self Dialog Port -->
+		case "BI_TalkSelf":
+			g_intRetVal = 0;
+		break;
+		// <-- Vex: Self Dialog Port
 
 		case "BI_ItemsChange":
 			g_intRetVal = 0;
@@ -282,6 +316,11 @@ void BLI_ExecuteCommand()
 			if(tmpi>=0 && !CheckAttribute(tmpChar, "corpse"))	Event("dlgReady","l",tmpi);
 			else Event("dlgReady","l",tmpi); //Log_SetStringToLog(TranslateString("","Gamlet")); //Levis: CORPSEMODE 3 fix, Remove event to revert
 		break;
+		// Vex: Self Dialog Port -->
+		case "BI_TalkSelf":
+			StartActorSelfDialog("TalkSelf_Main");
+		break;
+		// <-- Vex: Self Dialog Port
 		case "BI_ItemsChange":
 			tmpi = SendMessage(GetMainCharacter(),"ls",MSG_CHARACTER_EX_MSG,"FindDialogCharacter");
 			if(tmpi>=0)	LaunchCharacterItemChange(GetCharacter(tmpi));
@@ -498,6 +537,14 @@ void BLI_SetObjectData()
 	objLandInterface.Commands.DialogStart.texNum	= 0;
 	objLandInterface.Commands.DialogStart.event		= "BI_DialogStart";
 	objLandInterface.Commands.DialogStart.note		= LanguageConvertString(idLngFile, "land_DialogStart");
+	// Vex: Self Dialog Port -->
+	objLandInterface.Commands.TalkSelf.enable		= true;
+	objLandInterface.Commands.TalkSelf.picNum		= calcTextureIndex(4, 2);
+	objLandInterface.Commands.TalkSelf.selPicNum	= calcSelectedTextureIndex(4, 2);
+	objLandInterface.Commands.TalkSelf.texNum		= 0;
+	objLandInterface.Commands.TalkSelf.event		= "BI_TalkSelf";
+	objLandInterface.Commands.TalkSelf.note			= "Self Talk";
+	// <-- Vex: Self Dialog Port
 	objLandInterface.Commands.ItemsChange.enable	= true;
 	objLandInterface.Commands.ItemsChange.picNum	= calcTextureIndex(1, 2);
 	objLandInterface.Commands.ItemsChange.selPicNum	= calcSelectedTextureIndex(1, 2);
@@ -1081,6 +1128,11 @@ void BLI_SetPossibleCommands()
 
 	objLandInterface.Commands.FastReload.enable	= bTmpBool==true; // KK causes more problems than good && objLandInterface.Commands.DialogStart.enable==false;//MAXIMUS
 	bUseCommand = true;
+
+	// Vex: Self Dialog Port -->
+	objLandInterface.Commands.TalkSelf.enable = true;
+	bUseCommand = true;
+	// <-- Vex: Self Dialog Port
 
 	if(GetCharacterPerkUsing(mchref,"Rush"))
 	{
