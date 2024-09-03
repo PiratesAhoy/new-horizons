@@ -14,43 +14,43 @@ void ProcessDialogEvent()
     ref chr;
     float  fTemp;
     bool bOk;
-    
+
 	switch(Dialog.CurrentNode)
 	{
         case "Exit":
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			DialogExit_Self();
 		break;
-		
+
 		case "First time":
 	      	NextDiag.TempNode = "First time";
 
 	        Dialog.Text = "First time";
-			Link.l1 = "First time text (exit)";
-			Link.l1.go = "exit";
+			Link.l1 = DLG_TEXT[0];
+			Link.l1.go = DLG_TEXT[1];
 		break;
 
 		case "TalkSelf_Main":
 	   		NextDiag.TempNode = "First time";
-			Dialog.Text = "What to do ...";
+			Dialog.Text = DLG_TEXT[2];
 
-			Link.l1 = "It would surely not hurt to rest a bit.";
+			Link.l1 = DLG_TEXT[3];
 			Link.l1.go = "TalkSelf_Wait1";
 
-			Link.l10 = "I changed my mind.";
+			Link.l10 = DLG_TEXT[4];
 			Link.l10.go = "exit";
 		break;
 
 		case "TalkSelf_Wait1":
-			Dialog.Text = "How many hours?";
-		
+			Dialog.Text = DLG_TEXT[5];
+
 			Link.l1.edit = "string";
 			Link.l1.go = "TalkSelf_Wait2";
 
 		break;
-		
+
 		case "TalkSelf_Wait2":
-			Dialog.Text = "Maybe not, then ..."; // If a valid integer is given, this won't have time to show up.
+			Dialog.Text = DLG_TEXT[6]; // If a valid integer is given, this won't have time to show up.
 
 			int iWaitHours = sti(Dialog.value);
 
@@ -61,7 +61,7 @@ void ProcessDialogEvent()
 				Whr_UpdateWeather(false);
 				DialogExit_Self();
 			}
-			Link.l1 = "I changed my mind.";
+			Link.l1 = DLG_TEXT[4];
 			Link.l1.go = "exit";
 		break;
 	}

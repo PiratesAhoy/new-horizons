@@ -54,6 +54,7 @@ land_ItemsDead {Обыск трупа}
 land_FastReload {Переход}
 land_ItemsUse {Использовать}
 land_DialogStart {Говорить}
+land_TalkSelf {Мысли вслух}
 land_ItemsChange {Обменяться}
 land_TakeItem {Взять}
 land_PlaceItem {Положить}
