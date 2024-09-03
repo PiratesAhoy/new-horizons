@@ -648,7 +648,7 @@ void BLI_SetObjectData()
 	objLandInterface.Commands.TalkSelf.selPicNum	= calcSelectedTextureIndex(11, 2);
 	objLandInterface.Commands.TalkSelf.texNum		= 0;
 	objLandInterface.Commands.TalkSelf.event		= "BI_TalkSelf";
-	objLandInterface.Commands.TalkSelf.note			= "Self Talk";
+	objLandInterface.Commands.TalkSelf.note			= LanguageConvertString(idLngFile, "land_TalkSelf");
 	// <-- Vex: Self Dialog Port
 
 	// список пользовательских картинок
