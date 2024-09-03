@@ -537,14 +537,6 @@ void BLI_SetObjectData()
 	objLandInterface.Commands.DialogStart.texNum	= 0;
 	objLandInterface.Commands.DialogStart.event		= "BI_DialogStart";
 	objLandInterface.Commands.DialogStart.note		= LanguageConvertString(idLngFile, "land_DialogStart");
-	// Vex: Self Dialog Port -->
-	objLandInterface.Commands.TalkSelf.enable		= true;
-	objLandInterface.Commands.TalkSelf.picNum		= calcTextureIndex(4, 2);
-	objLandInterface.Commands.TalkSelf.selPicNum	= calcSelectedTextureIndex(4, 2);
-	objLandInterface.Commands.TalkSelf.texNum		= 0;
-	objLandInterface.Commands.TalkSelf.event		= "BI_TalkSelf";
-	objLandInterface.Commands.TalkSelf.note			= "Self Talk";
-	// <-- Vex: Self Dialog Port
 	objLandInterface.Commands.ItemsChange.enable	= true;
 	objLandInterface.Commands.ItemsChange.picNum	= calcTextureIndex(1, 2);
 	objLandInterface.Commands.ItemsChange.selPicNum	= calcSelectedTextureIndex(1, 2);
@@ -649,6 +641,15 @@ void BLI_SetObjectData()
 	objLandInterface.Commands.ActivateRush.texNum		= 0;
 	objLandInterface.Commands.ActivateRush.event		= "BI_ActivateRush";
 	objLandInterface.Commands.ActivateRush.note			= LanguageConvertString(idLngFile, "land_ActivateRush");
+
+	// Vex: Self Dialog Port -->
+	objLandInterface.Commands.TalkSelf.enable		= true;
+	objLandInterface.Commands.TalkSelf.picNum		= calcTextureIndex(4, 2);
+	objLandInterface.Commands.TalkSelf.selPicNum	= calcSelectedTextureIndex(4, 2);
+	objLandInterface.Commands.TalkSelf.texNum		= 0;
+	objLandInterface.Commands.TalkSelf.event		= "BI_TalkSelf";
+	objLandInterface.Commands.TalkSelf.note			= "Self Talk";
+	// <-- Vex: Self Dialog Port
 
 	// список пользовательских картинок
 		// cancel icon
