@@ -1095,6 +1095,23 @@ void BLI_SetPossibleCommands()
 		curcom.enable = false;
 	}
 
+	// Vex: Self Dialog Port -->
+	bool canTalkToSelf = true;
+
+	if (!chrMode == 0) canTalkToSelf = false;
+	if (LAi_IsBoardingProcess()) canTalkToSelf = false;
+	if (LAi_group_IsActivePlayerAlarm()) canTalkToSelf = false;
+	if (!LAi_IsCharacterControl(mchref)) canTalkToSelf = false;
+	if (CheckAttribute(mchref, "IsOnDeck") && mchref.IsOnDeck==true) canTalkToSelf = false; // Talking to self on deck crashes the game for some reason. This is a temporary fix.
+
+	if (canTalkToSelf){
+		objLandInterface.Commands.TalkSelf.enable = true;
+	}
+	else{
+		objLandInterface.Commands.TalkSelf.enable = false;
+	}
+	// <-- Vex: Self Dialog Port
+
 	if(chrMode==0)
 	{
 		bTmpBool = true;
@@ -1129,11 +1146,6 @@ void BLI_SetPossibleCommands()
 
 	objLandInterface.Commands.FastReload.enable	= bTmpBool==true; // KK causes more problems than good && objLandInterface.Commands.DialogStart.enable==false;//MAXIMUS
 	bUseCommand = true;
-
-	// Vex: Self Dialog Port -->
-	objLandInterface.Commands.TalkSelf.enable = true;
-	bUseCommand = true;
-	// <-- Vex: Self Dialog Port
 
 	if(GetCharacterPerkUsing(mchref,"Rush"))
 	{
