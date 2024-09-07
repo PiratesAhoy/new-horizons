@@ -1529,19 +1529,19 @@ void ProcessDialogEvent()
 			PChar.tempship = PChar.ship.idx;
 			PChar.oldship = PChar.ship.idx;
 
-			PChar.tempship.idx = PChar.oldship.idx
+			PChar.tempship.idx = PChar.oldship.idx;
 			PChar.oldship.idx = PChar.ship.idx;
 			PChar.ship.idx = PChar.tempship.idx;
 
-			PChar.tempship.HP = PChar.oldship.HP
+			PChar.tempship.HP = PChar.oldship.HP;
 			PChar.oldship.HP = PChar.ship.HP;
 			PChar.ship.HP = PChar.tempship.HP;
 
-			PChar.tempship.SP = PChar.oldship.SP
+			PChar.tempship.SP = PChar.oldship.SP;
 			PChar.oldship.SP = PChar.ship.SP;
 			PChar.ship.SP = PChar.tempship.SP;
 
-			PChar.tempship.type = PChar.oldship.type
+			PChar.tempship.type = PChar.oldship.type;
 			PChar.oldship.type = PChar.ship.type;
 			PChar.ship.type = PChar.tempship.type;
 
@@ -1590,7 +1590,7 @@ void ProcessDialogEvent()
 		case "LULaunchC":
 			PChar.ship = PChar.oldship.idx;
 			PChar.ship.idx = PChar.oldship.idx;
-			PChar.oldship.Cannons.Type; = PChar.oldship.guns
+			PChar.oldship.Cannons.Type = PChar.oldship.guns;
 			PChar.ship.name =  PChar.oldship.name;
 			PChar.ship.type = PChar.oldship.type;
 			PChar.ship.HP = PChar.oldship.HP;
