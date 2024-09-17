@@ -135,7 +135,7 @@ itmdescr_Correspondence2
 {
 Письмо от Сильвии Бондье для Арно Маттона, относительно Сабины.
 }
-// Клинки, Шпаги, Сабли и т.д
+
 itmname_shop_papers {Бумаги Купли/Продажи}
 itmdescr_shop_papers
 {
