@@ -331,9 +331,7 @@ bool AddXPtoChar(ref chref, string expName, int _exp)
 		{
 			//Because the resethp takes the fake levels in account already we need to remove them here.
 			if(!CheckAttribute(chref,"FakeLevels")) chref.FakeLevels = 0; //Levis
-			int oldrank = sti(chref.rank);
 			chref.rank = sti(chref.rank) - sti(chref.FakeLevels);
-			chref.rank = oldrank;
 		}
 		if(CheckAttribute(chref,"completeinit")) ResetMaxHP(chref);
 		
