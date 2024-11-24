@@ -4056,7 +4056,7 @@ void UpdateItemData()
 
 		if(IsEquipedItem(itemARef.id))
 		{
-			SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"EQUIP_BUTTON",0, XI_ConvertString("Release that"));
+			SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"EQUIP_BUTTON",0, "Release that");
 			if(itemARef.groupID==GUN_ITEM_TYPE || itemARef.groupID==BLADE_ITEM_TYPE || itemARef.groupID==ARMOR_ITEM_TYPE || itemARef.groupID==SPYGLASS_ITEM_TYPE
 			|| itemARef.groupID==FLASK_ITEM_TYPE || itemARef.groupID==POUCH_ITEM_TYPE || itemARef.groupID==LOCKPICK_ITEM_TYPE
 			|| itemARef.groupID==CLOCK_ITEM_TYPE || itemARef.groupID==COMPASS_ITEM_TYPE || itemARef.groupID==BELT_ITEM_TYPE
@@ -4070,7 +4070,7 @@ void UpdateItemData()
 		}
 		else
 		{
-			SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"EQUIP_BUTTON",0, XI_ConvertString("Equip that"));
+			SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"EQUIP_BUTTON",0, "Equip that");
 			SetNodeUsing("FLIP_BUTTON", false); //JRH
 		}
 	} else {
