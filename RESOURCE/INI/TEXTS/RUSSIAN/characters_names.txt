@@ -1387,3 +1387,4 @@ Shore Indian{Береговой Индеец}
 Laurens-Jan{Лоуренс-Ян}
 Revenboer{Ревенбур}
 Toothless Pew{Беззубый Пью}
+Envoy from{Посланник Нации}

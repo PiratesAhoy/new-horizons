@@ -1244,16 +1244,18 @@ NoCannons{Орудий не Осталось!}
 Enough{Вы не можете установить больше орудий!}
 
 There is no building ground left anymore!{Земли под застройку не осталось!}
-Switch to first-person-view if your avatar is inside of the building{Переключитесь на Вид От Первого Лица, если Ваш персонаж внутри здания}
+Switch to first-person-view if your avatar is inside of the building{Переключитесь на Вид от Первого Лица (TAB), если Ваш персонаж внутри здания!}
 There is no building ground free at{Нет свободного участка в местности - }
 Buildings for Greater Oxbay locs{Здания для новых локаций на Оксбэе.}
 BK Keeper initialised.{Создан хранитель.}
-You chat on for hours and learn a lot{Вы провели много часов за беседой и многое узнали}
-After 24hrs are you fit again, even stronger than before.{Через 24 часа Вы снова на ногах, и даже сильнее, чем прежде.}
+You chat on for hours and learn a lot.{Вы провели много часов за беседой и многое узнали}
+After 24hrs are you fit again, even stronger than before.{Через 24 часа вы снова на ногах, и даже сильнее, чем прежде.}
 + 1 max HP{+ 1 к максимальному здоровью}
 You have learned a lot about woundtreatment.{Вы многое узнали об излечении ран.}
 You wake up feeling feverish.{Вы просыпаетесь с ощущением лихорадки.}
 Your wounds burn like fire!{Ваши раны горят, как в огне!}
+Two days later most damage has been repaired.{Через два дня большая часть повреждений была устранена.}
+Two days later your sails and rig are almost as new.{Через два дня ваши паруса и оснастка почти как новые.}
 about the town.{о городе.}
 Your victim produces{Вы получили с Вашей жертвы}
 Your conduct didn't improve your reputation{Ваше поведение не улучшило Вашу репутацию}
@@ -1340,7 +1342,7 @@ CrewMutinyArticles4{Нет рома...}
 CrewMutinyArticles5{Ваши карманы пусты...}
 GainedPerk{Получена новая Способность:}
 You unlocked the perk:{Вы разблокировали способность:}
-PlaguevictimsGrave{Проклятие? Могила жертв чумы? Как бы то ни было, вы внезапно чувствуете себя ужасно больным!}
+PlaguevictimsGrave{Проклятие? Могила жертв чумы? Как бы то ни было, вам внезапно стало ужасно плохо!}
 Petit Tabac{Петит-Табак}
 Battle_Rocks{Боевые Скалы}
 Devil Creek{Бухта Дьявола}
@@ -2360,6 +2362,7 @@ Kristiania cathedral passage{Проход в Кафедральный Собор
 Kristiania suburb{Пригород Кристиании}
 Kristiania swamp exit{Выход из Болота Кристиании}
 Living Room{Гостиная}
+Mountain tunnel{Горный Туннель}
 Blackbeard's tower{Башня Чёрной Бороды}
 into the unknown...{В неизвестность...}
 Islet{Островок}

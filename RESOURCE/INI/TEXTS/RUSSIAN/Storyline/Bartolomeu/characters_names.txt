@@ -47,7 +47,7 @@ Soares{Соарес}
 Luc{Люк}
 Merin{Мерин}
 Elias{Элиас}
-Bartels{Бартелс}
+Bartels{Бартельс}
 Roxanne{Роксана}
 Lalliere{Лаллир}
 Pedro{Педро}
