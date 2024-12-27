@@ -104,12 +104,12 @@ Henri Caesar{Анри Цезарь}
 Santiago{Сантьяго}
 Los Barbados{Лос-Барбадос}
 Camahogne{Камахон}
-Isla do Palo Brasil{Исла-ду-Пало Бразилия}
+Isla do Palo Brasil{Исла-ду-Пало-Бразил}
 Nuestra Senora de las Nieves{Богоматерь Снегов}
 Las Tortugas{Лас-Тортугас}
 Isla Juana{Исла-Хуана}
 Santa Maria de Guadalupe de Extremadura{Санта-Мария-де-Гуадалупе Испания}
-Isla de San Martin{Исла-де-Сан-Мартин}
+Isla de San Martin{Сан-Мартин}
 San Salvador{Сан-Сальвадор}
 Kingdom of Granada{Королевство Гранада}
 Concepcion{Консепсьон}
@@ -119,12 +119,12 @@ New Granada{Новая Гранада}
 {=====| 24 Islands |=====}
 
 {=====| Towns |=====}
-Palo Brasil{Пало Бразилия}
+Palo Brasil{Пало-Бразил}
 Sao Luis{Сан-Луис}
 Santa Ines{Санта-Инес}
 Villa de la Vega{Вилья-де-ла-Вега}
 Pueblo Carlos{Пуэбло Карлос}
-Santa Maria del Puerto{Санта-Мария-дель-Пуэрто}
+Santa Maria del Puerto{Пуэрто-де-Санта-Мария}
 Cumana{Кумана}
 San Cristobal de la Habana{Сан-Кристобаль-де-ла-Хабана}
 Santiago de Cuba{Сантьяго-де-Куба}

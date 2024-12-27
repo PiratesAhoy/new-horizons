@@ -950,6 +950,18 @@ Marнa Santнsima{Сантисима-Тринидад}
 Cardenal Cisneros{Кардинал Сиснерос}
 Бngel de la Guarda{Ангел-Хранитель}
 Septentriуn{Септентрион}
+Barracuda{Барракуда}
+Retribution{Возмездие}
+Obstacle{Препятствие}
+Unstoppable{Неудержимость}
+Smashing{Разящий}
+Apostle{Апостол}
+Secretive{Скрытный}
+
+{=====| quests_side.c |=====}
+Fearless{Бесстрашный}
+
+{=====| Officers.c |=====}
 Arabella{Арабелла}
 Barracuda{Барракуда}
 Fearless{Бесстрашный}
