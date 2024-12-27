@@ -1,24 +1,800 @@
-// ccc Building Kit, new file
+// ccc Buildingset, new file
 
-/*
-ccc Dec06:
-This is nothing but a placeholder file that directs the program on to the real dialogfile in the \English subfolder.
+void ProcessDialogEvent()
+{
+	ref NPChar;
+	aref Link, NextDiag;
 
-The buildingset has recently been messed up by the attempt to localize my original all-English dialogfiles.
-Instead of spending weeks with fixing and testing the new files I restored my original files.
-However, the localization project has changed the structure of PotC for good :
-Upon loading a  "x-dialog.c" codefile the program now automatically includes a  "x-dialog.h" text array file from the dialogs\english subfolder(or from the Russian folder if you use that language).
-There the dialogtext is supposed to be.
+	DeleteAttribute(&Dialog,"Links");
 
-However, I prefer to have code AND plain text in one file, for 3 reasons:
--It is much easier to write
--You have much less bugs with not matching texts
--It is much easier to read and understand the file for debuggers and people who would like to change it
-The last point is especially important for me cause the Buildingset is supposed to be a tool for people who want to start modding.
-That's why I stick to the original "code plus English text" dialogfiles.
+	makeref(NPChar,CharacterRef);
+	makearef(Link, Dialog.Links);
+	makearef(NextDiag, NPChar.Dialog);
 
-As a concession to the localization project I put those files NOT into the \dialogs rootfolder but into the \dialogs\English subfolder.
-So if you want to translate this dialog you can simply copy the "code plus English text" into the subfolder for your language and translate the English text there.
-That will certainly be less work and trouble than messing up my files again. 
-Not mention the work and trouble that the debuging always causes.
-*/
+	ref PChar;
+	PChar = GetMainCharacter();
+	ref lcn = &Locations[FindLocation(PChar.location)];
+
+	string nr = NPChar.lastname;
+
+	string buildingstr = NPChar.equip.blade;
+	aref buildingref;
+	Items_FindItem(buildingstr,&buildingref);
+
+	string interiorstr = "simple furniture";
+	if(CheckAttribute(Npchar,"equip.gun"))
+	{
+	interiorstr = NPChar.equip.gun;
+	aref interiorref;
+	Items_FindItem(interiorstr,&interiorref);
+	}
+	
+	if( !CheckAttribute(npchar, "enemynation") ) npchar.enemynation = FindEnemyNation2Character(GetMainCharacterIndex());
+	int isnat = sti(Islands[GetCharacterCurrentIsland(Pchar)].smuggling_nation);
+	string isnatname = GetNationNameByType(isnat);
+
+	int planks = 0;
+	int money = 0;
+	int crew = 0;
+
+	int grgbonus = 0;
+
+	int iDYear = sti(lcn.building.(nr).taxyear);
+	int iDMonth = sti(lcn.building.(nr).taxMonth);
+	int iDDay = sti(lcn.building.(nr).taxDay);
+	int taxdays = GetPastTime("day", iDYear, iDMonth, iDDay, 1, GetDataYear(), GetDataMonth(), GetDataDay(), 1);
+	int tax = 0;
+
+	string adress;
+	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = XI_ConvertString("my landlord");}else{adress = " " + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " ";}
+	
+	ref chr;
+	float x,y,z;
+	
+	switch(Dialog.CurrentNode)
+	{
+		case "First time":
+			Dialog.defAni = "dialog_stay1";
+			Dialog.defCam = "1";
+			Dialog.defSnd = "dialogs\0\017";
+			Dialog.defLinkAni = "dialog_1";
+			Dialog.defLinkCam = "1";
+			Dialog.defLinkSnd = "dialogs\woman\024";
+			Dialog.ani = "dialog_stay2";
+			Dialog.cam = "1";
+			Dialog.snd = "voice\PADI\PADI001";
+
+			if(rand(100)<15) // chance for random attack, decrease last figure for fewer attacks
+			{
+				PlayStereoSound("voice\Eng_f_c_019.wav");
+				ChangeCharacterReputation(Pchar, -2);  // punishment: reputationloss. Will be offset if you accept the fight	
+				Dialog.text = LinkRandPhrase(DLG_TEXT[0], DLG_TEXT[1], DLG_TEXT[2] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + DLG_TEXT[3]);
+				link.l1 = LinkRandPhrase(DLG_TEXT[4], DLG_TEXT[5], DLG_TEXT[6]);
+				if(interiorstr=="boudoir")
+				{
+				  if(rand(100)>50 && IsBrothelEnabled()) {Link.l1.go = "gentry1";}
+				  else{Link.l1.go = "monks1";}
+				}				
+				else
+				{
+				  if(rand(100)>70) {Link.l1.go = "Akellani";}
+				  else{Link.l1.go = "commando";}
+				}
+				link.l9 = DLG_TEXT[7];
+				link.l9.go = "exit";
+			}
+			else
+			{	
+				PlayStereoSound("voice\Fre_f_a_005.wav");
+				Dialog.text = DLG_TEXT[8];
+				if(CheckAttribute(pchar,"chr_ai.poison") && pchar.chr_ai.poison > 0)
+				{
+					Link.l1 = DLG_TEXT[9];
+					Link.l1.go = "infected";
+				}
+
+				if(NPChar.chr_ai.group==LAI_GROUP_PLAYER) // if you are the landlord
+				{
+					if(interiorstr=="office")
+					{
+ 				    link.l32 = DLG_TEXT[10];
+					link.l32.go = "office";
+ 				    link.l31 = DLG_TEXT[11];
+					link.l31.go = "office1";
+					}
+
+					if(interiorstr=="boudoir")
+					{
+	   				if(taxdays>0)
+	   				{
+  					link.l5 = DLG_TEXT[12] + taxdays + DLG_TEXT[13];
+  					if(rand(100)*sti(pchar.reputation)/50 > 20)   // chance for a refusal of payments, decrease last figure for fewer refusals
+				  	{Link.l5.go = "tax";}
+  					else{Link.l5.go = "taxevasion";}
+ 				    link.l32 = DLG_TEXT[14];
+					link.l32.go = "crew";
+					link.l31 = DLG_TEXT[15];
+					link.l31.go = "frills";
+					}
+				 }
+
+					if(CheckCharacterItem(PChar,"pistolgrenade") && !CheckCharacterItem(NPChar,"pistolgrenade") )
+					{
+					link.l7 = DLG_TEXT[16];
+					link.l7.go = "grenade";
+					}
+
+					link.l8 = DLG_TEXT[17];
+					link.l8.go = "dismantle";
+
+				}
+				else   // if you are NOT the landlord
+				{
+					link.l9 = DLG_TEXT[18];
+					link.l9.go = "exit";
+				}
+
+				Link.l2 = DLG_TEXT[140];
+				Link.l2.go = "heal";
+
+				Link.l4 = LinkRandPhrase(DLG_TEXT[141], DLG_TEXT[142], DLG_TEXT[143]);
+				Link.l4.go = "chat";
+
+				Link.l10 = DLG_TEXT[144];
+				Link.l10.go = "exit";
+
+				link.l11 = DLG_TEXT[19] + LinkRandPhrase(DLG_TEXT[20], DLG_TEXT[21], DLG_TEXT[22]);
+				link.l11.go = "motion";
+
+				link.l12 = DLG_TEXT[23];
+				link.l12.go = "odd";
+
+				link.l13 = DLG_TEXT[24] + NPchar.dialog.filename + DLG_TEXT[25];
+				link.l13.go = "your_dialog"; //this is the case that runs if you choose the dialogoption l13. It is right below.
+			}
+		break;
+                
+		case "your_dialog":
+			Dialog.text = DLG_TEXT[26];
+
+			link.l1 = DLG_TEXT[27];
+			link.l1.go = "exit";	// link l1 exits the dialog
+
+			link.l2 = DLG_TEXT[28];
+			link.l2.go = "your_dialog2";	// l2 leads to the case your_dialog2
+		break;	// end of case "your_dialog"
+                
+		case "your_dialog2":
+			Dialog.text = DLG_TEXT[26];
+
+			link.l1 = DLG_TEXT[27];
+			link.l1.go = "exit";	// link l1 exits the dialog
+
+			// Here are some codelines that give you money, items, goods or experience. To activate them delete the comment slashes '//' in front of the code. You can change the amounts to your liking.
+
+			// AddMoneyToCharacter(Pchar, 1000);
+
+			// GiveItem2Character(Pchar, "Spyglass3");
+			// GiveItem2Character(Pchar, "Jewelry5");
+			// GiveItem2Character(Pchar, "Mineral3");
+			// TakenItems(Pchar, "potion1", 3);
+
+ 			// AddCharacterGoods(pchar, GOOD_SANDAL, 10 );
+			// AddCharacterGoods(pchar, GOOD_SILK, 10 );
+			// AddCharacterGoods(pchar, GOOD_RUM, 20 );
+			// AddCharacterGoods(pchar, GOOD_WHEAT, 20 );
+
+			// AddPartyExp(PChar, 100 );
+
+		break;	// end of case "your_dialog2"
+
+// give grenade to building for selfdefense
+		case "grenade":
+			Dialog.text = DLG_TEXT[29];
+			link.l1 = DLG_TEXT[30];
+			link.l1.go = "exit";
+			TakeItemFromCharacter(pchar, "pistolgrenade");
+			GiveItem2Character(NPchar, "pistolgrenade");
+		break;
+
+// random attacks
+		case "monks1":
+			dialog.text = DLG_TEXT[31];
+			Link.l4 = DLG_TEXT[32];
+			Link.l4.go = "exit";
+			Link.l1 = DLG_TEXT[33];
+			Link.l1.go = "monks";
+		break;
+
+		case "monks":
+			Dialog.text = DLG_TEXT[34];
+			link.l1 = RandSwear() + DLG_TEXT[35];
+			link.l1.go = "exit_monks";
+		break;
+
+		case "Exit_monks":
+		// PB: To prevent the fight from starting before the dialog is closed
+			ChangeCharacterReputation(Pchar, 4);  // reward: reputation. Change figure to your liking
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Fencing", (3+sti(pchar.skill.fencing)) * 100 ); }
+			else { AddPartyExp(PChar, (3+sti(pchar.skill.fencing)) * 100 ); }  // reward: experience. Change last figure to your liking
+			Ambush("monks", 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
+
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "gentry1":
+			dialog.text = DLG_TEXT[36];
+			Link.l4 = DLG_TEXT[37];
+			Link.l4.go = "gentry";
+			Link.l1 = DLG_TEXT[38];
+			Link.l1.go = "exit";
+		break;
+
+		case "gentry":
+			Dialog.text = DLG_TEXT[39];
+			link.l1 = RandSwear() + DLG_TEXT[40];
+			link.l1.go = "exit_gentry";
+		break;
+
+		case "Exit_gentry":
+		// PB: To prevent the fight from starting before the dialog is closed
+			ChangeCharacterReputation(Pchar, 4);  // reward: reputation. Change figure to your liking
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Fencing", (3+sti(pchar.skill.fencing)) * 100 ); }
+			else { AddPartyExp(PChar, (3+sti(pchar.skill.fencing)) * 100 ); }  // reward: experience. Change last figure to your liking
+			Ambush("Rich_Citizens", 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
+
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "Akellani":
+			Dialog.text = DLG_TEXT[41];
+			link.l1 = RandSwear() + DLG_TEXT[42];
+			link.l1.go = "exit_akellani";
+		break;
+
+		case "Exit_akellani":
+		// PB: To prevent the fight from starting before the dialog is closed
+			ChangeCharacterReputation(Pchar, 4);  // reward: reputation. Change figure to your liking
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Fencing", (3+sti(pchar.skill.fencing)) * 100 ); }
+			else { AddPartyExp(PChar, (3+sti(pchar.skill.fencing)) * 100 ); }  // reward: experience. Change last figure to your liking
+			Ambush("natives", 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
+
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "commando":
+			Dialog.text = DLG_TEXT[43] + XI_ConvertString(GetNationNameByType(sti(npchar.enemynation))) + DLG_TEXT[44] + RandSwear() + DLG_TEXT[45];
+			link.l1 = RandSwear() + DLG_TEXT[46];
+			link.l1.go = "exit_commando";
+		break;
+
+		case "Exit_commando":
+		// PB: To prevent the fight from starting before the dialog is closed
+			ChangeCharacterReputation(Pchar, 4);  // reward: reputation. Change figure to your liking
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Fencing", (3+sti(pchar.skill.fencing)) * 100 ); }
+			else { AddPartyExp(PChar, (3+sti(pchar.skill.fencing)) * 100 ); }  // reward: experience. Change last figure to your liking
+			Ambush(SelectSoldierModelByNation(sti(npchar.enemynation), "Soldier"), 3+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
+
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+// taxes and other profits and rewards
+		case "tax":
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			npchar.tax = taxdays * 50;	// Reward taxmoney, you can change the figure before the ';' to your liking
+			npchar.tax = makeint( sti(npchar.tax) * sti(pchar.reputation)/50 );	// Reputationinfluence on tax, delete line to disable that 
+			if(interiorstr=="marketstall") npchar.tax = sti(npchar.tax)*2;
+
+			Dialog.text = DLG_TEXT[47] + taxdays + DLG_TEXT[48] + npchar.tax + DLG_TEXT[49];
+			link.l1 = LinkRandPhrase(DLG_TEXT[50], DLG_TEXT[51], DLG_TEXT[52]);
+			link.l1.go = "taxfull";
+			link.l2 = LinkRandPhrase(DLG_TEXT[53], DLG_TEXT[54], DLG_TEXT[55]);
+			link.l2.go = "taxhalf";
+		break;
+
+		case "taxevasion":
+			ChangeCharacterReputation(Pchar, -1);  // punishment: reputationdrop. Change figure to your liking
+
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			npchar.tax = taxdays * 50;	// Reward taxmoney, you can change the figure before the ';' to your liking
+			npchar.tax = makeint( sti(npchar.tax) * sti(pchar.reputation)/50 );	// Reputationinfluence on tax, delete line to disable that 
+			if(interiorstr=="marketstall") npchar.tax = sti(npchar.tax)*2;
+
+			Dialog.text = RandSwear() + LinkRandPhrase(DLG_TEXT[56], DLG_TEXT[57], DLG_TEXT[58]);
+			link.l1 = LinkRandPhrase(DLG_TEXT[59], DLG_TEXT[60], DLG_TEXT[61]);
+			link.l1.go = "moraledrop";
+
+			link.l2 = LinkRandPhrase(DLG_TEXT[62], DLG_TEXT[63], DLG_TEXT[64]);
+			switch(Rand(5))   // chance for taxevader backing down, increase figure for less revolts and suicides
+			{
+			case 1: link.l2.go = "taxsuicide"; break;
+			case 2: link.l2.go = "taxrevolt"; break;
+			link.l2.go = "taxfull"; break;
+			}
+		break;
+
+		case "taxhalf":
+			AddMoneytoCharacter(Pchar, sti(npchar.tax)/2 );
+			ChangeCharacterReputation(Pchar, 1);  // reward: reputation. Change figure to your liking
+			Dialog.text = DLG_TEXT[65] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + DLG_TEXT[66];
+			link.l1 = DLG_TEXT[67];
+			link.l1.go = "exit";
+		break;
+
+		case "taxfull":
+			AddMoneytoCharacter(Pchar, sti(npchar.tax));
+			ChangeCharacterReputation(Pchar, -2);  // punishment: reputationdrop. Change figure to your liking
+			Dialog.text = RandSwear() + LinkRandPhrase(DLG_TEXT[68], DLG_TEXT[69], DLG_TEXT[70]);
+			link.l1 = DLG_TEXT[71] + npchar.tax + DLG_TEXT[49];
+			link.l1.go = "exit";
+		break;
+
+		case "taxrevolt":
+			AddMoneytoCharacter(Pchar, sti(npchar.tax));
+			ChangeCharacterReputation(Pchar, -2);  // punishment: reputationdrop. Change figure to your liking
+			Ambush("Liz1", 6+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
+			Dialog.text = RandSwear() + DLG_TEXT[72];
+			link.l1 = RandSwear() + DLG_TEXT[73];
+			link.l1.go = "exit";
+		break;
+
+		case "taxsuicide":
+			Dialog.text = RandSwear() + LinkRandPhrase(DLG_TEXT[74], DLG_TEXT[75], DLG_TEXT[76]);
+			link.l1 = LinkRandPhrase(DLG_TEXT[77], DLG_TEXT[78], DLG_TEXT[79]);
+			link.l1.go = "taxsuicide2";
+		break;
+
+		case "taxsuicide2":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			Explosion (NPchar, 30);
+			Lai_KillCharacter(NPchar);
+		break;
+
+
+// dismantling of this building
+		case "dismantle":
+			DialogExit();
+			planks += sti(buildingref.building.planks);
+			crew += sti(buildingref.building.crew);
+
+			if(CheckAttribute(Npchar,"equip.gun"))
+			{
+				planks += sti(interiorref.building.planks);
+				crew += sti(interiorref.building.crew);
+			}
+			AddCharacterGoods(pchar, GOOD_PLANKS, planks);
+			AddCharacterCrew(pchar, crew);   // ccc mar06
+			Lai_KillCharacter(npchar);
+		break;
+
+// info about modding                
+		case "odd":
+			Dialog.text = DLG_TEXT[80];
+			link.l1 = DLG_TEXT[81];
+			link.l1.go = "exit";
+			link.l2 = DLG_TEXT[82];
+			link.l2.go = "odd2";
+			link.l3 = DLG_TEXT[83];
+			link.l3.go = "tweaking";
+		break;
+
+		case "odd2":
+			Dialog.text = DLG_TEXT[84] + "'" +PA_INET+ "'.";
+			link.l1 = DLG_TEXT[85];
+			link.l1.go = "exit";
+		break;
+
+		case "tweaking":
+			Dialog.text = DLG_TEXT[86] + NPchar.dialog.filename + DLG_TEXT[87] + "'" +PA_INET+ "'.";
+			link.l1 = DLG_TEXT[88];
+			link.l1.go = "exit";
+		break;
+
+		case "frills":
+			Dialog.text = DLG_TEXT[89];
+			link.l1 = DLG_TEXT[90];
+			link.l1.go = "frills2";
+		break;
+
+		case "frills2":
+			PlayStereoSound("ambient\shipyard\axe.wav");
+			PlayStereoSound("nature\windmill.wav");
+			PlayStereoSound("ambient\town\vehicle.wav");
+			Dialog.text = DLG_TEXT[91];
+			link.l5 = DLG_TEXT[92] + taxdays + DLG_TEXT[93];
+  			if(rand(100)*sti(pchar.reputation)/50 > 20)   // chance for a refusal of payments, decrease last figure for fewer refusals
+			{Link.l5.go = "tax";}
+			else{Link.l5.go = "taxevasion";}
+		break;
+
+		case "motion":
+			Dialog.text = LinkRandPhrase(DLG_TEXT[94], DLG_TEXT[95], DLG_TEXT[96]);
+			link.l1 = DLG_TEXT[97];
+			link.l1.go = "exit";
+		break;
+
+// enc_resident stuff: healing, spending time etc. 
+		case "chat":
+			dialog.text = DLG_TEXT[145];
+			Link.l4 = DLG_TEXT[144];
+			Link.l4.go = "exit";
+			Link.l1 = DLG_TEXT[146];
+			Link.l1.go = "chat2";
+		break;
+
+		case "chat2":
+			dialog.text = SelectRumour(FindIslandByLocation(LoadedLocation.id), GetNationIDByType(GetCurrentLocationNation()) );
+
+			if (GetTime() >= 22.0 || GetTime() < 10.0)
+			{
+				Link.l1 = DLG_TEXT[147];
+				Link.l1.go = "hall_day_wait";
+			}
+			else
+			{
+				Link.l1 = DLG_TEXT[148];
+				Link.l1.go = "hall_night_wait";
+			}
+		break;
+
+		case "heal":
+			Dialog.text = DLG_TEXT[149];
+			Link.l1 = DLG_TEXT[150];
+			if (rand(100) + makeint(pchar.skill.Sneak) >= 35 || interiorstr=="luxurious furniture") {Link.l1.go = "exit recovered";}
+			else {Link.l1.go = "exit infected";}
+			Link.l3 = DLG_TEXT[151];
+			Link.l3.go = "exit";
+		break;
+
+		case "infected":
+			Dialog.text = LinkRandPhrase(DLG_TEXT[152], DLG_TEXT[153], DLG_TEXT[154]); 
+			int winlink = rand(100) 
+			if (winlink >= 50) 
+			{
+				Link.l1 = LinkRandPhrase(DLG_TEXT[155], DLG_TEXT[156], DLG_TEXT[157]);
+				Link.l1.go = "exit recovered"
+			}
+			Link.l2 = LinkRandPhrase(DLG_TEXT[158], DLG_TEXT[159], DLG_TEXT[160]);
+			Link.l2.go = "exit infected";
+			Link.l3 = LinkRandPhrase(DLG_TEXT[161], DLG_TEXT[162], DLG_TEXT[163]);
+			Link.l3.go = "exit infected";
+			if (winlink < 50) 
+			{
+				Link.l4 = LinkRandPhrase(DLG_TEXT[155], DLG_TEXT[156], DLG_TEXT[157]);
+				Link.l4.go = "exit recovered"
+			}
+			Link.l5 = DLG_TEXT[164];
+			Link.l5.go = "exit";
+		break;
+
+		case "hall_day_wait":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			TavernWaitDate("wait_day");
+			PlaySound("VOICE\Eng_m_a_013.wav");
+			Log_SetStringToLog(TranslateString("","You chat on for hours and learn a lot."));
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Leadership", 50+(sti(PChar.skill.Leadership)*10)+Rand(50) ); }
+			else { AddPartyExp(PChar, 50+(sti(PChar.skill.Leadership)*10)+Rand(50)); }
+		break;
+
+		case "hall_night_wait":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			TavernWaitDate("wait_night");
+			PlaySound("VOICE\Eng_m_a_014.wav");
+			Log_SetStringToLog(TranslateString("","You chat on for hours and learn a lot."));
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Leadership", 50+(sti(PChar.skill.Leadership)*10)+Rand(50) ); }
+			else { AddPartyExp(PChar, 50+(sti(PChar.skill.Leadership)*10)+Rand(50)); }
+		break;
+
+		case "exit recovered":
+			Dialog.text = DLG_TEXT[165];
+			Link.l1 = LinkRandPhrase(DLG_TEXT[166], DLG_TEXT[167], DLG_TEXT[168]);
+			Link.l1.go = "exit recovered2";
+		break;
+
+		case "exit recovered2":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			pchar.chr_ai.poison = 0;
+			pchar.chr_ai.hp_max = sti(pchar.chr_ai.hp_max) + 1;
+			LAi_SetCurHPMax(pchar);
+			LAi_Fade("", "");
+			WaitDate("", 0,0,1,0,0);
+			RecalculateJumpTable();
+			PlaySound("AMBIENT\SHOP\sigh2.wav");
+			Log_SetStringToLog(TranslateString("","After 24hrs are you fit again, even stronger than before."));
+			Log_SetStringToLog(TranslateString("","+ 1 max HP"));
+			Log_SetStringToLog(TranslateString("","You have learned a lot about woundtreatment."));
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Defence", 50+(sti(PChar.skill.Defence)*10)+Rand(50) + grgbonus ); }
+			else { AddPartyExp(PChar, 50+(sti(PChar.skill.Defence)*10)+Rand(50) + grgbonus); }
+		break;
+
+		case "exit infected":
+			Dialog.text = DLG_TEXT[165];
+			Link.l1 = LinkRandPhrase(DLG_TEXT[166], DLG_TEXT[167], DLG_TEXT[168]);
+			Link.l1.go = "exit infected2";
+		break;
+
+		case "exit infected2":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			if (GetTime() < 22.0 && GetTime() >= 10.0) TavernWaitDate2("wait_day"); // NK to catch if not night
+			TavernWaitDate("wait_day"); // NK so there is a fade
+			pchar.chr_ai.poison = 20 + rand(50 -sti(PChar.skill.Sneak) -sti(PChar.skill.defence) );
+			grgbonus = 200+Rand(200)
+			PlaySound("OBJECTS\DUEL\man_hit6.wav");
+			Log_SetStringToLog(TranslateString("","You wake up feeling feverish."));
+			Log_SetStringToLog(TranslateString("","Your wounds burn like fire!"));
+		break;
+
+// boudoir
+		case "crew":
+			Dialog.text = DLG_TEXT[98];
+			Link.l1 = DLG_TEXT[99];
+			Link.l1.go = "orgy";
+			Link.l2 = DLG_TEXT[100];
+			Link.l2.go = "crimp";
+		break;
+
+		case "crimp":
+			Dialog.text = DLG_TEXT[101];
+			Link.l1 = DLG_TEXT[102];
+			Link.l1.go = "crimp2";
+			Link.l2 = DLG_TEXT[103];
+			Link.l2.go = "exit";
+		break;
+
+		case "crimp2":
+		  pchar.ship.crew.morale=sti(pchar.ship.crew.morale)-30;  // reward: crew moral. Change figure to your liking
+		  if(sti(pchar.ship.crew.morale)<11) pchar.ship.crew.morale=11;
+		  SetCrewQuantity(&pchar, GetMaxCrewQuantity(&pchar));
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "orgy":
+			Dialog.text = DLG_TEXT[104];
+			Link.l1 = DLG_TEXT[105];
+			Link.l1.go = "orgy2";
+			Link.l2 = DLG_TEXT[106];
+			Link.l2.go = "exit";
+		break;
+
+		case "orgy2":
+		  pchar.ship.crew.morale=sti(pchar.ship.crew.morale)+10;  // reward: crew moral. Change figure to your liking
+		  if(sti(pchar.ship.crew.morale)>99) pchar.ship.crew.morale=99;
+		  PlaySound("OBJECTS\abordage\abordage_wining.wav");
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+// headquarter
+		case "office1":
+			Dialog.Text = DLG_TEXT[107];
+ 			link.l3 = DLG_TEXT[108];
+			link.l3.go = "office";
+		break;
+
+		case "office":
+		  if(taxdays>0)
+	   	  {
+			Dialog.Text = DLG_TEXT[109];
+			Link.l1 = DLG_TEXT[110];
+			Link.l1.go = "weapons";
+			if (sti(npchar.enemynation)!= -1 && sti(npchar.enemynation)!= PIRATE)
+			{
+			Link.l2 = DLG_TEXT[111];
+			Link.l2.go = "nations";
+			}
+			Link.l3 = DLG_TEXT[112];
+			Link.l3.go = "convoy";
+			Link.l4 = DLG_TEXT[113];
+			Link.l4.go = "officer";
+			Link.l5 = DLG_TEXT[114];
+			Link.l5.go = "Tribute";
+			Link.l6 = DLG_TEXT[115];
+			Link.l6.go = "Exit skip tax";
+			}
+			else
+			{
+			Dialog.text = DLG_TEXT[116];
+			Link.l2 = DLG_TEXT[117];
+			Link.l2.go = "exit";
+        }
+		break;
+
+		case "Tribute":
+			Dialog.text = DLG_TEXT[118] + XI_ConvertString(isnatname) + DLG_TEXT[119];
+			Link.l1 = DLG_TEXT[120] + XI_ConvertString(isnatname) + DLG_TEXT[121];
+			Link.l1.go = "repdrop";
+
+			Link.l2 = DLG_TEXT[122] + XI_ConvertString(isnatname) + DLG_TEXT[123];
+			if(rand(100)<30)    // chance for attack, decrease last figure for fewer attack 
+      		{Link.l2.go = "akellani";}
+			else{Link.l2.go = "represent";}
+
+			Link.l5 = DLG_TEXT[124] + XI_ConvertString(isnatname) + DLG_TEXT[125];
+			Link.l5.go = "Tribute2";
+		break;
+
+		case "Tribute2":
+			npchar.tax = taxdays*500;
+			ChangeCharacterReputation(Pchar, -3);  // punishment: reputation. Change figure to your liking
+			Dialog.text = npchar.tax + DLG_TEXT[126];
+			Link.l2 = DLG_TEXT[127];
+			if(rand(100)<50)    // chance for attack, decrease last figure for fewer attack 
+      		{Link.l2.go = "gentry";}
+			else{Link.l2.go = "Exit pay tax";}
+		break;
+
+
+		case "weapons":
+			LAi_Fade("", "");
+			Dialog.text = DLG_TEXT[128] + taxdays + DLG_TEXT[129];
+			link.l1 = DLG_TEXT[130];
+			if(rand(100)>20)    // chance for explosion, decrease last figure for fewer explosions 
+      		{Link.l1.go = "weapons_got";}
+			else{Link.l1.go = "explosion";}
+		break;
+
+		case "weapons_got":
+ 			 // ccc special weapons, SW assembly kit must be installed !
+			TakenItems(Pchar, "bladeX1", rand(1));	
+			TakenItems(Pchar, "bladeX2", rand(1));	
+			TakenItems(Pchar, "bladeX3", rand(1));	
+			TakenItems(Pchar, "pistolpdart", rand(taxdays));
+			TakenItems(Pchar, "pistolgrenade", rand(taxdays));
+			TakenItems(Pchar, "pistolgas", rand(taxdays));
+			TakenItems(Pchar, "pistolrock", rand(taxdays));
+			TakenItems(Pchar, "pistolstink", rand(taxdays));
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "explosion":
+			Explosion(NPchar, 60);
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "nations":
+			Dialog.text = GetNationRoyalByType(sti(npchar.enemynation)) + DLG_TEXT[131] + XI_ConvertString(GetNationNameByType(sti(npchar.enemynation))) + ".";
+			link.l1 = DLG_TEXT[132];
+			if(rand(100)>30) {Link.l1.go = "office";}
+			else{Link.l1.go = "commando";}
+			Link.l2 = XI_ConvertString(GetNationNameByType(sti(npchar.enemynation))) + DLG_TEXT[133];
+			Link.l2.go = "nations2";
+		break;
+
+		case "nations2":
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			chr = LAi_CreateFantomCharacterEx(false, 0, false, false, 0.0, GetRandomModelForTypeSex(1, "Rich_Citizens", "man"), "", "");	
+			chr.dialog.filename = "B_diplomat.c";
+			LAi_SetStayType(chr);
+			chr.nation = npchar.enemynation;
+			chr.name = TranslateString("", "Envoy from");
+			chr.lastname = XI_ConvertString(GetNationNameByType(sti(chr.nation)));
+  		GetCharacterPos(pchar, &x, &y, &z);
+  		x = x+1;
+  		TeleportCharacterToPos(chr, x, y, z);
+  		Lai_SetActorType(chr);
+  		LAi_ActorTurnToCharacter(chr, pchar);
+  		LAi_ActorDialog(chr,pchar, "", 4.0, 1.0);
+		break;
+
+		case "officer":
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			chr = LAi_CreateFantomCharacterEx(false, 0, true, true, 0.0, GetRandomModelForType(1, "Smugglers"), "", "");
+			chr.dialog.filename = "Enc_officer_dialog.c";
+			chr.dialog.CurrentNode = "Node_1";
+			LAi_SetStayType(chr);
+			GetCharacterPos(pchar, &x, &y, &z);
+			x = x+1;
+			TeleportCharacterToPos(chr, x, y, z);
+		break;
+
+		case "convoy":
+			string iDay, iMonth;
+			iDay = environment.date.day;
+			iMonth = environment.date.month;
+			string lastspeak_date = iday + " " + iMonth;
+			npchar.work = lastspeak_date;
+
+			if (GetCompanionIndex(pchar,1) != -1 && GetCompanionIndex(pchar,2) != -1 && GetCompanionIndex(pchar,3) != -1)
+			{
+				dialog.text = DLG_TEXT[134];
+				link.l1 = DLG_TEXT[135];
+				link.l1.go = "office";
+			}
+			else
+			{
+			  if (CheckQuestAttribute("generate_convoy_quest_progress", "begin"))
+			  {
+		  		dialog.text = DLG_TEXT[136];
+		  		link.l1 = DLG_TEXT[137];
+		  		link.l1.go = "office";
+        }else
+			  {
+		  		dialog.text = DLG_TEXT[138];
+		  		link.l1 = DLG_TEXT[139];
+		  		link.l1.go = "Exit skip tax";
+		  		AddDialogExitQuest("prepare_for_convoy_quest");
+				}
+			}
+		break;
+
+// dialogexits
+		case "moraledrop":
+			ChangeCharacterReputation(Pchar, 3);  // reward: reputation. Change figure to your liking
+
+		  pchar.ship.crew.morale=makeint(stf(pchar.ship.crew.morale) -5 );  // punishment: crew moraledrop. Change figure to your liking
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "repdrop":
+			ChangeCharacterReputation(Pchar, -3);  // punishment: reputation. Change figure to your liking
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "represent":
+			ChangeCharacterReputation(Pchar, 6);  // reward: reputation. Change figure to your liking
+			if (GetRMRelation(pchar, isnat) > REL_WAR) SetRMRelation(pchar, isnat, REL_WAR);
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "Exit skip tax":
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "Exit pay tax":
+			AddMoneytoCharacter(Pchar, sti(npchar.tax));
+			lcn.building.(nr).taxyear = GetDataYear();
+			lcn.building.(nr).taxMonth = GetDataMonth();
+			lcn.building.(nr).taxDay = GetDataDay();
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "Exit":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+	}
+}

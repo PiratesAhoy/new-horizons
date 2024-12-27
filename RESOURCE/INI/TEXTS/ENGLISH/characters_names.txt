@@ -1007,6 +1007,7 @@ Konrad{Konrad}
 Kulczycki{Kulczycki}
 Silver{Silver}
 Nathaniel's Crewmember{Nathaniel's Crewmember}
+Danielle's Crewmember{Danielle's Crewmember}
 Clair{Clair}
 Larrousse{Larrousse}
 France_bukaner_01{French Buccaneer}
@@ -1386,3 +1387,4 @@ Shore Indian{Shore Indian}
 Laurens-Jan{Laurens-Jan}
 Revenboer{Revenboer}
 Toothless Pew{Toothless Pew}
+Envoy from{Envoy from}

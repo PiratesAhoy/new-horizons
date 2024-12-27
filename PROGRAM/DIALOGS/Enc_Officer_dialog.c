@@ -892,7 +892,7 @@ void ProcessDialogEvent()
 
 		case "forest":
 			npchar.building = "forest";
-			d.text = DLG_TEXT[100];
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + "?";
 			Link.l1 = DLG_TEXT[150];
 			Link.l1.go = "exit";
 			Link.l2 = DLG_TEXT[114];
@@ -901,7 +901,7 @@ void ProcessDialogEvent()
 
 		case "keep":
 			npchar.building = "keep";
-			d.text = DLG_TEXT[100];
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + "?";
 			Link.l1 = DLG_TEXT[150];
 			Link.l1.go = "exit";
 			Link.l2 = DLG_TEXT[114];
@@ -1028,7 +1028,7 @@ void ProcessDialogEvent()
 
 		case "office":
 			npchar.interior = "office";
-			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior);
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior) + "?";
 			Link.l2 = DLG_TEXT[114];
 			Link.l2.go = "erect";
 			Link.l3 = DLG_TEXT[115];
@@ -1039,7 +1039,7 @@ void ProcessDialogEvent()
 
 		case "boudoir":
 			npchar.interior = "boudoir";
-			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior);
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior) + "?";
 			Link.l2 = DLG_TEXT[114];
 			Link.l2.go = "erect";
 			Link.l3 = DLG_TEXT[115];
@@ -1050,7 +1050,7 @@ void ProcessDialogEvent()
 
 		case "mine":
 			npchar.interior = "mine";
-			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior);
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior) + "?";
 			Link.l2 = DLG_TEXT[114];
 			Link.l2.go = "erect";
 			Link.l3 = DLG_TEXT[115];
@@ -1061,7 +1061,7 @@ void ProcessDialogEvent()
 
 		case "foundry":
 			npchar.interior = "foundry";
-			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior);
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior) + "?";
 			Link.l2 = DLG_TEXT[114];
 			Link.l2.go = "erect";
 			Link.l3 = DLG_TEXT[115];
@@ -1072,7 +1072,7 @@ void ProcessDialogEvent()
 
 		case "distillery":
 			npchar.interior = "distillery";
-			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior);
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior) + "?";
 			Link.l2 = DLG_TEXT[114];
 			Link.l2.go = "erect";
 			Link.l3 = DLG_TEXT[115];
@@ -1083,7 +1083,7 @@ void ProcessDialogEvent()
 
 		case "dock":
 			npchar.interior = "dock";
-			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior);
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior) + "?";
 			Link.l2 = DLG_TEXT[114];
 			Link.l2.go = "erect";
 			Link.l3 = DLG_TEXT[115];
@@ -1094,7 +1094,7 @@ void ProcessDialogEvent()
 
 		case "luxurious furniture":
 			npchar.interior = "luxurious furniture";
-			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS1"+npchar.interior);
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS1"+npchar.interior) + "?";
 			Link.l2 = DLG_TEXT[114];
 			Link.l2.go = "erect";
 			Link.l3 = DLG_TEXT[115];
@@ -1105,7 +1105,7 @@ void ProcessDialogEvent()
 
 		case "cannon":
 			npchar.interior = "cannon";
-			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior);
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior) + "?";
 			Link.l2 = DLG_TEXT[114];
 			Link.l2.go = "erect";
 			Link.l3 = DLG_TEXT[115];
@@ -1116,7 +1116,7 @@ void ProcessDialogEvent()
 
 		case "marketstall":
 			npchar.interior = "marketstall";
-			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior);
+			d.text = DLG_TEXT[112] + XI_ConvertString(npchar.building) + DLG_TEXT[113] + XI_ConvertString("BS"+npchar.interior) + "?";
 			Link.l2 = DLG_TEXT[114];
 			Link.l2.go = "erect";
 			Link.l3 = DLG_TEXT[115];

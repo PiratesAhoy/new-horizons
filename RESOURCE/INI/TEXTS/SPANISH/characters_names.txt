@@ -1049,11 +1049,24 @@ Constantino{Constantino}
 Avellán{Avellán}
 Growling{Oso}
 Bear{Que Gruñe}
+Growling Bear{Oso Que Gruсe}
 Kicking{Cuervo}
 Raven{Que Patea}
+Kicking Raven{Cuervo Que Patea}
 Lewis{Lewis}
 Vickers{Vickers}
 Carpenter1{Carpenter}
+Meredith{Meredith}
+Byrom{Byrom}
+Gilberto{Gilberto}
+Solano{Solano}
+Rafael{Rafael}
+Patiсo{Patiсo}
+Angulo{Angulo}
+Donato{Donato}
+Elcano{Elcano}
+Echevarrнa{Echevarrнa}
+Susanne{Susanne}
 
 {=====| StoreOwners.c |=====}
 Agent-Victualler{Agente de avituallamiento}
@@ -1360,3 +1373,15 @@ Akellani native{Nativo akellani}
 A rabid monkey{Un mono rabioso}
 Joshamee{Joshamee}
 Gibbs{Gibbs}
+Shuggy{Shuggy}
+Garry{Garry}
+Crystal{Crystal}
+Eccleston{Eccleston}
+Boulton{Boulton}
+Carib{Caribe}
+Carib Warrior{Guerrero caribe}
+Shore Indian{Indio de la costa}
+Laurens-Jan{Laurens-Jan}
+Revenboer{Revenboer}
+Toothless Pew{Toothless Pew}
+Envoy from{Enviado de}
