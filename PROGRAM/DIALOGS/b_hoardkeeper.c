@@ -1,24 +1,79 @@
-// ccc Building Kit, new file	
+// ccc Buildingset, new file
 
-/*
-ccc Dec06:
-This is nothing but a placeholder file that directs the program on to the real dialogfile in the \English subfolder.
+void ProcessDialogEvent()
+{
+	ref NPChar;
+	aref Link, NextDiag;
 
-The buildingset has recently been messed up by the attempt to localize my original all-English dialogfiles. 
-Instead of spending weeks with fixing and testing the new files I restored my original files. 
-However, the localization project has changed the structure of PotC for good : 
-Upon loading a  "x-dialog.c" codefile the program now automatically includes a  "x-dialog.h" text array file from the dialogs\english subfolder(or from the Russian folder if you use that language). 
-There the dialogtext is supposed to be.
+	DeleteAttribute(&Dialog,"Links");
 
-However, I prefer to have code AND plain text in one file, for 3 reasons:
--It is much easier to write
--You have much less bugs with not matching texts
--It is much easier to read and understand the file for debuggers and people who would like to change it
-The last point is especially important for me cause the Buildingset is supposed to be a tool for people who want to start modding.
-That's why I stick to the original "code plus English text" dialogfiles.
+	makeref(NPChar,CharacterRef);
+	makearef(Link, Dialog.Links);
+	makearef(NextDiag, NPChar.Dialog);
 
-As a concession to the localization project I put those files NOT into the \dialogs rootfolder but into the \dialogs\English subfolder.
-So if you want to translate this dialog you can simply copy the "code plus English text" into the subfolder for your language and translate the English text there.
-That will certainly be less work and trouble than messing up my files again. 
-Not mention the work and trouble that the debuging always causes.
-*/
+	ref PChar;
+	PChar = GetMainCharacter();
+
+	
+	switch(Dialog.CurrentNode)
+	{
+		case "First time":
+			Dialog.defAni = "dialog_stay1";
+			Dialog.defCam = "1";
+			Dialog.defSnd = "dialogs\0\017";
+			Dialog.defLinkAni = "dialog_1";
+			Dialog.defLinkCam = "1";
+			Dialog.defLinkSnd = "dialogs\woman\024";
+			Dialog.ani = "dialog_stay2";
+			Dialog.cam = "1";
+			NextDiag.TempNode = "first time";
+			dialog.text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + DLG_TEXT[1] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + DLG_TEXT[2];
+			link.l1 = DLG_TEXT[3];
+			link.l1.go = "help_2";
+			link.l4 = DLG_TEXT[4];
+			link.l4.go = "help_3";
+			link.l2 = DLG_TEXT[5];
+			link.l2.go = "items";
+			link.l3 = DLG_TEXT[6];
+			link.l3.go = "items1";
+		break;
+
+		case "help_2":
+			dialog.text = DLG_TEXT[7];
+			link.l1 = DLG_TEXT[8];
+			link.l1.go = "items";
+		break;
+
+		case "help_3":
+			dialog.text = DLG_TEXT[9];
+			link.l1 = DLG_TEXT[10];
+			link.l1.go = "items";
+		break;
+
+		case "items":
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(PChar, "Sneak", 100 ); }
+			else { AddPartyExp(PChar, 100 ); }
+			WaitDate("", 0, 0, 0, 2, 0);
+			dialog.text = DLG_TEXT[11];
+			link.l1 = DLG_TEXT[12];
+			link.l1.go = "items1";
+		break;
+
+		case "items1":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			LaunchCharacterItemChange(NPChar);
+
+			ChangeCharacterAddress(NPChar, "none", "");
+			Logit(TranslateString("","The Keeper disappears without word or sound, as if the ancient walls had swallowed him..."))
+		break;
+
+		case "Exit":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+
+			ChangeCharacterAddress(NPChar, "none", "");
+			Logit(TranslateString("","The Keeper disappears without word or sound, as if the ancient walls had swallowed him..."))
+		break;
+	}
+}

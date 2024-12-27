@@ -1239,11 +1239,17 @@ Rocky Cove{Rocky Cove}
 Sandy Beach{Sandy Beach}
 Arawak Village{Arawak Village}
 Arawak Burialground{Arawak Burialground}
+Boca Grandi{Boca Grandi}
 
 Rocky Cove.{Rocky Cove}
 Sandy Beach.{Sandy Beach}
 Arawak Village.{Arawak Village}
 Arawak Burialground.{Arawak Burialground}
+Boca Grandi.{Boca Grandi}
+
+The West Indies Brotherhood of Assassins - Headquarters{The West Indies Brotherhood of Assassins - Headquarters}
+Treasure room{Treasure room}
+Pyramid inside{Pyramid inside}
 
 NoCannons{No more cannons!}
 Enough{You can't install more cannons on this place!}
@@ -1253,12 +1259,14 @@ Switch to first-person-view if your avatar is inside of the building{Switch to f
 There is no building ground free at{There is no building ground free at}
 Buildings for Greater Oxbay locs{Buildings for Greater Oxbay locs}
 BK Keeper initialised.{BK Keeper initialised.}
-You chat on for hours and learn a lot{You chat on for hours and learn a lot}
+You chat on for hours and learn a lot.{You chat on for hours and learn a lot}
 After 24hrs are you fit again, even stronger than before.{After 24hrs are you fit again, even stronger than before.}
 + 1 max HP{+ 1 max HP}
 You have learned a lot about woundtreatment.{You have learned a lot about wound treatment.}
 You wake up feeling feverish.{You wake up feeling feverish.}
 Your wounds burn like fire!{Your wounds burn like fire!}
+Two days later most damage has been repaired.{Two days later most damage has been repaired.}
+Two days later your sails and rig are almost as new.{Two days later your sails and rig are almost as new.}
 about the town.{about the town.}
 Your victim produces{Your victim produces}
 Your conduct didn't improve your reputation{Your conduct didn't improve your reputation}
@@ -2350,6 +2358,7 @@ Kristiania cathedral passage{Kristiania cathedral passage}
 Kristiania suburb{Kristiania suburb}
 Kristiania swamp exit{Kristiania swamp exit}
 Living Room{Living Room}
+Mountain tunnel{Mountain tunnel}
 Blackbeard's tower{Blackbeard's tower}
 into the unknown...{into the unknown...}
 Islet{Islet}

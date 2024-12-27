@@ -963,5 +963,13 @@ Fearless{Бесстрашный}
 
 {=====| Officers.c |=====}
 Arabella{Арабелла}
+Barracuda{Барракуда}
+Fearless{Бесстрашный}
+Retribution{Возмездие}
+Obstacle{Препятствие}
+Unstoppable{Неудержимость}
+Smashing{Разящий}
+Apostle{Апостол}
+Secretive{Скрытный}
 
 {=====| 231 characters |=====}

@@ -279,6 +279,7 @@ You can't save while carrying a holy relic! Give it to a monk{°No puedes guarda
 You can't save while carrying a holy relic in this old abbey! Give it to a monk{°No puedes guardar mientras llevas una reliquia sagrada en la vieja abadÌa! D·sela a un monje}
 You can't save or load until{No puedes guardar o cargar hasta que}
 leaves.{se vaya.}
+You can't save without an active Profile{No puedes guardar sin un perfil activo}
 NewSave{Nueva partida guardada}
 God mode{Modo Dios}
 Selected character is{El personaje sleccionado es}	
@@ -711,6 +712,7 @@ You dig up a treasurechest{Cavas y sacas un cofre del tesoro}
 An  Akkelani witchdoctor. Mummified.. but spitting VENOM !{Un cham·n Akkelani. Momificado..., °pero escupe VENENO!!}
 Looks like someone has been digging here..{Parece que alguien ha estado cavando aquÌ..}
 Do you want to dig as well? With your SWORD{øQuieres cavar t˙ tambiÈn? Con tu ESPADA}
+Do you want to dig as well? With your{їQuieres cavar tъ tambiйn? Con tu }
 TAVERNBRAWL{PELEA DE TABERNA}
 AMBUSH{EMBOSCADA}
 MILITARY RAID{ATAQUE MILITAR}
@@ -1182,6 +1184,8 @@ Arsenal.{Barracones}
 #stown_name# Naval HQ{Cuartel General Naval de #stown_name#}
 Officer Commanding #stown_name# Naval HQ{Oficial al mando del Cuartel General Naval de #stown_name#}
 Mrs. Mason's House{Casa de la Sra. Mason}
+Yedam Kinne's house{Casa de Yedam Kinne}
+Mine commander's house{Casa del comandante de las minas}
 Office{Despacho}
 Naval Store{AlmacÈn Naval}
 Naval Shipyard{Astillero Naval}
@@ -1233,11 +1237,17 @@ Rocky Cove{Cala Rocosa}
 Sandy Beach{Playa Arenosa}
 Arawak Village{Aldea arawak}
 Arawak Burialground{Cementerio arawak}
+Boca Grandi{Boca Grandi}
 
 Rocky Cove.{Cala Rocosa}
 Sandy Beach.{Playa Arenosa}
 Arawak Village.{Aldea arawak}
 Arawak Burialground.{Cementerio arawak}
+Boca Grandi.{Boca Grandi}
+
+The West Indies Brotherhood of Assassins - Headquarters{The West Indies Brotherhood of Assassins - Headquarters}
+Treasure room{Treasure room}
+Pyramid inside{Pyramid inside}
 
 NoCannons{°No m·s caÒones!}
 Enough{°No puedes instalar m·s caÒones en este lugar!}
@@ -1247,12 +1257,14 @@ Switch to first-person-view if your avatar is inside of the building{°Cambia a 
 There is no building ground free at{No hay terreno edificable libre en}
 Buildings for Greater Oxbay locs{Buildings for Greater Oxbay locs}
 BK Keeper initialised.{BK Keeper initialised.}
-You chat on for hours and learn a lot{Charlas durante horas y aprendes mucho}
+You chat on for hours and learn a lot.{Charlas durante horas y aprendes mucho}
 After 24hrs are you fit again, even stronger than before.{24 horas despuÈs est·s en forma otra vez, incluso m·s fuerte que antes.}
 + 1 max HP{+ 1 max HP}
 You have learned a lot about woundtreatment.{Has aprendido muchos sobre tratamiento de heridas.}
 You wake up feeling feverish.{Te despiertas sintiÈndote febril.}
 Your wounds burn like fire!{°Tus heridas arden como el fuego!}
+Two days later most damage has been repaired.{Dos dнas despuйs, la mayor parte del daсo ha sido reparado.}
+Two days later your sails and rig are almost as new.{Dos dнas despuйs, tus velas y tus jarcias estan casi como nuevas.}
 about the town.{sobre la ciudad.}
 Your victim produces{Tu vÌctima saca}
 Your conduct didn't improve your reputation{Tu conducta no ayuda a mejorar tu reputaciÛn}
@@ -1604,6 +1616,7 @@ Gun deck{Cubierta de artillerÌa}
 Redmond old mine{Vieja mina}
 Friday's room{HabitaciÛn de Viernes}
 Port Royale Fort{Fuerte de Port Royale}
+Armory{Armerнa}
 
 Rogers' kitchen{Cocina de Rogers}
 Rogers' bedroom{Dormitorio de Rogers}
@@ -1615,6 +1628,16 @@ Rogers' storeroom{AlmacÈn de Rogers}
 Rogers' secret laboratory{Laboratorio secreto de Rogers}
 Rogers' secret storeroom{AlmacÈn secreto de Rogers}
 Wood tower{Torre de madera}
+
+Somewhere in the Caribbean{En algъn lugar del Caribe}
+Marooned Island{Isla del abandono}
+Manowar hold{Bodega del navнo de guerra}
+Secret room{Habitaciуn secreta}
+Entrance to Prison{Entrada a la prisiуn}
+Elevator{Elevador}
+Prison central hall{Pabellуn central de la prisiуn}
+Kristiania canyon{Caсуn de Kristiania}
+Kristiania entre{Entrada de Kristiania}
 
 You equipped a Powder Flask and an Ammunition Pouch.{Has equipado una petaca de pÛlvora y un saquete de balas.}
 If I push the fat trader I can take his cutlass!{°Si presiono al comerciante gordo, puedo llevarme su alfanje!}
@@ -1916,15 +1939,19 @@ Fort Moultrie restaurant{Restaurante de Fort Moultrie}
 Fort Moultrie hotel{Hotel de Fort Moultrie}
 Fort Moultrie prison{PrisiÛn de Fort Moultrie}
 Fort Moultrie barracks{Barracones de Fort Moultrie}
+Fort Moultrie armory{Armerнa de Fort Moultrie}
+Fort Moultrie shore{Costa de Fort Moultrie}
+Prison stairs{Escaleras de la prison}
+Gate tower stairs{Escaleras de la barbacana}											
 Lieutenant G:s house{Casa del teniente G}
 Lieutenant G:s office{Despacho del teniente G}
 Lieutenant G:s bedroom{Dormitorio del teniente G}
-Fort Moultrie shore{Costa de Fort Moultrie}
 Charleston{Charleston}
 Charleston port{Puerto de Charleston}
 Charleston port tavern{Taberna del puerto de Charleston}
 The Red Death{La Muerte Roja}
 The Maelstrom{El Maelstrom}
+Room in the Maelstrom{Habitaciуn de El Maelstrom}												  
 Charleston town{Ciudad de Charleston}
 Charleston shipyard{Astillero de Charleston}
 Charleston townhall{Ayuntamiento de Charleston}
@@ -1932,6 +1959,20 @@ Charleston store{Tienda de Charleston}
 Charleston Post & Bank{Correo y banco de Charleston}
 Charleston tailor{Sastre de Charleston}
 Charleston blacksmith{Herrero de Charleston}
+Strongroom{Cбmara acorazada}
+To the Wine Cellar{A la bodega de vino}
+First floor{Primera planta}
+Pym's drawing room{Sala de estar de Pym}
+Charleston Brothel{Burdel de Charleston}
+To the Brothel{Al burdel}
+Chinatown{Chinatown}
+Restaurant Tin Ho{Restaurante Tin Ho}
+Gunpowder mill{Fбbrica de pуlvora}
+Fireworks laboratory{Laboratorio de fuegos artificiales}
+Sulfur room{Sala del azufre}
+Salpeter barn{Ganero de salitre}
+Charcoal oven{Horno de carbуn vegetal}
+Charcoal storeroom{Almacйn de carbуn vegetal}											   
 Post Office{Oficina de correos}
 Poe's house{Casa de Poe}
 Poe's bedroom{Dormitorio de Poe}
@@ -1943,6 +1984,7 @@ Charleston shore{Costa de Charleston}
 Robert Cook and Maya{Robert Cook y Maya}
 Bishops Hostel{Hostal del Obispo}
 Bessop Plantation{PlantaciÛn Bessop}
+Guards only{Solo guardias}
 
 It's too high, I can't climb the rocks.{Es demasiado alto, no puedo trepar por las rocas.}
 Oxbay? Greenford? What are they talking about?{øOxbay? øGreenford? øDe quÈ est·n hablando?}
@@ -2004,6 +2046,8 @@ The Brig Grampus{El bergantÌn Grampus}
 The magnet makes something move inside.{El im·n hace que algo se mueva dentro.}
 Yes, with the Magnet I got a Key out of the collection box.{SÌ, con el im·n, he sacado una llave de la caja.}
 Private.{Privado.}
+Private{Privado}
+Charleston.{Charleston.}
 Textiles.{Textiles.}
 A photo of Edgar{Una fotografÌa de Edgar}
 The painting is signed by Frans Hals 1641{La pintura est· firmada por Frans Hals 1641}
@@ -2163,6 +2207,8 @@ East wing{Ala este}
 Rotunda upper levels{Niveles superiores de Rotunda}
 Rotunda middle levels{Niveles medios de Rotunda}
 Rotunda lower levels{Niveles inferiores de Rotunda}
+Rotunda bottom level{Nivel inferior de Rotunda}
+Prison Office{Oficina de la prisiуn}	 
 I'll need a Rope here.{NecesitarÈ una cuerda aquÌ.}
 Kitchen{Cocina}
 Dormitorium{Dormitorium}
@@ -2187,6 +2233,7 @@ To the Harbour Master{Al capit·n del puerto}
 Charleston Harbour Master{Capit·n del puerto de Charleston}
 Detective Agency 1st floor{Agencia de investigaciÛn, primera planta}
 C. Auguste Dupin - Private Investigator{C. Auguste Dupin - Investigador privado}	
+Dupin's room{Habitaciуn de Dupin}
 
 Something under that straw?{øAlgo bajo esa paja?}
 No, I'll only cut myself on those shards.{No, me cortarÌa con esos cristales rotos.}
@@ -2270,6 +2317,84 @@ It's something inside.{Hay algo dentro.}
 I need a small hook to reach it.{Necesito un gancho pequeÒo para alcanzarlo.}
 Nueva Suecia upper town{Barrio alto de Nueva Suecia}
 Nueva Suecia lower town{Barrio bajo de Nueva Suecia}
+Nueva Suecia inner town{Barrio interior de Nueva Suecia}
+Nueva Suecia tailor's shop{Nueva Suecia tailor's shop}
+Storeroom textiles{Almacйn de textiles}
+Tailor's room{Habitaciуn de sastre}
+Stairs{Escaleras}
+The Siberia.{The Siberia.}
+Priest's room{Habitaciуn de sacerdote}
+Kristiania cathedral{Catedral de Kristiania}
+Kristiania shipyard{Astillero de Kristiania}
+Spanish galleon{Galeуn espaсol}
+Kristiania port{Puerto de Kristiania}
+Kristiania center{Centro de Kristiania}
+Townhall office - open later today{Oficina del ayuntamiento. Abre mбs tarde}
+Townhall office{Oficina del ayuntamiento}
+Kitchen - staff only{Cocina - Solo persoanl autorizado}
+Kristiania Usurerhouse. Closed today because of the naval visit.{Prestamista de Kristiania. Hoy cerrado por la visita naval.}
+Kristiania Blacksmith. Closed today because of the naval visit.{Herrero de Kristiania. Hoy cerrado por la visita naval.}
+Kristiania Apothecary. Closed because of illness.{Boticario de Kristiania. Cerrado por enfermedad.}
+Kristiania prison. Vistors not allowed.{Prisiуn de Kristiania. No se admiten visitas.}
+Executioner. Leave me alone{Verdugo. Dйjenme en paz.}
+Opium house. Closed auction days.{Casa del opio. Dнas de subastas privadas.}
+Brothel open all days except Mondays.{Burdel abierto todos los dнas excepto lunes.}
+Magasin is swedish for warehouse. Stay away - the owner.{'Magasin' significa almacйn en sueco. Prohibido el paso - El dueсo.}
+Swedish Governor Walter{Gobernador sueco Walter}
+Kristiana store.{Tienda de Kristiania.}
+To the Brothel{Al burdel}
+To Kristiania center{Al centro de Kristiania}
+Exit from Kristiania{Salida de Kristiania}
+Kristiania Chapel{Capilla de Kristiania}
+Fort tower{Torre del fuerte}
+Fort Commander Hilpershaussen{Hilpershaussen del comandante del fuerte}
+Kristiania downhill{Parte baja de Kristiania}
+Kristiania cathedral passage{Pasadizo de la catedral de Kristiania}
+Kristiania suburb{Suburbio de Kristiania}
+Kristiania swamp exit{Salida del pantano de Kristiania}
+Living Room{Sala de estar}
+Blackbeard's tower{Torre de Barbanegra}
+into the unknown...{hacia lo desconocido...}
+Islet{Islote}
+Hideout{Escondite}
+Sloop{Balandro}
+Hold{Bodega}
+Large Cabin{Camarote grande}
+Small Cabin{Camarote pequeсo}
+Citadel{Ciudadela}
+This part of the Citadel is damaged{Esta parte de la ciudadela estб daсada}
+Maynard's room{Habitaciуn de Maynard}
+Citadel Cave{Cueva de la ciudadela}
+Gunsmith workshop{Taller del armero}
+#stown_name# surgeon{Cirujano de #stown_name#}
+#stown_name# sailmaker{Velero de #stown_name#}
+#stown_name# tower{Torre de #stown_name#}
+#stown_name# tower.{Torre de #stown_name#.}
+Tower stairs{Escaleras de la torre}
+To the Dovecote{Al palomar}
+Tower passage{Pasadizo de la torre}
+cloister passage{Pasadizo del claustro}
+Abbey{Abadнa}
+Bell tower{Campanario}
+Refectory{Refectorio}
+Abbess{Abbadesa}
+Small Chapel{Capilla pequeсa}
+Estate{Hacienda}
+Garden{Jardнn}
+Garden house{Casa del jardнn}
+Attic room{Habitaciуn del desvбn}
+Teach house{Casa de Teach}
+Teach room{Habitaciуn de Teach}
+Estate wine cellar{Bodega de vino de la hacienda}
+Repairs finished. The Gate will open today.{Reparaciones termiandas. La Puerta abrirб hoy.}
+Blockhouse{Fortнn}
+Weather deck{Toldilla}
+Gun deck prow{Cubierta de baterнa, proa}
+Gun deck stern{Cubierta de baterнa, popa}
+Animals hold prow{Bodega de ganado, proa}
+Convicts hold prow{Bodega de convictos, proa}
+Slaves hold stern{Bodega de esclavos, popa}
+
 It's just about too high.{Es un poco demasiado alto.}
 It's time to go downstairs and visit Caroline in her Drawing Room.{Es hora de ir al piso de abajo y visitar a Caroline en su salÛn.}
 It's a trap! I have to creep under the musket.{°Es una trampa! Tengo que pasar agachado bajo el mosquete.}
@@ -2301,6 +2426,7 @@ Insert coin.{Introducir moneda.}
 No, the cannon is stuck!{°No, el caÒÛn est· atascado!}
 So he could read? Most about Alchemy!{øAsÌ que sabÌa leer? °Sobre todo, sobre alquimia!}
 No, the Gold Bars are too heavy - the crew will take them to the ship.{No, los lingotes de oro son demasiado pesados; la tripulaciÛn los llevar· al barco.}
+No, the Gold Coins are too heavy - the crew will take them to the ship.{No, los monedas de oro son demasiado pesados; la tripulaciуn los llevarб al barco.}
 No, the Silver Bars are too heavy - the crew will take them to the ship.{No, los lingotes de plata son demasiado pesados; la tripulaciÛn los llevar· al barco.}
 No, the Valuable Weapons are too heavy - the crew will take them to the ship.{No, los armas valiosas son demasiado pesadas; la tripulaciÛn las llevar· al barco.}
 No, it's not the time for that.{No, no es momento para eso.}
@@ -2350,6 +2476,7 @@ Old Inquisition prison{Antigua prisiÛn de la InquisiciÛn}
 Archives{Archivo}
 Abandoned fort{Fuerte abandonado}
 Slave Camp{Campamento de esclavos}
+Slave Mine{Mina esclavista}
 Dining Room{Comedor}
 Dining Room.{Comedor}
 
