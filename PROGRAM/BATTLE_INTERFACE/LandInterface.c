@@ -19,7 +19,7 @@ bool bSelfDialogTurn = true; // Vex: Self Dialog Port; changes whether the playe
 void StartActorSelfDialog(string _CurrentNode)
 {
 	ref pchar = GetMainCharacter();
-	pchar.Dialog.Filename = "MainHero_dialog.c";
+	pchar.Dialog.Filename.self = "MainHero_dialog.c";
     LAi_SetActorType(pchar);
     locCameraSleep(true);
 

@@ -2,14 +2,11 @@
 
 void ProcessDialogEvent()
 {
-	ref NPChar;
-	aref Link, NextDiag;
+	aref Link;
 
 	DeleteAttribute(&Dialog,"Links");
 
-	makeref(NPChar,CharacterRef);
 	makearef(Link, Dialog.Links);
-	makearef(NextDiag, NPChar.Dialog);
 
     ref chr;
     float  fTemp;
@@ -17,28 +14,18 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-        case "Exit":
-			NextDiag.CurrentNode = NextDiag.TempNode;
+        case "TalkSelf_Exit":
 			DialogExit_Self();
 		break;
 
-		case "First time":
-	      	NextDiag.TempNode = "First time";
-
-	        Dialog.Text = "First time";
-			Link.l1 = DLG_TEXT[0];
-			Link.l1.go = DLG_TEXT[1];
-		break;
-
 		case "TalkSelf_Main":
-	   		NextDiag.TempNode = "First time";
 			Dialog.Text = DLG_TEXT[2];
 
 			Link.l1 = DLG_TEXT[3];
 			Link.l1.go = "TalkSelf_Wait1";
 
 			Link.l10 = DLG_TEXT[4];
-			Link.l10.go = "exit";
+			Link.l10.go = "TalkSelf_Exit";
 		break;
 
 		case "TalkSelf_Wait1":
@@ -62,7 +49,7 @@ void ProcessDialogEvent()
 				DialogExit_Self();
 			}
 			Link.l1 = DLG_TEXT[4];
-			Link.l1.go = "exit";
+			Link.l1.go = "TalkSelf_Exit";
 		break;
 	}
 }
