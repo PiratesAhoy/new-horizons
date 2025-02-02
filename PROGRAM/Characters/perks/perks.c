@@ -306,6 +306,8 @@ bool CheckCharacterPerk(ref chref, string perkName)
 
 void ActivateCharacterPerk(ref chref, string perkName)
 {
+	if(CheckAttribute(chref, "perks.list." + perkName + ".delay")) return;
+	
 	if( !CheckAttribute(&ChrPerksList,"list."+perkName) )
 	{
 		trace("Invalid perk name - " + perkName);
@@ -332,7 +334,10 @@ void ActivateCharacterPerk(ref chref, string perkName)
 		AddPerkToActiveList(perkName);
 	}
 
-	if(timeDelay>0) PostEvent("evntChrPerkDelay",1000,"sl",perkName,sti(chref.index));
+	if(timeDelay>0) 
+	{
+		PostEvent("evntChrPerkDelay",1000,"sl",perkName,sti(chref.index));
+	}
 	Event("eSwitchPerks","l",sti(chref.index));
 }
 
@@ -440,28 +445,36 @@ void procChrPerkDelay()
 	aref arPerk;
 	makearef(arPerk,Characters[chrIdx].perks.list.(perkName));
 	if( !CheckAttribute(arPerk,"delay") ) return;
-	int delay = sti(arPerk.delay);
-	delay--;
 
 	if( CheckAttribute(arPerk,"active") )
 	{
 		int iActive = sti(arPerk.active)-1;
-		if( iActive>0 )	{arPerk.active = iActive;}
+		if( iActive>0 )	
+		{
+			arPerk.active = iActive;
+			PostEvent("evntChrPerkDelay",1000,"sl",perkName,chrIdx);
+		}
 		else
 		{
+			DeleteAttribute(&Characters[chrIdx],"perks.list."+perkName+".active");
 			CharacterPerkOff(GetCharacter(chrIdx),perkName);
+			PostEvent("evntChrPerkDelay",1000,"sl",perkName,chrIdx);
 		}
-	}
-
-	if( delay<=0 )
-	{	DeleteAttribute(&Characters[chrIdx],"perks.list."+perkName+".delay");
-		DeleteAttribute(&Characters[chrIdx],"perks.list."+perkName+".active");
-		PostEvent("evntPerkAgainUsable",1);
 	}
 	else
 	{
-		Characters[chrIdx].perks.list.(perkName).delay = delay;
-		PostEvent("evntChrPerkDelay",1000,"sl",perkName,chrIdx);
+		int delay = sti(arPerk.delay);
+		delay--;
+		if( delay<=0 )
+		{	
+			DeleteAttribute(&Characters[chrIdx],"perks.list."+perkName+".delay");
+			PostEvent("evntPerkAgainUsable",1);
+		}
+		else
+		{
+			Characters[chrIdx].perks.list.(perkName).delay = delay;
+			PostEvent("evntChrPerkDelay",1000,"sl",perkName,chrIdx);
+		}
 	}
 }
 
