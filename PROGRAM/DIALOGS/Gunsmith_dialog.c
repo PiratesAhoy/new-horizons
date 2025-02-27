@@ -7,6 +7,7 @@
 * Based on the Gregor Samsa files.
 */
 
+
 void ProcessDialogEvent()
 {
 	int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
@@ -82,28 +83,28 @@ void ProcessDialogEvent()
 		Dialog.cam = "1";
 		Dialog.snd = "dialogs\0\009";
 
-		Dialog.text = "Hello captain, pleased to meet you. I'm the local blacksmith.";
-		link.l1 = "A blacksmith eh? So what exactly is it that you do? Can you repair anything for me?";
+		Dialog.text = DLG_TEXT[0];
+		link.l1 = DLG_TEXT[1];
 		link.l1.go = "Introduction";
 		break;
 
 		// Blacksmith tells the main char about his trade (and use in the game)
 	case "Introduction":
 		NPCDialog.CurrentNode = "SelectFix";
-		Dialog.text = "Ah yes, of course I can, " + GetMyAddressForm(NPCChar, MainChar, ADDR_POLITE, false, false) + "! I can repair any sword or gun you bring to me. Just equip the items that need fixing, and I'll fix it for you. The price varies for each type of sword or gun and level of damage, but I can fix everything in one day.";
-		link.l1 = "Good, let's get down to business!";
+		Dialog.text = DLG_TEXT[2] + GetMyAddressForm(NPCChar, MainChar, ADDR_POLITE, false, false) + DLG_TEXT[3];
+		link.l1 = DLG_TEXT[4];
 		link.l1.go = "SelectFix";
-		link.l2 = "Thanks, I'll keep it in mind! Goodbye.";
+		link.l2 = DLG_TEXT[5];
 		link.l2.go = "exit";
 		break;
 
 	case "SelectFix":
-		Dialog.text = "So what do you want to have fixed?";
-		link.l1 = "I think my blade could use some fixing.";
+		Dialog.text = DLG_TEXT[6];
+		link.l1 = DLG_TEXT[7];
 		link.l1.go = "BladeSelectFix";
-		link.l2 = "Does this gun look good to you? Because to me, it sure doesn't.";
+		link.l2 = DLG_TEXT[8];
 		link.l2.go = "GunSelectFix";
-		link.l99 = "Ehm. Come to think of it, I don't really need anything fixed at the moment.";
+		link.l99 = DLG_TEXT[9];
 		link.l99.go = "exit";
 		break;
 
@@ -117,8 +118,8 @@ void ProcessDialogEvent()
 		if(HasSubStr(BladeID,"halberd"))		//JRH
 		{
 			bneedexit = false;
-			Dialog.text = "What exactly do you want me to do with that rusty antiquity!?!? No blacksmith in the entire Caribbean could repair it, I'm afraid.";
-			link.l100 = "Thanks, I'll keep it in mind! Goodbye.";
+			Dialog.text = DLG_TEXT[10];
+			link.l100 = DLG_TEXT[11];
 			link.l100.go = "exit";
 		}
 		else
@@ -141,113 +142,113 @@ void ProcessDialogEvent()
 					// For a badly worn blade, show Excellent, Fine, Good and Average
 					// (if the player has enough money that is)
 				case QUALITY_BADLYWORN:
-					Dialog.text = "Wow, your " + BladeName + " is in terrible condition! I HAVE to fix it!";
+					Dialog.text = DLG_TEXT[12] + BladeName + DLG_TEXT[13];
 					if (PriceBladeExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best sword in the Archipelago, even if it costs me " + PriceBladeExcellent;
+						link.l1 = DLG_TEXT[14] + PriceBladeExcellent;;
 						link.l1.go = "BladeMakeExcellent";
 					}
 					if (PriceBladeFine <= PlayerMoney)
 					{
-						link.l2 = "Make her a blade to be proud of, I'll give you " + PriceBladeFine;
+						link.l2 = DLG_TEXT[15] + PriceBladeFine;;
 						link.l2.go = "BladeMakeFine";
 					}
 					if (PriceBladeGood <= PlayerMoney)
 					{
-						link.l3 = "A decent sword is all I need. Can you fix her up for, say, " + PriceBladeGood;
+						link.l3 = DLG_TEXT[16] + PriceBladeGood;;
 						link.l3.go = "BladeMakeGood";
 					}
 					if (PriceBladeAverage <= PlayerMoney)
 					{
-						link.l4 = "I'm pretty low on cash, so just give her a quick brush for " + PriceBladeAverage;
+						link.l4 = DLG_TEXT[17] + PriceBladeAverage;;
 						link.l4.go = "BladeMakeAverage";
 					}
-					link.l5 = "That's too expensive, never mind.";
+					link.l5 = DLG_TEXT[18];
 					link.l5.go = "exit";
 					break;
 
 					// Same goes for worn as goes for badly worn
 				case QUALITY_WORN:
-					Dialog.text = "Hmm, your " + BladeName + " is in pretty bad shape. Do you want me to fix it?";
+					Dialog.text = DLG_TEXT[19] + BladeName + DLG_TEXT[20];
 					if (PriceBladeExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best sword in the Archipelago, even if it costs me " + PriceBladeExcellent;
+						link.l1 = DLG_TEXT[21] + PriceBladeExcellent;;
 						link.l1.go = "BladeMakeExcellent";
 					}
 					if (PriceBladeFine <= PlayerMoney)
 					{
-						link.l2 = "Make her a blade to be proud of, I'll give you " + PriceBladeFine;
+						link.l2 = DLG_TEXT[22] + PriceBladeFine;;
 						link.l2.go = "BladeMakeFine";
 					}
 					if (PriceBladeGood <= PlayerMoney)
 					{
-						link.l3 = "A decent sword is all I need. Can you fix her up for, say, " + PriceBladeGood;
+						link.l3 = DLG_TEXT[23] + PriceBladeGood;;
 						link.l3.go = "BladeMakeGood";
 					}
 					if (PriceBladeAverage <= PlayerMoney)
 					{
-						link.l4 = "I'm pretty low on cash, so just give her a quick brush for " + PriceBladeAverage;
+						link.l4 = DLG_TEXT[24] + PriceBladeAverage;;
 						link.l4.go = "BladeMakeAverage";
 					}
-					link.l5 = "That's too expensive, never mind.";
+					link.l5 = DLG_TEXT[25];
 					link.l5.go = "exit";
 					break;
 
 					// If the blade is average, show excellent, fine and good
 				case QUALITY_AVERAGE:
-					Dialog.text = "Well, your " + BladeName + " is in reasonable condition, but you could do so much more damage with it after I fix it!";
+					Dialog.text = DLG_TEXT[26] + BladeName + DLG_TEXT[27];
 					if (PriceBladeExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best sword in the Archipelago, even if it costs me " + PriceBladeExcellent;
+						link.l1 = DLG_TEXT[28] + PriceBladeExcellent;;
 						link.l1.go = "BladeMakeExcellent";
 					}
 					if (PriceBladeFine <= PlayerMoney)
 					{
-						link.l2 = "Make her a blade to be proud of, I'll give you " + PriceBladeFine;
+						link.l2 = DLG_TEXT[29] + PriceBladeFine;;
 						link.l2.go = "BladeMakeFine";
 					}
 					if (PriceBladeGood <= PlayerMoney)
 					{
-						link.l3 = "A decent sword is all I need. Can you fix her up for, say, " + PriceBladeGood;
+						link.l3 = DLG_TEXT[30] + PriceBladeGood;;
 						link.l3.go = "BladeMakeGood";
 					}
-					link.l4 = "That's too expensive, never mind.";
+					link.l4 = DLG_TEXT[31];
 					link.l4.go = "exit";
 					break;
 
 					// If the blade is good, show excellent and fine
 				case QUALITY_GOOD:
-					Dialog.text = "Nice " + BladeName + "! I'd say sharpen it a little more, polish her up... What do you say?";
+					Dialog.text = DLG_TEXT[32] + BladeName + DLG_TEXT[33];
 					if (PriceBladeExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best sword in the Archipelago, even if it costs me " + PriceBladeExcellent;
+						link.l1 = DLG_TEXT[34] + PriceBladeExcellent;;
 						link.l1.go = "BladeMakeExcellent";
 					}
 					if (PriceBladeFine <= PlayerMoney)
 					{
-						link.l2 = "Make her a blade to be proud of, I'll give you " + PriceBladeFine;
+						link.l2 = DLG_TEXT[35] + PriceBladeFine;;
 						link.l2.go = "BladeMakeFine";
 					}
-					link.l3 = "That's too expensive, never mind.";
+					link.l3 = DLG_TEXT[36];
 					link.l3.go = "exit";
 					break;
 
 					// If the blade is fine, show only excellent
 				case QUALITY_FINE:
-					Dialog.text = "Ha! And what exactly would you like me to do with your " + BladeName + "? Just kidding, I can polish her up for you if you like.";
+					Dialog.text = DLG_TEXT[37] + BladeName + DLG_TEXT[38];
 					if (PriceBladeExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best sword in the Archipelago, even if it costs me " + PriceBladeExcellent;
+						link.l1 = DLG_TEXT[39] + PriceBladeExcellent;;
 						link.l1.go = "BladeMakeExcellent";
 					}
-					link.l2 = "That's too expensive, never mind.";
+					link.l2 = DLG_TEXT[40];
 					link.l2.go = "exit";
 					break;
 
 					// If the blade is excellent, refuse to repair (as there is nothing to repair...)
 				case QUALITY_EXELLENT:
-					Dialog.text = "... That " + BladeName + " is amazing! A true masterpiece! I wouldn't dare do anything to it fearing I'd destroy it!";
-					link.l1 = "...";
+					Dialog.text = DLG_TEXT[41] + BladeName + DLG_TEXT[42];
+					link.l1 = DLG_TEXT[43];
 					link.l1.go = "exit";
 					break;
 				}
@@ -256,8 +257,8 @@ void ProcessDialogEvent()
 		}
 		if(bneedexit) // NK bugfix 05-05-11
 		{
-			Dialog.text = "If you want my services, equip a blade, a proper blade, before you talk to me!";
-			link.l95 = "...";
+			Dialog.text = DLG_TEXT[44];
+			link.l95 = DLG_TEXT[45];
 			link.l95.go = "exit";
 		}
 		break;
@@ -287,8 +288,8 @@ void ProcessDialogEvent()
 		GiveItem2Character(MainChar, BladeBaseID + "+3");
 		EquipCharacterByItem(MainChar, BladeBaseID + "+3");
 
-		Dialog.text = "There you go, I'm all done. I hope to see you again when you need my services.";
-		link.l1 = "Thanks, I'll know where to find you!";
+		Dialog.text = DLG_TEXT[46];
+		link.l1 = DLG_TEXT[47];
 		link.l1.go = "exit";
 		break;
 
@@ -316,8 +317,8 @@ void ProcessDialogEvent()
 		GiveItem2Character(MainChar, BladeBaseID + "+2");
 		EquipCharacterByItem(MainChar, BladeBaseID + "+2");
 
-		Dialog.text = "There you go, I'm all done. I hope to see you again when you need my services.";
-		link.l1 = "Thanks, I'll know where to find you!";
+		Dialog.text = DLG_TEXT[48];
+		link.l1 = DLG_TEXT[49];
 		link.l1.go = "exit";
 		break;
 
@@ -345,8 +346,8 @@ void ProcessDialogEvent()
 		GiveItem2Character(MainChar, BladeBaseID + "+1");
 		EquipCharacterByItem(MainChar, BladeBaseID + "+1");
 
-		Dialog.text = "There you go, I'm all done. I hope to see you again when you need my services.";
-		link.l1 = "Thanks, I'll know where to find you!";
+		Dialog.text = DLG_TEXT[50];
+		link.l1 = DLG_TEXT[51];
 		link.l1.go = "exit";
 		break;
 
@@ -374,8 +375,8 @@ void ProcessDialogEvent()
 		GiveItem2Character(MainChar, BladeBaseID);
 		EquipCharacterByItem(MainChar, BladeBaseID);
 
-		Dialog.text = "There you go, I'm all done. I hope to see you again when you need my services.";
-		link.l1 = "Thanks, I'll know where to find you!";
+		Dialog.text = DLG_TEXT[52];
+		link.l1 = DLG_TEXT[53];
 		link.l1.go = "exit";
 		break;
 
@@ -403,113 +404,113 @@ void ProcessDialogEvent()
 					// For a badly worn gun, show Excellent, Fine, Good and Average
 					// (if the player has enough money that is)
 				case QUALITY_BADLYWORN:
-					Dialog.text = "Wow, your " + GunName + " is in terrible condition! I HAVE to fix it!";
+					Dialog.text = DLG_TEXT[54] + GunName + DLG_TEXT[55];
 					if (PriceGunExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best gun in the Archipelago, even if it costs me " + PriceGunExcellent;
+						link.l1 = DLG_TEXT[56] + PriceGunExcellent;;
 						link.l1.go = "GunMakeExcellent";
 					}
 					if (PriceGunFine <= PlayerMoney)
 					{
-						link.l2 = "Make her a gun to be proud of, I'll give you " + PriceGunFine;
+						link.l2 = DLG_TEXT[57] + PriceGunFine;;
 						link.l2.go = "GunMakeFine";
 					}
 					if (PriceGunGood <= PlayerMoney)
 					{
-						link.l3 = "A decent gun is all I need. Can you fix her up for, say, " + PriceGunGood;
+						link.l3 = DLG_TEXT[58] + PriceGunGood;;
 						link.l3.go = "GunMakeGood";
 					}
 					if (PriceGunAverage <= PlayerMoney)
 					{
-						link.l4 = "I'm pretty low on cash, so just give her a quick brush for " + PriceGunAverage;
+						link.l4 = DLG_TEXT[59] + PriceGunAverage;;
 						link.l4.go = "GunMakeAverage";
 					}
-					link.l5 = "That's too expensive, never mind.";
+					link.l5 = DLG_TEXT[60];
 					link.l5.go = "exit";
 					break;
 
 					// Same goes for worn as goes for badly worn
 				case QUALITY_WORN:
-					Dialog.text = "Hmm, your " + GunName + " is in pretty bad shape. Do you want me to fix it?";
+					Dialog.text = DLG_TEXT[61] + GunName + DLG_TEXT[62];
 					if (PriceGunExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best gun in the Archipelago, even if it costs me " + PriceGunExcellent;
+						link.l1 = DLG_TEXT[63] + PriceGunExcellent;;
 						link.l1.go = "GunMakeExcellent";
 					}
 					if (PriceGunFine <= PlayerMoney)
 					{
-						link.l2 = "Make her a gun to be proud of, I'll give you " + PriceGunFine;
+						link.l2 = DLG_TEXT[64] + PriceGunFine;;
 						link.l2.go = "GunMakeFine";
 					}
 					if (PriceGunGood <= PlayerMoney)
 					{
-						link.l3 = "A decent gun is all I need. Can you fix her up for, say, " + PriceGunGood;
+						link.l3 = DLG_TEXT[65] + PriceGunGood;;
 						link.l3.go = "GunMakeGood";
 					}
 					if (PriceGunAverage <= PlayerMoney)
 					{
-						link.l4 = "I'm pretty low on cash, so just give her a quick brush for " + PriceGunAverage;
+						link.l4 = DLG_TEXT[66] + PriceGunAverage;;
 						link.l4.go = "GunMakeAverage";
 					}
-					link.l5 = "That's too expensive, never mind.";
+					link.l5 = DLG_TEXT[67];
 					link.l5.go = "exit";
 					break;
 
 					// If the gun is average, show excellent, fine and good
 				case QUALITY_AVERAGE:
-					Dialog.text = "Well, your " + GunName + " is in reasonable condition, but you could do so much more damage with it after I fix it!";
+					Dialog.text = DLG_TEXT[68] + GunName + DLG_TEXT[69];
 					if (PriceGunExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best gun in the Archipelago, even if it costs me " + PriceGunExcellent;
+						link.l1 = DLG_TEXT[70] + PriceGunExcellent;;
 						link.l1.go = "GunMakeExcellent";
 					}
 					if (PriceGunFine <= PlayerMoney)
 					{
-						link.l2 = "Make her a gun to be proud of, I'll give you " + PriceGunFine;
+						link.l2 = DLG_TEXT[71] + PriceGunFine;;
 						link.l2.go = "GunMakeFine";
 					}
 					if (PriceGunGood <= PlayerMoney)
 					{
-						link.l3 = "A decent gun is all I need. Can you fix her up for, say, " + PriceGunGood;
+						link.l3 = DLG_TEXT[72] + PriceGunGood;;
 						link.l3.go = "GunMakeGood";
 					}
-					link.l4 = "That's too expensive, never mind.";
+					link.l4 = DLG_TEXT[73];
 					link.l4.go = "exit";
 					break;
 
 					// If the gun is good, show excellent and fine
 				case QUALITY_GOOD:
-					Dialog.text = "Nice " + GunName + "! I'd say sharpen it a little more, polish her up... What do you say?";
+					Dialog.text = DLG_TEXT[74] + GunName + DLG_TEXT[75];
 					if (PriceGunExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best gun in the Archipelago, even if it costs me " + PriceGunExcellent;
+						link.l1 = DLG_TEXT[76] + PriceGunExcellent;;
 						link.l1.go = "GunMakeExcellent";
 					}
 					if (PriceGunFine <= PlayerMoney)
 					{
-						link.l2 = "Make her a gun to be proud of, I'll give you " + PriceGunFine;
+						link.l2 = DLG_TEXT[77] + PriceGunFine;;
 						link.l2.go = "GunMakeFine";
 					}
-					link.l3 = "That's too expensive, never mind.";
+					link.l3 = DLG_TEXT[78];
 					link.l3.go = "exit";
 					break;
 
 					// If the gun is fine, show only excellent
 				case QUALITY_FINE:
-					Dialog.text = "Ha! And what exactly would you like me to do with your " + GunName + "? Just kidding, I can polish her up for you if you like.";
+					Dialog.text = DLG_TEXT[79] + GunName + DLG_TEXT[80];
 					if (PriceGunExcellent <= PlayerMoney)
 					{
-						link.l1 = "I want you to make this the best gun in the Archipelago, even if it costs me " + PriceGunExcellent;
+						link.l1 = DLG_TEXT[81] + PriceGunExcellent;;
 						link.l1.go = "GunMakeExcellent";
 					}
-					link.l2 = "That's too expensive, never mind.";
+					link.l2 = DLG_TEXT[82];
 					link.l2.go = "exit";
 					break;
 
 					// If the gun is excellent, refuse to repair (as there is nothing to repair...)
 				case QUALITY_EXELLENT:
-					Dialog.text = "... That " + GunName + " is amazing! A true masterpiece! I wouldn't dare do anything to it fearing I'd destroy it!";
-					link.l1 = "...";
+					Dialog.text = DLG_TEXT[83] + GunName + DLG_TEXT[84];
+					link.l1 = DLG_TEXT[85];
 					link.l1.go = "exit";
 					break;
 				}
@@ -517,8 +518,8 @@ void ProcessDialogEvent()
 		}
 		if(gneedexit) // NK bugfix 05-05-11
 		{
-			Dialog.text = "If you want my services, equip a gun, a proper gun, before you talk to me!";
-			link.l95 = "...";
+			Dialog.text = DLG_TEXT[86];
+			link.l95 = DLG_TEXT[87];
 			link.l95.go = "exit";
 		}
 		break;
@@ -548,8 +549,8 @@ void ProcessDialogEvent()
 		GiveItem2Character(MainChar, GunBaseID + "+3");
 		EquipCharacterByItem(MainChar, GunBaseID + "+3");
 
-		Dialog.text = "There you go, I'm all done. I hope to see you again when you need my services.";
-		link.l1 = "Thanks, I'll know where to find you!";
+		Dialog.text = DLG_TEXT[88];
+		link.l1 = DLG_TEXT[89];
 		link.l1.go = "exit";
 		break;
 
@@ -577,8 +578,8 @@ void ProcessDialogEvent()
 		GiveItem2Character(MainChar, GunBaseID + "+2");
 		EquipCharacterByItem(MainChar, GunBaseID + "+2");
 
-		Dialog.text = "There you go, I'm all done. I hope to see you again when you need my services.";
-		link.l1 = "Thanks, I'll know where to find you!";
+		Dialog.text = DLG_TEXT[90];
+		link.l1 = DLG_TEXT[91];
 		link.l1.go = "exit";
 		break;
 
@@ -606,8 +607,8 @@ void ProcessDialogEvent()
 		GiveItem2Character(MainChar, GunBaseID + "+1");
 		EquipCharacterByItem(MainChar, GunBaseID + "+1");
 
-		Dialog.text = "There you go, I'm all done. I hope to see you again when you need my services.";
-		link.l1 = "Thanks, I'll know where to find you!";
+		Dialog.text = DLG_TEXT[92];
+		link.l1 = DLG_TEXT[93];
 		link.l1.go = "exit";
 		break;
 
@@ -635,8 +636,8 @@ void ProcessDialogEvent()
 		GiveItem2Character(MainChar, GunBaseID);
 		EquipCharacterByItem(MainChar, GunBaseID);
 
-		Dialog.text = "There you go, I'm all done. I hope to see you again when you need my services.";
-		link.l1 = "Thanks, I'll know where to find you!";
+		Dialog.text = DLG_TEXT[94];
+		link.l1 = DLG_TEXT[95];
 		link.l1.go = "exit";
 		break;
 	}
