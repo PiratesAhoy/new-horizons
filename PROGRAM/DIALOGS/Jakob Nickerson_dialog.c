@@ -56,7 +56,7 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.text = DLG_TEXT[27] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[28];
-				Link.l1 = "Very well.";
+				Link.l1 = DLG_TEXT[31];  // Peter Norton - 28/02/2025
 				Link.l1.go = "exit";
 				if(sti(PChar.Skill.Commerce)>=5)
 				{

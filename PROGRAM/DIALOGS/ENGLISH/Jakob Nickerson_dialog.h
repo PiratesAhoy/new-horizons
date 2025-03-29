@@ -30,5 +30,5 @@ string DLG_TEXT[31] = {
 ", before I call the guards.",
 "After closing this dialog, press ENTER to bring up the sail changing interface.",
 "Exit",
-
+"Very Well!",  // Peter Norton 28/02/2025
 };
