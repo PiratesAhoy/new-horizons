@@ -19,7 +19,7 @@ personal_flag = 9
 ship = "Barque4_47"
 ship_name = "Neptunis"
 
-[storyline.new_horizons.start.editable]
+[storyline.assassin.start.editable]
 difficulty = true
 
 [storyline.assassin.start.date]

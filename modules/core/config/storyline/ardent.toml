@@ -19,7 +19,7 @@ personal_flag = 15
 ship = "Cutter1"
 ship_name = "Fortune"
 
-[storyline.new_horizons.start.editable]
+[storyline.ardent.start.editable]
 difficulty = true
 
 [storyline.ardent.start.date]

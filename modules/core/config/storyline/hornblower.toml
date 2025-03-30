@@ -16,7 +16,7 @@ personal_flag = 25
 ship = "HMS_Bellona"
 ship_name = "Justinian"
 
-[storyline.new_horizons.start.editable]
+[storyline.hornblower.start.editable]
 difficulty = true
 
 [storyline.hornblower.start.date]

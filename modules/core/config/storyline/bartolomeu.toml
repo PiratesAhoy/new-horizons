@@ -17,7 +17,7 @@ difficulty = "seadog"
 pirate_flag = 4
 personal_flag = 8
 
-[storyline.new_horizons.start.editable]
+[storyline.bartolomeu.start.editable]
 difficulty = true
 
 [storyline.bartolomeu.start.date]
