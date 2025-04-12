@@ -2329,26 +2329,26 @@ void SetNewLanguageView()
 	if(GetSelectable("B_LANGUAGES")) GameInterface.strings.GameOptionTitle = XI_ConvertString("Changeinterface");
 	else GameInterface.strings.GameOptionTitle = XI_ConvertString("Available Languages");//MAXIMUS
 	CreateExitString(); // KK//MAXIMUS
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_VIDEO",0,XI_ConvertString("Video Settings"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_SAILING",0,XI_ConvertString("Sailing Mode"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_SOUNDS",0,XI_ConvertString("Sounds"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CAMERA",0,XI_ConvertString("Camera Mode"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CONTROLS",0,XI_ConvertString("Controls"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_DIFFICULTY",0,XI_ConvertString("Difficulty"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_GAMEOPTION",0,XI_ConvertString("Changeinterface"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_BUILDSETTINGS",0,XI_ConvertString("BuildSettings"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NEWINTERFACE",0,XI_ConvertString("Newlook"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_OLDINTERFACE",0,XI_ConvertString("Oldlook"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NEWICONS",0,XI_ConvertString("NewIcons"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_OLDICONS",0,XI_ConvertString("OldIcons"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_VIDEO",0, "#" + XI_ConvertString("Video Settings"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_SAILING",0, "#" + XI_ConvertString("Sailing Mode"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_SOUNDS",0, "#" + XI_ConvertString("Sounds"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CAMERA",0, "#" + XI_ConvertString("Camera Mode"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CONTROLS",0, "#" + XI_ConvertString("Controls"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_DIFFICULTY",0, "#" + XI_ConvertString("Difficulty"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_GAMEOPTION",0, "#" + XI_ConvertString("Changeinterface"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_BUILDSETTINGS",0, "#" + XI_ConvertString("BuildSettings"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NEWINTERFACE",0, "#" + XI_ConvertString("Newlook"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_OLDINTERFACE",0, "#" + XI_ConvertString("Oldlook"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NEWICONS",0, "#" + XI_ConvertString("NewIcons"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_OLDICONS",0, "#" + XI_ConvertString("OldIcons"));
 	/*SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ENGLISH",0,XI_ConvertString("IntEnglish"));
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_RUSSIAN",0,XI_ConvertString("IntRussian"));//MAXIMUS
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FRENCH",0,XI_ConvertString("IntFrench"));//MAXIMUS
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_SPANISH",0,XI_ConvertString("IntSpanish"));//MAXIMUS
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_POLISH",0,XI_ConvertString("IntPolish"));*///MAXIMUS
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_LANGUAGES",0,XI_ConvertString("IntLanguages"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ANION",0,XI_ConvertString("AniOn"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ANIOFF",0,XI_ConvertString("AniOff"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_LANGUAGES",0, "#" + XI_ConvertString("IntLanguages"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ANION",0, "#" + XI_ConvertString("AniOn"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ANIOFF",0, "#" + XI_ConvertString("AniOff"));
 //	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ADDITIONAL",0,XI_ConvertString("IntAdditional")); // PB
 	GameInterface.strings.CurrentLanguage = XI_ConvertString("Int" + GetInterfaceLanguageName(iSelectedInterfaceLanguage)) + " | " + XI_ConvertString("Int" + GetInterfaceLanguageName(iSelectedKeyboardLayout)); // KK
 	DisplayInterfaceStatus();
