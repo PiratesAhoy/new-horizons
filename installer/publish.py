@@ -79,6 +79,9 @@ def copy_files():
     add_file("engine/mimalloc.dll")
     add_file("engine/mimalloc-redirect.dll")
 
+    # 7zip executable is required for uploading logs
+    add_file("resources/7za.exe")
+
     add_file("../.itch.toml")
     add_file("resources/engine.ini")
     add_file("resources/build14_beta4_final", "resource/build14_beta4_final")
