@@ -1211,7 +1211,7 @@ void ProcessDialogEvent()
 					Diag.CurrentNode = "get_out";
 					DialogExit();
 					LAi_QuestDelay("God_hit_us", 0.1);
-					PlaySound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+					PlaySound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 					if(mc.sex == "woman") PlaySound("OBJECTS\VOICES\DEAD\female\dead_wom4.wav");
 					else PlaySound("OBJECTS\VOICES\DEAD\male\dead6.wav");
 					Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"Boobytrapped") + "!");

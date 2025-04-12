@@ -7433,9 +7433,9 @@ void QuestComplete(string sQuestName)
 			PauseAllSounds();
 			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
 			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
 			PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
 			PlayStereoSound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
@@ -10859,7 +10859,7 @@ void QuestComplete(string sQuestName)
 
 		case "fireworks5_sound2":
 			PlaySound("AMBIENT\LAND\fireworks5B.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 		break;
 //...........................................................................................................
 

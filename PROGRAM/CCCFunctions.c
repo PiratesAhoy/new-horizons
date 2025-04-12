@@ -70,7 +70,7 @@ void Explosion(ref chr, int damage)		// Explosion hurts character "chr" with "da
 	CreateParticleSystemX("blast", x, y, z, x, y, z,0);	// effects at that pos
 	CreateParticleSystemX("fort_fire", x, y, z, x, y, z,5);
 	// LDH changed 23Mar09
-	PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+	PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 	if(chr.sex == "woman") PlayStereoSound("OBJECTS\VOICES\DEAD\female\dead_wom5.wav");
 	else PlayStereoSound("OBJECTS\VOICES\DEAD\male\dead6.wav");
 

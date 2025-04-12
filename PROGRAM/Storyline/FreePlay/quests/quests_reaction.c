@@ -1088,7 +1088,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("cancloud", 5.337, 1, 18.652, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 1.337, 1, 22.652, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 1.337, 1, 14.652, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 			LAi_KillCharacter(Pchar);
             }else{

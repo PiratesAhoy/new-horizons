@@ -190,7 +190,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Just_in_time":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			dialog.text = DLG_TEXT[60];
 			link.l1 = DLG_TEXT[61];
 			link.l1.go = "Just_in_time2";
@@ -218,7 +218,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_Just_in_time":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			AddDialogExitQuest("Antigua_Land_Battle");
 			Diag.CurrentNode = "First time";
 			DialogExit();

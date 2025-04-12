@@ -854,7 +854,7 @@ void QuestComplete(string sQuestName)
 		break;
 	//.......................................................................
 		case "sloop_sailaway1":
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("sloop_sailaway2", 1.0);
 		break;
@@ -8079,8 +8079,8 @@ void QuestComplete(string sQuestName)
 		case "cannonshot":
 			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
 			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
 
 			Pchar.quest.wr_armorybox = "open";
@@ -11141,7 +11141,7 @@ void QuestComplete(string sQuestName)
 		case "boiling_explosion":
 			PauseAllSounds();
 			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
 			PlayStereoSound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
 			PlaySound("PEOPLE\roof_broken2.wav");
@@ -23294,7 +23294,7 @@ void QuestComplete(string sQuestName)
 			ResumeAllSounds();
 
 			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
 			PlayStereoSound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
 			PlaySound("PEOPLE\roof_broken2.wav");
@@ -29418,7 +29418,7 @@ void QuestComplete(string sQuestName)
 			{
 				PauseAllSounds();
 				PlaySound("OBJECTS\DUEL\pistol_musket.wav");
-				PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+				PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 				PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
 				PlayStereoSound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
 				PlaySound("PEOPLE\roof_broken2.wav");
@@ -30546,7 +30546,7 @@ void QuestComplete(string sQuestName)
 
 					PauseAllSounds();
 					PlaySound("OBJECTS\DUEL\pistol_musket.wav");
-					PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+					PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 					PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
 					PlayStereoSound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
 					PlaySound("PEOPLE\roof_broken2.wav");
@@ -33448,7 +33448,7 @@ void QuestComplete(string sQuestName)
 			GetCharacterPos(CharacterFromID("wr_pir4"), &u, &v, &w);
 			CreateParticleSystemX("blast" , u, v, w, 0.0, 0.0, 0.0, 5 );
 			CreateParticleSystemX("fort_fire" , u, v, w, 0.0, 0.0, 0.0, 5 );
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 			LAi_KillCharacter(CharacterFromID("wr_pir4"));
 		break;
 	//-------------------------------------------------------------------------------------------------------------------------
@@ -42120,7 +42120,7 @@ void QuestComplete(string sQuestName)
 	//...............................................................................................
 		case "corvette_broadside3_1":
 			PlaySound("OBJECTS\SHIPCHARGE\LG24J.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			CreateParticleSystem("smoke_short" , -4.6, 2.7, 11.5, 4.5, 1.5, 0.0, sti(20) );
 			CreateParticleSystem("smoke_short" , -4.6, 2.7, 11.5, 4.5, 1.5, 0.0, sti(20) );
@@ -42147,7 +42147,7 @@ void QuestComplete(string sQuestName)
 	//...............................................................................................
 		case "corvette_broadside3_2":
 			PlaySound("OBJECTS\SHIPCHARGE\LG24J.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			CreateParticleSystem("smoke_short" , -4.9, 2.7, 7.1, 4.5, 1.5, 0.0, sti(20) );
 			CreateParticleSystem("smoke_short" , -4.9, 2.7, 7.1, 4.5, 1.5, 0.0, sti(20) );
@@ -42174,7 +42174,7 @@ void QuestComplete(string sQuestName)
 	//...............................................................................................
 		case "corvette_broadside3_3":
 			PlaySound("OBJECTS\SHIPCHARGE\LG24J.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			CreateParticleSystem("smoke_short" , -4.8, 2.7, 2.1, 4.5, 1.5, 0.0, sti(20) );
 			CreateParticleSystem("smoke_short" , -4.8, 2.7, 2.1, 4.5, 1.5, 0.0, sti(20) );
@@ -42201,7 +42201,7 @@ void QuestComplete(string sQuestName)
 	//...............................................................................................
 		case "corvette_broadside3_4":
 			PlaySound("OBJECTS\SHIPCHARGE\LG24J.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			CreateParticleSystem("smoke_short" , -4.8, 2.7, -1.4, 4.5, 1.5, 0.0, sti(20) );
 			CreateParticleSystem("smoke_short" , -4.8, 2.7, -1.4, 4.5, 1.5, 0.0, sti(20) );
@@ -42228,7 +42228,7 @@ void QuestComplete(string sQuestName)
 	//...............................................................................................
 		case "corvette_broadside3_5":
 			PlaySound("OBJECTS\SHIPCHARGE\LG24J.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			CreateParticleSystem("smoke_short" , -4.7, 2.7, -5.0, 4.5, 1.5, 0.0, sti(20) );
 			CreateParticleSystem("smoke_short" , -4.7, 2.7, -5.0, 4.5, 1.5, 0.0, sti(20) );
@@ -42255,7 +42255,7 @@ void QuestComplete(string sQuestName)
 	//...............................................................................................
 		case "corvette_broadside3_6":
 			PlaySound("OBJECTS\SHIPCHARGE\LG24J.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			CreateParticleSystem("smoke_short" , -4.4, 2.7, -10.4, 4.5, 1.5, 0.0, sti(20) );
 			CreateParticleSystem("smoke_short" , -4.4, 2.7, -10.4, 4.5, 1.5, 0.0, sti(20) );
@@ -45602,7 +45602,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "goodbye_Vane_Pchar5B":
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("goodbye_Vane_Pchar6", 1.0);
 		break;
@@ -56388,8 +56388,8 @@ void QuestComplete(string sQuestName)
 			
 			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
 			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
 
 			if(!LAi_IsDead(Pchar)) LAi_QuestDelay("Turks_gate_explosion1", 2.0);
@@ -61343,7 +61343,7 @@ void QuestComplete(string sQuestName)
 				//you survive
 
 				PlayStereoSound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
-				PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+				PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 				Locations[FindLocation("wr_church_inside")].reload.l1.disable = 1;
 
@@ -61369,7 +61369,7 @@ void QuestComplete(string sQuestName)
 
 				PauseAllSounds();
 				PlaySound("OBJECTS\DUEL\pistol_musket.wav");
-				PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+				PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 				PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
 				PlayStereoSound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
 				PlaySound("PEOPLE\roof_broken2.wav");
@@ -62391,7 +62391,7 @@ void QuestComplete(string sQuestName)
 
 		case "Charleston_gp_explosion":
 			PauseAllSounds();
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
 			PlaySound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
 			PlaySound("PEOPLE\roof_broken2.wav");
@@ -62886,19 +62886,19 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "LG12J":
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire2.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire2.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire2.flac");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire2.flac");
 		break;
 
 		case "LG18J":
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 		break;
 
 		case "LG24J":
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 		break;
 
 		case "QAR_broadsideR_1":
@@ -65533,7 +65533,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "salute":
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 		break;
 
 		case "hurrah":

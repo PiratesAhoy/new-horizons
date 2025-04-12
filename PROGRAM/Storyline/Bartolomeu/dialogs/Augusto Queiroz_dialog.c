@@ -432,7 +432,7 @@ void ProcessDialogEvent()
 			        dialog.text = DLG_TEXT[87];
 			        link.l1 = DLG_TEXT[88];
 			        link.l1.go = "begin_46";
-                    PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");					
+                    PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
                         break;
 
                        case "begin_46":
@@ -475,7 +475,7 @@ void ProcessDialogEvent()
 			        dialog.text = DLG_TEXT[97];
 			        link.l1 = DLG_TEXT[98];
 			        link.l1.go = "begin_51";
-                    PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");					
+                    PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
                         break;
 						
                        case "begin_51":
@@ -512,7 +512,7 @@ void ProcessDialogEvent()
 			        dialog.text = DLG_TEXT[104];
 			        link.l1 = DLG_TEXT[105];
 			        link.l1.go = "exit";
-                    PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");						
+                    PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
                               AddDialogExitQuest("outside_fort53");		                               
                         break;
 

@@ -80,7 +80,7 @@ void LAi_type_Building_CharacterUpdate(aref chr, float dltTime)
 			GetCharacterPos(chr, &x, &y, &z);
 			CreateParticleSystemX("blast_inv", x, y, z, x, y, z,2);
 			CreateParticleSystemX("cancloud", x, y, z, x, y, z,10);
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 			return;		// chr does nothing else
 		}
 	}
@@ -106,7 +106,7 @@ void LAi_type_Building_CharacterUpdate(aref chr, float dltTime)
 			GetCharacterPos(chr, &x, &y, &z);
 			CreateParticleSystemX("blast_inv", x, y, z, x, y, z,2);
 			CreateParticleSystemX("cancloud", x, y, z, x, y, z,10);
-			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlaySound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 
 			// mar06  cannonhit raises alarm
 			LAi_group_SetLookRadius(target.chr_ai.group, 25.0);

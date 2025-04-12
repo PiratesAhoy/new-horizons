@@ -1014,7 +1014,7 @@ void BothQuestComplete(string sQuestName)
 			CreateParticleSystemX("cancloud", -21.95, 0.00, 11.17, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -26.95, 0.00, 16.17, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -26.95, 0.00, 6.17, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 		break;
 

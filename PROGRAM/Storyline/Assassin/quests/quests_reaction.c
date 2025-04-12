@@ -732,7 +732,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -9.5, 18.5, 2.41, -1.57, 0.0, 0.0,0);	
 			CreateParticleSystemX("cancloud", -9.5, 18.5, 2.41, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -9.5, 18.5, -3.41, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
             LAi_QuestDelay("bombe2", 0.2);
 		break;
@@ -4514,7 +4514,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast", -35.434, 0.00, 10.042, -1.57, 0.0, 0.0,0);	
 			CreateParticleSystemX("fort_fire", -35.434, 1.00, 10.042, -1.57, 0.0, 0.0,20);
 
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 			LAi_ActorSetLayMode(characterFromID("Salvadore Benavides"));
 			LAi_KillCharacter(characterFromID("Quest_Havana_soldier_05"));
@@ -5521,7 +5521,7 @@ void QuestComplete(string sQuestName)
     		CreateParticleSystemX("cancloud", 77.019, 24.267, -218.54, -1.57, 0.0, 0.0,20);			
 			CreateParticleSystemX("cancloud", 22.421, 32.504, -154.62, -1.57, 0.0, 0.0,20);	
     		CreateParticleSystemX("cancloud", 100.58, 30.348, -142.78, -1.57, 0.0, 0.0,20);			
-            PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+            PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
             ref morro;		
 		    morro = &Locations[FindLocation("Morro_Fort")];
 			DeleteAttribute(morro,"building");				

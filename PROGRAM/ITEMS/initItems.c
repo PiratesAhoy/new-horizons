@@ -1767,7 +1767,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.multidmg                = 1;  // new attribute, does multiple damage
   itm.selfdmg                 = 1;  // hurts user if used too close
   itm.misfire                 = 5;  // chance in % that weapon hurts user only
-  itm.sound                   =  "OBJECTS\SHIPCHARGE\cannon_fire3.wav"; // soundfile played when used
+  itm.sound                   =  "OBJECTS/SHIPCHARGE/cannon_fire3.flac"; // soundfile played when used
   itm.always.fx.qty           = 2;
   itm.always.fx.effect0       = "blast";      // graphic effect, choose particlename from resource\ini\particles\
   itm.always.fx.effect0.time  = 5;        // duration of this effect

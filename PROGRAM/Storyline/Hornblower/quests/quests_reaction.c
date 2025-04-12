@@ -1380,7 +1380,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 116.4, 1.5766, -141.82, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 116.4, 1.5766, -141.82, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 116.4, 1.5766, -141.82, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("Off_to_the_Mystery_House3", 0.0);
 		break;
 
@@ -1425,7 +1425,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Charlestown_port")].models.night.lights.fire = "heater"; 
 			Locations[FindLocation("Charlestown_port")].locators_radius.fire = 4.0; 
 			CreateParticleSystemX("fireball", 90.519, 1.5425, -153.6, -1.57, 0.0, 0.0,0);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("Killed_at_Charlestown2", 1.0);
 		break;
 
@@ -1439,7 +1439,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Charlestown_port")].locators_radius.fire = 4.0; 
 			CreateParticleSystemX("fireball", 97.805, 1.5984, -152.8, -1.57, 0.0, 0.0,0);
 
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("Killed_at_Charlestown3", 1.0);
 		break;
 
@@ -1447,12 +1447,12 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 97.805, 1.5984, -152.8, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 97.805, 1.5984, -152.8, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 97.805, 1.5984, -152.8, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("Killed_at_Charlestown4", 1.0);
 		break;
 
 		case "Killed_at_Charlestown4":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			CreateParticleSystemX("blast_inv", 111.08, 1.582, -150.31, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 111.08, 1.582, -150.31, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 111.08, 1.582, -150.31, -1.57, 0.0, 0.0,20);
@@ -6528,7 +6528,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -0.12996, 2.7257, -10.364, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -0.12996, 2.7257, -10.364, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -0.12996, 2.7257, -10.364, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 			LAi_QuestDelay("The_fort_opens_fire2", 1.0);
 		break;
@@ -6542,7 +6542,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -1.3729, 2.76, -11.064, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -1.3729, 2.76, -11.064, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -1.3729, 2.76, -11.064, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 			LAi_QuestDelay("The_fort_opens_fire3", 1.0);
 		break;
@@ -6556,7 +6556,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -3.2834, 2.7341, -11.181, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -3.2834, 2.7341, -11.181, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -3.2834, 2.7341, -11.181, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 			LAi_QuestDelay("The_fort_opens_fire4", 1.0);
 		break;
@@ -6577,7 +6577,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -1.3729, 2.76, -11.064, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -1.3729, 2.76, -11.064, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -1.3729, 2.76, -11.064, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			LAi_SetActorType(characterFromID("Richard Sharpe"));
@@ -6590,7 +6590,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -1.3729, 2.76, -11.064, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -1.3729, 2.76, -11.064, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -1.3729, 2.76, -11.064, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			LAi_SetOfficerType(characterFromID("Richard Sharpe"));
@@ -6618,7 +6618,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Go_look_at_the_bridge":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_SetActorType(characterFromID("Archie Kennedy"));
 			LAi_SetActorType(characterFromID("Lt. William Bush"));
 			LAi_SetActorType(characterFromID("Matthews"));
@@ -6676,7 +6676,7 @@ void QuestComplete(string sQuestName)
 // TRAP
 		case "Bad_Set_up_the_attack":
 			Pchar.Quest.Set_up_the_attack.over = "yes";
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_SetActorType(characterFromID("soldier9SP"));
 			LAi_ActorTurnToCharacter(characterFromID("soldier9SP"), characterFromID("soldier6SP"));
 			LAi_SetActorType(characterFromID("soldier8SP"));
@@ -6746,7 +6746,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -8.9532, 12.8, 13.448, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -8.9532, 12.8, 13.448, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -8.9532, 12.8, 13.448, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("Bad_Set_up_the_attack5", 2.0);
 		break;
 
@@ -6754,7 +6754,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -8.5683, 11.659, -17.734, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -8.5683, 11.659, -17.734, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -8.5683, 11.659, -17.734, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			LAi_QuestDelay("Bad_Set_up_the_attack6", 1.0);
@@ -6774,7 +6774,7 @@ void QuestComplete(string sQuestName)
 // TRAP OVER
 		case "Set_up_the_attack":
 			Pchar.Quest.Bad_Set_up_the_attack.over = "yes";
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_SetActorType(characterFromID("soldier9SP"));
 			LAi_ActorTurnToCharacter(characterFromID("soldier9SP"), characterFromID("soldier6SP"));
 			LAi_SetActorType(characterFromID("soldier8SP"));
@@ -6808,7 +6808,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "now_start_shooting":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_SetActorType(PChar);
 			LAi_ActorGoToLocator((Pchar), "goto", "goto20", "",10.0);
 			LAi_SetActorType(characterFromID("Rifleman Haggman"));
@@ -7274,7 +7274,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -8.9532, 12.8, 13.448, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -8.9532, 12.8, 13.448, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -8.9532, 12.8, 13.448, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("Fire_at_rebel_Army2", 2.0);
 		break;
 
@@ -7282,7 +7282,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -8.5683, 11.659, -17.734, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -8.5683, 11.659, -17.734, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -8.5683, 11.659, -17.734, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			LAi_QuestDelay("Dead_rebel_Army", 1.0);
@@ -7324,7 +7324,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -5.6791, 12.234, 20.157, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -5.6791, 12.234, 20.157, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -5.6791, 12.234, 20.157, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire1", "", -1, -5.6791, 12.234, 20.157, false);
@@ -7338,7 +7338,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -4.702, 12.164, 18.35, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -4.702, 12.164, 18.35, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -4.702, 12.164, 18.35, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire2", "", -1, -4.702, 12.164, 18.35, false);
@@ -7352,7 +7352,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -6.5704, 12.176, 18.313, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -6.5704, 12.176, 18.313, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -6.5704, 12.176, 18.313, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire3", "", -1, -6.5704, 12.176, 18.313, false);
@@ -7366,7 +7366,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -8.3331, 12.111, 18.56, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -8.3331, 12.111, 18.56, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -8.3331, 12.111, 18.56, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire4", "", -1, -8.3331, 12.111, 18.56, false);
@@ -7385,7 +7385,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -2.6377, 12.089, 18.329, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -2.6377, 12.089, 18.329, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -2.6377, 12.089, 18.329, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire6", "", -1, -2.6377, 12.089, 18.329, false);
@@ -7399,7 +7399,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -10.825, 11.576, 18.945, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -10.825, 11.576, 18.945, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -10.825, 11.576, 18.945, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire7", "", -1, -10.825, 11.576, 18.945, false);
@@ -7413,7 +7413,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -5.6791, 12.234, 20.157, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -5.6791, 12.234, 20.157, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -5.6791, 12.234, 20.157, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire8", "", -1, -8.9954, 11.82, 14.951, false);
@@ -8073,7 +8073,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Meet_with_Wellesley_talk_battle":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			Locations[FindLocation("Antigua_outskirts")].vcskip = true;
 			LAi_SetOfficerType(characterFromID("Arthur Wellesley"));
 			LAi_SetOfficerType(characterFromID("Lt. Uriah Quelp"));
@@ -8271,7 +8271,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Go_to_Mr_Matthews":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_SetOfficerType(characterFromID("Richard Sharpe"));
 			LAi_QuestDelay("Go_to_Mr_Matthews2", 1.0);
 		break;
@@ -8292,7 +8292,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -22.122, -0.62642, 23.738, 1.7537, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -22.122, -0.62642, 23.738, 1.7537, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -22.122, -0.62642, 23.738, 1.7537, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			WriteLocatorGlobal("Antigua_outskirts", "fire", "fire1", "", -1, -22.122, -0.62642, 23.738, false);
 			Locations[FindLocation("Antigua_outskirts")].models.night.lights.fire = "heater"; 
@@ -8359,7 +8359,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -10.749, 0.39496, 22.555, -0.52835, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -10.749, 0.39496, 22.555, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -10.749, 0.39496, 22.555, 0.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Player_gets_blown_up2", 0.0);
 		break;
@@ -8386,7 +8386,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -8.0892, 2.1621, 55.201, 1.0, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -8.0892, 2.1621, 55.201, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -8.0892, 2.1621, 55.201, 0.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Player_gets_blown_up2", 1.0);
 		break;
@@ -8404,7 +8404,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -5.5041, 1.7323, 49.54, 0.99246, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -5.5041, 1.7323, 49.54, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -5.5041, 1.7323, 49.54, 0.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Player_gets_blown_up2", 1.0);
 		break;
@@ -8463,7 +8463,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 3.8167, 0.97968, 108.32, -2.9496, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 3.8167, 0.97968, 108.32, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 3.8167, 0.97968, 108.32, 0.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Cannon_bang_OneXXX", 0.0);
 		break;
@@ -8477,7 +8477,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -5.5041, 1.7323, 49.54, 0.99246, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -5.5041, 1.7323, 49.54, 0.99246, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -5.5041, 1.7323, 49.54, 0.99246, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Fire_cannon2", 1.0);
 		break;
@@ -8486,7 +8486,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 12.879, 0.14554, 107.56, -3.0157, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 12.879, 0.14554, 107.56, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 12.879, 0.14554, 107.56, 0.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Cannon_bang_TwoXXX", 0.0);
 		break;
@@ -8500,7 +8500,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -9.5927, 0.19974, 9.6287, 0.041649, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -9.5927, 0.19974, 9.6287, 0.041649, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -9.5927, 0.19974, 9.6287, 0.041649, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			WriteLocatorGlobal("Antigua_outskirts", "fire", "fire5", "", -1, -23.575, 2.0, 26.57, false);
 			Locations[FindLocation("Antigua_outskirts")].models.night.lights.fire = "heater"; 
@@ -8514,7 +8514,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 23.234, 0.64429, 105.12, -2.8216, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 23.234, 0.64429, 105.12, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 23.234, 0.64429, 105.12, 0.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Cannon_bang_ThreeXXX", 0.0);
 		break;
@@ -8528,7 +8528,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -12.354, 0.25733, 23.062, 0.15646, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -12.354, 0.25733, 23.062, 0.15646, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -12.354, 0.25733, 23.062, 0.15646, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			WriteLocatorGlobal("Antigua_outskirts", "fire", "fire6", "", -1, -9.5927, 0.2, 9.6287, false);
 			Locations[FindLocation("Antigua_outskirts")].models.night.lights.fire = "heater"; 
@@ -8547,7 +8547,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -12.115, 2.8464, 48.167, -1.404, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -12.115, 2.8464, 48.167, 0.0, 0.0, 0.0,20); // ay = -1.404 
 			CreateParticleSystemX("cancloud", -12.115, 2.8464, 48.167, 0.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("British_Bang_OneXXX", 0.0);
 		break;
@@ -8561,7 +8561,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 9.9351, -0.9602, 105.36, 0.65145, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 9.9351, -0.9602, 105.36, 0.65145, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 9.9351, -0.9602, 105.36, 0.65145, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("the_Cannon_fired", 1.0);
 		break;
@@ -8619,7 +8619,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 13.924, -0.83922, 108.78, -1.1836, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 13.924, -0.83922, 108.78, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 13.924, -0.83922, 108.78, 0.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			WriteLocatorGlobal("Antigua_outskirts", "fire", "fire7", "", -1, 13.924, -0.83922, 109.39, false);
 			Locations[FindLocation("Antigua_outskirts")].models.night.lights.fire = "heater"; 
@@ -9040,7 +9040,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 9.2328, 0.815108, 16.672, 1.5466, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 9.2328, 0.815108, 16.672, 1.5466, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 9.2328, 0.815108, 16.672, 1.5466, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Other_French_Valley_Trap3", 1.0);
 		break;
@@ -9049,7 +9049,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 32.631, -0.065334, 16.931, 1.0, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 32.631, -0.065334, 16.931, 1.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 32.631, -0.065334, 16.931, 1.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Player_gets_blown_up2", 0.0);
 		break;
@@ -9170,7 +9170,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -37.548, 0.831665, -7.1746, -0.69242, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -37.548, 0.831665, -7.1746, -0.69242, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -37.548, 0.831665, -7.1746, -0.69242, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Antigua_French_Valley_Trap4", 1.0);
 		break;
@@ -9179,7 +9179,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -51.974, 0.031665, 12.411, 1.0, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -51.974, 0.031665, 12.411, 1.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -51.974, 0.031665, 12.411, 1.0, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			LAi_QuestDelay("Player_gets_blown_up2", 0.0);
 		break;
@@ -9747,7 +9747,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", -2.9419, 1.545, 60.121, 0.57372, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -2.9419, 1.545, 60.121, 0.57372, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -2.9419, 1.545, 60.121, 0.57372, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_SetStunnedTypeNoGroup(characterFromID("The Earl of Edrington"));
 			LAi_QuestDelay("The_French_assualt5C", 1.0);
 		break;
@@ -9756,7 +9756,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 16.77, -0.39693, 65.962, -0.094352, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 16.77, -0.39693, 65.962, -0.094352, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 16.77, -0.39693, 65.962, -0.094352, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("Return_French_fire1", 5.0);
 		break;
 
@@ -9780,7 +9780,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 21.314, 1.4649, 152.13, 0.29548, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 21.314, 1.4649, 152.13, 0.29548, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 21.314, 1.4649, 152.13, 0.29548, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("Return_French_fire3Z", 0.5);
 		break;
 
@@ -9796,7 +9796,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 26.705, 1.0901, 155.58, 0.61948, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 26.705, 1.0901, 155.58, 0.61948, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 26.705, 1.0901, 155.58, 0.61948, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("French_second_volley2", 1.0);
 		break;
 
@@ -9809,7 +9809,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Antigua_outskirts")].models.night.lights.fire = "heater"; 
 			Locations[FindLocation("Antigua_outskirts")].locators_radius.fire = 20.0; 
 			CreateParticleSystemX("fireball", 34.503, 0.31109, 169.04, 2.1042, 0.0, 0.0,0);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("What_an_awful_mess", 10.0);
 		break;
 
@@ -9833,7 +9833,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("cancloud", 29.668, 1.61576, 169.26, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 29.668, 1.61576, 169.26, 0.0, 0.0, 0.0,20);
 			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire_HB.wav");
-////////////			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+////////////			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("French_Blast_vol2_1", 2.0);
 		break;
 
@@ -9841,7 +9841,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 5.2852, 0.69082, 54.312, -1.594, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 5.2852, 0.69082, 54.312, -1.594, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 5.2852, 0.69082, 54.312, -1.594, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Antigua_outskirts", "fire", "fire2", "", -1, 5.1668, 0.6619, 54.985, false);
@@ -9965,7 +9965,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 13.484, -0.88979, 109.63, 0.67745, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 13.484, -0.88979, 109.63, 0.67745, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 13.484, -0.88979, 109.63, 0.67745, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 
 			Lai_KillCharacter(characterFromID("soldier7X"));
 			Lai_KillCharacter(characterFromID("soldier8X"));
@@ -9976,7 +9976,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 9.9351, -0.9602, 105.36, 0.65145, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 9.9351, -0.9602, 105.36, 0.65145, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 9.9351, -0.9602, 105.36, 0.65145, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("The_Fire_Fight10", 1.0);
 		break;
 
@@ -13733,7 +13733,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 1.7085, 16.89, -10.585, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 1.7085, 16.89, -10.585, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 1.7085, 16.89, -10.585, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire1", "", -1, 1.7085, 16.89, -10.585, false);
@@ -13747,7 +13747,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 2.1397, 16.89, -10.585, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 2.1397, 16.89, -10.585, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 2.1397, 16.89, -10.585, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire1", "", -1, 2.1397, 16.89, -10.585, false);
@@ -13761,7 +13761,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 11.049, 16.864, -4.8695, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 11.049, 16.864, -4.8695, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 11.049, 16.864, -4.8695, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire1", "", -1, 11.049, 16.864, -4.8695, false);
@@ -13775,7 +13775,7 @@ void QuestComplete(string sQuestName)
 			CreateParticleSystemX("blast_inv", 6.0759, 16.869, -8.4767, -1.57, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 6.0759, 16.869, -8.4767, -1.57, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 6.0759, 16.869, -8.4767, -1.57, 0.0, 0.0,20);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
 
 			WriteLocatorGlobal("Prison_Shore", "fire", "fire1", "", -1, 6.0759, 16.869, -8.4767, false);
@@ -14797,7 +14797,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hotspur_underfire9":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			CreateParticleSystemX("blast_inv", -0.64847, 4.9474, -17.581, 1.7537, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -0.64847, 4.9474, -17.581, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -0.64847, 4.9474, -17.581, 0.0, 0.0, 0.0,20);
@@ -14852,7 +14852,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Orders_for_attack_battery":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			pchar.quest.Destroy_the_Battery.win_condition.l1 = "locator";
 			pchar.quest.Destroy_the_Battery.win_condition.l1.location = "PaP_Arsenal";
 			pchar.quest.Destroy_the_Battery.win_condition.l1.locator_group = "reload";
@@ -14865,7 +14865,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "set_the_guns_and_crew":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			CreateParticleSystemX("cancloud", 16.105, 7.9408, -6.0718, -1.00, 0.0, 0.0,5);
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m6, "goto", "goto1");
@@ -14937,7 +14937,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "set_the_guns_and_crew2":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			CreateParticleSystemX("cancloud", -7.0532, 7.9408, 2.21, -1.00, 0.0, 0.0,10);
 
 			LAi_SetActorType(characterFromID("soldier1X"));
@@ -14983,7 +14983,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Destroy_the_Battery3":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			CreateParticleSystemX("cancloud", 16.06, 7.9408, -11.026, -1.0, 0.0, 0.0,10);
 
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
@@ -14994,12 +14994,12 @@ void QuestComplete(string sQuestName)
 			PChar.quest.KilledFighting.win_condition.l1.character = PChar.id;
 			PChar.quest.KilledFighting.win_condition = "KilledFighting";
 
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			CreateParticleSystemX("cancloud", 16.105, 7.9408, -6.0718, -1.00, 0.0, 0.0,5);
 		break;
 
 		case "Now_stop_the_gunsP":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			CreateParticleSystemX("cancloud", -7.0532, 7.9408, 2.21, -1.00, 0.0, 0.0,10); //-7.2353
 
 			LAi_SetActorType(characterFromID("Styles"));
@@ -15026,12 +15026,12 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Styles"));
 			characters[GetCharacterIndex("Styles")].Dialog.Filename = "Styles_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Styles"),PChar,"",2.0);
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			CreateParticleSystemX("cancloud", 16.105, 7.9408, -6.0718, -1.00, 0.0, 0.0,5);
 		break;
 
 		case "Four_gunners_dead":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			CreateParticleSystemX("cancloud", 16.06, 7.9408, -11.026, -1.0, 0.0, 0.0,10);
 
 			LAi_SetActorType(PChar);
@@ -15264,7 +15264,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Fake_Guadeloupe_fort")].locators_radius.fire = 4.0; 
 			CreateParticleSystemX("fireball", 4.4705, 2.7257, -4.9335, -1.57, 0.0, 0.0,0);
 
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 			CreateParticleSystemX("blast_inv", 4.4705, 2.7257, -4.9335, 1.7537, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 4.4705, 2.7257, -4.9335, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 4.4705, 2.7257, -4.9335, 0.0, 0.0, 0.0,20);
@@ -15277,7 +15277,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Fake_Guadeloupe_fort")].locators_radius.fire = 4.0; 
 			CreateParticleSystemX("fireball", 4.4705, 2.7257, -4.9335, -1.57, 0.0, 0.0,0);
 
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 			CreateParticleSystemX("blast_inv", 4.4705, 2.7257, -4.9335, 1.7537, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", 4.4705, 2.7257, -4.9335, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", 4.4705, 2.7257, -4.9335, 0.0, 0.0, 0.0,20);
@@ -15290,7 +15290,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Fake_Guadeloupe_fort")].locators_radius.fire = 4.0; 
 			CreateParticleSystemX("fireball", -7.0333, 2.7295, -8.0215, -1.57, 0.0, 0.0,0);
 
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 			CreateParticleSystemX("blast_inv", -7.0333, 2.7295, -8.0215, 1.7537, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -7.0333, 2.7295, -8.0215, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -7.0333, 2.7295, -8.0215, 0.0, 0.0, 0.0,20);
@@ -15303,7 +15303,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Fake_Guadeloupe_fort")].locators_radius.fire = 4.0; 
 			CreateParticleSystemX("fireball", -1.1921, 7.6318, -1.1495, -1.57, 0.0, 0.0,0);
 
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 			CreateParticleSystemX("blast_inv", -1.1921, 7.6318, -1.1495, 1.7537, 0.0, 0.0,0);
 			CreateParticleSystemX("cancloud", -1.1921, 7.6318, -1.1495, 0.0, 0.0, 0.0,20);
 			CreateParticleSystemX("cancloud", -1.1921, 7.6318, -1.1495, 0.0, 0.0, 0.0,20);
@@ -15311,7 +15311,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Me_over_the_wall":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 			LAi_type_actor_Reset(characterFromID("Marsh"));
 			LAi_type_actor_Reset(characterFromID("Perrin"));
 			ChangeCharacterAddressGroup(characterFromID("Styles"), "Guadeloupe_shore_01", "reload", "locator3_back");
@@ -15330,7 +15330,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "AND_onto_The_BEACH":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire3.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire3.flac");
 			SetShipRemovable(pchar, true);
 			GiveShip2Character(pchar,"RN_Volage",TranslateString("","Hotspur"),-1,ENGLAND,true,true);
 			setCharacterShipLocation(Pchar, "Guadeloupe_shore_01");
@@ -15456,7 +15456,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Hotspur_crew_arrives":
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_group_MoveCharacter(characterFromID("Soldier1X"), LAI_GROUP_ENEMY);
 			LAi_group_MoveCharacter(characterFromID("Soldier1X"), "FRANCE_SOLDIERS");
 			LAi_group_MoveCharacter(characterFromID("Soldier2X"), LAI_GROUP_ENEMY);

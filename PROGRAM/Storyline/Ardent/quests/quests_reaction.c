@@ -10004,7 +10004,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.finale_port_royale_evacuation_end_bombardment.win_condition.l1 = "ExitFromLocation";
 			PChar.quest.finale_port_royale_evacuation_end_bombardment.win_condition.l1.location = "Redmond_Town_01";
 			PChar.quest.finale_port_royale_evacuation_end_bombardment.win_condition = "finale_port_royale_evacuation_end_bombardment";
-			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlayStereoSound("OBJECTS/SHIPCHARGE/cannon_fire1.flac");
 			LAi_QuestDelay("finale_port_royale_evacuation_bombardment2", 1.0);
 		break;
 
