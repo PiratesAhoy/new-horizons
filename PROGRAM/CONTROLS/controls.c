@@ -30,6 +30,25 @@ object TmpControlsList;
 extern void ExternControlsInit(bool bFirst);
 extern void ExternInitKeyCodes(); // NK 05-07-21
 
+void ControlsTreeInit(){
+	int n;
+
+	n = AddControlTreeNode(-1,"ChrAttackChoseBase","",0.05);
+	if( n!=-1 ) {
+		AddControlTreeNode(n,"ChrAttackFast","ChrAttackRound",0.0);
+		AddControlTreeNode(n,"ChrAttackBreakBase","ChrAttackFient",0.0);
+		AddControlTreeNode(n,"ChrAttackForce","ChrParry",0.0);
+	}
+
+	n = AddControlTreeNode(-1,"ChrAttackBase","ChrAttackForce2",0.0);
+	n = AddControlTreeNode(-1,"ChrAttackForce","ChrAttackFast2",0.0);
+	n = AddControlTreeNode(-1,"ChrAttackBreakBase","ChrAttackBreak",0.0);
+	n = AddControlTreeNode(-1,"ChrAttackFient1","ChrAttackFient",0.0);
+	n = AddControlTreeNode(-1,"ChrParry1","ChrParry",0.0);
+
+	
+}
+
 void ControlsInit(string sPlatformName,bool bFirst)
 {
 	DeleteAttribute(&objControlsState,"");

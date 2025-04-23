@@ -1,1251 +1,2210 @@
 
 animation = man.an
 
-data = "Turn speed", "4.0"
+data = "Turn speed", "5.5"
 
+
+	[lay_1]
+	speed = 2.
+	type = normal
+	start_time = 6400
+	end_time = 6400
+	
+	loop = false
+	
+	data = "Blend time", "0.8"		; sec
+	data = "Probability", "1.0"
+
+	
+	[lay_2]
+	speed = 2.
+	type = normal
+	start_time = 6397
+	end_time = 6397
+	
+	loop = false
+	
+	data = "Blend time", "0.8"		; sec
+	data = "Probability", "1.0"
 
 ;===================================================================================
-;–î–µ–π—Å—Ç–≤–∏—è —Å—Ç–æ—è–Ω–∏—è
+; ¡Œ≈¬€≈ ¿Õ»Ã¿÷»»
 ;===================================================================================
 
+;THRUSTS
+	[attack_fast_1] 
+	type = normal
+	start_time =5282
+	end_time = 5308
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5293, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5288, normal
+	event = "Resact", 5304, normal
+
+	
+	[attack_fast_2] 
+	type = normal
+	start_time = 5308
+	end_time = 5331
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5319, normal			;slash
+	event = "SndAlliace_attack_thrust2", 5314, normal
+	event = "Resact", 5329, normal
+	
+	
+	[attack_fast_3] 
+	type = normal
+	start_time =5331
+	end_time = 5356
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5340, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5337, normal
+	event = "Resact", 5352, normal
+
+	[attack_fast_4] 
+	type = normal
+	start_time =5282
+	end_time = 5308
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5293, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5288, normal
+	event = "Resact", 5304, normal
+
+	
+	[attack_fast_5] 
+	type = normal
+	start_time = 5308
+	end_time = 5331
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5319, normal			;slash
+	event = "SndAlliace_attack_thrust2", 5314, normal
+	event = "Resact", 5329, normal
+	
+	
+	[attack_fast_6] 
+	type = normal
+	start_time =5331
+	end_time = 5356
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5340, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5337, normal
+	event = "Resact", 5352, normal
+
+	[attack_fast_7] 
+	type = normal
+	start_time =5282
+	end_time = 5308
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5293, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5288, normal
+	event = "Resact", 5304, normal
+
+	
+	[attack_fast_8] 
+	type = normal
+	start_time = 5308
+	end_time = 5331
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5319, normal			;slash
+	event = "SndAlliace_attack_thrust2", 5314, normal
+	event = "Resact", 5329, normal
+	
+	[attack_1] 
+	type = normal
+	start_time =5282
+	end_time = 5308
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5293, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5288, normal
+	event = "Resact", 5304, normal
+
+	
+	[attack_2] 
+	type = normal
+	start_time = 5308
+	end_time = 5331
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5319, normal			;slash
+	event = "SndAlliace_attack_thrust2", 5314, normal
+	event = "Resact", 5329, normal
+	
+	
+	[attack_3] 
+	type = normal
+	start_time =5331
+	end_time = 5356
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5340, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5337, normal
+	event = "Resact", 5352, normal
+
+	[attack_4] 
+	type = normal
+	start_time =5282
+	end_time = 5308
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5293, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5288, normal
+	event = "Resact", 5304, normal
+
+	
+	[attack_5] 
+	type = normal
+	start_time = 5308
+	end_time = 5331
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5319, normal			;slash
+	event = "SndAlliace_attack_thrust2", 5314, normal
+	event = "Resact", 5329, normal
+	
+	
+	[attack_6] 
+	type = normal
+	start_time =5331
+	end_time = 5356
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5340, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5337, normal
+	event = "Resact", 5352, normal
+
+	[attack_7] 
+	type = normal
+	start_time =5282
+	end_time = 5308
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5293, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5288, normal
+	event = "Resact", 5304, normal
+
+	
+	[attack_8] 
+	type = normal
+	start_time = 5308
+	end_time = 5331
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5319, normal			;slash
+	event = "SndAlliace_attack_thrust2", 5314, normal
+	event = "Resact", 5329, normal
+
+	[attack_left_1] 
+	type = normal
+	start_time =5282
+	end_time = 5308
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5293, normal			;slash
+	event = "SndAlliace_attack_thrust1", 5288, normal
+	event = "Resact", 5304, normal
+
+	
+	[attack_right_1] 
+	type = normal
+	start_time = 5308
+	end_time = 5331
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2"	; m
+	data = "Ang", "20"	; grd
+		
+	event = "Attack", 5319, normal			;slash
+	event = "SndAlliace_attack_thrust2", 5314, normal
+	event = "Resact", 5329, normal
+	
+
+;SLASH
+	[attack_force_1]
+	type = normal
+	start_time = 5184
+	end_time = 5217
+	speed = 1.5
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2.2"	; m
+	data = "Ang", "40"	; grd
+	
+	event = "Attack", 5195, normal			;slash
+	event = "SndAlliace_attack_slash1", 5188, normal
+	event = "Resact", 5212, normal
+		
+	[attack_force_2]
+	type = normal
+	start_time = 5217
+	end_time = 5248
+	speed = 1.5
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2.2"	; m
+	data = "Ang", "40"	; grd
+	
+	event = "Attack", 5226, normal			;slash
+	event = "SndAlliace_attack_slash1", 5224, normal
+	event = "Resact", 5241, normal
+
+	[attack_force_3]
+	type = normal
+	start_time = 5248
+	end_time = 5282
+	speed = 1.5
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2.2"	; m
+	data = "Ang", "40"	; grd
+	
+	event = "Attack", 5258, normal			;slash
+	event = "SndAlliace_attack_slash2", 5250, normal
+	event = "Resact", 5273, normal
+
+	[attack_force_4]
+	type = normal
+	start_time = 5356
+	end_time = 5382
+	speed = 1.6
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2.3"	; m
+	data = "Ang", "10"	; grd
+	
+	event = "Attack", 5362, normal			;slash
+	event = "SndAlliace_attack_thrust2", 5355, normal
+	event = "Resact", 5375, normal
+
+;ROUNDHOUSE 
+	[attack_round_1]
+	type = normal
+	start_time = 8415
+	end_time = 8443
+	speed = 0.77
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2.5"	; m
+	data = "Ang", "160"	; grd
+		
+	event = "Attack", 8419, normal			;slash
+	event = "SndAlliace_attack_round", 8416, normal
+	event = "Attack", 8427, normal			;slash
+	event = "Resact", 8441, normal
+
+;BREAKS
+	[attack_break_1]
+	type = normal
+	start_time = 8315
+	end_time = 8341
+	speed = 0.9
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	data = "Dist", "2.5"	; m
+	data = "Ang", "25"	; grd
+		
+	event = "Attack", 8328, normal			;slash
+	event = "SndAlliace_attack_break", 8320, normal
+	event = "Resact", 8336, normal
+	
+;PARRY 
+;ÛıÓ‰ ‚ÎÂ‚Ó ·ÎÓÍ Ò‚ÂıÛ
+	[parry_1]
+	type = normal
+	start_time = 5385
+	end_time = 5410
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	
+	event = "Parry start", 5388, normal
+	event = "Parry end",5405, normal
+	event = "Resact", 5405, normal
+	event = "SndAlliace_attack_parry", 5386, normal
+
+; ÛıÓ‰ ‚Ô‡‚Ó ·ÎÓÍ Ò‚ÂıÛ
+    [parry_2]
+	type = normal
+	start_time = 5437
+	end_time = 5461
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	
+	event = "Parry start", 5440, normal
+	event = "Parry end",5455, normal
+	event = "Resact", 5455, normal
+	event = "SndAlliace_attack_parry", 5437, normal
+
+; ÛıÓ‰ ‚Ô‡‚Ó ·ÎÓÍ ÒÌËÁÛ
+    [parry_3]
+	type = normal
+	start_time = 5462
+	end_time = 5485
+	speed = 2.0
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	
+	event = "Parry start", 5465, normal
+	event = "Parry end",5479, normal
+	event = "Resact", 5479, normal
+	event = "SndAlliace_attack_parry", 5463, normal	
+
+; Ô‡ËÓ‚‡ÌËÂ ËÁ  3
+    [parry_4]
+	type = normal
+	start_time = 8395
+	end_time = 8410
+	speed = 1.4
+	loop = false
+	data = "Blend time", "0.2"		; sec
+
+	event = "Parry start", 8398, normal
+	event = "Parry end",8406, normal
+	event = "Resact", 8408, normal
+	event = "SndAlliace_attack_parry", 8396, normal
+	
+;FEINTS
+	[attack_feint_1]
+	type = normal
+	start_time = 8395
+	end_time = 8410
+	speed = 1.3
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	
+	event = "Feint start",8398, normal
+	event = "Feint end", 8406, normal
+
+	event = "SndAlliace_attack_parry", 8396, normal
+	event = "Resact",8408, normal
+	
+	
+	[attack_feint_2]
+	type = normal
+	start_time = 8395
+	end_time = 8410
+	speed = 1.3
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	
+	event = "Feint start",8398, normal
+	event = "Feint end", 8406, normal
+
+	event = "SndAlliace_attack_parry", 8396, normal
+	event = "Resact",8408, normal
+	
+		
+	[attack_feint_3]
+	type = normal
+	start_time = 8395
+	end_time = 8410
+	speed = 1.3
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	
+	event = "Feint start",8398, normal
+	event = "Feint end", 8406, normal
+
+	event = "SndAlliace_attack_parry", 8396, normal
+	event = "Resact",8408, normal
+	
+	
+    [attack_feint_4]
+	type = normal
+	start_time = 8395
+	end_time = 8410
+	speed = 1.3
+	loop = false
+	data = "Blend time", "0.2"		; sec
+	
+	event = "Feint start",8398, normal
+	event = "Feint end", 8406, normal
+
+	event = "SndAlliace_attack_parry", 8396, normal
+	event = "Resact",8408, normal
+		
+	
+;FEINT SUCCESSFUL
+
+	[attack_feintc_1]
+	type = normal
+	start_time = 8452
+	end_time = 8473
+	speed = 1.1
+	loop = false
+	data = "Ang", "10"	; grd
+	data = "Dist", "2,5"	; m
+	data = "Blend time", "0.2"		; sec
+	event = "Attack", 8459, normal			;slash
+	event = "SndAlliace_attack_feintc", 8453, normal
+	
+	
+	[attack_feintc_2]
+	type = normal
+	start_time = 8452
+	end_time = 8473
+	speed = 1.1
+	loop = false
+	data = "Ang", "10"	; grd
+	data = "Dist", "2,5"	; m
+	data = "Blend time", "0.2"		; sec
+	event = "Attack", 8459, normal			;slash
+	event = "SndAlliace_attack_feintc", 8453, normal
+	
+	
+	[attack_feintc_3]
+	type = normal
+	start_time = 8452
+	end_time = 8473
+	speed = 1.1
+	loop = false
+	data = "Ang", "10"	; grd
+	data = "Dist", "2,5"	; m
+	data = "Blend time", "0.2"		; sec
+	event = "Attack", 8459, normal			;slash
+	event = "SndAlliace_attack_feintc", 8453, normal
+	
+		
+	[attack_feintc_4]
+	type = normal
+	start_time = 8452
+	end_time = 8473
+	speed = 1.1
+	loop = false
+	data = "Ang", "10"	; grd
+	data = "Dist", "2,5"	; m
+	data = "Blend time", "0.2"		; sec
+	event = "Attack", 8459, normal			;slash
+	event = "SndAlliace_attack_feintc", 8453, normal
+	
+	
+;¡ÀŒ 
+	[block]
+	type = normal
+	start_time = 8680
+	end_time = 8690
+	speed = 0.15
+	loop = true
+	data = "Blend time", "0.2"		; sec
+	;event = "Resact", 6840, normal
+	
+
+;¡ÀŒ  “ŒœŒ–ŒÃ
+	[block_axe]
+	type = normal
+	start_time = 8275
+	end_time = 8299
+	speed = 0.15
+	loop = true
+	data = "Blend time", "0.2"		; sec
+	;event = "Resact", 8276, normal
+	
+
+;–≈¿ ÷»ﬂ Õ¿ œŒœ¿ƒ¿Õ»≈ ¬ ¡ÀŒ 
+	[block_hit]
+	type = normal
+	start_time = 8606
+	end_time = 8617
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_BlockHit", 8606, normal
+
+
+;–≈¿ ÷»ﬂ Õ¿ œŒœ¿ƒ¿Õ»≈ ¬ ¡ÀŒ  — “ŒœŒ–ŒÃ
+	[block_axe_hit]
+	type = normal
+	start_time = 8300
+	end_time = 8311
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_BlockHit", 8301, normal	
+	
+	
+;–≈¿ ÷»ﬂ Õ¿ œ–Œ¡»¬¿Õ»≈ ¡ÀŒ ¿
+	[block_break]
+	type = normal
+	start_time = 8680
+	end_time = 8690
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_BlockBreak", 5506, normal
+	
+;–≈¿ ÷»»
+
+	[hit_attack_1]
+	type = normal
+	start_time = 5485
+	end_time = 5506	
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manhit", 5485, normal		
+	
+	[hit_attack_2]
+	type = normal
+	start_time = 5506
+	end_time = 5530	
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manhit", 5506, normal			
+	
+	[hit_attack_3]
+	type = normal
+	start_time = 5530
+	end_time = 5552	
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manhit", 5530, normal	
+
+	[hit_1]
+	type = normal
+	start_time = 5485
+	end_time = 5506	
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manhit", 5485, normal		
+	
+	[hit_2]
+	type = normal
+	start_time = 5506
+	end_time = 5530	
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manhit", 5506, normal			
+	
+	[hit_3]
+	type = normal
+	start_time = 5530
+	end_time = 5552	
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manhit", 5530, normal		
+
+	[hit_feint]
+	type = normal
+	start_time = 5506
+	end_time = 5530	
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manhit", 5506, normal	
+	
+  	[hit_round]
+	type = normal
+	start_time = 5485
+	end_time = 5506
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manhit", 5485, normal
+
+	[hit_parry]
+	type = normal
+	start_time = 8475
+	end_time = 8500
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manZapad", 5508, normal	
+
+	[hit_fire]
+	type = normal
+	start_time = 5530
+	end_time = 5552
+	speed = 1.5
+	loop = false	
+	data = "Blend time", "0.2"		; sec
+	event = "SndAlliace_manhit", 5530, normal
+	
+;¬€—“–≈À 
+
+;ÔËÒÚÓÎÂÚ
+	[Shot]
+	start_time = 6334
+	end_time = 6396
+	speed = 1.85
+	loop = false
+
+	event = "To hand", 6340, normal
+	event = "SndAlliace_pistol_shot", 6339, normal
+	event = "Fire", 6360, normal
+	event = "To belt", 6386, normal
+	
+	data = "Blend time", "0.3"		; sec
+	
+	
+;—Ã≈–“»
+
+	[death_0]
+    speed = 1.5
+    type = normal
+	start_time = 6016
+	end_time = 6071	
+	loop = false	
+	data = "Blend time", "0.8"		; sec
+	data = "Probability", "1.0"
+	data = "Angle", "330.0"
+	
+	event = "LStep", 6033, normal
+	event = "SndAlliace_N_fight_death1", 6016, normal
+
+
+	[death_1]
+    speed = 1.5
+    type = normal
+	start_time = 6072
+	end_time = 6146	
+	loop = false	
+	data = "Blend time", "0.8"		; sec
+	data = "Probability", "1.0"
+	data = "Angle", "330.0"
+	
+	event = "LStep", 6080, normal
+	event = "SndAlliace_N_fight_death2", 6072, normal
+	
+	
+	[death_2]
+    speed = 1.5
+    type = normal
+	start_time = 6147
+	end_time = 6222
+	loop = false
+	data = "Blend time", "2.0"		; sec
+	data = "Probability", "1.0"
+	data = "Angle", "330.0"
+
+	event = "RStep", 6172, normal	
+	event = "SndAlliace_N_fight_death3", 6147, normal
+
+
+	[death_3]
+    speed = 1.5
+    type = normal
+	start_time = 6223
+	end_time = 6281
+	loop = false	
+	data = "Blend time", "0.8"		; sec
+	data = "Probability", "1.0"
+	data = "Angle", "140.0"
+
+	event = "RStep", 6241, normal
+	event = "SndAlliace_N_fight_death4", 6223, normal
+
+
+; ƒ≈…—“¬»ﬂ ¬ ¡Œ≈¬Œ… —“Œ… ≈ (IDLES)
+
+    [fight stand_1]
+    loop = true
+    type = rpingpong
+	start_time = 8520
+	end_time = 8544
+	speed = 0.6
+	data = "Blend time", "0.4"		; sec
+	
+	data = "Probability", "0.2"
+
+    [fight stand_2]
+    loop = true
+    type = normal
+	start_time = 8545
+	end_time = 8603
+	speed = 0.8	
+	data = "Blend time", "0.4"		; sec
+	
+	data = "Probability", "0.1"
+
+    [fight stand_3]
+    loop = true
+    type = normal
+	start_time = 5632
+	end_time = 5660	
+	speed = 1.0	
+	data = "Blend time", "0.2"		; sec
+	
+	data = "Probability", "0.1"
+
+    [fight stand_4]
+    loop = true
+    type = normal
+	start_time = 5660
+	end_time = 5704	
+	speed = 1.0	
+	data = "Blend time", "0.2"		; sec
+	
+	data = "Probability", "0.1"
+
+    [fight stand_5]
+    loop = true
+    type = normal
+	start_time = 5704
+	end_time = 5742	
+	speed = 1.0	
+	data = "Blend time", "0.2"		; sec
+	
+	data = "Probability", "0.1"
+
+
+    [fight stand_6]
+    loop = true
+    type = normal
+	start_time = 5742
+	end_time = 5776	
+	speed = 1.0
+	data = "Blend time", "0.2"		; sec
+	
+	data = "Probability", "0.1"
+
+    [fight stand_7]
+    loop = true
+    type = normal
+	start_time = 5776
+	end_time = 5902
+	speed = 1.0	
+	data = "Blend time", "0.2"		; sec
+	
+	data = "Probability", "0.1"
+
+
+;ƒ‡ÁÌËÎÍ‡ ÔÓÒÎÂ ÓÚÒÍÓÍ‡ Ì‡Á‡‰   
+    [fight stand_8]
+    loop = true
+    type = normal
+	start_time = 6860
+	end_time = 6898
+	speed = 1.0	
+	data = "Blend time", "0.2"		; sec
+	
+	data = "Probability", "0.0"   
+	
+	
+
+; ¡Œ≈¬€≈ œ≈–≈Ã≈Ÿ≈Õ»ﬂ
+
+;’Ó‰¸·‡ ‚ÔÂ∏‰ Ò ÍÎËÌÍÓÏ ‚ ÛÍÂ
+    [fight walk]
+    start_time = 6318
+    end_time = 6333
+ 	speed = 0.8
+ 	
+    data = "Blend time", "0.2"		; sec
+    data = "Walk speed", "1.8"		; m/sec
+    data = "Turn speed", "5.5"		; rad/sec
+
+    event = "RStep", 6321, normal
+    event = "LStep", 6329, normal
+
+;’Ó‰¸·‡ Ì‡Á‡‰ Ò ÍÎËÌÍÓÏ ‚ ÛÍÂ
+   	[fight back walk]
+    start_time = 6849
+    end_time = 6858
+    speed = 0.8
+    type = reverse
+    data = "Blend time", "0.2"		; sec
+    data = "Walk speed", "-1.7"		; m/sec
+    data = "Turn speed", "5.5"		; rad/sec
+
+    ;event = "RStep", 6325, reverse
+    ;event = "LStep", 6333, reverse
+
+
+;¡Â„ ‚ÔÂ∏‰ Ò ÍÎËÌÍÓÏ ‚ ÛÍÂ
+	[fight run]
+	speed = 1.2
+	loop = true
+	type = normal
+	start_time = 157
+	end_time = 169
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "5.5"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+	event = "LStep", 161, normal
+	event = "RStep", 167, normal
+    
+
+;¡Â„ Ì‡Á‡‰ Ò ÍÎËÌÍÓÏ ‚ ÛÍÂ
+   	[fight back run]
+	speed = 1.0
+	loop = true
+	type = reverse
+	start_time = 157
+	end_time = 169
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "5.5"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+	event = "LStep", 161, normal
+	event = "RStep", 167, normal
+
+
+;ŒÚÒÍÓÍ Ì‡Á‡‰
+	[Recoil]
+	type = normal
+	start_time = 6849
+	end_time = 6859
+	loop = false
+	speed = 1.8
+	data = "Blend time", "0.02"	; sec
+	data = "Walk speed", "2.0"		; m/sec
+	event = "SndAlliace_recoil", 6850, normal
+	
+	
+[straif_weapon_left]
+	start_time = 7190
+	end_time = 7204
+	data = "Blend time", "0.1"		; sec
+	event = "LStep", 7196, normal
+	event = "RStep", 7199, normal
+	speed = 1.3
+	loop = false
+	type = normal
+	
+
+[straif_weapon_right]
+	start_time = 7175
+	end_time = 7189
+	data = "Blend time", "0.1"		; sec
+	event = "LStep", 7181, normal
+	event = "RStep", 7184, normal
+	speed = 1.3
+	loop = false
+	type = normal	
+	
+
+;===================================================================================
+; Ã»–Õ€≈ ¿Õ»Ã¿÷»»
+;===================================================================================
+
+
+; œ≈–≈Ã≈Ÿ≈Õ»ﬂ
+
+;’Ó‰¸·‡ ‚ÔÂ∏‰
+	[walk]
+	loop = true
+	type = normal
+	start_time = 2
+	end_time = 18
+	data = "Blend time", "0.3"		; sec
+	data = "Walk speed", "1.8"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+	event = "LStep", 6, normal
+	event = "RStep", 14, normal
+	
+
+;’Ó‰¸·‡ Ì‡Á‡‰
+	[back walk]
+	speed = 1.0
+	loop = true
+	type = reverse
+	start_time = 2
+	end_time = 18
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "-1.0"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+	event = "LStep", 6, reverse
+	event = "RStep", 14, reverse
+    
+
+;»‰ÚË ‚ÌËÁ ÔÓ ÎÂÒÚÌËˆÂ
+	[stairs down]
+	loop = true
+	type = normal	
+	
+	start_time = 137
+	end_time = 156
+	event = "LStep", 142, normal
+	event = "RStep", 152, normal	
+	speed = 1.4	
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "0.8"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+
+;»‰ÚË ‚ÌËÁ ÔÓ ÎÂÒÚÌËˆÂ Á‡‰ÓÏ Ì‡ÔÂÂ‰
+	[back stairs down]
+	loop = true
+	start_time = 117
+	end_time = 136
+	event = "LStep", 128, reverse
+	event = "RStep", 121, reverse
+	type = reverse
+	speed = 2.0
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "-0.5"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+
+
+;»‰ÚË ‚‚Âı ÔÓ ÎÂÒÚÌËˆÂ
+	[stairs up]
+	loop = true
+	type = normal
+	start_time = 117
+	end_time = 136
+	event = "LStep", 121, normal
+	event = "RStep", 128, normal
+		
+	speed = 2.0
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "0.8"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+
+;»‰ÚË ‚‚Âı ÔÓ ÎÂÒÚÌËˆÂ Á‡‰ÓÏ Ì‡ÔÂÂ‰
+	[back stairs up]
+	loop = true
+	start_time = 137
+	end_time = 156	
+	event = "LStep", 142, reverse
+	event = "RStep", 152, reverse
+	type = reverse	
+	speed = 2.0
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "-0.6"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+
+;¡Â„ ‚ÔÂ∏‰
+	[run]
+	speed = 1.2
+	loop = true
+	type = normal
+	start_time = 157
+	end_time = 169
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "5.5"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+	event = "LStep", 161, normal
+	event = "RStep", 167, normal
+		
+
+;¡Â„ Ì‡Á‡‰
+	[back run]
+	speed = 1.4
+	loop = true
+	type = reverse
+	start_time = 2
+	end_time = 18	
+	data = "Blend time", "0.5"		; sec
+	data = "Walk speed", "-1.7"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+	event = "LStep", 6, reverse
+	event = "RStep", 14, reverse
+		
+
+;¡Â„ ÔÓ ÎÂÒÚÌËˆÂ ‚‚Âı  
+	[run stairs up]
+	speed = 2
+	loop = true
+	type = normal
+	start_time = 157
+	end_time = 169
+	data = "Blend time", "0.3"		; sec
+	data = "Walk speed", "3.3"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+	event = "LStep", 161, normal
+	event = "RStep", 167, normal
+
+;¡Â„ ÔÓ ÎÂÒÚÌËˆÂ ‚ÌËÁ
+
+	[run stairs down]
+	speed = 1.7
+	loop = true
+	type = normal
+	start_time = 157
+	end_time = 169
+	data = "Blend time", "0.3"		; sec
+	data = "Walk speed", "3.3"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+	event = "LStep", 161, normal
+	event = "RStep", 167, normal
+	
+; ¡Â„ ÔÓ ÎÂÒÚÌËˆÂ ‚‚Âı Á‡‰ÓÏ Ì‡ÔÂÂ‰
+
+	[back run stairs up]
+	loop = true
+	start_time = 137
+	end_time = 156	
+	event = "LStep", 142, reverse
+	event = "RStep", 152, reverse
+	type = reverse	
+	speed = 2.	
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "-0.6"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+
+; ¡Â„ ÔÓ ÎÂÒÚÌËˆÂ ‚ÌËÁ Á‡‰ÓÏ Ì‡ÔÂÂ‰
+	
+	[back run stairs down]
+	loop = true
+	start_time = 137
+	end_time = 156	
+	event = "LStep", 142, reverse
+	event = "RStep", 152, reverse
+	type = reverse	
+	speed = 2.	
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "-0.6"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec	
+	
+	
+;–‡Á‚ÓÓÚ ‚ÎÂ‚Ó
+	[turn left]
+	start_time = 220
+	end_time = 240
+
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "0.0"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+
+	event = "LStep", 229, normal
+	event = "RStep", 239, normal
+	
+
+;–‡Á‚ÓÓÚ ‚Ô‡‚Ó
+	[turn right]
+	start_time = 220
+	end_time = 240
+
+	data = "Blend time", "0.2"		; sec
+	data = "Walk speed", "0.0"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+
+	event = "LStep", 229, normal
+	event = "RStep", 239, normal
+
+
+
+;¬˚ı‚‡ÚËÚ¸ Ò‡·Î˛
+	[Normal to fight]
+	start_time = 5158
+	end_time = 5184
+
+	speed = 1.7
+	loop = false
+
+	data = "Blend time", "0.3"		; sec
+
+	event = "Move blade", 5164, normal
+
+	event = "Blade to hand", 5167, normal
+
+	event = "RStep", 5172, normal
+	event = "LStep", 5176, normal
+	event = "SndAlliace_sword_sh", 5158, normal
+
+;”·‡Ú¸ Ò‡·Î˛
+	[Fight to normal]
+	
+	start_time = 6282
+	end_time = 6317
+	speed = 1.5
+	loop = false
+
+	data = "Blend time", "0.3"		; sec
+
+	event = "Move blade", 6300, normal
+
+	event = "Blade to belt", 6296, normal
+
+	event = "LStep", 6302, normal
+	event = "RStep", 6306, normal
+	event = "SndAlliace_sword_out", 6296, normal
+
+
+	
+	
+
+;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+; —Ã≈–“»
+
+	[death_citizen_1]
+	start_time = 311
+	end_time = 371
+
+	loop = false
+
+	data = "Blend time", "0.3"		; sec
+	data = "Probability", "1.0"
+	data = "Angle", "340.0"
+
+	event = "LStep", 339, normal
+	
+	event = "SndAlliace_citizen_death1", 348, normal
+	
+	
+	[death_citizen_2]
+	start_time = 372
+	end_time = 423
+
+	loop = false
+
+	data = "Blend time", "0.3"		; sec
+	data = "Probability", "1.0"
+	data = "Angle", "340.0"
+
+	event = "LStep", 389, normal
+		
+	event = "SndAlliace_citizen_death2", 402, normal
+	
+	
+; –≈¿ ÷»ﬂ Õ¿ œŒ–¿∆≈Õ»≈ ÌÂÚ Ú‡ÍÓÈ ‡ÌËÏ‡ˆËË
+
+	[HitNoFight]
+	type = normal
+	start_time = 8620
+	end_time = 8635	
+	speed = 1.4
+	loop = false	
+	data = "Blend time", "0.3"		; sec
+	event = "SndAlliace_hitnofight", 2057, normal	
+	
+	
+	[Ground_HitNoFight]
+	type = pingpong
+	start_time = 6515
+	end_time = 6517	
+	speed = 1.0
+	loop = false	
+	data = "Blend time", "0.3"		; sec
+	event = "SndAlliace_hitnofight", 6515, normal
+		
+
+	[HitNoFightSit]
+	type = pingpong
+	start_time = 3100
+	end_time = 3105	
+	speed = 0.1
+	loop = false	
+	data = "Blend time", "0.3"		; sec
+	event = "SndAlliace_hitnofight", 2952, normal	
+	
+	
+; ƒ≈…—“¬»ﬂ ¬Œ ¬–≈Ãﬂ —“ŒﬂÕ»ﬂ (IDLES)
+
+; ÔÓÒÚÓ ÒÚÓËÚ - Á‚ÛÍ‡ ÚÛÚ ÌÂ ·Û‰ÂÚ π1
+	[idle_1]
+	speed = 1.0
+	loop = false
+	type = normal
+	start_time = 1225
+	end_time = 1285
+	data = "Blend time", "1.0"		; sec
+	
+	data = "Probability", "1.0"
+	
+; ÒÏ‡ıÌÛÚ¸ Ô˚Î¸ Ò ÛÍ‡‚‡
+	[idle_2]
+	speed = 1.0
+    loop = false
+    type = normal
+	start_time = 1970
+	end_time = 2040
+	data = "Blend time", "1.0"		; sec
+	
+	data = "Probability", "0.1"
+	
+	
+; ÛÚÂÂÚ¸ ÎÓ·
+	[idle_3]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 2040
+	end_time = 2101
+	data = "Blend time", "1.0"		; sec
+	
+	data = "Probability", "0.1"
+
+
+; ÔÓÒÏÓÚÂÚ¸ ÔÓ ÒÚÓÓÌ‡Ï ·ÂÁ ‰‚ËÊÂÌËˇ ÍÓÔÛÒ‡
+	[idle_4]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 1477
+	end_time = 1537
+	data = "Blend time", "1.0"		; sec
+
+	data = "Probability", "0.1"
+
+
+; ÔÓÒÏÓÚÂÚ¸ ÔÓ ÒÚÓÓÌ‡Ï Ò ‰‚ËÊÂÌËÂ ÍÓÔÛÒ‡
+	[idle_5]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 1537
+	end_time = 1602
+	data = "Blend time", "1.0"		; sec
+	
+	data = "Probability", "0.1"
+
+
+; ÒÚÓˇÌËÂ ‚ÂÚËÚ „ÓÎÓ‚ÓÈ ÌÂÏÌÓ„Ó
+	[idle_6]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 1602
+	end_time = 1642
+	data = "Blend time", "1.0"		; sec
+
+	data = "Probability", "0.1"
+	
+
+; ÔÓ˜ÂÒ‡Ú¸ Á‡Ú˚ÎÓÍ
+	[idle_7]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 1642
+	end_time = 1692
+	data = "Blend time", "1.0"		; sec
+	
+	data = "Probability", "0.1"
+
+
+; ÔÓ˜ÂÒ‡Ú¸ Á‡‰ÌËˆÛ
+	[idle_8]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 1692
+	end_time = 1735
+	data = "Blend time", "1.0"		; sec
+	
+	data = "Probability", "0.1"
+
+
+; ÒÚÓˇÌËÂ ÛÔË‡ÂÚ ÎÂ‚Û˛ ÛÍÛ ‚ ·ÓÍ
+	[idle_9]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 1764
+	end_time = 1806
+	data = "Blend time", "1.0"		; sec
+	
+	data = "Probability", "0.1"
+
+
+; ÒÚÓˇÌËÂ ÛÔË‡ÂÚ Ô‡‚Û˛ ÛÍÛ ‚ ·ÓÍ
+	[idle_10]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 1806
+	end_time = 1871
+	data = "Blend time", "1.0"		; sec
+	
+	data = "Probability", "0.1"
+
+
+ ÒÚÓˇÌËÂ ÛÔË‡ÂÚ Ó·Â ÛÍË ‚ ·ÓÍ‡
+	[idle_11]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 1871
+	end_time = 1970
+	data = "Blend time", "1.0"		; sec
+	
+	data = "Probability", "0.1"
+
+
+ ; ÚÓÎ˜ÓÍ Ô‡‚ÓÈ ÛÍÓÈ (ÓÚÍ˚‚‡ÌËÂ ‰‚ÂË)
+	[open_door]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 270
+	end_time = 310
+	data = "Blend time", "0.4"		; sec
+	
+	;data = "Probability", "0.1"
+	
+
+ ; ÔÓÍÎÓÌ
+	[bow]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 7300
+	end_time = 7335
+	data = "Blend time", "0.4"		; sec
+	
+
+;	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+;	¿Õ»Ã¿÷»» ƒ»¿ÀŒ√Œ¬ („Û·˚ ÌÂ ‰‚Ë„‡˛ÚÒˇ)
+
+    ;ÒÚÓˇ ÍË‚‡ÂÚ „ÓÎÓ‚ÓÈ, ÏÓÎ˜‡ ÒÓ„Î‡¯‡ÂÚÒˇ
+	[dialog_stay1]
+    speed = 1.0
+    type = normal
+	start_time = 2255
+	end_time = 2291
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+    ;ÒÚÓˇ ‰‚‡Ê‰˚ ÍË‚‡ÂÚ „ÓÎÓ‚ÓÈ, ÏÓÎ˜‡ ÒÓ„Î‡¯‡ÂÚÒˇ
+	[dialog_stay2]
+    speed = 1.0
+    type = normal
+	start_time = 2291
+	end_time = 2321
+	data = "Blend time", "1.0"		; sec
+	loop = false
+	
+    ;ÒÚÓˇ ÓÚËˆ‡ÚÂÎ¸ÌÓ Í‡˜‡ÂÚ „ÓÎÓ‚ÓÈ, ÏÓÎ˜‡
+	[dialog_stay3]
+    speed = 1.0
+    type = normal
+	start_time = 2321
+	end_time = 2360
+	data = "Blend time", "1.0"		; sec
+	loop = false
+
+    ;ÒÚÓˇ ÓÚËˆ‡ÚÂÎ¸ÌÓ Ï‡¯ÂÚ „ÓÎÓ‚ÓÈ "ÌÂ,ÌÂ,ÌÂÖ" ÏÓÎ˜‡
+	[dialog_stay4]
+    speed = 1.
+    type = normal
+	start_time = 2360
+	end_time = 2393
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+	
+	
+    ;ÒÚÓˇ Á‡‰ÛÏ˜Ë‚Ó ÔÓÍ‡˜Ë‚‡ÂÚ „ÓÎÓ‚ÓÈ "ÌÛÖ‚ÓÁÏÓÊÌÓ Ë Ú‡Í" ÏÓÎ˜‡
+	[dialog_stay5]
+    speed = 1.0
+    type = normal
+	start_time = 2393
+	end_time = 2462
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+	
+    ; ÒÚÓˇ ÔÓÍ‡˜Ë‚‡ÂÚ „ÓÎÓ‚ÓÈ Û‰Ë‚ÎÂÌÌÓ ÔËÔÓ‰ÌËÏ‡ˇ ·Ó‚¸ "‰‡ ÌÛ? ‚ÓÁÏÓÊÌÓÖ" ÏÓÎ˜‡
+	[dialog_stay6]
+    speed = 1.0
+    type = normal
+	start_time = 2462
+	end_time = 2493
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+    ; ÒÚÓˇ ÔÓÊËÏ‡ÂÚ ÔÎÂ˜‡ÏË ÔËÔÓ‰ÌËÏ‡ˇ ·Ó‚Ë "ÌÛ ÓÚÍÛ‰‡ ˇ ÁÌ‡˛?Ö" ÏÓÎ˜‡
+	[dialog_stay7]
+    speed = 1.0
+    type = normal
+	start_time = 2493
+	end_time = 2515
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+    ; ÒÚÓˇ ‚ËÌÓ‚‡ÚÓ ÔÓÊËÏ‡ÂÚ ÔÎÂ˜‡ÏË "ÌÛ ÙË„Ìˇ ‚˚¯Î‡Ö" ÏÓÎ˜‡
+	[dialog_stay8]
+    speed = 1.0
+    type = normal
+	start_time = 2515
+	end_time = 2541
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+
+; ‰Ë‡ÎÓ„Ë Ò ‡Á„Ó‚ÓÓÏ ‡ÌËÏ‡ˆËÂÈ Ú‡
+
+    ;ÒÚÓˇ ÔÓÍ‡Á˚‚‡ÂÚ Ô‡Î¸ˆÂÏ Ô‡‚ÓÈ ÛÍË Ì‡ÎÂ‚Ó "Ú‡‚ÂÌ‡ Ú‡Ï...Ö"
+	[dialog_stay9]
+    speed = 1.0
+    type = normal
+	start_time = 2541
+	end_time = 2577
+	;event = "SndAlliace_cit_common", 2546, normal
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+    ; ÒÚÓˇ ÔÓÍ‡Á˚‚‡ÂÚ Ô‡Î¸ˆÂÏ Ô‡‚ÓÈ ÛÍË Ì‡Ô‡‚Ó "‚ÓÌ Á‡ ÚÂÏ ÔËÒÓÏ.."
+	[dialog_stay10]
+    speed = 1.0
+    type = normal
+	start_time = 2577
+	end_time = 2619
+	;event = "SndAlliace_cit_common", 2583, normal
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+    ;ÒÚÓˇ ‡Á‚Ó‰ËÚ ÛÍ‡ÏË Ì‡ ÛÓ‚ÌÂ ÔÎÂ˜ ¯ËÓÍÓ "ÌÛ ‡ ˜ÚÓ ÔÓ‰ÂÎ‡Ú¸?Ö"
+	[dialog_stay11]
+    speed = 1.0
+    type = normal
+	start_time = 2101
+	end_time = 2131
+	;event = "SndAlliace_cit_common", 2106, normal
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+    ; ÒÚÓˇ ‡Á‚Ó‰ËÚ ÛÍ‡ÏË ÌÂÏÌÓ„Ó Ì‡ ÛÓ‚ÌÂ ·Â‰Â " ‰‡ Ú‡Í ‚ÓÚÖ"
+	[dialog_stay12]
+    speed = 1.0
+    type = normal
+	start_time = 2131
+	end_time = 2172
+	;event = "SndAlliace_cit_common", 2136, normal
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+    ; ÒÚÓˇ ‡Á‚Ó‰ËÚ ÛÍ‡ÏË Ì‡ ÛÓ‚ÌÂ ÔÓˇÒ‡ "ÌÛ ‡ Í‡Í Â˘Â?Ö"
+	[dialog_stay13]
+    speed = 1.0
+    type = normal
+	start_time = 2172
+	end_time = 2194
+	;event = "SndAlliace_cit_common", 2177, normal
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+    ; ÒÚÓˇ Ï‡¯ÂÚ ÛÍ‡ÏË, ˜ÚÓ-ÚÓ Ó·˙ˇÒÌˇÂÚ "Ú‡Ï ˝ÚÓ ‚ÒÂ Ú‡ÍÓÂÖ"
+	[dialog_stay14]
+    speed = 1.0
+    type = normal
+	start_time = 2194
+	end_time = 2233
+	;event = "SndAlliace_cit_common", 2199, normal
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+    ; ÒÚÓˇ ÔÓ‰ÌËÏ‡ÂÚ Ô‡‚Û˛ ÛÍÛ Ò ‚˚ÚˇÌÛÚ˚Ï ÛÍ‡Á‡ÚÂÎ¸Ì˚Ï Ô‡Î¸ˆÂÏ "ˇ „Ó‚ÓËÎÖ"
+	[dialog_stay15]
+    speed = 1.
+    type = normal
+	start_time = 2233
+	end_time = 2255
+	;event = "SndAlliace_cit_common", 2238, normal
+	data = "Blend time", "1.0"		; sec
+	loop = false	
+
+
+;	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+;	¿Õ»Ã¿÷»» «¿ —“Œ… Œ…
+
+    ;œÓÍ‡Á‡Ú¸ ÚÓ‚‡ ÎËˆÓÏ
+	[Merchant_invite]
+    speed = 1.0
+    type = normal
+	start_time = 6560
+	end_time = 6600
+	loop = false	
+	data = "Blend time", "0.4"		; sec
+
+    ;¡‡ÏÂÌ ÍÓÔÓ¯ËÚÒˇ Ì‡ ÔÓÎÍ‡ı (Ë ÛÚË‚‡ÚÂ ÌÓÒ)
+	[Barman_idle]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 6601
+	end_time = 6706	
+	data = "Blend time", "0.4"		; sec
+	event = "SndAlliace_barmen_clean", 6601, normal
+
+    ;Œ·ÎÓÍÓÚËÚ¸Òˇ Ì‡ ÒÚÓÈÍÛ
+	[Barman_lean]
+    speed = 1.0
+    type = normal
+    loop = false
+	start_time = 6707
+	end_time = 6732	
+	data = "Blend time", "0.4"		; sec
+	event = "SndAlliace_barmen2table", 6707, normal
+
+    ;Œ„Îˇ‰ÂÚ¸Òˇ
+   	[Barman_look_around]
+    speed = 1.0
+    loop = true
+    type = normal
+	start_time = 6707
+	end_time = 6822
+	data = "Blend time", "0.4"		; sec
+	event = "SndAlliace_barmen2table", 6732, normal
+
+    ;¬ÒÚ‡Ú¸ Ó·‡ÚÌÓ
+    [Barman_stand_back]
+    speed = 1.0
+    type = normal
+	start_time = 6797
+	end_time = 6822
+	loop = false
+	
+;	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+;	¿Õ»Ã¿÷»» —»ƒ≈Õ»ﬂ
+
+    ; ÒË‰ËÚ Á‡ ÒÚÓÎÓÏ, ÛÍË Ì‡ ÒÚÓÎÂ, ÒÏÓÚËÚ ÔÓ ÒÚÓÓÌ‡Ï ÒÛ˜ËÚ ÌÓÊÍ‡ÏË ÓÚ ÌÂÚÂÔÂÌËˇ
+    [Sit_Look_Around]
+    speed = 2.0
+    loop = true
+    type = normal
+	start_time = 2620
+	end_time = 2671
+	data = "Blend time", "0.3"		; sec	
+	data = "Probability", "1.0"
+
+    ; ÒË‰ËÚ Á‡ ÒÚÓÎÓÏ, ÛÍË Ì‡ ÒÚÓÎÂ, ÛÒÚ‡ÎÓ ÓÔÛÒÍ‡ÂÚ „ÓÎÓ‚Û ‚ÌËÁ
+    [Sit_Lower_head]
+    speed = 1.0
+    loop = true
+    type = normal
+	start_time = 2671
+	end_time = 2766
+	data = "Blend time", "0.3"		; sec
+	data = "Probability", "1.0"
+
+    ; ÒË‰ËÚ Á‡ ÒÚÓÎÓÏ, Ó·ÎÓÍ‡˜Ë‚‡ÂÚÒˇ „ÓÎÓ‚ÓÈ Ì‡ Ô‡‚Û˛ ÛÍÛ
+    [Sit_Idle01]
+    speed = 2.0
+    loop = true
+    type = normal
+	start_time = 2766
+	end_time = 2834
+	data = "Blend time", "0.3"		; sec
+	data = "Probability", "1.0"
+
+    ; ÒË‰ËÚ Á‡ ÒÚÓÎÓÏ, ÔÓ‰ÌËÏ‡ÂÚ Ô‡‚Û˛ ÛÍÛ, Ï‡¯ÂÚ, ÛÎ˚·‡ÂÚÒˇ
+    [Sit_Idle02]
+    speed = 1.0
+    loop = true
+    type = normal
+	start_time = 2834
+	end_time = 2880
+	data = "Blend time", "0.3"		; sec
+	event = "SndAlliace_Catchfly", 2834, normal
+	data = "Probability", "0.1"
+
+    ; ÒË‰ËÚ Á‡ ÒÚÓÎÓÏ, ÓÚ„ÓÌˇÂÚ ÏÛıÛ
+    [Sit_Idle03]
+    speed = 1.0
+    loop = true
+    type = normal
+	start_time = 2880
+	end_time = 2943
+	data = "Blend time", "0.3"		; sec
+	event = "SndAlliace_Catchfly", 2834, normal
+	data = "Probability", "0.3"
+
+    ; ÒË‰ËÚ Á‡ ÒÚÓÎÓÏ, ˚„‡ÂÚ
+    [Sit_Idle04]
+    speed = 1.0
+    loop = true
+    type = normal
+	start_time = 2943
+	end_time = 2961
+	data = "Blend time", "0.3"		; sec
+	event = "SndAlliace_Catchfly", 2834, normal
+	data = "Probability", "0.8"
+
+
+    ; ÒË‰ËÚ Á‡ ÒÚÓÎÓÏ Ó·„Î‡‰˚‚‡ÂÚ ÍÓÒÚ¸
+    [Sit_Idle05]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 2962
+	end_time = 3007
+	data = "Blend time", "0.3"		; sec
+	event = "SndAlliace_Catchfly", 2962, normal
+	event = "itemaction_set1", 2963, normal
+	event = "itemaction_reset1", 3006, normal
+	data = "Probability", "0.3"
+
+
+    ; ÒË‰ËÚ Á‡ ÒÚÓÎÓÏ ÂÒÚ¸ ‚ËÎÍÓÈ
+    [Sit_Idle06]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 3008
+	end_time = 3099
+	data = "Blend time", "0.3"		; sec
+	event = "SndAlliace_Catchfly", 3008, normal
+	event = "itemaction_set2", 3029, normal
+	event = "itemaction_reset2", 3098, normal
+	data = "Probability", "0.3"
+
+
+    [Sit_Death]
+    speed = 1.0
+    type = normal
+	start_time = 3100
+	end_time = 3144
+	data = "Blend time", "0.3"		; sec
+	data = "Probability", "1.0"
+	data = "Angle", "340.0"
+	loop = false
+	event = "SndAlliace_Sitdeath", 3102, normal
+	
+	
+    ; ---------- ‡ÌËÏ‡ˆËË ÒË‰ÂÌËˇ Ì‡ ÒÚÛÎÂ ·ÂÁ ÒÚÓÎ‡
+    [Sit2_Idle01]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 7750
+	end_time = 7926
+	data = "Blend time", "0.3"		; sec
+
+    [Sit2_Idle02]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 7927
+	end_time = 8002
+	data = "Blend time", "0.3"		; sec
+	
+    [Sit2_Idle03]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 8003
+	end_time = 8098
+	data = "Blend time", "0.3"		; sec
+	
+    [Sit2_Idle04]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 8099
+	end_time = 8183
+	data = "Blend time", "0.3"		; sec	
+		
+    [Sit2_Idle05]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 8184
+	end_time = 8222
+	data = "Blend time", "0.3"		; sec	
+	
+    [Sit2_Idle06]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 8123
+	end_time = 8245
+	data = "Blend time", "0.3"		; sec	
+	
+    [Sit2_Idle07]
+    speed = 1.0
+    loop = false
+    type = normal
+	start_time = 8246
+	end_time = 8274
+	data = "Blend time", "0.3"		; sec			
+			
+
+; ‰Ë‡ÎÓ„ ÒË‰ˇ Ì‡ Ú‡·ÛÂÚÍÂ
+
+; ÕŒ¬¿ﬂ ¿Õ»Ã¿÷»ﬂ Õ≈ ¡€À¿ œ–≈ƒ”—ÃŒ“–≈Õ¿ –¿Õ≈≈!!!!!!!!!!!!!!!!!!!!!!
+
+; ‡È‰Î ‰Îˇ ‰Ë‡ÎÓ„Ó‚Ó„Ó ÒË‰ÂÌËˇ ÔˇÏÓ, Ì‡ÂÁÍ‡ ËÁ ‡È‰ÎÓ‚ ‚˚¯Â
+    [Sit_Dialog0]
+    speed = 1.0
+    loop = true
+    type = normal
+	start_time = 2671
+	end_time = 2834
+	data = "Blend time", "0.3"		; sec
+
+; ÒË‰ˇ ÔÓ‚Ó‡˜Ë‚‡ÂÚÒˇ Ì‡ÎÂ‚Ó Ì‡ Ú‡·ÛÂÚÂ, ‡ÒÒÛÊ‰‡ÂÚ ÊÂÒÚËÍÛÎËÛˇ 120 ÒÂÍ.ÒÓÒÚÓËÚ ËÁ ÌÂÒÍÓÎ¸ÍËı ‰Ë‡ÎÓ„Ó‚, ÏÓÊÌÓ ÔËÍÛÚËÚ¸ ÌÂÒÍÓÎ¸ÍÓ Ù‡Á
+    [Sit_Dialog1]
+    speed = 1.0
+    loop = true
+    type = normal
+	start_time = 3145
+	end_time = 3888
+	data = "Blend time", "0.3"		; sec
+	
+
+; ÒË‰ˇ ÔÓ‚Ó‡˜Ë‚‡ÂÚÒˇ Ì‡Ô‡‚Ó Ì‡ Ú‡·ÛÂÚÂ, ‡ÒÒÛÊ‰‡ÂÚ ÊÂÒÚËÍÛÎËÛˇ 120 ÒÂÍ.ÒÓÒÚÓËÚ ËÁ ÌÂÒÍÓÎ¸ÍËı ‰Ë‡ÎÓ„Ó‚, ÏÓÊÌÓ ÔËÍÛÚËÚ¸ ÌÂÒÍÓÎ¸ÍÓ Ù‡Á
+    [Sit_Dialog2]
+    speed = 1.0
+    loop = true
+    type = normal
+    start_time = 3888
+    end_time = 4493
+    data = "Blend time", "0.3"		; sec
+
+	
+;	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+;	¿Õ»Ã¿÷»» √”¡≈–Õ¿“Œ–¿
+
+    ;–‡Á„Îˇ‰˚‚‡Ú¸ Ò‚ÓË ÛÍË
+    [Gov_ObserveHands]
+    speed = 1.2
+    loop = true
+    type = normal
+    start_time = 4629
+    end_time = 4740
+    data = "Blend time", "0.3"		; sec
+
+    ;«‡ÍËÌÛÚ¸ Ó‰ÌÛ ÌÓ„Û Ì‡ ‰Û„Û˛
+    [Gov_LegOnLeg]
+    speed = 1.5
+    loop = true
+    type = normal
+    start_time = 4740
+    end_time = 4809
+    data = "Blend time", "0.3"		; sec
+
+    ;—ÏÓÚÂÚ¸ ÔÓ ÒÚÓÓÌ‡Ï
+    [Gov_Look_Around]
+    speed = 1.5
+    loop = true
+    type = normal
+    start_time = 4809
+    end_time = 4883
+    data = "Blend time", "0.3"		; sec
+
+    ;–‡Á‰ÛÏ˚‚‡Ú¸1 ÒË‰ËÚ ‰ÛÏ‡ÂÚ, ÔÓ‰ÌˇÎ ÎÂ‚Û˛ ÛÍÛ Í ÎËˆÛ Ò ÔÓ‰ÌˇÚ˚Ï Ô‡Î¸ˆÂÏ, „ÓÎÓ‚Û ÔË„ÌÛÎ "„Û·ÂÌ‡ÚÓ"
+    [Gov_think_1]
+    speed = 1.5
+    loop = true
+    type = normal
+    start_time = 5013
+    end_time = 5066
+    data = "Blend time", "0.3"		; sec
+
+    ;–‡Á‰ÛÏ˚‚‡Ú¸2 ÒË‰ËÚ ‰ÛÏ‡ÂÚ, ÔÓÚÂ Ô‡‚ÓÈ ÛÍÓÈ ÎÓ· "„Û·ÂÌ‡ÚÓ"
+    [Gov_think_2]
+    speed = 1.5
+    loop = true
+    type = normal
+    start_time = 5066
+    end_time = 5105
+    data = "Blend time", "0.3"		; sec
+
+    ;”ı‡ÊË‚‡ÂÚ Á‡ ÛÍ‡ÏË "„Û·ÂÌ‡ÚÓ"
+    [Gov_think_3]
+    speed = 1.5
+    loop = true
+    type = normal
+    start_time = 4494
+    end_time = 4629
+    data = "Blend time", "0.3"		; sec
+
+
+; ƒ»¿ÀŒ√ √”¡≈–Õ¿“Œ–¿ –¿Õ≈≈ Õ≈ ¡€ÀŒ!!!!!!!!!!!!!
+; ÒÓÒÚÓËÚ ËÁ ÔˇÚË ÓÚ‰ÂÎ¸Ì˚ı ‰Ë‡ÎÓ„Ó‚ Ò ‡ÁÌÓÈ ÊÂÒÚËÍÛÎˇˆËÂÈ, ÚÓ ÂÒÚ¸ „Û·Â ÏÓÊÂÚ „ÓÎÓÒÓÏ ÓÚ‚Â˜‡Ú¸, ˜ÚÓ Û„Ó‰ÌÓ. 
+; ÃÓÊÌÓ ‡ÁÌÂÒÚË Ì‡ ÔˇÚ¸ ˜‡ÒÚÂÈ, ÂÒÎË „ÓÎÓÒ ÔËÍÛ˜Ë‚‡Ú¸ ËÎË Â˘Â ‰Îˇ ˜Â„Ó ÌÛÊÌÓ...
+    [Gov_Dialog_1]
+    speed = 1.0
+    loop = true
+    type = normal
+    start_time = 4883
+    end_time = 5013
+    data = "Blend time", "0.3"		; sec
+
+; ÒË‰ËÚ ÍË‚‡ÂÚ „ÓÎÓ‚ÓÈ, ÒÓ„Î‡¯‡ÂÚÒˇ "„Û·ÂÌ‡ÚÓ"
+    [Gov_Dialog_2]
+    speed = 1.0
+    loop = true
+    type = normal
+    start_time = 5105
+    end_time = 5129
+    data = "Blend time", "0.3"		; sec
+
+
+; ÒË‰ËÚ Ï‡¯ÂÚ „ÓÎÓ‚ÓÈ ÓÚÍ‡Á˚‚‡ÂÚÒˇ "„Û·ÂÌ‡ÚÓ "
+    [Gov_Dialog_3]
+    speed = 1.0
+    loop = true
+    type = normal
+    start_time = 5129
+    end_time = 5157
+    data = "Blend time", "0.3"		; sec
+
+
+	
+;	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+;	ƒŒœŒÀÕ»“≈À‹Õ€≈ ¿Õ»Ã¿÷»»
+
+;—ÚÓˇÌËÂ ÒÓ ÒÎÓÊÂÌÌ˚ÏË ÛÍ‡ÏË - ÏÓÎËÚ‚‡
+	[Bead]
+	loop = true
+	type = normal
+	start_time = 6899
+	end_time = 7000
+	speed = 2.0	
+	data = "Blend time", "0.4"		; sec
+	
+;—ÚÓˇÌËÂ Ò ÔÓ‰ÌˇÚ˚ÏË ‚ ÒÚ‡ıÂ ÛÍ‡ÏË
+	[afraid]
+	speed = 3.0
+	loop = true
+	type = normal
+	start_time = 424
+	end_time = 499
+	data = "Blend time", "0.3"		; sec
+	event = "SndAlliace_N_afraid", 424, normal
+
+	
+;—ÏÂÚ¸ ËÁ ÔÓÎÓÊÂÌËˇ ÚÛÒ‡
+	[death_afraid_1]
+	speed = 1.5
+	type = normal
+	start_time = 500
+	end_time = 568	
+	loop = false	
+	data = "Blend time", "0.8"		; sec
+	data = "Probability", "1.0"
+	data = "Angle", "340.0"
+	
+	event = "SndAlliace_N_afraid_death1", 500, normal
+	
+	
+;—ÏÂÚ¸ ËÁ ÔÓÎÓÊÂÌËˇ ÚÛÒ‡
+	[death_afraid_2]
+	speed = 1.5
+	type = normal
+	start_time = 500
+	end_time = 568	
+	loop = false	
+	data = "Blend time", "0.8"		; sec
+	data = "Probability", "1.0"
+	data = "Angle", "340.0"
+	
+	event = "SndAlliace_N_afraid_death1", 500, normal	
+	
+	;speed = 1.5
+	;type = normal
+	;start_time = 569
+	;end_time = 624	
+	;loop = false	
+	;data = "Blend time", "0.8"		; sec
+	;data = "Probability", "1.0"
+	;data = "Angle", "340.0"	
+	;event = "SndAlliace_N_afraid_death2", 569, normal   
+	
+
+;œ˚ÊÓÍ	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;—Ô˚„Ë‚‡ÌËÂ
+	[jump]
+	start_time = 183
+	end_time = 219
+
+	speed = 1.3
+	loop = false
+
+	event = "Jump pause", 196 , normal
+
+
+;—Ô˚„Ë‚‡ÌËÂ	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;—Ô˚„Ë‚‡ÌËÂ
+	[fall]
+	start_time = 183
+	end_time = 203
+
+	speed = 1.3
+	loop = false
+
+	event = "Jump pause", 196 , normal
+	
+;—Ô˚„Ë‚‡ÌËÂ. ‚ÒÚ‡‚‡ÌËÂ Ì‡ ÁÂÏÎÂ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;—Ô˚„Ë‚‡ÌËÂ
+	[fall_land]
+	start_time = 203
+	end_time = 219
+
+	speed = 1.3
+	loop = false
+	
+	
+;—Ô˚„Ë‚‡ÌËÂ. ‚ÒÔÎ˚ÚËÂ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;—Ô˚„Ë‚‡ÌËÂ
+	[fall_water]
+	start_time = 8641
+	end_time = 8676
+
+	speed = 1.3
+	loop = false
+		
+
+;œÎ‡‚‡Ì¸Â
+	[swim]
+	start_time = 241
+	end_time = 269
+
+	speed = 1.1
+
+	data = "Blend time", "0.4"		; sec
+	data = "Walk speed", "0.8"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+
+	event = "swim", 245, normal
+	
+;–‡Ò¯‡ÍË‚‡ÌËÂ ÏÛÊËÍ‡ ÔÂÂ‰ ‰‡ÏÓÈ
+	[Poklon]
+	type = normal
+	speed = 0.8
+	start_time = 7300
+	end_time = 7335	
+	loop = false
+	data = "Blend time", "0.3"		; sec
+    
+
+;===================================================================================
+;¡ÓÏÊ
+;===================================================================================
+;—ÂÒÚ¸
+	[Ground_SitDown]
+	type = normal
+	start_time = 625	
+	end_time = 685
+	loop = false	
+	data = "Blend time", "1.0"		; sec
+
+;—Ë‰ÂÚ¸	
+	[Ground_sitting]
+	type = normal
+	start_time = 685
+	end_time = 805	
+	loop = false
+	data = "Blend time", "0.2"		; sec
+
+;Œ„Îˇ‰˚‚‡Ú¸Òˇ	
+	[Ground_look_around]
+	type = normal
+	start_time = 805	
+	end_time = 905
+	loop = false
+	data = "Blend time", "0.2"		; sec
+
+;◊ÂÒ‡Ú¸Òˇ	
+	[Ground_Scratch]
+	type = normal
+	start_time = 905
+	end_time = 972
+	loop = false
+	data = "Blend time", "0.2"		; sec
+
+;œÓÒËÚ¸ ÏËÎÓÒÚ˚Ì˛
+	type = normal	
+	[Ground_Beg]
+	start_time = 6420
+	end_time = 6470
+	data = "Blend time", "0.2"		; sec
+
+;¬ÒÚ‡Ú¸	
+	[Ground_StandUp]
+	type = normal
+	start_time = 972	
+	end_time = 1032
+	loop = false
+	data = "Blend time", "1.5"		; sec
+	
+;¬ÒÚ‡Ú¸	·˚ÒÚÓ
+	[Ground_StandUp_Fast]
+	type = normal
+	start_time = 988	
+	end_time = 1032
+	loop = false
+	speed = 2.5
+	data = "Blend time", "0.3"		; sec	
+
+;—ÏÂÚ¸
+	[Ground_Death]
+	type = normal
+	start_time = 1033
+	end_time = 1084
+	data = "Blend time", "0.2"		; sec
+	loop = false
+
+	event = "Death sound", 1033, normal
+
+;—ÏÂÚ¸1
+	[Ground_Death1]
+	type = normal
+	start_time = 1085
+	end_time = 1125
+	data = "Blend time", "0.2"		; sec
+	loop = false
+
+	event = "Death sound", 1085, normal
+
+;¡ÓˇÁÌ¸
+	[Ground_Afraid]
+	type = pingpong
+	loop = true
+	speed = 0.1
+	start_time = 6510 
+	end_time = 6512 
+	data = "Blend time", "5.0"		; sec
+	
+	event = "SndAlliace_N_afraid", 6510, normal	
+
+;—ÏÂÚ¸ ËÁ ·ÓˇÁÌË
+	[Ground_Afraid_Death]
+	type = normal
+	start_time = 6510
+	end_time = 6559
+	data = "Blend time", "0.2"		; sec
+	loop = false
+
+	event = "Death sound", 6515, normal
+
+;===============================================================================     
+; ÌÓÒËÎ¸˘ËÍ
+;===============================================================================   
+;ÕÂÒÂÏ
+	[CarrierGo_1]
+	loop = true
+	type = normal
+	speed = 1.0
+	start_time = 76
+	end_time = 97
+	data = "Blend time", "0.5"		; sec
+	data = "Walk speed", "1.0"		; m/sec
+	data = "Turn speed", "1.0"		; rad/sec
+	
+	event = "LStep", 81, normal
+	event = "RStep", 92, normal
+	event = "itemaction_set1", 76, normal
+	event = "itemaction_reset1", 97, normal	
+
+	
+	[CarrierStay_1]
+	loop = false
+	type = normal
+	start_time = 85
+	end_time = 85
+	data = "Blend time", "1.0"		; sec
+	data = "Probability", "1"
+	
+	
+	[CarrierGo_2]
+	loop = true
+	type = normal
+	speed = 1.0	
+	start_time = 98
+	end_time = 116	
+	data = "Blend time", "0.5"		; sec
+	data = "Walk speed", "1.2"		; m/sec
+	data = "Turn speed", "5.5"		; rad/sec
+	
+	event = "LStep", 103, normal
+	event = "RStep", 111, normal
+	
+ 	event = "itemaction_set1", 98, normal
+	event = "itemaction_reset1", 116, normal	
+	                                                                                                                                                 
+
+	[CarrierStay_2]
+	speed = 1.0
+	loop = false
+	type = normal
+	start_time = 98
+	end_time = 98
+	data = "Blend time", "1.0"		; sec
+	data = "Probability", "1"
+
+
+	[Carrier_death]
+	start_time = 379
+	end_time = 423
+	loop = false
+	data = "Blend time", "1.3"		; sec
+	data = "Angle", "340.0"
+	event = "LStep", 389, normal		
+	event = "SndAlliace_citizen_death2", 402, normal	
 
 ;ccc building kit  still ani for buildings
 [building]
 start_time = 1500
 end_time = 1500
 data = "Blend time", "0.1"		; sec
-
-
-;–°—Ç–æ—è–Ω–∏–µ1
-[idle_1]
-start_time = 1452
-end_time = 1551
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.1"
-
-;–°—Ç–æ—è–Ω–∏–µ2 >>>>>>>>>>>>>>>>> –û—Å–Ω–æ–≤–Ω–æ–µ!
-[idle_2]
-start_time = 1551
-end_time = 1611
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.5"
-
-;idle 
-[idle_3]
-start_time = 1612
-end_time = 1802
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.02"
-
-;–û–≥–ª—è–¥–µ—Ç—å—Å—è1
-[idle_4]
-start_time = 1803
-end_time = 1863
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.02"
-
-;–û–≥–ª—è–¥–µ—Ç—å—Å—è2
-[idle_5]
-start_time = 1863
-end_time = 1928
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.02"
-
-;–û–≥–ª—è–¥–µ—Ç—å—Å—è3
-[idle_6]
-start_time = 1928
-end_time = 1968
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.05"
-
-;–ü–æ—á–µ—Å–∞—Ç—å –≥–æ–ª–æ–≤—É
-[idle_7]
-start_time = 1968
-end_time = 2018
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.02"
-
-;–ü–µ—Ä–µ–∫–∞—Ç—ã–≤–∞—Ç—å—Å—è —Å –ø—è—Ç–æ–∫ –Ω–∞ –º—ã—Å–∫–∏
-[idle_8]
-start_time = 2062
-end_time = 2089
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.05"
-
-;–ß–∏—Å—Ç–∏—Ç—å —Ä—É–∫–∞–≤
-[idle_9]
-start_time = 2090
-end_time = 2160
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.01"
-
-;–£—Ç–µ—Ä–µ—Ç—å –ø–æ—Ç
-[idle_10]
-start_time = 2160
-end_time = 2221
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.01"
-
-;===================================================================================
-;–ü–µ—Ä–µ–º–µ—â–µ–Ω–∏–µ –æ–±—ã—á–Ω–æ–≥–æ –ø–µ—Ä—Å–æ–Ω–∞–∂–∞
-;===================================================================================
-
-;–•–æ–¥—å–±–∞ –≤–ø–µ—Ä—ë–¥
-[walk]
-start_time = 2
-end_time = 18
-
-data = "Blend time", "0.4"		; sec
-data = "Walk speed", "1.6"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 6, normal
-event = "RStep", 14, normal
-
-;–•–æ–¥—å–±–∞ –Ω–∞–∑–∞–¥
-[back walk]
-start_time = 2
-end_time = 18
-
-speed = 0.7
-type = reverse
-
-data = "Blend time", "0.5"		; sec
-data = "Walk speed", "-1.1"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 6, reverse
-event = "RStep", 14, reverse
-
-;–ë–µ–≥ –≤–ø–µ—Ä—ë–¥
-[run]
-start_time = 113
-end_time = 125
-
-data = "Blend time", "0.3"		; sec
-data = "Walk speed", "3.3"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 117, normal
-event = "RStep", 123, normal
-
-;–ë–µ–≥ –Ω–∞–∑–∞–¥
-[back run]
-start_time = 2
-end_time = 18
-
-speed = 0.7
-type = reverse
-
-data = "Blend time", "0.5"		; sec
-data = "Walk speed", "-1.1"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 6, reverse
-event = "RStep", 14, reverse
-
-;–ò–¥—Ç–∏ –≤–≤–µ—Ä—Ö –ø–æ –ª–µ—Å—Ç–Ω–∏—Ü–µ
-[stairs up]
-start_time = 73
-end_time = 92
-
-speed = 1.4
-
-data = "Blend time", "0.2"		; sec
-data = "Walk speed", "0.8"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 77, normal
-event = "RStep", 86, normal
-
-;–ò–¥—Ç–∏ –≤–Ω–∏–∑ –ø–æ –ª–µ—Å—Ç–Ω–∏—Ü–µ
-[stairs down]
-start_time = 93
-end_time = 112
-
-speed = 1.4
-
-data = "Blend time", "0.2"		; sec
-data = "Walk speed", "0.8"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 98, normal
-event = "RStep", 108, normal
-
-;–ò–¥—Ç–∏ –≤–≤–µ—Ä—Ö –ø–æ –ª–µ—Å—Ç–Ω–∏—Ü–µ –Ω–∞–∑–∞–¥
-[back stairs up]
-start_time = 93
-end_time = 112
-
-type = reverse
-
-data = "Blend time", "0.2"		; sec
-data = "Walk speed", "-0.5"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 98, reverse
-event = "RStep", 108, reverse
-
-;–ò–¥—Ç–∏ –≤–Ω–∏–∑ –ø–æ –ª–µ—Å—Ç–Ω–∏—Ü–µ –Ω–∞–∑–∞–¥
-[back stairs down]
-start_time = 73
-end_time = 92
-
-type = reverse
-
-data = "Blend time", "0.2"		; sec
-data = "Walk speed", "-0.6"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 77, reverse
-event = "RStep", 86, reverse
-
-;–ë–µ–∂–∞—Ç—å –≤–≤–µ—Ä—Ö –ø–æ –ª–µ—Å—Ç–Ω–∏—Ü–µ
-[run stairs up]
-start_time = 113
-end_time = 125
-
-data = "Blend time", "0.3"		; sec
-data = "Walk speed", "3.3"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 117, normal
-event = "RStep", 123, normal
-
-;–ë–µ–∂–∞—Ç—å –≤–Ω–∏–∑ –ø–æ –ª–µ—Å—Ç–Ω–∏—Ü–µ
-[run stairs down]
-start_time = 113
-end_time = 125
-
-data = "Blend time", "0.3"		; sec
-data = "Walk speed", "3.3"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 117, normal
-event = "RStep", 123, normal
-
-;–ë–µ–∂–∞—Ç—å –≤–≤–µ—Ä—Ö –ø–æ –ª–µ—Å—Ç–Ω–∏—Ü–µ –Ω–∞–∑–∞–¥
-[back run stairs up]
-start_time = 93
-end_time = 112
-
-type = reverse
-
-data = "Blend time", "0.2"		; sec
-data = "Walk speed", "-0.5"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 98, reverse
-event = "RStep", 108, reverse
-
-;–ë–µ–∂–∞—Ç—å –≤–Ω–∏–∑ –ø–æ –ª–µ—Å—Ç–Ω–∏—Ü–µ –Ω–∞–∑–∞–¥
-[back run stairs down]
-start_time = 73
-end_time = 92
-
-type = reverse
-
-data = "Blend time", "0.2"		; sec
-data = "Walk speed", "-0.6"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 77, reverse
-event = "RStep", 86, reverse
-
-;–î–µ–π—Å—Ç–≤–∏–µ –ø–æ–≤–æ—Ä–æ—Ç–∞ –≤–ª–µ–≤–æ
-[turn left]
-start_time = 163
-end_time = 183
-
-data = "Blend time", "0.2"		; sec
-data = "Walk speed", "0.0"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-;event = "LStep", 172, normal
-;event = "RStep", 182, normal
-
-;–î–µ–π—Å—Ç–≤–∏–µ –ø–æ–≤–æ—Ä–æ—Ç–∞ –≤–ø—Ä–∞–≤–æ
-[turn right]
-start_time = 163
-end_time = 183
-
-type = reverse
-
-data = "Blend time", "0.2"		; sec
-data = "Walk speed", "0.0"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-;event = "LStep", 172, reverse
-;event = "RStep", 182, reverse
-
-;–°–ø—Ä—ã–≥–∏–≤–∞–Ω–∏–µ
-[jump]
-start_time = 126
-end_time = 162
-
-speed = 1.3
-loop = false
-
-event = "Jump pause", 139 , normal
-
-
-;===================================================================================
-;–î–æ–ø–æ–ª–Ω–∏—Ç–µ–ª—å–Ω—ã–µ –¥–µ–π—Å—Ç–≤–∏—è —Ö–æ–¥—å–±—ã
-;===================================================================================
-
-;===================================================================================
-;–ü–ª–∞–≤–∞–Ω—å–µ
-;===================================================================================
-
-[swim]
-start_time = 184
-end_time = 212
-
-speed = 1.1
-
-data = "Blend time", "0.4"		; sec
-data = "Walk speed", "0.8"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "swim", 188, normal
-
-;===================================================================================
-;–î–µ–π—Å—Ç–≤–∏—è —Å—Ç–æ—è–Ω–∏—è –≤ —Ä–µ–∂–∏–º–µ –±–æ—è
-;===================================================================================
-
-;–ü–∞—É–∑–∞1 
-[fight stand_1]
-start_time = 3233
-end_time = 3254
-
-speed = 1.2
-
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "1.0"
-
-;–ü–∞—É–∑–∞2 - –æ–ø—É—Å—Ç–∏—Ç—å –∏ —Å–Ω–æ–≤–∞ –ø–æ–¥–Ω—è—Ç—å —Ä—É–∫—É
-[fight stand_2]
-start_time = 3255
-end_time = 3311
-
-speed = 1.2
-
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.2"
-
-;–ü–∞—É–∑–∞3 - "–≤–æ—Å—å–º–µ—Ä–∫–∞"
-[fight stand_3]
-start_time = 3312
-end_time = 3340
-
-speed = 1.2
-
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.2"
-
-;–ü–∞—É–∑–∞4 - "–∏–¥–∏ —Å—é–¥–∞"
-[fight stand_4]
-start_time = 3340
-end_time = 3384
-
-speed = 1.2
-
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.1"
-
-;–ü–∞—É–∑–∞5 - "–¥–∞–≤–∞–π-–¥–∞–≤–∞–π, –∏–¥–∏"
-[fight stand_5]
-start_time = 3384
-end_time = 3422
-
-speed = 1.2
-
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.05"
-
-;–ü–∞—É–∑–∞6 - –ø–æ—Å—Ç—É—á–∞—Ç—å —à–ø–∞–≥–æ–π –ø–æ –∑–µ–º–ª–µ
-[fight stand_6]
-start_time = 3422
-end_time = 3456
-
-speed = 1.2
-
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.1"
-
-;–ü–∞—É–∑–∞7 - —Ä–∞—Å—Å–ª–∞–±–∏—Ç—å—Å—è, –ø–æ–∑—ã—Ä–∏—Ç—å –ø–æ —Å—Ç–æ—Ä–æ–Ω–∞–º
-[fight stand_7]
-start_time = 3456
-end_time = 3582
-
-speed = 1.2
-
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "0.02"
-
-;–í—ã—Ö–≤–∞—Ç–∏—Ç—å —Å–∞–±–ª—é
-[Normal to fight]
-start_time = 2966
-end_time = 2992
-
-speed = 1.7
-loop = false
-
-data = "Blend time", "0.3"		; sec
-
-event = "Move blade", 2973, normal
-
-event = "SndAlliace_sword_sh", 2975, normal
-
-;event = "RStep", 2980, normal
-;event = "LStep", 2986, normal
-
-;–£–±—Ä–∞—Ç—å —Å–∞–±–ª—é
-[Fight to normal]
-start_time = 3898
-end_time = 3933
-speed = 1.5
-loop = false
-
-data = "Blend time", "0.3"		; sec
-
-event = "Move blade", 3916, normal
-
-event = "SndAlliace_sword_out", 3912, normal
-
-;event = "LStep", 3918, normal
-;event = "RStep", 3922, normal
-
-;–ë—Ä–æ—Å–∏—Ç—å —Å–∞–±–ª—é –∏ –ø–æ–¥–Ω—è—Ç—å —Ä—É–∫–∏
-[drop saber]
-start_time = 3934
-end_time = 3987
-loop = false
-
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "1.0"
-
-event = "Drop blade", 3948, normal
-event = "Drop sound", 3949, normal
-
-;event = "LStep", 3974, normal
-;event = "RStep", 3987, normal
-
-;–°—Ç–æ—è—Ç—å —Å –ø–æ–¥–Ω—è—Ç—ã–º–∏ —Ä—É–∫–∞–º–∏
-[hands up]
-start_time = 3987
-end_time = 4047
-
-data = "Blend time", "0.4"		; sec
-
-data = "Probability", "1.0"
-
-;–†–ï–ê–ö–¶–ò–Ø –ù–ê –ü–û–õ–£–ß–ï–ù–ò–ï –ü–û –ú–û–†–î–ï
-[face_hit]
-start_time = 3186
-end_time = 3210
-speed = 1.2
-loop = false
-data = "Blend time", "0.2"		; sec
-
-
-;===================================================================================
-;–•–æ–¥—å–±–∞ –≤ —Ä–µ–∂–∏–º–µ –±–æ—è
-;===================================================================================
-
-;–•–æ–¥—å–±–∞ –≤–ø–µ—Ä—ë–¥ –≤ —Ä–µ–∂–∏–º–µ –±–æ—è
-[fight walk]
-start_time = 38
-end_time = 53
-
-data = "Blend time", "0.2"		; sec
-data = "Walk speed", "1.4"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "RStep", 45, normal
-event = "LStep", 53, normal
-
-;–•–æ–¥—å–±–∞ –Ω–∞–∑–∞–¥ –≤ —Ä–µ–∂–∏–º–µ –±–æ—è
-[fight back walk]
-start_time = 38
-end_time = 53
-
-type = reverse
-
-data = "Blend time", "0.4"		; sec
-data = "Walk speed", "-1.2"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "RStep", 45, normal
-event = "LStep", 53, normal
-
-;–ë–µ–≥ –≤–ø–µ—Ä—ë–¥ –≤ —Ä–µ–∂–∏–º–µ –±–æ—è
-[fight run]
-start_time = 113
-end_time = 125
-
-data = "Blend time", "0.3"		; sec
-data = "Walk speed", "3.3"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 117, normal
-event = "RStep", 123, normal
-
-;–ë–µ–≥ –Ω–∞–∑–∞–¥ –≤ —Ä–µ–∂–∏–º–µ –±–æ—è
-[fight back run]
-start_time = 38
-end_time = 53
-
-type = reverse
-
-data = "Blend time", "0.4"		; sec
-data = "Walk speed", "-1.2"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "RStep", 45, normal
-event = "LStep", 53, normal
-
-;===================================================================================
-;–î–µ–π—Å—Ç–≤–∏—è –±–æ—è
-;===================================================================================
-
-;--------------------------------------------------
-
-;–£–¥–∞—Ä 1 –ø—Ä—è–º–æ–π —Ä—É–±—è—â–∏–π
-[attack_fast_1]
-start_time = 2992
-end_time = 3008
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack", 2998, normal			;slash
-event = "SndAlliace_sword_wind", 2996, normal
-
-;event = "RStep", 1716, normal
-;event = "RStep", 1727, normal
-
-
-
-;–£–¥–∞—Ä 2 –ø—Ä—è–º–æ–π —Ä—É–±—è—â–∏–π
-[attack_fast_2]
-start_time = 3008
-end_time = 3023
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack", 3014, normal			;slash
-event = "SndAlliace_sword_wind", 3012, normal
-
-;event = "RStep", 1716, normal
-;event = "RStep", 1727, normal
-
-
-
-;–£–¥–∞—Ä 3 –ø—Ä—è–º–æ–π —Ä—É–±—è—â–∏–π
-[attack_fast_3]
-start_time = 3023
-end_time = 3036
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack", 3029, normal			;slash
-event = "SndAlliace_sword_wind", 3028, normal
-
-;event = "RStep", 1716, normal
-;event = "RStep", 1727, normal
-
-
-
-;–£–¥–∞—Ä 4 –ø—Ä—è–º–æ–π —Ä—É–±—è—â–∏–π
-[attack_fast_4]
-start_time = 3036
-end_time = 3048
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack", 3042, normal			;slash
-event = "SndAlliace_sword_wind", 3040, normal
-
-;event = "RStep", 1716, normal
-;event = "RStep", 1727, normal
-
-
-
-;–£–¥–∞—Ä 5 –ø—Ä—è–º–æ–π —Ä—É–±—è—â–∏–π
-[attack_fast_5]
-start_time = 3048
-end_time = 3061
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack", 3055, normal			;slash
-event = "SndAlliace_sword_wind", 3052, normal
-
-;event = "RStep", 1716, normal
-;event = "RStep", 1727, normal
-
-
-
-;–£–¥–∞—Ä 6 –ø—Ä—è–º–æ–π —Ä—É–±—è—â–∏–π
-[attack_fast_6]
-start_time = 3061
-end_time = 3074
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack", 3067, normal			;slash
-event = "SndAlliace_sword_wind", 3065, normal
-
-;event = "RStep", 1716, normal
-;event = "RStep", 1727, normal
-
-
-
-;–£–¥–∞—Ä 7 –ø—Ä—è–º–æ–π —Ä—É–±—è—â–∏–π
-[attack_fast_7]
-start_time = 3008
-end_time = 3023
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack", 3014, normal			;slash
-event = "SndAlliace_sword_wind", 3012, normal
-
-;event = "RStep", 1716, normal
-;event = "RStep", 1727, normal
-
-
-
-;–£–¥–∞—Ä 8 –ø—Ä—è–º–æ–π –∫–æ–ª—é—â–∏–π
-[attack_fast_8]
-start_time = 3074
-end_time = 3086
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack_stub", 3080, normal			;stub
-event = "Sound_stub", 3077, normal
-
-;event = "RStep", 1735, normal
-;event = "RStep", 1751, normal
-
-
-;--------------------------------------------------
-
-
-;–£–¥–∞—Ä 1 c —Ä–∞–∑–≤–æ—Ä–æ—Ç–æ–º –≤–ø—Ä–∞–≤–æ, —Ä—É–±—è—â–∏–π
-[attack_right_1]
-start_time = 3086
-end_time = 3102
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack", 3095, normal
-event = "SndAlliace_sword_wind", 3094, normal
-
-;event = "RStep", 1716, normal
-;event = "RStep", 1727, normal
-
-;--------------------------------------------------
-
-;–£–¥–∞—Ä 1 c —Ä–∞–∑–≤–æ—Ä–æ—Ç–æ–º –≤–ª–µ–≤–æ, —Ä—É–±—è—â–∏–π
-[attack_left_1]
-start_time = 3102
-end_time = 3120
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-event = "Attack", 3111, normal			;slash
-event = "SndAlliace_sword_wind", 3108, normal
-
-;event = "RStep", 1716, normal
-;event = "RStep", 1727, normal
-
-
-;--------------------------------------------------
-
-;–ü–æ–ø–∞–¥–∞–Ω–∏–µ 1
-[hit_1]
-start_time = 3165
-end_time = 3186
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-;–ü–æ–ø–∞–¥–∞–Ω–∏–µ 2
-[hit_2]
-start_time = 3186
-end_time = 3210
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-;–ü–æ–ø–∞–¥–∞–Ω–∏–µ 3
-[hit_3]
-start_time = 3210
-end_time = 3232
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-; Hitting a standing character
-[hit_stand]
-start_time = 213
-end_time = 228
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-[hit_feint]
-type = normal
-start_time = 3210
-end_time = 3232
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"
-event = "SndAlliace_manhit", 3210, normal
-
-[hit_round]
-type = normal
-start_time = 3210
-end_time = 3232
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"
-event = "SndAlliace_manhit", 3210, normal
-
-[hit_parry]
-type = normal
-start_time = 3210
-end_time = 3232
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"
-event = "SndAlliace_parryhit", 3210, normal
-
-[hit_fire]
-type = normal
-start_time = 3210
-end_time = 3232
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"
-event = "SndAlliace_bullethit", 3210, normal
-
-;--------------------------------------------------
-
-;–ë–ª–æ–∫
-[block]
-start_time = 3163
-end_time = 3164
-
-speed = 1.2
-loop = true
-
-data = "Blend time", "0.2"		; sec
-
-;–ü–æ–ø–∞–¥–∞–Ω–∏–µ –≤ –±–ª–æ–∫–µ
-[block_hit]
-start_time = 3153
-end_time = 3163
-
-speed = 1.2
-loop = false
-
-data = "Blend time", "0.2"		; sec
-
-;--------------------------------------------------
-
-;–û—Ç—Å–∫–æ–∫
-[Recoil]
-start_time = 3848
-end_time = 3858
-
-loop = false
-speed = 1.8
-
-data = "Blend time", "0.002"	; sec
-
-
-;--------------------------------------------------
-
-;–í—ã—Å—Ç—Ä–µ–ª
-[Shot]
-start_time = 3120
-end_time = 3144
-
-loop = false
-
-event = "To hand", 3126, normal
-event = "SndAlliace_pistol_shot", 3126, normal
-event = "Fire", 3133, normal
-event = "To belt", 3144, normal
-
-data = "Blend time", "0.3"		; sec
-
-;--------------------------------------------------
-
-;===================================================================================
-;–î–µ–π—Å—Ç–≤–∏—è —É–º–∏—Ä–∞–Ω–∏—è
-;===================================================================================
-
-;–í–∞—Ä–∏–∞–Ω—Ç—ã —Å–º–µ—Ä—Ç–µ–π
-[death_0]
-start_time = 3582
-end_time = 3637
-
-loop = false
-
-data = "Blend time", "0.8"		; sec
-data = "Probability", "1.0"
-data = "Angle", "330.0"
-
-
-event = "LStep", 3599, normal
-event = "Death sound", 3625, normal
-
-[death_1]
-start_time = 3638
-end_time = 3712
-
-loop = false
-
-data = "Blend time", "0.8"		; sec
-data = "Probability", "1.0"
-data = "Angle", "330.0"
-
-event = "LStep", 3656, normal
-event = "Death sound", 3693, normal
-
-[death_2]
-start_time = 3713
-end_time = 3788
-
-loop = false
-
-data = "Blend time", "0.8"		; sec
-data = "Probability", "1.0"
-data = "Angle", "330.0"
-
-event = "LStep", 3737, normal
-event = "Death sound", 3771, normal
-
-[death_3]
-start_time = 3789
-end_time = 3847
-
-loop = false
-
-data = "Blend time", "0.8"		; sec
-data = "Probability", "1.0"
-data = "Angle", "140.0"
-
-event = "Death sound", 3814, normal
-
-;–°–º–µ—Ä—Ç—å –≥–æ—Ä–æ–∂–∞–Ω
-[death_citizen_1]
-start_time = 228
-end_time = 288
-
-loop = false
-
-data = "Blend time", "0.3"		; sec
-data = "Probability", "1.0"
-data = "Angle", "340.0"
-
-event = "LStep", 246, normal
-event = "Death sound", 265, normal
-
-[death_citizen_2]
-start_time = 289
-end_time = 340
-
-loop = false
-
-data = "Blend time", "0.3"		; sec
-data = "Probability", "1.0"
-data = "Angle", "340.0"
-
-event = "LStep", 306, normal
-event = "Death sound", 319, normal
-
-;–°–º–µ—Ä—Ç—å —Ç—Ä—É—Å–∞
-[death_afraid_1]
-start_time = 417
-end_time = 485
-
-loop = false
-
-data = "Blend time", "0.1"		; sec
-data = "Probability", "1.0"
-data = "Angle", "340.0"
-
-event = "LStep", 433, normal
-event = "Death sound", 457, normal
-
-[death_afraid_2]
-start_time = 486
-end_time = 541
-
-loop = false
-
-data = "Blend time", "0.1"		; sec
-data = "Probability", "1.0"
-data = "Angle", "340.0"
-
-event = "LStep", 503, normal
-event = "Death sound", 527, normal
-
-;===================================================================================
-;–î–µ–π—Å—Ç–≤–∏—è —Å–∏–¥–µ–Ω–∏—è
-;===================================================================================
-
-[Sit_Look_Around]
-start_time = 2347
-end_time = 2398
-data = "Blend time", "0.3"		; sec
-
-[Sit_Lower_head]
-start_time = 2398
-end_time = 2493
-data = "Blend time", "0.3"		; sec
-
-[Sit_WaveFly]
-start_time = 2493
-end_time = 2556
-data = "Blend time", "0.3"		; sec
-
-[Sit_Blew_1]
-start_time = 2556
-end_time = 2573
-data = "Blend time", "0.3"		; sec
-
-[Sit_Death]
-start_time = 2573
-end_time = 2617	
-data = "Blend time", "0.1"		; sec
-data = "Probability", "1.0"
-data = "Angle", "340.0"
-
-loop = false
-
-event = "Death sound", 2596, normal
-
-;===================================================================================
-;govenment
-;===================================================================================
-
-;–†–∞–∑–≥–ª—è–¥—ã–≤–∞—Ç—å —Å–≤–æ–∏ —Ä—É–∫–∏	
-[Gov_ObserveHands]
-start_time = 2618	
-end_time = 2729	
-data = "Blend time", "0.3"		; sec
-
-;–ó–∞–∫–∏–Ω—É—Ç—å –æ–¥–Ω—É –Ω–æ–≥—É –Ω–∞ –¥—Ä—É–≥—É—é	
-[Gov_LegOnLeg]
-start_time = 2729	
-end_time = 2798	
-data = "Blend time", "0.3"		; sec
-
-;–°–º–æ—Ç—Ä–µ—Ç—å –ø–æ —Å—Ç–æ—Ä–æ–Ω–∞–º	
-[Gov_Look_Around]
-start_time = 2798	
-end_time = 2872
-data = "Blend time", "0.3"		; sec
-
-;–†–∞–∑–¥—É–º—ã–≤–∞—Ç—å1	
-[Gov_think_1]
-start_time = 2873	
-end_time = 2926
-data = "Blend time", "0.3"		; sec
-
-;–†–∞–∑–¥—É–º—ã–≤–∞—Ç—å2	
-[Gov_think_2]
-start_time = 2926	
-end_time = 2965
-data = "Blend time", "0.3"		; sec
-
-;===================================================================================
-;–î–∏–∞–ª–æ–≥–∏
-;===================================================================================
-
-[dialog_stay2]
-start_time = 2222
-end_time = 2263
-data = "Blend time", "0.1"		; sec
-loop = false
-
-[dialog_stay3]
-start_time = 2263
-end_time = 2285
-data = "Blend time", "0.1"		; sec
-loop = false
-
-[dialog_stay4]
-start_time = 2285
-end_time = 2324
-data = "Blend time", "0.1"		; sec
-loop = false
-
-[dialog_stay5]
-start_time = 2324
-end_time = 2346
-data = "Blend time", "0.1"		; sec
-loop = false
-
-;===================================================================================
-;–†–∞–∑–Ω–æ–µ
-;===================================================================================
-
-;–ü–æ—á–µ—Å–∞—Ç—å –∑–∞–¥–Ω–∏—Ü—É
-[idle_misc_0]
-start_time = 2018
-end_time = 2062
-data = "Blend time", "0.1"		; sec
-loop = false
-data = "Probability", "1.0"
-
-;–ë–æ—è–∑–Ω—å
-[afraid]
-start_time = 341
-end_time = 416  
-data = "Blend time", "0.3"		; sec
-
-;–õ–µ–∂–∞–Ω–∏–µ
-[Lay_1]
-start_time = 1183
-end_time = 1185
-data = "Blend time", "0.3"		; sec
-
-[Lay_2]
-start_time = 1186
-end_time = 1188
-data = "Blend time", "0.3"		; sec
-
-;===================================================================================
-;–ë–æ–º–∂
-;===================================================================================
-;–°–µ—Å—Ç—å
-[Ground_SitDown]
-start_time = 542	
-end_time = 602	
-data = "Blend time", "0.1"		; sec
-
-;–°–∏–¥–µ—Ç—å	
-[Ground_sitting]
-start_time = 602
-end_time = 722
-data = "Blend time", "0.1"		; sec
-
-;–û–≥–ª—è–¥—ã–≤–∞—Ç—å—Å—è	
-[Ground_look_around]
-start_time = 722	
-end_time = 822
-data = "Blend time", "0.1"		; sec
-
-;–ß–µ—Å–∞—Ç—å—Å—è	
-[Ground_Scratch]
-start_time = 822
-end_time = 889
-data = "Blend time", "0.1"		; sec
-
-;–ü—Ä–æ—Å–∏—Ç—å –º–∏–ª–æ—Å—Ç—ã–Ω—é	
-[Ground_Beg]
-start_time = 889
-end_time = 939
-data = "Blend time", "0.1"		; sec
-
-;–í—Å—Ç–∞—Ç—å	
-[Ground_StandUp]
-start_time = 939	
-end_time = 999
-data = "Blend time", "0.1"		; sec
-
-;–°–º–µ—Ä—Ç—å
-[Ground_Death]
-start_time = 1091
-end_time = 1142
-data = "Blend time", "0.1"		; sec
-loop = false
-
-event = "Death sound", 1116, normal
-
-;–°–º–µ—Ä—Ç—å1
-[Ground_Death1]
-start_time = 1143
-end_time = 1183
-data = "Blend time", "0.1"		; sec
-loop = false
-
-event = "Death sound", 1162, normal
-
-;–ë–æ—è–∑–Ω—å
-[Ground_Afraid]
-start_time = 1000
-end_time = 1040
-data = "Blend time", "0.1"		; sec
-
-;–°–º–µ—Ä—Ç—å –∏–∑ –±–æ—è–∑–Ω–∏
-[Ground_Afraid_Death]
-start_time = 1040
-end_time = 1090
-data = "Blend time", "0.1"		; sec
-loop = false
-
-event = "Death sound", 1064, normal
-
-;===============================================================================
-; –î–æ–ø–æ–ª–Ω–∏—Ç–µ–ª—å–Ω–∞—è –∞–Ω–∏–º–∞—Ü–∏—è –¥–ª—è —Å–∫–µ–ª–µ—Ç–æ–≤
-;===============================================================================
-
-; –•–æ–¥—å–±–∞
-[skel_walk]
-start_time = 19
-end_time = 37
-
-data = "Blend time", "0.4"		; sec
-data = "Walk speed", "1.6"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 31, normal
-event = "RStep", 23, normal
-
-; –•–æ–¥—å–±–∞ –≤ –±–æ—é
-[skel_fight_walk]
-start_time = 54
-end_time = 72
-
-data = "Blend time", "0.4"		; sec
-data = "Walk speed", "1.6"		; m/sec
-data = "Turn speed", "5.5"		; rad/sec
-
-event = "LStep", 66, normal
-event = "RStep", 58, normal
-
-;–ë–æ–µ–≤–æ–π –∫–ª–∏—á
-[Skel_Screem]
-start_time = 3858
-end_time = 3898
-data = "Blend time", "0.1"		; sec
-loop = false
-
-event = "Screem", 3868, normal
-
-;===================================================================================
-;–ë–∞—Ä–º–µ–Ω –∏ —Ç–æ—Ä–≥–æ–≤–µ—Ü
-;===================================================================================
-
-;–ü–æ–∫–∞–∑–∞—Ç—å —Ç–æ–≤–∞—Ä –ª–∏—Ü–æ–º
-[Merchiant_invite]
-start_time = 1189
-end_time = 1229
-
-loop = false
-
-data = "Blend time", "0.4"		; sec
-
-;–ë–∞—Ä–º–µ–Ω –∫–æ–ø–æ—à–∏—Ç—Å—è –Ω–∞ –ø–æ–ª–∫–∞—Ö
-[Barman_idle]
-start_time = 1230
-end_time = 1335
-
-data = "Blend time", "0.4"		; sec
-
-;–û–±–ª–æ–∫–æ—Ç–∏—Ç—å—Å—è –Ω–∞ —Å—Ç–æ–π–∫—É
-[Barman_lean]
-start_time = 1336
-end_time = 1361
-
-loop = false
-
-data = "Blend time", "0.4"		; sec
-
-;–û–≥–ª—è–¥–µ—Ç—å—Å—è 
-[Barman_look_around]
-start_time = 1361
-end_time = 1426
-data = "Blend time", "0.4"		; sec
-
-;–í—Å—Ç–∞—Ç—å –æ–±—Ä–∞—Ç–Ω–æ
-[Barman_stand_back]
-start_time = 1426
-end_time = 1451
-
-loop = false
-
-;===================================================================================
-; –°–≤—è—â–µ–Ω–Ω–∏–∫
-;===================================================================================
-
-;–ú–æ–ª–∏—Ç—å—Å—è
-[Bead]
-start_time = 4048
-end_time = 4083
-
-speed = 0.4
-
-data = "Blend time", "0.4"		; sec
+	

@@ -24,6 +24,9 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[3];
 			Link.l1.go = "TalkSelf_Wait1";
 
+			Link.l2 = "[RUN SCRIPT]";
+			Link.l2.go = "TalkSelf_TestScript1";
+
 			Link.l10 = DLG_TEXT[4];
 			Link.l10.go = "TalkSelf_Exit";
 		break;
@@ -49,6 +52,14 @@ void ProcessDialogEvent()
 				DialogExit_Self();
 			}
 			Link.l1 = DLG_TEXT[4];
+			Link.l1.go = "TalkSelf_Exit";
+		break;
+
+		case "TalkSelf_TestScript1":
+			ref PChar = GetMainCharacter();
+			Dialog.Text = PChar.model;
+			//SetModel(PCHar, "blaze", "blaze", "man", PChar.model.height, true);
+			Link.l1 = "Exit.";
 			Link.l1.go = "TalkSelf_Exit";
 		break;
 	}

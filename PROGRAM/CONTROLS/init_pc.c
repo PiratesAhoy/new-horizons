@@ -12,6 +12,8 @@ void ExternControlsInit(bool bFirst)
 		ExternInitKeyCodes();
 		CI_CreateAndSetControls( "", "ICancel", CI_GetKeyCode(CTL_INTERFACE_NAV_CANCEL), 0, false );
 		CI_CreateAndSetControls( "", "IAction", CI_GetKeyCode(CTL_INTERFACE_NAV_SELECT), 0, false );
+
+		ControlsTreeInit();
 		return;
 	}
 
@@ -89,7 +91,11 @@ void ExternControlsInit(bool bFirst)
 	MapControlToGroup("ChrFightMode","FightModeControls");
 	MapControlToGroup("ChrFightMode","BattleInterfaceControls");
 
-	CI_CreateAndSetControls( "FightModeControls", "ChrAttackFast", CI_GetKeyCode(CTL_FIGHT_ATTACK), 0, true );
+	CI_CreateAndSetControls( "FightModeControls", "ChrAttackFast", CI_GetKeyCode(CTL_FIGHT_ATTACK_FAST), 0, true );
+	CI_CreateAndSetControls( "FightModeControls", "ChrAttackBreakBase", CI_GetKeyCode(CTL_FIGHT_ATTACK_BREAK), 0, true );
+	CI_CreateAndSetControls( "FightModeControls", "ChrAttackForce", CI_GetKeyCode(CTL_FIGHT_ATTACK_FORCE), 0, true );
+	CI_CreateAndSetControls( "FightModeControls", "ChrAttackChoseBase", CI_GetKeyCode(CTL_FIGHT_ATTACK_CHOSE_B), 0, true );
+
 
 	CI_CreateAndSetControls( "FightModeControls", "ChrBlock", CI_GetKeyCode(CTL_FIGHT_BLOCK), 0, true );
 	MapControlToGroup("ChrBlock","BattleInterfaceControls");

@@ -4,7 +4,7 @@ animation = Monkey.an
 data = "Turn speed", "8.0"
 
 ;===================================================================================
-;Р”РµР№СЃС‚РІРёСЏ СЃС‚РѕСЏРЅРёСЏ
+;Действия стояния
 ;===================================================================================
 
 [idle_1]
@@ -38,10 +38,10 @@ data = "Probability", "0.3"
 
 
 ;===================================================================================
-;РџРµСЂРµРјРµС‰РµРЅРёРµ РѕР±С‹С‡РЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
+;Перемещение обычного персонажа
 ;===================================================================================
 
-;РҐРѕРґСЊР±Р° РІРїРµСЂС‘Рґ
+;Ходьба вперёд
 [walk]
 start_time = 0
 end_time = 8
@@ -55,7 +55,7 @@ event = "LStep", 3, normal
 event = "RStep", 6, normal
 event = "RStep", 7, normal
 
-;РҐРѕРґСЊР±Р° РЅР°Р·Р°Рґ
+;Ходьба назад
 [back walk]
 start_time = 0
 end_time = 8
@@ -73,7 +73,7 @@ event = "RStep", 6, normal
 event = "RStep", 7, normal
 
 
-;РЎРїСЂС‹РіРёРІР°РЅРёРµ
+;Спрыгивание
 [jump]
 start_time = 0
 end_time = 8
@@ -85,11 +85,11 @@ event = "Jump pause", 4 , normal
 
 
 ;===================================================================================
-;Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ С…РѕРґСЊР±С‹
+;Дополнительные действия ходьбы
 ;===================================================================================
 
 ;===================================================================================
-;РџР»Р°РІР°РЅСЊРµ
+;Плаванье
 ;===================================================================================
 
 [swim]
@@ -105,7 +105,7 @@ data = "Turn speed", "5.5"		; rad/sec
 event = "swim", 4, normal
 
 
-;Р’С‹С…РІР°С‚РёС‚СЊ СЃР°Р±Р»СЋ
+;Выхватить саблю
 [Normal to fight]
 start_time = 9
 end_time = 31
@@ -117,10 +117,10 @@ data = "Blend time", "0.3"		; sec
 
 event = "Move blade", 15, normal
 
-event = "SndAlliace_sword_sh", 16, normal
+event = "Blade to hand", 16, normal
 
 
-;РЈР±СЂР°С‚СЊ СЃР°Р±Р»СЋ
+;Убрать саблю
 [Fight to normal]
 start_time = 9
 end_time = 31
@@ -131,10 +131,10 @@ data = "Blend time", "0.3"		; sec
 
 event = "Move blade", 15, normal
 
-event = "SndAlliace_sword_out", 16, normal
+event = "Blade to belt", 16, normal
 
 
-;Р‘СЂРѕСЃРёС‚СЊ СЃР°Р±Р»СЋ Рё РїРѕРґРЅСЏС‚СЊ СЂСѓРєРё
+;Бросить саблю и поднять руки
 [drop saber]
 start_time = 9
 end_time = 31
@@ -149,7 +149,7 @@ event = "Drop blade", 15, normal
 event = "Drop sound", 16, normal
 
 
-;РЎС‚РѕСЏС‚СЊ СЃ РїРѕРґРЅСЏС‚С‹РјРё СЂСѓРєР°РјРё
+;Стоять с поднятыми руками
 [hands up]
 start_time = 9
 end_time = 31
@@ -160,10 +160,10 @@ data = "Probability", "1.0"
 
 
 ;===================================================================================
-;РҐРѕРґСЊР±Р° РІ СЂРµР¶РёРјРµ Р±РѕСЏ
+;Ходьба в режиме боя
 ;===================================================================================
 
-;РҐРѕРґСЊР±Р° РІРїРµСЂС‘Рґ РІ СЂРµР¶РёРјРµ Р±РѕСЏ
+;Ходьба вперёд в режиме боя
 [fight walk]
 start_time = 38
 end_time = 53
@@ -175,7 +175,7 @@ data = "Turn speed", "5.5"		; rad/sec
 event = "RStep", 45, normal
 event = "LStep", 53, normal
 
-;РҐРѕРґСЊР±Р° РЅР°Р·Р°Рґ РІ СЂРµР¶РёРјРµ Р±РѕСЏ
+;Ходьба назад в режиме боя
 [fight back walk]
 start_time = 38
 end_time = 53
@@ -189,7 +189,7 @@ data = "Turn speed", "5.5"		; rad/sec
 event = "RStep", 45, normal
 event = "LStep", 53, normal
 
-;Р‘РµРі РІРїРµСЂС‘Рґ РІ СЂРµР¶РёРјРµ Р±РѕСЏ
+;Бег вперёд в режиме боя
 [fight run]
 start_time = 113
 end_time = 125
@@ -201,7 +201,7 @@ data = "Turn speed", "5.5"		; rad/sec
 event = "LStep", 117, normal
 event = "RStep", 123, normal
 
-;Р‘РµРі РЅР°Р·Р°Рґ РІ СЂРµР¶РёРјРµ Р±РѕСЏ
+;Бег назад в режиме боя
 [fight back run]
 start_time = 38
 end_time = 53
@@ -216,7 +216,7 @@ event = "RStep", 45, normal
 event = "LStep", 53, normal
 
 ;===================================================================================
-;Р”РµР№СЃС‚РІРёСЏ Р±РѕСЏ
+;Действия боя
 ;===================================================================================
 
 ;--------------------------------------------------
@@ -228,12 +228,171 @@ data = "Blend time", "0.2"		; sec
 
 loop = false
 
-event = "Attack", 82, normal
+event = "attack", 82, normal
 event = "scream", 78, normal
 
+[attack_fast_1]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_fast_2]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_fast_3]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_fast_4]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_force_1]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_force_2]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_force_3]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_force_4]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_break_1]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_break_2]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_break_3]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_break_4]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_feint_1]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_feint_2]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_feint_3]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
+
+[attack_feint_4]
+start_time = 73
+end_time = 93
+data = "Blend time", "0.2"		; sec
+
+loop = false
+
+event = "attack", 82, normal
+event = "scream", 78, normal
 ;--------------------------------------------------
 
-;РџРѕРїР°РґР°РЅРёРµ
+;Попадание
 [hit]
 start_time = 31
 end_time = 51
@@ -243,49 +402,45 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-[hit_feint]
-type = normal
+[hit_attack_1]
 start_time = 31
 end_time = 51
 
-speed = 1.2
+speed = 2.2
 loop = false
 
-data = "Blend time", "0.2"
+data = "Blend time", "0.2"		; sec
 
-[hit_round]
-type = normal
+[hit_attack_2]
 start_time = 31
 end_time = 51
 
-speed = 1.2
+speed = 2.2
 loop = false
 
-data = "Blend time", "0.2"
+data = "Blend time", "0.2"		; sec
 
-[hit_parry]
-type = normal
+[hit_attack_3]
 start_time = 31
 end_time = 51
 
-speed = 1.2
+speed = 2.2
 loop = false
 
-data = "Blend time", "0.2"
+data = "Blend time", "0.2"		; sec
 
-[hit_fire]
-type = normal
+[hit_attack_4]
 start_time = 31
 end_time = 51
 
-speed = 1.2
+speed = 2.2
 loop = false
 
-data = "Blend time", "0.2"
+data = "Blend time", "0.2"		; sec
 
 ;--------------------------------------------------
 
-;Р‘Р»РѕРє
+;Блок
 [block]
 start_time = 51
 end_time = 72
@@ -295,7 +450,7 @@ loop = true
 
 data = "Blend time", "0.2"		; sec
 
-;РџРѕРїР°РґР°РЅРёРµ РІ Р±Р»РѕРєРµ
+;Попадание в блоке
 [block_hit]
 start_time = 31
 end_time = 51
@@ -307,7 +462,7 @@ data = "Blend time", "0.2"		; sec
 
 ;--------------------------------------------------
 
-;РћС‚СЃРєРѕРє
+;Отскок
 [Recoil]
 start_time = 51
 end_time = 72
@@ -320,7 +475,7 @@ data = "Blend time", "0.002"	; sec
 
 ;--------------------------------------------------
 
-;Р’С‹СЃС‚СЂРµР»
+;Выстрел
 [Shot]
 start_time = 51
 end_time = 72
@@ -328,7 +483,7 @@ end_time = 72
 loop = false
 
 event = "To hand", 53, normal
-event = "SndAlliace_pistol_shot", 55, normal
+event = "sound_pistol", 55, normal
 event = "Fire", 60, normal
 event = "To belt", 70, normal
 
@@ -337,10 +492,10 @@ data = "Blend time", "0.3"		; sec
 ;--------------------------------------------------
 
 ;===================================================================================
-;Р”РµР№СЃС‚РІРёСЏ СѓРјРёСЂР°РЅРёСЏ
+;Действия умирания
 ;===================================================================================
 
-;Р’Р°СЂРёР°РЅС‚С‹ СЃРјРµСЂС‚РµР№
+;Варианты смертей
 [Death]
 start_time = 94
 end_time = 117
@@ -352,7 +507,7 @@ loop = false
 
 event = "Death sound", 109, normal
 
-;РЎРјРµСЂС‚СЊ РіРѕСЂРѕР¶Р°РЅ
+;Смерть горожан
 [death_citizen_1]
 start_time = 94
 end_time = 117
@@ -379,7 +534,7 @@ data = "Angle", "340.0"
 event = "Death sound", 109, normal
 
 
-;РЎРјРµСЂС‚СЊ С‚СЂСѓСЃР°
+;Смерть труса
 [death_afraid_1]
 start_time = 94
 end_time = 117
@@ -407,7 +562,7 @@ event = "Death sound", 109, normal
 
 
 ;===================================================================================
-;Р”РёР°Р»РѕРіРё
+;Диалоги
 ;===================================================================================
 
 [dialog_stay2]
@@ -435,10 +590,10 @@ data = "Blend time", "0.1"		; sec
 loop = false
 
 ;===================================================================================
-;Р Р°Р·РЅРѕРµ
+;Разное
 ;===================================================================================
 
-;РџРѕС‡РµСЃР°С‚СЊ Р·Р°РґРЅРёС†Сѓ
+;Почесать задницу
 [idle_misc_0]
 start_time = 9
 end_time = 31
@@ -446,13 +601,13 @@ data = "Blend time", "0.1"		; sec
 loop = false
 data = "Probability", "1.0"
 
-;Р‘РѕСЏР·РЅСЊ
+;Боязнь
 [afraid]
 start_time = 9
 end_time = 31
 data = "Blend time", "0.3"		; sec
 
-;Р›РµР¶Р°РЅРёРµ
+;Лежание
 [Lay_1]
 start_time = 9
 end_time = 31

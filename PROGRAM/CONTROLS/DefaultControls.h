@@ -59,8 +59,15 @@ Please follow these rules when editing settings:
 #define CTL_LOOT_CORPSE 			"KEY_T"
 
 #define CTL_FIGHT_MODE 				"KEY_E"
-#define CTL_FIGHT_ATTACK 			"VK_LBUTTON"
-#define CTL_FIGHT_BLOCK 			"VK_RBUTTON"
+
+#define CTL_FIGHT_ATTACK_FAST 		"VK_LBUTTON"
+#define CTL_FIGHT_ATTACK_BREAK		"VK_MBUTTON"
+#define CTL_FIGHT_ATTACK_FORCE		"VK_RBUTTON"
+//#define CTL_FIGHT_ALT_ATTACK_BASE	"KEY_U"
+
+#define CTL_FIGHT_ATTACK_CHOSE_B	"VK_SHIFT"
+
+#define CTL_FIGHT_BLOCK 			"VK_SPACE"
 #define CTL_FIGHT_DODGE 			"KEY_Z"
 #define CTL_FIGHT_FIRE_GUN			"KEY_Q"
 #define CTL_FIGHT_RUSHMODE 			"KEY_H"

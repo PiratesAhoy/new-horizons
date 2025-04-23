@@ -16,10 +16,10 @@ data = "Probability", "1.0"
 data = "Angle", "330.0"
 	
 ;===================================================================================
-; Р”Р•Р™РЎРўР’РРЇ Р’Рћ Р’Р Р•РњРЇ РЎРўРћРЇРќРРЇ (IDLES)
+; ДЕЙСТВИЯ ВО ВРЕМЯ СТОЯНИЯ (IDLES)
 ;===================================================================================
 
-; РїСЂРѕСЃС‚Рѕ СЃС‚РѕРёС‚ - Р·РІСѓРєР° С‚СѓС‚ РЅРµ Р±СѓРґРµС‚
+; просто стоит - звука тут не будет
 [idle_1]
 speed = 1.
 loop = false
@@ -31,7 +31,7 @@ data = "Blend time", "0.2"		; sec
 data = "Probability", "1"
 
 
-; СЃРјР°С…РЅСѓС‚СЊ РїС‹Р»СЊ СЃ СЂСѓРєР°РІР°
+; смахнуть пыль с рукава
 [idle_2]
 speed = 1.6
 loop = false
@@ -44,7 +44,7 @@ data = "Probability", "0.1"
 event = "SndAlliace_sleeves", 1880, normal	
 
 
-; СѓС‚РµСЂРµС‚СЊ Р»РѕР±
+; утереть лоб
 [idle_3]
 speed = 1.
 loop = false
@@ -56,7 +56,7 @@ data = "Blend time", "0.2"		; sec
 data = "Probability", "0.1"
 
 
-; РїРѕСЃРјРѕС‚СЂРµС‚СЊ РїРѕ СЃС‚РѕСЂРѕРЅР°Рј СЃ РґРІРёР¶РµРЅРёРµ РєРѕСЂРїСѓСЃР°
+; посмотреть по сторонам с движение корпуса
 [idle_4]
 speed = 1.
 loop = false
@@ -68,7 +68,7 @@ data = "Blend time", "0.4"		; sec
 data = "Probability", "0.1"
 
 
-; РїРѕСЃРјРѕС‚СЂРµС‚СЊ РїРѕ СЃС‚РѕСЂРѕРЅР°Рј Р±РµР· РґРІРёР¶РµРЅРёСЏ РєРѕСЂРїСѓСЃР°
+; посмотреть по сторонам без движения корпуса
 [idle_5]
 speed = 1.
 loop = false
@@ -92,7 +92,7 @@ data = "Probability", "0.1"
 event = "SndAlliace_hair", 2123, normal	
 
 
-; РєР°С‡Р°С‚СЊСЃСЏ РЅР° РЅРѕРіР°С…
+; качаться на ногах
 [idle_7]
 speed = 1.
 loop = false
@@ -103,7 +103,7 @@ data = "Blend time", "0.4"		; sec
 
 data = "Probability", "0.1"
 
-; РґСѓР±Р»СЊ  idle_7
+; дубль  idle_7
 [idle_8]
 speed = 1.
 loop = false
@@ -115,7 +115,7 @@ data = "Blend time", "0.4"		; sec
 data = "Probability", "0.1"
 
 
-; РїРѕС‡РµСЃР°С‚СЊ Р·Р°РґРЅРёС†Сѓ
+; почесать задницу
 [idle_8_bak]
 speed = 1.6
 loop = false
@@ -128,7 +128,7 @@ data = "Probability", "0.1"
 event = "SndAlliace_ass", 2249, normal	
 
 
-; РїРѕРєР°С€Р»СЏС‚СЊ
+; покашлять
 [idle_9]			
 speed = 1.6
 loop = false
@@ -142,7 +142,7 @@ event = "SndAlliace_misc_cough", 2290, normal
 
 
 
-; РїСЂРѕСЃС‚Рѕ СЃС‚РѕРёС‚ РµС‰Рµ РѕРґРёРЅ РІР°СЂРёР°РЅС‚
+; просто стоит еще один вариант
 [idle_10]
 speed = 1.
 loop = false
@@ -155,12 +155,12 @@ data = "Probability", "0.1"
 
 
 ;===================================================================================
-; РњРР РќР«Р• РђРќРРњРђР¦РР
+; МИРНЫЕ АНИМАЦИИ
 ;===================================================================================
 
-;	 РџР•Р Р•РњР•Р©Р•РќРРЇ
+;	 ПЕРЕМЕЩЕНИЯ
 
-;РҐРѕРґСЊР±Р° РІРїРµСЂС‘Рґ
+;Ходьба вперёд
 [walk]
 speed = 2.1
 loop = true
@@ -175,7 +175,7 @@ data = "Turn speed", "5.5"		; rad/sec
 event = "LStep", 4207, normal
 event = "RStep", 4226, normal
 
-;РҐРѕРґСЊР±Р° РЅР°Р·Р°Рґ
+;Ходьба назад
 [back walk]
 speed = 2.1
 loop = true
@@ -191,7 +191,7 @@ event = "LStep", 4207, reverse
 event = "RStep", 4226, reverse
 
 
-;РРґС‚Рё РІРЅРёР· РїРѕ Р»РµСЃС‚РЅРёС†Рµ
+;Идти вниз по лестнице
 [stairs down]
 loop = true
 type = normal
@@ -210,7 +210,7 @@ data = "Walk speed", "0.9"		; m/sec
 data = "Turn speed", "5.5"		; rad/sec
 
 
-;РРґС‚Рё РІРЅРёР· РїРѕ Р»РµСЃС‚РЅРёС†Рµ Р·Р°РґРѕРј РЅР°РїРµСЂРµРґ
+;Идти вниз по лестнице задом наперед
 [back stairs down]
 loop = true
 start_time = 1409
@@ -227,7 +227,7 @@ data = "Walk speed", "-0.9"		; m/sec
 data = "Turn speed", "5.5"		; rad/sec
 
 
-;РРґС‚Рё РІРІРµСЂС… РїРѕ Р»РµСЃС‚РЅРёС†Рµ
+;Идти вверх по лестнице
 [stairs up]
 loop = true
 type = normal
@@ -243,7 +243,7 @@ data = "Walk speed", "0.9"		; m/sec
 data = "Turn speed", "5.5"		; rad/sec
 
 
-;РРґС‚Рё РІРІРµСЂС… РїРѕ Р»РµСЃС‚РЅРёС†Рµ Р·Р°РґРѕРј РЅР°РїРµСЂРµРґ
+;Идти вверх по лестнице задом наперед
 [back stairs up]
 loop = true
 
@@ -262,7 +262,7 @@ data = "Walk speed", "-0.9"		; m/sec
 data = "Turn speed", "5.5"		; rad/sec
 
 
-;Р‘РµРі РІРїРµСЂС‘Рґ
+;Бег вперёд
 [run]
 speed = 2.1
 loop = true
@@ -278,7 +278,7 @@ event = "LStep", 1385, normal
 event = "RStep", 1373, normal      
 
 
-;Р‘РµРі РЅР°Р·Р°Рґ
+;Бег назад
 [back run]
 speed = 2.2
 loop = true
@@ -294,7 +294,7 @@ event = "LStep", 4207, reverse
 event = "RStep", 4226, reverse
 
 
-;Р‘РµРі РїРѕ Р»РµСЃС‚РЅРёС†Рµ РІРІРµСЂС…  
+;Бег по лестнице вверх  
 [run stairs up]
 speed = 3.0
 loop = true
@@ -309,7 +309,7 @@ data = "Turn speed", "5.5"		; rad/sec
 event = "LStep", 1385, normal
 event = "RStep", 1373, normal                  
 
-;Р‘РµРі РїРѕ Р»РµСЃС‚РЅРёС†Рµ РІРЅРёР·
+;Бег по лестнице вниз
 
 [run stairs down]
 speed = 2.5
@@ -325,7 +325,7 @@ data = "Turn speed", "5.5"		; rad/sec
 event = "LStep", 1385, normal
 event = "RStep", 1373, normal                
 
-; Р‘РµРі РїРѕ Р»РµСЃС‚РЅРёС†Рµ РІРІРµСЂС… Р·Р°РґРѕРј РЅР°РїРµСЂРµРґ
+; Бег по лестнице вверх задом наперед
 
 [back run stairs up]
 loop = true
@@ -361,7 +361,7 @@ data = "Walk speed", "-0.9"		; m/sec
 data = "Turn speed", "5.5"		; rad/sec
 
 
-;Р Р°Р·РІРѕСЂРѕС‚ РІР»РµРІРѕ
+;Разворот влево
 [turn left]
 speed = 2.0
 loop = false
@@ -374,7 +374,7 @@ data = "Walk speed", "0.0"		; m/sec
 data = "Turn speed", "4.5"		; rad/sec
 
 
-;Р Р°Р·РІРѕСЂРѕС‚ РІРїСЂР°РІРѕ
+;Разворот вправо
 [turn right]
 speed = 2.0
 loop = false
@@ -387,7 +387,7 @@ data = "Walk speed", "0.0"		; m/sec
 data = "Turn speed", "4.5"		; rad/sec
 
 
-;РЎРїСЂС‹РіРёРІР°РЅРёРµ
+;Спрыгивание
 [jump]
 start_time = 2625 ;
 end_time = 2629 ;
@@ -399,11 +399,11 @@ event = "Jump pause", 228 , normal
 
 
 ;===================================================================================
-;Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ С…РѕРґСЊР±С‹
+;Дополнительные действия ходьбы
 ;===================================================================================
 
 ;===================================================================================
-;РџР»Р°РІР°РЅРёРµ
+;Плавание
 ;===================================================================================
 
 [swim]
@@ -419,7 +419,7 @@ event = "swim", 4285, normal
 ;===================================================================================
 
 ;===================================================================================
-; Р”Р•Р™РЎРўР’РРЇ Р’ Р‘РћР•Р’РћР™ РЎРўРћР™РљР• (IDLES)
+; ДЕЙСТВИЯ В БОЕВОЙ СТОЙКЕ (IDLES)
 ;===================================================================================
 
 [fight stand_1]
@@ -495,8 +495,32 @@ data = "Blend time", "0.0"		; sec
 
 data = "Probability", "0.0"
 
+[fight stand_7]
+loop = true
+type = normal
+start_time = 0
+end_time = 0
 
-;Р’С‹С…РІР°С‚РёС‚СЊ СЃР°Р±Р»СЋ
+speed = 1.
+
+data = "Blend time", "0.0"		; sec
+
+data = "Probability", "0.0"
+
+[fight stand_8]
+loop = true
+type = normal
+start_time = 0
+end_time = 0
+
+speed = 1.
+
+data = "Blend time", "0.0"		; sec
+
+data = "Probability", "0.0"
+
+
+;Выхватить саблю
 [Normal to fight]
 type = normal
 start_time = 785
@@ -509,10 +533,10 @@ data = "Blend time", "0.1"		; sec
 
 event = "Move blade", 791, normal
 event = "SndAlliace_sword_sh", 785, normal
-event = "SndAlliace_sword_sh", 791, normal
+event = "Blade to hand", 791, normal
 
 
-;РЈР±СЂР°С‚СЊ СЃР°Р±Р»СЋ
+;Убрать саблю
 [Fight to normal]
 
 type = normal
@@ -526,9 +550,9 @@ data = "Blend time", "0.1"		; sec
 event = "Move blade", 820, normal
 event = "SndAlliace_sword_out", 820, normal
 
-event = "SndAlliace_sword_out", 820, normal
+event = "Blade to belt", 820, normal
 
-;Р‘СЂРѕСЃРёС‚СЊ СЃР°Р±Р»СЋ Рё РїРѕРґРЅСЏС‚СЊ СЂСѓРєРё
+;Бросить саблю и поднять руки
 	[drop saber]
 	start_time = 827
 	end_time = 880
@@ -541,13 +565,13 @@ event = "SndAlliace_sword_out", 820, normal
 	event = "Drop blade", 882, normal
 	event = "Drop sound", 883, normal
 	
-;РЎС‚РѕСЏРЅРёРµ СЃ РїРѕРґРЅСЏС‚С‹РјРё РІ СЃС‚СЂР°С…Рµ СЂСѓРєР°РјРё
+;Стояние с поднятыми в страхе руками
 	[hands up]
 	start_time = 2625 ;881	
 	end_time = 2689 ;941	
 	data = "Blend time", "0.3"		; sec
 
-;Р Р•РђРљР¦РРЇ РќРђ РџРћР›РЈР§Р•РќРР• РџРћ РњРћР Р”Р•
+;РЕАКЦИЯ НА ПОЛУЧЕНИЕ ПО МОРДЕ
 	[face_hit]
 	start_time = 827
 	end_time = 834
@@ -558,10 +582,10 @@ event = "SndAlliace_sword_out", 820, normal
 
 
 ;===================================================================================
-; Р‘РћР•Р’Р«Р• РџР•Р Р•РњР•Р©Р•РќРРЇ
+; БОЕВЫЕ ПЕРЕМЕЩЕНИЯ
 ;===================================================================================
 
-;РҐРѕРґСЊР±Р° РІРїРµСЂС‘Рґ СЃ РєР»РёРЅРєРѕРј РІ СЂСѓРєРµ
+;Ходьба вперёд с клинком в руке
 [fight walk]
 speed = 1.9
 loop = true
@@ -577,7 +601,7 @@ event = "LStep", 373, normal
 event = "RStep", 390, normal
 
 
-;РҐРѕРґСЊР±Р° РЅР°Р·Р°Рґ СЃ РєР»РёРЅРєРѕРј РІ СЂСѓРєРµ
+;Ходьба назад с клинком в руке
 [fight back walk]
 speed = 1.8
 loop = true
@@ -595,7 +619,7 @@ event = "RStep", 390, reverse
 
 
 
-;Р‘РµРі РІРїРµСЂС‘Рґ СЃ РєР»РёРЅРєРѕРј РІ СЂСѓРєРµ
+;Бег вперёд с клинком в руке
 [fight run]
 speed = 2.2
 loop = true
@@ -611,7 +635,7 @@ event = "LStep", 425, normal
 event = "RStep", 413, normal                   
 
 
-;Р‘РµРі РЅР°Р·Р°Рґ СЃ РєР»РёРЅРєРѕРј РІ СЂСѓРєРµ
+;Бег назад с клинком в руке
 [fight back run]
 speed = 2.2
 loop = true
@@ -628,7 +652,7 @@ event = "LStep", 373, reverse
 event = "RStep", 390, reverse
 
 
-;РћС‚СЃРєРѕРє РЅР°Р·Р°Рґ
+;Отскок назад
 [Recoil]
 type = normal
 start_time = 761
@@ -641,11 +665,11 @@ data = "Blend time", "0.02"	; sec
 event = "SndAlliace_recoil", 761, normal
 
 ;===================================================================================
-; Р‘РћР•Р’Р«Р• РђРќРРњРђР¦РР
+; БОЕВЫЕ АНИМАЦИИ
 ;===================================================================================
 
 ;THRUSTS
-[attack_fast_1]
+[attack_1] 
 type = normal
 start_time = 2
 end_time = 18
@@ -654,11 +678,11 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 10, normal			;slash
-	event = "SndAlliace_sword_wind", 2, normal
+	event = "Attack_slash", 10, normal			;slash
+	event = "Sound_slash", 2, normal
 
 
-[attack_fast_2]
+[attack_2] 
 type = normal
 start_time = 2
 end_time = 18
@@ -667,10 +691,10 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 10, normal			;slash
-	event = "SndAlliace_sword_wind", 2, normal
+	event = "Attack_slash", 10, normal			;slash
+	event = "Sound_slash", 2, normal
 
-[attack_fast_3]
+[attack_3] 
 type = normal
 start_time = 19
 end_time = 35
@@ -679,10 +703,10 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 24, normal			;slash
-	event = "SndAlliace_sword_wind", 19, normal
+	event = "Attack_slash", 24, normal			;slash
+	event = "Sound_slash", 19, normal
 
-[attack_fast_4]
+[attack_4] 
 type = normal
 start_time = 19
 end_time = 35
@@ -691,12 +715,12 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 24, normal			;slash
-	event = "SndAlliace_sword_wind", 19, normal
+	event = "Attack_slash", 24, normal			;slash
+	event = "Sound_slash", 19, normal
 
 
 ;SLASH
-[attack_fast_5]
+[attack_5]
 type = normal
 start_time = 36
 end_time = 65
@@ -705,10 +729,10 @@ speed = 1.8
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 49, normal			;slash
-	event = "SndAlliace_sword_wind", 36, normal
+	event = "Attack_slash", 49, normal			;slash
+	event = "Sound_slash", 36, normal
 
-[attack_fast_6]
+[attack_6]
 type = normal
 start_time = 36
 end_time = 65
@@ -717,10 +741,10 @@ speed = 1.8
 loop = false
 	data = "Blend time", "0.2"		; sec
 	
-	event = "Attack", 78, normal			;slash
-	event = "SndAlliace_sword_wind", 66, normal
+	event = "Attack_slash", 78, normal			;slash
+	event = "Sound_slash", 66, normal
 
-[attack_fast_7]
+[attack_7]
 type = normal
 start_time = 66
 end_time = 96
@@ -729,10 +753,10 @@ speed = 1.8
 loop = false
 	data = "Blend time", "0.2"		; sec
 	
-	event = "Attack", 78, normal			;slash
-	event = "SndAlliace_sword_wind", 66, normal
+	event = "Attack_slash", 78, normal			;slash
+	event = "Sound_slash", 66, normal
 
-[attack_fast_8]
+[attack_8]
 type = normal
 start_time = 66
 end_time = 96
@@ -741,8 +765,8 @@ speed = 1.8
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 78, normal			;slash
-	event = "SndAlliace_sword_wind", 66, normal
+	event = "Attack_slash", 78, normal			;slash
+	event = "Sound_slash", 66, normal
 
 ;ROUNDHOUSE 
 [attack_right_1]
@@ -754,9 +778,9 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 131, normal			;slash
-	event = "SndAlliace_sword_wind", 125, normal
-	event = "Attack", 144, normal			;slash
+	event = "Attack_slash", 131, normal			;slash
+	event = "Sound_slash", 125, normal
+	event = "Attack_slash", 144, normal			;slash
 
 
 [attack_left_1]
@@ -768,9 +792,9 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 131, normal			;slash
-	event = "SndAlliace_sword_wind", 125, normal
-	event = "Attack", 144, normal			;slash
+	event = "Attack_slash", 131, normal			;slash
+	event = "Sound_slash", 125, normal
+	event = "Attack_slash", 144, normal			;slash
 
 
 [attack_round_3]
@@ -782,9 +806,9 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 131, normal			;slash
-	event = "SndAlliace_sword_wind", 125, normal
-	event = "Attack", 144, normal			;slash
+	event = "Attack_slash", 131, normal			;slash
+	event = "Sound_slash", 125, normal
+	event = "Attack_slash", 144, normal			;slash
 
 
 [attack_round_4]
@@ -796,9 +820,9 @@ speed = 1.5
 loop = false
 	data = "Blend time", "0.2"		; sec
 		
-	event = "Attack", 131, normal			;slash
-	event = "SndAlliace_sword_wind", 125, normal
-	event = "Attack", 144, normal			;slash
+	event = "Attack_slash", 131, normal			;slash
+	event = "Sound_slash", 125, normal
+	event = "Attack_slash", 144, normal			;slash
 
 
 
@@ -813,9 +837,9 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack", 186, normal			;slash
-event = "SndAlliace_sword_wind", 170, normal
-event = "Attack", 190, normal
+event = "Attack_slash", 186, normal			;slash
+event = "Sound_slash", 170, normal
+event = "Attack_slash", 190, normal
 
 [attack_break_2]
 type = normal
@@ -827,9 +851,9 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack", 186, normal			;slash
-event = "SndAlliace_sword_wind", 170, normal
-event = "Attack", 190, normal
+event = "Attack_slash", 186, normal			;slash
+event = "Sound_slash", 170, normal
+event = "Attack_slash", 190, normal
 
 [attack_break_3]
 type = normal
@@ -841,9 +865,9 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack", 186, normal			;slash
-event = "SndAlliace_sword_wind", 170, normal
-event = "Attack", 190, normal
+event = "Attack_slash", 186, normal			;slash
+event = "Sound_slash", 170, normal
+event = "Attack_slash", 190, normal
 
 [attack_break_4]
 type = normal
@@ -855,9 +879,9 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-event = "Attack", 186, normal			;slash
-event = "SndAlliace_sword_wind", 170, normal
-event = "Attack", 190, normal
+event = "Attack_slash", 186, normal			;slash
+event = "Sound_slash", 170, normal
+event = "Attack_slash", 190, normal
 
 
 ;PARRY
@@ -997,7 +1021,7 @@ event = "Attack", 284, normal			;slash
 event = "SndAlliace_attack_feintc", 271, normal
 
 
-;Р‘Р›РћРљ
+;БЛОК
 [block]
 type = normal
 start_time = 305
@@ -1010,7 +1034,7 @@ data = "Blend time", "0.2"		; sec
 event = "Resact", 306, normal	
 
 
-;Р Р•РђРљР¦РРЇ РќРђ РџРћРџРђР”РђРќРР• Р’ Р‘Р›РћРљ
+;РЕАКЦИЯ НА ПОПАДАНИЕ В БЛОК
 [block_hit]
 type = normal
 start_time = 350
@@ -1021,7 +1045,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-;Р Р•РђРљР¦РРЇ РќРђ РџР РћР‘РР’РђРќРР• Р‘Р›РћРљРђ
+;РЕАКЦИЯ НА ПРОБИВАНИЕ БЛОКА
 [block_break]
 type = normal
 start_time = 665
@@ -1032,7 +1056,7 @@ loop = false
 
 data = "Blend time", "0.2"		; sec
 
-;Р Р•РђРљР¦РР
+;РЕАКЦИИ
 
 [hit_1]
 type = normal
@@ -1131,7 +1155,7 @@ loop = false
 data = "Blend time", "0.2"		; sec
 event = "SndAlliace_hitnofight", 1867, normal	
 
-;Р’Р«РЎРўР Р•Р›
+;ВЫСТРЕЛ
 
 [Shot]
 speed = 2.
@@ -1140,7 +1164,7 @@ start_time = 698
 end_time = 760
 loop = false
 	event = "To hand", 711, normal
-	event = "SndAlliace_pistol_shot", 3126, normal
+	event = "sound_pistol", 3126, normal
 	event = "Fire", 725, normal
 	event = "To belt", 751, normal
 	
@@ -1148,7 +1172,7 @@ loop = false
 	
 	
 ;===================================================================================
-;РЎРњР•Р РўР
+;СМЕРТИ
 ;===================================================================================
 
 [death_0]
@@ -1241,7 +1265,7 @@ event = "Death sound", 1018, normal
 start_time = 897
 end_time = 897
 
-;РЎРњР•Р РўР¬ Р“РћР РћР–РђРќ
+;СМЕРТЬ ГОРОЖАН
 
 [death_citizen_1]
 speed = 1.5
@@ -1305,7 +1329,7 @@ data = "Angle", "340.0"
 
 event = "SndAlliace_citizen_death2", 1834, normal
 
-;РЎРњР•Р РўР¬ РўР РЈРЎРђ
+;СМЕРТЬ ТРУСА
 
 [death_afraid_1]
 speed = 2.
@@ -1339,7 +1363,7 @@ data = "Angle", "340.0"
 event = "Death sound", 2734, normal
 
 ;===================================================================================
-;РђРќРРњРђР¦РР РЎРР”Р•РќРРЇ
+;АНИМАЦИИ СИДЕНИЯ
 ;===================================================================================
 
 [Sit_Look_Around]
@@ -1389,10 +1413,10 @@ event = "Death sound", 3194, normal
 
 
 ;===================================================================================
-;РђРќРРњРђР¦РР Р“РЈР‘Р•Р РќРђРўРћР Рђ
+;АНИМАЦИИ ГУБЕРНАТОРА
 ;===================================================================================
 
-;Р Р°Р·РіР»СЏРґС‹РІР°С‚СЊ СЃРІРѕРё СЂСѓРєРё	
+;Разглядывать свои руки	
 [Gov_ObserveHands]
 speed = 1.2
 loop = true
@@ -1401,7 +1425,7 @@ start_time = 3676
 end_time = 3752
 data = "Blend time", "0.3"		; sec
 
-;Р—Р°РєРёРЅСѓС‚СЊ РѕРґРЅСѓ РЅРѕРіСѓ РЅР° РґСЂСѓРіСѓСЋ	
+;Закинуть одну ногу на другую	
 [Gov_LegOnLeg]
 speed = 1.5
 loop = true
@@ -1410,7 +1434,7 @@ start_time = 3753
 end_time = 3853
 data = "Blend time", "0.3"		; sec
 
-;РЎРјРѕС‚СЂРµС‚СЊ РїРѕ СЃС‚РѕСЂРѕРЅР°Рј	
+;Смотреть по сторонам	
 [Gov_Look_Around]
 speed = 1.5
 loop = true
@@ -1419,7 +1443,7 @@ start_time = 3854
 end_time = 3939
 data = "Blend time", "0.3"		; sec
 
-;Р Р°Р·РґСѓРјС‹РІР°С‚СЊ1	
+;Раздумывать1	
 [Gov_think_1]
 speed = 1.5
 loop = true
@@ -1428,7 +1452,7 @@ start_time = 3940
 end_time = 4040
 data = "Blend time", "0.3"		; sec
 
-;Р Р°Р·РґСѓРјС‹РІР°С‚СЊ2	
+;Раздумывать2	
 [Gov_think_2]
 speed = 1.5
 loop = true
@@ -1438,7 +1462,7 @@ end_time = 4139
 data = "Blend time", "0.3"		; sec
 
 ;===================================================================================
-;РђРќРРњРђР¦РР Р”РРђР›РћР“РћР’
+;АНИМАЦИИ ДИАЛОГОВ
 ;===================================================================================
 
 [dialog_stay2]
@@ -1474,10 +1498,10 @@ data = "Blend time", "0.1"		; sec
 loop = false
 
 ;===================================================================================
-;РђРќРРњРђР¦РР Р—Рђ РЎРўРћР™РљРћР™
+;АНИМАЦИИ ЗА СТОЙКОЙ
 ;===================================================================================
 
-;РџРѕРєР°Р·Р°С‚СЊ С‚РѕРІР°СЂ Р»РёС†РѕРј
+;Показать товар лицом
 [Merchant_invite]
 speed = 1.
 type = normal
@@ -1488,7 +1512,7 @@ loop = false
 
 data = "Blend time", "0.4"		; sec
 
-;Р‘Р°СЂРјРµРЅ РєРѕРїРѕС€РёС‚СЃСЏ РЅР° РїРѕР»РєР°С…
+;Бармен копошится на полках
 [Barman_idle]
 speed = 2.
 loop = true
@@ -1499,7 +1523,7 @@ end_time = 2900
 data = "Blend time", "0.4"		; sec
 	event = "SndAlliace_barmen_clean", 2770, normal
 
-;РћР±Р»РѕРєРѕС‚РёС‚СЊСЃСЏ РЅР° СЃС‚РѕР№РєСѓ
+;Облокотиться на стойку
 [Barman_lean]
 speed = 1.
 type = normal
@@ -1510,7 +1534,7 @@ loop = false
 
 data = "Blend time", "0.4"		; sec
 
-;РћРіР»СЏРґРµС‚СЊСЃСЏ 
+;Оглядеться 
 [Barman_look_around]
 speed = 2.
 loop = true
@@ -1520,7 +1544,7 @@ end_time = 3038
 data = "Blend time", "0.4"		; sec	 
 event = "SndAlliace_barmen2table", 2920, normal
 
-;Р’СЃС‚Р°С‚СЊ РѕР±СЂР°С‚РЅРѕ
+;Встать обратно
 [Barman_stand_back]
 speed = 1.
 type = normal
@@ -1530,10 +1554,10 @@ end_time = 3061
 loop = false
 	
 ;===================================================================================
-;Р”РћРџРћР›РќРРўР•Р›Р¬РќР«Р• РђРќРРњРђР¦РР
+;ДОПОЛНИТЕЛЬНЫЕ АНИМАЦИИ
 ;===================================================================================
 
-;РЎС‚РѕСЏРЅРёРµ СЃРѕ СЃР»РѕР¶РµРЅРЅС‹РјРё СЂСѓРєР°РјРё - РјРѕР»РёС‚РІР°
+;Стояние со сложенными руками - молитва
 [Bead]
 loop = true
 type = normal
@@ -1544,7 +1568,7 @@ speed = 2.
 
 data = "Blend time", "0.4"		; sec
 
-;РЎС‚РѕСЏРЅРёРµ СЃ РїРѕРґРЅСЏС‚С‹РјРё РІ СЃС‚СЂР°С…Рµ СЂСѓРєР°РјРё
+;Стояние с поднятыми в страхе руками
 [afraid]
 speed = 3.
 loop = true
@@ -1554,7 +1578,7 @@ end_time = 2689
 data = "Blend time", "0.3"		; sec
 event = "SndAlliace_N_afraid", 2625, normal
 
-;РЎРёРґРµС‚СЊ     
+;Сидеть     
 [Ground_sitting]
 start_time = 4330
 end_time = 4457
@@ -1573,7 +1597,7 @@ data = "Blend time", "0.1"          ; sec
 loop = false
 
 
-;РћРўРЎРљРћРљ Р’ РЎРўРћР РћРќРЈ
+;ОТСКОК В СТОРОНУ
 [straif_left]
 start_time = 4142
 end_time = 4153
