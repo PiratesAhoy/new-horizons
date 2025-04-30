@@ -95,7 +95,7 @@ Elbaro{Эльбаро}
 Caron{Кэрон}
 
 Roxanne{Роксана}
-Lalliere{Лаллир}
+Lalliere{Лальер}
 La Diablesse{Дьявол}
 
 Catalina{Каталина}
@@ -402,8 +402,8 @@ Bestevaкr{Наилучший}
 Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!{Рожденный в бедной семье во Флиссингене Вы, Микель Адриансзон де Рюйтер - скромный человек. Тем не менее, англо-голландские войны 17-го века предоставят Вам массу возможностей, чтобы стать великим!}
 Neptunus{Нептун}
 
-Edwaert{Эдверт}
-Mansveldt{Мансвельдт}
+Edwaert{Эдвард}
+Mansveldt{Мансвельт}
 
 Forester{Лесничий}
 
@@ -544,7 +544,7 @@ Emilio{Эмилио}
 Soares{Соарес}
 
 Francois{Франсуа}
-L'Ollenais{Л'Олленэ}
+L'Ollenais{Л'Олонне}
 Saint-Jean{Святой Иоанн}
 
 Julian{Джулиан}
@@ -963,13 +963,5 @@ Fearless{Бесстрашный}
 
 {=====| Officers.c |=====}
 Arabella{Арабелла}
-Barracuda{Барракуда}
-Fearless{Бесстрашный}
-Retribution{Возмездие}
-Obstacle{Препятствие}
-Unstoppable{Неудержимость}
-Smashing{Разящий}
-Apostle{Апостол}
-Secretive{Скрытный}
 
 {=====| 231 characters |=====}

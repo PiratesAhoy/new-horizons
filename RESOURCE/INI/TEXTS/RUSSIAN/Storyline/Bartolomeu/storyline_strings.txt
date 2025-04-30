@@ -16,3 +16,22 @@ Sirena{Сирена}
 San Martin{Сан-Мартин}
 Galicia{Галисия}
 New Santiago{Новый Сантьяго}
+Prinses Royaal Maria{Королевская Принцесса Мария}
+O Trovao{Гром}
+Le Malicieux{Озорной}
+La Joyeuse{Весёлая}
+El Dorado{Эльдорадо}
+El Castillo{Крепость}
+Rio del Plata{Рио-дель-Плата}
+Madragal{Мадрагал}
+Rio de Janeiro{Рио-де-Жанейро}
+Jamaica Merchant{Ямайский Торговец}
+Leon{Леон}
+Quick Death{Быстрая Смерть}
+A Felicidade{Счастье}
+San Pablo{Сан-Пабло}
+Le Gascon{Гасконец}
+Le Baron{Барон}
+La Galiza{Гализа}
+The Majestic{Величественный}
+while you are in the Cartagena Fort location{в локации Форта Картахены}
