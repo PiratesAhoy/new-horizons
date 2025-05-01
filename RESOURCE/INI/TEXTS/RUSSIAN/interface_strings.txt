@@ -1038,14 +1038,14 @@ Passage{Проход}
 Secret Passage{Секретный Проход}
 Old Fort{Старый Форт}
 Turtle Bay{Черепаховая Бухта}
-Inside House{Внутри Дома}
+Inside House{Дом}
 Birds Cove{Птичья Бухта}
 Pirate Lair{Пиратское Логово}
 
 Passage.{Проход}
 Old Fort.{Старый Форт}
 Turtle Bay.{Черепаховая Бухта}
-Inside House.{Внутри Дома}
+Inside House.{Дом}
 Birds Cove.{Птичья Бухта}
 Pirate Lair.{Пиратское Логово}
 
@@ -1268,10 +1268,10 @@ You wait here 1 day for ship repairs{Вы задержались на 1 день
 You wait here 5 days for ship repairs{Вы задержались на 5 дней для ремонта корабля}
 You wait here 10 days for ship repairs{Вы задержались на 10 дней для ремонта корабля}
 You wait here all a month for ship repairs{Вы задержались на месяц для ремонта корабля}
-Captain, we killed and fished for{Капитан! Сегодня мы добыли рыбы и дичи на}
-rations today{рационов}
+Captain, we killed and fished for{Капитан! Мы добыли рыбы и дичи на}
+rations today{рац.}
 but{но}
-men were killed by wild jungle or disappeared..{человек погибли или потерялись...}
+men were killed by wild jungle or disappeared..{чел. погибли или потерялись...}
 You you stand guard for hours.{На несколько часов Вы становитесь охранником.}
 It may be time to claim your reward.{Пришло время получить вознаграждение.}
 The Keeper disappears without word or sound, as if the ancient walls had swallowed him...{Хранитель исчезает беззвучно, как будто древние стены поглотили его...}
@@ -2129,11 +2129,11 @@ Hmm, I can't get the Cork out.{Хм, не могу вытащить Пробку
 The Ladder is stuck under the Barrel.{Лестница застряла под бочкой.}
 The Ladder is still stuck somehow! How do I lift it?{Лестница всё ещё застрявшая! Как бы поднять её?}
 The Ladder is stuck under the bridge now!{Теперь Лестница застряла под мостом!}
-No, it's locked from the inside. I have to brake it.{Нет, заперто изнутри. Придется сломать.}
+No, it's locked from the inside. I have to brake it.{Нет, заперто изнутри. Придётся сломать.}
 I'll use the butt-end of my pistol.{Я воспользуюсь прикладом своего пистолета.}
-Yes, I'll try this on the Cell door!{Да, попробую также с дверью Клетки!}
+Yes, I'll try this on the Cell door!{Я думаю, что можно использовать эту кислоту на двери клетки!}
 I shouldn't have done that. Hope no one heard it.{Мне не следовало так делать. Надеюсь, никто не слышал этого.}
-They went to sleep again. Let's go!{Они снова пошли спать. Вперед!}
+They went to sleep again. Let's go!{Они снова заснули. Вперёд!}
 Hmm, I have to find another way into the Church.{Хм, придется найти другую дорогу в Церковь.}
 No, there's nothing here.{Нет, здесь ничего нет.}
 

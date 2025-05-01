@@ -105,7 +105,7 @@ Parson{Парсон}
 William{Уильям}
 Cotter{Коттер}
 Roxanne{Роксана}
-Lalliere{Лаллир}
+Lalliere{Лальер}
 Guibert{Гиберт}
 Daudet{Даудет}
 Diablo{Дьябло}
