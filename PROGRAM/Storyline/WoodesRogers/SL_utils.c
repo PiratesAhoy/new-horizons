@@ -8636,7 +8636,7 @@ void OpenBoxProcedure_WR()
 			case "box9":
 				//climb ladder down
 				ChangeCharacterAddressGroup(chr, "wr_cave_shore", "goto", "reload5");
-				PlaySound("PEOPLE\step_grass1.wav");
+				PlaySound("PEOPLE\step_grass1.flac");
 			break;
 
 			case "box10":

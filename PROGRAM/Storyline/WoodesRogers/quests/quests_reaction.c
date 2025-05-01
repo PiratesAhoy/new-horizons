@@ -5329,7 +5329,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"sack"))
 			{
 				TakeItemFromCharacter(Pchar, "sack");
-				PlaySound("PEOPLE\step_grass.wav");
+				PlaySound("PEOPLE\step_grass.flac");
 				PlaySound("PEOPLE\step_wood.wav");
 				Pchar.quest.shya_posD = "basket";
 
@@ -63250,7 +63250,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"wax_candles"))
 			{
 				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
-				PlaySound("PEOPLE\step_grass1.wav");
+				PlaySound("PEOPLE\step_grass1.flac");
 
 				LAi_QuestDelay("count_abbess_items", 0.5);
 			}

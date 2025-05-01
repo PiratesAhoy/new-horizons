@@ -5757,7 +5757,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"medicine_leaves"))
 			{
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"No, I don't bother to take anything."));
-				PlaySound("PEOPLE\step_grass.wav");
+				PlaySound("PEOPLE\step_grass.flac");
 		
 				TakenItems(Pchar, "medicine_leaves", -1);
 				locations[FindLocation(Pchar.location)].box5.items.medicine_leaves = 0;
@@ -14637,7 +14637,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"leeches") || CheckCharacterItem(Pchar,"fish"))
 			{
 				if(CheckCharacterItem(Pchar,"leeches")) PlaySound("INTERFACE\glass2.wav");
-				if(CheckCharacterItem(Pchar,"fish")) PlaySound("PEOPLE\step_grass.wav");
+				if(CheckCharacterItem(Pchar,"fish")) PlaySound("PEOPLE\step_grass.flac");
  
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"No, I don't bother to take anything."));
 				TakenItems(Pchar, "leeches", -1); TakenItems(Pchar, "fish", -1);
@@ -16158,69 +16158,69 @@ void QuestComplete(string sQuestName)
 		break;
 	//---------------------------------------------------------------------------------
 		case "Jup_climbs_tree_animation2":
-			PlaySound("PEOPLE\step_grass2.wav");
+			PlaySound("PEOPLE\step_grass2.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb2");
 
 			LAi_QuestDelay("Jup_climbs_tree_animation3", 2.0);		
 		break;
 	
 		case "Jup_climbs_tree_animation3":
-			PlaySound("PEOPLE\step_grass.wav");
+			PlaySound("PEOPLE\step_grass.flac");
 			SetModel(characterFromID("Jupiter"), "jupiter", "climb", "man", 1.8, true);	
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb3");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_tree_animation4", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation4":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb4");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_tree_animation4A", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation4A":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb4A");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_tree_animation5", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation5":
-			PlaySound("PEOPLE\step_grass2.wav");	
+			PlaySound("PEOPLE\step_grass2.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb5");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_tree_animation5A", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation5A":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb5A");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_tree_animation6", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation6":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb6");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_tree_animation6A", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation6A":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb6A");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_tree_animation7", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation7":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb7");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_tree_animation8", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation8":
-			PlaySound("PEOPLE\step_grass2.wav");	
+			PlaySound("PEOPLE\step_grass2.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb8");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_tree_animation9", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation9":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb9");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_tree2A", 2.0);   
 		break;
@@ -16233,19 +16233,19 @@ void QuestComplete(string sQuestName)
 		break;
 //---------------------------------------------------------------------------------------------------------------------------
 		case "Jup_climbs_tree_animation10":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb10");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_tree_animation11", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation11":
-			PlaySound("PEOPLE\step_grass2.wav");	
+			PlaySound("PEOPLE\step_grass2.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb11");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_tree_animation12", 1.2);   
 		break;
 
 		case "Jup_climbs_tree_animation12":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb12");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_tree_animation13", 1.2);   
 		break;
@@ -16354,49 +16354,49 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Jup_climbs_down_animation11":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb11");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_down_animation10", 1.2);   
 		break;
 
 		case "Jup_climbs_down_animation10":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb10");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_down_animation9", 1.2);   
 		break;
 
 		case "Jup_climbs_down_animation9":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb9");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_down_animation8", 1.2);   
 		break;
 
 		case "Jup_climbs_down_animation8":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb8");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_down_animation7", 1.2);   
 		break;
 
 		case "Jup_climbs_down_animation7":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb7");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_down_animation6", 1.2);   
 		break;
 	
 		case "Jup_climbs_down_animation6":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb6");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_down_animation5", 1.2);   
 		break;
 	
 		case "Jup_climbs_down_animation5":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb5");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs_down_animation4", 1.2);   
 		break;
 	
 		case "Jup_climbs_down_animation4":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb4");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs_tree9", 1.2);   
 		break;
@@ -19152,7 +19152,7 @@ void QuestComplete(string sQuestName)
 			if(CheckCharacterItem(Pchar,"fake_candelabre") || CheckCharacterItem(Pchar,"wax_candles"))
 			{
 				if(CheckCharacterItem(Pchar,"fake_candelabre")) PlaySound("OBJECTS\DUEL\candelabre.wav");
-				if(CheckCharacterItem(Pchar,"wax_candles")) PlaySound("PEOPLE\step_grass.wav");
+				if(CheckCharacterItem(Pchar,"wax_candles")) PlaySound("PEOPLE\step_grass.flac");
  
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"No, I don't bother to take anything."));
 				TakenItems(Pchar, "fake_candelabre", -2); TakenItems(Pchar, "wax_candles", -4);
@@ -19815,87 +19815,87 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Jup_climbs2_tree_animation2":
-			PlaySound("PEOPLE\step_grass2.wav");
+			PlaySound("PEOPLE\step_grass2.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb2");
 
 			LAi_QuestDelay("Jup_climbs2_tree_animation3", 2.0);		
 		break;
 	
 		case "Jup_climbs2_tree_animation3":
-			PlaySound("PEOPLE\step_grass.wav");
+			PlaySound("PEOPLE\step_grass.flac");
 			SetModel(characterFromID("Jupiter"), "jupiter", "climb", "man", 1.8, true);	
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb3");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs2_tree_animation4", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation4":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb4");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs2_tree_animation4A", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation4A":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb4A");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs2_tree_animation5", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation5":
-			PlaySound("PEOPLE\step_grass2.wav");	
+			PlaySound("PEOPLE\step_grass2.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb5");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs2_tree_animation5A", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation5A":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb5A");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs2_tree_animation6", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation6":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb6");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs2_tree_animation6A", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation6A":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb6A");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs2_tree_animation7", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation7":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb7");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs2_tree_animation8", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation8":
-			PlaySound("PEOPLE\step_grass2.wav");	
+			PlaySound("PEOPLE\step_grass2.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb8");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs2_tree_animation9", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation9":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb9");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs2_tree_animation10", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation10":
-			PlaySound("PEOPLE\step_grass1.wav");	
+			PlaySound("PEOPLE\step_grass1.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb10");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs2_tree_animation11", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation11":
-			PlaySound("PEOPLE\step_grass2.wav");	
+			PlaySound("PEOPLE\step_grass2.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb11");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_2", "Jup_climbs2_tree_animation12", 1.2);   
 		break;
 
 		case "Jup_climbs2_tree_animation12":
-			PlaySound("PEOPLE\step_grass.wav");	
+			PlaySound("PEOPLE\step_grass.flac");
 			ChangeCharacterAddressGroup(characterFromID("Jupiter"), "Bishops_hostel", "goto", "Jup_climb12");
 			LAi_ActorAnimation(characterFromID("Jupiter"), "Lay_1", "Jup_climbs2_tree_animation13", 1.2);   
 		break;
