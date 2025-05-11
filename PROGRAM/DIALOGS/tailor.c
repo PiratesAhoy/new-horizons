@@ -28,6 +28,13 @@ void ProcessDialogEvent()
 			Link.l1.go = "agree fetch";
 			Link.l2 = DLG_TEXT[5];
 			Link.l2.go = "decline fetch";
+         // Peter Norton - PChar already has the cargo -->
+         if (GetCargoGoods(PChar, sti(NPChar.fetch_quest.good)) >= sti(NPChar.fetch_quest.amount))
+         {
+            Link.l3 = DLG_TEXT[17];
+            Link.l3.go = "fetch quest complete";
+         }
+         // <-- PN
 		break;
 		
 		case "fetch quest more runs":
