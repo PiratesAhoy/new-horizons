@@ -24,17 +24,17 @@ void ProcessDialogEvent()
 		case "fetch quest":
 			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			d.Text = DLG_TEXT[1] + NPChar.fetch_quest.amount + " " + XI_ConvertString(Goods[sti(NPChar.fetch_quest.good)].name) + DLG_TEXT[2] + NPChar.fetch_quest.money + DLG_TEXT[3]  + NPChar.fetch_quest.expire;
-               Link.l1 = DLG_TEXT[4];
-               Link.l1.go = "agree fetch";
-               Link.l2 = DLG_TEXT[5];
-               Link.l2.go = "decline fetch";
-               // Peter Norton - PChar already has the cargo -->
-               if (GetCargoGoods(PChar, sti(NPChar.fetch_quest.good)) >= sti(NPChar.fetch_quest.amount))
-               {
-                  Link.l3 = DLG_TEXT[17];
-                  Link.l3.go = "fetch quest complete";
-               }
-               // <-- PN
+			Link.l1 = DLG_TEXT[4];
+			Link.l1.go = "agree fetch";
+			Link.l2 = DLG_TEXT[5];
+			Link.l2.go = "decline fetch";
+			// Peter Norton - PChar already has the cargo -->
+			if (GetCargoGoods(PChar, sti(NPChar.fetch_quest.good)) >= sti(NPChar.fetch_quest.amount))
+			{
+				Link.l3 = DLG_TEXT[17];
+				Link.l3.go = "fetch quest complete";
+			}
+			// <-- PN
 		break;
 		
 		case "fetch quest more runs":
