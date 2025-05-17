@@ -1,4 +1,4 @@
-string DLG_TEXT[19] = {
+string DLG_TEXT[18] = {
 "Dicen que tienes un gran encargo entre manos. ¿Necesitas ayuda?",
 "La verdad es que sí, #ssir#. Ni siquiera la tienda puede satisfacer mi demanda. ¿Podrías ir a buscarme ",
 "? Te pagaré ",
@@ -16,4 +16,5 @@ string DLG_TEXT[19] = {
 "No pude conseguir todo tu cargamento de una vez, así que aquí está la primera parte.",
 "Muchas gracias. Por favor, consigue el resto tan pronto como sea posible. Voy a utilizar estos materiales ya, así que si no entregas el resto, tendré que cancelar el encargo igialmente, pero tampoco podré devolver estos materiales; solo para que lo sepas.",
 "¿Sabes?, creo que me lo quedaré hasta que tenga todo.",
+"Hoy es tu día de suerte, tengo lo que necesitas en la bodega de mi barco.",
 };
