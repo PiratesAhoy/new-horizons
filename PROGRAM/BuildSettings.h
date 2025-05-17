@@ -30,7 +30,7 @@ bool AUTO_SKILL_SYSTEM = true;
 // GENERAL MODS:
 // ======================================
 
-int DEATHRATE = 40;
+int DEATHRATE = 1;
 	// Chance of dying(= game over) after shipwrecks and lost fights
 	// Choose a value between 1(certain survival) and 130(certain death)
 	// After survival you will be down and out, so it is a new challenge and no cheat!
@@ -160,16 +160,16 @@ bool ENABLE_BROTHEL = false;
 	// 0: Stock PotC: no brothel in QC
 	// 1: Brothel location opened; a bit explicit, but in WORDS only
 
-bool ENABLE_BUILDINGSET = true;
+bool ENABLE_BUILDINGSET = false;
 	// 0: New towns have the same look as the stock PotC locations
 	// 1: "additional" buildings in some new locations
 
-int NO_THEFT = 0;
+int NO_THEFT = 50;
 	// You can now pick pockets. But this is risky, and other thieves may pick YOUR pocket too.
 	// 0 - 60 : The higher this value the safer you are from pickpockets
 	// Above 30 nobody picks YOUR pocket, above 60 you yourself get no chance to steal
 
-int LOCK_OPEN = 0;
+int LOCK_OPEN = 35;
  	// 0- 70: the higher this value the higher your chance of picking the locks of treasurechests
 	// Above 66 chests always open, above 33 you won't hurt yourself anymore ;-)
 
