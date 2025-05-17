@@ -1,4 +1,4 @@
-string DLG_TEXT[29] = {
+string DLG_TEXT[30] = {
 "I found this weird book and I thought you might know what it is.",
 "Let me see, #schild#. Hmmm... this is very special! I think I know what you have here, my #schild#, but I do not feel comfortable talking about this with you. Maybe you could first show me a sign of good faith?",
 "What say you if I donate some money to the church?",
@@ -28,4 +28,5 @@ string DLG_TEXT[29] = {
 "Maybe but I haven't got one, so there's just the book.",
 "Thank you so much, this could really save the life of people here. As special reward, you can have this item. I believe it relates to mister Winchester's gun.",
 "Much obliged, it could prove useful.",
+"Is this the cross you need?",
 };

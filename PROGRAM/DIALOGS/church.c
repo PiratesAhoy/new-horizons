@@ -106,8 +106,16 @@ void ProcessDialogEvent()
 		
 		case "next telescope":
 			dialog.Text = DLG_TEXT[7];
-			Link.l1 = DLG_TEXT[8];
-			Link.l1.go = "accept fetch";
+         if (CheckCharacterItem(Pchar,"jewelry9"))	  // Peter Norton - already own the item
+         {
+            Link.l1 = DLG_TEXT[29];
+            Link.l1.go = "bring cross";
+         }
+         else
+         {
+            Link.l1 = DLG_TEXT[8];
+            Link.l1.go = "accept fetch";
+         }
 			Link.l2 = DLG_TEXT[9];
 			Link.l2.go = "exit";
 		break;
@@ -127,8 +135,6 @@ void ProcessDialogEvent()
 				Link.l2 = DLG_TEXT[26];
 				Link.l2.go = "swap book";
 				}
-			
-
 		Break;
 
 		case "accept fetch":
