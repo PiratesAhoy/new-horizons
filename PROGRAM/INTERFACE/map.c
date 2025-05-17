@@ -84,8 +84,12 @@ void SelectMap(int idx)
 		// Screwface : MAP TITLES ARE PERIOD DEPENDANT
 		int period = GetCurrentPeriod();
 		string path = "RESOURCE\Textures\INTERFACES\Maps\" + period; 
-		if(FindFile(path, "*.tga.tx", item_id + ".tga.tx") !="")
-			{SetNewPicture("MAP", "INTERFACES\Maps\" + period  + "\" + item_id + ".tga");}
+		if(FindFile(path, "*.tga.tx", item_id + ".tga.tx") !="") {
+			SetNewPicture("MAP", "INTERFACES\Maps\" + period  + "\" + item_id + ".tga");
+		}
+		else if (FindFile("RESOURCE/Textures/INTERFACES/Maps/", "*.jpg", item_id + ".jpg") != "") {
+			SetNewPicture("MAP", "INTERFACES/Maps/" + item_id + ".jpg");
+		}
 		else
 			{SetNewPicture("MAP", "INTERFACES\Maps\" + item_id + ".tga");}
 		// Screwface : end

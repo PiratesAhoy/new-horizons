@@ -6145,6 +6145,20 @@ int InitMaps(int n)
 	curMap.labels = "";
 	makearef(labels, curMap.labels);
 	n = InitMap(n, curMap);
+
+	curMap.id = "map_maltese_crypt";					//lines attempt3
+	curMap.name = "itmname_map_maltese_crypt";
+	curMap.describe = "itmdescr_map_maltese_crypt";
+	curMap.island = "Oxbay";
+	curMap.location = FindIslandName("Oxbay");
+	curMap.picIndex = 17;
+	curMap.picTexture = "items_maps";
+	curMap.price = 1200;
+	curMap.skiptrade = false;
+	curMap.skipsell = false;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
 	//<-- JRH
 
 	return n;

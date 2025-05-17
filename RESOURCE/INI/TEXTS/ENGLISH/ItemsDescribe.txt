@@ -2262,3 +2262,6 @@ itmname_mapKRTempleUpper {#slocation# temple map}
 itmdescr_mapKRTempleUpper {
 Map of the upper level of #slocation# temple.
 }
+
+itmname_map_maltese_crypt {Maltese crypt map}
+itmdescr_map_maltese_crypt {Map of the maze of the Maltese crypt}

@@ -17,6 +17,9 @@ void ExecuteConsole()
 											// Case 0 = Enable reload (useful when you get stuck on boarding) + Set player type (if you cannot move anymore)
 	switch(0)								// Case 1 = Various test and cheat codes
 	{										// Case 2 = Location coordinate information
+
+		GiveItem2Character(PChar, "map_maltese_crypt");
+
 		case 1:								// Case 3 = Automatic instant cheats in port
 											// Case 4 = Instant teleport to Hendrick Vanderdecken
 
