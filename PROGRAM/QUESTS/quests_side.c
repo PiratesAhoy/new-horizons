@@ -10321,6 +10321,7 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.to_canvoy_with_larouse.win_condition = "to_oxbay_mines_with_larrouse_3_complete";
 			DisableFastTravel(true);
 			DisableMenuLaunch(true);
+			bQuestDisableSeaEnter = true;
 			DoQuestCheckDelay("to_oxbay_mines_with_larrouse_complete_2", 2.0);
 		break;
 
@@ -10945,6 +10946,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "fight_in_shore_completed":
 			DeleteAttribute(&Locations[FindLocation("Oxbay_jungle_02")],"vcskip"); // PB
+			bQuestDisableSeaEnter = false;
 			LAi_QuestDelay("fight_in_shore_completed_almost", 4.0);
 		break;
 
