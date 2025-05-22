@@ -2557,6 +2557,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1";
 	Locations[n].id = "Dungeon 1";
 	Locations[n].image = "Inside_Dungeon_1";
+	Locations[n].map = "mapOxbay_Dungeon";
 	Locations[n].monsters = "1";
 	locations[n].id.label = "#stown_name# Dungeon";
 	//Town sack
@@ -2614,6 +2615,7 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	Locations[n].filespath.models = "locations\Inside\Dungeon_3";
 	Locations[n].id = "Oxbay_cave";
 	Locations[n].image = "Inside_Dungeon_3";
+	Locations[n].map = "mapOxbay_Cave";
 //	Locations[n].monsters = "1";
 	locations[n].id.label = "Abandoned mine";
 	//Sound

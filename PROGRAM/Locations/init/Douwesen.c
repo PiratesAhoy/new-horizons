@@ -1595,6 +1595,7 @@ void LocationInitDouwesen(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "Douwesen_dungeon";
 	Locations[n].image = "Inside_Dungeon_4";
+	Locations[n].map = "mapDouwesen_Cave";
 //	Locations[n].monsters = "1";
 
 	//Sound

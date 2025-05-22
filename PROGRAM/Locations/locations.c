@@ -156,3 +156,13 @@ void LocationWaitNihgtEndFadeIn()
 		PostEvent("LocationWaitNihgtEnd", 1);
 	}	
 }
+
+string FindMapForLocation(string location_id) {
+	int location_index = FindLocation(location_id);
+	ref location;
+	makeref(location, Locations[location_index]);
+	if (CheckAttribute(location, "map") ) {
+		return location.map;
+	}
+	return "";
+}

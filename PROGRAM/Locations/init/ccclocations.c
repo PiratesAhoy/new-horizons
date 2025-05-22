@@ -1149,6 +1149,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
 	Locations[n].image = "Incas_Temple_Labirint_Crypt";
+	Locations[n].map = "mapMaltese_Crypt";
 	locations[n].type = "dungeon";
 	locations[n].abbey = true; // KK
 
@@ -1213,6 +1214,7 @@ void LocationInitCCCLocations(ref n)
 	locations[n].id.label = "Abbey of the Maltese order";
 	Locations[n].filespath.models = "locations\inside\Dungeon_2";
 	Locations[n].image = "Incas_Temple_Labirint_Crypt";
+	Locations[n].map = "mapRedmond_Dungeon";
 
 	//Town sack
 	Locations[n].townsack = "Greenford";
