@@ -2133,7 +2133,6 @@ void ProcessControls()
 					if (map != "" && CheckCharacterItem(PChar, map)) {
 						Interfaces[INTERFACE_MAP].from_hotkey = 1;
 						LaunchMap(GetItemIndex(map));
-						break;
 					}
 					else if(CheckCharacterItem(PChar,"map"))
 					{
