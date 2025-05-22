@@ -2127,12 +2127,16 @@ void ProcessControls()
 			break;
 
 			case "Sulan_ArchipelagoMap":
-				if(CheckCharacterItem(PChar,"map"))
+				string map = FindMapForLocation(pchar.location);
+				if (map != "" && CheckCharacterItem(PChar, map)) {
+					Interfaces[INTERFACE_MAP].from_hotkey = 1;
+					LaunchMap(GetItemIndex(map));
+				}
+				else if(CheckCharacterItem(PChar,"map"))
 				{
 					LaunchPelagoMap();
 				}
-				else
-				{
+				else {
 					LogIt(TranslateString("","You don't have a map of the archipelago."));
 				}
 			break;

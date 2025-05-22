@@ -39,6 +39,12 @@ void IDoExit(int exitCode)
 		DeleteAttribute(chm, "from_map");
 	}
 	// PB: Return to Archipelago Map <--
+	else if (CheckAttribute(Interfaces[CurrentInterface], "from_hotkey")) {
+		DeleteAttribute(Interfaces[CurrentInterface], "from_hotkey");
+		interfaceResultCommand = exitCode;
+		EndCancelInterface(true);
+		return;
+	}
 	else
 	{
 		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);

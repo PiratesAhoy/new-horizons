@@ -97,6 +97,7 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
 	Locations[n].image = "Incas_Temple_Labirint";
+	Locations[n].map = "mapKhaelRoa_TempleGround";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Maze";
 	//Models
@@ -218,7 +219,8 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].id = "Labirint_2";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-		Locations[n].image = "Incas_Temple_Labirint";
+	Locations[n].image = "Incas_Temple_Labirint";
+	Locations[n].map = "mapKhaelRoa_TempleUpper";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Maze";
 	//Models
@@ -316,7 +318,8 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].id = "Labirint_3";
 	Locations[n].filespath.models = "locations\Incas Temple\Labirint";
 	//Sound
-		Locations[n].image = "Incas_Temple_Labirint";
+	Locations[n].image = "Incas_Temple_Labirint";
+	Locations[n].map = "mapKhaelRoa_TempleGround";
 	locations[n].type = "inca_temple";
 	locations[n].id.label = "Maze";
 	//Models
