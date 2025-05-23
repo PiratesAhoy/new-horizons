@@ -409,6 +409,7 @@ void Reinit_KhaelRoa()
 	Locations[n].id.label = "Dungeon";
 	Locations[n].id = "Roa_dungeon";
 	Locations[n].image = "Inside_Dungeon_4";
+	Locations[n].map = "mapDouwesen_Cave";
 //	Locations[n].monsters = "1";
 
 	//Sound

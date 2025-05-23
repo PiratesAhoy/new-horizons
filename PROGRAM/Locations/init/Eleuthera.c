@@ -1836,6 +1836,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].id.label = "#stown_name# Dungeon";
 	Locations[n].filespath.models = "locations\inside\dungeon_2";
 	Locations[n].image = "Inside_Dungeon_2";
+	Locations[n].map = "mapRedmond_Dungeon";
 
 	//Town sack
 	Locations[n].townsack = "Alice";

@@ -295,6 +295,7 @@ void LocationInitCCCRandomLocations(ref n)
 	locations[n].id.label = "Undercroft";
 	Locations[n].filespath.models = "locations\inside\Dungeon_2";
 	Locations[n].image = "";
+	Locations[n].map = "mapRedmond_Dungeon";
  
 	//Sound
 	locations[n].type = "dungeon";

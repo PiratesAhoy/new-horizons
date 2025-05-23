@@ -3845,6 +3845,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "wr_dungeon4_main";
 	Locations[n].image = "wr_dungeon4_main";
+	Locations[n].map = "mapDouwesen_Cave";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
@@ -3971,6 +3972,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "wr_dungeon4_loop";
 	Locations[n].image = "wr_dungeon4_loop";
+	Locations[n].map = "mapDouwesen_Cave";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
@@ -4071,6 +4073,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "wr_dungeon4_low";
 	Locations[n].image = "wr_dungeon4_low";
+	Locations[n].map = "mapDouwesen_Cave";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
@@ -5695,6 +5698,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "wr_crypt";
 //	locations[n].id.label = "Port Royal catacombs";		//later
 	Locations[n].image = "wr_crypt";
+	Locations[n].map = "mapOxbay_Dungeon";
 	//Town sack
 	Locations[n].townsack = "Redmond";
 
@@ -12472,6 +12476,7 @@ Locations[n].reload.l4.go = "wr_gall_qdeck";
 	Locations[n].id = "Kristiania_cathedral_passage";
 	locations[n].id.label = "Kristiania cathedral passage";
 	Locations[n].image = "wr_Kr_passage";
+	Locations[n].map = "mapOxbay_Dungeon";
 	
 	//Town sack
 	Locations[n].townsack = "Khael Roa";

@@ -2363,6 +2363,7 @@ void LocationInitRedmond(ref n)
 	locations[n].id.label = "Dungeon";
 	Locations[n].filespath.models = "locations\inside\Dungeon_2";
 	Locations[n].image = "Inside_Dungeon_2";
+	Locations[n].map = "mapRedmond_Dungeon";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";

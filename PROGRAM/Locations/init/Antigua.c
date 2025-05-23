@@ -948,6 +948,7 @@ void LocationInitAntigua(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1";
 	Locations[n].id = "Antigua_Dungeon1";
 	Locations[n].image = "Inside_Dungeon_1";
+	Locations[n].map = "mapOxbay_Dungeon";
 	Locations[n].monsters = "1";
 	locations[n].id.label = "Cellar";
 

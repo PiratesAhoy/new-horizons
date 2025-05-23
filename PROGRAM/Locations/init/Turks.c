@@ -1628,6 +1628,7 @@ void LocationInitTurks(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "Turks_dungeon_01";
 	Locations[n].image = "Inside_Dungeon_4";
+	Locations[n].map = "mapDouwesen_Cave";
 	Locations[n].monsters = "1";
 
 	//Sound

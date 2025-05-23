@@ -3008,6 +3008,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Bathhouse_stairs";
 	locations[n].id.label = "Bathhouse stairs";
 	Locations[n].image = "Inside_bathhouse_stairs";
+	Locations[n].map = "mapOxbay_Dungeon";
 
 	//Sound
 	locations[n].type = "Vane_silent_temple";

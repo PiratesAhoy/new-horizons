@@ -1159,6 +1159,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
 	Locations[n].id = "boulder_tunnel";
 	Locations[n].image = "wr_dungeon4_loop";
+	Locations[n].map = "mapDouwesen_Cave";
 	locations[n].id.label = "Port Royal old mine";
 
 	//Sound
