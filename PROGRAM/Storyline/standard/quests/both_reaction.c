@@ -2121,9 +2121,11 @@ void BothQuestComplete(string sQuestName)
 			DeleteAttribute(PChar, "start_weapon");
 			DeleteAttribute(PChar, "start_spyglass");
 
-			EquiPCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, BLADE_ITEM_TYPE));
-			EquiPCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, GUN_ITEM_TYPE));
-			EquiPCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, SPYGLASS_ITEM_TYPE));
+			EquipCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, BLADE_ITEM_TYPE));
+			EquipCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, GUN_ITEM_TYPE));
+			EquipCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, SPYGLASS_ITEM_TYPE));
+			EquipCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, COMPASS_ITEM_TYPE));
+			EquipCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, CLOCK_ITEM_TYPE));
 
 	
 		     //JRH ammo mod --->
