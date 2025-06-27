@@ -2127,7 +2127,10 @@ void ProcessControls()
 			break;
 
 			case "Sulan_ArchipelagoMap":
-				string map = FindMapForLocation(pchar.location);
+				string map = "";
+				if (!IsEntity(&Worldmap) ) {
+					map = FindMapForLocation(pchar.location);
+				}
 				if (map != "" && CheckCharacterItem(PChar, map)) {
 					Interfaces[INTERFACE_MAP].from_hotkey = 1;
 					LaunchMap(GetItemIndex(map));

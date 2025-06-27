@@ -159,6 +159,9 @@ void LocationWaitNihgtEndFadeIn()
 
 string FindMapForLocation(string location_id) {
 	int location_index = FindLocation(location_id);
+	if (location_index < 0) {
+		return "";
+	}
 	ref location;
 	makeref(location, Locations[location_index]);
 	if (CheckAttribute(location, "map") ) {
