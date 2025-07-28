@@ -239,7 +239,6 @@ void StoreInit()
 	Stores[ORANJESTAD_STORE].Island	= "Aruba";
 	Stores[ORANJESTAD_STORE].group	= "Oranjestad";
 	Stores[ORANJESTAD_STORE].owner	= "Cornelis Huijser";
-	Stores[ORANJESTAD_STORE].dockyard = "Abraham Hollander";
 	Stores[ORANJESTAD_STORE].tavern = "Johannes Harlekeyn"; // KK
 	Stores[ORANJESTAD_STORE].usurer = "Oranjestad Usurer"; // KK
 	Stores[ORANJESTAD_STORE].taylor = "Jan Thijs"; // KK
