@@ -1396,7 +1396,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "why_3":
-			d.text = DLG_TEXT[286] + DLG_TEXT[287]);
+			d.text = DLG_TEXT[286] + DLG_TEXT[287];
 			link.l1 = DLG_TEXT[288];
 			link.l1.go = "tell_price";
 		break;
