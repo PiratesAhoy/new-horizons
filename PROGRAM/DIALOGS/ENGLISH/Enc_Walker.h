@@ -285,7 +285,7 @@ string DLG_TEXT[306] = {
 "What are you talking about? Speak on!",
 "Listen! A dying old pirate told me where he and his companions hid a treasure stolen from the Spanish! The only things you need to become a rich #sperson# are a good ship and food for the trip.",
 "And why don't you go yourself to take the treasure for you?",
-"Because I can't leave this cursed island, and I have no ship! All the pirates have disappeared now but this treasure is of great value!",
+"Because I can't leave this cursed island, and I have no ship! All the pirates have disappeared now, but this treasure is of great value!",
 " it is composed of gold, jewels, emeralds and indian gold idols! Are you interested or not, captain?",
 "And how much do you want for this secret?",
 " gold",
