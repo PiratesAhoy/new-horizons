@@ -45,6 +45,8 @@ void IncreaseBaseSkill(ref character, string skillName, int inc)
 }
 
 // Simple personal skill, only including personal modifications
+// Note: use CalcCharacterSkill instead to consider item
+//  modifiers.
 int GetCharacterSkill(ref character, string skillName)
 {
 	int skillPoints = GetCharacterBaseSkill(character, skillName);
