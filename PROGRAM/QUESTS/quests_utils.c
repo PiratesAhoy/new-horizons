@@ -121,10 +121,9 @@ bool FillTreasureChestWithRandomLoot(string locid)
 	{
 		ref lcn = &Locations[FindLocation(locid)];
 		int Calc_luck = CalcCharacterSkill(Pchar,SKILL_SNEAK);
-		// Someone with a luck of 5 will get scammed 50% of the time on average.
-		//  (Note that rand(9) is in the inclusive range [0, 9])
-		// Characters with luck 10 cannot get scammed.
-		if( Calc_luck > rand(9) ) // chance you may get robbed, higher luck means lower chances
+		// Someone with a luck of 5 will get scammed ~54.54% of the time on average.
+		//  (Note that rand(10) is in the inclusive range [0, 10])
+		if( Calc_luck > rand(10) ) // chance you may get robbed, higher luck means lower chances
 		{
 			Calc_luck = rand(Calc_luck-1)+1;
 			//TREASURE
