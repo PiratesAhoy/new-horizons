@@ -9,6 +9,8 @@ void wdmInitWorldMap()
 
 	wdmReinit();
 
+	worldMap.compass.enable = true;
+
 	//Start date
 	worldMap.date.hour = CharHour;
 	worldMap.date.min = CharMinute;
