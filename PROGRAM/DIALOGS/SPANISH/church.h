@@ -28,4 +28,5 @@ string DLG_TEXT[29] = {
 "Puede, pero no tengo ninguna, así que tendrás que conformarte con el libro.",
 "Muchas gracias, esto realmente podría salvar vidas aquí. Como recompensa especial, puedes quedarte con este objeto. Creo que está relacionado con el arma del señor Winchester.",
 "Muchas gracias, podría serme útil.",
+"¿Es esta la cruz que necesitas?",
 };
