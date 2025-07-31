@@ -627,7 +627,7 @@ void FillShipsList(ref NPChar)
 		// PRS3 -->
 		makearef(curship, NPChar.shipyard.(attr));
 		// PB: To prevent randomization of stats on "unique" ships in shipyards -->
-		if (!CheckAttribute(rShip, "unique")) //if ship is not unique, do modify stats
+		if (!CheckAttribute(rShip, "unique")) { //if ship is not unique, do modify stats
 			//Levis let's use the same function to get random stats as everywhere else.
 			NPChar.ship = "";
 			aref toShip; makearef(toShip, NPChar.ship);
@@ -639,12 +639,19 @@ void FillShipsList(ref NPChar)
 			int _idx = GetCharacterIndex(NPChar.id);
 			SetRandomStatsToShip(_idx, i, shipnation);
 			CopyAttributes(fromShip, toShip);
+			//fromShip.name = "fromship_" + i; 
+			curship.name = GetRandomShipNameForNation(shipnation);
 			DeleteAttribute(NPChar,"ship");
 			//arSetRandomStatsToShip(curship, i, shipnation);
-		else
+		}
+		else {
 			curship.stats.nation = shipnation; //otherwise, at least prevent missed attributes
-		// PB: To prevent randomization of stats on "unique" ships in shipyards <--
-		// PRS3 <--
+			// PB: To prevent randomization of stats on "unique" ships in shipyards <--
+			// PRS3 <--
+			
+			if(!CheckAttribute(curship, "name")) {curship.name = GetRandomShipNameForNation(shipnation);}
+		}
+			
 	}
 
 	// TIH --> rpg_style Auto-sort ships by class and price Jul27'06

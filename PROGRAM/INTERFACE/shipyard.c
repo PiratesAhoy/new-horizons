@@ -752,7 +752,7 @@ void UpdateFourData()
 		removable = GetRemovable(GetCharacter(cn));
 		if(CheckAttribute(GetCharacter(cn),"ship.name"))
 		{
-			GameInterface.strings.ShipName = GetMyShipName(GetCharacter(cn));
+			GameInterface.strings.ShipName = "";
 		}
 		else
 		{
@@ -864,6 +864,7 @@ void SetViewShipData(int cn, int buyPrice, int Reduction) // modded to PRS3, add
 // <-- KK
 	ref shref = GetShipByType(shipType);
 
+	GameInterface.strings.ShipName        = arCurShip.name;
 	GameInterface.strings.ShipClass       = sti(GetLocalShipAttrib(arCurShip, shref, "Class"));
 	GameInterface.strings.HullPoints      = sti(GetLocalShipAttrib(arCurShip, shref, "HP"));
 	GameInterface.strings.Speed           = FloatToString(stf(GetLocalShipAttrib(arCurShip, shref, "SpeedRate")),2);
@@ -2818,6 +2819,7 @@ void DoSellShip(string crewHandler, string cargoHandler)
 
 		arShipList.(shipYardSlot) = chref.ship.idx;
 		arShipList.(shipYardSlot).stats = "";
+		arShipList.(shipYardSlot).name = chref.ship.name;
 
 		aref sto;
 		aref sfrom;
@@ -2965,6 +2967,8 @@ void DoBuyShip()
 	chref.ship.sp = GetLocalShipAttrib(arCurShip, brefShip,"SP"); // PRS3
 	chref.ship.hp = GetLocalShipAttrib(arCurShip, brefShip,"HP"); // PRS3
 	chref.ship.acquired = "bought"; // TIH tag on how they acquired this ship (rpgstyle shipyard) Jul27'06
+	aref selectedShip = GetScrollShipAttr(nCurSScrollNum);
+	chref.ship.name = selectedShip.name;
 	DeleteAttribute(chref, "ship.cannons"); // delete cannons property to clear destroyable cannon state. 05-08-01
 	if(USE_REAL_CANNONS) 	chref.ship.Cannons.Type = CANNON_TYPE_LONG_LBS4; // KNB
 	else 					chref.ship.Cannons.Type = CANNON_TYPE_CANNON_LBS12; // NK
