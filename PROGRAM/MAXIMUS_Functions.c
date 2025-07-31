@@ -294,67 +294,67 @@ void GenerateTreasureQuest()
 			treasure_location = "Oxbay_Jungle_02";			x = -19.8645; y = 0.133416; z = 19.565;
  			attackers_location = treasure_location; attackers_locator = "citizens04";
 			numquest="1"; destination = "Oxbay"; PChar.required_item = "Minersspade";
-			PChar.treasureloc = "OShore 1";					// PB: For "X Marks the Spot"
+			PChar.treasureloc = "oxbay_shore_1";					// PB: For "X Marks the Spot"
 		break;
 		case 1 :
 			treasure_location = "Dungeon 1";				x = -31.5832; y = -5.11523; z = 14.6615;
 			attackers_location = ""; attackers_locator = "";
 			numquest="2"; destination = "Oxbay"; PChar.required_item = "-1";
-			PChar.treasureloc = "Oxbay";					// PB: For "X Marks the Spot"
+			PChar.treasureloc = "oxbay";					// PB: For "X Marks the Spot"
 		break;
 		case 2 :
 			treasure_location = "Conceicao_Grot";			x = 11.8876; y = -0.699745; z = 1.46466;
 			attackers_location = "Conceicao_shore_02"; attackers_locator = "locator14";
 			numquest="3"; destination = "Conceicao"; PChar.required_item = "Minerspick";
-			PChar.treasureloc = "CShore 2";					// PB: For "X Marks the Spot"
+			PChar.treasureloc = "conceicao_shore_2";					// PB: For "X Marks the Spot"
 		break;
 		case 3 :
 			treasure_location = "Hispaniola_grot3";			x = 11.8876; y = -0.699745; z = 1.46466;
 			attackers_location = "Hispaniola_passage"; attackers_locator = "goto7";
 			numquest="4"; destination = "Hispaniola"; PChar.required_item = "Minerspick";
-			PChar.treasureloc = "HiShore 3";				// PB: For "X Marks the Spot"
+			PChar.treasureloc = "hispaniola_shore_3";				// PB: For "X Marks the Spot"
 		break;
 		case 4 :
 			treasure_location = "Turks_shore_ship";			x = 33.6905; y = 5.30348; z = 3.8345;
 			attackers_location = "Turks_shore_01"; attackers_locator = "goto1";
 			numquest="5"; destination = "Turks"; PChar.required_item = "-1";
-			PChar.treasureloc = "TurksShore 1";				// PB: For "X Marks the Spot"
+			PChar.treasureloc = "turks_shore_1";				// PB: For "X Marks the Spot"
 		break;
 		case 5 :
 			treasure_location = "Cuba_Shore_01";			x = 230.049; y = 3.59354; z = 33.4243;
 			attackers_location = treasure_location; attackers_locator = "locator5";
 			numquest="6"; destination = "Cuba"; PChar.required_item = "Minersspade";
-			PChar.treasureloc = "CubShore 1";				// PB: For "X Marks the Spot"
+			PChar.treasureloc = "cuba_shore_1";				// PB: For "X Marks the Spot"
 		break;
 		case 6 :
 			treasure_location = "Turks_Cave_Exit_02";		x = 2.86374; y = -0.562296; z = -10.135;
 			attackers_location = treasure_location; attackers_locator = "goto5";
 			numquest="7"; destination = "Turks"; PChar.required_item = "Minersspade";
-			PChar.treasureloc = "TurksShore 2";				// PB: For "X Marks the Spot"
+			PChar.treasureloc = "turks_shore_2";				// PB: For "X Marks the Spot"
 		break;
 		case 7 :
 			treasure_location = "Cayman_Grot_01";			x = 11.8876; y = -0.699745; z = 1.46466;
 			attackers_location = "Cayman_Jungle_06"; attackers_locator = "goto5";
 			numquest="8"; destination = "Cayman"; PChar.required_item = "Minerspick";
-			PChar.treasureloc = "CaymanShore 2";			// PB: For "X Marks the Spot"
+			PChar.treasureloc = "cayman_shore_2";			// PB: For "X Marks the Spot"
 		break;
 		case 8 :
 			treasure_location = "Cayman_Grot_02";			x = 40.9334; y = -0.00547115; z = 37.0136;
 			attackers_location = "Cayman_Jungle_08"; attackers_locator = "goto9";
 			numquest="9"; destination = "Cayman"; PChar.required_item = "Minerspick";
-			PChar.treasureloc = "CaymanShore 3";			// PB: For "X Marks the Spot"
+			PChar.treasureloc = "cayman_shore_3";			// PB: For "X Marks the Spot"
 		break;
 		case 9 :
 			treasure_location = "Hispaniola_shore_02";		x = -15.2203; y = 2.33325; z = 39.6414;
 			attackers_location = treasure_location; attackers_locator = "citizen06";
 			numquest="10"; destination = "Hispaniola"; PChar.required_item = "Minersspade";
-			PChar.treasureloc = "HiShore 2";				// PB: For "X Marks the Spot"
+			PChar.treasureloc = "hispaniola_shore_2";				// PB: For "X Marks the Spot"
 		break;
 		case 10:
 			treasure_location = "Guadeloupe_Lighthouse";	x = 28.972; y = 12.183; z = -51.921;
 			attackers_location = treasure_location; attackers_locator = "goto22";
 			numquest="11"; destination = "Guadeloupe"; PChar.required_item = "Minersspade";
-			PChar.treasureloc = "GuadShore 1";				// PB: For "X Marks the Spot"
+			PChar.treasureloc = "guadeloupe_shore_1";				// PB: For "X Marks the Spot"
 		break;
 	}
 	Group_DelCharacter("Treasure_Pirate", "Treasure Pirate");
