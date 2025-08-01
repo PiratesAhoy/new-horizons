@@ -359,7 +359,9 @@ void GenerateTreasureQuest()
 	}
 	Group_DelCharacter("Treasure_Pirate", "Treasure Pirate");
 	Group_deleteGroup("Treasure_Pirate");
-	if(rand(sti(Pchar.skill.sneak))<3) // PB: was >0 - HIGHER luck skill gives a HIGHER chance at enemies?
+	
+	int playerLuck = CalcCharacterSkill(Pchar,SKILL_SNEAK);
+	if(rand(playerLuck)<3) // PB: was >0 - HIGHER luck skill gives a HIGHER chance at enemies?
 	{
 		GenerateQuestShip("Treasure Pirate", PIRATE); // PB: Use Generic Function
 	//	SetCharacterRelationBoth(GetCharacterIndex("Treasure Pirate"),GetMainCharacterIndex(),RELATION_ENEMY); // PB: Is already done by Group_SetTaskAttack
@@ -372,7 +374,7 @@ void GenerateTreasureQuest()
 		Group_SetAddress("Treasure_Pirate", destination, "", "");
 		//Logit("TreasureQuest: Treasure_Pirate "+GetCharacterIndex("Treasure Pirate")+" generated");// DEBUG
 	}
-	if(rand(sti(Pchar.skill.sneak))<3) // PB: was >0 - HIGHER luck skill gives a HIGHER chance at enemies?
+	if(rand(playerLuck)<3) // PB: was >0 - HIGHER luck skill gives a HIGHER chance at enemies?
 	{
 		ref pir; string ani;
 		int con;
@@ -380,7 +382,16 @@ void GenerateTreasureQuest()
 		{
 			pir = &Characters[GetcharacterIndex("Treas_Pirate_" + con)];
 			ClearCharacter(pir); // PB: Clear ALL attributes from previous character
-			if(rand(Makeint(Pchar.skill.sneak)) == 0) continue;
+
+			// NOTE: Rand(x) will return a number in the range [0, x] inclusive.
+			//  So Rand(3) can return anything from (0, 1, 2, 3).
+
+			// With a luck of 10, 2-3 enemies will spawn
+			//  on average in total.
+			//  With a luck of 3, 3 out of 4 enemies will spawn,
+			//  so on average 7-8 enemies will spawn in total.
+			//  (This is all provided that they spawn at all.)
+			if(rand(playerLuck) > 2) continue; 
 
 			pir.nation = PIRATE;
 			SetModelfromArray(pir, GetModelIndex(GetRandomModelForTypeExSubCheck(1, "Sailors", "man", sti(pir.nation))) );
