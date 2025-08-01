@@ -14,7 +14,7 @@ string DLG_TEXT[71] = {
 "Good lad, good lad. Give me a minute to leave here, then come to the room at the top of the stairs just opposite the shipyard. Better we're not seen leaving together.",
 "Very well, Sir Christopher. I will join you shortly.",
 "Ah! well, can't be helped I suppose. If you will excuse me. I feel the need for a doze.",
-"Oh! yes of course Sir Christopher. Good Day to you. [THINKS Or perhaps I should say good night!].",
+"Oh! yes of course Sir Christopher. Good Day to you. [THINKS: Or perhaps I should say good night!].",
 "Ah! Jack lad. You're here.",
 "CAPTAIN Jack if you don't mind Sir Christopher. [THINKS: And of course I'm here. You couldn't talk to me if I wasn't.]",
 "Whatever, Captain Jack, lad. Now down to business. You'll be wanting to talk payment of course.",
