@@ -67,7 +67,7 @@ void ProcessDialogEvent()
 		case "Pedro_watching4":
 			dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];
-			link.l1.go = "Pedro_watching4";
+			link.l1.go = "exit";
 			AddDialogExitQuest("Pedro_and_Juan_gone");
 		break;
 
