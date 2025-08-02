@@ -496,13 +496,35 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Start_Again_in_Tavern":
-			LAi_Fade("Start_Again_in_Tavern2", "");
+			//LAi_Fade("Start_Again_in_Tavern2", "");
+			LAi_QuestDelay("Start_Again_in_Tavern2", 0.1);
 		break;
 
 		case "Start_Again_in_Tavern2":
+			DeleteAttribute(&Locations[FindLocation("Oxbay_tavern")],"vcskip"); // PB
+		break;
+
+		case "Leave_Mings_At_Table":
+			DeleteAttribute(&Locations[FindLocation("Oxbay_tavern")],"vcskip"); // PB
+			LAi_QuestDelay("Mings_Refused_1", 0.1);
+		break;
+
+		case "Mings_Refused_1":
+			LAi_SetActorType(characterFromID("Sir Christopher Mings"));
+			LAi_ActorAnimation(characterFromID("Sir Christopher Mings"), "StandUp", "Mings_Refused_2", 1.0);
+		break;
+
+		case "Mings_Refused_2":
+			LAi_ActorGoToLocator(characterFromID("Sir Christopher Mings"), "goto", "goto4", "Mings_Refused_3", 5.0);
+		break;
+
+		case "Mings_Refused_3":
+			LAi_ActorGoToLocator(characterFromID("Sir Christopher Mings"), "reload", "reload1", "Mings_Refused_4", 10.0);
+		break;
+
+		case "Mings_Refused_4":
 			LAi_SetPlayerType(pchar);
 			DoQuestReloadToLocation("Oxbay_tavern", "goto", "goto2", "_");
-			DeleteAttribute(&Locations[FindLocation("Oxbay_tavern")],"vcskip"); // PB
 		break;
 
 		case "Mings_step_two":
