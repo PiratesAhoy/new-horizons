@@ -5,7 +5,7 @@
 //--------------------------------------------------------------------------------------
 
 //Частота штормов в секунду
-#define WDM_STORM_RATE			0.002
+#define WDM_STORM_RATE			0.0001
 //Частота торговцев в секунду
 #define WDM_MERCHANTS_RATE		0.3 // NK upped to 0.3, was 0.2. I will now use them as also warfleets (with simple orders, not chase-player orders)  05-06-27
 //Частота воюищих кораблей в секунду
