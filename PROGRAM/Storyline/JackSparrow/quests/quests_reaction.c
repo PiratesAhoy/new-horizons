@@ -6037,11 +6037,11 @@ void QuestComplete(string sQuestName)
 
 		case "Off_to_shipyard_now6":
 			LAi_SetActorType(pchar);
-			LAi_ActorRunToLocator(pchar, "goto", "goto_17", "Off_to_shipyard_now7", 2.0);
+			LAi_ActorRunToLocator(pchar, "goto", "goto_17", "Off_to_shipyard_now7", 4.0);
 		break;
 		
 		case "Off_to_shipyard_now7":
-			LAi_Fade("Fight_with_Turner_in_Shipyard","");
+			LAi_QuestDelay("Fight_with_Turner_in_Shipyard", 1.0);
 		break;
 
 		case "Fight_with_Turner_in_Shipyard":
