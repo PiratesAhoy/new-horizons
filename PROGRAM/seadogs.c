@@ -1179,6 +1179,56 @@ int counter = 0;
 string key_cpcode = "";
 // <-- KK
 
+
+void HandleSpeedUp_NonWorldmap(){
+	ref PChar = GetMainCharacter();
+	switch(GetTimeScale())
+	{
+		case  0: PChar.basetime =  1; break;	// New values by El Rapido
+		case  1: PChar.basetime =  3; break;
+		case  3: PChar.basetime =  5; break;
+		case  5: PChar.basetime = 10; break;
+		case 10: PChar.basetime = 20; break;
+		case 20: PChar.basetime = 20; break;
+		PChar.basetime =  1; // default time, just in case.
+	}
+}
+void HandleSpeedDown_NonWorldmap(){
+	ref PChar = GetMainCharacter();
+	switch(GetTimeScale())
+	{
+		case 20: PChar.basetime = 10; break;	// New values by El Rapido
+		case 10: PChar.basetime =  5; break;
+		case  5: PChar.basetime =  3; break;
+		case  3: PChar.basetime =  1; break;
+		PChar.basetime =  1; // default time, just in case.
+	}
+}
+
+void HandleSpeedUp_Worldmap(){
+	ref PChar = GetMainCharacter();
+	switch(GetTimeScale())
+	{
+		case  0: PChar.basetime =  1; break;	// New values by Vex
+		case  1: PChar.basetime =  2; break;
+		case  2: PChar.basetime =  3; break;
+		case  3: PChar.basetime =  5; break;
+		case  5: PChar.basetime =  5; break;
+		PChar.basetime =  1; // default time, just in case.
+	}
+}
+void HandleSpeedDown_Worldmap(){
+	ref PChar = GetMainCharacter();
+	switch(GetTimeScale())
+	{
+		case  5: PChar.basetime =  3; break;	// New values by Vex
+		case  3: PChar.basetime =  2; break;
+		case  2: PChar.basetime =  1; break;
+		PChar.basetime =  1; // default time, just in case.
+	}
+}
+
+
 void ProcessControls()
 {
 	string ControlName = GetEventData();
@@ -2075,26 +2125,25 @@ void ProcessControls()
 
 			// PB: Simplified Time Compression Controls -->
 			case "BOAL_Control":
-				switch(GetTimeScale())
-				{
-					case  0: PChar.basetime =  1; break;		// New values by El Rapido
-					case  1: PChar.basetime =  3; break;
-					case  3: PChar.basetime =  5; break;
-					case  5: PChar.basetime = 10; break;
-					case 10: PChar.basetime = 20; break;
+				if (CheckAttribute(worldMap, "isLoaded") == true && worldMap.isLoaded == "true"){
+					HandleSpeedUp_Worldmap();
 				}
+				else{
+					HandleSpeedUp_NonWorldmap();
+				}
+				
 				UpdateTimeScale();
 				LogIt(XI_ConvertString("Time") + " x" + makeint(GetTimeScale()));
 			break;
 
 			case "BOAL_Control0":
-				switch(GetTimeScale())
-				{
-					case 20: PChar.basetime = 10; break;		// New values by El Rapido
-					case 10: PChar.basetime =  5; break;
-					case  5: PChar.basetime =  3; break;
-					case  3: PChar.basetime =  1; break;
+				if (CheckAttribute(worldMap, "isLoaded") == true && worldMap.isLoaded == "true"){
+					HandleSpeedDown_Worldmap();
 				}
+				else{
+					HandleSpeedDown_NonWorldmap();
+				}
+				
 				UpdateTimeScale();
 				LogIt(XI_ConvertString("Time") + " x" + makeint(GetTimeScale()));
 			break;
