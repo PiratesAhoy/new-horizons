@@ -107,7 +107,7 @@ void ProcessDialogEvent()
 		case "Introduction6":
 			dialog.text = DLG_TEXT[14];
 			link.l1 = DLG_TEXT[15];			
-			link.l1.go = "Exit_Introduction_and leave";
+			link.l1.go = "Exit_Introduction_and_leave";
 		break;
 		
 		case "Upstairs_meeting":
@@ -306,11 +306,11 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("Sit_with_Sir_Christopher");
 		break;
 
-		case "Exit_Introduction_and leave":
+		case "Exit_Introduction_and_leave":
 			pchar.quest.Jacks_early_days = "first_meeting";
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-//			AddDialogExitQuest("Start_Again_In_Tavern");	// GR: this doesn't seem to trigger
+			AddDialogExitQuest("Leave_Mings_At_Table");
 		break;
 
 		case "Exit_for_upstairs_meeting":
