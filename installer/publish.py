@@ -44,7 +44,7 @@ with open("userversion.txt", 'w') as f:
         tomlkit.dump(mod, mod_file)
 
 # Download engine
-dload.save_unzip("https://github.com/PiratesAhoy/storm-engine/actions/runs/17180257880/artifacts/3835748327", "engine")
+dload.save_unzip("https://github.com/PiratesAhoy/storm-engine/releases/download/pa15.0.0-beta.6%2B2/storm-engine.release-steam-false.zip", "engine")
 
 def add_file(source_file, target_file=None):
     if target_file is None:
