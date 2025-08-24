@@ -44,7 +44,7 @@ with open("userversion.txt", 'w') as f:
         tomlkit.dump(mod, mod_file)
 
 # Download engine
-dload.save_unzip("https://github.com/PiratesAhoy/storm-engine/actions/runs/16656850610/artifacts/3661151872", "engine")
+dload.save_unzip("https://github.com/PiratesAhoy/storm-engine/actions/runs/17180257880/artifacts/3835748327", "engine")
 
 def add_file(source_file, target_file=None):
     if target_file is None:
@@ -73,6 +73,7 @@ def add_pattern(pattern, directory=None, target=None):
 # _____________________________________________________________________________
 def copy_files():
     add_file("engine/engine.exe")
+    add_file("engine/config.exe")
     add_file("engine/crashpad_handler.exe")
     add_file("engine/engine.pdb")
     add_file("engine/fmod.dll")

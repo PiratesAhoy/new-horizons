@@ -2,3 +2,18 @@
 name = "play"
 path = "engine.exe"
 sandbox = true
+
+[[actions]]
+name = "configure"
+path = "config.exe"
+sandbox = true
+
+[[actions]]
+name = "forums"
+path  ="https://www.piratesahoy.net/forums/beyond-new-horizons.274/"
+
+[[actions]]
+name = "editor"
+path = "engine.exe"
+args = ["--editor"]
+sandbox = true
