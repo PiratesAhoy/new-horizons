@@ -15,3 +15,5 @@
 *.psd
 
 *.afphoto
+/RESOURCE/shared
+/RESOURCE/techniques

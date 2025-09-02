@@ -249,6 +249,7 @@ void DoScrollChange()
 void ProcessCancelExit()
 {
 	ref mc = GetMainCharacter();
+
 	if (CheckAttribute(mc, "colony_capture")) LAi_QuestDelay("ColonyCapture_ContinueDialog", 1.0);
 	IDoExit(RC_INTERFACE_CAPTURE_COLONY_EXIT);
 }
@@ -474,9 +475,11 @@ void ProcessCommandExecute()
 
 void ProcessColonyNameChange()
 {
+	if (bRMouseDown) return;
 	SetNodeUsing("BOX", true);
 	SetCurrentNode("BOX");
 	KB_SetKeyboardMode(true);
+	SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "BOX");
 	KB_Prepare(GameInterface.strings.ColonyName);
 }
 
@@ -493,8 +496,10 @@ void WriteName()
 	}
 	else
 	{
-		GameInterface.strings.ColonyName = FindTownName(colony_name);
+		ProcessNodeCancel();
 	}
+	SetNodeUsing("BOX",false);
+	SendMessage(&GameInterface,"ll", MSG_INTERFACE_LOCK_NODE, 0);
 }
 
 void ProcessNodeCancel()

@@ -629,7 +629,7 @@ void QuestComplete(string sQuestName)
 
                         //LAi_SetPoorType(Pchar);
                         LAi_SetStunnedTypeNoGroup(Pchar);
-			PlaySound("AMBIENT\cheer2.wav")
+			PlaySound("AMBIENT\cheer2.wav");
 
 			LAi_SetFightMode(PChar, false);
 
@@ -656,14 +656,14 @@ void QuestComplete(string sQuestName)
 			LAi_type_actor_Reset(CharacterFromID("Dirty Cesar"));
                         LAi_SetStunnedTypeNoGroup(characterFromID("Dirty Cesar"));
 
-			PlaySound("AMBIENT\UnHappy-002.wav")
+			PlaySound("AMBIENT\UnHappy-002.wav");
 
 //			LAi_SetActorType(PChar);
 			LAi_SetFightMode(PChar, false);
 //			LAi_type_actor_Reset(Pchar);
 //                        LAi_SetPlayerType(Pchar);
 
-			LAi_QuestDelay("Blaze_won_first_fight2", 5.0);
+			LAi_QuestDelay("Blaze_won_first_fight2", 3.0);
 		break;
 
 		case "Blaze_won_first_fight2":
