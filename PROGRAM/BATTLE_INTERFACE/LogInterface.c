@@ -198,7 +198,6 @@ void Log_SetStringToLog(string strLog)
 	}
 }
 
-// Vex addition
 void TraceScriptStack()
 {
 	SendMessage(&ILog, "l", LOG_TRACE_SCRIPT_STACK);
