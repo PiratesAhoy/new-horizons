@@ -45,6 +45,10 @@ object	Weather, WeatherParams, WhrCommonParams;
 int		iNextWeatherNum = -1;
 int		iCurWeatherNum = -1;
 int		iCurWeatherHour = -1;
+// Mirsaneli add
+int		iBlendWeatherNum = -1;
+int lastSkyUpdateHour = -1;
+// Mirsaneli
 bool	bCurWeatherStorm = false;
 int		iTotalNumWeathers = 0;
 string	sLightingPath = "day";
@@ -321,6 +325,7 @@ void CreateWeatherEnvironment()
 	WhrCreateSunGlowEnvironment();
 	WhrCreateLightningEnvironment();
 	WhrCreateSkyEnvironment();
+	Whr_CheckSkyUpdate();
 	WhrCreateSeaEnvironment();
 	if(wRain >= 98) { WhrCreateTornadoEnvironment(); } // JL FLAG -----
 
@@ -658,3 +663,46 @@ bool	Whr_IsLight() { return bWeatherIsLight; };
 bool	Whr_IsRain() { return bWeatherIsRain; }
 bool	Whr_IsStorm() { return bWeatherIsStorm; }
 bool	Whr_IsFog() { return stf(Weathers.Fog.SeaDensity)>0.01; }
+
+// Mirsaneli add
+void Whr_CheckSkyUpdate()
+{
+    int currentHour = makeint(GetHour());
+    if (lastSkyUpdateHour == currentHour) return; // already updated this hour
+
+    lastSkyUpdateHour = currentHour;
+
+    aref aCurWeather = GetCurrentWeather();
+    aref aSky; 
+    makearef(aSky, aCurWeather.Sky);
+
+    // ------------------------------------------------
+    // Re-run the hourly random sky logic
+    // ------------------------------------------------
+    string selectedSkyFolder;
+
+    switch(rand(3))  // adjust to how many sky folders exist
+    {
+        case 0: selectedSkyFolder = "skies"; break;
+        case 1: selectedSkyFolder = "skies1"; break;
+        case 2: selectedSkyFolder = "skies2"; break;
+        case 3: selectedSkyFolder = "skies3"; break;
+    }
+
+    int hourInt = currentHour;
+    string hourStr;
+    if (hourInt == 0)      { hourStr = "24"; }
+    else if (hourInt < 10){ hourStr = "0" + hourInt; }
+    else                   { hourStr = "" + hourInt; }
+
+    string sDir = "weather\\" + selectedSkyFolder + "\\" + hourStr + "\\";
+
+    // assign new dir
+    aCurWeather.Sky.Dir = sDir;
+
+    // reload sky
+    WhrDeleteSkyEnvironment();
+    WhrCreateSkyEnvironment();
+
+    trace("Sky updated for hour " + currentHour + ": " + aCurWeather.Sky.Dir);
+}

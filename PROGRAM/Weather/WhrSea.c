@@ -129,15 +129,15 @@ void WhrCreateSeaEnvironment()
 
 	// Sea.Sea2.SimpleSea = sti(InterfaceStates.SimpleSea);
 
-	Sea.Sea2.FoamEnable = false;
-	// if(FindLocation(sLocation) == -1)
-	// {
-	// 	Sea.Sea2.FoamEnable = true;
-	// 	Sea.Sea2.FoamK = Whr_GetFloat(aSea2, "FoamK");
-	// 	Sea.Sea2.FoamV = Whr_GetFloat(aSea2, "FoamV");
-	// 	Sea.Sea2.FoamUV = Whr_GetFloat(aSea2, "FoamUV");
-	// 	Sea.Sea2.FoamTexDisturb = Whr_GetFloat(aSea2, "FoamTexDisturb");
-	// }
+	// Sea.Sea2.FoamEnable = false;
+
+	// foam enable
+	Sea.Sea2.FoamEnable = true;
+	Sea.Sea2.FoamK = Whr_GetFloat(aSea2, "FoamK");
+	Sea.Sea2.FoamV = Whr_GetFloat(aSea2, "FoamV");
+	Sea.Sea2.FoamUV = Whr_GetFloat(aSea2, "FoamUV");
+	Sea.Sea2.FoamTexDisturb = Whr_GetFloat(aSea2, "FoamTexDisturb");
+
 
 	if(CheckAttribute(aSea2, "LodScale"))
         Sea.Sea2.LodScale = Whr_GetFloat(aSea2, "LodScale");

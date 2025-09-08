@@ -4,6 +4,23 @@
 #include "Weather\Init\WhrFogRainCheck.c"
 #include "Weather\Init\WhrDebugInfo.c"
 
+// Mirsaneli add
+#define WIND2WAVESPEED 0.22
+#define WIND2WAVELENGTH 5.5
+#define WIND2AMPLITUDE 0.45
+
+#define RAIN2AMPLITUDE 2.0
+#define RAIN2WIND 1.0
+
+#define WIND2WAVELENGTH2 2.5
+#define WIND2AMPLITUDE2 0.25
+#define WIND2FOAMV 1.0
+
+#define AMPLITUDERANDOM 0.25
+#define SCALERANDOM 0.4
+#define FOAMRANDOM 0.020
+// Mirsaneli add
+
 void Whr_ResetOvrd(){
 	OWeatherAngle = -50.0;
 	OWABallast = -50.0;
@@ -211,33 +228,73 @@ void Whr_Generator(){
 				//Weathers.Sea.Harmonics.h8 = "2.77,17.0,0.0502,82.28,288.00";
 				//Weathers.Sea.Harmonics.h9 = "1.77,17.0,0.1002,82.28,188.00";
 				Weathers.Sea.Harmonics.h10 = "1.0,14.0,0.5002,82.28,28.00"; //
-				Weathers.Sea2.Amp1 = 30.0;
-				Weathers.Sea2.Amp2 = 1.0;
+				
+				// Mirsaneli: storm parameters
+				float seaWindSpeed = Whr_GetFloat(&Weathers,"Wind.Speed");
+				Weathers.Wind.seaWindSpeed = seaWindSpeed;
+				
+				float effectiveRain = (wRain-75)*RAIN2WIND;
+				if (effectiveRain < 0) effectiveRain = 0;
+				
+				// Wave amplitude
+				float Amp1rand = 2.0*(frnd()-0.5)*AMPLITUDERANDOM + 1.0;
+				float Amp1 = (0.25 + WIND2AMPLITUDE*(seaWindSpeed*Amp1rand + RAIN2AMPLITUDE*effectiveRain));
+				Weathers.Sea2.Amp1 = Amp1;
+				Weathers.Sea2.AnimSpeed1 = 3.0;
+
+				// Wave Length
+				float Scale1rand = 2.0*(frnd()-0.5)*SCALERANDOM + 1.2;	// was 1.0 (4.5.2025)
+				float scale1 = WIND2WAVELENGTH/(seaWindSpeed + effectiveRain);
+				if (scale1 > 1.0) {scale1 = 1.0;}
+				scale1 = scale1*Scale1rand;
+				Weathers.Sea2.Scale1 = scale1;
+
+				string waveSpeedX = f2s(-WIND2WAVESPEED*(winds + effectiveRain)*sin(fWindA), 2);
+				string waveSpeedZ = f2s(-WIND2WAVESPEED*(winds + effectiveRain)*cos(fWindA), 2);
+				Weathers.Sea2.MoveSpeed1 = waveSpeedX + ", 0.0, " + waveSpeedZ;
+
+				// Amplitude 2
+				float Amp2rand = 1.0*(frnd()-0.5)*AMPLITUDERANDOM + 1.0;
+				float Amp2 = 0.5 + WIND2AMPLITUDE*WIND2AMPLITUDE2*(seaWindSpeed + effectiveRain);
+				Weathers.Sea2.Amp2 = Amp2*Amp2rand;
+				Weathers.Sea2.AnimSpeed2 = 3.0;
+
+				// Wavelength 2
+				float Scale2rand = 2.0*(frnd()-0.5)*SCALERANDOM + 1.0;
+				Weathers.Sea2.Scale2 = WIND2WAVELENGTH*WIND2WAVELENGTH2/(seaWindSpeed + effectiveRain)*Scale2rand;
+				
+				// Foam properties
+				Weathers.Sea2.FoamEnable = true;
+				
+				float foamstorm = 4.0 * (frnd() - 1.5) * FOAMRANDOM;
+				Weathers.Sea2.FoamV = Amp1 * (0.54 + foamstorm);
+				Weathers.Sea2.FoamK = 0.062 - 0.05 * effectiveRain / RAIN2WIND / 25.0;
+				Weathers.Sea2.FoamUV = 0.5;
+				Weathers.Sea2.FoamTexDisturb = 0.7;
+				
+				Weathers.Sea2.Amp1 = 64.0;
+		        Weathers.Sea2.AnimSpeed1 = 4.25;
+		        Weathers.Sea2.Scale1 = 0.075;
+ 		        Weathers.Sea2.MoveSpeed1 = "8.0, 0.0, 0.0";
+
+		        Weathers.Sea2.Amp2 = 9.0;
+		        Weathers.Sea2.AnimSpeed2 = 8.0;
+		        Weathers.Sea2.Scale2 = 0.5;
+		        Weathers.Sea2.MoveSpeed2 = "12.0, 0.0, 0.0";
+
+				Weathers.Sea2.Reflection = 0.35;
+	            Weathers.Sea2.Transparency = 0.25;
+	            Weathers.Sea2.Frenel = 0.3;
+	            Weathers.Sea2.Attenuation = 0.2 + 5 * 0.05;
+			    Weathers.Sea2.WaterColor = argb(0, 10, 25, 40);
+				// Mirsaneli: storm parameters
+				
 				if(Characters[GetMainCharacterIndex()].location !="")
 				{
 					Sea.MaxSeaHeight = 50.0;
-				} else {
-					Sea.MaxSeaHeight = 300.0;
 				}
 			}
 		}
-		else
-		{
-			if(bSeaActive && !ownDeckStarted())
-			{
-				Seafoam.storm = "false";
-				//bstorm = false;
-				if(Characters[GetMainCharacterIndex()].location !="")
-				{
-					//if(stf(Sea.MaxSeaHeight)!=3.0) {Sea.MaxSeaHeight = 3.0;traceandlog("waves heights restored");}
-					float Maxheights = (wrain + winds) - 70;
-					if(maxheights<3) Sea.MaxSeaHeight = 3.0;
-					else Sea.MaxSeaHeight = Maxheights;
-					if(wrain < 75) Sea.MaxSeaHeight = 3.0;
-					//traceandlog("waves heights : " + Sea.MaxSeaHeight);	
-				}
-			}
-		} //screwface : end
 	}
 	else
 	{
