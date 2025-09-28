@@ -169,7 +169,8 @@ void CreateSeaEnvironment()
 
 	CreateParticleEntity();
 
-	Ship_Walk_Init();
+	// No longer needed
+	// Ship_Walk_Init();
 
 	LayerFreeze(REALIZE, true);
 	LayerFreeze(EXECUTE, true);
