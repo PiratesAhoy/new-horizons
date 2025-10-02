@@ -239,6 +239,9 @@ void Ship_Walk_Create()
 	string walk = ShipsTypes[shipType].name;
 	if(CheckAttribute(ShipsTypes[shipType],"walk")) walk = ShipsTypes[shipType].walk;
 
+	// TODO: Configure sailor models
+	SendMessage(PeopleOnShip,"lis",AI_MESSAGE_ADD_SHIP, ship, walk);
+	/*
 	switch (walk)
 	// PS <--
 	{
@@ -433,7 +436,8 @@ void Ship_Walk_Create()
 		//SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "Indiaman1", Indiaman1_walk_count, &Indiaman1_walk_verts, &Indiaman1_walk_graph, &Indiaman1_walk_types);
 		break;
 	case "LuggerVML":
-		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship, LuggerVML_walk_count, &LuggerVML_walk_verts, &LuggerVML_walk_graph, &LuggerVML_walk_types);
+//		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship, LuggerVML_walk_count, &LuggerVML_walk_verts, &LuggerVML_walk_graph, &LuggerVML_walk_types);
+		SendMessage(PeopleOnShip,"lis",AI_MESSAGE_ADD_SHIP, ship, "LuggerVML");
         //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "LuggerVML", LuggerVML_walk_count, &LuggerVML_walk_verts, &LuggerVML_walk_graph, &LuggerVML_walk_types);
 		break;
 	case "LuggerP":
@@ -749,4 +753,5 @@ void Ship_Walk_Create()
         break;
 	//HP <--
 	}
+	*/
 }
