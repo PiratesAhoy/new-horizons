@@ -1317,6 +1317,9 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			if(CheckAttribute(NPChar,"wealth")) NPChar.wealth = "0";
 			DialogExit();
 			DeleteCharacter(NPChar);
+			if (HasSubstr(GetAttribute(NPChar,"id"), "Enc_CabinCaptain")) {
+				NPChar.ClearUponExit = true;
+			}
 			boarding_enemy.status = "live";
 			boarding_enemy.position = "loser";
 			if (CheckAttribute(PChar, "TalkWithSurrenderedCaptain")) DeleteAttribute(PChar, "TalkWithSurrenderedCaptain"); // KK
