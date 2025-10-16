@@ -867,6 +867,9 @@ void PauseLayer()
 // Mirsaneli add
 void LaunchBlood(aref chr, float addy, bool isBig)
 {
+	if (!ENABLE_BLOOD_EFFECTS) {
+		return;
+	}
 	float x, y, z;
 	GetCharacterPos(chr, &x, &y, &z);
 	if (loadedLocation.type == "underwater")
