@@ -198,6 +198,11 @@ void Log_SetStringToLog(string strLog)
 	}
 }
 
+void TraceScriptStack()
+{
+	SendMessage(&ILog, "l", LOG_TRACE_SCRIPT_STACK);
+}
+
 /*void Log_SetStringToLog(string strLog)
 {//MAXIMUS: will store log-strings while player is on reload-locator, or speaks with NPC, or near some box. All logs will be shown later.
 	aref refStrings;
