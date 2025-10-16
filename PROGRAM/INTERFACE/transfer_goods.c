@@ -502,7 +502,8 @@ void ChangeScroll()
  // added by MAXIMUS -->
 	if(GetCargoGoods(refEnemyCharacter,GetGoodsIndexForI(curNum))>0 && GetCargoLoad(xi_refCharacter)!=GetCargoMaxSpace(xi_refCharacter)) SetSelectable("TAKEALLCURRENT_BUTTON",isEnable);
 	else SetSelectable("TAKEALLCURRENT_BUTTON",false);
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"TAKEALLCURRENT_BUTTON",0,XI_ConvertString(Goods[GetGoodsIndexForI(curNum)].Name)+" - "+XI_ConvertString("TakeAll"));
+	string take_all_of_one_name = "#" + XI_ConvertString(Goods[GetGoodsIndexForI(curNum)].Name) + " - " + XI_ConvertString("TakeAll");
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"TAKEALLCURRENT_BUTTON",0, take_all_of_one_name);
  // added by MAXIMUS <--
 }
 
