@@ -82,6 +82,8 @@ Please follow these rules when editing settings:
 #define NUM_RANDOM_OFFICERS				50		// INT - number of encounter (tavern) officers.
 #define FEMALE_OFFICER_PERCENTAGE		40		// INT = Percentage of female officers encountered
 
+#define ENABLE_BLOOD_EFFECTS			1
+
 // Difficulty
 #define ENEMYLEVEL_MULT_BASE			0.66	// FLOAT - The base multiplier to level for enemies.
 #define ENEMYLEVEL_DIFF_INFL			0.2		// FLOAT - The influence of difficulty on enemy levels.

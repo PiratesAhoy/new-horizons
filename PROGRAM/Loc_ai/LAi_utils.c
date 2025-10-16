@@ -292,6 +292,13 @@ void LAi_ApplyCharacterDamage(aref chr, int dmg)
 	// NK -->
 	int chrIndex = sti(chr.index);
 	ref mainChr = GetMainCharacter();
+	
+	// Mirsaneli add
+	bool bloodSize = false;
+	if (damage > 30.0) bloodSize = true;
+	float fRange = 1.0 + frand(0.6);
+	LaunchBlood(chr, fRange, bloodSize);
+	
 	if(sti(mainChr.index) == chrIndex)
 	{
 		if(SHOWHP_PLAYER) SendMessage(chr, "lfff", MSG_CHARACTER_VIEWDAMAGE, dmg, MakeFloat(MakeInt(hp)), MakeFloat(MakeInt(maxhp)));
@@ -856,3 +863,31 @@ void PauseLayer()
 //	ref ch = GetMainCharacter();
 }
 // <-- KK
+
+// Mirsaneli add
+void LaunchBlood(aref chr, float addy, bool isBig)
+{
+	if (!ENABLE_BLOOD_EFFECTS) {
+		return;
+	}
+	float x, y, z;
+	GetCharacterPos(chr, &x, &y, &z);
+	if (loadedLocation.type == "underwater")
+	{
+		y = y + 0.9;
+		CreateParticleSystem("bloodUnderwater", x, y, z, 0,1.0,0,0);
+	}
+	else
+	{
+		y = y + addy;
+		if(isBig == true)
+		{
+			CreateParticleSystem("blood_big", x, y, z, 0,1.0,0,0);
+		}
+		else
+		{
+			CreateParticleSystem("blood", x, y, z, 0,1.0,0,0);
+		}
+		SendMessage(loadedLocation, "lsfff", MSG_LOCATION_EX_MSG, "AddBlood", x,y,z);
+	}
+}
