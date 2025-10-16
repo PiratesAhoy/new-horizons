@@ -1640,6 +1640,7 @@ void InitShips()
 	refShip.All				= "Schooner1";
 	refShip.SName	 		= "Schooner1";
 	refShip.id				= refShip.Name;
+	refShip.walk			= "Schooner1";
 	refShip.Class		   = 6;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS6;//BB was LBS_9
 	refShip.MaxCaliber		= 6;//BB was 9
@@ -2347,7 +2348,7 @@ void InitShips()
 	refShip.Name			 = "Shnyava2";//BB 'trade' variety
 	refShip.id 			 = refShip.Name;
 	refShip.All				= "Shnyava1";
-	refShip.Walk		 = "schooner2";
+	refShip.Walk		 = "schooner1";
 	refShip.sname			= "Snow1";
 	refShip.Class			= 6;
 	refShip.Cannon		 = CANNON_TYPE_LONG_LBS6;	// was LBS9
@@ -3453,6 +3454,7 @@ void InitShips()
 	refShip.All				= "Barque1"
 	refShip.SName	 		= "Barque1";
 	refShip.id				= refShip.Name;
+	refShip.walk			= "Barque1";
 	refShip.Class		   = 7;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS4;
 	refShip.MaxCaliber		= 4;
@@ -3646,6 +3648,7 @@ void InitShips()
 	refShip.SName	 		= "Brig1H";
 	refShip.All				= "Brig1";
 	refShip.id				= refShip.Name;
+	refShip.walk			= "Brig1";
 	refShip.Class		   = 6;
 	refShip.Cannon			= CANNON_TYPE_CARRONADE_LBS12;
 	refShip.MaxCaliber		= 9;
@@ -4819,6 +4822,7 @@ void InitShips()
 	refShip.Name			= "Tartane2";
 	refShip.All				= "Tartane1";
 	refShip.id				= refShip.Name
+	refShip.walk			= "Tartane1";
 	refShip.sname			= "Tartane1";
 	refShip.Class			= 8;
 	refShip.Cannon		  = CANNON_TYPE_NONECANNON;
@@ -5583,6 +5587,7 @@ void InitShips()
 	refShip.All				= "Sloop1";
 	refShip.SName	 		= "Sloop1";
 	refShip.id				= refShip.Name;
+	refShip.walk			= "Sloop1";
 	refShip.Class		   = 7;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS6;
 	refShip.MaxCaliber		= 6;
@@ -8350,6 +8355,7 @@ void InitShips()
 	refShip.Name			= "Pinnace1";
 	refShip.SName	 		= "Pinnace1";
 	refShip.id				= refShip.Name;
+	refShip.walk			= "Pinnace";
 	refShip.Class		   = 4;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS9;
 	refShip.MaxCaliber		= 9;
@@ -8446,6 +8452,7 @@ void InitShips()
 	refShip.SName	 		= "Pinnace1";
 	refShip.All				= "Pinnace1";
 	refShip.id				= refShip.Name;
+	refShip.walk			= "Pinnace";
 	refShip.Class		   = 4;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS9;
 	refShip.MaxCaliber		= 9;
@@ -8731,6 +8738,7 @@ void InitShips()
 	refShip.sname			= "PinnaceWH";
 	refShip.All				= "Pinnace1";
 	refShip.id				= refShip.Name;
+	refShip.walk			= "Pinnace";
 	refShip.Class		   = 1;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS24;
 	refShip.MaxCaliber		= 24;
@@ -9571,7 +9579,7 @@ void InitShips()
 	refShip.Name				= "NL_PinnaceofWar47";
 	refShip.SName				= "PinnaceWH";
 	refShip.id					= refShip.Name;
-	refShip.walk				= "Pinnace1"; // PB
+	refShip.walk				= "Pinnace"; // PB
 	refShip.All					= "Pinnace1";
 	refShip.Class				= 1;
 	refShip.Cannon				= CANNON_TYPE_LONG_LBS24;
@@ -15293,7 +15301,7 @@ void InitShips()
 	refShip.id				= refShip.Name;
 	refShip.All				= "Pinnace1";
 	refShip.SName			= "PinnaceWH";
-	refShip.walk			= "Pinnace1"; // PB
+	refShip.walk			= "Pinnace"; // PB
 	refShip.Class           = 1;
 	refShip.Cannon          = CANNON_TYPE_LONG_LBS24;
 	refShip.MaxCaliber      = 24;
@@ -15775,6 +15783,7 @@ void InitShips()
 	n++;
 	refShip.Name			= "Battleship2";
 	refShip.id				= refShip.Name;
+	refShip.walk			= "Battleship1";
 	refShip.All				= "Battleship1"; // PB
 	refShip.SName				= "SoL3R2";
 	refShip.Class		   = 3;
@@ -16818,7 +16827,7 @@ void InitShips()
 	refShip.All				= "PO_Warship";
 	refShip.id				 = refShip.Name;
 	refShip.Class		     = 2;
-	refShip.walk			= "Pinnace1"; // PB
+	refShip.walk			= "Pinnace"; // PB
 	refShip.Cannon			 = CANNON_TYPE_LONG_LBS12;
 	refShip.MaxCaliber	     = 12;
 	refShip.Weight			 = Tonnes2CWT(1200);
@@ -16913,7 +16922,7 @@ void InitShips()
 	refShip.All				= "PO_Warship";
 	refShip.id				= refShip.Name;
 	refShip.Class				= 2;
-	refShip.walk				= "Pinnace1"; // PB
+	refShip.walk				= "Pinnace"; // PB
 	refShip.Cannon				= CANNON_TYPE_LONG_LBS18;
 	refShip.MaxCaliber			= 18;
 	refShip.Weight				= Tonnes2CWT(1800);
@@ -17005,7 +17014,7 @@ void InitShips()
 	refShip.All				= "PO_Warship";
 	refShip.id				= refShip.Name;
 	refShip.Class				= 2;
-	refShip.walk				= "Pinnace1"; // PB
+	refShip.walk				= "Pinnace"; // PB
 	refShip.Cannon				= CANNON_TYPE_LONG_LBS18;
 	refShip.MaxCaliber			= 18;
 	refShip.Weight				= Tonnes2CWT(1800);

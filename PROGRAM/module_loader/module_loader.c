@@ -5,6 +5,7 @@
 #define CORE_MODULE "core"
 
 native void LoadConfig(ref target, string path);
+// native void SaveConfig(ref target, string path);
 native string FindConfig(string path);
 native void ListFiles(ref target, string root);
 #libriary "config"
