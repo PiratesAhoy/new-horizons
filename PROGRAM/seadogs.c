@@ -55,6 +55,7 @@
 #include "smuggling.c";	//Everything related to smuggling moved to here -Levis
 #include "Characters\Leveling.c"; //Everything related to leveling move to this -Levis
 #include "compatibility.c";
+#include "migration/migration.c"
 #include "module_loader/module_loader.c"
 
 extern void UpdateWorldMap();

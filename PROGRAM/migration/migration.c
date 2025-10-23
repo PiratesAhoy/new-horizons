@@ -1,0 +1,5 @@
+object Migration;
+
+void ApplyMigrations() {
+
+}
