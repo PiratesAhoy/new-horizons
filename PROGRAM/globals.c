@@ -371,7 +371,7 @@ Note that you must be neutral with that nation to buy a LoM and buying the LoM s
 
 // RM <--
 
-#define IS_SGV					14.945 // must be a float - use small numbers to keep them sequential for all these updates --> 12.10 is smaller than 12.9!
+#define IS_SGV					15.20251025 // must be a float - use small numbers to keep them sequential for all these updates --> 12.10 is smaller than 12.9!
 
 #define PA_INET					"www.piratesahoy.net"
 #define PA_DOWN					"www.moddb.com/mods/new-horizons"
