@@ -1265,4 +1265,31 @@ categories = [
 name = "Peter Norton"
 categories = [
     "translation",
+    "scripting",
+]
+
+[[contributors]]
+name = "tntscreed"
+weight = 2
+categories = [
+    "scripting",
+]
+
+[[contributors]]
+name = "Anthony Lapenok"
+categories = [
+    "engine",
+]
+
+[[contributors]]
+name = "Meowsandstuff"
+categories = [
+    "music",
+]
+
+[[contributors]]
+name = "LipsarJ"
+weight = 2
+categories = [
+    "scripting",
 ]
