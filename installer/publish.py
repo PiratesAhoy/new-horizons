@@ -9,9 +9,7 @@ import datetime
 from git import Repo
 import tomlkit
 import semver
-
-if os.path.exists("publish"):
-    shutil.rmtree("publish")
+import filecmp
 
 os.makedirs("publish", exist_ok=True)
 
@@ -46,12 +44,44 @@ with open("userversion.txt", 'w') as f:
 # Download engine
 dload.save_unzip("https://github.com/PiratesAhoy/storm-engine/releases/download/pa15.0.0-beta.6%2B4/storm-engine.release-steam-false.zip", "engine", delete_after=True)
 
+published_files = set()
+changed_files = set()
+deleted_files = set()
+
+
 def add_file(source_file, target_file=None):
     if target_file is None:
         target_file = os.path.basename(source_file)
-    target_path = "publish/" + target_file
+    # Normalize target path under publish
+    target_rel = target_file.lstrip("\\/")
+    target_path = os.path.normpath(os.path.join("publish", target_rel))
     os.makedirs(os.path.dirname(target_path), exist_ok=True)
+
+    # Track this file as expected in the final publish folder
+    published_files.add(target_path)
+
+    # Skip copying if destination exists and content is unchanged
+    if os.path.exists(target_path):
+        try:
+            src_stat = os.stat(source_file)
+            dst_stat = os.stat(target_path)
+            if src_stat.st_size == dst_stat.st_size:
+                # If timestamps are effectively equal, assume unchanged
+                if abs(src_stat.st_mtime - dst_stat.st_mtime) < 1e-6:
+                    return
+                # Same size but different mtime — do a deep comparison to be sure
+                try:
+                    if filecmp.cmp(source_file, target_path, shallow=False):
+                        return
+                except OSError:
+                    pass
+        except OSError:
+            # If any error occurs, fall back to copying
+            pass
+
     shutil.copy2(source_file, target_path)
+    # Record that this file changed in publish (new or updated)
+    changed_files.add(target_path)
 
 
 def add_directory(path, target=None):
@@ -134,10 +164,48 @@ def copy_files():
 
 copy_files()
 
-# Publish to itch.io
-channel = "nightly-windows" if current_tag is None else "windows"
-butler_command = f"butler push publish cmdrhammie/beyond-new-horizons:{channel} --if-changed --userversion-file userversion.txt"
-print(f"Running '{butler_command}'")
-process = subprocess.Popen(butler_command, stdout=subprocess.PIPE)
-for c in iter(lambda: process.stdout.read(1), b""):
-    sys.stdout.buffer.write(c)
+# Remove files in publish that are no longer part of this build
+
+def cleanup_publish_folder():
+    existing_files = set()
+    for base, dirs, files in os.walk("publish"):
+        for file in files:
+            existing_files.add(os.path.normpath(os.path.join(base, file)))
+
+    obsolete = existing_files - published_files
+    for path in obsolete:
+        try:
+            os.remove(path)
+            deleted_files.add(path)
+        except OSError:
+            pass
+
+    # Remove empty directories bottom-up
+    for base, dirs, files in os.walk("publish", topdown=False):
+        for d in dirs:
+            p = os.path.join(base, d)
+            try:
+                if not os.listdir(p):
+                    os.rmdir(p)
+            except OSError:
+                pass
+
+cleanup_publish_folder()
+
+# Decide whether to run Butler based on significant changes
+mod_publish_path = os.path.normpath(os.path.join("publish", "modules", "core", "module.toml"))
+exclusions = {mod_publish_path}
+
+all_changes = set(map(os.path.normpath, changed_files | deleted_files))
+significant_changes = [p for p in all_changes if p not in exclusions]
+
+if not significant_changes and current_tag is None:
+    print("No significant changes detected (only module version/userversion updates). Skipping Butler push.")
+else:
+    # Publish to itch.io
+    channel = "nightly-windows" if current_tag is None else "windows"
+    butler_command = f"butler push publish cmdrhammie/beyond-new-horizons:{channel} --if-changed --userversion-file userversion.txt"
+    print(f"Running '{butler_command}'")
+    process = subprocess.Popen(butler_command, stdout=subprocess.PIPE)
+    for c in iter(lambda: process.stdout.read(1), b""):
+        sys.stdout.buffer.write(c)
