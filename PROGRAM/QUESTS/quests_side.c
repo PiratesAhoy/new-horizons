@@ -6171,6 +6171,7 @@ void SideQuestComplete(string sQuestName)
 			AddQuestRecord("Santiago", 2);
 			PChar.quest.santiago = "madame";
 			ChangeCharacterAddressGroup(CharacterFromID("Cecile Bienbonne"), "StoneHouse", "reload", "reload1");
+			Characters[GetCharacterIndex("Cecile Bienbonne")].Dialog.Filename = "Cecile Bienbonne_dialog.c";
 			Locations[FindLocation("StoneHouse")].vcskip = true;
 		break;
 
