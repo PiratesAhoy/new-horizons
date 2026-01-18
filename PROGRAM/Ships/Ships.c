@@ -581,7 +581,7 @@ void FillShipsList(ref NPChar)
 		if (CheckAttribute(NPChar,"id") && NPChar.id == "Hendrick Vanderdecken") // PB: Enable the buying of unavailable quest ships
 		{
 			bool VanderdeckenShip = false;
-			if(sti(rShip.CanBuy) == true && sti(rShip.CanEncounter) == false)	VanderdeckenShip = true;
+			if(sti(rShip.CanBuy) == false && sti(rShip.CanEncounter) == false)	VanderdeckenShip = true;
 			if(HasSubStr(rShip.id, "Steam"))									VanderdeckenShip = true;
 			if(HasSubStr(rShip.id, "obj_"))										VanderdeckenShip = false;
 			if(!VanderdeckenShip) 												continue;
