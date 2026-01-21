@@ -1,4 +1,4 @@
-string DLG_TEXT[158] = {
+string DLG_TEXT[166] = {
 "I'll report this cruelty to the government of ",
 "! This is treachery!",
 "Dirty rat! How dare you attack a ship under the flag of ", 
@@ -157,4 +157,12 @@ string DLG_TEXT[158] = {
 "Isn't the meaning clear? I mean to take your ship. And your cargo. And your life.",
 "Traitor! I'll see you in Hell!",
 "Quite likely, but you'll be there before me.",
+"You dishonourable bastard! this will not be forgotten!",
+"Be quiet before i change my mind and have you killed instead!",
+"My crew may have surrendered but they are still loyal to me! your men are outnumbered. EN GARDE!",
+"It appears i have little choice, very well.",
+"You'll have your crew do your dirtywork rather than fight me like a man?! Typical Pirate! You'll not get away with this!",
+"ENOUGH! Stop your whining or ill make sure you die slow!",
+"Why would i waste my time duelling you when i can have my crew kill you instead! BOYS! HAVE YOUR FUN!",
+"Duel you? how about my men just throw you in the brig.",
 };
