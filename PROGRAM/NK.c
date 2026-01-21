@@ -293,7 +293,14 @@ void GiveShip2Character(ref char, string shiptype, string shipname, int cannon_t
 		SupplyShip(char); // Then add them again
 	}
 // KK -->
-	if (FindLoadedLocation() >= 0 && locNumShips > 0) {
+
+	ref PChar = GetMainCharacter();
+	bool bSkipShipReloads = CheckAttribute(PChar, "settings.skipReloadShipsInLocation") && PChar.settings.skipReloadShipsInLocation == true;
+
+	if (
+		!bSkipShipReloads &&
+		FindLoadedLocation() >= 0 && locNumShips > 0
+	) {
 		DeleteRiggingEnvironment();
 		LocLoadShips(&Locations[FindLoadedLocation()]);
 	}
