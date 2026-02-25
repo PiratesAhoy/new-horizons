@@ -169,6 +169,8 @@ void CreateSeaEnvironment()
 
 	CreateParticleEntity();
 
+	Ship_Walk_Init();
+
 	LayerFreeze(REALIZE, true);
 	LayerFreeze(EXECUTE, true);
 	LayerFreeze(SEA_REFLECTION, false);
@@ -200,7 +202,7 @@ void CreateSeaEnvironment()
 	LayerAddObject(SEA_EXECUTE, &SinkEffect, 65531);
 	LayerAddObject(SEA_REALIZE, &SinkEffect, 65531);
 
-	 CreateEntity(&PeopleOnShip, "Sailors");	ReloadProgressUpdate();
+	 CreateEntity(&PeopleOnShip, "LegacySailors");	ReloadProgressUpdate();
 	 LayerAddObject(SEA_EXECUTE, &PeopleOnShip, 100);
 	 LayerAddObject(SEA_REALIZE, &PeopleOnShip, 100);
 

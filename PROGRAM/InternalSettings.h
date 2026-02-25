@@ -83,7 +83,7 @@ Please follow these rules when editing settings:
 #define FEMALE_OFFICER_PERCENTAGE		40		// INT = Percentage of female officers encountered
 
 #define ENABLE_BLOOD_EFFECTS			1
-#define ENABLE_SHIP_SAILORS				0
+#define ENABLE_SHIP_SAILORS				1
 
 // Difficulty
 #define ENEMYLEVEL_MULT_BASE			0.66	// FLOAT - The base multiplier to level for enemies.
