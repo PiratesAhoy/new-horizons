@@ -1423,7 +1423,24 @@ void ProcessDialogEvent()
 		case "accept_secret":
 			Diag.CurrentNode = "get_out";
 			DialogExit();
+
+			PChar.settings.skipReloadShipsInLocation = true;
+
+			// TODO: Investigate and fix!
+			// VEX: If the ship reloads are not skipped,
+			//  a bug happens when GenerateTreasureQuest() runs.
+			//  The player's active action becomes talking to themself,
+			//  and can even 'trade' with themself.
+			//  (https://github.com/PiratesAhoy/new-horizons/issues/222)
+			//  I have tracked down the issue to the following call-stack:
+			//  GenerateTreasureQuest -> GenerateQuestShip -> GiveShip2Character -> LocLoadShips -> SendMessage(&locShips[n],"laa",MSG_SHIP_CREATE,&rCharacter,&rShip)
+			//  Somehow this engine-side call results in "procFindDialogChar()" getting "0" as the dlgChar, and
+			//  the ID 0 belongs to the player.
+
 			GenerateTreasureQuest();
+			
+			DeleteAttribute(PChar, "settings.skipReloadShipsInLocation");
+			
 			AddMoneyToCharacter(PChar, -sti(NPChar.sum));
 			PlayStereoSound("INTERFACE\took_item.flac");
 			DeleteAttribute(NPChar, "sum");
