@@ -281,6 +281,17 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 						Link.l1 = DLG_TEXT[151];
 					}
 					Link.l1.go = "kill_captain";
+
+					Link.l2 = DLG_TEXT[165];
+					Link.l3 = DLG_TEXT[164];
+					if (GetCrewQuantity(PChar) > GetCrewQuantity(NPChar) ) {
+						Link.l2.go = "duel_decline_prisoner_succeed";
+						Link.l3.go = "duel_decline_execute_succeed";
+					}
+					else {
+						Link.l2.go = "duel_decline_prisoner_fail";
+						Link.l3.go = "duel_decline_execute_fail";
+					}
 				}
 				else
 				{// added by MAXIMUS 26.08.2006 [if enemy captain is stronger than player, you'll fight with him] <--
@@ -383,6 +394,34 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 				}//MAXIMUS
 			}
 			NextDiag.TempNode = "first time";
+		break;
+
+		case "duel_decline_prisoner_fail":
+			dialog.text = DLG_TEXT[160];
+			Link.l1 = DLG_TEXT[161];
+			Link.l1.go = "kill_captain";
+			ChangeCharacterReputation(PChar, -1);
+		break;
+
+		case "duel_decline_prisoner_succeed":
+			dialog.text = DLG_TEXT[158];
+			Link.l1 = DLG_TEXT[159];
+			Link.l1.go = "take_as_prisoner";
+			ChangeCharacterReputation(PChar, -1);
+		break;
+
+		case "duel_decline_execute_fail":
+			dialog.text = DLG_TEXT[160];
+			Link.l1 = DLG_TEXT[161];
+			Link.l1.go = "kill_captain";
+			ChangeCharacterReputation(PChar, -3);
+		break;
+
+		case "duel_decline_execute_succeed":
+			dialog.text = DLG_TEXT[162];
+			Link.l1 = DLG_TEXT[163];
+			Link.l1.go = "exit_hanged";
+			ChangeCharacterReputation(PChar, -3);
 		break;
 
 		case "talk":
